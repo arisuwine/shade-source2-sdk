@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x828
+             * Size: 0x840
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSCustomHudLayout : public shade::sdk::client::C_BaseEntity {
             public:
-                std::uint8_t pad_0600[0x8]; // 0x0600, 0x8 bytes
-                CUtlSymbolLarge m_strLayout; // 0x0608, 0x8 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CCSCustomHudLayoutState> m_vecPlayerLayoutStates; // 0x0610, 0x68 bytes
-                shade::sdk::client::CCSCustomHudLayoutState m_globalLayoutState; // 0x0678, 0x108 bytes
-                C_NetworkUtlVectorBase<CUtlString> m_vecPanelIds; // 0x0780, 0x18 bytes
-                C_NetworkUtlVectorBase<CUtlString> m_vecClassNames; // 0x0798, 0x18 bytes
-                C_NetworkUtlVectorBase<CUtlString> m_vecDialogVariableNames; // 0x07b0, 0x18 bytes
-                std::uint8_t pad_07c8[0x60]; // 0x07c8, 0x60 bytes
+                std::uint8_t pad_0600[0x18]; // 0x0600, 0x18 bytes
+                CUtlSymbolLarge m_strLayout; // 0x0618, 0x8 bytes
+                bool m_bObservable; // 0x0620, 0x1 bytes
+                std::uint8_t pad_0621[0x7]; // 0x0621, 0x7 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CCSCustomHudLayoutState> m_vecPlayerLayoutStates; // 0x0628, 0x68 bytes
+                shade::sdk::client::CCSCustomHudLayoutState m_globalLayoutState; // 0x0690, 0x108 bytes
+                C_NetworkUtlVectorBase<CUtlString> m_vecPanelIds; // 0x0798, 0x18 bytes
+                C_NetworkUtlVectorBase<CUtlString> m_vecClassNames; // 0x07b0, 0x18 bytes
+                C_NetworkUtlVectorBase<CUtlString> m_vecDialogVariableNames; // 0x07c8, 0x18 bytes
+                std::uint8_t pad_07e0[0x60]; // 0x07e0, 0x60 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSCustomHudLayout) == 0x828, "CCSCustomHudLayout size mismatch");
+            static_assert(sizeof(CCSCustomHudLayout) == 0x840, "CCSCustomHudLayout size mismatch");
         }
     }
 }

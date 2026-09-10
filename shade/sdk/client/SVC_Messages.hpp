@@ -47,7 +47,8 @@ namespace shade {
                 svc_Broadcast_Command = 0x4a,
                 svc_HltvFixupOperatorStatus = 0x4b,
                 svc_UserCmds = 0x4c,
-                svc_NextMsgPredicted = 0x4d
+                svc_NextMsgPredicted = 0x4d,
+                svc_EncryptedData = 0x4e
             };
         }
     }

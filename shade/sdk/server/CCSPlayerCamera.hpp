@@ -15,39 +15,28 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CBaseEntity.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace server {
-            class CCSPlayerPawnBase;
-        }
-    }
-}
+#include "shade/sdk/server/CCSCustomPlayerCamera.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCSPlayerCamera : public shade::sdk::server::CBaseEntity {
+            class CCSPlayerCamera : public shade::sdk::server::CCSCustomPlayerCamera {
             public:
-                CHandle<shade::sdk::server::CCSPlayerPawnBase> m_hPawn; // 0x04a8, 0x4 bytes
-                bool m_bEnabled; // 0x04ac, 0x1 bytes
-                bool m_bIsControllingAngles; // 0x04ad, 0x1 bytes
-                std::uint8_t pad_04ae[0x2]; // 0x04ae, 0x2 bytes
+                std::uint8_t pad_04e0[0x8]; // 0x04e0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSPlayerCamera) == 0x4B0, "CCSPlayerCamera size mismatch");
+            static_assert(sizeof(CCSPlayerCamera) == 0x4E8, "CCSPlayerCamera size mismatch");
         }
     }
 }
