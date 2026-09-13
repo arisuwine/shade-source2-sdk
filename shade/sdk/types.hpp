@@ -1185,15 +1185,15 @@ namespace shade {
         };
 
         template<>
-        class CUtlVectorFixedGrowable<shade::sdk::animlib::CNmGraphEventConditionNode__Condition_t, 5> {
-        public:
-            std::uint8_t pad_0000[0x68]; // 0x0000, 0x68 bytes
-        };
-
-        template<>
         class CUtlVectorFixedGrowable<shade::sdk::animlib::CNmClip*, 1> {
         public:
             std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
+        };
+
+        template<>
+        class CUtlVectorFixedGrowable<shade::sdk::animlib::CNmGraphEventConditionNode__Condition_t, 5> {
+        public:
+            std::uint8_t pad_0000[0x68]; // 0x0000, 0x68 bytes
         };
 
         template<>
