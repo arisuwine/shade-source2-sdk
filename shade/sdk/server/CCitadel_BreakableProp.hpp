@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xab0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,12 +34,15 @@ namespace shade {
                 std::uint8_t pad_0a94[0x4]; // 0x0a94, 0x4 bytes
                 float m_flOverrideInitialSpawnTime; // 0x0a98, 0x4 bytes
                 float m_flOverrideRespawnTime; // 0x0a9c, 0x4 bytes
+                std::uint8_t pad_0aa0[0x10]; // 0x0aa0, 0x10 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * std::int32_t m_nSpawnGroup; // Offset: 0xaa0, Size: 0x1, Size In Bytes: 0x4
+             */
 
-            static_assert(sizeof(CCitadel_BreakableProp) == 0xAA0, "CCitadel_BreakableProp size mismatch");
+            static_assert(sizeof(CCitadel_BreakableProp) == 0xAB0, "CCitadel_BreakableProp size mismatch");
         }
     }
 }

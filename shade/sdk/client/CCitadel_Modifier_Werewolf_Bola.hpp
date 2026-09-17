@@ -15,30 +15,27 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CCitadelBaseAbility.hpp"
+#include "shade/sdk/client/CCitadelModifier.hpp"
 
 namespace shade {
     namespace sdk {
-        namespace server {
+        namespace client {
             /* Class Parameters
-             * Size: 0x10f0
-             * Alignment: 0x8
+             * Size: 0x140
+             * Alignment: 0xff
              * Has VTable
-             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Ability_Haze_StackingDamage : public shade::sdk::server::CCitadelBaseAbility {
+            class CCitadel_Modifier_Werewolf_Bola : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0f70[0x180]; // 0x0f70, 0x180 bytes
+                std::uint8_t pad_00c0[0x80]; // 0x00c0, 0x80 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Haze_StackingDamage) == 0x10F0, "CCitadel_Ability_Haze_StackingDamage size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_Bola) == 0x140, "CCitadel_Modifier_Werewolf_Bola size mismatch");
         }
     }
 }

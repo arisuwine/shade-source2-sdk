@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x12f8
+             * Size: 0x1378
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,7 +33,7 @@ namespace shade {
             public:
                 std::uint8_t pad_0f70[0x4]; // 0x0f70, 0x4 bytes
                 shade::sdk::client::ParticleIndex_t m_ReadyParticleIndex; // 0x0f74, 0x4 bytes
-                std::uint8_t pad_0f78[0x380]; // 0x0f78, 0x380 bytes
+                std::uint8_t pad_0f78[0x400]; // 0x0f78, 0x400 bytes
             };
             #pragma pack(pop)
 
@@ -41,7 +41,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_Ability_Crackshot) == 0x12F8, "CCitadel_Ability_Crackshot size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Crackshot) == 0x1378, "CCitadel_Ability_Crackshot size mismatch");
         }
     }
 }

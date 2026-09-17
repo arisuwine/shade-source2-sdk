@@ -30,9 +30,9 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_KothComebackBonusesVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flTechResist; // 0x0750, 0x4 bytes
-                float m_flBulletResist; // 0x0754, 0x4 bytes
-                float m_flStatusResist; // 0x0758, 0x4 bytes
+                float m_flResistMaxAtStart; // 0x0750, 0x4 bytes
+                float m_flResistMaxPerMinute; // 0x0754, 0x4 bytes
+                float m_flResistMaxCap; // 0x0758, 0x4 bytes
                 std::uint8_t pad_075c[0x4]; // 0x075c, 0x4 bytes
             };
             #pragma pack(pop)

@@ -15,30 +15,25 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CCitadelBaseShivAbility.hpp"
-
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1370
-             * Alignment: 0x8
-             * Has VTable
+             * Size: 0x8
+             * Alignment: 0x4
+             * Has Trivial Destructor
              * Construct Allowed
-             * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Ability_ShivDagger : public shade::sdk::client::CCitadelBaseShivAbility {
-            public:
-                std::uint8_t pad_11d8[0x198]; // 0x11d8, 0x198 bytes
+            struct BreakableSpawnTimeDesc_t {
+                float m_flInitialSpawnTime; // 0x0000, 0x4 bytes
+                float m_flRespawnInterval; // 0x0004, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ShivDagger) == 0x1370, "CCitadel_Ability_ShivDagger size mismatch");
+            static_assert(sizeof(BreakableSpawnTimeDesc_t) == 0x8, "BreakableSpawnTimeDesc_t size mismatch");
         }
     }
 }

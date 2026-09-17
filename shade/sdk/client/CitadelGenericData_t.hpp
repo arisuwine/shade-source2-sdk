@@ -37,6 +37,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            struct BreakableSpawnTimeDesc_t;
             struct CurrencySound_t;
             struct DamageFlashSettings_t;
             struct HeroAbilityResourceDef_t;
@@ -54,7 +55,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1648
+             * Size: 0x1660
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -97,20 +98,21 @@ namespace shade {
                 shade::sdk::client::KothParams_t m_KothParams; // 0x0e68, 0x2e8 bytes
                 shade::sdk::client::TeleporterParams_t m_TeleporterParams; // 0x1150, 0x1f0 bytes
                 shade::sdk::client::ObjectivesParams_t m_ObjectiveParams; // 0x1340, 0x30 bytes
-                CUtlOrderedMap<shade::sdk::client::EStatsType, CUtlString> m_mapStatTypeImages; // 0x1370, 0x28 bytes
-                shade::sdk::client::CRemapFloat m_AimSpringStrength; // 0x1398, 0x10 bytes
-                shade::sdk::client::CRemapFloat m_TargetingSpringStrength; // 0x13a8, 0x10 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilityResourceType, shade::sdk::client::HeroAbilityResourceDef_t> m_mapResourceTypes; // 0x13b8, 0x28 bytes
-                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecWeaponGroups; // 0x13e0, 0x18 bytes
-                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecArmorGroups; // 0x13f8, 0x18 bytes
-                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecSpiritGroups; // 0x1410, 0x18 bytes
-                shade::sdk::client::GameModeStreetBrawl_t m_StreetBrawl; // 0x1428, 0x220 bytes
+                CUtlVector<shade::sdk::client::BreakableSpawnTimeDesc_t> m_BreakableSpawnTimeDesc; // 0x1370, 0x18 bytes
+                CUtlOrderedMap<shade::sdk::client::EStatsType, CUtlString> m_mapStatTypeImages; // 0x1388, 0x28 bytes
+                shade::sdk::client::CRemapFloat m_AimSpringStrength; // 0x13b0, 0x10 bytes
+                shade::sdk::client::CRemapFloat m_TargetingSpringStrength; // 0x13c0, 0x10 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilityResourceType, shade::sdk::client::HeroAbilityResourceDef_t> m_mapResourceTypes; // 0x13d0, 0x28 bytes
+                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecWeaponGroups; // 0x13f8, 0x18 bytes
+                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecArmorGroups; // 0x1410, 0x18 bytes
+                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecSpiritGroups; // 0x1428, 0x18 bytes
+                shade::sdk::client::GameModeStreetBrawl_t m_StreetBrawl; // 0x1440, 0x220 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelGenericData_t) == 0x1648, "CitadelGenericData_t size mismatch");
+            static_assert(sizeof(CitadelGenericData_t) == 0x1660, "CitadelGenericData_t size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1c40
+             * Size: 0x1c58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -61,13 +61,19 @@ namespace shade {
                 float m_flPostMaxDrag; // 0x1c24, 0x4 bytes
                 float m_flPostDragDuration; // 0x1c28, 0x4 bytes
                 float m_flDownwardAirDashSpeed; // 0x1c2c, 0x4 bytes
-                CSoundEventName m_strAirDashSound; // 0x1c30, 0x10 bytes
+                float m_flParryCancelSpeedScale; // 0x1c30, 0x4 bytes
+                float m_flParryCancelSlideDuration; // 0x1c34, 0x4 bytes
+                float m_flParryCancelSlideFrictionPercent; // 0x1c38, 0x4 bytes
+                float m_flParryCancelAirGlideDuration; // 0x1c3c, 0x4 bytes
+                float m_flParryCancelAirGravityScale; // 0x1c40, 0x4 bytes
+                std::uint8_t pad_1c44[0x4]; // 0x1c44, 0x4 bytes
+                CSoundEventName m_strAirDashSound; // 0x1c48, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityDashVData) == 0x1C40, "CAbilityDashVData size mismatch");
+            static_assert(sizeof(CAbilityDashVData) == 0x1C58, "CAbilityDashVData size mismatch");
         }
     }
 }

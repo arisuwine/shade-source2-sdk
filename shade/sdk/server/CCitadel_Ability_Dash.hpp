@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xfa0
+             * Size: 0xfa8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,11 +40,13 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flAirDashCastTime; // 0x0f84, 0x4 bytes
                 Vector m_flAirDashStartPos; // 0x0f88, 0xc bytes
                 shade::sdk::entity2::GameTime_t m_flAirDashDragStartTime; // 0x0f94, 0x4 bytes
-                std::int8_t m_nConsecutiveAirDashes; // 0x0f98, 0x1 bytes
-                std::int8_t m_nConsecutiveDownDashes; // 0x0f99, 0x1 bytes
-                bool m_bDownAirDash; // 0x0f9a, 0x1 bytes
-                std::uint8_t pad_0f9b[0x1]; // 0x0f9b, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0x0f9c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryCancelSlideEndTime; // 0x0f98, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryCancelAirGlideStartTime; // 0x0f9c, 0x4 bytes
+                std::int8_t m_nConsecutiveAirDashes; // 0x0fa0, 0x1 bytes
+                std::int8_t m_nConsecutiveDownDashes; // 0x0fa1, 0x1 bytes
+                bool m_bDownAirDash; // 0x0fa2, 0x1 bytes
+                std::uint8_t pad_0fa3[0x1]; // 0x0fa3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0x0fa4, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -52,7 +54,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_Ability_Dash) == 0xFA0, "CCitadel_Ability_Dash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Dash) == 0xFA8, "CCitadel_Ability_Dash size mismatch");
         }
     }
 }

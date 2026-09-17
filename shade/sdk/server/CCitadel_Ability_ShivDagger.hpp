@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1190
+             * Size: 0x1108
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,8 +30,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ShivDagger : public shade::sdk::server::CCitadelBaseShivAbility {
             public:
-                bool m_bIsInRicochet; // 0x0f70, 0x1 bytes
-                std::uint8_t pad_0f71[0x21f]; // 0x0f71, 0x21f bytes
+                std::uint8_t pad_0f70[0x198]; // 0x0f70, 0x198 bytes
             };
             #pragma pack(pop)
 
@@ -39,7 +38,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_Ability_ShivDagger) == 0x1190, "CCitadel_Ability_ShivDagger size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ShivDagger) == 0x1108, "CCitadel_Ability_ShivDagger size mismatch");
         }
     }
 }

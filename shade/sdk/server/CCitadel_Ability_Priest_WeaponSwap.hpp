@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1400
+             * Size: 0x1430
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,9 +30,9 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_WeaponSwap : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x488]; // 0x0f70, 0x488 bytes
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hOriginalGun; // 0x13f8, 0x4 bytes
-                std::uint8_t pad_13fc[0x4]; // 0x13fc, 0x4 bytes
+                std::uint8_t pad_0f70[0x4a4]; // 0x0f70, 0x4a4 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hOriginalGun; // 0x1414, 0x4 bytes
+                std::uint8_t pad_1418[0x18]; // 0x1418, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -40,7 +40,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_Ability_Priest_WeaponSwap) == 0x1400, "CCitadel_Ability_Priest_WeaponSwap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_WeaponSwap) == 0x1430, "CCitadel_Ability_Priest_WeaponSwap size mismatch");
         }
     }
 }

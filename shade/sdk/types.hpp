@@ -318,6 +318,7 @@ namespace shade {
             struct AttackData_t;
             struct BonusUpgrade_t;
             struct BreakablePowerupDropDefinition_t;
+            struct BreakableSpawnTimeDesc_t;
             struct BulletID_t;
             class CAI_CustomMovementGaitSettings;
             class CAnimGraphControllerBase;

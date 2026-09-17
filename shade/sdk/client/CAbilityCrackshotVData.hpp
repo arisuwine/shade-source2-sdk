@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b08
+             * Size: 0x1b18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -47,15 +47,16 @@ namespace shade {
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle; // 0x19d8, 0xe0 bytes
                 CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1ab8, 0x10 bytes
                 CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CrackshotImmuneModifier; // 0x1ac8, 0x10 bytes
-                CSoundEventName m_HeadShotVictimSound; // 0x1ad8, 0x10 bytes
-                CSoundEventName m_HeadShotConfirmationSound; // 0x1ae8, 0x10 bytes
-                CSoundEventName m_ReadySound; // 0x1af8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletResistModifier; // 0x1ad8, 0x10 bytes
+                CSoundEventName m_HeadShotVictimSound; // 0x1ae8, 0x10 bytes
+                CSoundEventName m_HeadShotConfirmationSound; // 0x1af8, 0x10 bytes
+                CSoundEventName m_ReadySound; // 0x1b08, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCrackshotVData) == 0x1B08, "CAbilityCrackshotVData size mismatch");
+            static_assert(sizeof(CAbilityCrackshotVData) == 0x1B18, "CAbilityCrackshotVData size mismatch");
         }
     }
 }

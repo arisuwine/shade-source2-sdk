@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1220
+             * Size: 0x1228
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -48,12 +48,14 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flAirDashCastTime; // 0x11ec, 0x4 bytes
                 Vector m_flAirDashStartPos; // 0x11f0, 0xc bytes
                 shade::sdk::entity2::GameTime_t m_flAirDashDragStartTime; // 0x11fc, 0x4 bytes
-                std::int8_t m_nConsecutiveAirDashes; // 0x1200, 0x1 bytes
-                std::int8_t m_nConsecutiveDownDashes; // 0x1201, 0x1 bytes
-                bool m_bDownAirDash; // 0x1202, 0x1 bytes
-                std::uint8_t pad_1203[0x15]; // 0x1203, 0x15 bytes
-                CHandle<shade::sdk::client::CCitadel_Ability_Jump> m_hJumpAbility; // 0x1218, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0x121c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryCancelSlideEndTime; // 0x1200, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryCancelAirGlideStartTime; // 0x1204, 0x4 bytes
+                std::int8_t m_nConsecutiveAirDashes; // 0x1208, 0x1 bytes
+                std::int8_t m_nConsecutiveDownDashes; // 0x1209, 0x1 bytes
+                bool m_bDownAirDash; // 0x120a, 0x1 bytes
+                std::uint8_t pad_120b[0x15]; // 0x120b, 0x15 bytes
+                CHandle<shade::sdk::client::CCitadel_Ability_Jump> m_hJumpAbility; // 0x1220, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0x1224, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -61,7 +63,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_Ability_Dash) == 0x1220, "CCitadel_Ability_Dash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Dash) == 0x1228, "CCitadel_Ability_Dash size mismatch");
         }
     }
 }

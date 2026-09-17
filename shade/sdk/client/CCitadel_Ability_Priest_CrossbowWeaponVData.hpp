@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e28
+             * Size: 0x1e30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,19 +40,21 @@ namespace shade {
             class CCitadel_Ability_Priest_CrossbowWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
                 CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x19c0, 0x40 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticle; // 0x1a00, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticleOwnerOnly; // 0x1ae0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlessedTracerParticle; // 0x1bc0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowMuzzleFlashParticle; // 0x1ca0, 0xe0 bytes
-                CSoundEventName m_strHitSound; // 0x1d80, 0x10 bytes
-                CSoundEventName m_strHitHeadshotSound; // 0x1d90, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBolt; // 0x1da0, 0x88 bytes
+                float m_flRicochetBulletSpeed; // 0x1a00, 0x4 bytes
+                std::uint8_t pad_1a04[0x4]; // 0x1a04, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticle; // 0x1a08, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticleOwnerOnly; // 0x1ae8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlessedTracerParticle; // 0x1bc8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowMuzzleFlashParticle; // 0x1ca8, 0xe0 bytes
+                CSoundEventName m_strHitSound; // 0x1d88, 0x10 bytes
+                CSoundEventName m_strHitHeadshotSound; // 0x1d98, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBolt; // 0x1da8, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_CrossbowWeaponVData) == 0x1E28, "CCitadel_Ability_Priest_CrossbowWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_CrossbowWeaponVData) == 0x1E30, "CCitadel_Ability_Priest_CrossbowWeaponVData size mismatch");
         }
     }
 }
