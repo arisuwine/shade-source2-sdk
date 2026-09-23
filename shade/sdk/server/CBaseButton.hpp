@@ -75,8 +75,8 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_ls.sLockedSound[0x8]; // Offset: 0x818, Size: 0x1, Size In Bytes: 0x8
-             * std::uint8_t m_ls.sUnlockedSound[0x8]; // Offset: 0x820, Size: 0x1, Size In Bytes: 0x8
+             * std::int32_t m_ls.sLockedSound; // Offset: 0x818, Size: 0x1, Size In Bytes: 0x8
+             * std::int32_t m_ls.sUnlockedSound; // Offset: 0x820, Size: 0x1, Size In Bytes: 0x8
              * void CBaseButtonButtonTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * void CBaseButtonButtonSpark; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * void CBaseButtonTriggerAndWait; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0

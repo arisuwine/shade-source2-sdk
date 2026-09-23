@@ -44,7 +44,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2bc8
+             * Size: 0x2bd8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -123,58 +123,58 @@ namespace shade {
                 std::uint8_t pad_05f0[0x1248]; // 0x05f0, 0x1248 bytes
                 shade::sdk::server::CountdownTimer m_CheckIdleTimer; // 0x1838, 0x18 bytes
                 shade::sdk::server::CountdownTimer m_CheckCheatersTimer; // 0x1850, 0x18 bytes
-                std::uint8_t pad_1868[0x150]; // 0x1868, 0x150 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleStart; // 0x19b8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleEndTime; // 0x19bc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleRampInEndTime; // 0x19c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleRampOutStartTime; // 0x19c4, 0x4 bytes
-                float m_flTimeScaleRampInTime; // 0x19c8, 0x4 bytes
-                float m_flTimeScaleDuration; // 0x19cc, 0x4 bytes
-                float m_flTimeScaleRampOutTime; // 0x19d0, 0x4 bytes
-                float m_flTimeScale; // 0x19d4, 0x4 bytes
-                float m_flOriginalTimeScale; // 0x19d8, 0x4 bytes
-                bool m_bTimeScaleActive; // 0x19dc, 0x1 bytes
-                std::uint8_t pad_19dd[0x3]; // 0x19dd, 0x3 bytes
-                std::int32_t m_iMidbossKillCount; // 0x19e0, 0x4 bytes
-                std::int32_t m_iAmberRejuvCount; // 0x19e4, 0x4 bytes
-                std::int32_t m_iSapphireRejuvCount; // 0x19e8, 0x4 bytes
-                float m_tNextMidBossSpawnTime; // 0x19ec, 0x4 bytes
-                std::uint8_t pad_19f0[0xfc0]; // 0x19f0, 0xfc0 bytes
-                bool m_bServerPaused; // 0x29b0, 0x1 bytes
-                std::uint8_t pad_29b1[0x3]; // 0x29b1, 0x3 bytes
-                std::int32_t m_iPauseTeam; // 0x29b4, 0x4 bytes
-                std::int32_t m_nMatchClockUpdateTick; // 0x29b8, 0x4 bytes
-                float m_flMatchClockAtLastUpdate; // 0x29bc, 0x4 bytes
-                double m_flPauseTime; // 0x29c0, 0x8 bytes
-                CPlayerSlot m_pausingPlayerId; // 0x29c8, 0x4 bytes
-                CPlayerSlot m_unpausingPlayerId; // 0x29cc, 0x4 bytes
-                float m_fPauseRawTime; // 0x29d0, 0x4 bytes
-                float m_fPauseCurTime; // 0x29d4, 0x4 bytes
-                float m_fUnpauseRawTime; // 0x29d8, 0x4 bytes
-                float m_fUnpauseCurTime; // 0x29dc, 0x4 bytes
-                std::uint8_t pad_29e0[0x50]; // 0x29e0, 0x50 bytes
-                std::int32_t m_nLastPreGameCount; // 0x2a30, 0x4 bytes
-                std::int32_t m_eGGTeam; // 0x2a34, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x2a38, 0x4 bytes
-                std::uint8_t pad_2a3c[0x4]; // 0x2a3c, 0x4 bytes
-                shade::sdk::client::MatchID_t m_unMatchID; // 0x2a40, 0x8 bytes
-                CUtlString m_sGameplayExperiment; // 0x2a48, 0x8 bytes
-                std::uint32_t m_ExperimentTokenHashCode; // 0x2a50, 0x4 bytes
-                std::int32_t m_nPlayerDeathEventID; // 0x2a54, 0x4 bytes
-                std::int32_t m_nReplayChangedEvent; // 0x2a58, 0x4 bytes
-                std::int32_t m_nGameOverEvent; // 0x2a5c, 0x4 bytes
-                std::uint8_t pad_2a60[0x20]; // 0x2a60, 0x20 bytes
-                shade::sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x2a80, 0x4 bytes
-                std::uint8_t pad_2a84[0x4]; // 0x2a84, 0x4 bytes
-                shade::sdk::server::CCitadelPlayOfTheGame *m_pPlayOfTheGame; // 0x2a88, 0x8 bytes
-                shade::sdk::server::CStreetBrawlController m_tStreetBrawl; // 0x2a90, 0x130 bytes
-                std::uint8_t pad_2bc0[0x8]; // 0x2bc0, 0x8 bytes
+                std::uint8_t pad_1868[0x160]; // 0x1868, 0x160 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleStart; // 0x19c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleEndTime; // 0x19cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleRampInEndTime; // 0x19d0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleRampOutStartTime; // 0x19d4, 0x4 bytes
+                float m_flTimeScaleRampInTime; // 0x19d8, 0x4 bytes
+                float m_flTimeScaleDuration; // 0x19dc, 0x4 bytes
+                float m_flTimeScaleRampOutTime; // 0x19e0, 0x4 bytes
+                float m_flTimeScale; // 0x19e4, 0x4 bytes
+                float m_flOriginalTimeScale; // 0x19e8, 0x4 bytes
+                bool m_bTimeScaleActive; // 0x19ec, 0x1 bytes
+                std::uint8_t pad_19ed[0x3]; // 0x19ed, 0x3 bytes
+                std::int32_t m_iMidbossKillCount; // 0x19f0, 0x4 bytes
+                std::int32_t m_iAmberRejuvCount; // 0x19f4, 0x4 bytes
+                std::int32_t m_iSapphireRejuvCount; // 0x19f8, 0x4 bytes
+                float m_tNextMidBossSpawnTime; // 0x19fc, 0x4 bytes
+                std::uint8_t pad_1a00[0xfc0]; // 0x1a00, 0xfc0 bytes
+                bool m_bServerPaused; // 0x29c0, 0x1 bytes
+                std::uint8_t pad_29c1[0x3]; // 0x29c1, 0x3 bytes
+                std::int32_t m_iPauseTeam; // 0x29c4, 0x4 bytes
+                std::int32_t m_nMatchClockUpdateTick; // 0x29c8, 0x4 bytes
+                float m_flMatchClockAtLastUpdate; // 0x29cc, 0x4 bytes
+                double m_flPauseTime; // 0x29d0, 0x8 bytes
+                CPlayerSlot m_pausingPlayerId; // 0x29d8, 0x4 bytes
+                CPlayerSlot m_unpausingPlayerId; // 0x29dc, 0x4 bytes
+                float m_fPauseRawTime; // 0x29e0, 0x4 bytes
+                float m_fPauseCurTime; // 0x29e4, 0x4 bytes
+                float m_fUnpauseRawTime; // 0x29e8, 0x4 bytes
+                float m_fUnpauseCurTime; // 0x29ec, 0x4 bytes
+                std::uint8_t pad_29f0[0x50]; // 0x29f0, 0x50 bytes
+                std::int32_t m_nLastPreGameCount; // 0x2a40, 0x4 bytes
+                std::int32_t m_eGGTeam; // 0x2a44, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x2a48, 0x4 bytes
+                std::uint8_t pad_2a4c[0x4]; // 0x2a4c, 0x4 bytes
+                shade::sdk::client::MatchID_t m_unMatchID; // 0x2a50, 0x8 bytes
+                CUtlString m_sGameplayExperiment; // 0x2a58, 0x8 bytes
+                std::uint32_t m_ExperimentTokenHashCode; // 0x2a60, 0x4 bytes
+                std::int32_t m_nPlayerDeathEventID; // 0x2a64, 0x4 bytes
+                std::int32_t m_nReplayChangedEvent; // 0x2a68, 0x4 bytes
+                std::int32_t m_nGameOverEvent; // 0x2a6c, 0x4 bytes
+                std::uint8_t pad_2a70[0x20]; // 0x2a70, 0x20 bytes
+                shade::sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x2a90, 0x4 bytes
+                std::uint8_t pad_2a94[0x4]; // 0x2a94, 0x4 bytes
+                shade::sdk::server::CCitadelPlayOfTheGame *m_pPlayOfTheGame; // 0x2a98, 0x8 bytes
+                shade::sdk::server::CStreetBrawlController m_tStreetBrawl; // 0x2aa0, 0x130 bytes
+                std::uint8_t pad_2bd0[0x8]; // 0x2bd0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelGameRules) == 0x2BC8, "CCitadelGameRules size mismatch");
+            static_assert(sizeof(CCitadelGameRules) == 0x2BD8, "CCitadelGameRules size mismatch");
         }
     }
 }

@@ -50,15 +50,16 @@ namespace shade {
                 CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0030, 0x4 bytes
                 std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
                 CUtlVector<shade::sdk::server::CBaseModifier*> m_vecModifiers; // 0x0038, 0x18 bytes
-                std::uint8_t pad_0050[0x176]; // 0x0050, 0x176 bytes
-                bool m_bModifierStatesDirty; // 0x01c6, 0x1 bytes
-                bool m_bPredictedOwner; // 0x01c7, 0x1 bytes
-                bool m_bAllowModifiersOnDeadEntities; // 0x01c8, 0x1 bytes
-                std::int8_t m_iLockRefCount; // 0x01c9, 0x1 bytes
-                shade::sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x01ca, 0x2 bytes
-                std::uint32_t m_nBroadcastEventListenerMask; // 0x01cc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nCachedHighestParticleIndex; // 0x01d0, 0x4 bytes
-                std::uint8_t pad_01d4[0x4]; // 0x01d4, 0x4 bytes
+                std::uint8_t pad_0050[0x177]; // 0x0050, 0x177 bytes
+                bool m_bModifierStatesDirty; // 0x01c7, 0x1 bytes
+                bool m_bPredictedOwner; // 0x01c8, 0x1 bytes
+                bool m_bAllowModifiersOnDeadEntities; // 0x01c9, 0x1 bytes
+                std::int8_t m_iLockRefCount; // 0x01ca, 0x1 bytes
+                std::uint8_t pad_01cb[0x1]; // 0x01cb, 0x1 bytes
+                shade::sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x01cc, 0x2 bytes
+                std::uint8_t pad_01ce[0x2]; // 0x01ce, 0x2 bytes
+                std::uint32_t m_nBroadcastEventListenerMask; // 0x01d0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nCachedHighestParticleIndex; // 0x01d4, 0x4 bytes
                 CUtlVector<shade::sdk::client::OwnerModifierEventListener_t> *m_pNotifyOwnerEvents; // 0x01d8, 0x8 bytes
                 std::uint32_t m_nDisabledGroups; // 0x01e0, 0x4 bytes
                 std::uint32_t m_bvEnabledStateMask[0xa]; // 0x01e4, 0x28 bytes

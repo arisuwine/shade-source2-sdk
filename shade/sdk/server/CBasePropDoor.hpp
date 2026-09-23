@@ -93,8 +93,8 @@ namespace shade {
 
             /* Data Map Fields
              * void m_hSoundMoving; // Offset: 0xd64, Size: 0x1, Size In Bytes: 0x0
-             * std::uint8_t m_ls.sLockedSound[0x8]; // Offset: 0xd38, Size: 0x1, Size In Bytes: 0x8
-             * std::uint8_t m_ls.sUnlockedSound[0x8]; // Offset: 0xd40, Size: 0x1, Size In Bytes: 0x8
+             * std::int32_t m_ls.sLockedSound; // Offset: 0xd38, Size: 0x1, Size In Bytes: 0x8
+             * std::int32_t m_ls.sUnlockedSound; // Offset: 0xd40, Size: 0x1, Size In Bytes: 0x8
              * void InputOpen; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * CUtlSymbolLarge InputOpenAwayFrom; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * float InputOpenAwayFromActivator; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
