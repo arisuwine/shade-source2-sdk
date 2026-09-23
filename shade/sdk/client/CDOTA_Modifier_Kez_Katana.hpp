@@ -33,7 +33,7 @@ namespace shade {
                 std::int32_t katana_attack_range; // 0x1a78, 0x4 bytes
                 float katana_base_attack_time; // 0x1a7c, 0x4 bytes
                 std::int32_t katana_agility_bonus_base_damage; // 0x1a80, 0x4 bytes
-                std::int32_t katana_bleed_attack_damage_pct; // 0x1a84, 0x4 bytes
+                float katana_bleed_attack_damage_pct; // 0x1a84, 0x4 bytes
                 std::int32_t katana_base_ms; // 0x1a88, 0x4 bytes
                 float katana_bleed_duration; // 0x1a8c, 0x4 bytes
                 std::int32_t katana_swap_bonus_damage; // 0x1a90, 0x4 bytes
