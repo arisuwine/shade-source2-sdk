@@ -62,12 +62,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetTargetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFriction; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPhysMotor) == 0x510, "CPhysMotor size mismatch");
         }

@@ -25,7 +25,8 @@ namespace shade {
                 eEventsDispatched = 0x10,
                 eLoopToStart = 0x20,
                 eLoopToEnd = 0x40,
-                eTransitionComplete = 0x80
+                eTransitionComplete = 0x80,
+                eStoppedDuringTransition = 0x100
             };
         }
     }

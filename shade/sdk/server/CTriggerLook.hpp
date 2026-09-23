@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x968
+             * Size: 0xa48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,28 +40,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerLook : public shade::sdk::server::CTriggerOnce {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hLookTarget; // 0x0900, 0x4 bytes
-                float m_flFieldOfView; // 0x0904, 0x4 bytes
-                float m_flLookTime; // 0x0908, 0x4 bytes
-                float m_flLookTimeTotal; // 0x090c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLookTimeLast; // 0x0910, 0x4 bytes
-                float m_flTimeoutDuration; // 0x0914, 0x4 bytes
-                bool m_bTimeoutFired; // 0x0918, 0x1 bytes
-                bool m_bIsLooking; // 0x0919, 0x1 bytes
-                bool m_b2DFOV; // 0x091a, 0x1 bytes
-                bool m_bUseVelocity; // 0x091b, 0x1 bytes
-                bool m_bTestOcclusion; // 0x091c, 0x1 bytes
-                bool m_bTestAllVisibleOcclusion; // 0x091d, 0x1 bytes
-                std::uint8_t pad_091e[0x2]; // 0x091e, 0x2 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTimeout; // 0x0920, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartLook; // 0x0938, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEndLook; // 0x0950, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLookTarget; // 0x09e0, 0x4 bytes
+                float m_flFieldOfView; // 0x09e4, 0x4 bytes
+                float m_flLookTime; // 0x09e8, 0x4 bytes
+                float m_flLookTimeTotal; // 0x09ec, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLookTimeLast; // 0x09f0, 0x4 bytes
+                float m_flTimeoutDuration; // 0x09f4, 0x4 bytes
+                bool m_bTimeoutFired; // 0x09f8, 0x1 bytes
+                bool m_bIsLooking; // 0x09f9, 0x1 bytes
+                bool m_b2DFOV; // 0x09fa, 0x1 bytes
+                bool m_bUseVelocity; // 0x09fb, 0x1 bytes
+                bool m_bTestOcclusion; // 0x09fc, 0x1 bytes
+                bool m_bTestAllVisibleOcclusion; // 0x09fd, 0x1 bytes
+                std::uint8_t pad_09fe[0x2]; // 0x09fe, 0x2 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTimeout; // 0x0a00, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartLook; // 0x0a18, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEndLook; // 0x0a30, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerLook) == 0x968, "CTriggerLook size mismatch");
+            static_assert(sizeof(CTriggerLook) == 0xA48, "CTriggerLook size mismatch");
         }
     }
 }

@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x648
+             * Size: 0x668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_DistanceToNeighborCull : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flDistance; // 0x01e0, 0x170 bytes
-                bool m_bIncludeRadii; // 0x0350, 0x1 bytes
-                std::uint8_t pad_0351[0x7]; // 0x0351, 0x7 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLifespanOverlap; // 0x0358, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldModify; // 0x04c8, 0x4 bytes
-                std::uint8_t pad_04cc[0x4]; // 0x04cc, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flModify; // 0x04d0, 0x170 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0640, 0x4 bytes
-                bool m_bUseNeighbor; // 0x0644, 0x1 bytes
-                std::uint8_t pad_0645[0x3]; // 0x0645, 0x3 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flDistance; // 0x01e8, 0x178 bytes
+                bool m_bIncludeRadii; // 0x0360, 0x1 bytes
+                std::uint8_t pad_0361[0x7]; // 0x0361, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLifespanOverlap; // 0x0368, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldModify; // 0x04e0, 0x4 bytes
+                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flModify; // 0x04e8, 0x178 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0660, 0x4 bytes
+                bool m_bUseNeighbor; // 0x0664, 0x1 bytes
+                std::uint8_t pad_0665[0x3]; // 0x0665, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_DistanceToNeighborCull) == 0x648, "C_INIT_DistanceToNeighborCull size mismatch");
+            static_assert(sizeof(C_INIT_DistanceToNeighborCull) == 0x668, "C_INIT_DistanceToNeighborCull size mismatch");
         }
     }
 }

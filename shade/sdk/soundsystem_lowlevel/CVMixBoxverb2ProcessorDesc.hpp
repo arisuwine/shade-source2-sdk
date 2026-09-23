@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x70
+             * Size: 0x78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixBoxverb2ProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
-                shade::sdk::soundsystem_lowlevel::VMixBoxverbDesc_t m_desc; // 0x0020, 0x50 bytes
+                shade::sdk::soundsystem_lowlevel::VMixBoxverbDesc_t m_desc; // 0x0028, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixBoxverb2ProcessorDesc) == 0x70, "CVMixBoxverb2ProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixBoxverb2ProcessorDesc) == 0x78, "CVMixBoxverb2ProcessorDesc size mismatch");
         }
     }
 }

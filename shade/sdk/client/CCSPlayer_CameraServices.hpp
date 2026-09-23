@@ -20,8 +20,16 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            class C_PointDeathcamBounds;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace client {
             /* Class Parameters
-             * Size: 0x340
+             * Size: 0x350
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +37,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSPlayer_CameraServices : public shade::sdk::client::CCSPlayerBase_CameraServices {
             public:
-                float m_flDeathCamTilt; // 0x02a8, 0x4 bytes
-                std::uint8_t pad_02ac[0x4]; // 0x02ac, 0x4 bytes
-                Vector m_vClientScopeInaccuracy; // 0x02b0, 0xc bytes
-                std::uint8_t pad_02bc[0x84]; // 0x02bc, 0x84 bytes
+                float m_flDeathCamTilt; // 0x02b0, 0x4 bytes
+                CHandle<shade::sdk::client::C_PointDeathcamBounds> m_hDeathCamBounds; // 0x02b4, 0x4 bytes
+                bool m_bDeathCamBoundsSearched; // 0x02b8, 0x1 bytes
+                std::uint8_t pad_02b9[0x7]; // 0x02b9, 0x7 bytes
+                Vector m_vClientScopeInaccuracy; // 0x02c0, 0xc bytes
+                std::uint8_t pad_02cc[0x84]; // 0x02cc, 0x84 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSPlayer_CameraServices) == 0x340, "CCSPlayer_CameraServices size mismatch");
+            static_assert(sizeof(CCSPlayer_CameraServices) == 0x350, "CCSPlayer_CameraServices size mismatch");
         }
     }
 }

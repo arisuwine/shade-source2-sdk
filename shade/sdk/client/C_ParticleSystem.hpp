@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1580
+             * Size: 0x1668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,38 +43,38 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ParticleSystem : public shade::sdk::client::C_BaseModelEntity {
             public:
-                char m_szSnapshotFileName[0x200]; // 0x0fb0, 0x200 bytes
-                bool m_bActive; // 0x11b0, 0x1 bytes
-                bool m_bFrozen; // 0x11b1, 0x1 bytes
-                std::uint8_t pad_11b2[0x2]; // 0x11b2, 0x2 bytes
-                float m_flFreezeTransitionDuration; // 0x11b4, 0x4 bytes
-                std::int32_t m_nStopType; // 0x11b8, 0x4 bytes
-                bool m_bAnimateDuringGameplayPause; // 0x11bc, 0x1 bytes
-                std::uint8_t pad_11bd[0x3]; // 0x11bd, 0x3 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x11c0, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x11c8, 0x4 bytes
-                float m_flPreSimTime; // 0x11cc, 0x4 bytes
-                Vector m_vServerControlPoints[0x4]; // 0x11d0, 0x30 bytes
-                std::uint8_t m_iServerControlPointAssignments[0x4]; // 0x1200, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hControlPointEnts[0x40]; // 0x1204, 0x100 bytes
-                bool m_bDataStringLocalized; // 0x1304, 0x1 bytes
-                std::uint8_t pad_1305[0x3]; // 0x1305, 0x3 bytes
-                CUtlString m_strDataString; // 0x1308, 0x8 bytes
-                bool m_bNoSave; // 0x1310, 0x1 bytes
-                bool m_bNoFreeze; // 0x1311, 0x1 bytes
-                bool m_bNoRamp; // 0x1312, 0x1 bytes
-                bool m_bStartActive; // 0x1313, 0x1 bytes
-                std::uint8_t pad_1314[0x4]; // 0x1314, 0x4 bytes
-                CUtlSymbolLarge m_iszEffectName; // 0x1318, 0x8 bytes
-                CUtlSymbolLarge m_iszControlPointNames[0x40]; // 0x1320, 0x200 bytes
-                std::int32_t m_nDataCP; // 0x1520, 0x4 bytes
-                Vector m_vecDataCPValue; // 0x1524, 0xc bytes
-                std::int32_t m_nTintCP; // 0x1530, 0x4 bytes
-                Color m_clrTint; // 0x1534, 0x4 bytes
-                std::uint8_t pad_1538[0x20]; // 0x1538, 0x20 bytes
-                bool m_bOldActive; // 0x1558, 0x1 bytes
-                bool m_bOldFrozen; // 0x1559, 0x1 bytes
-                std::uint8_t pad_155a[0x26]; // 0x155a, 0x26 bytes
+                char m_szSnapshotFileName[0x200]; // 0x1098, 0x200 bytes
+                bool m_bActive; // 0x1298, 0x1 bytes
+                bool m_bFrozen; // 0x1299, 0x1 bytes
+                std::uint8_t pad_129a[0x2]; // 0x129a, 0x2 bytes
+                float m_flFreezeTransitionDuration; // 0x129c, 0x4 bytes
+                std::int32_t m_nStopType; // 0x12a0, 0x4 bytes
+                bool m_bAnimateDuringGameplayPause; // 0x12a4, 0x1 bytes
+                std::uint8_t pad_12a5[0x3]; // 0x12a5, 0x3 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x12a8, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x12b0, 0x4 bytes
+                float m_flPreSimTime; // 0x12b4, 0x4 bytes
+                Vector m_vServerControlPoints[0x4]; // 0x12b8, 0x30 bytes
+                std::uint8_t m_iServerControlPointAssignments[0x4]; // 0x12e8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hControlPointEnts[0x40]; // 0x12ec, 0x100 bytes
+                bool m_bDataStringLocalized; // 0x13ec, 0x1 bytes
+                std::uint8_t pad_13ed[0x3]; // 0x13ed, 0x3 bytes
+                CUtlString m_strDataString; // 0x13f0, 0x8 bytes
+                bool m_bNoSave; // 0x13f8, 0x1 bytes
+                bool m_bNoFreeze; // 0x13f9, 0x1 bytes
+                bool m_bNoRamp; // 0x13fa, 0x1 bytes
+                bool m_bStartActive; // 0x13fb, 0x1 bytes
+                std::uint8_t pad_13fc[0x4]; // 0x13fc, 0x4 bytes
+                CUtlSymbolLarge m_iszEffectName; // 0x1400, 0x8 bytes
+                CUtlSymbolLarge m_iszControlPointNames[0x40]; // 0x1408, 0x200 bytes
+                std::int32_t m_nDataCP; // 0x1608, 0x4 bytes
+                Vector m_vecDataCPValue; // 0x160c, 0xc bytes
+                std::int32_t m_nTintCP; // 0x1618, 0x4 bytes
+                Color m_clrTint; // 0x161c, 0x4 bytes
+                std::uint8_t pad_1620[0x20]; // 0x1620, 0x20 bytes
+                bool m_bOldActive; // 0x1640, 0x1 bytes
+                bool m_bOldFrozen; // 0x1641, 0x1 bytes
+                std::uint8_t pad_1642[0x26]; // 0x1642, 0x26 bytes
             };
             #pragma pack(pop)
 
@@ -82,7 +82,7 @@ namespace shade {
              * CUtlString cpoint%d_value; // Offset: 0x7fffffff, Size: 0x40, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_ParticleSystem) == 0x1580, "C_ParticleSystem size mismatch");
+            static_assert(sizeof(C_ParticleSystem) == 0x1668, "C_ParticleSystem size mismatch");
         }
     }
 }

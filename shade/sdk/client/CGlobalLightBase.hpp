@@ -48,11 +48,11 @@ namespace shade {
                 Color m_SpecularColor; // 0x0064, 0x4 bytes
                 bool m_bStartDisabled; // 0x0068, 0x1 bytes
                 bool m_bEnabled; // 0x0069, 0x1 bytes
-                Color m_LightColor; // 0x006a, 0x4 bytes
-                Color m_AmbientColor1; // 0x006e, 0x4 bytes
-                Color m_AmbientColor2; // 0x0072, 0x4 bytes
-                Color m_AmbientColor3; // 0x0076, 0x4 bytes
-                std::uint8_t pad_007a[0x2]; // 0x007a, 0x2 bytes
+                std::uint8_t pad_006a[0x2]; // 0x006a, 0x2 bytes
+                Color m_LightColor; // 0x006c, 0x4 bytes
+                Color m_AmbientColor1; // 0x0070, 0x4 bytes
+                Color m_AmbientColor2; // 0x0074, 0x4 bytes
+                Color m_AmbientColor3; // 0x0078, 0x4 bytes
                 float m_flSunDistance; // 0x007c, 0x4 bytes
                 float m_flFOV; // 0x0080, 0x4 bytes
                 float m_flNearZ; // 0x0084, 0x4 bytes

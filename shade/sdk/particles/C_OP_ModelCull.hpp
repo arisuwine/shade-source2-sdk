@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x260
+             * Size: 0x268
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ModelCull : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01d8, 0x4 bytes
-                bool m_bBoundBox; // 0x01dc, 0x1 bytes
-                bool m_bCullOutside; // 0x01dd, 0x1 bytes
-                bool m_bUseBones; // 0x01de, 0x1 bytes
-                char m_HitboxSetName[0x80]; // 0x01df, 0x80 bytes
-                std::uint8_t pad_025f[0x1]; // 0x025f, 0x1 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
+                bool m_bBoundBox; // 0x01e4, 0x1 bytes
+                bool m_bCullOutside; // 0x01e5, 0x1 bytes
+                bool m_bUseBones; // 0x01e6, 0x1 bytes
+                char m_HitboxSetName[0x80]; // 0x01e7, 0x80 bytes
+                std::uint8_t pad_0267[0x1]; // 0x0267, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ModelCull) == 0x260, "C_OP_ModelCull size mismatch");
+            static_assert(sizeof(C_OP_ModelCull) == 0x268, "C_OP_ModelCull size mismatch");
         }
     }
 }

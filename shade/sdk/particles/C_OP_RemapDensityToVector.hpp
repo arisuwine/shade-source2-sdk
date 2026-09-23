@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapDensityToVector : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flRadiusScale; // 0x01d8, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01dc, 0x4 bytes
-                float m_flDensityMin; // 0x01e0, 0x4 bytes
-                float m_flDensityMax; // 0x01e4, 0x4 bytes
-                Vector m_vecOutputMin; // 0x01e8, 0xc bytes
-                Vector m_vecOutputMax; // 0x01f4, 0xc bytes
-                bool m_bUseParentDensity; // 0x0200, 0x1 bytes
-                std::uint8_t pad_0201[0x3]; // 0x0201, 0x3 bytes
-                std::int32_t m_nVoxelGridResolution; // 0x0204, 0x4 bytes
+                float m_flRadiusScale; // 0x01e0, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e4, 0x4 bytes
+                float m_flDensityMin; // 0x01e8, 0x4 bytes
+                float m_flDensityMax; // 0x01ec, 0x4 bytes
+                Vector m_vecOutputMin; // 0x01f0, 0xc bytes
+                Vector m_vecOutputMax; // 0x01fc, 0xc bytes
+                bool m_bUseParentDensity; // 0x0208, 0x1 bytes
+                std::uint8_t pad_0209[0x3]; // 0x0209, 0x3 bytes
+                std::int32_t m_nVoxelGridResolution; // 0x020c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapDensityToVector) == 0x208, "C_OP_RemapDensityToVector size mismatch");
+            static_assert(sizeof(C_OP_RemapDensityToVector) == 0x210, "C_OP_RemapDensityToVector size mismatch");
         }
     }
 }

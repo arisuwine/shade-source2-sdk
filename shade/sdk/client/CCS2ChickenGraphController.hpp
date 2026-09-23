@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x140
+             * Size: 0x1f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,22 +29,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCS2ChickenGraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_action; // 0x0088, 0x18 bytes
-                CAnimGraph2ParamAutoResetOptionalRef m_bActionReset; // 0x00a0, 0x20 bytes
-                CAnimGraph2ParamOptionalRef<float> m_idleVariation; // 0x00c0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_runVariation; // 0x00d8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_panicVariation; // 0x00f0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_squatVariation; // 0x0108, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bInWater; // 0x0120, 0x18 bytes
-                bool m_bHasActionCompletedEvent; // 0x0138, 0x1 bytes
-                bool m_bWaitingForCompletedEvent; // 0x0139, 0x1 bytes
-                std::uint8_t pad_013a[0x6]; // 0x013a, 0x6 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_action; // 0x00c0, 0x18 bytes
+                CAnimGraph2ParamAutoResetOptionalRef m_bActionReset; // 0x00d8, 0x20 bytes
+                CAnimGraph2ParamOptionalRef<float> m_actionVariation; // 0x00f8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bInWater; // 0x0110, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_mode; // 0x0128, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_lifeStage; // 0x0140, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_idlePhase; // 0x0158, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_turnAngle; // 0x0170, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bHasLookatTarget; // 0x0188, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<Vector> m_lookatTarget; // 0x01a0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bFlinch; // 0x01b8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flinchVariation; // 0x01d0, 0x18 bytes
+                bool m_bHasActionCompletedEvent; // 0x01e8, 0x1 bytes
+                std::uint8_t pad_01e9[0x7]; // 0x01e9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCS2ChickenGraphController) == 0x140, "CCS2ChickenGraphController size mismatch");
+            static_assert(sizeof(CCS2ChickenGraphController) == 0x1F0, "CCS2ChickenGraphController size mismatch");
         }
     }
 }

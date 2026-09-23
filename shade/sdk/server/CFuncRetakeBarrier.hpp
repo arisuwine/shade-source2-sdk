@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xbc0
+             * Size: 0xcb0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncRetakeBarrier : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint8_t pad_0ba0[0x20]; // 0x0ba0, 0x20 bytes
+                std::uint8_t pad_0c90[0x20]; // 0x0c90, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncRetakeBarrier) == 0xBC0, "CFuncRetakeBarrier size mismatch");
+            static_assert(sizeof(CFuncRetakeBarrier) == 0xCB0, "CFuncRetakeBarrier size mismatch");
         }
     }
 }

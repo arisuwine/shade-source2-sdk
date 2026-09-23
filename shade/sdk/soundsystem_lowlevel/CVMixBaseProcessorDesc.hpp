@@ -15,11 +15,13 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/soundsystem_lowlevel/CVMixParameterFloat.hpp"
+
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x28
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -30,16 +32,19 @@ namespace shade {
             public:
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 CUtlString m_name; // 0x0008, 0x8 bytes
-                std::uint8_t pad_0010[0x4]; // 0x0010, 0x4 bytes
-                std::int32_t m_nChannels; // 0x0014, 0x4 bytes
-                float m_flxfade; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                std::uint32_t m_nDebugId; // 0x0010, 0x4 bytes
+                float m_flxfade; // 0x0014, 0x4 bytes
+                std::int32_t m_nChannels; // 0x0018, 0x4 bytes
+                bool m_bDebugBypass; // 0x001c, 0x1 bytes
+                std::uint8_t pad_001d[0x3]; // 0x001d, 0x3 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramEnable; // 0x0020, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramMix; // 0x0024, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixBaseProcessorDesc) == 0x20, "CVMixBaseProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixBaseProcessorDesc) == 0x28, "CVMixBaseProcessorDesc size mismatch");
         }
     }
 }

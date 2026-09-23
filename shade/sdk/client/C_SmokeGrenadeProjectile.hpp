@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1418
+             * Size: 0x1500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,28 +30,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_SmokeGrenadeProjectile : public shade::sdk::client::C_BaseCSGrenadeProjectile {
             public:
-                std::uint8_t pad_1260[0x18]; // 0x1260, 0x18 bytes
-                std::int32_t m_nSmokeEffectTickBegin; // 0x1278, 0x4 bytes
-                bool m_bDidSmokeEffect; // 0x127c, 0x1 bytes
-                std::uint8_t pad_127d[0x3]; // 0x127d, 0x3 bytes
-                std::int32_t m_nRandomSeed; // 0x1280, 0x4 bytes
-                Vector m_vSmokeColor; // 0x1284, 0xc bytes
-                VectorWS m_vSmokeDetonationPos; // 0x1290, 0xc bytes
-                std::uint8_t pad_129c[0x4]; // 0x129c, 0x4 bytes
-                C_NetworkUtlVectorBase<std::uint8_t> m_VoxelFrameData; // 0x12a0, 0x18 bytes
-                std::int32_t m_nVoxelFrameDataSize; // 0x12b8, 0x4 bytes
-                std::int32_t m_nVoxelUpdate; // 0x12bc, 0x4 bytes
-                bool m_bSmokeVolumeDataReceived; // 0x12c0, 0x1 bytes
-                bool m_bSmokeEffectSpawned; // 0x12c1, 0x1 bytes
-                std::uint8_t pad_12c2[0x156]; // 0x12c2, 0x156 bytes
+                std::uint8_t pad_1348[0x18]; // 0x1348, 0x18 bytes
+                std::int32_t m_nSmokeEffectTickBegin; // 0x1360, 0x4 bytes
+                bool m_bDidSmokeEffect; // 0x1364, 0x1 bytes
+                std::uint8_t pad_1365[0x3]; // 0x1365, 0x3 bytes
+                std::int32_t m_nRandomSeed; // 0x1368, 0x4 bytes
+                Vector m_vSmokeColor; // 0x136c, 0xc bytes
+                VectorWS m_vSmokeDetonationPos; // 0x1378, 0xc bytes
+                std::uint8_t pad_1384[0x4]; // 0x1384, 0x4 bytes
+                C_NetworkUtlVectorBase<std::uint8_t> m_VoxelFrameData; // 0x1388, 0x18 bytes
+                std::int32_t m_nVoxelFrameDataSize; // 0x13a0, 0x4 bytes
+                std::int32_t m_nVoxelUpdate; // 0x13a4, 0x4 bytes
+                bool m_bSmokeVolumeDataReceived; // 0x13a8, 0x1 bytes
+                bool m_bSmokeEffectSpawned; // 0x13a9, 0x1 bytes
+                std::uint8_t pad_13aa[0x156]; // 0x13aa, 0x156 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_SmokeGrenadeProjectile) == 0x1418, "C_SmokeGrenadeProjectile size mismatch");
+            static_assert(sizeof(C_SmokeGrenadeProjectile) == 0x1500, "C_SmokeGrenadeProjectile size mismatch");
         }
     }
 }

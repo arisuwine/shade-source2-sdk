@@ -50,9 +50,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputTargetEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CTankTrainAI) == 0x4E8, "CTankTrainAI size mismatch");
         }

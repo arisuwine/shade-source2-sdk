@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f0
+             * Size: 0x9d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,51 +41,43 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseButton : public shade::sdk::server::CBaseToggle {
             public:
-                QAngle m_angMoveEntitySpace; // 0x07f0, 0xc bytes
-                bool m_fStayPushed; // 0x07fc, 0x1 bytes
-                bool m_fRotating; // 0x07fd, 0x1 bytes
-                std::uint8_t pad_07fe[0x2]; // 0x07fe, 0x2 bytes
-                shade::sdk::server::locksound_t m_ls; // 0x0800, 0x20 bytes
-                CGameSoundEventName m_sUseSound; // 0x0820, 0x8 bytes
-                CGameSoundEventName m_sLockedSound; // 0x0828, 0x8 bytes
-                CGameSoundEventName m_sUnlockedSound; // 0x0830, 0x8 bytes
-                CUtlSymbolLarge m_sOverrideAnticipationName; // 0x0838, 0x8 bytes
-                bool m_bLocked; // 0x0840, 0x1 bytes
-                bool m_bDisabled; // 0x0841, 0x1 bytes
-                std::uint8_t pad_0842[0x2]; // 0x0842, 0x2 bytes
-                float m_flSpeed; // 0x0844, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flUseLockedTime; // 0x0848, 0x4 bytes
-                bool m_bSolidBsp; // 0x084c, 0x1 bytes
-                std::uint8_t pad_084d[0x3]; // 0x084d, 0x3 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0850, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPressed; // 0x0868, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUseLocked; // 0x0880, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnIn; // 0x0898, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOut; // 0x08b0, 0x18 bytes
-                std::int32_t m_nState; // 0x08c8, 0x4 bytes
-                CEntityHandle m_hConstraint; // 0x08cc, 0x4 bytes
-                CEntityHandle m_hConstraintParent; // 0x08d0, 0x4 bytes
-                bool m_bForceNpcExclude; // 0x08d4, 0x1 bytes
-                std::uint8_t pad_08d5[0x3]; // 0x08d5, 0x3 bytes
-                CUtlSymbolLarge m_sGlowEntity; // 0x08d8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseModelEntity> m_glowEntity; // 0x08e0, 0x4 bytes
-                bool m_usable; // 0x08e4, 0x1 bytes
-                std::uint8_t pad_08e5[0x3]; // 0x08e5, 0x3 bytes
-                CUtlSymbolLarge m_szDisplayText; // 0x08e8, 0x8 bytes
+                QAngle m_angMoveEntitySpace; // 0x08d0, 0xc bytes
+                bool m_fStayPushed; // 0x08dc, 0x1 bytes
+                bool m_fRotating; // 0x08dd, 0x1 bytes
+                std::uint8_t pad_08de[0x2]; // 0x08de, 0x2 bytes
+                shade::sdk::server::locksound_t m_ls; // 0x08e0, 0x20 bytes
+                CGameSoundEventName m_sUseSound; // 0x0900, 0x8 bytes
+                CGameSoundEventName m_sLockedSound; // 0x0908, 0x8 bytes
+                CGameSoundEventName m_sUnlockedSound; // 0x0910, 0x8 bytes
+                CUtlSymbolLarge m_sOverrideAnticipationName; // 0x0918, 0x8 bytes
+                bool m_bLocked; // 0x0920, 0x1 bytes
+                bool m_bDisabled; // 0x0921, 0x1 bytes
+                std::uint8_t pad_0922[0x2]; // 0x0922, 0x2 bytes
+                float m_flSpeed; // 0x0924, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flUseLockedTime; // 0x0928, 0x4 bytes
+                bool m_bSolidBsp; // 0x092c, 0x1 bytes
+                std::uint8_t pad_092d[0x3]; // 0x092d, 0x3 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0930, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPressed; // 0x0948, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUseLocked; // 0x0960, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnIn; // 0x0978, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOut; // 0x0990, 0x18 bytes
+                std::int32_t m_nState; // 0x09a8, 0x4 bytes
+                CEntityHandle m_hConstraint; // 0x09ac, 0x4 bytes
+                CEntityHandle m_hConstraintParent; // 0x09b0, 0x4 bytes
+                bool m_bForceNpcExclude; // 0x09b4, 0x1 bytes
+                std::uint8_t pad_09b5[0x3]; // 0x09b5, 0x3 bytes
+                CUtlSymbolLarge m_sGlowEntity; // 0x09b8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseModelEntity> m_glowEntity; // 0x09c0, 0x4 bytes
+                bool m_usable; // 0x09c4, 0x1 bytes
+                std::uint8_t pad_09c5[0x3]; // 0x09c5, 0x3 bytes
+                CUtlSymbolLarge m_szDisplayText; // 0x09c8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputLock; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUnlock; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPress; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPressIn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPressOut; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseButton) == 0x8F0, "CBaseButton size mismatch");
+            static_assert(sizeof(CBaseButton) == 0x9D0, "CBaseButton size mismatch");
         }
     }
 }

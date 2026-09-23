@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x31
+             * Size: 0x1c
              * Alignment: 0xff
              * Has Trivial Destructor
              */
@@ -30,16 +30,12 @@ namespace shade {
                 char *followup_contexts; // 0x0008, 0x8 bytes
                 float followup_delay; // 0x0010, 0x4 bytes
                 char *followup_target; // 0x0014, 0x8 bytes
-                char *followup_entityiotarget; // 0x001c, 0x8 bytes
-                char *followup_entityioinput; // 0x0024, 0x8 bytes
-                float followup_entityiodelay; // 0x002c, 0x4 bytes
-                bool bFired; // 0x0030, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ResponseFollowup) == 0x31, "ResponseFollowup size mismatch");
+            static_assert(sizeof(ResponseFollowup) == 0x1C, "ResponseFollowup size mismatch");
         }
     }
 }

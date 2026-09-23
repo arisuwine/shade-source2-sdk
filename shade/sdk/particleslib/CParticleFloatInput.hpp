@@ -15,11 +15,11 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleInput.hpp"
 #include "shade/sdk/particleslib/PFNoiseModifier_t.hpp"
 #include "shade/sdk/particleslib/PFNoiseTurbulence_t.hpp"
 #include "shade/sdk/particleslib/PFNoiseType_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleFloatBiasType_t.hpp"
 #include "shade/sdk/particleslib/ParticleFloatInputMode_t.hpp"
 #include "shade/sdk/particleslib/ParticleFloatMapType_t.hpp"
@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace particleslib {
             /* Class Parameters
-             * Size: 0x170
+             * Size: 0x178
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,8 +45,8 @@ namespace shade {
                 std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
                 CParticleNamedValueRef m_NamedValue; // 0x0020, 0x40 bytes
                 std::int32_t m_nControlPoint; // 0x0060, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nScalarAttribute; // 0x0064, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nVectorAttribute; // 0x0068, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nScalarAttribute; // 0x0064, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nVectorAttribute; // 0x0068, 0x4 bytes
                 std::int32_t m_nVectorComponent; // 0x006c, 0x4 bytes
                 bool m_bReverseOrder; // 0x0070, 0x1 bytes
                 std::uint8_t pad_0071[0x3]; // 0x0071, 0x3 bytes
@@ -62,7 +62,7 @@ namespace shade {
                 float m_flLOD1; // 0x009c, 0x4 bytes
                 float m_flLOD2; // 0x00a0, 0x4 bytes
                 float m_flLOD3; // 0x00a4, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x00a8, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x00a8, 0x4 bytes
                 float m_flNoiseOutputMin; // 0x00ac, 0x4 bytes
                 float m_flNoiseOutputMax; // 0x00b0, 0x4 bytes
                 float m_flNoiseScale; // 0x00b4, 0x4 bytes
@@ -95,12 +95,14 @@ namespace shade {
                 float m_flBiasParameter; // 0x0128, 0x4 bytes
                 std::uint8_t pad_012c[0x4]; // 0x012c, 0x4 bytes
                 CPiecewiseCurve m_Curve; // 0x0130, 0x40 bytes
+                float m_flCompareValue; // 0x0170, 0x4 bytes
+                std::uint8_t pad_0174[0x4]; // 0x0174, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleFloatInput) == 0x170, "CParticleFloatInput size mismatch");
+            static_assert(sizeof(CParticleFloatInput) == 0x178, "CParticleFloatInput size mismatch");
         }
     }
 }

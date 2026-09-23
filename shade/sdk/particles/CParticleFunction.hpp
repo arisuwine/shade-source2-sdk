@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x1e0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -33,33 +33,33 @@ namespace shade {
             class CParticleFunction {
             public:
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOpStrength; // 0x0008, 0x170 bytes
-                shade::sdk::particles::ParticleEndcapMode_t m_nOpEndCapState; // 0x0178, 0x4 bytes
-                shade::sdk::particles::ParticleToolsState_t m_nToolsState; // 0x017c, 0x4 bytes
-                float m_flOpStartFadeInTime; // 0x0180, 0x4 bytes
-                float m_flOpEndFadeInTime; // 0x0184, 0x4 bytes
-                float m_flOpStartFadeOutTime; // 0x0188, 0x4 bytes
-                float m_flOpEndFadeOutTime; // 0x018c, 0x4 bytes
-                float m_flOpFadeOscillatePeriod; // 0x0190, 0x4 bytes
-                bool m_bNormalizeToStopTime; // 0x0194, 0x1 bytes
-                std::uint8_t pad_0195[0x3]; // 0x0195, 0x3 bytes
-                float m_flOpTimeOffsetMin; // 0x0198, 0x4 bytes
-                float m_flOpTimeOffsetMax; // 0x019c, 0x4 bytes
-                std::int32_t m_nOpTimeOffsetSeed; // 0x01a0, 0x4 bytes
-                std::int32_t m_nOpTimeScaleSeed; // 0x01a4, 0x4 bytes
-                float m_flOpTimeScaleMin; // 0x01a8, 0x4 bytes
-                float m_flOpTimeScaleMax; // 0x01ac, 0x4 bytes
-                std::uint8_t pad_01b0[0x2]; // 0x01b0, 0x2 bytes
-                bool m_bDisableOperator; // 0x01b2, 0x1 bytes
-                std::uint8_t pad_01b3[0x5]; // 0x01b3, 0x5 bytes
-                CUtlString m_Notes; // 0x01b8, 0x8 bytes
-                std::uint8_t pad_01c0[0x18]; // 0x01c0, 0x18 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOpStrength; // 0x0008, 0x178 bytes
+                shade::sdk::particles::ParticleEndcapMode_t m_nOpEndCapState; // 0x0180, 0x4 bytes
+                shade::sdk::particles::ParticleToolsState_t m_nToolsState; // 0x0184, 0x4 bytes
+                float m_flOpStartFadeInTime; // 0x0188, 0x4 bytes
+                float m_flOpEndFadeInTime; // 0x018c, 0x4 bytes
+                float m_flOpStartFadeOutTime; // 0x0190, 0x4 bytes
+                float m_flOpEndFadeOutTime; // 0x0194, 0x4 bytes
+                float m_flOpFadeOscillatePeriod; // 0x0198, 0x4 bytes
+                bool m_bNormalizeToStopTime; // 0x019c, 0x1 bytes
+                std::uint8_t pad_019d[0x3]; // 0x019d, 0x3 bytes
+                float m_flOpTimeOffsetMin; // 0x01a0, 0x4 bytes
+                float m_flOpTimeOffsetMax; // 0x01a4, 0x4 bytes
+                std::int32_t m_nOpTimeOffsetSeed; // 0x01a8, 0x4 bytes
+                std::int32_t m_nOpTimeScaleSeed; // 0x01ac, 0x4 bytes
+                float m_flOpTimeScaleMin; // 0x01b0, 0x4 bytes
+                float m_flOpTimeScaleMax; // 0x01b4, 0x4 bytes
+                std::uint8_t pad_01b8[0x2]; // 0x01b8, 0x2 bytes
+                bool m_bDisableOperator; // 0x01ba, 0x1 bytes
+                std::uint8_t pad_01bb[0x5]; // 0x01bb, 0x5 bytes
+                CUtlString m_Notes; // 0x01c0, 0x8 bytes
+                std::uint8_t pad_01c8[0x18]; // 0x01c8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleFunction) == 0x1D8, "CParticleFunction size mismatch");
+            static_assert(sizeof(CParticleFunction) == 0x1E0, "CParticleFunction size mismatch");
         }
     }
 }

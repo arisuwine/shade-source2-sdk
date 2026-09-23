@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x10c0
+             * Size: 0x11a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,31 +31,29 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PlayerSprayDecal : public shade::sdk::client::C_ModelPointEntity {
             public:
-                std::int32_t m_nUniqueID; // 0x0fb0, 0x4 bytes
-                std::uint32_t m_unAccountID; // 0x0fb4, 0x4 bytes
-                std::uint32_t m_unTraceID; // 0x0fb8, 0x4 bytes
-                std::uint32_t m_rtGcTime; // 0x0fbc, 0x4 bytes
-                VectorWS m_vecEndPos; // 0x0fc0, 0xc bytes
-                VectorWS m_vecStart; // 0x0fcc, 0xc bytes
-                Vector m_vecLeft; // 0x0fd8, 0xc bytes
-                Vector m_vecNormal; // 0x0fe4, 0xc bytes
-                std::int32_t m_nPlayer; // 0x0ff0, 0x4 bytes
-                std::int32_t m_nEntity; // 0x0ff4, 0x4 bytes
-                std::int32_t m_nHitbox; // 0x0ff8, 0x4 bytes
-                float m_flCreationTime; // 0x0ffc, 0x4 bytes
-                std::int32_t m_nTintID; // 0x1000, 0x4 bytes
-                std::uint8_t m_nVersion; // 0x1004, 0x1 bytes
-                std::uint8_t m_ubSignature[0x80]; // 0x1005, 0x80 bytes
-                std::uint8_t pad_1085[0xb]; // 0x1085, 0xb bytes
-                shade::sdk::client::CPlayerSprayDecalRenderHelper m_SprayRenderHelper; // 0x1090, 0x30 bytes
+                std::int32_t m_nUniqueID; // 0x1098, 0x4 bytes
+                std::uint32_t m_unAccountID; // 0x109c, 0x4 bytes
+                std::uint32_t m_unTraceID; // 0x10a0, 0x4 bytes
+                std::uint32_t m_rtGcTime; // 0x10a4, 0x4 bytes
+                VectorWS m_vecEndPos; // 0x10a8, 0xc bytes
+                VectorWS m_vecStart; // 0x10b4, 0xc bytes
+                Vector m_vecLeft; // 0x10c0, 0xc bytes
+                Vector m_vecNormal; // 0x10cc, 0xc bytes
+                std::int32_t m_nPlayer; // 0x10d8, 0x4 bytes
+                std::int32_t m_nEntity; // 0x10dc, 0x4 bytes
+                std::int32_t m_nHitbox; // 0x10e0, 0x4 bytes
+                float m_flCreationTime; // 0x10e4, 0x4 bytes
+                std::int32_t m_nTintID; // 0x10e8, 0x4 bytes
+                std::uint8_t m_nVersion; // 0x10ec, 0x1 bytes
+                std::uint8_t m_ubSignature[0x80]; // 0x10ed, 0x80 bytes
+                std::uint8_t pad_116d[0xb]; // 0x116d, 0xb bytes
+                shade::sdk::client::CPlayerSprayDecalRenderHelper m_SprayRenderHelper; // 0x1178, 0x30 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_PlayerSprayDecal) == 0x10C0, "C_PlayerSprayDecal size mismatch");
+            static_assert(sizeof(C_PlayerSprayDecal) == 0x11A8, "C_PlayerSprayDecal size mismatch");
         }
     }
 }

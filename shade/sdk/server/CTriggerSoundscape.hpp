@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0x9f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerSoundscape : public shade::sdk::server::CBaseTrigger {
             public:
-                CHandle<shade::sdk::server::CEnvSoundscapeTriggerable> m_hSoundscape; // 0x08e8, 0x4 bytes
-                std::uint8_t pad_08ec[0x4]; // 0x08ec, 0x4 bytes
-                CUtlSymbolLarge m_SoundscapeName; // 0x08f0, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBasePlayerPawn>> m_spectators; // 0x08f8, 0x18 bytes
+                CHandle<shade::sdk::server::CEnvSoundscapeTriggerable> m_hSoundscape; // 0x09c8, 0x4 bytes
+                std::uint8_t pad_09cc[0x4]; // 0x09cc, 0x4 bytes
+                CUtlSymbolLarge m_SoundscapeName; // 0x09d0, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBasePlayerPawn>> m_spectators; // 0x09d8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerSoundscape) == 0x910, "CTriggerSoundscape size mismatch");
+            static_assert(sizeof(CTriggerSoundscape) == 0x9F0, "CTriggerSoundscape size mismatch");
         }
     }
 }

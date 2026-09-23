@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8e8
+             * Size: 0x9c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,7 +37,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPrecipitation) == 0x8E8, "CPrecipitation size mismatch");
+            static_assert(sizeof(CPrecipitation) == 0x9C8, "CPrecipitation size mismatch");
         }
     }
 }

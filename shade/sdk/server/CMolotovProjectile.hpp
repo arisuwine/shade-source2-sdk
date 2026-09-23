@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb60
+             * Size: 0xc40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CMolotovProjectile : public shade::sdk::server::CBaseCSGrenadeProjectile {
             public:
-                bool m_bIsIncGrenade; // 0x0a60, 0x1 bytes
-                std::uint8_t pad_0a61[0x17]; // 0x0a61, 0x17 bytes
-                bool m_bDetonated; // 0x0a78, 0x1 bytes
-                std::uint8_t pad_0a79[0x7]; // 0x0a79, 0x7 bytes
-                shade::sdk::server::IntervalTimer m_stillTimer; // 0x0a80, 0x10 bytes
-                std::uint8_t pad_0a90[0xd0]; // 0x0a90, 0xd0 bytes
+                bool m_bIsIncGrenade; // 0x0b40, 0x1 bytes
+                std::uint8_t pad_0b41[0x17]; // 0x0b41, 0x17 bytes
+                bool m_bDetonated; // 0x0b58, 0x1 bytes
+                std::uint8_t pad_0b59[0x7]; // 0x0b59, 0x7 bytes
+                shade::sdk::server::IntervalTimer m_stillTimer; // 0x0b60, 0x10 bytes
+                std::uint8_t pad_0b70[0xd0]; // 0x0b70, 0xd0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CMolotovProjectile) == 0xB60, "CMolotovProjectile size mismatch");
+            static_assert(sizeof(CMolotovProjectile) == 0xC40, "CMolotovProjectile size mismatch");
         }
     }
 }

@@ -15,26 +15,26 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/soundsystem_lowlevel/VMixFilterDesc_t.hpp"
+#include "shade/sdk/soundsystem_lowlevel/VMixEQFilterDesc_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x80
+             * Size: 0xa0
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct VMixEQ8Desc_t {
-                shade::sdk::soundsystem_lowlevel::VMixFilterDesc_t m_stages[0x8]; // 0x0000, 0x80 bytes
+                shade::sdk::soundsystem_lowlevel::VMixEQFilterDesc_t m_stages[0x8]; // 0x0000, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(VMixEQ8Desc_t) == 0x80, "VMixEQ8Desc_t size mismatch");
+            static_assert(sizeof(VMixEQ8Desc_t) == 0xA0, "VMixEQ8Desc_t size mismatch");
         }
     }
 }

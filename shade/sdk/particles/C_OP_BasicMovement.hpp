@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xe60
+             * Size: 0xea8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_BasicMovement : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_Gravity; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_fDrag; // 0x0890, 0x170 bytes
-                shade::sdk::particles::CParticleMassCalculationParameters m_massControls; // 0x0a00, 0x458 bytes
-                std::int32_t m_nMaxConstraintPasses; // 0x0e58, 0x4 bytes
-                bool m_bUseNewCode; // 0x0e5c, 0x1 bytes
-                std::uint8_t pad_0e5d[0x3]; // 0x0e5d, 0x3 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_Gravity; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_fDrag; // 0x08b8, 0x178 bytes
+                shade::sdk::particles::CParticleMassCalculationParameters m_massControls; // 0x0a30, 0x470 bytes
+                std::int32_t m_nMaxConstraintPasses; // 0x0ea0, 0x4 bytes
+                bool m_bUseNewCode; // 0x0ea4, 0x1 bytes
+                std::uint8_t pad_0ea5[0x3]; // 0x0ea5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_BasicMovement) == 0xE60, "C_OP_BasicMovement size mismatch");
+            static_assert(sizeof(C_OP_BasicMovement) == 0xEA8, "C_OP_BasicMovement size mismatch");
         }
     }
 }

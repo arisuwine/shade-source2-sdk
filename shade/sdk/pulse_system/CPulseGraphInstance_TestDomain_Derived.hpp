@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x160
+             * Size: 0xd8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_TestDomain_Derived : public shade::sdk::pulse_system::CPulseGraphInstance_TestDomain {
             public:
-                std::int32_t m_nInstanceValueX; // 0x0158, 0x4 bytes
-                std::uint8_t pad_015c[0x4]; // 0x015c, 0x4 bytes
+                std::int32_t m_nInstanceValueX; // 0x00d0, 0x4 bytes
+                std::uint8_t pad_00d4[0x4]; // 0x00d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_TestDomain_Derived) == 0x160, "CPulseGraphInstance_TestDomain_Derived size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_TestDomain_Derived) == 0xD8, "CPulseGraphInstance_TestDomain_Derived size mismatch");
         }
     }
 }

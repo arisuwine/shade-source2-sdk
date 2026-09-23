@@ -15,6 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/soundsystem_lowlevel/CVMixDataOffset.hpp"
 #include "shade/sdk/soundsystem_lowlevel/VMixGraphCommandID_t.hpp"
 
 namespace shade {
@@ -31,12 +32,12 @@ namespace shade {
             public:
                 shade::sdk::soundsystem_lowlevel::VMixGraphCommandID_t m_nCommand; // 0x0000, 0x4 bytes
                 std::uint32_t m_nParameterNameHash; // 0x0004, 0x4 bytes
-                std::int32_t m_nOutputSubmix; // 0x0008, 0x4 bytes
-                std::int32_t m_nInputSubmix0; // 0x000c, 0x4 bytes
-                std::int32_t m_nInputSubmix1; // 0x0010, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_nOutputSubmix; // 0x0008, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_nInputSubmix0; // 0x000c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_nInputSubmix1; // 0x0010, 0x4 bytes
                 std::int32_t m_nProcessor; // 0x0014, 0x4 bytes
-                std::int32_t m_nInputValue0; // 0x0018, 0x4 bytes
-                std::int32_t m_nInputValue1; // 0x001c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_nInputValue0; // 0x0018, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_nInputValue1; // 0x001c, 0x4 bytes
             };
             #pragma pack(pop)
 

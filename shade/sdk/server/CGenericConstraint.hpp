@@ -88,26 +88,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputSetLinearMotionLockedX; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetLinearMotionLockedY; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetLinearMotionLockedZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearFrequencyX; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearFrequencyY; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearFrequencyZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearDampingRatioX; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearDampingRatioY; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearDampingRatioZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetAngularMotionLockedX; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetAngularMotionLockedY; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetAngularMotionLockedZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularFrequencyX; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularFrequencyY; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularFrequencyZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularDampingRatioX; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularDampingRatioY; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularDampingRatioZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CGenericConstraint) == 0x608, "CGenericConstraint size mismatch");
         }

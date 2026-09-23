@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_FadeIn : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flFadeInTimeMin; // 0x01d8, 0x4 bytes
-                float m_flFadeInTimeMax; // 0x01dc, 0x4 bytes
-                float m_flFadeInTimeExp; // 0x01e0, 0x4 bytes
-                bool m_bProportional; // 0x01e4, 0x1 bytes
-                std::uint8_t pad_01e5[0x3]; // 0x01e5, 0x3 bytes
+                float m_flFadeInTimeMin; // 0x01e0, 0x4 bytes
+                float m_flFadeInTimeMax; // 0x01e4, 0x4 bytes
+                float m_flFadeInTimeExp; // 0x01e8, 0x4 bytes
+                bool m_bProportional; // 0x01ec, 0x1 bytes
+                std::uint8_t pad_01ed[0x3]; // 0x01ed, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_FadeIn) == 0x1E8, "C_OP_FadeIn size mismatch");
+            static_assert(sizeof(C_OP_FadeIn) == 0x1F0, "C_OP_FadeIn size mismatch");
         }
     }
 }

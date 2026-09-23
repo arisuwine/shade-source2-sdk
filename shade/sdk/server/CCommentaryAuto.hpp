@@ -38,7 +38,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputMultiplayerSpawned; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CCommentaryAuto) == 0x4F0, "CCommentaryAuto size mismatch");

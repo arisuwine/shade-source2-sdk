@@ -81,17 +81,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputSetToDefaults; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetScattering; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAnisotropy; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFadeSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDrawDistance; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool EnableIndirect; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void ForceRefresh; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_EnvVolumetricFogController) == 0x6B0, "C_EnvVolumetricFogController size mismatch");
         }

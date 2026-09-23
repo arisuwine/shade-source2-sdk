@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1728
+             * Size: 0x1950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BasePlayerWeapon : public shade::sdk::client::C_EconEntity {
             public:
-                shade::sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0x16f0, 0x4 bytes
-                float m_flNextPrimaryAttackTickRatio; // 0x16f4, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0x16f8, 0x4 bytes
-                float m_flNextSecondaryAttackTickRatio; // 0x16fc, 0x4 bytes
-                std::int32_t m_iClip1; // 0x1700, 0x4 bytes
-                std::int32_t m_iClip2; // 0x1704, 0x4 bytes
-                std::int32_t m_pReserveAmmo[0x2]; // 0x1708, 0x8 bytes
-                std::uint8_t pad_1710[0x18]; // 0x1710, 0x18 bytes
+                shade::sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0x1918, 0x4 bytes
+                float m_flNextPrimaryAttackTickRatio; // 0x191c, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0x1920, 0x4 bytes
+                float m_flNextSecondaryAttackTickRatio; // 0x1924, 0x4 bytes
+                std::int32_t m_iClip1; // 0x1928, 0x4 bytes
+                std::int32_t m_iClip2; // 0x192c, 0x4 bytes
+                std::int32_t m_pReserveAmmo[0x2]; // 0x1930, 0x8 bytes
+                std::uint8_t pad_1938[0x18]; // 0x1938, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -46,7 +46,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_BasePlayerWeapon) == 0x1728, "C_BasePlayerWeapon size mismatch");
+            static_assert(sizeof(C_BasePlayerWeapon) == 0x1950, "C_BasePlayerWeapon size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,24 +29,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_CPOffsetToPercentageBetweenCPs : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flInputMin; // 0x01d8, 0x4 bytes
-                float m_flInputMax; // 0x01dc, 0x4 bytes
-                float m_flInputBias; // 0x01e0, 0x4 bytes
-                std::int32_t m_nStartCP; // 0x01e4, 0x4 bytes
-                std::int32_t m_nEndCP; // 0x01e8, 0x4 bytes
-                std::int32_t m_nOffsetCP; // 0x01ec, 0x4 bytes
-                std::int32_t m_nOuputCP; // 0x01f0, 0x4 bytes
-                std::int32_t m_nInputCP; // 0x01f4, 0x4 bytes
-                bool m_bRadialCheck; // 0x01f8, 0x1 bytes
-                bool m_bScaleOffset; // 0x01f9, 0x1 bytes
-                std::uint8_t pad_01fa[0x2]; // 0x01fa, 0x2 bytes
-                Vector m_vecOffset; // 0x01fc, 0xc bytes
+                float m_flInputMin; // 0x01e0, 0x4 bytes
+                float m_flInputMax; // 0x01e4, 0x4 bytes
+                float m_flInputBias; // 0x01e8, 0x4 bytes
+                std::int32_t m_nStartCP; // 0x01ec, 0x4 bytes
+                std::int32_t m_nEndCP; // 0x01f0, 0x4 bytes
+                std::int32_t m_nOffsetCP; // 0x01f4, 0x4 bytes
+                std::int32_t m_nOuputCP; // 0x01f8, 0x4 bytes
+                std::int32_t m_nInputCP; // 0x01fc, 0x4 bytes
+                bool m_bRadialCheck; // 0x0200, 0x1 bytes
+                bool m_bScaleOffset; // 0x0201, 0x1 bytes
+                std::uint8_t pad_0202[0x2]; // 0x0202, 0x2 bytes
+                Vector m_vecOffset; // 0x0204, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_CPOffsetToPercentageBetweenCPs) == 0x208, "C_OP_CPOffsetToPercentageBetweenCPs size mismatch");
+            static_assert(sizeof(C_OP_CPOffsetToPercentageBetweenCPs) == 0x210, "C_OP_CPOffsetToPercentageBetweenCPs size mismatch");
         }
     }
 }

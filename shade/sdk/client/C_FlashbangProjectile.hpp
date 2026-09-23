@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1260
+             * Size: 0x1348
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,7 +37,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_FlashbangProjectile) == 0x1260, "C_FlashbangProjectile size mismatch");
+            static_assert(sizeof(C_FlashbangProjectile) == 0x1348, "C_FlashbangProjectile size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0x130
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,15 +33,14 @@ namespace shade {
             public:
                 shade::sdk::pulse_runtime_lib::SignatureOutflow_Resume m_OnFired; // 0x00d8, 0x48 bytes
                 CGlobalSymbol m_strEntityOutput; // 0x0120, 0x8 bytes
-                CUtlString m_strEntityOutputParam; // 0x0128, 0x8 bytes
-                bool m_bListenUntilCanceled; // 0x0130, 0x1 bytes
-                std::uint8_t pad_0131[0x7]; // 0x0131, 0x7 bytes
+                bool m_bListenUntilCanceled; // 0x0128, 0x1 bytes
+                std::uint8_t pad_0129[0x7]; // 0x0129, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Outflow_ListenForEntityOutput) == 0x138, "CPulseCell_Outflow_ListenForEntityOutput size mismatch");
+            static_assert(sizeof(CPulseCell_Outflow_ListenForEntityOutput) == 0x130, "CPulseCell_Outflow_ListenForEntityOutput size mismatch");
         }
     }
 }

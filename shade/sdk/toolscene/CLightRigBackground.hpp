@@ -19,8 +19,8 @@ namespace shade {
     namespace sdk {
         namespace toolscene {
             /* Class Parameters
-             * Size: 0x5
-             * Alignment: 0x1
+             * Size: 0x8
+             * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
              */
@@ -28,13 +28,14 @@ namespace shade {
             class CLightRigBackground {
             public:
                 bool m_bEnabled; // 0x0000, 0x1 bytes
-                Color m_Color; // 0x0001, 0x4 bytes
+                std::uint8_t pad_0001[0x3]; // 0x0001, 0x3 bytes
+                Color m_Color; // 0x0004, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CLightRigBackground) == 0x5, "CLightRigBackground size mismatch");
+            static_assert(sizeof(CLightRigBackground) == 0x8, "CLightRigBackground size mismatch");
         }
     }
 }

@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1398
+             * Size: 0x13f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,31 +33,31 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateOnModel : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01e0, 0x60 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0240, 0x68 bytes
-                std::int32_t m_nForceInModel; // 0x02a8, 0x4 bytes
-                bool m_bScaleToVolume; // 0x02ac, 0x1 bytes
-                bool m_bEvenDistribution; // 0x02ad, 0x1 bytes
-                std::uint8_t pad_02ae[0x2]; // 0x02ae, 0x2 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nDesiredHitbox; // 0x02b0, 0x170 bytes
-                std::int32_t m_nHitboxValueFromControlPointIndex; // 0x0420, 0x4 bytes
-                std::uint8_t pad_0424[0x4]; // 0x0424, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x0428, 0x6b8 bytes
-                float m_flBoneVelocity; // 0x0ae0, 0x4 bytes
-                float m_flMaxBoneVelocity; // 0x0ae4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecDirectionBias; // 0x0ae8, 0x6b8 bytes
-                char m_HitboxSetName[0x80]; // 0x11a0, 0x80 bytes
-                bool m_bLocalCoords; // 0x1220, 0x1 bytes
-                bool m_bUseBones; // 0x1221, 0x1 bytes
-                bool m_bUseMesh; // 0x1222, 0x1 bytes
-                std::uint8_t pad_1223[0x5]; // 0x1223, 0x5 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x1228, 0x170 bytes
+                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01e8, 0x60 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0248, 0x68 bytes
+                std::int32_t m_nForceInModel; // 0x02b0, 0x4 bytes
+                bool m_bScaleToVolume; // 0x02b4, 0x1 bytes
+                bool m_bEvenDistribution; // 0x02b5, 0x1 bytes
+                std::uint8_t pad_02b6[0x2]; // 0x02b6, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nDesiredHitbox; // 0x02b8, 0x178 bytes
+                std::int32_t m_nHitboxValueFromControlPointIndex; // 0x0430, 0x4 bytes
+                std::uint8_t pad_0434[0x4]; // 0x0434, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x0438, 0x6d8 bytes
+                float m_flBoneVelocity; // 0x0b10, 0x4 bytes
+                float m_flMaxBoneVelocity; // 0x0b14, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecDirectionBias; // 0x0b18, 0x6d8 bytes
+                char m_HitboxSetName[0x80]; // 0x11f0, 0x80 bytes
+                bool m_bLocalCoords; // 0x1270, 0x1 bytes
+                bool m_bUseBones; // 0x1271, 0x1 bytes
+                bool m_bUseMesh; // 0x1272, 0x1 bytes
+                std::uint8_t pad_1273[0x5]; // 0x1273, 0x5 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x1278, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateOnModel) == 0x1398, "C_INIT_CreateOnModel size mismatch");
+            static_assert(sizeof(C_INIT_CreateOnModel) == 0x13F0, "C_INIT_CreateOnModel size mismatch");
         }
     }
 }

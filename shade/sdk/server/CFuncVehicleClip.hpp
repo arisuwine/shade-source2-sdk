@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x770
+             * Size: 0x850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,13 +34,10 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetSolid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetNonsolid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFuncVehicleClip) == 0x770, "CFuncVehicleClip size mismatch");
+            static_assert(sizeof(CFuncVehicleClip) == 0x850, "CFuncVehicleClip size mismatch");
         }
     }
 }

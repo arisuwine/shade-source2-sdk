@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1008
+             * Size: 0x10f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FuncLadder : public shade::sdk::client::C_BaseModelEntity {
             public:
-                Vector m_vecLadderDir; // 0x0fb0, 0xc bytes
-                std::uint8_t pad_0fbc[0x4]; // 0x0fbc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_InfoLadderDismount>> m_Dismounts; // 0x0fc0, 0x18 bytes
-                Vector m_vecLocalTop; // 0x0fd8, 0xc bytes
-                VectorWS m_vecPlayerMountPositionTop; // 0x0fe4, 0xc bytes
-                VectorWS m_vecPlayerMountPositionBottom; // 0x0ff0, 0xc bytes
-                float m_flAutoRideSpeed; // 0x0ffc, 0x4 bytes
-                bool m_bDisabled; // 0x1000, 0x1 bytes
-                bool m_bFakeLadder; // 0x1001, 0x1 bytes
-                bool m_bHasSlack; // 0x1002, 0x1 bytes
-                std::uint8_t pad_1003[0x5]; // 0x1003, 0x5 bytes
+                Vector m_vecLadderDir; // 0x1098, 0xc bytes
+                std::uint8_t pad_10a4[0x4]; // 0x10a4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_InfoLadderDismount>> m_Dismounts; // 0x10a8, 0x18 bytes
+                Vector m_vecLocalTop; // 0x10c0, 0xc bytes
+                VectorWS m_vecPlayerMountPositionTop; // 0x10cc, 0xc bytes
+                VectorWS m_vecPlayerMountPositionBottom; // 0x10d8, 0xc bytes
+                float m_flAutoRideSpeed; // 0x10e4, 0x4 bytes
+                bool m_bDisabled; // 0x10e8, 0x1 bytes
+                bool m_bFakeLadder; // 0x10e9, 0x1 bytes
+                bool m_bHasSlack; // 0x10ea, 0x1 bytes
+                std::uint8_t pad_10eb[0x5]; // 0x10eb, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FuncLadder) == 0x1008, "C_FuncLadder size mismatch");
+            static_assert(sizeof(C_FuncLadder) == 0x10F0, "C_FuncLadder size mismatch");
         }
     }
 }

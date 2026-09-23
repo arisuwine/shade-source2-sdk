@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1f0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CParticleFunctionForce : public shade::sdk::particles::CParticleFunction {
             public:
-                std::uint8_t pad_01d8[0x10]; // 0x01d8, 0x10 bytes
+                std::uint8_t pad_01e0[0x10]; // 0x01e0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleFunctionForce) == 0x1E8, "CParticleFunctionForce size mismatch");
+            static_assert(sizeof(CParticleFunctionForce) == 0x1F0, "CParticleFunctionForce size mismatch");
         }
     }
 }

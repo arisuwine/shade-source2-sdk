@@ -50,18 +50,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputRefireTime; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputFireTimer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputAddToTimer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputResetTimer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSubtractFromTimer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPauseTimer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUnpauseTimer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CTimerEntity) == 0x518, "CTimerEntity size mismatch");
         }

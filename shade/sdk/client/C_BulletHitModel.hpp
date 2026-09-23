@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x11d0
+             * Size: 0x12b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +38,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BulletHitModel : public shade::sdk::client::CBaseAnimGraph {
             public:
-                matrix3x4_t m_matLocal; // 0x1180, 0x30 bytes
-                std::int32_t m_iBoneIndex; // 0x11b0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hPlayerParent; // 0x11b4, 0x4 bytes
-                bool m_bIsHit; // 0x11b8, 0x1 bytes
-                std::uint8_t pad_11b9[0x3]; // 0x11b9, 0x3 bytes
-                float m_flTimeCreated; // 0x11bc, 0x4 bytes
-                VectorWS m_vecStartPos; // 0x11c0, 0xc bytes
-                std::uint8_t pad_11cc[0x4]; // 0x11cc, 0x4 bytes
+                matrix3x4_t m_matLocal; // 0x1268, 0x30 bytes
+                std::int32_t m_iBoneIndex; // 0x1298, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hPlayerParent; // 0x129c, 0x4 bytes
+                bool m_bIsHit; // 0x12a0, 0x1 bytes
+                std::uint8_t pad_12a1[0x3]; // 0x12a1, 0x3 bytes
+                float m_flTimeCreated; // 0x12a4, 0x4 bytes
+                VectorWS m_vecStartPos; // 0x12a8, 0xc bytes
+                std::uint8_t pad_12b4[0x4]; // 0x12b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BulletHitModel) == 0x11D0, "C_BulletHitModel size mismatch");
+            static_assert(sizeof(C_BulletHitModel) == 0x12B8, "C_BulletHitModel size mismatch");
         }
     }
 }

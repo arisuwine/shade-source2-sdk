@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x210
+             * Size: 0x218
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,24 +29,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_TeleportBeam : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nCPPosition; // 0x01d8, 0x4 bytes
-                std::int32_t m_nCPVelocity; // 0x01dc, 0x4 bytes
-                std::int32_t m_nCPMisc; // 0x01e0, 0x4 bytes
-                std::int32_t m_nCPColor; // 0x01e4, 0x4 bytes
-                std::int32_t m_nCPInvalidColor; // 0x01e8, 0x4 bytes
-                std::int32_t m_nCPExtraArcData; // 0x01ec, 0x4 bytes
-                Vector m_vGravity; // 0x01f0, 0xc bytes
-                float m_flArcMaxDuration; // 0x01fc, 0x4 bytes
-                float m_flSegmentBreak; // 0x0200, 0x4 bytes
-                float m_flArcSpeed; // 0x0204, 0x4 bytes
-                float m_flAlpha; // 0x0208, 0x4 bytes
-                std::uint8_t pad_020c[0x4]; // 0x020c, 0x4 bytes
+                std::int32_t m_nCPPosition; // 0x01e0, 0x4 bytes
+                std::int32_t m_nCPVelocity; // 0x01e4, 0x4 bytes
+                std::int32_t m_nCPMisc; // 0x01e8, 0x4 bytes
+                std::int32_t m_nCPColor; // 0x01ec, 0x4 bytes
+                std::int32_t m_nCPInvalidColor; // 0x01f0, 0x4 bytes
+                std::int32_t m_nCPExtraArcData; // 0x01f4, 0x4 bytes
+                Vector m_vGravity; // 0x01f8, 0xc bytes
+                float m_flArcMaxDuration; // 0x0204, 0x4 bytes
+                float m_flSegmentBreak; // 0x0208, 0x4 bytes
+                float m_flArcSpeed; // 0x020c, 0x4 bytes
+                float m_flAlpha; // 0x0210, 0x4 bytes
+                std::uint8_t pad_0214[0x4]; // 0x0214, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_TeleportBeam) == 0x210, "C_OP_TeleportBeam size mismatch");
+            static_assert(sizeof(C_OP_TeleportBeam) == 0x218, "C_OP_TeleportBeam size mismatch");
         }
     }
 }

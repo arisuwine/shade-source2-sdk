@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x788
+             * Size: 0x868
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncNavBlocker : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t pad_0770[0x8]; // 0x0770, 0x8 bytes
-                bool m_bDisabled; // 0x0778, 0x1 bytes
-                std::uint8_t pad_0779[0x3]; // 0x0779, 0x3 bytes
-                std::int32_t m_nBlockedTeamNumber; // 0x077c, 0x4 bytes
-                std::uint8_t pad_0780[0x8]; // 0x0780, 0x8 bytes
+                std::uint8_t pad_0850[0x8]; // 0x0850, 0x8 bytes
+                bool m_bDisabled; // 0x0858, 0x1 bytes
+                std::uint8_t pad_0859[0x3]; // 0x0859, 0x3 bytes
+                std::int32_t m_nBlockedTeamNumber; // 0x085c, 0x4 bytes
+                std::uint8_t pad_0860[0x8]; // 0x0860, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputBlockNav; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUnblockNav; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncNavBlocker) == 0x788, "CFuncNavBlocker size mismatch");
+            static_assert(sizeof(CFuncNavBlocker) == 0x868, "CFuncNavBlocker size mismatch");
         }
     }
 }

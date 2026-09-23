@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ParentVortices : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                float m_flForceScale; // 0x01e8, 0x4 bytes
-                Vector m_vecTwistAxis; // 0x01ec, 0xc bytes
-                bool m_bFlipBasedOnYaw; // 0x01f8, 0x1 bytes
-                std::uint8_t pad_01f9[0x7]; // 0x01f9, 0x7 bytes
+                float m_flForceScale; // 0x01f0, 0x4 bytes
+                Vector m_vecTwistAxis; // 0x01f4, 0xc bytes
+                bool m_bFlipBasedOnYaw; // 0x0200, 0x1 bytes
+                std::uint8_t pad_0201[0x7]; // 0x0201, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ParentVortices) == 0x200, "C_OP_ParentVortices size mismatch");
+            static_assert(sizeof(C_OP_ParentVortices) == 0x208, "C_OP_ParentVortices size mismatch");
         }
     }
 }

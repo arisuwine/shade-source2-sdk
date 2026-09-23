@@ -32,7 +32,8 @@ namespace shade {
                 OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
                 OBJECT_TYPE_BAKED_GEOMETRY = 0x20000,
                 OBJECT_TYPE_NEEDS_DYNAMIC_SHADOWS = 0x40000,
-                OBJECT_TYPE_HAS_AGGREGATE_RTPROXY = 0x80000
+                OBJECT_TYPE_HAS_AGGREGATE_RTPROXY = 0x80000,
+                OBJECT_TYPE_HAS_EMISSIVE_GI = 0x100000
             };
         }
     }

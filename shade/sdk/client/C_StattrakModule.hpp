@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1190
+             * Size: 0x1278
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_StattrakModule : public shade::sdk::client::C_CS2WeaponModuleBase {
             public:
-                bool m_bKnife; // 0x1188, 0x1 bytes
-                std::uint8_t pad_1189[0x7]; // 0x1189, 0x7 bytes
+                bool m_bKnife; // 0x1270, 0x1 bytes
+                std::uint8_t pad_1271[0x7]; // 0x1271, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_StattrakModule) == 0x1190, "C_StattrakModule size mismatch");
+            static_assert(sizeof(C_StattrakModule) == 0x1278, "C_StattrakModule size mismatch");
         }
     }
 }

@@ -63,13 +63,6 @@ namespace shade {
 
             /* Data Map Fields
              * CUtlSymbolLarge pathNodes; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopEndCap; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDestroy; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputDisablePin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetRadius; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSlack; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(C_PathParticleRope) == 0x710, "C_PathParticleRope size mismatch");

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_LocalAccelerationForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                std::int32_t m_nCP; // 0x01e8, 0x4 bytes
-                std::int32_t m_nScaleCP; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecAccel; // 0x01f0, 0x6b8 bytes
+                std::int32_t m_nCP; // 0x01f0, 0x4 bytes
+                std::int32_t m_nScaleCP; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecAccel; // 0x01f8, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_LocalAccelerationForce) == 0x8A8, "C_OP_LocalAccelerationForce size mismatch");
+            static_assert(sizeof(C_OP_LocalAccelerationForce) == 0x8D0, "C_OP_LocalAccelerationForce size mismatch");
         }
     }
 }

@@ -47,7 +47,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x440
+             * Size: 0x590
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -131,13 +131,13 @@ namespace shade {
                 bool m_bShouldSort; // 0x0378, 0x1 bytes
                 std::uint8_t pad_0379[0x47]; // 0x0379, 0x47 bytes
                 CUtlVector<shade::sdk::particles::ParticleControlPointConfiguration_t> m_controlPointConfigurations; // 0x03c0, 0x18 bytes
-                std::uint8_t pad_03d8[0x68]; // 0x03d8, 0x68 bytes
+                std::uint8_t pad_03d8[0x1b8]; // 0x03d8, 0x1b8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleSystemDefinition) == 0x440, "CParticleSystemDefinition size mismatch");
+            static_assert(sizeof(CParticleSystemDefinition) == 0x590, "CParticleSystemDefinition size mismatch");
         }
     }
 }

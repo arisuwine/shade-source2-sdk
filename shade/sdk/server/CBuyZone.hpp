@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f0
+             * Size: 0x9d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CBuyZone : public shade::sdk::server::CBaseTrigger {
             public:
-                std::int32_t m_LegacyTeamNum; // 0x08e8, 0x4 bytes
-                std::uint8_t pad_08ec[0x4]; // 0x08ec, 0x4 bytes
+                std::int32_t m_LegacyTeamNum; // 0x09c8, 0x4 bytes
+                std::uint8_t pad_09cc[0x4]; // 0x09cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBuyZone) == 0x8F0, "CBuyZone size mismatch");
+            static_assert(sizeof(CBuyZone) == 0x9D0, "CBuyZone size mismatch");
         }
     }
 }

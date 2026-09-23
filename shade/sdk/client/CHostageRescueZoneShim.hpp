@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1098
+             * Size: 0x1180
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CHostageRescueZoneShim) == 0x1098, "CHostageRescueZoneShim size mismatch");
+            static_assert(sizeof(CHostageRescueZoneShim) == 0x1180, "CHostageRescueZoneShim size mismatch");
         }
     }
 }

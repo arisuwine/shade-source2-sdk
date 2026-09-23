@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x1e0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleFunctionOperator) == 0x1D8, "CParticleFunctionOperator size mismatch");
+            static_assert(sizeof(CParticleFunctionOperator) == 0x1E0, "CParticleFunctionOperator size mismatch");
         }
     }
 }

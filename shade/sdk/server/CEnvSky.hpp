@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7d0
+             * Size: 0x8b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,26 +38,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvSky : public shade::sdk::server::CBaseModelEntity {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterial; // 0x0770, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterialLightingOnly; // 0x0778, 0x8 bytes
-                bool m_bStartDisabled; // 0x0780, 0x1 bytes
-                Color m_vTintColor; // 0x0781, 0x4 bytes
-                Color m_vTintColorLightingOnly; // 0x0785, 0x4 bytes
-                std::uint8_t pad_0789[0x3]; // 0x0789, 0x3 bytes
-                float m_flBrightnessScale; // 0x078c, 0x4 bytes
-                std::int32_t m_nFogType; // 0x0790, 0x4 bytes
-                float m_flFogMinStart; // 0x0794, 0x4 bytes
-                float m_flFogMinEnd; // 0x0798, 0x4 bytes
-                float m_flFogMaxStart; // 0x079c, 0x4 bytes
-                float m_flFogMaxEnd; // 0x07a0, 0x4 bytes
-                bool m_bEnabled; // 0x07a4, 0x1 bytes
-                std::uint8_t pad_07a5[0x2b]; // 0x07a5, 0x2b bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterial; // 0x0850, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterialLightingOnly; // 0x0858, 0x8 bytes
+                bool m_bStartDisabled; // 0x0860, 0x1 bytes
+                std::uint8_t pad_0861[0x3]; // 0x0861, 0x3 bytes
+                Color m_vTintColor; // 0x0864, 0x4 bytes
+                Color m_vTintColorLightingOnly; // 0x0868, 0x4 bytes
+                float m_flBrightnessScale; // 0x086c, 0x4 bytes
+                std::int32_t m_nFogType; // 0x0870, 0x4 bytes
+                float m_flFogMinStart; // 0x0874, 0x4 bytes
+                float m_flFogMinEnd; // 0x0878, 0x4 bytes
+                float m_flFogMaxStart; // 0x087c, 0x4 bytes
+                float m_flFogMaxEnd; // 0x0880, 0x4 bytes
+                bool m_bEnabled; // 0x0884, 0x1 bytes
+                std::uint8_t pad_0885[0x2b]; // 0x0885, 0x2b bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvSky) == 0x7D0, "CEnvSky size mismatch");
+            static_assert(sizeof(CEnvSky) == 0x8B0, "CEnvSky size mismatch");
         }
     }
 }

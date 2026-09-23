@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSPlace : public shade::sdk::server::CServerOnlyModelEntity {
             public:
-                std::uint8_t pad_0770[0x18]; // 0x0770, 0x18 bytes
-                CUtlSymbolLarge m_name; // 0x0788, 0x8 bytes
+                std::uint8_t pad_0850[0x18]; // 0x0850, 0x18 bytes
+                CUtlSymbolLarge m_name; // 0x0868, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSPlace) == 0x790, "CCSPlace size mismatch");
+            static_assert(sizeof(CCSPlace) == 0x870, "CCSPlace size mismatch");
         }
     }
 }

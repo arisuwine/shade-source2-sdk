@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x250
+             * Size: 0x258
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderTreeShake : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                float m_flPeakStrength; // 0x0228, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nPeakStrengthFieldOverride; // 0x022c, 0x4 bytes
-                float m_flRadius; // 0x0230, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nRadiusFieldOverride; // 0x0234, 0x4 bytes
-                float m_flShakeDuration; // 0x0238, 0x4 bytes
-                float m_flTransitionTime; // 0x023c, 0x4 bytes
-                float m_flTwistAmount; // 0x0240, 0x4 bytes
-                float m_flRadialAmount; // 0x0244, 0x4 bytes
-                float m_flControlPointOrientationAmount; // 0x0248, 0x4 bytes
-                std::int32_t m_nControlPointForLinearDirection; // 0x024c, 0x4 bytes
+                float m_flPeakStrength; // 0x0230, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nPeakStrengthFieldOverride; // 0x0234, 0x4 bytes
+                float m_flRadius; // 0x0238, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nRadiusFieldOverride; // 0x023c, 0x4 bytes
+                float m_flShakeDuration; // 0x0240, 0x4 bytes
+                float m_flTransitionTime; // 0x0244, 0x4 bytes
+                float m_flTwistAmount; // 0x0248, 0x4 bytes
+                float m_flRadialAmount; // 0x024c, 0x4 bytes
+                float m_flControlPointOrientationAmount; // 0x0250, 0x4 bytes
+                std::int32_t m_nControlPointForLinearDirection; // 0x0254, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderTreeShake) == 0x250, "C_OP_RenderTreeShake size mismatch");
+            static_assert(sizeof(C_OP_RenderTreeShake) == 0x258, "C_OP_RenderTreeShake size mismatch");
         }
     }
 }

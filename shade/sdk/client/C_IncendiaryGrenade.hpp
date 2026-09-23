@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1da0
+             * Size: 0x1fd0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_IncendiaryGrenade) == 0x1DA0, "C_IncendiaryGrenade size mismatch");
+            static_assert(sizeof(C_IncendiaryGrenade) == 0x1FD0, "C_IncendiaryGrenade size mismatch");
         }
     }
 }

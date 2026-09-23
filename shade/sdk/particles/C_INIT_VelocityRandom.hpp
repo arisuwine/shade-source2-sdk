@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1248
+             * Size: 0x12a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_VelocityRandom : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMin; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMax; // 0x0358, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0x04c8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0x0b80, 0x6b8 bytes
-                bool m_bIgnoreDT; // 0x1238, 0x1 bytes
-                std::uint8_t pad_1239[0x3]; // 0x1239, 0x3 bytes
-                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x123c, 0x8 bytes
-                std::uint8_t pad_1244[0x4]; // 0x1244, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMin; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMax; // 0x0368, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0x04e0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0x0bb8, 0x6d8 bytes
+                bool m_bIgnoreDT; // 0x1290, 0x1 bytes
+                std::uint8_t pad_1291[0x3]; // 0x1291, 0x3 bytes
+                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1294, 0x8 bytes
+                std::uint8_t pad_129c[0x4]; // 0x129c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_VelocityRandom) == 0x1248, "C_INIT_VelocityRandom size mismatch");
+            static_assert(sizeof(C_INIT_VelocityRandom) == 0x12A0, "C_INIT_VelocityRandom size mismatch");
         }
     }
 }

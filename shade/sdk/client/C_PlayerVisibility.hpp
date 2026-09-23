@@ -40,13 +40,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPlayerVisibilityStrength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPlayerFogDistanceMultiplier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPlayerFogMaxDensityMultiplier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_PlayerVisibility) == 0x630, "C_PlayerVisibility size mismatch");
         }

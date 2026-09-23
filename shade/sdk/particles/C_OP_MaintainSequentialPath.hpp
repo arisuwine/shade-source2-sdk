@@ -17,12 +17,13 @@
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
 #include "shade/sdk/particles/CPathParameters.hpp"
+#include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x230
+             * Size: 0x690
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MaintainSequentialPath : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_fMaxDistance; // 0x01d8, 0x4 bytes
-                float m_flNumToAssign; // 0x01dc, 0x4 bytes
-                float m_flCohesionStrength; // 0x01e0, 0x4 bytes
-                float m_flTolerance; // 0x01e4, 0x4 bytes
-                bool m_bLoop; // 0x01e8, 0x1 bytes
-                bool m_bUseParticleCount; // 0x01e9, 0x1 bytes
-                std::uint8_t pad_01ea[0x6]; // 0x01ea, 0x6 bytes
-                shade::sdk::particles::CPathParameters m_PathParams; // 0x01f0, 0x40 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_fMaxDistance; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flNumToAssign; // 0x0358, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flCohesionStrength; // 0x04d0, 0x178 bytes
+                float m_flTolerance; // 0x0648, 0x4 bytes
+                bool m_bLoop; // 0x064c, 0x1 bytes
+                bool m_bUseParticleCount; // 0x064d, 0x1 bytes
+                std::uint8_t pad_064e[0x2]; // 0x064e, 0x2 bytes
+                shade::sdk::particles::CPathParameters m_PathParams; // 0x0650, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MaintainSequentialPath) == 0x230, "C_OP_MaintainSequentialPath size mismatch");
+            static_assert(sizeof(C_OP_MaintainSequentialPath) == 0x690, "C_OP_MaintainSequentialPath size mismatch");
         }
     }
 }

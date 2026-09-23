@@ -32,6 +32,7 @@ namespace shade {
             class CClientAlphaProperty;
             class CDestructiblePartsComponent;
             class CRenderComponent;
+            struct C_BaseModelEntity__BodyGroupRequest_t;
             struct EntityRenderAttribute_t;
         }
     }
@@ -41,7 +42,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfb0
+             * Size: 0x1098
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -50,62 +51,66 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseModelEntity : public shade::sdk::client::C_BaseEntity {
             public:
-                std::uint8_t pad_0600[0x4f0]; // 0x0600, 0x4f0 bytes
-                shade::sdk::client::CRenderComponent *m_CRenderComponent; // 0x0af0, 0x8 bytes
-                shade::sdk::client::CHitboxComponent m_CHitboxComponent; // 0x0af8, 0x18 bytes
-                shade::sdk::client::CChoreoComponent *m_pChoreoComponent; // 0x0b10, 0x8 bytes
-                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed0; // 0x0b18, 0x4 bytes
-                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed1; // 0x0b1c, 0x4 bytes
-                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed2; // 0x0b20, 0x4 bytes
-                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed3; // 0x0b24, 0x4 bytes
-                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed4; // 0x0b28, 0x4 bytes
-                std::int32_t m_nDestructiblePartInitialStateDestructed0_PartIndex; // 0x0b2c, 0x4 bytes
-                std::int32_t m_nDestructiblePartInitialStateDestructed1_PartIndex; // 0x0b30, 0x4 bytes
-                std::int32_t m_nDestructiblePartInitialStateDestructed2_PartIndex; // 0x0b34, 0x4 bytes
-                std::int32_t m_nDestructiblePartInitialStateDestructed3_PartIndex; // 0x0b38, 0x4 bytes
-                std::int32_t m_nDestructiblePartInitialStateDestructed4_PartIndex; // 0x0b3c, 0x4 bytes
-                bool m_bDestructiblePartInitialStateDestructed0_GenerateBreakpieces; // 0x0b40, 0x1 bytes
-                bool m_bDestructiblePartInitialStateDestructed1_GenerateBreakpieces; // 0x0b41, 0x1 bytes
-                bool m_bDestructiblePartInitialStateDestructed2_GenerateBreakpieces; // 0x0b42, 0x1 bytes
-                bool m_bDestructiblePartInitialStateDestructed3_GenerateBreakpieces; // 0x0b43, 0x1 bytes
-                bool m_bDestructiblePartInitialStateDestructed4_GenerateBreakpieces; // 0x0b44, 0x1 bytes
-                std::uint8_t pad_0b45[0x3]; // 0x0b45, 0x3 bytes
-                shade::sdk::client::CDestructiblePartsComponent *m_pDestructiblePartsSystemComponent; // 0x0b48, 0x8 bytes
-                std::uint8_t pad_0b50[0x120]; // 0x0b50, 0x120 bytes
-                bool m_bInitModelEffects; // 0x0c70, 0x1 bytes
-                bool m_bDoingModelEffects; // 0x0c71, 0x1 bytes
-                std::uint8_t pad_0c72[0x2]; // 0x0c72, 0x2 bytes
-                std::int32_t m_iOldHealth; // 0x0c74, 0x4 bytes
-                shade::sdk::client::RenderMode_t m_nRenderMode; // 0x0c78, 0x1 bytes
-                shade::sdk::client::RenderFx_t m_nRenderFX; // 0x0c79, 0x1 bytes
-                bool m_bAllowFadeInView; // 0x0c7a, 0x1 bytes
-                std::uint8_t pad_0c7b[0x1d]; // 0x0c7b, 0x1d bytes
-                Color m_clrRender; // 0x0c98, 0x4 bytes
-                std::uint8_t pad_0c9c[0x4]; // 0x0c9c, 0x4 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::EntityRenderAttribute_t> m_vecRenderAttributes; // 0x0ca0, 0x68 bytes
-                std::uint8_t pad_0d08[0x18]; // 0x0d08, 0x18 bytes
-                bool m_bRenderToCubemaps; // 0x0d20, 0x1 bytes
-                bool m_bNoInterpolate; // 0x0d21, 0x1 bytes
-                std::uint8_t pad_0d22[0x6]; // 0x0d22, 0x6 bytes
-                shade::sdk::client::CCollisionProperty m_Collision; // 0x0d28, 0xb8 bytes
-                shade::sdk::client::CGlowProperty m_Glow; // 0x0de0, 0x58 bytes
-                float m_flGlowBackfaceMult; // 0x0e38, 0x4 bytes
-                float m_fadeMinDist; // 0x0e3c, 0x4 bytes
-                float m_fadeMaxDist; // 0x0e40, 0x4 bytes
-                float m_flFadeScale; // 0x0e44, 0x4 bytes
-                float m_flShadowStrength; // 0x0e48, 0x4 bytes
-                std::uint8_t m_nObjectCulling; // 0x0e4c, 0x1 bytes
-                shade::sdk::client::DecalRtEncoding_t m_nRequiredDecalRtEncoding; // 0x0e4d, 0x1 bytes
-                std::uint8_t pad_0e4e[0x2]; // 0x0e4e, 0x2 bytes
-                CUtlOrderedMap<CGlobalSymbol, std::int32_t> m_bodyGroupChoices; // 0x0e50, 0x28 bytes
-                shade::sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x0e78, 0x28 bytes
-                std::uint8_t pad_0ea0[0xb8]; // 0x0ea0, 0xb8 bytes
-                shade::sdk::client::CClientAlphaProperty *m_pClientAlphaProperty; // 0x0f58, 0x8 bytes
-                Color m_ClientOverrideTint; // 0x0f60, 0x4 bytes
-                bool m_bUseClientOverrideTint; // 0x0f64, 0x1 bytes
-                std::uint8_t pad_0f65[0x3b]; // 0x0f65, 0x3b bytes
-                std::uint32_t m_bvDisabledHitGroups[0x1]; // 0x0fa0, 0x4 bytes
-                std::uint8_t pad_0fa4[0xc]; // 0x0fa4, 0xc bytes
+                std::uint8_t pad_0600[0x4f8]; // 0x0600, 0x4f8 bytes
+                shade::sdk::client::CRenderComponent *m_CRenderComponent; // 0x0af8, 0x8 bytes
+                shade::sdk::client::CHitboxComponent m_CHitboxComponent; // 0x0b00, 0x18 bytes
+                shade::sdk::client::CChoreoComponent *m_pChoreoComponent; // 0x0b18, 0x8 bytes
+                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed0; // 0x0b20, 0x4 bytes
+                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed1; // 0x0b24, 0x4 bytes
+                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed2; // 0x0b28, 0x4 bytes
+                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed3; // 0x0b2c, 0x4 bytes
+                shade::sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed4; // 0x0b30, 0x4 bytes
+                std::int32_t m_nDestructiblePartInitialStateDestructed0_PartIndex; // 0x0b34, 0x4 bytes
+                std::int32_t m_nDestructiblePartInitialStateDestructed1_PartIndex; // 0x0b38, 0x4 bytes
+                std::int32_t m_nDestructiblePartInitialStateDestructed2_PartIndex; // 0x0b3c, 0x4 bytes
+                std::int32_t m_nDestructiblePartInitialStateDestructed3_PartIndex; // 0x0b40, 0x4 bytes
+                std::int32_t m_nDestructiblePartInitialStateDestructed4_PartIndex; // 0x0b44, 0x4 bytes
+                bool m_bDestructiblePartInitialStateDestructed0_GenerateBreakpieces; // 0x0b48, 0x1 bytes
+                bool m_bDestructiblePartInitialStateDestructed1_GenerateBreakpieces; // 0x0b49, 0x1 bytes
+                bool m_bDestructiblePartInitialStateDestructed2_GenerateBreakpieces; // 0x0b4a, 0x1 bytes
+                bool m_bDestructiblePartInitialStateDestructed3_GenerateBreakpieces; // 0x0b4b, 0x1 bytes
+                bool m_bDestructiblePartInitialStateDestructed4_GenerateBreakpieces; // 0x0b4c, 0x1 bytes
+                std::uint8_t pad_0b4d[0x3]; // 0x0b4d, 0x3 bytes
+                shade::sdk::client::CDestructiblePartsComponent *m_pDestructiblePartsSystemComponent; // 0x0b50, 0x8 bytes
+                std::uint8_t pad_0b58[0x120]; // 0x0b58, 0x120 bytes
+                bool m_bInitModelEffects; // 0x0c78, 0x1 bytes
+                bool m_bDoingModelEffects; // 0x0c79, 0x1 bytes
+                std::uint8_t pad_0c7a[0x2]; // 0x0c7a, 0x2 bytes
+                std::int32_t m_iOldHealth; // 0x0c7c, 0x4 bytes
+                shade::sdk::client::RenderMode_t m_nRenderMode; // 0x0c80, 0x1 bytes
+                shade::sdk::client::RenderFx_t m_nRenderFX; // 0x0c81, 0x1 bytes
+                bool m_bAllowFadeInView; // 0x0c82, 0x1 bytes
+                std::uint8_t pad_0c83[0x1d]; // 0x0c83, 0x1d bytes
+                Color m_clrRender; // 0x0ca0, 0x4 bytes
+                std::uint8_t pad_0ca4[0x4]; // 0x0ca4, 0x4 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::EntityRenderAttribute_t> m_vecRenderAttributes; // 0x0ca8, 0x68 bytes
+                std::uint8_t pad_0d10[0x18]; // 0x0d10, 0x18 bytes
+                bool m_bRenderToCubemaps; // 0x0d28, 0x1 bytes
+                bool m_bExpandRenderBoundsToIncludeCloth; // 0x0d29, 0x1 bytes
+                bool m_bNoInterpolate; // 0x0d2a, 0x1 bytes
+                std::uint8_t pad_0d2b[0x5]; // 0x0d2b, 0x5 bytes
+                shade::sdk::client::CCollisionProperty m_Collision; // 0x0d30, 0xb8 bytes
+                shade::sdk::client::CGlowProperty m_Glow; // 0x0de8, 0x58 bytes
+                float m_flGlowBackfaceMult; // 0x0e40, 0x4 bytes
+                float m_fadeMinDist; // 0x0e44, 0x4 bytes
+                float m_fadeMaxDist; // 0x0e48, 0x4 bytes
+                float m_flFadeScale; // 0x0e4c, 0x4 bytes
+                float m_flShadowStrength; // 0x0e50, 0x4 bytes
+                std::uint8_t m_nObjectCulling; // 0x0e54, 0x1 bytes
+                shade::sdk::client::DecalRtEncoding_t m_nRequiredDecalRtEncoding; // 0x0e55, 0x1 bytes
+                std::uint8_t pad_0e56[0x2]; // 0x0e56, 0x2 bytes
+                std::uint32_t m_bodyGroupTotalRequestCount; // 0x0e58, 0x4 bytes
+                std::uint8_t pad_0e5c[0x4]; // 0x0e5c, 0x4 bytes
+                CUtlVectorFixedGrowable<shade::sdk::client::C_BaseModelEntity__BodyGroupRequest_t, 8> m_bodyGroupRequests; // 0x0e60, 0xd8 bytes
+                CUtlOrderedMap<CGlobalSymbol, std::int32_t> m_bodyGroupChoices; // 0x0f38, 0x28 bytes
+                shade::sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x0f60, 0x28 bytes
+                std::uint8_t pad_0f88[0xb8]; // 0x0f88, 0xb8 bytes
+                shade::sdk::client::CClientAlphaProperty *m_pClientAlphaProperty; // 0x1040, 0x8 bytes
+                Color m_ClientOverrideTint; // 0x1048, 0x4 bytes
+                bool m_bUseClientOverrideTint; // 0x104c, 0x1 bytes
+                std::uint8_t pad_104d[0x3b]; // 0x104d, 0x3b bytes
+                std::uint32_t m_bvDisabledHitGroups[0x1]; // 0x1088, 0x4 bytes
+                std::uint8_t pad_108c[0xc]; // 0x108c, 0xc bytes
             };
             #pragma pack(pop)
 
@@ -115,11 +120,11 @@ namespace shade {
              * std::int32_t renderamt; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector mins; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector maxs; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * char *skin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlString skin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CUtlString bodygroups; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_BaseModelEntity) == 0xFB0, "C_BaseModelEntity size mismatch");
+            static_assert(sizeof(C_BaseModelEntity) == 0x1098, "C_BaseModelEntity size mismatch");
         }
     }
 }

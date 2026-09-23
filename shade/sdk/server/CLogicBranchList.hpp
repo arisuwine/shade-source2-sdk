@@ -50,11 +50,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputTest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void Input_OnLogicBranchChanged; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void Input_OnLogicBranchRemoved; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CLogicBranchList) == 0x590, "CLogicBranchList size mismatch");
         }

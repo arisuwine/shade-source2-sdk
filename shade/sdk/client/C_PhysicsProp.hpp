@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1300
+             * Size: 0x13f0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PhysicsProp : public shade::sdk::client::C_BreakableProp {
             public:
-                bool m_bAwake; // 0x12f0, 0x1 bytes
-                std::uint8_t pad_12f1[0xf]; // 0x12f1, 0xf bytes
+                bool m_bAwake; // 0x13e0, 0x1 bytes
+                std::uint8_t pad_13e1[0xf]; // 0x13e1, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PhysicsProp) == 0x1300, "C_PhysicsProp size mismatch");
+            static_assert(sizeof(C_PhysicsProp) == 0x13F0, "C_PhysicsProp size mismatch");
         }
     }
 }

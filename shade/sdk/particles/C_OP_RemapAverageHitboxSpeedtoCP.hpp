@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xef0
+             * Size: 0xf38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +32,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapAverageHitboxSpeedtoCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nInControlPointNumber; // 0x01e0, 0x4 bytes
-                std::int32_t m_nOutControlPointNumber; // 0x01e4, 0x4 bytes
-                std::int32_t m_nField; // 0x01e8, 0x4 bytes
-                shade::sdk::particles::ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMin; // 0x01f0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMax; // 0x0360, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x04d0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x0640, 0x170 bytes
-                std::int32_t m_nHeightControlPointNumber; // 0x07b0, 0x4 bytes
-                std::uint8_t pad_07b4[0x4]; // 0x07b4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecComparisonVelocity; // 0x07b8, 0x6b8 bytes
-                char m_HitboxSetName[0x80]; // 0x0e70, 0x80 bytes
+                std::int32_t m_nInControlPointNumber; // 0x01e8, 0x4 bytes
+                std::int32_t m_nOutControlPointNumber; // 0x01ec, 0x4 bytes
+                std::int32_t m_nField; // 0x01f0, 0x4 bytes
+                shade::sdk::particles::ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMin; // 0x01f8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMax; // 0x0370, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x04e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x0660, 0x178 bytes
+                std::int32_t m_nHeightControlPointNumber; // 0x07d8, 0x4 bytes
+                std::uint8_t pad_07dc[0x4]; // 0x07dc, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecComparisonVelocity; // 0x07e0, 0x6d8 bytes
+                char m_HitboxSetName[0x80]; // 0x0eb8, 0x80 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapAverageHitboxSpeedtoCP) == 0xEF0, "C_OP_RemapAverageHitboxSpeedtoCP size mismatch");
+            static_assert(sizeof(C_OP_RemapAverageHitboxSpeedtoCP) == 0xF38, "C_OP_RemapAverageHitboxSpeedtoCP size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xaa8
+             * Size: 0xad8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,24 +31,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_SetHitboxToModel : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                std::int32_t m_nForceInModel; // 0x01e4, 0x4 bytes
-                bool m_bEvenDistribution; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
-                std::int32_t m_nDesiredHitbox; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x01f0, 0x6b8 bytes
-                Vector m_vecDirectionBias; // 0x08a8, 0xc bytes
-                bool m_bMaintainHitbox; // 0x08b4, 0x1 bytes
-                bool m_bUseBones; // 0x08b5, 0x1 bytes
-                char m_HitboxSetName[0x80]; // 0x08b6, 0x80 bytes
-                std::uint8_t pad_0936[0x2]; // 0x0936, 0x2 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x0938, 0x170 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                std::int32_t m_nForceInModel; // 0x01ec, 0x4 bytes
+                bool m_bEvenDistribution; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x3]; // 0x01f1, 0x3 bytes
+                std::int32_t m_nDesiredHitbox; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x01f8, 0x6d8 bytes
+                Vector m_vecDirectionBias; // 0x08d0, 0xc bytes
+                bool m_bMaintainHitbox; // 0x08dc, 0x1 bytes
+                bool m_bUseBones; // 0x08dd, 0x1 bytes
+                char m_HitboxSetName[0x80]; // 0x08de, 0x80 bytes
+                std::uint8_t pad_095e[0x2]; // 0x095e, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x0960, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_SetHitboxToModel) == 0xAA8, "C_INIT_SetHitboxToModel size mismatch");
+            static_assert(sizeof(C_INIT_SetHitboxToModel) == 0xAD8, "C_INIT_SetHitboxToModel size mismatch");
         }
     }
 }

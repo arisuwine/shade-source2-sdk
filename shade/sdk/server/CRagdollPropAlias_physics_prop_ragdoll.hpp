@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb20
+             * Size: 0xc00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CRagdollPropAlias_physics_prop_ragdoll) == 0xB20, "CRagdollPropAlias_physics_prop_ragdoll size mismatch");
+            static_assert(sizeof(CRagdollPropAlias_physics_prop_ragdoll) == 0xC00, "CRagdollPropAlias_physics_prop_ragdoll size mismatch");
         }
     }
 }

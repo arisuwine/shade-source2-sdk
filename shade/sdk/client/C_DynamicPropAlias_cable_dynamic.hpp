@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13c0
+             * Size: 0x14b0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DynamicPropAlias_cable_dynamic) == 0x13C0, "C_DynamicPropAlias_cable_dynamic size mismatch");
+            static_assert(sizeof(C_DynamicPropAlias_cable_dynamic) == 0x14B0, "C_DynamicPropAlias_cable_dynamic size mismatch");
         }
     }
 }

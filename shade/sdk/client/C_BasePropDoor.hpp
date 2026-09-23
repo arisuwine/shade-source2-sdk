@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1400
+             * Size: 0x14f0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,22 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BasePropDoor : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_13c0[0x10]; // 0x13c0, 0x10 bytes
-                shade::sdk::client::DoorState_t m_eDoorState; // 0x13d0, 0x4 bytes
-                bool m_modelChanged; // 0x13d4, 0x1 bytes
-                bool m_bLocked; // 0x13d5, 0x1 bytes
-                bool m_bNoNPCs; // 0x13d6, 0x1 bytes
-                std::uint8_t pad_13d7[0x1]; // 0x13d7, 0x1 bytes
-                VectorWS m_closedPosition; // 0x13d8, 0xc bytes
-                QAngle m_closedAngles; // 0x13e4, 0xc bytes
-                CHandle<shade::sdk::client::C_BasePropDoor> m_hMaster; // 0x13f0, 0x4 bytes
-                VectorWS m_vWhereToSetLightingOrigin; // 0x13f4, 0xc bytes
+                std::uint8_t pad_14b0[0x10]; // 0x14b0, 0x10 bytes
+                shade::sdk::client::DoorState_t m_eDoorState; // 0x14c0, 0x4 bytes
+                bool m_modelChanged; // 0x14c4, 0x1 bytes
+                bool m_bLocked; // 0x14c5, 0x1 bytes
+                bool m_bNoNPCs; // 0x14c6, 0x1 bytes
+                std::uint8_t pad_14c7[0x1]; // 0x14c7, 0x1 bytes
+                VectorWS m_closedPosition; // 0x14c8, 0xc bytes
+                QAngle m_closedAngles; // 0x14d4, 0xc bytes
+                CHandle<shade::sdk::client::C_BasePropDoor> m_hMaster; // 0x14e0, 0x4 bytes
+                VectorWS m_vWhereToSetLightingOrigin; // 0x14e4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BasePropDoor) == 0x1400, "C_BasePropDoor size mismatch");
+            static_assert(sizeof(C_BasePropDoor) == 0x14F0, "C_BasePropDoor size mismatch");
         }
     }
 }

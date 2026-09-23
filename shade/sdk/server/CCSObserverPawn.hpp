@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd60
+             * Size: 0xe50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSObserverPawn : public shade::sdk::server::CCSPlayerPawnBase {
             public:
-                std::uint8_t pad_0d30[0x30]; // 0x0d30, 0x30 bytes
+                std::uint8_t pad_0e20[0x30]; // 0x0e20, 0x30 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xa68, Size: 0x1, Size In Bytes: 0x8
+             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xb48, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(CCSObserverPawn) == 0xD60, "CCSObserverPawn size mismatch");
+            static_assert(sizeof(CCSObserverPawn) == 0xE50, "CCSObserverPawn size mismatch");
         }
     }
 }

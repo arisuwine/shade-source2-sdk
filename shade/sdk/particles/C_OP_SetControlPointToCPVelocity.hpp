@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x8b0
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointToCPVelocity : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCPInput; // 0x01e0, 0x4 bytes
-                std::int32_t m_nCPOutputVel; // 0x01e4, 0x4 bytes
-                bool m_bNormalize; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
-                std::int32_t m_nCPOutputMag; // 0x01ec, 0x4 bytes
-                std::int32_t m_nCPField; // 0x01f0, 0x4 bytes
-                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecComparisonVelocity; // 0x01f8, 0x6b8 bytes
+                std::int32_t m_nCPInput; // 0x01e8, 0x4 bytes
+                std::int32_t m_nCPOutputVel; // 0x01ec, 0x4 bytes
+                bool m_bNormalize; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x3]; // 0x01f1, 0x3 bytes
+                std::int32_t m_nCPOutputMag; // 0x01f4, 0x4 bytes
+                std::int32_t m_nCPField; // 0x01f8, 0x4 bytes
+                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecComparisonVelocity; // 0x0200, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointToCPVelocity) == 0x8B0, "C_OP_SetControlPointToCPVelocity size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointToCPVelocity) == 0x8D8, "C_OP_SetControlPointToCPVelocity size mismatch");
         }
     }
 }

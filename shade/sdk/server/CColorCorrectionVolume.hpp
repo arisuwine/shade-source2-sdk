@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb08
+             * Size: 0xbe8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CColorCorrectionVolume : public shade::sdk::server::CBaseTrigger {
             public:
-                float m_MaxWeight; // 0x08e8, 0x4 bytes
-                float m_FadeDuration; // 0x08ec, 0x4 bytes
-                float m_Weight; // 0x08f0, 0x4 bytes
-                char m_lookupFilename[0x200]; // 0x08f4, 0x200 bytes
-                float m_LastEnterWeight; // 0x0af4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_LastEnterTime; // 0x0af8, 0x4 bytes
-                float m_LastExitWeight; // 0x0afc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_LastExitTime; // 0x0b00, 0x4 bytes
-                std::uint8_t pad_0b04[0x4]; // 0x0b04, 0x4 bytes
+                float m_MaxWeight; // 0x09c8, 0x4 bytes
+                float m_FadeDuration; // 0x09cc, 0x4 bytes
+                float m_Weight; // 0x09d0, 0x4 bytes
+                char m_lookupFilename[0x200]; // 0x09d4, 0x200 bytes
+                float m_LastEnterWeight; // 0x0bd4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastEnterTime; // 0x0bd8, 0x4 bytes
+                float m_LastExitWeight; // 0x0bdc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastExitTime; // 0x0be0, 0x4 bytes
+                std::uint8_t pad_0be4[0x4]; // 0x0be4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CColorCorrectionVolume) == 0xB08, "CColorCorrectionVolume size mismatch");
+            static_assert(sizeof(CColorCorrectionVolume) == 0xBE8, "CColorCorrectionVolume size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x350
+             * Size: 0x360
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetSimulationRate : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSimulationScale; // 0x01e0, 0x170 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSimulationScale; // 0x01e8, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetSimulationRate) == 0x350, "C_OP_SetSimulationRate size mismatch");
+            static_assert(sizeof(C_OP_SetSimulationRate) == 0x360, "C_OP_SetSimulationRate size mismatch");
         }
     }
 }

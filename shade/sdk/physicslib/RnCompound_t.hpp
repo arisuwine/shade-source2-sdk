@@ -16,6 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/mathlib_extended/AABB_t.hpp"
+#include "shade/sdk/physicslib/RnCompoundTree_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -31,27 +32,33 @@ namespace shade {
     namespace sdk {
         namespace physicslib {
             /* Class Parameters
-             * Size: 0x90
+             * Size: 0x160
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct RnCompound_t {
-                CUtlVector<RnSphere_t> m_Spheres; // 0x0000, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnCapsule_t> m_Capsules; // 0x0018, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnHull_t> m_Hulls; // 0x0030, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnMesh_t> m_Meshes; // 0x0048, 0x18 bytes
-                shade::sdk::mathlib_extended::AABB_t m_Bounds; // 0x0060, 0x18 bytes
-                Vector m_vOrthographicAreas; // 0x0078, 0xc bytes
-                float m_flSurfaceArea; // 0x0084, 0x4 bytes
-                float m_flVolume; // 0x0088, 0x4 bytes
-                std::uint8_t pad_008c[0x4]; // 0x008c, 0x4 bytes
+                shade::sdk::physicslib::RnCompoundTree_t m_Tree; // 0x0000, 0x18 bytes
+                std::int32_t m_nHullBaseIndex; // 0x0018, 0x4 bytes
+                std::int32_t m_nMeshBaseIndex; // 0x001c, 0x4 bytes
+                std::int32_t m_nShapeCount; // 0x0020, 0x4 bytes
+                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
+                CUtlLeanVectorFixedGrowable<shade::sdk::physicslib::RnMesh_t, 1> m_Meshes; // 0x0028, 0xc8 bytes
+                CUtlLeanVector<shade::sdk::physicslib::RnHull_t> m_Hulls; // 0x00f0, 0x10 bytes
+                CUtlLeanVector<shade::sdk::physicslib::RnCapsule_t> m_Capsules; // 0x0100, 0x10 bytes
+                CUtlLeanVector<RnSphere_t> m_Spheres; // 0x0110, 0x10 bytes
+                CUtlLeanVector<std::uint8_t> m_CompoundMaterialIndices; // 0x0120, 0x10 bytes
+                shade::sdk::mathlib_extended::AABB_t m_Bounds; // 0x0130, 0x18 bytes
+                Vector m_vOrthographicAreas; // 0x0148, 0xc bytes
+                float m_flSurfaceArea; // 0x0154, 0x4 bytes
+                float m_flVolume; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x4]; // 0x015c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(RnCompound_t) == 0x90, "RnCompound_t size mismatch");
+            static_assert(sizeof(RnCompound_t) == 0x160, "RnCompound_t size mismatch");
         }
     }
 }

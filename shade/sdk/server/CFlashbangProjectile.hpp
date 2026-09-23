@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa70
+             * Size: 0xb50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,10 +30,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CFlashbangProjectile : public shade::sdk::server::CBaseCSGrenadeProjectile {
             public:
-                float m_flTimeToDetonate; // 0x0a60, 0x4 bytes
-                std::uint8_t m_numOpponentsHit; // 0x0a64, 0x1 bytes
-                std::uint8_t m_numTeammatesHit; // 0x0a65, 0x1 bytes
-                std::uint8_t pad_0a66[0xa]; // 0x0a66, 0xa bytes
+                float m_flTimeToDetonate; // 0x0b40, 0x4 bytes
+                std::uint8_t m_numOpponentsHit; // 0x0b44, 0x1 bytes
+                std::uint8_t m_numTeammatesHit; // 0x0b45, 0x1 bytes
+                std::uint8_t pad_0b46[0xa]; // 0x0b46, 0xa bytes
             };
             #pragma pack(pop)
 
@@ -41,7 +41,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFlashbangProjectile) == 0xA70, "CFlashbangProjectile size mismatch");
+            static_assert(sizeof(CFlashbangProjectile) == 0xB50, "CFlashbangProjectile size mismatch");
         }
     }
 }

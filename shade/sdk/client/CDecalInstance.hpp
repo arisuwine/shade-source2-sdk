@@ -34,8 +34,8 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc0
-             * Alignment: 0x10
+             * Size: 0x108
+             * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
@@ -57,25 +57,26 @@ namespace shade {
                 float m_flWidth; // 0x0064, 0x4 bytes
                 float m_flHeight; // 0x0068, 0x4 bytes
                 float m_flDepth; // 0x006c, 0x4 bytes
-                CTransformWS m_transform; // 0x0070, 0x20 bytes
-                float m_flAnimationScale; // 0x0090, 0x4 bytes
-                float m_flAnimationStartTime; // 0x0094, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPlaceTime; // 0x0098, 0x4 bytes
-                float m_flFadeStartTime; // 0x009c, 0x4 bytes
-                float m_flFadeDuration; // 0x00a0, 0x4 bytes
-                float m_flLightingOriginOffset; // 0x00a4, 0x4 bytes
-                std::uint8_t pad_00a8[0x8]; // 0x00a8, 0x8 bytes
-                float m_flBoundingRadiusSqr; // 0x00b0, 0x4 bytes
-                std::int16_t m_nSequenceIndex; // 0x00b4, 0x2 bytes
-                bool m_bIsAdjacent; // 0x00b6, 0x1 bytes
-                bool m_bDoDecalLightmapping; // 0x00b7, 0x1 bytes
-                std::uint8_t pad_00b8[0x8]; // 0x00b8, 0x8 bytes
+                matrix3x4_t m_mTransform; // 0x0070, 0x30 bytes
+                matrix3x4_t m_mLocalToTriangle; // 0x00a0, 0x30 bytes
+                float m_flAnimationScale; // 0x00d0, 0x4 bytes
+                float m_flAnimationStartTime; // 0x00d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPlaceTime; // 0x00d8, 0x4 bytes
+                float m_flFadeStartTime; // 0x00dc, 0x4 bytes
+                float m_flFadeDuration; // 0x00e0, 0x4 bytes
+                float m_flLightingOriginOffset; // 0x00e4, 0x4 bytes
+                std::uint8_t pad_00e8[0x10]; // 0x00e8, 0x10 bytes
+                float m_flBoundingRadiusSqr; // 0x00f8, 0x4 bytes
+                std::int16_t m_nSequenceIndex; // 0x00fc, 0x2 bytes
+                bool m_bIsAdjacent; // 0x00fe, 0x1 bytes
+                bool m_bDoDecalLightmapping; // 0x00ff, 0x1 bytes
+                std::uint8_t pad_0100[0x8]; // 0x0100, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDecalInstance) == 0xC0, "CDecalInstance size mismatch");
+            static_assert(sizeof(CDecalInstance) == 0x108, "CDecalInstance size mismatch");
         }
     }
 }

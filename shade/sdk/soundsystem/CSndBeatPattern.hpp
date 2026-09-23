@@ -17,7 +17,8 @@
 
 #include "shade/sdk/soundsystem/SndBeatEventType_t.hpp"
 #include "shade/sdk/soundsystem/SndBeatKeyType_t.hpp"
-#include "shade/sdk/soundsystem/SndBeatLaunchSyncType_t.hpp"
+#include "shade/sdk/soundsystem/SndBeatSyncStartType_t.hpp"
+#include "shade/sdk/soundsystem/SndBeatSyncType_t.hpp"
 #include "shade/sdk/soundsystem/SndBeatTimeSignature_t.hpp"
 
 namespace shade {
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem {
             /* Class Parameters
-             * Size: 0x98
+             * Size: 0xb8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -44,28 +45,31 @@ namespace shade {
             public:
                 CUtlString m_name; // 0x0000, 0x8 bytes
                 std::uint8_t pad_0008[0x4]; // 0x0008, 0x4 bytes
-                shade::sdk::soundsystem::SndBeatLaunchSyncType_t m_launchSyncType; // 0x000c, 0x4 bytes
-                float m_flSyncPriority; // 0x0010, 0x4 bytes
-                shade::sdk::soundsystem::SndBeatTimeSignature_t m_timeSignature; // 0x0014, 0x2 bytes
-                std::uint8_t pad_0016[0x6]; // 0x0016, 0x6 bytes
-                float m_flLength; // 0x001c, 0x4 bytes
-                bool m_bLooping; // 0x0020, 0x1 bytes
-                std::uint8_t pad_0021[0x3]; // 0x0021, 0x3 bytes
-                shade::sdk::soundsystem::SndBeatEventType_t m_launchSyncEventType; // 0x0024, 0x4 bytes
-                float m_flSyncBeatMult; // 0x0028, 0x4 bytes
-                shade::sdk::soundsystem::SndBeatEventType_t m_playEventType; // 0x002c, 0x4 bytes
-                float m_flPlayBeatMult; // 0x0030, 0x4 bytes
-                shade::sdk::soundsystem::SndBeatKeyType_t m_keyType; // 0x0034, 0x4 bytes
+                float m_flSyncPriority; // 0x000c, 0x4 bytes
+                shade::sdk::soundsystem::SndBeatSyncStartType_t m_syncStartType; // 0x0010, 0x4 bytes
+                shade::sdk::soundsystem::SndBeatSyncType_t m_syncType; // 0x0014, 0x4 bytes
+                shade::sdk::soundsystem::SndBeatTimeSignature_t m_timeSignature; // 0x0018, 0x2 bytes
+                std::uint8_t pad_001a[0x6]; // 0x001a, 0x6 bytes
+                float m_flLength; // 0x0020, 0x4 bytes
+                bool m_bLooping; // 0x0024, 0x1 bytes
+                std::uint8_t pad_0025[0x3]; // 0x0025, 0x3 bytes
+                shade::sdk::soundsystem::SndBeatEventType_t m_playEventType; // 0x0028, 0x4 bytes
+                float m_flPlayBeatMult; // 0x002c, 0x4 bytes
+                shade::sdk::soundsystem::SndBeatKeyType_t m_playKeyType; // 0x0030, 0x4 bytes
+                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
                 CUtlVector<shade::sdk::soundsystem::SndBeatEventKeys_t> m_vecPatternKeys; // 0x0038, 0x18 bytes
                 CUtlVector<shade::sdk::soundsystem::SndBeatEventKeyedFloats_t> m_vecPatternFloats; // 0x0050, 0x18 bytes
                 CUtlVector<shade::sdk::soundsystem::SndBeatEventKeyedSndEvts_t> m_vecPatternSndEvts; // 0x0068, 0x18 bytes
                 CUtlVector<shade::sdk::soundsystem::SndBeatEventKeyedMidiNotes_t> m_vecPatternMidi; // 0x0080, 0x18 bytes
+                shade::sdk::soundsystem::SndBeatEventType_t m_syncEventType; // 0x0098, 0x4 bytes
+                float m_flSyncBeatMult; // 0x009c, 0x4 bytes
+                CUtlVector<shade::sdk::soundsystem::SndBeatEventKeys_t> m_vecSyncPatternKeys; // 0x00a0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSndBeatPattern) == 0x98, "CSndBeatPattern size mismatch");
+            static_assert(sizeof(CSndBeatPattern) == 0xB8, "CSndBeatPattern size mismatch");
         }
     }
 }

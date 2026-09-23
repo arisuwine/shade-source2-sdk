@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x540
+             * Size: 0x578
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,40 +38,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCS2PawnGraphController : public shade::sdk::client::CCS2WeaponGraphController {
             public:
-                CAnimGraph2ParamOptionalRef<bool> m_bIsDefusing; // 0x02a0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_moveType; // 0x02b8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_moveDirectionID; // 0x02d0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeedX; // 0x02e8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeedY; // 0x0300, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeedHorizontal; // 0x0318, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flPreviousMoveSpeedHorizontal; // 0x0330, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flCrouchAmount; // 0x0348, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bIsWalking; // 0x0360, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flWeaponDropAmount; // 0x0378, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_groundAction; // 0x0390, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_groundActionDirectionID; // 0x03a8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flGroundTurnAngleOrVelocity; // 0x03c0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flLadderCycle; // 0x03d8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flLadderYaw; // 0x03f0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flLadderYawBackwards; // 0x0408, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_airAction; // 0x0420, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flAirHeightAboveGround; // 0x0438, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<shade::sdk::animlib::CNmTarget> m_leftFootTarget; // 0x0450, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<shade::sdk::animlib::CNmTarget> m_rightFootTarget; // 0x0468, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flFlashedAmount; // 0x0480, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flAimPitchAngle; // 0x0498, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flAimYawAngle; // 0x04b0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_flinchHead; // 0x04c8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_flinchHeadRestart; // 0x04e0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_flinchBody; // 0x04f8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_flinchBodyRestart; // 0x0510, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_flinchIsOnFire; // 0x0528, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bIsDefusing; // 0x02d8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_moveType; // 0x02f0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_moveDirectionID; // 0x0308, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeedX; // 0x0320, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeedY; // 0x0338, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeedHorizontal; // 0x0350, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flPreviousMoveSpeedHorizontal; // 0x0368, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flCrouchAmount; // 0x0380, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bIsWalking; // 0x0398, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flWeaponDropAmount; // 0x03b0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_groundAction; // 0x03c8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_groundActionDirectionID; // 0x03e0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flGroundTurnAngleOrVelocity; // 0x03f8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLadderCycle; // 0x0410, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLadderYaw; // 0x0428, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLadderYawBackwards; // 0x0440, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_airAction; // 0x0458, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flAirHeightAboveGround; // 0x0470, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<shade::sdk::animlib::CNmTarget> m_leftFootTarget; // 0x0488, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<shade::sdk::animlib::CNmTarget> m_rightFootTarget; // 0x04a0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flFlashedAmount; // 0x04b8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flAimPitchAngle; // 0x04d0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flAimYawAngle; // 0x04e8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_flinchHead; // 0x0500, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_flinchHeadRestart; // 0x0518, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_flinchBody; // 0x0530, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_flinchBodyRestart; // 0x0548, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_flinchIsOnFire; // 0x0560, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCS2PawnGraphController) == 0x540, "CCS2PawnGraphController size mismatch");
+            static_assert(sizeof(CCS2PawnGraphController) == 0x578, "CCS2PawnGraphController size mismatch");
         }
     }
 }

@@ -16,13 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixDataOffset.hpp"
 #include "shade/sdk/soundsystem_lowlevel/VMixConvolutionDesc_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x40
+             * Size: 0x50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixConvolutionProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
-                shade::sdk::soundsystem_lowlevel::VMixConvolutionDesc_t m_desc; // 0x0020, 0x20 bytes
+                shade::sdk::soundsystem_lowlevel::VMixConvolutionDesc_t m_desc; // 0x0028, 0x20 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_paramImpulseResponse; // 0x0048, 0x4 bytes
+                std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixConvolutionProcessorDesc) == 0x40, "CVMixConvolutionProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixConvolutionProcessorDesc) == 0x50, "CVMixConvolutionProcessorDesc size mismatch");
         }
     }
 }

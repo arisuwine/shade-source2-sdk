@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1208
+             * Size: 0x12f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_RagdollProp : public shade::sdk::client::CBaseAnimGraph {
             public:
-                C_NetworkUtlVectorBase<bool> m_ragEnabled; // 0x1180, 0x18 bytes
-                C_NetworkUtlVectorBase<Vector> m_ragPos; // 0x1198, 0x18 bytes
-                C_NetworkUtlVectorBase<QAngle> m_ragAngles; // 0x11b0, 0x18 bytes
-                float m_flBlendWeight; // 0x11c8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hRagdollSource; // 0x11cc, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_iEyeAttachment; // 0x11d0, 0x1 bytes
-                std::uint8_t pad_11d1[0x3]; // 0x11d1, 0x3 bytes
-                float m_flBlendWeightCurrent; // 0x11d4, 0x4 bytes
-                CUtlVector<std::int32_t> m_parentPhysicsBoneIndices; // 0x11d8, 0x18 bytes
-                CUtlVector<std::int32_t> m_worldSpaceBoneComputationOrder; // 0x11f0, 0x18 bytes
+                C_NetworkUtlVectorBase<bool> m_ragEnabled; // 0x1268, 0x18 bytes
+                C_NetworkUtlVectorBase<Vector> m_ragPos; // 0x1280, 0x18 bytes
+                C_NetworkUtlVectorBase<QAngle> m_ragAngles; // 0x1298, 0x18 bytes
+                float m_flBlendWeight; // 0x12b0, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hRagdollSource; // 0x12b4, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_iEyeAttachment; // 0x12b8, 0x1 bytes
+                std::uint8_t pad_12b9[0x3]; // 0x12b9, 0x3 bytes
+                float m_flBlendWeightCurrent; // 0x12bc, 0x4 bytes
+                CUtlVector<std::int32_t> m_parentPhysicsBoneIndices; // 0x12c0, 0x18 bytes
+                CUtlVector<std::int32_t> m_worldSpaceBoneComputationOrder; // 0x12d8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_RagdollProp) == 0x1208, "C_RagdollProp size mismatch");
+            static_assert(sizeof(C_RagdollProp) == 0x12F0, "C_RagdollProp size mismatch");
         }
     }
 }

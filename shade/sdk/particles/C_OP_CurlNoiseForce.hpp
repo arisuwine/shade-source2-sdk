@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1fb0
+             * Size: 0x2048
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_CurlNoiseForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                shade::sdk::particleslib::ParticleDirectionNoiseType_t m_nNoiseType; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecNoiseFreq; // 0x01f0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecNoiseScale; // 0x08a8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecOffset; // 0x0f60, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecOffsetRate; // 0x1618, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flWorleySeed; // 0x1cd0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flWorleyJitter; // 0x1e40, 0x170 bytes
+                shade::sdk::particleslib::ParticleDirectionNoiseType_t m_nNoiseType; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecNoiseFreq; // 0x01f8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecNoiseScale; // 0x08d0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecOffset; // 0x0fa8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecOffsetRate; // 0x1680, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flWorleySeed; // 0x1d58, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flWorleyJitter; // 0x1ed0, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_CurlNoiseForce) == 0x1FB0, "C_OP_CurlNoiseForce size mismatch");
+            static_assert(sizeof(C_OP_CurlNoiseForce) == 0x2048, "C_OP_CurlNoiseForce size mismatch");
         }
     }
 }

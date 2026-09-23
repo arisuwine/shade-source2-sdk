@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfb8
+             * Size: 0x10a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseDoor : public shade::sdk::client::C_BaseToggle {
             public:
-                bool m_bIsUsable; // 0x0fb0, 0x1 bytes
-                std::uint8_t pad_0fb1[0x7]; // 0x0fb1, 0x7 bytes
+                bool m_bIsUsable; // 0x1098, 0x1 bytes
+                std::uint8_t pad_1099[0x7]; // 0x1099, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseDoor) == 0xFB8, "C_BaseDoor size mismatch");
+            static_assert(sizeof(C_BaseDoor) == 0x10A0, "C_BaseDoor size mismatch");
         }
     }
 }

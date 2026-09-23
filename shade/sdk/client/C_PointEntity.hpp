@@ -34,7 +34,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * Vector InputSetPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(C_PointEntity) == 0x600, "C_PointEntity size mismatch");

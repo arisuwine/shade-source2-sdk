@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x88
+             * Size: 0xc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CEmptyGraphController) == 0x88, "CEmptyGraphController size mismatch");
+            static_assert(sizeof(CEmptyGraphController) == 0xC0, "CEmptyGraphController size mismatch");
         }
     }
 }

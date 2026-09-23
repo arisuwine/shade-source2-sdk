@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x988
+             * Size: 0xa68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,32 +41,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerLerpObject : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlSymbolLarge m_iszLerpTarget; // 0x08e8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLerpTarget; // 0x08f0, 0x4 bytes
-                std::uint8_t pad_08f4[0x4]; // 0x08f4, 0x4 bytes
-                CUtlSymbolLarge m_iszLerpTargetAttachment; // 0x08f8, 0x8 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hLerpTargetAttachment; // 0x0900, 0x1 bytes
-                std::uint8_t pad_0901[0x3]; // 0x0901, 0x3 bytes
-                float m_flLerpDuration; // 0x0904, 0x4 bytes
-                bool m_bAttachedEntityWasParented; // 0x0908, 0x1 bytes
-                bool m_bLerpRestoreMoveType; // 0x0909, 0x1 bytes
-                bool m_bSingleLerpObject; // 0x090a, 0x1 bytes
-                std::uint8_t pad_090b[0x5]; // 0x090b, 0x5 bytes
-                CUtlVector<shade::sdk::server::lerpdata_t> m_vecLerpingObjects; // 0x0910, 0x18 bytes
-                CUtlSymbolLarge m_iszLerpEffect; // 0x0928, 0x8 bytes
-                CUtlSymbolLarge m_iszLerpSound; // 0x0930, 0x8 bytes
-                bool m_bAttachTouchingObject; // 0x0938, 0x1 bytes
-                std::uint8_t pad_0939[0x3]; // 0x0939, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEntityToWaitForDisconnect; // 0x093c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLerpStarted; // 0x0940, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLerpFinished; // 0x0958, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDetached; // 0x0970, 0x18 bytes
+                CUtlSymbolLarge m_iszLerpTarget; // 0x09c8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLerpTarget; // 0x09d0, 0x4 bytes
+                std::uint8_t pad_09d4[0x4]; // 0x09d4, 0x4 bytes
+                CUtlSymbolLarge m_iszLerpTargetAttachment; // 0x09d8, 0x8 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hLerpTargetAttachment; // 0x09e0, 0x1 bytes
+                std::uint8_t pad_09e1[0x3]; // 0x09e1, 0x3 bytes
+                float m_flLerpDuration; // 0x09e4, 0x4 bytes
+                bool m_bAttachedEntityWasParented; // 0x09e8, 0x1 bytes
+                bool m_bLerpRestoreMoveType; // 0x09e9, 0x1 bytes
+                bool m_bSingleLerpObject; // 0x09ea, 0x1 bytes
+                std::uint8_t pad_09eb[0x5]; // 0x09eb, 0x5 bytes
+                CUtlVector<shade::sdk::server::lerpdata_t> m_vecLerpingObjects; // 0x09f0, 0x18 bytes
+                CUtlSymbolLarge m_iszLerpEffect; // 0x0a08, 0x8 bytes
+                CUtlSymbolLarge m_iszLerpSound; // 0x0a10, 0x8 bytes
+                bool m_bAttachTouchingObject; // 0x0a18, 0x1 bytes
+                std::uint8_t pad_0a19[0x3]; // 0x0a19, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEntityToWaitForDisconnect; // 0x0a1c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLerpStarted; // 0x0a20, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLerpFinished; // 0x0a38, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDetached; // 0x0a50, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerLerpObject) == 0x988, "CTriggerLerpObject size mismatch");
+            static_assert(sizeof(CTriggerLerpObject) == 0xA68, "CTriggerLerpObject size mismatch");
         }
     }
 }

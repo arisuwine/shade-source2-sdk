@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2a8
+             * Size: 0x3e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -48,15 +48,15 @@ namespace shade {
                 shade::sdk::server::CAttributeList m_NetworkedDynamicAttributes; // 0x00e8, 0x78 bytes
                 char m_szCustomName[0xa1]; // 0x0160, 0xa1 bytes
                 char m_szCustomNameOverride[0xa1]; // 0x0201, 0xa1 bytes
-                std::uint8_t pad_02a2[0x6]; // 0x02a2, 0x6 bytes
+                char m_szCustomNameOverride2[0xa1]; // 0x02a2, 0xa1 bytes
+                char m_szCustomNameOverride3[0xa1]; // 0x0343, 0xa1 bytes
+                std::uint8_t pad_03e4[0x4]; // 0x03e4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEconItemView) == 0x2A8, "CEconItemView size mismatch");
+            static_assert(sizeof(CEconItemView) == 0x3E8, "CEconItemView size mismatch");
         }
     }
 }

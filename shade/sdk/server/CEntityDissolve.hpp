@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CEntityDissolve : public shade::sdk::server::CBaseModelEntity {
             public:
-                float m_flFadeInStart; // 0x0770, 0x4 bytes
-                float m_flFadeInLength; // 0x0774, 0x4 bytes
-                float m_flFadeOutModelStart; // 0x0778, 0x4 bytes
-                float m_flFadeOutModelLength; // 0x077c, 0x4 bytes
-                float m_flFadeOutStart; // 0x0780, 0x4 bytes
-                float m_flFadeOutLength; // 0x0784, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0788, 0x4 bytes
-                shade::sdk::client::EntityDissolveType_t m_nDissolveType; // 0x078c, 0x4 bytes
-                VectorWS m_vDissolverOrigin; // 0x0790, 0xc bytes
-                std::uint32_t m_nMagnitude; // 0x079c, 0x4 bytes
+                float m_flFadeInStart; // 0x0850, 0x4 bytes
+                float m_flFadeInLength; // 0x0854, 0x4 bytes
+                float m_flFadeOutModelStart; // 0x0858, 0x4 bytes
+                float m_flFadeOutModelLength; // 0x085c, 0x4 bytes
+                float m_flFadeOutStart; // 0x0860, 0x4 bytes
+                float m_flFadeOutLength; // 0x0864, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0868, 0x4 bytes
+                shade::sdk::client::EntityDissolveType_t m_nDissolveType; // 0x086c, 0x4 bytes
+                VectorWS m_vDissolverOrigin; // 0x0870, 0xc bytes
+                std::uint32_t m_nMagnitude; // 0x087c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputDissolve; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEntityDissolve) == 0x7A0, "CEntityDissolve size mismatch");
+            static_assert(sizeof(CEntityDissolve) == 0x880, "CEntityDissolve size mismatch");
         }
     }
 }

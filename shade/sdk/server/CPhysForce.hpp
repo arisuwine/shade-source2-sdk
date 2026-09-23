@@ -55,11 +55,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputActivate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDeactivate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputForceScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPhysForce) == 0x508, "CPhysForce size mismatch");
         }

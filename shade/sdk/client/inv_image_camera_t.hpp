@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x34
+             * Size: 0x38
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -27,18 +27,19 @@ namespace shade {
             #pragma pack(push, 1)
             struct inv_image_camera_t {
                 QAngle angle; // 0x0000, 0xc bytes
-                float fov; // 0x000c, 0x4 bytes
-                float znear; // 0x0010, 0x4 bytes
-                float zfar; // 0x0014, 0x4 bytes
-                Vector target; // 0x0018, 0xc bytes
-                Vector target_nudge; // 0x0024, 0xc bytes
-                float orbit_distance; // 0x0030, 0x4 bytes
+                float fov_h; // 0x000c, 0x4 bytes
+                float fov_v; // 0x0010, 0x4 bytes
+                float znear; // 0x0014, 0x4 bytes
+                float zfar; // 0x0018, 0x4 bytes
+                Vector target; // 0x001c, 0xc bytes
+                Vector target_nudge; // 0x0028, 0xc bytes
+                float orbit_distance; // 0x0034, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(inv_image_camera_t) == 0x34, "inv_image_camera_t size mismatch");
+            static_assert(sizeof(inv_image_camera_t) == 0x38, "inv_image_camera_t size mismatch");
         }
     }
 }

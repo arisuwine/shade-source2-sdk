@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7f8
+             * Size: 0x800
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -48,32 +48,34 @@ namespace shade {
                 bool m_bKnownTeamMismatch; // 0x06c0, 0x1 bytes
                 std::uint8_t pad_06c1[0x3]; // 0x06c1, 0x3 bytes
                 CHandle<shade::sdk::client::C_BasePlayerPawn> m_hPredictedPawn; // 0x06c4, 0x4 bytes
-                CSplitScreenSlot m_nSplitScreenSlot; // 0x06c8, 0x4 bytes
-                CHandle<shade::sdk::client::CBasePlayerController> m_hSplitOwner; // 0x06cc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::CBasePlayerController>> m_hSplitScreenPlayers; // 0x06d0, 0x18 bytes
-                bool m_bIsHLTV; // 0x06e8, 0x1 bytes
-                std::uint8_t pad_06e9[0x3]; // 0x06e9, 0x3 bytes
-                shade::sdk::client::PlayerConnectedState m_iConnected; // 0x06ec, 0x4 bytes
-                shade::sdk::client::PlayerConnectedState m_iMostConnected; // 0x06f0, 0x4 bytes
-                char m_iszPlayerName[0x80]; // 0x06f4, 0x80 bytes
-                std::uint8_t pad_0774[0xc]; // 0x0774, 0xc bytes
-                std::uint64_t m_steamID; // 0x0780, 0x8 bytes
-                bool m_bIsLocalPlayerController; // 0x0788, 0x1 bytes
-                bool m_bNoClipEnabled; // 0x0789, 0x1 bytes
-                std::uint8_t pad_078a[0x2]; // 0x078a, 0x2 bytes
-                std::uint32_t m_iDesiredFOV; // 0x078c, 0x4 bytes
-                std::uint8_t pad_0790[0x68]; // 0x0790, 0x68 bytes
+                std::uint8_t pad_06c8[0x4]; // 0x06c8, 0x4 bytes
+                CSplitScreenSlot m_nSplitScreenSlot; // 0x06cc, 0x4 bytes
+                CHandle<shade::sdk::client::CBasePlayerController> m_hSplitOwner; // 0x06d0, 0x4 bytes
+                std::uint8_t pad_06d4[0x4]; // 0x06d4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::CBasePlayerController>> m_hSplitScreenPlayers; // 0x06d8, 0x18 bytes
+                bool m_bIsHLTV; // 0x06f0, 0x1 bytes
+                std::uint8_t pad_06f1[0x3]; // 0x06f1, 0x3 bytes
+                shade::sdk::client::PlayerConnectedState m_iConnected; // 0x06f4, 0x4 bytes
+                shade::sdk::client::PlayerConnectedState m_iMostConnected; // 0x06f8, 0x4 bytes
+                char m_iszPlayerName[0x80]; // 0x06fc, 0x80 bytes
+                std::uint8_t pad_077c[0xc]; // 0x077c, 0xc bytes
+                std::uint64_t m_steamID; // 0x0788, 0x8 bytes
+                bool m_bIsLocalPlayerController; // 0x0790, 0x1 bytes
+                bool m_bNoClipEnabled; // 0x0791, 0x1 bytes
+                std::uint8_t pad_0792[0x2]; // 0x0792, 0x2 bytes
+                std::uint32_t m_iDesiredFOV; // 0x0794, 0x4 bytes
+                std::uint8_t pad_0798[0x68]; // 0x0798, 0x68 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * bool fakeclient; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool is_hltv; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * char *playername; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlString playername; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool reserving; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBasePlayerController) == 0x7F8, "CBasePlayerController size mismatch");
+            static_assert(sizeof(CBasePlayerController) == 0x800, "CBasePlayerController size mismatch");
         }
     }
 }

@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0xe8
              * Alignment: 0xff
              * Module Local Type Scope
              */
@@ -36,13 +36,13 @@ namespace shade {
                 shade::sdk::client::C_EconItemView *pItem; // 0x0000, 0x8 bytes
                 std::uint16_t team; // 0x0008, 0x2 bytes
                 std::uint16_t slot; // 0x000a, 0x2 bytes
-                std::uint8_t pad_000c[0xbc]; // 0x000c, 0xbc bytes
+                std::uint8_t pad_000c[0xdc]; // 0x000c, 0xdc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t) == 0xC8, "CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t size mismatch");
+            static_assert(sizeof(CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t) == 0xE8, "CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t size mismatch");
         }
     }
 }

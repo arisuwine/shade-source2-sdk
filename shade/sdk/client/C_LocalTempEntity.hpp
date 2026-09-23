@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1228
+             * Size: 0x1310
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,39 +31,39 @@ namespace shade {
             #pragma pack(push, 1)
             class C_LocalTempEntity : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::int32_t flags; // 0x1180, 0x4 bytes
-                shade::sdk::entity2::GameTime_t die; // 0x1184, 0x4 bytes
-                float m_flFrameMax; // 0x1188, 0x4 bytes
-                float x; // 0x118c, 0x4 bytes
-                float y; // 0x1190, 0x4 bytes
-                float fadeSpeed; // 0x1194, 0x4 bytes
-                float bounceFactor; // 0x1198, 0x4 bytes
-                std::int32_t hitSound; // 0x119c, 0x4 bytes
-                std::int32_t priority; // 0x11a0, 0x4 bytes
-                Vector tentOffset; // 0x11a4, 0xc bytes
-                QAngle m_vecTempEntAngVelocity; // 0x11b0, 0xc bytes
-                std::int32_t tempent_renderamt; // 0x11bc, 0x4 bytes
-                Vector m_vecNormal; // 0x11c0, 0xc bytes
-                float m_flSpriteScale; // 0x11cc, 0x4 bytes
-                std::int32_t m_nFlickerFrame; // 0x11d0, 0x4 bytes
-                float m_flFrameRate; // 0x11d4, 0x4 bytes
-                float m_flFrame; // 0x11d8, 0x4 bytes
-                std::uint8_t pad_11dc[0x4]; // 0x11dc, 0x4 bytes
-                char *m_pszImpactEffect; // 0x11e0, 0x8 bytes
-                char *m_pszParticleEffect; // 0x11e8, 0x8 bytes
-                bool m_bParticleCollision; // 0x11f0, 0x1 bytes
-                std::uint8_t pad_11f1[0x3]; // 0x11f1, 0x3 bytes
-                std::int32_t m_iLastCollisionFrame; // 0x11f4, 0x4 bytes
-                VectorWS m_vLastCollisionOrigin; // 0x11f8, 0xc bytes
-                Vector m_vecTempEntVelocity; // 0x1204, 0xc bytes
-                VectorWS m_vecPrevAbsOrigin; // 0x1210, 0xc bytes
-                Vector m_vecTempEntAcceleration; // 0x121c, 0xc bytes
+                std::int32_t flags; // 0x1268, 0x4 bytes
+                shade::sdk::entity2::GameTime_t die; // 0x126c, 0x4 bytes
+                float m_flFrameMax; // 0x1270, 0x4 bytes
+                float x; // 0x1274, 0x4 bytes
+                float y; // 0x1278, 0x4 bytes
+                float fadeSpeed; // 0x127c, 0x4 bytes
+                float bounceFactor; // 0x1280, 0x4 bytes
+                std::int32_t hitSound; // 0x1284, 0x4 bytes
+                std::int32_t priority; // 0x1288, 0x4 bytes
+                Vector tentOffset; // 0x128c, 0xc bytes
+                QAngle m_vecTempEntAngVelocity; // 0x1298, 0xc bytes
+                std::int32_t tempent_renderamt; // 0x12a4, 0x4 bytes
+                Vector m_vecNormal; // 0x12a8, 0xc bytes
+                float m_flSpriteScale; // 0x12b4, 0x4 bytes
+                std::int32_t m_nFlickerFrame; // 0x12b8, 0x4 bytes
+                float m_flFrameRate; // 0x12bc, 0x4 bytes
+                float m_flFrame; // 0x12c0, 0x4 bytes
+                std::uint8_t pad_12c4[0x4]; // 0x12c4, 0x4 bytes
+                char *m_pszImpactEffect; // 0x12c8, 0x8 bytes
+                char *m_pszParticleEffect; // 0x12d0, 0x8 bytes
+                bool m_bParticleCollision; // 0x12d8, 0x1 bytes
+                std::uint8_t pad_12d9[0x3]; // 0x12d9, 0x3 bytes
+                std::int32_t m_iLastCollisionFrame; // 0x12dc, 0x4 bytes
+                VectorWS m_vLastCollisionOrigin; // 0x12e0, 0xc bytes
+                Vector m_vecTempEntVelocity; // 0x12ec, 0xc bytes
+                VectorWS m_vecPrevAbsOrigin; // 0x12f8, 0xc bytes
+                Vector m_vecTempEntAcceleration; // 0x1304, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_LocalTempEntity) == 0x1228, "C_LocalTempEntity size mismatch");
+            static_assert(sizeof(C_LocalTempEntity) == 0x1310, "C_LocalTempEntity size mismatch");
         }
     }
 }

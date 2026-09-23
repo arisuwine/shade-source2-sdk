@@ -58,13 +58,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetMotorTargetAngle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetVelocity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetHingeFriction; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMinLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPhysHinge) == 0x678, "CPhysHinge size mismatch");
         }

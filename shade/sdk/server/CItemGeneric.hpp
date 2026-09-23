@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb30
+             * Size: 0xc10
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -45,58 +45,56 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemGeneric : public shade::sdk::server::CItem {
             public:
-                std::uint8_t pad_0a00[0x14]; // 0x0a00, 0x14 bytes
-                bool m_bHasTriggerRadius; // 0x0a14, 0x1 bytes
-                bool m_bHasPickupRadius; // 0x0a15, 0x1 bytes
-                std::uint8_t pad_0a16[0x2]; // 0x0a16, 0x2 bytes
-                float m_flPickupRadiusSqr; // 0x0a18, 0x4 bytes
-                float m_flTriggerRadiusSqr; // 0x0a1c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastPickupCheck; // 0x0a20, 0x4 bytes
-                bool m_bPlayerCounterListenerAdded; // 0x0a24, 0x1 bytes
-                bool m_bPlayerInTriggerRadius; // 0x0a25, 0x1 bytes
-                std::uint8_t pad_0a26[0x2]; // 0x0a26, 0x2 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hSpawnParticleEffect; // 0x0a28, 0x8 bytes
-                CUtlSymbolLarge m_pAmbientSoundEffect; // 0x0a30, 0x8 bytes
-                bool m_bAutoStartAmbientSound; // 0x0a38, 0x1 bytes
-                std::uint8_t pad_0a39[0x7]; // 0x0a39, 0x7 bytes
-                CUtlSymbolLarge m_pSpawnScriptFunction; // 0x0a40, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hPickupParticleEffect; // 0x0a48, 0x8 bytes
-                CUtlSymbolLarge m_pPickupSoundEffect; // 0x0a50, 0x8 bytes
-                CUtlSymbolLarge m_pPickupScriptFunction; // 0x0a58, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hTimeoutParticleEffect; // 0x0a60, 0x8 bytes
-                CUtlSymbolLarge m_pTimeoutSoundEffect; // 0x0a68, 0x8 bytes
-                CUtlSymbolLarge m_pTimeoutScriptFunction; // 0x0a70, 0x8 bytes
-                CUtlSymbolLarge m_pPickupFilterName; // 0x0a78, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseFilter> m_hPickupFilter; // 0x0a80, 0x4 bytes
-                std::uint8_t pad_0a84[0x4]; // 0x0a84, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPickup; // 0x0a88, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTimeout; // 0x0aa0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTriggerStartTouch; // 0x0ab8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTriggerTouch; // 0x0ad0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTriggerEndTouch; // 0x0ae8, 0x18 bytes
-                CUtlSymbolLarge m_pAllowPickupScriptFunction; // 0x0b00, 0x8 bytes
-                float m_flPickupRadius; // 0x0b08, 0x4 bytes
-                float m_flTriggerRadius; // 0x0b0c, 0x4 bytes
-                CUtlSymbolLarge m_pTriggerSoundEffect; // 0x0b10, 0x8 bytes
-                bool m_bGlowWhenInTrigger; // 0x0b18, 0x1 bytes
-                Color m_glowColor; // 0x0b19, 0x4 bytes
-                bool m_bUseable; // 0x0b1d, 0x1 bytes
-                std::uint8_t pad_0b1e[0x2]; // 0x0b1e, 0x2 bytes
-                CHandle<shade::sdk::server::CItemGenericTriggerHelper> m_hTriggerHelper; // 0x0b20, 0x4 bytes
-                std::uint8_t pad_0b24[0xc]; // 0x0b24, 0xc bytes
+                std::uint8_t pad_0ae0[0x14]; // 0x0ae0, 0x14 bytes
+                bool m_bHasTriggerRadius; // 0x0af4, 0x1 bytes
+                bool m_bHasPickupRadius; // 0x0af5, 0x1 bytes
+                std::uint8_t pad_0af6[0x2]; // 0x0af6, 0x2 bytes
+                float m_flPickupRadiusSqr; // 0x0af8, 0x4 bytes
+                float m_flTriggerRadiusSqr; // 0x0afc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastPickupCheck; // 0x0b00, 0x4 bytes
+                bool m_bPlayerCounterListenerAdded; // 0x0b04, 0x1 bytes
+                bool m_bPlayerInTriggerRadius; // 0x0b05, 0x1 bytes
+                std::uint8_t pad_0b06[0x2]; // 0x0b06, 0x2 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hSpawnParticleEffect; // 0x0b08, 0x8 bytes
+                CUtlSymbolLarge m_pAmbientSoundEffect; // 0x0b10, 0x8 bytes
+                bool m_bAutoStartAmbientSound; // 0x0b18, 0x1 bytes
+                std::uint8_t pad_0b19[0x7]; // 0x0b19, 0x7 bytes
+                CUtlSymbolLarge m_pSpawnScriptFunction; // 0x0b20, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hPickupParticleEffect; // 0x0b28, 0x8 bytes
+                CUtlSymbolLarge m_pPickupSoundEffect; // 0x0b30, 0x8 bytes
+                CUtlSymbolLarge m_pPickupScriptFunction; // 0x0b38, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hTimeoutParticleEffect; // 0x0b40, 0x8 bytes
+                CUtlSymbolLarge m_pTimeoutSoundEffect; // 0x0b48, 0x8 bytes
+                CUtlSymbolLarge m_pTimeoutScriptFunction; // 0x0b50, 0x8 bytes
+                CUtlSymbolLarge m_pPickupFilterName; // 0x0b58, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseFilter> m_hPickupFilter; // 0x0b60, 0x4 bytes
+                std::uint8_t pad_0b64[0x4]; // 0x0b64, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPickup; // 0x0b68, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTimeout; // 0x0b80, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTriggerStartTouch; // 0x0b98, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTriggerTouch; // 0x0bb0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTriggerEndTouch; // 0x0bc8, 0x18 bytes
+                CUtlSymbolLarge m_pAllowPickupScriptFunction; // 0x0be0, 0x8 bytes
+                float m_flPickupRadius; // 0x0be8, 0x4 bytes
+                float m_flTriggerRadius; // 0x0bec, 0x4 bytes
+                CUtlSymbolLarge m_pTriggerSoundEffect; // 0x0bf0, 0x8 bytes
+                bool m_bGlowWhenInTrigger; // 0x0bf8, 0x1 bytes
+                std::uint8_t pad_0bf9[0x3]; // 0x0bf9, 0x3 bytes
+                Color m_glowColor; // 0x0bfc, 0x4 bytes
+                bool m_bUseable; // 0x0c00, 0x1 bytes
+                std::uint8_t pad_0c01[0x3]; // 0x0c01, 0x3 bytes
+                CHandle<shade::sdk::server::CItemGenericTriggerHelper> m_hTriggerHelper; // 0x0c04, 0x4 bytes
+                std::uint8_t pad_0c08[0x8]; // 0x0c08, 0x8 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputStartAmbientSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopAmbientSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleAmbientSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * float auto_remove_timeout; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float drag_override; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float damping_override; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CItemGeneric) == 0xB30, "CItemGeneric size mismatch");
+            static_assert(sizeof(CItemGeneric) == 0xC10, "CItemGeneric size mismatch");
         }
     }
 }

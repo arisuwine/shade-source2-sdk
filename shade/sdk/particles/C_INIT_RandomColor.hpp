@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleColorBlendMode_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x228
+             * Size: 0x230
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,24 +31,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RandomColor : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::uint8_t pad_01e0[0x1c]; // 0x01e0, 0x1c bytes
-                Color m_ColorMin; // 0x01fc, 0x4 bytes
-                Color m_ColorMax; // 0x0200, 0x4 bytes
-                Color m_TintMin; // 0x0204, 0x4 bytes
-                Color m_TintMax; // 0x0208, 0x4 bytes
-                float m_flTintPerc; // 0x020c, 0x4 bytes
-                float m_flUpdateThreshold; // 0x0210, 0x4 bytes
-                std::int32_t m_nTintCP; // 0x0214, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0218, 0x4 bytes
-                shade::sdk::particleslib::ParticleColorBlendMode_t m_nTintBlendMode; // 0x021c, 0x4 bytes
-                float m_flLightAmplification; // 0x0220, 0x4 bytes
-                std::uint8_t pad_0224[0x4]; // 0x0224, 0x4 bytes
+                std::uint8_t pad_01e8[0x1c]; // 0x01e8, 0x1c bytes
+                Color m_ColorMin; // 0x0204, 0x4 bytes
+                Color m_ColorMax; // 0x0208, 0x4 bytes
+                Color m_TintMin; // 0x020c, 0x4 bytes
+                Color m_TintMax; // 0x0210, 0x4 bytes
+                float m_flTintPerc; // 0x0214, 0x4 bytes
+                float m_flUpdateThreshold; // 0x0218, 0x4 bytes
+                std::int32_t m_nTintCP; // 0x021c, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0220, 0x4 bytes
+                shade::sdk::particleslib::ParticleColorBlendMode_t m_nTintBlendMode; // 0x0224, 0x4 bytes
+                float m_flLightAmplification; // 0x0228, 0x4 bytes
+                std::uint8_t pad_022c[0x4]; // 0x022c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RandomColor) == 0x228, "C_INIT_RandomColor size mismatch");
+            static_assert(sizeof(C_INIT_RandomColor) == 0x230, "C_INIT_RandomColor size mismatch");
         }
     }
 }

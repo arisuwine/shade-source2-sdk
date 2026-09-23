@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x298
+             * Size: 0x2a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_LifespanFromVelocity : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                Vector m_vecComponentScale; // 0x01e0, 0xc bytes
-                float m_flTraceOffset; // 0x01ec, 0x4 bytes
-                float m_flMaxTraceLength; // 0x01f0, 0x4 bytes
-                float m_flTraceTolerance; // 0x01f4, 0x4 bytes
-                std::int32_t m_nMaxPlanes; // 0x01f8, 0x4 bytes
-                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
-                char m_CollisionGroupName[0x80]; // 0x0200, 0x80 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0280, 0x4 bytes
-                std::uint8_t pad_0284[0xc]; // 0x0284, 0xc bytes
-                bool m_bIncludeWater; // 0x0290, 0x1 bytes
-                std::uint8_t pad_0291[0x7]; // 0x0291, 0x7 bytes
+                Vector m_vecComponentScale; // 0x01e8, 0xc bytes
+                float m_flTraceOffset; // 0x01f4, 0x4 bytes
+                float m_flMaxTraceLength; // 0x01f8, 0x4 bytes
+                float m_flTraceTolerance; // 0x01fc, 0x4 bytes
+                std::int32_t m_nMaxPlanes; // 0x0200, 0x4 bytes
+                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
+                char m_CollisionGroupName[0x80]; // 0x0208, 0x80 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0288, 0x4 bytes
+                std::uint8_t pad_028c[0xc]; // 0x028c, 0xc bytes
+                bool m_bIncludeWater; // 0x0298, 0x1 bytes
+                std::uint8_t pad_0299[0x7]; // 0x0299, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_LifespanFromVelocity) == 0x298, "C_INIT_LifespanFromVelocity size mismatch");
+            static_assert(sizeof(C_INIT_LifespanFromVelocity) == 0x2A0, "C_INIT_LifespanFromVelocity size mismatch");
         }
     }
 }

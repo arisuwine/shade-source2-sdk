@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1fb8
+             * Size: 0x2050
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,25 +31,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ExternalWindForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vecSamplePosition; // 0x01e8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecScale; // 0x08a0, 0x6b8 bytes
-                bool m_bSampleWind; // 0x0f58, 0x1 bytes
-                bool m_bSampleWater; // 0x0f59, 0x1 bytes
-                bool m_bDampenNearWaterPlane; // 0x0f5a, 0x1 bytes
-                bool m_bSampleGravity; // 0x0f5b, 0x1 bytes
-                std::uint8_t pad_0f5c[0x4]; // 0x0f5c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecGravityForce; // 0x0f60, 0x6b8 bytes
-                bool m_bUseBasicMovementGravity; // 0x1618, 0x1 bytes
-                std::uint8_t pad_1619[0x7]; // 0x1619, 0x7 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLocalGravityScale; // 0x1620, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLocalBuoyancyScale; // 0x1790, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecBuoyancyForce; // 0x1900, 0x6b8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecSamplePosition; // 0x01f0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecScale; // 0x08c8, 0x6d8 bytes
+                bool m_bSampleWind; // 0x0fa0, 0x1 bytes
+                bool m_bSampleWater; // 0x0fa1, 0x1 bytes
+                bool m_bDampenNearWaterPlane; // 0x0fa2, 0x1 bytes
+                bool m_bSampleGravity; // 0x0fa3, 0x1 bytes
+                std::uint8_t pad_0fa4[0x4]; // 0x0fa4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecGravityForce; // 0x0fa8, 0x6d8 bytes
+                bool m_bUseBasicMovementGravity; // 0x1680, 0x1 bytes
+                std::uint8_t pad_1681[0x7]; // 0x1681, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLocalGravityScale; // 0x1688, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLocalBuoyancyScale; // 0x1800, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecBuoyancyForce; // 0x1978, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ExternalWindForce) == 0x1FB8, "C_OP_ExternalWindForce size mismatch");
+            static_assert(sizeof(C_OP_ExternalWindForce) == 0x2050, "C_OP_ExternalWindForce size mismatch");
         }
     }
 }

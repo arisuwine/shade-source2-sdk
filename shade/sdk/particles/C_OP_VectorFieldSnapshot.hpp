@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa20
+             * Size: 0xa50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +32,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_VectorFieldSnapshot : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01d8, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAttributeToWrite; // 0x01dc, 0x4 bytes
-                std::int32_t m_nLocalSpaceCP; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecScale; // 0x0358, 0x6b8 bytes
-                float m_flBoundaryDampening; // 0x0a10, 0x4 bytes
-                bool m_bSetVelocity; // 0x0a14, 0x1 bytes
-                bool m_bLockToSurface; // 0x0a15, 0x1 bytes
-                std::uint8_t pad_0a16[0x2]; // 0x0a16, 0x2 bytes
-                float m_flGridSpacing; // 0x0a18, 0x4 bytes
-                std::uint8_t pad_0a1c[0x4]; // 0x0a1c, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAttributeToWrite; // 0x01e4, 0x4 bytes
+                std::int32_t m_nLocalSpaceCP; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecScale; // 0x0368, 0x6d8 bytes
+                float m_flBoundaryDampening; // 0x0a40, 0x4 bytes
+                bool m_bSetVelocity; // 0x0a44, 0x1 bytes
+                bool m_bLockToSurface; // 0x0a45, 0x1 bytes
+                std::uint8_t pad_0a46[0x2]; // 0x0a46, 0x2 bytes
+                float m_flGridSpacing; // 0x0a48, 0x4 bytes
+                std::uint8_t pad_0a4c[0x4]; // 0x0a4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_VectorFieldSnapshot) == 0xA20, "C_OP_VectorFieldSnapshot size mismatch");
+            static_assert(sizeof(C_OP_VectorFieldSnapshot) == 0xA50, "C_OP_VectorFieldSnapshot size mismatch");
         }
     }
 }

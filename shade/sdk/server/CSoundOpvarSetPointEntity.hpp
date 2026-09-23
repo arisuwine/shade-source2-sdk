@@ -62,11 +62,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputSetDisabledValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDistanceMapMin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDistanceMapMax; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CSoundOpvarSetPointEntity) == 0x640, "CSoundOpvarSetPointEntity size mismatch");
         }

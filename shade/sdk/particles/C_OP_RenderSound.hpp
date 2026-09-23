@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x358
+             * Size: 0x360
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,25 +30,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderSound : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                float m_flDurationScale; // 0x0228, 0x4 bytes
-                float m_flSndLvlScale; // 0x022c, 0x4 bytes
-                float m_flPitchScale; // 0x0230, 0x4 bytes
-                float m_flVolumeScale; // 0x0234, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nSndLvlField; // 0x0238, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nDurationField; // 0x023c, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nPitchField; // 0x0240, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nVolumeField; // 0x0244, 0x4 bytes
-                std::int32_t m_nChannel; // 0x0248, 0x4 bytes
-                std::int32_t m_nCPReference; // 0x024c, 0x4 bytes
-                char m_pszSoundName[0x100]; // 0x0250, 0x100 bytes
-                bool m_bSuppressStopSoundEvent; // 0x0350, 0x1 bytes
-                std::uint8_t pad_0351[0x7]; // 0x0351, 0x7 bytes
+                float m_flDurationScale; // 0x0230, 0x4 bytes
+                float m_flSndLvlScale; // 0x0234, 0x4 bytes
+                float m_flPitchScale; // 0x0238, 0x4 bytes
+                float m_flVolumeScale; // 0x023c, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nSndLvlField; // 0x0240, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nDurationField; // 0x0244, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nPitchField; // 0x0248, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nVolumeField; // 0x024c, 0x4 bytes
+                std::int32_t m_nChannel; // 0x0250, 0x4 bytes
+                std::int32_t m_nCPReference; // 0x0254, 0x4 bytes
+                char m_pszSoundName[0x100]; // 0x0258, 0x100 bytes
+                bool m_bSuppressStopSoundEvent; // 0x0358, 0x1 bytes
+                std::uint8_t pad_0359[0x7]; // 0x0359, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderSound) == 0x358, "C_OP_RenderSound size mismatch");
+            static_assert(sizeof(C_OP_RenderSound) == 0x360, "C_OP_RenderSound size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,28 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncMonitor : public shade::sdk::server::CFuncBrush {
             public:
-                CUtlString m_targetCamera; // 0x0790, 0x8 bytes
-                std::int32_t m_nResolutionEnum; // 0x0798, 0x4 bytes
-                bool m_bRenderShadows; // 0x079c, 0x1 bytes
-                bool m_bUseUniqueColorTarget; // 0x079d, 0x1 bytes
-                std::uint8_t pad_079e[0x2]; // 0x079e, 0x2 bytes
-                CUtlString m_brushModelName; // 0x07a0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetCamera; // 0x07a8, 0x4 bytes
-                bool m_bEnabled; // 0x07ac, 0x1 bytes
-                bool m_bDraw3DSkybox; // 0x07ad, 0x1 bytes
-                bool m_bStartEnabled; // 0x07ae, 0x1 bytes
-                std::uint8_t pad_07af[0x1]; // 0x07af, 0x1 bytes
+                CUtlString m_targetCamera; // 0x0870, 0x8 bytes
+                std::int32_t m_nResolutionEnum; // 0x0878, 0x4 bytes
+                bool m_bRenderShadows; // 0x087c, 0x1 bytes
+                bool m_bUseUniqueColorTarget; // 0x087d, 0x1 bytes
+                std::uint8_t pad_087e[0x2]; // 0x087e, 0x2 bytes
+                CUtlString m_brushModelName; // 0x0880, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetCamera; // 0x0888, 0x4 bytes
+                bool m_bEnabled; // 0x088c, 0x1 bytes
+                bool m_bDraw3DSkybox; // 0x088d, 0x1 bytes
+                bool m_bStartEnabled; // 0x088e, 0x1 bytes
+                std::uint8_t pad_088f[0x1]; // 0x088f, 0x1 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetCamera; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncMonitor) == 0x7B0, "CFuncMonitor size mismatch");
+            static_assert(sizeof(CFuncMonitor) == 0x890, "CFuncMonitor size mismatch");
         }
     }
 }

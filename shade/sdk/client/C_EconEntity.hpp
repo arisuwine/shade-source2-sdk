@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16f0
+             * Size: 0x1918
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,41 +41,39 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EconEntity : public shade::sdk::client::CBaseAnimGraph, public shade::sdk::client::IHasAttributes {
             public:
-                std::uint8_t pad_1188[0x8]; // 0x1188, 0x8 bytes
-                float m_flFlexDelayTime; // 0x1190, 0x4 bytes
-                std::uint8_t pad_1194[0x4]; // 0x1194, 0x4 bytes
-                float *m_flFlexDelayedWeight; // 0x1198, 0x8 bytes
-                bool m_bAttributesInitialized; // 0x11a0, 0x1 bytes
-                std::uint8_t pad_11a1[0x7]; // 0x11a1, 0x7 bytes
-                shade::sdk::client::C_AttributeContainer m_AttributeManager; // 0x11a8, 0x4d0 bytes
-                std::uint32_t m_OriginalOwnerXuidLow; // 0x1678, 0x4 bytes
-                std::uint32_t m_OriginalOwnerXuidHigh; // 0x167c, 0x4 bytes
-                std::int32_t m_nFallbackPaintKit; // 0x1680, 0x4 bytes
-                std::int32_t m_nFallbackSeed; // 0x1684, 0x4 bytes
-                float m_flFallbackWear; // 0x1688, 0x4 bytes
-                std::int32_t m_nFallbackStatTrak; // 0x168c, 0x4 bytes
-                bool m_bClientside; // 0x1690, 0x1 bytes
-                bool m_bParticleSystemsCreated; // 0x1691, 0x1 bytes
-                std::uint8_t pad_1692[0x6]; // 0x1692, 0x6 bytes
-                CUtlVector<std::int32_t> m_vecAttachedParticles; // 0x1698, 0x18 bytes
-                CHandle<shade::sdk::client::CBaseAnimGraph> m_hViewmodelAttachment; // 0x16b0, 0x4 bytes
-                std::int32_t m_iOldTeam; // 0x16b4, 0x4 bytes
-                bool m_bAttachmentDirty; // 0x16b8, 0x1 bytes
-                std::uint8_t pad_16b9[0x3]; // 0x16b9, 0x3 bytes
-                std::int32_t m_nUnloadedModelIndex; // 0x16bc, 0x4 bytes
-                std::int32_t m_iNumOwnerValidationRetries; // 0x16c0, 0x4 bytes
-                std::uint8_t pad_16c4[0xc]; // 0x16c4, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hOldProvidee; // 0x16d0, 0x4 bytes
-                std::uint8_t pad_16d4[0x4]; // 0x16d4, 0x4 bytes
-                CUtlVector<shade::sdk::client::C_EconEntity__AttachedModelData_t> m_vecAttachedModels; // 0x16d8, 0x18 bytes
+                std::uint8_t pad_1270[0x8]; // 0x1270, 0x8 bytes
+                float m_flFlexDelayTime; // 0x1278, 0x4 bytes
+                std::uint8_t pad_127c[0x4]; // 0x127c, 0x4 bytes
+                float *m_flFlexDelayedWeight; // 0x1280, 0x8 bytes
+                bool m_bAttributesInitialized; // 0x1288, 0x1 bytes
+                std::uint8_t pad_1289[0x7]; // 0x1289, 0x7 bytes
+                shade::sdk::client::C_AttributeContainer m_AttributeManager; // 0x1290, 0x610 bytes
+                std::uint32_t m_OriginalOwnerXuidLow; // 0x18a0, 0x4 bytes
+                std::uint32_t m_OriginalOwnerXuidHigh; // 0x18a4, 0x4 bytes
+                std::int32_t m_nFallbackPaintKit; // 0x18a8, 0x4 bytes
+                std::int32_t m_nFallbackSeed; // 0x18ac, 0x4 bytes
+                float m_flFallbackWear; // 0x18b0, 0x4 bytes
+                std::int32_t m_nFallbackStatTrak; // 0x18b4, 0x4 bytes
+                bool m_bClientside; // 0x18b8, 0x1 bytes
+                bool m_bParticleSystemsCreated; // 0x18b9, 0x1 bytes
+                std::uint8_t pad_18ba[0x6]; // 0x18ba, 0x6 bytes
+                CUtlVector<std::int32_t> m_vecAttachedParticles; // 0x18c0, 0x18 bytes
+                CHandle<shade::sdk::client::CBaseAnimGraph> m_hViewmodelAttachment; // 0x18d8, 0x4 bytes
+                std::int32_t m_iOldTeam; // 0x18dc, 0x4 bytes
+                bool m_bAttachmentDirty; // 0x18e0, 0x1 bytes
+                std::uint8_t pad_18e1[0x3]; // 0x18e1, 0x3 bytes
+                std::int32_t m_nUnloadedModelIndex; // 0x18e4, 0x4 bytes
+                std::int32_t m_iNumOwnerValidationRetries; // 0x18e8, 0x4 bytes
+                std::uint8_t pad_18ec[0xc]; // 0x18ec, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hOldProvidee; // 0x18f8, 0x4 bytes
+                std::uint8_t pad_18fc[0x4]; // 0x18fc, 0x4 bytes
+                CUtlVector<shade::sdk::client::C_EconEntity__AttachedModelData_t> m_vecAttachedModels; // 0x1900, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_EconEntity) == 0x16F0, "C_EconEntity size mismatch");
+            static_assert(sizeof(C_EconEntity) == 0x1918, "C_EconEntity size mismatch");
         }
     }
 }

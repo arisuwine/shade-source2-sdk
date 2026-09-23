@@ -29,12 +29,13 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct VMixFilterDesc_t {
-                shade::sdk::soundsystem_lowlevel::VMixFilterType_t m_nFilterType; // 0x0000, 0x2 bytes
-                shade::sdk::soundsystem_lowlevel::VMixFilterSlope_t m_nFilterSlope; // 0x0002, 0x1 bytes
-                bool m_bEnabled; // 0x0003, 0x1 bytes
-                float m_fldbGain; // 0x0004, 0x4 bytes
-                float m_flCutoffFreq; // 0x0008, 0x4 bytes
-                float m_flQ; // 0x000c, 0x4 bytes
+                float m_fldbGain; // 0x0000, 0x4 bytes
+                float m_flCutoffFreq; // 0x0004, 0x4 bytes
+                float m_flQ; // 0x0008, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::VMixFilterType_t m_nFilterType; // 0x000c, 0x1 bytes
+                shade::sdk::soundsystem_lowlevel::VMixFilterSlope_t m_nFilterSlope; // 0x000d, 0x1 bytes
+                bool m_bEnabled; // 0x000e, 0x1 bytes
+                std::uint8_t pad_000f[0x1]; // 0x000f, 0x1 bytes
             };
             #pragma pack(pop)
 

@@ -17,10 +17,12 @@
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
 #include "shade/sdk/particles/ParticleLightUnitChoiceList_t.hpp"
+#include "shade/sdk/particles/ParticleOmni2LighOrientationChoiceList_t.hpp"
 #include "shade/sdk/particles/ParticleOmni2LightTypeChoiceList_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionVecInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
 #include "shade/sdk/particleslib/ParticleColorBlendType_t.hpp"
 
 namespace shade {
@@ -35,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1788
+             * Size: 0x2e88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,39 +45,49 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderOmni2Light : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particles::ParticleOmni2LightTypeChoiceList_t m_nLightType; // 0x0228, 0x4 bytes
-                std::uint16_t m_nMaxAllowed; // 0x022c, 0x2 bytes
-                std::uint8_t pad_022e[0x2]; // 0x022e, 0x2 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vColorBlend; // 0x0230, 0x6b8 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x08e8, 0x4 bytes
-                std::uint8_t pad_08ec[0x4]; // 0x08ec, 0x4 bytes
-                CUtlString m_strLightStyle; // 0x08f0, 0x8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLightStyleTime; // 0x08f8, 0x170 bytes
-                shade::sdk::particles::ParticleLightUnitChoiceList_t m_nBrightnessUnit; // 0x0a68, 0x4 bytes
-                std::uint8_t pad_0a6c[0x4]; // 0x0a6c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flBrightnessLumens; // 0x0a70, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flBrightnessCandelas; // 0x0be0, 0x170 bytes
-                bool m_bCastShadows; // 0x0d50, 0x1 bytes
-                bool m_bDynamicBounce; // 0x0d51, 0x1 bytes
-                std::uint8_t pad_0d52[0x6]; // 0x0d52, 0x6 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBounceScale; // 0x0d58, 0x170 bytes
-                bool m_bFog; // 0x0ec8, 0x1 bytes
-                std::uint8_t pad_0ec9[0x7]; // 0x0ec9, 0x7 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flFogScale; // 0x0ed0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLuminaireRadius; // 0x1040, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flSkirt; // 0x11b0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRange; // 0x1320, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInnerConeAngle; // 0x1490, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOuterConeAngle; // 0x1600, 0x170 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hLightCookie; // 0x1770, 0x8 bytes
-                bool m_bSphericalCookie; // 0x1778, 0x1 bytes
-                std::uint8_t pad_1779[0xf]; // 0x1779, 0xf bytes
+                shade::sdk::particles::ParticleOmni2LightTypeChoiceList_t m_nLightType; // 0x0230, 0x4 bytes
+                std::uint16_t m_nMaxAllowed; // 0x0234, 0x2 bytes
+                std::uint8_t pad_0236[0x2]; // 0x0236, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vColorBlend; // 0x0238, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0910, 0x4 bytes
+                std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes
+                CUtlString m_strLightStyle; // 0x0918, 0x8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLightStyleTime; // 0x0920, 0x178 bytes
+                shade::sdk::particles::ParticleLightUnitChoiceList_t m_nBrightnessUnit; // 0x0a98, 0x4 bytes
+                std::uint8_t pad_0a9c[0x4]; // 0x0a9c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBrightnessLumens; // 0x0aa0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBrightnessCandelas; // 0x0c18, 0x178 bytes
+                bool m_bCastShadows; // 0x0d90, 0x1 bytes
+                bool m_bDynamicBounce; // 0x0d91, 0x1 bytes
+                std::uint8_t pad_0d92[0x6]; // 0x0d92, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBounceScale; // 0x0d98, 0x178 bytes
+                bool m_bFog; // 0x0f10, 0x1 bytes
+                std::uint8_t pad_0f11[0x7]; // 0x0f11, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flFogScale; // 0x0f18, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLuminaireRadius; // 0x1090, 0x178 bytes
+                shade::sdk::particles::ParticleOmni2LighOrientationChoiceList_t m_nOrientationType; // 0x1208, 0x4 bytes
+                std::uint8_t pad_120c[0x4]; // 0x120c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vNormal; // 0x1210, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vTarget; // 0x18e8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flFOVAngle; // 0x1fc0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBarnShape; // 0x2138, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBarnNearSizeX; // 0x22b0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBarnNearSizeY; // 0x2428, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBarnSoftX; // 0x25a0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBarnSoftY; // 0x2718, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flSkirt; // 0x2890, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRange; // 0x2a08, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInnerConeAngle; // 0x2b80, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOuterConeAngle; // 0x2cf8, 0x178 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hLightCookie; // 0x2e70, 0x8 bytes
+                bool m_bSphericalCookie; // 0x2e78, 0x1 bytes
+                std::uint8_t pad_2e79[0xf]; // 0x2e79, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderOmni2Light) == 0x1788, "C_OP_RenderOmni2Light size mismatch");
+            static_assert(sizeof(C_OP_RenderOmni2Light) == 0x2E88, "C_OP_RenderOmni2Light size mismatch");
         }
     }
 }

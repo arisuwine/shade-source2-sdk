@@ -16,16 +16,16 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleTransformInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1c50
+             * Size: 0x1cd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,27 +33,27 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateWithinSphereTransform : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_fRadiusMin; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fRadiusMax; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecDistanceBias; // 0x04c0, 0x6b8 bytes
-                Vector m_vecDistanceBiasAbs; // 0x0b78, 0xc bytes
-                std::uint8_t pad_0b84[0x4]; // 0x0b84, 0x4 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x0b88, 0x68 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMin; // 0x0bf0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMax; // 0x0d60, 0x170 bytes
-                float m_fSpeedRandExp; // 0x0ed0, 0x4 bytes
-                bool m_bLocalCoords; // 0x0ed4, 0x1 bytes
-                std::uint8_t pad_0ed5[0x3]; // 0x0ed5, 0x3 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0x0ed8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0x1590, 0x6b8 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c48, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldVelocity; // 0x1c4c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fRadiusMin; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fRadiusMax; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecDistanceBias; // 0x04d8, 0x6d8 bytes
+                Vector m_vecDistanceBiasAbs; // 0x0bb0, 0xc bytes
+                std::uint8_t pad_0bbc[0x4]; // 0x0bbc, 0x4 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x0bc0, 0x68 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMin; // 0x0c28, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMax; // 0x0da0, 0x178 bytes
+                float m_fSpeedRandExp; // 0x0f18, 0x4 bytes
+                bool m_bLocalCoords; // 0x0f1c, 0x1 bytes
+                std::uint8_t pad_0f1d[0x3]; // 0x0f1d, 0x3 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0x0f20, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0x15f8, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x1cd0, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldVelocity; // 0x1cd4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateWithinSphereTransform) == 0x1C50, "C_INIT_CreateWithinSphereTransform size mismatch");
+            static_assert(sizeof(C_INIT_CreateWithinSphereTransform) == 0x1CD8, "C_INIT_CreateWithinSphereTransform size mismatch");
         }
     }
 }

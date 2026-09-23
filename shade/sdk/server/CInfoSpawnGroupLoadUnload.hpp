@@ -48,12 +48,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartSpawnGroupLoad; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputActivateSpawnGroup; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartSpawnGroupUnload; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSpawnGroup; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CInfoSpawnGroupLoadUnload) == 0x580, "CInfoSpawnGroupLoadUnload size mismatch");
         }

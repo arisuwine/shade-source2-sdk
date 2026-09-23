@@ -20,7 +20,8 @@ namespace shade {
                 BBOX_VOLUME = 0x0,
                 BBOX_DIMENSIONS = 0x1,
                 BBOX_MINS_MAXS = 0x2,
-                BBOX_RADIUS = 0x3
+                BBOX_RADIUS = 0x3,
+                BBOX_SURFACE_AREA = 0x4
             };
         }
     }

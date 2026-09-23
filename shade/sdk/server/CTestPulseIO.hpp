@@ -72,15 +72,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputVariantVoid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputVariantBool; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputVariantInt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputVariantFloat; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputVariantString; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputVariantColor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Vector InputVariantVector; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CTestPulseIO) == 0x7A0, "CTestPulseIO size mismatch");
         }

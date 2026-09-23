@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1748
+             * Size: 0x7d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_EnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume) == 0x1748, "C_EnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume size mismatch");
+            static_assert(sizeof(C_EnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume) == 0x7D8, "C_EnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume size mismatch");
         }
     }
 }

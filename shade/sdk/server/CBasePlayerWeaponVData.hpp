@@ -58,9 +58,9 @@ namespace shade {
                 float m_flMuzzleSmokeTimeout; // 0x04bc, 0x4 bytes
                 float m_flMuzzleSmokeDecrementRate; // 0x04c0, 0x4 bytes
                 bool m_bGenerateMuzzleLight; // 0x04c4, 0x1 bytes
-                bool m_bLinkedCooldowns; // 0x04c5, 0x1 bytes
-                shade::sdk::client::ItemFlagTypes_t m_iFlags; // 0x04c6, 0x1 bytes
-                std::uint8_t pad_04c7[0x1]; // 0x04c7, 0x1 bytes
+                bool m_bShouldAnimateInWorld; // 0x04c5, 0x1 bytes
+                bool m_bLinkedCooldowns; // 0x04c6, 0x1 bytes
+                shade::sdk::client::ItemFlagTypes_t m_iFlags; // 0x04c7, 0x1 bytes
                 std::int32_t m_iWeight; // 0x04c8, 0x4 bytes
                 bool m_bAutoSwitchTo; // 0x04cc, 0x1 bytes
                 bool m_bAutoSwitchFrom; // 0x04cd, 0x1 bytes

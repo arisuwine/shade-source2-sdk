@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x970
+             * Size: 0xa50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CConstraintAnchor : public shade::sdk::server::CBaseAnimGraph {
             public:
-                float m_massScale; // 0x0960, 0x4 bytes
-                std::uint8_t pad_0964[0xc]; // 0x0964, 0xc bytes
+                float m_massScale; // 0x0a40, 0x4 bytes
+                std::uint8_t pad_0a44[0xc]; // 0x0a44, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CConstraintAnchor) == 0x970, "CConstraintAnchor size mismatch");
+            static_assert(sizeof(CConstraintAnchor) == 0xA50, "CConstraintAnchor size mismatch");
         }
     }
 }

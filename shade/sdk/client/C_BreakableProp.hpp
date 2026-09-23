@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x12f0
+             * Size: 0x13e0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -44,53 +44,46 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BreakableProp : public shade::sdk::client::CBaseProp {
             public:
-                shade::sdk::client::CPropDataComponent m_CPropDataComponent; // 0x11b0, 0x40 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x11f0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x1208, 0x18 bytes
-                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x1220, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x1240, 0x18 bytes
-                float m_impactEnergyScale; // 0x1258, 0x4 bytes
-                std::int32_t m_iMinHealthDmg; // 0x125c, 0x4 bytes
-                float m_flPressureDelay; // 0x1260, 0x4 bytes
-                float m_flDefBurstScale; // 0x1264, 0x4 bytes
-                Vector m_vDefBurstOffset; // 0x1268, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBreaker; // 0x1274, 0x4 bytes
-                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x1278, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPreventDamageBeforeTime; // 0x127c, 0x4 bytes
-                shade::sdk::client::BreakableContentsType_t m_BreakableContentsType; // 0x1280, 0x4 bytes
-                std::uint8_t pad_1284[0x4]; // 0x1284, 0x4 bytes
-                CUtlString m_strBreakableContentsPropGroupOverride; // 0x1288, 0x8 bytes
-                CUtlString m_strBreakableContentsParticleOverride; // 0x1290, 0x8 bytes
-                bool m_bHasBreakPiecesOrCommands; // 0x1298, 0x1 bytes
-                std::uint8_t pad_1299[0x3]; // 0x1299, 0x3 bytes
-                float m_explodeDamage; // 0x129c, 0x4 bytes
-                float m_explodeRadius; // 0x12a0, 0x4 bytes
-                std::uint8_t pad_12a4[0x4]; // 0x12a4, 0x4 bytes
-                CGlobalSymbol m_sExplosionType; // 0x12a8, 0x8 bytes
-                float m_explosionDelay; // 0x12b0, 0x4 bytes
-                std::uint8_t pad_12b4[0x4]; // 0x12b4, 0x4 bytes
-                CUtlSymbolLarge m_explosionBuildupSound; // 0x12b8, 0x8 bytes
-                CUtlSymbolLarge m_explosionCustomEffect; // 0x12c0, 0x8 bytes
-                CUtlSymbolLarge m_explosionCustomSound; // 0x12c8, 0x8 bytes
-                CUtlSymbolLarge m_explosionModifier; // 0x12d0, 0x8 bytes
-                CHandle<shade::sdk::client::C_BasePlayerPawn> m_hPhysicsAttacker; // 0x12d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x12dc, 0x4 bytes
-                float m_flDefaultFadeScale; // 0x12e0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLastAttacker; // 0x12e4, 0x4 bytes
-                std::uint8_t pad_12e8[0x8]; // 0x12e8, 0x8 bytes
+                shade::sdk::client::CPropDataComponent m_CPropDataComponent; // 0x12a0, 0x40 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x12e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x12f8, 0x18 bytes
+                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x1310, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x1330, 0x18 bytes
+                float m_impactEnergyScale; // 0x1348, 0x4 bytes
+                std::int32_t m_iMinHealthDmg; // 0x134c, 0x4 bytes
+                float m_flPressureDelay; // 0x1350, 0x4 bytes
+                float m_flDefBurstScale; // 0x1354, 0x4 bytes
+                Vector m_vDefBurstOffset; // 0x1358, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBreaker; // 0x1364, 0x4 bytes
+                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x1368, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPreventDamageBeforeTime; // 0x136c, 0x4 bytes
+                shade::sdk::client::BreakableContentsType_t m_BreakableContentsType; // 0x1370, 0x4 bytes
+                std::uint8_t pad_1374[0x4]; // 0x1374, 0x4 bytes
+                CUtlString m_strBreakableContentsPropGroupOverride; // 0x1378, 0x8 bytes
+                CUtlString m_strBreakableContentsParticleOverride; // 0x1380, 0x8 bytes
+                bool m_bHasBreakPiecesOrCommands; // 0x1388, 0x1 bytes
+                std::uint8_t pad_1389[0x3]; // 0x1389, 0x3 bytes
+                float m_explodeDamage; // 0x138c, 0x4 bytes
+                float m_explodeRadius; // 0x1390, 0x4 bytes
+                std::uint8_t pad_1394[0x4]; // 0x1394, 0x4 bytes
+                CGlobalSymbol m_sExplosionType; // 0x1398, 0x8 bytes
+                float m_explosionDelay; // 0x13a0, 0x4 bytes
+                std::uint8_t pad_13a4[0x4]; // 0x13a4, 0x4 bytes
+                CUtlSymbolLarge m_explosionBuildupSound; // 0x13a8, 0x8 bytes
+                CUtlSymbolLarge m_explosionCustomEffect; // 0x13b0, 0x8 bytes
+                CUtlSymbolLarge m_explosionCustomSound; // 0x13b8, 0x8 bytes
+                CUtlSymbolLarge m_explosionModifier; // 0x13c0, 0x8 bytes
+                CHandle<shade::sdk::client::C_BasePlayerPawn> m_hPhysicsAttacker; // 0x13c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x13cc, 0x4 bytes
+                float m_flDefaultFadeScale; // 0x13d0, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLastAttacker; // 0x13d4, 0x4 bytes
+                std::uint8_t pad_13d8[0x8]; // 0x13d8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputAddHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputRemoveHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetEnableBreaking; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetEnableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_BreakableProp) == 0x12F0, "C_BreakableProp size mismatch");
+            static_assert(sizeof(C_BreakableProp) == 0x13E0, "C_BreakableProp size mismatch");
         }
     }
 }

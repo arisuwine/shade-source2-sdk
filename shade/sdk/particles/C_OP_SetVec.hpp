@@ -16,16 +16,16 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetVec : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_InputValue; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x0890, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0894, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_Lerp; // 0x0898, 0x170 bytes
-                bool m_bNormalizedOutput; // 0x0a08, 0x1 bytes
-                std::uint8_t pad_0a09[0x7]; // 0x0a09, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_InputValue; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x08b8, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x08bc, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_Lerp; // 0x08c0, 0x178 bytes
+                bool m_bNormalizedOutput; // 0x0a38, 0x1 bytes
+                std::uint8_t pad_0a39[0x7]; // 0x0a39, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetVec) == 0xA10, "C_OP_SetVec size mismatch");
+            static_assert(sizeof(C_OP_SetVec) == 0xA40, "C_OP_SetVec size mismatch");
         }
     }
 }

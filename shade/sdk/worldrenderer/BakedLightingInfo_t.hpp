@@ -43,10 +43,11 @@ namespace shade {
                 bool m_bHasLightmaps; // 0x0010, 0x1 bytes
                 bool m_bBakedShadowsGamma20; // 0x0011, 0x1 bytes
                 bool m_bCompressionEnabled; // 0x0012, 0x1 bytes
-                bool m_bSHLightmaps; // 0x0013, 0x1 bytes
-                std::uint8_t m_nChartPackIterations; // 0x0014, 0x1 bytes
-                std::uint8_t m_nVradQuality; // 0x0015, 0x1 bytes
-                std::uint8_t pad_0016[0x2]; // 0x0016, 0x2 bytes
+                std::int8_t m_nLPVEncoding; // 0x0013, 0x1 bytes
+                std::int8_t m_nLightmapEncoding; // 0x0014, 0x1 bytes
+                std::uint8_t m_nChartPackIterations; // 0x0015, 0x1 bytes
+                std::uint8_t m_nVradQuality; // 0x0016, 0x1 bytes
+                std::uint8_t pad_0017[0x1]; // 0x0017, 0x1 bytes
                 CUtlVector<CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase>> m_lightMaps; // 0x0018, 0x18 bytes
                 CUtlVector<shade::sdk::worldrenderer::BakedLightingInfo_t__BakedShadowAssignment_t> m_bakedShadows; // 0x0030, 0x18 bytes
             };

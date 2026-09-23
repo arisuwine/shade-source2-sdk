@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerBrush : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x0770, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x0788, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUse; // 0x07a0, 0x18 bytes
-                std::int32_t m_iInputFilter; // 0x07b8, 0x4 bytes
-                std::int32_t m_iDontMessageParent; // 0x07bc, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x0850, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x0868, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUse; // 0x0880, 0x18 bytes
+                std::int32_t m_iInputFilter; // 0x0898, 0x4 bytes
+                std::int32_t m_iDontMessageParent; // 0x089c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTriggerBrush) == 0x7C0, "CTriggerBrush size mismatch");
+            static_assert(sizeof(CTriggerBrush) == 0x8A0, "CTriggerBrush size mismatch");
         }
     }
 }

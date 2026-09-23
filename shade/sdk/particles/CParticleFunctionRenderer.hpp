@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x228
+             * Size: 0x230
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -31,16 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CParticleFunctionRenderer : public shade::sdk::particles::CParticleFunction {
             public:
-                shade::sdk::particles::CParticleVisibilityInputs VisibilityInputs; // 0x01d8, 0x48 bytes
-                bool m_bCannotBeRefracted; // 0x0220, 0x1 bytes
-                bool m_bSkipRenderingOnMobile; // 0x0221, 0x1 bytes
-                std::uint8_t pad_0222[0x6]; // 0x0222, 0x6 bytes
+                shade::sdk::particles::CParticleVisibilityInputs VisibilityInputs; // 0x01e0, 0x48 bytes
+                bool m_bCannotBeRefracted; // 0x0228, 0x1 bytes
+                std::uint8_t pad_0229[0x7]; // 0x0229, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleFunctionRenderer) == 0x228, "CParticleFunctionRenderer size mismatch");
+            static_assert(sizeof(CParticleFunctionRenderer) == 0x230, "CParticleFunctionRenderer size mismatch");
         }
     }
 }

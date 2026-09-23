@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e0
+             * Size: 0x1e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_GlobalLight : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flScale; // 0x01d8, 0x4 bytes
-                bool m_bClampLowerRange; // 0x01dc, 0x1 bytes
-                bool m_bClampUpperRange; // 0x01dd, 0x1 bytes
-                std::uint8_t pad_01de[0x2]; // 0x01de, 0x2 bytes
+                float m_flScale; // 0x01e0, 0x4 bytes
+                bool m_bClampLowerRange; // 0x01e4, 0x1 bytes
+                bool m_bClampUpperRange; // 0x01e5, 0x1 bytes
+                std::uint8_t pad_01e6[0x2]; // 0x01e6, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_GlobalLight) == 0x1E0, "C_OP_GlobalLight size mismatch");
+            static_assert(sizeof(C_OP_GlobalLight) == 0x1E8, "C_OP_GlobalLight size mismatch");
         }
     }
 }

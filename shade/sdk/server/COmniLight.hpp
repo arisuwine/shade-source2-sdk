@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa68
+             * Size: 0xb48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class COmniLight : public shade::sdk::server::CBarnLight {
             public:
-                float m_flInnerAngle; // 0x0a58, 0x4 bytes
-                float m_flOuterAngle; // 0x0a5c, 0x4 bytes
-                bool m_bShowLight; // 0x0a60, 0x1 bytes
-                std::uint8_t pad_0a61[0x7]; // 0x0a61, 0x7 bytes
+                float m_flInnerAngle; // 0x0b38, 0x4 bytes
+                float m_flOuterAngle; // 0x0b3c, 0x4 bytes
+                bool m_bShowLight; // 0x0b40, 0x1 bytes
+                std::uint8_t pad_0b41[0x7]; // 0x0b41, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(COmniLight) == 0xA68, "COmniLight size mismatch");
+            static_assert(sizeof(COmniLight) == 0xB48, "COmniLight size mismatch");
         }
     }
 }

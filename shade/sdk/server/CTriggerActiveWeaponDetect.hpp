@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x908
+             * Size: 0x9e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerActiveWeaponDetect : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnTouchedActiveWeapon; // 0x08e8, 0x18 bytes
-                CUtlSymbolLarge m_iszWeaponClassName; // 0x0900, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTouchedActiveWeapon; // 0x09c8, 0x18 bytes
+                CUtlSymbolLarge m_iszWeaponClassName; // 0x09e0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerActiveWeaponDetect) == 0x908, "CTriggerActiveWeaponDetect size mismatch");
+            static_assert(sizeof(CTriggerActiveWeaponDetect) == 0x9E8, "CTriggerActiveWeaponDetect size mismatch");
         }
     }
 }

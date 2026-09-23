@@ -29,11 +29,11 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_FadeOut : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flFadeOutTimeMin; // 0x01d8, 0x4 bytes
-                float m_flFadeOutTimeMax; // 0x01dc, 0x4 bytes
-                float m_flFadeOutTimeExp; // 0x01e0, 0x4 bytes
-                float m_flFadeBias; // 0x01e4, 0x4 bytes
-                std::uint8_t pad_01e8[0x38]; // 0x01e8, 0x38 bytes
+                float m_flFadeOutTimeMin; // 0x01e0, 0x4 bytes
+                float m_flFadeOutTimeMax; // 0x01e4, 0x4 bytes
+                float m_flFadeOutTimeExp; // 0x01e8, 0x4 bytes
+                float m_flFadeBias; // 0x01ec, 0x4 bytes
+                std::uint8_t pad_01f0[0x30]; // 0x01f0, 0x30 bytes
                 bool m_bProportional; // 0x0220, 0x1 bytes
                 bool m_bEaseInAndOut; // 0x0221, 0x1 bytes
                 std::uint8_t pad_0222[0xe]; // 0x0222, 0xe bytes

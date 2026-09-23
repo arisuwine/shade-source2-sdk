@@ -39,9 +39,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputActivate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CAI_ChangeHintGroup) == 0x4C8, "CAI_ChangeHintGroup size mismatch");
         }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1410
+             * Size: 0x1500
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PointClientUIWorldTextPanel : public shade::sdk::client::C_PointClientUIWorldPanel {
             public:
-                char m_messageText[0x200]; // 0x1210, 0x200 bytes
+                char m_messageText[0x200]; // 0x1300, 0x200 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetMessage; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetIntMessage; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_PointClientUIWorldTextPanel) == 0x1410, "C_PointClientUIWorldTextPanel size mismatch");
+            static_assert(sizeof(C_PointClientUIWorldTextPanel) == 0x1500, "C_PointClientUIWorldTextPanel size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x898
+             * Size: 0x8c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_ScaleVelocity : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecScale; // 0x01e0, 0x6b8 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecScale; // 0x01e8, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_ScaleVelocity) == 0x898, "C_INIT_ScaleVelocity size mismatch");
+            static_assert(sizeof(C_INIT_ScaleVelocity) == 0x8C0, "C_INIT_ScaleVelocity size mismatch");
         }
     }
 }

@@ -44,14 +44,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void ShowWorldLayer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void HideWorldLayer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void SpawnEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void DestroyEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void ShowWorldLayerAndSpawnEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void HideWorldLayerAndDestroyEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CInfoWorldLayer) == 0x638, "CInfoWorldLayer size mismatch");
         }

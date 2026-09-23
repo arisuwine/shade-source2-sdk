@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x240
+             * Size: 0x248
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,31 +30,31 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_StatusEffect : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particles::Detail2Combo_t m_nDetail2Combo; // 0x01e0, 0x4 bytes
-                float m_flDetail2Rotation; // 0x01e4, 0x4 bytes
-                float m_flDetail2Scale; // 0x01e8, 0x4 bytes
-                float m_flDetail2BlendFactor; // 0x01ec, 0x4 bytes
-                float m_flColorWarpIntensity; // 0x01f0, 0x4 bytes
-                float m_flDiffuseWarpBlendToFull; // 0x01f4, 0x4 bytes
-                float m_flEnvMapIntensity; // 0x01f8, 0x4 bytes
-                float m_flAmbientScale; // 0x01fc, 0x4 bytes
-                Color m_specularColor; // 0x0200, 0x4 bytes
-                float m_flSpecularScale; // 0x0204, 0x4 bytes
-                float m_flSpecularExponent; // 0x0208, 0x4 bytes
-                float m_flSpecularExponentBlendToFull; // 0x020c, 0x4 bytes
-                float m_flSpecularBlendToFull; // 0x0210, 0x4 bytes
-                Color m_rimLightColor; // 0x0214, 0x4 bytes
-                float m_flRimLightScale; // 0x0218, 0x4 bytes
-                float m_flReflectionsTintByBaseBlendToNone; // 0x021c, 0x4 bytes
-                float m_flMetalnessBlendToFull; // 0x0220, 0x4 bytes
-                float m_flSelfIllumBlendToFull; // 0x0224, 0x4 bytes
-                std::uint8_t pad_0228[0x18]; // 0x0228, 0x18 bytes
+                shade::sdk::particles::Detail2Combo_t m_nDetail2Combo; // 0x01e8, 0x4 bytes
+                float m_flDetail2Rotation; // 0x01ec, 0x4 bytes
+                float m_flDetail2Scale; // 0x01f0, 0x4 bytes
+                float m_flDetail2BlendFactor; // 0x01f4, 0x4 bytes
+                float m_flColorWarpIntensity; // 0x01f8, 0x4 bytes
+                float m_flDiffuseWarpBlendToFull; // 0x01fc, 0x4 bytes
+                float m_flEnvMapIntensity; // 0x0200, 0x4 bytes
+                float m_flAmbientScale; // 0x0204, 0x4 bytes
+                Color m_specularColor; // 0x0208, 0x4 bytes
+                float m_flSpecularScale; // 0x020c, 0x4 bytes
+                float m_flSpecularExponent; // 0x0210, 0x4 bytes
+                float m_flSpecularExponentBlendToFull; // 0x0214, 0x4 bytes
+                float m_flSpecularBlendToFull; // 0x0218, 0x4 bytes
+                Color m_rimLightColor; // 0x021c, 0x4 bytes
+                float m_flRimLightScale; // 0x0220, 0x4 bytes
+                float m_flReflectionsTintByBaseBlendToNone; // 0x0224, 0x4 bytes
+                float m_flMetalnessBlendToFull; // 0x0228, 0x4 bytes
+                float m_flSelfIllumBlendToFull; // 0x022c, 0x4 bytes
+                std::uint8_t pad_0230[0x18]; // 0x0230, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_StatusEffect) == 0x240, "C_INIT_StatusEffect size mismatch");
+            static_assert(sizeof(C_INIT_StatusEffect) == 0x248, "C_INIT_StatusEffect size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc30
+             * Size: 0xd10
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysicsPropOverride) == 0xC30, "CPhysicsPropOverride size mismatch");
+            static_assert(sizeof(CPhysicsPropOverride) == 0xD10, "CPhysicsPropOverride size mismatch");
         }
     }
 }

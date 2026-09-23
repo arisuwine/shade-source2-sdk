@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3510
+             * Size: 0x37c0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CSGO_PreviewPlayer : public shade::sdk::client::C_CSPlayerPawn {
             public:
-                CGlobalSymbol m_animgraphCharacterModeString; // 0x3470, 0x8 bytes
-                float m_flInitialModelScale; // 0x3478, 0x4 bytes
-                std::uint8_t pad_347c[0x94]; // 0x347c, 0x94 bytes
+                CGlobalSymbol m_animgraphCharacterModeString; // 0x3710, 0x8 bytes
+                float m_flInitialModelScale; // 0x3718, 0x4 bytes
+                std::uint8_t pad_371c[0xa4]; // 0x371c, 0xa4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CSGO_PreviewPlayer) == 0x3510, "C_CSGO_PreviewPlayer size mismatch");
+            static_assert(sizeof(C_CSGO_PreviewPlayer) == 0x37C0, "C_CSGO_PreviewPlayer size mismatch");
         }
     }
 }

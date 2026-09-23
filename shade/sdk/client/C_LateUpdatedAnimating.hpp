@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1240
+             * Size: 0x1320
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -31,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_LateUpdatedAnimating : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::uint8_t pad_1180[0xc0]; // 0x1180, 0xc0 bytes
+                std::uint8_t pad_1268[0xb8]; // 0x1268, 0xb8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_LateUpdatedAnimating) == 0x1240, "C_LateUpdatedAnimating size mismatch");
+            static_assert(sizeof(C_LateUpdatedAnimating) == 0x1320, "C_LateUpdatedAnimating size mismatch");
         }
     }
 }

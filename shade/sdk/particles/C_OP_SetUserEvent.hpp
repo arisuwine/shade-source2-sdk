@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x638
+             * Size: 0x658
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetUserEvent : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInput; // 0x01d8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRisingEdge; // 0x0348, 0x170 bytes
-                shade::sdk::particles::EventTypeSelection_t m_nRisingEventType; // 0x04b8, 0x4 bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flFallingEdge; // 0x04c0, 0x170 bytes
-                shade::sdk::particles::EventTypeSelection_t m_nFallingEventType; // 0x0630, 0x4 bytes
-                std::uint8_t pad_0634[0x4]; // 0x0634, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInput; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRisingEdge; // 0x0358, 0x178 bytes
+                shade::sdk::particles::EventTypeSelection_t m_nRisingEventType; // 0x04d0, 0x4 bytes
+                std::uint8_t pad_04d4[0x4]; // 0x04d4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flFallingEdge; // 0x04d8, 0x178 bytes
+                shade::sdk::particles::EventTypeSelection_t m_nFallingEventType; // 0x0650, 0x4 bytes
+                std::uint8_t pad_0654[0x4]; // 0x0654, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetUserEvent) == 0x638, "C_OP_SetUserEvent size mismatch");
+            static_assert(sizeof(C_OP_SetUserEvent) == 0x658, "C_OP_SetUserEvent size mismatch");
         }
     }
 }

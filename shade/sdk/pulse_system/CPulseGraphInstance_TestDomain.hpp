@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0xd0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,24 +29,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_TestDomain : public shade::sdk::pulse_runtime_lib::CBasePulseGraphInstance {
             public:
-                std::uint8_t pad_0110[0x18]; // 0x0110, 0x18 bytes
-                bool m_bIsRunningUnitTests; // 0x0128, 0x1 bytes
-                bool m_bExplicitTimeStepping; // 0x0129, 0x1 bytes
-                bool m_bExpectingToDestroyWithYieldedCursors; // 0x012a, 0x1 bytes
-                bool m_bQuietTracepoints; // 0x012b, 0x1 bytes
-                bool m_bExpectingCursorTerminatedDueToMaxInstructions; // 0x012c, 0x1 bytes
-                std::uint8_t pad_012d[0x3]; // 0x012d, 0x3 bytes
-                std::int32_t m_nCursorsTerminatedDueToMaxInstructions; // 0x0130, 0x4 bytes
-                std::int32_t m_nNextValidateIndex; // 0x0134, 0x4 bytes
-                CUtlVector<CUtlString> m_Tracepoints; // 0x0138, 0x18 bytes
-                bool m_bTestYesOrNoPath; // 0x0150, 0x1 bytes
-                std::uint8_t pad_0151[0x7]; // 0x0151, 0x7 bytes
+                std::uint8_t pad_0088[0x18]; // 0x0088, 0x18 bytes
+                bool m_bIsRunningUnitTests; // 0x00a0, 0x1 bytes
+                bool m_bExplicitTimeStepping; // 0x00a1, 0x1 bytes
+                bool m_bExpectingToDestroyWithYieldedCursors; // 0x00a2, 0x1 bytes
+                bool m_bQuietTracepoints; // 0x00a3, 0x1 bytes
+                bool m_bExpectingCursorTerminatedDueToMaxInstructions; // 0x00a4, 0x1 bytes
+                std::uint8_t pad_00a5[0x3]; // 0x00a5, 0x3 bytes
+                std::int32_t m_nCursorsTerminatedDueToMaxInstructions; // 0x00a8, 0x4 bytes
+                std::int32_t m_nNextValidateIndex; // 0x00ac, 0x4 bytes
+                CUtlVector<CUtlString> m_Tracepoints; // 0x00b0, 0x18 bytes
+                bool m_bTestYesOrNoPath; // 0x00c8, 0x1 bytes
+                std::uint8_t pad_00c9[0x7]; // 0x00c9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_TestDomain) == 0x158, "CPulseGraphInstance_TestDomain size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_TestDomain) == 0xD0, "CPulseGraphInstance_TestDomain size mismatch");
         }
     }
 }

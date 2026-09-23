@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x430
+             * Size: 0x460
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -43,15 +43,13 @@ namespace shade {
                 std::int32_t m_iNumRoundKills; // 0x0188, 0x4 bytes
                 std::int32_t m_iNumRoundKillsHeadshots; // 0x018c, 0x4 bytes
                 float m_flTotalRoundDamageDealt; // 0x0190, 0x4 bytes
-                std::uint8_t pad_0194[0x29c]; // 0x0194, 0x29c bytes
+                std::uint8_t pad_0194[0x2cc]; // 0x0194, 0x2cc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSPlayerController_ActionTrackingServices) == 0x430, "CCSPlayerController_ActionTrackingServices size mismatch");
+            static_assert(sizeof(CCSPlayerController_ActionTrackingServices) == 0x460, "CCSPlayerController_ActionTrackingServices size mismatch");
         }
     }
 }

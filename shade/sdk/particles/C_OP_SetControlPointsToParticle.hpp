@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointsToParticle : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nChildGroupID; // 0x01d8, 0x4 bytes
-                std::int32_t m_nFirstControlPoint; // 0x01dc, 0x4 bytes
-                std::int32_t m_nNumControlPoints; // 0x01e0, 0x4 bytes
-                std::int32_t m_nFirstSourcePoint; // 0x01e4, 0x4 bytes
-                bool m_bReverse; // 0x01e8, 0x1 bytes
-                bool m_bSetOrientation; // 0x01e9, 0x1 bytes
-                std::uint8_t pad_01ea[0x2]; // 0x01ea, 0x2 bytes
-                shade::sdk::particles::ParticleOrientationSetMode_t m_nOrientationMode; // 0x01ec, 0x4 bytes
-                shade::sdk::particles::ParticleParentSetMode_t m_nSetParent; // 0x01f0, 0x4 bytes
-                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                std::int32_t m_nChildGroupID; // 0x01e0, 0x4 bytes
+                std::int32_t m_nFirstControlPoint; // 0x01e4, 0x4 bytes
+                std::int32_t m_nNumControlPoints; // 0x01e8, 0x4 bytes
+                std::int32_t m_nFirstSourcePoint; // 0x01ec, 0x4 bytes
+                bool m_bReverse; // 0x01f0, 0x1 bytes
+                bool m_bSetOrientation; // 0x01f1, 0x1 bytes
+                std::uint8_t pad_01f2[0x2]; // 0x01f2, 0x2 bytes
+                shade::sdk::particles::ParticleOrientationSetMode_t m_nOrientationMode; // 0x01f4, 0x4 bytes
+                shade::sdk::particles::ParticleParentSetMode_t m_nSetParent; // 0x01f8, 0x4 bytes
+                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointsToParticle) == 0x1F8, "C_OP_SetControlPointsToParticle size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointsToParticle) == 0x200, "C_OP_SetControlPointsToParticle size mismatch");
         }
     }
 }

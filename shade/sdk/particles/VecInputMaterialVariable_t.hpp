@@ -21,20 +21,20 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x6c0
+             * Size: 0x6e0
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct VecInputMaterialVariable_t {
                 CUtlString m_strVariable; // 0x0000, 0x8 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput; // 0x0008, 0x6b8 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput; // 0x0008, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(VecInputMaterialVariable_t) == 0x6C0, "VecInputMaterialVariable_t size mismatch");
+            static_assert(sizeof(VecInputMaterialVariable_t) == 0x6E0, "VecInputMaterialVariable_t size mismatch");
         }
     }
 }

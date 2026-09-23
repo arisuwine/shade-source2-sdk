@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc90
+             * Size: 0xeb0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -40,24 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CEconEntity : public shade::sdk::server::CBaseAnimGraph, public shade::sdk::client::IHasAttributes {
             public:
-                std::uint8_t pad_0968[0x10]; // 0x0968, 0x10 bytes
-                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0978, 0x2f8 bytes
-                std::uint32_t m_OriginalOwnerXuidLow; // 0x0c70, 0x4 bytes
-                std::uint32_t m_OriginalOwnerXuidHigh; // 0x0c74, 0x4 bytes
-                std::int32_t m_nFallbackPaintKit; // 0x0c78, 0x4 bytes
-                std::int32_t m_nFallbackSeed; // 0x0c7c, 0x4 bytes
-                float m_flFallbackWear; // 0x0c80, 0x4 bytes
-                std::int32_t m_nFallbackStatTrak; // 0x0c84, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOldProvidee; // 0x0c88, 0x4 bytes
-                std::int32_t m_iOldOwnerClass; // 0x0c8c, 0x4 bytes
+                std::uint8_t pad_0a48[0x10]; // 0x0a48, 0x10 bytes
+                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0a58, 0x438 bytes
+                std::uint32_t m_OriginalOwnerXuidLow; // 0x0e90, 0x4 bytes
+                std::uint32_t m_OriginalOwnerXuidHigh; // 0x0e94, 0x4 bytes
+                std::int32_t m_nFallbackPaintKit; // 0x0e98, 0x4 bytes
+                std::int32_t m_nFallbackSeed; // 0x0e9c, 0x4 bytes
+                float m_flFallbackWear; // 0x0ea0, 0x4 bytes
+                std::int32_t m_nFallbackStatTrak; // 0x0ea4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOldProvidee; // 0x0ea8, 0x4 bytes
+                std::int32_t m_iOldOwnerClass; // 0x0eac, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEconEntity) == 0xC90, "CEconEntity size mismatch");
+            static_assert(sizeof(CEconEntity) == 0xEB0, "CEconEntity size mismatch");
         }
     }
 }

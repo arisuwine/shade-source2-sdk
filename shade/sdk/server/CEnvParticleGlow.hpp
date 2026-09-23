@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd10
+             * Size: 0xdf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvParticleGlow : public shade::sdk::server::CParticleSystem {
             public:
-                float m_flAlphaScale; // 0x0cf8, 0x4 bytes
-                float m_flRadiusScale; // 0x0cfc, 0x4 bytes
-                float m_flSelfIllumScale; // 0x0d00, 0x4 bytes
-                Color m_ColorTint; // 0x0d04, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTextureOverride; // 0x0d08, 0x8 bytes
+                float m_flAlphaScale; // 0x0dd8, 0x4 bytes
+                float m_flRadiusScale; // 0x0ddc, 0x4 bytes
+                float m_flSelfIllumScale; // 0x0de0, 0x4 bytes
+                Color m_ColorTint; // 0x0de4, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTextureOverride; // 0x0de8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAlphaScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorTint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvParticleGlow) == 0xD10, "CEnvParticleGlow size mismatch");
+            static_assert(sizeof(CEnvParticleGlow) == 0xDF0, "CEnvParticleGlow size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x12b0
+             * Size: 0x1390
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CS2HudModelWeapon : public shade::sdk::client::C_CS2HudModelBase {
             public:
-                std::uint8_t pad_1270[0x40]; // 0x1270, 0x40 bytes
+                std::uint8_t pad_1350[0x40]; // 0x1350, 0x40 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_CS2HudModelWeapon) == 0x12B0, "C_CS2HudModelWeapon size mismatch");
+            static_assert(sizeof(C_CS2HudModelWeapon) == 0x1390, "C_CS2HudModelWeapon size mismatch");
         }
     }
 }

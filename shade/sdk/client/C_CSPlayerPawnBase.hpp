@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1480
+             * Size: 0x1568
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,39 +41,39 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CSPlayerPawnBase : public shade::sdk::client::C_BasePlayerPawn {
             public:
-                std::uint8_t pad_13e0[0x10]; // 0x13e0, 0x10 bytes
-                shade::sdk::client::CCSPlayer_PingServices *m_pPingServices; // 0x13f0, 0x8 bytes
-                shade::sdk::client::CSPlayerState m_previousPlayerState; // 0x13f8, 0x4 bytes
-                shade::sdk::client::CSPlayerState m_iPlayerState; // 0x13fc, 0x4 bytes
-                bool m_bHasMovedSinceSpawn; // 0x1400, 0x1 bytes
-                std::uint8_t pad_1401[0x3]; // 0x1401, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSpawnTimeIndex; // 0x1404, 0x4 bytes
-                std::int32_t m_iProgressBarDuration; // 0x1408, 0x4 bytes
-                float m_flProgressBarStartTime; // 0x140c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flClientDeathTime; // 0x1410, 0x4 bytes
-                float m_flFlashBangTime; // 0x1414, 0x4 bytes
-                float m_flFlashScreenshotAlpha; // 0x1418, 0x4 bytes
-                float m_flFlashOverlayAlpha; // 0x141c, 0x4 bytes
-                bool m_bFlashBuildUp; // 0x1420, 0x1 bytes
-                bool m_bFlashDspHasBeenCleared; // 0x1421, 0x1 bytes
-                bool m_bFlashScreenshotHasBeenGrabbed; // 0x1422, 0x1 bytes
-                std::uint8_t pad_1423[0x1]; // 0x1423, 0x1 bytes
-                float m_flFlashMaxAlpha; // 0x1424, 0x4 bytes
-                float m_flFlashDuration; // 0x1428, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flClientHealthFadeChangeTimestamp; // 0x142c, 0x4 bytes
-                std::int32_t m_nClientHealthFadeParityValue; // 0x1430, 0x4 bytes
-                float m_fNextThinkPushAway; // 0x1434, 0x4 bytes
-                std::uint8_t pad_1438[0x4]; // 0x1438, 0x4 bytes
-                float m_flCurrentMusicStartTime; // 0x143c, 0x4 bytes
-                float m_flMusicRoundStartTime; // 0x1440, 0x4 bytes
-                bool m_bDeferStartMusicOnWarmup; // 0x1444, 0x1 bytes
-                std::uint8_t pad_1445[0x3]; // 0x1445, 0x3 bytes
-                float m_flLastSmokeOverlayAlpha; // 0x1448, 0x4 bytes
-                float m_flLastSmokeAge; // 0x144c, 0x4 bytes
-                Vector m_vLastSmokeOverlayColor; // 0x1450, 0xc bytes
-                std::uint8_t pad_145c[0x1c]; // 0x145c, 0x1c bytes
-                CHandle<shade::sdk::client::CCSPlayerController> m_hOriginalController; // 0x1478, 0x4 bytes
-                std::uint8_t pad_147c[0x4]; // 0x147c, 0x4 bytes
+                std::uint8_t pad_14c8[0x10]; // 0x14c8, 0x10 bytes
+                shade::sdk::client::CCSPlayer_PingServices *m_pPingServices; // 0x14d8, 0x8 bytes
+                shade::sdk::client::CSPlayerState m_previousPlayerState; // 0x14e0, 0x4 bytes
+                shade::sdk::client::CSPlayerState m_iPlayerState; // 0x14e4, 0x4 bytes
+                bool m_bHasMovedSinceSpawn; // 0x14e8, 0x1 bytes
+                std::uint8_t pad_14e9[0x3]; // 0x14e9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSpawnTimeIndex; // 0x14ec, 0x4 bytes
+                std::int32_t m_iProgressBarDuration; // 0x14f0, 0x4 bytes
+                float m_flProgressBarStartTime; // 0x14f4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flClientDeathTime; // 0x14f8, 0x4 bytes
+                float m_flFlashBangTime; // 0x14fc, 0x4 bytes
+                float m_flFlashScreenshotAlpha; // 0x1500, 0x4 bytes
+                float m_flFlashOverlayAlpha; // 0x1504, 0x4 bytes
+                bool m_bFlashBuildUp; // 0x1508, 0x1 bytes
+                bool m_bFlashDspHasBeenCleared; // 0x1509, 0x1 bytes
+                bool m_bFlashScreenshotHasBeenGrabbed; // 0x150a, 0x1 bytes
+                std::uint8_t pad_150b[0x1]; // 0x150b, 0x1 bytes
+                float m_flFlashMaxAlpha; // 0x150c, 0x4 bytes
+                float m_flFlashDuration; // 0x1510, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flClientHealthFadeChangeTimestamp; // 0x1514, 0x4 bytes
+                std::int32_t m_nClientHealthFadeParityValue; // 0x1518, 0x4 bytes
+                float m_fNextThinkPushAway; // 0x151c, 0x4 bytes
+                std::uint8_t pad_1520[0x4]; // 0x1520, 0x4 bytes
+                float m_flCurrentMusicStartTime; // 0x1524, 0x4 bytes
+                float m_flMusicRoundStartTime; // 0x1528, 0x4 bytes
+                bool m_bDeferStartMusicOnWarmup; // 0x152c, 0x1 bytes
+                std::uint8_t pad_152d[0x3]; // 0x152d, 0x3 bytes
+                float m_flLastSmokeOverlayAlpha; // 0x1530, 0x4 bytes
+                float m_flLastSmokeAge; // 0x1534, 0x4 bytes
+                Vector m_vLastSmokeOverlayColor; // 0x1538, 0xc bytes
+                std::uint8_t pad_1544[0x1c]; // 0x1544, 0x1c bytes
+                CHandle<shade::sdk::client::CCSPlayerController> m_hOriginalController; // 0x1560, 0x4 bytes
+                std::uint8_t pad_1564[0x4]; // 0x1564, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -81,7 +81,7 @@ namespace shade {
              * CHandle<CBaseEntity> original_controller; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_CSPlayerPawnBase) == 0x1480, "C_CSPlayerPawnBase size mismatch");
+            static_assert(sizeof(C_CSPlayerPawnBase) == 0x1568, "C_CSPlayerPawnBase size mismatch");
         }
     }
 }

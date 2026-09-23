@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x958
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,10 +34,10 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void TriggerTrackChange; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFuncTrackAuto) == 0x878, "CFuncTrackAuto size mismatch");
+            static_assert(sizeof(CFuncTrackAuto) == 0x958, "CFuncTrackAuto size mismatch");
         }
     }
 }

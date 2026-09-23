@@ -16,10 +16,10 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionVecInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleColorBlendType_t.hpp"
 
 namespace shade {
@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xf10
+             * Size: 0xf58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,34 +43,34 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderProjected : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                bool m_bProjectCharacter; // 0x0228, 0x1 bytes
-                bool m_bProjectWorld; // 0x0229, 0x1 bytes
-                bool m_bProjectWater; // 0x022a, 0x1 bytes
-                bool m_bFlipHorizontal; // 0x022b, 0x1 bytes
-                bool m_bEnableProjectedDepthControls; // 0x022c, 0x1 bytes
-                std::uint8_t pad_022d[0x3]; // 0x022d, 0x3 bytes
-                float m_flMinProjectionDepth; // 0x0230, 0x4 bytes
-                float m_flMaxProjectionDepth; // 0x0234, 0x4 bytes
-                CUtlVector<shade::sdk::particles::RenderProjectedMaterial_t> m_vecProjectedMaterials; // 0x0238, 0x18 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMaterialSelection; // 0x0250, 0x170 bytes
-                float m_flAnimationTimeScale; // 0x03c0, 0x4 bytes
-                bool m_bOrientToNormal; // 0x03c4, 0x1 bytes
-                std::uint8_t pad_03c5[0x3]; // 0x03c5, 0x3 bytes
-                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x03c8, 0x18 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x03e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x0550, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRollScale; // 0x06c0, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAlpha2Field; // 0x0830, 0x4 bytes
-                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0838, 0x6b8 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0ef0, 0x4 bytes
-                std::uint8_t pad_0ef4[0x1c]; // 0x0ef4, 0x1c bytes
+                bool m_bProjectCharacter; // 0x0230, 0x1 bytes
+                bool m_bProjectWorld; // 0x0231, 0x1 bytes
+                bool m_bProjectWater; // 0x0232, 0x1 bytes
+                bool m_bFlipHorizontal; // 0x0233, 0x1 bytes
+                bool m_bEnableProjectedDepthControls; // 0x0234, 0x1 bytes
+                std::uint8_t pad_0235[0x3]; // 0x0235, 0x3 bytes
+                float m_flMinProjectionDepth; // 0x0238, 0x4 bytes
+                float m_flMaxProjectionDepth; // 0x023c, 0x4 bytes
+                CUtlVector<shade::sdk::particles::RenderProjectedMaterial_t> m_vecProjectedMaterials; // 0x0240, 0x18 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMaterialSelection; // 0x0258, 0x178 bytes
+                float m_flAnimationTimeScale; // 0x03d0, 0x4 bytes
+                bool m_bOrientToNormal; // 0x03d4, 0x1 bytes
+                std::uint8_t pad_03d5[0x3]; // 0x03d5, 0x3 bytes
+                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x03d8, 0x18 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x03f0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x0568, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRollScale; // 0x06e0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlpha2Field; // 0x0858, 0x4 bytes
+                std::uint8_t pad_085c[0x4]; // 0x085c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0860, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0f38, 0x4 bytes
+                std::uint8_t pad_0f3c[0x1c]; // 0x0f3c, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderProjected) == 0xF10, "C_OP_RenderProjected size mismatch");
+            static_assert(sizeof(C_OP_RenderProjected) == 0xF58, "C_OP_RenderProjected size mismatch");
         }
     }
 }

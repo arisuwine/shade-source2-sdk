@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1260
+             * Size: 0x1348
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,34 +41,32 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseCSGrenadeProjectile : public shade::sdk::client::C_BaseGrenade {
             public:
-                VectorWS m_vInitialPosition; // 0x11c8, 0xc bytes
-                Vector m_vInitialVelocity; // 0x11d4, 0xc bytes
-                std::int32_t m_nBounces; // 0x11e0, 0x4 bytes
-                std::uint8_t pad_11e4[0x4]; // 0x11e4, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nExplodeEffectIndex; // 0x11e8, 0x8 bytes
-                std::int32_t m_nExplodeEffectTickBegin; // 0x11f0, 0x4 bytes
-                VectorWS m_vecExplodeEffectOrigin; // 0x11f4, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x1200, 0x4 bytes
-                Vector vecLastTrailLinePos; // 0x1204, 0xc bytes
-                shade::sdk::entity2::GameTime_t flNextTrailLineTime; // 0x1210, 0x4 bytes
-                bool m_bExplodeEffectBegan; // 0x1214, 0x1 bytes
-                bool m_bCanCreateGrenadeTrail; // 0x1215, 0x1 bytes
-                std::uint8_t pad_1216[0x2]; // 0x1216, 0x2 bytes
-                shade::sdk::client::ParticleIndex_t m_nSnapshotTrajectoryEffectIndex; // 0x1218, 0x4 bytes
-                std::uint8_t pad_121c[0x4]; // 0x121c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hSnapshotTrajectoryParticleSnapshot; // 0x1220, 0x8 bytes
-                CUtlVector<Vector> m_arrTrajectoryTrailPoints; // 0x1228, 0x18 bytes
-                CUtlVector<float> m_arrTrajectoryTrailPointCreationTimes; // 0x1240, 0x18 bytes
-                float m_flTrajectoryTrailEffectCreationTime; // 0x1258, 0x4 bytes
-                std::uint8_t pad_125c[0x4]; // 0x125c, 0x4 bytes
+                VectorWS m_vInitialPosition; // 0x12b0, 0xc bytes
+                Vector m_vInitialVelocity; // 0x12bc, 0xc bytes
+                std::int32_t m_nBounces; // 0x12c8, 0x4 bytes
+                std::uint8_t pad_12cc[0x4]; // 0x12cc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nExplodeEffectIndex; // 0x12d0, 0x8 bytes
+                std::int32_t m_nExplodeEffectTickBegin; // 0x12d8, 0x4 bytes
+                VectorWS m_vecExplodeEffectOrigin; // 0x12dc, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x12e8, 0x4 bytes
+                Vector vecLastTrailLinePos; // 0x12ec, 0xc bytes
+                shade::sdk::entity2::GameTime_t flNextTrailLineTime; // 0x12f8, 0x4 bytes
+                bool m_bExplodeEffectBegan; // 0x12fc, 0x1 bytes
+                bool m_bCanCreateGrenadeTrail; // 0x12fd, 0x1 bytes
+                std::uint8_t pad_12fe[0x2]; // 0x12fe, 0x2 bytes
+                shade::sdk::client::ParticleIndex_t m_nSnapshotTrajectoryEffectIndex; // 0x1300, 0x4 bytes
+                std::uint8_t pad_1304[0x4]; // 0x1304, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hSnapshotTrajectoryParticleSnapshot; // 0x1308, 0x8 bytes
+                CUtlVector<Vector> m_arrTrajectoryTrailPoints; // 0x1310, 0x18 bytes
+                CUtlVector<float> m_arrTrajectoryTrailPointCreationTimes; // 0x1328, 0x18 bytes
+                float m_flTrajectoryTrailEffectCreationTime; // 0x1340, 0x4 bytes
+                std::uint8_t pad_1344[0x4]; // 0x1344, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_BaseCSGrenadeProjectile) == 0x1260, "C_BaseCSGrenadeProjectile size mismatch");
+            static_assert(sizeof(C_BaseCSGrenadeProjectile) == 0x1348, "C_BaseCSGrenadeProjectile size mismatch");
         }
     }
 }

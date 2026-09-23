@@ -16,16 +16,16 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionConstraint.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/ParticleCollisionMode_t.hpp"
 #include "shade/sdk/particles/ParticleTraceSet_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x9d8
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,42 +33,43 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_WorldTraceConstraint : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                std::int32_t m_nCP; // 0x01d8, 0x4 bytes
-                Vector m_vecCpOffset; // 0x01dc, 0xc bytes
-                shade::sdk::particles::ParticleCollisionMode_t m_nCollisionMode; // 0x01e8, 0x4 bytes
-                shade::sdk::particles::ParticleCollisionMode_t m_nCollisionModeMin; // 0x01ec, 0x4 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x01f0, 0x4 bytes
-                char m_CollisionGroupName[0x80]; // 0x01f4, 0x80 bytes
-                bool m_bWorldOnly; // 0x0274, 0x1 bytes
-                bool m_bBrushOnly; // 0x0275, 0x1 bytes
-                bool m_bIncludeWater; // 0x0276, 0x1 bytes
-                std::uint8_t pad_0277[0x1]; // 0x0277, 0x1 bytes
-                std::int32_t m_nIgnoreCP; // 0x0278, 0x4 bytes
-                float m_flCpMovementTolerance; // 0x027c, 0x4 bytes
-                float m_flRetestRate; // 0x0280, 0x4 bytes
-                float m_flTraceTolerance; // 0x0284, 0x4 bytes
-                float m_flCollisionConfirmationSpeed; // 0x0288, 0x4 bytes
-                float m_nMaxTracesPerFrame; // 0x028c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x0290, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flBounceAmount; // 0x0400, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flSlideAmount; // 0x0570, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRandomDirScale; // 0x06e0, 0x170 bytes
-                bool m_bDecayBounce; // 0x0850, 0x1 bytes
-                bool m_bKillonContact; // 0x0851, 0x1 bytes
-                std::uint8_t pad_0852[0x2]; // 0x0852, 0x2 bytes
-                float m_flMinSpeed; // 0x0854, 0x4 bytes
-                bool m_bSetNormal; // 0x0858, 0x1 bytes
-                std::uint8_t pad_0859[0x3]; // 0x0859, 0x3 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nStickOnCollisionField; // 0x085c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flStopSpeed; // 0x0860, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nEntityStickDataField; // 0x09d0, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nEntityStickNormalField; // 0x09d4, 0x4 bytes
+                std::int32_t m_nCP; // 0x01e0, 0x4 bytes
+                Vector m_vecCpOffset; // 0x01e4, 0xc bytes
+                shade::sdk::particles::ParticleCollisionMode_t m_nCollisionMode; // 0x01f0, 0x4 bytes
+                shade::sdk::particles::ParticleCollisionMode_t m_nCollisionModeMin; // 0x01f4, 0x4 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x01f8, 0x4 bytes
+                char m_CollisionGroupName[0x80]; // 0x01fc, 0x80 bytes
+                bool m_bWorldOnly; // 0x027c, 0x1 bytes
+                bool m_bBrushOnly; // 0x027d, 0x1 bytes
+                bool m_bIncludeWater; // 0x027e, 0x1 bytes
+                std::uint8_t pad_027f[0x1]; // 0x027f, 0x1 bytes
+                std::int32_t m_nIgnoreCP; // 0x0280, 0x4 bytes
+                float m_flCpMovementTolerance; // 0x0284, 0x4 bytes
+                float m_flRetestRate; // 0x0288, 0x4 bytes
+                float m_flTraceTolerance; // 0x028c, 0x4 bytes
+                float m_flCollisionConfirmationSpeed; // 0x0290, 0x4 bytes
+                float m_nMaxTracesPerFrame; // 0x0294, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x0298, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flBounceAmount; // 0x0410, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flSlideAmount; // 0x0588, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRandomDirScale; // 0x0700, 0x178 bytes
+                bool m_bDecayBounce; // 0x0878, 0x1 bytes
+                bool m_bKillonContact; // 0x0879, 0x1 bytes
+                std::uint8_t pad_087a[0x2]; // 0x087a, 0x2 bytes
+                float m_flMinSpeed; // 0x087c, 0x4 bytes
+                bool m_bKillonContactBounce; // 0x0880, 0x1 bytes
+                bool m_bSetNormal; // 0x0881, 0x1 bytes
+                std::uint8_t pad_0882[0x2]; // 0x0882, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nStickOnCollisionField; // 0x0884, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flStopSpeed; // 0x0888, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nEntityStickDataField; // 0x0a00, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nEntityStickNormalField; // 0x0a04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_WorldTraceConstraint) == 0x9D8, "C_OP_WorldTraceConstraint size mismatch");
+            static_assert(sizeof(C_OP_WorldTraceConstraint) == 0xA08, "C_OP_WorldTraceConstraint size mismatch");
         }
     }
 }

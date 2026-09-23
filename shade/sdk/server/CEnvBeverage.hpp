@@ -36,9 +36,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputActivate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CEnvBeverage) == 0x4B0, "CEnvBeverage size mismatch");
         }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,24 +30,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapModelVolumetoCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particles::BBoxVolumeType_t m_nBBoxType; // 0x01e0, 0x4 bytes
-                std::int32_t m_nInControlPointNumber; // 0x01e4, 0x4 bytes
-                std::int32_t m_nOutControlPointNumber; // 0x01e8, 0x4 bytes
-                std::int32_t m_nOutControlPointMaxNumber; // 0x01ec, 0x4 bytes
-                std::int32_t m_nField; // 0x01f0, 0x4 bytes
-                float m_flInputMin; // 0x01f4, 0x4 bytes
-                float m_flInputMax; // 0x01f8, 0x4 bytes
-                float m_flOutputMin; // 0x01fc, 0x4 bytes
-                float m_flOutputMax; // 0x0200, 0x4 bytes
-                bool m_bBBoxOnly; // 0x0204, 0x1 bytes
-                bool m_bCubeRoot; // 0x0205, 0x1 bytes
-                std::uint8_t pad_0206[0x2]; // 0x0206, 0x2 bytes
+                shade::sdk::particles::BBoxVolumeType_t m_nBBoxType; // 0x01e8, 0x4 bytes
+                std::int32_t m_nInControlPointNumber; // 0x01ec, 0x4 bytes
+                std::int32_t m_nOutControlPointNumber; // 0x01f0, 0x4 bytes
+                std::int32_t m_nOutControlPointMaxNumber; // 0x01f4, 0x4 bytes
+                std::int32_t m_nField; // 0x01f8, 0x4 bytes
+                float m_flInputMin; // 0x01fc, 0x4 bytes
+                float m_flInputMax; // 0x0200, 0x4 bytes
+                float m_flOutputMin; // 0x0204, 0x4 bytes
+                float m_flOutputMax; // 0x0208, 0x4 bytes
+                bool m_bBBoxOnly; // 0x020c, 0x1 bytes
+                bool m_bCubeRoot; // 0x020d, 0x1 bytes
+                std::uint8_t pad_020e[0x2]; // 0x020e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapModelVolumetoCP) == 0x208, "C_OP_RemapModelVolumetoCP size mismatch");
+            static_assert(sizeof(C_OP_RemapModelVolumetoCP) == 0x210, "C_OP_RemapModelVolumetoCP size mismatch");
         }
     }
 }

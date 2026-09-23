@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xb80
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,21 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDecoyProjectile : public shade::sdk::server::CBaseCSGrenadeProjectile {
             public:
-                std::uint8_t pad_0a60[0x18]; // 0x0a60, 0x18 bytes
-                std::int32_t m_nDecoyShotTick; // 0x0a78, 0x4 bytes
-                std::int32_t m_shotsRemaining; // 0x0a7c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fExpireTime; // 0x0a80, 0x4 bytes
-                std::uint8_t pad_0a84[0xc]; // 0x0a84, 0xc bytes
-                std::uint16_t m_decoyWeaponDefIndex; // 0x0a90, 0x2 bytes
-                std::uint8_t pad_0a92[0xe]; // 0x0a92, 0xe bytes
+                std::uint8_t pad_0b40[0x18]; // 0x0b40, 0x18 bytes
+                std::int32_t m_nDecoyShotTick; // 0x0b58, 0x4 bytes
+                std::int32_t m_shotsRemaining; // 0x0b5c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fExpireTime; // 0x0b60, 0x4 bytes
+                std::uint8_t pad_0b64[0xc]; // 0x0b64, 0xc bytes
+                std::uint16_t m_decoyWeaponDefIndex; // 0x0b70, 0x2 bytes
+                std::uint8_t pad_0b72[0xe]; // 0x0b72, 0xe bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDecoyProjectile) == 0xAA0, "CDecoyProjectile size mismatch");
+            static_assert(sizeof(CDecoyProjectile) == 0xB80, "CDecoyProjectile size mismatch");
         }
     }
 }

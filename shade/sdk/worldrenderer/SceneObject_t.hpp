@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace worldrenderer {
             /* Class Parameters
-             * Size: 0x88
+             * Size: 0x90
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -49,15 +49,16 @@ namespace shade {
                 std::int16_t m_nLODOverride; // 0x006a, 0x2 bytes
                 std::int32_t m_nCubeMapPrecomputedHandshake; // 0x006c, 0x4 bytes
                 std::int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x0070, 0x4 bytes
-                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_renderableModel; // 0x0078, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCRenderMesh> m_renderable; // 0x0080, 0x8 bytes
+                float m_flEmissiveLightingBoost; // 0x0074, 0x4 bytes
+                std::uint8_t pad_0078[0x8]; // 0x0078, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_renderableModel; // 0x0080, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCRenderMesh> m_renderable; // 0x0088, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(SceneObject_t) == 0x88, "SceneObject_t size mismatch");
+            static_assert(sizeof(SceneObject_t) == 0x90, "SceneObject_t size mismatch");
         }
     }
 }

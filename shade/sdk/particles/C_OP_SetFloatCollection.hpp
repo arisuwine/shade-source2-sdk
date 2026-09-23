@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x500
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetFloatCollection : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_InputValue; // 0x01d8, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x0348, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x034c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_Lerp; // 0x0350, 0x170 bytes
-                std::uint8_t pad_04c0[0x20]; // 0x04c0, 0x20 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_InputValue; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x0358, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x035c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_Lerp; // 0x0360, 0x178 bytes
+                std::uint8_t pad_04d8[0x28]; // 0x04d8, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetFloatCollection) == 0x4E0, "C_OP_SetFloatCollection size mismatch");
+            static_assert(sizeof(C_OP_SetFloatCollection) == 0x500, "C_OP_SetFloatCollection size mismatch");
         }
     }
 }

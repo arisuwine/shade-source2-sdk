@@ -47,17 +47,6 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * float InputAdd; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputDivide; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputMultiply; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetValueNoFire; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSubtract; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetHitMax; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetHitMin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputGetValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t startvalue; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 

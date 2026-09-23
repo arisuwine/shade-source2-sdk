@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13a0
+             * Size: 0x1d18
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -38,16 +38,17 @@ namespace shade {
                 std::uint8_t pad_060c[0x4]; // 0x060c, 0x4 bytes
                 CUtlString m_sWeaponName; // 0x0610, 0x8 bytes
                 std::uint64_t m_xuid; // 0x0618, 0x8 bytes
-                shade::sdk::client::C_EconItemView m_agentItem; // 0x0620, 0x470 bytes
-                shade::sdk::client::C_EconItemView m_glovesItem; // 0x0a90, 0x470 bytes
-                shade::sdk::client::C_EconItemView m_weaponItem; // 0x0f00, 0x470 bytes
-                std::uint8_t pad_1370[0x30]; // 0x1370, 0x30 bytes
+                shade::sdk::client::C_EconItemView m_agentItem; // 0x0620, 0x5b0 bytes
+                shade::sdk::client::C_EconItemView m_glovesItem; // 0x0bd0, 0x5b0 bytes
+                shade::sdk::client::C_EconItemView m_weaponItem; // 0x1180, 0x5b0 bytes
+                shade::sdk::client::C_EconItemView m_petItem; // 0x1730, 0x5b0 bytes
+                std::uint8_t pad_1ce0[0x38]; // 0x1ce0, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CSGO_TeamPreviewCharacterPosition) == 0x13A0, "C_CSGO_TeamPreviewCharacterPosition size mismatch");
+            static_assert(sizeof(C_CSGO_TeamPreviewCharacterPosition) == 0x1D18, "C_CSGO_TeamPreviewCharacterPosition size mismatch");
         }
     }
 }

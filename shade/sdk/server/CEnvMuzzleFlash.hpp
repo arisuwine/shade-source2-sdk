@@ -36,9 +36,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputFire; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CEnvMuzzleFlash) == 0x4B8, "CEnvMuzzleFlash size mismatch");
         }

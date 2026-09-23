@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8a0
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,44 +40,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncShatterglass : public shade::sdk::server::CBaseModelEntity {
             public:
-                matrix3x4_t m_matPanelTransform; // 0x0770, 0x30 bytes
-                matrix3x4_t m_matPanelTransformWsTemp; // 0x07a0, 0x30 bytes
-                CUtlVector<std::uint32_t> m_vecShatterGlassShards; // 0x07d0, 0x18 bytes
-                Vector2D m_PanelSize; // 0x07e8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flLastShatterSoundEmitTime; // 0x07f0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastCleanupTime; // 0x07f4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flInitAtTime; // 0x07f8, 0x4 bytes
-                float m_flGlassThickness; // 0x07fc, 0x4 bytes
-                float m_flSpawnInvulnerability; // 0x0800, 0x4 bytes
-                bool m_bBreakSilent; // 0x0804, 0x1 bytes
-                bool m_bBreakShardless; // 0x0805, 0x1 bytes
-                bool m_bBroken; // 0x0806, 0x1 bytes
-                bool m_bGlassNavIgnore; // 0x0807, 0x1 bytes
-                bool m_bGlassInFrame; // 0x0808, 0x1 bytes
-                bool m_bStartBroken; // 0x0809, 0x1 bytes
-                std::uint8_t m_iInitialDamageType; // 0x080a, 0x1 bytes
-                std::uint8_t pad_080b[0x5]; // 0x080b, 0x5 bytes
-                CUtlSymbolLarge m_szDamagePositioningEntityName01; // 0x0810, 0x8 bytes
-                CUtlSymbolLarge m_szDamagePositioningEntityName02; // 0x0818, 0x8 bytes
-                CUtlSymbolLarge m_szDamagePositioningEntityName03; // 0x0820, 0x8 bytes
-                CUtlSymbolLarge m_szDamagePositioningEntityName04; // 0x0828, 0x8 bytes
-                CUtlVector<VectorWS> m_vInitialDamagePositions; // 0x0830, 0x18 bytes
-                CUtlVector<VectorWS> m_vExtraDamagePositions; // 0x0848, 0x18 bytes
-                CUtlVector<Vector4D> m_vInitialPanelVertices; // 0x0860, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBroken; // 0x0878, 0x18 bytes
-                std::uint8_t m_iSurfaceType; // 0x0890, 0x1 bytes
-                std::uint8_t pad_0891[0x7]; // 0x0891, 0x7 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterialDamageBase; // 0x0898, 0x8 bytes
+                matrix3x4_t m_matPanelTransform; // 0x0850, 0x30 bytes
+                matrix3x4_t m_matPanelTransformWsTemp; // 0x0880, 0x30 bytes
+                CUtlVector<std::uint32_t> m_vecShatterGlassShards; // 0x08b0, 0x18 bytes
+                Vector2D m_PanelSize; // 0x08c8, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flLastShatterSoundEmitTime; // 0x08d0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastCleanupTime; // 0x08d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flInitAtTime; // 0x08d8, 0x4 bytes
+                float m_flGlassThickness; // 0x08dc, 0x4 bytes
+                float m_flSpawnInvulnerability; // 0x08e0, 0x4 bytes
+                bool m_bBreakSilent; // 0x08e4, 0x1 bytes
+                bool m_bBreakShardless; // 0x08e5, 0x1 bytes
+                bool m_bBroken; // 0x08e6, 0x1 bytes
+                bool m_bGlassNavIgnore; // 0x08e7, 0x1 bytes
+                bool m_bGlassInFrame; // 0x08e8, 0x1 bytes
+                bool m_bStartBroken; // 0x08e9, 0x1 bytes
+                std::uint8_t m_iInitialDamageType; // 0x08ea, 0x1 bytes
+                std::uint8_t pad_08eb[0x5]; // 0x08eb, 0x5 bytes
+                CUtlSymbolLarge m_szDamagePositioningEntityName01; // 0x08f0, 0x8 bytes
+                CUtlSymbolLarge m_szDamagePositioningEntityName02; // 0x08f8, 0x8 bytes
+                CUtlSymbolLarge m_szDamagePositioningEntityName03; // 0x0900, 0x8 bytes
+                CUtlSymbolLarge m_szDamagePositioningEntityName04; // 0x0908, 0x8 bytes
+                CUtlVector<VectorWS> m_vInitialDamagePositions; // 0x0910, 0x18 bytes
+                CUtlVector<VectorWS> m_vExtraDamagePositions; // 0x0928, 0x18 bytes
+                CUtlVector<Vector4D> m_vInitialPanelVertices; // 0x0940, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBroken; // 0x0958, 0x18 bytes
+                std::uint8_t m_iSurfaceType; // 0x0970, 0x1 bytes
+                std::uint8_t pad_0971[0x7]; // 0x0971, 0x7 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterialDamageBase; // 0x0978, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputHit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputShatter; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputRestore; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncShatterglass) == 0x8A0, "CFuncShatterglass size mismatch");
+            static_assert(sizeof(CFuncShatterglass) == 0x980, "CFuncShatterglass size mismatch");
         }
     }
 }

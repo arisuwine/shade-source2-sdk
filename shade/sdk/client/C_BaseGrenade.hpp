@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x11c8
+             * Size: 0x12b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseGrenade : public shade::sdk::client::CBaseAnimGraph {
             public:
-                bool m_bHasWarnedAI; // 0x1180, 0x1 bytes
-                bool m_bIsSmokeGrenade; // 0x1181, 0x1 bytes
-                bool m_bIsLive; // 0x1182, 0x1 bytes
-                std::uint8_t pad_1183[0x1]; // 0x1183, 0x1 bytes
-                float m_DmgRadius; // 0x1184, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDetonateTime; // 0x1188, 0x4 bytes
-                float m_flWarnAITime; // 0x118c, 0x4 bytes
-                float m_flDamage; // 0x1190, 0x4 bytes
-                std::uint8_t pad_1194[0x4]; // 0x1194, 0x4 bytes
-                CUtlSymbolLarge m_iszBounceSound; // 0x1198, 0x8 bytes
-                CUtlString m_ExplosionSound; // 0x11a0, 0x8 bytes
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hThrower; // 0x11a8, 0x4 bytes
-                std::uint8_t pad_11ac[0x14]; // 0x11ac, 0x14 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttack; // 0x11c0, 0x4 bytes
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hOriginalThrower; // 0x11c4, 0x4 bytes
+                bool m_bHasWarnedAI; // 0x1268, 0x1 bytes
+                bool m_bIsSmokeGrenade; // 0x1269, 0x1 bytes
+                bool m_bIsLive; // 0x126a, 0x1 bytes
+                std::uint8_t pad_126b[0x1]; // 0x126b, 0x1 bytes
+                float m_DmgRadius; // 0x126c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDetonateTime; // 0x1270, 0x4 bytes
+                float m_flWarnAITime; // 0x1274, 0x4 bytes
+                float m_flDamage; // 0x1278, 0x4 bytes
+                std::uint8_t pad_127c[0x4]; // 0x127c, 0x4 bytes
+                CUtlSymbolLarge m_iszBounceSound; // 0x1280, 0x8 bytes
+                CUtlString m_ExplosionSound; // 0x1288, 0x8 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hThrower; // 0x1290, 0x4 bytes
+                std::uint8_t pad_1294[0x14]; // 0x1294, 0x14 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttack; // 0x12a8, 0x4 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hOriginalThrower; // 0x12ac, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -61,7 +61,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_BaseGrenade) == 0x11C8, "C_BaseGrenade size mismatch");
+            static_assert(sizeof(C_BaseGrenade) == 0x12B0, "C_BaseGrenade size mismatch");
         }
     }
 }

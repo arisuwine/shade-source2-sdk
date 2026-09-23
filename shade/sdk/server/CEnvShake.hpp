@@ -54,12 +54,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartShake; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopShake; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputAmplitude; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CEnvShake) == 0x4F8, "CEnvShake size mismatch");
         }

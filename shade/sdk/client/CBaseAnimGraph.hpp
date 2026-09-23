@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1180
+             * Size: 0x1268
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,37 +42,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseAnimGraph : public shade::sdk::client::C_BaseModelEntity {
             public:
-                shade::sdk::client::CAnimGraphControllerManager m_graphControllerManager; // 0x0fb0, 0x98 bytes
-                shade::sdk::client::CAnimGraphControllerPtr m_pMainGraphController; // 0x1048, 0x8 bytes
-                bool m_bInitiallyPopulateInterpHistory; // 0x1050, 0x1 bytes
-                std::uint8_t pad_1051[0x1]; // 0x1051, 0x1 bytes
-                bool m_bSuppressAnimEventSounds; // 0x1052, 0x1 bytes
-                std::uint8_t pad_1053[0x5]; // 0x1053, 0x5 bytes
-                CEntityOutputTemplate<float> m_OnLayerCycleUpdated; // 0x1058, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnExternalChoreoGraphChanged; // 0x1078, 0x18 bytes
-                std::uint8_t pad_1090[0x8]; // 0x1090, 0x8 bytes
-                bool m_bAnimGraphUpdateEnabled; // 0x1098, 0x1 bytes
-                bool m_bAnimationUpdateScheduled; // 0x1099, 0x1 bytes
-                std::uint8_t pad_109a[0x2]; // 0x109a, 0x2 bytes
-                Vector m_vecForce; // 0x109c, 0xc bytes
-                std::int32_t m_nForceBone; // 0x10a8, 0x4 bytes
-                std::uint8_t pad_10ac[0x4]; // 0x10ac, 0x4 bytes
-                shade::sdk::client::CBaseAnimGraph *m_pClientsideRagdoll; // 0x10b0, 0x8 bytes
-                bool m_bBuiltRagdoll; // 0x10b8, 0x1 bytes
-                std::uint8_t pad_10b9[0xf]; // 0x10b9, 0xf bytes
-                shade::sdk::vphysics2::IPhysicsRagdollControl *m_pRagdollControl; // 0x10c8, 0x8 bytes
-                shade::sdk::client::PhysicsRagdollPose_t m_RagdollPose; // 0x10d0, 0x48 bytes
-                bool m_bRagdollEnabled; // 0x1118, 0x1 bytes
-                bool m_bRagdollClientSide; // 0x1119, 0x1 bytes
-                std::uint8_t pad_111a[0xe]; // 0x111a, 0xe bytes
-                bool m_bHasAnimatedMaterialAttributes; // 0x1128, 0x1 bytes
-                std::uint8_t pad_1129[0x57]; // 0x1129, 0x57 bytes
+                shade::sdk::client::CAnimGraphControllerManager m_graphControllerManager; // 0x1098, 0x98 bytes
+                shade::sdk::client::CAnimGraphControllerPtr m_pMainGraphController; // 0x1130, 0x8 bytes
+                bool m_bInitiallyPopulateInterpHistory; // 0x1138, 0x1 bytes
+                std::uint8_t pad_1139[0x1]; // 0x1139, 0x1 bytes
+                bool m_bSuppressAnimEventSounds; // 0x113a, 0x1 bytes
+                std::uint8_t pad_113b[0x5]; // 0x113b, 0x5 bytes
+                CEntityOutputTemplate<float> m_OnLayerCycleUpdated; // 0x1140, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnExternalChoreoGraphChanged; // 0x1160, 0x18 bytes
+                std::uint8_t pad_1178[0x8]; // 0x1178, 0x8 bytes
+                bool m_bAnimGraphUpdateEnabled; // 0x1180, 0x1 bytes
+                bool m_bAnimationUpdateScheduled; // 0x1181, 0x1 bytes
+                std::uint8_t pad_1182[0x2]; // 0x1182, 0x2 bytes
+                Vector m_vecForce; // 0x1184, 0xc bytes
+                std::int32_t m_nForceBone; // 0x1190, 0x4 bytes
+                std::uint8_t pad_1194[0x4]; // 0x1194, 0x4 bytes
+                shade::sdk::client::CBaseAnimGraph *m_pClientsideRagdoll; // 0x1198, 0x8 bytes
+                bool m_bBuiltRagdoll; // 0x11a0, 0x1 bytes
+                std::uint8_t pad_11a1[0xf]; // 0x11a1, 0xf bytes
+                shade::sdk::vphysics2::IPhysicsRagdollControl *m_pRagdollControl; // 0x11b0, 0x8 bytes
+                shade::sdk::client::PhysicsRagdollPose_t m_RagdollPose; // 0x11b8, 0x48 bytes
+                bool m_bRagdollEnabled; // 0x1200, 0x1 bytes
+                bool m_bRagdollClientSide; // 0x1201, 0x1 bytes
+                bool m_bShouldUpdateTransformations; // 0x1202, 0x1 bytes
+                std::uint8_t pad_1203[0xd]; // 0x1203, 0xd bytes
+                bool m_bHasAnimatedMaterialAttributes; // 0x1210, 0x1 bytes
+                std::uint8_t pad_1211[0x57]; // 0x1211, 0x57 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimGraph) == 0x1180, "CBaseAnimGraph size mismatch");
+            static_assert(sizeof(CBaseAnimGraph) == 0x1268, "CBaseAnimGraph size mismatch");
         }
     }
 }

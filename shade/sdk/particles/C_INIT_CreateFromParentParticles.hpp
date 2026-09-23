@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateFromParentParticles : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                float m_flVelocityScale; // 0x01e0, 0x4 bytes
-                float m_flIncrement; // 0x01e4, 0x4 bytes
-                bool m_bRandomDistribution; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
-                std::int32_t m_nRandomSeed; // 0x01ec, 0x4 bytes
-                bool m_bSubFrame; // 0x01f0, 0x1 bytes
-                bool m_bSetRopeSegmentID; // 0x01f1, 0x1 bytes
-                std::uint8_t pad_01f2[0x6]; // 0x01f2, 0x6 bytes
+                float m_flVelocityScale; // 0x01e8, 0x4 bytes
+                float m_flIncrement; // 0x01ec, 0x4 bytes
+                bool m_bRandomDistribution; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x3]; // 0x01f1, 0x3 bytes
+                std::int32_t m_nRandomSeed; // 0x01f4, 0x4 bytes
+                bool m_bSubFrame; // 0x01f8, 0x1 bytes
+                bool m_bSetRopeSegmentID; // 0x01f9, 0x1 bytes
+                std::uint8_t pad_01fa[0x6]; // 0x01fa, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateFromParentParticles) == 0x1F8, "C_INIT_CreateFromParentParticles size mismatch");
+            static_assert(sizeof(C_INIT_CreateFromParentParticles) == 0x200, "C_INIT_CreateFromParentParticles size mismatch");
         }
     }
 }

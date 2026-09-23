@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameMoney : public shade::sdk::server::CRulePointEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnMoneySpent; // 0x0780, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMoneySpentFail; // 0x0798, 0x18 bytes
-                std::int32_t m_nMoney; // 0x07b0, 0x4 bytes
-                std::uint8_t pad_07b4[0x4]; // 0x07b4, 0x4 bytes
-                CUtlString m_strAwardText; // 0x07b8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMoneySpent; // 0x0860, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMoneySpentFail; // 0x0878, 0x18 bytes
+                std::int32_t m_nMoney; // 0x0890, 0x4 bytes
+                std::uint8_t pad_0894[0x4]; // 0x0894, 0x4 bytes
+                CUtlString m_strAwardText; // 0x0898, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameMoney) == 0x7C0, "CGameMoney size mismatch");
+            static_assert(sizeof(CGameMoney) == 0x8A0, "CGameMoney size mismatch");
         }
     }
 }

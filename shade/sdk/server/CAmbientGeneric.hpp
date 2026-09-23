@@ -56,13 +56,6 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputPlaySound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputPitch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputVolume; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputFadeIn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputFadeOut; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fadein; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fadeout; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fadeinsecs; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0

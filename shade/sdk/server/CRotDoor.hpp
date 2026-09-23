@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x980
+             * Size: 0xa60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CRotDoor : public shade::sdk::server::CBaseDoor {
             public:
-                bool m_bSolidBsp; // 0x0978, 0x1 bytes
-                std::uint8_t pad_0979[0x7]; // 0x0979, 0x7 bytes
+                bool m_bSolidBsp; // 0x0a58, 0x1 bytes
+                std::uint8_t pad_0a59[0x7]; // 0x0a59, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRotDoor) == 0x980, "CRotDoor size mismatch");
+            static_assert(sizeof(CRotDoor) == 0xA60, "CRotDoor size mismatch");
         }
     }
 }

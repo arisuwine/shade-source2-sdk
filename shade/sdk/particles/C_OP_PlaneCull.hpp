@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x8a0
+             * Size: 0x8c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_PlaneCull : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nPlaneControlPoint; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecPlaneDirection; // 0x01e0, 0x6b8 bytes
-                bool m_bLocalSpace; // 0x0898, 0x1 bytes
-                std::uint8_t pad_0899[0x3]; // 0x0899, 0x3 bytes
-                float m_flPlaneOffset; // 0x089c, 0x4 bytes
+                std::int32_t m_nPlaneControlPoint; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecPlaneDirection; // 0x01e8, 0x6d8 bytes
+                bool m_bLocalSpace; // 0x08c0, 0x1 bytes
+                std::uint8_t pad_08c1[0x3]; // 0x08c1, 0x3 bytes
+                float m_flPlaneOffset; // 0x08c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_PlaneCull) == 0x8A0, "C_OP_PlaneCull size mismatch");
+            static_assert(sizeof(C_OP_PlaneCull) == 0x8C8, "C_OP_PlaneCull size mismatch");
         }
     }
 }

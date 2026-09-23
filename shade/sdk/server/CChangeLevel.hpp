@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x918
+             * Size: 0x9f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,24 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CChangeLevel : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlString m_sMapName; // 0x08e8, 0x8 bytes
-                CUtlString m_sLandmarkName; // 0x08f0, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnChangeLevel; // 0x08f8, 0x18 bytes
-                bool m_bTouched; // 0x0910, 0x1 bytes
-                bool m_bNoTouch; // 0x0911, 0x1 bytes
-                bool m_bNewChapter; // 0x0912, 0x1 bytes
-                bool m_bOnChangeLevelFired; // 0x0913, 0x1 bytes
-                std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes
+                CUtlString m_sMapName; // 0x09c8, 0x8 bytes
+                CUtlString m_sLandmarkName; // 0x09d0, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnChangeLevel; // 0x09d8, 0x18 bytes
+                bool m_bTouched; // 0x09f0, 0x1 bytes
+                bool m_bNoTouch; // 0x09f1, 0x1 bytes
+                bool m_bNewChapter; // 0x09f2, 0x1 bytes
+                bool m_bOnChangeLevelFired; // 0x09f3, 0x1 bytes
+                std::uint8_t pad_09f4[0x4]; // 0x09f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputChangeLevel; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * CUtlString map; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CUtlString landmark; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CChangeLevel) == 0x918, "CChangeLevel size mismatch");
+            static_assert(sizeof(CChangeLevel) == 0x9F8, "CChangeLevel size mismatch");
         }
     }
 }

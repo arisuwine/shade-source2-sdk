@@ -47,13 +47,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputSetValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetValueTest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleTest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CLogicBranch) == 0x4F8, "CLogicBranch size mismatch");
         }

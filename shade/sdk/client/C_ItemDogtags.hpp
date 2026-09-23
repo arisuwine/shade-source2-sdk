@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17f8
+             * Size: 0x1a20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ItemDogtags : public shade::sdk::client::C_Item {
             public:
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_OwningPlayer; // 0x17f0, 0x4 bytes
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_KillingPlayer; // 0x17f4, 0x4 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_OwningPlayer; // 0x1a18, 0x4 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_KillingPlayer; // 0x1a1c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_ItemDogtags) == 0x17F8, "C_ItemDogtags size mismatch");
+            static_assert(sizeof(C_ItemDogtags) == 0x1A20, "C_ItemDogtags size mismatch");
         }
     }
 }

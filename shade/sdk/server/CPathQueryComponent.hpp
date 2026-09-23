@@ -37,9 +37,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::uint8_t CPathQueryUtil[0x80]; // Offset: 0x10, Size: 0x1, Size In Bytes: 0x80
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPathQueryComponent) == 0xA0, "CPathQueryComponent size mismatch");
         }

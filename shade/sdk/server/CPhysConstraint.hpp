@@ -62,20 +62,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputOnBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableLinearConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableLinearConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableAngularConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableAngularConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnMotorOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnMotorOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMotorTorqueFactor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMotorTargetVelocity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPhysConstraint) == 0x508, "CPhysConstraint size mismatch");
         }

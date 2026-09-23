@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InheritVelocity : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                float m_flVelocityScale; // 0x01e4, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                float m_flVelocityScale; // 0x01ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InheritVelocity) == 0x1E8, "C_INIT_InheritVelocity size mismatch");
+            static_assert(sizeof(C_INIT_InheritVelocity) == 0x1F0, "C_INIT_InheritVelocity size mismatch");
         }
     }
 }

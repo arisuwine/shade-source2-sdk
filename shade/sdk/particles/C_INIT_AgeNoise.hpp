@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_AgeNoise : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                bool m_bAbsVal; // 0x01e0, 0x1 bytes
-                bool m_bAbsValInv; // 0x01e1, 0x1 bytes
-                std::uint8_t pad_01e2[0x2]; // 0x01e2, 0x2 bytes
-                float m_flOffset; // 0x01e4, 0x4 bytes
-                float m_flAgeMin; // 0x01e8, 0x4 bytes
-                float m_flAgeMax; // 0x01ec, 0x4 bytes
-                float m_flNoiseScale; // 0x01f0, 0x4 bytes
-                float m_flNoiseScaleLoc; // 0x01f4, 0x4 bytes
-                Vector m_vecOffsetLoc; // 0x01f8, 0xc bytes
-                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
+                bool m_bAbsVal; // 0x01e8, 0x1 bytes
+                bool m_bAbsValInv; // 0x01e9, 0x1 bytes
+                std::uint8_t pad_01ea[0x2]; // 0x01ea, 0x2 bytes
+                float m_flOffset; // 0x01ec, 0x4 bytes
+                float m_flAgeMin; // 0x01f0, 0x4 bytes
+                float m_flAgeMax; // 0x01f4, 0x4 bytes
+                float m_flNoiseScale; // 0x01f8, 0x4 bytes
+                float m_flNoiseScaleLoc; // 0x01fc, 0x4 bytes
+                Vector m_vecOffsetLoc; // 0x0200, 0xc bytes
+                std::uint8_t pad_020c[0x4]; // 0x020c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_AgeNoise) == 0x208, "C_INIT_AgeNoise size mismatch");
+            static_assert(sizeof(C_INIT_AgeNoise) == 0x210, "C_INIT_AgeNoise size mismatch");
         }
     }
 }

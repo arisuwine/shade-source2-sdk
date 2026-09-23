@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1430
+             * Size: 0x1510
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,22 +38,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FuncMonitor : public shade::sdk::client::C_FuncBrush {
             public:
-                CUtlString m_targetCamera; // 0x0fb0, 0x8 bytes
-                std::int32_t m_nResolutionEnum; // 0x0fb8, 0x4 bytes
-                bool m_bRenderShadows; // 0x0fbc, 0x1 bytes
-                bool m_bUseUniqueColorTarget; // 0x0fbd, 0x1 bytes
-                std::uint8_t pad_0fbe[0x2]; // 0x0fbe, 0x2 bytes
-                CUtlString m_brushModelName; // 0x0fc0, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetCamera; // 0x0fc8, 0x4 bytes
-                bool m_bEnabled; // 0x0fcc, 0x1 bytes
-                bool m_bDraw3DSkybox; // 0x0fcd, 0x1 bytes
-                std::uint8_t pad_0fce[0x462]; // 0x0fce, 0x462 bytes
+                CUtlString m_targetCamera; // 0x1098, 0x8 bytes
+                std::int32_t m_nResolutionEnum; // 0x10a0, 0x4 bytes
+                bool m_bRenderShadows; // 0x10a4, 0x1 bytes
+                bool m_bUseUniqueColorTarget; // 0x10a5, 0x1 bytes
+                std::uint8_t pad_10a6[0x2]; // 0x10a6, 0x2 bytes
+                CUtlString m_brushModelName; // 0x10a8, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetCamera; // 0x10b0, 0x4 bytes
+                bool m_bEnabled; // 0x10b4, 0x1 bytes
+                bool m_bDraw3DSkybox; // 0x10b5, 0x1 bytes
+                std::uint8_t pad_10b6[0x45a]; // 0x10b6, 0x45a bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FuncMonitor) == 0x1430, "C_FuncMonitor size mismatch");
+            static_assert(sizeof(C_FuncMonitor) == 0x1510, "C_FuncMonitor size mismatch");
         }
     }
 }

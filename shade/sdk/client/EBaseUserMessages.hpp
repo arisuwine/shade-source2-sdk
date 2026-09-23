@@ -67,6 +67,8 @@ namespace shade {
                 UM_PlayResponseConditional = 0xa6,
                 UM_UserSentBugBug = 0xa7,
                 UM_UsageReport = 0xa8,
+                UM_RemoteServerCommand = 0xa9,
+                UM_RemoteServerResponse = 0xaa,
                 UM_MAX_BASE = 0xc8
             };
         }

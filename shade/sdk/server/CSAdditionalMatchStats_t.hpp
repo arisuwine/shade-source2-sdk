@@ -21,29 +21,29 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x128
+             * Size: 0x140
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
             struct CSAdditionalMatchStats_t : public shade::sdk::server::CSAdditionalPerRoundStats_t {
-                std::int32_t m_numRoundsSurvivedStreak; // 0x00f8, 0x4 bytes
-                std::int32_t m_maxNumRoundsSurvivedStreak; // 0x00fc, 0x4 bytes
-                std::int32_t m_numRoundsSurvivedTotal; // 0x0100, 0x4 bytes
-                std::int32_t m_iRoundsWonWithoutPurchase; // 0x0104, 0x4 bytes
-                std::int32_t m_iRoundsWonWithoutPurchaseTotal; // 0x0108, 0x4 bytes
-                std::int32_t m_numFirstKills; // 0x010c, 0x4 bytes
-                std::int32_t m_numClutchKills; // 0x0110, 0x4 bytes
-                std::int32_t m_numPistolKills; // 0x0114, 0x4 bytes
-                std::int32_t m_numSniperKills; // 0x0118, 0x4 bytes
-                std::int32_t m_iNumSuicides; // 0x011c, 0x4 bytes
-                std::int32_t m_iNumTeamKills; // 0x0120, 0x4 bytes
-                float m_flTeamDamage; // 0x0124, 0x4 bytes
+                std::int32_t m_numRoundsSurvivedStreak; // 0x0110, 0x4 bytes
+                std::int32_t m_maxNumRoundsSurvivedStreak; // 0x0114, 0x4 bytes
+                std::int32_t m_numRoundsSurvivedTotal; // 0x0118, 0x4 bytes
+                std::int32_t m_iRoundsWonWithoutPurchase; // 0x011c, 0x4 bytes
+                std::int32_t m_iRoundsWonWithoutPurchaseTotal; // 0x0120, 0x4 bytes
+                std::int32_t m_numFirstKills; // 0x0124, 0x4 bytes
+                std::int32_t m_numClutchKills; // 0x0128, 0x4 bytes
+                std::int32_t m_numPistolKills; // 0x012c, 0x4 bytes
+                std::int32_t m_numSniperKills; // 0x0130, 0x4 bytes
+                std::int32_t m_iNumSuicides; // 0x0134, 0x4 bytes
+                std::int32_t m_iNumTeamKills; // 0x0138, 0x4 bytes
+                float m_flTeamDamage; // 0x013c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSAdditionalMatchStats_t) == 0x128, "CSAdditionalMatchStats_t size mismatch");
+            static_assert(sizeof(CSAdditionalMatchStats_t) == 0x140, "CSAdditionalMatchStats_t size mismatch");
         }
     }
 }

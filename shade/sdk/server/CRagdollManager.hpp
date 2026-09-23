@@ -39,9 +39,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t InputSetMaxRagdollCount; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CRagdollManager) == 0x4B8, "CRagdollManager size mismatch");
         }

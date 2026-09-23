@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xb78
+             * Size: 0xbb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,17 +33,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ScreenSpaceRotateTowardTarget : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x0890, 0x170 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0a00, 0x4 bytes
-                std::uint8_t pad_0a04[0x4]; // 0x0a04, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flScreenEdgeAlignmentDistance; // 0x0a08, 0x170 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x08b8, 0x178 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0a30, 0x4 bytes
+                std::uint8_t pad_0a34[0x4]; // 0x0a34, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flScreenEdgeAlignmentDistance; // 0x0a38, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ScreenSpaceRotateTowardTarget) == 0xB78, "C_OP_ScreenSpaceRotateTowardTarget size mismatch");
+            static_assert(sizeof(C_OP_ScreenSpaceRotateTowardTarget) == 0xBB0, "C_OP_ScreenSpaceRotateTowardTarget size mismatch");
         }
     }
 }

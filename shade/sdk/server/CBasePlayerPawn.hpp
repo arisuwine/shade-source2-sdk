@@ -46,7 +46,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xbe0
+             * Size: 0xcd0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -55,46 +55,45 @@ namespace shade {
             #pragma pack(push, 1)
             class CBasePlayerPawn : public shade::sdk::server::CBaseCombatCharacter {
             public:
-                shade::sdk::server::CPlayer_WeaponServices *m_pWeaponServices; // 0x0a30, 0x8 bytes
-                shade::sdk::server::CPlayer_ItemServices *m_pItemServices; // 0x0a38, 0x8 bytes
-                shade::sdk::server::CPlayer_AutoaimServices *m_pAutoaimServices; // 0x0a40, 0x8 bytes
-                shade::sdk::server::CPlayer_ObserverServices *m_pObserverServices; // 0x0a48, 0x8 bytes
-                shade::sdk::server::CPlayer_WaterServices *m_pWaterServices; // 0x0a50, 0x8 bytes
-                shade::sdk::server::CPlayer_UseServices *m_pUseServices; // 0x0a58, 0x8 bytes
-                shade::sdk::server::CPlayer_FlashlightServices *m_pFlashlightServices; // 0x0a60, 0x8 bytes
-                shade::sdk::server::CPlayer_CameraServices *m_pCameraServices; // 0x0a68, 0x8 bytes
-                shade::sdk::server::CPlayer_MovementServices *m_pMovementServices; // 0x0a70, 0x8 bytes
-                std::uint8_t pad_0a78[0x8]; // 0x0a78, 0x8 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ViewAngleServerChange_t> m_ServerViewAngleChanges; // 0x0a80, 0x68 bytes
-                QAngle v_angle; // 0x0ae8, 0xc bytes
-                QAngle v_anglePrevious; // 0x0af4, 0xc bytes
-                std::uint32_t m_iHideHUD; // 0x0b00, 0x4 bytes
-                std::uint8_t pad_0b04[0x4]; // 0x0b04, 0x4 bytes
-                shade::sdk::server::sky3dparams_t m_skybox3d; // 0x0b08, 0x90 bytes
-                shade::sdk::entity2::GameTime_t m_fTimeLastHurt; // 0x0b98, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDeathTime; // 0x0b9c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fNextSuicideTime; // 0x0ba0, 0x4 bytes
-                bool m_fInitHUD; // 0x0ba4, 0x1 bytes
-                std::uint8_t pad_0ba5[0x3]; // 0x0ba5, 0x3 bytes
-                shade::sdk::server::CAI_Expresser *m_pExpresser; // 0x0ba8, 0x8 bytes
-                CHandle<shade::sdk::server::CBasePlayerController> m_hController; // 0x0bb0, 0x4 bytes
-                CHandle<shade::sdk::server::CBasePlayerController> m_hDefaultController; // 0x0bb4, 0x4 bytes
-                std::uint8_t pad_0bb8[0x4]; // 0x0bb8, 0x4 bytes
-                float m_fHltvReplayDelay; // 0x0bbc, 0x4 bytes
-                float m_fHltvReplayEnd; // 0x0bc0, 0x4 bytes
-                CEntityIndex m_iHltvReplayEntity; // 0x0bc4, 0x4 bytes
-                CUtlVector<shade::sdk::client::sndopvarlatchdata_t> m_sndOpvarLatchData; // 0x0bc8, 0x18 bytes
+                shade::sdk::server::CPlayer_WeaponServices *m_pWeaponServices; // 0x0b10, 0x8 bytes
+                shade::sdk::server::CPlayer_ItemServices *m_pItemServices; // 0x0b18, 0x8 bytes
+                shade::sdk::server::CPlayer_AutoaimServices *m_pAutoaimServices; // 0x0b20, 0x8 bytes
+                shade::sdk::server::CPlayer_ObserverServices *m_pObserverServices; // 0x0b28, 0x8 bytes
+                shade::sdk::server::CPlayer_WaterServices *m_pWaterServices; // 0x0b30, 0x8 bytes
+                shade::sdk::server::CPlayer_UseServices *m_pUseServices; // 0x0b38, 0x8 bytes
+                shade::sdk::server::CPlayer_FlashlightServices *m_pFlashlightServices; // 0x0b40, 0x8 bytes
+                shade::sdk::server::CPlayer_CameraServices *m_pCameraServices; // 0x0b48, 0x8 bytes
+                shade::sdk::server::CPlayer_MovementServices *m_pMovementServices; // 0x0b50, 0x8 bytes
+                std::uint8_t pad_0b58[0x8]; // 0x0b58, 0x8 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ViewAngleServerChange_t> m_ServerViewAngleChanges; // 0x0b60, 0x68 bytes
+                QAngle v_angle; // 0x0bc8, 0xc bytes
+                QAngle v_anglePrevious; // 0x0bd4, 0xc bytes
+                std::uint32_t m_iHideHUD; // 0x0be0, 0x4 bytes
+                std::uint8_t pad_0be4[0x4]; // 0x0be4, 0x4 bytes
+                shade::sdk::server::sky3dparams_t m_skybox3d; // 0x0be8, 0x90 bytes
+                shade::sdk::entity2::GameTime_t m_fTimeLastHurt; // 0x0c78, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDeathTime; // 0x0c7c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fNextSuicideTime; // 0x0c80, 0x4 bytes
+                std::uint8_t pad_0c84[0x4]; // 0x0c84, 0x4 bytes
+                bool m_fInitHUD; // 0x0c88, 0x1 bytes
+                std::uint8_t pad_0c89[0x7]; // 0x0c89, 0x7 bytes
+                shade::sdk::server::CAI_Expresser *m_pExpresser; // 0x0c90, 0x8 bytes
+                CHandle<shade::sdk::server::CBasePlayerController> m_hController; // 0x0c98, 0x4 bytes
+                CHandle<shade::sdk::server::CBasePlayerController> m_hDefaultController; // 0x0c9c, 0x4 bytes
+                std::uint8_t pad_0ca0[0x4]; // 0x0ca0, 0x4 bytes
+                float m_fHltvReplayDelay; // 0x0ca4, 0x4 bytes
+                float m_fHltvReplayEnd; // 0x0ca8, 0x4 bytes
+                CEntityIndex m_iHltvReplayEntity; // 0x0cac, 0x4 bytes
+                CUtlVector<shade::sdk::client::sndopvarlatchdata_t> m_sndOpvarLatchData; // 0x0cb0, 0x18 bytes
+                std::uint8_t pad_0cc8[0x8]; // 0x0cc8, 0x8 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * CHandle<CBaseEntity> controller; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetHUDVisibility; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetFogController; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBasePlayerPawn) == 0xBE0, "CBasePlayerPawn size mismatch");
+            static_assert(sizeof(CBasePlayerPawn) == 0xCD0, "CBasePlayerPawn size mismatch");
         }
     }
 }

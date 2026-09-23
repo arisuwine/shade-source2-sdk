@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x5c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,33 +30,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CCS2WeaponGraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_action; // 0x0088, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bActionReset; // 0x00a0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flWeaponActionSpeedScale; // 0x00b8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponCategory; // 0x00d0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponType; // 0x00e8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponExtraInfo; // 0x0100, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flWeaponAmmo; // 0x0118, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flWeaponAmmoMax; // 0x0130, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flWeaponAmmoReserve; // 0x0148, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bWeaponIsSilenced; // 0x0160, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flWeaponIronsightAmount; // 0x0178, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bIsUsingLegacyModel; // 0x0190, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_idleVariation; // 0x01a8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_deployVariation; // 0x01c0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_attackType; // 0x01d8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_attackThrowStrength; // 0x01f0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flAttackVariation; // 0x0208, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_inspectVariation; // 0x0220, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_inspectExtraInfo; // 0x0238, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_reloadStage; // 0x0250, 0x18 bytes
-                std::uint8_t pad_0268[0x320]; // 0x0268, 0x320 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_action; // 0x00c0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bActionReset; // 0x00d8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flWeaponActionSpeedScale; // 0x00f0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponCategory; // 0x0108, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponType; // 0x0120, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponExtraInfo; // 0x0138, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flWeaponAmmo; // 0x0150, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flWeaponAmmoMax; // 0x0168, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flWeaponAmmoReserve; // 0x0180, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bWeaponIsSilenced; // 0x0198, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flWeaponIronsightAmount; // 0x01b0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bIsUsingLegacyModel; // 0x01c8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_idleVariation; // 0x01e0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_deployVariation; // 0x01f8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_attackType; // 0x0210, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_attackThrowStrength; // 0x0228, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flAttackVariation; // 0x0240, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_inspectVariation; // 0x0258, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_inspectExtraInfo; // 0x0270, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_reloadStage; // 0x0288, 0x18 bytes
+                std::uint8_t pad_02a0[0x320]; // 0x02a0, 0x320 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCS2WeaponGraphController) == 0x588, "CCS2WeaponGraphController size mismatch");
+            static_assert(sizeof(CCS2WeaponGraphController) == 0x5C0, "CCS2WeaponGraphController size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x230
+             * Size: 0x238
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,13 +37,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderPoints : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x0228, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x0230, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderPoints) == 0x230, "C_OP_RenderPoints size mismatch");
+            static_assert(sizeof(C_OP_RenderPoints) == 0x238, "C_OP_RenderPoints size mismatch");
         }
     }
 }

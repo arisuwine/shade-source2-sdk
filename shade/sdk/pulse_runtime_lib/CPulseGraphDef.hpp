@@ -27,6 +27,7 @@ namespace shade {
             class CPulse_InvokeBinding;
             class CPulse_OutputConnection;
             class CPulse_PublicOutput;
+            class CPulse_TempVarBankDefinition;
             class CPulse_Variable;
         }
     }
@@ -36,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x1b0
+             * Size: 0x1c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -53,20 +54,21 @@ namespace shade {
                 CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_Chunk*> m_Chunks; // 0x0050, 0x18 bytes
                 CUtlVector<shade::sdk::pulse_runtime_lib::CPulseCell_Base*> m_Cells; // 0x0068, 0x18 bytes
                 CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_Variable> m_Vars; // 0x0080, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_PublicOutput> m_PublicOutputs; // 0x0098, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_InvokeBinding*> m_InvokeBindings; // 0x00b0, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_CallInfo*> m_CallInfos; // 0x00c8, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_Constant> m_Constants; // 0x00e0, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_DomainValue> m_DomainValues; // 0x00f8, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_BlackboardReference> m_BlackboardReferences; // 0x0110, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutputConnection*> m_OutputConnections; // 0x0128, 0x18 bytes
-                std::uint8_t pad_0140[0x70]; // 0x0140, 0x70 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_TempVarBankDefinition*> m_TempVarBanks; // 0x0098, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_PublicOutput> m_PublicOutputs; // 0x00b0, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_InvokeBinding*> m_InvokeBindings; // 0x00c8, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_CallInfo*> m_CallInfos; // 0x00e0, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_Constant> m_Constants; // 0x00f8, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_DomainValue> m_DomainValues; // 0x0110, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_BlackboardReference> m_BlackboardReferences; // 0x0128, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutputConnection*> m_OutputConnections; // 0x0140, 0x18 bytes
+                std::uint8_t pad_0158[0x68]; // 0x0158, 0x68 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphDef) == 0x1B0, "CPulseGraphDef size mismatch");
+            static_assert(sizeof(CPulseGraphDef) == 0x1C0, "CPulseGraphDef size mismatch");
         }
     }
 }

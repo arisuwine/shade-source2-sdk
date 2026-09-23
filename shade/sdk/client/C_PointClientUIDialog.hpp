@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfe8
+             * Size: 0x10d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PointClientUIDialog : public shade::sdk::client::C_BaseClientUIEntity {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hActivator; // 0x0fe0, 0x4 bytes
-                bool m_bStartEnabled; // 0x0fe4, 0x1 bytes
-                std::uint8_t pad_0fe5[0x3]; // 0x0fe5, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hActivator; // 0x10c8, 0x4 bytes
+                bool m_bStartEnabled; // 0x10cc, 0x1 bytes
+                std::uint8_t pad_10cd[0x3]; // 0x10cd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PointClientUIDialog) == 0xFE8, "C_PointClientUIDialog size mismatch");
+            static_assert(sizeof(C_PointClientUIDialog) == 0x10D0, "C_PointClientUIDialog size mismatch");
         }
     }
 }

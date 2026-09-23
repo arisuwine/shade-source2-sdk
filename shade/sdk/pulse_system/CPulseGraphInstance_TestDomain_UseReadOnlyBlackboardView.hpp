@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0xd0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView) == 0x158, "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView) == 0xD0, "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView size mismatch");
         }
     }
 }

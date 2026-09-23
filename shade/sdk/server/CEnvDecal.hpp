@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,22 +38,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvDecal : public shade::sdk::server::CBaseModelEntity {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x0770, 0x8 bytes
-                float m_flWidth; // 0x0778, 0x4 bytes
-                float m_flHeight; // 0x077c, 0x4 bytes
-                float m_flDepth; // 0x0780, 0x4 bytes
-                std::uint32_t m_nRenderOrder; // 0x0784, 0x4 bytes
-                bool m_bProjectOnWorld; // 0x0788, 0x1 bytes
-                bool m_bProjectOnCharacters; // 0x0789, 0x1 bytes
-                bool m_bProjectOnWater; // 0x078a, 0x1 bytes
-                std::uint8_t pad_078b[0x1]; // 0x078b, 0x1 bytes
-                float m_flDepthSortBias; // 0x078c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x0850, 0x8 bytes
+                float m_flWidth; // 0x0858, 0x4 bytes
+                float m_flHeight; // 0x085c, 0x4 bytes
+                float m_flDepth; // 0x0860, 0x4 bytes
+                std::uint32_t m_nRenderOrder; // 0x0864, 0x4 bytes
+                bool m_bProjectOnWorld; // 0x0868, 0x1 bytes
+                bool m_bProjectOnCharacters; // 0x0869, 0x1 bytes
+                bool m_bProjectOnWater; // 0x086a, 0x1 bytes
+                std::uint8_t pad_086b[0x1]; // 0x086b, 0x1 bytes
+                float m_flDepthSortBias; // 0x086c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvDecal) == 0x790, "CEnvDecal size mismatch");
+            static_assert(sizeof(CEnvDecal) == 0x870, "CEnvDecal size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x310
+             * Size: 0x380
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -45,15 +45,14 @@ namespace shade {
                 std::uint8_t pad_0225[0x3]; // 0x0225, 0x3 bytes
                 shade::sdk::server::WeaponPurchaseTracker_t m_weaponPurchasesThisMatch; // 0x0228, 0x70 bytes
                 shade::sdk::server::WeaponPurchaseTracker_t m_weaponPurchasesThisRound; // 0x0298, 0x70 bytes
-                std::uint8_t pad_0308[0x8]; // 0x0308, 0x8 bytes
+                shade::sdk::server::WeaponPurchaseTracker_t m_weaponCarryOverIntoThisRound; // 0x0308, 0x70 bytes
+                std::uint8_t pad_0378[0x8]; // 0x0378, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSPlayer_ActionTrackingServices) == 0x310, "CCSPlayer_ActionTrackingServices size mismatch");
+            static_assert(sizeof(CCSPlayer_ActionTrackingServices) == 0x380, "CCSPlayer_ActionTrackingServices size mismatch");
         }
     }
 }

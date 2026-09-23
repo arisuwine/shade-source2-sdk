@@ -45,15 +45,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputPass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableAlternatePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableAlternatePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleAlternatePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnablePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisablePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTogglePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPathTrack) == 0x4E8, "CPathTrack size mismatch");
         }

@@ -21,6 +21,10 @@
 
 namespace shade {
     namespace sdk {
+        namespace client {
+            class C_BaseEntity;
+        }
+
         namespace resourcesystem {
             class InfoForResourceTypeCTextureBase;
         }
@@ -43,10 +47,9 @@ namespace shade {
             public:
                 std::uint8_t pad_0008[0x30]; // 0x0008, 0x30 bytes
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0038, 0x28 bytes
-                std::uint8_t pad_0060[0x15]; // 0x0060, 0x15 bytes
-                Color m_Color; // 0x0075, 0x4 bytes
-                Color m_SecondaryColor; // 0x0079, 0x4 bytes
-                std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
+                std::uint8_t pad_0060[0x18]; // 0x0060, 0x18 bytes
+                Color m_Color; // 0x0078, 0x4 bytes
+                Color m_SecondaryColor; // 0x007c, 0x4 bytes
                 float m_flBrightness; // 0x0080, 0x4 bytes
                 float m_flBrightnessScale; // 0x0084, 0x4 bytes
                 float m_flBrightnessMult; // 0x0088, 0x4 bytes
@@ -120,22 +123,26 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flLightStyleStartTime; // 0x01a0, 0x4 bytes
                 float m_flCapsuleLength; // 0x01a4, 0x4 bytes
                 float m_flMinRoughness; // 0x01a8, 0x4 bytes
-                std::uint8_t pad_01ac[0x44]; // 0x01ac, 0x44 bytes
+                bool m_bAmbientOcclusionProxyOverride; // 0x01ac, 0x1 bytes
+                std::uint8_t pad_01ad[0x3]; // 0x01ad, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAmbientOcclusionProxyPosition0; // 0x01b0, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAmbientOcclusionProxyPosition1; // 0x01b4, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAmbientOcclusionProxyPosition2; // 0x01b8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAmbientOcclusionProxyPosition3; // 0x01bc, 0x4 bytes
+                float m_flAmbientOcclusionProxyStrength0; // 0x01c0, 0x4 bytes
+                float m_flAmbientOcclusionProxyStrength1; // 0x01c4, 0x4 bytes
+                float m_flAmbientOcclusionProxyStrength2; // 0x01c8, 0x4 bytes
+                float m_flAmbientOcclusionProxyStrength3; // 0x01cc, 0x4 bytes
+                float m_flAmbientOcclusionProxyAmbientStrength; // 0x01d0, 0x4 bytes
+                float m_flAmbientOcclusionProxyConeAngle0; // 0x01d4, 0x4 bytes
+                float m_flAmbientOcclusionProxyConeAngle1; // 0x01d8, 0x4 bytes
+                float m_flAmbientOcclusionProxyConeAngle2; // 0x01dc, 0x4 bytes
+                float m_flAmbientOcclusionProxyConeAngle3; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0xc]; // 0x01e4, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool m_bAmbientOcclusionProxyOverride; // Offset: 0x1ac, Size: 0x1, Size In Bytes: 0x1
-             * float m_flAmbientOcclusionProxyStrength0; // Offset: 0x1c0, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyStrength1; // Offset: 0x1c4, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyStrength2; // Offset: 0x1c8, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyStrength3; // Offset: 0x1cc, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyAmbientStrength; // Offset: 0x1d0, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyConeAngle0; // Offset: 0x1d4, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyConeAngle1; // Offset: 0x1d8, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyConeAngle2; // Offset: 0x1dc, Size: 0x1, Size In Bytes: 0x4
-             * float m_flAmbientOcclusionProxyConeAngle3; // Offset: 0x1e0, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CLightComponent) == 0x1F0, "CLightComponent size mismatch");
         }

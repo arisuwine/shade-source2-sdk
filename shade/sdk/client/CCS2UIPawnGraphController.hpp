@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x240
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,26 +29,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCS2UIPawnGraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraph2ParamOptionalRef<float> m_nAnimationSeed; // 0x0088, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_characterMode; // 0x00a0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bCharacterModeReset; // 0x00b8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_nTeamPreviewVariant; // 0x00d0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_nTeamPreviewRandom; // 0x00e8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_nTeamPreviewPosition; // 0x0100, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_endOfMatchCelebration; // 0x0118, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_action; // 0x0130, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_bannerAnimation; // 0x0148, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponCategory; // 0x0160, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponType; // 0x0178, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponState; // 0x0190, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_inspectTurnAngle; // 0x01a8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bCT; // 0x01c0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_nAnimationSeed; // 0x00c0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_characterMode; // 0x00d8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bCharacterModeReset; // 0x00f0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_nTeamPreviewVariant; // 0x0108, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_nTeamPreviewRandom; // 0x0120, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_nTeamPreviewPosition; // 0x0138, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_endOfMatchCelebration; // 0x0150, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_action; // 0x0168, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_bannerAnimation; // 0x0180, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponCategory; // 0x0198, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponType; // 0x01b0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_weaponState; // 0x01c8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_inspectTurnAngle; // 0x01e0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_nChickSnapshotVariant; // 0x01f8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_nChickLifeStage; // 0x0210, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bCT; // 0x0228, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCS2UIPawnGraphController) == 0x1D8, "CCS2UIPawnGraphController size mismatch");
+            static_assert(sizeof(CCS2UIPawnGraphController) == 0x240, "CCS2UIPawnGraphController size mismatch");
         }
     }
 }

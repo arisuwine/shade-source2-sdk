@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e0
+             * Size: 0x1e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetCPOrientationToDirection : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nInputControlPoint; // 0x01d8, 0x4 bytes
-                std::int32_t m_nOutputControlPoint; // 0x01dc, 0x4 bytes
+                std::int32_t m_nInputControlPoint; // 0x01e0, 0x4 bytes
+                std::int32_t m_nOutputControlPoint; // 0x01e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetCPOrientationToDirection) == 0x1E0, "C_OP_SetCPOrientationToDirection size mismatch");
+            static_assert(sizeof(C_OP_SetCPOrientationToDirection) == 0x1E8, "C_OP_SetCPOrientationToDirection size mismatch");
         }
     }
 }

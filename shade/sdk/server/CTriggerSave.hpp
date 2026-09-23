@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f8
+             * Size: 0x9d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerSave : public shade::sdk::server::CBaseTrigger {
             public:
-                bool m_bForceNewLevelUnit; // 0x08e8, 0x1 bytes
-                std::uint8_t pad_08e9[0x3]; // 0x08e9, 0x3 bytes
-                float m_fDangerousTimer; // 0x08ec, 0x4 bytes
-                std::int32_t m_minHitPoints; // 0x08f0, 0x4 bytes
-                float m_flRetriggerDelay; // 0x08f4, 0x4 bytes
+                bool m_bForceNewLevelUnit; // 0x09c8, 0x1 bytes
+                std::uint8_t pad_09c9[0x3]; // 0x09c9, 0x3 bytes
+                float m_fDangerousTimer; // 0x09cc, 0x4 bytes
+                std::int32_t m_minHitPoints; // 0x09d0, 0x4 bytes
+                float m_flRetriggerDelay; // 0x09d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerSave) == 0x8F8, "CTriggerSave size mismatch");
+            static_assert(sizeof(CTriggerSave) == 0x9D8, "CTriggerSave size mismatch");
         }
     }
 }

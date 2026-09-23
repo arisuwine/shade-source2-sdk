@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1320
+             * Size: 0x1410
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,27 +32,27 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PhysPropClientside : public shade::sdk::client::C_BreakableProp {
             public:
-                shade::sdk::entity2::GameTime_t m_flTouchDelta; // 0x12f0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fDeathTime; // 0x12f4, 0x4 bytes
-                VectorWS m_vecDamagePosition; // 0x12f8, 0xc bytes
-                Vector m_vecDamageDirection; // 0x1304, 0xc bytes
-                shade::sdk::client::DamageTypes_t m_nDamageType; // 0x1310, 0x4 bytes
-                std::uint8_t pad_1314[0xc]; // 0x1314, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flTouchDelta; // 0x13e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fDeathTime; // 0x13e4, 0x4 bytes
+                VectorWS m_vecDamagePosition; // 0x13e8, 0xc bytes
+                Vector m_vecDamageDirection; // 0x13f4, 0xc bytes
+                shade::sdk::client::DamageTypes_t m_nDamageType; // 0x1400, 0x4 bytes
+                std::uint8_t pad_1404[0xc]; // 0x1404, 0xc bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * float m_impactEnergyScale; // Offset: 0x1258, Size: 0x1, Size In Bytes: 0x4
+             * float m_impactEnergyScale; // Offset: 0x1348, Size: 0x1, Size In Bytes: 0x4
              * bool forcemotiondisabled; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool phys_start_asleep; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float fademaxdist; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float fademindist; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float fadescale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float scale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * char *skin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlString skin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_PhysPropClientside) == 0x1320, "C_PhysPropClientside size mismatch");
+            static_assert(sizeof(C_PhysPropClientside) == 0x1410, "C_PhysPropClientside size mismatch");
         }
     }
 }

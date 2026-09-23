@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x10a8
+             * Size: 0x1190
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FootstepControl : public shade::sdk::client::C_BaseTrigger {
             public:
-                CUtlSymbolLarge m_source; // 0x1098, 0x8 bytes
-                CUtlSymbolLarge m_destination; // 0x10a0, 0x8 bytes
+                CUtlSymbolLarge m_source; // 0x1180, 0x8 bytes
+                CUtlSymbolLarge m_destination; // 0x1188, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FootstepControl) == 0x10A8, "C_FootstepControl size mismatch");
+            static_assert(sizeof(C_FootstepControl) == 0x1190, "C_FootstepControl size mismatch");
         }
     }
 }

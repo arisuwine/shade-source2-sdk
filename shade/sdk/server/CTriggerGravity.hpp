@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8e8
+             * Size: 0x9c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerGravity) == 0x8E8, "CTriggerGravity size mismatch");
+            static_assert(sizeof(CTriggerGravity) == 0x9C8, "CTriggerGravity size mismatch");
         }
     }
 }

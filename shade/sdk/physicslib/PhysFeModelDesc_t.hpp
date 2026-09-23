@@ -42,12 +42,14 @@ namespace shade {
             struct FeNodeReverseOffset_t;
             struct FeNodeStrayBox_t;
             struct FeNodeWindBase_t;
+            struct FePrism_t;
             struct FeQuad_t;
             struct FeRigidColliderIndices_t;
             struct FeRodConstraint_t;
             struct FeSDFRigid_t;
             struct FeSimdAnimStrayRadius_t;
             struct FeSimdNodeBase_t;
+            struct FeSimdPrism_t;
             struct FeSimdQuad_t;
             struct FeSimdRodConstraintAnim_t;
             struct FeSimdRodConstraint_t;
@@ -70,7 +72,7 @@ namespace shade {
     namespace sdk {
         namespace physicslib {
             /* Class Parameters
-             * Size: 0x6f8
+             * Size: 0x728
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -102,98 +104,100 @@ namespace shade {
                 CUtlVector<shade::sdk::physicslib::FeQuad_t> m_Quads; // 0x00a8, 0x18 bytes
                 CUtlVector<shade::sdk::physicslib::FeSimdQuad_t> m_SimdQuads; // 0x00c0, 0x18 bytes
                 CUtlVector<shade::sdk::physicslib::FeSimdTri_t> m_SimdTris; // 0x00d8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeSimdRodConstraint_t> m_SimdRods; // 0x00f0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeSimdRodConstraintAnim_t> m_SimdRodsAnim; // 0x0108, 0x18 bytes
-                CUtlVector<CTransform> m_InitPose; // 0x0120, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeRodConstraint_t> m_Rods; // 0x0138, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeTwistConstraint_t> m_Twists; // 0x0150, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeHingeLimit_t> m_HingeLimits; // 0x0168, 0x18 bytes
-                CUtlVector<std::uint32_t> m_AntiTunnelBytecode; // 0x0180, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeDynKinLink_t> m_DynKinLinks; // 0x0198, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeBoneMergeLink_t> m_BoneMergeLinks; // 0x01b0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeAntiTunnelProbe_t> m_AntiTunnelProbes; // 0x01c8, 0x18 bytes
-                CUtlVector<std::uint16_t> m_AntiTunnelTargetNodes; // 0x01e0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeNodeStrayBox_t> m_NodeStrayBoxes; // 0x01f8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeAxialEdgeBend_t> m_AxialEdges; // 0x0210, 0x18 bytes
-                CUtlVector<float> m_NodeInvMasses; // 0x0228, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeCtrlOffset_t> m_CtrlOffsets; // 0x0240, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeCtrlOsOffset_t> m_CtrlOsOffsets; // 0x0258, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeFollowNode_t> m_FollowNodes; // 0x0270, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeCollisionPlane_t> m_CollisionPlanes; // 0x0288, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeNodeIntegrator_t> m_NodeIntegrator; // 0x02a0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeSpringIntegrator_t> m_SpringIntegrator; // 0x02b8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeSimdSpringIntegrator_t> m_SimdSpringIntegrator; // 0x02d0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeWorldCollisionParams_t> m_WorldCollisionParams; // 0x02e8, 0x18 bytes
-                CUtlVector<float> m_LegacyStretchForce; // 0x0300, 0x18 bytes
-                CUtlVector<float> m_NodeCollisionRadii; // 0x0318, 0x18 bytes
-                CUtlVector<float> m_DynNodeFriction; // 0x0330, 0x18 bytes
-                CUtlVector<float> m_LocalRotation; // 0x0348, 0x18 bytes
-                CUtlVector<float> m_LocalForce; // 0x0360, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeTaperedCapsuleStretch_t> m_TaperedCapsuleStretches; // 0x0378, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeTaperedCapsuleRigid_t> m_TaperedCapsuleRigids; // 0x0390, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeSphereRigid_t> m_SphereRigids; // 0x03a8, 0x18 bytes
-                CUtlVector<std::uint16_t> m_WorldCollisionNodes; // 0x03c0, 0x18 bytes
-                CUtlVector<std::uint16_t> m_TreeParents; // 0x03d8, 0x18 bytes
-                CUtlVector<std::uint16_t> m_TreeCollisionMasks; // 0x03f0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeTreeChildren_t> m_TreeChildren; // 0x0408, 0x18 bytes
-                CUtlVector<std::uint16_t> m_FreeNodes; // 0x0420, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeFitMatrix_t> m_FitMatrices; // 0x0438, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeFitWeight_t> m_FitWeights; // 0x0450, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeNodeReverseOffset_t> m_ReverseOffsets; // 0x0468, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeAnimStrayRadius_t> m_AnimStrayRadii; // 0x0480, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeSimdAnimStrayRadius_t> m_SimdAnimStrayRadii; // 0x0498, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeKelagerBend2_t> m_KelagerBends; // 0x04b0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeCtrlSoftOffset_t> m_CtrlSoftOffsets; // 0x04c8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::CFeIndexedJiggleBone> m_JiggleBones; // 0x04e0, 0x18 bytes
-                CUtlVector<std::uint16_t> m_SourceElems; // 0x04f8, 0x18 bytes
-                CUtlVector<std::uint32_t> m_GoalDampedSpringIntegrators; // 0x0510, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeTri_t> m_Tris; // 0x0528, 0x18 bytes
-                std::uint16_t m_nTriCount1; // 0x0540, 0x2 bytes
-                std::uint16_t m_nTriCount2; // 0x0542, 0x2 bytes
-                std::uint8_t m_nReservedUint8; // 0x0544, 0x1 bytes
-                std::uint8_t m_nExtraPressureIterations; // 0x0545, 0x1 bytes
-                std::uint8_t m_nExtraGoalIterations; // 0x0546, 0x1 bytes
-                std::uint8_t m_nExtraIterations; // 0x0547, 0x1 bytes
-                CUtlVector<shade::sdk::physicslib::FeSDFRigid_t> m_SDFRigids; // 0x0548, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeBoxRigid_t> m_BoxRigids; // 0x0560, 0x18 bytes
-                CUtlVector<std::uint8_t> m_DynNodeVertexSet; // 0x0578, 0x18 bytes
-                CUtlVector<std::uint32_t> m_VertexSetNames; // 0x0590, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeRigidColliderIndices_t> m_RigidColliderPriorities; // 0x05a8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeMorphLayerDepr_t> m_MorphLayers; // 0x05c0, 0x18 bytes
-                CUtlVector<std::uint8_t> m_MorphSetData; // 0x05d8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeVertexMapDesc_t> m_VertexMaps; // 0x05f0, 0x18 bytes
-                CUtlVector<std::uint8_t> m_VertexMapValues; // 0x0608, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeEffectDesc_t> m_Effects; // 0x0620, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeCtrlOffset_t> m_LockToParent; // 0x0638, 0x18 bytes
-                CUtlVector<std::uint16_t> m_LockToGoal; // 0x0650, 0x18 bytes
-                CUtlVector<std::int16_t> m_SkelParents; // 0x0668, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeNodeWindBase_t> m_DynNodeWindBases; // 0x0680, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::FeModelSelfCollisionLayer_t> m_SelfCollisionLayers; // 0x0698, 0x18 bytes
-                float m_flInternalPressure; // 0x06b0, 0x4 bytes
-                float m_flDefaultTimeDilation; // 0x06b4, 0x4 bytes
-                float m_flWindage; // 0x06b8, 0x4 bytes
-                float m_flWindDrag; // 0x06bc, 0x4 bytes
-                float m_flDefaultSurfaceStretch; // 0x06c0, 0x4 bytes
-                float m_flDefaultThreadStretch; // 0x06c4, 0x4 bytes
-                float m_flDefaultGravityScale; // 0x06c8, 0x4 bytes
-                float m_flDefaultVelAirDrag; // 0x06cc, 0x4 bytes
-                float m_flDefaultExpAirDrag; // 0x06d0, 0x4 bytes
-                float m_flDefaultVelQuadAirDrag; // 0x06d4, 0x4 bytes
-                float m_flDefaultExpQuadAirDrag; // 0x06d8, 0x4 bytes
-                float m_flRodVelocitySmoothRate; // 0x06dc, 0x4 bytes
-                float m_flQuadVelocitySmoothRate; // 0x06e0, 0x4 bytes
-                float m_flAddWorldCollisionRadius; // 0x06e4, 0x4 bytes
-                float m_flDefaultVolumetricSolveAmount; // 0x06e8, 0x4 bytes
-                float m_flMotionSmoothCDT; // 0x06ec, 0x4 bytes
-                float m_flLocalDrag1; // 0x06f0, 0x4 bytes
-                std::uint16_t m_nRodVelocitySmoothIterations; // 0x06f4, 0x2 bytes
-                std::uint16_t m_nQuadVelocitySmoothIterations; // 0x06f6, 0x2 bytes
+                CUtlVector<shade::sdk::physicslib::FePrism_t> m_Prisms; // 0x00f0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeSimdPrism_t> m_SimdPrisms; // 0x0108, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeSimdRodConstraint_t> m_SimdRods; // 0x0120, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeSimdRodConstraintAnim_t> m_SimdRodsAnim; // 0x0138, 0x18 bytes
+                CUtlVector<CTransform> m_InitPose; // 0x0150, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeRodConstraint_t> m_Rods; // 0x0168, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeTwistConstraint_t> m_Twists; // 0x0180, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeHingeLimit_t> m_HingeLimits; // 0x0198, 0x18 bytes
+                CUtlVector<std::uint32_t> m_AntiTunnelBytecode; // 0x01b0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeDynKinLink_t> m_DynKinLinks; // 0x01c8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeBoneMergeLink_t> m_BoneMergeLinks; // 0x01e0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeAntiTunnelProbe_t> m_AntiTunnelProbes; // 0x01f8, 0x18 bytes
+                CUtlVector<std::uint16_t> m_AntiTunnelTargetNodes; // 0x0210, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeNodeStrayBox_t> m_NodeStrayBoxes; // 0x0228, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeAxialEdgeBend_t> m_AxialEdges; // 0x0240, 0x18 bytes
+                CUtlVector<float> m_NodeInvMasses; // 0x0258, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeCtrlOffset_t> m_CtrlOffsets; // 0x0270, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeCtrlOsOffset_t> m_CtrlOsOffsets; // 0x0288, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeFollowNode_t> m_FollowNodes; // 0x02a0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeCollisionPlane_t> m_CollisionPlanes; // 0x02b8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeNodeIntegrator_t> m_NodeIntegrator; // 0x02d0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeSpringIntegrator_t> m_SpringIntegrator; // 0x02e8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeSimdSpringIntegrator_t> m_SimdSpringIntegrator; // 0x0300, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeWorldCollisionParams_t> m_WorldCollisionParams; // 0x0318, 0x18 bytes
+                CUtlVector<float> m_LegacyStretchForce; // 0x0330, 0x18 bytes
+                CUtlVector<float> m_NodeCollisionRadii; // 0x0348, 0x18 bytes
+                CUtlVector<float> m_DynNodeFriction; // 0x0360, 0x18 bytes
+                CUtlVector<float> m_LocalRotation; // 0x0378, 0x18 bytes
+                CUtlVector<float> m_LocalForce; // 0x0390, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeTaperedCapsuleStretch_t> m_TaperedCapsuleStretches; // 0x03a8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeTaperedCapsuleRigid_t> m_TaperedCapsuleRigids; // 0x03c0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeSphereRigid_t> m_SphereRigids; // 0x03d8, 0x18 bytes
+                CUtlVector<std::uint16_t> m_WorldCollisionNodes; // 0x03f0, 0x18 bytes
+                CUtlVector<std::uint16_t> m_TreeParents; // 0x0408, 0x18 bytes
+                CUtlVector<std::uint16_t> m_TreeCollisionMasks; // 0x0420, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeTreeChildren_t> m_TreeChildren; // 0x0438, 0x18 bytes
+                CUtlVector<std::uint16_t> m_FreeNodes; // 0x0450, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeFitMatrix_t> m_FitMatrices; // 0x0468, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeFitWeight_t> m_FitWeights; // 0x0480, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeNodeReverseOffset_t> m_ReverseOffsets; // 0x0498, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeAnimStrayRadius_t> m_AnimStrayRadii; // 0x04b0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeSimdAnimStrayRadius_t> m_SimdAnimStrayRadii; // 0x04c8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeKelagerBend2_t> m_KelagerBends; // 0x04e0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeCtrlSoftOffset_t> m_CtrlSoftOffsets; // 0x04f8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::CFeIndexedJiggleBone> m_JiggleBones; // 0x0510, 0x18 bytes
+                CUtlVector<std::uint16_t> m_SourceElems; // 0x0528, 0x18 bytes
+                CUtlVector<std::uint32_t> m_GoalDampedSpringIntegrators; // 0x0540, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeTri_t> m_Tris; // 0x0558, 0x18 bytes
+                std::uint16_t m_nTriCount1; // 0x0570, 0x2 bytes
+                std::uint16_t m_nTriCount2; // 0x0572, 0x2 bytes
+                std::uint8_t m_nReservedUint8; // 0x0574, 0x1 bytes
+                std::uint8_t m_nExtraPressureIterations; // 0x0575, 0x1 bytes
+                std::uint8_t m_nExtraGoalIterations; // 0x0576, 0x1 bytes
+                std::uint8_t m_nExtraIterations; // 0x0577, 0x1 bytes
+                CUtlVector<shade::sdk::physicslib::FeSDFRigid_t> m_SDFRigids; // 0x0578, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeBoxRigid_t> m_BoxRigids; // 0x0590, 0x18 bytes
+                CUtlVector<std::uint8_t> m_DynNodeVertexSet; // 0x05a8, 0x18 bytes
+                CUtlVector<std::uint32_t> m_VertexSetNames; // 0x05c0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeRigidColliderIndices_t> m_RigidColliderPriorities; // 0x05d8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeMorphLayerDepr_t> m_MorphLayers; // 0x05f0, 0x18 bytes
+                CUtlVector<std::uint8_t> m_MorphSetData; // 0x0608, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeVertexMapDesc_t> m_VertexMaps; // 0x0620, 0x18 bytes
+                CUtlVector<std::uint8_t> m_VertexMapValues; // 0x0638, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeEffectDesc_t> m_Effects; // 0x0650, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeCtrlOffset_t> m_LockToParent; // 0x0668, 0x18 bytes
+                CUtlVector<std::uint16_t> m_LockToGoal; // 0x0680, 0x18 bytes
+                CUtlVector<std::int16_t> m_SkelParents; // 0x0698, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeNodeWindBase_t> m_DynNodeWindBases; // 0x06b0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::FeModelSelfCollisionLayer_t> m_SelfCollisionLayers; // 0x06c8, 0x18 bytes
+                float m_flInternalPressure; // 0x06e0, 0x4 bytes
+                float m_flDefaultTimeDilation; // 0x06e4, 0x4 bytes
+                float m_flWindage; // 0x06e8, 0x4 bytes
+                float m_flWindDrag; // 0x06ec, 0x4 bytes
+                float m_flDefaultSurfaceStretch; // 0x06f0, 0x4 bytes
+                float m_flDefaultThreadStretch; // 0x06f4, 0x4 bytes
+                float m_flDefaultGravityScale; // 0x06f8, 0x4 bytes
+                float m_flDefaultVelAirDrag; // 0x06fc, 0x4 bytes
+                float m_flDefaultExpAirDrag; // 0x0700, 0x4 bytes
+                float m_flDefaultVelQuadAirDrag; // 0x0704, 0x4 bytes
+                float m_flDefaultExpQuadAirDrag; // 0x0708, 0x4 bytes
+                float m_flRodVelocitySmoothRate; // 0x070c, 0x4 bytes
+                float m_flQuadVelocitySmoothRate; // 0x0710, 0x4 bytes
+                float m_flAddWorldCollisionRadius; // 0x0714, 0x4 bytes
+                float m_flDefaultVolumetricSolveAmount; // 0x0718, 0x4 bytes
+                float m_flMotionSmoothCDT; // 0x071c, 0x4 bytes
+                float m_flLocalDrag1; // 0x0720, 0x4 bytes
+                std::uint16_t m_nRodVelocitySmoothIterations; // 0x0724, 0x2 bytes
+                std::uint16_t m_nQuadVelocitySmoothIterations; // 0x0726, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PhysFeModelDesc_t) == 0x6F8, "PhysFeModelDesc_t size mismatch");
+            static_assert(sizeof(PhysFeModelDesc_t) == 0x728, "PhysFeModelDesc_t size mismatch");
         }
     }
 }

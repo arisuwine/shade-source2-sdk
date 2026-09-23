@@ -88,9 +88,10 @@ namespace shade {
                 LOADOUT_SLOT_MUSICKIT = 0x36,
                 LOADOUT_SLOT_FLAIR0 = 0x37,
                 LOADOUT_SLOT_SPRAY0 = 0x38,
+                LOADOUT_SLOT_PET = 0x39,
                 LOADOUT_SLOT_FIRST_ALL_CHARACTER = 0x36,
-                LOADOUT_SLOT_LAST_ALL_CHARACTER = 0x38,
-                LOADOUT_SLOT_COUNT = 0x39
+                LOADOUT_SLOT_LAST_ALL_CHARACTER = 0x39,
+                LOADOUT_SLOT_COUNT = 0x3a
             };
         }
     }

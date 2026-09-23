@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xe50
+             * Size: 0xe98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SpringToVectorConstraint : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRestLength; // 0x01d8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMinDistance; // 0x0348, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxDistance; // 0x04b8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRestingLength; // 0x0628, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecAnchorVector; // 0x0798, 0x6b8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRestLength; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMinDistance; // 0x0358, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxDistance; // 0x04d0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRestingLength; // 0x0648, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecAnchorVector; // 0x07c0, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SpringToVectorConstraint) == 0xE50, "C_OP_SpringToVectorConstraint size mismatch");
+            static_assert(sizeof(C_OP_SpringToVectorConstraint) == 0xE98, "C_OP_SpringToVectorConstraint size mismatch");
         }
     }
 }

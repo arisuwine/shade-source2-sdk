@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_LerpVector : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01d8, 0x4 bytes
-                Vector m_vecOutput; // 0x01dc, 0xc bytes
-                float m_flStartTime; // 0x01e8, 0x4 bytes
-                float m_flEndTime; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x01f0, 0x4 bytes
-                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
+                Vector m_vecOutput; // 0x01e4, 0xc bytes
+                float m_flStartTime; // 0x01f0, 0x4 bytes
+                float m_flEndTime; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x01f8, 0x4 bytes
+                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_LerpVector) == 0x1F8, "C_OP_LerpVector size mismatch");
+            static_assert(sizeof(C_OP_LerpVector) == 0x200, "C_OP_LerpVector size mismatch");
         }
     }
 }

@@ -15,7 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CSoundEventEntity.hpp"
+#include "shade/sdk/server/CSoundEventMultiPointEntity.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,29 +29,24 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x608
+             * Size: 0x620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CSoundEventPathCornerEntity : public shade::sdk::server::CSoundEventEntity {
+            class CSoundEventPathCornerEntity : public shade::sdk::server::CSoundEventMultiPointEntity {
             public:
-                CUtlSymbolLarge m_iszPathCorner; // 0x0568, 0x8 bytes
-                std::int32_t m_iCountMax; // 0x0570, 0x4 bytes
-                float m_flDistanceMax; // 0x0574, 0x4 bytes
-                float m_flDistMaxSqr; // 0x0578, 0x4 bytes
-                float m_flDotProductMax; // 0x057c, 0x4 bytes
-                bool m_bPlaying; // 0x0580, 0x1 bytes
-                std::uint8_t pad_0581[0x27]; // 0x0581, 0x27 bytes
-                CNetworkUtlVectorBase<shade::sdk::client::SoundeventPathCornerPairNetworked_t> m_vecCornerPairsNetworked; // 0x05a8, 0x60 bytes
+                CUtlSymbolLarge m_iszPathCorner; // 0x05a0, 0x8 bytes
+                std::uint8_t pad_05a8[0x18]; // 0x05a8, 0x18 bytes
+                CNetworkUtlVectorBase<shade::sdk::client::SoundeventPathCornerPairNetworked_t> m_vecCornerPairsNetworked; // 0x05c0, 0x60 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSoundEventPathCornerEntity) == 0x608, "CSoundEventPathCornerEntity size mismatch");
+            static_assert(sizeof(CSoundEventPathCornerEntity) == 0x620, "CSoundEventPathCornerEntity size mismatch");
         }
     }
 }

@@ -22,10 +22,9 @@ namespace shade {
         namespace navlib {
             /* Class Parameters
              * Size: 0x30
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Construct Allowed
-             * Construct Disallowed
              */
             #pragma pack(push, 1)
             class CNavPathCost : public shade::sdk::navlib::INavPathCost {

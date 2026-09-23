@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1090
+             * Size: 0x12b0
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -32,30 +32,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseCSGrenade : public shade::sdk::server::CCSWeaponBase {
             public:
-                bool m_bRedraw; // 0x1050, 0x1 bytes
-                bool m_bIsHeldByPlayer; // 0x1051, 0x1 bytes
-                bool m_bPinPulled; // 0x1052, 0x1 bytes
-                bool m_bJumpThrow; // 0x1053, 0x1 bytes
-                bool m_bThrowAnimating; // 0x1054, 0x1 bytes
-                std::uint8_t pad_1055[0x3]; // 0x1055, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_fThrowTime; // 0x1058, 0x4 bytes
-                float m_flThrowStrength; // 0x105c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fDropTime; // 0x1060, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fPinPullTime; // 0x1064, 0x4 bytes
-                bool m_bJustPulledPin; // 0x1068, 0x1 bytes
-                std::uint8_t pad_1069[0x3]; // 0x1069, 0x3 bytes
-                shade::sdk::entity2::GameTick_t m_nNextHoldTick; // 0x106c, 0x4 bytes
-                float m_flNextHoldFrac; // 0x1070, 0x4 bytes
-                CHandle<shade::sdk::server::CCSWeaponBase> m_hSwitchToWeaponAfterThrow; // 0x1074, 0x4 bytes
-                std::uint8_t pad_1078[0x18]; // 0x1078, 0x18 bytes
+                bool m_bRedraw; // 0x1270, 0x1 bytes
+                bool m_bIsHeldByPlayer; // 0x1271, 0x1 bytes
+                bool m_bPinPulled; // 0x1272, 0x1 bytes
+                bool m_bJumpThrow; // 0x1273, 0x1 bytes
+                bool m_bThrowAnimating; // 0x1274, 0x1 bytes
+                std::uint8_t pad_1275[0x3]; // 0x1275, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fThrowTime; // 0x1278, 0x4 bytes
+                float m_flThrowStrength; // 0x127c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fDropTime; // 0x1280, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fPinPullTime; // 0x1284, 0x4 bytes
+                bool m_bJustPulledPin; // 0x1288, 0x1 bytes
+                std::uint8_t pad_1289[0x3]; // 0x1289, 0x3 bytes
+                shade::sdk::entity2::GameTick_t m_nNextHoldTick; // 0x128c, 0x4 bytes
+                float m_flNextHoldFrac; // 0x1290, 0x4 bytes
+                CHandle<shade::sdk::server::CCSWeaponBase> m_hSwitchToWeaponAfterThrow; // 0x1294, 0x4 bytes
+                std::uint8_t pad_1298[0x18]; // 0x1298, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseCSGrenade) == 0x1090, "CBaseCSGrenade size mismatch");
+            static_assert(sizeof(CBaseCSGrenade) == 0x12B0, "CBaseCSGrenade size mismatch");
         }
     }
 }

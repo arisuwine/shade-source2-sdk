@@ -16,7 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -39,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RandomNamedModelElement : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x01e0, 0x8 bytes
-                CUtlVector<CUtlString> m_names; // 0x01e8, 0x18 bytes
-                bool m_bShuffle; // 0x0200, 0x1 bytes
-                bool m_bLinear; // 0x0201, 0x1 bytes
-                bool m_bModelFromRenderer; // 0x0202, 0x1 bytes
-                std::uint8_t pad_0203[0x1]; // 0x0203, 0x1 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0204, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x01e8, 0x8 bytes
+                CUtlVector<CUtlString> m_names; // 0x01f0, 0x18 bytes
+                bool m_bShuffle; // 0x0208, 0x1 bytes
+                bool m_bLinear; // 0x0209, 0x1 bytes
+                bool m_bModelFromRenderer; // 0x020a, 0x1 bytes
+                std::uint8_t pad_020b[0x1]; // 0x020b, 0x1 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x020c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RandomNamedModelElement) == 0x208, "C_INIT_RandomNamedModelElement size mismatch");
+            static_assert(sizeof(C_INIT_RandomNamedModelElement) == 0x210, "C_INIT_RandomNamedModelElement size mismatch");
         }
     }
 }

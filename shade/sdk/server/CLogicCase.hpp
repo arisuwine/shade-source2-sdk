@@ -40,12 +40,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPickRandom; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPickRandomShuffle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputResetShuffle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CLogicCase) == 0x8F0, "CLogicCase size mismatch");
         }

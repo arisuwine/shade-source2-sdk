@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x800
+             * Size: 0x8e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CShatterGlassShardPhysics : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint32_t m_hParentShard; // 0x0770, 0x4 bytes
-                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
-                shade::sdk::server::shard_model_desc_t m_ShardDesc; // 0x0778, 0x80 bytes
-                shade::sdk::client::ShatterGlassEntityPoolState_t m_nPoolState; // 0x07f8, 0x4 bytes
-                bool m_bTouchedByPlayer; // 0x07fc, 0x1 bytes
-                std::uint8_t pad_07fd[0x3]; // 0x07fd, 0x3 bytes
+                std::uint32_t m_hParentShard; // 0x0850, 0x4 bytes
+                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
+                shade::sdk::server::shard_model_desc_t m_ShardDesc; // 0x0858, 0x80 bytes
+                shade::sdk::client::ShatterGlassEntityPoolState_t m_nPoolState; // 0x08d8, 0x4 bytes
+                bool m_bTouchedByPlayer; // 0x08dc, 0x1 bytes
+                std::uint8_t pad_08dd[0x3]; // 0x08dd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CShatterGlassShardPhysics) == 0x800, "CShatterGlassShardPhysics size mismatch");
+            static_assert(sizeof(CShatterGlassShardPhysics) == 0x8E0, "CShatterGlassShardPhysics size mismatch");
         }
     }
 }

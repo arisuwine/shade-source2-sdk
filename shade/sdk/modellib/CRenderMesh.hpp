@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0x228
+             * Size: 0x238
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,19 +44,19 @@ namespace shade {
                 CUtlLeanVectorFixedGrowable<shade::sdk::modellib::CSceneObjectData, 1> m_sceneObjects; // 0x0010, 0xc0 bytes
                 CUtlLeanVector<shade::sdk::modellib::CBaseConstraint*> m_constraints; // 0x00d0, 0x10 bytes
                 shade::sdk::modellib::CRenderSkeleton m_skeleton; // 0x00e0, 0x50 bytes
-                std::uint8_t pad_0130[0xbc]; // 0x0130, 0xbc bytes
-                bool m_bUseUV2ForCharting; // 0x01ec, 0x1 bytes
-                bool m_bEmbeddedMapMesh; // 0x01ed, 0x1 bytes
-                std::uint8_t pad_01ee[0x22]; // 0x01ee, 0x22 bytes
-                shade::sdk::modellib::DynamicMeshDeformParams_t m_meshDeformParams; // 0x0210, 0xc bytes
-                std::uint8_t pad_021c[0x4]; // 0x021c, 0x4 bytes
-                shade::sdk::modellib::CRenderGroom *m_pGroomData; // 0x0220, 0x8 bytes
+                std::uint8_t pad_0130[0xc8]; // 0x0130, 0xc8 bytes
+                bool m_bUseUV2ForCharting; // 0x01f8, 0x1 bytes
+                bool m_bEmbeddedMapMesh; // 0x01f9, 0x1 bytes
+                std::uint8_t pad_01fa[0x26]; // 0x01fa, 0x26 bytes
+                shade::sdk::modellib::DynamicMeshDeformParams_t m_meshDeformParams; // 0x0220, 0xc bytes
+                std::uint8_t pad_022c[0x4]; // 0x022c, 0x4 bytes
+                shade::sdk::modellib::CRenderGroom *m_pGroomData; // 0x0230, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRenderMesh) == 0x228, "CRenderMesh size mismatch");
+            static_assert(sizeof(CRenderMesh) == 0x238, "CRenderMesh size mismatch");
         }
     }
 }

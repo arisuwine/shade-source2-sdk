@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x360
+             * Size: 0x370
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ExternalGameImpulseForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flForceScale; // 0x01e8, 0x170 bytes
-                bool m_bRopes; // 0x0358, 0x1 bytes
-                bool m_bRopesZOnly; // 0x0359, 0x1 bytes
-                bool m_bExplosions; // 0x035a, 0x1 bytes
-                bool m_bParticles; // 0x035b, 0x1 bytes
-                std::uint8_t pad_035c[0x4]; // 0x035c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flForceScale; // 0x01f0, 0x178 bytes
+                bool m_bRopes; // 0x0368, 0x1 bytes
+                bool m_bRopesZOnly; // 0x0369, 0x1 bytes
+                bool m_bExplosions; // 0x036a, 0x1 bytes
+                bool m_bParticles; // 0x036b, 0x1 bytes
+                std::uint8_t pad_036c[0x4]; // 0x036c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ExternalGameImpulseForce) == 0x360, "C_OP_ExternalGameImpulseForce size mismatch");
+            static_assert(sizeof(C_OP_ExternalGameImpulseForce) == 0x370, "C_OP_ExternalGameImpulseForce size mismatch");
         }
     }
 }

@@ -38,25 +38,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetStartDist; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetEndDist; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxDensity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorSecondary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetFarZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAngles; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSet2DSkyboxFogFactor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorSecondaryLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetStartDistLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetEndDistLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxDensityLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSet2DSkyboxFogFactorLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartFogTransition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CFogController) == 0x518, "CFogController size mismatch");
         }

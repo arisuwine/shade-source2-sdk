@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x12d0
+             * Size: 0x13b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OmniLight : public shade::sdk::client::C_BarnLight {
             public:
-                float m_flInnerAngle; // 0x12c0, 0x4 bytes
-                float m_flOuterAngle; // 0x12c4, 0x4 bytes
-                bool m_bShowLight; // 0x12c8, 0x1 bytes
-                std::uint8_t pad_12c9[0x7]; // 0x12c9, 0x7 bytes
+                float m_flInnerAngle; // 0x13a8, 0x4 bytes
+                float m_flOuterAngle; // 0x13ac, 0x4 bytes
+                bool m_bShowLight; // 0x13b0, 0x1 bytes
+                std::uint8_t pad_13b1[0x7]; // 0x13b1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OmniLight) == 0x12D0, "C_OmniLight size mismatch");
+            static_assert(sizeof(C_OmniLight) == 0x13B8, "C_OmniLight size mismatch");
         }
     }
 }

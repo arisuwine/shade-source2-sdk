@@ -19,19 +19,19 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x3d0
+             * Size: 0x3b0
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
             class CNmGraphInstance {
             public:
-                std::uint8_t pad_0000[0x3d0]; // 0x0000, 0x3d0 bytes
+                std::uint8_t pad_0000[0x3b0]; // 0x0000, 0x3b0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmGraphInstance) == 0x3D0, "CNmGraphInstance size mismatch");
+            static_assert(sizeof(CNmGraphInstance) == 0x3B0, "CNmGraphInstance size mismatch");
         }
     }
 }

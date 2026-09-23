@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17f0
+             * Size: 0x1a18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Item : public shade::sdk::client::C_EconEntity {
             public:
-                char m_pReticleHintTextName[0x100]; // 0x16f0, 0x100 bytes
+                char m_pReticleHintTextName[0x100]; // 0x1918, 0x100 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Item) == 0x17F0, "C_Item size mismatch");
+            static_assert(sizeof(C_Item) == 0x1A18, "C_Item size mismatch");
         }
     }
 }

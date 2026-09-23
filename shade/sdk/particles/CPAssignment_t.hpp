@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x6c8
+             * Size: 0x6e8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -30,15 +30,15 @@ namespace shade {
             struct CPAssignment_t {
                 std::int32_t m_nCPNumber; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_Pos; // 0x0008, 0x6b8 bytes
-                shade::sdk::particles::ParticleOrientationSetMode_t m_nOrientationMode; // 0x06c0, 0x4 bytes
-                std::uint8_t pad_06c4[0x4]; // 0x06c4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_Pos; // 0x0008, 0x6d8 bytes
+                shade::sdk::particles::ParticleOrientationSetMode_t m_nOrientationMode; // 0x06e0, 0x4 bytes
+                std::uint8_t pad_06e4[0x4]; // 0x06e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPAssignment_t) == 0x6C8, "CPAssignment_t size mismatch");
+            static_assert(sizeof(CPAssignment_t) == 0x6E8, "CPAssignment_t size mismatch");
         }
     }
 }

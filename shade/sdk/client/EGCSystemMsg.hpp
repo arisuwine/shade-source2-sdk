@@ -108,7 +108,14 @@ namespace shade {
                 k_EGCMsgTerminateGamePersonalDataEntriesResponse = 0x211,
                 k_EGCMsgRecurringSubscriptionStatusChange = 0x212,
                 k_EGCMsgDirectServiceMethod = 0x213,
-                k_EGCMsgDirectServiceMethodResponse = 0x214
+                k_EGCMsgDirectServiceMethodResponse = 0x214,
+                k_EGCMsgAppCheersReceived = 0x215,
+                k_EGCMsgAppCheersGetAllowedTypes = 0x216,
+                k_EGCMsgAppCheersGetAllowedTypesResponse = 0x217,
+                k_EGCMsgReportMetrics = 0x218,
+                k_EGCMsgReportMetricsResponse = 0x219,
+                k_EGCMsgGetClanDetails = 0x21a,
+                k_EGCMsgGetClanDetailsResponse = 0x21b
             };
         }
     }

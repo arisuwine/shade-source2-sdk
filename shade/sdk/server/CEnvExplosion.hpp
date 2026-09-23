@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c8
+             * Size: 0x8a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,34 +40,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvExplosion : public shade::sdk::server::CModelPointEntity {
             public:
-                std::int32_t m_iMagnitude; // 0x0770, 0x4 bytes
-                float m_flPlayerDamage; // 0x0774, 0x4 bytes
-                std::int32_t m_iRadiusOverride; // 0x0778, 0x4 bytes
-                float m_flInnerRadius; // 0x077c, 0x4 bytes
-                float m_flDamageForce; // 0x0780, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hInflictor; // 0x0784, 0x4 bytes
-                shade::sdk::client::DamageTypes_t m_iCustomDamageType; // 0x0788, 0x4 bytes
-                bool m_bCreateDebris; // 0x078c, 0x1 bytes
-                std::uint8_t pad_078d[0xb]; // 0x078d, 0xb bytes
-                CUtlSymbolLarge m_iszCustomEffectName; // 0x0798, 0x8 bytes
-                CUtlSymbolLarge m_iszCustomSoundName; // 0x07a0, 0x8 bytes
-                bool m_bSuppressParticleImpulse; // 0x07a8, 0x1 bytes
-                std::uint8_t pad_07a9[0x3]; // 0x07a9, 0x3 bytes
-                shade::sdk::client::Class_T m_iClassIgnore; // 0x07ac, 0x4 bytes
-                shade::sdk::client::Class_T m_iClassIgnore2; // 0x07b0, 0x4 bytes
-                std::uint8_t pad_07b4[0x4]; // 0x07b4, 0x4 bytes
-                CUtlSymbolLarge m_iszEntityIgnoreName; // 0x07b8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEntityIgnore; // 0x07c0, 0x4 bytes
-                std::uint8_t pad_07c4[0x4]; // 0x07c4, 0x4 bytes
+                std::int32_t m_iMagnitude; // 0x0850, 0x4 bytes
+                float m_flPlayerDamage; // 0x0854, 0x4 bytes
+                std::int32_t m_iRadiusOverride; // 0x0858, 0x4 bytes
+                float m_flInnerRadius; // 0x085c, 0x4 bytes
+                float m_flDamageForce; // 0x0860, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hInflictor; // 0x0864, 0x4 bytes
+                shade::sdk::client::DamageTypes_t m_iCustomDamageType; // 0x0868, 0x4 bytes
+                bool m_bHasCustomDamageType; // 0x086c, 0x1 bytes
+                bool m_bCreateDebris; // 0x086d, 0x1 bytes
+                std::uint8_t pad_086e[0xa]; // 0x086e, 0xa bytes
+                CUtlSymbolLarge m_iszCustomEffectName; // 0x0878, 0x8 bytes
+                CUtlSymbolLarge m_iszCustomSoundName; // 0x0880, 0x8 bytes
+                bool m_bSuppressParticleImpulse; // 0x0888, 0x1 bytes
+                std::uint8_t pad_0889[0x3]; // 0x0889, 0x3 bytes
+                shade::sdk::client::Class_T m_iClassIgnore; // 0x088c, 0x4 bytes
+                shade::sdk::client::Class_T m_iClassIgnore2; // 0x0890, 0x4 bytes
+                std::uint8_t pad_0894[0x4]; // 0x0894, 0x4 bytes
+                CUtlSymbolLarge m_iszEntityIgnoreName; // 0x0898, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEntityIgnore; // 0x08a0, 0x4 bytes
+                std::uint8_t pad_08a4[0x4]; // 0x08a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * CUtlSymbolLarge explosion_type; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void InputExplode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CEnvExplosion) == 0x7C8, "CEnvExplosion size mismatch");
+            static_assert(sizeof(CEnvExplosion) == 0x8A8, "CEnvExplosion size mismatch");
         }
     }
 }

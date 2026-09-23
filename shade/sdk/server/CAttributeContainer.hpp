@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2f8
+             * Size: 0x438
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAttributeContainer : public shade::sdk::server::CAttributeManager {
             public:
-                shade::sdk::server::CEconItemView m_Item; // 0x0050, 0x2a8 bytes
+                shade::sdk::server::CEconItemView m_Item; // 0x0050, 0x3e8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAttributeContainer) == 0x2F8, "CAttributeContainer size mismatch");
+            static_assert(sizeof(CAttributeContainer) == 0x438, "CAttributeContainer size mismatch");
         }
     }
 }

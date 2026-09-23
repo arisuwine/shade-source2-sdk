@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xf50
+             * Size: 0xf98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapCrossProductOfTwoVectorsToVector : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_InputVec1; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_InputVec2; // 0x0890, 0x6b8 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0f48, 0x4 bytes
-                bool m_bNormalize; // 0x0f4c, 0x1 bytes
-                std::uint8_t pad_0f4d[0x3]; // 0x0f4d, 0x3 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_InputVec1; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_InputVec2; // 0x08b8, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0f90, 0x4 bytes
+                bool m_bNormalize; // 0x0f94, 0x1 bytes
+                std::uint8_t pad_0f95[0x3]; // 0x0f95, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapCrossProductOfTwoVectorsToVector) == 0xF50, "C_OP_RemapCrossProductOfTwoVectorsToVector size mismatch");
+            static_assert(sizeof(C_OP_RemapCrossProductOfTwoVectorsToVector) == 0xF98, "C_OP_RemapCrossProductOfTwoVectorsToVector size mismatch");
         }
     }
 }

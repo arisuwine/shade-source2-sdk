@@ -16,13 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixParameterFloat.hpp"
 #include "shade/sdk/soundsystem_lowlevel/VMixDynamicsDesc_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixDynamicsProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
-                shade::sdk::soundsystem_lowlevel::VMixDynamicsDesc_t m_desc; // 0x0020, 0x30 bytes
+                shade::sdk::soundsystem_lowlevel::VMixDynamicsDesc_t m_desc; // 0x0028, 0x30 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_outParamLevel; // 0x0058, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_outParamdBLevel; // 0x005c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixDynamicsProcessorDesc) == 0x50, "CVMixDynamicsProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixDynamicsProcessorDesc) == 0x60, "CVMixDynamicsProcessorDesc size mismatch");
         }
     }
 }

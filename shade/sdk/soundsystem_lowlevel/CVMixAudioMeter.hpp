@@ -28,7 +28,8 @@ namespace shade {
             public:
                 CUtlString m_name; // 0x0000, 0x8 bytes
                 CUtlString m_displayName; // 0x0008, 0x8 bytes
-                std::uint8_t pad_0010[0x8]; // 0x0010, 0x8 bytes
+                std::uint32_t m_nDebugId; // 0x0010, 0x4 bytes
+                std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
             };
             #pragma pack(pop)
 

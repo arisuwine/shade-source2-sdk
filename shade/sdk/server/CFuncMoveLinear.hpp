@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x958
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,39 +32,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncMoveLinear : public shade::sdk::server::CBaseToggle {
             public:
-                shade::sdk::server::MoveLinearAuthoredPos_t m_authoredPosition; // 0x07f0, 0x4 bytes
-                QAngle m_angMoveEntitySpace; // 0x07f4, 0xc bytes
-                Vector m_vecMoveDirParentSpace; // 0x0800, 0xc bytes
-                std::uint8_t pad_080c[0x4]; // 0x080c, 0x4 bytes
-                CGameSoundEventName m_soundStart; // 0x0810, 0x8 bytes
-                CGameSoundEventName m_soundStop; // 0x0818, 0x8 bytes
-                CUtlSymbolLarge m_currentSound; // 0x0820, 0x8 bytes
-                float m_flBlockDamage; // 0x0828, 0x4 bytes
-                float m_flStartPosition; // 0x082c, 0x4 bytes
-                std::uint8_t pad_0830[0x8]; // 0x0830, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x0838, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x0850, 0x18 bytes
-                float m_flSpeed; // 0x0868, 0x4 bytes
-                bool m_bCreateMovableNavMesh; // 0x086c, 0x1 bytes
-                bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x086d, 0x1 bytes
-                bool m_bCreateNavObstacle; // 0x086e, 0x1 bytes
-                std::uint8_t pad_086f[0x9]; // 0x086f, 0x9 bytes
+                shade::sdk::server::MoveLinearAuthoredPos_t m_authoredPosition; // 0x08d0, 0x4 bytes
+                QAngle m_angMoveEntitySpace; // 0x08d4, 0xc bytes
+                Vector m_vecMoveDirParentSpace; // 0x08e0, 0xc bytes
+                std::uint8_t pad_08ec[0x4]; // 0x08ec, 0x4 bytes
+                CGameSoundEventName m_soundStart; // 0x08f0, 0x8 bytes
+                CGameSoundEventName m_soundStop; // 0x08f8, 0x8 bytes
+                CUtlSymbolLarge m_currentSound; // 0x0900, 0x8 bytes
+                float m_flBlockDamage; // 0x0908, 0x4 bytes
+                float m_flStartPosition; // 0x090c, 0x4 bytes
+                std::uint8_t pad_0910[0x8]; // 0x0910, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x0918, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x0930, 0x18 bytes
+                float m_flSpeed; // 0x0948, 0x4 bytes
+                bool m_bCreateMovableNavMesh; // 0x094c, 0x1 bytes
+                bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x094d, 0x1 bytes
+                bool m_bCreateNavObstacle; // 0x094e, 0x1 bytes
+                std::uint8_t pad_094f[0x9]; // 0x094f, 0x9 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * bool movewithoutpushingblockers; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void InputOpen; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClose; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTeleportToTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputResetPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMoveDistanceFromStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMoveDistanceFromEnd; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFuncMoveLinear) == 0x878, "CFuncMoveLinear size mismatch");
+            static_assert(sizeof(CFuncMoveLinear) == 0x958, "CFuncMoveLinear size mismatch");
         }
     }
 }

@@ -26,6 +26,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             class CBaseEntity;
+            class CCSPlayerController;
             class CCSPlayerPawn;
         }
     }
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x30c0
+             * Size: 0x32f0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -44,46 +45,49 @@ namespace shade {
             #pragma pack(push, 1)
             class CChicken : public shade::sdk::server::CDynamicProp, public shade::sdk::client::IHasAttributes {
             public:
-                // Base IHasAttributes schema offset 0xbb8 differs from generated packed offset 0xba0
-                std::uint8_t pad_0ba8[0x18]; // 0x0ba8, 0x18 bytes
-                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0bc0, 0x2f8 bytes
-                shade::sdk::server::CountdownTimer m_updateTimer; // 0x0eb8, 0x18 bytes
-                VectorWS m_stuckAnchor; // 0x0ed0, 0xc bytes
-                std::uint8_t pad_0edc[0x4]; // 0x0edc, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_collisionStuckTimer; // 0x0ee0, 0x18 bytes
-                bool m_isOnGround; // 0x0ef8, 0x1 bytes
-                std::uint8_t pad_0ef9[0x3]; // 0x0ef9, 0x3 bytes
-                Vector m_vFallVelocity; // 0x0efc, 0xc bytes
-                shade::sdk::client::EChickenActivity m_desiredActivity; // 0x0f08, 0x4 bytes
-                shade::sdk::client::EChickenActivity m_currentActivity; // 0x0f0c, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_activityTimer; // 0x0f10, 0x18 bytes
-                float m_turnRate; // 0x0f28, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_fleeFrom; // 0x0f2c, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_moveRateThrottleTimer; // 0x0f30, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_startleTimer; // 0x0f48, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_vocalizeTimer; // 0x0f60, 0x18 bytes
-                CHandle<shade::sdk::server::CCSPlayerPawn> m_leader; // 0x0f78, 0x4 bytes
-                std::uint8_t pad_0f7c[0x14]; // 0x0f7c, 0x14 bytes
-                shade::sdk::server::CountdownTimer m_reuseTimer; // 0x0f90, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_jumpTimer; // 0x0fa8, 0x18 bytes
-                float m_flLastJumpTime; // 0x0fc0, 0x4 bytes
-                std::uint8_t pad_0fc4[0x200c]; // 0x0fc4, 0x200c bytes
-                shade::sdk::server::CountdownTimer m_repathTimer; // 0x2fd0, 0x18 bytes
-                std::uint8_t pad_2fe8[0x80]; // 0x2fe8, 0x80 bytes
-                VectorWS m_vecPathGoal; // 0x3068, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flActiveFollowStartTime; // 0x3074, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_followMinuteTimer; // 0x3078, 0x18 bytes
-                std::uint8_t pad_3090[0x8]; // 0x3090, 0x8 bytes
-                shade::sdk::server::CountdownTimer m_BlockDirectionTimer; // 0x3098, 0x18 bytes
-                std::uint8_t pad_30b0[0x10]; // 0x30b0, 0x10 bytes
+                // Base IHasAttributes schema offset 0xca8 differs from generated packed offset 0xc90
+                std::uint8_t pad_0c98[0x18]; // 0x0c98, 0x18 bytes
+                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0cb0, 0x438 bytes
+                shade::sdk::server::CountdownTimer m_updateTimer; // 0x10e8, 0x18 bytes
+                VectorWS m_stuckAnchor; // 0x1100, 0xc bytes
+                std::uint8_t pad_110c[0x4]; // 0x110c, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_collisionStuckTimer; // 0x1110, 0x18 bytes
+                bool m_isOnGround; // 0x1128, 0x1 bytes
+                std::uint8_t pad_1129[0x3]; // 0x1129, 0x3 bytes
+                Vector m_vFallVelocity; // 0x112c, 0xc bytes
+                shade::sdk::client::EChickenActivity m_desiredActivity; // 0x1138, 0x4 bytes
+                shade::sdk::client::EChickenActivity m_currentActivity; // 0x113c, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_activityTimer; // 0x1140, 0x18 bytes
+                float m_turnRate; // 0x1158, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_fleeFrom; // 0x115c, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_moveRateThrottleTimer; // 0x1160, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_startleTimer; // 0x1178, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_vocalizeTimer; // 0x1190, 0x18 bytes
+                CHandle<shade::sdk::server::CCSPlayerPawn> m_leader; // 0x11a8, 0x4 bytes
+                CHandle<shade::sdk::server::CCSPlayerController> m_owner; // 0x11ac, 0x4 bytes
+                std::uint8_t pad_11b0[0x10]; // 0x11b0, 0x10 bytes
+                shade::sdk::server::CountdownTimer m_reuseTimer; // 0x11c0, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_jumpTimer; // 0x11d8, 0x18 bytes
+                float m_flLastJumpTime; // 0x11f0, 0x4 bytes
+                std::uint8_t pad_11f4[0x200c]; // 0x11f4, 0x200c bytes
+                shade::sdk::server::CountdownTimer m_repathTimer; // 0x3200, 0x18 bytes
+                std::uint8_t pad_3218[0x80]; // 0x3218, 0x80 bytes
+                VectorWS m_vecPathGoal; // 0x3298, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flActiveFollowStartTime; // 0x32a4, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_followMinuteTimer; // 0x32a8, 0x18 bytes
+                std::uint8_t pad_32c0[0x8]; // 0x32c0, 0x8 bytes
+                shade::sdk::server::CountdownTimer m_BlockDirectionTimer; // 0x32c8, 0x18 bytes
+                std::uint8_t pad_32e0[0x2]; // 0x32e0, 0x2 bytes
+                bool m_bSpawnDyingParticles; // 0x32e2, 0x1 bytes
+                std::uint8_t pad_32e3[0xd]; // 0x32e3, 0xd bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             * CUtlSymbolLarge chicken_model; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CChicken) == 0x30C0, "CChicken size mismatch");
+            static_assert(sizeof(CChicken) == 0x32F0, "CChicken size mismatch");
         }
     }
 }

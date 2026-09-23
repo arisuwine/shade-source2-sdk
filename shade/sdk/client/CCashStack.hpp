@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfb8
+             * Size: 0x10a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCashStack : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::int32_t m_nCashStackValue; // 0x0fb0, 0x4 bytes
-                std::uint8_t pad_0fb4[0x4]; // 0x0fb4, 0x4 bytes
+                std::int32_t m_nCashStackValue; // 0x1098, 0x4 bytes
+                std::uint8_t pad_109c[0x4]; // 0x109c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCashStack) == 0xFB8, "CCashStack size mismatch");
+            static_assert(sizeof(CCashStack) == 0x10A0, "CCashStack size mismatch");
         }
     }
 }

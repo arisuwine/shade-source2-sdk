@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x12c8
+             * Size: 0x13b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_RectLight : public shade::sdk::client::C_BarnLight {
             public:
-                bool m_bShowLight; // 0x12c0, 0x1 bytes
-                std::uint8_t pad_12c1[0x7]; // 0x12c1, 0x7 bytes
+                bool m_bShowLight; // 0x13a8, 0x1 bytes
+                std::uint8_t pad_13a9[0x7]; // 0x13a9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_RectLight) == 0x12C8, "C_RectLight size mismatch");
+            static_assert(sizeof(C_RectLight) == 0x13B0, "C_RectLight size mismatch");
         }
     }
 }

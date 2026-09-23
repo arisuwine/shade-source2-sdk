@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x30
+             * Size: 0x38
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -37,12 +37,13 @@ namespace shade {
                 float desired_speed; // 0x0008, 0x4 bytes
                 Vector motor_velocity; // 0x000c, 0xc bytes
                 CUtlVector<shade::sdk::client::AI_MotorServices_DebugSnapshotData_t__MotorPathWaypoint_t> motor_path; // 0x0018, 0x18 bytes
+                CUtlString ground_entity_debug_name; // 0x0030, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_MotorServices_DebugSnapshotData_t) == 0x30, "AI_MotorServices_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_MotorServices_DebugSnapshotData_t) == 0x38, "AI_MotorServices_DebugSnapshotData_t size mismatch");
         }
     }
 }

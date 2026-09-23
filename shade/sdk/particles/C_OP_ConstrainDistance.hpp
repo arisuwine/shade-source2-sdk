@@ -17,12 +17,14 @@
 
 #include "shade/sdk/particles/CParticleFunctionConstraint.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
+#include "shade/sdk/particleslib/CParticleCollectionVecInput.hpp"
+#include "shade/sdk/particleslib/CParticleTransformInput.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0xc18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ConstrainDistance : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_fMinDistance; // 0x01d8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_fMaxDistance; // 0x0348, 0x170 bytes
-                std::int32_t m_nControlPointNumber; // 0x04b8, 0x4 bytes
-                Vector m_CenterOffset; // 0x04bc, 0xc bytes
-                bool m_bGlobalCenter; // 0x04c8, 0x1 bytes
-                std::uint8_t pad_04c9[0x7]; // 0x04c9, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_fMinDistance; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_fMaxDistance; // 0x0358, 0x178 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_nControlPointNumber; // 0x04d0, 0x68 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_CenterOffset; // 0x0538, 0x6d8 bytes
+                bool m_bGlobalCenter; // 0x0c10, 0x1 bytes
+                std::uint8_t pad_0c11[0x7]; // 0x0c11, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ConstrainDistance) == 0x4D0, "C_OP_ConstrainDistance size mismatch");
+            static_assert(sizeof(C_OP_ConstrainDistance) == 0xC18, "C_OP_ConstrainDistance size mismatch");
         }
     }
 }

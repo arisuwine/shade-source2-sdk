@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0xb0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +29,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_TurtleGraphics : public shade::sdk::pulse_runtime_lib::CBasePulseGraphInstance {
             public:
-                std::uint8_t pad_0110[0x28]; // 0x0110, 0x28 bytes
+                std::uint8_t pad_0088[0x28]; // 0x0088, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_TurtleGraphics) == 0x138, "CPulseGraphInstance_TurtleGraphics size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_TurtleGraphics) == 0xB0, "CPulseGraphInstance_TurtleGraphics size mismatch");
         }
     }
 }

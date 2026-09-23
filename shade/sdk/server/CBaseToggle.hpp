@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7f0
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,30 +39,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseToggle : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::server::TOGGLE_STATE m_toggle_state; // 0x0770, 0x4 bytes
-                float m_flMoveDistance; // 0x0774, 0x4 bytes
-                float m_flWait; // 0x0778, 0x4 bytes
-                float m_flLip; // 0x077c, 0x4 bytes
-                bool m_bAlwaysFireBlockedOutputs; // 0x0780, 0x1 bytes
-                std::uint8_t pad_0781[0x3]; // 0x0781, 0x3 bytes
-                Vector m_vecPosition1; // 0x0784, 0xc bytes
-                Vector m_vecPosition2; // 0x0790, 0xc bytes
-                QAngle m_vecMoveAng; // 0x079c, 0xc bytes
-                QAngle m_vecAngle1; // 0x07a8, 0xc bytes
-                QAngle m_vecAngle2; // 0x07b4, 0xc bytes
-                float m_flHeight; // 0x07c0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hActivator; // 0x07c4, 0x4 bytes
-                Vector m_vecFinalDest; // 0x07c8, 0xc bytes
-                QAngle m_vecFinalAngle; // 0x07d4, 0xc bytes
-                std::int32_t m_movementType; // 0x07e0, 0x4 bytes
-                std::uint8_t pad_07e4[0x4]; // 0x07e4, 0x4 bytes
-                CUtlSymbolLarge m_sMaster; // 0x07e8, 0x8 bytes
+                shade::sdk::server::TOGGLE_STATE m_toggle_state; // 0x0850, 0x4 bytes
+                float m_flMoveDistance; // 0x0854, 0x4 bytes
+                float m_flWait; // 0x0858, 0x4 bytes
+                float m_flLip; // 0x085c, 0x4 bytes
+                bool m_bAlwaysFireBlockedOutputs; // 0x0860, 0x1 bytes
+                std::uint8_t pad_0861[0x3]; // 0x0861, 0x3 bytes
+                Vector m_vecPosition1; // 0x0864, 0xc bytes
+                Vector m_vecPosition2; // 0x0870, 0xc bytes
+                QAngle m_vecMoveAng; // 0x087c, 0xc bytes
+                QAngle m_vecAngle1; // 0x0888, 0xc bytes
+                QAngle m_vecAngle2; // 0x0894, 0xc bytes
+                float m_flHeight; // 0x08a0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hActivator; // 0x08a4, 0x4 bytes
+                Vector m_vecFinalDest; // 0x08a8, 0xc bytes
+                QAngle m_vecFinalAngle; // 0x08b4, 0xc bytes
+                std::int32_t m_movementType; // 0x08c0, 0x4 bytes
+                std::uint8_t pad_08c4[0x4]; // 0x08c4, 0x4 bytes
+                CUtlSymbolLarge m_sMaster; // 0x08c8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseToggle) == 0x7F0, "CBaseToggle size mismatch");
+            static_assert(sizeof(CBaseToggle) == 0x8D0, "CBaseToggle size mismatch");
         }
     }
 }

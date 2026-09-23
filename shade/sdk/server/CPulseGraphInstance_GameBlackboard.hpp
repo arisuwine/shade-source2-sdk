@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +29,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_GameBlackboard : public shade::sdk::server::CPulseGraphInstance_ServerEntity {
             public:
-                std::uint8_t pad_01c8[0x10]; // 0x01c8, 0x10 bytes
+                std::uint8_t pad_0140[0x10]; // 0x0140, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_GameBlackboard) == 0x1D8, "CPulseGraphInstance_GameBlackboard size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_GameBlackboard) == 0x150, "CPulseGraphInstance_GameBlackboard size mismatch");
         }
     }
 }

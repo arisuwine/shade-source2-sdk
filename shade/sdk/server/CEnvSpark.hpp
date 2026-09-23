@@ -39,12 +39,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartSpark; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopSpark; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleSpark; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSparkOnce; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CEnvSpark) == 0x4D0, "CEnvSpark size mismatch");
         }

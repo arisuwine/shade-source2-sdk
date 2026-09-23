@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x958
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,23 +40,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncTrackChange : public shade::sdk::server::CFuncPlatRot {
             public:
-                CHandle<shade::sdk::server::CPathTrack> m_trackTop; // 0x0840, 0x4 bytes
-                CHandle<shade::sdk::server::CPathTrack> m_trackBottom; // 0x0844, 0x4 bytes
-                CHandle<shade::sdk::server::CFuncTrackTrain> m_train; // 0x0848, 0x4 bytes
-                std::uint8_t pad_084c[0x4]; // 0x084c, 0x4 bytes
-                CUtlSymbolLarge m_trackTopName; // 0x0850, 0x8 bytes
-                CUtlSymbolLarge m_trackBottomName; // 0x0858, 0x8 bytes
-                CUtlSymbolLarge m_trainName; // 0x0860, 0x8 bytes
-                shade::sdk::server::TRAIN_CODE m_code; // 0x0868, 0x4 bytes
-                std::int32_t m_targetState; // 0x086c, 0x4 bytes
-                std::int32_t m_use; // 0x0870, 0x4 bytes
-                std::uint8_t pad_0874[0x4]; // 0x0874, 0x4 bytes
+                CHandle<shade::sdk::server::CPathTrack> m_trackTop; // 0x0920, 0x4 bytes
+                CHandle<shade::sdk::server::CPathTrack> m_trackBottom; // 0x0924, 0x4 bytes
+                CHandle<shade::sdk::server::CFuncTrackTrain> m_train; // 0x0928, 0x4 bytes
+                std::uint8_t pad_092c[0x4]; // 0x092c, 0x4 bytes
+                CUtlSymbolLarge m_trackTopName; // 0x0930, 0x8 bytes
+                CUtlSymbolLarge m_trackBottomName; // 0x0938, 0x8 bytes
+                CUtlSymbolLarge m_trainName; // 0x0940, 0x8 bytes
+                shade::sdk::server::TRAIN_CODE m_code; // 0x0948, 0x4 bytes
+                std::int32_t m_targetState; // 0x094c, 0x4 bytes
+                std::int32_t m_use; // 0x0950, 0x4 bytes
+                std::uint8_t pad_0954[0x4]; // 0x0954, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncTrackChange) == 0x878, "CFuncTrackChange size mismatch");
+            static_assert(sizeof(CFuncTrackChange) == 0x958, "CFuncTrackChange size mismatch");
         }
     }
 }

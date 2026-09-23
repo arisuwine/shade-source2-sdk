@@ -16,7 +16,6 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CBaseRendererSource2.hpp"
-#include "shade/sdk/particles/CReplicationParameters.hpp"
 #include "shade/sdk/particles/ParticleLightingQuality_t.hpp"
 #include "shade/sdk/particles/ParticleOrientationChoiceList_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionRendererFloatInput.hpp"
@@ -26,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x5248
+             * Size: 0x41c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,49 +33,48 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderSprites : public shade::sdk::particles::CBaseRendererSource2 {
             public:
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_nSequenceOverride; // 0x2df0, 0x170 bytes
-                bool m_bSequenceNumbersAreRawSequenceIndices; // 0x2f60, 0x1 bytes
-                std::uint8_t pad_2f61[0x3]; // 0x2f61, 0x3 bytes
-                shade::sdk::particles::ParticleOrientationChoiceList_t m_nOrientationType; // 0x2f64, 0x4 bytes
-                std::int32_t m_nOrientationControlPoint; // 0x2f68, 0x4 bytes
-                bool m_bUseYawWithNormalAligned; // 0x2f6c, 0x1 bytes
-                std::uint8_t pad_2f6d[0x3]; // 0x2f6d, 0x3 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMinSize; // 0x2f70, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMaxSize; // 0x30e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSubPixelAAScale; // 0x3250, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x33c0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x3530, 0x170 bytes
-                float m_flStartFadeDot; // 0x36a0, 0x4 bytes
-                float m_flEndFadeDot; // 0x36a4, 0x4 bytes
-                bool m_bDistanceAlpha; // 0x36a8, 0x1 bytes
-                bool m_bSoftEdges; // 0x36a9, 0x1 bytes
-                std::uint8_t pad_36aa[0x2]; // 0x36aa, 0x2 bytes
-                float m_flEdgeSoftnessStart; // 0x36ac, 0x4 bytes
-                float m_flEdgeSoftnessEnd; // 0x36b0, 0x4 bytes
-                bool m_bOutline; // 0x36b4, 0x1 bytes
-                Color m_OutlineColor; // 0x36b5, 0x4 bytes
-                std::uint8_t pad_36b9[0x3]; // 0x36b9, 0x3 bytes
-                std::int32_t m_nOutlineAlpha; // 0x36bc, 0x4 bytes
-                float m_flOutlineStart0; // 0x36c0, 0x4 bytes
-                float m_flOutlineStart1; // 0x36c4, 0x4 bytes
-                float m_flOutlineEnd0; // 0x36c8, 0x4 bytes
-                float m_flOutlineEnd1; // 0x36cc, 0x4 bytes
-                shade::sdk::particles::ParticleLightingQuality_t m_nLightingMode; // 0x36d0, 0x4 bytes
-                std::uint8_t pad_36d4[0x4]; // 0x36d4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererVecInput m_vecLightingOverride; // 0x36d8, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x3d90, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x3f00, 0x170 bytes
-                bool m_bParticleShadows; // 0x4070, 0x1 bytes
-                std::uint8_t pad_4071[0x3]; // 0x4071, 0x3 bytes
-                float m_flShadowDensity; // 0x4074, 0x4 bytes
-                shade::sdk::particles::CReplicationParameters m_replicationParameters; // 0x4078, 0x11c8 bytes
-                std::uint8_t pad_5240[0x8]; // 0x5240, 0x8 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_nSequenceOverride; // 0x2ed8, 0x178 bytes
+                bool m_bSequenceNumbersAreRawSequenceIndices; // 0x3050, 0x1 bytes
+                std::uint8_t pad_3051[0x3]; // 0x3051, 0x3 bytes
+                shade::sdk::particles::ParticleOrientationChoiceList_t m_nOrientationType; // 0x3054, 0x4 bytes
+                std::int32_t m_nOrientationControlPoint; // 0x3058, 0x4 bytes
+                bool m_bUseYawWithNormalAligned; // 0x305c, 0x1 bytes
+                std::uint8_t pad_305d[0x3]; // 0x305d, 0x3 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMinSize; // 0x3060, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMaxSize; // 0x31d8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSubPixelAAScale; // 0x3350, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x34c8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x3640, 0x178 bytes
+                float m_flStartFadeDot; // 0x37b8, 0x4 bytes
+                float m_flEndFadeDot; // 0x37bc, 0x4 bytes
+                bool m_bDistanceAlpha; // 0x37c0, 0x1 bytes
+                bool m_bSoftEdges; // 0x37c1, 0x1 bytes
+                std::uint8_t pad_37c2[0x2]; // 0x37c2, 0x2 bytes
+                float m_flEdgeSoftnessStart; // 0x37c4, 0x4 bytes
+                float m_flEdgeSoftnessEnd; // 0x37c8, 0x4 bytes
+                bool m_bOutline; // 0x37cc, 0x1 bytes
+                std::uint8_t pad_37cd[0x3]; // 0x37cd, 0x3 bytes
+                Color m_OutlineColor; // 0x37d0, 0x4 bytes
+                std::int32_t m_nOutlineAlpha; // 0x37d4, 0x4 bytes
+                float m_flOutlineStart0; // 0x37d8, 0x4 bytes
+                float m_flOutlineStart1; // 0x37dc, 0x4 bytes
+                float m_flOutlineEnd0; // 0x37e0, 0x4 bytes
+                float m_flOutlineEnd1; // 0x37e4, 0x4 bytes
+                shade::sdk::particles::ParticleLightingQuality_t m_nLightingMode; // 0x37e8, 0x4 bytes
+                std::uint8_t pad_37ec[0x4]; // 0x37ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererVecInput m_vecLightingOverride; // 0x37f0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x3ec8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x4040, 0x178 bytes
+                bool m_bParticleShadows; // 0x41b8, 0x1 bytes
+                std::uint8_t pad_41b9[0x3]; // 0x41b9, 0x3 bytes
+                float m_flShadowDensity; // 0x41bc, 0x4 bytes
+                std::uint8_t pad_41c0[0x8]; // 0x41c0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderSprites) == 0x5248, "C_OP_RenderSprites size mismatch");
+            static_assert(sizeof(C_OP_RenderSprites) == 0x41C8, "C_OP_RenderSprites size mismatch");
         }
     }
 }

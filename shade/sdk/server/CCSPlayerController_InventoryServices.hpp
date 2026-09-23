@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xfe0
+             * Size: 0x1020
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -46,19 +46,17 @@ namespace shade {
                 std::int32_t m_nPersonaDataPublicCommendsTeacher; // 0x0064, 0x4 bytes
                 std::int32_t m_nPersonaDataPublicCommendsFriendly; // 0x0068, 0x4 bytes
                 std::int32_t m_nPersonaDataXpTrailLevel; // 0x006c, 0x4 bytes
-                std::uint8_t pad_0070[0xed8]; // 0x0070, 0xed8 bytes
-                std::uint32_t m_unEquippedPlayerSprayIDs[0x1]; // 0x0f48, 0x4 bytes
-                std::uint8_t pad_0f4c[0x4]; // 0x0f4c, 0x4 bytes
-                std::uint64_t m_unCurrentLoadoutHash; // 0x0f50, 0x8 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ServerAuthoritativeWeaponSlot_t> m_vecServerAuthoritativeWeaponSlots; // 0x0f58, 0x88 bytes
+                std::uint8_t pad_0070[0xf18]; // 0x0070, 0xf18 bytes
+                std::uint32_t m_unEquippedPlayerSprayIDs[0x1]; // 0x0f88, 0x4 bytes
+                std::uint8_t pad_0f8c[0x4]; // 0x0f8c, 0x4 bytes
+                std::uint64_t m_unCurrentLoadoutHash; // 0x0f90, 0x8 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ServerAuthoritativeWeaponSlot_t> m_vecServerAuthoritativeWeaponSlots; // 0x0f98, 0x88 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSPlayerController_InventoryServices) == 0xFE0, "CCSPlayerController_InventoryServices size mismatch");
+            static_assert(sizeof(CCSPlayerController_InventoryServices) == 0x1020, "CCSPlayerController_InventoryServices size mismatch");
         }
     }
 }

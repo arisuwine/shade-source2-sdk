@@ -165,35 +165,6 @@ namespace shade {
              * CUtlSymbolLarge m_iszPrivateVScripts; // Offset: 0x8, Size: 0x1, Size In Bytes: 0x8
              * CUtlSymbolLarge subclass_name; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CHandle<CBaseEntity> caster; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetTeam; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputKill; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputKillHierarchy; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputKillConstrained; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputUse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetParentAttachment; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetParentAttachmentMaintainOffset; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClearParent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFollowEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetDamageFilter; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableDamageForces; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableDamageForces; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputDispatchResponse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddContext; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveContext; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClearContext; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddAttribute; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveAttribute; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableShadow; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableShadow; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser1; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser2; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser3; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser4; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputChangeSubclass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformFollowYaw; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformIgnoreYaw; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * QAngle angles; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector origin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CStrongHandle<InfoForResourceTypeCModel> model; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0

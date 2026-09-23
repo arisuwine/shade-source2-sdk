@@ -44,10 +44,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputShowHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEndHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CEnvInstructorVRHint) == 0x4E8, "CEnvInstructorVRHint size mismatch");
         }

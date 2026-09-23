@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x918
+             * Size: 0x948
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_MoveBetweenPoints : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flSpeedMin; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flSpeedMax; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flEndSpread; // 0x04c0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flStartOffset; // 0x0630, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flEndOffset; // 0x07a0, 0x170 bytes
-                std::int32_t m_nEndControlPointNumber; // 0x0910, 0x4 bytes
-                bool m_bTrailBias; // 0x0914, 0x1 bytes
-                std::uint8_t pad_0915[0x3]; // 0x0915, 0x3 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flSpeedMin; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flSpeedMax; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flEndSpread; // 0x04d8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flStartOffset; // 0x0650, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flEndOffset; // 0x07c8, 0x178 bytes
+                std::int32_t m_nEndControlPointNumber; // 0x0940, 0x4 bytes
+                bool m_bTrailBias; // 0x0944, 0x1 bytes
+                std::uint8_t pad_0945[0x3]; // 0x0945, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_MoveBetweenPoints) == 0x918, "C_INIT_MoveBetweenPoints size mismatch");
+            static_assert(sizeof(C_INIT_MoveBetweenPoints) == 0x948, "C_INIT_MoveBetweenPoints size mismatch");
         }
     }
 }

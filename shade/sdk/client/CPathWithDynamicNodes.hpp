@@ -16,6 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CPathSimple.hpp"
+#include "shade/sdk/client/DirectionAlongSimplePath_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x750
+             * Size: 0x760
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,12 +42,15 @@ namespace shade {
                 C_NetworkUtlVectorBase<CHandle<shade::sdk::client::CPathNode>> m_vecPathNodes; // 0x0710, 0x18 bytes
                 std::uint8_t pad_0728[0x8]; // 0x0728, 0x8 bytes
                 CTransform m_xInitialPathWorldToLocal; // 0x0730, 0x20 bytes
+                shade::sdk::client::DirectionAlongSimplePath_t m_eDesiredDirection; // 0x0750, 0x4 bytes
+                bool m_bIgnoreParentRotation; // 0x0754, 0x1 bytes
+                std::uint8_t pad_0755[0xb]; // 0x0755, 0xb bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPathWithDynamicNodes) == 0x750, "CPathWithDynamicNodes size mismatch");
+            static_assert(sizeof(CPathWithDynamicNodes) == 0x760, "CPathWithDynamicNodes size mismatch");
         }
     }
 }

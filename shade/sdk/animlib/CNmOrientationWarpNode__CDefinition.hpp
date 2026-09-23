@@ -15,6 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/animlib/CNmOrientationWarpNode__AlignmentMode_t.hpp"
 #include "shade/sdk/animlib/CNmPoseNode__CDefinition.hpp"
 #include "shade/sdk/animlib/CNmRootMotionData__SamplingMode_t.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x18
+             * Size: 0x20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,13 +36,15 @@ namespace shade {
                 bool m_bIsOffsetNode; // 0x0014, 0x1 bytes
                 bool m_bIsOffsetRelativeToCharacter; // 0x0015, 0x1 bytes
                 bool m_bWarpTranslation; // 0x0016, 0x1 bytes
-                shade::sdk::animlib::CNmRootMotionData__SamplingMode_t m_samplingMode; // 0x0017, 0x1 bytes
+                shade::sdk::animlib::CNmOrientationWarpNode__AlignmentMode_t m_alignmentMode; // 0x0017, 0x1 bytes
+                shade::sdk::animlib::CNmRootMotionData__SamplingMode_t m_samplingMode; // 0x0018, 0x1 bytes
+                std::uint8_t pad_0019[0x7]; // 0x0019, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmOrientationWarpNode__CDefinition) == 0x18, "CNmOrientationWarpNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmOrientationWarpNode__CDefinition) == 0x20, "CNmOrientationWarpNode__CDefinition size mismatch");
         }
     }
 }

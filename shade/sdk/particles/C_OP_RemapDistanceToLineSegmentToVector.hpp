@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/C_OP_RemapDistanceToLineSegmentBase.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x210
+             * Size: 0x218
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapDistanceToLineSegmentToVector : public shade::sdk::particles::C_OP_RemapDistanceToLineSegmentBase {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01f0, 0x4 bytes
-                Vector m_vMinOutputValue; // 0x01f4, 0xc bytes
-                Vector m_vMaxOutputValue; // 0x0200, 0xc bytes
-                std::uint8_t pad_020c[0x4]; // 0x020c, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01f8, 0x4 bytes
+                Vector m_vMinOutputValue; // 0x01fc, 0xc bytes
+                Vector m_vMaxOutputValue; // 0x0208, 0xc bytes
+                std::uint8_t pad_0214[0x4]; // 0x0214, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapDistanceToLineSegmentToVector) == 0x210, "C_OP_RemapDistanceToLineSegmentToVector size mismatch");
+            static_assert(sizeof(C_OP_RemapDistanceToLineSegmentToVector) == 0x218, "C_OP_RemapDistanceToLineSegmentToVector size mismatch");
         }
     }
 }

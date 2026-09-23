@@ -26,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1998
+             * Size: 0x1a18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,29 +34,29 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MultiSegmentDisplaySnapshotGenerator : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCPSnapshot; // 0x01e0, 0x4 bytes
-                shade::sdk::particles::ParticleMultiSegmentCountSelection_t m_nSegCount; // 0x01e4, 0x4 bytes
-                shade::sdk::particles::ParticleMultiSegmentInputSelection_t m_nInputType; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
-                CUtlString m_strDefaultString; // 0x01f0, 0x8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flValue; // 0x01f8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScollOffset; // 0x0368, 0x170 bytes
-                CUtlVector<shade::sdk::particles::ParticleMultiSegmentSpecialCharacter_t> m_SpecialCharList; // 0x04d8, 0x18 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorUnlit; // 0x04f0, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorLit; // 0x0ba8, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadius; // 0x1260, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSpacing; // 0x13d0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMinCount; // 0x1540, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaxCount; // 0x16b0, 0x170 bytes
-                bool m_bPrependEmpty; // 0x1820, 0x1 bytes
-                std::uint8_t pad_1821[0x7]; // 0x1821, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDigitsAfterDecimal; // 0x1828, 0x170 bytes
+                std::int32_t m_nCPSnapshot; // 0x01e8, 0x4 bytes
+                shade::sdk::particles::ParticleMultiSegmentCountSelection_t m_nSegCount; // 0x01ec, 0x4 bytes
+                shade::sdk::particles::ParticleMultiSegmentInputSelection_t m_nInputType; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                CUtlString m_strDefaultString; // 0x01f8, 0x8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flValue; // 0x0200, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScollOffset; // 0x0378, 0x178 bytes
+                CUtlVector<shade::sdk::particles::ParticleMultiSegmentSpecialCharacter_t> m_SpecialCharList; // 0x04f0, 0x18 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorUnlit; // 0x0508, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorLit; // 0x0be0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadius; // 0x12b8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSpacing; // 0x1430, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMinCount; // 0x15a8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaxCount; // 0x1720, 0x178 bytes
+                bool m_bPrependEmpty; // 0x1898, 0x1 bytes
+                std::uint8_t pad_1899[0x7]; // 0x1899, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDigitsAfterDecimal; // 0x18a0, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MultiSegmentDisplaySnapshotGenerator) == 0x1998, "C_OP_MultiSegmentDisplaySnapshotGenerator size mismatch");
+            static_assert(sizeof(C_OP_MultiSegmentDisplaySnapshotGenerator) == 0x1A18, "C_OP_MultiSegmentDisplaySnapshotGenerator size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfc0
+             * Size: 0x10a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_SpotlightEnd : public shade::sdk::client::C_BaseModelEntity {
             public:
-                float m_flLightScale; // 0x0fb0, 0x4 bytes
-                float m_Radius; // 0x0fb4, 0x4 bytes
-                std::uint8_t pad_0fb8[0x8]; // 0x0fb8, 0x8 bytes
+                float m_flLightScale; // 0x1098, 0x4 bytes
+                float m_Radius; // 0x109c, 0x4 bytes
+                std::uint8_t pad_10a0[0x8]; // 0x10a0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_SpotlightEnd) == 0xFC0, "C_SpotlightEnd size mismatch");
+            static_assert(sizeof(C_SpotlightEnd) == 0x10A8, "C_SpotlightEnd size mismatch");
         }
     }
 }

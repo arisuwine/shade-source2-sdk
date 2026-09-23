@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x11b0
+             * Size: 0x12a0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,12 +30,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseProp : public shade::sdk::client::CBaseAnimGraph {
             public:
-                bool m_bModelOverrodeBlockLOS; // 0x1180, 0x1 bytes
-                std::uint8_t pad_1181[0x3]; // 0x1181, 0x3 bytes
-                std::int32_t m_iShapeType; // 0x1184, 0x4 bytes
-                bool m_bConformToCollisionBounds; // 0x1188, 0x1 bytes
-                std::uint8_t pad_1189[0x7]; // 0x1189, 0x7 bytes
-                CTransform m_mPreferredCatchTransform; // 0x1190, 0x20 bytes
+                bool m_bModelOverrodeBlockLOS; // 0x1268, 0x1 bytes
+                std::uint8_t pad_1269[0x3]; // 0x1269, 0x3 bytes
+                std::int32_t m_iShapeType; // 0x126c, 0x4 bytes
+                bool m_bConformToCollisionBounds; // 0x1270, 0x1 bytes
+                std::uint8_t pad_1271[0xf]; // 0x1271, 0xf bytes
+                CTransform m_mPreferredCatchTransform; // 0x1280, 0x20 bytes
             };
             #pragma pack(pop)
 
@@ -44,7 +44,7 @@ namespace shade {
              * CUtlSymbolLarge propdata_override; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBaseProp) == 0x11B0, "CBaseProp size mismatch");
+            static_assert(sizeof(CBaseProp) == 0x12A0, "CBaseProp size mismatch");
         }
     }
 }

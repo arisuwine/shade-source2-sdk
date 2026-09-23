@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x528
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderClientPhysicsImpulse : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x0228, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMagnitude; // 0x0398, 0x170 bytes
-                std::int32_t m_nSimIdFilter; // 0x0508, 0x4 bytes
-                std::uint8_t pad_050c[0x4]; // 0x050c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x0230, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMagnitude; // 0x03a8, 0x178 bytes
+                std::int32_t m_nSimIdFilter; // 0x0520, 0x4 bytes
+                std::uint8_t pad_0524[0x4]; // 0x0524, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderClientPhysicsImpulse) == 0x510, "C_OP_RenderClientPhysicsImpulse size mismatch");
+            static_assert(sizeof(C_OP_RenderClientPhysicsImpulse) == 0x528, "C_OP_RenderClientPhysicsImpulse size mismatch");
         }
     }
 }

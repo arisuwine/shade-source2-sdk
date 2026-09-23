@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1730
+             * Size: 0x1958
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,54 +44,52 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PlantedC4 : public shade::sdk::client::CBaseAnimGraph, public shade::sdk::client::IHasAttributes {
             public:
-                std::uint8_t pad_1188[0x18]; // 0x1188, 0x18 bytes
-                bool m_bBombTicking; // 0x11a0, 0x1 bytes
-                std::uint8_t pad_11a1[0x3]; // 0x11a1, 0x3 bytes
-                std::int32_t m_nBombSite; // 0x11a4, 0x4 bytes
-                std::int32_t m_nSourceSoundscapeHash; // 0x11a8, 0x4 bytes
-                std::uint8_t pad_11ac[0x4]; // 0x11ac, 0x4 bytes
-                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x11b0, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flNextGlow; // 0x11c8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextBeep; // 0x11cc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flC4Blow; // 0x11d0, 0x4 bytes
-                bool m_bCannotBeDefused; // 0x11d4, 0x1 bytes
-                bool m_bHasExploded; // 0x11d5, 0x1 bytes
-                std::uint8_t pad_11d6[0x2]; // 0x11d6, 0x2 bytes
-                float m_flTimerLength; // 0x11d8, 0x4 bytes
-                bool m_bBeingDefused; // 0x11dc, 0x1 bytes
-                std::uint8_t pad_11dd[0x3]; // 0x11dd, 0x3 bytes
-                float m_bTriggerWarning; // 0x11e0, 0x4 bytes
-                float m_bExplodeWarning; // 0x11e4, 0x4 bytes
-                bool m_bC4Activated; // 0x11e8, 0x1 bytes
-                bool m_bTenSecWarning; // 0x11e9, 0x1 bytes
-                std::uint8_t pad_11ea[0x2]; // 0x11ea, 0x2 bytes
-                float m_flDefuseLength; // 0x11ec, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDefuseCountDown; // 0x11f0, 0x4 bytes
-                bool m_bBombDefused; // 0x11f4, 0x1 bytes
-                std::uint8_t pad_11f5[0x3]; // 0x11f5, 0x3 bytes
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hBombDefuser; // 0x11f8, 0x4 bytes
-                std::uint8_t pad_11fc[0x4]; // 0x11fc, 0x4 bytes
-                shade::sdk::client::C_AttributeContainer m_AttributeManager; // 0x1200, 0x4d0 bytes
-                CHandle<shade::sdk::client::C_Multimeter> m_hDefuserMultimeter; // 0x16d0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextRadarFlashTime; // 0x16d4, 0x4 bytes
-                bool m_bRadarFlash; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_pBombDefuser; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastDefuseTime; // 0x16e0, 0x4 bytes
-                std::uint8_t pad_16e4[0x4]; // 0x16e4, 0x4 bytes
-                shade::sdk::client::CBasePlayerController *m_pPredictionOwner; // 0x16e8, 0x8 bytes
-                VectorWS m_vecC4ExplodeSpectatePos; // 0x16f0, 0xc bytes
-                QAngle m_vecC4ExplodeSpectateAng; // 0x16fc, 0xc bytes
-                float m_flC4ExplodeSpectateDuration; // 0x1708, 0x4 bytes
-                std::uint8_t pad_170c[0x24]; // 0x170c, 0x24 bytes
+                std::uint8_t pad_1270[0x18]; // 0x1270, 0x18 bytes
+                bool m_bBombTicking; // 0x1288, 0x1 bytes
+                std::uint8_t pad_1289[0x3]; // 0x1289, 0x3 bytes
+                std::int32_t m_nBombSite; // 0x128c, 0x4 bytes
+                std::int32_t m_nSourceSoundscapeHash; // 0x1290, 0x4 bytes
+                std::uint8_t pad_1294[0x4]; // 0x1294, 0x4 bytes
+                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x1298, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flNextGlow; // 0x12b0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextBeep; // 0x12b4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flC4Blow; // 0x12b8, 0x4 bytes
+                bool m_bCannotBeDefused; // 0x12bc, 0x1 bytes
+                bool m_bHasExploded; // 0x12bd, 0x1 bytes
+                std::uint8_t pad_12be[0x2]; // 0x12be, 0x2 bytes
+                float m_flTimerLength; // 0x12c0, 0x4 bytes
+                bool m_bBeingDefused; // 0x12c4, 0x1 bytes
+                std::uint8_t pad_12c5[0x3]; // 0x12c5, 0x3 bytes
+                float m_bTriggerWarning; // 0x12c8, 0x4 bytes
+                float m_bExplodeWarning; // 0x12cc, 0x4 bytes
+                bool m_bC4Activated; // 0x12d0, 0x1 bytes
+                bool m_bTenSecWarning; // 0x12d1, 0x1 bytes
+                std::uint8_t pad_12d2[0x2]; // 0x12d2, 0x2 bytes
+                float m_flDefuseLength; // 0x12d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDefuseCountDown; // 0x12d8, 0x4 bytes
+                bool m_bBombDefused; // 0x12dc, 0x1 bytes
+                std::uint8_t pad_12dd[0x3]; // 0x12dd, 0x3 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hBombDefuser; // 0x12e0, 0x4 bytes
+                std::uint8_t pad_12e4[0x4]; // 0x12e4, 0x4 bytes
+                shade::sdk::client::C_AttributeContainer m_AttributeManager; // 0x12e8, 0x610 bytes
+                CHandle<shade::sdk::client::C_Multimeter> m_hDefuserMultimeter; // 0x18f8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRadarFlashTime; // 0x18fc, 0x4 bytes
+                bool m_bRadarFlash; // 0x1900, 0x1 bytes
+                std::uint8_t pad_1901[0x3]; // 0x1901, 0x3 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_pBombDefuser; // 0x1904, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastDefuseTime; // 0x1908, 0x4 bytes
+                std::uint8_t pad_190c[0x4]; // 0x190c, 0x4 bytes
+                shade::sdk::client::CBasePlayerController *m_pPredictionOwner; // 0x1910, 0x8 bytes
+                VectorWS m_vecC4ExplodeSpectatePos; // 0x1918, 0xc bytes
+                QAngle m_vecC4ExplodeSpectateAng; // 0x1924, 0xc bytes
+                float m_flC4ExplodeSpectateDuration; // 0x1930, 0x4 bytes
+                std::uint8_t pad_1934[0x24]; // 0x1934, 0x24 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_PlantedC4) == 0x1730, "C_PlantedC4 size mismatch");
+            static_assert(sizeof(C_PlantedC4) == 0x1958, "C_PlantedC4 size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x7d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapDotProductToCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nInputCP1; // 0x01e0, 0x4 bytes
-                std::int32_t m_nInputCP2; // 0x01e4, 0x4 bytes
-                std::int32_t m_nOutputCP; // 0x01e8, 0x4 bytes
-                std::int32_t m_nOutVectorField; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMin; // 0x01f0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMax; // 0x0360, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x04d0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x0640, 0x170 bytes
+                std::int32_t m_nInputCP1; // 0x01e8, 0x4 bytes
+                std::int32_t m_nInputCP2; // 0x01ec, 0x4 bytes
+                std::int32_t m_nOutputCP; // 0x01f0, 0x4 bytes
+                std::int32_t m_nOutVectorField; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMin; // 0x01f8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputMax; // 0x0370, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x04e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x0660, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapDotProductToCP) == 0x7B0, "C_OP_RemapDotProductToCP size mismatch");
+            static_assert(sizeof(C_OP_RemapDotProductToCP) == 0x7D8, "C_OP_RemapDotProductToCP size mismatch");
         }
     }
 }

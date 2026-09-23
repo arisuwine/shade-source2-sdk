@@ -65,12 +65,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetTransitionTime; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSplineEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CSplineConstraint) == 0x5B8, "CSplineConstraint size mismatch");
         }

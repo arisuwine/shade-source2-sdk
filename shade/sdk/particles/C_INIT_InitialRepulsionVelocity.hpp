@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x298
+             * Size: 0x2a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,28 +30,28 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InitialRepulsionVelocity : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                char m_CollisionGroupName[0x80]; // 0x01e0, 0x80 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0260, 0x4 bytes
-                Vector m_vecOutputMin; // 0x0264, 0xc bytes
-                Vector m_vecOutputMax; // 0x0270, 0xc bytes
-                std::int32_t m_nControlPointNumber; // 0x027c, 0x4 bytes
-                bool m_bPerParticle; // 0x0280, 0x1 bytes
-                bool m_bTranslate; // 0x0281, 0x1 bytes
-                bool m_bProportional; // 0x0282, 0x1 bytes
-                std::uint8_t pad_0283[0x1]; // 0x0283, 0x1 bytes
-                float m_flTraceLength; // 0x0284, 0x4 bytes
-                bool m_bPerParticleTR; // 0x0288, 0x1 bytes
-                bool m_bInherit; // 0x0289, 0x1 bytes
-                std::uint8_t pad_028a[0x2]; // 0x028a, 0x2 bytes
-                std::int32_t m_nChildCP; // 0x028c, 0x4 bytes
-                std::int32_t m_nChildGroupID; // 0x0290, 0x4 bytes
-                std::uint8_t pad_0294[0x4]; // 0x0294, 0x4 bytes
+                char m_CollisionGroupName[0x80]; // 0x01e8, 0x80 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0268, 0x4 bytes
+                Vector m_vecOutputMin; // 0x026c, 0xc bytes
+                Vector m_vecOutputMax; // 0x0278, 0xc bytes
+                std::int32_t m_nControlPointNumber; // 0x0284, 0x4 bytes
+                bool m_bPerParticle; // 0x0288, 0x1 bytes
+                bool m_bTranslate; // 0x0289, 0x1 bytes
+                bool m_bProportional; // 0x028a, 0x1 bytes
+                std::uint8_t pad_028b[0x1]; // 0x028b, 0x1 bytes
+                float m_flTraceLength; // 0x028c, 0x4 bytes
+                bool m_bPerParticleTR; // 0x0290, 0x1 bytes
+                bool m_bInherit; // 0x0291, 0x1 bytes
+                std::uint8_t pad_0292[0x2]; // 0x0292, 0x2 bytes
+                std::int32_t m_nChildCP; // 0x0294, 0x4 bytes
+                std::int32_t m_nChildGroupID; // 0x0298, 0x4 bytes
+                std::uint8_t pad_029c[0x4]; // 0x029c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InitialRepulsionVelocity) == 0x298, "C_INIT_InitialRepulsionVelocity size mismatch");
+            static_assert(sizeof(C_INIT_InitialRepulsionVelocity) == 0x2A0, "C_INIT_InitialRepulsionVelocity size mismatch");
         }
     }
 }

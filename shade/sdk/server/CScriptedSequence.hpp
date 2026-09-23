@@ -133,14 +133,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputMoveToPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputBeginSequence; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputCancelSequence; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetActionSequence; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputForceTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputScriptPlayerDeath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CScriptedSequence) == 0x6F0, "CScriptedSequence size mismatch");
         }

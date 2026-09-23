@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfd8
+             * Size: 0x10c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DynamicLight : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t m_Flags; // 0x0fb0, 0x1 bytes
-                std::uint8_t m_LightStyle; // 0x0fb1, 0x1 bytes
-                std::uint8_t pad_0fb2[0x2]; // 0x0fb2, 0x2 bytes
-                float m_Radius; // 0x0fb4, 0x4 bytes
-                std::int32_t m_Exponent; // 0x0fb8, 0x4 bytes
-                float m_InnerAngle; // 0x0fbc, 0x4 bytes
-                float m_OuterAngle; // 0x0fc0, 0x4 bytes
-                float m_SpotRadius; // 0x0fc4, 0x4 bytes
-                std::uint8_t pad_0fc8[0x10]; // 0x0fc8, 0x10 bytes
+                std::uint8_t m_Flags; // 0x1098, 0x1 bytes
+                std::uint8_t m_LightStyle; // 0x1099, 0x1 bytes
+                std::uint8_t pad_109a[0x2]; // 0x109a, 0x2 bytes
+                float m_Radius; // 0x109c, 0x4 bytes
+                std::int32_t m_Exponent; // 0x10a0, 0x4 bytes
+                float m_InnerAngle; // 0x10a4, 0x4 bytes
+                float m_OuterAngle; // 0x10a8, 0x4 bytes
+                float m_SpotRadius; // 0x10ac, 0x4 bytes
+                std::uint8_t pad_10b0[0x10]; // 0x10b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DynamicLight) == 0xFD8, "C_DynamicLight size mismatch");
+            static_assert(sizeof(C_DynamicLight) == 0x10C0, "C_DynamicLight size mismatch");
         }
     }
 }

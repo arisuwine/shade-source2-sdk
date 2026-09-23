@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,23 +29,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapCPtoCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nInputControlPoint; // 0x01e0, 0x4 bytes
-                std::int32_t m_nOutputControlPoint; // 0x01e4, 0x4 bytes
-                std::int32_t m_nInputField; // 0x01e8, 0x4 bytes
-                std::int32_t m_nOutputField; // 0x01ec, 0x4 bytes
-                float m_flInputMin; // 0x01f0, 0x4 bytes
-                float m_flInputMax; // 0x01f4, 0x4 bytes
-                float m_flOutputMin; // 0x01f8, 0x4 bytes
-                float m_flOutputMax; // 0x01fc, 0x4 bytes
-                bool m_bDerivative; // 0x0200, 0x1 bytes
-                std::uint8_t pad_0201[0x3]; // 0x0201, 0x3 bytes
-                float m_flInterpRate; // 0x0204, 0x4 bytes
+                std::int32_t m_nInputControlPoint; // 0x01e8, 0x4 bytes
+                std::int32_t m_nOutputControlPoint; // 0x01ec, 0x4 bytes
+                std::int32_t m_nInputField; // 0x01f0, 0x4 bytes
+                std::int32_t m_nOutputField; // 0x01f4, 0x4 bytes
+                float m_flInputMin; // 0x01f8, 0x4 bytes
+                float m_flInputMax; // 0x01fc, 0x4 bytes
+                float m_flOutputMin; // 0x0200, 0x4 bytes
+                float m_flOutputMax; // 0x0204, 0x4 bytes
+                bool m_bDerivative; // 0x0208, 0x1 bytes
+                std::uint8_t pad_0209[0x3]; // 0x0209, 0x3 bytes
+                float m_flInterpRate; // 0x020c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapCPtoCP) == 0x208, "C_OP_RemapCPtoCP size mismatch");
+            static_assert(sizeof(C_OP_RemapCPtoCP) == 0x210, "C_OP_RemapCPtoCP size mismatch");
         }
     }
 }

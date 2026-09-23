@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x230
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RampScalarLinear : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_RateMin; // 0x01d8, 0x4 bytes
-                float m_RateMax; // 0x01dc, 0x4 bytes
-                float m_flStartTime_min; // 0x01e0, 0x4 bytes
-                float m_flStartTime_max; // 0x01e4, 0x4 bytes
-                float m_flEndTime_min; // 0x01e8, 0x4 bytes
-                float m_flEndTime_max; // 0x01ec, 0x4 bytes
-                std::uint8_t pad_01f0[0x20]; // 0x01f0, 0x20 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nField; // 0x0210, 0x4 bytes
-                bool m_bProportionalOp; // 0x0214, 0x1 bytes
-                std::uint8_t pad_0215[0xb]; // 0x0215, 0xb bytes
+                float m_RateMin; // 0x01e0, 0x4 bytes
+                float m_RateMax; // 0x01e4, 0x4 bytes
+                float m_flStartTime_min; // 0x01e8, 0x4 bytes
+                float m_flStartTime_max; // 0x01ec, 0x4 bytes
+                float m_flEndTime_min; // 0x01f0, 0x4 bytes
+                float m_flEndTime_max; // 0x01f4, 0x4 bytes
+                std::uint8_t pad_01f8[0x28]; // 0x01f8, 0x28 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nField; // 0x0220, 0x4 bytes
+                bool m_bProportionalOp; // 0x0224, 0x1 bytes
+                std::uint8_t pad_0225[0xb]; // 0x0225, 0xb bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RampScalarLinear) == 0x220, "C_OP_RampScalarLinear size mismatch");
+            static_assert(sizeof(C_OP_RampScalarLinear) == 0x230, "C_OP_RampScalarLinear size mismatch");
         }
     }
 }

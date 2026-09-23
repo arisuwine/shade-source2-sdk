@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,23 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InitialVelocityNoise : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                Vector m_vecAbsVal; // 0x01e0, 0xc bytes
-                Vector m_vecAbsValInv; // 0x01ec, 0xc bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecOffsetLoc; // 0x01f8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x08b0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecOutputMin; // 0x0a20, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecOutputMax; // 0x10d8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flNoiseScale; // 0x1790, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flNoiseScaleLoc; // 0x1900, 0x170 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x1a70, 0x68 bytes
-                bool m_bIgnoreDt; // 0x1ad8, 0x1 bytes
-                std::uint8_t pad_1ad9[0x7]; // 0x1ad9, 0x7 bytes
+                Vector m_vecAbsVal; // 0x01e8, 0xc bytes
+                Vector m_vecAbsValInv; // 0x01f4, 0xc bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecOffsetLoc; // 0x0200, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x08d8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecOutputMin; // 0x0a50, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecOutputMax; // 0x1128, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flNoiseScale; // 0x1800, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flNoiseScaleLoc; // 0x1978, 0x178 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x1af0, 0x68 bytes
+                bool m_bIgnoreDt; // 0x1b58, 0x1 bytes
+                std::uint8_t pad_1b59[0x7]; // 0x1b59, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InitialVelocityNoise) == 0x1AE0, "C_INIT_InitialVelocityNoise size mismatch");
+            static_assert(sizeof(C_INIT_InitialVelocityNoise) == 0x1B60, "C_INIT_InitialVelocityNoise size mismatch");
         }
     }
 }

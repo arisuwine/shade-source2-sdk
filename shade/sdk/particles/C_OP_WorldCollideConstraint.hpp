@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x1e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_WorldCollideConstraint) == 0x1D8, "C_OP_WorldCollideConstraint size mismatch");
+            static_assert(sizeof(C_OP_WorldCollideConstraint) == 0x1E0, "C_OP_WorldCollideConstraint size mismatch");
         }
     }
 }

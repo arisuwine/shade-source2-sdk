@@ -30,10 +30,10 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_LockToSavedSequentialPathV2 : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flFadeStart; // 0x01d8, 0x4 bytes
-                float m_flFadeEnd; // 0x01dc, 0x4 bytes
-                bool m_bCPPairs; // 0x01e0, 0x1 bytes
-                std::uint8_t pad_01e1[0xf]; // 0x01e1, 0xf bytes
+                float m_flFadeStart; // 0x01e0, 0x4 bytes
+                float m_flFadeEnd; // 0x01e4, 0x4 bytes
+                bool m_bCPPairs; // 0x01e8, 0x1 bytes
+                std::uint8_t pad_01e9[0x7]; // 0x01e9, 0x7 bytes
                 shade::sdk::particles::CPathParameters m_PathParams; // 0x01f0, 0x40 bytes
             };
             #pragma pack(pop)

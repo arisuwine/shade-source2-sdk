@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x210
+             * Size: 0x220
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_OscillateScalarSimple : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_Rate; // 0x01d8, 0x4 bytes
-                float m_Frequency; // 0x01dc, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nField; // 0x01e0, 0x4 bytes
-                float m_flOscMult; // 0x01e4, 0x4 bytes
-                float m_flOscAdd; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x24]; // 0x01ec, 0x24 bytes
+                float m_Rate; // 0x01e0, 0x4 bytes
+                float m_Frequency; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nField; // 0x01e8, 0x4 bytes
+                float m_flOscMult; // 0x01ec, 0x4 bytes
+                float m_flOscAdd; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x2c]; // 0x01f4, 0x2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_OscillateScalarSimple) == 0x210, "C_OP_OscillateScalarSimple size mismatch");
+            static_assert(sizeof(C_OP_OscillateScalarSimple) == 0x220, "C_OP_OscillateScalarSimple size mismatch");
         }
     }
 }

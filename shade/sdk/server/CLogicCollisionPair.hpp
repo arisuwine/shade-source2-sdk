@@ -41,11 +41,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputDisableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputDisableCollisionsWith; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CLogicCollisionPair) == 0x4C0, "CLogicCollisionPair size mismatch");
         }

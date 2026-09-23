@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1400
+             * Size: 0x14f0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PropDoorRotating) == 0x1400, "C_PropDoorRotating size mismatch");
+            static_assert(sizeof(C_PropDoorRotating) == 0x14F0, "C_PropDoorRotating size mismatch");
         }
     }
 }

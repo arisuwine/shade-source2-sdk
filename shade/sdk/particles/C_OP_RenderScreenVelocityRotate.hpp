@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x230
+             * Size: 0x238
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderScreenVelocityRotate : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                float m_flRotateRateDegrees; // 0x0228, 0x4 bytes
-                float m_flForwardDegrees; // 0x022c, 0x4 bytes
+                float m_flRotateRateDegrees; // 0x0230, 0x4 bytes
+                float m_flForwardDegrees; // 0x0234, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderScreenVelocityRotate) == 0x230, "C_OP_RenderScreenVelocityRotate size mismatch");
+            static_assert(sizeof(C_OP_RenderScreenVelocityRotate) == 0x238, "C_OP_RenderScreenVelocityRotate size mismatch");
         }
     }
 }

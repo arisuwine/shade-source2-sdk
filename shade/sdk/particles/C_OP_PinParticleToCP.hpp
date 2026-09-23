@@ -26,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1158
+             * Size: 0x11b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,30 +34,30 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_PinParticleToCP : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecOffset; // 0x01e0, 0x6b8 bytes
-                bool m_bOffsetLocal; // 0x0898, 0x1 bytes
-                std::uint8_t pad_0899[0x3]; // 0x0899, 0x3 bytes
-                shade::sdk::particles::ParticleSelection_t m_nParticleSelection; // 0x089c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nParticleNumber; // 0x08a0, 0x170 bytes
-                shade::sdk::particles::ParticlePinDistance_t m_nPinBreakType; // 0x0a10, 0x4 bytes
-                std::uint8_t pad_0a14[0x4]; // 0x0a14, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBreakDistance; // 0x0a18, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBreakSpeed; // 0x0b88, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAge; // 0x0cf8, 0x170 bytes
-                std::int32_t m_nBreakControlPointNumber; // 0x0e68, 0x4 bytes
-                std::int32_t m_nBreakControlPointNumber2; // 0x0e6c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBreakValue; // 0x0e70, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x0fe0, 0x170 bytes
-                bool m_bRetainInitialVelocity; // 0x1150, 0x1 bytes
-                std::uint8_t pad_1151[0x7]; // 0x1151, 0x7 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecOffset; // 0x01e8, 0x6d8 bytes
+                bool m_bOffsetLocal; // 0x08c0, 0x1 bytes
+                std::uint8_t pad_08c1[0x3]; // 0x08c1, 0x3 bytes
+                shade::sdk::particles::ParticleSelection_t m_nParticleSelection; // 0x08c4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nParticleNumber; // 0x08c8, 0x178 bytes
+                shade::sdk::particles::ParticlePinDistance_t m_nPinBreakType; // 0x0a40, 0x4 bytes
+                std::uint8_t pad_0a44[0x4]; // 0x0a44, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBreakDistance; // 0x0a48, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBreakSpeed; // 0x0bc0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAge; // 0x0d38, 0x178 bytes
+                std::int32_t m_nBreakControlPointNumber; // 0x0eb0, 0x4 bytes
+                std::int32_t m_nBreakControlPointNumber2; // 0x0eb4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBreakValue; // 0x0eb8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x1030, 0x178 bytes
+                bool m_bRetainInitialVelocity; // 0x11a8, 0x1 bytes
+                std::uint8_t pad_11a9[0x7]; // 0x11a9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_PinParticleToCP) == 0x1158, "C_OP_PinParticleToCP size mismatch");
+            static_assert(sizeof(C_OP_PinParticleToCP) == 0x11B0, "C_OP_PinParticleToCP size mismatch");
         }
     }
 }

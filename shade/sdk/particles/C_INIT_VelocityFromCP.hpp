@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x908
+             * Size: 0x930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_VelocityFromCP : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_velocityInput; // 0x01e0, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0898, 0x68 bytes
-                float m_flVelocityScale; // 0x0900, 0x4 bytes
-                bool m_bDirectionOnly; // 0x0904, 0x1 bytes
-                std::uint8_t pad_0905[0x3]; // 0x0905, 0x3 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_velocityInput; // 0x01e8, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x08c0, 0x68 bytes
+                float m_flVelocityScale; // 0x0928, 0x4 bytes
+                bool m_bDirectionOnly; // 0x092c, 0x1 bytes
+                std::uint8_t pad_092d[0x3]; // 0x092d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_VelocityFromCP) == 0x908, "C_INIT_VelocityFromCP size mismatch");
+            static_assert(sizeof(C_INIT_VelocityFromCP) == 0x930, "C_INIT_VelocityFromCP size mismatch");
         }
     }
 }

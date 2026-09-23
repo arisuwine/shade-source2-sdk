@@ -16,7 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x238
+             * Size: 0x240
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapNamedModelElementOnceTimed : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x01d8, 0x8 bytes
-                CUtlVector<CUtlString> m_inNames; // 0x01e0, 0x18 bytes
-                CUtlVector<CUtlString> m_outNames; // 0x01f8, 0x18 bytes
-                CUtlVector<CUtlString> m_fallbackNames; // 0x0210, 0x18 bytes
-                bool m_bModelFromRenderer; // 0x0228, 0x1 bytes
-                bool m_bProportional; // 0x0229, 0x1 bytes
-                std::uint8_t pad_022a[0x2]; // 0x022a, 0x2 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldInput; // 0x022c, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0230, 0x4 bytes
-                float m_flRemapTime; // 0x0234, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x01e0, 0x8 bytes
+                CUtlVector<CUtlString> m_inNames; // 0x01e8, 0x18 bytes
+                CUtlVector<CUtlString> m_outNames; // 0x0200, 0x18 bytes
+                CUtlVector<CUtlString> m_fallbackNames; // 0x0218, 0x18 bytes
+                bool m_bModelFromRenderer; // 0x0230, 0x1 bytes
+                bool m_bProportional; // 0x0231, 0x1 bytes
+                std::uint8_t pad_0232[0x2]; // 0x0232, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldInput; // 0x0234, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0238, 0x4 bytes
+                float m_flRemapTime; // 0x023c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapNamedModelElementOnceTimed) == 0x238, "C_OP_RemapNamedModelElementOnceTimed size mismatch");
+            static_assert(sizeof(C_OP_RemapNamedModelElementOnceTimed) == 0x240, "C_OP_RemapNamedModelElementOnceTimed size mismatch");
         }
     }
 }

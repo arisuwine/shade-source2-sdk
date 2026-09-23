@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfe0
+             * Size: 0x10c8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseClientUIEntity : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_0fb0[0x8]; // 0x0fb0, 0x8 bytes
-                bool m_bEnabled; // 0x0fb8, 0x1 bytes
-                std::uint8_t pad_0fb9[0x7]; // 0x0fb9, 0x7 bytes
-                CUtlSymbolLarge m_DialogXMLName; // 0x0fc0, 0x8 bytes
-                CUtlSymbolLarge m_PanelClassName; // 0x0fc8, 0x8 bytes
-                CUtlSymbolLarge m_PanelID; // 0x0fd0, 0x8 bytes
-                std::uint8_t pad_0fd8[0x8]; // 0x0fd8, 0x8 bytes
+                std::uint8_t pad_1098[0x8]; // 0x1098, 0x8 bytes
+                bool m_bEnabled; // 0x10a0, 0x1 bytes
+                std::uint8_t pad_10a1[0x7]; // 0x10a1, 0x7 bytes
+                CUtlSymbolLarge m_DialogXMLName; // 0x10a8, 0x8 bytes
+                CUtlSymbolLarge m_PanelClassName; // 0x10b0, 0x8 bytes
+                CUtlSymbolLarge m_PanelID; // 0x10b8, 0x8 bytes
+                std::uint8_t pad_10c0[0x8]; // 0x10c0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseClientUIEntity) == 0xFE0, "C_BaseClientUIEntity size mismatch");
+            static_assert(sizeof(C_BaseClientUIEntity) == 0x10C8, "C_BaseClientUIEntity size mismatch");
         }
     }
 }

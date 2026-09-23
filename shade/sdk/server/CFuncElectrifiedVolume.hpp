@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c8
+             * Size: 0x8a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncElectrifiedVolume : public shade::sdk::server::CFuncBrush {
             public:
-                CUtlSymbolLarge m_EffectName; // 0x0790, 0x8 bytes
-                CUtlSymbolLarge m_EffectInterpenetrateName; // 0x0798, 0x8 bytes
-                CUtlSymbolLarge m_EffectZapName; // 0x07a0, 0x8 bytes
-                CUtlSymbolLarge m_iszEffectSource; // 0x07a8, 0x8 bytes
-                std::uint8_t pad_07b0[0x18]; // 0x07b0, 0x18 bytes
+                CUtlSymbolLarge m_EffectName; // 0x0870, 0x8 bytes
+                CUtlSymbolLarge m_EffectInterpenetrateName; // 0x0878, 0x8 bytes
+                CUtlSymbolLarge m_EffectZapName; // 0x0880, 0x8 bytes
+                CUtlSymbolLarge m_iszEffectSource; // 0x0888, 0x8 bytes
+                std::uint8_t pad_0890[0x18]; // 0x0890, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncElectrifiedVolume) == 0x7C8, "CFuncElectrifiedVolume size mismatch");
+            static_assert(sizeof(CFuncElectrifiedVolume) == 0x8A8, "CFuncElectrifiedVolume size mismatch");
         }
     }
 }

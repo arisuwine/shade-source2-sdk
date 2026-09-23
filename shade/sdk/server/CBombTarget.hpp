@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x948
+             * Size: 0xa28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,26 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CBombTarget : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnBombExplode; // 0x08e8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBombPlanted; // 0x0900, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBombDefused; // 0x0918, 0x18 bytes
-                bool m_bIsBombSiteB; // 0x0930, 0x1 bytes
-                bool m_bIsHeistBombTarget; // 0x0931, 0x1 bytes
-                bool m_bBombPlantedHere; // 0x0932, 0x1 bytes
-                std::uint8_t pad_0933[0x5]; // 0x0933, 0x5 bytes
-                CUtlSymbolLarge m_szMountTarget; // 0x0938, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hInstructorHint; // 0x0940, 0x4 bytes
-                std::int32_t m_nBombSiteDesignation; // 0x0944, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBombExplode; // 0x09c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBombPlanted; // 0x09e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBombDefused; // 0x09f8, 0x18 bytes
+                bool m_bIsBombSiteB; // 0x0a10, 0x1 bytes
+                bool m_bIsHeistBombTarget; // 0x0a11, 0x1 bytes
+                bool m_bBombPlantedHere; // 0x0a12, 0x1 bytes
+                std::uint8_t pad_0a13[0x5]; // 0x0a13, 0x5 bytes
+                CUtlSymbolLarge m_szMountTarget; // 0x0a18, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hInstructorHint; // 0x0a20, 0x4 bytes
+                std::int32_t m_nBombSiteDesignation; // 0x0a24, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void OnBombExplode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void OnBombPlanted; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void OnBombDefused; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBombTarget) == 0x948, "CBombTarget size mismatch");
+            static_assert(sizeof(CBombTarget) == 0xA28, "CBombTarget size mismatch");
         }
     }
 }

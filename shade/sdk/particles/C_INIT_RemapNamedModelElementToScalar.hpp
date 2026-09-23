@@ -16,7 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x228
+             * Size: 0x230
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -40,20 +40,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RemapNamedModelElementToScalar : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x01e0, 0x8 bytes
-                CUtlVector<CUtlString> m_names; // 0x01e8, 0x18 bytes
-                CUtlVector<float> m_values; // 0x0200, 0x18 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldInput; // 0x0218, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x021c, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0220, 0x4 bytes
-                bool m_bModelFromRenderer; // 0x0224, 0x1 bytes
-                std::uint8_t pad_0225[0x3]; // 0x0225, 0x3 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x01e8, 0x8 bytes
+                CUtlVector<CUtlString> m_names; // 0x01f0, 0x18 bytes
+                CUtlVector<float> m_values; // 0x0208, 0x18 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldInput; // 0x0220, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0224, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0228, 0x4 bytes
+                bool m_bModelFromRenderer; // 0x022c, 0x1 bytes
+                std::uint8_t pad_022d[0x3]; // 0x022d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RemapNamedModelElementToScalar) == 0x228, "C_INIT_RemapNamedModelElementToScalar size mismatch");
+            static_assert(sizeof(C_INIT_RemapNamedModelElementToScalar) == 0x230, "C_INIT_RemapNamedModelElementToScalar size mismatch");
         }
     }
 }

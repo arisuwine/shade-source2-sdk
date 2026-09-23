@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d20
+             * Size: 0x1f50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_WeaponTaser : public shade::sdk::client::C_CSWeaponBaseGun {
             public:
-                shade::sdk::entity2::GameTime_t m_fFireTime; // 0x1d10, 0x4 bytes
-                std::int32_t m_nLastAttackTick; // 0x1d14, 0x4 bytes
-                std::uint8_t pad_1d18[0x8]; // 0x1d18, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_fFireTime; // 0x1f40, 0x4 bytes
+                std::int32_t m_nLastAttackTick; // 0x1f44, 0x4 bytes
+                std::uint8_t pad_1f48[0x8]; // 0x1f48, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_WeaponTaser) == 0x1D20, "C_WeaponTaser size mismatch");
+            static_assert(sizeof(C_WeaponTaser) == 0x1F50, "C_WeaponTaser size mismatch");
         }
     }
 }

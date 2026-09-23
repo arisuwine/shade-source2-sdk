@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x928
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,40 +32,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysBox : public shade::sdk::server::CBreakable {
             public:
-                std::int32_t m_damageType; // 0x0848, 0x4 bytes
-                std::int32_t m_damageToEnableMotion; // 0x084c, 0x4 bytes
-                float m_flForceToEnableMotion; // 0x0850, 0x4 bytes
-                Vector m_vHoverPosePosition; // 0x0854, 0xc bytes
-                QAngle m_angHoverPoseAngles; // 0x0860, 0xc bytes
-                bool m_bNotSolidToWorld; // 0x086c, 0x1 bytes
-                bool m_bEnableUseOutput; // 0x086d, 0x1 bytes
-                shade::sdk::server::HoverPoseFlags_t m_nHoverPoseFlags; // 0x086e, 0x1 bytes
-                std::uint8_t pad_086f[0x1]; // 0x086f, 0x1 bytes
-                float m_flTouchOutputPerEntityDelay; // 0x0870, 0x4 bytes
-                std::uint8_t pad_0874[0x4]; // 0x0874, 0x4 bytes
-                CUtlSymbolLarge m_iszCollisionGroup; // 0x0878, 0x8 bytes
-                CUtlSymbolLarge m_iszInteractsAs; // 0x0880, 0x8 bytes
-                CUtlSymbolLarge m_iszInteractsWith; // 0x0888, 0x8 bytes
-                CUtlSymbolLarge m_iszInteractsExclude; // 0x0890, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0898, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x08b0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMotionEnabled; // 0x08c8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x08e0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x08f8, 0x18 bytes
-                std::uint8_t pad_0910[0x18]; // 0x0910, 0x18 bytes
+                std::int32_t m_damageType; // 0x0928, 0x4 bytes
+                std::int32_t m_damageToEnableMotion; // 0x092c, 0x4 bytes
+                float m_flForceToEnableMotion; // 0x0930, 0x4 bytes
+                Vector m_vHoverPosePosition; // 0x0934, 0xc bytes
+                QAngle m_angHoverPoseAngles; // 0x0940, 0xc bytes
+                bool m_bNotSolidToWorld; // 0x094c, 0x1 bytes
+                bool m_bEnableUseOutput; // 0x094d, 0x1 bytes
+                shade::sdk::server::HoverPoseFlags_t m_nHoverPoseFlags; // 0x094e, 0x1 bytes
+                std::uint8_t pad_094f[0x1]; // 0x094f, 0x1 bytes
+                float m_flTouchOutputPerEntityDelay; // 0x0950, 0x4 bytes
+                std::uint8_t pad_0954[0x4]; // 0x0954, 0x4 bytes
+                CUtlSymbolLarge m_iszCollisionGroup; // 0x0958, 0x8 bytes
+                CUtlSymbolLarge m_iszInteractsAs; // 0x0960, 0x8 bytes
+                CUtlSymbolLarge m_iszInteractsWith; // 0x0968, 0x8 bytes
+                CUtlSymbolLarge m_iszInteractsExclude; // 0x0970, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0978, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x0990, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMotionEnabled; // 0x09a8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x09c0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x09d8, 0x18 bytes
+                std::uint8_t pad_09f0[0x18]; // 0x09f0, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * QAngle preferredcarryangles; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void InputWake; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSleep; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableMotion; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableMotion; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputForceDrop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPhysBox) == 0x928, "CPhysBox size mismatch");
+            static_assert(sizeof(CPhysBox) == 0xA08, "CPhysBox size mismatch");
         }
     }
 }

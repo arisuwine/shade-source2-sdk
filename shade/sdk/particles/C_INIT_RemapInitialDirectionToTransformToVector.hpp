@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleTransformInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x268
+             * Size: 0x270
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RemapInitialDirectionToTransformToVector : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e0, 0x68 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0248, 0x4 bytes
-                float m_flScale; // 0x024c, 0x4 bytes
-                float m_flOffsetRot; // 0x0250, 0x4 bytes
-                Vector m_vecOffsetAxis; // 0x0254, 0xc bytes
-                bool m_bNormalize; // 0x0260, 0x1 bytes
-                std::uint8_t pad_0261[0x7]; // 0x0261, 0x7 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e8, 0x68 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0250, 0x4 bytes
+                float m_flScale; // 0x0254, 0x4 bytes
+                float m_flOffsetRot; // 0x0258, 0x4 bytes
+                Vector m_vecOffsetAxis; // 0x025c, 0xc bytes
+                bool m_bNormalize; // 0x0268, 0x1 bytes
+                std::uint8_t pad_0269[0x7]; // 0x0269, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RemapInitialDirectionToTransformToVector) == 0x268, "C_INIT_RemapInitialDirectionToTransformToVector size mismatch");
+            static_assert(sizeof(C_INIT_RemapInitialDirectionToTransformToVector) == 0x270, "C_INIT_RemapInitialDirectionToTransformToVector size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x1f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_UpdateLightSource : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                Color m_vColorTint; // 0x01d8, 0x4 bytes
-                float m_flBrightnessScale; // 0x01dc, 0x4 bytes
-                float m_flRadiusScale; // 0x01e0, 0x4 bytes
-                float m_flMinimumLightingRadius; // 0x01e4, 0x4 bytes
-                float m_flMaximumLightingRadius; // 0x01e8, 0x4 bytes
-                float m_flPositionDampingConstant; // 0x01ec, 0x4 bytes
+                Color m_vColorTint; // 0x01e0, 0x4 bytes
+                float m_flBrightnessScale; // 0x01e4, 0x4 bytes
+                float m_flRadiusScale; // 0x01e8, 0x4 bytes
+                float m_flMinimumLightingRadius; // 0x01ec, 0x4 bytes
+                float m_flMaximumLightingRadius; // 0x01f0, 0x4 bytes
+                float m_flPositionDampingConstant; // 0x01f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_UpdateLightSource) == 0x1F0, "C_OP_UpdateLightSource size mismatch");
+            static_assert(sizeof(C_OP_UpdateLightSource) == 0x1F8, "C_OP_UpdateLightSource size mismatch");
         }
     }
 }

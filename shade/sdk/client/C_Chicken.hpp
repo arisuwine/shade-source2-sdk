@@ -23,6 +23,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            class CCSPlayerController;
             class C_CSPlayerPawn;
         }
     }
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18b0
+             * Size: 0x1ba0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,22 +42,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Chicken : public shade::sdk::client::C_DynamicProp, public shade::sdk::client::IHasAttributes {
             public:
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_leader; // 0x13c8, 0x4 bytes
-                std::uint8_t pad_13cc[0x4]; // 0x13cc, 0x4 bytes
-                shade::sdk::client::C_AttributeContainer m_AttributeManager; // 0x13d0, 0x4d0 bytes
-                bool m_bAttributesInitialized; // 0x18a0, 0x1 bytes
-                std::uint8_t pad_18a1[0x3]; // 0x18a1, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_hWaterWakeParticles; // 0x18a4, 0x4 bytes
-                bool m_bIsPreviewModel; // 0x18a8, 0x1 bytes
-                std::uint8_t pad_18a9[0x7]; // 0x18a9, 0x7 bytes
+                std::uint8_t pad_14b8[0x8]; // 0x14b8, 0x8 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_leader; // 0x14c0, 0x4 bytes
+                CHandle<shade::sdk::client::CCSPlayerController> m_owner; // 0x14c4, 0x4 bytes
+                shade::sdk::client::C_AttributeContainer m_AttributeManager; // 0x14c8, 0x610 bytes
+                bool m_bAttributesInitialized; // 0x1ad8, 0x1 bytes
+                std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_hWaterWakeParticles; // 0x1adc, 0x4 bytes
+                bool m_bIsPreviewModel; // 0x1ae0, 0x1 bytes
+                std::uint8_t pad_1ae1[0x87]; // 0x1ae1, 0x87 bytes
+                bool m_bSpawnDyingParticles; // 0x1b68, 0x1 bytes
+                std::uint8_t pad_1b69[0x37]; // 0x1b69, 0x37 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Chicken) == 0x18B0, "C_Chicken size mismatch");
+            static_assert(sizeof(C_Chicken) == 0x1BA0, "C_Chicken size mismatch");
         }
     }
 }

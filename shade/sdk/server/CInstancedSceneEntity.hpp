@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x808
+             * Size: 0x818
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +38,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CInstancedSceneEntity : public shade::sdk::server::CSceneEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x07f0, 0x4 bytes
-                bool m_bHadOwner; // 0x07f4, 0x1 bytes
-                std::uint8_t pad_07f5[0x3]; // 0x07f5, 0x3 bytes
-                float m_flPostSpeakDelay; // 0x07f8, 0x4 bytes
-                float m_flPreDelay; // 0x07fc, 0x4 bytes
-                bool m_bIsBackground; // 0x0800, 0x1 bytes
-                bool m_bRemoveOnCompletion; // 0x0801, 0x1 bytes
-                std::uint8_t pad_0802[0x2]; // 0x0802, 0x2 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0804, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0800, 0x4 bytes
+                bool m_bHadOwner; // 0x0804, 0x1 bytes
+                std::uint8_t pad_0805[0x3]; // 0x0805, 0x3 bytes
+                float m_flPostSpeakDelay; // 0x0808, 0x4 bytes
+                float m_flPreDelay; // 0x080c, 0x4 bytes
+                bool m_bIsBackground; // 0x0810, 0x1 bytes
+                std::uint8_t pad_0811[0x3]; // 0x0811, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0814, 0x4 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * bool m_bRemoveOnCompletion; // Offset: 0x539, Size: 0x1, Size In Bytes: 0x1
+             */
 
-            static_assert(sizeof(CInstancedSceneEntity) == 0x808, "CInstancedSceneEntity size mismatch");
+            static_assert(sizeof(CInstancedSceneEntity) == 0x818, "CInstancedSceneEntity size mismatch");
         }
     }
 }

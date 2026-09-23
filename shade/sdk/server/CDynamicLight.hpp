@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x788
+             * Size: 0x868
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,28 +30,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDynamicLight : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t m_ActualFlags; // 0x0770, 0x1 bytes
-                std::uint8_t m_Flags; // 0x0771, 0x1 bytes
-                std::uint8_t m_LightStyle; // 0x0772, 0x1 bytes
-                bool m_On; // 0x0773, 0x1 bytes
-                float m_Radius; // 0x0774, 0x4 bytes
-                std::int32_t m_Exponent; // 0x0778, 0x4 bytes
-                float m_InnerAngle; // 0x077c, 0x4 bytes
-                float m_OuterAngle; // 0x0780, 0x4 bytes
-                float m_SpotRadius; // 0x0784, 0x4 bytes
+                std::uint8_t m_ActualFlags; // 0x0850, 0x1 bytes
+                std::uint8_t m_Flags; // 0x0851, 0x1 bytes
+                std::uint8_t m_LightStyle; // 0x0852, 0x1 bytes
+                bool m_On; // 0x0853, 0x1 bytes
+                float m_Radius; // 0x0854, 0x4 bytes
+                std::int32_t m_Exponent; // 0x0858, 0x4 bytes
+                float m_InnerAngle; // 0x085c, 0x4 bytes
+                float m_OuterAngle; // 0x0860, 0x4 bytes
+                float m_SpotRadius; // 0x0864, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * Color _light; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float pitch; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t spawnflags; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDynamicLight) == 0x788, "CDynamicLight size mismatch");
+            static_assert(sizeof(CDynamicLight) == 0x868, "CDynamicLight size mismatch");
         }
     }
 }

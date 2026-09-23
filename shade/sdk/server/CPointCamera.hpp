@@ -33,8 +33,8 @@ namespace shade {
                 float m_FOV; // 0x04a8, 0x4 bytes
                 float m_Resolution; // 0x04ac, 0x4 bytes
                 bool m_bFogEnable; // 0x04b0, 0x1 bytes
-                Color m_FogColor; // 0x04b1, 0x4 bytes
-                std::uint8_t pad_04b5[0x3]; // 0x04b5, 0x3 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                Color m_FogColor; // 0x04b4, 0x4 bytes
                 float m_flFogStart; // 0x04b8, 0x4 bytes
                 float m_flFogEnd; // 0x04bc, 0x4 bytes
                 float m_flFogMaxDensity; // 0x04c0, 0x4 bytes
@@ -64,21 +64,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputChangeFOV; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOnAndTurnOthersOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputForceActive; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputForceInactive; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableDOF; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableDOF; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFNearBlurry; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFNearCrisp; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFFarCrisp; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFFarBlurry; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFTiltToGround; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPointCamera) == 0x508, "CPointCamera size mismatch");
         }

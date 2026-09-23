@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetParentControlPointsToChildCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nChildGroupID; // 0x01e0, 0x4 bytes
-                std::int32_t m_nChildControlPoint; // 0x01e4, 0x4 bytes
-                std::int32_t m_nNumControlPoints; // 0x01e8, 0x4 bytes
-                std::int32_t m_nFirstSourcePoint; // 0x01ec, 0x4 bytes
-                bool m_bSetOrientation; // 0x01f0, 0x1 bytes
-                std::uint8_t pad_01f1[0x7]; // 0x01f1, 0x7 bytes
+                std::int32_t m_nChildGroupID; // 0x01e8, 0x4 bytes
+                std::int32_t m_nChildControlPoint; // 0x01ec, 0x4 bytes
+                std::int32_t m_nNumControlPoints; // 0x01f0, 0x4 bytes
+                std::int32_t m_nFirstSourcePoint; // 0x01f4, 0x4 bytes
+                bool m_bSetOrientation; // 0x01f8, 0x1 bytes
+                std::uint8_t pad_01f9[0x7]; // 0x01f9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetParentControlPointsToChildCP) == 0x1F8, "C_OP_SetParentControlPointsToChildCP size mismatch");
+            static_assert(sizeof(C_OP_SetParentControlPointsToChildCP) == 0x200, "C_OP_SetParentControlPointsToChildCP size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1690
+             * Size: 0x18b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CSGO_PreviewModel : public shade::sdk::client::CBaseAnimGraph {
             public:
-                CUtlString m_defaultAnim; // 0x1180, 0x8 bytes
-                shade::sdk::client::AnimLoopMode_t m_nDefaultAnimLoopMode; // 0x1188, 0x4 bytes
-                float m_flInitialModelScale; // 0x118c, 0x4 bytes
-                CUtlString m_sInitialWeaponState; // 0x1190, 0x8 bytes
-                std::uint8_t pad_1198[0x4f8]; // 0x1198, 0x4f8 bytes
+                CUtlString m_defaultAnim; // 0x1268, 0x8 bytes
+                shade::sdk::client::AnimLoopMode_t m_nDefaultAnimLoopMode; // 0x1270, 0x4 bytes
+                float m_flInitialModelScale; // 0x1274, 0x4 bytes
+                CUtlString m_sInitialWeaponState; // 0x1278, 0x8 bytes
+                std::uint8_t pad_1280[0x638]; // 0x1280, 0x638 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CSGO_PreviewModel) == 0x1690, "C_CSGO_PreviewModel size mismatch");
+            static_assert(sizeof(C_CSGO_PreviewModel) == 0x18B8, "C_CSGO_PreviewModel size mismatch");
         }
     }
 }

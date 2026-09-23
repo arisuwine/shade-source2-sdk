@@ -39,12 +39,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetValueCompare; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetCompareValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputCompare; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CLogicCompare) == 0x530, "CLogicCompare size mismatch");
         }

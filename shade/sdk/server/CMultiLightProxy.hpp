@@ -51,12 +51,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputFlickerLights; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputDisableLights; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLightsBrightnessMultiplier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetBrightnessDelta; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CMultiLightProxy) == 0x4E8, "CMultiLightProxy size mismatch");
         }

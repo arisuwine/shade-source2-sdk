@@ -33,9 +33,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCSGO_EndOfMatchLineupEndpoint) == 0x4A8, "CCSGO_EndOfMatchLineupEndpoint size mismatch");
         }

@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xbd8
+             * Size: 0xc18
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -48,14 +48,14 @@ namespace shade {
                 shade::sdk::particles::SpriteCardTextureChannel_t m_nTextureChannels; // 0x002c, 0x4 bytes
                 shade::sdk::particles::ParticleTextureLayerBlendType_t m_nTextureBlendMode; // 0x0030, 0x4 bytes
                 std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureBlend; // 0x0038, 0x170 bytes
-                shade::sdk::particles::TextureControls_t m_TextureControls; // 0x01a8, 0xa30 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureBlend; // 0x0038, 0x178 bytes
+                shade::sdk::particles::TextureControls_t m_TextureControls; // 0x01b0, 0xa68 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(TextureGroup_t) == 0xBD8, "TextureGroup_t size mismatch");
+            static_assert(sizeof(TextureGroup_t) == 0xC18, "TextureGroup_t size mismatch");
         }
     }
 }

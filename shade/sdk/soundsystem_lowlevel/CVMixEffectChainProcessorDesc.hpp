@@ -16,13 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixParameterEffectName.hpp"
 #include "shade/sdk/soundsystem_lowlevel/VMixEffectChainDesc_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixEffectChainProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
-                shade::sdk::soundsystem_lowlevel::VMixEffectChainDesc_t m_desc; // 0x0020, 0x8 bytes
+                shade::sdk::soundsystem_lowlevel::VMixEffectChainDesc_t m_desc; // 0x0028, 0x8 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterEffectName m_paramEffectName; // 0x0030, 0x4 bytes
+                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixEffectChainProcessorDesc) == 0x28, "CVMixEffectChainProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixEffectChainProcessorDesc) == 0x38, "CVMixEffectChainProcessorDesc size mismatch");
         }
     }
 }

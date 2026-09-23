@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1880
+             * Size: 0x18b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -50,18 +50,16 @@ namespace shade {
                 bool m_bPickedUpWeapon; // 0x00da, 0x1 bytes
                 bool m_bDisableAutoDeploy; // 0x00db, 0x1 bytes
                 bool m_bIsPickingUpGroundWeapon; // 0x00dc, 0x1 bytes
-                std::uint8_t pad_00dd[0x1783]; // 0x00dd, 0x1783 bytes
-                CNetworkUtlVectorBase<std::uint8_t> m_networkAnimTiming; // 0x1860, 0x18 bytes
-                bool m_bBlockInspectUntilNextGraphUpdate; // 0x1878, 0x1 bytes
-                std::uint8_t pad_1879[0x7]; // 0x1879, 0x7 bytes
+                std::uint8_t pad_00dd[0x17bb]; // 0x00dd, 0x17bb bytes
+                CNetworkUtlVectorBase<std::uint8_t> m_networkAnimTiming; // 0x1898, 0x18 bytes
+                bool m_bBlockInspectUntilNextGraphUpdate; // 0x18b0, 0x1 bytes
+                std::uint8_t pad_18b1[0x7]; // 0x18b1, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSPlayer_WeaponServices) == 0x1880, "CCSPlayer_WeaponServices size mismatch");
+            static_assert(sizeof(CCSPlayer_WeaponServices) == 0x18B8, "CCSPlayer_WeaponServices size mismatch");
         }
     }
 }

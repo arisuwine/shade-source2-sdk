@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x268
+             * Size: 0x270
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_ModelCull : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                bool m_bBoundBox; // 0x01e4, 0x1 bytes
-                bool m_bCullOutside; // 0x01e5, 0x1 bytes
-                bool m_bUseBones; // 0x01e6, 0x1 bytes
-                char m_HitboxSetName[0x80]; // 0x01e7, 0x80 bytes
-                std::uint8_t pad_0267[0x1]; // 0x0267, 0x1 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                bool m_bBoundBox; // 0x01ec, 0x1 bytes
+                bool m_bCullOutside; // 0x01ed, 0x1 bytes
+                bool m_bUseBones; // 0x01ee, 0x1 bytes
+                char m_HitboxSetName[0x80]; // 0x01ef, 0x80 bytes
+                std::uint8_t pad_026f[0x1]; // 0x026f, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_ModelCull) == 0x268, "C_INIT_ModelCull size mismatch");
+            static_assert(sizeof(C_INIT_ModelCull) == 0x270, "C_INIT_ModelCull size mismatch");
         }
     }
 }

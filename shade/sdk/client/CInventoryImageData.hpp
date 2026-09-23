@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x100
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -32,13 +32,13 @@ namespace shade {
                 shade::sdk::client::InventoryNodeType_t m_nNodeType; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 CUtlString name; // 0x0008, 0x8 bytes
-                shade::sdk::client::inv_image_data_t inventory_image_data; // 0x0010, 0xe8 bytes
+                shade::sdk::client::inv_image_data_t inventory_image_data; // 0x0010, 0xf0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInventoryImageData) == 0xF8, "CInventoryImageData size mismatch");
+            static_assert(sizeof(CInventoryImageData) == 0x100, "CInventoryImageData size mismatch");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x898
+             * Size: 0x978
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,71 +42,56 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncTrackTrain : public shade::sdk::server::CBaseModelEntity {
             public:
-                CHandle<shade::sdk::server::CPathTrack> m_ppath; // 0x0770, 0x4 bytes
-                float m_length; // 0x0774, 0x4 bytes
-                Vector m_vPosPrev; // 0x0778, 0xc bytes
-                QAngle m_angPrev; // 0x0784, 0xc bytes
-                float m_flSpeed; // 0x0790, 0x4 bytes
-                Vector m_controlMins; // 0x0794, 0xc bytes
-                Vector m_controlMaxs; // 0x07a0, 0xc bytes
-                VectorWS m_lastBlockPos; // 0x07ac, 0xc bytes
-                std::int32_t m_lastBlockTick; // 0x07b8, 0x4 bytes
-                float m_flVolume; // 0x07bc, 0x4 bytes
-                float m_flBank; // 0x07c0, 0x4 bytes
-                float m_oldSpeed; // 0x07c4, 0x4 bytes
-                float m_flBlockDamage; // 0x07c8, 0x4 bytes
-                float m_height; // 0x07cc, 0x4 bytes
-                float m_maxSpeed; // 0x07d0, 0x4 bytes
-                float m_dir; // 0x07d4, 0x4 bytes
-                CGameSoundEventName m_iszSoundMove; // 0x07d8, 0x8 bytes
-                CGameSoundEventName m_iszSoundMovePing; // 0x07e0, 0x8 bytes
-                CGameSoundEventName m_iszSoundStart; // 0x07e8, 0x8 bytes
-                CGameSoundEventName m_iszSoundStop; // 0x07f0, 0x8 bytes
-                CGameSoundEventName m_strPathTarget; // 0x07f8, 0x8 bytes
-                float m_flMoveSoundMinDuration; // 0x0800, 0x4 bytes
-                float m_flMoveSoundMaxDuration; // 0x0804, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextMoveSoundTime; // 0x0808, 0x4 bytes
-                float m_flMoveSoundMinPitch; // 0x080c, 0x4 bytes
-                float m_flMoveSoundMaxPitch; // 0x0810, 0x4 bytes
-                shade::sdk::server::TrainOrientationType_t m_eOrientationType; // 0x0814, 0x4 bytes
-                shade::sdk::server::TrainVelocityType_t m_eVelocityType; // 0x0818, 0x4 bytes
-                std::uint8_t pad_081c[0x14]; // 0x081c, 0x14 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStart; // 0x0830, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNext; // 0x0848, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnArrivedAtDestinationNode; // 0x0860, 0x18 bytes
-                bool m_bManualSpeedChanges; // 0x0878, 0x1 bytes
-                std::uint8_t pad_0879[0x3]; // 0x0879, 0x3 bytes
-                float m_flDesiredSpeed; // 0x087c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSpeedChangeTime; // 0x0880, 0x4 bytes
-                float m_flAccelSpeed; // 0x0884, 0x4 bytes
-                float m_flDecelSpeed; // 0x0888, 0x4 bytes
-                bool m_bAccelToSpeed; // 0x088c, 0x1 bytes
-                std::uint8_t pad_088d[0x3]; // 0x088d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flNextMPSoundTime; // 0x0890, 0x4 bytes
-                std::uint8_t pad_0894[0x4]; // 0x0894, 0x4 bytes
+                CHandle<shade::sdk::server::CPathTrack> m_ppath; // 0x0850, 0x4 bytes
+                float m_length; // 0x0854, 0x4 bytes
+                Vector m_vPosPrev; // 0x0858, 0xc bytes
+                QAngle m_angPrev; // 0x0864, 0xc bytes
+                float m_flSpeed; // 0x0870, 0x4 bytes
+                Vector m_controlMins; // 0x0874, 0xc bytes
+                Vector m_controlMaxs; // 0x0880, 0xc bytes
+                VectorWS m_lastBlockPos; // 0x088c, 0xc bytes
+                std::int32_t m_lastBlockTick; // 0x0898, 0x4 bytes
+                float m_flVolume; // 0x089c, 0x4 bytes
+                float m_flBank; // 0x08a0, 0x4 bytes
+                float m_oldSpeed; // 0x08a4, 0x4 bytes
+                float m_flBlockDamage; // 0x08a8, 0x4 bytes
+                float m_height; // 0x08ac, 0x4 bytes
+                float m_maxSpeed; // 0x08b0, 0x4 bytes
+                float m_dir; // 0x08b4, 0x4 bytes
+                CGameSoundEventName m_iszSoundMove; // 0x08b8, 0x8 bytes
+                CGameSoundEventName m_iszSoundMovePing; // 0x08c0, 0x8 bytes
+                CGameSoundEventName m_iszSoundStart; // 0x08c8, 0x8 bytes
+                CGameSoundEventName m_iszSoundStop; // 0x08d0, 0x8 bytes
+                CGameSoundEventName m_strPathTarget; // 0x08d8, 0x8 bytes
+                float m_flMoveSoundMinDuration; // 0x08e0, 0x4 bytes
+                float m_flMoveSoundMaxDuration; // 0x08e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextMoveSoundTime; // 0x08e8, 0x4 bytes
+                float m_flMoveSoundMinPitch; // 0x08ec, 0x4 bytes
+                float m_flMoveSoundMaxPitch; // 0x08f0, 0x4 bytes
+                shade::sdk::server::TrainOrientationType_t m_eOrientationType; // 0x08f4, 0x4 bytes
+                shade::sdk::server::TrainVelocityType_t m_eVelocityType; // 0x08f8, 0x4 bytes
+                std::uint8_t pad_08fc[0x14]; // 0x08fc, 0x14 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStart; // 0x0910, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNext; // 0x0928, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnArrivedAtDestinationNode; // 0x0940, 0x18 bytes
+                bool m_bManualSpeedChanges; // 0x0958, 0x1 bytes
+                std::uint8_t pad_0959[0x3]; // 0x0959, 0x3 bytes
+                float m_flDesiredSpeed; // 0x095c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSpeedChangeTime; // 0x0960, 0x4 bytes
+                float m_flAccelSpeed; // 0x0964, 0x4 bytes
+                float m_flDecelSpeed; // 0x0968, 0x4 bytes
+                bool m_bAccelToSpeed; // 0x096c, 0x1 bytes
+                std::uint8_t pad_096d[0x3]; // 0x096d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flNextMPSoundTime; // 0x0970, 0x4 bytes
+                std::uint8_t pad_0974[0x4]; // 0x0974, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartForward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartBackward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputResume; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputReverse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeedDir; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeedReal; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeedDirAccel; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputMoveToPathNode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTeleportToPathNode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputLockOrientation; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUnlockOrientation; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t volume; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFuncTrackTrain) == 0x898, "CFuncTrackTrain size mismatch");
+            static_assert(sizeof(CFuncTrackTrain) == 0x978, "CFuncTrackTrain size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x30
              * Alignment: 0x8
              * Has Trivial Destructor
              * Construct Allowed
@@ -33,12 +33,14 @@ namespace shade {
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 PulseSymbol_t m_SequencePoint; // 0x0008, 0x10 bytes
                 PulseSymbol_t m_PortName; // 0x0018, 0x10 bytes
+                bool m_bDeferBreak; // 0x0028, 0x1 bytes
+                std::uint8_t pad_0029[0x7]; // 0x0029, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseBreakpointLocation) == 0x28, "CPulseBreakpointLocation size mismatch");
+            static_assert(sizeof(CPulseBreakpointLocation) == 0x30, "CPulseBreakpointLocation size mismatch");
         }
     }
 }

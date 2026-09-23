@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateFromPlaneCache : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                Vector m_vecOffsetMin; // 0x01e0, 0xc bytes
-                Vector m_vecOffsetMax; // 0x01ec, 0xc bytes
-                std::uint8_t pad_01f8[0x1]; // 0x01f8, 0x1 bytes
-                bool m_bUseNormal; // 0x01f9, 0x1 bytes
-                std::uint8_t pad_01fa[0x6]; // 0x01fa, 0x6 bytes
+                Vector m_vecOffsetMin; // 0x01e8, 0xc bytes
+                Vector m_vecOffsetMax; // 0x01f4, 0xc bytes
+                std::uint8_t pad_0200[0x1]; // 0x0200, 0x1 bytes
+                bool m_bUseNormal; // 0x0201, 0x1 bytes
+                std::uint8_t pad_0202[0x6]; // 0x0202, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateFromPlaneCache) == 0x200, "C_INIT_CreateFromPlaneCache size mismatch");
+            static_assert(sizeof(C_INIT_CreateFromPlaneCache) == 0x208, "C_INIT_CreateFromPlaneCache size mismatch");
         }
     }
 }

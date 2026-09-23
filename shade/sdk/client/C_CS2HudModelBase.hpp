@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1270
+             * Size: 0x1350
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -31,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CS2HudModelBase : public shade::sdk::client::C_LateUpdatedAnimating {
             public:
-                std::uint8_t pad_1240[0x30]; // 0x1240, 0x30 bytes
+                std::uint8_t pad_1320[0x30]; // 0x1320, 0x30 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_CS2HudModelBase) == 0x1270, "C_CS2HudModelBase size mismatch");
+            static_assert(sizeof(C_CS2HudModelBase) == 0x1350, "C_CS2HudModelBase size mismatch");
         }
     }
 }

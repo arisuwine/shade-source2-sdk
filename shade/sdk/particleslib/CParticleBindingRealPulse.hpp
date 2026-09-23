@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particleslib {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0xa8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleBindingRealPulse) == 0x130, "CParticleBindingRealPulse size mismatch");
+            static_assert(sizeof(CParticleBindingRealPulse) == 0xA8, "CParticleBindingRealPulse size mismatch");
         }
     }
 }

@@ -39,10 +39,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputRollCredits; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputRollOutroCredits; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputShowLogo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLogoLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CCredits) == 0x4C8, "CCredits size mismatch");

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x960
+             * Size: 0xa40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -37,7 +37,7 @@ namespace shade {
              * Vector bullet_direction; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CWaterBullet) == 0x960, "CWaterBullet size mismatch");
+            static_assert(sizeof(CWaterBullet) == 0xA40, "CWaterBullet size mismatch");
         }
     }
 }

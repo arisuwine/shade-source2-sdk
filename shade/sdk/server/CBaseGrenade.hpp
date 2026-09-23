@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9f0
+             * Size: 0xad0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -40,27 +40,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseGrenade : public shade::sdk::server::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0960[0x8]; // 0x0960, 0x8 bytes
-                bool m_bDamageDetonating; // 0x0968, 0x1 bytes
-                std::uint8_t pad_0969[0x7]; // 0x0969, 0x7 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerPickup; // 0x0970, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnExplode; // 0x0988, 0x18 bytes
-                bool m_bHasWarnedAI; // 0x09a0, 0x1 bytes
-                bool m_bIsSmokeGrenade; // 0x09a1, 0x1 bytes
-                bool m_bIsLive; // 0x09a2, 0x1 bytes
-                std::uint8_t pad_09a3[0x1]; // 0x09a3, 0x1 bytes
-                float m_DmgRadius; // 0x09a4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDetonateTime; // 0x09a8, 0x4 bytes
-                float m_flWarnAITime; // 0x09ac, 0x4 bytes
-                float m_flDamage; // 0x09b0, 0x4 bytes
-                std::uint8_t pad_09b4[0x4]; // 0x09b4, 0x4 bytes
-                CUtlSymbolLarge m_iszBounceSound; // 0x09b8, 0x8 bytes
-                CUtlString m_ExplosionSound; // 0x09c0, 0x8 bytes
-                CHandle<shade::sdk::server::CCSPlayerPawn> m_hThrower; // 0x09c8, 0x4 bytes
-                std::uint8_t pad_09cc[0x14]; // 0x09cc, 0x14 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttack; // 0x09e0, 0x4 bytes
-                CHandle<shade::sdk::server::CCSPlayerPawn> m_hOriginalThrower; // 0x09e4, 0x4 bytes
-                std::uint8_t pad_09e8[0x8]; // 0x09e8, 0x8 bytes
+                std::uint8_t pad_0a40[0x8]; // 0x0a40, 0x8 bytes
+                bool m_bDamageDetonating; // 0x0a48, 0x1 bytes
+                std::uint8_t pad_0a49[0x7]; // 0x0a49, 0x7 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerPickup; // 0x0a50, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnExplode; // 0x0a68, 0x18 bytes
+                bool m_bHasWarnedAI; // 0x0a80, 0x1 bytes
+                bool m_bIsSmokeGrenade; // 0x0a81, 0x1 bytes
+                bool m_bIsLive; // 0x0a82, 0x1 bytes
+                std::uint8_t pad_0a83[0x1]; // 0x0a83, 0x1 bytes
+                float m_DmgRadius; // 0x0a84, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDetonateTime; // 0x0a88, 0x4 bytes
+                float m_flWarnAITime; // 0x0a8c, 0x4 bytes
+                float m_flDamage; // 0x0a90, 0x4 bytes
+                std::uint8_t pad_0a94[0x4]; // 0x0a94, 0x4 bytes
+                CUtlSymbolLarge m_iszBounceSound; // 0x0a98, 0x8 bytes
+                CUtlString m_ExplosionSound; // 0x0aa0, 0x8 bytes
+                CHandle<shade::sdk::server::CCSPlayerPawn> m_hThrower; // 0x0aa8, 0x4 bytes
+                std::uint8_t pad_0aac[0x14]; // 0x0aac, 0x14 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttack; // 0x0ac0, 0x4 bytes
+                CHandle<shade::sdk::server::CCSPlayerPawn> m_hOriginalThrower; // 0x0ac4, 0x4 bytes
+                std::uint8_t pad_0ac8[0x8]; // 0x0ac8, 0x8 bytes
             };
             #pragma pack(pop)
 
@@ -68,7 +68,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBaseGrenade) == 0x9F0, "CBaseGrenade size mismatch");
+            static_assert(sizeof(CBaseGrenade) == 0xAD0, "CBaseGrenade size mismatch");
         }
     }
 }

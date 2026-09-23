@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e0
+             * Size: 0x1e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,15 +29,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_Decay : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                bool m_bRopeDecay; // 0x01d8, 0x1 bytes
-                bool m_bForcePreserveParticleOrder; // 0x01d9, 0x1 bytes
-                std::uint8_t pad_01da[0x6]; // 0x01da, 0x6 bytes
+                bool m_bRopeDecay; // 0x01e0, 0x1 bytes
+                bool m_bForcePreserveParticleOrder; // 0x01e1, 0x1 bytes
+                std::uint8_t pad_01e2[0x6]; // 0x01e2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_Decay) == 0x1E0, "C_OP_Decay size mismatch");
+            static_assert(sizeof(C_OP_Decay) == 0x1E8, "C_OP_Decay size mismatch");
         }
     }
 }

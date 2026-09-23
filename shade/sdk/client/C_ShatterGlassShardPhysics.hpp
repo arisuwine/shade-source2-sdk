@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1038
+             * Size: 0x1120
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ShatterGlassShardPhysics : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_0fb0[0x8]; // 0x0fb0, 0x8 bytes
-                shade::sdk::client::shard_model_desc_t m_ShardDesc; // 0x0fb8, 0x80 bytes
+                std::uint8_t pad_1098[0x8]; // 0x1098, 0x8 bytes
+                shade::sdk::client::shard_model_desc_t m_ShardDesc; // 0x10a0, 0x80 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_ShatterGlassShardPhysics) == 0x1038, "C_ShatterGlassShardPhysics size mismatch");
+            static_assert(sizeof(C_ShatterGlassShardPhysics) == 0x1120, "C_ShatterGlassShardPhysics size mismatch");
         }
     }
 }

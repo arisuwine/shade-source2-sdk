@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x798
+             * Size: 0x878
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CFogVolume : public shade::sdk::server::CServerOnlyModelEntity {
             public:
-                CUtlSymbolLarge m_fogName; // 0x0770, 0x8 bytes
-                CUtlSymbolLarge m_postProcessName; // 0x0778, 0x8 bytes
-                CUtlSymbolLarge m_colorCorrectionName; // 0x0780, 0x8 bytes
-                std::uint8_t pad_0788[0x8]; // 0x0788, 0x8 bytes
-                bool m_bDisabled; // 0x0790, 0x1 bytes
-                bool m_bInFogVolumesList; // 0x0791, 0x1 bytes
-                std::uint8_t pad_0792[0x6]; // 0x0792, 0x6 bytes
+                CUtlSymbolLarge m_fogName; // 0x0850, 0x8 bytes
+                CUtlSymbolLarge m_postProcessName; // 0x0858, 0x8 bytes
+                CUtlSymbolLarge m_colorCorrectionName; // 0x0860, 0x8 bytes
+                std::uint8_t pad_0868[0x8]; // 0x0868, 0x8 bytes
+                bool m_bDisabled; // 0x0870, 0x1 bytes
+                bool m_bInFogVolumesList; // 0x0871, 0x1 bytes
+                std::uint8_t pad_0872[0x6]; // 0x0872, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFogVolume) == 0x798, "CFogVolume size mismatch");
+            static_assert(sizeof(CFogVolume) == 0x878, "CFogVolume size mismatch");
         }
     }
 }

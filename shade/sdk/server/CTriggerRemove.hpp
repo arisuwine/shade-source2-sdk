@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0x9e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerRemove : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnRemove; // 0x08e8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnRemove; // 0x09c8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CTriggerRemove) == 0x900, "CTriggerRemove size mismatch");
+            static_assert(sizeof(CTriggerRemove) == 0x9E0, "CTriggerRemove size mismatch");
         }
     }
 }

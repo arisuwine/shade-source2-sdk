@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xba0
+             * Size: 0xc90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDynamicPropAlias_cable_dynamic) == 0xBA0, "CDynamicPropAlias_cable_dynamic size mismatch");
+            static_assert(sizeof(CDynamicPropAlias_cable_dynamic) == 0xC90, "CDynamicPropAlias_cable_dynamic size mismatch");
         }
     }
 }

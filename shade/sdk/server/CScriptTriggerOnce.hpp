@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0x9f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CScriptTriggerOnce : public shade::sdk::server::CTriggerOnce {
             public:
-                Vector m_vExtent; // 0x0900, 0xc bytes
-                std::uint8_t pad_090c[0x4]; // 0x090c, 0x4 bytes
+                Vector m_vExtent; // 0x09e0, 0xc bytes
+                std::uint8_t pad_09ec[0x4]; // 0x09ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CScriptTriggerOnce) == 0x910, "CScriptTriggerOnce size mismatch");
+            static_assert(sizeof(CScriptTriggerOnce) == 0x9F0, "CScriptTriggerOnce size mismatch");
         }
     }
 }

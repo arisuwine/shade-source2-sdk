@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0x610
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_AttributeContainer : public shade::sdk::client::CAttributeManager {
             public:
-                shade::sdk::client::C_EconItemView m_Item; // 0x0050, 0x470 bytes
-                std::int32_t m_iExternalItemProviderRegisteredToken; // 0x04c0, 0x4 bytes
-                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
-                std::uint64_t m_ullRegisteredAsItemID; // 0x04c8, 0x8 bytes
+                shade::sdk::client::C_EconItemView m_Item; // 0x0050, 0x5b0 bytes
+                std::int32_t m_iExternalItemProviderRegisteredToken; // 0x0600, 0x4 bytes
+                std::uint8_t pad_0604[0x4]; // 0x0604, 0x4 bytes
+                std::uint64_t m_ullRegisteredAsItemID; // 0x0608, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_AttributeContainer) == 0x4D0, "C_AttributeContainer size mismatch");
+            static_assert(sizeof(C_AttributeContainer) == 0x610, "C_AttributeContainer size mismatch");
         }
     }
 }

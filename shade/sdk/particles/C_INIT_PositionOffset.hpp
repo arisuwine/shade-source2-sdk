@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xfc8
+             * Size: 0x1010
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_PositionOffset : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_OffsetMin; // 0x01e0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_OffsetMax; // 0x0898, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x0f50, 0x68 bytes
-                bool m_bLocalCoords; // 0x0fb8, 0x1 bytes
-                bool m_bProportional; // 0x0fb9, 0x1 bytes
-                std::uint8_t pad_0fba[0x2]; // 0x0fba, 0x2 bytes
-                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x0fbc, 0x8 bytes
-                std::uint8_t pad_0fc4[0x4]; // 0x0fc4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_OffsetMin; // 0x01e8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_OffsetMax; // 0x08c0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x0f98, 0x68 bytes
+                bool m_bLocalCoords; // 0x1000, 0x1 bytes
+                bool m_bProportional; // 0x1001, 0x1 bytes
+                std::uint8_t pad_1002[0x2]; // 0x1002, 0x2 bytes
+                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1004, 0x8 bytes
+                std::uint8_t pad_100c[0x4]; // 0x100c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_PositionOffset) == 0xFC8, "C_INIT_PositionOffset size mismatch");
+            static_assert(sizeof(C_INIT_PositionOffset) == 0x1010, "C_INIT_PositionOffset size mismatch");
         }
     }
 }

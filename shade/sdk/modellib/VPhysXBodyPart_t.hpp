@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0xa8
+             * Size: 0x98
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -29,23 +29,23 @@ namespace shade {
             struct VPhysXBodyPart_t {
                 std::uint32_t m_nFlags; // 0x0000, 0x4 bytes
                 float m_flMass; // 0x0004, 0x4 bytes
-                shade::sdk::modellib::VPhysics2ShapeDef_t m_rnShape; // 0x0008, 0x78 bytes
-                std::uint16_t m_nCollisionAttributeIndex; // 0x0080, 0x2 bytes
-                std::uint16_t m_nReserved; // 0x0082, 0x2 bytes
-                float m_flInertiaScale; // 0x0084, 0x4 bytes
-                float m_flLinearDamping; // 0x0088, 0x4 bytes
-                float m_flAngularDamping; // 0x008c, 0x4 bytes
-                float m_flLinearDrag; // 0x0090, 0x4 bytes
-                float m_flAngularDrag; // 0x0094, 0x4 bytes
-                bool m_bOverrideMassCenter; // 0x0098, 0x1 bytes
-                std::uint8_t pad_0099[0x3]; // 0x0099, 0x3 bytes
-                Vector m_vMassCenterOverride; // 0x009c, 0xc bytes
+                shade::sdk::modellib::VPhysics2ShapeDef_t m_rnShape; // 0x0008, 0x68 bytes
+                std::uint16_t m_nCollisionAttributeIndex; // 0x0070, 0x2 bytes
+                std::uint16_t m_nReserved; // 0x0072, 0x2 bytes
+                float m_flInertiaScale; // 0x0074, 0x4 bytes
+                float m_flLinearDamping; // 0x0078, 0x4 bytes
+                float m_flAngularDamping; // 0x007c, 0x4 bytes
+                float m_flLinearDrag; // 0x0080, 0x4 bytes
+                float m_flAngularDrag; // 0x0084, 0x4 bytes
+                bool m_bOverrideMassCenter; // 0x0088, 0x1 bytes
+                std::uint8_t pad_0089[0x3]; // 0x0089, 0x3 bytes
+                Vector m_vMassCenterOverride; // 0x008c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(VPhysXBodyPart_t) == 0xA8, "VPhysXBodyPart_t size mismatch");
+            static_assert(sizeof(VPhysXBodyPart_t) == 0x98, "VPhysXBodyPart_t size mismatch");
         }
     }
 }

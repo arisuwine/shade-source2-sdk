@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x648
+             * Size: 0x668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_InstantaneousEmitter : public shade::sdk::particles::CParticleFunctionEmitter {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nParticlesToEmit; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flStartTime; // 0x0350, 0x170 bytes
-                float m_flInitFromKilledParentParticles; // 0x04c0, 0x4 bytes
-                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x04c4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flParentParticleScale; // 0x04c8, 0x170 bytes
-                std::int32_t m_nMaxEmittedPerFrame; // 0x0638, 0x4 bytes
-                std::int32_t m_nSnapshotControlPoint; // 0x063c, 0x4 bytes
-                CUtlString m_strSnapshotSubset; // 0x0640, 0x8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nParticlesToEmit; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flStartTime; // 0x0360, 0x178 bytes
+                float m_flInitFromKilledParentParticles; // 0x04d8, 0x4 bytes
+                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x04dc, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flParentParticleScale; // 0x04e0, 0x178 bytes
+                std::int32_t m_nMaxEmittedPerFrame; // 0x0658, 0x4 bytes
+                std::int32_t m_nSnapshotControlPoint; // 0x065c, 0x4 bytes
+                CUtlString m_strSnapshotSubset; // 0x0660, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_InstantaneousEmitter) == 0x648, "C_OP_InstantaneousEmitter size mismatch");
+            static_assert(sizeof(C_OP_InstantaneousEmitter) == 0x668, "C_OP_InstantaneousEmitter size mismatch");
         }
     }
 }

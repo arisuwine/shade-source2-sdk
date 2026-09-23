@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd30
+             * Size: 0xe20
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -42,26 +42,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSPlayerPawnBase : public shade::sdk::server::CBasePlayerPawn {
             public:
-                std::uint8_t pad_0be0[0x10]; // 0x0be0, 0x10 bytes
-                shade::sdk::server::CTouchExpansionComponent m_CTouchExpansionComponent; // 0x0bf0, 0x50 bytes
-                shade::sdk::server::CCSPlayer_PingServices *m_pPingServices; // 0x0c40, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_blindUntilTime; // 0x0c48, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_blindStartTime; // 0x0c4c, 0x4 bytes
-                shade::sdk::client::CSPlayerState m_iPlayerState; // 0x0c50, 0x4 bytes
-                std::uint8_t pad_0c54[0xac]; // 0x0c54, 0xac bytes
-                bool m_bRespawning; // 0x0d00, 0x1 bytes
-                bool m_bHasMovedSinceSpawn; // 0x0d01, 0x1 bytes
-                std::uint8_t pad_0d02[0x2]; // 0x0d02, 0x2 bytes
-                std::int32_t m_iNumSpawns; // 0x0d04, 0x4 bytes
-                std::uint8_t pad_0d08[0x4]; // 0x0d08, 0x4 bytes
-                float m_flIdleTimeSinceLastAction; // 0x0d0c, 0x4 bytes
-                float m_fNextRadarUpdateTime; // 0x0d10, 0x4 bytes
-                float m_flFlashDuration; // 0x0d14, 0x4 bytes
-                float m_flFlashMaxAlpha; // 0x0d18, 0x4 bytes
-                float m_flProgressBarStartTime; // 0x0d1c, 0x4 bytes
-                std::int32_t m_iProgressBarDuration; // 0x0d20, 0x4 bytes
-                CHandle<shade::sdk::server::CCSPlayerController> m_hOriginalController; // 0x0d24, 0x4 bytes
-                std::uint8_t pad_0d28[0x8]; // 0x0d28, 0x8 bytes
+                std::uint8_t pad_0cd0[0x10]; // 0x0cd0, 0x10 bytes
+                shade::sdk::server::CTouchExpansionComponent m_CTouchExpansionComponent; // 0x0ce0, 0x50 bytes
+                shade::sdk::server::CCSPlayer_PingServices *m_pPingServices; // 0x0d30, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_blindUntilTime; // 0x0d38, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_blindStartTime; // 0x0d3c, 0x4 bytes
+                shade::sdk::client::CSPlayerState m_iPlayerState; // 0x0d40, 0x4 bytes
+                std::uint8_t pad_0d44[0xac]; // 0x0d44, 0xac bytes
+                bool m_bRespawning; // 0x0df0, 0x1 bytes
+                bool m_bHasMovedSinceSpawn; // 0x0df1, 0x1 bytes
+                std::uint8_t pad_0df2[0x2]; // 0x0df2, 0x2 bytes
+                std::int32_t m_iNumSpawns; // 0x0df4, 0x4 bytes
+                std::uint8_t pad_0df8[0x4]; // 0x0df8, 0x4 bytes
+                float m_flIdleTimeSinceLastAction; // 0x0dfc, 0x4 bytes
+                float m_fNextRadarUpdateTime; // 0x0e00, 0x4 bytes
+                float m_flFlashDuration; // 0x0e04, 0x4 bytes
+                float m_flFlashMaxAlpha; // 0x0e08, 0x4 bytes
+                float m_flProgressBarStartTime; // 0x0e0c, 0x4 bytes
+                std::int32_t m_iProgressBarDuration; // 0x0e10, 0x4 bytes
+                CHandle<shade::sdk::server::CCSPlayerController> m_hOriginalController; // 0x0e14, 0x4 bytes
+                std::uint8_t pad_0e18[0x8]; // 0x0e18, 0x8 bytes
             };
             #pragma pack(pop)
 
@@ -69,7 +69,7 @@ namespace shade {
              * CHandle<CBaseEntity> original_controller; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCSPlayerPawnBase) == 0xD30, "CCSPlayerPawnBase size mismatch");
+            static_assert(sizeof(CCSPlayerPawnBase) == 0xE20, "CCSPlayerPawnBase size mismatch");
         }
     }
 }

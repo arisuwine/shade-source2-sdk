@@ -17,12 +17,13 @@
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
 #include "shade/sdk/particles/CPathParameters.hpp"
+#include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x250
+             * Size: 0x540
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,20 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateAlongPath : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                float m_fMaxDistance; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0xc]; // 0x01e4, 0xc bytes
-                shade::sdk::particles::CPathParameters m_PathParams; // 0x01f0, 0x40 bytes
-                bool m_bUseRandomCPs; // 0x0230, 0x1 bytes
-                std::uint8_t pad_0231[0x3]; // 0x0231, 0x3 bytes
-                Vector m_vEndOffset; // 0x0234, 0xc bytes
-                bool m_bSaveOffset; // 0x0240, 0x1 bytes
-                std::uint8_t pad_0241[0xf]; // 0x0241, 0xf bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fMaxDistance; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fT; // 0x0360, 0x178 bytes
+                std::uint8_t pad_04d8[0x8]; // 0x04d8, 0x8 bytes
+                shade::sdk::particles::CPathParameters m_PathParams; // 0x04e0, 0x40 bytes
+                bool m_bUseRandomCPs; // 0x0520, 0x1 bytes
+                std::uint8_t pad_0521[0x3]; // 0x0521, 0x3 bytes
+                Vector m_vEndOffset; // 0x0524, 0xc bytes
+                bool m_bSaveOffset; // 0x0530, 0x1 bytes
+                std::uint8_t pad_0531[0xf]; // 0x0531, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateAlongPath) == 0x250, "C_INIT_CreateAlongPath size mismatch");
+            static_assert(sizeof(C_INIT_CreateAlongPath) == 0x540, "C_INIT_CreateAlongPath size mismatch");
         }
     }
 }

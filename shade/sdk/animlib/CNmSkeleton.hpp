@@ -19,6 +19,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             struct CNmFloatChannelSet_t;
+            struct CNmSkeleton__ContactConfig_t;
             struct CNmSkeleton__SecondarySkeleton_t;
             struct NmBoneMaskSetDefinition_t;
         }
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x100
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -42,19 +43,21 @@ namespace shade {
                 CUtlVector<CTransform> m_parentSpaceReferencePose; // 0x0030, 0x18 bytes
                 CUtlVector<CTransform> m_modelSpaceReferencePose; // 0x0048, 0x18 bytes
                 std::int32_t m_numBonesToSampleAtLowLOD; // 0x0060, 0x4 bytes
-                std::uint8_t pad_0064[0x24]; // 0x0064, 0x24 bytes
+                bool m_bIsPropSkeleton; // 0x0064, 0x1 bytes
+                std::uint8_t pad_0065[0x23]; // 0x0065, 0x23 bytes
                 CUtlLeanVector<shade::sdk::animlib::NmBoneMaskSetDefinition_t> m_maskDefinitions; // 0x0088, 0x10 bytes
                 std::uint8_t pad_0098[0x10]; // 0x0098, 0x10 bytes
                 CUtlLeanVector<shade::sdk::animlib::CNmSkeleton__SecondarySkeleton_t> m_secondarySkeletons; // 0x00a8, 0x10 bytes
                 CUtlLeanVector<shade::sdk::animlib::CNmFloatChannelSet_t> m_floatChannelSets; // 0x00b8, 0x10 bytes
-                bool m_bIsPropSkeleton; // 0x00c8, 0x1 bytes
-                std::uint8_t pad_00c9[0x7]; // 0x00c9, 0x7 bytes
+                CUtlVector<shade::sdk::animlib::CNmSkeleton__ContactConfig_t> m_contactConfigs; // 0x00c8, 0x18 bytes
+                CUtlVector<std::int32_t> m_gameplayRelevantBoneIndices; // 0x00e0, 0x18 bytes
+                std::int64_t m_nSpecialDependencyHash; // 0x00f8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmSkeleton) == 0xD0, "CNmSkeleton size mismatch");
+            static_assert(sizeof(CNmSkeleton) == 0x100, "CNmSkeleton size mismatch");
         }
     }
 }

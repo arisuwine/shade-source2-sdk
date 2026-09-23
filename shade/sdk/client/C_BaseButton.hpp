@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfc0
+             * Size: 0x10a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +38,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseButton : public shade::sdk::client::C_BaseToggle {
             public:
-                CHandle<shade::sdk::client::C_BaseModelEntity> m_glowEntity; // 0x0fb0, 0x4 bytes
-                bool m_usable; // 0x0fb4, 0x1 bytes
-                std::uint8_t pad_0fb5[0x3]; // 0x0fb5, 0x3 bytes
-                CUtlSymbolLarge m_szDisplayText; // 0x0fb8, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseModelEntity> m_glowEntity; // 0x1098, 0x4 bytes
+                bool m_usable; // 0x109c, 0x1 bytes
+                std::uint8_t pad_109d[0x3]; // 0x109d, 0x3 bytes
+                CUtlSymbolLarge m_szDisplayText; // 0x10a0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseButton) == 0xFC0, "C_BaseButton size mismatch");
+            static_assert(sizeof(C_BaseButton) == 0x10A8, "C_BaseButton size mismatch");
         }
     }
 }

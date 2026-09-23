@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x388
+             * Size: 0x398
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,34 +31,34 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InitSkinnedPositionFromCPSnapshot : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nSnapshotControlPointNumber; // 0x01e0, 0x4 bytes
-                std::int32_t m_nControlPointNumber; // 0x01e4, 0x4 bytes
-                bool m_bRandom; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
-                std::int32_t m_nRandomSeed; // 0x01ec, 0x4 bytes
-                bool m_bRigid; // 0x01f0, 0x1 bytes
-                bool m_bSetNormal; // 0x01f1, 0x1 bytes
-                bool m_bIgnoreDt; // 0x01f2, 0x1 bytes
-                std::uint8_t pad_01f3[0x1]; // 0x01f3, 0x1 bytes
-                float m_flMinNormalVelocity; // 0x01f4, 0x4 bytes
-                float m_flMaxNormalVelocity; // 0x01f8, 0x4 bytes
-                shade::sdk::particles::SnapshotIndexType_t m_nIndexType; // 0x01fc, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flReadIndex; // 0x0200, 0x170 bytes
-                float m_flIncrement; // 0x0370, 0x4 bytes
-                std::int32_t m_nFullLoopIncrement; // 0x0374, 0x4 bytes
-                std::int32_t m_nSnapShotStartPoint; // 0x0378, 0x4 bytes
-                float m_flBoneVelocity; // 0x037c, 0x4 bytes
-                float m_flBoneVelocityMax; // 0x0380, 0x4 bytes
-                bool m_bCopyColor; // 0x0384, 0x1 bytes
-                bool m_bCopyAlpha; // 0x0385, 0x1 bytes
-                bool m_bSetRadius; // 0x0386, 0x1 bytes
-                std::uint8_t pad_0387[0x1]; // 0x0387, 0x1 bytes
+                std::int32_t m_nSnapshotControlPointNumber; // 0x01e8, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01ec, 0x4 bytes
+                bool m_bRandom; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x3]; // 0x01f1, 0x3 bytes
+                std::int32_t m_nRandomSeed; // 0x01f4, 0x4 bytes
+                bool m_bRigid; // 0x01f8, 0x1 bytes
+                bool m_bSetNormal; // 0x01f9, 0x1 bytes
+                bool m_bIgnoreDt; // 0x01fa, 0x1 bytes
+                std::uint8_t pad_01fb[0x1]; // 0x01fb, 0x1 bytes
+                float m_flMinNormalVelocity; // 0x01fc, 0x4 bytes
+                float m_flMaxNormalVelocity; // 0x0200, 0x4 bytes
+                shade::sdk::particles::SnapshotIndexType_t m_nIndexType; // 0x0204, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flReadIndex; // 0x0208, 0x178 bytes
+                float m_flIncrement; // 0x0380, 0x4 bytes
+                std::int32_t m_nFullLoopIncrement; // 0x0384, 0x4 bytes
+                std::int32_t m_nSnapShotStartPoint; // 0x0388, 0x4 bytes
+                float m_flBoneVelocity; // 0x038c, 0x4 bytes
+                float m_flBoneVelocityMax; // 0x0390, 0x4 bytes
+                bool m_bCopyColor; // 0x0394, 0x1 bytes
+                bool m_bCopyAlpha; // 0x0395, 0x1 bytes
+                bool m_bSetRadius; // 0x0396, 0x1 bytes
+                std::uint8_t pad_0397[0x1]; // 0x0397, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InitSkinnedPositionFromCPSnapshot) == 0x388, "C_INIT_InitSkinnedPositionFromCPSnapshot size mismatch");
+            static_assert(sizeof(C_INIT_InitSkinnedPositionFromCPSnapshot) == 0x398, "C_INIT_InitSkinnedPositionFromCPSnapshot size mismatch");
         }
     }
 }

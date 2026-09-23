@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace entity2 {
             /* Class Parameters
-             * Size: 0x70
+             * Size: 0xf8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -47,13 +47,15 @@ namespace shade {
                 CEntityHandle m_hEntTarget; // 0x0028, 0x4 bytes
                 std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
                 CVariantBase<shade::sdk::entity2::CVariantDefaultAllocator> m_variantValue; // 0x0030, 0x10 bytes
-                std::uint8_t pad_0040[0x30]; // 0x0040, 0x30 bytes
+                CPulseArgumentPack m_PulseArguments; // 0x0040, 0x90 bytes
+                CPulseInputParamMap m_paramMap; // 0x00d0, 0x18 bytes
+                std::uint8_t pad_00e8[0x10]; // 0x00e8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(EntityIOQueuePrioritizedEvent_t) == 0x70, "EntityIOQueuePrioritizedEvent_t size mismatch");
+            static_assert(sizeof(EntityIOQueuePrioritizedEvent_t) == 0xF8, "EntityIOQueuePrioritizedEvent_t size mismatch");
         }
     }
 }

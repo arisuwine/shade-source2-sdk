@@ -34,7 +34,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * CUtlSymbolLarge InputCommand; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CPointServerCommand) == 0x4A8, "CPointServerCommand size mismatch");

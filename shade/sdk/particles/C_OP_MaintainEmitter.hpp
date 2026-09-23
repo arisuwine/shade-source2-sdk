@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x650
+             * Size: 0x670
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MaintainEmitter : public shade::sdk::particles::CParticleFunctionEmitter {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nParticlesToMaintain; // 0x01e0, 0x170 bytes
-                float m_flStartTime; // 0x0350, 0x4 bytes
-                std::uint8_t pad_0354[0x4]; // 0x0354, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flEmissionDuration; // 0x0358, 0x170 bytes
-                float m_flEmissionRate; // 0x04c8, 0x4 bytes
-                std::int32_t m_nSnapshotControlPoint; // 0x04cc, 0x4 bytes
-                CUtlString m_strSnapshotSubset; // 0x04d0, 0x8 bytes
-                bool m_bEmitInstantaneously; // 0x04d8, 0x1 bytes
-                bool m_bFinalEmitOnStop; // 0x04d9, 0x1 bytes
-                std::uint8_t pad_04da[0x6]; // 0x04da, 0x6 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScale; // 0x04e0, 0x170 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nParticlesToMaintain; // 0x01e8, 0x178 bytes
+                float m_flStartTime; // 0x0360, 0x4 bytes
+                std::uint8_t pad_0364[0x4]; // 0x0364, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flEmissionDuration; // 0x0368, 0x178 bytes
+                float m_flEmissionRate; // 0x04e0, 0x4 bytes
+                std::int32_t m_nSnapshotControlPoint; // 0x04e4, 0x4 bytes
+                CUtlString m_strSnapshotSubset; // 0x04e8, 0x8 bytes
+                bool m_bEmitInstantaneously; // 0x04f0, 0x1 bytes
+                bool m_bFinalEmitOnStop; // 0x04f1, 0x1 bytes
+                std::uint8_t pad_04f2[0x6]; // 0x04f2, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScale; // 0x04f8, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MaintainEmitter) == 0x650, "C_OP_MaintainEmitter size mismatch");
+            static_assert(sizeof(C_OP_MaintainEmitter) == 0x670, "C_OP_MaintainEmitter size mismatch");
         }
     }
 }

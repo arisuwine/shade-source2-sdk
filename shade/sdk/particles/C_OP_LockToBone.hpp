@@ -16,18 +16,18 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/ParticleRotationLockType_t.hpp"
 #include "shade/sdk/particleslib/CParticleModelInput.hpp"
 #include "shade/sdk/particleslib/CParticleTransformInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xb70
+             * Size: 0xba0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,29 +35,29 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_LockToBone : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01d8, 0x60 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0238, 0x68 bytes
-                float m_flLifeTimeFadeStart; // 0x02a0, 0x4 bytes
-                float m_flLifeTimeFadeEnd; // 0x02a4, 0x4 bytes
-                float m_flJumpThreshold; // 0x02a8, 0x4 bytes
-                float m_flPrevPosScale; // 0x02ac, 0x4 bytes
-                char m_HitboxSetName[0x80]; // 0x02b0, 0x80 bytes
-                bool m_bRigid; // 0x0330, 0x1 bytes
-                bool m_bUseBones; // 0x0331, 0x1 bytes
-                std::uint8_t pad_0332[0x2]; // 0x0332, 0x2 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0334, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutputPrev; // 0x0338, 0x4 bytes
-                shade::sdk::particles::ParticleRotationLockType_t m_nRotationSetType; // 0x033c, 0x4 bytes
-                bool m_bRigidRotationLock; // 0x0340, 0x1 bytes
-                std::uint8_t pad_0341[0x7]; // 0x0341, 0x7 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecRotation; // 0x0348, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRotLerp; // 0x0a00, 0x170 bytes
+                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01e0, 0x60 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0240, 0x68 bytes
+                float m_flLifeTimeFadeStart; // 0x02a8, 0x4 bytes
+                float m_flLifeTimeFadeEnd; // 0x02ac, 0x4 bytes
+                float m_flJumpThreshold; // 0x02b0, 0x4 bytes
+                float m_flPrevPosScale; // 0x02b4, 0x4 bytes
+                char m_HitboxSetName[0x80]; // 0x02b8, 0x80 bytes
+                bool m_bRigid; // 0x0338, 0x1 bytes
+                bool m_bUseBones; // 0x0339, 0x1 bytes
+                std::uint8_t pad_033a[0x2]; // 0x033a, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x033c, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutputPrev; // 0x0340, 0x4 bytes
+                shade::sdk::particles::ParticleRotationLockType_t m_nRotationSetType; // 0x0344, 0x4 bytes
+                bool m_bRigidRotationLock; // 0x0348, 0x1 bytes
+                std::uint8_t pad_0349[0x7]; // 0x0349, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecRotation; // 0x0350, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRotLerp; // 0x0a28, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_LockToBone) == 0xB70, "C_OP_LockToBone size mismatch");
+            static_assert(sizeof(C_OP_LockToBone) == 0xBA0, "C_OP_LockToBone size mismatch");
         }
     }
 }

@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x110
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
@@ -37,13 +37,13 @@ namespace shade {
                 std::int32_t m_nHostagePickUps; // 0x0020, 0x4 bytes
                 std::int32_t m_numTeammatesFlashed; // 0x0024, 0x4 bytes
                 CUtlString m_strAnnotationsWorkshopId; // 0x0028, 0x8 bytes
-                std::uint8_t pad_0030[0xc8]; // 0x0030, 0xc8 bytes
+                std::uint8_t pad_0030[0xe0]; // 0x0030, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSAdditionalPerRoundStats_t) == 0xF8, "CSAdditionalPerRoundStats_t size mismatch");
+            static_assert(sizeof(CSAdditionalPerRoundStats_t) == 0x110, "CSAdditionalPerRoundStats_t size mismatch");
         }
     }
 }

@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,26 +32,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InitFromCPSnapshot : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                CUtlString m_strSnapshotSubset; // 0x01e8, 0x8 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAttributeToRead; // 0x01f0, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAttributeToWrite; // 0x01f4, 0x4 bytes
-                std::int32_t m_nLocalSpaceCP; // 0x01f8, 0x4 bytes
-                bool m_bRandom; // 0x01fc, 0x1 bytes
-                bool m_bReverse; // 0x01fd, 0x1 bytes
-                std::uint8_t pad_01fe[0x2]; // 0x01fe, 0x2 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x0200, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_nManualSnapshotIndex; // 0x0370, 0x170 bytes
-                std::int32_t m_nRandomSeed; // 0x04e0, 0x4 bytes
-                bool m_bLocalSpaceAngles; // 0x04e4, 0x1 bytes
-                std::uint8_t pad_04e5[0x3]; // 0x04e5, 0x3 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                CUtlString m_strSnapshotSubset; // 0x01f0, 0x8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAttributeToRead; // 0x01f8, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAttributeToWrite; // 0x01fc, 0x4 bytes
+                std::int32_t m_nLocalSpaceCP; // 0x0200, 0x4 bytes
+                bool m_bRandom; // 0x0204, 0x1 bytes
+                bool m_bReverse; // 0x0205, 0x1 bytes
+                std::uint8_t pad_0206[0x2]; // 0x0206, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x0208, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_nManualSnapshotIndex; // 0x0380, 0x178 bytes
+                std::int32_t m_nRandomSeed; // 0x04f8, 0x4 bytes
+                bool m_bLocalSpaceAngles; // 0x04fc, 0x1 bytes
+                std::uint8_t pad_04fd[0x3]; // 0x04fd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InitFromCPSnapshot) == 0x4E8, "C_INIT_InitFromCPSnapshot size mismatch");
+            static_assert(sizeof(C_INIT_InitFromCPSnapshot) == 0x500, "C_INIT_InitFromCPSnapshot size mismatch");
         }
     }
 }

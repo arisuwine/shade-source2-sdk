@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace worldrenderer {
             /* Class Parameters
-             * Size: 0x48
+             * Size: 0x4c
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -40,12 +40,13 @@ namespace shade {
                 std::uint32_t m_nVertexEmissiveByteOffset; // 0x0010, 0x4 bytes
                 float m_fEmissiveFactor; // 0x0014, 0x4 bytes
                 matrix3x4_t m_mWorldFromLocal; // 0x0018, 0x30 bytes
+                Color m_vTintColorSRGB; // 0x0048, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(RTProxyInstanceInfo_t) == 0x48, "RTProxyInstanceInfo_t size mismatch");
+            static_assert(sizeof(RTProxyInstanceInfo_t) == 0x4C, "RTProxyInstanceInfo_t size mismatch");
         }
     }
 }

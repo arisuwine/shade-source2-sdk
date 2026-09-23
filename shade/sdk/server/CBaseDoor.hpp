@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x978
+             * Size: 0xa58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,55 +33,46 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseDoor : public shade::sdk::server::CBaseToggle {
             public:
-                std::uint8_t pad_07f0[0x10]; // 0x07f0, 0x10 bytes
-                QAngle m_angMoveEntitySpace; // 0x0800, 0xc bytes
-                Vector m_vecMoveDirParentSpace; // 0x080c, 0xc bytes
-                shade::sdk::server::locksound_t m_ls; // 0x0818, 0x20 bytes
-                bool m_bForceClosed; // 0x0838, 0x1 bytes
-                bool m_bDoorGroup; // 0x0839, 0x1 bytes
-                bool m_bLocked; // 0x083a, 0x1 bytes
-                bool m_bIgnoreDebris; // 0x083b, 0x1 bytes
-                bool m_bNoNPCs; // 0x083c, 0x1 bytes
-                std::uint8_t pad_083d[0x3]; // 0x083d, 0x3 bytes
-                shade::sdk::server::FuncDoorSpawnPos_t m_eSpawnPosition; // 0x0840, 0x4 bytes
-                float m_flBlockDamage; // 0x0844, 0x4 bytes
-                CGameSoundEventName m_NoiseMoving; // 0x0848, 0x8 bytes
-                CGameSoundEventName m_NoiseArrived; // 0x0850, 0x8 bytes
-                CGameSoundEventName m_NoiseMovingClosed; // 0x0858, 0x8 bytes
-                CGameSoundEventName m_NoiseArrivedClosed; // 0x0860, 0x8 bytes
-                CUtlSymbolLarge m_ChainTarget; // 0x0868, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBlockedClosing; // 0x0870, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBlockedOpening; // 0x0888, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUnblockedClosing; // 0x08a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUnblockedOpening; // 0x08b8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x08d0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x08e8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnClose; // 0x0900, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOpen; // 0x0918, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLockedUse; // 0x0930, 0x18 bytes
-                bool m_bLoopMoveSound; // 0x0948, 0x1 bytes
-                std::uint8_t pad_0949[0x1f]; // 0x0949, 0x1f bytes
-                bool m_bCreateNavObstacle; // 0x0968, 0x1 bytes
-                std::uint8_t pad_0969[0x3]; // 0x0969, 0x3 bytes
-                float m_flSpeed; // 0x096c, 0x4 bytes
-                bool m_isChaining; // 0x0970, 0x1 bytes
-                bool m_bIsUsable; // 0x0971, 0x1 bytes
-                std::uint8_t pad_0972[0x6]; // 0x0972, 0x6 bytes
+                std::uint8_t pad_08d0[0x10]; // 0x08d0, 0x10 bytes
+                QAngle m_angMoveEntitySpace; // 0x08e0, 0xc bytes
+                Vector m_vecMoveDirParentSpace; // 0x08ec, 0xc bytes
+                shade::sdk::server::locksound_t m_ls; // 0x08f8, 0x20 bytes
+                bool m_bForceClosed; // 0x0918, 0x1 bytes
+                bool m_bDoorGroup; // 0x0919, 0x1 bytes
+                bool m_bLocked; // 0x091a, 0x1 bytes
+                bool m_bIgnoreDebris; // 0x091b, 0x1 bytes
+                bool m_bNoNPCs; // 0x091c, 0x1 bytes
+                std::uint8_t pad_091d[0x3]; // 0x091d, 0x3 bytes
+                shade::sdk::server::FuncDoorSpawnPos_t m_eSpawnPosition; // 0x0920, 0x4 bytes
+                float m_flBlockDamage; // 0x0924, 0x4 bytes
+                CGameSoundEventName m_NoiseMoving; // 0x0928, 0x8 bytes
+                CGameSoundEventName m_NoiseArrived; // 0x0930, 0x8 bytes
+                CGameSoundEventName m_NoiseMovingClosed; // 0x0938, 0x8 bytes
+                CGameSoundEventName m_NoiseArrivedClosed; // 0x0940, 0x8 bytes
+                CUtlSymbolLarge m_ChainTarget; // 0x0948, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBlockedClosing; // 0x0950, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBlockedOpening; // 0x0968, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUnblockedClosing; // 0x0980, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUnblockedOpening; // 0x0998, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x09b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x09c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnClose; // 0x09e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOpen; // 0x09f8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLockedUse; // 0x0a10, 0x18 bytes
+                bool m_bLoopMoveSound; // 0x0a28, 0x1 bytes
+                std::uint8_t pad_0a29[0x1f]; // 0x0a29, 0x1f bytes
+                bool m_bCreateNavObstacle; // 0x0a48, 0x1 bytes
+                std::uint8_t pad_0a49[0x3]; // 0x0a49, 0x3 bytes
+                float m_flSpeed; // 0x0a4c, 0x4 bytes
+                bool m_isChaining; // 0x0a50, 0x1 bytes
+                bool m_bIsUsable; // 0x0a51, 0x1 bytes
+                std::uint8_t pad_0a52[0x6]; // 0x0a52, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputOpen; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClose; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputLock; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUnlock; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetToggleState; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetNoNPCs; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseDoor) == 0x978, "CBaseDoor size mismatch");
+            static_assert(sizeof(CBaseDoor) == 0xA58, "CBaseDoor size mismatch");
         }
     }
 }

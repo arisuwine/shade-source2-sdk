@@ -26,7 +26,6 @@ namespace shade {
              * Has VTable
              * Abstract Class
              * Construct Allowed
-             * Construct Disallowed
              */
             #pragma pack(push, 1)
             class INavPathCost {

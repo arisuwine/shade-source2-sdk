@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15d0
+             * Size: 0x1608
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,18 +35,16 @@ namespace shade {
                 std::uint32_t m_nOldTotalShootPositionHistoryCount; // 0x00d4, 0x4 bytes
                 std::uint8_t pad_00d8[0x298]; // 0x00d8, 0x298 bytes
                 std::uint32_t m_nOldTotalInputHistoryCount; // 0x0370, 0x4 bytes
-                std::uint8_t pad_0374[0x1214]; // 0x0374, 0x1214 bytes
-                C_NetworkUtlVectorBase<std::uint8_t> m_networkAnimTiming; // 0x1588, 0x18 bytes
-                bool m_bBlockInspectUntilNextGraphUpdate; // 0x15a0, 0x1 bytes
-                std::uint8_t pad_15a1[0x2f]; // 0x15a1, 0x2f bytes
+                std::uint8_t pad_0374[0x124c]; // 0x0374, 0x124c bytes
+                C_NetworkUtlVectorBase<std::uint8_t> m_networkAnimTiming; // 0x15c0, 0x18 bytes
+                bool m_bBlockInspectUntilNextGraphUpdate; // 0x15d8, 0x1 bytes
+                std::uint8_t pad_15d9[0x2f]; // 0x15d9, 0x2f bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSPlayer_WeaponServices) == 0x15D0, "CCSPlayer_WeaponServices size mismatch");
+            static_assert(sizeof(CCSPlayer_WeaponServices) == 0x1608, "CCSPlayer_WeaponServices size mismatch");
         }
     }
 }

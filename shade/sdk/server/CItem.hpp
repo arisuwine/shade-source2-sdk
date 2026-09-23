@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa00
+             * Size: 0xae0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,23 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem : public shade::sdk::server::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0960[0x8]; // 0x0960, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerTouch; // 0x0968, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerPickup; // 0x0980, 0x18 bytes
-                bool m_bActivateWhenAtRest; // 0x0998, 0x1 bytes
-                std::uint8_t pad_0999[0x7]; // 0x0999, 0x7 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnCacheInteraction; // 0x09a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnGlovePulled; // 0x09b8, 0x18 bytes
-                VectorWS m_vOriginalSpawnOrigin; // 0x09d0, 0xc bytes
-                QAngle m_vOriginalSpawnAngles; // 0x09dc, 0xc bytes
-                bool m_bPhysStartAsleep; // 0x09e8, 0x1 bytes
-                std::uint8_t pad_09e9[0x17]; // 0x09e9, 0x17 bytes
+                std::uint8_t pad_0a40[0x8]; // 0x0a40, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerTouch; // 0x0a48, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerPickup; // 0x0a60, 0x18 bytes
+                bool m_bActivateWhenAtRest; // 0x0a78, 0x1 bytes
+                std::uint8_t pad_0a79[0x7]; // 0x0a79, 0x7 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnCacheInteraction; // 0x0a80, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnGlovePulled; // 0x0a98, 0x18 bytes
+                VectorWS m_vOriginalSpawnOrigin; // 0x0ab0, 0xc bytes
+                QAngle m_vOriginalSpawnAngles; // 0x0abc, 0xc bytes
+                bool m_bPhysStartAsleep; // 0x0ac8, 0x1 bytes
+                std::uint8_t pad_0ac9[0x17]; // 0x0ac9, 0x17 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem) == 0xA00, "CItem size mismatch");
+            static_assert(sizeof(CItem) == 0xAE0, "CItem size mismatch");
         }
     }
 }

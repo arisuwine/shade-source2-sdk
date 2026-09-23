@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x6c0
+             * Size: 0x6e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,22 +42,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderBlobs : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_cubeWidth; // 0x0228, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_cutoffRadius; // 0x0398, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_renderRadius; // 0x0508, 0x170 bytes
-                std::uint32_t m_nVertexCountKb; // 0x0678, 0x4 bytes
-                std::uint32_t m_nIndexCountKb; // 0x067c, 0x4 bytes
-                std::int32_t m_nScaleCP; // 0x0680, 0x4 bytes
-                std::uint8_t pad_0684[0x4]; // 0x0684, 0x4 bytes
-                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x0688, 0x18 bytes
-                std::uint8_t pad_06a0[0x18]; // 0x06a0, 0x18 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x06b8, 0x8 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_cubeWidth; // 0x0230, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_cutoffRadius; // 0x03a8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_renderRadius; // 0x0520, 0x178 bytes
+                std::uint32_t m_nVertexCountKb; // 0x0698, 0x4 bytes
+                std::uint32_t m_nIndexCountKb; // 0x069c, 0x4 bytes
+                std::int32_t m_nScaleCP; // 0x06a0, 0x4 bytes
+                std::uint8_t pad_06a4[0x4]; // 0x06a4, 0x4 bytes
+                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x06a8, 0x18 bytes
+                std::uint8_t pad_06c0[0x18]; // 0x06c0, 0x18 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x06d8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderBlobs) == 0x6C0, "C_OP_RenderBlobs size mismatch");
+            static_assert(sizeof(C_OP_RenderBlobs) == 0x6E0, "C_OP_RenderBlobs size mismatch");
         }
     }
 }

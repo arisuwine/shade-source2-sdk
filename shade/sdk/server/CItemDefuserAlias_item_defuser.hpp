@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa20
+             * Size: 0xb00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CItemDefuserAlias_item_defuser) == 0xA20, "CItemDefuserAlias_item_defuser size mismatch");
+            static_assert(sizeof(CItemDefuserAlias_item_defuser) == 0xB00, "CItemDefuserAlias_item_defuser size mismatch");
         }
     }
 }

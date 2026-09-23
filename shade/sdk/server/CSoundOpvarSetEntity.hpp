@@ -44,16 +44,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::uint64_t InputSetEventGuid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetStackName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetOperatorName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetOpvarName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetOpvarIndex; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOpvar; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputChangeOpvarValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputChangeOpvarValueAndSet; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CSoundOpvarSetEntity) == 0x500, "CSoundOpvarSetEntity size mismatch");
         }

@@ -43,7 +43,8 @@ namespace shade {
             struct VPhysXAggregateData_t {
                 std::uint16_t m_nFlags; // 0x0000, 0x2 bytes
                 std::uint16_t m_nRefCounter; // 0x0002, 0x2 bytes
-                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
+                bool m_bCompoundsPacked; // 0x0004, 0x1 bytes
+                std::uint8_t pad_0005[0x3]; // 0x0005, 0x3 bytes
                 CUtlVector<std::uint32_t> m_bonesHash; // 0x0008, 0x18 bytes
                 CUtlVector<CUtlString> m_boneNames; // 0x0020, 0x18 bytes
                 CUtlVector<std::uint16_t> m_indexNames; // 0x0038, 0x18 bytes

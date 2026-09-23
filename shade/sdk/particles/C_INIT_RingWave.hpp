@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xdd0
+             * Size: 0xe18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +32,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RingWave : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e0, 0x68 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flParticlesPerOrbit; // 0x0248, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialRadius; // 0x03b8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flThickness; // 0x0528, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMin; // 0x0698, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMax; // 0x0808, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRoll; // 0x0978, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flPitch; // 0x0ae8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flYaw; // 0x0c58, 0x170 bytes
-                bool m_bEvenDistribution; // 0x0dc8, 0x1 bytes
-                bool m_bXYVelocityOnly; // 0x0dc9, 0x1 bytes
-                std::uint8_t pad_0dca[0x6]; // 0x0dca, 0x6 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e8, 0x68 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flParticlesPerOrbit; // 0x0250, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialRadius; // 0x03c8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flThickness; // 0x0540, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMin; // 0x06b8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMax; // 0x0830, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRoll; // 0x09a8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flPitch; // 0x0b20, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flYaw; // 0x0c98, 0x178 bytes
+                bool m_bEvenDistribution; // 0x0e10, 0x1 bytes
+                bool m_bXYVelocityOnly; // 0x0e11, 0x1 bytes
+                std::uint8_t pad_0e12[0x6]; // 0x0e12, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RingWave) == 0xDD0, "C_INIT_RingWave size mismatch");
+            static_assert(sizeof(C_INIT_RingWave) == 0xE18, "C_INIT_RingWave size mismatch");
         }
     }
 }

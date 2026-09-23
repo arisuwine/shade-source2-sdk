@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x178
+             * Size: 0x188
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -50,16 +50,16 @@ namespace shade {
                 CUtlString s_last_task_end_location; // 0x0038, 0x8 bytes
                 CUtlVector<CGlobalSymbol> conditions; // 0x0040, 0x18 bytes
                 CUtlVector<CGlobalSymbol> anim_events; // 0x0058, 0x18 bytes
-                shade::sdk::client::AI_BaseNPCAnimGraph_DebugSnapshotData_t animgraph; // 0x0070, 0x40 bytes
-                shade::sdk::client::AI_Navigator_DebugSnapshotData_t navigator; // 0x00b0, 0x50 bytes
-                shade::sdk::client::AI_MotorServices_DebugSnapshotData_t motorServices; // 0x0100, 0x30 bytes
-                shade::sdk::client::AI_FacingServices_DebugSnapshotData_t facingServices; // 0x0130, 0x48 bytes
+                shade::sdk::client::AI_BaseNPCAnimGraph_DebugSnapshotData_t animgraph; // 0x0070, 0x48 bytes
+                shade::sdk::client::AI_Navigator_DebugSnapshotData_t navigator; // 0x00b8, 0x50 bytes
+                shade::sdk::client::AI_MotorServices_DebugSnapshotData_t motorServices; // 0x0108, 0x38 bytes
+                shade::sdk::client::AI_FacingServices_DebugSnapshotData_t facingServices; // 0x0140, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_BaseNPC_DebugSnapshotData_t) == 0x178, "AI_BaseNPC_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_BaseNPC_DebugSnapshotData_t) == 0x188, "AI_BaseNPC_DebugSnapshotData_t size mismatch");
         }
     }
 }

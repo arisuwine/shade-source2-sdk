@@ -30,10 +30,10 @@ namespace shade {
             class CNmClipNode__CDefinition : public shade::sdk::animlib::CNmClipReferenceNode__CDefinition {
             public:
                 std::int16_t m_nPlayInReverseValueNodeIdx; // 0x0010, 0x2 bytes
-                std::int16_t m_nResetTimeValueNodeIdx; // 0x0012, 0x2 bytes
-                bool m_bSampleRootMotion; // 0x0014, 0x1 bytes
-                bool m_bAllowLooping; // 0x0015, 0x1 bytes
-                std::int16_t m_nDataSlotIdx; // 0x0016, 0x2 bytes
+                bool m_bSampleRootMotion; // 0x0012, 0x1 bytes
+                bool m_bAllowLooping; // 0x0013, 0x1 bytes
+                std::int16_t m_nDataSlotIdx; // 0x0014, 0x2 bytes
+                std::int16_t m_nResetTimeValueNodeIdx; // 0x0016, 0x2 bytes
                 CUtlVectorFixedGrowable<CGlobalSymbol, 2> m_graphEvents; // 0x0018, 0x28 bytes
                 float m_flSpeedMultiplier; // 0x0040, 0x4 bytes
                 std::int32_t m_nStartSyncEventOffset; // 0x0044, 0x4 bytes

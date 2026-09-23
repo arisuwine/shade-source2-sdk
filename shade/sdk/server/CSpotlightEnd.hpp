@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CSpotlightEnd : public shade::sdk::server::CBaseModelEntity {
             public:
-                float m_flLightScale; // 0x0770, 0x4 bytes
-                float m_Radius; // 0x0774, 0x4 bytes
-                Vector m_vSpotlightDir; // 0x0778, 0xc bytes
-                VectorWS m_vSpotlightOrg; // 0x0784, 0xc bytes
+                float m_flLightScale; // 0x0850, 0x4 bytes
+                float m_Radius; // 0x0854, 0x4 bytes
+                Vector m_vSpotlightDir; // 0x0858, 0xc bytes
+                VectorWS m_vSpotlightOrg; // 0x0864, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSpotlightEnd) == 0x790, "CSpotlightEnd size mismatch");
+            static_assert(sizeof(CSpotlightEnd) == 0x870, "CSpotlightEnd size mismatch");
         }
     }
 }

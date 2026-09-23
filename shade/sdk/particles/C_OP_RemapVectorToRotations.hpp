@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xf48
+             * Size: 0xf90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapVectorToRotations : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vecInput; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecRotation; // 0x0890, 0x6b8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecInput; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecRotation; // 0x08b8, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapVectorToRotations) == 0xF48, "C_OP_RemapVectorToRotations size mismatch");
+            static_assert(sizeof(C_OP_RemapVectorToRotations) == 0xF90, "C_OP_RemapVectorToRotations size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x378
+             * Size: 0x388
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_PositionWarpScalar : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                Vector m_vecWarpMin; // 0x01e0, 0xc bytes
-                Vector m_vecWarpMax; // 0x01ec, 0xc bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_InputValue; // 0x01f8, 0x170 bytes
-                float m_flPrevPosScale; // 0x0368, 0x4 bytes
-                std::int32_t m_nScaleControlPointNumber; // 0x036c, 0x4 bytes
-                std::int32_t m_nControlPointNumber; // 0x0370, 0x4 bytes
-                std::uint8_t pad_0374[0x4]; // 0x0374, 0x4 bytes
+                Vector m_vecWarpMin; // 0x01e8, 0xc bytes
+                Vector m_vecWarpMax; // 0x01f4, 0xc bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_InputValue; // 0x0200, 0x178 bytes
+                float m_flPrevPosScale; // 0x0378, 0x4 bytes
+                std::int32_t m_nScaleControlPointNumber; // 0x037c, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x0380, 0x4 bytes
+                std::uint8_t pad_0384[0x4]; // 0x0384, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_PositionWarpScalar) == 0x378, "C_INIT_PositionWarpScalar size mismatch");
+            static_assert(sizeof(C_INIT_PositionWarpScalar) == 0x388, "C_INIT_PositionWarpScalar size mismatch");
         }
     }
 }

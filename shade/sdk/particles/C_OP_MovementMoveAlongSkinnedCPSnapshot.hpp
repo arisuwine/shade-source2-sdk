@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MovementMoveAlongSkinnedCPSnapshot : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01d8, 0x4 bytes
-                std::int32_t m_nSnapshotControlPointNumber; // 0x01dc, 0x4 bytes
-                bool m_bSetNormal; // 0x01e0, 0x1 bytes
-                bool m_bSetRadius; // 0x01e1, 0x1 bytes
-                std::uint8_t pad_01e2[0x6]; // 0x01e2, 0x6 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flTValue; // 0x0358, 0x170 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
+                std::int32_t m_nSnapshotControlPointNumber; // 0x01e4, 0x4 bytes
+                bool m_bSetNormal; // 0x01e8, 0x1 bytes
+                bool m_bSetRadius; // 0x01e9, 0x1 bytes
+                std::uint8_t pad_01ea[0x6]; // 0x01ea, 0x6 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flTValue; // 0x0368, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MovementMoveAlongSkinnedCPSnapshot) == 0x4C8, "C_OP_MovementMoveAlongSkinnedCPSnapshot size mismatch");
+            static_assert(sizeof(C_OP_MovementMoveAlongSkinnedCPSnapshot) == 0x4E0, "C_OP_MovementMoveAlongSkinnedCPSnapshot size mismatch");
         }
     }
 }

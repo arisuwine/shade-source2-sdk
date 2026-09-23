@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa88
+             * Size: 0xac0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateOnGrid : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nXCount; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nYCount; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nZCount; // 0x04c0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nXSpacing; // 0x0630, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nYSpacing; // 0x07a0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nZSpacing; // 0x0910, 0x170 bytes
-                std::int32_t m_nControlPointNumber; // 0x0a80, 0x4 bytes
-                bool m_bLocalSpace; // 0x0a84, 0x1 bytes
-                bool m_bCenter; // 0x0a85, 0x1 bytes
-                bool m_bHollow; // 0x0a86, 0x1 bytes
-                std::uint8_t pad_0a87[0x1]; // 0x0a87, 0x1 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nXCount; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nYCount; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nZCount; // 0x04d8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nXSpacing; // 0x0650, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nYSpacing; // 0x07c8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nZSpacing; // 0x0940, 0x178 bytes
+                std::int32_t m_nControlPointNumber; // 0x0ab8, 0x4 bytes
+                bool m_bLocalSpace; // 0x0abc, 0x1 bytes
+                bool m_bCenter; // 0x0abd, 0x1 bytes
+                bool m_bHollow; // 0x0abe, 0x1 bytes
+                std::uint8_t pad_0abf[0x1]; // 0x0abf, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateOnGrid) == 0xA88, "C_INIT_CreateOnGrid size mismatch");
+            static_assert(sizeof(C_INIT_CreateOnGrid) == 0xAC0, "C_INIT_CreateOnGrid size mismatch");
         }
     }
 }

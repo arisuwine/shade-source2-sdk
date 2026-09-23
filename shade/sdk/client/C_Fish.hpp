@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1270
+             * Size: 0x1358
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,37 +31,37 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Fish : public shade::sdk::client::CBaseAnimGraph {
             public:
-                VectorWS m_pos; // 0x1180, 0xc bytes
-                Vector m_vel; // 0x118c, 0xc bytes
-                QAngle m_angles; // 0x1198, 0xc bytes
-                std::int32_t m_localLifeState; // 0x11a4, 0x4 bytes
-                float m_deathDepth; // 0x11a8, 0x4 bytes
-                float m_deathAngle; // 0x11ac, 0x4 bytes
-                float m_buoyancy; // 0x11b0, 0x4 bytes
-                std::uint8_t pad_11b4[0x4]; // 0x11b4, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_wiggleTimer; // 0x11b8, 0x18 bytes
-                float m_wigglePhase; // 0x11d0, 0x4 bytes
-                float m_wiggleRate; // 0x11d4, 0x4 bytes
-                VectorWS m_actualPos; // 0x11d8, 0xc bytes
-                QAngle m_actualAngles; // 0x11e4, 0xc bytes
-                VectorWS m_poolOrigin; // 0x11f0, 0xc bytes
-                float m_waterLevel; // 0x11fc, 0x4 bytes
-                bool m_gotUpdate; // 0x1200, 0x1 bytes
-                std::uint8_t pad_1201[0x3]; // 0x1201, 0x3 bytes
-                float m_x; // 0x1204, 0x4 bytes
-                float m_y; // 0x1208, 0x4 bytes
-                float m_z; // 0x120c, 0x4 bytes
-                float m_angle; // 0x1210, 0x4 bytes
-                float m_errorHistory[0x14]; // 0x1214, 0x50 bytes
-                std::int32_t m_errorHistoryIndex; // 0x1264, 0x4 bytes
-                std::int32_t m_errorHistoryCount; // 0x1268, 0x4 bytes
-                float m_averageError; // 0x126c, 0x4 bytes
+                VectorWS m_pos; // 0x1268, 0xc bytes
+                Vector m_vel; // 0x1274, 0xc bytes
+                QAngle m_angles; // 0x1280, 0xc bytes
+                std::int32_t m_localLifeState; // 0x128c, 0x4 bytes
+                float m_deathDepth; // 0x1290, 0x4 bytes
+                float m_deathAngle; // 0x1294, 0x4 bytes
+                float m_buoyancy; // 0x1298, 0x4 bytes
+                std::uint8_t pad_129c[0x4]; // 0x129c, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_wiggleTimer; // 0x12a0, 0x18 bytes
+                float m_wigglePhase; // 0x12b8, 0x4 bytes
+                float m_wiggleRate; // 0x12bc, 0x4 bytes
+                VectorWS m_actualPos; // 0x12c0, 0xc bytes
+                QAngle m_actualAngles; // 0x12cc, 0xc bytes
+                VectorWS m_poolOrigin; // 0x12d8, 0xc bytes
+                float m_waterLevel; // 0x12e4, 0x4 bytes
+                bool m_gotUpdate; // 0x12e8, 0x1 bytes
+                std::uint8_t pad_12e9[0x3]; // 0x12e9, 0x3 bytes
+                float m_x; // 0x12ec, 0x4 bytes
+                float m_y; // 0x12f0, 0x4 bytes
+                float m_z; // 0x12f4, 0x4 bytes
+                float m_angle; // 0x12f8, 0x4 bytes
+                float m_errorHistory[0x14]; // 0x12fc, 0x50 bytes
+                std::int32_t m_errorHistoryIndex; // 0x134c, 0x4 bytes
+                std::int32_t m_errorHistoryCount; // 0x1350, 0x4 bytes
+                float m_averageError; // 0x1354, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Fish) == 0x1270, "C_Fish size mismatch");
+            static_assert(sizeof(C_Fish) == 0x1358, "C_Fish size mismatch");
         }
     }
 }

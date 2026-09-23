@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x12d8
+             * Size: 0x13c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,44 +44,42 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Hostage : public shade::sdk::client::C_BaseCombatCharacter {
             public:
-                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x1208, 0x18 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_leader; // 0x1220, 0x4 bytes
-                std::uint8_t pad_1224[0x4]; // 0x1224, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_reuseTimer; // 0x1228, 0x18 bytes
-                Vector m_vel; // 0x1240, 0xc bytes
-                bool m_isRescued; // 0x124c, 0x1 bytes
-                bool m_jumpedThisFrame; // 0x124d, 0x1 bytes
-                std::uint8_t pad_124e[0x2]; // 0x124e, 0x2 bytes
-                std::int32_t m_nHostageState; // 0x1250, 0x4 bytes
-                bool m_bHandsHaveBeenCut; // 0x1254, 0x1 bytes
-                std::uint8_t pad_1255[0x3]; // 0x1255, 0x3 bytes
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hHostageGrabber; // 0x1258, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastGrabTime; // 0x125c, 0x4 bytes
-                VectorWS m_vecGrabbedPos; // 0x1260, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flRescueStartTime; // 0x126c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGrabSuccessTime; // 0x1270, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDropStartTime; // 0x1274, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDeadOrRescuedTime; // 0x1278, 0x4 bytes
-                std::uint8_t pad_127c[0x4]; // 0x127c, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_blinkTimer; // 0x1280, 0x18 bytes
-                VectorWS m_lookAt; // 0x1298, 0xc bytes
-                std::uint8_t pad_12a4[0x4]; // 0x12a4, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_lookAroundTimer; // 0x12a8, 0x18 bytes
-                bool m_isInit; // 0x12c0, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_eyeAttachment; // 0x12c1, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_chestAttachment; // 0x12c2, 0x1 bytes
-                std::uint8_t pad_12c3[0x5]; // 0x12c3, 0x5 bytes
-                shade::sdk::client::CBasePlayerController *m_pPredictionOwner; // 0x12c8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_fNewestAlphaThinkTime; // 0x12d0, 0x4 bytes
-                std::uint8_t pad_12d4[0x4]; // 0x12d4, 0x4 bytes
+                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x12f0, 0x18 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_leader; // 0x1308, 0x4 bytes
+                std::uint8_t pad_130c[0x4]; // 0x130c, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_reuseTimer; // 0x1310, 0x18 bytes
+                Vector m_vel; // 0x1328, 0xc bytes
+                bool m_isRescued; // 0x1334, 0x1 bytes
+                bool m_jumpedThisFrame; // 0x1335, 0x1 bytes
+                std::uint8_t pad_1336[0x2]; // 0x1336, 0x2 bytes
+                std::int32_t m_nHostageState; // 0x1338, 0x4 bytes
+                bool m_bHandsHaveBeenCut; // 0x133c, 0x1 bytes
+                std::uint8_t pad_133d[0x3]; // 0x133d, 0x3 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hHostageGrabber; // 0x1340, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastGrabTime; // 0x1344, 0x4 bytes
+                VectorWS m_vecGrabbedPos; // 0x1348, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flRescueStartTime; // 0x1354, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGrabSuccessTime; // 0x1358, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDropStartTime; // 0x135c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDeadOrRescuedTime; // 0x1360, 0x4 bytes
+                std::uint8_t pad_1364[0x4]; // 0x1364, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_blinkTimer; // 0x1368, 0x18 bytes
+                VectorWS m_lookAt; // 0x1380, 0xc bytes
+                std::uint8_t pad_138c[0x4]; // 0x138c, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_lookAroundTimer; // 0x1390, 0x18 bytes
+                bool m_isInit; // 0x13a8, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_eyeAttachment; // 0x13a9, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_chestAttachment; // 0x13aa, 0x1 bytes
+                std::uint8_t pad_13ab[0x5]; // 0x13ab, 0x5 bytes
+                shade::sdk::client::CBasePlayerController *m_pPredictionOwner; // 0x13b0, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_fNewestAlphaThinkTime; // 0x13b8, 0x4 bytes
+                std::uint8_t pad_13bc[0x4]; // 0x13bc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Hostage) == 0x12D8, "C_Hostage size mismatch");
+            static_assert(sizeof(C_Hostage) == 0x13C0, "C_Hostage size mismatch");
         }
     }
 }

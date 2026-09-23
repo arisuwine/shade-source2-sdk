@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d20
+             * Size: 0x1f50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_WeaponCZ75a : public shade::sdk::client::C_CSWeaponBaseGun {
             public:
-                bool m_bMagazineRemoved; // 0x1d10, 0x1 bytes
-                std::uint8_t pad_1d11[0xf]; // 0x1d11, 0xf bytes
+                bool m_bMagazineRemoved; // 0x1f40, 0x1 bytes
+                std::uint8_t pad_1f41[0xf]; // 0x1f41, 0xf bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_WeaponCZ75a) == 0x1D20, "C_WeaponCZ75a size mismatch");
+            static_assert(sizeof(C_WeaponCZ75a) == 0x1F50, "C_WeaponCZ75a size mismatch");
         }
     }
 }

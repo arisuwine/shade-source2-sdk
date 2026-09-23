@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1290
+             * Size: 0x1378
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DecoyProjectile : public shade::sdk::client::C_BaseCSGrenadeProjectile {
             public:
-                std::int32_t m_nDecoyShotTick; // 0x1260, 0x4 bytes
-                std::int32_t m_nClientLastKnownDecoyShotTick; // 0x1264, 0x4 bytes
-                std::uint8_t pad_1268[0x20]; // 0x1268, 0x20 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeParticleEffectSpawn; // 0x1288, 0x4 bytes
-                std::uint8_t pad_128c[0x4]; // 0x128c, 0x4 bytes
+                std::int32_t m_nDecoyShotTick; // 0x1348, 0x4 bytes
+                std::int32_t m_nClientLastKnownDecoyShotTick; // 0x134c, 0x4 bytes
+                std::uint8_t pad_1350[0x20]; // 0x1350, 0x20 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeParticleEffectSpawn; // 0x1370, 0x4 bytes
+                std::uint8_t pad_1374[0x4]; // 0x1374, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DecoyProjectile) == 0x1290, "C_DecoyProjectile size mismatch");
+            static_assert(sizeof(C_DecoyProjectile) == 0x1378, "C_DecoyProjectile size mismatch");
         }
     }
 }

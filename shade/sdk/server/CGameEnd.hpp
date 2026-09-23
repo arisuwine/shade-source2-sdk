@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x860
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,10 +34,10 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputGameEnd; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CGameEnd) == 0x780, "CGameEnd size mismatch");
+            static_assert(sizeof(CGameEnd) == 0x860, "CGameEnd size mismatch");
         }
     }
 }

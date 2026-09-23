@@ -22,6 +22,7 @@
 namespace shade {
     namespace sdk {
         namespace server {
+            struct ActorClipEntry_t;
             struct ActorMapping_t;
             class CBaseEntity;
             class CBaseModelEntity;
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7f0
+             * Size: 0x800
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -72,7 +73,8 @@ namespace shade {
                 float m_flCurrentTime; // 0x0530, 0x4 bytes
                 float m_flFrameTime; // 0x0534, 0x4 bytes
                 bool m_bCancelAtNextInterrupt; // 0x0538, 0x1 bytes
-                std::uint8_t pad_0539[0x3]; // 0x0539, 0x3 bytes
+                bool m_bRemoveOnCompletion; // 0x0539, 0x1 bytes
+                std::uint8_t pad_053a[0x2]; // 0x053a, 0x2 bytes
                 float m_fPitch; // 0x053c, 0x4 bytes
                 bool m_bAutomated; // 0x0540, 0x1 bytes
                 std::uint8_t pad_0541[0x3]; // 0x0541, 0x3 bytes
@@ -99,45 +101,37 @@ namespace shade {
                 shade::sdk::entity2::CEntityIOOutput m_OnPaused; // 0x0610, 0x18 bytes
                 shade::sdk::entity2::CEntityIOOutput m_OnResumed; // 0x0628, 0x18 bytes
                 shade::sdk::entity2::CEntityIOOutput m_OnPulseRequirement; // 0x0640, 0x18 bytes
-                std::uint8_t pad_0658[0xf0]; // 0x0658, 0xf0 bytes
-                CUtlVector<shade::sdk::server::ActorMapping_t> m_ActorMap; // 0x0748, 0x18 bytes
-                std::uint8_t pad_0760[0x28]; // 0x0760, 0x28 bytes
+                std::uint8_t pad_0658[0x78]; // 0x0658, 0x78 bytes
+                CUtlDict<CUtlSymbolLarge> m_TargetNameMap; // 0x06d0, 0x28 bytes
+                CUtlDict<CUtlSymbolLarge> m_AnchorNameMap; // 0x06f8, 0x28 bytes
+                CUtlDict<CUtlSymbolLarge> m_ActorGraphMap; // 0x0720, 0x28 bytes
+                CUtlDict<shade::sdk::server::ActorClipEntry_t> m_ActorClipMap; // 0x0748, 0x28 bytes
+                CUtlVector<shade::sdk::server::ActorMapping_t> m_ActorMap; // 0x0770, 0x18 bytes
                 CHandle<shade::sdk::server::CSceneEntity> m_hInterruptScene; // 0x0788, 0x4 bytes
                 std::int32_t m_nInterruptCount; // 0x078c, 0x4 bytes
-                bool m_bSceneMissing; // 0x0790, 0x1 bytes
-                bool m_bInterrupted; // 0x0791, 0x1 bytes
-                bool m_bCompletedEarly; // 0x0792, 0x1 bytes
-                bool m_bInterruptSceneFinished; // 0x0793, 0x1 bytes
-                bool m_bRestoring; // 0x0794, 0x1 bytes
-                std::uint8_t pad_0795[0x3]; // 0x0795, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::server::CSceneEntity>> m_hNotifySceneCompletion; // 0x0798, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CSceneListManager>> m_hListManagers; // 0x07b0, 0x18 bytes
-                CUtlSymbolLarge m_iszSoundName; // 0x07c8, 0x8 bytes
-                CUtlSymbolLarge m_iszSequenceName; // 0x07d0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseModelEntity> m_hActor; // 0x07d8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hActivator; // 0x07dc, 0x4 bytes
-                std::int32_t m_BusyActor; // 0x07e0, 0x4 bytes
-                shade::sdk::server::SceneOnPlayerDeath_t m_iPlayerDeathBehavior; // 0x07e4, 0x4 bytes
-                std::uint8_t pad_07e8[0x8]; // 0x07e8, 0x8 bytes
+                CUtlString m_responseConcept; // 0x0790, 0x8 bytes
+                CUtlString m_responseCriteria; // 0x0798, 0x8 bytes
+                bool m_bSceneMissing; // 0x07a0, 0x1 bytes
+                bool m_bInterrupted; // 0x07a1, 0x1 bytes
+                bool m_bCompletedEarly; // 0x07a2, 0x1 bytes
+                bool m_bInterruptSceneFinished; // 0x07a3, 0x1 bytes
+                bool m_bRestoring; // 0x07a4, 0x1 bytes
+                std::uint8_t pad_07a5[0x3]; // 0x07a5, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CSceneEntity>> m_hNotifySceneCompletion; // 0x07a8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CSceneListManager>> m_hListManagers; // 0x07c0, 0x18 bytes
+                CUtlSymbolLarge m_iszSoundName; // 0x07d8, 0x8 bytes
+                CUtlSymbolLarge m_iszSequenceName; // 0x07e0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseModelEntity> m_hActor; // 0x07e8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hActivator; // 0x07ec, 0x4 bytes
+                std::int32_t m_BusyActor; // 0x07f0, 0x4 bytes
+                shade::sdk::server::SceneOnPlayerDeath_t m_iPlayerDeathBehavior; // 0x07f4, 0x4 bytes
+                std::uint8_t pad_07f8[0x8]; // 0x07f8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartPlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPausePlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputResumePlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputCancelPlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputCancelAtNextInterrupt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputPitchShiftPlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputInterjectResponse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopWaitingForActor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTarget1; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTarget2; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputScriptPlayerDeath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPauseAtNextInterrupt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSceneEntity) == 0x7F0, "CSceneEntity size mismatch");
+            static_assert(sizeof(CSceneEntity) == 0x800, "CSceneEntity size mismatch");
         }
     }
 }

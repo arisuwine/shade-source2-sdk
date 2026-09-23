@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa60
+             * Size: 0xb40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,32 +39,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseCSGrenadeProjectile : public shade::sdk::server::CBaseGrenade {
             public:
-                VectorWS m_vInitialPosition; // 0x09f0, 0xc bytes
-                Vector m_vInitialVelocity; // 0x09fc, 0xc bytes
-                std::int32_t m_nBounces; // 0x0a08, 0x4 bytes
-                std::uint8_t pad_0a0c[0x4]; // 0x0a0c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nExplodeEffectIndex; // 0x0a10, 0x8 bytes
-                std::int32_t m_nExplodeEffectTickBegin; // 0x0a18, 0x4 bytes
-                VectorWS m_vecExplodeEffectOrigin; // 0x0a1c, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x0a28, 0x4 bytes
-                std::uint8_t m_unOGSExtraFlags; // 0x0a2c, 0x1 bytes
-                bool m_bDetonationRecorded; // 0x0a2d, 0x1 bytes
-                std::uint16_t m_nItemIndex; // 0x0a2e, 0x2 bytes
-                VectorWS m_vecOriginalSpawnLocation; // 0x0a30, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastBounceSoundTime; // 0x0a3c, 0x4 bytes
-                RotationVector m_vecGrenadeSpin; // 0x0a40, 0xc bytes
-                Vector m_vecLastHitSurfaceNormal; // 0x0a4c, 0xc bytes
-                std::int32_t m_nTicksAtZeroVelocity; // 0x0a58, 0x4 bytes
-                bool m_bHasEverHitEnemy; // 0x0a5c, 0x1 bytes
-                std::uint8_t pad_0a5d[0x3]; // 0x0a5d, 0x3 bytes
+                VectorWS m_vInitialPosition; // 0x0ad0, 0xc bytes
+                Vector m_vInitialVelocity; // 0x0adc, 0xc bytes
+                std::int32_t m_nBounces; // 0x0ae8, 0x4 bytes
+                std::uint8_t pad_0aec[0x4]; // 0x0aec, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nExplodeEffectIndex; // 0x0af0, 0x8 bytes
+                std::int32_t m_nExplodeEffectTickBegin; // 0x0af8, 0x4 bytes
+                VectorWS m_vecExplodeEffectOrigin; // 0x0afc, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x0b08, 0x4 bytes
+                std::uint8_t m_unOGSExtraFlags; // 0x0b0c, 0x1 bytes
+                bool m_bDetonationRecorded; // 0x0b0d, 0x1 bytes
+                std::uint16_t m_nItemIndex; // 0x0b0e, 0x2 bytes
+                VectorWS m_vecOriginalSpawnLocation; // 0x0b10, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastBounceSoundTime; // 0x0b1c, 0x4 bytes
+                RotationVector m_vecGrenadeSpin; // 0x0b20, 0xc bytes
+                Vector m_vecLastHitSurfaceNormal; // 0x0b2c, 0xc bytes
+                std::int32_t m_nTicksAtZeroVelocity; // 0x0b38, 0x4 bytes
+                bool m_bHasEverHitEnemy; // 0x0b3c, 0x1 bytes
+                std::uint8_t pad_0b3d[0x3]; // 0x0b3d, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseCSGrenadeProjectile) == 0xA60, "CBaseCSGrenadeProjectile size mismatch");
+            static_assert(sizeof(CBaseCSGrenadeProjectile) == 0xB40, "CBaseCSGrenadeProjectile size mismatch");
         }
     }
 }

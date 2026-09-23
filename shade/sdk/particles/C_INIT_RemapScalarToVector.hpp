@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x228
+             * Size: 0x230
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,26 +31,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RemapScalarToVector : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldInput; // 0x01e0, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e4, 0x4 bytes
-                float m_flInputMin; // 0x01e8, 0x4 bytes
-                float m_flInputMax; // 0x01ec, 0x4 bytes
-                Vector m_vecOutputMin; // 0x01f0, 0xc bytes
-                Vector m_vecOutputMax; // 0x01fc, 0xc bytes
-                float m_flStartTime; // 0x0208, 0x4 bytes
-                float m_flEndTime; // 0x020c, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0210, 0x4 bytes
-                std::int32_t m_nControlPointNumber; // 0x0214, 0x4 bytes
-                bool m_bLocalCoords; // 0x0218, 0x1 bytes
-                std::uint8_t pad_0219[0x3]; // 0x0219, 0x3 bytes
-                float m_flRemapBias; // 0x021c, 0x4 bytes
-                std::uint8_t pad_0220[0x8]; // 0x0220, 0x8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldInput; // 0x01e8, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01ec, 0x4 bytes
+                float m_flInputMin; // 0x01f0, 0x4 bytes
+                float m_flInputMax; // 0x01f4, 0x4 bytes
+                Vector m_vecOutputMin; // 0x01f8, 0xc bytes
+                Vector m_vecOutputMax; // 0x0204, 0xc bytes
+                float m_flStartTime; // 0x0210, 0x4 bytes
+                float m_flEndTime; // 0x0214, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0218, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x021c, 0x4 bytes
+                bool m_bLocalCoords; // 0x0220, 0x1 bytes
+                std::uint8_t pad_0221[0x3]; // 0x0221, 0x3 bytes
+                float m_flRemapBias; // 0x0224, 0x4 bytes
+                std::uint8_t pad_0228[0x8]; // 0x0228, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RemapScalarToVector) == 0x228, "C_INIT_RemapScalarToVector size mismatch");
+            static_assert(sizeof(C_INIT_RemapScalarToVector) == 0x230, "C_INIT_RemapScalarToVector size mismatch");
         }
     }
 }

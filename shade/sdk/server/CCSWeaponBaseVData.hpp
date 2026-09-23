@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -65,82 +65,81 @@ namespace shade {
                 bool m_bCannotShootUnderwater; // 0x071f, 0x1 bytes
                 CGlobalSymbol m_szName; // 0x0720, 0x8 bytes
                 shade::sdk::client::CSWeaponSilencerType m_eSilencerType; // 0x0728, 0x4 bytes
-                std::int32_t m_nCrosshairMinDistance; // 0x072c, 0x4 bytes
-                std::int32_t m_nCrosshairDeltaDistance; // 0x0730, 0x4 bytes
-                bool m_bIsFullAuto; // 0x0734, 0x1 bytes
+                bool m_bShowCrosshair; // 0x072c, 0x1 bytes
+                bool m_bIsFullAuto; // 0x072d, 0x1 bytes
+                std::uint8_t pad_072e[0x2]; // 0x072e, 0x2 bytes
+                std::int32_t m_nNumBullets; // 0x0730, 0x4 bytes
+                bool m_bReloadsSingleShells; // 0x0734, 0x1 bytes
                 std::uint8_t pad_0735[0x3]; // 0x0735, 0x3 bytes
-                std::int32_t m_nNumBullets; // 0x0738, 0x4 bytes
-                bool m_bReloadsSingleShells; // 0x073c, 0x1 bytes
-                std::uint8_t pad_073d[0x3]; // 0x073d, 0x3 bytes
-                shade::sdk::client::CFiringModeFloat m_flCycleTime; // 0x0740, 0x8 bytes
-                float m_flCycleTimeWhenInBurstMode; // 0x0748, 0x4 bytes
-                float m_flTimeBetweenBurstShots; // 0x074c, 0x4 bytes
-                shade::sdk::client::CFiringModeFloat m_flMaxSpeed; // 0x0750, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flSpread; // 0x0758, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flInaccuracyCrouch; // 0x0760, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flInaccuracyStand; // 0x0768, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flInaccuracyJump; // 0x0770, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flInaccuracyLand; // 0x0778, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flInaccuracyLadder; // 0x0780, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flInaccuracyFire; // 0x0788, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flInaccuracyMove; // 0x0790, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flRecoilAngle; // 0x0798, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flRecoilAngleVariance; // 0x07a0, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flRecoilMagnitude; // 0x07a8, 0x8 bytes
-                shade::sdk::client::CFiringModeFloat m_flRecoilMagnitudeVariance; // 0x07b0, 0x8 bytes
-                shade::sdk::client::CFiringModeInt m_nTracerFrequency; // 0x07b8, 0x8 bytes
-                float m_flInaccuracyJumpInitial; // 0x07c0, 0x4 bytes
-                float m_flInaccuracyJumpApex; // 0x07c4, 0x4 bytes
-                float m_flInaccuracyReload; // 0x07c8, 0x4 bytes
-                float m_flDeployDuration; // 0x07cc, 0x4 bytes
-                float m_flDisallowAttackAfterReloadStartDuration; // 0x07d0, 0x4 bytes
-                std::int32_t m_nBurstShotCount; // 0x07d4, 0x4 bytes
-                bool m_bAllowBurstHolster; // 0x07d8, 0x1 bytes
-                std::uint8_t pad_07d9[0x3]; // 0x07d9, 0x3 bytes
-                std::int32_t m_nRecoilSeed; // 0x07dc, 0x4 bytes
-                std::int32_t m_nSpreadSeed; // 0x07e0, 0x4 bytes
-                float m_flAttackMovespeedFactor; // 0x07e4, 0x4 bytes
-                float m_flInaccuracyPitchShift; // 0x07e8, 0x4 bytes
-                float m_flInaccuracyAltSoundThreshold; // 0x07ec, 0x4 bytes
-                CUtlString m_szUseRadioSubtitle; // 0x07f0, 0x8 bytes
-                bool m_bUnzoomsAfterShot; // 0x07f8, 0x1 bytes
-                bool m_bHideViewModelWhenZoomed; // 0x07f9, 0x1 bytes
-                std::uint8_t pad_07fa[0x2]; // 0x07fa, 0x2 bytes
-                std::int32_t m_nZoomLevels; // 0x07fc, 0x4 bytes
-                std::int32_t m_nZoomFOV1; // 0x0800, 0x4 bytes
-                std::int32_t m_nZoomFOV2; // 0x0804, 0x4 bytes
-                float m_flZoomTime0; // 0x0808, 0x4 bytes
-                float m_flZoomTime1; // 0x080c, 0x4 bytes
-                float m_flZoomTime2; // 0x0810, 0x4 bytes
-                float m_flIronSightPullUpSpeed; // 0x0814, 0x4 bytes
-                float m_flIronSightPutDownSpeed; // 0x0818, 0x4 bytes
-                float m_flIronSightFOV; // 0x081c, 0x4 bytes
-                float m_flIronSightPivotForward; // 0x0820, 0x4 bytes
-                float m_flIronSightLooseness; // 0x0824, 0x4 bytes
-                std::int32_t m_nDamage; // 0x0828, 0x4 bytes
-                float m_flHeadshotMultiplier; // 0x082c, 0x4 bytes
-                float m_flArmorRatio; // 0x0830, 0x4 bytes
-                float m_flPenetration; // 0x0834, 0x4 bytes
-                float m_flRange; // 0x0838, 0x4 bytes
-                float m_flRangeModifier; // 0x083c, 0x4 bytes
-                float m_flFlinchVelocityModifierLarge; // 0x0840, 0x4 bytes
-                float m_flFlinchVelocityModifierSmall; // 0x0844, 0x4 bytes
-                float m_flRecoveryTimeCrouch; // 0x0848, 0x4 bytes
-                float m_flRecoveryTimeStand; // 0x084c, 0x4 bytes
-                float m_flRecoveryTimeCrouchFinal; // 0x0850, 0x4 bytes
-                float m_flRecoveryTimeStandFinal; // 0x0854, 0x4 bytes
-                std::int32_t m_nRecoveryTransitionStartBullet; // 0x0858, 0x4 bytes
-                std::int32_t m_nRecoveryTransitionEndBullet; // 0x085c, 0x4 bytes
-                float m_flThrowVelocity; // 0x0860, 0x4 bytes
-                Vector m_vSmokeColor; // 0x0864, 0xc bytes
-                CGlobalSymbol m_szAnimClass; // 0x0870, 0x8 bytes
-                std::uint8_t pad_0878[0x30]; // 0x0878, 0x30 bytes
+                shade::sdk::client::CFiringModeFloat m_flCycleTime; // 0x0738, 0x8 bytes
+                float m_flCycleTimeWhenInBurstMode; // 0x0740, 0x4 bytes
+                float m_flTimeBetweenBurstShots; // 0x0744, 0x4 bytes
+                shade::sdk::client::CFiringModeFloat m_flMaxSpeed; // 0x0748, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flSpread; // 0x0750, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flInaccuracyCrouch; // 0x0758, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flInaccuracyStand; // 0x0760, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flInaccuracyJump; // 0x0768, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flInaccuracyLand; // 0x0770, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flInaccuracyLadder; // 0x0778, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flInaccuracyFire; // 0x0780, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flInaccuracyMove; // 0x0788, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flRecoilAngle; // 0x0790, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flRecoilAngleVariance; // 0x0798, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flRecoilMagnitude; // 0x07a0, 0x8 bytes
+                shade::sdk::client::CFiringModeFloat m_flRecoilMagnitudeVariance; // 0x07a8, 0x8 bytes
+                shade::sdk::client::CFiringModeInt m_nTracerFrequency; // 0x07b0, 0x8 bytes
+                float m_flInaccuracyJumpInitial; // 0x07b8, 0x4 bytes
+                float m_flInaccuracyJumpApex; // 0x07bc, 0x4 bytes
+                float m_flInaccuracyReload; // 0x07c0, 0x4 bytes
+                float m_flDeployDuration; // 0x07c4, 0x4 bytes
+                float m_flDisallowAttackAfterReloadStartDuration; // 0x07c8, 0x4 bytes
+                std::int32_t m_nBurstShotCount; // 0x07cc, 0x4 bytes
+                bool m_bAllowBurstHolster; // 0x07d0, 0x1 bytes
+                std::uint8_t pad_07d1[0x3]; // 0x07d1, 0x3 bytes
+                std::int32_t m_nRecoilSeed; // 0x07d4, 0x4 bytes
+                std::int32_t m_nSpreadSeed; // 0x07d8, 0x4 bytes
+                float m_flAttackMovespeedFactor; // 0x07dc, 0x4 bytes
+                float m_flInaccuracyPitchShift; // 0x07e0, 0x4 bytes
+                float m_flInaccuracyAltSoundThreshold; // 0x07e4, 0x4 bytes
+                CUtlString m_szUseRadioSubtitle; // 0x07e8, 0x8 bytes
+                bool m_bUnzoomsAfterShot; // 0x07f0, 0x1 bytes
+                bool m_bHideViewModelWhenZoomed; // 0x07f1, 0x1 bytes
+                std::uint8_t pad_07f2[0x2]; // 0x07f2, 0x2 bytes
+                std::int32_t m_nZoomLevels; // 0x07f4, 0x4 bytes
+                std::int32_t m_nZoomFOV1; // 0x07f8, 0x4 bytes
+                std::int32_t m_nZoomFOV2; // 0x07fc, 0x4 bytes
+                float m_flZoomTime0; // 0x0800, 0x4 bytes
+                float m_flZoomTime1; // 0x0804, 0x4 bytes
+                float m_flZoomTime2; // 0x0808, 0x4 bytes
+                float m_flIronSightPullUpSpeed; // 0x080c, 0x4 bytes
+                float m_flIronSightPutDownSpeed; // 0x0810, 0x4 bytes
+                float m_flIronSightFOV; // 0x0814, 0x4 bytes
+                float m_flIronSightPivotForward; // 0x0818, 0x4 bytes
+                float m_flIronSightLooseness; // 0x081c, 0x4 bytes
+                std::int32_t m_nDamage; // 0x0820, 0x4 bytes
+                float m_flHeadshotMultiplier; // 0x0824, 0x4 bytes
+                float m_flArmorRatio; // 0x0828, 0x4 bytes
+                float m_flPenetration; // 0x082c, 0x4 bytes
+                float m_flRange; // 0x0830, 0x4 bytes
+                float m_flRangeModifier; // 0x0834, 0x4 bytes
+                float m_flFlinchVelocityModifierLarge; // 0x0838, 0x4 bytes
+                float m_flFlinchVelocityModifierSmall; // 0x083c, 0x4 bytes
+                float m_flRecoveryTimeCrouch; // 0x0840, 0x4 bytes
+                float m_flRecoveryTimeStand; // 0x0844, 0x4 bytes
+                float m_flRecoveryTimeCrouchFinal; // 0x0848, 0x4 bytes
+                float m_flRecoveryTimeStandFinal; // 0x084c, 0x4 bytes
+                std::int32_t m_nRecoveryTransitionStartBullet; // 0x0850, 0x4 bytes
+                std::int32_t m_nRecoveryTransitionEndBullet; // 0x0854, 0x4 bytes
+                float m_flThrowVelocity; // 0x0858, 0x4 bytes
+                Vector m_vSmokeColor; // 0x085c, 0xc bytes
+                CGlobalSymbol m_szAnimClass; // 0x0868, 0x8 bytes
+                std::uint8_t pad_0870[0x30]; // 0x0870, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSWeaponBaseVData) == 0x8A8, "CCSWeaponBaseVData size mismatch");
+            static_assert(sizeof(CCSWeaponBaseVData) == 0x8A0, "CCSWeaponBaseVData size mismatch");
         }
     }
 }

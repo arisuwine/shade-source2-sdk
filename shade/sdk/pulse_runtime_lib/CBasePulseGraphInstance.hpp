@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x110
+             * Size: 0x88
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -28,13 +28,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CBasePulseGraphInstance {
             public:
-                std::uint8_t pad_0000[0x110]; // 0x0000, 0x110 bytes
+                std::uint8_t pad_0000[0x88]; // 0x0000, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBasePulseGraphInstance) == 0x110, "CBasePulseGraphInstance size mismatch");
+            static_assert(sizeof(CBasePulseGraphInstance) == 0x88, "CBasePulseGraphInstance size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2cc0
+             * Size: 0x2da0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CHostageAlias_info_hostage_spawn) == 0x2CC0, "CHostageAlias_info_hostage_spawn size mismatch");
+            static_assert(sizeof(CHostageAlias_info_hostage_spawn) == 0x2DA0, "CHostageAlias_info_hostage_spawn size mismatch");
         }
     }
 }

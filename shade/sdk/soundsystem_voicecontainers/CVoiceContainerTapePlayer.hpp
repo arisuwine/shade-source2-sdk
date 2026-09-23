@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xc0
+             * Size: 0xd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,13 +42,13 @@ namespace shade {
                 CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVoiceContainerBase> m_sourceAudio; // 0x0088, 0x8 bytes
                 float m_flTapeSpeedAttackTime; // 0x0090, 0x4 bytes
                 float m_flTapeSpeedReleaseTime; // 0x0094, 0x4 bytes
-                std::uint8_t pad_0098[0x28]; // 0x0098, 0x28 bytes
+                std::uint8_t pad_0098[0x38]; // 0x0098, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerTapePlayer) == 0xC0, "CVoiceContainerTapePlayer size mismatch");
+            static_assert(sizeof(CVoiceContainerTapePlayer) == 0xD0, "CVoiceContainerTapePlayer size mismatch");
         }
     }
 }

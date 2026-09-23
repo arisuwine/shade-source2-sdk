@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x640
+             * Size: 0x650
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -40,20 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathMover : public shade::sdk::server::CPathWithDynamicNodes {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CFuncMover>> m_vecMovers; // 0x05f0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CPathMoverEntitySpawner>> m_vecSpawners; // 0x0608, 0x18 bytes
-                CUtlSymbolLarge m_iszMoverSpawnerName; // 0x0620, 0x8 bytes
-                CHandle<shade::sdk::server::CFuncMoverRouter> m_hMoverRouter; // 0x0628, 0x4 bytes
-                std::uint8_t pad_062c[0x4]; // 0x062c, 0x4 bytes
-                CUtlSymbolLarge m_iszMoverRouterName; // 0x0630, 0x8 bytes
-                float m_flSampleSpacing; // 0x0638, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CFuncMover>> m_vecMovers; // 0x0600, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CPathMoverEntitySpawner>> m_vecSpawners; // 0x0618, 0x18 bytes
+                CUtlSymbolLarge m_iszMoverSpawnerName; // 0x0630, 0x8 bytes
+                CHandle<shade::sdk::server::CFuncMoverRouter> m_hMoverRouter; // 0x0638, 0x4 bytes
                 std::uint8_t pad_063c[0x4]; // 0x063c, 0x4 bytes
+                CUtlSymbolLarge m_iszMoverRouterName; // 0x0640, 0x8 bytes
+                float m_flSampleSpacing; // 0x0648, 0x4 bytes
+                std::uint8_t pad_064c[0x4]; // 0x064c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * bool m_bIgnoreParentRotation; // Offset: 0x5f4, Size: 0x1, Size In Bytes: 0x1
+             */
 
-            static_assert(sizeof(CPathMover) == 0x640, "CPathMover size mismatch");
+            static_assert(sizeof(CPathMover) == 0x650, "CPathMover size mismatch");
         }
     }
 }

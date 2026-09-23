@@ -27,7 +27,10 @@ namespace shade {
                 WALKING = 0x6,
                 TEAM_INTRO = 0x7,
                 WINGMAN_INTRO = 0x8,
-                BANNER = 0x9
+                RUSH_INTRO = 0x9,
+                BANNER = 0xa,
+                CHICK_SNAPSHOT = 0xb,
+                CHICK_VIEWMODEL = 0xc
             };
         }
     }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x470
+             * Size: 0x5b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -65,17 +65,17 @@ namespace shade {
                 shade::sdk::client::CAttributeList m_NetworkedDynamicAttributes; // 0x0280, 0x78 bytes
                 char m_szCustomName[0xa1]; // 0x02f8, 0xa1 bytes
                 char m_szCustomNameOverride[0xa1]; // 0x0399, 0xa1 bytes
-                std::uint8_t pad_043a[0x2e]; // 0x043a, 0x2e bytes
-                bool m_bInitializedTags; // 0x0468, 0x1 bytes
-                std::uint8_t pad_0469[0x7]; // 0x0469, 0x7 bytes
+                char m_szCustomNameOverride2[0xa1]; // 0x043a, 0xa1 bytes
+                char m_szCustomNameOverride3[0xa1]; // 0x04db, 0xa1 bytes
+                std::uint8_t pad_057c[0x2c]; // 0x057c, 0x2c bytes
+                bool m_bInitializedTags; // 0x05a8, 0x1 bytes
+                std::uint8_t pad_05a9[0x7]; // 0x05a9, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_EconItemView) == 0x470, "C_EconItemView size mismatch");
+            static_assert(sizeof(C_EconItemView) == 0x5B0, "C_EconItemView size mismatch");
         }
     }
 }

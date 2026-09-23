@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0xe8
+             * Size: 0xf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -52,13 +52,15 @@ namespace shade {
                 std::uint8_t pad_008f[0x1]; // 0x008f, 0x1 bytes
                 CUtlString m_BodygroupOnOtherModels; // 0x0090, 0x8 bytes
                 CUtlString m_MaterialGroupOnOtherModels; // 0x0098, 0x8 bytes
-                std::uint8_t pad_00a0[0x48]; // 0x00a0, 0x48 bytes
+                bool m_bCollideWithHierarchy; // 0x00a0, 0x1 bytes
+                bool m_bCollideOutsideHierarchy; // 0x00a1, 0x1 bytes
+                std::uint8_t pad_00a2[0x4e]; // 0x00a2, 0x4e bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModelConfigElement_AttachedModel) == 0xE8, "CModelConfigElement_AttachedModel size mismatch");
+            static_assert(sizeof(CModelConfigElement_AttachedModel) == 0xF0, "CModelConfigElement_AttachedModel size mismatch");
         }
     }
 }

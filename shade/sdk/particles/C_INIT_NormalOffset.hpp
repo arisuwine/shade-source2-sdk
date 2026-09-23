@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_NormalOffset : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                Vector m_OffsetMin; // 0x01e0, 0xc bytes
-                Vector m_OffsetMax; // 0x01ec, 0xc bytes
-                std::int32_t m_nControlPointNumber; // 0x01f8, 0x4 bytes
-                bool m_bLocalCoords; // 0x01fc, 0x1 bytes
-                bool m_bNormalize; // 0x01fd, 0x1 bytes
-                std::uint8_t pad_01fe[0x2]; // 0x01fe, 0x2 bytes
+                Vector m_OffsetMin; // 0x01e8, 0xc bytes
+                Vector m_OffsetMax; // 0x01f4, 0xc bytes
+                std::int32_t m_nControlPointNumber; // 0x0200, 0x4 bytes
+                bool m_bLocalCoords; // 0x0204, 0x1 bytes
+                bool m_bNormalize; // 0x0205, 0x1 bytes
+                std::uint8_t pad_0206[0x2]; // 0x0206, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_NormalOffset) == 0x200, "C_INIT_NormalOffset size mismatch");
+            static_assert(sizeof(C_INIT_NormalOffset) == 0x208, "C_INIT_NormalOffset size mismatch");
         }
     }
 }

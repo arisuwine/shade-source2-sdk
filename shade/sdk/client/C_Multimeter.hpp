@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1188
+             * Size: 0x1270
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Multimeter : public shade::sdk::client::CBaseAnimGraph {
             public:
-                CHandle<shade::sdk::client::C_PlantedC4> m_hTargetC4; // 0x1180, 0x4 bytes
-                std::uint8_t pad_1184[0x4]; // 0x1184, 0x4 bytes
+                CHandle<shade::sdk::client::C_PlantedC4> m_hTargetC4; // 0x1268, 0x4 bytes
+                std::uint8_t pad_126c[0x4]; // 0x126c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Multimeter) == 0x1188, "C_Multimeter size mismatch");
+            static_assert(sizeof(C_Multimeter) == 0x1270, "C_Multimeter size mismatch");
         }
     }
 }

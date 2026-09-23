@@ -19,26 +19,23 @@ namespace shade {
     namespace sdk {
         namespace worldrenderer {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x30
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct NodeData_t {
-                std::int32_t m_nParent; // 0x0000, 0x4 bytes
-                Vector m_vOrigin; // 0x0004, 0xc bytes
-                Vector m_vMinBounds; // 0x0010, 0xc bytes
-                Vector m_vMaxBounds; // 0x001c, 0xc bytes
-                float m_flMinimumDistance; // 0x0028, 0x4 bytes
-                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
-                CUtlVector<std::int32_t> m_ChildNodeIndices; // 0x0030, 0x18 bytes
-                CUtlString m_worldNodePrefix; // 0x0048, 0x8 bytes
+                Vector m_vOrigin; // 0x0000, 0xc bytes
+                Vector m_vMinBounds; // 0x000c, 0xc bytes
+                Vector m_vMaxBounds; // 0x0018, 0xc bytes
+                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
+                CUtlString m_worldNodePrefix; // 0x0028, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(NodeData_t) == 0x50, "NodeData_t size mismatch");
+            static_assert(sizeof(NodeData_t) == 0x30, "NodeData_t size mismatch");
         }
     }
 }

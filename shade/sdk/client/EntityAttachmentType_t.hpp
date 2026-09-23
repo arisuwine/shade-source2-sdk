@@ -20,7 +20,8 @@ namespace shade {
                 eAbsOrigin = 0x0,
                 eCenter = 0x1,
                 eEyes = 0x2,
-                eAttachment = 0x3
+                eAttachment = 0x3,
+                eLocalOffset = 0x4
             };
         }
     }

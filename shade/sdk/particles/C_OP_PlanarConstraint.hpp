@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_PlanarConstraint : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                Vector m_PointOnPlane; // 0x01d8, 0xc bytes
-                Vector m_PlaneNormal; // 0x01e4, 0xc bytes
-                std::int32_t m_nControlPointNumber; // 0x01f0, 0x4 bytes
-                bool m_bGlobalOrigin; // 0x01f4, 0x1 bytes
-                bool m_bGlobalNormal; // 0x01f5, 0x1 bytes
-                std::uint8_t pad_01f6[0x2]; // 0x01f6, 0x2 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x01f8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaximumDistanceToCP; // 0x0368, 0x170 bytes
-                bool m_bUseOldCode; // 0x04d8, 0x1 bytes
-                std::uint8_t pad_04d9[0x7]; // 0x04d9, 0x7 bytes
+                Vector m_PointOnPlane; // 0x01e0, 0xc bytes
+                Vector m_PlaneNormal; // 0x01ec, 0xc bytes
+                std::int32_t m_nControlPointNumber; // 0x01f8, 0x4 bytes
+                bool m_bGlobalOrigin; // 0x01fc, 0x1 bytes
+                bool m_bGlobalNormal; // 0x01fd, 0x1 bytes
+                std::uint8_t pad_01fe[0x2]; // 0x01fe, 0x2 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x0200, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaximumDistanceToCP; // 0x0378, 0x178 bytes
+                bool m_bUseOldCode; // 0x04f0, 0x1 bytes
+                std::uint8_t pad_04f1[0x7]; // 0x04f1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_PlanarConstraint) == 0x4E0, "C_OP_PlanarConstraint size mismatch");
+            static_assert(sizeof(C_OP_PlanarConstraint) == 0x4F8, "C_OP_PlanarConstraint size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,21 +29,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapSpeedtoCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nInControlPointNumber; // 0x01e0, 0x4 bytes
-                std::int32_t m_nOutControlPointNumber; // 0x01e4, 0x4 bytes
-                std::int32_t m_nField; // 0x01e8, 0x4 bytes
-                float m_flInputMin; // 0x01ec, 0x4 bytes
-                float m_flInputMax; // 0x01f0, 0x4 bytes
-                float m_flOutputMin; // 0x01f4, 0x4 bytes
-                float m_flOutputMax; // 0x01f8, 0x4 bytes
-                bool m_bUseDeltaV; // 0x01fc, 0x1 bytes
-                std::uint8_t pad_01fd[0x3]; // 0x01fd, 0x3 bytes
+                std::int32_t m_nInControlPointNumber; // 0x01e8, 0x4 bytes
+                std::int32_t m_nOutControlPointNumber; // 0x01ec, 0x4 bytes
+                std::int32_t m_nField; // 0x01f0, 0x4 bytes
+                float m_flInputMin; // 0x01f4, 0x4 bytes
+                float m_flInputMax; // 0x01f8, 0x4 bytes
+                float m_flOutputMin; // 0x01fc, 0x4 bytes
+                float m_flOutputMax; // 0x0200, 0x4 bytes
+                bool m_bUseDeltaV; // 0x0204, 0x1 bytes
+                std::uint8_t pad_0205[0x3]; // 0x0205, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapSpeedtoCP) == 0x200, "C_OP_RemapSpeedtoCP size mismatch");
+            static_assert(sizeof(C_OP_RemapSpeedtoCP) == 0x208, "C_OP_RemapSpeedtoCP size mismatch");
         }
     }
 }

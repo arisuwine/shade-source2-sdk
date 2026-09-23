@@ -17,14 +17,14 @@
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
 #include "shade/sdk/particles/MissingParentInheritBehavior_t.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x638
+             * Size: 0x658
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_InheritFromParentParticlesV2 : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flScale; // 0x01d8, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0348, 0x4 bytes
-                std::uint8_t pad_034c[0x4]; // 0x034c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_nIncrement; // 0x0350, 0x170 bytes
-                bool m_bSubSample; // 0x04c0, 0x1 bytes
-                bool m_bRandomDistribution; // 0x04c1, 0x1 bytes
-                bool m_bReverse; // 0x04c2, 0x1 bytes
-                std::uint8_t pad_04c3[0x1]; // 0x04c3, 0x1 bytes
-                shade::sdk::particles::MissingParentInheritBehavior_t m_nMissingParentBehavior; // 0x04c4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x04c8, 0x170 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flScale; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0358, 0x4 bytes
+                std::uint8_t pad_035c[0x4]; // 0x035c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_nIncrement; // 0x0360, 0x178 bytes
+                bool m_bSubSample; // 0x04d8, 0x1 bytes
+                bool m_bRandomDistribution; // 0x04d9, 0x1 bytes
+                bool m_bReverse; // 0x04da, 0x1 bytes
+                std::uint8_t pad_04db[0x1]; // 0x04db, 0x1 bytes
+                shade::sdk::particles::MissingParentInheritBehavior_t m_nMissingParentBehavior; // 0x04dc, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x04e0, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_InheritFromParentParticlesV2) == 0x638, "C_OP_InheritFromParentParticlesV2 size mismatch");
+            static_assert(sizeof(C_OP_InheritFromParentParticlesV2) == 0x658, "C_OP_InheritFromParentParticlesV2 size mismatch");
         }
     }
 }

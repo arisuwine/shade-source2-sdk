@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8b0
+             * Size: 0x990
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncTankTrain : public shade::sdk::server::CFuncTrackTrain {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x0898, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x0978, 0x18 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CFuncTankTrain) == 0x8B0, "CFuncTankTrain size mismatch");
+            static_assert(sizeof(CFuncTankTrain) == 0x990, "CFuncTankTrain size mismatch");
         }
     }
 }

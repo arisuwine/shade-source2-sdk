@@ -15,6 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/soundsystem_lowlevel/CVMixDataOffset.hpp"
 #include "shade/sdk/soundsystem_lowlevel/CVMixInputBase.hpp"
 
 namespace shade {
@@ -28,7 +29,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixNameInputMeter : public shade::sdk::soundsystem_lowlevel::CVMixInputBase {
             public:
-                std::int32_t m_nValueIndex; // 0x0010, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_nValueIndex; // 0x0010, 0x4 bytes
                 std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
             };
             #pragma pack(pop)

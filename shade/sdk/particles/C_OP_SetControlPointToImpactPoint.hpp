@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x400
+             * Size: 0x410
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,26 +31,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointToImpactPoint : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCPOut; // 0x01e0, 0x4 bytes
-                std::int32_t m_nCPIn; // 0x01e4, 0x4 bytes
-                float m_flUpdateRate; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTraceLength; // 0x01f0, 0x170 bytes
-                float m_flStartOffset; // 0x0360, 0x4 bytes
-                float m_flOffset; // 0x0364, 0x4 bytes
-                Vector m_vecTraceDir; // 0x0368, 0xc bytes
-                char m_CollisionGroupName[0x80]; // 0x0374, 0x80 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x03f4, 0x4 bytes
-                bool m_bSetToEndpoint; // 0x03f8, 0x1 bytes
-                bool m_bTraceToClosestSurface; // 0x03f9, 0x1 bytes
-                bool m_bIncludeWater; // 0x03fa, 0x1 bytes
-                std::uint8_t pad_03fb[0x5]; // 0x03fb, 0x5 bytes
+                std::int32_t m_nCPOut; // 0x01e8, 0x4 bytes
+                std::int32_t m_nCPIn; // 0x01ec, 0x4 bytes
+                float m_flUpdateRate; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTraceLength; // 0x01f8, 0x178 bytes
+                float m_flStartOffset; // 0x0370, 0x4 bytes
+                float m_flOffset; // 0x0374, 0x4 bytes
+                Vector m_vecTraceDir; // 0x0378, 0xc bytes
+                char m_CollisionGroupName[0x80]; // 0x0384, 0x80 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0404, 0x4 bytes
+                bool m_bSetToEndpoint; // 0x0408, 0x1 bytes
+                bool m_bTraceToClosestSurface; // 0x0409, 0x1 bytes
+                bool m_bIncludeWater; // 0x040a, 0x1 bytes
+                std::uint8_t pad_040b[0x5]; // 0x040b, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointToImpactPoint) == 0x400, "C_OP_SetControlPointToImpactPoint size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointToImpactPoint) == 0x410, "C_OP_SetControlPointToImpactPoint size mismatch");
         }
     }
 }

@@ -39,7 +39,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1540
+             * Size: 0x15a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -47,42 +47,42 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderCables : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x0228, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x0398, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0508, 0x6b8 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0bc0, 0x4 bytes
-                std::uint8_t pad_0bc4[0x4]; // 0x0bc4, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x0bc8, 0x8 bytes
-                shade::sdk::particles::TextureRepetitionMode_t m_nTextureRepetitionMode; // 0x0bd0, 0x4 bytes
-                std::uint8_t pad_0bd4[0x4]; // 0x0bd4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTextureRepeatsPerSegment; // 0x0bd8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTextureRepeatsCircumference; // 0x0d48, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flColorMapOffsetV; // 0x0eb8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flColorMapOffsetU; // 0x1028, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flNormalMapOffsetV; // 0x1198, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flNormalMapOffsetU; // 0x1308, 0x170 bytes
-                bool m_bDrawCableCaps; // 0x1478, 0x1 bytes
-                std::uint8_t pad_1479[0x3]; // 0x1479, 0x3 bytes
-                float m_flCapRoundness; // 0x147c, 0x4 bytes
-                float m_flCapOffsetAmount; // 0x1480, 0x4 bytes
-                float m_flTessScale; // 0x1484, 0x4 bytes
-                std::int32_t m_nMinTesselation; // 0x1488, 0x4 bytes
-                std::int32_t m_nMaxTesselation; // 0x148c, 0x4 bytes
-                std::int32_t m_nRoundness; // 0x1490, 0x4 bytes
-                bool m_nForceRoundnessFixed; // 0x1494, 0x1 bytes
-                bool m_bOnlyRenderInEffectsBloomPass; // 0x1495, 0x1 bytes
-                std::uint8_t pad_1496[0x2]; // 0x1496, 0x2 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_LightingTransform; // 0x1498, 0x68 bytes
-                CUtlLeanVector<shade::sdk::particles::FloatInputMaterialVariable_t> m_MaterialFloatVars; // 0x1500, 0x10 bytes
-                std::uint8_t pad_1510[0x10]; // 0x1510, 0x10 bytes
-                CUtlLeanVector<shade::sdk::particles::VecInputMaterialVariable_t> m_MaterialVecVars; // 0x1520, 0x10 bytes
-                std::uint8_t pad_1530[0x10]; // 0x1530, 0x10 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x0230, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x03a8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0520, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0bf8, 0x4 bytes
+                std::uint8_t pad_0bfc[0x4]; // 0x0bfc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x0c00, 0x8 bytes
+                shade::sdk::particles::TextureRepetitionMode_t m_nTextureRepetitionMode; // 0x0c08, 0x4 bytes
+                std::uint8_t pad_0c0c[0x4]; // 0x0c0c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTextureRepeatsPerSegment; // 0x0c10, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTextureRepeatsCircumference; // 0x0d88, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flColorMapOffsetV; // 0x0f00, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flColorMapOffsetU; // 0x1078, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flNormalMapOffsetV; // 0x11f0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flNormalMapOffsetU; // 0x1368, 0x178 bytes
+                bool m_bDrawCableCaps; // 0x14e0, 0x1 bytes
+                std::uint8_t pad_14e1[0x3]; // 0x14e1, 0x3 bytes
+                float m_flCapRoundness; // 0x14e4, 0x4 bytes
+                float m_flCapOffsetAmount; // 0x14e8, 0x4 bytes
+                float m_flTessScale; // 0x14ec, 0x4 bytes
+                std::int32_t m_nMinTesselation; // 0x14f0, 0x4 bytes
+                std::int32_t m_nMaxTesselation; // 0x14f4, 0x4 bytes
+                std::int32_t m_nRoundness; // 0x14f8, 0x4 bytes
+                bool m_nForceRoundnessFixed; // 0x14fc, 0x1 bytes
+                bool m_bOnlyRenderInEffectsBloomPass; // 0x14fd, 0x1 bytes
+                std::uint8_t pad_14fe[0x2]; // 0x14fe, 0x2 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_LightingTransform; // 0x1500, 0x68 bytes
+                CUtlLeanVector<shade::sdk::particles::FloatInputMaterialVariable_t> m_MaterialFloatVars; // 0x1568, 0x10 bytes
+                std::uint8_t pad_1578[0x10]; // 0x1578, 0x10 bytes
+                CUtlLeanVector<shade::sdk::particles::VecInputMaterialVariable_t> m_MaterialVecVars; // 0x1588, 0x10 bytes
+                std::uint8_t pad_1598[0x10]; // 0x1598, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderCables) == 0x1540, "C_OP_RenderCables size mismatch");
+            static_assert(sizeof(C_OP_RenderCables) == 0x15A8, "C_OP_RenderCables size mismatch");
         }
     }
 }

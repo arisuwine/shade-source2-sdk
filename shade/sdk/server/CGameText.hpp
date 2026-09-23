@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameText : public shade::sdk::server::CRulePointEntity {
             public:
-                CUtlSymbolLarge m_iszMessage; // 0x0780, 0x8 bytes
-                shade::sdk::client::hudtextparms_t m_textParms; // 0x0788, 0x14 bytes
-                std::uint8_t pad_079c[0x4]; // 0x079c, 0x4 bytes
+                CUtlSymbolLarge m_iszMessage; // 0x0860, 0x8 bytes
+                shade::sdk::client::hudtextparms_t m_textParms; // 0x0868, 0x14 bytes
+                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputDisplay; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetText; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * Color color; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Color color2; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CGameText) == 0x7A0, "CGameText size mismatch");
+            static_assert(sizeof(CGameText) == 0x880, "CGameText size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xcc0
+             * Size: 0x1468
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -38,15 +38,16 @@ namespace shade {
                 std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
                 CUtlString m_sWeaponName; // 0x04b8, 0x8 bytes
                 std::uint64_t m_xuid; // 0x04c0, 0x8 bytes
-                shade::sdk::server::CEconItemView m_agentItem; // 0x04c8, 0x2a8 bytes
-                shade::sdk::server::CEconItemView m_glovesItem; // 0x0770, 0x2a8 bytes
-                shade::sdk::server::CEconItemView m_weaponItem; // 0x0a18, 0x2a8 bytes
+                shade::sdk::server::CEconItemView m_agentItem; // 0x04c8, 0x3e8 bytes
+                shade::sdk::server::CEconItemView m_glovesItem; // 0x08b0, 0x3e8 bytes
+                shade::sdk::server::CEconItemView m_weaponItem; // 0x0c98, 0x3e8 bytes
+                shade::sdk::server::CEconItemView m_petItem; // 0x1080, 0x3e8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSGO_TeamPreviewCharacterPosition) == 0xCC0, "CCSGO_TeamPreviewCharacterPosition size mismatch");
+            static_assert(sizeof(CCSGO_TeamPreviewCharacterPosition) == 0x1468, "CCSGO_TeamPreviewCharacterPosition size mismatch");
         }
     }
 }

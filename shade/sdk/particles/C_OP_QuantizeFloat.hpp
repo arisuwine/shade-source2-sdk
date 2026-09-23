@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x370
+             * Size: 0x380
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_QuantizeFloat : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_InputValue; // 0x01d8, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x0348, 0x4 bytes
-                std::uint8_t pad_034c[0x24]; // 0x034c, 0x24 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_InputValue; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x0358, 0x4 bytes
+                std::uint8_t pad_035c[0x24]; // 0x035c, 0x24 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_QuantizeFloat) == 0x370, "C_OP_QuantizeFloat size mismatch");
+            static_assert(sizeof(C_OP_QuantizeFloat) == 0x380, "C_OP_QuantizeFloat size mismatch");
         }
     }
 }

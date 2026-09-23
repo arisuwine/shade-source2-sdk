@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x848
+             * Size: 0x928
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,30 +30,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CPlayerSprayDecal : public shade::sdk::server::CModelPointEntity {
             public:
-                std::int32_t m_nUniqueID; // 0x0770, 0x4 bytes
-                std::uint32_t m_unAccountID; // 0x0774, 0x4 bytes
-                std::uint32_t m_unTraceID; // 0x0778, 0x4 bytes
-                std::uint32_t m_rtGcTime; // 0x077c, 0x4 bytes
-                VectorWS m_vecEndPos; // 0x0780, 0xc bytes
-                VectorWS m_vecStart; // 0x078c, 0xc bytes
-                Vector m_vecLeft; // 0x0798, 0xc bytes
-                Vector m_vecNormal; // 0x07a4, 0xc bytes
-                std::int32_t m_nPlayer; // 0x07b0, 0x4 bytes
-                std::int32_t m_nEntity; // 0x07b4, 0x4 bytes
-                std::int32_t m_nHitbox; // 0x07b8, 0x4 bytes
-                float m_flCreationTime; // 0x07bc, 0x4 bytes
-                std::int32_t m_nTintID; // 0x07c0, 0x4 bytes
-                std::uint8_t m_nVersion; // 0x07c4, 0x1 bytes
-                std::uint8_t m_ubSignature[0x80]; // 0x07c5, 0x80 bytes
-                std::uint8_t pad_0845[0x3]; // 0x0845, 0x3 bytes
+                std::int32_t m_nUniqueID; // 0x0850, 0x4 bytes
+                std::uint32_t m_unAccountID; // 0x0854, 0x4 bytes
+                std::uint32_t m_unTraceID; // 0x0858, 0x4 bytes
+                std::uint32_t m_rtGcTime; // 0x085c, 0x4 bytes
+                VectorWS m_vecEndPos; // 0x0860, 0xc bytes
+                VectorWS m_vecStart; // 0x086c, 0xc bytes
+                Vector m_vecLeft; // 0x0878, 0xc bytes
+                Vector m_vecNormal; // 0x0884, 0xc bytes
+                std::int32_t m_nPlayer; // 0x0890, 0x4 bytes
+                std::int32_t m_nEntity; // 0x0894, 0x4 bytes
+                std::int32_t m_nHitbox; // 0x0898, 0x4 bytes
+                float m_flCreationTime; // 0x089c, 0x4 bytes
+                std::int32_t m_nTintID; // 0x08a0, 0x4 bytes
+                std::uint8_t m_nVersion; // 0x08a4, 0x1 bytes
+                std::uint8_t m_ubSignature[0x80]; // 0x08a5, 0x80 bytes
+                std::uint8_t pad_0925[0x3]; // 0x0925, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPlayerSprayDecal) == 0x848, "CPlayerSprayDecal size mismatch");
+            static_assert(sizeof(CPlayerSprayDecal) == 0x928, "CPlayerSprayDecal size mismatch");
         }
     }
 }

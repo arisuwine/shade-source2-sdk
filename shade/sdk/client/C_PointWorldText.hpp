@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1288
+             * Size: 0x1370
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,42 +33,35 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PointWorldText : public shade::sdk::client::C_ModelPointEntity {
             public:
-                std::uint8_t pad_0fb0[0x8]; // 0x0fb0, 0x8 bytes
-                bool m_bForceRecreateNextUpdate; // 0x0fb8, 0x1 bytes
-                std::uint8_t pad_0fb9[0x17]; // 0x0fb9, 0x17 bytes
-                std::int32_t m_nTextWidthPx; // 0x0fd0, 0x4 bytes
-                std::int32_t m_nTextHeightPx; // 0x0fd4, 0x4 bytes
-                char m_messageText[0x200]; // 0x0fd8, 0x200 bytes
-                char m_FontName[0x40]; // 0x11d8, 0x40 bytes
-                char m_BackgroundMaterialName[0x40]; // 0x1218, 0x40 bytes
-                bool m_bEnabled; // 0x1258, 0x1 bytes
-                bool m_bFullbright; // 0x1259, 0x1 bytes
-                std::uint8_t pad_125a[0x2]; // 0x125a, 0x2 bytes
-                float m_flWorldUnitsPerPx; // 0x125c, 0x4 bytes
-                float m_flFontSize; // 0x1260, 0x4 bytes
-                float m_flDepthOffset; // 0x1264, 0x4 bytes
-                bool m_bDrawBackground; // 0x1268, 0x1 bytes
-                std::uint8_t pad_1269[0x3]; // 0x1269, 0x3 bytes
-                float m_flBackgroundBorderWidth; // 0x126c, 0x4 bytes
-                float m_flBackgroundBorderHeight; // 0x1270, 0x4 bytes
-                float m_flBackgroundWorldToUV; // 0x1274, 0x4 bytes
-                Color m_Color; // 0x1278, 0x4 bytes
-                shade::sdk::client::PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x127c, 0x4 bytes
-                shade::sdk::client::PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x1280, 0x4 bytes
-                shade::sdk::client::PointWorldTextReorientMode_t m_nReorientMode; // 0x1284, 0x4 bytes
+                std::uint8_t pad_1098[0x8]; // 0x1098, 0x8 bytes
+                bool m_bForceRecreateNextUpdate; // 0x10a0, 0x1 bytes
+                std::uint8_t pad_10a1[0x17]; // 0x10a1, 0x17 bytes
+                std::int32_t m_nTextWidthPx; // 0x10b8, 0x4 bytes
+                std::int32_t m_nTextHeightPx; // 0x10bc, 0x4 bytes
+                char m_messageText[0x200]; // 0x10c0, 0x200 bytes
+                char m_FontName[0x40]; // 0x12c0, 0x40 bytes
+                char m_BackgroundMaterialName[0x40]; // 0x1300, 0x40 bytes
+                bool m_bEnabled; // 0x1340, 0x1 bytes
+                bool m_bFullbright; // 0x1341, 0x1 bytes
+                std::uint8_t pad_1342[0x2]; // 0x1342, 0x2 bytes
+                float m_flWorldUnitsPerPx; // 0x1344, 0x4 bytes
+                float m_flFontSize; // 0x1348, 0x4 bytes
+                float m_flDepthOffset; // 0x134c, 0x4 bytes
+                bool m_bDrawBackground; // 0x1350, 0x1 bytes
+                std::uint8_t pad_1351[0x3]; // 0x1351, 0x3 bytes
+                float m_flBackgroundBorderWidth; // 0x1354, 0x4 bytes
+                float m_flBackgroundBorderHeight; // 0x1358, 0x4 bytes
+                float m_flBackgroundWorldToUV; // 0x135c, 0x4 bytes
+                Color m_Color; // 0x1360, 0x4 bytes
+                shade::sdk::client::PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x1364, 0x4 bytes
+                shade::sdk::client::PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x1368, 0x4 bytes
+                shade::sdk::client::PointWorldTextReorientMode_t m_nReorientMode; // 0x136c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetMessage; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetIntMessage; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetTextColor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_PointWorldText) == 0x1288, "C_PointWorldText size mismatch");
+            static_assert(sizeof(C_PointWorldText) == 0x1370, "C_PointWorldText size mismatch");
         }
     }
 }

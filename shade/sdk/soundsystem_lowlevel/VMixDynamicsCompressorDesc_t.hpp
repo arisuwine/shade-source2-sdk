@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x24
+             * Size: 0x28
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -34,14 +34,16 @@ namespace shade {
                 float m_flReleaseTimeMS; // 0x0014, 0x4 bytes
                 float m_flRMSTimeMS; // 0x0018, 0x4 bytes
                 float m_flWetMix; // 0x001c, 0x4 bytes
-                bool m_bPeakMode; // 0x0020, 0x1 bytes
-                std::uint8_t pad_0021[0x3]; // 0x0021, 0x3 bytes
+                float m_flSCHighPassFreq; // 0x0020, 0x4 bytes
+                bool m_bPeakMode; // 0x0024, 0x1 bytes
+                bool m_bAutoMakeupGain; // 0x0025, 0x1 bytes
+                std::uint8_t pad_0026[0x2]; // 0x0026, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(VMixDynamicsCompressorDesc_t) == 0x24, "VMixDynamicsCompressorDesc_t size mismatch");
+            static_assert(sizeof(VMixDynamicsCompressorDesc_t) == 0x28, "VMixDynamicsCompressorDesc_t size mismatch");
         }
     }
 }

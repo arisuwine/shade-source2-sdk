@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2d60
+             * Size: 0x2e40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,31 +31,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CSmokeGrenadeProjectile : public shade::sdk::server::CBaseCSGrenadeProjectile {
             public:
-                std::uint8_t pad_0a60[0x28]; // 0x0a60, 0x28 bytes
-                std::int32_t m_nSmokeEffectTickBegin; // 0x0a88, 0x4 bytes
-                bool m_bDidSmokeEffect; // 0x0a8c, 0x1 bytes
-                std::uint8_t pad_0a8d[0x3]; // 0x0a8d, 0x3 bytes
-                std::int32_t m_nRandomSeed; // 0x0a90, 0x4 bytes
-                Vector m_vSmokeColor; // 0x0a94, 0xc bytes
-                VectorWS m_vSmokeDetonationPos; // 0x0aa0, 0xc bytes
-                std::uint8_t pad_0aac[0x4]; // 0x0aac, 0x4 bytes
-                CNetworkUtlVectorBase<std::uint8_t> m_VoxelFrameData; // 0x0ab0, 0x18 bytes
-                std::int32_t m_nVoxelFrameDataSize; // 0x0ac8, 0x4 bytes
-                std::int32_t m_nVoxelUpdate; // 0x0acc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastBounce; // 0x0ad0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fllastSimulationTime; // 0x0ad4, 0x4 bytes
-                std::uint8_t pad_0ad8[0x2280]; // 0x0ad8, 0x2280 bytes
-                bool m_bExplodeFromInferno; // 0x2d58, 0x1 bytes
-                bool m_bDidGroundScorch; // 0x2d59, 0x1 bytes
-                std::uint8_t pad_2d5a[0x6]; // 0x2d5a, 0x6 bytes
+                std::uint8_t pad_0b40[0x28]; // 0x0b40, 0x28 bytes
+                std::int32_t m_nSmokeEffectTickBegin; // 0x0b68, 0x4 bytes
+                bool m_bDidSmokeEffect; // 0x0b6c, 0x1 bytes
+                std::uint8_t pad_0b6d[0x3]; // 0x0b6d, 0x3 bytes
+                std::int32_t m_nRandomSeed; // 0x0b70, 0x4 bytes
+                Vector m_vSmokeColor; // 0x0b74, 0xc bytes
+                VectorWS m_vSmokeDetonationPos; // 0x0b80, 0xc bytes
+                std::uint8_t pad_0b8c[0x4]; // 0x0b8c, 0x4 bytes
+                CNetworkUtlVectorBase<std::uint8_t> m_VoxelFrameData; // 0x0b90, 0x18 bytes
+                std::int32_t m_nVoxelFrameDataSize; // 0x0ba8, 0x4 bytes
+                std::int32_t m_nVoxelUpdate; // 0x0bac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBounce; // 0x0bb0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fllastSimulationTime; // 0x0bb4, 0x4 bytes
+                std::uint8_t pad_0bb8[0x2280]; // 0x0bb8, 0x2280 bytes
+                bool m_bExplodeFromInferno; // 0x2e38, 0x1 bytes
+                bool m_bDidGroundScorch; // 0x2e39, 0x1 bytes
+                std::uint8_t pad_2e3a[0x6]; // 0x2e3a, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSmokeGrenadeProjectile) == 0x2D60, "CSmokeGrenadeProjectile size mismatch");
+            static_assert(sizeof(CSmokeGrenadeProjectile) == 0x2E40, "CSmokeGrenadeProjectile size mismatch");
         }
     }
 }

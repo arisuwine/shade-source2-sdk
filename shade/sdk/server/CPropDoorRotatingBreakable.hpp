@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe60
+             * Size: 0xf50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CPropDoorRotatingBreakable : public shade::sdk::server::CPropDoorRotating {
             public:
-                bool m_bBreakable; // 0x0e40, 0x1 bytes
-                bool m_isAbleToCloseAreaPortals; // 0x0e41, 0x1 bytes
-                std::uint8_t pad_0e42[0x2]; // 0x0e42, 0x2 bytes
-                std::int32_t m_currentDamageState; // 0x0e44, 0x4 bytes
-                CUtlVector<CUtlSymbolLarge> m_damageStates; // 0x0e48, 0x18 bytes
+                bool m_bBreakable; // 0x0f30, 0x1 bytes
+                bool m_isAbleToCloseAreaPortals; // 0x0f31, 0x1 bytes
+                std::uint8_t pad_0f32[0x2]; // 0x0f32, 0x2 bytes
+                std::int32_t m_currentDamageState; // 0x0f34, 0x4 bytes
+                CUtlVector<CUtlSymbolLarge> m_damageStates; // 0x0f38, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputSetUnbreakable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetBreakable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPropDoorRotatingBreakable) == 0xE60, "CPropDoorRotatingBreakable size mismatch");
+            static_assert(sizeof(CPropDoorRotatingBreakable) == 0xF50, "CPropDoorRotatingBreakable size mismatch");
         }
     }
 }

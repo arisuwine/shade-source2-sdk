@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x85c0
+             * Size: 0x86a0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,44 +39,42 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Inferno : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_0fb0[0x40]; // 0x0fb0, 0x40 bytes
-                shade::sdk::client::ParticleIndex_t m_nfxFireDamageEffect; // 0x0ff0, 0x4 bytes
-                std::uint8_t pad_0ff4[0x4]; // 0x0ff4, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoPointsSnapshot; // 0x0ff8, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoFillerPointsSnapshot; // 0x1000, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoOutlinePointsSnapshot; // 0x1008, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoClimbingOutlinePointsSnapshot; // 0x1010, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoDecalsSnapshot; // 0x1018, 0x8 bytes
-                VectorWS m_firePositions[0x40]; // 0x1020, 0x300 bytes
-                VectorWS m_fireParentPositions[0x40]; // 0x1320, 0x300 bytes
-                bool m_bFireIsBurning[0x40]; // 0x1620, 0x40 bytes
-                Vector m_BurnNormal[0x40]; // 0x1660, 0x300 bytes
-                std::int32_t m_fireCount; // 0x1960, 0x4 bytes
-                std::int32_t m_nInfernoType; // 0x1964, 0x4 bytes
-                float m_nFireLifetime; // 0x1968, 0x4 bytes
-                bool m_bInPostEffectTime; // 0x196c, 0x1 bytes
-                std::uint8_t pad_196d[0x3]; // 0x196d, 0x3 bytes
-                std::int32_t m_lastFireCount; // 0x1970, 0x4 bytes
-                std::int32_t m_nFireEffectTickBegin; // 0x1974, 0x4 bytes
-                std::uint8_t pad_1978[0x6c08]; // 0x1978, 0x6c08 bytes
-                std::int32_t m_drawableCount; // 0x8580, 0x4 bytes
-                bool m_blosCheck; // 0x8584, 0x1 bytes
-                std::uint8_t pad_8585[0x3]; // 0x8585, 0x3 bytes
-                std::int32_t m_nlosperiod; // 0x8588, 0x4 bytes
-                float m_maxFireHalfWidth; // 0x858c, 0x4 bytes
-                float m_maxFireHeight; // 0x8590, 0x4 bytes
-                VectorWS m_minBounds; // 0x8594, 0xc bytes
-                VectorWS m_maxBounds; // 0x85a0, 0xc bytes
-                float m_flLastGrassBurnThink; // 0x85ac, 0x4 bytes
-                std::uint8_t pad_85b0[0x10]; // 0x85b0, 0x10 bytes
+                std::uint8_t pad_1098[0x40]; // 0x1098, 0x40 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxFireDamageEffect; // 0x10d8, 0x4 bytes
+                std::uint8_t pad_10dc[0x4]; // 0x10dc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoPointsSnapshot; // 0x10e0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoFillerPointsSnapshot; // 0x10e8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoOutlinePointsSnapshot; // 0x10f0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoClimbingOutlinePointsSnapshot; // 0x10f8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSnapshot> m_hInfernoDecalsSnapshot; // 0x1100, 0x8 bytes
+                VectorWS m_firePositions[0x40]; // 0x1108, 0x300 bytes
+                VectorWS m_fireParentPositions[0x40]; // 0x1408, 0x300 bytes
+                bool m_bFireIsBurning[0x40]; // 0x1708, 0x40 bytes
+                Vector m_BurnNormal[0x40]; // 0x1748, 0x300 bytes
+                std::int32_t m_fireCount; // 0x1a48, 0x4 bytes
+                std::int32_t m_nInfernoType; // 0x1a4c, 0x4 bytes
+                float m_nFireLifetime; // 0x1a50, 0x4 bytes
+                bool m_bInPostEffectTime; // 0x1a54, 0x1 bytes
+                std::uint8_t pad_1a55[0x3]; // 0x1a55, 0x3 bytes
+                std::int32_t m_lastFireCount; // 0x1a58, 0x4 bytes
+                std::int32_t m_nFireEffectTickBegin; // 0x1a5c, 0x4 bytes
+                std::uint8_t pad_1a60[0x6c00]; // 0x1a60, 0x6c00 bytes
+                std::int32_t m_drawableCount; // 0x8660, 0x4 bytes
+                bool m_blosCheck; // 0x8664, 0x1 bytes
+                std::uint8_t pad_8665[0x3]; // 0x8665, 0x3 bytes
+                std::int32_t m_nlosperiod; // 0x8668, 0x4 bytes
+                float m_maxFireHalfWidth; // 0x866c, 0x4 bytes
+                float m_maxFireHeight; // 0x8670, 0x4 bytes
+                VectorWS m_minBounds; // 0x8674, 0xc bytes
+                VectorWS m_maxBounds; // 0x8680, 0xc bytes
+                float m_flLastGrassBurnThink; // 0x868c, 0x4 bytes
+                std::uint8_t pad_8690[0x10]; // 0x8690, 0x10 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Inferno) == 0x85C0, "C_Inferno size mismatch");
+            static_assert(sizeof(C_Inferno) == 0x86A0, "C_Inferno size mismatch");
         }
     }
 }

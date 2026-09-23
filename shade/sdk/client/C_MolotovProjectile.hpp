@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1288
+             * Size: 0x1370
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_MolotovProjectile : public shade::sdk::client::C_BaseCSGrenadeProjectile {
             public:
-                bool m_bIsIncGrenade; // 0x1260, 0x1 bytes
-                std::uint8_t pad_1261[0x27]; // 0x1261, 0x27 bytes
+                bool m_bIsIncGrenade; // 0x1348, 0x1 bytes
+                std::uint8_t pad_1349[0x27]; // 0x1349, 0x27 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_MolotovProjectile) == 0x1288, "C_MolotovProjectile size mismatch");
+            static_assert(sizeof(C_MolotovProjectile) == 0x1370, "C_MolotovProjectile size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x810
+             * Size: 0x838
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,24 +31,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ModelSurfaceSnapshotGenerator : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCPSnapshot; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01e8, 0x60 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRecalcRate; // 0x0248, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flUSpacing; // 0x03b8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flVSpacing; // 0x0528, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSurfaceOffset; // 0x0698, 0x170 bytes
-                bool m_bSetNormal; // 0x0808, 0x1 bytes
-                bool m_bSetUp; // 0x0809, 0x1 bytes
-                bool m_bSetGravity; // 0x080a, 0x1 bytes
-                bool m_bSetUV; // 0x080b, 0x1 bytes
-                std::uint8_t pad_080c[0x4]; // 0x080c, 0x4 bytes
+                std::int32_t m_nCPSnapshot; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01f0, 0x60 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRecalcRate; // 0x0250, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flUSpacing; // 0x03c8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flVSpacing; // 0x0540, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSurfaceOffset; // 0x06b8, 0x178 bytes
+                bool m_bSetNormal; // 0x0830, 0x1 bytes
+                bool m_bSetUp; // 0x0831, 0x1 bytes
+                bool m_bSetGravity; // 0x0832, 0x1 bytes
+                bool m_bSetUV; // 0x0833, 0x1 bytes
+                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ModelSurfaceSnapshotGenerator) == 0x810, "C_OP_ModelSurfaceSnapshotGenerator size mismatch");
+            static_assert(sizeof(C_OP_ModelSurfaceSnapshotGenerator) == 0x838, "C_OP_ModelSurfaceSnapshotGenerator size mismatch");
         }
     }
 }

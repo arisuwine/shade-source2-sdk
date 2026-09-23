@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1100
+             * Size: 0x11e0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerFan : public shade::sdk::client::C_BaseTrigger {
             public:
-                Vector m_vFanOriginOffset; // 0x1098, 0xc bytes
-                Vector m_vDirection; // 0x10a4, 0xc bytes
-                bool m_bPushTowardsInfoTarget; // 0x10b0, 0x1 bytes
-                bool m_bPushAwayFromInfoTarget; // 0x10b1, 0x1 bytes
-                std::uint8_t pad_10b2[0xe]; // 0x10b2, 0xe bytes
-                Quaternion m_qNoiseDelta; // 0x10c0, 0x10 bytes
-                CHandle<shade::sdk::client::CInfoFan> m_hInfoFan; // 0x10d0, 0x4 bytes
-                float m_flForce; // 0x10d4, 0x4 bytes
-                bool m_bFalloff; // 0x10d8, 0x1 bytes
-                std::uint8_t pad_10d9[0x7]; // 0x10d9, 0x7 bytes
-                shade::sdk::client::CountdownTimer m_RampTimer; // 0x10e0, 0x18 bytes
-                std::uint8_t pad_10f8[0x8]; // 0x10f8, 0x8 bytes
+                Vector m_vFanOriginOffset; // 0x1180, 0xc bytes
+                Vector m_vDirection; // 0x118c, 0xc bytes
+                bool m_bPushTowardsInfoTarget; // 0x1198, 0x1 bytes
+                bool m_bPushAwayFromInfoTarget; // 0x1199, 0x1 bytes
+                std::uint8_t pad_119a[0x6]; // 0x119a, 0x6 bytes
+                Quaternion m_qNoiseDelta; // 0x11a0, 0x10 bytes
+                CHandle<shade::sdk::client::CInfoFan> m_hInfoFan; // 0x11b0, 0x4 bytes
+                float m_flForce; // 0x11b4, 0x4 bytes
+                bool m_bFalloff; // 0x11b8, 0x1 bytes
+                std::uint8_t pad_11b9[0x7]; // 0x11b9, 0x7 bytes
+                shade::sdk::client::CountdownTimer m_RampTimer; // 0x11c0, 0x18 bytes
+                std::uint8_t pad_11d8[0x8]; // 0x11d8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerFan) == 0x1100, "CTriggerFan size mismatch");
+            static_assert(sizeof(CTriggerFan) == 0x11E0, "CTriggerFan size mismatch");
         }
     }
 }

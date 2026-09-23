@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2b0
+             * Size: 0x2b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,16 +37,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSObserver_CameraServices : public shade::sdk::client::CCSPlayerBase_CameraServices {
             public:
-                CHandle<shade::sdk::client::C_PostProcessingVolume> m_hPrevPostProcessingVolume; // 0x02a8, 0x4 bytes
-                std::uint8_t pad_02ac[0x4]; // 0x02ac, 0x4 bytes
+                CHandle<shade::sdk::client::C_PostProcessingVolume> m_hPrevPostProcessingVolume; // 0x02b0, 0x4 bytes
+                std::uint8_t pad_02b4[0x4]; // 0x02b4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSObserver_CameraServices) == 0x2B0, "CCSObserver_CameraServices size mismatch");
+            static_assert(sizeof(CCSObserver_CameraServices) == 0x2B8, "CCSObserver_CameraServices size mismatch");
         }
     }
 }

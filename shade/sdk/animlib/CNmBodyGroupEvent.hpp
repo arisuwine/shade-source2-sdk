@@ -33,8 +33,7 @@ namespace shade {
                 shade::sdk::animlib::CNmEventTargetEntity_t m_target; // 0x0018, 0x4 bytes
                 std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
                 CUtlString m_groupName; // 0x0020, 0x8 bytes
-                std::int32_t m_nGroupValue; // 0x0028, 0x4 bytes
-                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
+                CUtlString m_choiceName; // 0x0028, 0x8 bytes
             };
             #pragma pack(pop)
 

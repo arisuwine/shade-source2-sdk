@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2a8
+             * Size: 0x2b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,20 +38,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSPlayerBase_CameraServices : public shade::sdk::client::CPlayer_CameraServices {
             public:
-                std::uint32_t m_iFOV; // 0x0290, 0x4 bytes
-                std::uint32_t m_iFOVStart; // 0x0294, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFOVTime; // 0x0298, 0x4 bytes
-                float m_flFOVRate; // 0x029c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hZoomOwner; // 0x02a0, 0x4 bytes
-                float m_flLastShotFOV; // 0x02a4, 0x4 bytes
+                std::uint32_t m_iFOV; // 0x0298, 0x4 bytes
+                std::uint32_t m_iFOVStart; // 0x029c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFOVTime; // 0x02a0, 0x4 bytes
+                float m_flFOVRate; // 0x02a4, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hZoomOwner; // 0x02a8, 0x4 bytes
+                float m_flLastShotFOV; // 0x02ac, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCSPlayerBase_CameraServices) == 0x2A8, "CCSPlayerBase_CameraServices size mismatch");
+            static_assert(sizeof(CCSPlayerBase_CameraServices) == 0x2B0, "CCSPlayerBase_CameraServices size mismatch");
         }
     }
 }

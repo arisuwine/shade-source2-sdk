@@ -16,16 +16,16 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/ParticleTraceSet_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x9c8
+             * Size: 0x9f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,32 +33,32 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_DistanceToCPInit : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMin; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMax; // 0x0358, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMin; // 0x04c8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMax; // 0x0638, 0x170 bytes
-                std::int32_t m_nStartCP; // 0x07a8, 0x4 bytes
-                bool m_bLOS; // 0x07ac, 0x1 bytes
-                char m_CollisionGroupName[0x80]; // 0x07ad, 0x80 bytes
-                std::uint8_t pad_082d[0x3]; // 0x082d, 0x3 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0830, 0x4 bytes
-                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxTraceLength; // 0x0838, 0x170 bytes
-                float m_flLOSScale; // 0x09a8, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x09ac, 0x4 bytes
-                bool m_bActiveRange; // 0x09b0, 0x1 bytes
-                std::uint8_t pad_09b1[0x3]; // 0x09b1, 0x3 bytes
-                Vector m_vecDistanceScale; // 0x09b4, 0xc bytes
-                float m_flRemapBias; // 0x09c0, 0x4 bytes
-                std::uint8_t pad_09c4[0x4]; // 0x09c4, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMin; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMax; // 0x0368, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMin; // 0x04e0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMax; // 0x0658, 0x178 bytes
+                std::int32_t m_nStartCP; // 0x07d0, 0x4 bytes
+                bool m_bLOS; // 0x07d4, 0x1 bytes
+                char m_CollisionGroupName[0x80]; // 0x07d5, 0x80 bytes
+                std::uint8_t pad_0855[0x3]; // 0x0855, 0x3 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0858, 0x4 bytes
+                std::uint8_t pad_085c[0x4]; // 0x085c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxTraceLength; // 0x0860, 0x178 bytes
+                float m_flLOSScale; // 0x09d8, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x09dc, 0x4 bytes
+                bool m_bActiveRange; // 0x09e0, 0x1 bytes
+                std::uint8_t pad_09e1[0x3]; // 0x09e1, 0x3 bytes
+                Vector m_vecDistanceScale; // 0x09e4, 0xc bytes
+                float m_flRemapBias; // 0x09f0, 0x4 bytes
+                std::uint8_t pad_09f4[0x4]; // 0x09f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_DistanceToCPInit) == 0x9C8, "C_INIT_DistanceToCPInit size mismatch");
+            static_assert(sizeof(C_INIT_DistanceToCPInit) == 0x9F8, "C_INIT_DistanceToCPInit size mismatch");
         }
     }
 }

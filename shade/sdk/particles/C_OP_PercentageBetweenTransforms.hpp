@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleTransformInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x2c8
+             * Size: 0x2d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +32,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_PercentageBetweenTransforms : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01d8, 0x4 bytes
-                float m_flInputMin; // 0x01dc, 0x4 bytes
-                float m_flInputMax; // 0x01e0, 0x4 bytes
-                float m_flOutputMin; // 0x01e4, 0x4 bytes
-                float m_flOutputMax; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformStart; // 0x01f0, 0x68 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformEnd; // 0x0258, 0x68 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x02c0, 0x4 bytes
-                bool m_bActiveRange; // 0x02c4, 0x1 bytes
-                bool m_bRadialCheck; // 0x02c5, 0x1 bytes
-                std::uint8_t pad_02c6[0x2]; // 0x02c6, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
+                float m_flInputMin; // 0x01e4, 0x4 bytes
+                float m_flInputMax; // 0x01e8, 0x4 bytes
+                float m_flOutputMin; // 0x01ec, 0x4 bytes
+                float m_flOutputMax; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformStart; // 0x01f8, 0x68 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformEnd; // 0x0260, 0x68 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x02c8, 0x4 bytes
+                bool m_bActiveRange; // 0x02cc, 0x1 bytes
+                bool m_bRadialCheck; // 0x02cd, 0x1 bytes
+                std::uint8_t pad_02ce[0x2]; // 0x02ce, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_PercentageBetweenTransforms) == 0x2C8, "C_OP_PercentageBetweenTransforms size mismatch");
+            static_assert(sizeof(C_OP_PercentageBetweenTransforms) == 0x2D0, "C_OP_PercentageBetweenTransforms size mismatch");
         }
     }
 }

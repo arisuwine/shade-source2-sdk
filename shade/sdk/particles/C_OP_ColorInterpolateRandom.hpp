@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x218
+             * Size: 0x220
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ColorInterpolateRandom : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                Color m_ColorFadeMin; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x18]; // 0x01dc, 0x18 bytes
-                Color m_ColorFadeMax; // 0x01f4, 0x4 bytes
-                std::uint8_t pad_01f8[0xc]; // 0x01f8, 0xc bytes
-                float m_flFadeStartTime; // 0x0204, 0x4 bytes
-                float m_flFadeEndTime; // 0x0208, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x020c, 0x4 bytes
-                bool m_bEaseInOut; // 0x0210, 0x1 bytes
-                std::uint8_t pad_0211[0x7]; // 0x0211, 0x7 bytes
+                Color m_ColorFadeMin; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x18]; // 0x01e4, 0x18 bytes
+                Color m_ColorFadeMax; // 0x01fc, 0x4 bytes
+                std::uint8_t pad_0200[0xc]; // 0x0200, 0xc bytes
+                float m_flFadeStartTime; // 0x020c, 0x4 bytes
+                float m_flFadeEndTime; // 0x0210, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0214, 0x4 bytes
+                bool m_bEaseInOut; // 0x0218, 0x1 bytes
+                std::uint8_t pad_0219[0x7]; // 0x0219, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ColorInterpolateRandom) == 0x218, "C_OP_ColorInterpolateRandom size mismatch");
+            static_assert(sizeof(C_OP_ColorInterpolateRandom) == 0x220, "C_OP_ColorInterpolateRandom size mismatch");
         }
     }
 }

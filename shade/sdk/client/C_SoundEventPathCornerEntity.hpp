@@ -15,7 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/C_SoundEventEntity.hpp"
+#include "shade/sdk/client/C_SoundEventMultiPointEntity.hpp"
 
 namespace shade {
     namespace sdk {
@@ -36,7 +36,7 @@ namespace shade {
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class C_SoundEventPathCornerEntity : public shade::sdk::client::C_SoundEventEntity {
+            class C_SoundEventPathCornerEntity : public shade::sdk::client::C_SoundEventMultiPointEntity {
             public:
                 C_NetworkUtlVectorBase<shade::sdk::client::SoundeventPathCornerPairNetworked_t> m_vecCornerPairsNetworked; // 0x06c0, 0x18 bytes
             };

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,28 +38,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncMoverRouter : public shade::sdk::server::CLogicalEntity {
             public:
-                std::uint8_t pad_04a8[0x8]; // 0x04a8, 0x8 bytes
-                std::int32_t m_nMoverIndex; // 0x04b0, 0x4 bytes
-                bool m_bRouteToAllMovers; // 0x04b4, 0x1 bytes
-                std::uint8_t pad_04b5[0x3]; // 0x04b5, 0x3 bytes
-                CHandle<shade::sdk::server::CPathMover> m_hPathMover; // 0x04b8, 0x4 bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
-                CUtlSymbolLarge m_iszPathMoverName; // 0x04c0, 0x8 bytes
-                std::uint8_t pad_04c8[0x20]; // 0x04c8, 0x20 bytes
+                std::int32_t m_nMoverIndex; // 0x04a8, 0x4 bytes
+                bool m_bRouteToAllMovers; // 0x04ac, 0x1 bytes
+                std::uint8_t pad_04ad[0x3]; // 0x04ad, 0x3 bytes
+                CHandle<shade::sdk::server::CPathMover> m_hPathMover; // 0x04b0, 0x4 bytes
+                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlSymbolLarge m_iszPathMoverName; // 0x04b8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartForward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartReverse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopImmediate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClearFollowMoverEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetMoverIndex; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncMoverRouter) == 0x4E8, "CFuncMoverRouter size mismatch");
+            static_assert(sizeof(CFuncMoverRouter) == 0x4C0, "CFuncMoverRouter size mismatch");
         }
     }
 }

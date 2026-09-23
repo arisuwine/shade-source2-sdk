@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1438
+             * Size: 0x1498
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,29 +32,29 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateOnModelAtHeight : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                bool m_bUseBones; // 0x01e0, 0x1 bytes
-                bool m_bForceZ; // 0x01e1, 0x1 bytes
-                std::uint8_t pad_01e2[0x2]; // 0x01e2, 0x2 bytes
-                std::int32_t m_nControlPointNumber; // 0x01e4, 0x4 bytes
-                std::int32_t m_nHeightCP; // 0x01e8, 0x4 bytes
-                bool m_bUseWaterHeight; // 0x01ec, 0x1 bytes
-                std::uint8_t pad_01ed[0x3]; // 0x01ed, 0x3 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDesiredHeight; // 0x01f0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x0360, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecDirectionBias; // 0x0a18, 0x6b8 bytes
-                shade::sdk::particles::ParticleHitboxBiasType_t m_nBiasType; // 0x10d0, 0x4 bytes
-                bool m_bLocalCoords; // 0x10d4, 0x1 bytes
-                bool m_bPreferMovingBoxes; // 0x10d5, 0x1 bytes
-                char m_HitboxSetName[0x80]; // 0x10d6, 0x80 bytes
-                std::uint8_t pad_1156[0x2]; // 0x1156, 0x2 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flHitboxVelocityScale; // 0x1158, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaxBoneVelocity; // 0x12c8, 0x170 bytes
+                bool m_bUseBones; // 0x01e8, 0x1 bytes
+                bool m_bForceZ; // 0x01e9, 0x1 bytes
+                std::uint8_t pad_01ea[0x2]; // 0x01ea, 0x2 bytes
+                std::int32_t m_nControlPointNumber; // 0x01ec, 0x4 bytes
+                std::int32_t m_nHeightCP; // 0x01f0, 0x4 bytes
+                bool m_bUseWaterHeight; // 0x01f4, 0x1 bytes
+                std::uint8_t pad_01f5[0x3]; // 0x01f5, 0x3 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDesiredHeight; // 0x01f8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x0370, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecDirectionBias; // 0x0a48, 0x6d8 bytes
+                shade::sdk::particles::ParticleHitboxBiasType_t m_nBiasType; // 0x1120, 0x4 bytes
+                bool m_bLocalCoords; // 0x1124, 0x1 bytes
+                bool m_bPreferMovingBoxes; // 0x1125, 0x1 bytes
+                char m_HitboxSetName[0x80]; // 0x1126, 0x80 bytes
+                std::uint8_t pad_11a6[0x2]; // 0x11a6, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flHitboxVelocityScale; // 0x11a8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaxBoneVelocity; // 0x1320, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateOnModelAtHeight) == 0x1438, "C_INIT_CreateOnModelAtHeight size mismatch");
+            static_assert(sizeof(C_INIT_CreateOnModelAtHeight) == 0x1498, "C_INIT_CreateOnModelAtHeight size mismatch");
         }
     }
 }

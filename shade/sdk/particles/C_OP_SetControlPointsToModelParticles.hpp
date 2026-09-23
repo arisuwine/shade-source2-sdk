@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x2e8
+             * Size: 0x2f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointsToModelParticles : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                char m_HitboxSetName[0x80]; // 0x01d8, 0x80 bytes
-                char m_AttachmentName[0x80]; // 0x0258, 0x80 bytes
-                std::int32_t m_nFirstControlPoint; // 0x02d8, 0x4 bytes
-                std::int32_t m_nNumControlPoints; // 0x02dc, 0x4 bytes
-                std::int32_t m_nFirstSourcePoint; // 0x02e0, 0x4 bytes
-                bool m_bSkin; // 0x02e4, 0x1 bytes
-                bool m_bAttachment; // 0x02e5, 0x1 bytes
-                std::uint8_t pad_02e6[0x2]; // 0x02e6, 0x2 bytes
+                char m_HitboxSetName[0x80]; // 0x01e0, 0x80 bytes
+                char m_AttachmentName[0x80]; // 0x0260, 0x80 bytes
+                std::int32_t m_nFirstControlPoint; // 0x02e0, 0x4 bytes
+                std::int32_t m_nNumControlPoints; // 0x02e4, 0x4 bytes
+                std::int32_t m_nFirstSourcePoint; // 0x02e8, 0x4 bytes
+                bool m_bSkin; // 0x02ec, 0x1 bytes
+                bool m_bAttachment; // 0x02ed, 0x1 bytes
+                std::uint8_t pad_02ee[0x2]; // 0x02ee, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointsToModelParticles) == 0x2E8, "C_OP_SetControlPointsToModelParticles size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointsToModelParticles) == 0x2F0, "C_OP_SetControlPointsToModelParticles size mismatch");
         }
     }
 }

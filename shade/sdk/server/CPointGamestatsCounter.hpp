@@ -36,12 +36,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputSetName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputIncrement; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPointGamestatsCounter) == 0x4B8, "CPointGamestatsCounter size mismatch");
         }

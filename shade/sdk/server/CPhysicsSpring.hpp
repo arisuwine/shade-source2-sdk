@@ -54,11 +54,6 @@ namespace shade {
 
             /* Data Map Fields
              * float lengthscale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDampingRatio; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetRestLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputAddRestLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputRemoveRestLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CPhysicsSpring) == 0x4F0, "CPhysicsSpring size mismatch");

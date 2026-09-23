@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1488
+             * Size: 0x1570
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CSObserverPawn : public shade::sdk::client::C_CSPlayerPawnBase {
             public:
-                CEntityHandle m_hDetectParentChange; // 0x1480, 0x4 bytes
-                std::uint8_t pad_1484[0x4]; // 0x1484, 0x4 bytes
+                CEntityHandle m_hDetectParentChange; // 0x1568, 0x4 bytes
+                std::uint8_t pad_156c[0x4]; // 0x156c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0x1240, Size: 0x1, Size In Bytes: 0x8
+             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0x1328, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(C_CSObserverPawn) == 0x1488, "C_CSObserverPawn size mismatch");
+            static_assert(sizeof(C_CSObserverPawn) == 0x1570, "C_CSObserverPawn size mismatch");
         }
     }
 }

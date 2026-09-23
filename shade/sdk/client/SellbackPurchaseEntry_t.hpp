@@ -38,9 +38,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(SellbackPurchaseEntry_t) == 0x48, "SellbackPurchaseEntry_t size mismatch");
         }

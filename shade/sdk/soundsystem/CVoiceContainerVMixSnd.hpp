@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x180
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,13 +29,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerVMixSnd : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                std::uint8_t pad_0070[0x168]; // 0x0070, 0x168 bytes
+                std::uint8_t pad_0070[0x110]; // 0x0070, 0x110 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerVMixSnd) == 0x1D8, "CVoiceContainerVMixSnd size mismatch");
+            static_assert(sizeof(CVoiceContainerVMixSnd) == 0x180, "CVoiceContainerVMixSnd size mismatch");
         }
     }
 }

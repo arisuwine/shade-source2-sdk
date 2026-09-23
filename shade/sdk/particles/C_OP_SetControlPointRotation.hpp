@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointRotation : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecRotAxis; // 0x01e0, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRotRate; // 0x0898, 0x170 bytes
-                std::int32_t m_nCP; // 0x0a08, 0x4 bytes
-                std::int32_t m_nLocalCP; // 0x0a0c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecRotAxis; // 0x01e8, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRotRate; // 0x08c0, 0x178 bytes
+                std::int32_t m_nCP; // 0x0a38, 0x4 bytes
+                std::int32_t m_nLocalCP; // 0x0a3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointRotation) == 0xA10, "C_OP_SetControlPointRotation size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointRotation) == 0xA40, "C_OP_SetControlPointRotation size mismatch");
         }
     }
 }

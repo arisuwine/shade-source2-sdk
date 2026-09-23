@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x8a0
+             * Size: 0x8c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_SkyVisCull : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecTestDir; // 0x01e0, 0x6b8 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0898, 0x4 bytes
-                bool m_bCullOnSky; // 0x089c, 0x1 bytes
-                std::uint8_t pad_089d[0x3]; // 0x089d, 0x3 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecTestDir; // 0x01e8, 0x6d8 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x08c0, 0x4 bytes
+                bool m_bCullOnSky; // 0x08c4, 0x1 bytes
+                std::uint8_t pad_08c5[0x3]; // 0x08c5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_SkyVisCull) == 0x8A0, "C_INIT_SkyVisCull size mismatch");
+            static_assert(sizeof(C_INIT_SkyVisCull) == 0x8C8, "C_INIT_SkyVisCull size mismatch");
         }
     }
 }

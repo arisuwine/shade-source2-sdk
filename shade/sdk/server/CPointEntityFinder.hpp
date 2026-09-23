@@ -52,9 +52,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputFindEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPointEntityFinder) == 0x4E8, "CPointEntityFinder size mismatch");
         }

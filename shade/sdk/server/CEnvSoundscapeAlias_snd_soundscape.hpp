@@ -33,9 +33,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CEnvSoundscapeAlias_snd_soundscape) == 0x538, "CEnvSoundscapeAlias_snd_soundscape size mismatch");
         }

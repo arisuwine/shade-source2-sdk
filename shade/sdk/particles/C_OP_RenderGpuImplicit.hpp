@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x698
+             * Size: 0x6b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderGpuImplicit : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                bool m_bUsePerParticleRadius; // 0x0228, 0x1 bytes
-                std::uint8_t pad_0229[0x3]; // 0x0229, 0x3 bytes
-                std::uint32_t m_nVertexCountKb; // 0x022c, 0x4 bytes
-                std::uint32_t m_nIndexCountKb; // 0x0230, 0x4 bytes
-                std::uint8_t pad_0234[0x4]; // 0x0234, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fGridSize; // 0x0238, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fRadiusScale; // 0x03a8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fIsosurfaceThreshold; // 0x0518, 0x170 bytes
-                std::int32_t m_nScaleCP; // 0x0688, 0x4 bytes
-                std::uint8_t pad_068c[0x4]; // 0x068c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x0690, 0x8 bytes
+                bool m_bUsePerParticleRadius; // 0x0230, 0x1 bytes
+                std::uint8_t pad_0231[0x3]; // 0x0231, 0x3 bytes
+                std::uint32_t m_nVertexCountKb; // 0x0234, 0x4 bytes
+                std::uint32_t m_nIndexCountKb; // 0x0238, 0x4 bytes
+                std::uint8_t pad_023c[0x4]; // 0x023c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fGridSize; // 0x0240, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fRadiusScale; // 0x03b8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fIsosurfaceThreshold; // 0x0530, 0x178 bytes
+                std::int32_t m_nScaleCP; // 0x06a8, 0x4 bytes
+                std::uint8_t pad_06ac[0x4]; // 0x06ac, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x06b0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderGpuImplicit) == 0x698, "C_OP_RenderGpuImplicit size mismatch");
+            static_assert(sizeof(C_OP_RenderGpuImplicit) == 0x6B8, "C_OP_RenderGpuImplicit size mismatch");
         }
     }
 }

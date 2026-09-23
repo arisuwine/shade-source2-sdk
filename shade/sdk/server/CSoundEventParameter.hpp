@@ -37,11 +37,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::uint64_t InputSetEventGuid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetParamName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFloatValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CSoundEventParameter) == 0x4D0, "CSoundEventParameter size mismatch");
         }

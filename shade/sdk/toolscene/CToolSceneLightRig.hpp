@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace toolscene {
             /* Class Parameters
-             * Size: 0x168
+             * Size: 0x170
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -50,19 +50,19 @@ namespace shade {
                 CUtlVector<shade::sdk::toolscene::CLightRigSunLight> m_Suns; // 0x0010, 0x18 bytes
                 CUtlVector<shade::sdk::toolscene::CLightRigPointLight> m_PointLights; // 0x0028, 0x18 bytes
                 CUtlVector<shade::sdk::toolscene::CLightRigSpotLight> m_SpotLights; // 0x0040, 0x18 bytes
-                shade::sdk::toolscene::CLightRigBackground m_Background; // 0x0058, 0x5 bytes
-                shade::sdk::toolscene::CLightRigGrid m_Grid; // 0x005d, 0x5 bytes
-                std::uint8_t pad_0062[0x2]; // 0x0062, 0x2 bytes
-                shade::sdk::toolscene::CLightRigExposure m_Exposure; // 0x0064, 0xc bytes
-                shade::sdk::toolscene::CLightRigPostProcessing m_PostProcessing; // 0x0070, 0x8 bytes
-                shade::sdk::toolscene::CLightRigSky m_Sky; // 0x0078, 0x8 bytes
-                shade::sdk::toolscene::CLightRigVMap m_BackgroundMap; // 0x0080, 0xe8 bytes
+                shade::sdk::toolscene::CLightRigBackground m_Background; // 0x0058, 0x8 bytes
+                shade::sdk::toolscene::CLightRigGrid m_Grid; // 0x0060, 0x8 bytes
+                shade::sdk::toolscene::CLightRigExposure m_Exposure; // 0x0068, 0xc bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                shade::sdk::toolscene::CLightRigPostProcessing m_PostProcessing; // 0x0078, 0x8 bytes
+                shade::sdk::toolscene::CLightRigSky m_Sky; // 0x0080, 0x8 bytes
+                shade::sdk::toolscene::CLightRigVMap m_BackgroundMap; // 0x0088, 0xe8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CToolSceneLightRig) == 0x168, "CToolSceneLightRig size mismatch");
+            static_assert(sizeof(CToolSceneLightRig) == 0x170, "CToolSceneLightRig size mismatch");
         }
     }
 }

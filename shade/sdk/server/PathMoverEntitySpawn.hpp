@@ -28,7 +28,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x28
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -38,12 +38,14 @@ namespace shade {
                 CHandle<shade::sdk::server::CFuncMover> hMover; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> vecOtherEntities; // 0x0008, 0x18 bytes
+                std::int32_t nSpawnNumber; // 0x0020, 0x4 bytes
+                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PathMoverEntitySpawn) == 0x20, "PathMoverEntitySpawn size mismatch");
+            static_assert(sizeof(PathMoverEntitySpawn) == 0x28, "PathMoverEntitySpawn size mismatch");
         }
     }
 }

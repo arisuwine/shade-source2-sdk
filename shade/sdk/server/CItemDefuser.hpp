@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa20
+             * Size: 0xb00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemDefuser : public shade::sdk::server::CItem {
             public:
-                shade::sdk::server::EntitySpottedState_t m_entitySpottedState; // 0x0a00, 0x18 bytes
-                std::int32_t m_nSpotRules; // 0x0a18, 0x4 bytes
-                std::uint8_t pad_0a1c[0x4]; // 0x0a1c, 0x4 bytes
+                shade::sdk::server::EntitySpottedState_t m_entitySpottedState; // 0x0ae0, 0x18 bytes
+                std::int32_t m_nSpotRules; // 0x0af8, 0x4 bytes
+                std::uint8_t pad_0afc[0x4]; // 0x0afc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CItemDefuser) == 0xA20, "CItemDefuser size mismatch");
+            static_assert(sizeof(CItemDefuser) == 0xB00, "CItemDefuser size mismatch");
         }
     }
 }

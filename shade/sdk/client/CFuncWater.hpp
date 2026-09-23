@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x10c8
+             * Size: 0x11b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncWater : public shade::sdk::client::C_BaseModelEntity {
             public:
-                shade::sdk::client::CBuoyancyHelper m_BuoyancyHelper; // 0x0fb0, 0x118 bytes
+                shade::sdk::client::CBuoyancyHelper m_BuoyancyHelper; // 0x1098, 0x118 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncWater) == 0x10C8, "CFuncWater size mismatch");
+            static_assert(sizeof(CFuncWater) == 0x11B0, "CFuncWater size mismatch");
         }
     }
 }

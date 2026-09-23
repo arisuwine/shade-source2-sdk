@@ -17,13 +17,13 @@
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
 #include "shade/sdk/particles/CRandomNumberGeneratorParameters.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RandomVector : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                Vector m_vecMin; // 0x01e0, 0xc bytes
-                Vector m_vecMax; // 0x01ec, 0xc bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01f8, 0x4 bytes
-                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x01fc, 0x8 bytes
-                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
+                Vector m_vecMin; // 0x01e8, 0xc bytes
+                Vector m_vecMax; // 0x01f4, 0xc bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0200, 0x4 bytes
+                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x0204, 0x8 bytes
+                std::uint8_t pad_020c[0x4]; // 0x020c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RandomVector) == 0x208, "C_INIT_RandomVector size mismatch");
+            static_assert(sizeof(C_INIT_RandomVector) == 0x210, "C_INIT_RandomVector size mismatch");
         }
     }
 }

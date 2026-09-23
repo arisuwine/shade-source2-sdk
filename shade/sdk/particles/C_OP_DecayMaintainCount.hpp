@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x370
+             * Size: 0x380
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_DecayMaintainCount : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nParticlesToMaintain; // 0x01d8, 0x4 bytes
-                float m_flDecayDelay; // 0x01dc, 0x4 bytes
-                std::int32_t m_nSnapshotControlPoint; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                CUtlString m_strSnapshotSubset; // 0x01e8, 0x8 bytes
-                bool m_bLifespanDecay; // 0x01f0, 0x1 bytes
-                std::uint8_t pad_01f1[0x7]; // 0x01f1, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScale; // 0x01f8, 0x170 bytes
-                bool m_bKillNewest; // 0x0368, 0x1 bytes
-                std::uint8_t pad_0369[0x7]; // 0x0369, 0x7 bytes
+                std::int32_t m_nParticlesToMaintain; // 0x01e0, 0x4 bytes
+                float m_flDecayDelay; // 0x01e4, 0x4 bytes
+                std::int32_t m_nSnapshotControlPoint; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                CUtlString m_strSnapshotSubset; // 0x01f0, 0x8 bytes
+                bool m_bLifespanDecay; // 0x01f8, 0x1 bytes
+                std::uint8_t pad_01f9[0x7]; // 0x01f9, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScale; // 0x0200, 0x178 bytes
+                bool m_bKillNewest; // 0x0378, 0x1 bytes
+                std::uint8_t pad_0379[0x7]; // 0x0379, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_DecayMaintainCount) == 0x370, "C_OP_DecayMaintainCount size mismatch");
+            static_assert(sizeof(C_OP_DecayMaintainCount) == 0x380, "C_OP_DecayMaintainCount size mismatch");
         }
     }
 }

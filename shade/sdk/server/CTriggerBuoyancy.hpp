@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa08
+             * Size: 0xae8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerBuoyancy : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::server::CBuoyancyHelper m_BuoyancyHelper; // 0x08e8, 0x118 bytes
-                float m_flFluidDensity; // 0x0a00, 0x4 bytes
-                std::uint8_t pad_0a04[0x4]; // 0x0a04, 0x4 bytes
+                shade::sdk::server::CBuoyancyHelper m_BuoyancyHelper; // 0x09c8, 0x118 bytes
+                float m_flFluidDensity; // 0x0ae0, 0x4 bytes
+                std::uint8_t pad_0ae4[0x4]; // 0x0ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetFluidDensity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTriggerBuoyancy) == 0xA08, "CTriggerBuoyancy size mismatch");
+            static_assert(sizeof(CTriggerBuoyancy) == 0xAE8, "CTriggerBuoyancy size mismatch");
         }
     }
 }

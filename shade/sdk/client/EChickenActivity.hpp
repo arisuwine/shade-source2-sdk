@@ -23,7 +23,13 @@ namespace shade {
                 Run = 0x3,
                 Glide = 0x4,
                 Land = 0x5,
-                Panic = 0x6
+                Panic = 0x6,
+                Trick = 0x7,
+                TurnInPlace = 0x8,
+                Feed = 0x9,
+                Sleep = 0xa,
+                Shoulder = 0xb,
+                LowOnFood = 0xc
             };
         }
     }

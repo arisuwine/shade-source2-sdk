@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x8a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncConveyor : public shade::sdk::server::CBaseModelEntity {
             public:
-                CUtlSymbolLarge m_szConveyorModels; // 0x0770, 0x8 bytes
-                float m_flTransitionDurationSeconds; // 0x0778, 0x4 bytes
-                float m_flSpeed; // 0x077c, 0x4 bytes
-                QAngle m_angMoveEntitySpace; // 0x0780, 0xc bytes
-                Vector m_vecMoveDirEntitySpace; // 0x078c, 0xc bytes
-                float m_flTargetSpeed; // 0x0798, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nTransitionStartTick; // 0x079c, 0x4 bytes
-                std::int32_t m_nTransitionDurationTicks; // 0x07a0, 0x4 bytes
-                float m_flTransitionStartSpeed; // 0x07a4, 0x4 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_hConveyorModels; // 0x07a8, 0x18 bytes
+                CUtlSymbolLarge m_szConveyorModels; // 0x0850, 0x8 bytes
+                float m_flTransitionDurationSeconds; // 0x0858, 0x4 bytes
+                float m_flSpeed; // 0x085c, 0x4 bytes
+                QAngle m_angMoveEntitySpace; // 0x0860, 0xc bytes
+                Vector m_vecMoveDirEntitySpace; // 0x086c, 0xc bytes
+                float m_flTargetSpeed; // 0x0878, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nTransitionStartTick; // 0x087c, 0x4 bytes
+                std::int32_t m_nTransitionDurationTicks; // 0x0880, 0x4 bytes
+                float m_flTransitionStartSpeed; // 0x0884, 0x4 bytes
+                float m_flFrictionScale; // 0x0888, 0x4 bytes
+                std::uint8_t pad_088c[0x4]; // 0x088c, 0x4 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_hConveyorModels; // 0x0890, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncConveyor) == 0x7C0, "CFuncConveyor size mismatch");
+            static_assert(sizeof(CFuncConveyor) == 0x8A8, "CFuncConveyor size mismatch");
         }
     }
 }

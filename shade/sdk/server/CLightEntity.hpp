@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x778
+             * Size: 0x858
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CLightEntity : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::server::CLightComponent *m_CLightComponent; // 0x0770, 0x8 bytes
+                shade::sdk::server::CLightComponent *m_CLightComponent; // 0x0850, 0x8 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CLightEntity) == 0x778, "CLightEntity size mismatch");
+            static_assert(sizeof(CLightEntity) == 0x858, "CLightEntity size mismatch");
         }
     }
 }

@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe8
+             * Size: 0xf0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -35,18 +35,19 @@ namespace shade {
             struct inv_image_data_t {
                 shade::sdk::client::inv_image_map_t map; // 0x0000, 0x10 bytes
                 shade::sdk::client::inv_image_item_t item; // 0x0010, 0x20 bytes
-                shade::sdk::client::inv_image_camera_t camera; // 0x0030, 0x34 bytes
-                shade::sdk::client::inv_image_light_sun_t lightsun; // 0x0064, 0x1c bytes
-                shade::sdk::client::inv_image_light_fill_t lightfill; // 0x0080, 0x1c bytes
-                shade::sdk::client::inv_image_light_barn_t light0; // 0x009c, 0x20 bytes
-                shade::sdk::client::inv_image_light_barn_t light1; // 0x00bc, 0x20 bytes
-                shade::sdk::client::inv_image_clearcolor_t clearcolor; // 0x00dc, 0xc bytes
+                shade::sdk::client::inv_image_camera_t camera; // 0x0030, 0x38 bytes
+                shade::sdk::client::inv_image_light_sun_t lightsun; // 0x0068, 0x1c bytes
+                shade::sdk::client::inv_image_light_fill_t lightfill; // 0x0084, 0x1c bytes
+                shade::sdk::client::inv_image_light_barn_t light0; // 0x00a0, 0x20 bytes
+                shade::sdk::client::inv_image_light_barn_t light1; // 0x00c0, 0x20 bytes
+                shade::sdk::client::inv_image_clearcolor_t clearcolor; // 0x00e0, 0xc bytes
+                std::uint8_t pad_00ec[0x4]; // 0x00ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(inv_image_data_t) == 0xE8, "inv_image_data_t size mismatch");
+            static_assert(sizeof(inv_image_data_t) == 0xF0, "inv_image_data_t size mismatch");
         }
     }
 }

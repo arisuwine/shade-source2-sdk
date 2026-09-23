@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x10d8
+             * Size: 0x11c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,25 +31,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Precipitation : public shade::sdk::client::C_BaseTrigger {
             public:
-                float m_flDensity; // 0x1098, 0x4 bytes
-                std::uint8_t pad_109c[0xc]; // 0x109c, 0xc bytes
-                float m_flParticleInnerDist; // 0x10a8, 0x4 bytes
-                std::uint8_t pad_10ac[0x4]; // 0x10ac, 0x4 bytes
-                char *m_pParticleDef; // 0x10b0, 0x8 bytes
-                std::uint8_t pad_10b8[0xc]; // 0x10b8, 0xc bytes
-                shade::sdk::client::TimedEvent m_tParticlePrecipTraceTimer[0x1]; // 0x10c4, 0x8 bytes
-                bool m_bActiveParticlePrecipEmitter[0x1]; // 0x10cc, 0x1 bytes
-                bool m_bParticlePrecipInitialized; // 0x10cd, 0x1 bytes
-                bool m_bHasSimulatedSinceLastSceneObjectUpdate; // 0x10ce, 0x1 bytes
-                std::uint8_t pad_10cf[0x1]; // 0x10cf, 0x1 bytes
-                std::int32_t m_nAvailableSheetSequencesMaxIndex; // 0x10d0, 0x4 bytes
-                std::uint8_t pad_10d4[0x4]; // 0x10d4, 0x4 bytes
+                float m_flDensity; // 0x1180, 0x4 bytes
+                std::uint8_t pad_1184[0xc]; // 0x1184, 0xc bytes
+                float m_flParticleInnerDist; // 0x1190, 0x4 bytes
+                std::uint8_t pad_1194[0x4]; // 0x1194, 0x4 bytes
+                char *m_pParticleDef; // 0x1198, 0x8 bytes
+                std::uint8_t pad_11a0[0xc]; // 0x11a0, 0xc bytes
+                shade::sdk::client::TimedEvent m_tParticlePrecipTraceTimer[0x1]; // 0x11ac, 0x8 bytes
+                bool m_bActiveParticlePrecipEmitter[0x1]; // 0x11b4, 0x1 bytes
+                bool m_bParticlePrecipInitialized; // 0x11b5, 0x1 bytes
+                bool m_bHasSimulatedSinceLastSceneObjectUpdate; // 0x11b6, 0x1 bytes
+                std::uint8_t pad_11b7[0x1]; // 0x11b7, 0x1 bytes
+                std::int32_t m_nAvailableSheetSequencesMaxIndex; // 0x11b8, 0x4 bytes
+                std::uint8_t pad_11bc[0x4]; // 0x11bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Precipitation) == 0x10D8, "C_Precipitation size mismatch");
+            static_assert(sizeof(C_Precipitation) == 0x11C0, "C_Precipitation size mismatch");
         }
     }
 }

@@ -42,12 +42,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetLinearFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearDampingRatio; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularDampingRatio; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPhysFixed) == 0x530, "CPhysFixed size mismatch");
         }

@@ -16,12 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixDataOffset.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixParameterFloat.hpp"
 
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,12 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixSteamAudioHybridReverbProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramReverbTimeLow; // 0x0028, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramReverbTimeMid; // 0x002c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramReverbTimeHigh; // 0x0030, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramBand; // 0x0034, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_paramReverbTime; // 0x0038, 0x4 bytes
+                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixSteamAudioHybridReverbProcessorDesc) == 0x20, "CVMixSteamAudioHybridReverbProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixSteamAudioHybridReverbProcessorDesc) == 0x40, "CVMixSteamAudioHybridReverbProcessorDesc size mismatch");
         }
     }
 }
