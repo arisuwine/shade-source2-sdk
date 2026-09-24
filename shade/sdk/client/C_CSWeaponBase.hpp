@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f10
+             * Size: 0x1f20
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -83,44 +83,46 @@ namespace shade {
                 bool m_bInSilentReloadSection; // 0x1a55, 0x1 bytes
                 std::uint8_t pad_1a56[0x2]; // 0x1a56, 0x2 bytes
                 shade::sdk::entity2::GameTime_t m_flStealthHoldStartTime; // 0x1a58, 0x4 bytes
-                float m_flWeaponActionPlaybackRate; // 0x1a5c, 0x4 bytes
-                std::int32_t m_iOriginalTeamNumber; // 0x1a60, 0x4 bytes
-                std::int32_t m_iMostRecentTeamNumber; // 0x1a64, 0x4 bytes
-                bool m_bDroppedNearBuyZone; // 0x1a68, 0x1 bytes
-                std::uint8_t pad_1a69[0x3]; // 0x1a69, 0x3 bytes
-                float m_flNextAttackRenderTimeOffset; // 0x1a6c, 0x4 bytes
-                std::uint8_t pad_1a70[0xa8]; // 0x1a70, 0xa8 bytes
-                bool m_bClearWeaponIdentifyingUGC; // 0x1b18, 0x1 bytes
-                bool m_bVisualsDataSet; // 0x1b19, 0x1 bytes
-                bool m_bUIWeapon; // 0x1b1a, 0x1 bytes
-                std::uint8_t pad_1b1b[0x1]; // 0x1b1b, 0x1 bytes
-                std::int32_t m_nCustomEconReloadEventId; // 0x1b1c, 0x4 bytes
-                std::uint8_t pad_1b20[0x8]; // 0x1b20, 0x8 bytes
-                bool m_bCanBePickedUp; // 0x1b28, 0x1 bytes
-                std::uint8_t pad_1b29[0x3]; // 0x1b29, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_nextPrevOwnerUseTime; // 0x1b2c, 0x4 bytes
-                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hPrevOwner; // 0x1b30, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nDropTick; // 0x1b34, 0x4 bytes
-                bool m_bWasActiveWeaponWhenDropped; // 0x1b38, 0x1 bytes
-                std::uint8_t pad_1b39[0x23]; // 0x1b39, 0x23 bytes
-                bool m_donated; // 0x1b5c, 0x1 bytes
-                std::uint8_t pad_1b5d[0x3]; // 0x1b5d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_fLastShotTime; // 0x1b60, 0x4 bytes
-                bool m_bWasOwnedByCT; // 0x1b64, 0x1 bytes
-                bool m_bWasOwnedByTerrorist; // 0x1b65, 0x1 bytes
-                std::uint8_t pad_1b66[0x2]; // 0x1b66, 0x2 bytes
-                float m_flNextClientFireBulletTime; // 0x1b68, 0x4 bytes
-                float m_flNextClientFireBulletTime_Repredict; // 0x1b6c, 0x4 bytes
-                std::uint8_t pad_1b70[0x50]; // 0x1b70, 0x50 bytes
-                shade::sdk::client::C_IronSightController m_IronSightController; // 0x1bc0, 0xb0 bytes
-                std::int32_t m_iIronSightMode; // 0x1c70, 0x4 bytes
-                std::uint8_t pad_1c74[0x74]; // 0x1c74, 0x74 bytes
-                shade::sdk::entity2::GameTime_t m_flLastLOSTraceFailureTime; // 0x1ce8, 0x4 bytes
-                std::uint8_t pad_1cec[0x5c]; // 0x1cec, 0x5c bytes
-                float m_flWatTickOffset; // 0x1d48, 0x4 bytes
-                std::uint8_t pad_1d4c[0x10]; // 0x1d4c, 0x10 bytes
-                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x1d5c, 0x4 bytes
-                std::uint8_t pad_1d60[0x1b0]; // 0x1d60, 0x1b0 bytes
+                bool m_bReloadHeldSinceStart; // 0x1a5c, 0x1 bytes
+                std::uint8_t pad_1a5d[0x3]; // 0x1a5d, 0x3 bytes
+                float m_flWeaponActionPlaybackRate; // 0x1a60, 0x4 bytes
+                std::int32_t m_iOriginalTeamNumber; // 0x1a64, 0x4 bytes
+                std::int32_t m_iMostRecentTeamNumber; // 0x1a68, 0x4 bytes
+                bool m_bDroppedNearBuyZone; // 0x1a6c, 0x1 bytes
+                std::uint8_t pad_1a6d[0x3]; // 0x1a6d, 0x3 bytes
+                float m_flNextAttackRenderTimeOffset; // 0x1a70, 0x4 bytes
+                std::uint8_t pad_1a74[0xac]; // 0x1a74, 0xac bytes
+                bool m_bClearWeaponIdentifyingUGC; // 0x1b20, 0x1 bytes
+                bool m_bVisualsDataSet; // 0x1b21, 0x1 bytes
+                bool m_bUIWeapon; // 0x1b22, 0x1 bytes
+                std::uint8_t pad_1b23[0x1]; // 0x1b23, 0x1 bytes
+                std::int32_t m_nCustomEconReloadEventId; // 0x1b24, 0x4 bytes
+                std::uint8_t pad_1b28[0x8]; // 0x1b28, 0x8 bytes
+                bool m_bCanBePickedUp; // 0x1b30, 0x1 bytes
+                std::uint8_t pad_1b31[0x3]; // 0x1b31, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_nextPrevOwnerUseTime; // 0x1b34, 0x4 bytes
+                CHandle<shade::sdk::client::C_CSPlayerPawn> m_hPrevOwner; // 0x1b38, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nDropTick; // 0x1b3c, 0x4 bytes
+                bool m_bWasActiveWeaponWhenDropped; // 0x1b40, 0x1 bytes
+                std::uint8_t pad_1b41[0x23]; // 0x1b41, 0x23 bytes
+                bool m_donated; // 0x1b64, 0x1 bytes
+                std::uint8_t pad_1b65[0x3]; // 0x1b65, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fLastShotTime; // 0x1b68, 0x4 bytes
+                bool m_bWasOwnedByCT; // 0x1b6c, 0x1 bytes
+                bool m_bWasOwnedByTerrorist; // 0x1b6d, 0x1 bytes
+                std::uint8_t pad_1b6e[0x2]; // 0x1b6e, 0x2 bytes
+                float m_flNextClientFireBulletTime; // 0x1b70, 0x4 bytes
+                float m_flNextClientFireBulletTime_Repredict; // 0x1b74, 0x4 bytes
+                std::uint8_t pad_1b78[0x58]; // 0x1b78, 0x58 bytes
+                shade::sdk::client::C_IronSightController m_IronSightController; // 0x1bd0, 0xb0 bytes
+                std::int32_t m_iIronSightMode; // 0x1c80, 0x4 bytes
+                std::uint8_t pad_1c84[0x74]; // 0x1c84, 0x74 bytes
+                shade::sdk::entity2::GameTime_t m_flLastLOSTraceFailureTime; // 0x1cf8, 0x4 bytes
+                std::uint8_t pad_1cfc[0x5c]; // 0x1cfc, 0x5c bytes
+                float m_flWatTickOffset; // 0x1d58, 0x4 bytes
+                std::uint8_t pad_1d5c[0x10]; // 0x1d5c, 0x10 bytes
+                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x1d6c, 0x4 bytes
+                std::uint8_t pad_1d70[0x1b0]; // 0x1d70, 0x1b0 bytes
             };
             #pragma pack(pop)
 
@@ -128,7 +130,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_CSWeaponBase) == 0x1F10, "C_CSWeaponBase size mismatch");
+            static_assert(sizeof(C_CSWeaponBase) == 0x1F20, "C_CSWeaponBase size mismatch");
         }
     }
 }

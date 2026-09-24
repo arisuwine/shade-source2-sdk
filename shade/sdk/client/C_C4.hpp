@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f50
+             * Size: 0x1f60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,25 +34,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_C4 : public shade::sdk::client::C_CSWeaponBase {
             public:
-                shade::sdk::client::ParticleIndex_t m_activeLightParticleIndex; // 0x1f10, 0x4 bytes
-                shade::sdk::client::C4LightEffect_t m_eActiveLightEffect; // 0x1f14, 0x4 bytes
-                bool m_bStartedArming; // 0x1f18, 0x1 bytes
-                std::uint8_t pad_1f19[0x3]; // 0x1f19, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_fArmedTime; // 0x1f1c, 0x4 bytes
-                bool m_bBombPlacedAnimation; // 0x1f20, 0x1 bytes
-                bool m_bIsPlantingViaUse; // 0x1f21, 0x1 bytes
-                std::uint8_t pad_1f22[0x6]; // 0x1f22, 0x6 bytes
-                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x1f28, 0x18 bytes
-                std::int32_t m_nSpotRules; // 0x1f40, 0x4 bytes
-                bool m_bPlayedArmingBeeps[0x7]; // 0x1f44, 0x7 bytes
-                bool m_bBombPlanted; // 0x1f4b, 0x1 bytes
-                std::uint8_t pad_1f4c[0x4]; // 0x1f4c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_activeLightParticleIndex; // 0x1f20, 0x4 bytes
+                shade::sdk::client::C4LightEffect_t m_eActiveLightEffect; // 0x1f24, 0x4 bytes
+                bool m_bStartedArming; // 0x1f28, 0x1 bytes
+                std::uint8_t pad_1f29[0x3]; // 0x1f29, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fArmedTime; // 0x1f2c, 0x4 bytes
+                bool m_bBombPlacedAnimation; // 0x1f30, 0x1 bytes
+                bool m_bIsPlantingViaUse; // 0x1f31, 0x1 bytes
+                std::uint8_t pad_1f32[0x6]; // 0x1f32, 0x6 bytes
+                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x1f38, 0x18 bytes
+                std::int32_t m_nSpotRules; // 0x1f50, 0x4 bytes
+                bool m_bPlayedArmingBeeps[0x7]; // 0x1f54, 0x7 bytes
+                bool m_bBombPlanted; // 0x1f5b, 0x1 bytes
+                std::uint8_t pad_1f5c[0x4]; // 0x1f5c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_C4) == 0x1F50, "C_C4 size mismatch");
+            static_assert(sizeof(C_C4) == 0x1F60, "C_C4 size mismatch");
         }
     }
 }

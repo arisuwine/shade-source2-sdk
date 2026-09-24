@@ -88,13 +88,15 @@ namespace shade {
                 bool m_bSilentReloadStatCounted; // 0x0fc2, 0x1 bytes
                 std::uint8_t pad_0fc3[0x1]; // 0x0fc3, 0x1 bytes
                 shade::sdk::entity2::GameTime_t m_flStealthHoldStartTime; // 0x0fc4, 0x4 bytes
-                float m_flWeaponActionPlaybackRate; // 0x0fc8, 0x4 bytes
-                std::int32_t m_iOriginalTeamNumber; // 0x0fcc, 0x4 bytes
-                std::int32_t m_iMostRecentTeamNumber; // 0x0fd0, 0x4 bytes
-                bool m_bDroppedNearBuyZone; // 0x0fd4, 0x1 bytes
-                std::uint8_t pad_0fd5[0x3]; // 0x0fd5, 0x3 bytes
-                float m_flNextAttackRenderTimeOffset; // 0x0fd8, 0x4 bytes
-                std::uint8_t pad_0fdc[0x14]; // 0x0fdc, 0x14 bytes
+                bool m_bReloadHeldSinceStart; // 0x0fc8, 0x1 bytes
+                std::uint8_t pad_0fc9[0x3]; // 0x0fc9, 0x3 bytes
+                float m_flWeaponActionPlaybackRate; // 0x0fcc, 0x4 bytes
+                std::int32_t m_iOriginalTeamNumber; // 0x0fd0, 0x4 bytes
+                std::int32_t m_iMostRecentTeamNumber; // 0x0fd4, 0x4 bytes
+                bool m_bDroppedNearBuyZone; // 0x0fd8, 0x1 bytes
+                std::uint8_t pad_0fd9[0x3]; // 0x0fd9, 0x3 bytes
+                float m_flNextAttackRenderTimeOffset; // 0x0fdc, 0x4 bytes
+                std::uint8_t pad_0fe0[0x10]; // 0x0fe0, 0x10 bytes
                 bool m_bCanBePickedUp; // 0x0ff0, 0x1 bytes
                 bool m_bUseCanOverrideNextOwnerTouchTime; // 0x0ff1, 0x1 bytes
                 std::uint8_t pad_0ff2[0x2]; // 0x0ff2, 0x2 bytes

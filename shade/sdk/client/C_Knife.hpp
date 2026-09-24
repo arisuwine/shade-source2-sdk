@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f20
+             * Size: 0x1f30
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Knife : public shade::sdk::client::C_CSWeaponBase {
             public:
-                bool m_bFirstAttack; // 0x1f10, 0x1 bytes
-                std::uint8_t pad_1f11[0xf]; // 0x1f11, 0xf bytes
+                bool m_bFirstAttack; // 0x1f20, 0x1 bytes
+                std::uint8_t pad_1f21[0xf]; // 0x1f21, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Knife) == 0x1F20, "C_Knife size mismatch");
+            static_assert(sizeof(C_Knife) == 0x1F30, "C_Knife size mismatch");
         }
     }
 }
