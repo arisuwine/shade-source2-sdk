@@ -41,9 +41,10 @@ namespace shade {
                 C_NetworkUtlVectorBase<std::uint8_t> m_VoxelFrameData; // 0x1388, 0x18 bytes
                 std::int32_t m_nVoxelFrameDataSize; // 0x13a0, 0x4 bytes
                 std::int32_t m_nVoxelUpdate; // 0x13a4, 0x4 bytes
-                bool m_bSmokeVolumeDataReceived; // 0x13a8, 0x1 bytes
-                bool m_bSmokeEffectSpawned; // 0x13a9, 0x1 bytes
-                std::uint8_t pad_13aa[0x156]; // 0x13aa, 0x156 bytes
+                std::uint8_t m_nSmokeLightProbeRegen; // 0x13a8, 0x1 bytes
+                bool m_bSmokeVolumeDataReceived; // 0x13a9, 0x1 bytes
+                bool m_bSmokeEffectSpawned; // 0x13aa, 0x1 bytes
+                std::uint8_t pad_13ab[0x155]; // 0x13ab, 0x155 bytes
             };
             #pragma pack(pop)
 

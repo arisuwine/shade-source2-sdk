@@ -86,7 +86,7 @@ namespace shade {
                 bool m_bStealthy; // 0x0fc0, 0x1 bytes
                 bool m_bInSilentReloadSection; // 0x0fc1, 0x1 bytes
                 bool m_bSilentReloadStatCounted; // 0x0fc2, 0x1 bytes
-                std::uint8_t pad_0fc3[0x1]; // 0x0fc3, 0x1 bytes
+                bool m_bSilentReloadStatPending; // 0x0fc3, 0x1 bytes
                 shade::sdk::entity2::GameTime_t m_flStealthHoldStartTime; // 0x0fc4, 0x4 bytes
                 bool m_bReloadHeldSinceStart; // 0x0fc8, 0x1 bytes
                 std::uint8_t pad_0fc9[0x3]; // 0x0fc9, 0x3 bytes

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2e40
+             * Size: 0x2e50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -42,18 +42,20 @@ namespace shade {
                 CNetworkUtlVectorBase<std::uint8_t> m_VoxelFrameData; // 0x0b90, 0x18 bytes
                 std::int32_t m_nVoxelFrameDataSize; // 0x0ba8, 0x4 bytes
                 std::int32_t m_nVoxelUpdate; // 0x0bac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastBounce; // 0x0bb0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fllastSimulationTime; // 0x0bb4, 0x4 bytes
-                std::uint8_t pad_0bb8[0x2280]; // 0x0bb8, 0x2280 bytes
-                bool m_bExplodeFromInferno; // 0x2e38, 0x1 bytes
-                bool m_bDidGroundScorch; // 0x2e39, 0x1 bytes
-                std::uint8_t pad_2e3a[0x6]; // 0x2e3a, 0x6 bytes
+                std::uint8_t m_nSmokeLightProbeRegen; // 0x0bb0, 0x1 bytes
+                std::uint8_t pad_0bb1[0x3]; // 0x0bb1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBounce; // 0x0bb4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fllastSimulationTime; // 0x0bb8, 0x4 bytes
+                std::uint8_t pad_0bbc[0x2284]; // 0x0bbc, 0x2284 bytes
+                bool m_bExplodeFromInferno; // 0x2e40, 0x1 bytes
+                bool m_bDidGroundScorch; // 0x2e41, 0x1 bytes
+                std::uint8_t pad_2e42[0xe]; // 0x2e42, 0xe bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSmokeGrenadeProjectile) == 0x2E40, "CSmokeGrenadeProjectile size mismatch");
+            static_assert(sizeof(CSmokeGrenadeProjectile) == 0x2E50, "CSmokeGrenadeProjectile size mismatch");
         }
     }
 }
