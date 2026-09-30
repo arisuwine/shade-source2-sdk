@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x790
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierT3BossWaveTargetVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CSoundEventName m_strSilenceTargetSound; // 0x0750, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CurseModifier; // 0x0760, 0x10 bytes
-                float m_flTossUpStrength; // 0x0770, 0x4 bytes
-                float m_flTossHorizontalMax; // 0x0774, 0x4 bytes
-                float m_flTossHorizontalMin; // 0x0778, 0x4 bytes
-                float m_flDebuffDuration; // 0x077c, 0x4 bytes
+                CSoundEventName m_strSilenceTargetSound; // 0x0760, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CurseModifier; // 0x0770, 0x10 bytes
+                float m_flTossUpStrength; // 0x0780, 0x4 bytes
+                float m_flTossHorizontalMax; // 0x0784, 0x4 bytes
+                float m_flTossHorizontalMin; // 0x0788, 0x4 bytes
+                float m_flDebuffDuration; // 0x078c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierT3BossWaveTargetVData) == 0x780, "CModifierT3BossWaveTargetVData size mismatch");
+            static_assert(sizeof(CModifierT3BossWaveTargetVData) == 0x790, "CModifierT3BossWaveTargetVData size mismatch");
         }
     }
 }

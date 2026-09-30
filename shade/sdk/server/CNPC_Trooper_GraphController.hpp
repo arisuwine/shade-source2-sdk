@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8b8
+             * Size: 0x478
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Trooper_GraphController : public shade::sdk::server::CAI_CitadelNPC_GraphController {
             public:
-                CAnimGraph2ParamOptionalRef<float> m_flVariant; // 0x07f0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bExplosionReact; // 0x0808, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bMedicHeal; // 0x0820, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flExplosionReactRandomTimeScale; // 0x0838, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eTurn; // 0x0850, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eBaseAction; // 0x0868, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bZiplining; // 0x0880, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bFalling; // 0x0898, 0x18 bytes
-                bool m_bShouldReset; // 0x08b0, 0x1 bytes
-                std::uint8_t pad_08b1[0x7]; // 0x08b1, 0x7 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eBaseAction; // 0x0388, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eTrooperAction; // 0x03a0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_ePivot; // 0x03b8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flAimPitch; // 0x03d0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flAimYaw; // 0x03e8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flRunSpeed; // 0x0400, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bAttack; // 0x0418, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bInAirForced; // 0x0430, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bJumped; // 0x0448, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bLanded; // 0x0460, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Trooper_GraphController) == 0x8B8, "CNPC_Trooper_GraphController size mismatch");
+            static_assert(sizeof(CNPC_Trooper_GraphController) == 0x478, "CNPC_Trooper_GraphController size mismatch");
         }
     }
 }

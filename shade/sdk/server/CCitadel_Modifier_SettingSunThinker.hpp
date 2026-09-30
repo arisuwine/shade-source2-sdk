@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x168
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,24 +30,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SettingSunThinker : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flTickInterval; // 0x00d0, 0x4 bytes
-                float m_flRadius; // 0x00d4, 0x4 bytes
-                float m_CenterRadius; // 0x00d8, 0x4 bytes
-                float m_CenterDamage; // 0x00dc, 0x4 bytes
-                float m_OuterDamage; // 0x00e0, 0x4 bytes
-                float m_StunDuration; // 0x00e4, 0x4 bytes
-                float m_TargetingDuration; // 0x00e8, 0x4 bytes
-                float m_ShootDuration; // 0x00ec, 0x4 bytes
-                bool m_bTargetingCompleted; // 0x00f0, 0x1 bytes
-                bool m_bSecondHit; // 0x00f1, 0x1 bytes
-                bool m_bTwoHits; // 0x00f2, 0x1 bytes
-                std::uint8_t pad_00f3[0x5]; // 0x00f3, 0x5 bytes
+                float m_flTickInterval; // 0x0140, 0x4 bytes
+                float m_flRadius; // 0x0144, 0x4 bytes
+                float m_CenterRadius; // 0x0148, 0x4 bytes
+                float m_CenterDamage; // 0x014c, 0x4 bytes
+                float m_OuterDamage; // 0x0150, 0x4 bytes
+                float m_StunDuration; // 0x0154, 0x4 bytes
+                float m_TargetingDuration; // 0x0158, 0x4 bytes
+                float m_ShootDuration; // 0x015c, 0x4 bytes
+                bool m_bTargetingCompleted; // 0x0160, 0x1 bytes
+                bool m_bSecondHit; // 0x0161, 0x1 bytes
+                bool m_bTwoHits; // 0x0162, 0x1 bytes
+                std::uint8_t pad_0163[0x5]; // 0x0163, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SettingSunThinker) == 0xF8, "CCitadel_Modifier_SettingSunThinker size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SettingSunThinker) == 0x168, "CCitadel_Modifier_SettingSunThinker size mismatch");
         }
     }
 }

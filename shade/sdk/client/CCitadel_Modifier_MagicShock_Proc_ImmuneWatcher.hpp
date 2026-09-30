@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x1e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint64_t m_iAbilityID; // 0x00c0, 0x8 bytes
-                std::uint8_t pad_00c8[0x80]; // 0x00c8, 0x80 bytes
+                std::uint64_t m_iAbilityID; // 0x0130, 0x8 bytes
+                std::uint8_t pad_0138[0xb0]; // 0x0138, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher) == 0x148, "CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher) == 0x1E8, "CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher size mismatch");
         }
     }
 }

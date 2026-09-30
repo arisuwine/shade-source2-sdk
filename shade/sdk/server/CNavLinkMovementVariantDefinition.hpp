@@ -12,19 +12,20 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/BodySectionAuthority_t.hpp"
+#include "shade/sdk/client/BodySectionMutex_t.hpp"
+#include "shade/sdk/client/StanceType_t.hpp"
+#include "shade/sdk/modellib/SharedMovementGait_t.hpp"
+#include "shade/sdk/server/CNavLinkApproachConditions.hpp"
+#include "shade/sdk/server/NavLinkMovementFlags_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace resourcesystem {
             class InfoForResourceTypeCNmGraphDefinition;
-        }
-
-        namespace server {
-            class CNavLinkApproachConditions;
         }
     }
 }
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x108
+             * Size: 0x110
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -41,18 +42,23 @@ namespace shade {
             class CNavLinkMovementVariantDefinition {
             public:
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition>> m_sExternalGraphName; // 0x0000, 0xe0 bytes
-                shade::sdk::client::BodySectionAuthority_t m_nBodySectionAuthority; // 0x00e0, 0x4 bytes
-                bool m_bSupportsExit; // 0x00e4, 0x1 bytes
-                std::uint8_t pad_00e5[0x3]; // 0x00e5, 0x3 bytes
+                shade::sdk::client::BodySectionMutex_t m_eBodySectionMutex; // 0x00e0, 0x4 bytes
+                CBitVecEnum<shade::sdk::server::NavLinkMovementFlags_t> m_flags; // 0x00e4, 0x4 bytes
                 float m_flMinimalPathLengthForMovingExit; // 0x00e8, 0x4 bytes
                 float m_flSnapDestinationToPathGoalThreshold; // 0x00ec, 0x4 bytes
-                CUtlVector<shade::sdk::server::CNavLinkApproachConditions> m_vecApproachConditions; // 0x00f0, 0x18 bytes
+                shade::sdk::modellib::SharedMovementGait_t m_ePreferredMovementGait; // 0x00f0, 0x1 bytes
+                std::uint8_t pad_00f1[0x3]; // 0x00f1, 0x3 bytes
+                shade::sdk::client::StanceType_t m_ePreferredStance; // 0x00f4, 0x4 bytes
+                float m_flPreferredMovementGaitDistance; // 0x00f8, 0x4 bytes
+                shade::sdk::server::CNavLinkApproachConditions m_approachConditionsFromIdle; // 0x00fc, 0x8 bytes
+                shade::sdk::server::CNavLinkApproachConditions m_approachConditionsFromMovement; // 0x0104, 0x8 bytes
+                std::uint8_t pad_010c[0x4]; // 0x010c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNavLinkMovementVariantDefinition) == 0x108, "CNavLinkMovementVariantDefinition size mismatch");
+            static_assert(sizeof(CNavLinkMovementVariantDefinition) == 0x110, "CNavLinkMovementVariantDefinition size mismatch");
         }
     }
 }

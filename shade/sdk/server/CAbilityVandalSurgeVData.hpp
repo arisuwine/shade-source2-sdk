@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1918
+             * Size: 0x14a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityVandalSurgeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LiftModifier; // 0x1818, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1828, 0xe0 bytes
-                CSoundEventName m_TargetCastSound; // 0x1908, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LiftModifier; // 0x13a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x13b0, 0xe0 bytes
+                CSoundEventName m_TargetCastSound; // 0x1490, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityVandalSurgeVData) == 0x1918, "CAbilityVandalSurgeVData size mismatch");
+            static_assert(sizeof(CAbilityVandalSurgeVData) == 0x14A0, "CAbilityVandalSurgeVData size mismatch");
         }
     }
 }

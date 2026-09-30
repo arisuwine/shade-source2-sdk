@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particleslib {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0xb0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CParticleCollectionBindingInstance : public shade::sdk::pulse_runtime_lib::CBasePulseGraphInstance {
             public:
-                std::uint8_t pad_0118[0x20]; // 0x0118, 0x20 bytes
+                std::uint8_t pad_0090[0x20]; // 0x0090, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleCollectionBindingInstance) == 0x138, "CParticleCollectionBindingInstance size mismatch");
+            static_assert(sizeof(CParticleCollectionBindingInstance) == 0xB0, "CParticleCollectionBindingInstance size mismatch");
         }
     }
 }

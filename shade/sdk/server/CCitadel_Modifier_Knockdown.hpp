@@ -12,10 +12,10 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/EKnockDownTypes.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CCitadel_Modifier_Stunned.hpp"
 
@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x168
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Knockdown : public shade::sdk::server::CCitadel_Modifier_Stunned {
             public:
-                QAngle m_angStunAngles; // 0x00d8, 0xc bytes
-                shade::sdk::client::EKnockDownTypes m_ePreferredKnockdownType; // 0x00e4, 0x4 bytes
-                bool m_bForceTakePreferred; // 0x00e8, 0x1 bytes
-                std::uint8_t pad_00e9[0x3]; // 0x00e9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0x00ec, 0x4 bytes
-                bool m_bGetUpCamSeqStarted; // 0x00f0, 0x1 bytes
-                std::uint8_t pad_00f1[0x3]; // 0x00f1, 0x3 bytes
-                float m_flOnGroundDuration; // 0x00f4, 0x4 bytes
+                QAngle m_angStunAngles; // 0x0148, 0xc bytes
+                std::int32_t m_ePreferredKnockdownType; // 0x0154, 0x4 bytes
+                bool m_bForceTakePreferred; // 0x0158, 0x1 bytes
+                std::uint8_t pad_0159[0x3]; // 0x0159, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0x015c, 0x4 bytes
+                bool m_bGetUpCamSeqStarted; // 0x0160, 0x1 bytes
+                std::uint8_t pad_0161[0x3]; // 0x0161, 0x3 bytes
+                float m_flOnGroundDuration; // 0x0164, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Knockdown) == 0xF8, "CCitadel_Modifier_Knockdown size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Knockdown) == 0x168, "CCitadel_Modifier_Knockdown size mismatch");
         }
     }
 }

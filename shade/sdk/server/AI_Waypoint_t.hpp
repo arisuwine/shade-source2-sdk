@@ -12,11 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/navlib/NavGravity_t.hpp"
-#include "shade/sdk/server/Navigation_t.hpp"
+#include "shade/sdk/server/NavType_t.hpp"
 #include "shade/sdk/server/WaypointFlags_t.hpp"
 
 namespace shade {
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x60
+             * Size: 0x68
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -39,26 +40,29 @@ namespace shade {
             struct AI_Waypoint_t {
                 VectorWS m_vPos; // 0x0000, 0xc bytes
                 shade::sdk::server::WaypointFlags_t m_fWaypointFlags; // 0x000c, 0x4 bytes
-                shade::sdk::server::Navigation_t m_nWpType; // 0x0010, 0x4 bytes
+                shade::sdk::server::NavType_t m_nNavType; // 0x0010, 0x4 bytes
                 std::uint8_t pad_0014[0x14]; // 0x0014, 0x14 bytes
                 float m_flYaw; // 0x0028, 0x4 bytes
                 float m_flBoundaryDist; // 0x002c, 0x4 bytes
-                float m_flPathDistGoal; // 0x0030, 0x4 bytes
+                float m_flPathDistToLastWaypoint; // 0x0030, 0x4 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hPathCorner; // 0x0034, 0x4 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hData; // 0x0038, 0x4 bytes
-                std::uint32_t m_nGroundNavAreaId; // 0x003c, 0x4 bytes
-                std::uint32_t m_nNavLinkAreaId; // 0x0040, 0x4 bytes
-                std::uint32_t m_nNavBlockId; // 0x0044, 0x4 bytes
-                shade::sdk::navlib::NavGravity_t m_gravityOverride; // 0x0048, 0x10 bytes
-                bool m_bGravityOverrideSet; // 0x0058, 0x1 bytes
-                std::uint8_t pad_0059[0x3]; // 0x0059, 0x3 bytes
-                std::uint32_t m_nConstrainedToMovableMeshId; // 0x005c, 0x4 bytes
+                std::uint32_t m_nNavAreaId; // 0x003c, 0x4 bytes
+                std::uint32_t m_nNavBlockId; // 0x0040, 0x4 bytes
+                std::uint32_t m_nNavAreaIdAfterTransition; // 0x0044, 0x4 bytes
+                shade::sdk::server::NavType_t m_nNavTypeAfterTransition; // 0x0048, 0x4 bytes
+                shade::sdk::navlib::NavGravity_t m_gravityOverride; // 0x004c, 0x10 bytes
+                bool m_bGravityOverrideSet; // 0x005c, 0x1 bytes
+                std::uint8_t pad_005d[0x3]; // 0x005d, 0x3 bytes
+                std::uint32_t m_nConstrainedToMovableMeshId; // 0x0060, 0x4 bytes
+                std::uint8_t m_nNavLinkSubMotorId; // 0x0064, 0x1 bytes
+                std::uint8_t pad_0065[0x3]; // 0x0065, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_Waypoint_t) == 0x60, "AI_Waypoint_t size mismatch");
+            static_assert(sizeof(AI_Waypoint_t) == 0x68, "AI_Waypoint_t size mismatch");
         }
     }
 }

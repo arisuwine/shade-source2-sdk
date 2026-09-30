@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CCitadelModifier.hpp"
+#include "shade/sdk/client/CCitadel_Modifier_Drag.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,26 +30,22 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x190
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_LuggageDrag : public shade::sdk::client::CCitadelModifier {
+            class CCitadel_Modifier_LuggageDrag : public shade::sdk::client::CCitadel_Modifier_Drag {
             public:
-                float m_flRelativeDist; // 0x00c0, 0x4 bytes
-                float m_flCartSpeed; // 0x00c4, 0x4 bytes
-                QAngle m_qRelativeOffset; // 0x00c8, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDragger; // 0x00d4, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDummyForCamera; // 0x00d8, 0x4 bytes
-                std::uint8_t pad_00dc[0x4]; // 0x00dc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hDummyForCamera; // 0x0188, 0x4 bytes
+                std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LuggageDrag) == 0xE0, "CCitadel_Modifier_LuggageDrag size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LuggageDrag) == 0x190, "CCitadel_Modifier_LuggageDrag size mismatch");
         }
     }
 }

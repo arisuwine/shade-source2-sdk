@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x13b8
+             * Size: 0xcc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,40 +31,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayerBotNPCBrainVData : public shade::sdk::server::CAI_CitadelNPCVData {
             public:
-                float m_flJumpMaxRise; // 0x1348, 0x4 bytes
-                float m_flAirJumpMin; // 0x134c, 0x4 bytes
-                float m_flJumpMaxDrop; // 0x1350, 0x4 bytes
-                float m_flJumpMaxDist; // 0x1354, 0x4 bytes
-                float m_flJumpMinDist; // 0x1358, 0x4 bytes
-                float m_flClimbUpCostBase; // 0x135c, 0x4 bytes
-                float m_flClimbUpCostScalar; // 0x1360, 0x4 bytes
-                float m_flFaceTargetDistance; // 0x1364, 0x4 bytes
-                float m_flNavGoalTolerance; // 0x1368, 0x4 bytes
-                float m_flVerticalAttachOffset; // 0x136c, 0x4 bytes
-                float m_flStuckTime; // 0x1370, 0x4 bytes
-                float m_flStuckTimeAir; // 0x1374, 0x4 bytes
-                float m_flMajorStuckTime; // 0x1378, 0x4 bytes
-                std::int32_t m_unMajorStuckAttemptCount; // 0x137c, 0x4 bytes
-                float m_flStuckDistance; // 0x1380, 0x4 bytes
-                float m_flMaxPathDistance; // 0x1384, 0x4 bytes
-                float m_flMinLanePathDistance; // 0x1388, 0x4 bytes
-                float m_flEnemyDistanceForReload; // 0x138c, 0x4 bytes
-                float m_flReloadEnemyFarPct; // 0x1390, 0x4 bytes
-                float m_flReloadEnemyLoSPct; // 0x1394, 0x4 bytes
-                float m_flReloadEnemyLosTime; // 0x1398, 0x4 bytes
-                float m_flMinShootTimeToReload; // 0x139c, 0x4 bytes
-                float m_flDashDamageThreshold; // 0x13a0, 0x4 bytes
-                float m_flDashDamageTickDown; // 0x13a4, 0x4 bytes
-                float m_flMinDesiredDashDist; // 0x13a8, 0x4 bytes
-                float m_flMinAbilityAimTime; // 0x13ac, 0x4 bytes
-                float m_flDisengageFromEnemyToLaneDist; // 0x13b0, 0x4 bytes
-                float m_flDefendBaseSearchRadius; // 0x13b4, 0x4 bytes
+                float m_flJumpMaxRise; // 0x0c50, 0x4 bytes
+                float m_flAirJumpMin; // 0x0c54, 0x4 bytes
+                float m_flJumpMaxDrop; // 0x0c58, 0x4 bytes
+                float m_flJumpMaxDist; // 0x0c5c, 0x4 bytes
+                float m_flJumpMinDist; // 0x0c60, 0x4 bytes
+                float m_flClimbUpCostBase; // 0x0c64, 0x4 bytes
+                float m_flClimbUpCostScalar; // 0x0c68, 0x4 bytes
+                float m_flFaceTargetDistance; // 0x0c6c, 0x4 bytes
+                float m_flNavGoalTolerance; // 0x0c70, 0x4 bytes
+                float m_flVerticalAttachOffset; // 0x0c74, 0x4 bytes
+                float m_flStuckTime; // 0x0c78, 0x4 bytes
+                float m_flStuckTimeAir; // 0x0c7c, 0x4 bytes
+                float m_flMajorStuckTime; // 0x0c80, 0x4 bytes
+                std::int32_t m_unMajorStuckAttemptCount; // 0x0c84, 0x4 bytes
+                float m_flStuckDistance; // 0x0c88, 0x4 bytes
+                float m_flMaxPathDistance; // 0x0c8c, 0x4 bytes
+                float m_flMinLanePathDistance; // 0x0c90, 0x4 bytes
+                float m_flEnemyDistanceForReload; // 0x0c94, 0x4 bytes
+                float m_flReloadEnemyFarPct; // 0x0c98, 0x4 bytes
+                float m_flReloadEnemyLoSPct; // 0x0c9c, 0x4 bytes
+                float m_flReloadEnemyLosTime; // 0x0ca0, 0x4 bytes
+                float m_flMinShootTimeToReload; // 0x0ca4, 0x4 bytes
+                float m_flDashDamageThreshold; // 0x0ca8, 0x4 bytes
+                float m_flDashDamageTickDown; // 0x0cac, 0x4 bytes
+                float m_flMinDesiredDashDist; // 0x0cb0, 0x4 bytes
+                float m_flMinAbilityAimTime; // 0x0cb4, 0x4 bytes
+                float m_flDisengageFromEnemyToLaneDist; // 0x0cb8, 0x4 bytes
+                float m_flDefendBaseSearchRadius; // 0x0cbc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelPlayerBotNPCBrainVData) == 0x13B8, "CCitadelPlayerBotNPCBrainVData size mismatch");
+            static_assert(sizeof(CCitadelPlayerBotNPCBrainVData) == 0xCC0, "CCitadelPlayerBotNPCBrainVData size mismatch");
         }
     }
 }

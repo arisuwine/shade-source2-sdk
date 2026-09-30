@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19d8
+             * Size: 0x1670
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCadencePrimaryWeaponVData : public shade::sdk::server::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x19c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1660, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCadencePrimaryWeaponVData) == 0x19D8, "CAbilityCadencePrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CAbilityCadencePrimaryWeaponVData) == 0x1670, "CAbilityCadencePrimaryWeaponVData size mismatch");
         }
     }
 }

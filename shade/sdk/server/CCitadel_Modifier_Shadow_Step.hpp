@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x6f0
+             * Size: 0x9a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Shadow_Step : public shade::sdk::server::CCitadel_Modifier_Invis {
             public:
-                shade::sdk::client::ParticleIndex_t m_nRevealedEffect; // 0x0468, 0x4 bytes
-                std::uint8_t pad_046c[0x284]; // 0x046c, 0x284 bytes
+                shade::sdk::client::ParticleIndex_t m_nRevealedEffect; // 0x0628, 0x4 bytes
+                std::uint8_t pad_062c[0x374]; // 0x062c, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Shadow_Step) == 0x6F0, "CCitadel_Modifier_Shadow_Step size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Shadow_Step) == 0x9A0, "CCitadel_Modifier_Shadow_Step size mismatch");
         }
     }
 }

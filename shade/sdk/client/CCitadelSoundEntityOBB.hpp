@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,10 +31,9 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelSoundEntityOBB : public shade::sdk::client::C_SoundEventEntity {
             public:
-                std::uint8_t pad_06b0[0x14]; // 0x06b0, 0x14 bytes
-                Vector m_vMins; // 0x06c4, 0xc bytes
-                Vector m_vMaxs; // 0x06d0, 0xc bytes
-                std::uint8_t pad_06dc[0x4]; // 0x06dc, 0x4 bytes
+                Vector m_vMins; // 0x06b0, 0xc bytes
+                Vector m_vMaxs; // 0x06bc, 0xc bytes
+                std::uint8_t pad_06c8[0x18]; // 0x06c8, 0x18 bytes
             };
             #pragma pack(pop)
 

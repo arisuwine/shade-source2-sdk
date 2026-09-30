@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x288
+             * Size: 0x388
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Upgrade_ArcaneMedallion : public shade::sdk::server::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_0208[0x80]; // 0x0208, 0x80 bytes
+                std::uint8_t pad_02d8[0xb0]; // 0x02d8, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Upgrade_ArcaneMedallion) == 0x288, "CModifier_Upgrade_ArcaneMedallion size mismatch");
+            static_assert(sizeof(CModifier_Upgrade_ArcaneMedallion) == 0x388, "CModifier_Upgrade_ArcaneMedallion size mismatch");
         }
     }
 }

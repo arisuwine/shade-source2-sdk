@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,7 +20,6 @@
 #include "shade/sdk/client/AbilityCosmeticInfo_t.hpp"
 #include "shade/sdk/client/AbilityTooltipDetails_t.hpp"
 #include "shade/sdk/client/AdditionalAbilities_t.hpp"
-#include "shade/sdk/client/CCitadelWeaponInfo.hpp"
 #include "shade/sdk/client/CEntitySubclassVDataBase.hpp"
 #include "shade/sdk/client/CITADEL_UNIT_TARGET_FLAGS.hpp"
 #include "shade/sdk/client/CITADEL_UNIT_TARGET_TYPE.hpp"
@@ -46,7 +46,9 @@ namespace shade {
             struct AbilityDependencyDescription_t;
             struct AbilityUpgrade_t;
             class CBaseModifier;
+            class CCitadelWeaponInfo;
             struct CitadelAbilityProperty_t;
+            struct ItemSectionInfo_t;
         }
 
         namespace resourcesystem {
@@ -60,7 +62,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1818
+             * Size: 0x13a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -93,100 +95,106 @@ namespace shade {
                 std::uint8_t pad_006b[0x1]; // 0x006b, 0x1 bytes
                 float m_flNearbySweepOffset; // 0x006c, 0x4 bytes
                 float m_flNearbySweepRadius; // 0x0070, 0x4 bytes
-                shade::sdk::client::EAbilityActivation_t m_eAbilityActivation; // 0x0074, 0x4 bytes
-                shade::sdk::client::InputBitMask_t m_TriggerButtonPreReqButton; // 0x0078, 0x8 bytes
-                shade::sdk::client::InputBitMask_t m_TriggerButtonOverride; // 0x0080, 0x8 bytes
-                shade::sdk::client::EAbilitySpectatePriority m_eAbilitySpectatePriority; // 0x0088, 0x1 bytes
-                std::uint8_t pad_0089[0x3]; // 0x0089, 0x3 bytes
-                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsInterruptingStates; // 0x008c, 0x28 bytes
-                shade::sdk::client::IncompatibleFilter_t m_IncompatibleFilter; // 0x00b4, 0x14 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x00c8, 0x4 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x00cc, 0x4 bytes
-                shade::sdk::client::ELOSCheck m_eTargettingLOSCheck; // 0x00d0, 0x4 bytes
-                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsPreCastEnabledStateMask; // 0x00d4, 0x28 bytes
-                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsChannelEnabledStateMask; // 0x00fc, 0x28 bytes
-                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsPostCastEnabledStateMask; // 0x0124, 0x28 bytes
-                shade::sdk::client::ECitadelTargetAbilityEffects m_TargetAbilityEffectsToApply; // 0x014c, 0x4 bytes
-                float m_flBossDamageScale; // 0x0150, 0x4 bytes
-                bool m_bShowTargetingPreviewWhileChanneling; // 0x0154, 0x1 bytes
-                bool m_bShowTargetingPreviewWhileCasting; // 0x0155, 0x1 bytes
-                std::uint8_t pad_0156[0x2]; // 0x0156, 0x2 bytes
-                shade::sdk::client::CCitadelWeaponInfo m_WeaponInfo; // 0x0158, 0x778 bytes
-                shade::sdk::client::ProjectileInfo_t m_projectileInfo; // 0x08d0, 0x398 bytes
-                shade::sdk::client::DeploymentInfo_t m_deploymentInfo; // 0x0c68, 0x200 bytes
-                CUtlOrderedMap<CUtlString, shade::sdk::client::CitadelAbilityProperty_t> m_mapAbilityProperties; // 0x0e68, 0x28 bytes
-                CUtlOrderedMap<CSubclassName<4>, shade::sdk::client::AbilityDependencyDescription_t> m_mapDependentAbilities; // 0x0e90, 0x28 bytes
-                CUtlVector<shade::sdk::client::AbilityUpgrade_t> m_vecAbilityUpgrades; // 0x0eb8, 0x18 bytes
-                CGlobalSymbol m_strCastAnimGraphParam; // 0x0ed0, 0x8 bytes
-                CUtlString m_strSelectionNameOverride; // 0x0ed8, 0x8 bytes
-                CUtlString m_strCastAnimSequenceName; // 0x0ee0, 0x8 bytes
-                bool m_bSuppressOutOfCombatOnCast; // 0x0ee8, 0x1 bytes
-                bool m_bSuppressOutOfCombatWhileChanneling; // 0x0ee9, 0x1 bytes
-                std::uint8_t pad_0eea[0x6]; // 0x0eea, 0x6 bytes
-                CGlobalSymbol m_strAG2SourceName; // 0x0ef0, 0x8 bytes
-                CGlobalSymbol m_strAG2CastingAction; // 0x0ef8, 0x8 bytes
-                CGlobalSymbol m_strAG2ChannelingAction; // 0x0f00, 0x8 bytes
-                CGlobalSymbol m_strAG2CastCompletedAction; // 0x0f08, 0x8 bytes
-                shade::sdk::client::AbilityTooltipDetails_t m_AbilityTooltipDetails; // 0x0f10, 0x30 bytes
-                CUtlString m_strCSSClass; // 0x0f40, 0x8 bytes
-                CPanoramaImageName m_strAbilityImage; // 0x0f48, 0x10 bytes
-                CUtlString m_strMoviePreviewPath; // 0x0f58, 0x8 bytes
-                shade::sdk::client::CitadelAbilityHUDPanel_t m_HUDPanel; // 0x0f60, 0x38 bytes
-                bool m_bShowInPassiveItemsArea; // 0x0f98, 0x1 bytes
-                bool m_bForceHideHUDPanel; // 0x0f99, 0x1 bytes
-                bool m_bForceShowHUDPanel; // 0x0f9a, 0x1 bytes
-                bool m_bUsesFlightControls; // 0x0f9b, 0x1 bytes
-                std::uint8_t pad_0f9c[0x4]; // 0x0f9c, 0x4 bytes
-                CUtlString m_strFlyUpLocString; // 0x0fa0, 0x8 bytes
-                CUtlString m_strFlyDownLocString; // 0x0fa8, 0x8 bytes
-                CUtlString m_strSubCastUICSSClass; // 0x0fb0, 0x8 bytes
-                shade::sdk::client::AdditionalAbilities_t m_additionalAbilities; // 0x0fb8, 0x20 bytes
-                CUtlString m_strSecondaryStatName; // 0x0fd8, 0x8 bytes
-                CUtlString m_strCastButtonLocToken; // 0x0fe0, 0x8 bytes
-                CUtlString m_strAltCastButtonLocToken; // 0x0fe8, 0x8 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastStart; // 0x0ff0, 0x88 bytes
-                bool m_bEndCastStartSequenceOnCastComplete; // 0x1078, 0x1 bytes
-                std::uint8_t pad_1079[0x7]; // 0x1079, 0x7 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastComplete; // 0x1080, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceChannelStart; // 0x1108, 0x88 bytes
-                bool m_bEndChannelStartSequenceOnChannelComplete; // 0x1190, 0x1 bytes
-                std::uint8_t pad_1191[0x3]; // 0x1191, 0x3 bytes
-                float m_flCameraPreviewOffset; // 0x1194, 0x4 bytes
-                float m_flCameraPreviewDistance; // 0x1198, 0x4 bytes
-                float m_flCameraPreviewSpeed; // 0x119c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_previewParticle; // 0x11a0, 0xe0 bytes
-                CUtlString m_strPreviewParticleEffectConfig; // 0x1280, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewPathParticle; // 0x1288, 0xe0 bytes
-                CUtlOrderedMap<shade::sdk::client::AbilityCastEvent_t, CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>> m_mapCastEventParticles; // 0x1368, 0x28 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotHitParticle; // 0x1390, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotMissParticle; // 0x1470, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingPreviewParticle; // 0x1550, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCPanoramaStyle>> m_HudSharedStyle; // 0x1630, 0xe0 bytes
-                CSoundEventName m_strSelectedSound; // 0x1710, 0x10 bytes
-                CSoundEventName m_strUnselectedSound; // 0x1720, 0x10 bytes
-                CSoundEventName m_strSelectedLoopSound; // 0x1730, 0x10 bytes
-                CSoundEventName m_strCastSound; // 0x1740, 0x10 bytes
-                CSoundEventName m_strChannelSound; // 0x1750, 0x10 bytes
-                CSoundEventName m_strChannelLoopSound; // 0x1760, 0x10 bytes
-                CSoundEventName m_strCastDelaySound; // 0x1770, 0x10 bytes
-                CSoundEventName m_strCastDelayLoopSound; // 0x1780, 0x10 bytes
-                CSoundEventName m_strHitConfirmationSound; // 0x1790, 0x10 bytes
-                CSoundEventName m_strDamageTakenSound; // 0x17a0, 0x10 bytes
-                CSoundEventName m_strAbilityOffCooldownSound; // 0x17b0, 0x10 bytes
-                CSoundEventName m_strAbilityChargeReadySound; // 0x17c0, 0x10 bytes
-                bool m_bPlayMeepMop; // 0x17d0, 0x1 bytes
-                std::uint8_t pad_17d1[0x7]; // 0x17d1, 0x7 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoChannelModifier; // 0x17d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoCastDelayModifier; // 0x17e8, 0x10 bytes
-                CUtlVector<CEmbeddedSubclass<shade::sdk::client::CBaseModifier>> m_AutoIntrinsicModifiers; // 0x17f8, 0x18 bytes
-                shade::sdk::client::AbilityCosmeticInfo_t m_cosmeticInfo; // 0x1810, 0x1 bytes
-                std::uint8_t pad_1811[0x7]; // 0x1811, 0x7 bytes
+                bool m_bTargetingPreviewDesaturatesScreen; // 0x0074, 0x1 bytes
+                std::uint8_t pad_0075[0x3]; // 0x0075, 0x3 bytes
+                shade::sdk::client::EAbilityActivation_t m_eAbilityActivation; // 0x0078, 0x4 bytes
+                float m_flToggleOffDelay; // 0x007c, 0x4 bytes
+                shade::sdk::client::InputBitMask_t m_TriggerButtonPreReqButton; // 0x0080, 0x8 bytes
+                shade::sdk::client::InputBitMask_t m_TriggerButtonOverride; // 0x0088, 0x8 bytes
+                shade::sdk::client::EAbilitySpectatePriority m_eAbilitySpectatePriority; // 0x0090, 0x1 bytes
+                std::uint8_t pad_0091[0x3]; // 0x0091, 0x3 bytes
+                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsInterruptingStates; // 0x0094, 0x2c bytes
+                shade::sdk::client::IncompatibleFilter_t m_IncompatibleFilter; // 0x00c0, 0x14 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x00d4, 0x4 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x00d8, 0x4 bytes
+                shade::sdk::client::ELOSCheck m_eTargettingLOSCheck; // 0x00dc, 0x4 bytes
+                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsPreCastEnabledStateMask; // 0x00e0, 0x2c bytes
+                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsChannelEnabledStateMask; // 0x010c, 0x2c bytes
+                CBitVecEnum<shade::sdk::client::EModifierState> m_bitsPostCastEnabledStateMask; // 0x0138, 0x2c bytes
+                shade::sdk::client::ECitadelTargetAbilityEffects m_TargetAbilityEffectsToApply; // 0x0164, 0x4 bytes
+                float m_flBossDamageScale; // 0x0168, 0x4 bytes
+                bool m_bShowTargetingPreviewWhileChanneling; // 0x016c, 0x1 bytes
+                bool m_bShowTargetingPreviewWhileCasting; // 0x016d, 0x1 bytes
+                std::uint8_t pad_016e[0x2]; // 0x016e, 0x2 bytes
+                CUtlOrderedMap<CGlobalSymbol, shade::sdk::client::CCitadelWeaponInfo> m_mapWeaponInfos; // 0x0170, 0x28 bytes
+                shade::sdk::client::ProjectileInfo_t m_projectileInfo; // 0x0198, 0x3a0 bytes
+                shade::sdk::client::DeploymentInfo_t m_deploymentInfo; // 0x0538, 0x200 bytes
+                CUtlDict<shade::sdk::client::CitadelAbilityProperty_t> m_mapAbilityProperties; // 0x0738, 0x28 bytes
+                CUtlOrderedMap<CSubclassName<4>, shade::sdk::client::AbilityDependencyDescription_t> m_mapDependentAbilities; // 0x0760, 0x28 bytes
+                CUtlVector<shade::sdk::client::AbilityUpgrade_t> m_vecAbilityUpgrades; // 0x0788, 0x18 bytes
+                bool m_bSuppressOutOfCombatOnCast; // 0x07a0, 0x1 bytes
+                bool m_bSuppressOutOfCombatWhileChanneling; // 0x07a1, 0x1 bytes
+                std::uint8_t pad_07a2[0x6]; // 0x07a2, 0x6 bytes
+                CGlobalSymbol m_strAG2SourceName; // 0x07a8, 0x8 bytes
+                CGlobalSymbol m_strAG2CastingAction; // 0x07b0, 0x8 bytes
+                CGlobalSymbol m_strAG2ChannelingAction; // 0x07b8, 0x8 bytes
+                CGlobalSymbol m_strAG2CastCompletedAction; // 0x07c0, 0x8 bytes
+                CGlobalSymbol m_strAG2CastFailedAction; // 0x07c8, 0x8 bytes
+                shade::sdk::client::AbilityTooltipDetails_t m_AbilityTooltipDetails; // 0x07d0, 0x30 bytes
+                CUtlString m_strCSSClass; // 0x0800, 0x8 bytes
+                CPanoramaImageName m_strAbilityImage; // 0x0808, 0x10 bytes
+                shade::sdk::client::CitadelAbilityHUDPanel_t m_HUDPanel; // 0x0818, 0x38 bytes
+                bool m_bShowInPassiveItemsArea; // 0x0850, 0x1 bytes
+                bool m_bForceHideHUDPanel; // 0x0851, 0x1 bytes
+                bool m_bForceShowHUDPanel; // 0x0852, 0x1 bytes
+                bool m_bUsesFlightControls; // 0x0853, 0x1 bytes
+                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
+                CUtlString m_strFlyUpLocString; // 0x0858, 0x8 bytes
+                CUtlString m_strFlyDownLocString; // 0x0860, 0x8 bytes
+                CUtlString m_strSubCastUICSSClass; // 0x0868, 0x8 bytes
+                CUtlString m_sCustomStackLabel; // 0x0870, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCPanoramaStyle>> m_HudSharedStyle; // 0x0878, 0xe0 bytes
+                CUtlString m_sCustomTooltipID; // 0x0958, 0x8 bytes
+                bool m_bCustomTooltipInteractive; // 0x0960, 0x1 bytes
+                std::uint8_t pad_0961[0x7]; // 0x0961, 0x7 bytes
+                shade::sdk::client::AdditionalAbilities_t m_additionalAbilities; // 0x0968, 0x20 bytes
+                CUtlString m_strSecondaryStatName; // 0x0988, 0x8 bytes
+                CUtlString m_strCastButtonLocToken; // 0x0990, 0x8 bytes
+                CUtlString m_strAltCastButtonLocToken; // 0x0998, 0x8 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastStart; // 0x09a0, 0x88 bytes
+                bool m_bEndCastStartSequenceOnCastComplete; // 0x0a28, 0x1 bytes
+                std::uint8_t pad_0a29[0x7]; // 0x0a29, 0x7 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastComplete; // 0x0a30, 0x88 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceChannelStart; // 0x0ab8, 0x88 bytes
+                bool m_bEndChannelStartSequenceOnChannelComplete; // 0x0b40, 0x1 bytes
+                std::uint8_t pad_0b41[0x7]; // 0x0b41, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_previewParticle; // 0x0b48, 0xe0 bytes
+                CUtlString m_strPreviewParticleEffectConfig; // 0x0c28, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewPathParticle; // 0x0c30, 0xe0 bytes
+                bool m_bUseSatShapesOnPreview; // 0x0d10, 0x1 bytes
+                std::uint8_t pad_0d11[0x7]; // 0x0d11, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEPreviewParticleOverride; // 0x0d18, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConePreviewParticleOverride; // 0x0df8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LinePreviewParticleOverride; // 0x0ed8, 0xe0 bytes
+                CUtlOrderedMap<shade::sdk::client::AbilityCastEvent_t, CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>> m_mapCastEventParticles; // 0x0fb8, 0x28 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotHitParticle; // 0x0fe0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotMissParticle; // 0x10c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingPreviewParticle; // 0x11a0, 0xe0 bytes
+                CSoundEventName m_strSelectedSound; // 0x1280, 0x10 bytes
+                CSoundEventName m_strUnselectedSound; // 0x1290, 0x10 bytes
+                CSoundEventName m_strSelectedLoopSound; // 0x12a0, 0x10 bytes
+                CSoundEventName m_strCastSound; // 0x12b0, 0x10 bytes
+                CSoundEventName m_strChannelSound; // 0x12c0, 0x10 bytes
+                CSoundEventName m_strChannelLoopSound; // 0x12d0, 0x10 bytes
+                CSoundEventName m_strCastDelaySound; // 0x12e0, 0x10 bytes
+                CSoundEventName m_strCastDelayLoopSound; // 0x12f0, 0x10 bytes
+                CSoundEventName m_strHitConfirmationSound; // 0x1300, 0x10 bytes
+                CSoundEventName m_strDamageTakenSound; // 0x1310, 0x10 bytes
+                CSoundEventName m_strAbilityOffCooldownSound; // 0x1320, 0x10 bytes
+                CSoundEventName m_strAbilityChargeReadySound; // 0x1330, 0x10 bytes
+                bool m_bPlayMeepMop; // 0x1340, 0x1 bytes
+                std::uint8_t pad_1341[0x7]; // 0x1341, 0x7 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoChannelModifier; // 0x1348, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoCastDelayModifier; // 0x1358, 0x10 bytes
+                CUtlVector<CEmbeddedSubclass<shade::sdk::client::CBaseModifier>> m_AutoIntrinsicModifiers; // 0x1368, 0x18 bytes
+                shade::sdk::client::AbilityCosmeticInfo_t m_cosmeticInfo; // 0x1380, 0x8 bytes
+                CUtlVector<shade::sdk::client::ItemSectionInfo_t> m_vecTooltipSectionInfo; // 0x1388, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelAbilityVData) == 0x1818, "CitadelAbilityVData size mismatch");
+            static_assert(sizeof(CitadelAbilityVData) == 0x13A0, "CitadelAbilityVData size mismatch");
         }
     }
 }

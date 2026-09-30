@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x670
+             * Size: 0x680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,45 +34,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysHinge : public shade::sdk::server::CPhysConstraint {
             public:
-                std::uint8_t pad_0500[0x8]; // 0x0500, 0x8 bytes
-                shade::sdk::server::ConstraintSoundInfo m_soundInfo; // 0x0508, 0x98 bytes
-                shade::sdk::entity2::CEntityIOOutput m_NotifyMinLimitReached; // 0x05a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_NotifyMaxLimitReached; // 0x05b8, 0x18 bytes
-                bool m_bAtMinLimit; // 0x05d0, 0x1 bytes
-                bool m_bAtMaxLimit; // 0x05d1, 0x1 bytes
-                std::uint8_t pad_05d2[0x2]; // 0x05d2, 0x2 bytes
-                shade::sdk::client::constraint_hingeparams_t m_hinge; // 0x05d4, 0x40 bytes
-                float m_hingeFriction; // 0x0614, 0x4 bytes
-                float m_systemLoadScale; // 0x0618, 0x4 bytes
-                bool m_bIsAxisLocal; // 0x061c, 0x1 bytes
-                std::uint8_t pad_061d[0x3]; // 0x061d, 0x3 bytes
-                float m_flMinRotation; // 0x0620, 0x4 bytes
-                float m_flMaxRotation; // 0x0624, 0x4 bytes
-                float m_flInitialRotation; // 0x0628, 0x4 bytes
-                float m_flMotorFrequency; // 0x062c, 0x4 bytes
-                float m_flMotorDampingRatio; // 0x0630, 0x4 bytes
-                float m_flAngleSpeed; // 0x0634, 0x4 bytes
-                float m_flAngleSpeedThreshold; // 0x0638, 0x4 bytes
-                float m_flLimitsDebugVisRotation; // 0x063c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartMoving; // 0x0640, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStopMoving; // 0x0658, 0x18 bytes
+                std::uint8_t pad_0510[0x8]; // 0x0510, 0x8 bytes
+                shade::sdk::server::ConstraintSoundInfo m_soundInfo; // 0x0518, 0x98 bytes
+                shade::sdk::entity2::CEntityIOOutput m_NotifyMinLimitReached; // 0x05b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_NotifyMaxLimitReached; // 0x05c8, 0x18 bytes
+                bool m_bAtMinLimit; // 0x05e0, 0x1 bytes
+                bool m_bAtMaxLimit; // 0x05e1, 0x1 bytes
+                std::uint8_t pad_05e2[0x2]; // 0x05e2, 0x2 bytes
+                shade::sdk::client::constraint_hingeparams_t m_hinge; // 0x05e4, 0x40 bytes
+                float m_hingeFriction; // 0x0624, 0x4 bytes
+                float m_systemLoadScale; // 0x0628, 0x4 bytes
+                bool m_bIsAxisLocal; // 0x062c, 0x1 bytes
+                std::uint8_t pad_062d[0x3]; // 0x062d, 0x3 bytes
+                float m_flMinRotation; // 0x0630, 0x4 bytes
+                float m_flMaxRotation; // 0x0634, 0x4 bytes
+                float m_flInitialRotation; // 0x0638, 0x4 bytes
+                float m_flMotorFrequency; // 0x063c, 0x4 bytes
+                float m_flMotorDampingRatio; // 0x0640, 0x4 bytes
+                float m_flAngleSpeed; // 0x0644, 0x4 bytes
+                float m_flAngleSpeedThreshold; // 0x0648, 0x4 bytes
+                float m_flLimitsDebugVisRotation; // 0x064c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartMoving; // 0x0650, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStopMoving; // 0x0668, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * Vector m_hinge.worldPosition; // Offset: 0x5d4, Size: 0x1, Size In Bytes: 0xc
-             * Vector m_hinge.worldAxisDirection; // Offset: 0x5e0, Size: 0x1, Size In Bytes: 0xc
-             * float InputSetMotorTargetAngle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetVelocity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetHingeFriction; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMinLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysHingeSoundThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysHingeLimitThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysHingeMoveThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysHinge) == 0x670, "CPhysHinge size mismatch");
+            static_assert(sizeof(CPhysHinge) == 0x680, "CPhysHinge size mismatch");
         }
     }
 }

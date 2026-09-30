@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17e8
+             * Size: 0x1f28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HornetLeap : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x2]; // 0x11d8, 0x2 bytes
-                bool m_bLeaping; // 0x11da, 0x1 bytes
-                std::uint8_t pad_11db[0x1]; // 0x11db, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flLeapStartTime; // 0x11dc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x11e0, 0x4 bytes
-                std::uint8_t pad_11e4[0x604]; // 0x11e4, 0x604 bytes
+                std::uint8_t pad_16d8[0x2]; // 0x16d8, 0x2 bytes
+                bool m_bLeaping; // 0x16da, 0x1 bytes
+                std::uint8_t pad_16db[0x1]; // 0x16db, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLeapStartTime; // 0x16dc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x16e0, 0x4 bytes
+                std::uint8_t pad_16e4[0x844]; // 0x16e4, 0x844 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HornetLeap) == 0x17E8, "CCitadel_Ability_HornetLeap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HornetLeap) == 0x1F28, "CCitadel_Ability_HornetLeap size mismatch");
         }
     }
 }

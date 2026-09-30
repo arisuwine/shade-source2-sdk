@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d48
+             * Size: 0x18d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,35 +44,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityPowerSlashVData : public shade::sdk::client::CCitadelYamatoBaseVData {
             public:
-                float m_flAirDrag; // 0x1820, 0x4 bytes
-                float m_flMaxPowerPadding; // 0x1824, 0x4 bytes
-                float m_flEffectGroundTrace; // 0x1828, 0x4 bytes
-                float m_flWhizbyMaxRange; // 0x182c, 0x4 bytes
-                float m_flStartPosTestCapsuleLength; // 0x1830, 0x4 bytes
-                float m_flCoverLOSBackDist; // 0x1834, 0x4 bytes
-                Vector m_vecLongEffectOffset; // 0x1838, 0xc bytes
-                float m_vecPlayerLeftOffset; // 0x1844, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerSlashParticle; // 0x1848, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerSlashFullParticle; // 0x1928, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1a08, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1ae8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerUpParticle; // 0x1bc8, 0xe0 bytes
-                CSoundEventName m_strStartSound; // 0x1ca8, 0x10 bytes
-                CSoundEventName m_strHitConfirmSound; // 0x1cb8, 0x10 bytes
-                CSoundEventName m_strPowerUp1Sounds; // 0x1cc8, 0x10 bytes
-                CSoundEventName m_strPowerUp2Sounds; // 0x1cd8, 0x10 bytes
-                CSoundEventName m_strPowerUp3Sounds; // 0x1ce8, 0x10 bytes
-                CSoundEventName m_strWhizbySound; // 0x1cf8, 0x10 bytes
-                CSoundEventName m_strSlashSound; // 0x1d08, 0x10 bytes
-                CSoundEventName m_strSlashFullSound; // 0x1d18, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x1d28, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UnstoppableWhileCastingModifier; // 0x1d38, 0x10 bytes
+                float m_flAirDrag; // 0x13a8, 0x4 bytes
+                float m_flMaxPowerPadding; // 0x13ac, 0x4 bytes
+                float m_flEffectGroundTrace; // 0x13b0, 0x4 bytes
+                float m_flWhizbyMaxRange; // 0x13b4, 0x4 bytes
+                float m_flStartPosTestCapsuleLength; // 0x13b8, 0x4 bytes
+                float m_flCoverLOSBackDist; // 0x13bc, 0x4 bytes
+                Vector m_vecLongEffectOffset; // 0x13c0, 0xc bytes
+                float m_vecPlayerLeftOffset; // 0x13cc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerSlashParticle; // 0x13d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerSlashFullParticle; // 0x14b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1590, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1670, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerUpParticle; // 0x1750, 0xe0 bytes
+                CSoundEventName m_strStartSound; // 0x1830, 0x10 bytes
+                CSoundEventName m_strHitConfirmSound; // 0x1840, 0x10 bytes
+                CSoundEventName m_strPowerUp1Sounds; // 0x1850, 0x10 bytes
+                CSoundEventName m_strPowerUp2Sounds; // 0x1860, 0x10 bytes
+                CSoundEventName m_strPowerUp3Sounds; // 0x1870, 0x10 bytes
+                CSoundEventName m_strWhizbySound; // 0x1880, 0x10 bytes
+                CSoundEventName m_strSlashSound; // 0x1890, 0x10 bytes
+                CSoundEventName m_strSlashFullSound; // 0x18a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x18b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UnstoppableWhileCastingModifier; // 0x18c0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityPowerSlashVData) == 0x1D48, "CAbilityPowerSlashVData size mismatch");
+            static_assert(sizeof(CAbilityPowerSlashVData) == 0x18D0, "CAbilityPowerSlashVData size mismatch");
         }
     }
 }

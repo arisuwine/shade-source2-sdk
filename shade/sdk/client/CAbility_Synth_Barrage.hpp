@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1768
+             * Size: 0x1e78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,19 +33,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Synth_Barrage : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x580]; // 0x11d8, 0x580 bytes
-                std::int32_t m_nProjectilesScheduled; // 0x1758, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x175c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextShootTime; // 0x1760, 0x4 bytes
-                std::uint8_t pad_1764[0x4]; // 0x1764, 0x4 bytes
+                std::uint8_t pad_16d8[0x790]; // 0x16d8, 0x790 bytes
+                std::int32_t m_nProjectilesScheduled; // 0x1e68, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x1e6c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextShootTime; // 0x1e70, 0x4 bytes
+                std::uint8_t pad_1e74[0x4]; // 0x1e74, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Synth_Barrage) == 0x1768, "CAbility_Synth_Barrage size mismatch");
+            static_assert(sizeof(CAbility_Synth_Barrage) == 0x1E78, "CAbility_Synth_Barrage size mismatch");
         }
     }
 }

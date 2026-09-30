@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x88
+             * Size: 0x90
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -37,13 +38,13 @@ namespace shade {
             struct ParticleControlPointConfiguration_t {
                 CUtlString m_name; // 0x0000, 0x8 bytes
                 CUtlVector<shade::sdk::particles::ParticleControlPointDriver_t> m_drivers; // 0x0008, 0x18 bytes
-                shade::sdk::particles::ParticlePreviewState_t m_previewState; // 0x0020, 0x68 bytes
+                shade::sdk::particles::ParticlePreviewState_t m_previewState; // 0x0020, 0x70 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ParticleControlPointConfiguration_t) == 0x88, "ParticleControlPointConfiguration_t size mismatch");
+            static_assert(sizeof(ParticleControlPointConfiguration_t) == 0x90, "ParticleControlPointConfiguration_t size mismatch");
         }
     }
 }

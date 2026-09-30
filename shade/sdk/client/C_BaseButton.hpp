@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9b8
+             * Size: 0xbc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseButton : public shade::sdk::client::C_BaseToggle {
             public:
-                CHandle<shade::sdk::client::C_BaseModelEntity> m_glowEntity; // 0x09a8, 0x4 bytes
-                bool m_usable; // 0x09ac, 0x1 bytes
-                std::uint8_t pad_09ad[0x3]; // 0x09ad, 0x3 bytes
-                CUtlSymbolLarge m_szDisplayText; // 0x09b0, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseModelEntity> m_glowEntity; // 0x0bb0, 0x4 bytes
+                bool m_usable; // 0x0bb4, 0x1 bytes
+                std::uint8_t pad_0bb5[0x3]; // 0x0bb5, 0x3 bytes
+                CUtlSymbolLarge m_szDisplayText; // 0x0bb8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseButton) == 0x9B8, "C_BaseButton size mismatch");
+            static_assert(sizeof(C_BaseButton) == 0xBC0, "C_BaseButton size mismatch");
         }
     }
 }

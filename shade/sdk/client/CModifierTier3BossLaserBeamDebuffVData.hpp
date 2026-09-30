@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xae0
+             * Size: 0xaf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierTier3BossLaserBeamDebuffVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flTickRate; // 0x0750, 0x4 bytes
-                float m_flNPCDPS; // 0x0754, 0x4 bytes
-                float m_flPlayerDPS; // 0x0758, 0x4 bytes
-                float m_flMaxHealthDPS; // 0x075c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberStatusEffect; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberEffect; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphStatusEffect; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphEffect; // 0x0a00, 0xe0 bytes
+                float m_flTickRate; // 0x0760, 0x4 bytes
+                float m_flNPCDPS; // 0x0764, 0x4 bytes
+                float m_flPlayerDPS; // 0x0768, 0x4 bytes
+                float m_flMaxHealthDPS; // 0x076c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberStatusEffect; // 0x0770, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberEffect; // 0x0850, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphStatusEffect; // 0x0930, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphEffect; // 0x0a10, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierTier3BossLaserBeamDebuffVData) == 0xAE0, "CModifierTier3BossLaserBeamDebuffVData size mismatch");
+            static_assert(sizeof(CModifierTier3BossLaserBeamDebuffVData) == 0xAF0, "CModifierTier3BossLaserBeamDebuffVData size mismatch");
         }
     }
 }

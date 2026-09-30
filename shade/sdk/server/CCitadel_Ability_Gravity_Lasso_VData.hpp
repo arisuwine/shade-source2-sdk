@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1928
+             * Size: 0x14b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Gravity_Lasso_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GravityLassoSelf; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GravityLassoTarget; // 0x1828, 0x10 bytes
-                CSoundEventName m_TargetWarningSound; // 0x1838, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreCastParticle; // 0x1848, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GravityLassoSelf; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GravityLassoTarget; // 0x13b0, 0x10 bytes
+                CSoundEventName m_TargetWarningSound; // 0x13c0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreCastParticle; // 0x13d0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Gravity_Lasso_VData) == 0x1928, "CCitadel_Ability_Gravity_Lasso_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Gravity_Lasso_VData) == 0x14B0, "CCitadel_Ability_Gravity_Lasso_VData size mismatch");
         }
     }
 }

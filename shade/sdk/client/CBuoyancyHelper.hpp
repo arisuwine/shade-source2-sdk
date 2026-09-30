@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -28,8 +29,9 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x118
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)

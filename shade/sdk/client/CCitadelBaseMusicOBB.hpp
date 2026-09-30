@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,14 +34,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * Vector m_vMins; // Offset: 0x6b0, Size: 0x1, Size In Bytes: 0xc
-             * Vector m_vMaxs; // Offset: 0x6bc, Size: 0x1, Size In Bytes: 0xc
-             * std::uint32_t m_nMaxDistance; // Offset: 0x6c8, Size: 0x1, Size In Bytes: 0x4
-             * CUtlString m_nStackName; // Offset: 0x6d0, Size: 0x1, Size In Bytes: 0x8
-             * CUtlString m_nOperatorName; // Offset: 0x6d8, Size: 0x1, Size In Bytes: 0x8
-             * CUtlString m_nOperatorFieldName; // Offset: 0x6e0, Size: 0x1, Size In Bytes: 0x8
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCitadelBaseMusicOBB) == 0x6F0, "CCitadelBaseMusicOBB size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,7 +21,7 @@
 namespace shade {
     namespace sdk {
         namespace server {
-            class CBaseFlex;
+            class CBaseModelEntity;
         }
     }
 }
@@ -29,37 +30,36 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa0
-             * Alignment: 0xff
+             * Size: 0x98
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CAI_Expresser {
             public:
-                std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
-                shade::sdk::entity2::GameTime_t m_flStopTalkTime; // 0x0060, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStopTalkTimeWithoutDelay; // 0x0064, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flQueuedSpeechTime; // 0x0068, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBlockedTalkTime; // 0x006c, 0x4 bytes
-                std::int32_t m_voicePitch; // 0x0070, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTimeAcceptedSpeak; // 0x0074, 0x4 bytes
-                bool m_bAllowSpeakingInterrupts; // 0x0078, 0x1 bytes
-                bool m_bConsiderSceneInvolvementAsSpeech; // 0x0079, 0x1 bytes
-                bool m_bSceneEntityDisabled; // 0x007a, 0x1 bytes
-                std::uint8_t pad_007b[0x1]; // 0x007b, 0x1 bytes
-                std::int32_t m_nLastSpokenPriority; // 0x007c, 0x4 bytes
-                std::uint8_t pad_0080[0x18]; // 0x0080, 0x18 bytes
-                shade::sdk::server::CBaseFlex *m_pOuter; // 0x0098, 0x8 bytes
+                std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
+                CUtlDict<shade::sdk::entity2::GameTime_t> m_conceptCooldowns; // 0x0008, 0x28 bytes
+                CUtlDict<shade::sdk::entity2::GameTime_t> m_ruleCooldowns; // 0x0030, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_flStopTalkTime; // 0x0058, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStopTalkTimeWithoutDelay; // 0x005c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flQueuedSpeechTime; // 0x0060, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBlockedTalkTime; // 0x0064, 0x4 bytes
+                std::int32_t m_voicePitch; // 0x0068, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTimeAcceptedSpeak; // 0x006c, 0x4 bytes
+                bool m_bAllowSpeakingInterrupts; // 0x0070, 0x1 bytes
+                bool m_bConsiderSceneInvolvementAsSpeech; // 0x0071, 0x1 bytes
+                bool m_bSceneEntityDisabled; // 0x0072, 0x1 bytes
+                std::uint8_t pad_0073[0x1]; // 0x0073, 0x1 bytes
+                std::int32_t m_nLastSpokenPriority; // 0x0074, 0x4 bytes
+                std::uint8_t pad_0078[0x18]; // 0x0078, 0x18 bytes
+                shade::sdk::server::CBaseModelEntity *m_pOuter; // 0x0090, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pSink; // Offset: 0x8, Size: 0x1, Size In Bytes: 0x0
-             * void m_conceptCooldowns; // Offset: 0x10, Size: 0x1, Size In Bytes: 0x28
-             * void m_ruleCooldowns; // Offset: 0x38, Size: 0x1, Size In Bytes: 0x28
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_Expresser) == 0xA0, "CAI_Expresser size mismatch");
+            static_assert(sizeof(CAI_Expresser) == 0x98, "CAI_Expresser size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicAutoCitadel : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnWaitingForPlayersToJoin; // 0x04a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPreGameWait; // 0x04b8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnGameInProgress; // 0x04d0, 0x18 bytes
-                std::uint8_t pad_04e8[0x8]; // 0x04e8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnWaitingForPlayersToJoin; // 0x04b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPreGameWait; // 0x04c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnGameInProgress; // 0x04e0, 0x18 bytes
+                std::uint8_t pad_04f8[0x8]; // 0x04f8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CLogicAutoCitadel) == 0x4F0, "CLogicAutoCitadel size mismatch");
+            static_assert(sizeof(CLogicAutoCitadel) == 0x500, "CLogicAutoCitadel size mismatch");
         }
     }
 }

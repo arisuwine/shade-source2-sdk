@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1320
+             * Size: 0x19a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,22 +41,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ProximityRitual : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ECatStatueState_t m_eState; // 0x0f70, 0x1 bytes
-                std::uint8_t pad_0f71[0x3]; // 0x0f71, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hStatue; // 0x0f74, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tCatRecallTime; // 0x0f78, 0x4 bytes
-                std::int32_t m_iCatRecallHealth; // 0x0f7c, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x0f80, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x0f8c, 0xc bytes
-                std::uint8_t pad_0f98[0x388]; // 0x0f98, 0x388 bytes
+                shade::sdk::client::ECatStatueState_t m_eState; // 0x14a0, 0x1 bytes
+                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hStatue; // 0x14a4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tCatRecallTime; // 0x14a8, 0x4 bytes
+                std::int32_t m_iCatRecallHealth; // 0x14ac, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x14b0, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x14bc, 0xc bytes
+                std::uint8_t pad_14c8[0x4d8]; // 0x14c8, 0x4d8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ProximityRitual) == 0x1320, "CCitadel_Ability_ProximityRitual size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ProximityRitual) == 0x19A0, "CCitadel_Ability_ProximityRitual size mismatch");
         }
     }
 }

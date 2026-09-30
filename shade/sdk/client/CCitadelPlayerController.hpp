@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc40
+             * Size: 0xc60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,46 +44,50 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayerController : public shade::sdk::client::CBasePlayerController {
             public:
-                shade::sdk::client::EPlayerPlayState m_ePlayState; // 0x07f0, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchLastHits; // 0x07f4, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchOrbsSecured; // 0x07f8, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchOrbsDenied; // 0x07fc, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchDamageToGuardians; // 0x0800, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchDamageToPlayers; // 0x0804, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchDamageTaken; // 0x0808, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchNetWorth; // 0x080c, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchModsPurchased; // 0x0810, 0x4 bytes
-                std::int32_t m_iGuidedBotMatchAbilityUpgrades; // 0x0814, 0x4 bytes
-                float m_flGuideBotMatchLastTaskNagVO; // 0x0818, 0x4 bytes
-                float m_flGuideBotLastTimeTaskCompleted; // 0x081c, 0x4 bytes
-                shade::sdk::client::EGuidedBotMatchObjective m_eGuidedBotMatchObjective; // 0x0820, 0x4 bytes
-                std::int32_t m_nCurrentRank; // 0x0824, 0x4 bytes
-                std::int8_t m_nAssignedLane; // 0x0828, 0x1 bytes
-                std::int8_t m_nOriginalLaneAssignment; // 0x0829, 0x1 bytes
-                bool m_bBotDisconnectTakeover; // 0x082a, 0x1 bytes
-                bool m_bInTeamChat; // 0x082b, 0x1 bytes
-                bool m_bInPartyChat; // 0x082c, 0x1 bytes
-                bool m_bLaneSwapLocked; // 0x082d, 0x1 bytes
-                std::uint8_t pad_082e[0x2]; // 0x082e, 0x2 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecLaneSwapRequests; // 0x0830, 0x18 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecLaneSwapRejects; // 0x0848, 0x18 bytes
-                C_NetworkUtlVectorBase<std::int32_t> m_vecMutedPlayers; // 0x0860, 0x18 bytes
-                bool m_bCommsRestricted; // 0x0878, 0x1 bytes
-                std::uint8_t pad_0879[0x33]; // 0x0879, 0x33 bytes
-                CHandle<shade::sdk::client::C_CitadelPlayerPawn> m_hHeroPawn; // 0x08ac, 0x4 bytes
-                std::uint8_t pad_08b0[0x40]; // 0x08b0, 0x40 bytes
-                shade::sdk::client::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x08f0, 0x340 bytes
-                std::int8_t m_nDeathReplayAvailable; // 0x0c30, 0x1 bytes
-                shade::sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0x0c31, 0x1 bytes
-                bool m_bHasCheckedFriendName; // 0x0c32, 0x1 bytes
-                std::uint8_t pad_0c33[0x5]; // 0x0c33, 0x5 bytes
-                CUtlString m_sFriendName; // 0x0c38, 0x8 bytes
+                shade::sdk::client::EPlayerPlayState m_ePlayState; // 0x0800, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchLastHits; // 0x0804, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchOrbsSecured; // 0x0808, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchOrbsDenied; // 0x080c, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchDamageToGuardians; // 0x0810, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchDamageToPlayers; // 0x0814, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchDamageTaken; // 0x0818, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchNetWorth; // 0x081c, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchModsPurchased; // 0x0820, 0x4 bytes
+                std::int32_t m_iGuidedBotMatchAbilityUpgrades; // 0x0824, 0x4 bytes
+                float m_flGuideBotMatchLastTaskNagVO; // 0x0828, 0x4 bytes
+                float m_flGuideBotLastTimeTaskCompleted; // 0x082c, 0x4 bytes
+                shade::sdk::client::EGuidedBotMatchObjective m_eGuidedBotMatchObjective; // 0x0830, 0x4 bytes
+                std::int32_t m_nCurrentRank; // 0x0834, 0x4 bytes
+                std::int8_t m_nAssignedLane; // 0x0838, 0x1 bytes
+                std::int8_t m_nOriginalLaneAssignment; // 0x0839, 0x1 bytes
+                bool m_bBotDisconnectTakeover; // 0x083a, 0x1 bytes
+                bool m_bInTeamChat; // 0x083b, 0x1 bytes
+                bool m_bInPartyChat; // 0x083c, 0x1 bytes
+                bool m_bLaneSwapLocked; // 0x083d, 0x1 bytes
+                std::uint8_t pad_083e[0x2]; // 0x083e, 0x2 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecLaneSwapRequests; // 0x0840, 0x18 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecLaneSwapRejects; // 0x0858, 0x18 bytes
+                C_NetworkUtlVectorBase<std::int32_t> m_vecMutedPlayers; // 0x0870, 0x18 bytes
+                bool m_bCommsRestricted; // 0x0888, 0x1 bytes
+                bool m_bPriorCommsAbuse; // 0x0889, 0x1 bytes
+                bool m_bIsNewPlayer; // 0x088a, 0x1 bytes
+                std::uint8_t pad_088b[0x1]; // 0x088b, 0x1 bytes
+                std::uint32_t m_unEconAccountID; // 0x088c, 0x4 bytes
+                std::uint8_t pad_0890[0x30]; // 0x0890, 0x30 bytes
+                CHandle<shade::sdk::client::C_CitadelPlayerPawn> m_hHeroPawn; // 0x08c0, 0x4 bytes
+                std::uint8_t pad_08c4[0x44]; // 0x08c4, 0x44 bytes
+                shade::sdk::client::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x0908, 0x348 bytes
+                std::int8_t m_nDeathReplayAvailable; // 0x0c50, 0x1 bytes
+                shade::sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0x0c51, 0x1 bytes
+                bool m_bHasCheckedFriendName; // 0x0c52, 0x1 bytes
+                std::uint8_t pad_0c53[0x5]; // 0x0c53, 0x5 bytes
+                CUtlString m_sFriendName; // 0x0c58, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelPlayerController) == 0xC40, "CCitadelPlayerController size mismatch");
+            static_assert(sizeof(CCitadelPlayerController) == 0xC60, "CCitadelPlayerController size mismatch");
         }
     }
 }

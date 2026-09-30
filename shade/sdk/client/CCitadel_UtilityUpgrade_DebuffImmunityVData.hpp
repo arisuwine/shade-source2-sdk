@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18c8
+             * Size: 0x14c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_UtilityUpgrade_DebuffImmunityVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffImmunityModifier; // 0x18b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffImmunityModifier; // 0x14b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_UtilityUpgrade_DebuffImmunityVData) == 0x18C8, "CCitadel_UtilityUpgrade_DebuffImmunityVData size mismatch");
+            static_assert(sizeof(CCitadel_UtilityUpgrade_DebuffImmunityVData) == 0x14C0, "CCitadel_UtilityUpgrade_DebuffImmunityVData size mismatch");
         }
     }
 }

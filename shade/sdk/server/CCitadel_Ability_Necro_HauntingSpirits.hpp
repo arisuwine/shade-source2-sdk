@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x10f8
+             * Size: 0x16b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_HauntingSpirits : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x180]; // 0x0f70, 0x180 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x10f0, 0x4 bytes
-                std::uint8_t pad_10f4[0x4]; // 0x10f4, 0x4 bytes
+                std::uint8_t pad_14a0[0x210]; // 0x14a0, 0x210 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x16b0, 0x4 bytes
+                std::uint8_t pad_16b4[0x4]; // 0x16b4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSpirits) == 0x10F8, "CCitadel_Ability_Necro_HauntingSpirits size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSpirits) == 0x16B8, "CCitadel_Ability_Necro_HauntingSpirits size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d8
+             * Size: 0x4e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundAreaEntityOrientedBox : public shade::sdk::server::CSoundAreaEntityBase {
             public:
-                Vector m_vMin; // 0x04c0, 0xc bytes
-                Vector m_vMax; // 0x04cc, 0xc bytes
+                Vector m_vMin; // 0x04d0, 0xc bytes
+                Vector m_vMax; // 0x04dc, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSoundAreaEntityOrientedBox) == 0x4D8, "CSoundAreaEntityOrientedBox size mismatch");
+            static_assert(sizeof(CSoundAreaEntityOrientedBox) == 0x4E8, "CSoundAreaEntityOrientedBox size mismatch");
         }
     }
 }

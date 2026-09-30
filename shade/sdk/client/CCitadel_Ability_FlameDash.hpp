@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1500
+             * Size: 0x1b20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FlameDash : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::CCitadelAutoScaledTime m_flDashEndTime; // 0x11d8, 0x18 bytes
-                bool m_bIsSpeedBursting; // 0x11f0, 0x1 bytes
-                std::uint8_t pad_11f1[0x30f]; // 0x11f1, 0x30f bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flDashEndTime; // 0x16d8, 0x18 bytes
+                bool m_bIsSpeedBursting; // 0x16f0, 0x1 bytes
+                std::uint8_t pad_16f1[0x42f]; // 0x16f1, 0x42f bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FlameDash) == 0x1500, "CCitadel_Ability_FlameDash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FlameDash) == 0x1B20, "CCitadel_Ability_FlameDash size mismatch");
         }
     }
 }

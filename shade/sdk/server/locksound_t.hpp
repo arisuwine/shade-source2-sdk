@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,15 +23,16 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x20
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct locksound_t {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                CUtlSymbolLarge sLockedSound; // 0x0008, 0x8 bytes
-                CUtlSymbolLarge sUnlockedSound; // 0x0010, 0x8 bytes
+                CGameSoundEventName sLockedSound; // 0x0008, 0x8 bytes
+                CGameSoundEventName sUnlockedSound; // 0x0010, 0x8 bytes
                 shade::sdk::entity2::GameTime_t flwaitSound; // 0x0018, 0x4 bytes
                 std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
             };

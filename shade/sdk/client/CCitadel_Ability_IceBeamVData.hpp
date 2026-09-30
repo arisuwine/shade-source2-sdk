@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a70
+             * Size: 0x15f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,25 +44,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_IceBeamVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_SplitBeamWidth; // 0x1818, 0x4 bytes
-                std::uint8_t pad_181c[0x4]; // 0x181c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x1820, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x1900, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_IceBeamModifier; // 0x19e0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x19f0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_Base_Buildup> m_BuildupModifier; // 0x1a00, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuildupProcModifier; // 0x1a10, 0x10 bytes
-                CSoundEventName m_BeamStartSound; // 0x1a20, 0x10 bytes
-                CSoundEventName m_BeamStopSound; // 0x1a30, 0x10 bytes
-                CSoundEventName m_BeamPointStartLoopSound; // 0x1a40, 0x10 bytes
-                CSoundEventName m_BeamPointEndLoopSound; // 0x1a50, 0x10 bytes
-                CSoundEventName m_BeamPointClosestLoopSound; // 0x1a60, 0x10 bytes
+                float m_SplitBeamWidth; // 0x13a0, 0x4 bytes
+                std::uint8_t pad_13a4[0x4]; // 0x13a4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x13a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x1488, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_IceBeamModifier; // 0x1568, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1578, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_Base_Buildup> m_BuildupModifier; // 0x1588, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuildupProcModifier; // 0x1598, 0x10 bytes
+                CSoundEventName m_BeamStartSound; // 0x15a8, 0x10 bytes
+                CSoundEventName m_BeamStopSound; // 0x15b8, 0x10 bytes
+                CSoundEventName m_BeamPointStartLoopSound; // 0x15c8, 0x10 bytes
+                CSoundEventName m_BeamPointEndLoopSound; // 0x15d8, 0x10 bytes
+                CSoundEventName m_BeamPointClosestLoopSound; // 0x15e8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_IceBeamVData) == 0x1A70, "CCitadel_Ability_IceBeamVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_IceBeamVData) == 0x15F8, "CCitadel_Ability_IceBeamVData size mismatch");
         }
     }
 }

@@ -12,11 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/C_BaseEntity.hpp"
-#include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -39,7 +39,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTrooperMinimap : public shade::sdk::client::C_BaseEntity {
             public:
-                shade::sdk::entity2::GameTime_t m_timeLastUpdate; // 0x05f0, 0x4 bytes
+                float m_flUpdateInterval; // 0x05f0, 0x4 bytes
                 std::uint8_t pad_05f4[0x4]; // 0x05f4, 0x4 bytes
                 C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::STrooperFOWEntity> m_vecFOWEntities; // 0x05f8, 0x68 bytes
             };

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,6 +21,7 @@
 #include "shade/sdk/client/EntityPlatformTypes_t.hpp"
 #include "shade/sdk/client/MoveCollide_t.hpp"
 #include "shade/sdk/client/MoveType_t.hpp"
+#include "shade/sdk/client/SensableByNPCHandle_t.hpp"
 #include "shade/sdk/client/TakeDamageFlags_t.hpp"
 #include "shade/sdk/entity2/CEntityIOOutput.hpp"
 #include "shade/sdk/entity2/CEntityInstance.hpp"
@@ -47,7 +49,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4a0
+             * Size: 0x4b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -66,10 +68,14 @@ namespace shade {
                 std::uint8_t pad_0269[0xf]; // 0x0269, 0xf bytes
                 CTypedBitVec<64> m_isSteadyState; // 0x0278, 0x8 bytes
                 float m_lastNetworkChange; // 0x0280, 0x4 bytes
-                std::uint8_t pad_0284[0xc]; // 0x0284, 0xc bytes
+                std::uint8_t pad_0284[0x4]; // 0x0284, 0x4 bytes
+                BASEPTR m_think; // 0x0288, 0x8 bytes
                 CUtlVector<shade::sdk::server::ResponseContext_t> m_ResponseContexts; // 0x0290, 0x18 bytes
                 CUtlSymbolLarge m_iszResponseContext; // 0x02a8, 0x8 bytes
-                std::uint8_t pad_02b0[0x20]; // 0x02b0, 0x20 bytes
+                ENTITYFUNCPTR m_pfnTouch; // 0x02b0, 0x8 bytes
+                USEPTR m_pfnUse; // 0x02b8, 0x8 bytes
+                ENTITYFUNCPTR m_pfnBlocked; // 0x02c0, 0x8 bytes
+                BASEPTR m_pfnMoveDone; // 0x02c8, 0x8 bytes
                 std::int32_t m_iHealth; // 0x02d0, 0x4 bytes
                 std::int32_t m_iMaxHealth; // 0x02d4, 0x4 bytes
                 std::uint8_t m_lifeState; // 0x02d8, 0x1 bytes
@@ -82,135 +88,87 @@ namespace shade {
                 std::uint8_t pad_02f1[0x1]; // 0x02f1, 0x1 bytes
                 shade::sdk::client::MoveCollide_t m_MoveCollide; // 0x02f2, 0x1 bytes
                 shade::sdk::client::MoveType_t m_MoveType; // 0x02f3, 0x1 bytes
-                shade::sdk::client::MoveType_t m_nActualMoveType; // 0x02f4, 0x1 bytes
-                std::uint8_t m_nWaterTouch; // 0x02f5, 0x1 bytes
-                std::uint8_t m_nSlimeTouch; // 0x02f6, 0x1 bytes
-                bool m_bRestoreInHierarchy; // 0x02f7, 0x1 bytes
-                CUtlSymbolLarge m_target; // 0x02f8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseFilter> m_hDamageFilter; // 0x0300, 0x4 bytes
-                std::uint8_t pad_0304[0x4]; // 0x0304, 0x4 bytes
-                CUtlSymbolLarge m_iszDamageFilterName; // 0x0308, 0x8 bytes
-                float m_flMoveDoneTime; // 0x0310, 0x4 bytes
-                CUtlStringToken m_nSubclassID; // 0x0314, 0x4 bytes
-                std::uint8_t pad_0318[0x8]; // 0x0318, 0x8 bytes
-                float m_flAnimTime; // 0x0320, 0x4 bytes
-                float m_flSimulationTime; // 0x0324, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCreateTime; // 0x0328, 0x4 bytes
-                bool m_bClientSideRagdoll; // 0x032c, 0x1 bytes
-                std::uint8_t m_ubInterpolationFrame; // 0x032d, 0x1 bytes
-                std::uint8_t pad_032e[0x2]; // 0x032e, 0x2 bytes
-                Vector m_vPrevVPhysicsUpdatePos; // 0x0330, 0xc bytes
-                std::uint8_t m_iTeamNum; // 0x033c, 0x1 bytes
-                std::uint8_t pad_033d[0x3]; // 0x033d, 0x3 bytes
-                CUtlSymbolLarge m_iGlobalname; // 0x0340, 0x8 bytes
-                std::int32_t m_iSentToClients; // 0x0348, 0x4 bytes
-                float m_flSpeed; // 0x034c, 0x4 bytes
-                CUtlString m_sUniqueHammerID; // 0x0350, 0x8 bytes
-                std::uint32_t m_spawnflags; // 0x0358, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nNextThinkTick; // 0x035c, 0x4 bytes
-                std::int32_t m_nSimulationTick; // 0x0360, 0x4 bytes
-                std::uint8_t pad_0364[0x4]; // 0x0364, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnKilled; // 0x0368, 0x18 bytes
-                std::uint32_t m_fFlags; // 0x0380, 0x4 bytes
-                Vector m_vecAbsVelocity; // 0x0384, 0xc bytes
-                shade::sdk::client::CNetworkVelocityVector m_vecVelocity; // 0x0390, 0x28 bytes
-                std::uint8_t pad_03b8[0x8]; // 0x03b8, 0x8 bytes
-                std::int32_t m_nPushEnumCount; // 0x03c0, 0x4 bytes
-                std::uint8_t pad_03c4[0x4]; // 0x03c4, 0x4 bytes
-                shade::sdk::server::CCollisionProperty *m_pCollision; // 0x03c8, 0x8 bytes
-                shade::sdk::server::CModifierProperty *m_pModifierProp; // 0x03d0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEffectEntity; // 0x03d8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwnerEntity; // 0x03dc, 0x4 bytes
-                std::uint32_t m_fEffects; // 0x03e0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hGroundEntity; // 0x03e4, 0x4 bytes
-                std::int32_t m_nGroundBodyIndex; // 0x03e8, 0x4 bytes
-                float m_flFriction; // 0x03ec, 0x4 bytes
-                float m_flElasticity; // 0x03f0, 0x4 bytes
-                float m_flGravityScale; // 0x03f4, 0x4 bytes
-                float m_flTimeScale; // 0x03f8, 0x4 bytes
-                float m_flWaterLevel; // 0x03fc, 0x4 bytes
-                bool m_bGravityDisabled; // 0x0400, 0x1 bytes
-                bool m_bAnimatedEveryTick; // 0x0401, 0x1 bytes
-                std::uint8_t pad_0402[0x2]; // 0x0402, 0x2 bytes
-                float m_flActualGravityScale; // 0x0404, 0x4 bytes
-                bool m_bGravityActuallyDisabled; // 0x0408, 0x1 bytes
-                bool m_bDisableLowViolence; // 0x0409, 0x1 bytes
-                std::uint8_t m_nWaterType; // 0x040a, 0x1 bytes
-                std::uint8_t pad_040b[0x1]; // 0x040b, 0x1 bytes
-                std::int32_t m_iEFlags; // 0x040c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUser1; // 0x0410, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUser2; // 0x0428, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUser3; // 0x0440, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUser4; // 0x0458, 0x18 bytes
-                std::int32_t m_iInitialTeamNum; // 0x0470, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNavIgnoreUntilTime; // 0x0474, 0x4 bytes
-                QAngle m_vecAngVelocity; // 0x0478, 0xc bytes
-                bool m_bNetworkQuantizeOriginAndAngles; // 0x0484, 0x1 bytes
-                bool m_bLagCompensate; // 0x0485, 0x1 bytes
-                std::uint8_t pad_0486[0x2]; // 0x0486, 0x2 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_pBlocker; // 0x0488, 0x4 bytes
-                float m_flLocalTime; // 0x048c, 0x4 bytes
-                float m_flVPhysicsUpdateLocalTime; // 0x0490, 0x4 bytes
-                std::uint8_t pad_0494[0x4]; // 0x0494, 0x4 bytes
-                shade::sdk::server::CPulseGraphInstance_ServerEntity *m_pPulseGraphInstance; // 0x0498, 0x8 bytes
+                shade::sdk::client::MoveType_t m_nPreviouslySetMoveType; // 0x02f4, 0x1 bytes
+                shade::sdk::client::MoveType_t m_nActualMoveType; // 0x02f5, 0x1 bytes
+                std::uint8_t m_nWaterTouch; // 0x02f6, 0x1 bytes
+                std::uint8_t m_nSlimeTouch; // 0x02f7, 0x1 bytes
+                bool m_bRestoreInHierarchy; // 0x02f8, 0x1 bytes
+                std::uint8_t pad_02f9[0x7]; // 0x02f9, 0x7 bytes
+                CUtlSymbolLarge m_target; // 0x0300, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseFilter> m_hDamageFilter; // 0x0308, 0x4 bytes
+                std::uint8_t pad_030c[0x4]; // 0x030c, 0x4 bytes
+                CUtlSymbolLarge m_iszDamageFilterName; // 0x0310, 0x8 bytes
+                float m_flMoveDoneTime; // 0x0318, 0x4 bytes
+                CUtlStringToken m_nSubclassID; // 0x031c, 0x4 bytes
+                std::uint8_t pad_0320[0x8]; // 0x0320, 0x8 bytes
+                shade::sdk::client::SensableByNPCHandle_t m_hNPCSensingHandle; // 0x0328, 0x4 bytes
+                float m_flAnimTime; // 0x032c, 0x4 bytes
+                float m_flSimulationTime; // 0x0330, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCreateTime; // 0x0334, 0x4 bytes
+                bool m_bClientSideRagdoll; // 0x0338, 0x1 bytes
+                std::uint8_t m_ubInterpolationFrame; // 0x0339, 0x1 bytes
+                std::uint8_t pad_033a[0x2]; // 0x033a, 0x2 bytes
+                VectorWS m_vPrevVPhysicsUpdatePos; // 0x033c, 0xc bytes
+                std::uint8_t m_iTeamNum; // 0x0348, 0x1 bytes
+                std::uint8_t pad_0349[0x7]; // 0x0349, 0x7 bytes
+                CUtlSymbolLarge m_iGlobalname; // 0x0350, 0x8 bytes
+                std::int32_t m_iSentToClients; // 0x0358, 0x4 bytes
+                std::uint8_t pad_035c[0x4]; // 0x035c, 0x4 bytes
+                CUtlString m_sUniqueHammerID; // 0x0360, 0x8 bytes
+                std::uint32_t m_spawnflags; // 0x0368, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nNextThinkTick; // 0x036c, 0x4 bytes
+                std::int32_t m_nSimulationTick; // 0x0370, 0x4 bytes
+                std::uint8_t pad_0374[0x4]; // 0x0374, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnKilled; // 0x0378, 0x18 bytes
+                std::uint32_t m_fFlags; // 0x0390, 0x4 bytes
+                Vector m_vecAbsVelocity; // 0x0394, 0xc bytes
+                shade::sdk::client::CNetworkVelocityVector m_vecVelocity; // 0x03a0, 0x28 bytes
+                std::uint8_t pad_03c8[0x8]; // 0x03c8, 0x8 bytes
+                std::int32_t m_nPushEnumCount; // 0x03d0, 0x4 bytes
+                std::uint8_t pad_03d4[0x4]; // 0x03d4, 0x4 bytes
+                shade::sdk::server::CCollisionProperty *m_pCollision; // 0x03d8, 0x8 bytes
+                shade::sdk::server::CModifierProperty *m_pModifierProp; // 0x03e0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEffectEntity; // 0x03e8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwnerEntity; // 0x03ec, 0x4 bytes
+                std::uint32_t m_fEffects; // 0x03f0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hGroundEntity; // 0x03f4, 0x4 bytes
+                std::int32_t m_nGroundBodyIndex; // 0x03f8, 0x4 bytes
+                float m_flFriction; // 0x03fc, 0x4 bytes
+                float m_flElasticity; // 0x0400, 0x4 bytes
+                float m_flGravityScale; // 0x0404, 0x4 bytes
+                float m_flTimeScale; // 0x0408, 0x4 bytes
+                float m_flWaterLevel; // 0x040c, 0x4 bytes
+                bool m_bGravityDisabled; // 0x0410, 0x1 bytes
+                bool m_bAnimatedEveryTick; // 0x0411, 0x1 bytes
+                std::uint8_t pad_0412[0x2]; // 0x0412, 0x2 bytes
+                float m_flActualGravityScale; // 0x0414, 0x4 bytes
+                bool m_bGravityActuallyDisabled; // 0x0418, 0x1 bytes
+                bool m_bDisableLowViolence; // 0x0419, 0x1 bytes
+                std::uint8_t m_nWaterType; // 0x041a, 0x1 bytes
+                std::uint8_t pad_041b[0x1]; // 0x041b, 0x1 bytes
+                std::int32_t m_iEFlags; // 0x041c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUser1; // 0x0420, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUser2; // 0x0438, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUser3; // 0x0450, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUser4; // 0x0468, 0x18 bytes
+                std::int32_t m_iInitialTeamNum; // 0x0480, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNavIgnoreUntilTime; // 0x0484, 0x4 bytes
+                QAngle m_vecAngVelocity; // 0x0488, 0xc bytes
+                bool m_bNetworkQuantizeOriginAndAngles; // 0x0494, 0x1 bytes
+                bool m_bLagCompensate; // 0x0495, 0x1 bytes
+                std::uint8_t pad_0496[0x2]; // 0x0496, 0x2 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_pBlocker; // 0x0498, 0x4 bytes
+                float m_flLocalTime; // 0x049c, 0x4 bytes
+                float m_flVPhysicsUpdateLocalTime; // 0x04a0, 0x4 bytes
+                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
+                shade::sdk::server::CPulseGraphInstance_ServerEntity *m_pPulseGraphInstance; // 0x04a8, 0x8 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * CUtlSymbolLarge m_iszPrivateVScripts; // Offset: 0x8, Size: 0x1, Size In Bytes: 0x8
-             * void m_CScriptComponent; // Offset: 0x28, Size: 0x1, Size In Bytes: 0x8
              * CUtlSymbolLarge subclass_name; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void m_pSubclassVData; // Offset: 0x318, Size: 0x1, Size In Bytes: 0x0
-             * void *m_think; // Offset: 0x288, Size: 0x1, Size In Bytes: 0x8
-             * void *m_pfnTouch; // Offset: 0x2b0, Size: 0x1, Size In Bytes: 0x8
-             * void *m_pfnUse; // Offset: 0x2b8, Size: 0x1, Size In Bytes: 0x8
-             * void *m_pfnBlocked; // Offset: 0x2c0, Size: 0x1, Size In Bytes: 0x8
-             * void *m_pfnMoveDone; // Offset: 0x2c8, Size: 0x1, Size In Bytes: 0x8
              * CHandle<CBaseEntity> caster; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetTeam; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputKill; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputKillHierarchy; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputKillConstrained; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputUse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputAlternativeSorting; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetParent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetParentAttachment; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetParentAttachmentMaintainOffset; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClearParent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFollowEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetDamageFilter; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableDamageForces; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableDamageForces; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputDispatchResponse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddContext; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveContext; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClearContext; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddAttribute; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveAttribute; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddModifier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveModifier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableShadow; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableShadow; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser1; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser2; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser3; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputFireUser4; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputChangeSubclass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformFollowYaw; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlatformIgnoreYaw; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntitySUB_Remove; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntitySUB_RemoveIfUncarried; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntitySUB_DoNothing; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntitySUB_Vanish; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntitySUB_CallUseToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntitySUB_KillSelf; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntitySUB_KillSelfIfUncarried; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntityFakeScriptThinkFunc; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseEntityClearNavIgnoreContentsThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_pGameSceneNode; // Offset: 0x270, Size: 0x1, Size In Bytes: 0x0
-             * void m_nEntityType; // Offset: 0x2f1, Size: 0x1, Size In Bytes: 0x0
              * QAngle angles; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector origin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CStrongHandle<InfoForResourceTypeCModel> model; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
@@ -221,7 +179,7 @@ namespace shade {
              * float angle; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBaseEntity) == 0x4A0, "CBaseEntity size mismatch");
+            static_assert(sizeof(CBaseEntity) == 0x4B0, "CBaseEntity size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xd8
+             * Size: 0xa0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerLoopTrigger : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_sound; // 0x00a8, 0x20 bytes
-                float m_flRetriggerTimeMin; // 0x00c8, 0x4 bytes
-                float m_flRetriggerTimeMax; // 0x00cc, 0x4 bytes
-                float m_flFadeTime; // 0x00d0, 0x4 bytes
-                bool m_bCrossFade; // 0x00d4, 0x1 bytes
-                std::uint8_t pad_00d5[0x3]; // 0x00d5, 0x3 bytes
+                float m_flRetriggerTimeMin; // 0x0070, 0x4 bytes
+                float m_flRetriggerTimeMax; // 0x0074, 0x4 bytes
+                float m_flFadeTime; // 0x0078, 0x4 bytes
+                bool m_bCrossFade; // 0x007c, 0x1 bytes
+                std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_sound; // 0x0080, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerLoopTrigger) == 0xD8, "CVoiceContainerLoopTrigger size mismatch");
+            static_assert(sizeof(CVoiceContainerLoopTrigger) == 0xA0, "CVoiceContainerLoopTrigger size mismatch");
         }
     }
 }

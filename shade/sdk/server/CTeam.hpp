@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x558
+             * Size: 0x568
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CTeam : public shade::sdk::server::CBaseEntity {
             public:
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBasePlayerController>> m_aPlayerControllers; // 0x04a0, 0x18 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBasePlayerPawn>> m_aPlayers; // 0x04b8, 0x18 bytes
-                std::int32_t m_iScore; // 0x04d0, 0x4 bytes
-                char m_szTeamname[0x81]; // 0x04d4, 0x81 bytes
-                std::uint8_t pad_0555[0x3]; // 0x0555, 0x3 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBasePlayerController>> m_aPlayerControllers; // 0x04b0, 0x18 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBasePlayerPawn>> m_aPlayers; // 0x04c8, 0x18 bytes
+                std::int32_t m_iScore; // 0x04e0, 0x4 bytes
+                char m_szTeamname[0x81]; // 0x04e4, 0x81 bytes
+                std::uint8_t pad_0565[0x3]; // 0x0565, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTeam) == 0x558, "CTeam size mismatch");
+            static_assert(sizeof(CTeam) == 0x568, "CTeam size mismatch");
         }
     }
 }

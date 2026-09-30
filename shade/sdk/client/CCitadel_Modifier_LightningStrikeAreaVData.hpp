@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xad8
+             * Size: 0xae8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LightningStrikeAreaVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrikeParticle; // 0x0830, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticleFriendly; // 0x0910, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrikeParticleFriendly; // 0x09f0, 0xe0 bytes
-                float m_flHeight; // 0x0ad0, 0x4 bytes
-                std::uint8_t pad_0ad4[0x4]; // 0x0ad4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrikeParticle; // 0x0840, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticleFriendly; // 0x0920, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrikeParticleFriendly; // 0x0a00, 0xe0 bytes
+                float m_flHeight; // 0x0ae0, 0x4 bytes
+                std::uint8_t pad_0ae4[0x4]; // 0x0ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LightningStrikeAreaVData) == 0xAD8, "CCitadel_Modifier_LightningStrikeAreaVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LightningStrikeAreaVData) == 0xAE8, "CCitadel_Modifier_LightningStrikeAreaVData size mismatch");
         }
     }
 }

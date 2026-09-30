@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -21,7 +22,8 @@ namespace shade {
                 NAV_OBSTACLE_TYPE_NONE = 0x0,
                 NAV_OBSTACLE_TYPE_AVOID = 0x1,
                 NAV_OBSTACLE_TYPE_CONN = 0x2,
-                NAV_OBSTACLE_TYPE_BLOCK = 0x3
+                NAV_OBSTACLE_TYPE_BLOCK = 0x3,
+                NAV_OBSTACLE_TYPE_PERMANENT_BLOCK = 0x4
             };
         }
     }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -54,17 +55,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputSetSoundName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSourceEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputStartSoundOnAllClients; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputStartSoundOnSingleClient; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputPauseSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputUnPauseSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_nGUID; // Offset: 0x690, Size: 0x1, Size In Bytes: 0x0
-             * void C_SoundEventEntitySoundFinishedThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_SoundEventEntity) == 0x6B0, "C_SoundEventEntity size mismatch");
         }

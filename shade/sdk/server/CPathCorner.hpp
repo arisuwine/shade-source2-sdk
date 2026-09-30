@@ -12,17 +12,19 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/entity2/CEntityIOOutput.hpp"
+#include "shade/sdk/server/AI_ArrivalDirection_t.hpp"
 #include "shade/sdk/server/CPointEntity.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x540
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +33,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathCorner : public shade::sdk::server::CPointEntity {
             public:
-                float m_flWait; // 0x04a0, 0x4 bytes
-                float m_flRadius; // 0x04a4, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPass; // 0x04a8, 0x18 bytes
+                shade::sdk::server::AI_ArrivalDirection_t m_ArrivalDirection; // 0x04b0, 0x58 bytes
+                bool m_bTriggerLocomotionStop; // 0x0508, 0x1 bytes
+                bool m_bSmoothArrival; // 0x0509, 0x1 bytes
+                bool m_bExactPositioning; // 0x050a, 0x1 bytes
+                std::uint8_t pad_050b[0x1]; // 0x050b, 0x1 bytes
+                float m_flWait; // 0x050c, 0x4 bytes
+                float m_flRadius; // 0x0510, 0x4 bytes
+                float m_flWaypointSuccessRadiusWhenBlocked; // 0x0514, 0x4 bytes
+                float m_flWaypointSuccessRadius; // 0x0518, 0x4 bytes
+                float m_flPathEndDistanceFromGoal; // 0x051c, 0x4 bytes
+                float m_flSpeed; // 0x0520, 0x4 bytes
+                std::uint8_t pad_0524[0x4]; // 0x0524, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPass; // 0x0528, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * CUtlSymbolLarge InputSetNextPathCorner; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputInPass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * CUtlSymbolLarge arrival_direction_entity; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CHandle<CBaseEntity> arrival_direction_entity_handle; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * float arrival_direction_tolerance_angle; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * Vector arrival_direction_relative_position; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPathCorner) == 0x4C0, "CPathCorner size mismatch");
+            static_assert(sizeof(CPathCorner) == 0x540, "CPathCorner size mismatch");
         }
     }
 }

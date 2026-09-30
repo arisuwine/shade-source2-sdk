@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x2d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,12 +41,14 @@ namespace shade {
             public:
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TimeWallHitParticle; // 0x0028, 0xe0 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TimeWallHitTimerParticle; // 0x0108, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TimeWallAllyBulletTracer; // 0x01e8, 0xe0 bytes
+                CSoundEventName m_strTimeWallHitSound; // 0x02c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBulletTimeWarpVData) == 0x1E8, "CCitadelBulletTimeWarpVData size mismatch");
+            static_assert(sizeof(CCitadelBulletTimeWarpVData) == 0x2D8, "CCitadelBulletTimeWarpVData size mismatch");
         }
     }
 }

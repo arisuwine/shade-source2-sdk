@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x250
+             * Size: 0x350
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Apex_Watcher : public shade::sdk::client::CCitadel_Modifier_Out_Of_Combat_Health_Regen {
             public:
-                bool m_bShouldEnableBuff; // 0x01c8, 0x1 bytes
-                std::uint8_t pad_01c9[0x87]; // 0x01c9, 0x87 bytes
+                bool m_bShouldEnableBuff; // 0x0298, 0x1 bytes
+                std::uint8_t pad_0299[0xb7]; // 0x0299, 0xb7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Apex_Watcher) == 0x250, "CCitadel_Modifier_Apex_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Apex_Watcher) == 0x350, "CCitadel_Modifier_Apex_Watcher size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a18
+             * Size: 0x15a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,24 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_RadiantBlastVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1818, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x1828, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1838, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x1918, 0xe0 bytes
-                float m_flJumpAirSpeedMax; // 0x19f8, 0x4 bytes
-                float m_flJumpFallSpeedMax; // 0x19fc, 0x4 bytes
-                float m_flJumpAirDrag; // 0x1a00, 0x4 bytes
-                std::int32_t m_iConeBulletCount; // 0x1a04, 0x4 bytes
-                float m_flConeBulletSpread; // 0x1a08, 0x4 bytes
-                float m_flRangeScaleIncreaseMax; // 0x1a0c, 0x4 bytes
-                float m_flRangeScaleIncreaseMaxSpeed; // 0x1a10, 0x4 bytes
-                float m_flHitConeAngleExtra; // 0x1a14, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13a0, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x13b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x13c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x14a0, 0xe0 bytes
+                float m_flJumpAirSpeedMax; // 0x1580, 0x4 bytes
+                float m_flJumpFallSpeedMax; // 0x1584, 0x4 bytes
+                float m_flJumpAirDrag; // 0x1588, 0x4 bytes
+                std::int32_t m_iConeBulletCount; // 0x158c, 0x4 bytes
+                float m_flConeBulletSpread; // 0x1590, 0x4 bytes
+                float m_flRangeScaleIncreaseMax; // 0x1594, 0x4 bytes
+                float m_flRangeScaleIncreaseMaxSpeed; // 0x1598, 0x4 bytes
+                float m_flHitConeAngleExtra; // 0x159c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_RadiantBlastVData) == 0x1A18, "CCitadel_Ability_Unicorn_RadiantBlastVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_RadiantBlastVData) == 0x15A0, "CCitadel_Ability_Unicorn_RadiantBlastVData size mismatch");
         }
     }
 }

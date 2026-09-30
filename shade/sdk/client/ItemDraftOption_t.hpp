@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0xf8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             struct ItemDraftOption_t {
                 std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
-                shade::sdk::client::ItemDraftItem_t m_Item; // 0x0030, 0x38 bytes
-                shade::sdk::client::ItemDraftItem_t m_BonusItem1; // 0x0068, 0x38 bytes
-                shade::sdk::client::ItemDraftItem_t m_BonusItem2; // 0x00a0, 0x38 bytes
-                bool m_bHasBeenDrafted; // 0x00d8, 0x1 bytes
-                bool m_bRare; // 0x00d9, 0x1 bytes
-                std::uint8_t pad_00da[0x6]; // 0x00da, 0x6 bytes
+                shade::sdk::client::ItemDraftItem_t m_Item; // 0x0030, 0x40 bytes
+                shade::sdk::client::ItemDraftItem_t m_BonusItem1; // 0x0070, 0x40 bytes
+                shade::sdk::client::ItemDraftItem_t m_BonusItem2; // 0x00b0, 0x40 bytes
+                bool m_bHasBeenDrafted; // 0x00f0, 0x1 bytes
+                bool m_bRare; // 0x00f1, 0x1 bytes
+                std::uint8_t pad_00f2[0x6]; // 0x00f2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ItemDraftOption_t) == 0xE0, "ItemDraftOption_t size mismatch");
+            static_assert(sizeof(ItemDraftOption_t) == 0xF8, "ItemDraftOption_t size mismatch");
         }
     }
 }

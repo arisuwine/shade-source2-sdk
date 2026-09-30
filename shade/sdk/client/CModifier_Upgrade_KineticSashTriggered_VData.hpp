@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x760
+             * Size: 0x770
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Upgrade_KineticSashTriggered_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CSoundEventName m_TriggeredSound; // 0x0750, 0x10 bytes
+                CSoundEventName m_TriggeredSound; // 0x0760, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Upgrade_KineticSashTriggered_VData) == 0x760, "CModifier_Upgrade_KineticSashTriggered_VData size mismatch");
+            static_assert(sizeof(CModifier_Upgrade_KineticSashTriggered_VData) == 0x770, "CModifier_Upgrade_KineticSashTriggered_VData size mismatch");
         }
     }
 }

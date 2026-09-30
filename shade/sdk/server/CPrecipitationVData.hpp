@@ -12,11 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/animationsystem/ParticleAttachment_t.hpp"
 #include "shade/sdk/client/CEntitySubclassVDataBase.hpp"
+#include "shade/sdk/client/PrecipitationFilter_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -30,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x128
+             * Size: 0x2f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,20 +42,24 @@ namespace shade {
             class CPrecipitationVData : public shade::sdk::client::CEntitySubclassVDataBase {
             public:
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szParticlePrecipitationEffect; // 0x0028, 0xe0 bytes
-                float m_flInnerDistance; // 0x0108, 0x4 bytes
-                shade::sdk::animationsystem::ParticleAttachment_t m_nAttachType; // 0x010c, 0x4 bytes
-                bool m_bBatchSameVolumeType; // 0x0110, 0x1 bytes
-                std::uint8_t pad_0111[0x3]; // 0x0111, 0x3 bytes
-                std::int32_t m_nRTEnvCP; // 0x0114, 0x4 bytes
-                std::int32_t m_nRTEnvCPComponent; // 0x0118, 0x4 bytes
-                std::uint8_t pad_011c[0x4]; // 0x011c, 0x4 bytes
-                CUtlString m_szModifier; // 0x0120, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szParticlePrecipitationPuddleEffect; // 0x0108, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szParticlePrecipitationPostEffect; // 0x01e8, 0xe0 bytes
+                float m_flInnerDistance; // 0x02c8, 0x4 bytes
+                shade::sdk::animationsystem::ParticleAttachment_t m_nAttachType; // 0x02cc, 0x4 bytes
+                bool m_bBatchSameVolumeType; // 0x02d0, 0x1 bytes
+                std::uint8_t pad_02d1[0x3]; // 0x02d1, 0x3 bytes
+                std::int32_t m_nRTEnvCP; // 0x02d4, 0x4 bytes
+                std::int32_t m_nRTEnvCPComponent; // 0x02d8, 0x4 bytes
+                std::uint8_t pad_02dc[0x4]; // 0x02dc, 0x4 bytes
+                CUtlString m_szModifier; // 0x02e0, 0x8 bytes
+                std::int32_t m_nUseSnapshotFromSurfaceGraph; // 0x02e8, 0x4 bytes
+                shade::sdk::client::PrecipitationFilter_t m_snapshotFilter; // 0x02ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPrecipitationVData) == 0x128, "CPrecipitationVData size mismatch");
+            static_assert(sizeof(CPrecipitationVData) == 0x2F0, "CPrecipitationVData size mismatch");
         }
     }
 }

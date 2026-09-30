@@ -12,16 +12,20 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace server {
             enum class AI_StanceRequestSource_t : std::int32_t {
                 eInvalid = -0x1,
-                eSchedule = 0x0,
-                eMoveStrategy = 0x1,
-                eBase = 0x2,
-                eCount = 0x3
+                eModifier = 0x0,
+                eNavLinkEntry = 0x1,
+                eSchedule = 0x2,
+                eMovement = 0x3,
+                eStrategy = 0x4,
+                eBase = 0x5,
+                eCount = 0x6
             };
         }
     }

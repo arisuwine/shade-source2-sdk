@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicNavigation : public shade::sdk::server::CLogicalEntity {
             public:
-                std::uint8_t pad_04a0[0x8]; // 0x04a0, 0x8 bytes
-                bool m_isOn; // 0x04a8, 0x1 bytes
-                std::uint8_t pad_04a9[0x3]; // 0x04a9, 0x3 bytes
-                shade::sdk::server::navproperties_t m_navProperty; // 0x04ac, 0x4 bytes
+                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
+                bool m_isOn; // 0x04b8, 0x1 bytes
+                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
+                shade::sdk::server::navproperties_t m_navProperty; // 0x04bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * CUtlString navprop; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CLogicNavigation) == 0x4B0, "CLogicNavigation size mismatch");
+            static_assert(sizeof(CLogicNavigation) == 0x4C0, "CLogicNavigation size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1838
+             * Size: 0x13c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityKobunVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                Vector m_vSummonFollowOffset; // 0x1818, 0xc bytes
-                std::uint8_t pad_1824[0x4]; // 0x1824, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CloneModifier; // 0x1828, 0x10 bytes
+                Vector m_vSummonFollowOffset; // 0x13a0, 0xc bytes
+                std::uint8_t pad_13ac[0x4]; // 0x13ac, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CloneModifier; // 0x13b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityKobunVData) == 0x1838, "CAbilityKobunVData size mismatch");
+            static_assert(sizeof(CAbilityKobunVData) == 0x13C0, "CAbilityKobunVData size mismatch");
         }
     }
 }

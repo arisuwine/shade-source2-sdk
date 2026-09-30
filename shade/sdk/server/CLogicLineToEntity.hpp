@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d8
+             * Size: 0x4e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicLineToEntity : public shade::sdk::server::CLogicalEntity {
             public:
-                CEntityOutputTemplate<Vector> m_Line; // 0x04a0, 0x28 bytes
-                CUtlSymbolLarge m_SourceName; // 0x04c8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_StartEntity; // 0x04d0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_EndEntity; // 0x04d4, 0x4 bytes
+                CEntityOutputTemplate<Vector> m_Line; // 0x04b0, 0x28 bytes
+                CUtlSymbolLarge m_SourceName; // 0x04d8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_StartEntity; // 0x04e0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_EndEntity; // 0x04e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CLogicLineToEntity) == 0x4D8, "CLogicLineToEntity size mismatch");
+            static_assert(sizeof(CLogicLineToEntity) == 0x4E8, "CLogicLineToEntity size mismatch");
         }
     }
 }

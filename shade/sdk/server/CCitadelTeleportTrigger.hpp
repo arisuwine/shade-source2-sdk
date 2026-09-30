@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x990
+             * Size: 0xaa0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTeleportTrigger : public shade::sdk::server::CTriggerModifier {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x08f0, 0x20 bytes
-                Vector m_vExitOrigin; // 0x0910, 0xc bytes
-                std::uint8_t pad_091c[0x44]; // 0x091c, 0x44 bytes
-                CUtlSymbolLarge m_strExitPoint; // 0x0960, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTeleport; // 0x0968, 0x18 bytes
-                CUtlSymbolLarge m_strPropModel; // 0x0980, 0x8 bytes
-                float m_flTeleportDelay; // 0x0988, 0x4 bytes
-                std::uint8_t pad_098c[0x4]; // 0x098c, 0x4 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0a00, 0x20 bytes
+                VectorWS m_vExitOrigin; // 0x0a20, 0xc bytes
+                std::uint8_t pad_0a2c[0x44]; // 0x0a2c, 0x44 bytes
+                CUtlSymbolLarge m_strExitPoint; // 0x0a70, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTeleport; // 0x0a78, 0x18 bytes
+                CUtlSymbolLarge m_strPropModel; // 0x0a90, 0x8 bytes
+                float m_flTeleportDelay; // 0x0a98, 0x4 bytes
+                std::uint8_t pad_0a9c[0x4]; // 0x0a9c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pEntExit; // Offset: 0x920, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelTeleportTrigger) == 0x990, "CCitadelTeleportTrigger size mismatch");
+            static_assert(sizeof(CCitadelTeleportTrigger) == 0xAA0, "CCitadelTeleportTrigger size mismatch");
         }
     }
 }

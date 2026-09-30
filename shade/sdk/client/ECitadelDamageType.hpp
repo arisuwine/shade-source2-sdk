@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -24,7 +25,8 @@ namespace shade {
                 CITADEL_DAMAGETYPE_ENVIRONMENTAL = 0x4,
                 CITADEL_DAMAGETYPE_POISON = 0x5,
                 CITADEL_DAMAGETYPE_WEAKPOINT_BONUS = 0x6,
-                CITADEL_DAMAGETYPE_PURE = 0x7
+                CITADEL_DAMAGETYPE_PURE = 0x7,
+                CITADEL_DAMAGETYPE_NO_DAMAGE = 0x8
             };
         }
     }

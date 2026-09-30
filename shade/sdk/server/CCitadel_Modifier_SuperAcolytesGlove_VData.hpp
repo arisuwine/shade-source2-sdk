@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa30
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SuperAcolytesGlove_VData : public shade::sdk::server::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x0780, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingParticle; // 0x0790, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x0870, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FistReadyEffect; // 0x0950, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x0790, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingParticle; // 0x07a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x0880, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FistReadyEffect; // 0x0960, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SuperAcolytesGlove_VData) == 0xA30, "CCitadel_Modifier_SuperAcolytesGlove_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SuperAcolytesGlove_VData) == 0xA40, "CCitadel_Modifier_SuperAcolytesGlove_VData size mismatch");
         }
     }
 }

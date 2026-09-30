@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,9 +23,10 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c0
+             * Size: 0x1b0
              * Alignment: 0xff
              * Has VTable
+             * Construct Allowed
              * Construct Disallowed
              * Module Local Type Scope
              */
@@ -32,13 +34,13 @@ namespace shade {
             class CBodyComponentPoint : public shade::sdk::client::CBodyComponent {
             public:
                 std::uint8_t pad_0078[0x8]; // 0x0078, 0x8 bytes
-                shade::sdk::client::CGameSceneNode m_sceneNode; // 0x0080, 0x140 bytes
+                shade::sdk::client::CGameSceneNode m_sceneNode; // 0x0080, 0x130 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBodyComponentPoint) == 0x1C0, "CBodyComponentPoint size mismatch");
+            static_assert(sizeof(CBodyComponentPoint) == 0x1B0, "CBodyComponentPoint size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1660
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FamiliarPrimaryWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                float m_flShotCosmeticVarianceMagnitude; // 0x19c0, 0x4 bytes
-                std::uint8_t pad_19c4[0x4]; // 0x19c4, 0x4 bytes
+                float m_flShotCosmeticVarianceMagnitude; // 0x1658, 0x4 bytes
+                std::uint8_t pad_165c[0x4]; // 0x165c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FamiliarPrimaryWeaponVData) == 0x19C8, "CCitadel_Ability_FamiliarPrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FamiliarPrimaryWeaponVData) == 0x1660, "CCitadel_Ability_FamiliarPrimaryWeaponVData size mismatch");
         }
     }
 }

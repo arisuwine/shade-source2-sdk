@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,7 +20,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14
+             * Size: 0x18
              * Alignment: 0x4
              * Has Trivial Constructor
              * Has Trivial Destructor
@@ -30,12 +31,14 @@ namespace shade {
                 VectorWS position; // 0x0000, 0xc bytes
                 std::uint32_t nav_type; // 0x000c, 0x4 bytes
                 std::uint32_t flags; // 0x0010, 0x4 bytes
+                bool is_pathcorner; // 0x0014, 0x1 bytes
+                std::uint8_t pad_0015[0x3]; // 0x0015, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_Navigator_DebugSnapshotData_t__Waypoint_t) == 0x14, "AI_Navigator_DebugSnapshotData_t__Waypoint_t size mismatch");
+            static_assert(sizeof(AI_Navigator_DebugSnapshotData_t__Waypoint_t) == 0x18, "AI_Navigator_DebugSnapshotData_t__Waypoint_t size mismatch");
         }
     }
 }

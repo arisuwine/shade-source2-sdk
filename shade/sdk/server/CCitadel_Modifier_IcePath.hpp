@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5e8
+             * Size: 0x8e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_IcePath : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x500]; // 0x00d0, 0x500 bytes
-                std::int32_t m_iShardCount; // 0x05d0, 0x4 bytes
-                Vector m_vLastShardPosition; // 0x05d4, 0xc bytes
-                CHandle<shade::sdk::server::CBaseModelEntity> m_hSurfShard; // 0x05e0, 0x4 bytes
-                std::uint8_t pad_05e4[0x4]; // 0x05e4, 0x4 bytes
+                std::uint8_t pad_0140[0x790]; // 0x0140, 0x790 bytes
+                std::int32_t m_iShardCount; // 0x08d0, 0x4 bytes
+                VectorWS m_vLastShardPosition; // 0x08d4, 0xc bytes
+                CHandle<shade::sdk::server::CBaseModelEntity> m_hSurfShard; // 0x08e0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseModelEntity> m_hLastSpawnedShard; // 0x08e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_IcePath) == 0x5E8, "CCitadel_Modifier_IcePath size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_IcePath) == 0x8E8, "CCitadel_Modifier_IcePath size mismatch");
         }
     }
 }

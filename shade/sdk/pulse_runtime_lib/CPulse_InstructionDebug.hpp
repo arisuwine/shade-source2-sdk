@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x10
+             * Size: 0x18
              * Alignment: 0x8
              * Has Trivial Destructor
              * Construct Allowed
@@ -31,13 +32,13 @@ namespace shade {
             public:
                 shade::sdk::pulse_runtime_lib::PulseDocNodeID_t m_nFlowNodeID; // 0x0000, 0x4 bytes
                 shade::sdk::pulse_runtime_lib::PulseDocNodeID_t m_nValueNodeID; // 0x0004, 0x4 bytes
-                CGlobalSymbol m_SequencePointName; // 0x0008, 0x8 bytes
+                PulseSymbol_t m_SequencePointName; // 0x0008, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulse_InstructionDebug) == 0x10, "CPulse_InstructionDebug size mismatch");
+            static_assert(sizeof(CPulse_InstructionDebug) == 0x18, "CPulse_InstructionDebug size mismatch");
         }
     }
 }

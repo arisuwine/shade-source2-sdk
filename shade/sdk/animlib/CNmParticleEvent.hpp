@@ -12,12 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/animationsystem/ParticleAttachment_t.hpp"
 #include "shade/sdk/animlib/CNmEvent.hpp"
 #include "shade/sdk/animlib/CNmEventRelevance_t.hpp"
+#include "shade/sdk/animlib/CNmEventTargetEntity_t.hpp"
 #include "shade/sdk/animlib/CNmParticleEvent__Type_t.hpp"
 
 namespace shade {
@@ -40,8 +42,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmParticleEvent : public shade::sdk::animlib::CNmEvent {
             public:
-                shade::sdk::animlib::CNmEventRelevance_t m_relevance; // 0x0020, 0x4 bytes
-                shade::sdk::animlib::CNmParticleEvent__Type_t m_type; // 0x0024, 0x4 bytes
+                shade::sdk::animlib::CNmEventRelevance_t m_relevance; // 0x0018, 0x4 bytes
+                shade::sdk::animlib::CNmParticleEvent__Type_t m_type; // 0x001c, 0x4 bytes
+                shade::sdk::animlib::CNmEventTargetEntity_t m_target; // 0x0020, 0x4 bytes
+                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
                 CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hParticleSystem; // 0x0028, 0x8 bytes
                 CUtlString m_tags; // 0x0030, 0x8 bytes
                 bool m_bStopImmediately; // 0x0038, 0x1 bytes

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1698
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_WeaponUpgrade_ExpressShot_VData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle; // 0x18b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x1998, 0xe0 bytes
-                float flShotDelay; // 0x1a78, 0x4 bytes
-                std::uint8_t pad_1a7c[0x4]; // 0x1a7c, 0x4 bytes
-                CSoundEventName m_strOffCooldownSound; // 0x1a80, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProcNotificationModifier; // 0x1a90, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle; // 0x14b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x1590, 0xe0 bytes
+                float flShotDelay; // 0x1670, 0x4 bytes
+                std::uint8_t pad_1674[0x4]; // 0x1674, 0x4 bytes
+                CSoundEventName m_strOffCooldownSound; // 0x1678, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProcNotificationModifier; // 0x1688, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_WeaponUpgrade_ExpressShot_VData) == 0x1AA0, "CCitadel_WeaponUpgrade_ExpressShot_VData size mismatch");
+            static_assert(sizeof(CCitadel_WeaponUpgrade_ExpressShot_VData) == 0x1698, "CCitadel_WeaponUpgrade_ExpressShot_VData size mismatch");
         }
     }
 }

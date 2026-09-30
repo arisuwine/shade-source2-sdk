@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d8
+             * Size: 0x4e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,26 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvGlobal : public shade::sdk::server::CLogicalEntity {
             public:
-                CEntityOutputTemplate<std::int32_t> m_outCounter; // 0x04a0, 0x20 bytes
-                CUtlSymbolLarge m_globalstate; // 0x04c0, 0x8 bytes
-                std::int32_t m_triggermode; // 0x04c8, 0x4 bytes
-                std::int32_t m_initialstate; // 0x04cc, 0x4 bytes
-                std::int32_t m_counter; // 0x04d0, 0x4 bytes
-                std::uint8_t pad_04d4[0x4]; // 0x04d4, 0x4 bytes
+                CEntityOutputTemplate<std::int32_t> m_outCounter; // 0x04b0, 0x20 bytes
+                CUtlSymbolLarge m_globalstate; // 0x04d0, 0x8 bytes
+                std::int32_t m_triggermode; // 0x04d8, 0x4 bytes
+                std::int32_t m_initialstate; // 0x04dc, 0x4 bytes
+                std::int32_t m_counter; // 0x04e0, 0x4 bytes
+                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputRemove; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetCounter; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputAddToCounter; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputGetCounter; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvGlobal) == 0x4D8, "CEnvGlobal size mismatch");
+            static_assert(sizeof(CEnvGlobal) == 0x4E8, "CEnvGlobal size mismatch");
         }
     }
 }

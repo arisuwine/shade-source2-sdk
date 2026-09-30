@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3a8
+             * Size: 0x3b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayer_CameraServices : public shade::sdk::client::CPlayer_CameraServices {
             public:
-                CHandle<shade::sdk::client::C_PostProcessingVolume> m_hPrevPostProcessingVolume; // 0x03a0, 0x4 bytes
-                std::uint8_t pad_03a4[0x4]; // 0x03a4, 0x4 bytes
+                CHandle<shade::sdk::client::C_PostProcessingVolume> m_hPrevPostProcessingVolume; // 0x03a8, 0x4 bytes
+                std::uint8_t pad_03ac[0x4]; // 0x03ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelPlayer_CameraServices) == 0x3A8, "CCitadelPlayer_CameraServices size mismatch");
+            static_assert(sizeof(CCitadelPlayer_CameraServices) == 0x3B0, "CCitadelPlayer_CameraServices size mismatch");
         }
     }
 }

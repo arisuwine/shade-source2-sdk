@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -57,9 +58,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_guid; // Offset: 0x28, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CSoundPatch) == 0xB0, "CSoundPatch size mismatch");
         }

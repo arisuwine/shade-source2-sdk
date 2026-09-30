@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -38,9 +39,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Nano_Predatory_Statue : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0x28]; // 0x0bf0, 0x28 bytes
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c18, 0x4 bytes
-                float m_flLifetime; // 0x0c1c, 0x4 bytes
+                std::uint8_t pad_0bf0[0x20]; // 0x0bf0, 0x20 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c10, 0x4 bytes
+                float m_flLifetime; // 0x0c14, 0x4 bytes
+                std::uint8_t pad_0c18[0x8]; // 0x0c18, 0x8 bytes
             };
             #pragma pack(pop)
 

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14b0
+             * Size: 0x1a20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_ClawWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon_ScalingAltFire {
             public:
-                std::uint8_t pad_1430[0x80]; // 0x1430, 0x80 bytes
+                std::uint8_t pad_1970[0xb0]; // 0x1970, 0xb0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_ClawWeapon) == 0x14B0, "CCitadel_Ability_Werewolf_ClawWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_ClawWeapon) == 0x1A20, "CCitadel_Ability_Werewolf_ClawWeapon size mismatch");
         }
     }
 }

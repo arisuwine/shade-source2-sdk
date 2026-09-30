@@ -12,13 +12,15 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace client {
             enum class EHideoutButtonInteractStyle : std::uint32_t {
                 k_eHideoutUse = 0x0,
-                k_eAbilityMelee = 0x1
+                k_eAbilityMelee = 0x1,
+                k_eHideoutLookAndUse = 0x2
             };
         }
     }

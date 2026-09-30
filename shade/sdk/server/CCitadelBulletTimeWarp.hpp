@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9a8
+             * Size: 0xaa0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelBulletTimeWarp : public shade::sdk::server::CBaseModelEntity {
             public:
-                float m_flBulletTimeScale; // 0x0780, 0x4 bytes
-                float m_flProjectileTimeScale; // 0x0784, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flExpireTime; // 0x0788, 0x4 bytes
-                float m_flStopDuration; // 0x078c, 0x4 bytes
-                float m_flBulletTimeScaleFriendly; // 0x0790, 0x4 bytes
-                float m_flBonusBulletBaseDamageFriendly; // 0x0794, 0x4 bytes
-                std::uint8_t pad_0798[0x210]; // 0x0798, 0x210 bytes
+                float m_flBulletTimeScale; // 0x0878, 0x4 bytes
+                float m_flProjectileTimeScale; // 0x087c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flExpireTime; // 0x0880, 0x4 bytes
+                float m_flStopDuration; // 0x0884, 0x4 bytes
+                float m_flBulletTimeScaleFriendly; // 0x0888, 0x4 bytes
+                float m_flBonusBulletBaseDamageFriendly; // 0x088c, 0x4 bytes
+                std::uint8_t pad_0890[0x210]; // 0x0890, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBulletTimeWarp) == 0x9A8, "CCitadelBulletTimeWarp size mismatch");
+            static_assert(sizeof(CCitadelBulletTimeWarp) == 0xAA0, "CCitadelBulletTimeWarp size mismatch");
         }
     }
 }

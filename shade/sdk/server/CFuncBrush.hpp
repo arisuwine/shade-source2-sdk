@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x898
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,28 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncBrush : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::client::BrushSolidities_e m_iSolidity; // 0x0780, 0x4 bytes
-                std::int32_t m_iDisabled; // 0x0784, 0x4 bytes
-                bool m_bSolidBsp; // 0x0788, 0x1 bytes
-                std::uint8_t pad_0789[0x7]; // 0x0789, 0x7 bytes
-                CUtlSymbolLarge m_iszExcludedClass; // 0x0790, 0x8 bytes
-                bool m_bInvertExclusion; // 0x0798, 0x1 bytes
-                bool m_bScriptedMovement; // 0x0799, 0x1 bytes
-                std::uint8_t pad_079a[0x6]; // 0x079a, 0x6 bytes
+                shade::sdk::client::BrushSolidities_e m_iSolidity; // 0x0878, 0x4 bytes
+                std::int32_t m_iDisabled; // 0x087c, 0x4 bytes
+                bool m_bSolidBsp; // 0x0880, 0x1 bytes
+                std::uint8_t pad_0881[0x7]; // 0x0881, 0x7 bytes
+                CUtlSymbolLarge m_iszExcludedClass; // 0x0888, 0x8 bytes
+                bool m_bInvertExclusion; // 0x0890, 0x1 bytes
+                bool m_bScriptedMovement; // 0x0891, 0x1 bytes
+                std::uint8_t pad_0892[0x6]; // 0x0892, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetExcluded; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetInvert; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetSolid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetNonsolid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncBrush) == 0x7A0, "CFuncBrush size mismatch");
+            static_assert(sizeof(CFuncBrush) == 0x898, "CFuncBrush size mismatch");
         }
     }
 }

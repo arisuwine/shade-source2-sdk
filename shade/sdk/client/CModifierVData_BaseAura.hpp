@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x7a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,19 +42,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierVData_BaseAura : public shade::sdk::client::CCitadelModifierVData {
             public:
-                shade::sdk::client::AuraShapeType_t m_nAuraShapeType; // 0x0750, 0x4 bytes
-                shade::sdk::client::AuraCenterType_t m_nCenterType; // 0x0754, 0x4 bytes
-                shade::sdk::client::CModifierLevelFloat m_flAuraRadius; // 0x0758, 0x10 bytes
-                shade::sdk::client::CModifierLevelFloat m_flAuraEntityBoundsScale; // 0x0768, 0x10 bytes
-                std::int32_t m_nAmbientParticleRadiusControlPoint; // 0x0778, 0x4 bytes
-                std::uint8_t pad_077c[0x4]; // 0x077c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_modifierProvidedByAura; // 0x0780, 0x10 bytes
+                shade::sdk::client::AuraShapeType_t m_nAuraShapeType; // 0x0760, 0x4 bytes
+                shade::sdk::client::AuraCenterType_t m_nCenterType; // 0x0764, 0x4 bytes
+                shade::sdk::client::CModifierLevelFloat m_flAuraRadius; // 0x0768, 0x10 bytes
+                shade::sdk::client::CModifierLevelFloat m_flAuraEntityBoundsScale; // 0x0778, 0x10 bytes
+                std::int32_t m_nAmbientParticleRadiusControlPoint; // 0x0788, 0x4 bytes
+                std::uint8_t pad_078c[0x4]; // 0x078c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_modifierProvidedByAura; // 0x0790, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierVData_BaseAura) == 0x790, "CModifierVData_BaseAura size mismatch");
+            static_assert(sizeof(CModifierVData_BaseAura) == 0x7A0, "CModifierVData_BaseAura size mismatch");
         }
     }
 }

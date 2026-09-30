@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x100
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Priest_CrossbowEquipped : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::CCitadel_Ability_Priest_CrossbowWeapon *m_pCrossbowWeapon; // 0x00c0, 0x8 bytes
-                std::uint8_t pad_00c8[0x38]; // 0x00c8, 0x38 bytes
+                shade::sdk::client::CCitadel_Ability_Priest_CrossbowWeapon *m_pCrossbowWeapon; // 0x0130, 0x8 bytes
+                std::uint8_t pad_0138[0x20]; // 0x0138, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Priest_CrossbowEquipped) == 0x100, "CCitadel_Modifier_Priest_CrossbowEquipped size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Priest_CrossbowEquipped) == 0x158, "CCitadel_Modifier_Priest_CrossbowEquipped size mismatch");
         }
     }
 }

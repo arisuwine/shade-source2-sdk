@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x750
+             * Size: 0x760
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UIAbilityHudNotificaitonVData) == 0x750, "CCitadel_Modifier_UIAbilityHudNotificaitonVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UIAbilityHudNotificaitonVData) == 0x760, "CCitadel_Modifier_UIAbilityHudNotificaitonVData size mismatch");
         }
     }
 }

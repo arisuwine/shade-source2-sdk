@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x248
+             * Size: 0x348
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Mirage_FireScarabs_HealthLoss : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bCanProc; // 0x00c0, 0x1 bytes
-                std::uint8_t pad_00c1[0x187]; // 0x00c1, 0x187 bytes
+                bool m_bCanProc; // 0x0130, 0x1 bytes
+                std::uint8_t pad_0131[0x217]; // 0x0131, 0x217 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Mirage_FireScarabs_HealthLoss) == 0x248, "CModifier_Mirage_FireScarabs_HealthLoss size mismatch");
+            static_assert(sizeof(CModifier_Mirage_FireScarabs_HealthLoss) == 0x348, "CModifier_Mirage_FireScarabs_HealthLoss size mismatch");
         }
     }
 }

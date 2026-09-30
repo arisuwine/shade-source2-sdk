@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f8
+             * Size: 0x508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,34 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetEntity : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x18]; // 0x04a0, 0x18 bytes
-                CUtlSymbolLarge m_iszStackName; // 0x04b8, 0x8 bytes
-                CUtlSymbolLarge m_iszOperatorName; // 0x04c0, 0x8 bytes
-                CUtlSymbolLarge m_iszOpvarName; // 0x04c8, 0x8 bytes
-                std::int32_t m_nOpvarType; // 0x04d0, 0x4 bytes
-                std::int32_t m_nOpvarIndex; // 0x04d4, 0x4 bytes
-                float m_flOpvarValue; // 0x04d8, 0x4 bytes
-                std::uint8_t pad_04dc[0x4]; // 0x04dc, 0x4 bytes
-                CUtlSymbolLarge m_OpvarValueString; // 0x04e0, 0x8 bytes
-                bool m_bSetOnSpawn; // 0x04e8, 0x1 bytes
-                std::uint8_t pad_04e9[0xf]; // 0x04e9, 0xf bytes
+                std::uint8_t pad_04b0[0x18]; // 0x04b0, 0x18 bytes
+                CUtlSymbolLarge m_iszStackName; // 0x04c8, 0x8 bytes
+                CUtlSymbolLarge m_iszOperatorName; // 0x04d0, 0x8 bytes
+                CUtlSymbolLarge m_iszOpvarName; // 0x04d8, 0x8 bytes
+                std::int32_t m_nOpvarType; // 0x04e0, 0x4 bytes
+                std::int32_t m_nOpvarIndex; // 0x04e4, 0x4 bytes
+                float m_flOpvarValue; // 0x04e8, 0x4 bytes
+                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
+                CUtlSymbolLarge m_OpvarValueString; // 0x04f0, 0x8 bytes
+                bool m_bSetOnSpawn; // 0x04f8, 0x1 bytes
+                std::uint8_t pad_04f9[0xf]; // 0x04f9, 0xf bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::uint64_t InputSetEventGuid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetStackName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetOperatorName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetOpvarName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetOpvarIndex; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOpvar; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputChangeOpvarValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputChangeOpvarValueAndSet; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_nGUID; // Offset: 0x4a0, Size: 0x1, Size In Bytes: 0x0
-             * void m_LastOpvarValueString; // Offset: 0x4f0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetEntity) == 0x4F8, "CSoundOpvarSetEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetEntity) == 0x508, "CSoundOpvarSetEntity size mismatch");
         }
     }
 }

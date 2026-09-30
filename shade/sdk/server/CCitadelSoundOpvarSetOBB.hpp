@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelSoundOpvarSetOBB : public shade::sdk::server::CBaseEntity {
             public:
-                CUtlSymbolLarge m_iszStackName; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszOperatorName; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_iszOpvarName; // 0x04b0, 0x8 bytes
-                Vector m_vDistanceInnerMins; // 0x04b8, 0xc bytes
-                Vector m_vDistanceInnerMaxs; // 0x04c4, 0xc bytes
-                Vector m_vDistanceOuterMins; // 0x04d0, 0xc bytes
-                Vector m_vDistanceOuterMaxs; // 0x04dc, 0xc bytes
-                std::int32_t m_nAABBDirection; // 0x04e8, 0x4 bytes
-                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
+                CUtlSymbolLarge m_iszStackName; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszOperatorName; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_iszOpvarName; // 0x04c0, 0x8 bytes
+                Vector m_vDistanceInnerMins; // 0x04c8, 0xc bytes
+                Vector m_vDistanceInnerMaxs; // 0x04d4, 0xc bytes
+                Vector m_vDistanceOuterMins; // 0x04e0, 0xc bytes
+                Vector m_vDistanceOuterMaxs; // 0x04ec, 0xc bytes
+                std::int32_t m_nAABBDirection; // 0x04f8, 0x4 bytes
+                std::uint8_t pad_04fc[0x4]; // 0x04fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelSoundOpvarSetOBB) == 0x4F0, "CCitadelSoundOpvarSetOBB size mismatch");
+            static_assert(sizeof(CCitadelSoundOpvarSetOBB) == 0x500, "CCitadelSoundOpvarSetOBB size mismatch");
         }
     }
 }

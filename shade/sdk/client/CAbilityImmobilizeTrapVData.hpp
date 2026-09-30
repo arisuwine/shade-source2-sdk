@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c08
+             * Size: 0x17a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,23 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityImmobilizeTrapVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewRingParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TrapHighlightParticle; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ArmedParticle; // 0x1ab8, 0xe0 bytes
-                CSoundEventName m_strTripSound; // 0x1b98, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1ba8, 0x10 bytes
-                CSoundEventName m_strExpiredSound; // 0x1bb8, 0x10 bytes
-                CSoundEventName m_strImmobilizeTargetSound; // 0x1bc8, 0x10 bytes
-                CSoundEventName m_strArmingSound; // 0x1bd8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GlitchModifier; // 0x1be8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1bf8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewRingParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TrapHighlightParticle; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ArmedParticle; // 0x1640, 0xe0 bytes
+                CSoundEventName m_strTripSound; // 0x1720, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1730, 0x10 bytes
+                CSoundEventName m_strExpiredSound; // 0x1740, 0x10 bytes
+                CSoundEventName m_strImmobilizeTargetSound; // 0x1750, 0x10 bytes
+                CSoundEventName m_strArmingSound; // 0x1760, 0x10 bytes
+                CSoundEventName m_strArmedSound; // 0x1770, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GlitchModifier; // 0x1780, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1790, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityImmobilizeTrapVData) == 0x1C08, "CAbilityImmobilizeTrapVData size mismatch");
+            static_assert(sizeof(CAbilityImmobilizeTrapVData) == 0x17A0, "CAbilityImmobilizeTrapVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1970
+             * Size: 0x14f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,34 +43,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SwingLineVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SwingModifier; // 0x1818, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingAttachParticle; // 0x1828, 0xe0 bytes
-                CSoundEventName m_strDaggerHitSound; // 0x1908, 0x10 bytes
-                CSoundEventName m_strDaggerExplodeSound; // 0x1918, 0x10 bytes
-                float m_flSwingStartDelay; // 0x1928, 0x4 bytes
-                float m_flSwingMaxDuration; // 0x192c, 0x4 bytes
-                float m_flMass; // 0x1930, 0x4 bytes
-                float m_flBodyForwardForce; // 0x1934, 0x4 bytes
-                float m_flCameraForwardForce; // 0x1938, 0x4 bytes
-                float m_flInputForce; // 0x193c, 0x4 bytes
-                float m_flPullForce; // 0x1940, 0x4 bytes
-                float m_flGravityForce; // 0x1944, 0x4 bytes
-                float m_flDampingConstant; // 0x1948, 0x4 bytes
-                float m_flIdealSpringLengthOverride; // 0x194c, 0x4 bytes
-                float m_flTensionSpringConstant; // 0x1950, 0x4 bytes
-                float m_flMaxSpringForce; // 0x1954, 0x4 bytes
-                float m_flMaxSpeed; // 0x1958, 0x4 bytes
-                float m_flWhiskerLength; // 0x195c, 0x4 bytes
-                float m_flWhiskerOffset; // 0x1960, 0x4 bytes
-                float m_flWhiskerForce; // 0x1964, 0x4 bytes
-                float m_flWhiskerPositionVerticalOffset; // 0x1968, 0x4 bytes
-                std::uint8_t pad_196c[0x4]; // 0x196c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SwingModifier; // 0x13a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingAttachParticle; // 0x13b0, 0xe0 bytes
+                CSoundEventName m_strDaggerHitSound; // 0x1490, 0x10 bytes
+                CSoundEventName m_strDaggerExplodeSound; // 0x14a0, 0x10 bytes
+                float m_flSwingStartDelay; // 0x14b0, 0x4 bytes
+                float m_flSwingMaxDuration; // 0x14b4, 0x4 bytes
+                float m_flMass; // 0x14b8, 0x4 bytes
+                float m_flBodyForwardForce; // 0x14bc, 0x4 bytes
+                float m_flCameraForwardForce; // 0x14c0, 0x4 bytes
+                float m_flInputForce; // 0x14c4, 0x4 bytes
+                float m_flPullForce; // 0x14c8, 0x4 bytes
+                float m_flGravityForce; // 0x14cc, 0x4 bytes
+                float m_flDampingConstant; // 0x14d0, 0x4 bytes
+                float m_flIdealSpringLengthOverride; // 0x14d4, 0x4 bytes
+                float m_flTensionSpringConstant; // 0x14d8, 0x4 bytes
+                float m_flMaxSpringForce; // 0x14dc, 0x4 bytes
+                float m_flMaxSpeed; // 0x14e0, 0x4 bytes
+                float m_flWhiskerLength; // 0x14e4, 0x4 bytes
+                float m_flWhiskerOffset; // 0x14e8, 0x4 bytes
+                float m_flWhiskerForce; // 0x14ec, 0x4 bytes
+                float m_flWhiskerPositionVerticalOffset; // 0x14f0, 0x4 bytes
+                std::uint8_t pad_14f4[0x4]; // 0x14f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SwingLineVData) == 0x1970, "CCitadel_Ability_SwingLineVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SwingLineVData) == 0x14F8, "CCitadel_Ability_SwingLineVData size mismatch");
         }
     }
 }

@@ -12,19 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace server {
-            enum class NavGoalType_t : std::uint32_t {
-                eNone = 0x0,
-                eEntity = 0x1,
-                ePathCorner = 0x2,
-                eLocation = 0x3,
-                eCover = 0x4,
-                eLOS = 0x5,
-                eCount = 0x6,
-                eInvalid = 0x7
+            enum class NavGoalType_t : std::uint8_t {
+                eDefault = 0x0,
+                eCover = 0x1,
+                eLOS = 0x2,
+                eBackAway = 0x3,
+                eCount = 0x4,
+                eInvalid = 0x5
             };
         }
     }

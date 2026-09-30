@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,22 +20,23 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc
-             * Alignment: 0x4
-             * Has Trivial Destructor
+             * Size: 0x30
+             * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CitadelBodygroupSetting_t {
                 CUtlStringToken m_sBodyGroupName; // 0x0000, 0x4 bytes
-                std::int32_t m_nBodygroupChoice; // 0x0004, 0x4 bytes
-                std::int32_t m_nPriority; // 0x0008, 0x4 bytes
+                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
+                CBodyGroupChoiceSymbolWithStorage m_BodygroupChoice; // 0x0008, 0x20 bytes
+                std::int32_t m_nPriority; // 0x0028, 0x4 bytes
+                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelBodygroupSetting_t) == 0xC, "CitadelBodygroupSetting_t size mismatch");
+            static_assert(sizeof(CitadelBodygroupSetting_t) == 0x30, "CitadelBodygroupSetting_t size mismatch");
         }
     }
 }

@@ -12,10 +12,10 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/rendersystemdx11/RsComparison_t.hpp"
 #include "shade/sdk/rendersystemdx11/RsStencilStateDesc_t.hpp"
 
 namespace shade {
@@ -30,7 +30,8 @@ namespace shade {
             struct RsDepthStencilStateDesc_t {
                 std::uint8_t m_bDepthTestEnable : 1; // 0x0000, 0x1 bytes
                 std::uint8_t m_bDepthWriteEnable : 1; // 0x0000, 0x1 bytes
-                shade::sdk::rendersystemdx11::RsComparison_t m_depthFunc; // 0x0001, 0x1 bytes
+                std::uint8_t m_depthFunc : 4; // 0x0000, 0x1 bytes
+                std::uint8_t pad_0001[0x1]; // 0x0001, 0x1 bytes
                 shade::sdk::rendersystemdx11::RsStencilStateDesc_t m_stencilState; // 0x0002, 0x6 bytes
             };
             #pragma pack(pop)

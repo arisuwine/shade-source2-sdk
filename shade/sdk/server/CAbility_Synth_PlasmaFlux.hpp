@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x12d8
+             * Size: 0x1928
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,23 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Synth_PlasmaFlux : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x28]; // 0x0f70, 0x28 bytes
-                bool m_bTeleported; // 0x0f98, 0x1 bytes
-                std::uint8_t pad_0f99[0x7]; // 0x0f99, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecUniqueHitList; // 0x0fa0, 0x18 bytes
-                Vector m_vLastValidTeleportPosition; // 0x0fb8, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0x0fc4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0x0fc8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hActiveProjectile; // 0x0fcc, 0x4 bytes
-                std::uint8_t pad_0fd0[0x308]; // 0x0fd0, 0x308 bytes
+                std::uint8_t pad_14a0[0x28]; // 0x14a0, 0x28 bytes
+                bool m_bTeleported; // 0x14c8, 0x1 bytes
+                std::uint8_t pad_14c9[0x7]; // 0x14c9, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecUniqueHitList; // 0x14d0, 0x18 bytes
+                VectorWS m_vLastValidTeleportPosition; // 0x14e8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0x14f4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0x14f8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hActiveProjectile; // 0x14fc, 0x4 bytes
+                std::uint8_t pad_1500[0x428]; // 0x1500, 0x428 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Synth_PlasmaFlux) == 0x12D8, "CAbility_Synth_PlasmaFlux size mismatch");
+            static_assert(sizeof(CAbility_Synth_PlasmaFlux) == 0x1928, "CAbility_Synth_PlasmaFlux size mismatch");
         }
     }
 }

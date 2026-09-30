@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa80
+             * Size: 0xca0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelSpeedBoostTrigger : public shade::sdk::client::C_BaseTrigger {
             public:
-                float m_flMovespeedOverride; // 0x0a78, 0x4 bytes
-                std::uint8_t pad_0a7c[0x4]; // 0x0a7c, 0x4 bytes
+                float m_flMovespeedOverride; // 0x0c98, 0x4 bytes
+                std::uint8_t pad_0c9c[0x4]; // 0x0c9c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelSpeedBoostTrigger) == 0xA80, "CCitadelSpeedBoostTrigger size mismatch");
+            static_assert(sizeof(CCitadelSpeedBoostTrigger) == 0xCA0, "CCitadelSpeedBoostTrigger size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -41,20 +42,20 @@ namespace shade {
             struct RnHull_t {
                 Vector m_vCentroid; // 0x0000, 0xc bytes
                 float m_flMaxAngularRadius; // 0x000c, 0x4 bytes
-                shade::sdk::mathlib_extended::AABB_t m_Bounds; // 0x0010, 0x18 bytes
-                Vector m_vOrthographicAreas; // 0x0028, 0xc bytes
-                matrix3x4_t m_MassProperties; // 0x0034, 0x30 bytes
-                float m_flVolume; // 0x0064, 0x4 bytes
-                float m_flSurfaceArea; // 0x0068, 0x4 bytes
-                std::uint8_t pad_006c[0x4]; // 0x006c, 0x4 bytes
-                CUtlVector<shade::sdk::physicslib::RnVertex_t> m_Vertices; // 0x0070, 0x18 bytes
-                CUtlVector<Vector> m_VertexPositions; // 0x0088, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnHalfEdge_t> m_Edges; // 0x00a0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnFace_t> m_Faces; // 0x00b8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnPlane_t> m_FacePlanes; // 0x00d0, 0x18 bytes
-                std::uint32_t m_nFlags; // 0x00e8, 0x4 bytes
-                std::uint8_t pad_00ec[0x4]; // 0x00ec, 0x4 bytes
-                shade::sdk::physicslib::CRegionSVM *m_pRegionSVM; // 0x00f0, 0x8 bytes
+                float m_flMinCentroidRadius; // 0x0010, 0x4 bytes
+                shade::sdk::mathlib_extended::AABB_t m_Bounds; // 0x0014, 0x18 bytes
+                Vector m_vOrthographicAreas; // 0x002c, 0xc bytes
+                matrix3x4_t m_MassProperties; // 0x0038, 0x30 bytes
+                float m_flVolume; // 0x0068, 0x4 bytes
+                float m_flSurfaceArea; // 0x006c, 0x4 bytes
+                CUtlVector<Vector> m_VertexPositions; // 0x0070, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::RnPlane_t> m_FacePlanes; // 0x0088, 0x18 bytes
+                std::uint32_t m_nFlags; // 0x00a0, 0x4 bytes
+                std::uint8_t pad_00a4[0x4]; // 0x00a4, 0x4 bytes
+                shade::sdk::physicslib::CRegionSVM *m_pRegionSVM; // 0x00a8, 0x8 bytes
+                CUtlVector<shade::sdk::physicslib::RnVertex_t> m_Vertices; // 0x00b0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::RnHalfEdge_t> m_Edges; // 0x00c8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::RnFace_t> m_Faces; // 0x00e0, 0x18 bytes
             };
             #pragma pack(pop)
 

@@ -12,9 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/BreakablePowerupLootParams_t.hpp"
 #include "shade/sdk/client/CRemapFloat.hpp"
 #include "shade/sdk/client/DOFDesc_t.hpp"
 #include "shade/sdk/client/DamageIndicatorSounds_t.hpp"
@@ -38,9 +40,11 @@ namespace shade {
     namespace sdk {
         namespace client {
             struct BreakableSpawnTimeDesc_t;
+            struct CorruptedPenaltyDef_t;
             struct CurrencySound_t;
             struct DamageFlashSettings_t;
             struct HeroAbilityResourceDef_t;
+            struct MapDistrictDesc_t;
             struct MinimapOffsetDesc_t;
             struct ShopGroups_t;
         }
@@ -55,7 +59,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1660
+             * Size: 0x1628
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -67,52 +71,62 @@ namespace shade {
                 std::uint8_t pad_007c[0x4]; // 0x007c, 0x4 bytes
                 CUtlOrderedMap<shade::sdk::client::ECurrencyType, shade::sdk::client::CurrencySound_t> m_CurrencyTypeSounds; // 0x0080, 0x28 bytes
                 shade::sdk::client::DamageReceivedSounds_t m_DamageReceivedSounds; // 0x00a8, 0x60 bytes
-                shade::sdk::client::HealingReceivedSounds_t m_HealingReceivedSounds; // 0x0108, 0x60 bytes
-                shade::sdk::client::DamageIndicatorSounds_t m_DamageIndicatorSounds; // 0x0168, 0x60 bytes
-                CSoundEventName m_strExitCombatSound; // 0x01c8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShoppingEffect; // 0x01d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MinimapZiplinesParticle; // 0x02b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KillStreakFireParticle; // 0x0398, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MidbossIndicatorRespawningParticle; // 0x0478, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MidbossIndicatorSpawnedParticle; // 0x0558, 0xe0 bytes
-                Color m_MinimapTeamRebelsColor; // 0x0638, 0x4 bytes
-                Color m_MinimapTeamCombineColor; // 0x063c, 0x4 bytes
-                CUtlVector<shade::sdk::client::MinimapOffsetDesc_t> m_MiniMapOffsets; // 0x0640, 0x18 bytes
-                Color m_OutlineColorFriend; // 0x0658, 0x4 bytes
-                Color m_OutlineColorEnemy; // 0x065c, 0x4 bytes
-                Color m_OutlineColorEnemyHero; // 0x0660, 0x4 bytes
-                Color m_OutlineColorTeam1; // 0x0664, 0x4 bytes
-                Color m_OutlineColorTeam2; // 0x0668, 0x4 bytes
-                Color m_OutlineColorNeutral; // 0x066c, 0x4 bytes
-                shade::sdk::client::LaneDesc_t m_LaneInfo[0x7]; // 0x0670, 0xe0 bytes
-                shade::sdk::client::LaneDesc_t m_NoLaneZip; // 0x0750, 0x20 bytes
-                Color m_enemyZiplineColor; // 0x0770, 0x4 bytes
-                Color m_enemyObjectivesColor; // 0x0774, 0x4 bytes
-                shade::sdk::client::NewPlayerMetrics_t m_NewPlayerMetrics[0x4]; // 0x0778, 0xc0 bytes
-                std::int32_t m_nItemPricePerTier[0x6]; // 0x0838, 0x18 bytes
-                float m_flTrooperKillGoldShareFrac[0x6]; // 0x0850, 0x18 bytes
-                float m_flHeroKillGoldShareFrac[0x6]; // 0x0868, 0x18 bytes
-                shade::sdk::client::DOFDesc_t m_DefaultDOF; // 0x0880, 0x10 bytes
-                shade::sdk::client::RejuvinatorParams_t m_RejuvParams; // 0x0890, 0x60 bytes
-                shade::sdk::client::IdolParams_t m_IdolParams; // 0x08f0, 0x578 bytes
-                shade::sdk::client::KothParams_t m_KothParams; // 0x0e68, 0x2e8 bytes
-                shade::sdk::client::TeleporterParams_t m_TeleporterParams; // 0x1150, 0x1f0 bytes
-                shade::sdk::client::ObjectivesParams_t m_ObjectiveParams; // 0x1340, 0x30 bytes
-                CUtlVector<shade::sdk::client::BreakableSpawnTimeDesc_t> m_BreakableSpawnTimeDesc; // 0x1370, 0x18 bytes
-                CUtlOrderedMap<shade::sdk::client::EStatsType, CUtlString> m_mapStatTypeImages; // 0x1388, 0x28 bytes
-                shade::sdk::client::CRemapFloat m_AimSpringStrength; // 0x13b0, 0x10 bytes
-                shade::sdk::client::CRemapFloat m_TargetingSpringStrength; // 0x13c0, 0x10 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilityResourceType, shade::sdk::client::HeroAbilityResourceDef_t> m_mapResourceTypes; // 0x13d0, 0x28 bytes
-                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecWeaponGroups; // 0x13f8, 0x18 bytes
-                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecArmorGroups; // 0x1410, 0x18 bytes
-                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecSpiritGroups; // 0x1428, 0x18 bytes
-                shade::sdk::client::GameModeStreetBrawl_t m_StreetBrawl; // 0x1440, 0x220 bytes
+                shade::sdk::client::HealingReceivedSounds_t m_HealingReceivedSounds; // 0x0108, 0x70 bytes
+                shade::sdk::client::DamageIndicatorSounds_t m_DamageIndicatorSounds; // 0x0178, 0x60 bytes
+                CSoundEventName m_strExitCombatSound; // 0x01d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShoppingEffect; // 0x01e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KillStreakFireParticle; // 0x02c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MidbossIndicatorRespawningParticle; // 0x03a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MidbossIndicatorSpawnedParticle; // 0x0488, 0xe0 bytes
+                CUtlVector<shade::sdk::client::MinimapOffsetDesc_t> m_MiniMapOffsets; // 0x0568, 0x18 bytes
+                CUtlVector<shade::sdk::client::MapDistrictDesc_t> m_MapDistrictLocalization; // 0x0580, 0x18 bytes
+                Color m_OutlineColorFriend; // 0x0598, 0x4 bytes
+                Color m_OutlineColorEnemy; // 0x059c, 0x4 bytes
+                Color m_OutlineColorEnemyHero; // 0x05a0, 0x4 bytes
+                Color m_OutlineColorTeam1; // 0x05a4, 0x4 bytes
+                Color m_OutlineColorTeam2; // 0x05a8, 0x4 bytes
+                Color m_OutlineColorNeutral; // 0x05ac, 0x4 bytes
+                Color m_OutlineColorHighlight; // 0x05b0, 0x4 bytes
+                float m_flOutlineWidthHighlight; // 0x05b4, 0x4 bytes
+                shade::sdk::client::LaneDesc_t m_LaneInfo[0x8]; // 0x05b8, 0x100 bytes
+                Color m_ColorFriend; // 0x06b8, 0x4 bytes
+                Color m_ColorEnemy; // 0x06bc, 0x4 bytes
+                Color m_ColorTeam1; // 0x06c0, 0x4 bytes
+                Color m_ColorTeam2; // 0x06c4, 0x4 bytes
+                shade::sdk::client::NewPlayerMetrics_t m_NewPlayerMetrics[0x4]; // 0x06c8, 0xc0 bytes
+                std::int32_t m_nItemPricePerTier[0x6]; // 0x0788, 0x18 bytes
+                std::int32_t m_nItemCorruptionPricePerTier[0x6]; // 0x07a0, 0x18 bytes
+                CUtlVector<shade::sdk::client::CorruptedPenaltyDef_t> m_vecCorruptedPenaltyDefs; // 0x07b8, 0x18 bytes
+                float m_flNeutralCampRespawnTimerShowDistance; // 0x07d0, 0x4 bytes
+                float m_flMidBossRespawnTimerShowDistance; // 0x07d4, 0x4 bytes
+                float m_flNeutralCampRespawnTimerHeight; // 0x07d8, 0x4 bytes
+                float m_flPickupGainedEffectStaggerInterval; // 0x07dc, 0x4 bytes
+                float m_flPermanentPickupTextDuration; // 0x07e0, 0x4 bytes
+                float m_flTrooperKillGoldShareFrac[0x6]; // 0x07e4, 0x18 bytes
+                float m_flHeroKillGoldShareFrac[0x6]; // 0x07fc, 0x18 bytes
+                shade::sdk::client::DOFDesc_t m_DefaultDOF; // 0x0814, 0x10 bytes
+                std::uint8_t pad_0824[0x4]; // 0x0824, 0x4 bytes
+                shade::sdk::client::RejuvinatorParams_t m_RejuvParams; // 0x0828, 0x60 bytes
+                shade::sdk::client::IdolParams_t m_IdolParams; // 0x0888, 0x578 bytes
+                shade::sdk::client::KothParams_t m_KothParams; // 0x0e00, 0x2e8 bytes
+                shade::sdk::client::TeleporterParams_t m_TeleporterParams; // 0x10e8, 0x1f0 bytes
+                shade::sdk::client::ObjectivesParams_t m_ObjectiveParams; // 0x12d8, 0x30 bytes
+                shade::sdk::client::BreakablePowerupLootParams_t m_BreakablePowerupLootParams; // 0x1308, 0x30 bytes
+                CUtlVector<shade::sdk::client::BreakableSpawnTimeDesc_t> m_BreakableSpawnTimeDesc; // 0x1338, 0x18 bytes
+                CUtlOrderedMap<shade::sdk::client::EStatsType, CUtlString> m_mapStatTypeImages; // 0x1350, 0x28 bytes
+                shade::sdk::client::CRemapFloat m_AimSpringStrength; // 0x1378, 0x10 bytes
+                shade::sdk::client::CRemapFloat m_TargetingSpringStrength; // 0x1388, 0x10 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilityResourceType, shade::sdk::client::HeroAbilityResourceDef_t> m_mapResourceTypes; // 0x1398, 0x28 bytes
+                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecWeaponGroups; // 0x13c0, 0x18 bytes
+                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecArmorGroups; // 0x13d8, 0x18 bytes
+                CUtlVector<shade::sdk::client::ShopGroups_t> m_vecSpiritGroups; // 0x13f0, 0x18 bytes
+                shade::sdk::client::GameModeStreetBrawl_t m_StreetBrawl; // 0x1408, 0x220 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelGenericData_t) == 0x1660, "CitadelGenericData_t size mismatch");
+            static_assert(sizeof(CitadelGenericData_t) == 0x1628, "CitadelGenericData_t size mismatch");
         }
     }
 }

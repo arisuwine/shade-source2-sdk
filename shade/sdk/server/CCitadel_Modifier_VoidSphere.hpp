@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x488
+             * Size: 0x648
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VoidSphere : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bTeleported; // 0x00d0, 0x1 bytes
-                std::uint8_t pad_00d1[0x3]; // 0x00d1, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_particleStart; // 0x00d4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_particleEnd; // 0x00d8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_particleTrail; // 0x00dc, 0x4 bytes
-                Vector m_vecEndLocation; // 0x00e0, 0xc bytes
-                Vector m_vecStartPosition; // 0x00ec, 0xc bytes
-                Vector m_vecEndLocationCaster; // 0x00f8, 0xc bytes
-                std::uint8_t pad_0104[0x384]; // 0x0104, 0x384 bytes
+                bool m_bTeleported; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_particleStart; // 0x0144, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particleEnd; // 0x0148, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particleTrail; // 0x014c, 0x4 bytes
+                VectorWS m_vecEndLocation; // 0x0150, 0xc bytes
+                VectorWS m_vecStartPosition; // 0x015c, 0xc bytes
+                VectorWS m_vecEndLocationCaster; // 0x0168, 0xc bytes
+                std::uint8_t pad_0174[0x4d4]; // 0x0174, 0x4d4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VoidSphere) == 0x488, "CCitadel_Modifier_VoidSphere size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VoidSphere) == 0x648, "CCitadel_Modifier_VoidSphere size mismatch");
         }
     }
 }

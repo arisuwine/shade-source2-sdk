@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2e8
+             * Size: 0x418
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StickyBombOnGround : public shade::sdk::server::CCitadel_Modifier_StickyBombAttached {
             public:
-                shade::sdk::entity2::GameTime_t m_tLastStopTime; // 0x02e0, 0x4 bytes
-                std::uint8_t pad_02e4[0x4]; // 0x02e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastStopTime; // 0x0410, 0x4 bytes
+                std::uint8_t pad_0414[0x4]; // 0x0414, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StickyBombOnGround) == 0x2E8, "CCitadel_Modifier_StickyBombOnGround size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StickyBombOnGround) == 0x418, "CCitadel_Modifier_StickyBombOnGround size mismatch");
         }
     }
 }

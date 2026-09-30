@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x840
+             * Size: 0x848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -58,22 +59,24 @@ namespace shade {
                 CSoundEventName m_strKothGivingUpWarningLoopSound; // 0x07e8, 0x10 bytes
                 CSoundEventName m_strKothContestedLoopSound; // 0x07f8, 0x10 bytes
                 CSoundEventName m_strKothCaptureStartAnnounce; // 0x0808, 0x10 bytes
-                float m_flZoneHeightMeters; // 0x0818, 0x4 bytes
-                float m_flTotalTimeToCaptureFavored; // 0x081c, 0x4 bytes
-                float m_flTotalTimeToCaptureUnfavored; // 0x0820, 0x4 bytes
-                float m_flTimeToGiveUp; // 0x0824, 0x4 bytes
-                float m_flTimeToWarnAboutGivingUp; // 0x0828, 0x4 bytes
-                std::int32_t m_nGiveUpOrbs; // 0x082c, 0x4 bytes
-                float m_flTroopersMin; // 0x0830, 0x4 bytes
-                float m_flTroopersMax; // 0x0834, 0x4 bytes
-                float m_flTroopersSpawnRate; // 0x0838, 0x4 bytes
-                float m_flDelayedDelete; // 0x083c, 0x4 bytes
+                float m_flPingTargetRadius; // 0x0818, 0x4 bytes
+                float m_flPingTargetHeightOffset; // 0x081c, 0x4 bytes
+                float m_flZoneHeightMeters; // 0x0820, 0x4 bytes
+                float m_flTotalTimeToCaptureFavored; // 0x0824, 0x4 bytes
+                float m_flTotalTimeToCaptureUnfavored; // 0x0828, 0x4 bytes
+                float m_flTimeToGiveUp; // 0x082c, 0x4 bytes
+                float m_flTimeToWarnAboutGivingUp; // 0x0830, 0x4 bytes
+                std::int32_t m_nGiveUpOrbs; // 0x0834, 0x4 bytes
+                float m_flTroopersMin; // 0x0838, 0x4 bytes
+                float m_flTroopersMax; // 0x083c, 0x4 bytes
+                float m_flTroopersSpawnRate; // 0x0840, 0x4 bytes
+                float m_flDelayedDelete; // 0x0844, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_KothCashInVData) == 0x840, "CCitadel_KothCashInVData size mismatch");
+            static_assert(sizeof(CCitadel_KothCashInVData) == 0x848, "CCitadel_KothCashInVData size mismatch");
         }
     }
 }

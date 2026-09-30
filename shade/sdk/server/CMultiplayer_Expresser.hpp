@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,21 +22,22 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa8
-             * Alignment: 0xff
+             * Size: 0xa0
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CMultiplayer_Expresser : public shade::sdk::server::CAI_ExpresserWithFollowup {
             public:
-                bool m_bAllowMultipleScenes; // 0x00a0, 0x1 bytes
-                std::uint8_t pad_00a1[0x7]; // 0x00a1, 0x7 bytes
+                bool m_bAllowMultipleScenes; // 0x0098, 0x1 bytes
+                std::uint8_t pad_0099[0x7]; // 0x0099, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CMultiplayer_Expresser) == 0xA8, "CMultiplayer_Expresser size mismatch");
+            static_assert(sizeof(CMultiplayer_Expresser) == 0xA0, "CMultiplayer_Expresser size mismatch");
         }
     }
 }

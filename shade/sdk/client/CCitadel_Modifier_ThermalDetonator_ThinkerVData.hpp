@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x968
+             * Size: 0x978
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ThermalDetonator_ThinkerVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x07a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticleFriendly; // 0x0888, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x07b8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticleFriendly; // 0x0898, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ThermalDetonator_ThinkerVData) == 0x968, "CCitadel_Modifier_ThermalDetonator_ThinkerVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ThermalDetonator_ThinkerVData) == 0x978, "CCitadel_Modifier_ThermalDetonator_ThinkerVData size mismatch");
         }
     }
 }

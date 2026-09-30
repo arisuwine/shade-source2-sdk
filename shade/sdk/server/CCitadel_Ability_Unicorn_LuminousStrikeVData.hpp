@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d98
+             * Size: 0x1920
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,22 +43,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_LuminousStrikeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TellParticleFriendly; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TellParticleEnemy; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TellParticle; // 0x1ab8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyHitParticle; // 0x1b98, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FluxStrikeCast; // 0x1c78, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x1d58, 0x10 bytes
-                CSoundEventName m_strTellSound; // 0x1d68, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x1d78, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1d88, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TellParticleFriendly; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TellParticleEnemy; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TellParticle; // 0x1640, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyHitParticle; // 0x1720, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FluxStrikeCast; // 0x1800, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x18e0, 0x10 bytes
+                CSoundEventName m_strTellSound; // 0x18f0, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x1900, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1910, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_LuminousStrikeVData) == 0x1D98, "CCitadel_Ability_Unicorn_LuminousStrikeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_LuminousStrikeVData) == 0x1920, "CCitadel_Ability_Unicorn_LuminousStrikeVData size mismatch");
         }
     }
 }

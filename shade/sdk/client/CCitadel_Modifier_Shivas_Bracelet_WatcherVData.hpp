@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x860
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Shivas_Bracelet_WatcherVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FreezeModifier; // 0x0750, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ImmuneModifier; // 0x0760, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle; // 0x0770, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FreezeModifier; // 0x0760, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ImmuneModifier; // 0x0770, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle; // 0x0780, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Shivas_Bracelet_WatcherVData) == 0x850, "CCitadel_Modifier_Shivas_Bracelet_WatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Shivas_Bracelet_WatcherVData) == 0x860, "CCitadel_Modifier_Shivas_Bracelet_WatcherVData size mismatch");
         }
     }
 }

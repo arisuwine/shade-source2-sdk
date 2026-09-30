@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x500
+             * Size: 0x510
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,22 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathNode : public shade::sdk::server::CPointEntity {
             public:
-                Vector m_vInTangentLocal; // 0x04a0, 0xc bytes
-                Vector m_vOutTangentLocal; // 0x04ac, 0xc bytes
-                CUtlString m_strParentPathUniqueID; // 0x04b8, 0x8 bytes
-                CUtlString m_strPathNodeParameter; // 0x04c0, 0x8 bytes
-                std::uint8_t pad_04c8[0x8]; // 0x04c8, 0x8 bytes
-                CTransform m_xWSPrevParent; // 0x04d0, 0x20 bytes
-                CHandle<shade::sdk::server::CPathWithDynamicNodes> m_hPath; // 0x04f0, 0x4 bytes
-                std::uint8_t pad_04f4[0xc]; // 0x04f4, 0xc bytes
+                Vector m_vInTangentLocal; // 0x04b0, 0xc bytes
+                Vector m_vOutTangentLocal; // 0x04bc, 0xc bytes
+                CUtlString m_strParentPathUniqueID; // 0x04c8, 0x8 bytes
+                CUtlString m_strPathNodeParameter; // 0x04d0, 0x8 bytes
+                std::uint8_t pad_04d8[0x8]; // 0x04d8, 0x8 bytes
+                CTransformWS m_xWSPrevParent; // 0x04e0, 0x20 bytes
+                CHandle<shade::sdk::server::CPathWithDynamicNodes> m_hPath; // 0x0500, 0x4 bytes
+                std::uint8_t pad_0504[0xc]; // 0x0504, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CPathNodeParentedMoveThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPathNode) == 0x500, "CPathNode size mismatch");
+            static_assert(sizeof(CPathNode) == 0x510, "CPathNode size mismatch");
         }
     }
 }

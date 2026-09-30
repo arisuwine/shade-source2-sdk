@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1660
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_BookWorm_PrimaryWeaponVData) == 0x19C8, "CCitadel_Ability_BookWorm_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_BookWorm_PrimaryWeaponVData) == 0x1660, "CCitadel_Ability_BookWorm_PrimaryWeaponVData size mismatch");
         }
     }
 }

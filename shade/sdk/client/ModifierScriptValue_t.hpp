@@ -12,12 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CModifierLevelFloat.hpp"
-#include "shade/sdk/client/EModifierScriptVariantType.hpp"
 #include "shade/sdk/client/EModifierValue.hpp"
+#include "shade/sdk/client/ModifierScriptVariantType_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -32,23 +33,24 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x1e0
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct ModifierScriptValue_t {
                 shade::sdk::client::EModifierValue m_eModifierValue; // 0x0000, 0x4 bytes
-                shade::sdk::client::EModifierScriptVariantType m_eType; // 0x0004, 0x4 bytes
+                shade::sdk::client::ModifierScriptVariantType_t m_eType; // 0x0004, 0x4 bytes
                 shade::sdk::client::CModifierLevelFloat m_value; // 0x0008, 0x10 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sModelValue; // 0x0018, 0xe0 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sParticleValue; // 0x00f8, 0xe0 bytes
+                CUtlString m_sStringValue; // 0x01d8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ModifierScriptValue_t) == 0x1D8, "ModifierScriptValue_t size mismatch");
+            static_assert(sizeof(ModifierScriptValue_t) == 0x1E0, "ModifierScriptValue_t size mismatch");
         }
     }
 }

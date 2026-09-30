@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x398
+             * Size: 0x3a0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -49,40 +50,43 @@ namespace shade {
                 float m_flUpSpeed; // 0x0014, 0x4 bytes
                 float m_flMaxLinearRange; // 0x0018, 0x4 bytes
                 float m_flVerticalAimBias; // 0x001c, 0x4 bytes
-                shade::sdk::client::ProjectileShape_t m_eProjectileShape; // 0x0020, 0x4 bytes
-                float m_flTriggerRadius; // 0x0024, 0x4 bytes
-                float m_flPhysicsRadius; // 0x0028, 0x4 bytes
-                float m_flBulletOnlyTriggerRadius; // 0x002c, 0x4 bytes
-                Vector m_vecCapsulePhysicsCenter1; // 0x0030, 0xc bytes
-                Vector m_vecCapsulePhysicsCenter2; // 0x003c, 0xc bytes
-                float m_flCapsulePhysicsRadius; // 0x0048, 0x4 bytes
-                Vector m_vecCapsuleTriggerCenter1; // 0x004c, 0xc bytes
-                Vector m_vecCapsuleTriggerCenter2; // 0x0058, 0xc bytes
-                float m_flCapsuleTriggerRadius; // 0x0064, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_particle; // 0x0068, 0xe0 bytes
-                bool m_bHideWarningParticle; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_warningParticle; // 0x0150, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_customModel; // 0x0230, 0xe0 bytes
-                float m_flProjectileModelScale; // 0x0310, 0x4 bytes
-                std::uint8_t pad_0314[0x4]; // 0x0314, 0x4 bytes
-                CSoundEventName m_HitSound; // 0x0318, 0x10 bytes
-                CSoundEventName m_HitTargetSound; // 0x0328, 0x10 bytes
-                CSoundEventName m_HitWorldSound; // 0x0338, 0x10 bytes
-                CSoundEventName m_DetonateSound; // 0x0348, 0x10 bytes
-                CSoundEventName m_LoopingSound; // 0x0358, 0x10 bytes
-                CSoundEventName m_WarningSound; // 0x0368, 0x10 bytes
-                float m_flTrackingDampingCoefficient; // 0x0378, 0x4 bytes
-                float m_flTrackingDuration; // 0x037c, 0x4 bytes
-                float m_flTrackingStartTime; // 0x0380, 0x4 bytes
-                float m_flTrackingEndTime; // 0x0384, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoProjectileModifier; // 0x0388, 0x10 bytes
+                float m_flNoCollisionDuration; // 0x0020, 0x4 bytes
+                bool m_bAllowMotionDuringNoCollisionDuration; // 0x0024, 0x1 bytes
+                std::uint8_t pad_0025[0x3]; // 0x0025, 0x3 bytes
+                shade::sdk::client::ProjectileShape_t m_eProjectileShape; // 0x0028, 0x4 bytes
+                float m_flTriggerRadius; // 0x002c, 0x4 bytes
+                float m_flPhysicsRadius; // 0x0030, 0x4 bytes
+                float m_flBulletOnlyTriggerRadius; // 0x0034, 0x4 bytes
+                Vector m_vecCapsulePhysicsCenter1; // 0x0038, 0xc bytes
+                Vector m_vecCapsulePhysicsCenter2; // 0x0044, 0xc bytes
+                float m_flCapsulePhysicsRadius; // 0x0050, 0x4 bytes
+                Vector m_vecCapsuleTriggerCenter1; // 0x0054, 0xc bytes
+                Vector m_vecCapsuleTriggerCenter2; // 0x0060, 0xc bytes
+                float m_flCapsuleTriggerRadius; // 0x006c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_particle; // 0x0070, 0xe0 bytes
+                bool m_bHideWarningParticle; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x7]; // 0x0151, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_warningParticle; // 0x0158, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_customModel; // 0x0238, 0xe0 bytes
+                float m_flProjectileModelScale; // 0x0318, 0x4 bytes
+                std::uint8_t pad_031c[0x4]; // 0x031c, 0x4 bytes
+                CSoundEventName m_HitSound; // 0x0320, 0x10 bytes
+                CSoundEventName m_HitTargetSound; // 0x0330, 0x10 bytes
+                CSoundEventName m_HitWorldSound; // 0x0340, 0x10 bytes
+                CSoundEventName m_DetonateSound; // 0x0350, 0x10 bytes
+                CSoundEventName m_LoopingSound; // 0x0360, 0x10 bytes
+                CSoundEventName m_WarningSound; // 0x0370, 0x10 bytes
+                float m_flTrackingDampingCoefficient; // 0x0380, 0x4 bytes
+                float m_flTrackingDuration; // 0x0384, 0x4 bytes
+                float m_flTrackingStartTime; // 0x0388, 0x4 bytes
+                float m_flTrackingEndTime; // 0x038c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoProjectileModifier; // 0x0390, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ProjectileInfo_t) == 0x398, "ProjectileInfo_t size mismatch");
+            static_assert(sizeof(ProjectileInfo_t) == 0x3A0, "ProjectileInfo_t size mismatch");
         }
     }
 }

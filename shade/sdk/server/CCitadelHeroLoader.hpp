@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHeroLoader : public shade::sdk::server::CBaseEntity {
             public:
-                CUtlSymbolLarge m_hero; // 0x04a0, 0x8 bytes
-                std::int32_t m_nLoadSeq; // 0x04a8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x04ac, 0x4 bytes
+                CUtlSymbolLarge m_hero; // 0x04b0, 0x8 bytes
+                std::int32_t m_nLoadSeq; // 0x04b8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x04bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHeroLoader) == 0x4B0, "CCitadelHeroLoader size mismatch");
+            static_assert(sizeof(CCitadelHeroLoader) == 0x4C0, "CCitadelHeroLoader size mismatch");
         }
     }
 }

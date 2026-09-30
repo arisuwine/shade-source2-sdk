@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9b8
+             * Size: 0xbc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FuncTrackTrain : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::int32_t m_nLongAxis; // 0x09a8, 0x4 bytes
-                float m_flRadius; // 0x09ac, 0x4 bytes
-                float m_flLineLength; // 0x09b0, 0x4 bytes
-                std::uint8_t pad_09b4[0x4]; // 0x09b4, 0x4 bytes
+                std::int32_t m_nLongAxis; // 0x0bb0, 0x4 bytes
+                float m_flRadius; // 0x0bb4, 0x4 bytes
+                float m_flLineLength; // 0x0bb8, 0x4 bytes
+                std::uint8_t pad_0bbc[0x4]; // 0x0bbc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FuncTrackTrain) == 0x9B8, "C_FuncTrackTrain size mismatch");
+            static_assert(sizeof(C_FuncTrackTrain) == 0xBC0, "C_FuncTrackTrain size mismatch");
         }
     }
 }

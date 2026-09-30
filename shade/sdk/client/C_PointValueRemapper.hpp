@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -64,7 +65,7 @@ namespace shade {
                 std::uint8_t pad_0652[0x2]; // 0x0652, 0x2 bytes
                 float m_flPreviousValue; // 0x0654, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flPreviousUpdateTickTime; // 0x0658, 0x4 bytes
-                Vector m_vecPreviousTestPoint; // 0x065c, 0xc bytes
+                VectorWS m_vecPreviousTestPoint; // 0x065c, 0xc bytes
             };
             #pragma pack(pop)
 

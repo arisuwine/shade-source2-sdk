@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -27,9 +28,10 @@ namespace shade {
             struct LaneDesc_t {
                 CUtlString m_strLaneName; // 0x0000, 0x8 bytes
                 CUtlString m_strCSSClass; // 0x0008, 0x8 bytes
-                Color m_Color; // 0x0010, 0x4 bytes
-                Color m_MinimapZiplineColorOverride; // 0x0014, 0x4 bytes
-                Color m_ObjectiveColor; // 0x0018, 0x4 bytes
+                bool m_bIsEnemyLane; // 0x0010, 0x1 bytes
+                std::uint8_t pad_0011[0x3]; // 0x0011, 0x3 bytes
+                Color m_Color; // 0x0014, 0x4 bytes
+                Color m_MinimapColor; // 0x0018, 0x4 bytes
                 std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
             };
             #pragma pack(pop)

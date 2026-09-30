@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0xa20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,16 +34,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHideoutInteractableTrigger : public shade::sdk::server::CBaseTrigger, public shade::sdk::client::IHideoutInteractable {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnInteracted; // 0x08e8, 0x18 bytes
-                CUtlString m_strInteractLocString; // 0x0900, 0x8 bytes
-                shade::sdk::client::EHideoutButtonAction m_eHideoutAction; // 0x0908, 0x4 bytes
-                std::uint8_t pad_090c[0x4]; // 0x090c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnInteracted; // 0x09f8, 0x18 bytes
+                CUtlString m_strInteractLocString; // 0x0a10, 0x8 bytes
+                shade::sdk::client::EHideoutButtonAction m_eHideoutAction; // 0x0a18, 0x4 bytes
+                std::uint8_t pad_0a1c[0x4]; // 0x0a1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHideoutInteractableTrigger) == 0x910, "CCitadelHideoutInteractableTrigger size mismatch");
+            static_assert(sizeof(CCitadelHideoutInteractableTrigger) == 0xA20, "CCitadelHideoutInteractableTrigger size mismatch");
         }
     }
 }

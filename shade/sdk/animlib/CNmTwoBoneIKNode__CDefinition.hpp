@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -37,7 +38,7 @@ namespace shade {
                 shade::sdk::animlib::NmIKBlendMode_t m_blendMode; // 0x0028, 0x1 bytes
                 bool m_bIsTargetInWorldSpace; // 0x0029, 0x1 bytes
                 std::uint8_t pad_002a[0x2]; // 0x002a, 0x2 bytes
-                float m_flReferencePoseTwistWeight; // 0x002c, 0x4 bytes
+                float m_flChainRotationWeight; // 0x002c, 0x4 bytes
             };
             #pragma pack(pop)
 

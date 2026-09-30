@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x128
+             * Size: 0x138
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPickupIdolVData : public shade::sdk::client::CCitadelItemPickupVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WalkBackModifier; // 0x0108, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PickUpAura; // 0x0118, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WalkBackModifier; // 0x0118, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PickUpAura; // 0x0128, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPickupIdolVData) == 0x128, "CCitadelItemPickupIdolVData size mismatch");
+            static_assert(sizeof(CCitadelItemPickupIdolVData) == 0x138, "CCitadelItemPickupIdolVData size mismatch");
         }
     }
 }

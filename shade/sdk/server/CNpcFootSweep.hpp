@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0xa10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CNpcFootSweep : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlVector<shade::sdk::server::FootSweepPusher_t> m_vecPushers; // 0x08e0, 0x18 bytes
-                bool m_bUseCenterPusher; // 0x08f8, 0x1 bytes
-                bool m_bUseForwardPusher; // 0x08f9, 0x1 bytes
-                std::uint8_t pad_08fa[0x6]; // 0x08fa, 0x6 bytes
+                CUtlVector<shade::sdk::server::FootSweepPusher_t> m_vecPushers; // 0x09f0, 0x18 bytes
+                bool m_bUseCenterPusher; // 0x0a08, 0x1 bytes
+                bool m_bUseForwardPusher; // 0x0a09, 0x1 bytes
+                std::uint8_t pad_0a0a[0x6]; // 0x0a0a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNpcFootSweep) == 0x900, "CNpcFootSweep size mismatch");
+            static_assert(sizeof(CNpcFootSweep) == 0xA10, "CNpcFootSweep size mismatch");
         }
     }
 }

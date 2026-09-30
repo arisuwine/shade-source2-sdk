@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb50
+             * Size: 0xb60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SalvoBulletVData : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x0880, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x0890, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle; // 0x0970, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SalvoWeaponParticle; // 0x0a50, 0xe0 bytes
-                CSoundEventName m_ShotVictimSound; // 0x0b30, 0x10 bytes
-                CSoundEventName m_ShotConfirmationSound; // 0x0b40, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x0890, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x08a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle; // 0x0980, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SalvoWeaponParticle; // 0x0a60, 0xe0 bytes
+                CSoundEventName m_ShotVictimSound; // 0x0b40, 0x10 bytes
+                CSoundEventName m_ShotConfirmationSound; // 0x0b50, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SalvoBulletVData) == 0xB50, "CCitadel_Modifier_SalvoBulletVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SalvoBulletVData) == 0xB60, "CCitadel_Modifier_SalvoBulletVData size mismatch");
         }
     }
 }

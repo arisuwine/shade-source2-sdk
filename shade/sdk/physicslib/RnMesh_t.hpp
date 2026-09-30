@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -46,7 +47,7 @@ namespace shade {
                 Vector m_vOrthographicAreas; // 0x00a8, 0xc bytes
                 std::uint32_t m_nFlags; // 0x00b4, 0x4 bytes
                 std::uint32_t m_nDebugFlags; // 0x00b8, 0x4 bytes
-                std::uint8_t pad_00bc[0x4]; // 0x00bc, 0x4 bytes
+                float m_flSurfaceArea; // 0x00bc, 0x4 bytes
             };
             #pragma pack(pop)
 

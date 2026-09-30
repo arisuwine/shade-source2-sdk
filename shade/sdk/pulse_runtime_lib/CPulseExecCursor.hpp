@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,7 +20,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0xd8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -27,13 +28,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseExecCursor {
             public:
-                std::uint8_t pad_0000[0xd0]; // 0x0000, 0xd0 bytes
+                std::uint8_t pad_0000[0xd8]; // 0x0000, 0xd8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseExecCursor) == 0xD0, "CPulseExecCursor size mismatch");
+            static_assert(sizeof(CPulseExecCursor) == 0xD8, "CPulseExecCursor size mismatch");
         }
     }
 }

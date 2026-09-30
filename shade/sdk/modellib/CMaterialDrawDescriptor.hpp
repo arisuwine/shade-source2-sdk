@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0x108
+             * Size: 0x120
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -44,31 +45,33 @@ namespace shade {
                 float m_flUvDensity; // 0x0000, 0x4 bytes
                 Vector m_vTintColor; // 0x0004, 0xc bytes
                 float m_flAlpha; // 0x0010, 0x4 bytes
-                std::uint8_t pad_0014[0x2]; // 0x0014, 0x2 bytes
-                std::uint16_t m_nNumMeshlets; // 0x0016, 0x2 bytes
-                std::uint8_t pad_0018[0x4]; // 0x0018, 0x4 bytes
-                std::uint32_t m_nFirstMeshlet; // 0x001c, 0x4 bytes
-                std::uint32_t m_nAppliedIndexOffset; // 0x0020, 0x4 bytes
-                std::uint8_t m_nDepthVertexBufferIndex; // 0x0024, 0x1 bytes
-                std::uint8_t m_nMeshletPackedIVBIndex; // 0x0025, 0x1 bytes
-                std::uint8_t pad_0026[0x2]; // 0x0026, 0x2 bytes
-                CUtlLeanVector<shade::sdk::modellib::CMaterialDrawDescriptor__RigidMeshPart_t> m_rigidMeshParts; // 0x0028, 0x10 bytes
-                shade::sdk::modellib::RenderPrimitiveType_t m_nPrimitiveType; // 0x0038, 0x4 bytes
-                std::int32_t m_nBaseVertex; // 0x003c, 0x4 bytes
-                std::int32_t m_nVertexCount; // 0x0040, 0x4 bytes
-                std::int32_t m_nStartIndex; // 0x0044, 0x4 bytes
-                std::int32_t m_nIndexCount; // 0x0048, 0x4 bytes
-                std::uint8_t pad_004c[0x64]; // 0x004c, 0x64 bytes
-                shade::sdk::modellib::CRenderBufferBinding m_indexBuffer; // 0x00b0, 0x20 bytes
-                shade::sdk::modellib::CRenderBufferBinding m_meshletPackedIVB; // 0x00d0, 0x20 bytes
-                std::uint8_t pad_00f0[0x10]; // 0x00f0, 0x10 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_material; // 0x0100, 0x8 bytes
+                std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
+                std::uint32_t m_nNumMeshlets; // 0x0018, 0x4 bytes
+                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                std::uint32_t m_nFirstMeshlet; // 0x0020, 0x4 bytes
+                std::uint32_t m_nAppliedIndexOffset; // 0x0024, 0x4 bytes
+                std::int32_t m_nEmissivePrimitiveCount; // 0x0028, 0x4 bytes
+                std::uint8_t m_nDepthVertexBufferIndex; // 0x002c, 0x1 bytes
+                std::uint8_t m_nMeshletPackedIVBIndex; // 0x002d, 0x1 bytes
+                std::uint8_t pad_002e[0x2]; // 0x002e, 0x2 bytes
+                CUtlLeanVector<shade::sdk::modellib::CMaterialDrawDescriptor__RigidMeshPart_t> m_rigidMeshParts; // 0x0030, 0x10 bytes
+                CUtlLeanVector<std::uint16_t> m_rootBvhNodes; // 0x0040, 0x10 bytes
+                shade::sdk::modellib::RenderPrimitiveType_t m_nPrimitiveType; // 0x0050, 0x4 bytes
+                std::int32_t m_nBaseVertex; // 0x0054, 0x4 bytes
+                std::int32_t m_nVertexCount; // 0x0058, 0x4 bytes
+                std::int32_t m_nStartIndex; // 0x005c, 0x4 bytes
+                std::int32_t m_nIndexCount; // 0x0060, 0x4 bytes
+                std::uint8_t pad_0064[0x64]; // 0x0064, 0x64 bytes
+                shade::sdk::modellib::CRenderBufferBinding m_indexBuffer; // 0x00c8, 0x20 bytes
+                shade::sdk::modellib::CRenderBufferBinding m_meshletPackedIVB; // 0x00e8, 0x20 bytes
+                std::uint8_t pad_0108[0x10]; // 0x0108, 0x10 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_material; // 0x0118, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CMaterialDrawDescriptor) == 0x108, "CMaterialDrawDescriptor size mismatch");
+            static_assert(sizeof(CMaterialDrawDescriptor) == 0x120, "CMaterialDrawDescriptor size mismatch");
         }
     }
 }

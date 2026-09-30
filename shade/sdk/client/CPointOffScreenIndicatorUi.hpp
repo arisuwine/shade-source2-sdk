@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xe20
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointOffScreenIndicatorUi : public shade::sdk::client::C_PointClientUIWorldPanel {
             public:
-                bool m_bBeenEnabled; // 0x0c00, 0x1 bytes
-                bool m_bHide; // 0x0c01, 0x1 bytes
-                std::uint8_t pad_0c02[0x2]; // 0x0c02, 0x2 bytes
-                float m_flSeenTargetTime; // 0x0c04, 0x4 bytes
-                shade::sdk::client::C_PointClientUIWorldPanel *m_pTargetPanel; // 0x0c08, 0x8 bytes
+                bool m_bBeenEnabled; // 0x0e10, 0x1 bytes
+                bool m_bHide; // 0x0e11, 0x1 bytes
+                std::uint8_t pad_0e12[0x2]; // 0x0e12, 0x2 bytes
+                float m_flSeenTargetTime; // 0x0e14, 0x4 bytes
+                shade::sdk::client::C_PointClientUIWorldPanel *m_pTargetPanel; // 0x0e18, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPointOffScreenIndicatorUi) == 0xC10, "CPointOffScreenIndicatorUi size mismatch");
+            static_assert(sizeof(CPointOffScreenIndicatorUi) == 0xE20, "CPointOffScreenIndicatorUi size mismatch");
         }
     }
 }

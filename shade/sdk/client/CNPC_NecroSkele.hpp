@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,8 +22,16 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            class C_CitadelBaseAbility;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace client {
             /* Class Parameters
-             * Size: 0x1c18
+             * Size: 0x1b50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_NecroSkele : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                std::uint8_t pad_1bd0[0x28]; // 0x1bd0, 0x28 bytes
-                shade::sdk::entity2::GameTime_t m_tSpawnTime; // 0x1bf8, 0x4 bytes
-                VectorWS m_vecCastLocation; // 0x1bfc, 0xc bytes
-                bool m_bDontMove; // 0x1c08, 0x1 bytes
-                std::uint8_t pad_1c09[0x3]; // 0x1c09, 0x3 bytes
-                float m_flAttackRange; // 0x1c0c, 0x4 bytes
-                float m_flSpawnDuration; // 0x1c10, 0x4 bytes
-                std::uint8_t pad_1c14[0x4]; // 0x1c14, 0x4 bytes
+                std::uint8_t pad_1b08[0x14]; // 0x1b08, 0x14 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hCastingAbility; // 0x1b1c, 0x4 bytes
+                std::uint8_t pad_1b20[0x10]; // 0x1b20, 0x10 bytes
+                shade::sdk::entity2::GameTime_t m_tSpawnTime; // 0x1b30, 0x4 bytes
+                VectorWS m_vecCastLocation; // 0x1b34, 0xc bytes
+                bool m_bDontMove; // 0x1b40, 0x1 bytes
+                std::uint8_t pad_1b41[0x3]; // 0x1b41, 0x3 bytes
+                float m_flAttackRange; // 0x1b44, 0x4 bytes
+                float m_flSpawnDuration; // 0x1b48, 0x4 bytes
+                std::uint8_t pad_1b4c[0x4]; // 0x1b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CHandle<CBaseEntity> m_hCastingAbility; // Offset: 0x1be4, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CNPC_NecroSkele) == 0x1C18, "CNPC_NecroSkele size mismatch");
+            static_assert(sizeof(CNPC_NecroSkele) == 0x1B50, "CNPC_NecroSkele size mismatch");
         }
     }
 }

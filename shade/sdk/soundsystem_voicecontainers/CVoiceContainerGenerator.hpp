@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xa8
+             * Size: 0x70
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -35,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerGenerator) == 0xA8, "CVoiceContainerGenerator size mismatch");
+            static_assert(sizeof(CVoiceContainerGenerator) == 0x70, "CVoiceContainerGenerator size mismatch");
         }
     }
 }

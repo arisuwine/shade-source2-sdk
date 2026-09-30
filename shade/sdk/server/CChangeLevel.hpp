@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0xa20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,24 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CChangeLevel : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlString m_sMapName; // 0x08e0, 0x8 bytes
-                CUtlString m_sLandmarkName; // 0x08e8, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnChangeLevel; // 0x08f0, 0x18 bytes
-                bool m_bTouched; // 0x0908, 0x1 bytes
-                bool m_bNoTouch; // 0x0909, 0x1 bytes
-                bool m_bNewChapter; // 0x090a, 0x1 bytes
-                bool m_bOnChangeLevelFired; // 0x090b, 0x1 bytes
-                std::uint8_t pad_090c[0x4]; // 0x090c, 0x4 bytes
+                CUtlString m_sMapName; // 0x09f0, 0x8 bytes
+                CUtlString m_sLandmarkName; // 0x09f8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnChangeLevel; // 0x0a00, 0x18 bytes
+                bool m_bTouched; // 0x0a18, 0x1 bytes
+                bool m_bNoTouch; // 0x0a19, 0x1 bytes
+                bool m_bNewChapter; // 0x0a1a, 0x1 bytes
+                bool m_bOnChangeLevelFired; // 0x0a1b, 0x1 bytes
+                std::uint8_t pad_0a1c[0x4]; // 0x0a1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputChangeLevel; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * CUtlString map; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CUtlString landmark; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CChangeLevel) == 0x910, "CChangeLevel size mismatch");
+            static_assert(sizeof(CChangeLevel) == 0xA20, "CChangeLevel size mismatch");
         }
     }
 }

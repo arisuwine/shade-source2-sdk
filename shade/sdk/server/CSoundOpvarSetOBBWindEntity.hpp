@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x5a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetOBBWindEntity : public shade::sdk::server::CSoundOpvarSetPointBase {
             public:
-                Vector m_vMins; // 0x0548, 0xc bytes
-                Vector m_vMaxs; // 0x0554, 0xc bytes
-                Vector m_vDistanceMins; // 0x0560, 0xc bytes
-                Vector m_vDistanceMaxs; // 0x056c, 0xc bytes
-                float m_flWindMin; // 0x0578, 0x4 bytes
-                float m_flWindMax; // 0x057c, 0x4 bytes
-                float m_flWindMapMin; // 0x0580, 0x4 bytes
-                float m_flWindMapMax; // 0x0584, 0x4 bytes
+                Vector m_vMins; // 0x0560, 0xc bytes
+                Vector m_vMaxs; // 0x056c, 0xc bytes
+                Vector m_vDistanceMins; // 0x0578, 0xc bytes
+                Vector m_vDistanceMaxs; // 0x0584, 0xc bytes
+                float m_flWindMin; // 0x0590, 0x4 bytes
+                float m_flWindMax; // 0x0594, 0x4 bytes
+                float m_flWindMapMin; // 0x0598, 0x4 bytes
+                float m_flWindMapMax; // 0x059c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSoundOpvarSetOBBWindEntitySetOpvarThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetOBBWindEntity) == 0x588, "CSoundOpvarSetOBBWindEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetOBBWindEntity) == 0x5A0, "CSoundOpvarSetOBBWindEntity size mismatch");
         }
     }
 }

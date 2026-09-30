@@ -12,10 +12,19 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/server/CCitadelItemPickup.hpp"
+
+namespace shade {
+    namespace sdk {
+        namespace server {
+            class CBaseEntity;
+        }
+    }
+}
 
 namespace shade {
     namespace sdk {
@@ -30,12 +39,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPunchableNeutralGold : public shade::sdk::server::CCitadelItemPickup {
             public:
+                CHandle<shade::sdk::server::CBaseEntity> m_hVictimPlayer; // 0x5500, 0x4 bytes
+                std::uint8_t pad_5504[0xc]; // 0x5504, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCitadelItemPunchableNeutralGold) == 0x5510, "CCitadelItemPunchableNeutralGold size mismatch");
         }

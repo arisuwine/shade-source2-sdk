@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1818
+             * Size: 0x13a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Mirage_SandPhantom_VData) == 0x1818, "CAbility_Mirage_SandPhantom_VData size mismatch");
+            static_assert(sizeof(CAbility_Mirage_SandPhantom_VData) == 0x13A0, "CAbility_Mirage_SandPhantom_VData size mismatch");
         }
     }
 }

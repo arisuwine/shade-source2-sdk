@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,9 +22,10 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x50
-             * Alignment: 0xff
+             * Size: 0x58
+             * Alignment: 0x8
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class AI_CustomMoveRequest {
@@ -33,13 +35,15 @@ namespace shade {
                 bool m_bForceInterrupt; // 0x003c, 0x1 bytes
                 std::uint8_t pad_003d[0x3]; // 0x003d, 0x3 bytes
                 float m_flMinPathLength; // 0x0040, 0x4 bytes
-                VectorWS m_vTargetPosition; // 0x0044, 0xc bytes
+                float m_flAngleThreshold; // 0x0044, 0x4 bytes
+                VectorWS m_vTargetPosition; // 0x0048, 0xc bytes
+                std::uint8_t pad_0054[0x4]; // 0x0054, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_CustomMoveRequest) == 0x50, "AI_CustomMoveRequest size mismatch");
+            static_assert(sizeof(AI_CustomMoveRequest) == 0x58, "AI_CustomMoveRequest size mismatch");
         }
     }
 }

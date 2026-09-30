@@ -12,13 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/C_BaseEntity.hpp"
 #include "shade/sdk/client/CitadelAbilityUpgradeInfoPacked_t.hpp"
 #include "shade/sdk/client/CitadelStolenAbilitySlot_t.hpp"
-#include "shade/sdk/client/EAbilityBucketType.hpp"
+#include "shade/sdk/client/EAbilityActiveReasonBits.hpp"
 #include "shade/sdk/client/EAbilitySlots_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 
@@ -34,64 +35,65 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x11d8
+             * Size: 0x16d8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class C_CitadelBaseAbility : public shade::sdk::client::C_BaseEntity {
             public:
-                std::uint8_t pad_05f0[0xd0]; // 0x05f0, 0xd0 bytes
-                CUtlVector<CModifierHandleTyped<shade::sdk::client::CCitadelModifier>> m_vecIntrinsicModifiers; // 0x06c0, 0x18 bytes
-                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_pCastDelayAutoModifier; // 0x06d8, 0x18 bytes
-                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_pChannelAutoModifier; // 0x06f0, 0x18 bytes
-                CGlobalSymbol m_strUsedCastGraphParam; // 0x0708, 0x8 bytes
-                std::int32_t m_nCastParamNeedsResetTick; // 0x0710, 0x4 bytes
-                std::uint8_t pad_0714[0x4]; // 0x0714, 0x4 bytes
-                bool m_bIsCoolingDownInternal; // 0x0718, 0x1 bytes
-                std::uint8_t pad_0719[0x3]; // 0x0719, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flCancelMashProtectionEndTime; // 0x071c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCancelLockoutEndTime; // 0x0720, 0x4 bytes
-                std::uint8_t pad_0724[0x1c]; // 0x0724, 0x1c bytes
-                bool m_bChanneling; // 0x0740, 0x1 bytes
-                bool m_bInCastDelay; // 0x0741, 0x1 bytes
-                bool m_bShouldBeExecuted; // 0x0742, 0x1 bytes
-                bool m_bCanBeUpgraded; // 0x0743, 0x1 bytes
-                std::uint8_t pad_0744[0x4]; // 0x0744, 0x4 bytes
-                shade::sdk::client::CitadelStolenAbilitySlot_t m_eStolenInSlot; // 0x0748, 0x10 bytes
-                shade::sdk::client::CitadelAbilityUpgradeInfoPacked_t m_nUpgradeInfo; // 0x0758, 0x4 bytes
-                shade::sdk::client::EAbilityBucketType m_iBucketID; // 0x075c, 0x4 bytes
-                bool m_bToggleState; // 0x0760, 0x1 bytes
-                std::uint8_t pad_0761[0x3]; // 0x0761, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flCooldownStart; // 0x0764, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCooldownEnd; // 0x0768, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x076c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChannelStartTime; // 0x0770, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x0774, 0x4 bytes
-                shade::sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x0778, 0x2 bytes
-                std::uint8_t pad_077a[0x2]; // 0x077a, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x077c, 0x4 bytes
-                std::int32_t m_iRemainingCharges; // 0x0780, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x0784, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x0788, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x078c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x0790, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x0794, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x0798, 0x4 bytes
-                bool m_bCanBeImbued; // 0x079c, 0x1 bytes
-                std::uint8_t pad_079d[0x3]; // 0x079d, 0x3 bytes
-                C_NetworkUtlVectorBase<CUtlStringToken> m_vecImbuedAbilities; // 0x07a0, 0x18 bytes
-                bool m_bSelectionModeIsAltMode; // 0x07b8, 0x1 bytes
-                bool m_bPredErrorCheckChanneling; // 0x07b9, 0x1 bytes
-                bool m_bPredErrorCheckCasting; // 0x07ba, 0x1 bytes
-                std::uint8_t pad_07bb[0x1]; // 0x07bb, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flPredErrorCheckCastCompleteTime; // 0x07bc, 0x4 bytes
-                bool m_bPredErrorCheckIsSelected; // 0x07c0, 0x1 bytes
-                std::uint8_t pad_07c1[0x9db]; // 0x07c1, 0x9db bytes
-                shade::sdk::entity2::GameTime_t m_flNextMeepMopTime; // 0x119c, 0x4 bytes
-                std::uint8_t pad_11a0[0x38]; // 0x11a0, 0x38 bytes
+                std::uint8_t pad_05f0[0xe0]; // 0x05f0, 0xe0 bytes
+                CUtlVector<CModifierHandleTyped<shade::sdk::client::CCitadelModifier>> m_vecIntrinsicModifiers; // 0x06d0, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_pCastDelayAutoModifier; // 0x06e8, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_pChannelAutoModifier; // 0x0700, 0x18 bytes
+                std::uint8_t pad_0718[0x4]; // 0x0718, 0x4 bytes
+                bool m_bIsCoolingDownInternal; // 0x071c, 0x1 bytes
+                std::uint8_t pad_071d[0x3]; // 0x071d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flCancelMashProtectionEndTime; // 0x0720, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCancelLockoutEndTime; // 0x0724, 0x4 bytes
+                std::uint8_t pad_0728[0x20]; // 0x0728, 0x20 bytes
+                bool m_bChanneling; // 0x0748, 0x1 bytes
+                bool m_bInCastDelay; // 0x0749, 0x1 bytes
+                bool m_bShouldBeExecuted; // 0x074a, 0x1 bytes
+                bool m_bCanBeUpgraded; // 0x074b, 0x1 bytes
+                std::uint8_t pad_074c[0x4]; // 0x074c, 0x4 bytes
+                shade::sdk::client::CitadelStolenAbilitySlot_t m_eStolenInSlot; // 0x0750, 0x10 bytes
+                shade::sdk::client::CitadelAbilityUpgradeInfoPacked_t m_nUpgradeInfo; // 0x0760, 0x4 bytes
+                bool m_bToggleState; // 0x0764, 0x1 bytes
+                std::uint8_t pad_0765[0x3]; // 0x0765, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flCooldownStart; // 0x0768, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCooldownEnd; // 0x076c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x0770, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChannelStartTime; // 0x0774, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x0778, 0x4 bytes
+                shade::sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x077c, 0x2 bytes
+                std::uint8_t pad_077e[0x2]; // 0x077e, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x0780, 0x4 bytes
+                std::int32_t m_iRemainingCharges; // 0x0784, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x0788, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x078c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x0790, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x0794, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x0798, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x079c, 0x4 bytes
+                bool m_bCanBeImbued; // 0x07a0, 0x1 bytes
+                std::uint8_t pad_07a1[0x7]; // 0x07a1, 0x7 bytes
+                C_NetworkUtlVectorBase<CUtlStringToken> m_vecImbuedAbilities; // 0x07a8, 0x18 bytes
+                bool m_bSelectionModeIsAltMode; // 0x07c0, 0x1 bytes
+                bool m_bPredErrorCheckChanneling; // 0x07c1, 0x1 bytes
+                bool m_bPredErrorCheckCasting; // 0x07c2, 0x1 bytes
+                std::uint8_t pad_07c3[0x1]; // 0x07c3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flPredErrorCheckCastCompleteTime; // 0x07c4, 0x4 bytes
+                bool m_bPredErrorCheckIsSelected; // 0x07c8, 0x1 bytes
+                std::uint8_t pad_07c9[0xc7b]; // 0x07c9, 0xc7b bytes
+                shade::sdk::client::EAbilityActiveReasonBits m_enActiveReasonBits; // 0x1444, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flActiveWindowDeadlines[0x8]; // 0x1448, 0x20 bytes
+                std::uint8_t pad_1468[0x234]; // 0x1468, 0x234 bytes
+                shade::sdk::entity2::GameTime_t m_flNextMeepMopTime; // 0x169c, 0x4 bytes
+                std::uint8_t pad_16a0[0x38]; // 0x16a0, 0x38 bytes
             };
             #pragma pack(pop)
 
@@ -99,7 +101,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_CitadelBaseAbility) == 0x11D8, "C_CitadelBaseAbility size mismatch");
+            static_assert(sizeof(C_CitadelBaseAbility) == 0x16D8, "C_CitadelBaseAbility size mismatch");
         }
     }
 }

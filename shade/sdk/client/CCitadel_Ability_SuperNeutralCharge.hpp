@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1638
+             * Size: 0x1cb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,27 +33,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SuperNeutralCharge : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x400]; // 0x11d8, 0x400 bytes
-                bool m_bPreparing; // 0x15d8, 0x1 bytes
-                bool m_bTackling; // 0x15d9, 0x1 bytes
-                std::uint8_t pad_15da[0x2]; // 0x15da, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flTackleStartTime; // 0x15dc, 0x4 bytes
-                float m_flTackleDuration; // 0x15e0, 0x4 bytes
-                Vector m_vecTackleDir; // 0x15e4, 0xc bytes
-                Vector m_vecLastPosition; // 0x15f0, 0xc bytes
-                std::int32_t m_nStuckFramesCount; // 0x15fc, 0x4 bytes
-                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x1600, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flPrepareStartTime; // 0x1618, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nDistancePreview; // 0x161c, 0x4 bytes
-                std::uint8_t pad_1620[0x18]; // 0x1620, 0x18 bytes
+                std::uint8_t pad_16d8[0x580]; // 0x16d8, 0x580 bytes
+                bool m_bPreparing; // 0x1c58, 0x1 bytes
+                bool m_bTackling; // 0x1c59, 0x1 bytes
+                std::uint8_t pad_1c5a[0x2]; // 0x1c5a, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flTackleStartTime; // 0x1c5c, 0x4 bytes
+                float m_flTackleDuration; // 0x1c60, 0x4 bytes
+                Vector m_vecTackleDir; // 0x1c64, 0xc bytes
+                VectorWS m_vecLastPosition; // 0x1c70, 0xc bytes
+                std::int32_t m_nStuckFramesCount; // 0x1c7c, 0x4 bytes
+                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x1c80, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flPrepareStartTime; // 0x1c98, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nDistancePreview; // 0x1c9c, 0x4 bytes
+                std::uint8_t pad_1ca0[0x18]; // 0x1ca0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SuperNeutralCharge) == 0x1638, "CCitadel_Ability_SuperNeutralCharge size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SuperNeutralCharge) == 0x1CB8, "CCitadel_Ability_SuperNeutralCharge size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x11f8
+             * Size: 0x1818
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Perched_Predator : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x280]; // 0x0f70, 0x280 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hActiveProjectile; // 0x11f0, 0x4 bytes
-                std::uint8_t pad_11f4[0x4]; // 0x11f4, 0x4 bytes
+                std::uint8_t pad_14a0[0x370]; // 0x14a0, 0x370 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hActiveProjectile; // 0x1810, 0x4 bytes
+                std::uint8_t pad_1814[0x4]; // 0x1814, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Perched_Predator) == 0x11F8, "CCitadel_Ability_Perched_Predator size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Perched_Predator) == 0x1818, "CCitadel_Ability_Perched_Predator size mismatch");
         }
     }
 }

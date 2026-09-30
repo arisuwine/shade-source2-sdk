@@ -12,11 +12,16 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 namespace shade {
     namespace sdk {
+        namespace pulse_runtime_lib {
+            struct PulseCursorID_t;
+        }
+
         namespace server {
             class CBaseEntity;
         }
@@ -27,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x48
              * Alignment: 0x8
              * Construct Allowed
              * Module Local Type Scope
@@ -36,13 +41,14 @@ namespace shade {
             struct CPulseCell_Outflow_PlaySceneBase__CursorState_t {
                 CHandle<shade::sdk::server::CBaseEntity> m_sceneInstance; // 0x0000, 0x4 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_mainActor; // 0x0004, 0x4 bytes
-                CUtlHashtable<std::int32_t, CUtlString> m_cursorIDToPort; // 0x0008, 0x20 bytes
+                CUtlHashtable<shade::sdk::pulse_runtime_lib::PulseCursorID_t, std::int32_t> m_cursorIDToRequirementsEventID; // 0x0008, 0x20 bytes
+                CUtlHashtable<PulseSymbol_t, shade::sdk::pulse_runtime_lib::PulseCursorID_t> m_outflowNameToCursorID; // 0x0028, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Outflow_PlaySceneBase__CursorState_t) == 0x28, "CPulseCell_Outflow_PlaySceneBase__CursorState_t size mismatch");
+            static_assert(sizeof(CPulseCell_Outflow_PlaySceneBase__CursorState_t) == 0x48, "CPulseCell_Outflow_PlaySceneBase__CursorState_t size mismatch");
         }
     }
 }

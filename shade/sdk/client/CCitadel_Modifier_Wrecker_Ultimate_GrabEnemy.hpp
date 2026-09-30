@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3d0
+             * Size: 0x560
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy : public shade::sdk::client::CCitadelModifier {
             public:
-                Vector m_vHoldOffset; // 0x00c0, 0xc bytes
-                float m_flLastTouchTime; // 0x00cc, 0x4 bytes
-                std::uint8_t pad_00d0[0x300]; // 0x00d0, 0x300 bytes
+                Vector m_vHoldOffset; // 0x0130, 0xc bytes
+                float m_flLastTouchTime; // 0x013c, 0x4 bytes
+                std::uint8_t pad_0140[0x420]; // 0x0140, 0x420 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x3D0, "CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x560, "CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy size mismatch");
         }
     }
 }

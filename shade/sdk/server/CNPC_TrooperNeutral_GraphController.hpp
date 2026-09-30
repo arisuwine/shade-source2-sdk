@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8c8
+             * Size: 0x450
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,17 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_TrooperNeutral_GraphController : public shade::sdk::server::CAI_CitadelNPC_GraphController {
             public:
-                CAnimGraphParamRef<bool> m_bShielded; // 0x07f0, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bAlert; // 0x0818, 0x28 bytes
-                CAnimGraphParamRef<char*> m_pszAttackLeanPosition; // 0x0840, 0x30 bytes
-                CAnimGraphParamRef<char*> m_pszOrbDrop; // 0x0870, 0x30 bytes
-                CAnimGraphParamRef<bool> m_bHeavyMelee; // 0x08a0, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bShielded; // 0x0388, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bAlert; // 0x03b0, 0x28 bytes
+                CAnimGraphParamRef<char*> m_pszAttackLeanPosition; // 0x03d8, 0x30 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eBaseAction; // 0x0408, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_MoveType; // 0x0420, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eNeutralTurn; // 0x0438, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_TrooperNeutral_GraphController) == 0x8C8, "CNPC_TrooperNeutral_GraphController size mismatch");
+            static_assert(sizeof(CNPC_TrooperNeutral_GraphController) == 0x450, "CNPC_TrooperNeutral_GraphController size mismatch");
         }
     }
 }

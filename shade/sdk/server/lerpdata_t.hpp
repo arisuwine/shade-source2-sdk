@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,8 +33,9 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x50
-             * Alignment: 0xff
+             * Alignment: 0x10
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct lerpdata_t {
@@ -41,7 +43,7 @@ namespace shade {
                 shade::sdk::client::MoveType_t m_MoveType; // 0x0004, 0x1 bytes
                 std::uint8_t pad_0005[0x3]; // 0x0005, 0x3 bytes
                 shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0008, 0x4 bytes
-                Vector m_vecStartOrigin; // 0x000c, 0xc bytes
+                VectorWS m_vecStartOrigin; // 0x000c, 0xc bytes
                 std::uint8_t pad_0018[0x8]; // 0x0018, 0x8 bytes
                 Quaternion m_qStartRot; // 0x0020, 0x10 bytes
                 shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0030, 0x4 bytes
@@ -49,9 +51,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_nSound; // Offset: 0x34, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(lerpdata_t) == 0x50, "lerpdata_t size mismatch");
         }

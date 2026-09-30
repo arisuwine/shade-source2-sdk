@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,9 +20,17 @@
 
 namespace shade {
     namespace sdk {
+        namespace resourcesystem {
+            class InfoForResourceTypeIParticleSystemDefinition;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xad8
+             * Size: 0xce8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,41 +39,41 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelProjectile : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_09a8[0x40]; // 0x09a8, 0x40 bytes
-                float m_flMaxDistance; // 0x09e8, 0x4 bytes
-                std::uint8_t pad_09ec[0x4]; // 0x09ec, 0x4 bytes
-                std::uint64_t m_nCachedExcludeFlags; // 0x09f0, 0x8 bytes
-                bool m_bInPortalEnvironment; // 0x09f8, 0x1 bytes
-                bool m_bHandlingPortalResult; // 0x09f9, 0x1 bytes
-                std::uint8_t pad_09fa[0x2]; // 0x09fa, 0x2 bytes
-                float m_flArmingTime; // 0x09fc, 0x4 bytes
-                float m_flChargeAmount; // 0x0a00, 0x4 bytes
-                bool m_bCollideWithThrower; // 0x0a04, 0x1 bytes
-                bool m_bNewCollideWithThrower; // 0x0a05, 0x1 bytes
-                std::uint8_t pad_0a06[0xa]; // 0x0a06, 0xa bytes
-                float m_flTickSoundInterval; // 0x0a10, 0x4 bytes
-                std::uint8_t pad_0a14[0x4]; // 0x0a14, 0x4 bytes
-                Vector m_vInitialVelocity; // 0x0a18, 0xc bytes
-                VectorWS m_vInitialPosition; // 0x0a24, 0xc bytes
-                CUtlStringToken m_abilityID; // 0x0a30, 0x4 bytes
-                std::uint8_t pad_0a34[0x4]; // 0x0a34, 0x4 bytes
-                CUtlSymbolLarge m_sParticleName; // 0x0a38, 0x8 bytes
-                Vector m_vecSpawnPosition; // 0x0a40, 0xc bytes
-                float m_flProjectileSpeed; // 0x0a4c, 0x4 bytes
-                float m_flMaxLifetime; // 0x0a50, 0x4 bytes
-                std::uint8_t pad_0a54[0x4]; // 0x0a54, 0x4 bytes
-                float m_flParticleRadius; // 0x0a58, 0x4 bytes
-                std::uint8_t pad_0a5c[0x74]; // 0x0a5c, 0x74 bytes
-                float m_flPreviousTimeScale; // 0x0ad0, 0x4 bytes
-                std::uint8_t pad_0ad4[0x4]; // 0x0ad4, 0x4 bytes
+                std::uint8_t pad_0bb0[0x40]; // 0x0bb0, 0x40 bytes
+                float m_flMaxDistance; // 0x0bf0, 0x4 bytes
+                std::uint8_t pad_0bf4[0x4]; // 0x0bf4, 0x4 bytes
+                std::uint64_t m_nCachedExcludeFlags; // 0x0bf8, 0x8 bytes
+                bool m_bInPortalEnvironment; // 0x0c00, 0x1 bytes
+                bool m_bHandlingPortalResult; // 0x0c01, 0x1 bytes
+                std::uint8_t pad_0c02[0x2]; // 0x0c02, 0x2 bytes
+                float m_flArmingTime; // 0x0c04, 0x4 bytes
+                float m_flChargeAmount; // 0x0c08, 0x4 bytes
+                bool m_bCollideWithThrower; // 0x0c0c, 0x1 bytes
+                bool m_bNewCollideWithThrower; // 0x0c0d, 0x1 bytes
+                std::uint8_t pad_0c0e[0xa]; // 0x0c0e, 0xa bytes
+                float m_flTickSoundInterval; // 0x0c18, 0x4 bytes
+                std::uint8_t pad_0c1c[0x4]; // 0x0c1c, 0x4 bytes
+                std::int32_t m_nNumDetonations; // 0x0c20, 0x4 bytes
+                std::int32_t m_nDetonationsLeft; // 0x0c24, 0x4 bytes
+                Vector m_vInitialVelocity; // 0x0c28, 0xc bytes
+                VectorWS m_vInitialPosition; // 0x0c34, 0xc bytes
+                CUtlStringToken m_abilityID; // 0x0c40, 0x4 bytes
+                std::uint8_t pad_0c44[0x4]; // 0x0c44, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hParticleDef; // 0x0c48, 0x8 bytes
+                VectorWS m_vecSpawnPosition; // 0x0c50, 0xc bytes
+                float m_flProjectileSpeed; // 0x0c5c, 0x4 bytes
+                float m_flMaxLifetime; // 0x0c60, 0x4 bytes
+                std::uint8_t pad_0c64[0x4]; // 0x0c64, 0x4 bytes
+                float m_flParticleRadius; // 0x0c68, 0x4 bytes
+                std::uint8_t pad_0c6c[0x74]; // 0x0c6c, 0x74 bytes
+                float m_flPreviousTimeScale; // 0x0ce0, 0x4 bytes
+                std::uint8_t pad_0ce4[0x4]; // 0x0ce4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_CitadelProjectile) == 0xAD8, "C_CitadelProjectile size mismatch");
+            static_assert(sizeof(C_CitadelProjectile) == 0xCE8, "C_CitadelProjectile size mismatch");
         }
     }
 }

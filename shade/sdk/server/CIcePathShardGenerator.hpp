@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -42,11 +43,11 @@ namespace shade {
                 CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hSurfModel; // 0x0078, 0x8 bytes
                 float m_flRadius; // 0x0080, 0x4 bytes
                 std::uint8_t pad_0084[0x4]; // 0x0084, 0x4 bytes
-                CUtlVector<Vector> m_vecPreviousShard; // 0x0088, 0x18 bytes
-                Vector m_vecPreviousShardOrigin; // 0x00a0, 0xc bytes
-                Vector m_vecPreviousPreviousShardOrigin; // 0x00ac, 0xc bytes
+                CUtlVector<VectorWS> m_vecPreviousShard; // 0x0088, 0x18 bytes
+                VectorWS m_vecPreviousShardOrigin; // 0x00a0, 0xc bytes
+                VectorWS m_vecPreviousPreviousShardOrigin; // 0x00ac, 0xc bytes
                 CUtlVector<Vector> m_vecUnitCirclePoints; // 0x00b8, 0x18 bytes
-                CUtlVector<Vector> m_vPrevFrontEdgeVerts; // 0x00d0, 0x18 bytes
+                CUtlVector<VectorWS> m_vPrevFrontEdgeVerts; // 0x00d0, 0x18 bytes
             };
             #pragma pack(pop)
 

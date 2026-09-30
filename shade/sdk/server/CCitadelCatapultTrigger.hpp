@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f8
+             * Size: 0xa58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelCatapultTrigger : public shade::sdk::server::CBaseTrigger {
             public:
-                Vector m_vLaunchTarget; // 0x08e0, 0xc bytes
-                float m_flLaunchSpeed; // 0x08ec, 0x4 bytes
-                CUtlSymbolLarge m_nameTarget; // 0x08f0, 0x8 bytes
+                std::uint8_t pad_09f0[0x10]; // 0x09f0, 0x10 bytes
+                VectorWS m_vLaunchTarget; // 0x0a00, 0xc bytes
+                float m_flLaunchSpeed; // 0x0a0c, 0x4 bytes
+                CUtlSymbolLarge m_nameTarget; // 0x0a10, 0x8 bytes
+                bool m_bPickupTrailEnabled; // 0x0a18, 0x1 bytes
+                std::uint8_t pad_0a19[0x7]; // 0x0a19, 0x7 bytes
+                CUtlSymbolLarge m_iszTrailPickupSubclass; // 0x0a20, 0x8 bytes
+                std::int32_t m_nTrailPickupCount; // 0x0a28, 0x4 bytes
+                float m_flTrailStartDelay; // 0x0a2c, 0x4 bytes
+                float m_flTrailSpawnInterval; // 0x0a30, 0x4 bytes
+                bool m_bTrailAutoSpace; // 0x0a34, 0x1 bytes
+                std::uint8_t pad_0a35[0x3]; // 0x0a35, 0x3 bytes
+                float m_flTrailTrajectoryTimeSpacing; // 0x0a38, 0x4 bytes
+                std::uint8_t pad_0a3c[0x1c]; // 0x0a3c, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelCatapultTrigger) == 0x8F8, "CCitadelCatapultTrigger size mismatch");
+            static_assert(sizeof(CCitadelCatapultTrigger) == 0xA58, "CCitadelCatapultTrigger size mismatch");
         }
     }
 }

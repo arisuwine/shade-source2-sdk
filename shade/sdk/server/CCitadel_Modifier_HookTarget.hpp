@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2a0
+             * Size: 0x3a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HookTarget : public shade::sdk::server::CCitadel_Modifier_Link {
             public:
-                float m_flCurrentVerticalSpeed; // 0x0100, 0x4 bytes
-                bool m_bSuccess; // 0x0104, 0x1 bytes
-                bool m_bSameTeam; // 0x0105, 0x1 bytes
-                bool m_bPlayedApproachingWhoosh; // 0x0106, 0x1 bytes
-                std::uint8_t pad_0107[0x1]; // 0x0107, 0x1 bytes
-                float m_flInitialTravelDistance; // 0x0108, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckStartTime; // 0x010c, 0x4 bytes
-                Vector m_vLastPos; // 0x0110, 0xc bytes
-                std::uint8_t pad_011c[0x184]; // 0x011c, 0x184 bytes
+                float m_flCurrentVerticalSpeed; // 0x0170, 0x4 bytes
+                bool m_bSuccess; // 0x0174, 0x1 bytes
+                bool m_bSameTeam; // 0x0175, 0x1 bytes
+                bool m_bPlayedApproachingWhoosh; // 0x0176, 0x1 bytes
+                std::uint8_t pad_0177[0x1]; // 0x0177, 0x1 bytes
+                float m_flInitialTravelDistance; // 0x0178, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckStartTime; // 0x017c, 0x4 bytes
+                VectorWS m_vLastPos; // 0x0180, 0xc bytes
+                std::uint8_t pad_018c[0x214]; // 0x018c, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HookTarget) == 0x2A0, "CCitadel_Modifier_HookTarget size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HookTarget) == 0x3A0, "CCitadel_Modifier_HookTarget size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,8 +30,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmSelectorNode__CDefinition : public shade::sdk::animlib::CNmPoseNode__CDefinition {
             public:
-                CUtlLeanVectorFixedGrowable<std::int16_t, 5> m_optionNodeIndices; // 0x0010, 0x18 bytes
-                CUtlLeanVectorFixedGrowable<std::int16_t, 5> m_conditionNodeIndices; // 0x0028, 0x18 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 8> m_optionNodeIndices; // 0x0010, 0x18 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 8> m_conditionNodeIndices; // 0x0028, 0x18 bytes
             };
             #pragma pack(pop)
 

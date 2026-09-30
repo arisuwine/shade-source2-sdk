@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x848
+             * Size: 0x858
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VacuumAuraTargetModifierVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                float m_flOuterSpeedScale; // 0x0830, 0x4 bytes
-                float m_flSpeedScaleBias; // 0x0834, 0x4 bytes
-                CSoundEventName m_TargetLoopingSound; // 0x0838, 0x10 bytes
+                float m_flOuterSpeedScale; // 0x0840, 0x4 bytes
+                float m_flSpeedScaleBias; // 0x0844, 0x4 bytes
+                CSoundEventName m_TargetLoopingSound; // 0x0848, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VacuumAuraTargetModifierVData) == 0x848, "CCitadel_Modifier_VacuumAuraTargetModifierVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VacuumAuraTargetModifierVData) == 0x858, "CCitadel_Modifier_VacuumAuraTargetModifierVData size mismatch");
         }
     }
 }

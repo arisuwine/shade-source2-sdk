@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicActiveAutosave : public shade::sdk::server::CLogicAutosave {
             public:
-                std::int32_t m_TriggerHitPoints; // 0x04b0, 0x4 bytes
-                float m_flTimeToTrigger; // 0x04b4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x04b8, 0x4 bytes
-                float m_flDangerousTime; // 0x04bc, 0x4 bytes
+                std::int32_t m_TriggerHitPoints; // 0x04c0, 0x4 bytes
+                float m_flTimeToTrigger; // 0x04c4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x04c8, 0x4 bytes
+                float m_flDangerousTime; // 0x04cc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CLogicActiveAutosaveSaveThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicActiveAutosave) == 0x4C0, "CLogicActiveAutosave size mismatch");
+            static_assert(sizeof(CLogicActiveAutosave) == 0x4D0, "CLogicActiveAutosave size mismatch");
         }
     }
 }

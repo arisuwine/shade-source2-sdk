@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1440
+             * Size: 0x19b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_PrimaryWeapon : public shade::sdk::server::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1198[0x2a0]; // 0x1198, 0x2a0 bytes
-                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x1438, 0x4 bytes
-                std::uint8_t pad_143c[0x4]; // 0x143c, 0x4 bytes
+                std::uint8_t pad_1708[0x2a0]; // 0x1708, 0x2a0 bytes
+                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x19a8, 0x4 bytes
+                std::uint8_t pad_19ac[0x4]; // 0x19ac, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_PrimaryWeapon) == 0x1440, "CCitadel_Ability_Unicorn_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_PrimaryWeapon) == 0x19B0, "CCitadel_Ability_Unicorn_PrimaryWeapon size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x500
+             * Size: 0x510
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicDistanceCheck : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_iszEntityA; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszEntityB; // 0x04a8, 0x8 bytes
-                float m_flZone1Distance; // 0x04b0, 0x4 bytes
-                float m_flZone2Distance; // 0x04b4, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_InZone1; // 0x04b8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_InZone2; // 0x04d0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_InZone3; // 0x04e8, 0x18 bytes
+                CUtlSymbolLarge m_iszEntityA; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszEntityB; // 0x04b8, 0x8 bytes
+                float m_flZone1Distance; // 0x04c0, 0x4 bytes
+                float m_flZone2Distance; // 0x04c4, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_InZone1; // 0x04c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_InZone2; // 0x04e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_InZone3; // 0x04f8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputCheckDistance; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicDistanceCheck) == 0x500, "CLogicDistanceCheck size mismatch");
+            static_assert(sizeof(CLogicDistanceCheck) == 0x510, "CLogicDistanceCheck size mismatch");
         }
     }
 }

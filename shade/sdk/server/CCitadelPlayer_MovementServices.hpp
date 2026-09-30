@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2f8
+             * Size: 0x320
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,31 +32,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayer_MovementServices : public shade::sdk::server::CPlayer_MovementServices_Humanoid {
             public:
-                shade::sdk::client::CNetworkVelocityVector m_vPositionDeltaVelocity; // 0x0278, 0x28 bytes
-                std::uint8_t pad_02a0[0x8]; // 0x02a0, 0x8 bytes
-                bool m_bToggleDuckActive; // 0x02a8, 0x1 bytes
-                bool m_bDucked; // 0x02a9, 0x1 bytes
-                bool m_bInPortalEnvironment; // 0x02aa, 0x1 bytes
-                std::uint8_t pad_02ab[0x1]; // 0x02ab, 0x1 bytes
-                Vector m_vecPogoVelocity; // 0x02ac, 0xc bytes
-                Vector m_vecSupport; // 0x02b8, 0xc bytes
-                bool m_bColliding; // 0x02c4, 0x1 bytes
-                bool m_bLandedOnGround; // 0x02c5, 0x1 bytes
-                bool m_bHasFreeCursor; // 0x02c6, 0x1 bytes
-                std::uint8_t pad_02c7[0x1]; // 0x02c7, 0x1 bytes
-                float m_flTurnSpringSpeed; // 0x02c8, 0x4 bytes
-                float m_flInputDirectionCommitment; // 0x02cc, 0x4 bytes
-                std::int8_t m_nSuccessiveDirChanges; // 0x02d0, 0x1 bytes
-                std::uint8_t pad_02d1[0x3]; // 0x02d1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDirChange; // 0x02d4, 0x4 bytes
-                Vector2D m_vLastWishDir; // 0x02d8, 0x8 bytes
-                std::uint8_t pad_02e0[0x18]; // 0x02e0, 0x18 bytes
+                shade::sdk::client::CNetworkVelocityVector m_vPositionDeltaVelocity; // 0x0290, 0x28 bytes
+                std::uint8_t pad_02b8[0x8]; // 0x02b8, 0x8 bytes
+                bool m_bToggleDuckActive; // 0x02c0, 0x1 bytes
+                bool m_bDucked; // 0x02c1, 0x1 bytes
+                bool m_bInPortalEnvironment; // 0x02c2, 0x1 bytes
+                std::uint8_t pad_02c3[0x1]; // 0x02c3, 0x1 bytes
+                Vector m_vecPogoVelocity; // 0x02c4, 0xc bytes
+                float m_flSkyclipVelocityZ; // 0x02d0, 0x4 bytes
+                VectorWS m_vecSupport; // 0x02d4, 0xc bytes
+                bool m_bColliding; // 0x02e0, 0x1 bytes
+                bool m_bLandedOnGround; // 0x02e1, 0x1 bytes
+                bool m_bHasFreeCursor; // 0x02e2, 0x1 bytes
+                std::uint8_t pad_02e3[0x1]; // 0x02e3, 0x1 bytes
+                float m_flPawnTurnSpringSpeed; // 0x02e4, 0x4 bytes
+                float m_flAG2TurnSpeed; // 0x02e8, 0x4 bytes
+                float m_flAG2TurnSpeedSpringSpeed; // 0x02ec, 0x4 bytes
+                float m_flInputDirectionCommitment; // 0x02f0, 0x4 bytes
+                std::int8_t m_nSuccessiveDirChanges; // 0x02f4, 0x1 bytes
+                std::uint8_t pad_02f5[0x3]; // 0x02f5, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDirChange; // 0x02f8, 0x4 bytes
+                Vector2D m_vLastWishDir; // 0x02fc, 0x8 bytes
+                std::uint8_t pad_0304[0x1c]; // 0x0304, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelPlayer_MovementServices) == 0x2F8, "CCitadelPlayer_MovementServices size mismatch");
+            static_assert(sizeof(CCitadelPlayer_MovementServices) == 0x320, "CCitadelPlayer_MovementServices size mismatch");
         }
     }
 }

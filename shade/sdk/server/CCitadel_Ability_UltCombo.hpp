@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1118
+             * Size: 0x16d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,20 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_UltCombo : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hTargetComboModifier; // 0x0f70, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flLastAttackTime; // 0x0f88, 0x4 bytes
-                std::int32_t m_nAttackNum; // 0x0f8c, 0x4 bytes
-                std::uint8_t pad_0f90[0x180]; // 0x0f90, 0x180 bytes
-                std::int32_t m_iBonusHealth; // 0x1110, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1114, 0x4 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hTargetComboModifier; // 0x14a0, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flLastAttackTime; // 0x14b8, 0x4 bytes
+                std::int32_t m_nAttackNum; // 0x14bc, 0x4 bytes
+                std::uint8_t pad_14c0[0x210]; // 0x14c0, 0x210 bytes
+                std::int32_t m_iBonusHealth; // 0x16d0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x16d4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_UltCombo) == 0x1118, "CCitadel_Ability_UltCombo size mismatch");
+            static_assert(sizeof(CCitadel_Ability_UltCombo) == 0x16D8, "CCitadel_Ability_UltCombo size mismatch");
         }
     }
 }

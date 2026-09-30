@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x460
+             * Size: 0x620
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_hAOEWarningParticle; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x384]; // 0x00d4, 0x384 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x0458, 0x4 bytes
-                std::uint8_t pad_045c[0x4]; // 0x045c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_hAOEWarningParticle; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x4d4]; // 0x0144, 0x4d4 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x0618, 0x4 bytes
+                std::uint8_t pad_061c[0x4]; // 0x061c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier) == 0x460, "CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier) == 0x620, "CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier size mismatch");
         }
     }
 }

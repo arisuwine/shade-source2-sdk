@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x898
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncNavObstruction : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t pad_0780[0x18]; // 0x0780, 0x18 bytes
-                bool m_bDisabled; // 0x0798, 0x1 bytes
-                bool m_bUseAsyncObstacleUpdate; // 0x0799, 0x1 bytes
-                std::uint8_t pad_079a[0x6]; // 0x079a, 0x6 bytes
+                std::uint8_t pad_0878[0x18]; // 0x0878, 0x18 bytes
+                bool m_bDisabled; // 0x0890, 0x1 bytes
+                bool m_bUseAsyncObstacleUpdate; // 0x0891, 0x1 bytes
+                std::uint8_t pad_0892[0x6]; // 0x0892, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncNavObstruction) == 0x7A0, "CFuncNavObstruction size mismatch");
+            static_assert(sizeof(CFuncNavObstruction) == 0x898, "CFuncNavObstruction size mismatch");
         }
     }
 }

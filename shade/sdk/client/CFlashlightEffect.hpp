@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -42,7 +43,7 @@ namespace shade {
                 float m_flMuzzleFlashBrightness; // 0x0024, 0x4 bytes
                 std::uint8_t pad_0028[0x8]; // 0x0028, 0x8 bytes
                 Quaternion m_quatMuzzleFlashOrientation; // 0x0030, 0x10 bytes
-                Vector m_vecMuzzleFlashOrigin; // 0x0040, 0xc bytes
+                VectorWS m_vecMuzzleFlashOrigin; // 0x0040, 0xc bytes
                 float m_flFov; // 0x004c, 0x4 bytes
                 float m_flFarZ; // 0x0050, 0x4 bytes
                 float m_flLinearAtten; // 0x0054, 0x4 bytes

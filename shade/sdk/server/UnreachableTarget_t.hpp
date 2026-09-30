@@ -12,43 +12,33 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/entity2/GameTime_t.hpp"
-#include "shade/sdk/server/UnreachableTargetType_t.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace server {
-            class CBaseEntity;
-        }
-    }
-}
+#include "shade/sdk/server/CRelativeLocation.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x30
-             * Alignment: 0xff
+             * Size: 0x58
+             * Alignment: 0x8
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct UnreachableTarget_t {
-                shade::sdk::server::UnreachableTargetType_t nTargetType; // 0x0000, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> hTargetEnt; // 0x0004, 0x4 bytes
-                VectorWS vecTargetWorldPos; // 0x0008, 0xc bytes
-                std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
-                CGlobalSymbol sTargetSymbol; // 0x0018, 0x8 bytes
-                shade::sdk::entity2::GameTime_t fExpireTime; // 0x0020, 0x4 bytes
-                VectorWS vecTargetLocationWhenUnreachable; // 0x0024, 0xc bytes
+                shade::sdk::server::CRelativeLocation m_location; // 0x0000, 0x48 bytes
+                shade::sdk::entity2::GameTime_t m_flExpireTime; // 0x0048, 0x4 bytes
+                VectorWS m_vecTargetLocationWhenUnreachable; // 0x004c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(UnreachableTarget_t) == 0x30, "UnreachableTarget_t size mismatch");
+            static_assert(sizeof(UnreachableTarget_t) == 0x58, "UnreachableTarget_t size mismatch");
         }
     }
 }

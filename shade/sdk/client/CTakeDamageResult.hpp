@@ -12,15 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/HitGroup_t.hpp"
+#include "shade/sdk/client/TakeDamageFlags_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             class CTakeDamageInfo;
+            struct DestructiblePartDamageRequest_t;
         }
     }
 }
@@ -29,32 +32,37 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x30
-             * Alignment: 0xff
-             * Has Trivial Destructor
+             * Size: 0x68
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CTakeDamageResult {
             public:
                 shade::sdk::client::CTakeDamageInfo *m_pOriginatingInfo; // 0x0000, 0x8 bytes
-                std::int32_t m_nHealthLost; // 0x0008, 0x4 bytes
-                std::int32_t m_nHealthBefore; // 0x000c, 0x4 bytes
-                std::int32_t m_nDamageDealt; // 0x0010, 0x4 bytes
-                float m_flPreModifiedDamage; // 0x0014, 0x4 bytes
-                std::int32_t m_nTotalledHealthLost; // 0x0018, 0x4 bytes
-                std::int32_t m_nTotalledDamageDealt; // 0x001c, 0x4 bytes
-                float m_flTotalledPreModifiedDamage; // 0x0020, 0x4 bytes
-                bool m_bWasDamageSuppressed; // 0x0024, 0x1 bytes
-                bool m_bSuppressFlinch; // 0x0025, 0x1 bytes
-                std::uint8_t pad_0026[0x2]; // 0x0026, 0x2 bytes
-                shade::sdk::client::HitGroup_t m_nOverrideFlinchHitGroup; // 0x0028, 0x4 bytes
-                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
+                CUtlLeanVector<shade::sdk::client::DestructiblePartDamageRequest_t> m_DestructibleHitGroupRequests; // 0x0008, 0x10 bytes
+                std::int32_t m_nHealthLost; // 0x0018, 0x4 bytes
+                std::int32_t m_nHealthBefore; // 0x001c, 0x4 bytes
+                float m_flDamageDealt; // 0x0020, 0x4 bytes
+                float m_flPreModifiedDamage; // 0x0024, 0x4 bytes
+                VectorWS m_vDamagePosition; // 0x0028, 0xc bytes
+                std::int32_t m_nTotalledHealthLost; // 0x0034, 0x4 bytes
+                float m_flTotalledDamageDealt; // 0x0038, 0x4 bytes
+                float m_flTotalledPreModifiedDamage; // 0x003c, 0x4 bytes
+                float m_flNewDamageAccumulatorValue; // 0x0040, 0x4 bytes
+                std::uint8_t pad_0044[0x4]; // 0x0044, 0x4 bytes
+                shade::sdk::client::TakeDamageFlags_t m_nDamageFlags; // 0x0048, 0x8 bytes
+                bool m_bWasDamageSuppressed; // 0x0050, 0x1 bytes
+                bool m_bSuppressFlinch; // 0x0051, 0x1 bytes
+                std::uint8_t pad_0052[0x2]; // 0x0052, 0x2 bytes
+                shade::sdk::client::HitGroup_t m_nOverrideFlinchHitGroup; // 0x0054, 0x4 bytes
+                std::uint8_t pad_0058[0x10]; // 0x0058, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTakeDamageResult) == 0x30, "CTakeDamageResult size mismatch");
+            static_assert(sizeof(CTakeDamageResult) == 0x68, "CTakeDamageResult size mismatch");
         }
     }
 }

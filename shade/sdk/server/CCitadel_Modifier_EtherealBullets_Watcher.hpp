@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x398
+             * Size: 0x4f8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_EtherealBullets_Watcher : public shade::sdk::server::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_0208[0x184]; // 0x0208, 0x184 bytes
-                bool m_bProcNextHit; // 0x038c, 0x1 bytes
-                std::uint8_t pad_038d[0xb]; // 0x038d, 0xb bytes
+                std::uint8_t pad_02d8[0x214]; // 0x02d8, 0x214 bytes
+                bool m_bProcNextHit; // 0x04ec, 0x1 bytes
+                std::uint8_t pad_04ed[0xb]; // 0x04ed, 0xb bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_EtherealBullets_Watcher) == 0x398, "CCitadel_Modifier_EtherealBullets_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_EtherealBullets_Watcher) == 0x4F8, "CCitadel_Modifier_EtherealBullets_Watcher size mismatch");
         }
     }
 }

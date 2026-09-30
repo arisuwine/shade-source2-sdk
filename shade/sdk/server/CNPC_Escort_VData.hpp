@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1448
+             * Size: 0xd50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Escort_VData : public shade::sdk::server::CAI_CitadelNPCVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSpawnParticle; // 0x1348, 0xe0 bytes
-                float m_flEscortFriendlyHeroSlowMoveSearchRadius; // 0x1428, 0x4 bytes
-                float m_flEscortFriendlyHeroFastMoveSearchRadius; // 0x142c, 0x4 bytes
-                float m_flEscortEnemyObjectiveSearchRadius; // 0x1430, 0x4 bytes
-                float m_flEscortEnemySlowWalkRadius; // 0x1434, 0x4 bytes
-                float m_flCloseEnoughToNode; // 0x1438, 0x4 bytes
-                float m_flCatchUpSpeed; // 0x143c, 0x4 bytes
-                float m_flActivateDelay; // 0x1440, 0x4 bytes
-                std::uint8_t pad_1444[0x4]; // 0x1444, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSpawnParticle; // 0x0c50, 0xe0 bytes
+                float m_flEscortFriendlyHeroSlowMoveSearchRadius; // 0x0d30, 0x4 bytes
+                float m_flEscortFriendlyHeroFastMoveSearchRadius; // 0x0d34, 0x4 bytes
+                float m_flEscortEnemyObjectiveSearchRadius; // 0x0d38, 0x4 bytes
+                float m_flEscortEnemySlowWalkRadius; // 0x0d3c, 0x4 bytes
+                float m_flCloseEnoughToNode; // 0x0d40, 0x4 bytes
+                float m_flCatchUpSpeed; // 0x0d44, 0x4 bytes
+                float m_flActivateDelay; // 0x0d48, 0x4 bytes
+                std::uint8_t pad_0d4c[0x4]; // 0x0d4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Escort_VData) == 0x1448, "CNPC_Escort_VData size mismatch");
+            static_assert(sizeof(CNPC_Escort_VData) == 0xD50, "CNPC_Escort_VData size mismatch");
         }
     }
 }

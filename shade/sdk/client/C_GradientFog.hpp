@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -59,20 +60,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogStartDistance; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogEndDistance; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogStartHeight; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogEndHeight; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogMaxOpacity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogFalloffExponent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogVerticalExponent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetFogColor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFogStrength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFarZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_GradientFog) == 0x688, "C_GradientFog size mismatch");
         }

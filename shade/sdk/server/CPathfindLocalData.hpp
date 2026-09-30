@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x30
+             * Size: 0x28
              * Alignment: 0xff
              * Has Trivial Destructor
              */
@@ -33,14 +34,12 @@ namespace shade {
                 std::uint8_t pad_0018[0x8]; // 0x0018, 0x8 bytes
                 shade::sdk::server::WaypointFlags_t m_nEndFlags; // 0x0020, 0x4 bytes
                 std::int32_t m_nBuildFlags; // 0x0024, 0x4 bytes
-                float m_flYaw; // 0x0028, 0x4 bytes
-                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPathfindLocalData) == 0x30, "CPathfindLocalData size mismatch");
+            static_assert(sizeof(CPathfindLocalData) == 0x28, "CPathfindLocalData size mismatch");
         }
     }
 }

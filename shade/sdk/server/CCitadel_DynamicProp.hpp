@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd00
+             * Size: 0xd80
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_DynamicProp : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint8_t pad_0cd0[0x10]; // 0x0cd0, 0x10 bytes
-                CUtlString m_strDefaultSkin; // 0x0ce0, 0x8 bytes
-                CUtlString m_strFriendlySkin; // 0x0ce8, 0x8 bytes
-                CUtlString m_strEnemySkin; // 0x0cf0, 0x8 bytes
-                bool m_bIsWorld; // 0x0cf8, 0x1 bytes
-                std::uint8_t pad_0cf9[0x7]; // 0x0cf9, 0x7 bytes
+                std::uint8_t pad_0d50[0x10]; // 0x0d50, 0x10 bytes
+                CUtlString m_strDefaultSkin; // 0x0d60, 0x8 bytes
+                CUtlString m_strFriendlySkin; // 0x0d68, 0x8 bytes
+                CUtlString m_strEnemySkin; // 0x0d70, 0x8 bytes
+                bool m_bIsWorld; // 0x0d78, 0x1 bytes
+                std::uint8_t pad_0d79[0x7]; // 0x0d79, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge SetFriendlySkin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge SetEnemySkin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_DynamicProp) == 0xD00, "CCitadel_DynamicProp size mismatch");
+            static_assert(sizeof(CCitadel_DynamicProp) == 0xD80, "CCitadel_DynamicProp size mismatch");
         }
     }
 }

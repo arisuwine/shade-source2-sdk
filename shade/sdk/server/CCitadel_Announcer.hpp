@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xbc0
+             * Size: 0xb70
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Announcer : public shade::sdk::server::CCitadel_Announcer_Base {
             public:
-                std::uint8_t pad_0ba0[0x20]; // 0x0ba0, 0x20 bytes
+                std::uint8_t pad_0b60[0x10]; // 0x0b60, 0x10 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Announcer) == 0xBC0, "CCitadel_Announcer size mismatch");
+            static_assert(sizeof(CCitadel_Announcer) == 0xB70, "CCitadel_Announcer size mismatch");
         }
     }
 }

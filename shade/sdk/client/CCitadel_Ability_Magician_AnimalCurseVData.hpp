@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Magician_AnimalCurseVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CurseModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AirDampingModifier; // 0x1828, 0x10 bytes
-                CSoundEventName m_TargetWarningSound; // 0x1838, 0x10 bytes
-                CSoundEventName m_ProjectileHitConfirm; // 0x1848, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileImpactParticle; // 0x1858, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetWarningParticle; // 0x1938, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileExplodeParticle; // 0x1a18, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CurseModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AirDampingModifier; // 0x13b0, 0x10 bytes
+                CSoundEventName m_TargetWarningSound; // 0x13c0, 0x10 bytes
+                CSoundEventName m_ProjectileHitConfirm; // 0x13d0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileImpactParticle; // 0x13e0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetWarningParticle; // 0x14c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileExplodeParticle; // 0x15a0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_AnimalCurseVData) == 0x1AF8, "CCitadel_Ability_Magician_AnimalCurseVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_AnimalCurseVData) == 0x1680, "CCitadel_Ability_Magician_AnimalCurseVData size mismatch");
         }
     }
 }

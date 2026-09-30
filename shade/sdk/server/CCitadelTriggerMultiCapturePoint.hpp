@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc28
+             * Size: 0xd30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,22 +34,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTriggerMultiCapturePoint : public shade::sdk::server::CBaseTrigger {
             public:
-                std::uint8_t pad_08e0[0x18]; // 0x08e0, 0x18 bytes
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x08f8, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x0918, 0x18 bytes
-                CEntityOutputTemplate<std::int32_t> m_OnFullyCaptured; // 0x0930, 0x20 bytes
-                CUtlSymbolLarge m_iszGroupName; // 0x0950, 0x8 bytes
-                shade::sdk::client::ParticleIndex_t m_nEnabledParticle; // 0x0958, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nPreEnableFX; // 0x095c, 0x4 bytes
-                std::uint8_t pad_0960[0x2c0]; // 0x0960, 0x2c0 bytes
-                std::uint8_t m_nEnableState; // 0x0c20, 0x1 bytes
-                std::uint8_t pad_0c21[0x7]; // 0x0c21, 0x7 bytes
+                std::uint8_t pad_09f0[0x10]; // 0x09f0, 0x10 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0a00, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x0a20, 0x18 bytes
+                CEntityOutputTemplate<std::int32_t> m_OnFullyCaptured; // 0x0a38, 0x20 bytes
+                CUtlSymbolLarge m_iszGroupName; // 0x0a58, 0x8 bytes
+                shade::sdk::client::ParticleIndex_t m_nEnabledParticle; // 0x0a60, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nPreEnableFX; // 0x0a64, 0x4 bytes
+                std::uint8_t pad_0a68[0x2c0]; // 0x0a68, 0x2c0 bytes
+                std::uint8_t m_nEnableState; // 0x0d28, 0x1 bytes
+                std::uint8_t pad_0d29[0x7]; // 0x0d29, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelTriggerMultiCapturePoint) == 0xC28, "CCitadelTriggerMultiCapturePoint size mismatch");
+            static_assert(sizeof(CCitadelTriggerMultiCapturePoint) == 0xD30, "CCitadelTriggerMultiCapturePoint size mismatch");
         }
     }
 }

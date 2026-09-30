@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,9 +31,10 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x140
-             * Alignment: 0xff
+             * Size: 0x130
+             * Alignment: 0x10
              * Has VTable
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -77,8 +79,7 @@ namespace shade {
                 std::uint8_t pad_0110[0x10]; // 0x0110, 0x10 bytes
                 CUtlStringToken m_hierarchyAttachName; // 0x0120, 0x4 bytes
                 float m_flClientLocalScale; // 0x0124, 0x4 bytes
-                Vector m_vRenderOrigin; // 0x0128, 0xc bytes
-                std::uint8_t pad_0134[0xc]; // 0x0134, 0xc bytes
+                std::uint8_t pad_0128[0x8]; // 0x0128, 0x8 bytes
             };
             #pragma pack(pop)
 
@@ -93,7 +94,7 @@ namespace shade {
              * float ModelScale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CGameSceneNode) == 0x140, "CGameSceneNode size mismatch");
+            static_assert(sizeof(CGameSceneNode) == 0x130, "CGameSceneNode size mismatch");
         }
     }
 }

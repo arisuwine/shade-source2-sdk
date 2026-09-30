@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -24,7 +25,10 @@ namespace shade {
                 eInstantStop = 0x4,
                 eShuffle = 0x5,
                 ePlantedTurn = 0x6,
-                eCount = 0x7
+                eUseStartAsPlantedTurn = 0x7,
+                eLean = 0x8,
+                eForwardStartOnly = 0x9,
+                eCount = 0xa
             };
         }
     }

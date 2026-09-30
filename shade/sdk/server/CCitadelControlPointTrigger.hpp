@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x980
+             * Size: 0xa90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,30 +42,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelControlPointTrigger : public shade::sdk::server::CTriggerMultiple {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyCaptured; // 0x08f8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x0910, 0x18 bytes
-                float m_flInitialRadius; // 0x0928, 0x4 bytes
-                float m_flEndRadius; // 0x092c, 0x4 bytes
-                float m_flProgress; // 0x0930, 0x4 bytes
-                float m_flCaptureTime; // 0x0934, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hUnlockPrereq; // 0x0938, 0x4 bytes
-                bool m_bAvailable; // 0x093c, 0x1 bytes
-                bool m_bIsBeingCaptured; // 0x093d, 0x1 bytes
-                bool m_bIsBeingBlocked; // 0x093e, 0x1 bytes
-                std::uint8_t pad_093f[0x9]; // 0x093f, 0x9 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTouchedTime; // 0x0948, 0x4 bytes
-                Vector m_vecBeamTarget; // 0x094c, 0xc bytes
-                Vector m_vecBeamStart; // 0x0958, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_nFXProgressBeam; // 0x0964, 0x4 bytes
-                CUtlSymbolLarge m_strUnlockPrereq; // 0x0968, 0x8 bytes
-                CUtlSymbolLarge m_strBeamStart; // 0x0970, 0x8 bytes
-                CUtlSymbolLarge m_strBeamTarget; // 0x0978, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyCaptured; // 0x0a08, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x0a20, 0x18 bytes
+                float m_flInitialRadius; // 0x0a38, 0x4 bytes
+                float m_flEndRadius; // 0x0a3c, 0x4 bytes
+                float m_flProgress; // 0x0a40, 0x4 bytes
+                float m_flCaptureTime; // 0x0a44, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hUnlockPrereq; // 0x0a48, 0x4 bytes
+                bool m_bAvailable; // 0x0a4c, 0x1 bytes
+                bool m_bIsBeingCaptured; // 0x0a4d, 0x1 bytes
+                bool m_bIsBeingBlocked; // 0x0a4e, 0x1 bytes
+                std::uint8_t pad_0a4f[0x9]; // 0x0a4f, 0x9 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTouchedTime; // 0x0a58, 0x4 bytes
+                VectorWS m_vecBeamTarget; // 0x0a5c, 0xc bytes
+                VectorWS m_vecBeamStart; // 0x0a68, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nFXProgressBeam; // 0x0a74, 0x4 bytes
+                CUtlSymbolLarge m_strUnlockPrereq; // 0x0a78, 0x8 bytes
+                CUtlSymbolLarge m_strBeamStart; // 0x0a80, 0x8 bytes
+                CUtlSymbolLarge m_strBeamTarget; // 0x0a88, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelControlPointTrigger) == 0x980, "CCitadelControlPointTrigger size mismatch");
+            static_assert(sizeof(CCitadelControlPointTrigger) == 0xA90, "CCitadelControlPointTrigger size mismatch");
         }
     }
 }

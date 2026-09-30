@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5780
+             * Size: 0x5770
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPickupRejuv : public shade::sdk::server::CCitadelItemPickup {
             public:
-                shade::sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x5510, 0x268 bytes
-                std::uint8_t pad_5778[0x4]; // 0x5778, 0x4 bytes
-                bool m_bPickedUp; // 0x577c, 0x1 bytes
-                std::uint8_t pad_577d[0x3]; // 0x577d, 0x3 bytes
+                shade::sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x5500, 0x268 bytes
+                std::uint8_t pad_5768[0x4]; // 0x5768, 0x4 bytes
+                bool m_bPickedUp; // 0x576c, 0x1 bytes
+                std::uint8_t pad_576d[0x3]; // 0x576d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPickupRejuv) == 0x5780, "CCitadelItemPickupRejuv size mismatch");
+            static_assert(sizeof(CCitadelItemPickupRejuv) == 0x5770, "CCitadelItemPickupRejuv size mismatch");
         }
     }
 }

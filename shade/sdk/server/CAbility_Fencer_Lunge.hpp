@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d08
+             * Size: 0x2620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,40 +41,37 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Fencer_Lunge : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x4]; // 0x0f70, 0x4 bytes
-                std::uint8_t m_nCurrentLungeState; // 0x0f74, 0x1 bytes
-                std::uint8_t pad_0f75[0x3]; // 0x0f75, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x0f78, 0x4 bytes
-                Vector m_vDashStartPos; // 0x0f7c, 0xc bytes
-                Vector m_vDashDirection; // 0x0f88, 0xc bytes
-                Vector m_vLookDirection; // 0x0f94, 0xc bytes
-                Vector m_vStrikeDirection; // 0x0fa0, 0xc bytes
-                bool m_bStartedInAir; // 0x0fac, 0x1 bytes
-                std::uint8_t m_iRemainingCasts; // 0x0fad, 0x1 bytes
-                std::uint8_t pad_0fae[0x2]; // 0x0fae, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x0fb0, 0x4 bytes
-                std::uint8_t m_eLungeDirection; // 0x0fb4, 0x1 bytes
-                std::uint8_t pad_0fb5[0x3]; // 0x0fb5, 0x3 bytes
-                float m_flHeldTime; // 0x0fb8, 0x4 bytes
-                std::uint8_t pad_0fbc[0x4]; // 0x0fbc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x0fc0, 0x18 bytes
-                Vector m_vLastPosition; // 0x0fd8, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x0fe4, 0x4 bytes
-                std::uint8_t pad_0fe8[0x4]; // 0x0fe8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nGlintParticleIndex; // 0x0fec, 0x4 bytes
-                std::uint8_t pad_0ff0[0x284]; // 0x0ff0, 0x284 bytes
-                float m_flLastOuterCircleProgress; // 0x1274, 0x4 bytes
-                std::uint8_t pad_1278[0x8]; // 0x1278, 0x8 bytes
-                std::int32_t m_nPowerLevel; // 0x1280, 0x4 bytes
-                std::uint8_t pad_1284[0xa84]; // 0x1284, 0xa84 bytes
+                std::uint8_t pad_14a0[0x2]; // 0x14a0, 0x2 bytes
+                std::uint8_t m_nCurrentLungeState; // 0x14a2, 0x1 bytes
+                std::uint8_t pad_14a3[0x1]; // 0x14a3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x14a4, 0x4 bytes
+                VectorWS m_vDashStartPos; // 0x14a8, 0xc bytes
+                Vector m_vDashDirection; // 0x14b4, 0xc bytes
+                Vector m_vLookDirection; // 0x14c0, 0xc bytes
+                Vector m_vStrikeDirection; // 0x14cc, 0xc bytes
+                bool m_bStartedInAir; // 0x14d8, 0x1 bytes
+                std::uint8_t m_iRemainingCasts; // 0x14d9, 0x1 bytes
+                std::uint8_t pad_14da[0x2]; // 0x14da, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x14dc, 0x4 bytes
+                std::uint8_t m_eLungeDirection; // 0x14e0, 0x1 bytes
+                std::uint8_t pad_14e1[0x3]; // 0x14e1, 0x3 bytes
+                float m_flHeldTime; // 0x14e4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x14e8, 0x18 bytes
+                VectorWS m_vLastPosition; // 0x1500, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x150c, 0x4 bytes
+                std::uint8_t pad_1510[0x4]; // 0x1510, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nGlintParticleIndex; // 0x1514, 0x4 bytes
+                std::uint8_t pad_1518[0x284]; // 0x1518, 0x284 bytes
+                float m_flLastOuterCircleProgress; // 0x179c, 0x4 bytes
+                std::uint8_t pad_17a0[0x8]; // 0x17a0, 0x8 bytes
+                std::int32_t m_nPowerLevel; // 0x17a8, 0x4 bytes
+                std::uint8_t pad_17ac[0xe74]; // 0x17ac, 0xe74 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Fencer_Lunge) == 0x1D08, "CAbility_Fencer_Lunge size mismatch");
+            static_assert(sizeof(CAbility_Fencer_Lunge) == 0x2620, "CAbility_Fencer_Lunge size mismatch");
         }
     }
 }

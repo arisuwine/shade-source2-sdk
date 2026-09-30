@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointTeleport : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                Vector m_vSaveOrigin; // 0x04a0, 0xc bytes
-                QAngle m_vSaveAngles; // 0x04ac, 0xc bytes
-                bool m_bTeleportParentedEntities; // 0x04b8, 0x1 bytes
-                bool m_bTeleportUseCurrentAngle; // 0x04b9, 0x1 bytes
-                std::uint8_t pad_04ba[0x6]; // 0x04ba, 0x6 bytes
+                VectorWS m_vSaveOrigin; // 0x04b0, 0xc bytes
+                QAngle m_vSaveAngles; // 0x04bc, 0xc bytes
+                bool m_bTeleportParentedEntities; // 0x04c8, 0x1 bytes
+                bool m_bTeleportUseCurrentAngle; // 0x04c9, 0x1 bytes
+                std::uint8_t pad_04ca[0x6]; // 0x04ca, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPointTeleport) == 0x4C0, "CPointTeleport size mismatch");
+            static_assert(sizeof(CPointTeleport) == 0x4D0, "CPointTeleport size mismatch");
         }
     }
 }

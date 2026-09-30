@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a30
+             * Size: 0x15b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Werewolf_CripplingSlashVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisarmModifier; // 0x1828, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1838, 0x10 bytes
-                CSoundEventName m_strSlashStart; // 0x1848, 0x10 bytes
-                CSoundEventName m_strSlashImpactSound; // 0x1858, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashSwingEffect; // 0x1868, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashImpactEffect; // 0x1948, 0xe0 bytes
-                float m_flSlashForwardOffset; // 0x1a28, 0x4 bytes
-                std::uint8_t pad_1a2c[0x4]; // 0x1a2c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisarmModifier; // 0x13b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x13c0, 0x10 bytes
+                CSoundEventName m_strSlashStart; // 0x13d0, 0x10 bytes
+                CSoundEventName m_strSlashImpactSound; // 0x13e0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashSwingEffect; // 0x13f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashImpactEffect; // 0x14d0, 0xe0 bytes
+                float m_flSlashForwardOffset; // 0x15b0, 0x4 bytes
+                std::uint8_t pad_15b4[0x4]; // 0x15b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Werewolf_CripplingSlashVData) == 0x1A30, "CCitadel_Werewolf_CripplingSlashVData size mismatch");
+            static_assert(sizeof(CCitadel_Werewolf_CripplingSlashVData) == 0x15B8, "CCitadel_Werewolf_CripplingSlashVData size mismatch");
         }
     }
 }

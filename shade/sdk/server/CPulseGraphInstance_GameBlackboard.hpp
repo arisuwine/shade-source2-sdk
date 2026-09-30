@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1c8
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_GameBlackboard : public shade::sdk::server::CPulseGraphInstance_ServerEntity {
             public:
-                std::uint8_t pad_01b8[0x10]; // 0x01b8, 0x10 bytes
+                std::uint8_t pad_0148[0x10]; // 0x0148, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_GameBlackboard) == 0x1C8, "CPulseGraphInstance_GameBlackboard size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_GameBlackboard) == 0x158, "CPulseGraphInstance_GameBlackboard size mismatch");
         }
     }
 }

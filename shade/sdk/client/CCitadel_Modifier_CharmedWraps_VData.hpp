@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x940
+             * Size: 0x950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CharmedWraps_VData : public shade::sdk::client::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingParticle; // 0x0780, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x0860, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingParticle; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x0870, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CharmedWraps_VData) == 0x940, "CCitadel_Modifier_CharmedWraps_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CharmedWraps_VData) == 0x950, "CCitadel_Modifier_CharmedWraps_VData size mismatch");
         }
     }
 }

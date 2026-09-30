@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1580
+             * Size: 0x1cc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,30 +40,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ShivDash : public shade::sdk::server::CCitadelBaseShivAbility {
             public:
-                Vector m_vStartPosition; // 0x0f70, 0xc bytes
-                Vector m_vDashDirection; // 0x0f7c, 0xc bytes
-                bool m_bIsDashing; // 0x0f88, 0x1 bytes
-                std::uint8_t pad_0f89[0x7]; // 0x0f89, 0x7 bytes
-                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x0f90, 0x18 bytes
-                Vector m_vecLastPosition; // 0x0fa8, 0xc bytes
-                std::int32_t m_nReductionsLeft; // 0x0fb4, 0x4 bytes
-                std::uint8_t pad_0fb8[0x580]; // 0x0fb8, 0x580 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1538, 0x4 bytes
-                std::uint8_t pad_153c[0x14]; // 0x153c, 0x14 bytes
-                CHandle<shade::sdk::server::CPointModifierThinker> m_hEchoThinker; // 0x1550, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_EchoStartTime; // 0x1554, 0x4 bytes
-                bool m_bLetEchoPlay; // 0x1558, 0x1 bytes
-                std::uint8_t pad_1559[0x1f]; // 0x1559, 0x1f bytes
-                bool m_bDiscontinuityInEcho; // 0x1578, 0x1 bytes
-                std::uint8_t pad_1579[0x7]; // 0x1579, 0x7 bytes
+                VectorWS m_vStartPosition; // 0x14a0, 0xc bytes
+                Vector m_vDashDirection; // 0x14ac, 0xc bytes
+                bool m_bIsDashing; // 0x14b8, 0x1 bytes
+                std::uint8_t pad_14b9[0x7]; // 0x14b9, 0x7 bytes
+                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x14c0, 0x18 bytes
+                VectorWS m_vecLastPosition; // 0x14d8, 0xc bytes
+                std::int32_t m_nReductionsLeft; // 0x14e4, 0x4 bytes
+                std::uint8_t pad_14e8[0x790]; // 0x14e8, 0x790 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1c78, 0x4 bytes
+                std::uint8_t pad_1c7c[0x14]; // 0x1c7c, 0x14 bytes
+                CHandle<shade::sdk::server::CPointModifierThinker> m_hEchoThinker; // 0x1c90, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_EchoStartTime; // 0x1c94, 0x4 bytes
+                bool m_bLetEchoPlay; // 0x1c98, 0x1 bytes
+                std::uint8_t pad_1c99[0x1f]; // 0x1c99, 0x1f bytes
+                bool m_bDiscontinuityInEcho; // 0x1cb8, 0x1 bytes
+                std::uint8_t pad_1cb9[0x7]; // 0x1cb9, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ShivDash) == 0x1580, "CCitadel_Ability_ShivDash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ShivDash) == 0x1CC0, "CCitadel_Ability_ShivDash size mismatch");
         }
     }
 }

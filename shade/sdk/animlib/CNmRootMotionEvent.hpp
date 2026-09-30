@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmRootMotionEvent : public shade::sdk::animlib::CNmEvent {
             public:
-                float m_flBlendTimeSeconds; // 0x0020, 0x4 bytes
-                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
+                float m_flBlendTimeSeconds; // 0x0018, 0x4 bytes
+                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmRootMotionEvent) == 0x28, "CNmRootMotionEvent size mismatch");
+            static_assert(sizeof(CNmRootMotionEvent) == 0x20, "CNmRootMotionEvent size mismatch");
         }
     }
 }

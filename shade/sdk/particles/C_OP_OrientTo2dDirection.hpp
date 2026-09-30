@@ -12,17 +12,19 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x8c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_OrientTo2dDirection : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flRotOffset; // 0x01d8, 0x4 bytes
-                float m_flSpinStrength; // 0x01dc, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecInput; // 0x01e0, 0x6d8 bytes
+                float m_flRotOffset; // 0x08b8, 0x4 bytes
+                float m_flSpinStrength; // 0x08bc, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x08c0, 0x4 bytes
+                std::uint8_t pad_08c4[0x4]; // 0x08c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_OrientTo2dDirection) == 0x1E8, "C_OP_OrientTo2dDirection size mismatch");
+            static_assert(sizeof(C_OP_OrientTo2dDirection) == 0x8C8, "C_OP_OrientTo2dDirection size mismatch");
         }
     }
 }

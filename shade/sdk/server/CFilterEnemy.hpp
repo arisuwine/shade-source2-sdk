@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f8
+             * Size: 0x508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CFilterEnemy : public shade::sdk::server::CBaseFilter {
             public:
-                CUtlSymbolLarge m_iszEnemyName; // 0x04d8, 0x8 bytes
-                float m_flRadius; // 0x04e0, 0x4 bytes
-                float m_flOuterRadius; // 0x04e4, 0x4 bytes
-                std::int32_t m_nMaxSquadmatesPerEnemy; // 0x04e8, 0x4 bytes
-                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
-                CUtlSymbolLarge m_iszPlayerName; // 0x04f0, 0x8 bytes
+                CUtlSymbolLarge m_iszEnemyName; // 0x04e8, 0x8 bytes
+                float m_flRadius; // 0x04f0, 0x4 bytes
+                float m_flOuterRadius; // 0x04f4, 0x4 bytes
+                std::int32_t m_nMaxSquadmatesPerEnemy; // 0x04f8, 0x4 bytes
+                std::uint8_t pad_04fc[0x4]; // 0x04fc, 0x4 bytes
+                CUtlSymbolLarge m_iszPlayerName; // 0x0500, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFilterEnemy) == 0x4F8, "CFilterEnemy size mismatch");
+            static_assert(sizeof(CFilterEnemy) == 0x508, "CFilterEnemy size mismatch");
         }
     }
 }

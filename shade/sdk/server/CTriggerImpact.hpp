@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerImpact : public shade::sdk::server::CTriggerMultiple {
             public:
-                float m_flMagnitude; // 0x08f8, 0x4 bytes
-                float m_flNoise; // 0x08fc, 0x4 bytes
-                float m_flViewkick; // 0x0900, 0x4 bytes
-                std::uint8_t pad_0904[0x4]; // 0x0904, 0x4 bytes
-                CEntityOutputTemplate<Vector> m_pOutputForce; // 0x0908, 0x28 bytes
+                float m_flMagnitude; // 0x0a08, 0x4 bytes
+                float m_flNoise; // 0x0a0c, 0x4 bytes
+                float m_flViewkick; // 0x0a10, 0x4 bytes
+                std::uint8_t pad_0a14[0x4]; // 0x0a14, 0x4 bytes
+                CEntityOutputTemplate<Vector> m_pOutputForce; // 0x0a18, 0x28 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputImpact; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMagnitude; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CTriggerImpactDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTriggerImpact) == 0x930, "CTriggerImpact size mismatch");
+            static_assert(sizeof(CTriggerImpact) == 0xA40, "CTriggerImpact size mismatch");
         }
     }
 }

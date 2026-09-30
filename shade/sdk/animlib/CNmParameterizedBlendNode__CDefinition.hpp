@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x40
+             * Size: 0x30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmParameterizedBlendNode__CDefinition : public shade::sdk::animlib::CNmPoseNode__CDefinition {
             public:
-                CUtlVectorFixedGrowable<std::int16_t, 5> m_sourceNodeIndices; // 0x0010, 0x28 bytes
-                std::int16_t m_nInputParameterValueNodeIdx; // 0x0038, 0x2 bytes
-                bool m_bAllowLooping; // 0x003a, 0x1 bytes
-                std::uint8_t pad_003b[0x5]; // 0x003b, 0x5 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 5> m_sourceNodeIndices; // 0x0010, 0x18 bytes
+                std::int16_t m_nInputParameterValueNodeIdx; // 0x0028, 0x2 bytes
+                bool m_bAllowLooping; // 0x002a, 0x1 bytes
+                std::uint8_t pad_002b[0x5]; // 0x002b, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmParameterizedBlendNode__CDefinition) == 0x40, "CNmParameterizedBlendNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmParameterizedBlendNode__CDefinition) == 0x30, "CNmParameterizedBlendNode__CDefinition size mismatch");
         }
     }
 }

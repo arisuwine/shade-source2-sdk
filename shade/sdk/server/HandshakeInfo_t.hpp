@@ -12,21 +12,25 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/animgraphlib/HandshakeTagState_t.hpp"
+#include "shade/sdk/client/BodySectionMutex_t.hpp"
 #include "shade/sdk/entity2/GameTick_t.hpp"
+#include "shade/sdk/server/HandshakeRestartType_t.hpp"
 #include "shade/sdk/server/HandshakeState_t.hpp"
+#include "shade/sdk/server/HandshakeTagState_t.hpp"
 #include "shade/sdk/server/TaskHandshakeScope_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18
-             * Alignment: 0xff
+             * Size: 0x28
+             * Alignment: 0x8
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct HandshakeInfo_t {
@@ -34,15 +38,19 @@ namespace shade {
                 std::uint64_t m_nActiveEventUniqueID; // 0x0008, 0x8 bytes
                 shade::sdk::entity2::GameTick_t m_nLastHandshakeUpdateTick; // 0x0010, 0x4 bytes
                 shade::sdk::server::HandshakeState_t m_nHandshakeState; // 0x0014, 0x1 bytes
-                shade::sdk::animgraphlib::HandshakeTagState_t m_nAG2EmulatedState; // 0x0015, 0x1 bytes
+                shade::sdk::server::HandshakeTagState_t m_nAG2EmulatedState; // 0x0015, 0x1 bytes
                 shade::sdk::server::TaskHandshakeScope_t m_nHandshakeScope; // 0x0016, 0x1 bytes
                 bool m_bForceHandshakeRestartOnScriptedSequenceCompletion; // 0x0017, 0x1 bytes
+                shade::sdk::client::BodySectionMutex_t m_eBodySectionMutex; // 0x0018, 0x4 bytes
+                shade::sdk::client::BodySectionMutex_t m_ePreviousBodySectionMutex; // 0x001c, 0x4 bytes
+                shade::sdk::server::HandshakeRestartType_t m_eRestartType; // 0x0020, 0x1 bytes
+                std::uint8_t pad_0021[0x7]; // 0x0021, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(HandshakeInfo_t) == 0x18, "HandshakeInfo_t size mismatch");
+            static_assert(sizeof(HandshakeInfo_t) == 0x28, "HandshakeInfo_t size mismatch");
         }
     }
 }

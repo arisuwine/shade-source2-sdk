@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1368
+             * Size: 0x18f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_MeleeParry : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nActiveFX; // 0x11d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flParryStartTime; // 0x11dc, 0x4 bytes
-                bool m_bAttackParried; // 0x11e0, 0x1 bytes
-                std::uint8_t pad_11e1[0x3]; // 0x11e1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flParrySuccessEndTime; // 0x11e4, 0x4 bytes
-                std::uint8_t pad_11e8[0x180]; // 0x11e8, 0x180 bytes
+                shade::sdk::client::ParticleIndex_t m_nActiveFX; // 0x16d8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryStartTime; // 0x16dc, 0x4 bytes
+                bool m_bAttackParried; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x3]; // 0x16e1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flParrySuccessEndTime; // 0x16e4, 0x4 bytes
+                std::uint8_t pad_16e8[0x210]; // 0x16e8, 0x210 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_MeleeParry) == 0x1368, "CCitadel_Ability_MeleeParry size mismatch");
+            static_assert(sizeof(CCitadel_Ability_MeleeParry) == 0x18F8, "CCitadel_Ability_MeleeParry size mismatch");
         }
     }
 }

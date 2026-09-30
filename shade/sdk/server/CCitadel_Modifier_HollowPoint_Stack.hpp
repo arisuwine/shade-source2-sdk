@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x2a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HollowPoint_Stack : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flStackDecayDelayTime; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x104]; // 0x00d4, 0x104 bytes
+                shade::sdk::entity2::GameTime_t m_flStackDecayDelayTime; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x164]; // 0x0144, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HollowPoint_Stack) == 0x1D8, "CCitadel_Modifier_HollowPoint_Stack size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HollowPoint_Stack) == 0x2A8, "CCitadel_Modifier_HollowPoint_Stack size mismatch");
         }
     }
 }

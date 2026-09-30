@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bb0
+             * Size: 0x1738
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,23 +45,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TurretClone_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strTurretParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwapParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_TurretModel; // 0x19d8, 0xe0 bytes
-                CSoundEventName m_strTurretLoopSound; // 0x1ab8, 0x10 bytes
-                CSoundEventName m_strTurretLoopStartSound; // 0x1ac8, 0x10 bytes
-                CSoundEventName m_strTurretLoopEndSound; // 0x1ad8, 0x10 bytes
-                CSoundEventName m_strTurretShootSound; // 0x1ae8, 0x10 bytes
-                CSoundEventName m_strSwapSound; // 0x1af8, 0x10 bytes
-                CSoundEventName m_strSwapCloneSound; // 0x1b08, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1b18, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1b28, 0x88 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strTurretParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwapParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_TurretModel; // 0x1560, 0xe0 bytes
+                CSoundEventName m_strTurretLoopSound; // 0x1640, 0x10 bytes
+                CSoundEventName m_strTurretLoopStartSound; // 0x1650, 0x10 bytes
+                CSoundEventName m_strTurretLoopEndSound; // 0x1660, 0x10 bytes
+                CSoundEventName m_strTurretShootSound; // 0x1670, 0x10 bytes
+                CSoundEventName m_strSwapSound; // 0x1680, 0x10 bytes
+                CSoundEventName m_strSwapCloneSound; // 0x1690, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x16a0, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x16b0, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TurretClone_VData) == 0x1BB0, "CCitadel_Ability_TurretClone_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TurretClone_VData) == 0x1738, "CCitadel_Ability_TurretClone_VData size mismatch");
         }
     }
 }

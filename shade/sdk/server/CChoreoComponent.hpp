@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,6 @@ namespace shade {
     namespace sdk {
         namespace server {
             class CBaseModelEntity;
-            class CCitadelModifier;
         }
     }
 }
@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x98
+             * Size: 0x80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,19 +44,18 @@ namespace shade {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0008, 0x28 bytes
                 CHandle<shade::sdk::server::CBaseModelEntity> m_hOwner; // 0x0030, 0x4 bytes
-                std::uint8_t pad_0034[0x34]; // 0x0034, 0x34 bytes
-                shade::sdk::client::SceneEventId_t m_nNextSceneEventId; // 0x0068, 0x4 bytes
-                bool m_bUpdateLayerPriorities; // 0x006c, 0x1 bytes
-                std::uint8_t pad_006d[0x3]; // 0x006d, 0x3 bytes
-                CUtlVector<CModifierHandleTyped<shade::sdk::server::CCitadelModifier>> m_vecChoreoModifiers; // 0x0070, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flAllowResponsesEndTime; // 0x0088, 0x4 bytes
-                std::uint8_t pad_008c[0xc]; // 0x008c, 0xc bytes
+                std::int32_t m_nExernalChoreoGraphCount; // 0x0034, 0x4 bytes
+                CGlobalSymbol m_sActiveExternalChoreoGraphSlotID; // 0x0038, 0x8 bytes
+                std::uint8_t pad_0040[0x30]; // 0x0040, 0x30 bytes
+                shade::sdk::client::SceneEventId_t m_nNextSceneEventId; // 0x0070, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAllowResponsesEndTime; // 0x0074, 0x4 bytes
+                std::uint8_t pad_0078[0x8]; // 0x0078, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CChoreoComponent) == 0x98, "CChoreoComponent size mismatch");
+            static_assert(sizeof(CChoreoComponent) == 0x80, "CChoreoComponent size mismatch");
         }
     }
 }

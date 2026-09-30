@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,9 +21,10 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x4
-             * Alignment: 0xff
+             * Alignment: 0x4
              * Has Trivial Constructor
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct physics_save_sphere_t {

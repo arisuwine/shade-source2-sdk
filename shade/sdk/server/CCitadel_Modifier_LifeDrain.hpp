@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x358
+             * Size: 0x4b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LifeDrain : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x284]; // 0x00d4, 0x284 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x374]; // 0x0144, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LifeDrain) == 0x358, "CCitadel_Modifier_LifeDrain size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LifeDrain) == 0x4B8, "CCitadel_Modifier_LifeDrain size mismatch");
         }
     }
 }

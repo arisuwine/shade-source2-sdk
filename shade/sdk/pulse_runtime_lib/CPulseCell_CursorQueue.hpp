@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0xa0
+             * Size: 0x130
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_CursorQueue : public shade::sdk::pulse_runtime_lib::CPulseCell_WaitForCursorsWithTagBase {
             public:
-                std::int32_t m_nCursorsAllowedToRunParallel; // 0x0098, 0x4 bytes
-                std::uint8_t pad_009c[0x4]; // 0x009c, 0x4 bytes
+                std::int32_t m_nCursorsAllowedToRunParallel; // 0x0128, 0x4 bytes
+                std::uint8_t pad_012c[0x4]; // 0x012c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_CursorQueue) == 0xA0, "CPulseCell_CursorQueue size mismatch");
+            static_assert(sizeof(CPulseCell_CursorQueue) == 0x130, "CPulseCell_CursorQueue size mismatch");
         }
     }
 }

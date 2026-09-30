@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -29,7 +30,9 @@ namespace shade {
                 GE_SosStopSoundEvent = 0xd1,
                 GE_SosSetSoundEventParams = 0xd2,
                 GE_SosSetLibraryStackFields = 0xd3,
-                GE_SosStopSoundEventHash = 0xd4
+                GE_SosStopSoundEventHash = 0xd4,
+                GE_ClothStiffenAnimEvent = 0xd5,
+                GE_ClothEffectAnimEvent = 0xd6
             };
         }
     }

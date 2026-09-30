@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x538
+             * Size: 0x548
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvSoundscapeProxy : public shade::sdk::server::CEnvSoundscape {
             public:
-                CUtlSymbolLarge m_MainSoundscapeName; // 0x0530, 0x8 bytes
+                CUtlSymbolLarge m_MainSoundscapeName; // 0x0540, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvSoundscapeProxy) == 0x538, "CEnvSoundscapeProxy size mismatch");
+            static_assert(sizeof(CEnvSoundscapeProxy) == 0x548, "CEnvSoundscapeProxy size mismatch");
         }
     }
 }

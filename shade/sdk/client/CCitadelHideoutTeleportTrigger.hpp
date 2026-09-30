@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xaf0
+             * Size: 0xd10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHideoutTeleportTrigger : public shade::sdk::client::C_BaseTrigger {
             public:
-                std::uint8_t pad_0a78[0x40]; // 0x0a78, 0x40 bytes
-                CUtlSymbolLarge m_strDestLandmark; // 0x0ab8, 0x8 bytes
-                CUtlSymbolLarge m_strDestMap; // 0x0ac0, 0x8 bytes
-                CUtlSymbolLarge m_strDestLocString; // 0x0ac8, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnHideoutTeleport; // 0x0ad0, 0x18 bytes
-                CUtlSymbolLarge m_strPropModel; // 0x0ae8, 0x8 bytes
+                std::uint8_t pad_0c98[0x40]; // 0x0c98, 0x40 bytes
+                CUtlSymbolLarge m_strDestLandmark; // 0x0cd8, 0x8 bytes
+                CUtlSymbolLarge m_strDestMap; // 0x0ce0, 0x8 bytes
+                CUtlSymbolLarge m_strDestLocString; // 0x0ce8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnHideoutTeleport; // 0x0cf0, 0x18 bytes
+                CUtlSymbolLarge m_strPropModel; // 0x0d08, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHideoutTeleportTrigger) == 0xAF0, "CCitadelHideoutTeleportTrigger size mismatch");
+            static_assert(sizeof(CCitadelHideoutTeleportTrigger) == 0xD10, "CCitadelHideoutTeleportTrigger size mismatch");
         }
     }
 }

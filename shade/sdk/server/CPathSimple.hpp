@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5b0
+             * Size: 0x5c0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathSimple : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x10]; // 0x04a0, 0x10 bytes
-                shade::sdk::server::CPathQueryComponent m_CPathQueryComponent; // 0x04b0, 0xa0 bytes
-                std::uint8_t pad_0550[0x50]; // 0x0550, 0x50 bytes
-                CUtlString m_pathString; // 0x05a0, 0x8 bytes
-                bool m_bClosedLoop; // 0x05a8, 0x1 bytes
-                std::uint8_t pad_05a9[0x7]; // 0x05a9, 0x7 bytes
+                std::uint8_t pad_04b0[0x10]; // 0x04b0, 0x10 bytes
+                shade::sdk::server::CPathQueryComponent m_CPathQueryComponent; // 0x04c0, 0xa0 bytes
+                std::uint8_t pad_0560[0x50]; // 0x0560, 0x50 bytes
+                CUtlString m_pathString; // 0x05b0, 0x8 bytes
+                bool m_bClosedLoop; // 0x05b8, 0x1 bytes
+                std::uint8_t pad_05b9[0x7]; // 0x05b9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPathSimple) == 0x5B0, "CPathSimple size mismatch");
+            static_assert(sizeof(CPathSimple) == 0x5C0, "CPathSimple size mismatch");
         }
     }
 }

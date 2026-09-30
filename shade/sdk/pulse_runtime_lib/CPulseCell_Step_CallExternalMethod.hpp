@@ -12,12 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp"
 #include "shade/sdk/pulse_runtime_lib/CPulse_ResumePoint.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseMethodCallMode_t.hpp"
+#include "shade/sdk/pulse_runtime_lib/PulseRuntimeBlackboardReferenceIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -31,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0x150
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +42,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_Step_CallExternalMethod : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                PulseSymbol_t m_MethodName; // 0x0048, 0x10 bytes
-                PulseSymbol_t m_GameBlackboard; // 0x0058, 0x10 bytes
-                CUtlLeanVector<shade::sdk::pulse_runtime_lib::CPulseRuntimeMethodArg> m_ExpectedArgs; // 0x0068, 0x10 bytes
-                shade::sdk::pulse_runtime_lib::PulseMethodCallMode_t m_nAsyncCallMode; // 0x0078, 0x4 bytes
-                std::uint8_t pad_007c[0x4]; // 0x007c, 0x4 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x0080, 0x48 bytes
+                PulseSymbol_t m_MethodName; // 0x00d8, 0x10 bytes
+                shade::sdk::pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t m_nBlackboardIndex; // 0x00e8, 0x2 bytes
+                std::uint8_t pad_00ea[0x6]; // 0x00ea, 0x6 bytes
+                CUtlLeanVector<shade::sdk::pulse_runtime_lib::CPulseRuntimeMethodArg> m_ExpectedArgs; // 0x00f0, 0x10 bytes
+                shade::sdk::pulse_runtime_lib::PulseMethodCallMode_t m_nAsyncCallMode; // 0x0100, 0x4 bytes
+                std::uint8_t pad_0104[0x4]; // 0x0104, 0x4 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x0108, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Step_CallExternalMethod) == 0xC8, "CPulseCell_Step_CallExternalMethod size mismatch");
+            static_assert(sizeof(CPulseCell_Step_CallExternalMethod) == 0x150, "CPulseCell_Step_CallExternalMethod size mismatch");
         }
     }
 }

@@ -12,8 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
+
+#include "shade/sdk/pulse_runtime_lib/PulseRuntimeTempVarBankIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x58
+             * Size: 0x60
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -39,13 +42,14 @@ namespace shade {
                 CUtlLeanVector<shade::sdk::pulse_runtime_lib::PGDInstruction_t> m_Instructions; // 0x0000, 0x10 bytes
                 CUtlLeanVector<shade::sdk::pulse_runtime_lib::CPulse_RegisterInfo> m_Registers; // 0x0010, 0x10 bytes
                 CUtlLeanVector<shade::sdk::pulse_runtime_lib::CPulse_InstructionDebug> m_InstructionDebugInfos; // 0x0020, 0x10 bytes
-                std::uint8_t pad_0030[0x28]; // 0x0030, 0x28 bytes
+                shade::sdk::pulse_runtime_lib::PulseRuntimeTempVarBankIndex_t m_nTempVarBank; // 0x0030, 0x2 bytes
+                std::uint8_t pad_0032[0x2e]; // 0x0032, 0x2e bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulse_Chunk) == 0x58, "CPulse_Chunk size mismatch");
+            static_assert(sizeof(CPulse_Chunk) == 0x60, "CPulse_Chunk size mismatch");
         }
     }
 }

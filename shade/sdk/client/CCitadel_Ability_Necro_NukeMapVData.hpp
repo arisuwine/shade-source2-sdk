@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1928
+             * Size: 0x14b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_NukeMapVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageParticle; // 0x1818, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DelayedEffectModifier; // 0x18f8, 0x10 bytes
-                CSoundEventName m_strDamageSound; // 0x1908, 0x10 bytes
-                float m_flRandomSpawnOffsetPerSummon; // 0x1918, 0x4 bytes
-                float m_flVerticalOffset; // 0x191c, 0x4 bytes
-                float m_flForwardOffset; // 0x1920, 0x4 bytes
-                std::uint8_t pad_1924[0x4]; // 0x1924, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageParticle; // 0x13a0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DelayedEffectModifier; // 0x1480, 0x10 bytes
+                CSoundEventName m_strDamageSound; // 0x1490, 0x10 bytes
+                float m_flRandomSpawnOffsetPerSummon; // 0x14a0, 0x4 bytes
+                float m_flVerticalOffset; // 0x14a4, 0x4 bytes
+                float m_flForwardOffset; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x4]; // 0x14ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_NukeMapVData) == 0x1928, "CCitadel_Ability_Necro_NukeMapVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_NukeMapVData) == 0x14B0, "CCitadel_Ability_Necro_NukeMapVData size mismatch");
         }
     }
 }

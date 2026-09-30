@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,6 @@ namespace shade {
              * Size: 0x20
              * Alignment: 0xff
              * Has VTable
-             * Has Trivial Destructor
              * Construct Disallowed
              * Module Local Type Scope
              */
@@ -35,9 +35,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCitadelMinimapComponent) == 0x20, "CCitadelMinimapComponent size mismatch");
         }

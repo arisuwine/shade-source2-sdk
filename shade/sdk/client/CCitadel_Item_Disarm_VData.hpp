@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19e8
+             * Size: 0x15e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_Disarm_VData : public shade::sdk::client::CCitadel_Item_TrackingProjectileApplyModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x19c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x19d8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x15c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x15d0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_Disarm_VData) == 0x19E8, "CCitadel_Item_Disarm_VData size mismatch");
+            static_assert(sizeof(CCitadel_Item_Disarm_VData) == 0x15E0, "CCitadel_Item_Disarm_VData size mismatch");
         }
     }
 }

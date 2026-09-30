@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,6 +20,10 @@
 
 namespace shade {
     namespace sdk {
+        namespace resourcesystem {
+            class InfoForResourceTypeIParticleSystemDefinition;
+        }
+
         namespace server {
             class CCitadelModifier;
         }
@@ -29,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x760
+             * Size: 0x850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierStackingDamageVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0750, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0760, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpreadParticle; // 0x0770, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierStackingDamageVData) == 0x760, "CModifierStackingDamageVData size mismatch");
+            static_assert(sizeof(CModifierStackingDamageVData) == 0x850, "CModifierStackingDamageVData size mismatch");
         }
     }
 }

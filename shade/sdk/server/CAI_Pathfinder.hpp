@@ -12,29 +12,35 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
+
+#include "shade/sdk/server/CAI_PathfindFinderData_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4930
-             * Alignment: 0xff
+             * Size: 0x10
+             * Alignment: 0x8
              * Has VTable
+             * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CAI_Pathfinder {
             public:
-                std::uint8_t pad_0000[0x4918]; // 0x0000, 0x4918 bytes
-                float m_flPathMaxDetour; // 0x4918, 0x4 bytes
-                std::uint8_t pad_491c[0x14]; // 0x491c, 0x14 bytes
+                std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
+                float m_flPathMaxDetour; // 0x0008, 0x4 bytes
+                shade::sdk::server::CAI_PathfindFinderData_t m_FinderData; // 0x000c, 0x1 bytes
+                std::uint8_t pad_000d[0x3]; // 0x000d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_Pathfinder) == 0x4930, "CAI_Pathfinder size mismatch");
+            static_assert(sizeof(CAI_Pathfinder) == 0x10, "CAI_Pathfinder size mismatch");
         }
     }
 }

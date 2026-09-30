@@ -12,19 +12,20 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace client {
             enum class ELOSCheck : std::uint32_t {
-                ELOSCheck_None = 0x0,
-                ELOSCheck_Head = 0x1,
-                ELOSCheck_Head_IgnoreObscureBlockers = 0x2,
-                ELOSCheck_BodyCenter = 0x3,
-                ELOSCheck_BodyCenter_IgnoreObscureBlockers = 0x4,
-                ELOSCheck_Bounds = 0x5,
-                ELOSCheck_Bounds_IgnoreObscureBlockers = 0x6,
-                ELOSCheck_FibonacciSphere = 0x7
+                None = 0x0,
+                Head = 0x1,
+                Head_IgnoreObscureBlockers = 0x2,
+                BodyCenter = 0x3,
+                BodyCenter_IgnoreObscureBlockers = 0x4,
+                Bounds = 0x5,
+                Bounds_IgnoreObscureBlockers = 0x6,
+                FibonacciSphere = 0x7
             };
         }
     }

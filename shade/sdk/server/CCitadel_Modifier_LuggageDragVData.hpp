@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CCitadelModifierVData.hpp"
+#include "shade/sdk/server/CCitadel_Modifier_DragVData.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,29 +30,24 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x788
+             * Size: 0x888
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_LuggageDragVData : public shade::sdk::server::CCitadelModifierVData {
+            class CCitadel_Modifier_LuggageDragVData : public shade::sdk::server::CCitadel_Modifier_DragVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0750, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StompIgnoreLingerModifier; // 0x0760, 0x10 bytes
-                float m_flForwardOffset; // 0x0770, 0x4 bytes
-                float m_flVerticalOffset; // 0x0774, 0x4 bytes
-                float m_flDragDistance; // 0x0778, 0x4 bytes
-                float m_flForceDistScale; // 0x077c, 0x4 bytes
-                float m_flWallStunLookAheadDist; // 0x0780, 0x4 bytes
-                float m_flStompIgnoreLingerDuration; // 0x0784, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StompIgnoreLingerModifier; // 0x0870, 0x10 bytes
+                float m_flStompIgnoreLingerDuration; // 0x0880, 0x4 bytes
+                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LuggageDragVData) == 0x788, "CCitadel_Modifier_LuggageDragVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LuggageDragVData) == 0x888, "CCitadel_Modifier_LuggageDragVData size mismatch");
         }
     }
 }

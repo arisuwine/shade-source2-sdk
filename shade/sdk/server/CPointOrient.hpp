@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,24 +34,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointOrient : public shade::sdk::server::CBaseEntity {
             public:
-                CUtlSymbolLarge m_iszSpawnTargetName; // 0x04a0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x04a8, 0x4 bytes
-                bool m_bActive; // 0x04ac, 0x1 bytes
-                std::uint8_t pad_04ad[0x3]; // 0x04ad, 0x3 bytes
-                shade::sdk::client::PointOrientGoalDirectionType_t m_nGoalDirection; // 0x04b0, 0x4 bytes
-                shade::sdk::client::PointOrientConstraint_t m_nConstraint; // 0x04b4, 0x4 bytes
-                float m_flMaxTurnRate; // 0x04b8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x04bc, 0x4 bytes
+                CUtlSymbolLarge m_iszSpawnTargetName; // 0x04b0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x04b8, 0x4 bytes
+                bool m_bActive; // 0x04bc, 0x1 bytes
+                std::uint8_t pad_04bd[0x3]; // 0x04bd, 0x3 bytes
+                shade::sdk::client::PointOrientGoalDirectionType_t m_nGoalDirection; // 0x04c0, 0x4 bytes
+                shade::sdk::client::PointOrientConstraint_t m_nConstraint; // 0x04c4, 0x4 bytes
+                float m_flMaxTurnRate; // 0x04c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x04cc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputSetActive; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPointOrientReorientThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointOrient) == 0x4C0, "CPointOrient size mismatch");
+            static_assert(sizeof(CPointOrient) == 0x4D0, "CPointOrient size mismatch");
         }
     }
 }

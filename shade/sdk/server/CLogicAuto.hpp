@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x598
+             * Size: 0x5a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicAuto : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnMapSpawn; // 0x04a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDemoMapSpawn; // 0x04b8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNewGame; // 0x04d0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLoadGame; // 0x04e8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMapTransition; // 0x0500, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBackgroundMap; // 0x0518, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMultiNewMap; // 0x0530, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMultiNewRound; // 0x0548, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnVREnabled; // 0x0560, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnVRNotEnabled; // 0x0578, 0x18 bytes
-                CUtlSymbolLarge m_globalstate; // 0x0590, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMapSpawn; // 0x04b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDemoMapSpawn; // 0x04c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNewGame; // 0x04e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLoadGame; // 0x04f8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMapTransition; // 0x0510, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBackgroundMap; // 0x0528, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMultiNewMap; // 0x0540, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMultiNewRound; // 0x0558, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnVREnabled; // 0x0570, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnVRNotEnabled; // 0x0588, 0x18 bytes
+                CUtlSymbolLarge m_globalstate; // 0x05a0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CLogicAuto) == 0x598, "CLogicAuto size mismatch");
+            static_assert(sizeof(CLogicAuto) == 0x5A8, "CLogicAuto size mismatch");
         }
     }
 }

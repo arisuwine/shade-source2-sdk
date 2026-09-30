@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5b0
+             * Size: 0x5c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,37 +44,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CSplineConstraint : public shade::sdk::server::CPhysConstraint {
             public:
-                std::uint8_t pad_0500[0x50]; // 0x0500, 0x50 bytes
-                Vector m_vAnchorOffsetRestore; // 0x0550, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hSplineEntity; // 0x055c, 0x4 bytes
-                shade::sdk::vphysics2::IPhysicsBody *m_pSplineBody; // 0x0560, 0x8 bytes
-                bool m_bEnableLateralConstraint; // 0x0568, 0x1 bytes
-                bool m_bEnableVerticalConstraint; // 0x0569, 0x1 bytes
-                bool m_bEnableAngularConstraint; // 0x056a, 0x1 bytes
-                bool m_bEnableLimit; // 0x056b, 0x1 bytes
-                bool m_bFireEventsOnPath; // 0x056c, 0x1 bytes
-                std::uint8_t pad_056d[0x3]; // 0x056d, 0x3 bytes
-                float m_flLinearFrequency; // 0x0570, 0x4 bytes
-                float m_flLinarDampingRatio; // 0x0574, 0x4 bytes
-                float m_flJointFriction; // 0x0578, 0x4 bytes
-                float m_flTransitionTime; // 0x057c, 0x4 bytes
-                std::uint8_t pad_0580[0x10]; // 0x0580, 0x10 bytes
-                VectorWS m_vPreSolveAnchorPos; // 0x0590, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_StartTransitionTime; // 0x059c, 0x4 bytes
-                Vector m_vTangentSpaceAnchorAtTransitionStart; // 0x05a0, 0xc bytes
-                std::uint8_t pad_05ac[0x4]; // 0x05ac, 0x4 bytes
+                std::uint8_t pad_0510[0x50]; // 0x0510, 0x50 bytes
+                Vector m_vAnchorOffsetRestore; // 0x0560, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hSplineEntity; // 0x056c, 0x4 bytes
+                shade::sdk::vphysics2::IPhysicsBody *m_pSplineBody; // 0x0570, 0x8 bytes
+                bool m_bEnableLateralConstraint; // 0x0578, 0x1 bytes
+                bool m_bEnableVerticalConstraint; // 0x0579, 0x1 bytes
+                bool m_bEnableAngularConstraint; // 0x057a, 0x1 bytes
+                bool m_bEnableLimit; // 0x057b, 0x1 bytes
+                bool m_bFireEventsOnPath; // 0x057c, 0x1 bytes
+                std::uint8_t pad_057d[0x3]; // 0x057d, 0x3 bytes
+                float m_flLinearFrequency; // 0x0580, 0x4 bytes
+                float m_flLinarDampingRatio; // 0x0584, 0x4 bytes
+                float m_flJointFriction; // 0x0588, 0x4 bytes
+                float m_flTransitionTime; // 0x058c, 0x4 bytes
+                std::uint8_t pad_0590[0x10]; // 0x0590, 0x10 bytes
+                VectorWS m_vPreSolveAnchorPos; // 0x05a0, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_StartTransitionTime; // 0x05ac, 0x4 bytes
+                Vector m_vTangentSpaceAnchorAtTransitionStart; // 0x05b0, 0xc bytes
+                std::uint8_t pad_05bc[0x4]; // 0x05bc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSplineConstraintTransitionThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetTransitionTime; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSplineEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSplineConstraint) == 0x5B0, "CSplineConstraint size mismatch");
+            static_assert(sizeof(CSplineConstraint) == 0x5C0, "CSplineConstraint size mismatch");
         }
     }
 }

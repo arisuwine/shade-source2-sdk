@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -44,7 +45,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * char *worldGroupID; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlString worldGroupID; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CSkyboxReference) == 0x5F8, "CSkyboxReference size mismatch");

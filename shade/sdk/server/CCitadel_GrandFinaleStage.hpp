@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,8 +32,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_GrandFinaleStage : public shade::sdk::server::CBaseAnimGraph {
             public:
-                Vector m_vStartPos; // 0x0a90, 0xc bytes
-                Vector m_vEndPos; // 0x0a9c, 0xc bytes
+                VectorWS m_vStartPos; // 0x0a90, 0xc bytes
+                VectorWS m_vEndPos; // 0x0a9c, 0xc bytes
                 shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0aa8, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0aac, 0x4 bytes
                 std::int32_t m_nTouchCount; // 0x0ab0, 0x4 bytes
@@ -40,9 +41,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCitadel_GrandFinaleStage) == 0xAC0, "CCitadel_GrandFinaleStage size mismatch");
         }

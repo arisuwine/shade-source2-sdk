@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x40
+             * Size: 0x50
              * Alignment: 0x10
              * Has Trivial Destructor
              * Construct Allowed
@@ -32,17 +33,19 @@ namespace shade {
                 shade::sdk::animlib::NmCompressionSettings_t__QuantizationRange_t m_translationRangeY; // 0x0008, 0x8 bytes
                 shade::sdk::animlib::NmCompressionSettings_t__QuantizationRange_t m_translationRangeZ; // 0x0010, 0x8 bytes
                 shade::sdk::animlib::NmCompressionSettings_t__QuantizationRange_t m_scaleRange; // 0x0018, 0x8 bytes
-                Quaternion m_constantRotation; // 0x0020, 0x10 bytes
-                bool m_bIsRotationStatic; // 0x0030, 0x1 bytes
-                bool m_bIsTranslationStatic; // 0x0031, 0x1 bytes
-                bool m_bIsScaleStatic; // 0x0032, 0x1 bytes
-                std::uint8_t pad_0033[0xd]; // 0x0033, 0xd bytes
+                std::int32_t m_nTrackReadOffset; // 0x0020, 0x4 bytes
+                std::uint8_t pad_0024[0xc]; // 0x0024, 0xc bytes
+                Quaternion m_constantRotation; // 0x0030, 0x10 bytes
+                bool m_bIsRotationStatic; // 0x0040, 0x1 bytes
+                bool m_bIsTranslationStatic; // 0x0041, 0x1 bytes
+                bool m_bIsScaleStatic; // 0x0042, 0x1 bytes
+                std::uint8_t pad_0043[0xd]; // 0x0043, 0xd bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(NmCompressionSettings_t) == 0x40, "NmCompressionSettings_t size mismatch");
+            static_assert(sizeof(NmCompressionSettings_t) == 0x50, "NmCompressionSettings_t size mismatch");
         }
     }
 }

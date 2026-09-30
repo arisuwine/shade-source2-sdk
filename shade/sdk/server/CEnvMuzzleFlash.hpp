@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvMuzzleFlash : public shade::sdk::server::CPointEntity {
             public:
-                float m_flScale; // 0x04a0, 0x4 bytes
-                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
-                CUtlSymbolLarge m_iszParentAttachment; // 0x04a8, 0x8 bytes
+                float m_flScale; // 0x04b0, 0x4 bytes
+                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlSymbolLarge m_iszParentAttachment; // 0x04b8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputFire; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvMuzzleFlash) == 0x4B0, "CEnvMuzzleFlash size mismatch");
+            static_assert(sizeof(CEnvMuzzleFlash) == 0x4C0, "CEnvMuzzleFlash size mismatch");
         }
     }
 }

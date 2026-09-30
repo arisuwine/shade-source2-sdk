@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x168
+             * Size: 0xe0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_TestDomain_Derived : public shade::sdk::pulse_system::CPulseGraphInstance_TestDomain {
             public:
-                std::int32_t m_nInstanceValueX; // 0x0160, 0x4 bytes
-                std::uint8_t pad_0164[0x4]; // 0x0164, 0x4 bytes
+                std::int32_t m_nInstanceValueX; // 0x00d8, 0x4 bytes
+                std::uint8_t pad_00dc[0x4]; // 0x00dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_TestDomain_Derived) == 0x168, "CPulseGraphInstance_TestDomain_Derived size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_TestDomain_Derived) == 0xE0, "CPulseGraphInstance_TestDomain_Derived size mismatch");
         }
     }
 }

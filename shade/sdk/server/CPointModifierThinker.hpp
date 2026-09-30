@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointModifierThinker : public shade::sdk::server::CBaseEntity {
             public:
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hModifier; // 0x04a0, 0x18 bytes
-                bool m_bSendToClients; // 0x04b8, 0x1 bytes
-                std::uint8_t pad_04b9[0x7]; // 0x04b9, 0x7 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hModifier; // 0x04b0, 0x18 bytes
+                bool m_bSendToClients; // 0x04c8, 0x1 bytes
+                std::uint8_t pad_04c9[0x7]; // 0x04c9, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CPointModifierThinkerOnModifierLost; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointModifierThinker) == 0x4C0, "CPointModifierThinker size mismatch");
+            static_assert(sizeof(CPointModifierThinker) == 0x4D0, "CPointModifierThinker size mismatch");
         }
     }
 }

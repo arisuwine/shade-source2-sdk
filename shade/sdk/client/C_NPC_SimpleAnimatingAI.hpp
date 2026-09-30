@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcb8
+             * Size: 0xdb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +40,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_SimpleAnimatingAI : public shade::sdk::client::CBaseAnimGraph {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hEnemy; // 0x0ca8, 0x4 bytes
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityOwner; // 0x0cac, 0x4 bytes
-                std::uint8_t pad_0cb0[0x8]; // 0x0cb0, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hEnemy; // 0x0da0, 0x4 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityOwner; // 0x0da4, 0x4 bytes
+                std::uint8_t pad_0da8[0x10]; // 0x0da8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_SimpleAnimatingAI) == 0xCB8, "C_NPC_SimpleAnimatingAI size mismatch");
+            static_assert(sizeof(C_NPC_SimpleAnimatingAI) == 0xDB8, "C_NPC_SimpleAnimatingAI size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,9 +24,10 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14
-             * Alignment: 0xff
+             * Size: 0x18
+             * Alignment: 0x4
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct AIScheduleState_t {
@@ -35,13 +37,14 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flTimeCurTaskStarted; // 0x000c, 0x4 bytes
                 shade::sdk::server::AI_TaskFailureCode_t m_taskFailureCode; // 0x0010, 0x2 bytes
                 bool m_bScheduleWasInterrupted; // 0x0012, 0x1 bytes
-                std::uint8_t pad_0013[0x1]; // 0x0013, 0x1 bytes
+                bool m_bForceScheduleInterrupt; // 0x0013, 0x1 bytes
+                std::int32_t m_nStartingTask; // 0x0014, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AIScheduleState_t) == 0x14, "AIScheduleState_t size mismatch");
+            static_assert(sizeof(AIScheduleState_t) == 0x18, "AIScheduleState_t size mismatch");
         }
     }
 }

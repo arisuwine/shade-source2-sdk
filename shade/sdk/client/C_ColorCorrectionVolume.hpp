@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xca0
+             * Size: 0xec0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ColorCorrectionVolume : public shade::sdk::client::C_BaseTrigger {
             public:
-                float m_LastEnterWeight; // 0x0a78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_LastEnterTime; // 0x0a7c, 0x4 bytes
-                float m_LastExitWeight; // 0x0a80, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_LastExitTime; // 0x0a84, 0x4 bytes
-                bool m_bEnabled; // 0x0a88, 0x1 bytes
-                std::uint8_t pad_0a89[0x3]; // 0x0a89, 0x3 bytes
-                float m_MaxWeight; // 0x0a8c, 0x4 bytes
-                float m_FadeDuration; // 0x0a90, 0x4 bytes
-                float m_Weight; // 0x0a94, 0x4 bytes
-                char m_lookupFilename[0x200]; // 0x0a98, 0x200 bytes
-                std::uint8_t pad_0c98[0x8]; // 0x0c98, 0x8 bytes
+                float m_LastEnterWeight; // 0x0c98, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastEnterTime; // 0x0c9c, 0x4 bytes
+                float m_LastExitWeight; // 0x0ca0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastExitTime; // 0x0ca4, 0x4 bytes
+                bool m_bEnabled; // 0x0ca8, 0x1 bytes
+                std::uint8_t pad_0ca9[0x3]; // 0x0ca9, 0x3 bytes
+                float m_MaxWeight; // 0x0cac, 0x4 bytes
+                float m_FadeDuration; // 0x0cb0, 0x4 bytes
+                float m_Weight; // 0x0cb4, 0x4 bytes
+                char m_lookupFilename[0x200]; // 0x0cb8, 0x200 bytes
+                std::uint8_t pad_0eb8[0x8]; // 0x0eb8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_ColorCorrectionVolume) == 0xCA0, "C_ColorCorrectionVolume size mismatch");
+            static_assert(sizeof(C_ColorCorrectionVolume) == 0xEC0, "C_ColorCorrectionVolume size mismatch");
         }
     }
 }

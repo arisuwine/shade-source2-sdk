@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x920
+             * Size: 0x930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_CloakingDevice_Active_Ambush_VData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisRevealedParticle; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbushParticle; // 0x0830, 0xe0 bytes
-                CSoundEventName m_strActivateAmbushSound; // 0x0910, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisRevealedParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbushParticle; // 0x0840, 0xe0 bytes
+                CSoundEventName m_strActivateAmbushSound; // 0x0920, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_CloakingDevice_Active_Ambush_VData) == 0x920, "CModifier_CloakingDevice_Active_Ambush_VData size mismatch");
+            static_assert(sizeof(CModifier_CloakingDevice_Active_Ambush_VData) == 0x930, "CModifier_CloakingDevice_Active_Ambush_VData size mismatch");
         }
     }
 }

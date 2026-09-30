@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x98
+             * Size: 0x128
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_WaitForCursorsWithTagBase : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                std::int32_t m_nCursorsAllowedToWait; // 0x0048, 0x4 bytes
-                std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WaitComplete; // 0x0050, 0x48 bytes
+                std::int32_t m_nCursorsAllowedToWait; // 0x00d8, 0x4 bytes
+                std::uint8_t pad_00dc[0x4]; // 0x00dc, 0x4 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WaitComplete; // 0x00e0, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_WaitForCursorsWithTagBase) == 0x98, "CPulseCell_WaitForCursorsWithTagBase size mismatch");
+            static_assert(sizeof(CPulseCell_WaitForCursorsWithTagBase) == 0x128, "CPulseCell_WaitForCursorsWithTagBase size mismatch");
         }
     }
 }

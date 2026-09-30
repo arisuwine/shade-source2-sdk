@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x920
+             * Size: 0xa30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerDetectExplosion : public shade::sdk::server::CBaseTrigger {
             public:
-                std::uint8_t pad_08e0[0x28]; // 0x08e0, 0x28 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDetectedExplosion; // 0x0908, 0x18 bytes
+                std::uint8_t pad_09f0[0x28]; // 0x09f0, 0x28 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDetectedExplosion; // 0x0a18, 0x18 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CTriggerDetectExplosion) == 0x920, "CTriggerDetectExplosion size mismatch");
+            static_assert(sizeof(CTriggerDetectExplosion) == 0xA30, "CTriggerDetectExplosion size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1948
+             * Size: 0x14d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_NetShotVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootParticle; // 0x1818, 0xe0 bytes
-                CSoundEventName m_strShootSound; // 0x18f8, 0x10 bytes
-                CSoundEventName m_strHitConfirmSound; // 0x1908, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RootModifier; // 0x1918, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1928, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BonusDebuffModifier; // 0x1938, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootParticle; // 0x13a0, 0xe0 bytes
+                CSoundEventName m_strShootSound; // 0x1480, 0x10 bytes
+                CSoundEventName m_strHitConfirmSound; // 0x1490, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RootModifier; // 0x14a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x14b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BonusDebuffModifier; // 0x14c0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_NetShotVData) == 0x1948, "CCitadel_Ability_Werewolf_NetShotVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_NetShotVData) == 0x14D0, "CCitadel_Ability_Werewolf_NetShotVData size mismatch");
         }
     }
 }

@@ -12,17 +12,19 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/ENeutralTrooperType.hpp"
+#include "shade/sdk/client/ENeutralNPCType.hpp"
+#include "shade/sdk/entity2/CEntityIOOutput.hpp"
 #include "shade/sdk/server/CServerOnlyPointEntity.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoTrooperNeutralSpawn : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                std::int32_t m_iCoverGroupID; // 0x04a0, 0x4 bytes
-                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
-                CUtlSymbolLarge m_iszSquadName; // 0x04a8, 0x8 bytes
-                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
-                shade::sdk::client::ENeutralTrooperType m_eTrooperType; // 0x04b8, 0x4 bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNeutralKilled; // 0x04b0, 0x18 bytes
+                CUtlSymbolLarge m_iszSquadName; // 0x04c8, 0x8 bytes
+                shade::sdk::client::ENeutralNPCType m_eNeutralNPCType; // 0x04d0, 0x4 bytes
+                std::uint8_t pad_04d4[0x4]; // 0x04d4, 0x4 bytes
+                CUtlSymbolLarge m_iszNeutralSubclass; // 0x04d8, 0x8 bytes
+                std::uint8_t pad_04e0[0x10]; // 0x04e0, 0x10 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNeutralTakeDamage; // 0x04f0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoTrooperNeutralSpawn) == 0x4C0, "CInfoTrooperNeutralSpawn size mismatch");
+            static_assert(sizeof(CInfoTrooperNeutralSpawn) == 0x508, "CInfoTrooperNeutralSpawn size mismatch");
         }
     }
 }

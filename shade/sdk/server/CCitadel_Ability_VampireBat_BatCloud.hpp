@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1318
+             * Size: 0x1998
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_BatCloud : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x20]; // 0x0f70, 0x20 bytes
-                shade::sdk::entity2::GameTime_t m_flBatCloudEndTime; // 0x0f90, 0x4 bytes
-                std::uint8_t pad_0f94[0x384]; // 0x0f94, 0x384 bytes
+                std::uint8_t pad_14a0[0x20]; // 0x14a0, 0x20 bytes
+                shade::sdk::entity2::GameTime_t m_flBatCloudEndTime; // 0x14c0, 0x4 bytes
+                std::uint8_t pad_14c4[0x4d4]; // 0x14c4, 0x4d4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_BatCloud) == 0x1318, "CCitadel_Ability_VampireBat_BatCloud size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_BatCloud) == 0x1998, "CCitadel_Ability_VampireBat_BatCloud size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8c0
+             * Size: 0x9b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncTankTrain : public shade::sdk::server::CFuncTrackTrain {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x08a8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x09a0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CFuncTankTrain) == 0x8C0, "CFuncTankTrain size mismatch");
+            static_assert(sizeof(CFuncTankTrain) == 0x9B8, "CFuncTankTrain size mismatch");
         }
     }
 }

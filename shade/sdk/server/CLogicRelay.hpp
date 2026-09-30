@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d8
+             * Size: 0x4e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicRelay : public shade::sdk::server::CLogicalEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnSpawn; // 0x04a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x04b8, 0x18 bytes
-                bool m_bDisabled; // 0x04d0, 0x1 bytes
-                bool m_bWaitForRefire; // 0x04d1, 0x1 bytes
-                bool m_bTriggerOnce; // 0x04d2, 0x1 bytes
-                bool m_bFastRetrigger; // 0x04d3, 0x1 bytes
-                bool m_bPassthoughCaller; // 0x04d4, 0x1 bytes
-                std::uint8_t pad_04d5[0x3]; // 0x04d5, 0x3 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnSpawn; // 0x04b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x04c8, 0x18 bytes
+                bool m_bDisabled; // 0x04e0, 0x1 bytes
+                bool m_bWaitForRefire; // 0x04e1, 0x1 bytes
+                bool m_bTriggerOnce; // 0x04e2, 0x1 bytes
+                bool m_bFastRetrigger; // 0x04e3, 0x1 bytes
+                bool m_bPassthoughCaller; // 0x04e4, 0x1 bytes
+                std::uint8_t pad_04e5[0x3]; // 0x04e5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CLogicRelay) == 0x4D8, "CLogicRelay size mismatch");
+            static_assert(sizeof(CLogicRelay) == 0x4E8, "CLogicRelay size mismatch");
         }
     }
 }

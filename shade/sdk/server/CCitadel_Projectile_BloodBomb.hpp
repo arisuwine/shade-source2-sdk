@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x890
+             * Size: 0x998
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_BloodBomb : public shade::sdk::server::CCitadelProjectile {
             public:
-                bool m_bSecondBomb; // 0x0860, 0x1 bytes
-                std::uint8_t pad_0861[0x3]; // 0x0861, 0x3 bytes
-                std::int32_t m_nBeepSoundBuildupCount; // 0x0864, 0x4 bytes
-                float m_flBeepSoundIntervalBias; // 0x0868, 0x4 bytes
-                float m_flBeepSoundMaxFrequency; // 0x086c, 0x4 bytes
-                float m_flArmingDuration; // 0x0870, 0x4 bytes
-                std::uint8_t pad_0874[0x4]; // 0x0874, 0x4 bytes
-                CUtlVector<float> m_vecBeepIntervals; // 0x0878, 0x18 bytes
+                bool m_bSecondBomb; // 0x0968, 0x1 bytes
+                std::uint8_t pad_0969[0x3]; // 0x0969, 0x3 bytes
+                std::int32_t m_nBeepSoundBuildupCount; // 0x096c, 0x4 bytes
+                float m_flBeepSoundIntervalBias; // 0x0970, 0x4 bytes
+                float m_flBeepSoundMaxFrequency; // 0x0974, 0x4 bytes
+                float m_flArmingDuration; // 0x0978, 0x4 bytes
+                std::uint8_t pad_097c[0x4]; // 0x097c, 0x4 bytes
+                CUtlVector<float> m_vecBeepIntervals; // 0x0980, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_BloodBomb) == 0x890, "CCitadel_Projectile_BloodBomb size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_BloodBomb) == 0x998, "CCitadel_Projectile_BloodBomb size mismatch");
         }
     }
 }

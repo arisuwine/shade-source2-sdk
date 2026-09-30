@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x970
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticShotVData : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0880, 0xe0 bytes
-                CSoundEventName m_ExplodeSound; // 0x0960, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0890, 0xe0 bytes
+                CSoundEventName m_ExplodeSound; // 0x0970, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticShotVData) == 0x970, "CCitadel_Modifier_MysticShotVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticShotVData) == 0x980, "CCitadel_Modifier_MysticShotVData size mismatch");
         }
     }
 }

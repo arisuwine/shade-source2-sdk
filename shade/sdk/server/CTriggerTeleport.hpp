@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f0
+             * Size: 0xa00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerTeleport : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlSymbolLarge m_iLandmark; // 0x08e0, 0x8 bytes
-                bool m_bUseLandmarkAngles; // 0x08e8, 0x1 bytes
-                bool m_bMirrorPlayer; // 0x08e9, 0x1 bytes
-                bool m_bCheckDestIfClearForPlayer; // 0x08ea, 0x1 bytes
-                std::uint8_t pad_08eb[0x5]; // 0x08eb, 0x5 bytes
+                CUtlSymbolLarge m_iLandmark; // 0x09f0, 0x8 bytes
+                bool m_bUseLandmarkAngles; // 0x09f8, 0x1 bytes
+                bool m_bMirrorPlayer; // 0x09f9, 0x1 bytes
+                bool m_bCheckDestIfClearForPlayer; // 0x09fa, 0x1 bytes
+                std::uint8_t pad_09fb[0x5]; // 0x09fb, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerTeleport) == 0x8F0, "CTriggerTeleport size mismatch");
+            static_assert(sizeof(CTriggerTeleport) == 0xA00, "CTriggerTeleport size mismatch");
         }
     }
 }

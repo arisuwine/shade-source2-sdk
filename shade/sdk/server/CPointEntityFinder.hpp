@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,23 +41,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointEntityFinder : public shade::sdk::server::CBaseEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x04a0, 0x4 bytes
-                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
-                CUtlSymbolLarge m_iFilterName; // 0x04a8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseFilter> m_hFilter; // 0x04b0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x04b0, 0x4 bytes
                 std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
-                CUtlSymbolLarge m_iRefName; // 0x04b8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hReference; // 0x04c0, 0x4 bytes
-                shade::sdk::server::EntFinderMethod_t m_FindMethod; // 0x04c4, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFoundEntity; // 0x04c8, 0x18 bytes
+                CUtlSymbolLarge m_iFilterName; // 0x04b8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseFilter> m_hFilter; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
+                CUtlSymbolLarge m_iRefName; // 0x04c8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hReference; // 0x04d0, 0x4 bytes
+                shade::sdk::server::EntFinderMethod_t m_FindMethod; // 0x04d4, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFoundEntity; // 0x04d8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputFindEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointEntityFinder) == 0x4E0, "CPointEntityFinder size mismatch");
+            static_assert(sizeof(CPointEntityFinder) == 0x4F0, "CPointEntityFinder size mismatch");
         }
     }
 }

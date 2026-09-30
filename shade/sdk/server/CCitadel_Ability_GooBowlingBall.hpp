@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1928
+             * Size: 0x20f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,27 +41,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_GooBowlingBall : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x700]; // 0x0f70, 0x700 bytes
-                std::int32_t m_nAirJumpsLeft; // 0x1670, 0x4 bytes
-                bool m_bIsRolling; // 0x1674, 0x1 bytes
-                std::uint8_t pad_1675[0x3]; // 0x1675, 0x3 bytes
-                CHandle<shade::sdk::server::CCitadelViscousBall> m_hBall; // 0x1678, 0x4 bytes
-                shade::sdk::client::EViscousBowlingBallState_t m_eRollingState; // 0x167c, 0x1 bytes
-                std::uint8_t pad_167d[0x3]; // 0x167d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x1680, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextWallCheck; // 0x1684, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRollStartTime; // 0x1688, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flWallExitTime; // 0x168c, 0x4 bytes
-                Vector m_vecWallExitVelocity; // 0x1690, 0xc bytes
-                std::uint8_t pad_169c[0x28c]; // 0x169c, 0x28c bytes
+                std::uint8_t pad_14a0[0x9a0]; // 0x14a0, 0x9a0 bytes
+                std::int32_t m_nAirJumpsLeft; // 0x1e40, 0x4 bytes
+                bool m_bIsRolling; // 0x1e44, 0x1 bytes
+                std::uint8_t pad_1e45[0x3]; // 0x1e45, 0x3 bytes
+                CHandle<shade::sdk::server::CCitadelViscousBall> m_hBall; // 0x1e48, 0x4 bytes
+                shade::sdk::client::EViscousBowlingBallState_t m_eRollingState; // 0x1e4c, 0x1 bytes
+                std::uint8_t pad_1e4d[0x3]; // 0x1e4d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x1e50, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextWallCheck; // 0x1e54, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRollStartTime; // 0x1e58, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flWallExitTime; // 0x1e5c, 0x4 bytes
+                Vector m_vecWallExitVelocity; // 0x1e60, 0xc bytes
+                std::uint8_t pad_1e6c[0x28c]; // 0x1e6c, 0x28c bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_GooBowlingBall) == 0x1928, "CCitadel_Ability_GooBowlingBall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_GooBowlingBall) == 0x20F8, "CCitadel_Ability_GooBowlingBall size mismatch");
         }
     }
 }

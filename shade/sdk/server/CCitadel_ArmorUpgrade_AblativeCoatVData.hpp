@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1908
+             * Size: 0x1500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_AblativeCoatVData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RestoreEffectModifier; // 0x18b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnTakeDamageEffectModifier; // 0x18c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnBreakEffectModifier; // 0x18d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ResistBuffModifier; // 0x18e8, 0x10 bytes
-                float m_flOnTakeDamageEffectDuration; // 0x18f8, 0x4 bytes
-                float m_flOnBreakEffectDuration; // 0x18fc, 0x4 bytes
-                float m_flOnRestoreEffectDuration; // 0x1900, 0x4 bytes
-                std::uint8_t pad_1904[0x4]; // 0x1904, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RestoreEffectModifier; // 0x14b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnTakeDamageEffectModifier; // 0x14c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnBreakEffectModifier; // 0x14d0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ResistBuffModifier; // 0x14e0, 0x10 bytes
+                float m_flOnTakeDamageEffectDuration; // 0x14f0, 0x4 bytes
+                float m_flOnBreakEffectDuration; // 0x14f4, 0x4 bytes
+                float m_flOnRestoreEffectDuration; // 0x14f8, 0x4 bytes
+                std::uint8_t pad_14fc[0x4]; // 0x14fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_AblativeCoatVData) == 0x1908, "CCitadel_ArmorUpgrade_AblativeCoatVData size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_AblativeCoatVData) == 0x1500, "CCitadel_ArmorUpgrade_AblativeCoatVData size mismatch");
         }
     }
 }

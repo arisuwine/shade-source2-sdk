@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1688
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_TechDamagePulseVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle; // 0x18b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1998, 0xe0 bytes
-                CSoundEventName m_strPulseTickSound; // 0x1a78, 0x10 bytes
-                std::int32_t m_iMaxTargets; // 0x1a88, 0x4 bytes
-                std::uint8_t pad_1a8c[0x4]; // 0x1a8c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle; // 0x14b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1590, 0xe0 bytes
+                CSoundEventName m_strPulseTickSound; // 0x1670, 0x10 bytes
+                std::int32_t m_iMaxTargets; // 0x1680, 0x4 bytes
+                std::uint8_t pad_1684[0x4]; // 0x1684, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_TechDamagePulseVData) == 0x1A90, "CCitadel_Item_TechDamagePulseVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_TechDamagePulseVData) == 0x1688, "CCitadel_Item_TechDamagePulseVData size mismatch");
         }
     }
 }

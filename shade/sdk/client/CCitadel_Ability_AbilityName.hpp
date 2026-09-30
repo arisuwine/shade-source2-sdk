@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x11f0
+             * Size: 0x16f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_AbilityName : public shade::sdk::client::CCitadelBaseTriggerAbility {
             public:
-                shade::sdk::client::CCitadel_Ability_Doorman_Doorway *m_hDoorwayAbility; // 0x11e8, 0x8 bytes
+                shade::sdk::client::CCitadel_Ability_Doorman_Doorway *m_hDoorwayAbility; // 0x16e8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_AbilityName) == 0x11F0, "CCitadel_Ability_AbilityName size mismatch");
+            static_assert(sizeof(CCitadel_Ability_AbilityName) == 0x16F0, "CCitadel_Ability_AbilityName size mismatch");
         }
     }
 }

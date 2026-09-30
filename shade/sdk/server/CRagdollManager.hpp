@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CRagdollManager : public shade::sdk::server::CBaseEntity {
             public:
-                std::int8_t m_iCurrentMaxRagdollCount; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x3]; // 0x04a1, 0x3 bytes
-                std::int32_t m_iMaxRagdollCount; // 0x04a4, 0x4 bytes
-                bool m_bSaveImportant; // 0x04a8, 0x1 bytes
-                bool m_bCanTakeDamage; // 0x04a9, 0x1 bytes
-                std::uint8_t pad_04aa[0x6]; // 0x04aa, 0x6 bytes
+                std::int8_t m_iCurrentMaxRagdollCount; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                std::int32_t m_iMaxRagdollCount; // 0x04b4, 0x4 bytes
+                bool m_bSaveImportant; // 0x04b8, 0x1 bytes
+                bool m_bCanTakeDamage; // 0x04b9, 0x1 bytes
+                std::uint8_t pad_04ba[0x6]; // 0x04ba, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t InputSetMaxRagdollCount; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CRagdollManager) == 0x4B0, "CRagdollManager size mismatch");
+            static_assert(sizeof(CRagdollManager) == 0x4C0, "CRagdollManager size mismatch");
         }
     }
 }

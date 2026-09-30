@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,8 +21,16 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            class C_BaseEntity;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace client {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xde8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPunchableNeutralGold : public shade::sdk::client::C_CitadelItemPickup {
             public:
+                CHandle<shade::sdk::client::C_BaseEntity> m_hVictimPlayer; // 0x0de0, 0x4 bytes
+                std::uint8_t pad_0de4[0x4]; // 0x0de4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPunchableNeutralGold) == 0xCF0, "CCitadelItemPunchableNeutralGold size mismatch");
+            static_assert(sizeof(CCitadelItemPunchableNeutralGold) == 0xDE8, "CCitadelItemPunchableNeutralGold size mismatch");
         }
     }
 }

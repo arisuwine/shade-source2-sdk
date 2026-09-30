@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +33,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemCrateSpawn : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                std::uint8_t pad_04a0[0x18]; // 0x04a0, 0x18 bytes
-                shade::sdk::client::ECrateLootType_t m_eLootType; // 0x04b8, 0x4 bytes
-                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x04bc, 0x4 bytes
-                std::uint8_t pad_04c0[0x8]; // 0x04c0, 0x8 bytes
+                std::uint8_t pad_04b0[0x10]; // 0x04b0, 0x10 bytes
+                shade::sdk::client::ECrateLootType_t m_eLootType; // 0x04c0, 0x4 bytes
+                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x04c4, 0x4 bytes
+                std::uint8_t pad_04c8[0x8]; // 0x04c8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemCrateSpawn) == 0x4C8, "CItemCrateSpawn size mismatch");
+            static_assert(sizeof(CItemCrateSpawn) == 0x4D0, "CItemCrateSpawn size mismatch");
         }
     }
 }

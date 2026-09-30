@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x680
+             * Size: 0x698
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +34,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSoundOpvarSetOBBEntitySetOpvarThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetOBBEntity) == 0x680, "CSoundOpvarSetOBBEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetOBBEntity) == 0x698, "CSoundOpvarSetOBBEntity size mismatch");
         }
     }
 }

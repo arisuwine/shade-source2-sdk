@@ -12,36 +12,39 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CPhysicsProp.hpp"
+#include "shade/sdk/client/ShatterGlassEntityPoolState_t.hpp"
+#include "shade/sdk/server/CBaseModelEntity.hpp"
 #include "shade/sdk/server/shard_model_desc_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xdf0
-             * Alignment: 0x10
+             * Size: 0x908
+             * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CShatterGlassShardPhysics : public shade::sdk::server::CPhysicsProp {
+            class CShatterGlassShardPhysics : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bDebris; // 0x0d60, 0x1 bytes
-                std::uint8_t pad_0d61[0x3]; // 0x0d61, 0x3 bytes
-                std::uint32_t m_hParentShard; // 0x0d64, 0x4 bytes
-                shade::sdk::server::shard_model_desc_t m_ShardDesc; // 0x0d68, 0x80 bytes
-                std::uint8_t pad_0de8[0x8]; // 0x0de8, 0x8 bytes
+                std::uint32_t m_hParentShard; // 0x0878, 0x4 bytes
+                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
+                shade::sdk::server::shard_model_desc_t m_ShardDesc; // 0x0880, 0x80 bytes
+                shade::sdk::client::ShatterGlassEntityPoolState_t m_nPoolState; // 0x0900, 0x4 bytes
+                bool m_bTouchedByPlayer; // 0x0904, 0x1 bytes
+                std::uint8_t pad_0905[0x3]; // 0x0905, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CShatterGlassShardPhysics) == 0xDF0, "CShatterGlassShardPhysics size mismatch");
+            static_assert(sizeof(CShatterGlassShardPhysics) == 0x908, "CShatterGlassShardPhysics size mismatch");
         }
     }
 }

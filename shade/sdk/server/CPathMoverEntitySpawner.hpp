@@ -12,18 +12,21 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/entity2/CEntityIOOutput.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CLogicalEntity.hpp"
+#include "shade/sdk/server/CPathMoverEntitySpawner__TemplateChoiceStrategy_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             class CFuncMover;
             class CPathMover;
-            class CPathMoverEntitySpawn;
+            class PathMoverEntitySpawn;
         }
     }
 }
@@ -32,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x500
+             * Size: 0x5c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,27 +44,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathMoverEntitySpawner : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_szSpawnTemplates[0x4]; // 0x04a0, 0x20 bytes
-                std::int32_t m_nSpawnIndex; // 0x04c0, 0x4 bytes
-                CHandle<shade::sdk::server::CPathMover> m_hPathMover; // 0x04c4, 0x4 bytes
-                float m_flSpawnFrequencySeconds; // 0x04c8, 0x4 bytes
-                float m_flSpawnFrequencyDistToNearestMover; // 0x04cc, 0x4 bytes
-                CUtlHashtable<CHandle<shade::sdk::server::CFuncMover>, shade::sdk::server::CPathMoverEntitySpawn> m_mapSpawnedMoverTemplates; // 0x04d0, 0x20 bytes
-                std::int32_t m_nMaxActive; // 0x04f0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSpawnTime; // 0x04f4, 0x4 bytes
-                bool m_bEnabled; // 0x04f8, 0x1 bytes
-                std::uint8_t pad_04f9[0x7]; // 0x04f9, 0x7 bytes
+                shade::sdk::server::CPathMoverEntitySpawner__TemplateChoiceStrategy_t m_eTemplateChoiceStrategy; // 0x04b0, 0x4 bytes
+                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlSymbolLarge m_szSpawnTemplates[0x4]; // 0x04b8, 0x20 bytes
+                std::int32_t m_szSpawnTemplateParams[0x4]; // 0x04d8, 0x10 bytes
+                std::int32_t m_szSpawnTemplateCount[0x4]; // 0x04e8, 0x10 bytes
+                std::int32_t m_nSpawnIndex; // 0x04f8, 0x4 bytes
+                CHandle<shade::sdk::server::CPathMover> m_hPathMover; // 0x04fc, 0x4 bytes
+                float m_flSpawnFrequencySeconds; // 0x0500, 0x4 bytes
+                float m_flSpawnFrequencyDistToNearestMover; // 0x0504, 0x4 bytes
+                CUtlHashtable<CHandle<shade::sdk::server::CFuncMover>, shade::sdk::server::PathMoverEntitySpawn> m_mapSpawnedMoverTemplates; // 0x0508, 0x20 bytes
+                std::int32_t m_nMaxActive; // 0x0528, 0x4 bytes
+                std::int32_t m_nSpawnNum; // 0x052c, 0x4 bytes
+                std::int32_t m_nSpawnActive; // 0x0530, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSpawnTime; // 0x0534, 0x4 bytes
+                bool m_bEnabled; // 0x0538, 0x1 bytes
+                bool m_bDestroyMoverOnArrivedAtEnd; // 0x0539, 0x1 bytes
+                std::uint8_t pad_053a[0x6]; // 0x053a, 0x6 bytes
+                CUtlVector<CHandle<shade::sdk::server::CFuncMover>> m_vecQueuedRemovals; // 0x0540, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTemplateSpawned; // 0x0558, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTemplateGroupSpawned; // 0x0570, 0x18 bytes
+                CUtlSymbolLarge m_iszPathMoverName; // 0x0588, 0x8 bytes
+                bool m_bPrepopulateOnSpawn; // 0x0590, 0x1 bytes
+                std::uint8_t pad_0591[0x7]; // 0x0591, 0x7 bytes
+                CUtlSymbolLarge m_iszPathNodeStartName; // 0x0598, 0x8 bytes
+                std::uint8_t pad_05a0[0xc]; // 0x05a0, 0xc bytes
+                VectorWS m_vMoverSpawnPos; // 0x05ac, 0xc bytes
+                bool m_bRunningDebugThink; // 0x05b8, 0x1 bytes
+                std::uint8_t pad_05b9[0x7]; // 0x05b9, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CPathMoverEntitySpawnerSpawnThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPathMoverEntitySpawner) == 0x500, "CPathMoverEntitySpawner size mismatch");
+            static_assert(sizeof(CPathMoverEntitySpawner) == 0x5C0, "CPathMoverEntitySpawner size mismatch");
         }
     }
 }

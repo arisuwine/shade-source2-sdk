@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1920
+             * Size: 0x14a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,17 +43,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelAbilityChargedBombVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ChargeBombModifier; // 0x1818, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1828, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x1908, 0x10 bytes
-                float m_flChargeForMaxDamage; // 0x1918, 0x4 bytes
-                float m_flMinDamagePercent; // 0x191c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ChargeBombModifier; // 0x13a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13b0, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1490, 0x10 bytes
+                float m_flChargeForMaxDamage; // 0x14a0, 0x4 bytes
+                float m_flMinDamagePercent; // 0x14a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelAbilityChargedBombVData) == 0x1920, "CCitadelAbilityChargedBombVData size mismatch");
+            static_assert(sizeof(CCitadelAbilityChargedBombVData) == 0x14A8, "CCitadelAbilityChargedBombVData size mismatch");
         }
     }
 }

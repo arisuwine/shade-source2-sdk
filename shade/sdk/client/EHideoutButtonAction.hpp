@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -28,8 +29,10 @@ namespace shade {
                 k_eHeroReleaseVote = 0x8,
                 k_eFireEntityOutput = 0x9,
                 k_eSeasonalEvent = 0xa,
-                k_eWardrobe = 0xb,
-                k_eRankedHub = 0xc
+                k_eRankedHub = 0xc,
+                k_eServerCallback = 0xd,
+                k_eHeroReleaseVoteInGame = 0x12,
+                k_eVoiceLines = 0x13
             };
         }
     }

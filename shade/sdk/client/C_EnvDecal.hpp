@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9e0
+             * Size: 0xbe8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +39,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EnvDecal : public shade::sdk::client::C_BaseModelEntity {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x09a8, 0x8 bytes
-                float m_flWidth; // 0x09b0, 0x4 bytes
-                float m_flHeight; // 0x09b4, 0x4 bytes
-                float m_flDepth; // 0x09b8, 0x4 bytes
-                std::uint32_t m_nRenderOrder; // 0x09bc, 0x4 bytes
-                bool m_bProjectOnWorld; // 0x09c0, 0x1 bytes
-                bool m_bProjectOnCharacters; // 0x09c1, 0x1 bytes
-                bool m_bProjectOnWater; // 0x09c2, 0x1 bytes
-                std::uint8_t pad_09c3[0x1]; // 0x09c3, 0x1 bytes
-                float m_flDepthSortBias; // 0x09c4, 0x4 bytes
-                std::uint8_t pad_09c8[0x18]; // 0x09c8, 0x18 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x0bb0, 0x8 bytes
+                float m_flWidth; // 0x0bb8, 0x4 bytes
+                float m_flHeight; // 0x0bbc, 0x4 bytes
+                float m_flDepth; // 0x0bc0, 0x4 bytes
+                std::uint32_t m_nRenderOrder; // 0x0bc4, 0x4 bytes
+                bool m_bProjectOnWorld; // 0x0bc8, 0x1 bytes
+                bool m_bProjectOnCharacters; // 0x0bc9, 0x1 bytes
+                bool m_bProjectOnWater; // 0x0bca, 0x1 bytes
+                std::uint8_t pad_0bcb[0x1]; // 0x0bcb, 0x1 bytes
+                float m_flDepthSortBias; // 0x0bcc, 0x4 bytes
+                std::uint8_t pad_0bd0[0x18]; // 0x0bd0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_EnvDecal) == 0x9E0, "C_EnvDecal size mismatch");
+            static_assert(sizeof(C_EnvDecal) == 0xBE8, "C_EnvDecal size mismatch");
         }
     }
 }

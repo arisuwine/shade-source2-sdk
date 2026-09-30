@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9f0
+             * Size: 0xa20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Pickup_Currency_VData : public shade::sdk::server::CCitadel_Pickup_VData {
             public:
-                shade::sdk::client::ECurrencyType m_Currency; // 0x09d8, 0x4 bytes
-                std::int32_t m_nCurrencyAmount; // 0x09dc, 0x4 bytes
-                bool m_bPlayCurrencySound; // 0x09e0, 0x1 bytes
-                std::uint8_t pad_09e1[0x7]; // 0x09e1, 0x7 bytes
-                CUtlString m_strLabelName; // 0x09e8, 0x8 bytes
+                shade::sdk::client::ECurrencyType m_Currency; // 0x0a10, 0x4 bytes
+                bool m_bPlayCurrencySound; // 0x0a14, 0x1 bytes
+                std::uint8_t pad_0a15[0x3]; // 0x0a15, 0x3 bytes
+                CUtlString m_strLabelName; // 0x0a18, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Pickup_Currency_VData) == 0x9F0, "CCitadel_Pickup_Currency_VData size mismatch");
+            static_assert(sizeof(CCitadel_Pickup_Currency_VData) == 0xA20, "CCitadel_Pickup_Currency_VData size mismatch");
         }
     }
 }

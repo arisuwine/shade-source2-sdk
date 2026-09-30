@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,23 +20,23 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x30
-             * Alignment: 0x4
-             * Has Trivial Destructor
+             * Size: 0x48
+             * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CitadelUnitStatusSettings_t {
-                Vector m_vUnitStatusOffset; // 0x0000, 0xc bytes
-                Vector m_vHealthbarOffset; // 0x000c, 0xc bytes
-                Vector m_vDamageNumbersOffset; // 0x0018, 0xc bytes
-                Vector m_vStatusEffectsOffset; // 0x0024, 0xc bytes
+                CUtlStringTokenWithStorage m_strUnitStatusAttachmentName; // 0x0000, 0x18 bytes
+                Vector m_vUnitStatusOffset; // 0x0018, 0xc bytes
+                Vector m_vHealthbarOffset; // 0x0024, 0xc bytes
+                Vector m_vDamageNumbersOffset; // 0x0030, 0xc bytes
+                Vector m_vStatusEffectsOffset; // 0x003c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelUnitStatusSettings_t) == 0x30, "CitadelUnitStatusSettings_t size mismatch");
+            static_assert(sizeof(CitadelUnitStatusSettings_t) == 0x48, "CitadelUnitStatusSettings_t size mismatch");
         }
     }
 }

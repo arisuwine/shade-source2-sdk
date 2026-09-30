@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd08
+             * Size: 0xe00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CPropAnimatingBreakable : public shade::sdk::client::CBaseAnimGraph {
             public:
-                shade::sdk::client::CBreakableStageHelper m_stages; // 0x0ca8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x0cc0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFinalBreak; // 0x0cd8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStageAdvanced; // 0x0cf0, 0x18 bytes
+                shade::sdk::client::CBreakableStageHelper m_stages; // 0x0da0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x0db8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFinalBreak; // 0x0dd0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStageAdvanced; // 0x0de8, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputNextBreakStage; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPropAnimatingBreakable) == 0xD08, "CPropAnimatingBreakable size mismatch");
+            static_assert(sizeof(CPropAnimatingBreakable) == 0xE00, "CPropAnimatingBreakable size mismatch");
         }
     }
 }

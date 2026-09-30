@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,13 +31,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t m_nSampleCount; // Offset: 0x4, Size: 0x1, Size In Bytes: 0x4
-             * std::int32_t m_nMaxSampleCount; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x4
-             * float m_previousSample; // Offset: 0x8, Size: 0x1, Size In Bytes: 0x4
-             * float m_average; // Offset: 0xc, Size: 0x1, Size In Bytes: 0x4
-             * float m_averageDelta; // Offset: 0x10, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CFloatExponentialMovingAverage) == 0x14, "CFloatExponentialMovingAverage size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,35 +31,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvVolumetricFogVolume : public shade::sdk::server::CBaseEntity {
             public:
-                bool m_bActive; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x3]; // 0x04a1, 0x3 bytes
-                Vector m_vBoxMins; // 0x04a4, 0xc bytes
-                Vector m_vBoxMaxs; // 0x04b0, 0xc bytes
-                bool m_bStartDisabled; // 0x04bc, 0x1 bytes
-                bool m_bIndirectUseLPVs; // 0x04bd, 0x1 bytes
-                std::uint8_t pad_04be[0x2]; // 0x04be, 0x2 bytes
-                float m_flStrength; // 0x04c0, 0x4 bytes
-                std::int32_t m_nFalloffShape; // 0x04c4, 0x4 bytes
-                float m_flFalloffExponent; // 0x04c8, 0x4 bytes
-                float m_flHeightFogDepth; // 0x04cc, 0x4 bytes
-                float m_fHeightFogEdgeWidth; // 0x04d0, 0x4 bytes
-                float m_fIndirectLightStrength; // 0x04d4, 0x4 bytes
-                float m_fSunLightStrength; // 0x04d8, 0x4 bytes
-                float m_fNoiseStrength; // 0x04dc, 0x4 bytes
-                Color m_TintColor; // 0x04e0, 0x4 bytes
-                bool m_bOverrideTintColor; // 0x04e4, 0x1 bytes
-                bool m_bOverrideIndirectLightStrength; // 0x04e5, 0x1 bytes
-                bool m_bOverrideSunLightStrength; // 0x04e6, 0x1 bytes
-                bool m_bOverrideNoiseStrength; // 0x04e7, 0x1 bytes
+                bool m_bActive; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                Vector m_vBoxMins; // 0x04b4, 0xc bytes
+                Vector m_vBoxMaxs; // 0x04c0, 0xc bytes
+                bool m_bStartDisabled; // 0x04cc, 0x1 bytes
+                bool m_bIndirectUseLPVs; // 0x04cd, 0x1 bytes
+                std::uint8_t pad_04ce[0x2]; // 0x04ce, 0x2 bytes
+                float m_flStrength; // 0x04d0, 0x4 bytes
+                std::int32_t m_nFalloffShape; // 0x04d4, 0x4 bytes
+                float m_flFalloffExponent; // 0x04d8, 0x4 bytes
+                float m_flHeightFogDepth; // 0x04dc, 0x4 bytes
+                float m_fHeightFogEdgeWidth; // 0x04e0, 0x4 bytes
+                float m_fIndirectLightStrength; // 0x04e4, 0x4 bytes
+                float m_fSunLightStrength; // 0x04e8, 0x4 bytes
+                float m_fNoiseStrength; // 0x04ec, 0x4 bytes
+                Color m_TintColor; // 0x04f0, 0x4 bytes
+                bool m_bOverrideTintColor; // 0x04f4, 0x1 bytes
+                bool m_bOverrideIndirectLightStrength; // 0x04f5, 0x1 bytes
+                bool m_bOverrideSunLightStrength; // 0x04f6, 0x1 bytes
+                bool m_bOverrideNoiseStrength; // 0x04f7, 0x1 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvVolumetricFogVolume) == 0x4E8, "CEnvVolumetricFogVolume size mismatch");
+            static_assert(sizeof(CEnvVolumetricFogVolume) == 0x4F8, "CEnvVolumetricFogVolume size mismatch");
         }
     }
 }

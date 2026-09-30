@@ -12,10 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/animlib/CNmEvent.hpp"
+#include "shade/sdk/animlib/CNmEventTargetEntity_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,6 +31,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmEntityAttributeEventBase : public shade::sdk::animlib::CNmEvent {
             public:
+                shade::sdk::animlib::CNmEventTargetEntity_t m_target; // 0x0018, 0x4 bytes
+                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
                 CUtlString m_attributeName; // 0x0020, 0x8 bytes
                 std::uint8_t pad_0028[0x10]; // 0x0028, 0x10 bytes
             };

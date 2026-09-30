@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0xc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,13 +30,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_SimpleAnimatingAI_GraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraphParamRef<bool> m_bHasTarget; // 0x0090, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_SimpleAnimatingAI_GraphController) == 0xB8, "CNPC_SimpleAnimatingAI_GraphController size mismatch");
+            static_assert(sizeof(CNPC_SimpleAnimatingAI_GraphController) == 0xC0, "CNPC_SimpleAnimatingAI_GraphController size mismatch");
         }
     }
 }

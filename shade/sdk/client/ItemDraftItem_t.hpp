@@ -12,14 +12,17 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
+
+#include "shade/sdk/client/AbilityUpgradeBits_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x38
+             * Size: 0x40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -28,13 +31,16 @@ namespace shade {
             struct ItemDraftItem_t {
                 std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
                 CUtlStringToken m_unItemID; // 0x0030, 0x4 bytes
-                std::int32_t m_nUpgradeBits; // 0x0034, 0x4 bytes
+                shade::sdk::client::AbilityUpgradeBits_t m_nUpgradeBits; // 0x0034, 0x2 bytes
+                std::uint8_t pad_0036[0x2]; // 0x0036, 0x2 bytes
+                std::int32_t m_nAbilityLevel; // 0x0038, 0x4 bytes
+                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ItemDraftItem_t) == 0x38, "ItemDraftItem_t size mismatch");
+            static_assert(sizeof(ItemDraftItem_t) == 0x40, "ItemDraftItem_t size mismatch");
         }
     }
 }

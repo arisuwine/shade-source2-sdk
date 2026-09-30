@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x520
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,35 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CFogController : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::server::fogparams_t m_fog; // 0x04a0, 0x68 bytes
-                bool m_bUseAngles; // 0x0508, 0x1 bytes
-                std::uint8_t pad_0509[0x3]; // 0x0509, 0x3 bytes
-                std::int32_t m_iChangedVariables; // 0x050c, 0x4 bytes
+                shade::sdk::server::fogparams_t m_fog; // 0x04b0, 0x68 bytes
+                bool m_bUseAngles; // 0x0518, 0x1 bytes
+                std::uint8_t pad_0519[0x3]; // 0x0519, 0x3 bytes
+                std::int32_t m_iChangedVariables; // 0x051c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetStartDist; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetEndDist; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxDensity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorSecondary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetFarZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAngles; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSet2DSkyboxFogFactor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorSecondaryLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetStartDistLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetEndDistLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxDensityLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSet2DSkyboxFogFactorLerpTo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartFogTransition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFogControllerSetLerpValues; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFogController) == 0x510, "CFogController size mismatch");
+            static_assert(sizeof(CFogController) == 0x520, "CFogController size mismatch");
         }
     }
 }

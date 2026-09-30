@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x160
+             * Size: 0x188
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CFacingServices_GraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraphParamRef<float> m_flFacingHeading; // 0x0090, 0x28 bytes
-                CAnimGraphParamRef<Vector> m_vFacingTarget; // 0x00b8, 0x28 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_sMovementStrafingState; // 0x00e0, 0x30 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_sFacingReason; // 0x0110, 0x30 bytes
-                CAnimGraphTagOptionalRef m_sFacingModeUsePath; // 0x0140, 0x20 bytes
+                CAnimGraphParamRef<float> m_flFacingHeading; // 0x00c0, 0x28 bytes
+                CAnimGraphParamRef<Vector> m_vFacingTarget; // 0x00e8, 0x28 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sMovementStrafingState; // 0x0110, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sFacingReason; // 0x0140, 0x30 bytes
+                CAnimGraphTagOptionalRef m_sFacingModeUsePath; // 0x0170, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFacingServices_GraphController) == 0x160, "CFacingServices_GraphController size mismatch");
+            static_assert(sizeof(CFacingServices_GraphController) == 0x188, "CFacingServices_GraphController size mismatch");
         }
     }
 }

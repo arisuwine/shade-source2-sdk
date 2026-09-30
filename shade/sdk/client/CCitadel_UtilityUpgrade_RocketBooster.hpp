@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1780
+             * Size: 0x2168
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,23 +33,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_UtilityUpgrade_RocketBooster : public shade::sdk::client::CCitadel_UtilityUpgrade_RocketBoots {
             public:
-                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x12d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x12dc, 0x4 bytes
-                bool m_bCrashingDown; // 0x12e0, 0x1 bytes
-                bool m_bImpulseApplied; // 0x12e1, 0x1 bytes
-                bool m_bCanCrash; // 0x12e2, 0x1 bytes
-                std::uint8_t pad_12e3[0x1]; // 0x12e3, 0x1 bytes
-                Vector m_vecCrashPosition; // 0x12e4, 0xc bytes
-                Vector m_vecCrashDirection; // 0x12f0, 0xc bytes
-                std::uint8_t pad_12fc[0x484]; // 0x12fc, 0x484 bytes
+                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x1838, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x183c, 0x4 bytes
+                bool m_bCrashingDown; // 0x1840, 0x1 bytes
+                bool m_bImpulseApplied; // 0x1841, 0x1 bytes
+                bool m_bCanCrash; // 0x1842, 0x1 bytes
+                std::uint8_t pad_1843[0x1]; // 0x1843, 0x1 bytes
+                VectorWS m_vecCrashPosition; // 0x1844, 0xc bytes
+                Vector m_vecCrashDirection; // 0x1850, 0xc bytes
+                std::uint8_t pad_185c[0x8f4]; // 0x185c, 0x8f4 bytes
+                SndOpEventGuid_t m_InAirLoopSound; // 0x2150, 0x14 bytes
+                std::uint8_t pad_2164[0x4]; // 0x2164, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBooster) == 0x1780, "CCitadel_UtilityUpgrade_RocketBooster size mismatch");
+            static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBooster) == 0x2168, "CCitadel_UtilityUpgrade_RocketBooster size mismatch");
         }
     }
 }

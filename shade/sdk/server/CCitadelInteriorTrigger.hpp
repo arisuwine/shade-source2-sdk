@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f8
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelInteriorTrigger : public shade::sdk::server::CTriggerModifier {
             public:
-                std::int32_t m_nInteriorType; // 0x08f0, 0x4 bytes
-                CUtlStringToken m_tInteriorModifier; // 0x08f4, 0x4 bytes
+                std::int32_t m_nInteriorType; // 0x0a00, 0x4 bytes
+                CUtlStringToken m_tInteriorModifier; // 0x0a04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelInteriorTrigger) == 0x8F8, "CCitadelInteriorTrigger size mismatch");
+            static_assert(sizeof(CCitadelInteriorTrigger) == 0xA08, "CCitadelInteriorTrigger size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x30
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -40,12 +41,14 @@ namespace shade {
                 shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nRetiredAtNodeID; // 0x001c, 0x4 bytes
                 float flLastReferenced; // 0x0020, 0x4 bytes
                 std::int32_t nLastValidEntryIdx; // 0x0024, 0x4 bytes
+                bool bWasAnObservableComputation; // 0x0028, 0x1 bytes
+                std::uint8_t pad_0029[0x7]; // 0x0029, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PulseGraphExecutionHistoryCursorDesc_t) == 0x28, "PulseGraphExecutionHistoryCursorDesc_t size mismatch");
+            static_assert(sizeof(PulseGraphExecutionHistoryCursorDesc_t) == 0x30, "PulseGraphExecutionHistoryCursorDesc_t size mismatch");
         }
     }
 }

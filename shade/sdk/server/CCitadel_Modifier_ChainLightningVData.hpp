@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x970
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChainLightningVData : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x0880, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ChainModifier; // 0x0960, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x0890, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ChainModifier; // 0x0970, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChainLightningVData) == 0x970, "CCitadel_Modifier_ChainLightningVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChainLightningVData) == 0x980, "CCitadel_Modifier_ChainLightningVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -24,7 +25,8 @@ namespace shade {
                 EAbilityType_Item = 0x3,
                 EAbilityType_Innate = 0x4,
                 EAbilityType_Cosmetic = 0x5,
-                EAbilityType_Melee = 0x6
+                EAbilityType_Melee = 0x6,
+                EAbilityType_Held = 0x7
             };
         }
     }

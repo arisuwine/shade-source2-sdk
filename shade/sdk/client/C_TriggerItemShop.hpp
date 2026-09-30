@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa80
+             * Size: 0xca8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_TriggerItemShop : public shade::sdk::client::C_BaseTrigger {
             public:
-                CUtlSymbolLarge m_iszSoundName; // 0x0a78, 0x8 bytes
+                CUtlSymbolLarge m_iszSoundName; // 0x0c98, 0x8 bytes
+                std::int32_t m_iLane; // 0x0ca0, 0x4 bytes
+                std::uint8_t pad_0ca4[0x4]; // 0x0ca4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_TriggerItemShop) == 0xA80, "C_TriggerItemShop size mismatch");
+            static_assert(sizeof(C_TriggerItemShop) == 0xCA8, "C_TriggerItemShop size mismatch");
         }
     }
 }

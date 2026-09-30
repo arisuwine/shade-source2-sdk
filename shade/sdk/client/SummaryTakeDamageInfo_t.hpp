@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,23 +31,24 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x140
-             * Alignment: 0xff
+             * Size: 0x170
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct SummaryTakeDamageInfo_t {
                 std::int32_t nSummarisedCount; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
-                shade::sdk::client::CTakeDamageInfo info; // 0x0008, 0x100 bytes
-                shade::sdk::client::CTakeDamageResult result; // 0x0108, 0x30 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> hTarget; // 0x0138, 0x4 bytes
-                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
+                shade::sdk::client::CTakeDamageInfo info; // 0x0008, 0xf8 bytes
+                shade::sdk::client::CTakeDamageResult result; // 0x0100, 0x68 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> hTarget; // 0x0168, 0x4 bytes
+                std::uint8_t pad_016c[0x4]; // 0x016c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(SummaryTakeDamageInfo_t) == 0x140, "SummaryTakeDamageInfo_t size mismatch");
+            static_assert(sizeof(SummaryTakeDamageInfo_t) == 0x170, "SummaryTakeDamageInfo_t size mismatch");
         }
     }
 }

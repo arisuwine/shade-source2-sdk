@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CScriptNavBlocker : public shade::sdk::server::CFuncNavBlocker {
             public:
-                Vector m_vExtent; // 0x0798, 0xc bytes
-                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
+                Vector m_vExtent; // 0x0890, 0xc bytes
+                std::uint8_t pad_089c[0x4]; // 0x089c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CScriptNavBlocker) == 0x7A8, "CScriptNavBlocker size mismatch");
+            static_assert(sizeof(CScriptNavBlocker) == 0x8A0, "CScriptNavBlocker size mismatch");
         }
     }
 }

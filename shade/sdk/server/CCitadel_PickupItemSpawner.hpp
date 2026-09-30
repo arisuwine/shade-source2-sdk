@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xab0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,14 +34,18 @@ namespace shade {
             public:
                 std::uint8_t pad_0a90[0x8]; // 0x0a90, 0x8 bytes
                 shade::sdk::entity2::GameTime_t m_tNextDropTime; // 0x0a98, 0x4 bytes
-                bool m_bPowerupActive; // 0x0a9c, 0x1 bytes
-                std::uint8_t pad_0a9d[0x3]; // 0x0a9d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tNextPingTime; // 0x0a9c, 0x4 bytes
+                bool m_bPingedPowerup; // 0x0aa0, 0x1 bytes
+                bool m_bPowerupActive; // 0x0aa1, 0x1 bytes
+                std::uint8_t pad_0aa2[0xe]; // 0x0aa2, 0xe bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CCitadel_PickupItemSpawner) == 0xAA0, "CCitadel_PickupItemSpawner size mismatch");
+            static_assert(sizeof(CCitadel_PickupItemSpawner) == 0xAB0, "CCitadel_PickupItemSpawner size mismatch");
         }
     }
 }

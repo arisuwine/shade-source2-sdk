@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -22,7 +23,8 @@ namespace shade {
                 ROTATE_STOP_AT_END = 0x2,
                 ROTATE_LOOK_AT_TARGET = 0x3,
                 ROTATE_LOOK_AT_TARGET_ONLY_YAW = 0x4,
-                ROTATE_RETURN_TO_INITIAL_ORIENTATION = 0x5
+                ROTATE_LOOK_AT_TARGET_ONLY_PITCH = 0x5,
+                ROTATE_RETURN_TO_INITIAL_ORIENTATION = 0x6
             };
         }
     }

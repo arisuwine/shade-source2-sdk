@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -21,7 +22,8 @@ namespace shade {
                 Portrait = 0x1,
                 TeamReveal = 0x2,
                 Profile = 0x3,
-                PostGamePortrait = 0x4
+                PostGamePortrait = 0x4,
+                HeroReveal = 0x5
             };
         }
     }

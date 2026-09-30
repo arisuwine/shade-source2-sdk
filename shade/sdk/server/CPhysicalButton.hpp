@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0x9f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,14 +34,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CPhysicalButtonPhysicsThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysicalButtonButtonTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysicalButtonTriggerAndWait; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysicalButtonButtonBackHome; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysicalButton) == 0x900, "CPhysicalButton size mismatch");
+            static_assert(sizeof(CPhysicalButton) == 0x9F8, "CPhysicalButton size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -28,7 +29,7 @@ namespace shade {
             #pragma pack(push, 1)
             struct RnBodyDesc_t {
                 CUtlString m_sDebugName; // 0x0000, 0x8 bytes
-                Vector m_vPosition; // 0x0008, 0xc bytes
+                VectorWS m_vPosition; // 0x0008, 0xc bytes
                 QuaternionStorage m_qOrientation; // 0x0014, 0x10 bytes
                 Vector m_vLinearVelocity; // 0x0024, 0xc bytes
                 Vector m_vAngularVelocity; // 0x0030, 0xc bytes

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1578
+             * Size: 0x1be0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +33,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tengu_StoneForm : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x388]; // 0x11d8, 0x388 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1560, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLandedTime; // 0x1564, 0x4 bytes
-                bool m_bLanded; // 0x1568, 0x1 bytes
-                bool m_bFalling; // 0x1569, 0x1 bytes
-                bool m_bInStoneForm; // 0x156a, 0x1 bytes
-                std::uint8_t pad_156b[0x1]; // 0x156b, 0x1 bytes
-                float m_flStartHeight; // 0x156c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0x1570, 0x4 bytes
-                std::uint8_t pad_1574[0x4]; // 0x1574, 0x4 bytes
+                std::uint8_t pad_16d8[0x4f0]; // 0x16d8, 0x4f0 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1bc8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLandedTime; // 0x1bcc, 0x4 bytes
+                bool m_bLanded; // 0x1bd0, 0x1 bytes
+                bool m_bFalling; // 0x1bd1, 0x1 bytes
+                bool m_bInStoneForm; // 0x1bd2, 0x1 bytes
+                std::uint8_t pad_1bd3[0x1]; // 0x1bd3, 0x1 bytes
+                float m_flStartHeight; // 0x1bd4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0x1bd8, 0x4 bytes
+                std::uint8_t pad_1bdc[0x4]; // 0x1bdc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tengu_StoneForm) == 0x1578, "CCitadel_Ability_Tengu_StoneForm size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tengu_StoneForm) == 0x1BE0, "CCitadel_Ability_Tengu_StoneForm size mismatch");
         }
     }
 }

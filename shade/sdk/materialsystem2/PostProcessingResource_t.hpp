@@ -12,12 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/materialsystem2/PostProcessingBloomParameters_t.hpp"
 #include "shade/sdk/materialsystem2/PostProcessingFogScatteringParameters_t.hpp"
 #include "shade/sdk/materialsystem2/PostProcessingLocalContrastParameters_t.hpp"
+#include "shade/sdk/materialsystem2/PostProcessingLocalExposureParameters_t.hpp"
 #include "shade/sdk/materialsystem2/PostProcessingTonemapParameters_t.hpp"
 #include "shade/sdk/materialsystem2/PostProcessingVignetteParameters_t.hpp"
 
@@ -25,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace materialsystem2 {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0x158
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -48,13 +50,16 @@ namespace shade {
                 bool m_bHasColorCorrection; // 0x0120, 0x1 bytes
                 bool m_bHasFogScatteringParams; // 0x0121, 0x1 bytes
                 std::uint8_t pad_0122[0x2]; // 0x0122, 0x2 bytes
-                shade::sdk::materialsystem2::PostProcessingFogScatteringParameters_t m_fogScatteringParams; // 0x0124, 0x14 bytes
+                shade::sdk::materialsystem2::PostProcessingFogScatteringParameters_t m_fogScatteringParams; // 0x0124, 0x20 bytes
+                bool m_bHasLocalExposureParams; // 0x0144, 0x1 bytes
+                std::uint8_t pad_0145[0x3]; // 0x0145, 0x3 bytes
+                shade::sdk::materialsystem2::PostProcessingLocalExposureParameters_t m_localExposureParams; // 0x0148, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PostProcessingResource_t) == 0x138, "PostProcessingResource_t size mismatch");
+            static_assert(sizeof(PostProcessingResource_t) == 0x158, "PostProcessingResource_t size mismatch");
         }
     }
 }

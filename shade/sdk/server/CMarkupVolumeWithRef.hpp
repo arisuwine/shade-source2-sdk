@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7e8
+             * Size: 0x8e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CMarkupVolumeWithRef : public shade::sdk::server::CMarkupVolumeTagged {
             public:
-                std::uint8_t pad_07c0[0x8]; // 0x07c0, 0x8 bytes
-                bool m_bUseRef; // 0x07c8, 0x1 bytes
-                std::uint8_t pad_07c9[0x3]; // 0x07c9, 0x3 bytes
-                Vector m_vRefPosEntitySpace; // 0x07cc, 0xc bytes
-                VectorWS m_vRefPosWorldSpace; // 0x07d8, 0xc bytes
-                float m_flRefDot; // 0x07e4, 0x4 bytes
+                std::uint8_t pad_08b8[0x8]; // 0x08b8, 0x8 bytes
+                bool m_bUseRef; // 0x08c0, 0x1 bytes
+                std::uint8_t pad_08c1[0x3]; // 0x08c1, 0x3 bytes
+                Vector m_vRefPosEntitySpace; // 0x08c4, 0xc bytes
+                VectorWS m_vRefPosWorldSpace; // 0x08d0, 0xc bytes
+                float m_flRefDot; // 0x08dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CMarkupVolumeWithRef) == 0x7E8, "CMarkupVolumeWithRef size mismatch");
+            static_assert(sizeof(CMarkupVolumeWithRef) == 0x8E0, "CMarkupVolumeWithRef size mismatch");
         }
     }
 }

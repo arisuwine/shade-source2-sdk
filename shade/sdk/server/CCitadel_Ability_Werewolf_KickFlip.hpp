@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1900
+             * Size: 0x21c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_KickFlip : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bIsLeaping; // 0x0f70, 0x1 bytes
-                std::uint8_t pad_0f71[0x3]; // 0x0f71, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x0f74, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x0f78, 0x4 bytes
-                std::uint8_t pad_0f7c[0x984]; // 0x0f7c, 0x984 bytes
+                bool m_bIsLeaping; // 0x14a0, 0x1 bytes
+                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x14a4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0xd14]; // 0x14ac, 0xd14 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_KickFlip) == 0x1900, "CCitadel_Ability_Werewolf_KickFlip size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_KickFlip) == 0x21C0, "CCitadel_Ability_Werewolf_KickFlip size mismatch");
         }
     }
 }

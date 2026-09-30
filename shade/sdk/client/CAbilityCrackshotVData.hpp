@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b18
+             * Size: 0x16a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCrackshotVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle; // 0x19d8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1ab8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CrackshotImmuneModifier; // 0x1ac8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletResistModifier; // 0x1ad8, 0x10 bytes
-                CSoundEventName m_HeadShotVictimSound; // 0x1ae8, 0x10 bytes
-                CSoundEventName m_HeadShotConfirmationSound; // 0x1af8, 0x10 bytes
-                CSoundEventName m_ReadySound; // 0x1b08, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle; // 0x1560, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1640, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CrackshotImmuneModifier; // 0x1650, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletResistModifier; // 0x1660, 0x10 bytes
+                CSoundEventName m_HeadShotVictimSound; // 0x1670, 0x10 bytes
+                CSoundEventName m_HeadShotConfirmationSound; // 0x1680, 0x10 bytes
+                CSoundEventName m_ReadySound; // 0x1690, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCrackshotVData) == 0x1B18, "CAbilityCrackshotVData size mismatch");
+            static_assert(sizeof(CAbilityCrackshotVData) == 0x16A0, "CAbilityCrackshotVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x550
+             * Size: 0x560
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,37 +32,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CMathCounter : public shade::sdk::server::CLogicalEntity {
             public:
-                float m_flMin; // 0x04a0, 0x4 bytes
-                float m_flMax; // 0x04a4, 0x4 bytes
-                bool m_bHitMin; // 0x04a8, 0x1 bytes
-                bool m_bHitMax; // 0x04a9, 0x1 bytes
-                bool m_bDisabled; // 0x04aa, 0x1 bytes
-                std::uint8_t pad_04ab[0x5]; // 0x04ab, 0x5 bytes
-                CEntityOutputTemplate<float> m_OutValue; // 0x04b0, 0x20 bytes
-                CEntityOutputTemplate<float> m_OnGetValue; // 0x04d0, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnHitMin; // 0x04f0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnHitMax; // 0x0508, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnChangedFromMin; // 0x0520, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnChangedFromMax; // 0x0538, 0x18 bytes
+                float m_flMin; // 0x04b0, 0x4 bytes
+                float m_flMax; // 0x04b4, 0x4 bytes
+                bool m_bHitMin; // 0x04b8, 0x1 bytes
+                bool m_bHitMax; // 0x04b9, 0x1 bytes
+                bool m_bDisabled; // 0x04ba, 0x1 bytes
+                std::uint8_t pad_04bb[0x5]; // 0x04bb, 0x5 bytes
+                CEntityOutputTemplate<float> m_OutValue; // 0x04c0, 0x20 bytes
+                CEntityOutputTemplate<float> m_OnGetValue; // 0x04e0, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnHitMin; // 0x0500, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnHitMax; // 0x0518, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnChangedFromMin; // 0x0530, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnChangedFromMax; // 0x0548, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * float InputAdd; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputDivide; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputMultiply; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetValueNoFire; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSubtract; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetHitMax; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetHitMin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputGetValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t startvalue; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CMathCounter) == 0x550, "CMathCounter size mismatch");
+            static_assert(sizeof(CMathCounter) == 0x560, "CMathCounter size mismatch");
         }
     }
 }

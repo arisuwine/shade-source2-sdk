@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x16b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_ActiveReload_VData : public shade::sdk::client::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SuccessModifier; // 0x18b8, 0x10 bytes
-                CSoundEventName m_strSuccessSound; // 0x18c8, 0x10 bytes
-                CSoundEventName m_strFailureSound; // 0x18d8, 0x10 bytes
-                CSoundEventName m_strWindowEnteredSound; // 0x18e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FailureParticle; // 0x19d8, 0xe0 bytes
-                float m_flGraceTime; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SuccessModifier; // 0x14b0, 0x10 bytes
+                CSoundEventName m_strSuccessSound; // 0x14c0, 0x10 bytes
+                CSoundEventName m_strFailureSound; // 0x14d0, 0x10 bytes
+                CSoundEventName m_strWindowEnteredSound; // 0x14e0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessParticle; // 0x14f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FailureParticle; // 0x15d0, 0xe0 bytes
+                float m_flGraceTime; // 0x16b0, 0x4 bytes
+                std::uint8_t pad_16b4[0x4]; // 0x16b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_ActiveReload_VData) == 0x1AC0, "CItem_ActiveReload_VData size mismatch");
+            static_assert(sizeof(CItem_ActiveReload_VData) == 0x16B8, "CItem_ActiveReload_VData size mismatch");
         }
     }
 }

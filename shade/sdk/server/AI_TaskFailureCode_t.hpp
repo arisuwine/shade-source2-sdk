@@ -12,13 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace server {
             enum class AI_TaskFailureCode_t : std::uint16_t {
                 NO_TASK_FAILURE = 0x0,
-                NO_MOVE_TACTIC_FAILURE = 0x0,
+                NO_TACTIC_FAILURE = 0x0,
                 FAIL_NO_TARGET = 0x1,
                 FAIL_ITEM_NO_FIND = 0x2,
                 FAIL_NO_HINT_NODE = 0x3,
@@ -26,7 +27,6 @@ namespace shade {
                 FAIL_NO_ENEMY = 0x5,
                 FAIL_NO_COVER = 0x6,
                 FAIL_NO_SHOOT = 0x7,
-                FAIL_FIRST_PATH_FAILURE = 0x8,
                 FAIL_NO_ROUTE = 0x8,
                 FAIL_NO_ROUTE_GOAL = 0x9,
                 FAIL_NO_ROUTE_BLOCKED_WORLD = 0xa,
@@ -37,7 +37,6 @@ namespace shade {
                 FAIL_NO_ROUTE_BLOCKED_NPC_START_SOLID = 0xf,
                 FAIL_NO_ROUTE_BLOCKED_LOCAL_NAV = 0x10,
                 FAIL_NO_ROUTE_ILLEGAL = 0x11,
-                FAIL_LAST_PATH_FAILURE = 0x12,
                 FAIL_MOVEMENT_DISABLED = 0x12,
                 FAIL_HINT_ALREADY_RESERVED = 0x13,
                 FAIL_NO_SOUND = 0x14,
@@ -60,7 +59,11 @@ namespace shade {
                 FAIL_NO_PHYSICS = 0x25,
                 FAIL_BAD_HANDSHAKE = 0x26,
                 FAIL_NO_MOVEMENT_GAIT = 0x27,
-                NUM_FAIL_CODES = 0x28
+                FAIL_COVER_GOAL_INVALIDATED = 0x28,
+                FAIL_LOS_GOAL_INVALIDATED = 0x29,
+                NUM_FAIL_CODES = 0x2a,
+                FAIL_FIRST_PATH_FAILURE = 0x8,
+                FAIL_LAST_PATH_FAILURE = 0x11
             };
         }
     }

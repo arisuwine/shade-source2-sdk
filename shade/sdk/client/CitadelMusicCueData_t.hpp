@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x98
+             * Size: 0xa0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -39,22 +40,24 @@ namespace shade {
                 CSoundEventName m_strSoundEvent; // 0x0000, 0x10 bytes
                 shade::sdk::client::EMusicState_t m_nDeferState; // 0x0010, 0x4 bytes
                 float m_flBpm; // 0x0014, 0x4 bytes
-                bool m_bInterruptStop; // 0x0018, 0x1 bytes
-                bool m_bSetToNoneStateWhenFinished; // 0x0019, 0x1 bytes
-                std::uint8_t pad_001a[0x2]; // 0x001a, 0x2 bytes
-                shade::sdk::client::CitadelMusicSyncMode_t m_nSyncMode; // 0x001c, 0x4 bytes
-                CUtlVector<float> m_SyncTimes; // 0x0020, 0x18 bytes
-                float m_flSyncOffset; // 0x0038, 0x4 bytes
-                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
-                CUtlOrderedMap<CUtlString, shade::sdk::client::CitadelMusicChord_t> m_Chords; // 0x0040, 0x28 bytes
-                CUtlVector<CUtlString> m_Arpeggiators; // 0x0068, 0x18 bytes
-                std::uint8_t pad_0080[0x18]; // 0x0080, 0x18 bytes
+                float m_flExitTimeSeconds; // 0x0018, 0x4 bytes
+                bool m_bInterruptStop; // 0x001c, 0x1 bytes
+                bool m_bSetToNoneStateWhenFinished; // 0x001d, 0x1 bytes
+                std::uint8_t pad_001e[0x2]; // 0x001e, 0x2 bytes
+                shade::sdk::client::CitadelMusicSyncMode_t m_nSyncMode; // 0x0020, 0x4 bytes
+                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
+                CUtlVector<float> m_SyncTimes; // 0x0028, 0x18 bytes
+                float m_flSyncOffset; // 0x0040, 0x4 bytes
+                std::uint8_t pad_0044[0x4]; // 0x0044, 0x4 bytes
+                CUtlOrderedMap<CUtlString, shade::sdk::client::CitadelMusicChord_t> m_Chords; // 0x0048, 0x28 bytes
+                CUtlVector<CUtlString> m_Arpeggiators; // 0x0070, 0x18 bytes
+                std::uint8_t pad_0088[0x18]; // 0x0088, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelMusicCueData_t) == 0x98, "CitadelMusicCueData_t size mismatch");
+            static_assert(sizeof(CitadelMusicCueData_t) == 0xA0, "CitadelMusicCueData_t size mismatch");
         }
     }
 }

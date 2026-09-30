@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1868
+             * Size: 0x13f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_SelfZapVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1818, 0x10 bytes
-                CPiecewiseCurve m_healCurve; // 0x1828, 0x40 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x13a0, 0x10 bytes
+                CPiecewiseCurve m_healCurve; // 0x13b0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_SelfZapVData) == 0x1868, "CCitadel_Ability_Frank_SelfZapVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_SelfZapVData) == 0x13F0, "CCitadel_Ability_Frank_SelfZapVData size mismatch");
         }
     }
 }

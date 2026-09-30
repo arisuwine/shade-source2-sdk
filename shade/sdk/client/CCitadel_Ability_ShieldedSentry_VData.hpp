@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1840
+             * Size: 0x13c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ShieldedSentry_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_InnateModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DebuffModifier; // 0x1828, 0x10 bytes
-                float m_flDamageFalloffEndScale; // 0x1838, 0x4 bytes
-                std::uint8_t pad_183c[0x4]; // 0x183c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_InnateModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DebuffModifier; // 0x13b0, 0x10 bytes
+                float m_flDamageFalloffEndScale; // 0x13c0, 0x4 bytes
+                std::uint8_t pad_13c4[0x4]; // 0x13c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ShieldedSentry_VData) == 0x1840, "CCitadel_Ability_ShieldedSentry_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ShieldedSentry_VData) == 0x13C8, "CCitadel_Ability_ShieldedSentry_VData size mismatch");
         }
     }
 }

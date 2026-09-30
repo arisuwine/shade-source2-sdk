@@ -12,35 +12,30 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/animationsystem/HSequence.hpp"
 #include "shade/sdk/client/AnimLoopMode_t.hpp"
 #include "shade/sdk/client/AnimationAlgorithm_t.hpp"
+#include "shade/sdk/client/CAnimGraph2InstancePtr.hpp"
+#include "shade/sdk/client/CExternalAnimGraphList.hpp"
 #include "shade/sdk/client/CSkeletonAnimationController.hpp"
 #include "shade/sdk/client/ExternalAnimGraphHandle_t.hpp"
 #include "shade/sdk/client/SequenceFinishNotifyState_t.hpp"
 #include "shade/sdk/entity2/GameTick_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/resourcefile/ResourceId_t.hpp"
-#include "shade/sdk/server/CAnimGraphNetworkedVariables.hpp"
 
 namespace shade {
     namespace sdk {
-        namespace animgraphlib {
-            class IAnimationGraphInstance;
-        }
-
-        namespace client {
-            struct ExternalAnimGraph_t;
-        }
-
         namespace resourcesystem {
             class InfoForResourceTypeCNmGraphDefinition;
         }
 
         namespace server {
+            struct AnimGraph2SerializedPoseRecipeSlot_t;
             class CBaseAnimGraph;
         }
     }
@@ -50,9 +45,10 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x858
-             * Alignment: 0xff
+             * Size: 0x5d0
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -60,54 +56,49 @@ namespace shade {
             public:
                 std::uint8_t pad_0010[0x8]; // 0x0010, 0x8 bytes
                 shade::sdk::client::AnimationAlgorithm_t m_nAnimationAlgorithm; // 0x0018, 0x1 bytes
-                std::uint8_t pad_0019[0x7]; // 0x0019, 0x7 bytes
-                shade::sdk::server::CAnimGraphNetworkedVariables m_animGraphNetworkedVars; // 0x0020, 0x208 bytes
-                CSmartPtr<shade::sdk::animgraphlib::IAnimationGraphInstance> m_pAnimGraphInstance; // 0x0228, 0x8 bytes
-                std::uint8_t pad_0230[0x58]; // 0x0230, 0x58 bytes
-                shade::sdk::client::ExternalAnimGraphHandle_t m_nNextExternalGraphHandle; // 0x0288, 0x4 bytes
-                std::uint8_t pad_028c[0x4]; // 0x028c, 0x4 bytes
-                CUtlVector<CGlobalSymbol> m_vecSecondarySkeletonNames; // 0x0290, 0x18 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseAnimGraph>> m_vecSecondarySkeletons; // 0x02a8, 0x18 bytes
-                std::int32_t m_nSecondarySkeletonMasterCount; // 0x02c0, 0x4 bytes
-                std::uint8_t pad_02c4[0x4]; // 0x02c4, 0x4 bytes
-                float m_flSoundSyncTime; // 0x02c8, 0x4 bytes
-                std::uint32_t m_nActiveIKChainMask; // 0x02cc, 0x4 bytes
-                shade::sdk::animationsystem::HSequence m_hSequence; // 0x02d0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSeqStartTime; // 0x02d4, 0x4 bytes
-                float m_flSeqFixedCycle; // 0x02d8, 0x4 bytes
-                shade::sdk::client::AnimLoopMode_t m_nAnimLoopMode; // 0x02dc, 0x4 bytes
-                CNetworkedQuantizedFloat m_flPlaybackRate; // 0x02e0, 0x8 bytes
-                std::uint8_t pad_02e8[0x4]; // 0x02e8, 0x4 bytes
-                shade::sdk::client::SequenceFinishNotifyState_t m_nNotifyState; // 0x02ec, 0x1 bytes
-                bool m_bNetworkedAnimationInputsChanged; // 0x02ed, 0x1 bytes
-                bool m_bNetworkedSequenceChanged; // 0x02ee, 0x1 bytes
-                bool m_bLastUpdateSkipped; // 0x02ef, 0x1 bytes
-                bool m_bSequenceFinished; // 0x02f0, 0x1 bytes
-                std::uint8_t pad_02f1[0x3]; // 0x02f1, 0x3 bytes
-                shade::sdk::entity2::GameTick_t m_nPrevAnimUpdateTick; // 0x02f4, 0x4 bytes
-                std::uint8_t pad_02f8[0x298]; // 0x02f8, 0x298 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition> m_hGraphDefinitionAG2; // 0x0590, 0x8 bytes
-                CNetworkUtlVectorBase<std::uint8_t> m_serializedPoseRecipeAG2; // 0x0598, 0x18 bytes
-                std::int32_t m_nSerializePoseRecipeSizeAG2; // 0x05b0, 0x4 bytes
-                std::int32_t m_nSerializePoseRecipeVersionAG2; // 0x05b4, 0x4 bytes
-                std::int32_t m_nServerGraphInstanceIteration; // 0x05b8, 0x4 bytes
-                std::int32_t m_nServerSerializationContextIteration; // 0x05bc, 0x4 bytes
-                shade::sdk::resourcefile::ResourceId_t m_primaryGraphId; // 0x05c0, 0x8 bytes
-                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalGraphIds; // 0x05c8, 0x18 bytes
-                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalClipIds; // 0x05e0, 0x18 bytes
-                CGlobalSymbol m_sAnimGraph2Identifier; // 0x05f8, 0x8 bytes
-                std::uint8_t pad_0600[0x220]; // 0x0600, 0x220 bytes
-                CUtlVector<shade::sdk::client::ExternalAnimGraph_t> m_vecExternalGraphs; // 0x0820, 0x18 bytes
-                std::uint8_t pad_0838[0x20]; // 0x0838, 0x20 bytes
+                std::uint8_t pad_0019[0x3]; // 0x0019, 0x3 bytes
+                shade::sdk::client::ExternalAnimGraphHandle_t m_nNextExternalGraphHandle; // 0x001c, 0x4 bytes
+                CNetworkUtlVectorBase<CGlobalSymbol> m_vecSecondarySkeletonSlotIDs; // 0x0020, 0x18 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseAnimGraph>> m_vecSecondarySkeletons; // 0x0038, 0x18 bytes
+                std::int32_t m_nSecondarySkeletonMasterCount; // 0x0050, 0x4 bytes
+                float m_flSoundSyncTime; // 0x0054, 0x4 bytes
+                std::uint32_t m_nActiveIKChainMask; // 0x0058, 0x4 bytes
+                shade::sdk::animationsystem::HSequence m_hSequence; // 0x005c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSeqStartTime; // 0x0060, 0x4 bytes
+                float m_flSeqFixedCycle; // 0x0064, 0x4 bytes
+                shade::sdk::client::AnimLoopMode_t m_nAnimLoopMode; // 0x0068, 0x4 bytes
+                CNetworkedQuantizedFloat m_flPlaybackRate; // 0x006c, 0x8 bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                shade::sdk::client::SequenceFinishNotifyState_t m_nNotifyState; // 0x0078, 0x1 bytes
+                bool m_bNetworkedAnimationInputsChanged; // 0x0079, 0x1 bytes
+                bool m_bNetworkedSequenceChanged; // 0x007a, 0x1 bytes
+                bool m_bLastUpdateSkipped; // 0x007b, 0x1 bytes
+                bool m_bSequenceFinished; // 0x007c, 0x1 bytes
+                std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
+                shade::sdk::entity2::GameTick_t m_nPrevAnimUpdateTick; // 0x0080, 0x4 bytes
+                std::uint8_t pad_0084[0x21c]; // 0x0084, 0x21c bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition> m_hGraphDefinitionAG2; // 0x02a0, 0x8 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::AnimGraph2SerializedPoseRecipeSlot_t> m_SerializePoseRecipeAG2Slots; // 0x02a8, 0x68 bytes
+                CNetworkUtlVectorBase<std::uint8_t> m_SerializePoseRecipeAG2Dynamic; // 0x0310, 0x18 bytes
+                std::uint32_t m_nSerializePoseRecipeAG2ActiveSlot; // 0x0328, 0x4 bytes
+                std::int32_t m_nSerializePoseRecipeVersionAG2; // 0x032c, 0x4 bytes
+                std::uint8_t pad_0330[0x10]; // 0x0330, 0x10 bytes
+                std::int32_t m_nServerGraphInstanceIteration; // 0x0340, 0x4 bytes
+                std::int32_t m_nServerSerializationContextIteration; // 0x0344, 0x4 bytes
+                shade::sdk::resourcefile::ResourceId_t m_primaryGraphId; // 0x0348, 0x8 bytes
+                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalGraphIds; // 0x0350, 0x18 bytes
+                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalClipIds; // 0x0368, 0x18 bytes
+                CGlobalSymbol m_sAnimGraph2Identifier; // 0x0380, 0x8 bytes
+                shade::sdk::client::CAnimGraph2InstancePtr m_pGraphInstanceAG2; // 0x0388, 0x10 bytes
+                std::uint8_t pad_0398[0x210]; // 0x0398, 0x210 bytes
+                shade::sdk::client::CExternalAnimGraphList m_vecExternalGraphs; // 0x05a8, 0x20 bytes
+                std::uint8_t pad_05c8[0x8]; // 0x05c8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pGraphInstanceAG2; // Offset: 0x608, Size: 0x1, Size In Bytes: 0x8
-             * float m_flCachedSequenceCycleRate; // Offset: 0x2e8, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimGraphController) == 0x858, "CBaseAnimGraphController size mismatch");
+            static_assert(sizeof(CBaseAnimGraphController) == 0x5D0, "CBaseAnimGraphController size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x2c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_HornetLeap : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x18]; // 0x00d0, 0x18 bytes
-                std::int32_t m_iBonusClip; // 0x00e8, 0x4 bytes
-                std::uint8_t pad_00ec[0x104]; // 0x00ec, 0x104 bytes
+                std::uint8_t pad_0140[0x18]; // 0x0140, 0x18 bytes
+                std::int32_t m_iBonusClip; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x164]; // 0x015c, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_HornetLeap) == 0x1F0, "CModifier_HornetLeap size mismatch");
+            static_assert(sizeof(CModifier_HornetLeap) == 0x2C0, "CModifier_HornetLeap size mismatch");
         }
     }
 }

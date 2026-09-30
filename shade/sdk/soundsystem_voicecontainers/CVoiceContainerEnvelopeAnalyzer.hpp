@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x60
+             * Size: 0x58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerEnvelopeAnalyzer : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerAnalysisBase {
             public:
-                shade::sdk::soundsystem_voicecontainers::EMode_t m_mode; // 0x0050, 0x4 bytes
-                float m_fAnalysisWindowMs; // 0x0054, 0x4 bytes
-                float m_flThreshold; // 0x0058, 0x4 bytes
-                std::uint8_t pad_005c[0x4]; // 0x005c, 0x4 bytes
+                shade::sdk::soundsystem_voicecontainers::EMode_t m_mode; // 0x0048, 0x4 bytes
+                float m_fAnalysisWindowMs; // 0x004c, 0x4 bytes
+                float m_flThreshold; // 0x0050, 0x4 bytes
+                std::uint8_t pad_0054[0x4]; // 0x0054, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerEnvelopeAnalyzer) == 0x60, "CVoiceContainerEnvelopeAnalyzer size mismatch");
+            static_assert(sizeof(CVoiceContainerEnvelopeAnalyzer) == 0x58, "CVoiceContainerEnvelopeAnalyzer size mismatch");
         }
     }
 }

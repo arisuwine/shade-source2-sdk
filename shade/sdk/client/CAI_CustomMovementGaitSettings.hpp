@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,20 +22,20 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0xb8
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             class CAI_CustomMovementGaitSettings : public shade::sdk::client::CAI_OptionalMovementGaitSettings {
             public:
-                CGlobalSymbol m_sGaitId; // 0x00c0, 0x8 bytes
+                CGlobalSymbol m_sGaitId; // 0x00b0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_CustomMovementGaitSettings) == 0xC8, "CAI_CustomMovementGaitSettings size mismatch");
+            static_assert(sizeof(CAI_CustomMovementGaitSettings) == 0xB8, "CAI_CustomMovementGaitSettings size mismatch");
         }
     }
 }

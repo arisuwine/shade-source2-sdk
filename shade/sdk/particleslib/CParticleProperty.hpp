@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,7 +21,8 @@ namespace shade {
         namespace particleslib {
             /* Class Parameters
              * Size: 0x28
-             * Alignment: 0xff
+             * Alignment: 0x8
+             * Construct Allowed
              * Global Type Scope
              */
             #pragma pack(push, 1)

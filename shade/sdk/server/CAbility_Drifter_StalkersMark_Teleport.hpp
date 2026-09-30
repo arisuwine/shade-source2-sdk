@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf80
+             * Size: 0x14b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +34,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport) == 0xF80, "CAbility_Drifter_StalkersMark_Teleport size mismatch");
+            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport) == 0x14B0, "CAbility_Drifter_StalkersMark_Teleport size mismatch");
         }
     }
 }

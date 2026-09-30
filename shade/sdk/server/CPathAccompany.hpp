@@ -12,13 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/entity2/CEntityIOOutput.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CBaseEntity.hpp"
-#include "shade/sdk/server/PathAccompanyProperties_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -41,18 +41,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathAccompany : public shade::sdk::server::CBaseEntity {
             public:
-                float m_flPathLength; // 0x04a0, 0x4 bytes
-                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
-                CUtlVector<shade::sdk::server::PathAccompanyNode_t> m_vecNodes; // 0x04a8, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flLastPathRecalc; // 0x04c0, 0x4 bytes
-                std::uint8_t pad_04c4[0xc]; // 0x04c4, 0xc bytes
-                CTransform m_xLastParentTransform; // 0x04d0, 0x20 bytes
-                shade::sdk::server::PathAccompanyProperties_t m_properties; // 0x04f0, 0x1c bytes
-                std::uint8_t pad_050c[0x4]; // 0x050c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNpcStartedPath; // 0x0510, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNpcCompletedPath; // 0x0528, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNpcBreakFromPath; // 0x0540, 0x18 bytes
-                std::uint8_t pad_0558[0x8]; // 0x0558, 0x8 bytes
+                float m_flPathLength; // 0x04b0, 0x4 bytes
+                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlVector<shade::sdk::server::PathAccompanyNode_t> m_vecNodes; // 0x04b8, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flLastPathRecalc; // 0x04d0, 0x4 bytes
+                std::uint8_t pad_04d4[0xc]; // 0x04d4, 0xc bytes
+                CTransform m_xLastParentTransform; // 0x04e0, 0x20 bytes
+                bool m_bAllowAutoLead; // 0x0500, 0x1 bytes
+                std::uint8_t pad_0501[0x7]; // 0x0501, 0x7 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNpcStartedPath; // 0x0508, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNpcCompletedPath; // 0x0520, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNpcBreakFromPath; // 0x0538, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_nLastDebugDraw; // 0x0550, 0x4 bytes
+                std::uint8_t pad_0554[0xc]; // 0x0554, 0xc bytes
             };
             #pragma pack(pop)
 

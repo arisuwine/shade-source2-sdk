@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x100
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmBlendTaskBase : public shade::sdk::animlib::CNmPoseTask {
             public:
-                std::uint8_t pad_0058[0x88]; // 0x0058, 0x88 bytes
+                std::uint8_t pad_0070[0x90]; // 0x0070, 0x90 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmBlendTaskBase) == 0xE0, "CNmBlendTaskBase size mismatch");
+            static_assert(sizeof(CNmBlendTaskBase) == 0x100, "CNmBlendTaskBase size mismatch");
         }
     }
 }

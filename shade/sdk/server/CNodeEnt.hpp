@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f8
+             * Size: 0x508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,19 +33,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CNodeEnt : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                bool m_bDontDropNode; // 0x04a0, 0x1 bytes
-                shade::sdk::client::HullFlags_t m_HullForceFlags; // 0x04a1, 0xa bytes
-                std::uint8_t pad_04ab[0x5]; // 0x04ab, 0x5 bytes
-                shade::sdk::server::HintNodeData m_NodeData; // 0x04b0, 0x40 bytes
-                std::uint8_t pad_04f0[0x8]; // 0x04f0, 0x8 bytes
+                bool m_bDontDropNode; // 0x04b0, 0x1 bytes
+                shade::sdk::client::HullFlags_t m_HullForceFlags; // 0x04b1, 0xa bytes
+                std::uint8_t pad_04bb[0x5]; // 0x04bb, 0x5 bytes
+                shade::sdk::server::HintNodeData m_NodeData; // 0x04c0, 0x40 bytes
+                std::uint8_t pad_0500[0x8]; // 0x0500, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pKeyValuesCopy; // Offset: 0x4f0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CNodeEnt) == 0x4F8, "CNodeEnt size mismatch");
+            static_assert(sizeof(CNodeEnt) == 0x508, "CNodeEnt size mismatch");
         }
     }
 }

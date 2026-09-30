@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,20 +22,20 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4938
-             * Alignment: 0xff
+             * Size: 0x10
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CAI_CitadelPathfinder : public shade::sdk::server::CAI_Pathfinder {
             public:
-                std::uint8_t pad_4930[0x8]; // 0x4930, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_CitadelPathfinder) == 0x4938, "CAI_CitadelPathfinder size mismatch");
+            static_assert(sizeof(CAI_CitadelPathfinder) == 0x10, "CAI_CitadelPathfinder size mismatch");
         }
     }
 }

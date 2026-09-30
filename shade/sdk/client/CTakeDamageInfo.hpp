@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -25,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             class C_BaseEntity;
-            struct DestructibleHitGroupToDestroy_t;
+            struct DestructiblePartDamageRequest_t;
         }
     }
 }
@@ -34,9 +35,10 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x100
-             * Alignment: 0xff
+             * Size: 0xf8
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CTakeDamageInfo {
@@ -75,18 +77,17 @@ namespace shade {
                 float m_flEffectiveness; // 0x00b0, 0x4 bytes
                 float m_timeDamage; // 0x00b4, 0x4 bytes
                 float m_flCritDamage; // 0x00b8, 0x4 bytes
-                std::uint8_t pad_00bc[0x24]; // 0x00bc, 0x24 bytes
-                CUtlVector<shade::sdk::client::DestructibleHitGroupToDestroy_t> m_nDestructibleHitGroupsToForceDestroy; // 0x00e0, 0x18 bytes
-                bool m_bInTakeDamageFlow; // 0x00f8, 0x1 bytes
-                std::uint8_t pad_00f9[0x7]; // 0x00f9, 0x7 bytes
+                bool m_bSpeakDamageEvent; // 0x00bc, 0x1 bytes
+                std::uint8_t pad_00bd[0x23]; // 0x00bd, 0x23 bytes
+                CUtlLeanVector<shade::sdk::client::DestructiblePartDamageRequest_t> m_DestructibleHitGroupRequests; // 0x00e0, 0x10 bytes
+                bool m_bInTakeDamageFlow; // 0x00f0, 0x1 bytes
+                std::uint8_t pad_00f1[0x7]; // 0x00f1, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_hScriptInstance; // Offset: 0xc0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTakeDamageInfo) == 0x100, "CTakeDamageInfo size mismatch");
+            static_assert(sizeof(CTakeDamageInfo) == 0xF8, "CTakeDamageInfo size mismatch");
         }
     }
 }

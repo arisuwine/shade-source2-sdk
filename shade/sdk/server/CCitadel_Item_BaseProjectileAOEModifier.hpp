@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1070
+             * Size: 0x16a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_BaseProjectileAOEModifier : public shade::sdk::server::CCitadel_Item {
             public:
-                VectorWS m_vLaunchPosition; // 0x0f78, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x0f84, 0xc bytes
-                std::uint8_t pad_0f90[0x80]; // 0x0f90, 0x80 bytes
-                shade::sdk::server::CitadelAbilityProjectileCreateInfo_t m_projInfo; // 0x1010, 0x60 bytes
+                VectorWS m_vLaunchPosition; // 0x14a8, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x14b4, 0xc bytes
+                std::uint8_t pad_14c0[0xb0]; // 0x14c0, 0xb0 bytes
+                shade::sdk::server::CitadelAbilityProjectileCreateInfo_t m_projInfo; // 0x1570, 0x130 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_BaseProjectileAOEModifier) == 0x1070, "CCitadel_Item_BaseProjectileAOEModifier size mismatch");
+            static_assert(sizeof(CCitadel_Item_BaseProjectileAOEModifier) == 0x16A0, "CCitadel_Item_BaseProjectileAOEModifier size mismatch");
         }
     }
 }

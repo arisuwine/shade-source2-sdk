@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1630
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,25 +44,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_InfinitySlashVData : public shade::sdk::server::CCitadelYamatoBaseVData {
             public:
-                float m_flRiseSpeed; // 0x1820, 0x4 bytes
-                float m_flRiseDuration; // 0x1824, 0x4 bytes
-                float m_flSpeedDecayScale; // 0x1828, 0x4 bytes
-                float m_flExplodeHoldTime; // 0x182c, 0x4 bytes
-                float m_flExplosionShakeAmplitude; // 0x1830, 0x4 bytes
-                float m_flExplosionShakeFrequency; // 0x1834, 0x4 bytes
-                float m_flExplosionShakeDuration; // 0x1838, 0x4 bytes
-                std::uint8_t pad_183c[0x4]; // 0x183c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOERangeEffect; // 0x1840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AnimCastEffect; // 0x1920, 0xe0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceExplosion; // 0x1a00, 0x88 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1a88, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffTimerModifier; // 0x1a98, 0x10 bytes
+                float m_flRiseSpeed; // 0x13a8, 0x4 bytes
+                float m_flRiseDuration; // 0x13ac, 0x4 bytes
+                float m_flSpeedDecayScale; // 0x13b0, 0x4 bytes
+                float m_flExplodeHoldTime; // 0x13b4, 0x4 bytes
+                float m_flExplosionShakeAmplitude; // 0x13b8, 0x4 bytes
+                float m_flExplosionShakeFrequency; // 0x13bc, 0x4 bytes
+                float m_flExplosionShakeDuration; // 0x13c0, 0x4 bytes
+                std::uint8_t pad_13c4[0x4]; // 0x13c4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOERangeEffect; // 0x13c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AnimCastEffect; // 0x14a8, 0xe0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceExplosion; // 0x1588, 0x88 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1610, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffTimerModifier; // 0x1620, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_InfinitySlashVData) == 0x1AA8, "CCitadel_Ability_InfinitySlashVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_InfinitySlashVData) == 0x1630, "CCitadel_Ability_InfinitySlashVData size mismatch");
         }
     }
 }

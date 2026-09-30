@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x410
+             * Size: 0x650
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Warden_RiotProtocol : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlOrderedMap<CHandle<shade::sdk::server::CBaseEntity>, shade::sdk::entity2::GameTime_t> m_mapEntToTimeHit; // 0x00d0, 0x28 bytes
-                std::int32_t m_nNumPlayersAffected; // 0x00f8, 0x4 bytes
-                std::int32_t m_nNumPlayersKilled; // 0x00fc, 0x4 bytes
-                QAngle m_playerAngles; // 0x0100, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x010c, 0x4 bytes
-                std::uint8_t pad_0110[0x300]; // 0x0110, 0x300 bytes
+                CUtlOrderedMap<CHandle<shade::sdk::server::CBaseEntity>, shade::sdk::entity2::GameTime_t> m_mapEntToTimeHit; // 0x0140, 0x28 bytes
+                std::int32_t m_nNumPlayersAffected; // 0x0168, 0x4 bytes
+                std::int32_t m_nNumPlayersKilled; // 0x016c, 0x4 bytes
+                QAngle m_playerAngles; // 0x0170, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x017c, 0x4 bytes
+                std::uint8_t pad_0180[0x4d0]; // 0x0180, 0x4d0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Warden_RiotProtocol) == 0x410, "CCitadel_Modifier_Warden_RiotProtocol size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Warden_RiotProtocol) == 0x650, "CCitadel_Modifier_Warden_RiotProtocol size mismatch");
         }
     }
 }

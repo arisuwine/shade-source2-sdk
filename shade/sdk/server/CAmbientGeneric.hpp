@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x548
+             * Size: 0x558
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,38 +41,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CAmbientGeneric : public shade::sdk::server::CPointEntity {
             public:
-                float m_radius; // 0x04a0, 0x4 bytes
-                float m_flMaxRadius; // 0x04a4, 0x4 bytes
-                shade::sdk::client::soundlevel_t m_iSoundLevel; // 0x04a8, 0x4 bytes
-                shade::sdk::server::dynpitchvol_t m_dpv; // 0x04ac, 0x64 bytes
-                bool m_fActive; // 0x0510, 0x1 bytes
-                bool m_fLooping; // 0x0511, 0x1 bytes
-                std::uint8_t pad_0512[0x6]; // 0x0512, 0x6 bytes
-                CUtlSymbolLarge m_iszSound; // 0x0518, 0x8 bytes
-                CUtlSymbolLarge m_sSourceEntName; // 0x0520, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hSoundSource; // 0x0528, 0x4 bytes
-                CEntityIndex m_nSoundSourceEntIndex; // 0x052c, 0x4 bytes
-                std::uint8_t pad_0530[0x18]; // 0x0530, 0x18 bytes
+                float m_radius; // 0x04b0, 0x4 bytes
+                float m_flMaxRadius; // 0x04b4, 0x4 bytes
+                shade::sdk::client::soundlevel_t m_iSoundLevel; // 0x04b8, 0x4 bytes
+                shade::sdk::server::dynpitchvol_t m_dpv; // 0x04bc, 0x64 bytes
+                bool m_fActive; // 0x0520, 0x1 bytes
+                bool m_fLooping; // 0x0521, 0x1 bytes
+                std::uint8_t pad_0522[0x6]; // 0x0522, 0x6 bytes
+                CGameSoundEventName m_iszSound; // 0x0528, 0x8 bytes
+                CUtlSymbolLarge m_sSourceEntName; // 0x0530, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hSoundSource; // 0x0538, 0x4 bytes
+                CEntityIndex m_nSoundSourceEntIndex; // 0x053c, 0x4 bytes
+                std::uint8_t pad_0540[0x18]; // 0x0540, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void m_nGUID; // Offset: 0x530, Size: 0x1, Size In Bytes: 0x0
-             * void CAmbientGenericRampThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPlaySound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputPitch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputVolume; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputFadeIn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputFadeOut; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fadein; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fadeout; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fadeinsecs; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fadeoutsecs; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CAmbientGeneric) == 0x548, "CAmbientGeneric size mismatch");
+            static_assert(sizeof(CAmbientGeneric) == 0x558, "CAmbientGeneric size mismatch");
         }
     }
 }

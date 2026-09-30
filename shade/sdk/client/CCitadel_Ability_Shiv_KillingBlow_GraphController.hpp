@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x110
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Shiv_KillingBlow_GraphController : public shade::sdk::client::CCitadelBaseAbilityGraphController {
             public:
-                CAnimGraphParamRef<bool> m_bSlashLeap; // 0x0090, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bSlashAttack; // 0x00b8, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bSlashLeap; // 0x00c0, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bSlashAttack; // 0x00e8, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow_GraphController) == 0xE0, "CCitadel_Ability_Shiv_KillingBlow_GraphController size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow_GraphController) == 0x110, "CCitadel_Ability_Shiv_KillingBlow_GraphController size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -24,7 +25,7 @@ namespace shade {
                 SUBCLASS_SCOPE_NPC_UNITS = 0x3,
                 SUBCLASS_SCOPE_ABILITIES = 0x4,
                 SUBCLASS_SCOPE_SCALE_FUNCTIONS = 0x5,
-                SUBCLASS_SCOPE_LOOT_TABLES = 0x6,
+                SUBCLASS_SCOPE_ECON_ITEMS = 0x6,
                 SUBCLASS_SCOPE_COUNT = 0x7
             };
         }

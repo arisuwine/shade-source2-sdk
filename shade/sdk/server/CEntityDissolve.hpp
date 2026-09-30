@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/EntityDisolveType_t.hpp"
+#include "shade/sdk/client/EntityDissolveType_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CBaseModelEntity.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x8a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,26 +33,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CEntityDissolve : public shade::sdk::server::CBaseModelEntity {
             public:
-                float m_flFadeInStart; // 0x0780, 0x4 bytes
-                float m_flFadeInLength; // 0x0784, 0x4 bytes
-                float m_flFadeOutModelStart; // 0x0788, 0x4 bytes
-                float m_flFadeOutModelLength; // 0x078c, 0x4 bytes
-                float m_flFadeOutStart; // 0x0790, 0x4 bytes
-                float m_flFadeOutLength; // 0x0794, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0798, 0x4 bytes
-                shade::sdk::client::EntityDisolveType_t m_nDissolveType; // 0x079c, 0x4 bytes
-                Vector m_vDissolverOrigin; // 0x07a0, 0xc bytes
-                std::uint32_t m_nMagnitude; // 0x07ac, 0x4 bytes
+                float m_flFadeInStart; // 0x0878, 0x4 bytes
+                float m_flFadeInLength; // 0x087c, 0x4 bytes
+                float m_flFadeOutModelStart; // 0x0880, 0x4 bytes
+                float m_flFadeOutModelLength; // 0x0884, 0x4 bytes
+                float m_flFadeOutStart; // 0x0888, 0x4 bytes
+                float m_flFadeOutLength; // 0x088c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0890, 0x4 bytes
+                shade::sdk::client::EntityDissolveType_t m_nDissolveType; // 0x0894, 0x4 bytes
+                VectorWS m_vDissolverOrigin; // 0x0898, 0xc bytes
+                std::uint32_t m_nMagnitude; // 0x08a4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CEntityDissolveDissolveThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CEntityDissolveElectrocuteThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputDissolve; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEntityDissolve) == 0x7B0, "CEntityDissolve size mismatch");
+            static_assert(sizeof(CEntityDissolve) == 0x8A8, "CEntityDissolve size mismatch");
         }
     }
 }

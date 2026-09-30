@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -57,7 +58,8 @@ namespace shade {
                 GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN = 0x25,
                 GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH = 0x26,
                 GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN = 0x27,
-                GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID = 0x28
+                GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID = 0x28,
+                GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE = 0x29
             };
         }
     }

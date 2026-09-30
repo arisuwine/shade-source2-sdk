@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -37,6 +38,8 @@ namespace shade {
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Allowed
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -62,7 +65,7 @@ namespace shade {
                 std::uint8_t m_eDestroyReason; // 0x0070, 0x1 bytes
                 bool m_bDisabled; // 0x0071, 0x1 bytes
                 bool m_bSuppressSendModifier; // 0x0072, 0x1 bytes
-                std::uint8_t pad_0073[0x1]; // 0x0073, 0x1 bytes
+                bool m_bReadyOnClient; // 0x0073, 0x1 bytes
                 float m_flThinkInterval; // 0x0074, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flThinkIntervalStartTime; // 0x0078, 0x4 bytes
                 float m_flTimeScale; // 0x007c, 0x4 bytes
@@ -72,10 +75,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pModifierProp; // Offset: 0x20, Size: 0x1, Size In Bytes: 0x0
-             * void m_pSubclassVData; // Offset: 0x10, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CBaseModifier) == 0x90, "CBaseModifier size mismatch");
         }

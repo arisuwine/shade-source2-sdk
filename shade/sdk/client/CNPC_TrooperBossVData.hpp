@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13d8
+             * Size: 0xcc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,34 +39,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_TrooperBossVData : public shade::sdk::client::CAI_CitadelNPCVData {
             public:
-                bool m_bMitigateDamageFromPlayers; // 0x1348, 0x1 bytes
-                std::uint8_t pad_1349[0x3]; // 0x1349, 0x3 bytes
-                float m_flPlayerAutoAttackRange; // 0x134c, 0x4 bytes
-                float m_flMinMeleeAttackTime; // 0x1350, 0x4 bytes
-                float m_flMeleeDuration; // 0x1354, 0x4 bytes
-                float m_flInvulRange; // 0x1358, 0x4 bytes
-                float m_flTrooperDamageResistPct; // 0x135c, 0x4 bytes
-                float m_flPlayerDamageResistPct; // 0x1360, 0x4 bytes
-                float m_flBackDoorProtectionRange; // 0x1364, 0x4 bytes
-                float m_flDeathFadeTimeStart; // 0x1368, 0x4 bytes
-                float m_flDeathFadeTimeEnd; // 0x136c, 0x4 bytes
-                float m_flTier1PlayerClipCapsuleRadius; // 0x1370, 0x4 bytes
-                float m_flTier1PlayerClipCapsuleHeight; // 0x1374, 0x4 bytes
-                CSoundEventName m_sAngryStart; // 0x1378, 0x10 bytes
-                CSoundEventName m_sAngryLoop; // 0x1388, 0x10 bytes
-                CSoundEventName m_sAngryStop; // 0x1398, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BackdoorProtectionModifier; // 0x13a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TrooperBossInvulnModifier; // 0x13b8, 0x10 bytes
-                float m_flTrooperDPS; // 0x13c8, 0x4 bytes
-                float m_flPlayerDPS; // 0x13cc, 0x4 bytes
-                float m_flDPSPctGrowthPerMinute; // 0x13d0, 0x4 bytes
-                std::uint8_t pad_13d4[0x4]; // 0x13d4, 0x4 bytes
+                bool m_bMitigateDamageFromPlayers; // 0x0c30, 0x1 bytes
+                std::uint8_t pad_0c31[0x3]; // 0x0c31, 0x3 bytes
+                float m_flPlayerAutoAttackRange; // 0x0c34, 0x4 bytes
+                float m_flMinMeleeAttackTime; // 0x0c38, 0x4 bytes
+                float m_flMeleeDuration; // 0x0c3c, 0x4 bytes
+                float m_flInvulRange; // 0x0c40, 0x4 bytes
+                float m_flTrooperDamageResistPct; // 0x0c44, 0x4 bytes
+                float m_flPlayerDamageResistPct; // 0x0c48, 0x4 bytes
+                float m_flBackDoorProtectionRange; // 0x0c4c, 0x4 bytes
+                float m_flDeathFadeTimeStart; // 0x0c50, 0x4 bytes
+                float m_flDeathFadeTimeEnd; // 0x0c54, 0x4 bytes
+                float m_flTier1PlayerClipCapsuleRadius; // 0x0c58, 0x4 bytes
+                float m_flTier1PlayerClipCapsuleHeight; // 0x0c5c, 0x4 bytes
+                CSoundEventName m_sAngryStart; // 0x0c60, 0x10 bytes
+                CSoundEventName m_sAngryLoop; // 0x0c70, 0x10 bytes
+                CSoundEventName m_sAngryStop; // 0x0c80, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BackdoorProtectionModifier; // 0x0c90, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TrooperBossInvulnModifier; // 0x0ca0, 0x10 bytes
+                float m_flTrooperDPS; // 0x0cb0, 0x4 bytes
+                float m_flPlayerDPS; // 0x0cb4, 0x4 bytes
+                float m_flDPSPctGrowthPerMinute; // 0x0cb8, 0x4 bytes
+                std::uint8_t pad_0cbc[0x4]; // 0x0cbc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_TrooperBossVData) == 0x13D8, "CNPC_TrooperBossVData size mismatch");
+            static_assert(sizeof(CNPC_TrooperBossVData) == 0xCC0, "CNPC_TrooperBossVData size mismatch");
         }
     }
 }

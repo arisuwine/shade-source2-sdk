@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x17a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,35 +40,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_PrimaryWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatonFlameParticle; // 0x19c0, 0xe0 bytes
-                CSoundEventName m_strBounceSound; // 0x1aa0, 0x10 bytes
-                CSoundEventName m_strFiringLoopSound; // 0x1ab0, 0x10 bytes
-                float m_flTargetingRadius; // 0x1ac0, 0x4 bytes
-                float m_flUnitHitTargetingRadius; // 0x1ac4, 0x4 bytes
-                float m_flOrbHitTargetingRadius; // 0x1ac8, 0x4 bytes
-                shade::sdk::client::ELOSCheck m_eLosCheckType; // 0x1acc, 0x4 bytes
-                std::int32_t m_nRicochetTargets; // 0x1ad0, 0x4 bytes
-                float m_flRicochetPitchAddition; // 0x1ad4, 0x4 bytes
-                float m_flOrbRicochetPitchAddition; // 0x1ad8, 0x4 bytes
-                float m_flRicochetGravity; // 0x1adc, 0x4 bytes
-                float m_flOrbRicochetConeAngle; // 0x1ae0, 0x4 bytes
-                float m_flRicochetConeAngle; // 0x1ae4, 0x4 bytes
-                float m_flMaxRicohetDot; // 0x1ae8, 0x4 bytes
-                float m_flMinTargetDot; // 0x1aec, 0x4 bytes
-                float m_flRicochetDamageScale; // 0x1af0, 0x4 bytes
-                float m_flRearOffset; // 0x1af4, 0x4 bytes
-                float m_flRicochetDotMaxDampening; // 0x1af8, 0x4 bytes
-                float m_flRicochetDotMinDampening; // 0x1afc, 0x4 bytes
-                float m_flMinVelocityDampening; // 0x1b00, 0x4 bytes
-                float m_flMaxVelocityDampening; // 0x1b04, 0x4 bytes
-                float m_flMinButtonHoldTimeToPlaySound; // 0x1b08, 0x4 bytes
-                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatonFlameParticle; // 0x1658, 0xe0 bytes
+                CSoundEventName m_strBounceSound; // 0x1738, 0x10 bytes
+                CSoundEventName m_strFiringLoopSound; // 0x1748, 0x10 bytes
+                float m_flTargetingRadius; // 0x1758, 0x4 bytes
+                float m_flUnitHitTargetingRadius; // 0x175c, 0x4 bytes
+                float m_flOrbHitTargetingRadius; // 0x1760, 0x4 bytes
+                shade::sdk::client::ELOSCheck m_eLosCheckType; // 0x1764, 0x4 bytes
+                std::int32_t m_nRicochetTargets; // 0x1768, 0x4 bytes
+                float m_flRicochetPitchAddition; // 0x176c, 0x4 bytes
+                float m_flOrbRicochetPitchAddition; // 0x1770, 0x4 bytes
+                float m_flRicochetGravity; // 0x1774, 0x4 bytes
+                float m_flOrbRicochetConeAngle; // 0x1778, 0x4 bytes
+                float m_flRicochetConeAngle; // 0x177c, 0x4 bytes
+                float m_flMaxRicohetDot; // 0x1780, 0x4 bytes
+                float m_flMinTargetDot; // 0x1784, 0x4 bytes
+                float m_flRicochetDamageScale; // 0x1788, 0x4 bytes
+                float m_flRearOffset; // 0x178c, 0x4 bytes
+                float m_flRicochetDotMaxDampening; // 0x1790, 0x4 bytes
+                float m_flRicochetDotMinDampening; // 0x1794, 0x4 bytes
+                float m_flMinVelocityDampening; // 0x1798, 0x4 bytes
+                float m_flMaxVelocityDampening; // 0x179c, 0x4 bytes
+                float m_flMinButtonHoldTimeToPlaySound; // 0x17a0, 0x4 bytes
+                std::uint8_t pad_17a4[0x4]; // 0x17a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_PrimaryWeaponVData) == 0x1B10, "CCitadel_Ability_Unicorn_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_PrimaryWeaponVData) == 0x17A8, "CCitadel_Ability_Unicorn_PrimaryWeaponVData size mismatch");
         }
     }
 }

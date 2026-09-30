@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f08
+             * Size: 0x1a88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,43 +43,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityViscousBowlingVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TransformStartFx; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeFX; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactFx; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BallTrailFx; // 0x1ab8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundImpactParticle; // 0x1b98, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JumpParticle; // 0x1c78, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DirectionParticle; // 0x1d58, 0xe0 bytes
-                CGlobalSymbol m_strPopGraphParamter; // 0x1e38, 0x8 bytes
-                CSoundEventName m_BallJumpSound; // 0x1e40, 0x10 bytes
-                CSoundEventName m_EnterBallSound; // 0x1e50, 0x10 bytes
-                CSoundEventName m_BallLoopSound; // 0x1e60, 0x10 bytes
-                CSoundEventName m_ExitBallSound; // 0x1e70, 0x10 bytes
-                CSoundEventName m_WallImpactSound; // 0x1e80, 0x10 bytes
-                CSoundEventName m_PlayerImpactSound; // 0x1e90, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ImpactModifier; // 0x1ea0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamagePreventionModifier; // 0x1eb0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RollingModifier; // 0x1ec0, 0x10 bytes
-                float m_flTransformToBallTime; // 0x1ed0, 0x4 bytes
-                float m_flTransformFromBallTime; // 0x1ed4, 0x4 bytes
-                float m_flAirTurnRatio; // 0x1ed8, 0x4 bytes
-                float m_flWallTurnRatioMax; // 0x1edc, 0x4 bytes
-                float m_flWallTurnRatioMin; // 0x1ee0, 0x4 bytes
-                float m_flTurnRatio; // 0x1ee4, 0x4 bytes
-                float m_flDefaultBallSpeed; // 0x1ee8, 0x4 bytes
-                float m_flFastBallSpeed; // 0x1eec, 0x4 bytes
-                float m_flSpeedAccel; // 0x1ef0, 0x4 bytes
-                float m_flSpeedDeccel; // 0x1ef4, 0x4 bytes
-                float m_flElasticity; // 0x1ef8, 0x4 bytes
-                float m_flWallCheckGroundOffset; // 0x1efc, 0x4 bytes
-                float m_flWallPauseTime; // 0x1f00, 0x4 bytes
-                float m_flWallAngleMin; // 0x1f04, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TransformStartFx; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeFX; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactFx; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BallTrailFx; // 0x1640, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundImpactParticle; // 0x1720, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JumpParticle; // 0x1800, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DirectionParticle; // 0x18e0, 0xe0 bytes
+                CSoundEventName m_BallJumpSound; // 0x19c0, 0x10 bytes
+                CSoundEventName m_EnterBallSound; // 0x19d0, 0x10 bytes
+                CSoundEventName m_BallLoopSound; // 0x19e0, 0x10 bytes
+                CSoundEventName m_ExitBallSound; // 0x19f0, 0x10 bytes
+                CSoundEventName m_WallImpactSound; // 0x1a00, 0x10 bytes
+                CSoundEventName m_PlayerImpactSound; // 0x1a10, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ImpactModifier; // 0x1a20, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamagePreventionModifier; // 0x1a30, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RollingModifier; // 0x1a40, 0x10 bytes
+                float m_flTransformToBallTime; // 0x1a50, 0x4 bytes
+                float m_flTransformFromBallTime; // 0x1a54, 0x4 bytes
+                float m_flAirTurnRatio; // 0x1a58, 0x4 bytes
+                float m_flWallTurnRatioMax; // 0x1a5c, 0x4 bytes
+                float m_flWallTurnRatioMin; // 0x1a60, 0x4 bytes
+                float m_flTurnRatio; // 0x1a64, 0x4 bytes
+                float m_flDefaultBallSpeed; // 0x1a68, 0x4 bytes
+                float m_flFastBallSpeed; // 0x1a6c, 0x4 bytes
+                float m_flSpeedAccel; // 0x1a70, 0x4 bytes
+                float m_flSpeedDeccel; // 0x1a74, 0x4 bytes
+                float m_flElasticity; // 0x1a78, 0x4 bytes
+                float m_flWallCheckGroundOffset; // 0x1a7c, 0x4 bytes
+                float m_flWallPauseTime; // 0x1a80, 0x4 bytes
+                float m_flWallAngleMin; // 0x1a84, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityViscousBowlingVData) == 0x1F08, "CAbilityViscousBowlingVData size mismatch");
+            static_assert(sizeof(CAbilityViscousBowlingVData) == 0x1A88, "CAbilityViscousBowlingVData size mismatch");
         }
     }
 }

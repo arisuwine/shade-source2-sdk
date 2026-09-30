@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15a8
+             * Size: 0x1d18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,25 +40,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Werewolf_Transformation : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x600]; // 0x0f70, 0x600 bytes
-                bool m_bIsTransformed; // 0x1570, 0x1 bytes
-                bool m_bIsTransformingBack; // 0x1571, 0x1 bytes
-                std::uint8_t pad_1572[0x2]; // 0x1572, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_tLastRegenComponentThinkTime; // 0x1574, 0x4 bytes
-                std::uint8_t pad_1578[0x4]; // 0x1578, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tForceTransformTime; // 0x157c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flWerewolfStartTime; // 0x1580, 0x4 bytes
-                std::uint8_t pad_1584[0x4]; // 0x1584, 0x4 bytes
-                shade::sdk::server::CCitadelModifier *m_pWerewolfModifier; // 0x1588, 0x8 bytes
-                std::uint8_t pad_1590[0x18]; // 0x1590, 0x18 bytes
+                std::uint8_t pad_14a0[0x840]; // 0x14a0, 0x840 bytes
+                bool m_bIsTransformed; // 0x1ce0, 0x1 bytes
+                bool m_bIsTransformingBack; // 0x1ce1, 0x1 bytes
+                std::uint8_t pad_1ce2[0x2]; // 0x1ce2, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_tLastRegenComponentThinkTime; // 0x1ce4, 0x4 bytes
+                std::uint8_t pad_1ce8[0x4]; // 0x1ce8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tForceTransformTime; // 0x1cec, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flWerewolfStartTime; // 0x1cf0, 0x4 bytes
+                std::uint8_t pad_1cf4[0x4]; // 0x1cf4, 0x4 bytes
+                shade::sdk::server::CCitadelModifier *m_pWerewolfModifier; // 0x1cf8, 0x8 bytes
+                std::uint8_t pad_1d00[0x18]; // 0x1d00, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Werewolf_Transformation) == 0x15A8, "CCitadel_Werewolf_Transformation size mismatch");
+            static_assert(sizeof(CCitadel_Werewolf_Transformation) == 0x1D18, "CCitadel_Werewolf_Transformation size mismatch");
         }
     }
 }

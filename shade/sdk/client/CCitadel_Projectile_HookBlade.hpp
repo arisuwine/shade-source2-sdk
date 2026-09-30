@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xae0
+             * Size: 0xcf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_HookBlade : public shade::sdk::client::C_CitadelTrackedProjectile {
             public:
-                bool bIsReturning; // 0x0ad8, 0x1 bytes
-                std::uint8_t pad_0ad9[0x7]; // 0x0ad9, 0x7 bytes
+                bool bIsReturning; // 0x0ce8, 0x1 bytes
+                std::uint8_t pad_0ce9[0x7]; // 0x0ce9, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_HookBlade) == 0xAE0, "CCitadel_Projectile_HookBlade size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_HookBlade) == 0xCF0, "CCitadel_Projectile_HookBlade size mismatch");
         }
     }
 }

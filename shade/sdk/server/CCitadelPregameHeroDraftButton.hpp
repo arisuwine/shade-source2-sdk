@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xd70
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPregameHeroDraftButton : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint8_t pad_0cd0[0x18]; // 0x0cd0, 0x18 bytes
-                std::int32_t m_nGameStateChangedEventID; // 0x0ce8, 0x4 bytes
-                std::uint8_t pad_0cec[0x4]; // 0x0cec, 0x4 bytes
+                std::uint8_t pad_0d50[0x18]; // 0x0d50, 0x18 bytes
+                std::int32_t m_nGameStateChangedEventID; // 0x0d68, 0x4 bytes
+                std::uint8_t pad_0d6c[0x4]; // 0x0d6c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelPregameHeroDraftButton) == 0xCF0, "CCitadelPregameHeroDraftButton size mismatch");
+            static_assert(sizeof(CCitadelPregameHeroDraftButton) == 0xD70, "CCitadelPregameHeroDraftButton size mismatch");
         }
     }
 }

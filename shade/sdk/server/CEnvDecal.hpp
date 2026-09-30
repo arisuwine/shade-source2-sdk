@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x898
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvDecal : public shade::sdk::server::CBaseModelEntity {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x0780, 0x8 bytes
-                float m_flWidth; // 0x0788, 0x4 bytes
-                float m_flHeight; // 0x078c, 0x4 bytes
-                float m_flDepth; // 0x0790, 0x4 bytes
-                std::uint32_t m_nRenderOrder; // 0x0794, 0x4 bytes
-                bool m_bProjectOnWorld; // 0x0798, 0x1 bytes
-                bool m_bProjectOnCharacters; // 0x0799, 0x1 bytes
-                bool m_bProjectOnWater; // 0x079a, 0x1 bytes
-                std::uint8_t pad_079b[0x1]; // 0x079b, 0x1 bytes
-                float m_flDepthSortBias; // 0x079c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x0878, 0x8 bytes
+                float m_flWidth; // 0x0880, 0x4 bytes
+                float m_flHeight; // 0x0884, 0x4 bytes
+                float m_flDepth; // 0x0888, 0x4 bytes
+                std::uint32_t m_nRenderOrder; // 0x088c, 0x4 bytes
+                bool m_bProjectOnWorld; // 0x0890, 0x1 bytes
+                bool m_bProjectOnCharacters; // 0x0891, 0x1 bytes
+                bool m_bProjectOnWater; // 0x0892, 0x1 bytes
+                std::uint8_t pad_0893[0x1]; // 0x0893, 0x1 bytes
+                float m_flDepthSortBias; // 0x0894, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvDecal) == 0x7A0, "CEnvDecal size mismatch");
+            static_assert(sizeof(CEnvDecal) == 0x898, "CEnvDecal size mismatch");
         }
     }
 }

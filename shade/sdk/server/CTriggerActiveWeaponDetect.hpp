@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0xa10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerActiveWeaponDetect : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnTouchedActiveWeapon; // 0x08e0, 0x18 bytes
-                CUtlSymbolLarge m_iszWeaponClassName; // 0x08f8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTouchedActiveWeapon; // 0x09f0, 0x18 bytes
+                CUtlSymbolLarge m_iszWeaponClassName; // 0x0a08, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CTriggerActiveWeaponDetectActiveWeaponThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTriggerActiveWeaponDetect) == 0x900, "CTriggerActiveWeaponDetect size mismatch");
+            static_assert(sizeof(CTriggerActiveWeaponDetect) == 0xA10, "CTriggerActiveWeaponDetect size mismatch");
         }
     }
 }

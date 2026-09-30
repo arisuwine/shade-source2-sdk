@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe20
+             * Size: 0x1030
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FuncMonitor : public shade::sdk::client::C_FuncBrush {
             public:
-                CUtlString m_targetCamera; // 0x09a8, 0x8 bytes
-                std::int32_t m_nResolutionEnum; // 0x09b0, 0x4 bytes
-                bool m_bRenderShadows; // 0x09b4, 0x1 bytes
-                bool m_bUseUniqueColorTarget; // 0x09b5, 0x1 bytes
-                std::uint8_t pad_09b6[0x2]; // 0x09b6, 0x2 bytes
-                CUtlString m_brushModelName; // 0x09b8, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetCamera; // 0x09c0, 0x4 bytes
-                bool m_bEnabled; // 0x09c4, 0x1 bytes
-                bool m_bDraw3DSkybox; // 0x09c5, 0x1 bytes
-                std::uint8_t pad_09c6[0x45a]; // 0x09c6, 0x45a bytes
+                CUtlString m_targetCamera; // 0x0bb0, 0x8 bytes
+                std::int32_t m_nResolutionEnum; // 0x0bb8, 0x4 bytes
+                bool m_bRenderShadows; // 0x0bbc, 0x1 bytes
+                bool m_bUseUniqueColorTarget; // 0x0bbd, 0x1 bytes
+                std::uint8_t pad_0bbe[0x2]; // 0x0bbe, 0x2 bytes
+                CUtlString m_brushModelName; // 0x0bc0, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetCamera; // 0x0bc8, 0x4 bytes
+                bool m_bEnabled; // 0x0bcc, 0x1 bytes
+                bool m_bDraw3DSkybox; // 0x0bcd, 0x1 bytes
+                std::uint8_t pad_0bce[0x462]; // 0x0bce, 0x462 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FuncMonitor) == 0xE20, "C_FuncMonitor size mismatch");
+            static_assert(sizeof(C_FuncMonitor) == 0x1030, "C_FuncMonitor size mismatch");
         }
     }
 }

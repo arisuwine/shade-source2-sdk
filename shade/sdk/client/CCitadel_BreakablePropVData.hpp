@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,12 +21,9 @@
 
 namespace shade {
     namespace sdk {
-        namespace client {
-            struct BreakablePowerupDropDefinition_t;
-        }
-
         namespace resourcesystem {
             class InfoForResourceTypeCModel;
+            class InfoForResourceTypeIParticleSystemDefinition;
         }
     }
 }
@@ -34,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,44 +44,67 @@ namespace shade {
                 bool m_bBreakOnDodgeTouch; // 0x0028, 0x1 bytes
                 bool m_bRenderAfterDeath; // 0x0029, 0x1 bytes
                 bool m_bSolidAfterDeath; // 0x002a, 0x1 bytes
-                bool m_bIsPermanent; // 0x002b, 0x1 bytes
-                bool m_bDamagedByBullets; // 0x002c, 0x1 bytes
-                bool m_bDamagedByMelee; // 0x002d, 0x1 bytes
-                bool m_bDamagedByAbilities; // 0x002e, 0x1 bytes
-                std::uint8_t pad_002f[0x1]; // 0x002f, 0x1 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hModel; // 0x0030, 0xe0 bytes
-                CGlobalSymbol m_sAnimgraphParamDamageReceived; // 0x0110, 0x8 bytes
-                CGlobalSymbol m_sAnimgraphParamOnHit; // 0x0118, 0x8 bytes
-                CGlobalSymbol m_sAnimgraphParamOnRespawn; // 0x0120, 0x8 bytes
-                CSoundEventName m_sBreakSound; // 0x0128, 0x10 bytes
-                CSoundEventName m_sSpawnSound; // 0x0138, 0x10 bytes
-                CSoundEventName m_sDamageSound; // 0x0148, 0x10 bytes
-                CSoundEventName m_sHeavyDamageSound; // 0x0158, 0x10 bytes
-                CSoundEventName m_sHitIndicatorSound; // 0x0168, 0x10 bytes
-                std::int32_t m_iHealth; // 0x0178, 0x4 bytes
-                float m_flInitialSpawnTime; // 0x017c, 0x4 bytes
-                float m_flRespawnTime; // 0x0180, 0x4 bytes
-                float m_flInitialSpawnTimeTest; // 0x0184, 0x4 bytes
-                float m_flRespawnTimeTest; // 0x0188, 0x4 bytes
-                bool m_bIsMantleable; // 0x018c, 0x1 bytes
-                std::uint8_t pad_018d[0x3]; // 0x018d, 0x3 bytes
-                float m_flPrimaryDropChance; // 0x0190, 0x4 bytes
-                shade::sdk::client::ECitadelRandomRollTypes m_eRollType; // 0x0194, 0x4 bytes
-                CUtlVector<shade::sdk::client::BreakablePowerupDropDefinition_t> m_vecPrimaryPickups; // 0x0198, 0x18 bytes
-                std::int32_t m_iMatchTimeMinsForLevel2Pickups; // 0x01b0, 0x4 bytes
-                std::uint8_t pad_01b4[0x4]; // 0x01b4, 0x4 bytes
-                CUtlVector<shade::sdk::client::BreakablePowerupDropDefinition_t> m_vecPickups_lv2; // 0x01b8, 0x18 bytes
-                std::int32_t m_iMatchTimeMinsForLevel3Pickups; // 0x01d0, 0x4 bytes
-                std::uint8_t pad_01d4[0x4]; // 0x01d4, 0x4 bytes
-                CUtlVector<shade::sdk::client::BreakablePowerupDropDefinition_t> m_vecPickups_lv3; // 0x01d8, 0x18 bytes
-                std::int32_t m_iLootListDeckSize; // 0x01f0, 0x4 bytes
-                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                bool m_bDieOnBreak; // 0x002b, 0x1 bytes
+                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
+                CUtlString m_strDeathSequenceName; // 0x0030, 0x8 bytes
+                CUtlString m_strHitSequenceName; // 0x0038, 0x8 bytes
+                float m_flLootDelay; // 0x0040, 0x4 bytes
+                bool m_bDamagedByBullets; // 0x0044, 0x1 bytes
+                bool m_bDamagedByMelee; // 0x0045, 0x1 bytes
+                bool m_bHeavyMeleeOnly; // 0x0046, 0x1 bytes
+                bool m_bDamagedByAbilities; // 0x0047, 0x1 bytes
+                bool m_bDamagedBySlide; // 0x0048, 0x1 bytes
+                bool m_bDamagedByPlayersOnly; // 0x0049, 0x1 bytes
+                std::uint8_t pad_004a[0x2]; // 0x004a, 0x2 bytes
+                std::int32_t m_iHealth; // 0x004c, 0x4 bytes
+                std::int32_t m_nMeleeHitsToBreak; // 0x0050, 0x4 bytes
+                std::int32_t m_nHeavyMeleeHitCount; // 0x0054, 0x4 bytes
+                bool m_bNoMeleeCleave; // 0x0058, 0x1 bytes
+                bool m_bIsMantleable; // 0x0059, 0x1 bytes
+                bool m_bRequireFullCostToBreak; // 0x005a, 0x1 bytes
+                std::uint8_t pad_005b[0x1]; // 0x005b, 0x1 bytes
+                float m_flOutlineRadius; // 0x005c, 0x4 bytes
+                bool m_bRequireVisibleOnMinimapForOutline; // 0x0060, 0x1 bytes
+                std::uint8_t pad_0061[0x3]; // 0x0061, 0x3 bytes
+                Color m_colorOutline; // 0x0064, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hModel; // 0x0068, 0xe0 bytes
+                float m_flModelScale; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
+                CModelMaterialGroupName m_sMaterialGroupName; // 0x0150, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ambientParticle; // 0x0158, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_breakParticle; // 0x0238, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_breakRollFailParticle; // 0x0318, 0xe0 bytes
+                CSoundEventName m_sBreakSound; // 0x03f8, 0x10 bytes
+                CSoundEventName m_sSpawnSound; // 0x0408, 0x10 bytes
+                CSoundEventName m_sBreakRollFailSound; // 0x0418, 0x10 bytes
+                CSoundEventName m_sMeleeDamageSound; // 0x0428, 0x10 bytes
+                CSoundEventName m_sOtherDamageSound; // 0x0438, 0x10 bytes
+                CSoundEventName m_sMeleeRejectSound; // 0x0448, 0x10 bytes
+                CSoundEventName m_OtherRejectSound; // 0x0458, 0x10 bytes
+                CSoundEventName m_sAmbientSound; // 0x0468, 0x10 bytes
+                float m_flInitialSpawnTime; // 0x0478, 0x4 bytes
+                float m_flInitialSpawnTimeTest; // 0x047c, 0x4 bytes
+                float m_flRespawnTime; // 0x0480, 0x4 bytes
+                float m_flRespawnTimeTest; // 0x0484, 0x4 bytes
+                CUtlString m_strMinimapCSSClassAlive; // 0x0488, 0x8 bytes
+                CUtlString m_strMinimapCSSClassDead; // 0x0490, 0x8 bytes
+                float m_flMinDistanceToRevealOnMinimap; // 0x0498, 0x4 bytes
+                std::uint8_t pad_049c[0x4]; // 0x049c, 0x4 bytes
+                CUtlString m_strLayoutFile; // 0x04a0, 0x8 bytes
+                float m_flPanelHeightOffset; // 0x04a8, 0x4 bytes
+                float m_flPanelDrawDistance; // 0x04ac, 0x4 bytes
+                CUtlString m_strInWorldCSSClasses; // 0x04b0, 0x8 bytes
+                float m_flPanelWidth; // 0x04b8, 0x4 bytes
+                float m_flPanelHeight; // 0x04bc, 0x4 bytes
+                float m_flPowerupDropChance; // 0x04c0, 0x4 bytes
+                shade::sdk::client::ECitadelRandomRollTypes m_eRollType; // 0x04c4, 0x4 bytes
+                CUtlOrderedMap<CSubclassName<0>, float> m_mapPickupChances; // 0x04c8, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_BreakablePropVData) == 0x1F8, "CCitadel_BreakablePropVData size mismatch");
+            static_assert(sizeof(CCitadel_BreakablePropVData) == 0x4F0, "CCitadel_BreakablePropVData size mismatch");
         }
     }
 }

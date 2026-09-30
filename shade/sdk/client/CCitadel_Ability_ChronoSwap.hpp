@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14e0
+             * Size: 0x1b00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ChronoSwap : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bHitTarget; // 0x11d8, 0x1 bytes
-                bool m_bAltCast; // 0x11d9, 0x1 bytes
-                std::uint8_t pad_11da[0x306]; // 0x11da, 0x306 bytes
+                bool m_bHitTarget; // 0x16d8, 0x1 bytes
+                bool m_bAltCast; // 0x16d9, 0x1 bytes
+                std::uint8_t pad_16da[0x426]; // 0x16da, 0x426 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ChronoSwap) == 0x14E0, "CCitadel_Ability_ChronoSwap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ChronoSwap) == 0x1B00, "CCitadel_Ability_ChronoSwap size mismatch");
         }
     }
 }

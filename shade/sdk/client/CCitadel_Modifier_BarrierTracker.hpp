@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BarrierTracker : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_flMaxHealth; // 0x00c0, 0x4 bytes
-                float m_flCurrentHealth; // 0x00c4, 0x4 bytes
-                std::uint8_t pad_00c8[0x18]; // 0x00c8, 0x18 bytes
+                float m_flMaxHealth; // 0x0130, 0x4 bytes
+                float m_flCurrentHealth; // 0x0134, 0x4 bytes
+                std::uint8_t pad_0138[0x18]; // 0x0138, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BarrierTracker) == 0xE0, "CCitadel_Modifier_BarrierTracker size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BarrierTracker) == 0x150, "CCitadel_Modifier_BarrierTracker size mismatch");
         }
     }
 }

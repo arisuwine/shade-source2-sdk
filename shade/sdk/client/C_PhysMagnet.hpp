@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcd8
+             * Size: 0xdd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PhysMagnet : public shade::sdk::client::CBaseAnimGraph {
             public:
-                CUtlVector<std::int32_t> m_aAttachedObjectsFromServer; // 0x0ca8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_aAttachedObjects; // 0x0cc0, 0x18 bytes
+                CUtlVector<std::int32_t> m_aAttachedObjectsFromServer; // 0x0da0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_aAttachedObjects; // 0x0db8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PhysMagnet) == 0xCD8, "C_PhysMagnet size mismatch");
+            static_assert(sizeof(C_PhysMagnet) == 0xDD0, "C_PhysMagnet size mismatch");
         }
     }
 }

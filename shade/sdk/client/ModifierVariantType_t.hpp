@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -24,7 +25,8 @@ namespace shade {
                 Variant_Entity = 0x4,
                 Variant_Vector = 0x5,
                 Variant_Quaternion = 0x6,
-                Variant_StructPtr = 0x7
+                Variant_StructPtr = 0x7,
+                Variant_VectorWS = 0x8
             };
         }
     }

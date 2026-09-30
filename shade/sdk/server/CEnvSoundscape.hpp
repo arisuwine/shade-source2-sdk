@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x530
+             * Size: 0x540
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,32 +32,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvSoundscape : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnPlay; // 0x04a0, 0x18 bytes
-                float m_flRadius; // 0x04b8, 0x4 bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
-                CUtlSymbolLarge m_soundEventName; // 0x04c0, 0x8 bytes
-                bool m_bOverrideWithEvent; // 0x04c8, 0x1 bytes
-                std::uint8_t pad_04c9[0x3]; // 0x04c9, 0x3 bytes
-                std::int32_t m_soundscapeIndex; // 0x04cc, 0x4 bytes
-                std::int32_t m_soundscapeEntityListId; // 0x04d0, 0x4 bytes
-                std::uint8_t pad_04d4[0x4]; // 0x04d4, 0x4 bytes
-                CUtlSymbolLarge m_positionNames[0x8]; // 0x04d8, 0x40 bytes
-                CHandle<shade::sdk::server::CEnvSoundscape> m_hProxySoundscape; // 0x0518, 0x4 bytes
-                bool m_bDisabled; // 0x051c, 0x1 bytes
-                std::uint8_t pad_051d[0x3]; // 0x051d, 0x3 bytes
-                CUtlSymbolLarge m_soundscapeName; // 0x0520, 0x8 bytes
-                std::uint32_t m_soundEventHash; // 0x0528, 0x4 bytes
-                std::uint8_t pad_052c[0x4]; // 0x052c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlay; // 0x04b0, 0x18 bytes
+                float m_flRadius; // 0x04c8, 0x4 bytes
+                std::uint8_t pad_04cc[0x4]; // 0x04cc, 0x4 bytes
+                CGameSoundEventName m_soundEventName; // 0x04d0, 0x8 bytes
+                bool m_bOverrideWithEvent; // 0x04d8, 0x1 bytes
+                std::uint8_t pad_04d9[0x3]; // 0x04d9, 0x3 bytes
+                std::int32_t m_soundscapeIndex; // 0x04dc, 0x4 bytes
+                std::int32_t m_soundscapeEntityListId; // 0x04e0, 0x4 bytes
+                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                CUtlSymbolLarge m_positionNames[0x8]; // 0x04e8, 0x40 bytes
+                CHandle<shade::sdk::server::CEnvSoundscape> m_hProxySoundscape; // 0x0528, 0x4 bytes
+                bool m_bDisabled; // 0x052c, 0x1 bytes
+                std::uint8_t pad_052d[0x3]; // 0x052d, 0x3 bytes
+                CUtlSymbolLarge m_soundscapeName; // 0x0530, 0x8 bytes
+                std::uint32_t m_soundEventHash; // 0x0538, 0x4 bytes
+                std::uint8_t pad_053c[0x4]; // 0x053c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleEnabled; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvSoundscape) == 0x530, "CEnvSoundscape size mismatch");
+            static_assert(sizeof(CEnvSoundscape) == 0x540, "CEnvSoundscape size mismatch");
         }
     }
 }

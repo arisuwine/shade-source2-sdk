@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xad8
+             * Size: 0xce8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +34,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDoormanBombProjectile) == 0xAD8, "CDoormanBombProjectile size mismatch");
+            static_assert(sizeof(CDoormanBombProjectile) == 0xCE8, "CDoormanBombProjectile size mismatch");
         }
     }
 }

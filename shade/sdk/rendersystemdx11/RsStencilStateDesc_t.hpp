@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -25,15 +26,15 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct RsStencilStateDesc_t {
-                std::uint8_t m_bStencilEnable : 1; // 0x0000, 0x1 bytes
-                std::uint8_t m_frontStencilFailOp : 3; // 0x0000, 0x1 bytes
-                std::uint8_t m_frontStencilDepthFailOp : 3; // 0x0000, 0x1 bytes
-                std::uint8_t m_frontStencilPassOp : 3; // 0x0001, 0x1 bytes
-                std::uint8_t m_frontStencilFunc : 3; // 0x0001, 0x1 bytes
+                std::uint8_t m_frontStencilFunc : 4; // 0x0000, 0x1 bytes
+                std::uint8_t m_backStencilFunc : 4; // 0x0000, 0x1 bytes
+                std::uint8_t m_bStencilEnable : 1; // 0x0001, 0x1 bytes
+                std::uint8_t m_frontStencilFailOp : 3; // 0x0001, 0x1 bytes
+                std::uint8_t m_frontStencilDepthFailOp : 3; // 0x0001, 0x1 bytes
+                std::uint8_t m_frontStencilPassOp : 3; // 0x0002, 0x1 bytes
                 std::uint8_t m_backStencilFailOp : 3; // 0x0002, 0x1 bytes
-                std::uint8_t m_backStencilDepthFailOp : 3; // 0x0002, 0x1 bytes
+                std::uint8_t m_backStencilDepthFailOp : 3; // 0x0003, 0x1 bytes
                 std::uint8_t m_backStencilPassOp : 3; // 0x0003, 0x1 bytes
-                std::uint8_t m_backStencilFunc : 3; // 0x0003, 0x1 bytes
                 std::uint8_t m_nStencilReadMask; // 0x0004, 0x1 bytes
                 std::uint8_t m_nStencilWriteMask; // 0x0005, 0x1 bytes
             };

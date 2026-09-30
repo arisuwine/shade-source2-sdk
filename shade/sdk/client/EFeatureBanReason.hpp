@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -21,7 +22,8 @@ namespace shade {
                 k_eFeatureBanReason_DevCommand = 0x1,
                 k_eFeatureBanReason_ReportedByOtherPlayers = 0x2,
                 k_eFeatureBanReason_MatchAbandons = 0x3,
-                k_eFeatureBanReason_TooManyReportsSubmitted = 0x4
+                k_eFeatureBanReason_TooManyReportsSubmitted = 0x4,
+                k_eFeatureBanReason_ToxicChat = 0x5
             };
         }
     }

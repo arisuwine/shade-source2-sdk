@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2d8
+             * Size: 0x408
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Afterburn_DOT : public shade::sdk::server::CCitadel_Modifier_Burning {
             public:
-                bool m_bCheckForExplosion; // 0x00d0, 0x1 bytes
-                std::uint8_t pad_00d1[0x3]; // 0x00d1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastBurnTime; // 0x00d4, 0x4 bytes
-                std::uint8_t pad_00d8[0x200]; // 0x00d8, 0x200 bytes
+                bool m_bCheckForExplosion; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBurnTime; // 0x0144, 0x4 bytes
+                std::uint8_t pad_0148[0x2c0]; // 0x0148, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Afterburn_DOT) == 0x2D8, "CCitadel_Modifier_Afterburn_DOT size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Afterburn_DOT) == 0x408, "CCitadel_Modifier_Afterburn_DOT size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x190
+             * Size: 0x270
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,26 +45,27 @@ namespace shade {
             class CBasePlayerVData : public shade::sdk::client::CEntitySubclassVDataBase {
             public:
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sModelName; // 0x0028, 0xe0 bytes
-                CUtlVector<CEmbeddedSubclass<shade::sdk::client::CCitadelModifier>> m_vecIntrinsicModifiers; // 0x0108, 0x18 bytes
-                shade::sdk::client::CSkillFloat m_flHeadDamageMultiplier; // 0x0120, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flChestDamageMultiplier; // 0x0130, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flStomachDamageMultiplier; // 0x0140, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flArmDamageMultiplier; // 0x0150, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flLegDamageMultiplier; // 0x0160, 0x10 bytes
-                float m_flHoldBreathTime; // 0x0170, 0x4 bytes
-                float m_flDrowningDamageInterval; // 0x0174, 0x4 bytes
-                std::int32_t m_nDrowningDamageInitial; // 0x0178, 0x4 bytes
-                std::int32_t m_nDrowningDamageMax; // 0x017c, 0x4 bytes
-                std::int32_t m_nWaterSpeed; // 0x0180, 0x4 bytes
-                float m_flUseRange; // 0x0184, 0x4 bytes
-                float m_flUseAngleTolerance; // 0x0188, 0x4 bytes
-                float m_flCrouchTime; // 0x018c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sModelNameAg2Override; // 0x0108, 0xe0 bytes
+                CUtlVector<CEmbeddedSubclass<shade::sdk::client::CCitadelModifier>> m_vecIntrinsicModifiers; // 0x01e8, 0x18 bytes
+                shade::sdk::client::CSkillFloat m_flHeadDamageMultiplier; // 0x0200, 0x10 bytes
+                shade::sdk::client::CSkillFloat m_flChestDamageMultiplier; // 0x0210, 0x10 bytes
+                shade::sdk::client::CSkillFloat m_flStomachDamageMultiplier; // 0x0220, 0x10 bytes
+                shade::sdk::client::CSkillFloat m_flArmDamageMultiplier; // 0x0230, 0x10 bytes
+                shade::sdk::client::CSkillFloat m_flLegDamageMultiplier; // 0x0240, 0x10 bytes
+                float m_flHoldBreathTime; // 0x0250, 0x4 bytes
+                float m_flDrowningDamageInterval; // 0x0254, 0x4 bytes
+                std::int32_t m_nDrowningDamageInitial; // 0x0258, 0x4 bytes
+                std::int32_t m_nDrowningDamageMax; // 0x025c, 0x4 bytes
+                std::int32_t m_nWaterSpeed; // 0x0260, 0x4 bytes
+                float m_flUseRange; // 0x0264, 0x4 bytes
+                float m_flUseAngleTolerance; // 0x0268, 0x4 bytes
+                float m_flCrouchTime; // 0x026c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBasePlayerVData) == 0x190, "CBasePlayerVData size mismatch");
+            static_assert(sizeof(CBasePlayerVData) == 0x270, "CBasePlayerVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1258
+             * Size: 0x1788
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_Colossus : public shade::sdk::client::CCitadel_Item {
             public:
-                std::uint8_t pad_11d8[0x80]; // 0x11d8, 0x80 bytes
+                std::uint8_t pad_16d8[0xb0]; // 0x16d8, 0xb0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_Colossus) == 0x1258, "CCitadel_ArmorUpgrade_Colossus size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_Colossus) == 0x1788, "CCitadel_ArmorUpgrade_Colossus size mismatch");
         }
     }
 }

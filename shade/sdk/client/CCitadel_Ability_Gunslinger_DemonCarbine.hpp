@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1578
+             * Size: 0x1bc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Gunslinger_DemonCarbine : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bWantsSlow; // 0x11d8, 0x1 bytes
-                std::uint8_t pad_11d9[0x3]; // 0x11d9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0x11dc, 0x4 bytes
-                float m_flLatchedTimeScaleFrac; // 0x11e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0x11e4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0x11e8, 0x4 bytes
-                std::uint8_t pad_11ec[0x4]; // 0x11ec, 0x4 bytes
-                float m_flStoredPowerPct; // 0x11f0, 0x4 bytes
-                std::uint8_t pad_11f4[0x384]; // 0x11f4, 0x384 bytes
+                bool m_bWantsSlow; // 0x16d8, 0x1 bytes
+                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0x16dc, 0x4 bytes
+                float m_flLatchedTimeScaleFrac; // 0x16e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0x16e8, 0x4 bytes
+                std::uint8_t pad_16ec[0x4]; // 0x16ec, 0x4 bytes
+                float m_flStoredPowerPct; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0x4d4]; // 0x16f4, 0x4d4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Gunslinger_DemonCarbine) == 0x1578, "CCitadel_Ability_Gunslinger_DemonCarbine size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Gunslinger_DemonCarbine) == 0x1BC8, "CCitadel_Ability_Gunslinger_DemonCarbine size mismatch");
         }
     }
 }

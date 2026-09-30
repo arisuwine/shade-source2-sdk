@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1858
+             * Size: 0x13e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityBouncePadVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BounceModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AllyBounceModifier; // 0x1828, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SpeedOnLandModifier; // 0x1838, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NoBounceModifier; // 0x1848, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BounceModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AllyBounceModifier; // 0x13b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SpeedOnLandModifier; // 0x13c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NoBounceModifier; // 0x13d0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityBouncePadVData) == 0x1858, "CAbilityBouncePadVData size mismatch");
+            static_assert(sizeof(CAbilityBouncePadVData) == 0x13E0, "CAbilityBouncePadVData size mismatch");
         }
     }
 }

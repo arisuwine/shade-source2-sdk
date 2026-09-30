@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -22,7 +23,8 @@ namespace shade {
                 VMAP = 0x2,
                 VMDL = 0x3,
                 XML = 0x4,
-                COUNT = 0x5
+                VDATA = 0x5,
+                COUNT = 0x6
             };
         }
     }

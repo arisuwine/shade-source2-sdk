@@ -12,32 +12,30 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/entity2/GameTime_t.hpp"
-#include "shade/sdk/server/CCitadelModifier.hpp"
+#include "shade/sdk/server/CCitadelModifier_BleedBase.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x258
+             * Size: 0x2a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_Hornet_Sting : public shade::sdk::server::CCitadelModifier {
+            class CCitadel_Modifier_Hornet_Sting : public shade::sdk::server::CCitadelModifier_BleedBase {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastTickTime; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x184]; // 0x00d4, 0x184 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Hornet_Sting) == 0x258, "CCitadel_Modifier_Hornet_Sting size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Hornet_Sting) == 0x2A8, "CCitadel_Modifier_Hornet_Sting size mismatch");
         }
     }
 }

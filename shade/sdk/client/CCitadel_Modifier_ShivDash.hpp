@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x1e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ShivDash : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x80]; // 0x00c0, 0x80 bytes
-                bool m_bUseTrail; // 0x0140, 0x1 bytes
-                bool m_bUseEchoEffect; // 0x0141, 0x1 bytes
-                std::uint8_t pad_0142[0x6]; // 0x0142, 0x6 bytes
+                std::uint8_t pad_0130[0xb0]; // 0x0130, 0xb0 bytes
+                bool m_bUseTrail; // 0x01e0, 0x1 bytes
+                bool m_bUseEchoEffect; // 0x01e1, 0x1 bytes
+                std::uint8_t pad_01e2[0x6]; // 0x01e2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ShivDash) == 0x148, "CCitadel_Modifier_ShivDash size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ShivDash) == 0x1E8, "CCitadel_Modifier_ShivDash size mismatch");
         }
     }
 }

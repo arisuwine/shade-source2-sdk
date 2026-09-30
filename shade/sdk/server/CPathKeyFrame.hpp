@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,17 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathKeyFrame : public shade::sdk::server::CLogicalEntity {
             public:
-                Vector m_Origin; // 0x04a0, 0xc bytes
-                QAngle m_Angles; // 0x04ac, 0xc bytes
-                std::uint8_t pad_04b8[0x8]; // 0x04b8, 0x8 bytes
-                Quaternion m_qAngle; // 0x04c0, 0x10 bytes
-                CUtlSymbolLarge m_iNextKey; // 0x04d0, 0x8 bytes
-                float m_flNextTime; // 0x04d8, 0x4 bytes
-                std::uint8_t pad_04dc[0x4]; // 0x04dc, 0x4 bytes
-                shade::sdk::server::CPathKeyFrame *m_pNextKey; // 0x04e0, 0x8 bytes
-                shade::sdk::server::CPathKeyFrame *m_pPrevKey; // 0x04e8, 0x8 bytes
-                float m_flMoveSpeed; // 0x04f0, 0x4 bytes
-                std::uint8_t pad_04f4[0xc]; // 0x04f4, 0xc bytes
+                Vector m_Origin; // 0x04b0, 0xc bytes
+                QAngle m_Angles; // 0x04bc, 0xc bytes
+                std::uint8_t pad_04c8[0x8]; // 0x04c8, 0x8 bytes
+                Quaternion m_qAngle; // 0x04d0, 0x10 bytes
+                CUtlSymbolLarge m_iNextKey; // 0x04e0, 0x8 bytes
+                float m_flNextTime; // 0x04e8, 0x4 bytes
+                CHandle<shade::sdk::server::CPathKeyFrame> m_pNextKey; // 0x04ec, 0x4 bytes
+                CHandle<shade::sdk::server::CPathKeyFrame> m_pPrevKey; // 0x04f0, 0x4 bytes
+                float m_flMoveSpeed; // 0x04f4, 0x4 bytes
+                std::uint8_t pad_04f8[0x8]; // 0x04f8, 0x8 bytes
             };
             #pragma pack(pop)
 

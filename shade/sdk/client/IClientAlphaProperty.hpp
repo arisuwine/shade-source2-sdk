@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,6 +25,7 @@ namespace shade {
              * Has VTable
              * Abstract Class
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class IClientAlphaProperty {

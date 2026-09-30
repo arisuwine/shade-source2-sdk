@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x160
+             * Size: 0xd8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView) == 0x160, "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView) == 0xD8, "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView size mismatch");
         }
     }
 }

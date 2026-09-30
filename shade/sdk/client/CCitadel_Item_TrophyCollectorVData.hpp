@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19b8
+             * Size: 0x15b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_TrophyCollectorVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EarnedParticle; // 0x18b8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GoldModifier; // 0x1998, 0x10 bytes
-                CSoundEventName m_strEarnedSound; // 0x19a8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EarnedParticle; // 0x14b0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TrophyStacksModifier; // 0x1590, 0x10 bytes
+                CSoundEventName m_strEarnedSound; // 0x15a0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_TrophyCollectorVData) == 0x19B8, "CCitadel_Item_TrophyCollectorVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_TrophyCollectorVData) == 0x15B0, "CCitadel_Item_TrophyCollectorVData size mismatch");
         }
     }
 }

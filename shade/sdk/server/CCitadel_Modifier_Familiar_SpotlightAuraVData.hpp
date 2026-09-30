@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x890
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Familiar_SpotlightAuraVData : public shade::sdk::server::CCitadelModifierAuraVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x07a8, 0xe0 bytes
-                float m_flHeight; // 0x0888, 0x4 bytes
-                float m_flOffset; // 0x088c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x07b8, 0xe0 bytes
+                float m_flHeight; // 0x0898, 0x4 bytes
+                float m_flOffset; // 0x089c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Familiar_SpotlightAuraVData) == 0x890, "CCitadel_Modifier_Familiar_SpotlightAuraVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Familiar_SpotlightAuraVData) == 0x8A0, "CCitadel_Modifier_Familiar_SpotlightAuraVData size mismatch");
         }
     }
 }

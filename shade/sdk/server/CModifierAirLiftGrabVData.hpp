@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CCitadelModifierVData.hpp"
+#include "shade/sdk/server/CCitadel_Modifier_DragVData.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,28 +30,24 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x848
+             * Size: 0x958
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CModifierAirLiftGrabVData : public shade::sdk::server::CCitadelModifierVData {
+            class CModifierAirLiftGrabVData : public shade::sdk::server::CCitadel_Modifier_DragVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GrabEffect; // 0x0750, 0xe0 bytes
-                float m_flLiftHorizontal; // 0x0830, 0x4 bytes
-                float m_flLiftHeight; // 0x0834, 0x4 bytes
-                float m_flFollowDampingFactor; // 0x0838, 0x4 bytes
-                float m_flFollowDistance; // 0x083c, 0x4 bytes
-                float m_flAllyGrabCancelTime; // 0x0840, 0x4 bytes
-                float m_flAllyPossibleStuckDistance; // 0x0844, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GrabEffect; // 0x0870, 0xe0 bytes
+                float m_flAllyGrabCancelTime; // 0x0950, 0x4 bytes
+                std::uint8_t pad_0954[0x4]; // 0x0954, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierAirLiftGrabVData) == 0x848, "CModifierAirLiftGrabVData size mismatch");
+            static_assert(sizeof(CModifierAirLiftGrabVData) == 0x958, "CModifierAirLiftGrabVData size mismatch");
         }
     }
 }

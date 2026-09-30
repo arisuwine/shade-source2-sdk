@@ -12,34 +12,46 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
+
+#include "shade/sdk/tier2/CRangeFloat.hpp"
+#include "shade/sdk/tier2/CRangeInt.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c
-             * Alignment: 0x4
-             * Has Trivial Destructor
+             * Size: 0xd8
+             * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct DamageFlashSettings_t {
                 float m_flDuration; // 0x0000, 0x4 bytes
-                float m_flCoverage; // 0x0004, 0x4 bytes
-                float m_flHardness; // 0x0008, 0x4 bytes
-                float m_flBrightness; // 0x000c, 0x4 bytes
-                float m_flBrightnessInLightSensitivityMode; // 0x0010, 0x4 bytes
-                bool m_bHeadOnly; // 0x0014, 0x1 bytes
-                Color m_Color; // 0x0015, 0x4 bytes
-                std::uint8_t pad_0019[0x3]; // 0x0019, 0x3 bytes
+                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
+                CColorGradient m_ColorGradient; // 0x0008, 0x18 bytes
+                shade::sdk::tier2::CRangeFloat m_flBrightness; // 0x0020, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flBrightnessInLightSensitivityMode; // 0x0028, 0x8 bytes
+                bool m_bAnimateAlpha; // 0x0030, 0x1 bytes
+                bool m_bFlashHit; // 0x0031, 0x1 bytes
+                std::uint8_t pad_0032[0x2]; // 0x0032, 0x2 bytes
+                shade::sdk::tier2::CRangeFloat m_flFlashHitScale; // 0x0034, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flFlashHitRotation; // 0x003c, 0x8 bytes
+                bool m_bFlashHitAnimateRadius; // 0x0044, 0x1 bytes
+                bool m_bFlashHitSpikes; // 0x0045, 0x1 bytes
+                std::uint8_t pad_0046[0x2]; // 0x0046, 0x2 bytes
+                shade::sdk::tier2::CRangeInt m_nSpikeCount; // 0x0048, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flSpikeSharpness; // 0x0050, 0x8 bytes
+                CPiecewiseCurve m_AlphaAnimationCurve; // 0x0058, 0x40 bytes
+                CPiecewiseCurve m_RadiusScaleAnimationCurve; // 0x0098, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(DamageFlashSettings_t) == 0x1C, "DamageFlashSettings_t size mismatch");
+            static_assert(sizeof(DamageFlashSettings_t) == 0xD8, "DamageFlashSettings_t size mismatch");
         }
     }
 }

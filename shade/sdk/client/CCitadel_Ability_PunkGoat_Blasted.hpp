@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1870
+             * Size: 0x1fe0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_Blasted : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bHUDElementVisible; // 0x11d8, 0x1 bytes
-                std::uint8_t pad_11d9[0x13]; // 0x11d9, 0x13 bytes
-                float m_flBlastedCurrentDuration; // 0x11ec, 0x4 bytes
-                std::uint8_t pad_11f0[0x680]; // 0x11f0, 0x680 bytes
+                bool m_bHUDElementVisible; // 0x16d8, 0x1 bytes
+                std::uint8_t pad_16d9[0x13]; // 0x16d9, 0x13 bytes
+                float m_flBlastedCurrentDuration; // 0x16ec, 0x4 bytes
+                std::uint8_t pad_16f0[0x8f0]; // 0x16f0, 0x8f0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_Blasted) == 0x1870, "CCitadel_Ability_PunkGoat_Blasted size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_Blasted) == 0x1FE0, "CCitadel_Ability_PunkGoat_Blasted size mismatch");
         }
     }
 }

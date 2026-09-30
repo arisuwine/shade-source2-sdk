@@ -12,15 +12,15 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace server {
             enum class AI_NavSetGoalFlags_t : std::uint32_t {
-                AISG_SET_ARRIVAL_FROM_PREVWP = 0x1,
-                AISG_MAINTAIN_SMART_GOAL = 0x2,
-                AISG_QUEUE_GOAL = 0x4,
-                AISG_DEF_FLAGS = 0x0
+                AISG_DEF_FLAGS = 0x0,
+                AISG_QUEUE_GOAL = 0x1,
+                AISG_QUEUED_GOAL_BEING_PROCESSED = 0x2
             };
         }
     }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x418
+             * Size: 0x5a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,18 +38,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticReverb_Proc : public shade::sdk::server::CCitadel_Modifier_BaseEventProc {
             public:
-                bool m_bNoDeath; // 0x0208, 0x1 bytes
-                std::uint8_t pad_0209[0x3]; // 0x0209, 0x3 bytes
-                float m_flDamage; // 0x020c, 0x4 bytes
-                std::int32_t m_nDamageTick; // 0x0210, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0214, 0x4 bytes
-                std::uint8_t pad_0218[0x200]; // 0x0218, 0x200 bytes
+                bool m_bNoDeath; // 0x02d8, 0x1 bytes
+                std::uint8_t pad_02d9[0x3]; // 0x02d9, 0x3 bytes
+                float m_flDamage; // 0x02dc, 0x4 bytes
+                std::int32_t m_nDamageTick; // 0x02e0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x02e4, 0x4 bytes
+                std::uint8_t pad_02e8[0x2c0]; // 0x02e8, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticReverb_Proc) == 0x418, "CCitadel_Modifier_MysticReverb_Proc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticReverb_Proc) == 0x5A8, "CCitadel_Modifier_MysticReverb_Proc size mismatch");
         }
     }
 }

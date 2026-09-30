@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xca0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,34 +39,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelZipLineNode : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_09a8[0x70]; // 0x09a8, 0x70 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::CCitadelZipLineNode>> m_vecConnections; // 0x0a18, 0x18 bytes
-                C_NetworkUtlVectorBase<std::int32_t> m_vecConnectionDir; // 0x0a30, 0x18 bytes
-                Vector m_vTangentIn; // 0x0a48, 0xc bytes
-                Vector m_vTangentOut; // 0x0a54, 0xc bytes
-                float m_flCumulativeDistance; // 0x0a60, 0x4 bytes
-                std::int16_t m_iNodeIndex; // 0x0a64, 0x2 bytes
-                std::int16_t m_eCaptureState; // 0x0a66, 0x2 bytes
-                std::int16_t m_iPrimaryLane; // 0x0a68, 0x2 bytes
-                bool m_bUseBaseLaneColor; // 0x0a6a, 0x1 bytes
-                std::uint8_t pad_0a6b[0x1]; // 0x0a6b, 0x1 bytes
-                std::int16_t m_nRopesParity; // 0x0a6c, 0x2 bytes
-                bool m_bCornerNode; // 0x0a6e, 0x1 bytes
-                bool m_bCapturable; // 0x0a6f, 0x1 bytes
-                bool m_bDisableZippingToByPlayers; // 0x0a70, 0x1 bytes
-                std::uint8_t pad_0a71[0x3]; // 0x0a71, 0x3 bytes
-                float m_flSpeedMultiplierToBaseBonus; // 0x0a74, 0x4 bytes
-                float m_flSpeedMultiplierFromBaseBonus; // 0x0a78, 0x4 bytes
-                std::uint8_t pad_0a7c[0x4]; // 0x0a7c, 0x4 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_hGuardingBosses; // 0x0a80, 0x18 bytes
-                float m_flRopeRadius; // 0x0a98, 0x4 bytes
-                std::uint8_t pad_0a9c[0x4]; // 0x0a9c, 0x4 bytes
+                std::uint8_t pad_0bb0[0x70]; // 0x0bb0, 0x70 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::CCitadelZipLineNode>> m_vecConnections; // 0x0c20, 0x18 bytes
+                C_NetworkUtlVectorBase<std::int32_t> m_vecConnectionDir; // 0x0c38, 0x18 bytes
+                Vector m_vTangentIn; // 0x0c50, 0xc bytes
+                Vector m_vTangentOut; // 0x0c5c, 0xc bytes
+                float m_flCumulativeDistance; // 0x0c68, 0x4 bytes
+                std::int16_t m_iNodeIndex; // 0x0c6c, 0x2 bytes
+                std::int16_t m_eCaptureState; // 0x0c6e, 0x2 bytes
+                std::int16_t m_iPrimaryLane; // 0x0c70, 0x2 bytes
+                std::int16_t m_nRopesParity; // 0x0c72, 0x2 bytes
+                bool m_bCornerNode; // 0x0c74, 0x1 bytes
+                bool m_bCapturable; // 0x0c75, 0x1 bytes
+                bool m_bDisableZippingToByPlayers; // 0x0c76, 0x1 bytes
+                std::uint8_t pad_0c77[0x1]; // 0x0c77, 0x1 bytes
+                float m_flSpeedMultiplierToBaseBonus; // 0x0c78, 0x4 bytes
+                float m_flSpeedMultiplierFromBaseBonus; // 0x0c7c, 0x4 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_hGuardingBosses; // 0x0c80, 0x18 bytes
+                float m_flRopeRadius; // 0x0c98, 0x4 bytes
+                std::uint8_t pad_0c9c[0x4]; // 0x0c9c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelZipLineNode) == 0xAA0, "CCitadelZipLineNode size mismatch");
+            static_assert(sizeof(CCitadelZipLineNode) == 0xCA0, "CCitadelZipLineNode size mismatch");
         }
     }
 }

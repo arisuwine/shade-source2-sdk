@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/C_SoundEventEntity.hpp"
+#include "shade/sdk/client/C_SoundEventMultiPointEntity.hpp"
 
 namespace shade {
     namespace sdk {
@@ -36,13 +37,15 @@ namespace shade {
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class C_SoundEventPathCornerEntity : public shade::sdk::client::C_SoundEventEntity {
+            class C_SoundEventPathCornerEntity : public shade::sdk::client::C_SoundEventMultiPointEntity {
             public:
                 C_NetworkUtlVectorBase<shade::sdk::client::SoundeventPathCornerPairNetworked_t> m_vecCornerPairsNetworked; // 0x06b0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
             static_assert(sizeof(C_SoundEventPathCornerEntity) == 0x6C8, "C_SoundEventPathCornerEntity size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,23 +23,23 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2010
+             * Size: 0xb50
              * Alignment: 0xff
              * Has VTable
+             * Construct Allowed
              * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CBodyComponentBaseAnimGraph : public shade::sdk::client::CBodyComponentSkeletonInstance {
             public:
-                shade::sdk::client::CBaseAnimGraphController m_animationController; // 0x04d0, 0x1b38 bytes
-                std::uint8_t pad_2008[0x8]; // 0x2008, 0x8 bytes
+                shade::sdk::client::CBaseAnimGraphController m_animationController; // 0x0530, 0x620 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0x2010, "CBodyComponentBaseAnimGraph size mismatch");
+            static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0xB50, "CBodyComponentBaseAnimGraph size mismatch");
         }
     }
 }

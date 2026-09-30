@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x178
+             * Size: 0x218
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Containment_Victim : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flGoalHeight; // 0x00d0, 0x4 bytes
-                float m_flFallRate; // 0x00d4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x00d8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexVictim; // 0x00dc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nChainFxIndex; // 0x00e0, 0x4 bytes
-                float m_flTetherRadius; // 0x00e4, 0x4 bytes
-                Vector m_vecOrigin; // 0x00e8, 0xc bytes
-                std::uint8_t pad_00f4[0x84]; // 0x00f4, 0x84 bytes
+                float m_flGoalHeight; // 0x0140, 0x4 bytes
+                float m_flFallRate; // 0x0144, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0148, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexVictim; // 0x014c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nChainFxIndex; // 0x0150, 0x4 bytes
+                float m_flTetherRadius; // 0x0154, 0x4 bytes
+                VectorWS m_vecOrigin; // 0x0158, 0xc bytes
+                std::uint8_t pad_0164[0xb4]; // 0x0164, 0xb4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Containment_Victim) == 0x178, "CCitadel_Modifier_Containment_Victim size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Containment_Victim) == 0x218, "CCitadel_Modifier_Containment_Victim size mismatch");
         }
     }
 }

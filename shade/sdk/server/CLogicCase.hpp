@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8e8
+             * Size: 0x8f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicCase : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_nCase[0x20]; // 0x04a0, 0x100 bytes
-                std::int32_t m_nShuffleCases; // 0x05a0, 0x4 bytes
-                std::int32_t m_nLastShuffleCase; // 0x05a4, 0x4 bytes
-                std::uint8_t m_uchShuffleCaseMap[0x20]; // 0x05a8, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnCase[0x20]; // 0x05c8, 0x300 bytes
-                CEntityOutputTemplate<CUtlString> m_OnDefault; // 0x08c8, 0x20 bytes
+                CUtlSymbolLarge m_nCase[0x20]; // 0x04b0, 0x100 bytes
+                std::int32_t m_nShuffleCases; // 0x05b0, 0x4 bytes
+                std::int32_t m_nLastShuffleCase; // 0x05b4, 0x4 bytes
+                std::uint8_t m_uchShuffleCaseMap[0x20]; // 0x05b8, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnCase[0x20]; // 0x05d8, 0x300 bytes
+                CEntityOutputTemplate<CUtlString> m_OnDefault; // 0x08d8, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPickRandom; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPickRandomShuffle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputResetShuffle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicCase) == 0x8E8, "CLogicCase size mismatch");
+            static_assert(sizeof(CLogicCase) == 0x8F8, "CLogicCase size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -39,20 +40,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int16_t m_skyboxData.scale; // Offset: 0x5f8, Size: 0x1, Size In Bytes: 0x2
-             * Vector m_skyboxData.origin; // Offset: 0x5fc, Size: 0x1, Size In Bytes: 0xc
-             * bool m_skyboxData.bClip3DSkyBoxNearToWorldFar; // Offset: 0x608, Size: 0x1, Size In Bytes: 0x1
-             * float m_skyboxData.flClip3DSkyBoxNearToWorldFarOffset; // Offset: 0x60c, Size: 0x1, Size In Bytes: 0x4
-             * bool m_skyboxData.fog.enable; // Offset: 0x674, Size: 0x1, Size In Bytes: 0x1
-             * bool m_skyboxData.fog.blend; // Offset: 0x675, Size: 0x1, Size In Bytes: 0x1
-             * Vector m_skyboxData.fog.dirPrimary; // Offset: 0x618, Size: 0x1, Size In Bytes: 0xc
-             * Color m_skyboxData.fog.colorPrimary; // Offset: 0x624, Size: 0x1, Size In Bytes: 0x4
-             * Color m_skyboxData.fog.colorSecondary; // Offset: 0x628, Size: 0x1, Size In Bytes: 0x4
-             * float m_skyboxData.fog.start; // Offset: 0x634, Size: 0x1, Size In Bytes: 0x4
-             * float m_skyboxData.fog.end; // Offset: 0x638, Size: 0x1, Size In Bytes: 0x4
-             * float m_skyboxData.fog.maxdensity; // Offset: 0x640, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_SkyCamera) == 0x690, "C_SkyCamera size mismatch");
         }

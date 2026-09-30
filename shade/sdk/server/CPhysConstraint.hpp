@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,49 +35,37 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x500
+             * Size: 0x510
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CPhysConstraint : public shade::sdk::server::CLogicalEntity {
             public:
-                shade::sdk::vphysics2::IPhysicsJoint *m_hJoint; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_nameAttach1; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_nameAttach2; // 0x04b0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAttach1; // 0x04b8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAttach2; // 0x04bc, 0x4 bytes
-                CUtlSymbolLarge m_nameAttachment1; // 0x04c0, 0x8 bytes
-                CUtlSymbolLarge m_nameAttachment2; // 0x04c8, 0x8 bytes
-                CUtlSymbolLarge m_breakSound; // 0x04d0, 0x8 bytes
-                float m_forceLimit; // 0x04d8, 0x4 bytes
-                float m_torqueLimit; // 0x04dc, 0x4 bytes
-                float m_minTeleportDistance; // 0x04e0, 0x4 bytes
-                bool m_bSnapObjectPositions; // 0x04e4, 0x1 bytes
-                bool m_bTreatEntity1AsInfiniteMass; // 0x04e5, 0x1 bytes
-                std::uint8_t pad_04e6[0x2]; // 0x04e6, 0x2 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x04e8, 0x18 bytes
+                shade::sdk::vphysics2::IPhysicsJoint *m_hJoint; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_nameAttach1; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_nameAttach2; // 0x04c0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAttach1; // 0x04c8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAttach2; // 0x04cc, 0x4 bytes
+                CUtlSymbolLarge m_nameAttachment1; // 0x04d0, 0x8 bytes
+                CUtlSymbolLarge m_nameAttachment2; // 0x04d8, 0x8 bytes
+                CGameSoundEventName m_breakSound; // 0x04e0, 0x8 bytes
+                float m_forceLimit; // 0x04e8, 0x4 bytes
+                float m_torqueLimit; // 0x04ec, 0x4 bytes
+                float m_minTeleportDistance; // 0x04f0, 0x4 bytes
+                bool m_bSnapObjectPositions; // 0x04f4, 0x1 bytes
+                bool m_bTreatEntity1AsInfiniteMass; // 0x04f5, 0x1 bytes
+                std::uint8_t pad_04f6[0x2]; // 0x04f6, 0x2 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x04f8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputOnBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableLinearConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableLinearConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableAngularConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableAngularConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnMotorOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnMotorOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMotorTorqueFactor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMotorTargetVelocity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysConstraint) == 0x500, "CPhysConstraint size mismatch");
+            static_assert(sizeof(CPhysConstraint) == 0x510, "CPhysConstraint size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1138
+             * Size: 0x16f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Doorway : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x30]; // 0x0f70, 0x30 bytes
-                CHandle<shade::sdk::server::CCitadel_DoorwayPortal> m_hDoor1; // 0x0fa0, 0x4 bytes
-                std::uint8_t pad_0fa4[0x4]; // 0x0fa4, 0x4 bytes
-                double m_flLastRangeFailCast; // 0x0fa8, 0x8 bytes
-                std::uint8_t pad_0fb0[0x180]; // 0x0fb0, 0x180 bytes
-                float m_flDoorBreakableRadius; // 0x1130, 0x4 bytes
-                std::uint8_t pad_1134[0x4]; // 0x1134, 0x4 bytes
+                std::uint8_t pad_14a0[0x30]; // 0x14a0, 0x30 bytes
+                CHandle<shade::sdk::server::CCitadel_DoorwayPortal> m_hDoor1; // 0x14d0, 0x4 bytes
+                std::uint8_t pad_14d4[0x4]; // 0x14d4, 0x4 bytes
+                double m_flLastRangeFailCast; // 0x14d8, 0x8 bytes
+                std::uint8_t pad_14e0[0x210]; // 0x14e0, 0x210 bytes
+                float m_flDoorBreakableRadius; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0x4]; // 0x16f4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Doorway) == 0x1138, "CCitadel_Ability_Doorman_Doorway size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Doorway) == 0x16F8, "CCitadel_Ability_Doorman_Doorway size mismatch");
         }
     }
 }

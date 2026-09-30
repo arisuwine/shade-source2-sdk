@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x860
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierUnstickVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                CSoundEventName m_sSuccessSound; // 0x0830, 0x10 bytes
-                CSoundEventName m_sFailureSound; // 0x0840, 0x10 bytes
+                CSoundEventName m_sSuccessSound; // 0x0840, 0x10 bytes
+                CSoundEventName m_sFailureSound; // 0x0850, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierUnstickVData) == 0x850, "CModifierUnstickVData size mismatch");
+            static_assert(sizeof(CModifierUnstickVData) == 0x860, "CModifierUnstickVData size mismatch");
         }
     }
 }

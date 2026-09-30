@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xfc0
+             * Size: 0xfc8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -45,13 +46,16 @@ namespace shade {
                 CHandle<shade::sdk::server::CCitadelPlayerPawn> m_hPlayerShooter; // 0x0028, 0x4 bytes
                 std::uint8_t pad_002c[0xf8c]; // 0x002c, 0xf8c bytes
                 bool m_bEnforceLOSToShootPosition; // 0x0fb8, 0x1 bytes
-                std::uint8_t pad_0fb9[0x7]; // 0x0fb9, 0x7 bytes
+                std::uint8_t pad_0fb9[0x3]; // 0x0fb9, 0x3 bytes
+                float m_flFixedWidth; // 0x0fbc, 0x4 bytes
+                float m_flFixedLength; // 0x0fc0, 0x4 bytes
+                std::uint8_t pad_0fc4[0x4]; // 0x0fc4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelAbilityBeam_t) == 0xFC0, "CCitadelAbilityBeam_t size mismatch");
+            static_assert(sizeof(CCitadelAbilityBeam_t) == 0xFC8, "CCitadelAbilityBeam_t size mismatch");
         }
     }
 }

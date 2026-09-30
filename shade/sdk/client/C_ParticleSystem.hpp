@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf58
+             * Size: 0x1180
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,55 +44,46 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ParticleSystem : public shade::sdk::client::C_BaseModelEntity {
             public:
-                char m_szSnapshotFileName[0x200]; // 0x09a8, 0x200 bytes
-                bool m_bActive; // 0x0ba8, 0x1 bytes
-                bool m_bFrozen; // 0x0ba9, 0x1 bytes
-                std::uint8_t pad_0baa[0x2]; // 0x0baa, 0x2 bytes
-                float m_flFreezeTransitionDuration; // 0x0bac, 0x4 bytes
-                std::int32_t m_nStopType; // 0x0bb0, 0x4 bytes
-                bool m_bAnimateDuringGameplayPause; // 0x0bb4, 0x1 bytes
-                std::uint8_t pad_0bb5[0x3]; // 0x0bb5, 0x3 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x0bb8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0bc0, 0x4 bytes
-                float m_flPreSimTime; // 0x0bc4, 0x4 bytes
-                Vector m_vServerControlPoints[0x4]; // 0x0bc8, 0x30 bytes
-                std::uint8_t m_iServerControlPointAssignments[0x4]; // 0x0bf8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hControlPointEnts[0x40]; // 0x0bfc, 0x100 bytes
-                bool m_bNoSave; // 0x0cfc, 0x1 bytes
-                bool m_bNoFreeze; // 0x0cfd, 0x1 bytes
-                bool m_bNoRamp; // 0x0cfe, 0x1 bytes
-                bool m_bStartActive; // 0x0cff, 0x1 bytes
-                CUtlSymbolLarge m_iszEffectName; // 0x0d00, 0x8 bytes
-                CUtlSymbolLarge m_iszControlPointNames[0x40]; // 0x0d08, 0x200 bytes
-                std::int32_t m_nDataCP; // 0x0f08, 0x4 bytes
-                Vector m_vecDataCPValue; // 0x0f0c, 0xc bytes
-                std::int32_t m_nTintCP; // 0x0f18, 0x4 bytes
-                Color m_clrTint; // 0x0f1c, 0x4 bytes
-                std::uint8_t pad_0f20[0x20]; // 0x0f20, 0x20 bytes
-                bool m_bOldActive; // 0x0f40, 0x1 bytes
-                bool m_bOldFrozen; // 0x0f41, 0x1 bytes
-                std::uint8_t pad_0f42[0x16]; // 0x0f42, 0x16 bytes
+                char m_szSnapshotFileName[0x200]; // 0x0bb0, 0x200 bytes
+                bool m_bActive; // 0x0db0, 0x1 bytes
+                bool m_bFrozen; // 0x0db1, 0x1 bytes
+                std::uint8_t pad_0db2[0x2]; // 0x0db2, 0x2 bytes
+                float m_flFreezeTransitionDuration; // 0x0db4, 0x4 bytes
+                std::int32_t m_nStopType; // 0x0db8, 0x4 bytes
+                bool m_bAnimateDuringGameplayPause; // 0x0dbc, 0x1 bytes
+                std::uint8_t pad_0dbd[0x3]; // 0x0dbd, 0x3 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x0dc0, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0dc8, 0x4 bytes
+                float m_flPreSimTime; // 0x0dcc, 0x4 bytes
+                Vector m_vServerControlPoints[0x4]; // 0x0dd0, 0x30 bytes
+                std::uint8_t m_iServerControlPointAssignments[0x4]; // 0x0e00, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hControlPointEnts[0x40]; // 0x0e04, 0x100 bytes
+                bool m_bDataStringLocalized; // 0x0f04, 0x1 bytes
+                std::uint8_t pad_0f05[0x3]; // 0x0f05, 0x3 bytes
+                CUtlString m_strDataString; // 0x0f08, 0x8 bytes
+                bool m_bNoSave; // 0x0f10, 0x1 bytes
+                bool m_bNoFreeze; // 0x0f11, 0x1 bytes
+                bool m_bNoRamp; // 0x0f12, 0x1 bytes
+                bool m_bStartActive; // 0x0f13, 0x1 bytes
+                std::uint8_t pad_0f14[0x4]; // 0x0f14, 0x4 bytes
+                CUtlSymbolLarge m_iszEffectName; // 0x0f18, 0x8 bytes
+                CUtlSymbolLarge m_iszControlPointNames[0x40]; // 0x0f20, 0x200 bytes
+                std::int32_t m_nDataCP; // 0x1120, 0x4 bytes
+                Vector m_vecDataCPValue; // 0x1124, 0xc bytes
+                std::int32_t m_nTintCP; // 0x1130, 0x4 bytes
+                Color m_clrTint; // 0x1134, 0x4 bytes
+                std::uint8_t pad_1138[0x20]; // 0x1138, 0x20 bytes
+                bool m_bOldActive; // 0x1158, 0x1 bytes
+                bool m_bOldFrozen; // 0x1159, 0x1 bytes
+                std::uint8_t pad_115a[0x26]; // 0x115a, 0x26 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputFreeze; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputThaw; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopEndCap; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDestroy; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetControlPoint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDataControlPointX; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDataControlPointY; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDataControlPointZ; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void C_ParticleSystemStartParticleSystemThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * CUtlString cpoint%d_value; // Offset: 0x7fffffff, Size: 0x40, Size In Bytes: 0x0
-             * void m_pEffect; // Offset: 0xf20, Size: 0x1, Size In Bytes: 0x0
-             * void m_iOldEffectIndex; // Offset: 0xf48, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_ParticleSystem) == 0xF58, "C_ParticleSystem size mismatch");
+            static_assert(sizeof(C_ParticleSystem) == 0x1180, "C_ParticleSystem size mismatch");
         }
     }
 }

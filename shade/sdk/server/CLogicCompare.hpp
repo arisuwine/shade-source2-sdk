@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x528
+             * Size: 0x538
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicCompare : public shade::sdk::server::CLogicalEntity {
             public:
-                float m_flInValue; // 0x04a0, 0x4 bytes
-                float m_flCompareValue; // 0x04a4, 0x4 bytes
-                CEntityOutputTemplate<float> m_OnLessThan; // 0x04a8, 0x20 bytes
-                CEntityOutputTemplate<float> m_OnEqualTo; // 0x04c8, 0x20 bytes
-                CEntityOutputTemplate<float> m_OnNotEqualTo; // 0x04e8, 0x20 bytes
-                CEntityOutputTemplate<float> m_OnGreaterThan; // 0x0508, 0x20 bytes
+                float m_flInValue; // 0x04b0, 0x4 bytes
+                float m_flCompareValue; // 0x04b4, 0x4 bytes
+                CEntityOutputTemplate<float> m_OnLessThan; // 0x04b8, 0x20 bytes
+                CEntityOutputTemplate<float> m_OnEqualTo; // 0x04d8, 0x20 bytes
+                CEntityOutputTemplate<float> m_OnNotEqualTo; // 0x04f8, 0x20 bytes
+                CEntityOutputTemplate<float> m_OnGreaterThan; // 0x0518, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetValueCompare; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetCompareValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputCompare; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicCompare) == 0x528, "CLogicCompare size mismatch");
+            static_assert(sizeof(CLogicCompare) == 0x538, "CLogicCompare size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd8
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TossUp : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bForceApplied; // 0x00c0, 0x1 bytes
-                bool m_bRestrictMovement; // 0x00c1, 0x1 bytes
-                std::uint8_t pad_00c2[0x2]; // 0x00c2, 0x2 bytes
-                Vector m_vTossUpForce; // 0x00c4, 0xc bytes
-                float m_flCurrentVelocityScale; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x4]; // 0x00d4, 0x4 bytes
+                bool m_bForceApplied; // 0x0130, 0x1 bytes
+                bool m_bRestrictMovement; // 0x0131, 0x1 bytes
+                std::uint8_t pad_0132[0x2]; // 0x0132, 0x2 bytes
+                Vector m_vTossUpForce; // 0x0134, 0xc bytes
+                float m_flCurrentVelocityScale; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x4]; // 0x0144, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TossUp) == 0xD8, "CCitadel_Modifier_TossUp size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TossUp) == 0x148, "CCitadel_Modifier_TossUp size mismatch");
         }
     }
 }

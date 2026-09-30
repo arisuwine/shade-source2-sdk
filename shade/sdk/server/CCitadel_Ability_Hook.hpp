@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14a0
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,23 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Hook : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hHookVictim; // 0x0f70, 0x4 bytes
-                Vector m_vecHookTargetStartPos; // 0x0f74, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flCancelHookTime; // 0x0f80, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBeginReelHookTime; // 0x0f84, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBulletShouldExpireTime; // 0x0f88, 0x4 bytes
-                std::uint8_t pad_0f8c[0x8]; // 0x0f8c, 0x8 bytes
-                float m_flMaxHookTravelTime; // 0x0f94, 0x4 bytes
-                float m_flLastUppercutRestoreTime; // 0x0f98, 0x4 bytes
-                std::uint8_t pad_0f9c[0x504]; // 0x0f9c, 0x504 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hHookVictim; // 0x14a0, 0x4 bytes
+                VectorWS m_vecHookTargetStartPos; // 0x14a4, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flCancelHookTime; // 0x14b0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBeginReelHookTime; // 0x14b4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBulletShouldExpireTime; // 0x14b8, 0x4 bytes
+                std::uint8_t pad_14bc[0x8]; // 0x14bc, 0x8 bytes
+                float m_flMaxHookTravelTime; // 0x14c4, 0x4 bytes
+                float m_flLastUppercutRestoreTime; // 0x14c8, 0x4 bytes
+                std::uint8_t pad_14cc[0x6e4]; // 0x14cc, 0x6e4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Hook) == 0x14A0, "CCitadel_Ability_Hook size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Hook) == 0x1BB0, "CCitadel_Ability_Hook size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1530
+             * Size: 0x1c00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,27 +43,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_BulletFlurry : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::CCitadelAutoScaledTime m_flFlurryEndTime; // 0x11d8, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttackTime; // 0x11f0, 0x4 bytes
-                std::uint8_t pad_11f4[0x304]; // 0x11f4, 0x304 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecShootTargets; // 0x14f8, 0x18 bytes
-                std::int32_t m_nNumPlayersKilled; // 0x1510, 0x4 bytes
-                std::int32_t m_nShootIndex; // 0x1514, 0x4 bytes
-                std::int32_t m_nShootIndexNPC; // 0x1518, 0x4 bytes
-                std::int32_t m_nBurstShots; // 0x151c, 0x4 bytes
-                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x1520, 0x4 bytes
-                bool m_bHasCameraOverride; // 0x1524, 0x1 bytes
-                std::uint8_t pad_1525[0x3]; // 0x1525, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nConeVFX; // 0x1528, 0x4 bytes
-                std::uint8_t pad_152c[0x4]; // 0x152c, 0x4 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flFlurryEndTime; // 0x16d8, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttackTime; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0x4d4]; // 0x16f4, 0x4d4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecShootTargets; // 0x1bc8, 0x18 bytes
+                std::int32_t m_nNumPlayersKilled; // 0x1be0, 0x4 bytes
+                std::int32_t m_nShootIndex; // 0x1be4, 0x4 bytes
+                std::int32_t m_nShootIndexNPC; // 0x1be8, 0x4 bytes
+                std::int32_t m_nBurstShots; // 0x1bec, 0x4 bytes
+                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x1bf0, 0x4 bytes
+                bool m_bHasCameraOverride; // 0x1bf4, 0x1 bytes
+                std::uint8_t pad_1bf5[0x3]; // 0x1bf5, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nConeVFX; // 0x1bf8, 0x4 bytes
+                std::uint8_t pad_1bfc[0x4]; // 0x1bfc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_BulletFlurry) == 0x1530, "CCitadel_Ability_BulletFlurry size mismatch");
+            static_assert(sizeof(CCitadel_Ability_BulletFlurry) == 0x1C00, "CCitadel_Ability_BulletFlurry size mismatch");
         }
     }
 }

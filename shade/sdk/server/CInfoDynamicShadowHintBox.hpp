@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoDynamicShadowHintBox : public shade::sdk::server::CInfoDynamicShadowHint {
             public:
-                Vector m_vBoxMins; // 0x04b8, 0xc bytes
-                Vector m_vBoxMaxs; // 0x04c4, 0xc bytes
+                Vector m_vBoxMins; // 0x04c8, 0xc bytes
+                Vector m_vBoxMaxs; // 0x04d4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoDynamicShadowHintBox) == 0x4D0, "CInfoDynamicShadowHintBox size mismatch");
+            static_assert(sizeof(CInfoDynamicShadowHintBox) == 0x4E0, "CInfoDynamicShadowHintBox size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1628
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,22 +44,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_BatCloudVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1828, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraParticle; // 0x1838, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatHitParticle; // 0x1918, 0xe0 bytes
-                CSoundEventName m_strFireBatSound; // 0x19f8, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBatCloud; // 0x1a08, 0x88 bytes
-                float m_flCameraForwardForce; // 0x1a90, 0x4 bytes
-                float m_flInputForce; // 0x1a94, 0x4 bytes
-                float m_flDampingConstant; // 0x1a98, 0x4 bytes
-                std::uint8_t pad_1a9c[0x4]; // 0x1a9c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraParticle; // 0x13c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatHitParticle; // 0x14a0, 0xe0 bytes
+                CSoundEventName m_strFireBatSound; // 0x1580, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBatCloud; // 0x1590, 0x88 bytes
+                float m_flCameraForwardForce; // 0x1618, 0x4 bytes
+                float m_flInputForce; // 0x161c, 0x4 bytes
+                float m_flDampingConstant; // 0x1620, 0x4 bytes
+                std::uint8_t pad_1624[0x4]; // 0x1624, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_BatCloudVData) == 0x1AA0, "CCitadel_Ability_VampireBat_BatCloudVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_BatCloudVData) == 0x1628, "CCitadel_Ability_VampireBat_BatCloudVData size mismatch");
         }
     }
 }

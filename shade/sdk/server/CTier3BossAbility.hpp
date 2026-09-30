@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,10 +22,11 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf70
+             * Size: 0x14a0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -33,11 +35,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTier3BossAbility) == 0xF70, "CTier3BossAbility size mismatch");
+            static_assert(sizeof(CTier3BossAbility) == 0x14A0, "CTier3BossAbility size mismatch");
         }
     }
 }

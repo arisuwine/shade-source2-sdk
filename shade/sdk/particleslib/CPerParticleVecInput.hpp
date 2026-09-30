@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particleslib {
             /* Class Parameters
-             * Size: 0x6b8
+             * Size: 0x6d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CPerParticleVecInput) == 0x6B8, "CPerParticleVecInput size mismatch");
+            static_assert(sizeof(CPerParticleVecInput) == 0x6D8, "CPerParticleVecInput size mismatch");
         }
     }
 }

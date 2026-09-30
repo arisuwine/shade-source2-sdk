@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x520
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysTorque : public shade::sdk::server::CPhysForce {
             public:
-                VectorWS m_axis; // 0x0500, 0xc bytes
-                std::uint8_t pad_050c[0x4]; // 0x050c, 0x4 bytes
+                Vector m_axis; // 0x0510, 0xc bytes
+                std::uint8_t pad_051c[0x4]; // 0x051c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysTorque) == 0x510, "CPhysTorque size mismatch");
+            static_assert(sizeof(CPhysTorque) == 0x520, "CPhysTorque size mismatch");
         }
     }
 }

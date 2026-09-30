@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -42,7 +43,7 @@ namespace shade {
             public:
                 std::uint8_t pad_0008[0x60]; // 0x0008, 0x60 bytes
                 C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_CitadelBaseAbility>> m_vecAbilities; // 0x0068, 0x18 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_CitadelBaseAbility>> m_vecThinkableAbilities; // 0x0080, 0x18 bytes
+                std::uint8_t pad_0080[0x18]; // 0x0080, 0x18 bytes
                 C_NetworkUtlVectorBase<std::int32_t> m_arPendingAsyncAbilityReservationSlots; // 0x0098, 0x18 bytes
                 C_NetworkUtlVectorBase<std::int32_t> m_arPendingAsyncAbilityReservationAbilityIDs; // 0x00b0, 0x18 bytes
                 CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hSelectedAbility; // 0x00c8, 0x4 bytes
@@ -55,22 +56,21 @@ namespace shade {
                 float m_flParticleTimeScale; // 0x00e0, 0x4 bytes
                 bool m_bInInterruptState; // 0x00e4, 0x1 bytes
                 std::uint8_t pad_00e5[0x3]; // 0x00e5, 0x3 bytes
-                shade::sdk::client::AbilityResource_t m_ResourceStamina; // 0x00e8, 0x20 bytes
-                shade::sdk::client::AbilityResource_t m_ResourceAbility; // 0x0108, 0x20 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::ConsumedComponentState_t> m_vecConsumedComponents; // 0x0128, 0x68 bytes
-                std::uint8_t pad_0190[0x48]; // 0x0190, 0x48 bytes
-                std::uint32_t m_nExecuteAbilityMask; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                bool m_bSelectedEffectsStarted; // 0x01e0, 0x1 bytes
-                std::uint8_t pad_01e1[0x7]; // 0x01e1, 0x7 bytes
+                shade::sdk::client::AbilityResource_t m_ResourceStamina; // 0x00e8, 0x40 bytes
+                shade::sdk::client::AbilityResource_t m_ResourceAbility; // 0x0128, 0x40 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::ConsumedComponentState_t> m_vecConsumedComponents; // 0x0168, 0x68 bytes
+                bool m_bThinkableAbilitiesDirty; // 0x01d0, 0x1 bytes
+                std::uint8_t pad_01d1[0x3]; // 0x01d1, 0x3 bytes
+                std::uint32_t m_nExecuteAbilityMask; // 0x01d4, 0x4 bytes
+                std::uint8_t pad_01d8[0x4]; // 0x01d8, 0x4 bytes
+                bool m_bSelectedEffectsStarted; // 0x01dc, 0x1 bytes
+                std::uint8_t pad_01dd[0x3]; // 0x01dd, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelAbilityComponent) == 0x1E8, "CCitadelAbilityComponent size mismatch");
+            static_assert(sizeof(CCitadelAbilityComponent) == 0x1E0, "CCitadelAbilityComponent size mismatch");
         }
     }
 }

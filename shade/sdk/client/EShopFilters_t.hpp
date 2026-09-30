@@ -12,22 +12,64 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EShopFilters_t : std::uint16_t {
+            enum class EShopFilters_t : std::uint64_t {
                 EShopFilterNone = 0x0,
                 EShopFilterWeaponDamage = 0x1,
-                EShopFilterMagicDamage = 0x2,
-                EShopFilterDurability = 0x4,
-                EShopFilterFireRate = 0x8,
-                EShopFilterClipSize = 0x10,
+                EShopFilterWeaponAmmo = 0x2,
+                EShopFilterWeaponFireRate = 0x4,
+                EShopFilterWeaponBulletVelocity = 0x8,
+                EShopFilterWeaponRange = 0x10,
                 EShopFilterMelee = 0x20,
-                EShopFilterHealing = 0x40,
-                EShopFilterMovement = 0x80,
-                EShopFilterDisruption = 0x100,
-                EShopFilterMax = 0x200
+                EShopFilterPhysicalAdditionalDamage = 0x40,
+                EShopFilterSpiritDamage = 0x80,
+                EShopFilterSpiritCooldownAndCharges = 0x100,
+                EShopFilterSpiritDuration = 0x200,
+                EShopFilterSpiritRange = 0x400,
+                EShopFilterSpiritAdditionalDamage = 0x800,
+                EShopFilterSpiritAdditionalDamagePct = 0x1000,
+                EShopFilterHP = 0x2000,
+                EShopFilterRegen = 0x4000,
+                EShopFilterOutOfCombatRegen = 0x8000,
+                EShopFilterBarrier = 0x10000,
+                EShopFilterHealing = 0x20000,
+                EShopFilterLifesteal = 0x40000,
+                EShopFilterPhysicalResist = 0x80000,
+                EShopFilterSpiritResist = 0x100000,
+                EShopFilterMeleeResist = 0x200000,
+                EShopFilterDebuffResist = 0x400000,
+                EShopFilterSlowResist = 0x800000,
+                EShopFilterAntiCC = 0x1000000,
+                EShopFilterInvulnerability = 0x2000000,
+                EShopFilterMoveSpeed = 0x4000000,
+                EShopFilterSprint = 0x8000000,
+                EShopFilterStamina = 0x10000000,
+                EShopFilterTeleport = 0x20000000,
+                EShopFilterStealth = 0x40000000,
+                EShopFilterBulletVuln = 0x80000000,
+                EShopFilterSpiritVuln = 0x100000000,
+                EShopFilterAntiHeal = 0x200000000,
+                EShopFilterBulletDamageReduction = 0x400000000,
+                EShopFilterFireRateReduction = 0x800000000,
+                EShopFilterSpiritDamageReduction = 0x1000000000,
+                EShopFilterMobilityReduction = 0x2000000000,
+                EShopFilterStatus_Stun = 0x4000000000,
+                EShopFilterStatus_Disarm = 0x8000000000,
+                EShopFilterStatus_Silence = 0x10000000000,
+                EShopFilterStatus_Curse = 0x20000000000,
+                EShopFilterStatus_Immobilize = 0x40000000000,
+                EShopFilterStatus_Grounded = 0x80000000000,
+                EShopFilterJumpAndDash = 0x100000000000,
+                EShopFilterActive = 0x200000000000,
+                EShopFilterImbue = 0x400000000000,
+                EShopFilterPopular = 0x800000000000,
+                EShopFilterItemWeapon = 0x1000000000000,
+                EShopFilterItemSpirit = 0x2000000000000,
+                EShopFilterItemVitality = 0x4000000000000
             };
         }
     }

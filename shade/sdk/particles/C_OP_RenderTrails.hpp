@@ -12,19 +12,20 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CBaseTrailRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionVecInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4450
+             * Size: 0x4720
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,35 +33,35 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderTrails : public shade::sdk::particles::CBaseTrailRenderer {
             public:
-                bool m_bEnableFadingAndClamping; // 0x30e8, 0x1 bytes
-                std::uint8_t pad_30e9[0x3]; // 0x30e9, 0x3 bytes
-                float m_flStartFadeDot; // 0x30ec, 0x4 bytes
-                float m_flEndFadeDot; // 0x30f0, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nPrevPntSource; // 0x30f4, 0x4 bytes
-                float m_flMaxLength; // 0x30f8, 0x4 bytes
-                float m_flMinLength; // 0x30fc, 0x4 bytes
-                bool m_bIgnoreDT; // 0x3100, 0x1 bytes
-                std::uint8_t pad_3101[0x3]; // 0x3101, 0x3 bytes
-                float m_flConstrainRadiusToLengthRatio; // 0x3104, 0x4 bytes
-                float m_flLengthScale; // 0x3108, 0x4 bytes
-                float m_flLengthFadeInTime; // 0x310c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusHeadTaper; // 0x3110, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHeadColorScale; // 0x3280, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flHeadAlphaScale; // 0x3938, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusTaper; // 0x3aa8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecTailColorScale; // 0x3c18, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flTailAlphaScale; // 0x42d0, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nHorizCropField; // 0x4440, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nVertCropField; // 0x4444, 0x4 bytes
-                float m_flForwardShift; // 0x4448, 0x4 bytes
-                bool m_bFlipUVBasedOnPitchYaw; // 0x444c, 0x1 bytes
-                std::uint8_t pad_444d[0x3]; // 0x444d, 0x3 bytes
+                bool m_bEnableFadingAndClamping; // 0x3358, 0x1 bytes
+                std::uint8_t pad_3359[0x3]; // 0x3359, 0x3 bytes
+                float m_flStartFadeDot; // 0x335c, 0x4 bytes
+                float m_flEndFadeDot; // 0x3360, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nPrevPntSource; // 0x3364, 0x4 bytes
+                float m_flMaxLength; // 0x3368, 0x4 bytes
+                float m_flMinLength; // 0x336c, 0x4 bytes
+                bool m_bIgnoreDT; // 0x3370, 0x1 bytes
+                std::uint8_t pad_3371[0x3]; // 0x3371, 0x3 bytes
+                float m_flConstrainRadiusToLengthRatio; // 0x3374, 0x4 bytes
+                float m_flLengthScale; // 0x3378, 0x4 bytes
+                float m_flLengthFadeInTime; // 0x337c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusHeadTaper; // 0x3380, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHeadColorScale; // 0x34f8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flHeadAlphaScale; // 0x3bd0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusTaper; // 0x3d48, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecTailColorScale; // 0x3ec0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flTailAlphaScale; // 0x4598, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nHorizCropField; // 0x4710, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nVertCropField; // 0x4714, 0x4 bytes
+                float m_flForwardShift; // 0x4718, 0x4 bytes
+                bool m_bFlipUVBasedOnPitchYaw; // 0x471c, 0x1 bytes
+                std::uint8_t pad_471d[0x3]; // 0x471d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderTrails) == 0x4450, "C_OP_RenderTrails size mismatch");
+            static_assert(sizeof(C_OP_RenderTrails) == 0x4720, "C_OP_RenderTrails size mismatch");
         }
     }
 }

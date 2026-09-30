@@ -12,15 +12,16 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/CAnimGraphControllerPtr.hpp"
 #include "shade/sdk/entity2/CNetworkVarChainer.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
-            class CBaseAnimGraphDestructibleParts_GraphController;
             class C_BaseModelEntity;
         }
     }
@@ -43,7 +44,7 @@ namespace shade {
                 CUtlVector<std::uint16_t> m_vecDamageTakenByHitGroup; // 0x0048, 0x18 bytes
                 CHandle<shade::sdk::client::C_BaseModelEntity> m_hOwner; // 0x0060, 0x4 bytes
                 std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
-                shade::sdk::client::CBaseAnimGraphDestructibleParts_GraphController *m_pAnimGraphDestructibleGraphController; // 0x0068, 0x8 bytes
+                shade::sdk::client::CAnimGraphControllerPtr m_pAnimGraphDestructibleGraphController; // 0x0068, 0x8 bytes
             };
             #pragma pack(pop)
 

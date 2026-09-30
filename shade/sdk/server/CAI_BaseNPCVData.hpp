@@ -12,13 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CEntitySubclassVDataBase.hpp"
 #include "shade/sdk/client/CFootstepTableHandle.hpp"
-#include "shade/sdk/client/CSkillFloat.hpp"
-#include "shade/sdk/client/CSkillInt.hpp"
 #include "shade/sdk/client/NPCStatusEffectMap_t.hpp"
 
 namespace shade {
@@ -34,6 +33,7 @@ namespace shade {
         }
 
         namespace server {
+            class CAI_NavLinkObstacleSettings;
             class CCitadelModifier;
         }
     }
@@ -43,7 +43,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x330
+             * Size: 0x2f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -60,45 +60,38 @@ namespace shade {
                 std::int32_t m_nMaxHealth; // 0x0130, 0x4 bytes
                 std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
                 CUtlVector<CEmbeddedSubclass<shade::sdk::server::CCitadelModifier>> m_vecIntrinsicModifiers; // 0x0138, 0x18 bytes
-                shade::sdk::client::NPCStatusEffectMap_t m_statusEffectMap; // 0x0150, 0x1 bytes
-                std::uint8_t pad_0151[0x7]; // 0x0151, 0x7 bytes
-                CUtlVector<shade::sdk::client::NPCAttachmentDesc_t> m_vecAttachments; // 0x0158, 0x18 bytes
-                shade::sdk::client::CSkillFloat m_flHeadDamageMultiplier; // 0x0170, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flChestDamageMultiplier; // 0x0180, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flStomachDamageMultiplier; // 0x0190, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flArmDamageMultiplier; // 0x01a0, 0x10 bytes
-                shade::sdk::client::CSkillFloat m_flLegDamageMultiplier; // 0x01b0, 0x10 bytes
-                shade::sdk::client::CSkillInt m_nMaxAdditionalAmmoBalancingShots; // 0x01c0, 0x10 bytes
-                bool m_bTakesDamage; // 0x01d0, 0x1 bytes
-                std::uint8_t pad_01d1[0x7]; // 0x01d1, 0x7 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strDamagedEffect; // 0x01d8, 0xe0 bytes
-                bool m_bLightsFiresWhenDamaged; // 0x02b8, 0x1 bytes
-                std::uint8_t pad_02b9[0x3]; // 0x02b9, 0x3 bytes
-                std::int32_t m_nRagdollHealth; // 0x02bc, 0x4 bytes
-                float m_flImpactEnergyScale; // 0x02c0, 0x4 bytes
-                bool m_bAllowNonZUpMovement; // 0x02c4, 0x1 bytes
-                bool m_bUseDynamicCollisionHull; // 0x02c5, 0x1 bytes
-                bool m_bRequestCapsuleCollision; // 0x02c6, 0x1 bytes
-                std::uint8_t pad_02c7[0x1]; // 0x02c7, 0x1 bytes
-                float m_flCapsuleRadiusOverride; // 0x02c8, 0x4 bytes
-                float m_flCapsuleHeightOverride; // 0x02cc, 0x4 bytes
-                CUtlVector<CGlobalSymbol> m_vecActionDesiredShared; // 0x02d0, 0x18 bytes
-                CSoundEventName m_sPlayerKilledNpcSound; // 0x02e8, 0x10 bytes
-                CGlobalSymbol m_sCustomDeathHandshake; // 0x02f8, 0x8 bytes
-                CUtlString m_sDefaultMovementSettings; // 0x0300, 0x8 bytes
-                CUtlVector<shade::sdk::client::AI_MappedMovementSettingsItem_t> m_mappedMovementSettings; // 0x0308, 0x18 bytes
-                bool m_bEnableCodeDrivenAnimgraphMovement; // 0x0320, 0x1 bytes
-                bool m_bEnableAnimgraphTagDrivenStrafing; // 0x0321, 0x1 bytes
-                std::uint8_t pad_0322[0x2]; // 0x0322, 0x2 bytes
-                float m_flMassOverride; // 0x0324, 0x4 bytes
-                float m_flThreatTemperature; // 0x0328, 0x4 bytes
-                float m_flFlashpoint; // 0x032c, 0x4 bytes
+                CUtlVector<CSubclassName<2>> m_vecIntrinsicModifiersByName; // 0x0150, 0x18 bytes
+                shade::sdk::client::NPCStatusEffectMap_t m_statusEffectMap; // 0x0168, 0x1 bytes
+                std::uint8_t pad_0169[0x7]; // 0x0169, 0x7 bytes
+                CUtlVector<shade::sdk::client::NPCAttachmentDesc_t> m_vecAttachments; // 0x0170, 0x18 bytes
+                bool m_bTakesDamage; // 0x0188, 0x1 bytes
+                std::uint8_t pad_0189[0x7]; // 0x0189, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strDamagedEffect; // 0x0190, 0xe0 bytes
+                std::int32_t m_nRagdollHealth; // 0x0270, 0x4 bytes
+                float m_flImpactEnergyScale; // 0x0274, 0x4 bytes
+                bool m_bAllowNonZUpMovement; // 0x0278, 0x1 bytes
+                std::uint8_t pad_0279[0x7]; // 0x0279, 0x7 bytes
+                CUtlVector<shade::sdk::server::CAI_NavLinkObstacleSettings*> m_vecObstacleNavLinks; // 0x0280, 0x18 bytes
+                bool m_bUseDynamicCollisionHull; // 0x0298, 0x1 bytes
+                bool m_bRequestCapsuleCollision; // 0x0299, 0x1 bytes
+                std::uint8_t pad_029a[0x2]; // 0x029a, 0x2 bytes
+                float m_flCapsuleRadiusOverride; // 0x029c, 0x4 bytes
+                float m_flCapsuleHeightOverride; // 0x02a0, 0x4 bytes
+                std::uint8_t pad_02a4[0x4]; // 0x02a4, 0x4 bytes
+                CUtlVector<CGlobalSymbol> m_vecActionDesiredShared; // 0x02a8, 0x18 bytes
+                CSoundEventName m_sPlayerKilledNpcSound; // 0x02c0, 0x10 bytes
+                CUtlString m_sDefaultMovementSettings; // 0x02d0, 0x8 bytes
+                CUtlVector<shade::sdk::client::AI_MappedMovementSettingsItem_t> m_mappedMovementSettings; // 0x02d8, 0x18 bytes
+                bool m_bEnableCodeDrivenAnimgraphMovement; // 0x02f0, 0x1 bytes
+                bool m_bEnableAnimgraphTagDrivenStrafing; // 0x02f1, 0x1 bytes
+                std::uint8_t pad_02f2[0x2]; // 0x02f2, 0x2 bytes
+                float m_flMassOverride; // 0x02f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_BaseNPCVData) == 0x330, "CAI_BaseNPCVData size mismatch");
+            static_assert(sizeof(CAI_BaseNPCVData) == 0x2F8, "CAI_BaseNPCVData size mismatch");
         }
     }
 }

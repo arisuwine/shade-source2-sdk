@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -37,7 +38,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb50
+             * Size: 0xb88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,31 +47,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_BreakablePropHealthPickupVData : public shade::sdk::server::CCitadel_Pickup_VData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParticleAOEHeal; // 0x09d8, 0xe0 bytes
-                shade::sdk::client::TimeScalingValue_t m_flHealMaxHealthPercent; // 0x0ab8, 0x10 bytes
-                shade::sdk::client::TimeScalingValue_t m_flHealFixed; // 0x0ac8, 0x10 bytes
-                shade::sdk::client::TimeScalingValue_t m_flMissingPctHeal; // 0x0ad8, 0x10 bytes
-                shade::sdk::client::TimeScalingValue_t m_flRegenMaxHealthPercent; // 0x0ae8, 0x10 bytes
-                shade::sdk::client::TimeScalingValue_t m_flRegenFixed; // 0x0af8, 0x10 bytes
-                shade::sdk::client::TimeScalingValue_t m_flMissingPctRegen; // 0x0b08, 0x10 bytes
-                bool m_bUseFixedDuration; // 0x0b18, 0x1 bytes
-                std::uint8_t pad_0b19[0x3]; // 0x0b19, 0x3 bytes
-                float m_flRegenDuration; // 0x0b1c, 0x4 bytes
-                float m_flRegenDurationTroopers; // 0x0b20, 0x4 bytes
-                float m_flRegenTrooperMulti; // 0x0b24, 0x4 bytes
-                float m_flRegenHPS; // 0x0b28, 0x4 bytes
-                std::uint8_t pad_0b2c[0x4]; // 0x0b2c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RegenModifier; // 0x0b30, 0x10 bytes
-                float m_flAOERadius; // 0x0b40, 0x4 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_AOETargetTypes; // 0x0b44, 0x4 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_AOETargetFlags; // 0x0b48, 0x4 bytes
-                shade::sdk::client::ELOSCheck m_AOELOSCheckType; // 0x0b4c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParticleAOEHeal; // 0x0a10, 0xe0 bytes
+                shade::sdk::client::TimeScalingValue_t m_flHealMaxHealthPercent; // 0x0af0, 0x10 bytes
+                shade::sdk::client::TimeScalingValue_t m_flHealFixed; // 0x0b00, 0x10 bytes
+                shade::sdk::client::TimeScalingValue_t m_flMissingPctHeal; // 0x0b10, 0x10 bytes
+                shade::sdk::client::TimeScalingValue_t m_flRegenMaxHealthPercent; // 0x0b20, 0x10 bytes
+                shade::sdk::client::TimeScalingValue_t m_flRegenFixed; // 0x0b30, 0x10 bytes
+                shade::sdk::client::TimeScalingValue_t m_flMissingPctRegen; // 0x0b40, 0x10 bytes
+                bool m_bUseFixedDuration; // 0x0b50, 0x1 bytes
+                std::uint8_t pad_0b51[0x3]; // 0x0b51, 0x3 bytes
+                float m_flRegenDuration; // 0x0b54, 0x4 bytes
+                float m_flRegenDurationTroopers; // 0x0b58, 0x4 bytes
+                float m_flRegenTrooperMulti; // 0x0b5c, 0x4 bytes
+                float m_flRegenHPS; // 0x0b60, 0x4 bytes
+                std::uint8_t pad_0b64[0x4]; // 0x0b64, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RegenModifier; // 0x0b68, 0x10 bytes
+                float m_flAOERadius; // 0x0b78, 0x4 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_AOETargetTypes; // 0x0b7c, 0x4 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_AOETargetFlags; // 0x0b80, 0x4 bytes
+                shade::sdk::client::ELOSCheck m_AOELOSCheckType; // 0x0b84, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_BreakablePropHealthPickupVData) == 0xB50, "CCitadel_BreakablePropHealthPickupVData size mismatch");
+            static_assert(sizeof(CCitadel_BreakablePropHealthPickupVData) == 0xB88, "CCitadel_BreakablePropHealthPickupVData size mismatch");
         }
     }
 }

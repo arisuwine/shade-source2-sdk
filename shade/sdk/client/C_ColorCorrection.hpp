@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ColorCorrection : public shade::sdk::client::C_BaseEntity {
             public:
-                Vector m_vecOrigin; // 0x05f0, 0xc bytes
+                VectorWS m_vecOrigin; // 0x05f0, 0xc bytes
                 float m_MinFalloff; // 0x05fc, 0x4 bytes
                 float m_MaxFalloff; // 0x0600, 0x4 bytes
                 float m_flFadeInDuration; // 0x0604, 0x4 bytes

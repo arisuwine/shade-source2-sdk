@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,6 +20,7 @@
 #include "shade/sdk/client/CitadelSpreadPerShotNormalization_t.hpp"
 #include "shade/sdk/client/CitadelWeaponRecoilData_t.hpp"
 #include "shade/sdk/client/EAttachmentSourceType.hpp"
+#include "shade/sdk/client/EBulletHandlerType_t.hpp"
 #include "shade/sdk/client/ECitadelDamageType.hpp"
 #include "shade/sdk/tier2/CRangeFloat.hpp"
 
@@ -38,152 +40,169 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x778
+             * Size: 0x8d0
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             class CCitadelWeaponInfo {
             public:
-                std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                float m_flBulletDamage; // 0x0008, 0x4 bytes
-                shade::sdk::client::ECitadelDamageType m_eDamageType; // 0x000c, 0x4 bytes
-                std::int32_t m_iBullets; // 0x0010, 0x4 bytes
-                std::int32_t m_iSplitShotsMax; // 0x0014, 0x4 bytes
-                float m_flSplitShotAngles; // 0x0018, 0x4 bytes
-                bool m_bExpressShotDisabled; // 0x001c, 0x1 bytes
-                bool m_bHitOnceAcrossAllBullets; // 0x001d, 0x1 bytes
-                std::uint8_t pad_001e[0x2]; // 0x001e, 0x2 bytes
-                std::int32_t m_iBulletsToFullyClaimOrb; // 0x0020, 0x4 bytes
-                float m_flExplosionRadius; // 0x0024, 0x4 bytes
-                float m_flExplosionDamageScaleAtMaxRadius; // 0x0028, 0x4 bytes
-                bool m_bAllowExplosionToCollectGold; // 0x002c, 0x1 bytes
-                std::uint8_t pad_002d[0x3]; // 0x002d, 0x3 bytes
-                std::int32_t m_iClipSize; // 0x0030, 0x4 bytes
-                float m_flCycleTime; // 0x0034, 0x4 bytes
-                float m_flBulletCreationDelay; // 0x0038, 0x4 bytes
-                std::int32_t m_iBurstShotCount; // 0x003c, 0x4 bytes
-                float m_flIntraBurstCycleTime; // 0x0040, 0x4 bytes
-                std::int32_t m_iAmmoConsumedPerShot; // 0x0044, 0x4 bytes
-                float m_flRange; // 0x0048, 0x4 bytes
-                float m_flRangeWhileZoomed; // 0x004c, 0x4 bytes
-                float m_flDamageFalloffStartRange; // 0x0050, 0x4 bytes
-                float m_flDamageFalloffEndRange; // 0x0054, 0x4 bytes
-                float m_flDamageFalloffBias; // 0x0058, 0x4 bytes
-                float m_flDamageFalloffStartScale; // 0x005c, 0x4 bytes
-                float m_flDamageFalloffEndScale; // 0x0060, 0x4 bytes
-                bool m_bDontPassThroughPortals; // 0x0064, 0x1 bytes
-                bool m_bPlayImpactEffectsOnTeammates; // 0x0065, 0x1 bytes
-                std::uint8_t pad_0066[0x2]; // 0x0066, 0x2 bytes
-                float m_flPenetrationPercent; // 0x0068, 0x4 bytes
-                float m_flIronSightsTime; // 0x006c, 0x4 bytes
-                float m_reloadDuration; // 0x0070, 0x4 bytes
-                bool m_bReloadUseActiveWeaponInfoDuration; // 0x0074, 0x1 bytes
-                bool m_bReloadSingleBullets; // 0x0075, 0x1 bytes
-                bool m_bReloadSingleBulletsAllowCancel; // 0x0076, 0x1 bytes
-                std::uint8_t pad_0077[0x1]; // 0x0077, 0x1 bytes
-                float m_flReloadSingleBulletsInitialDelay; // 0x0078, 0x4 bytes
-                bool m_bCanCrit; // 0x007c, 0x1 bytes
-                std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
-                float m_flCritBonusStartRange; // 0x0080, 0x4 bytes
-                float m_flCritBonusEndRange; // 0x0084, 0x4 bytes
-                float m_flCritBonusStart; // 0x0088, 0x4 bytes
-                float m_flCritBonusEnd; // 0x008c, 0x4 bytes
-                float m_flCritBonusAgainstNPCs; // 0x0090, 0x4 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_eCritFilter; // 0x0094, 0x4 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_eCritAlwaysFilter; // 0x0098, 0x4 bytes
-                bool m_bSpinsUp; // 0x009c, 0x1 bytes
-                std::uint8_t pad_009d[0x3]; // 0x009d, 0x3 bytes
-                float m_flMaxSpinCycleTime; // 0x00a0, 0x4 bytes
-                float m_flSpinIncreaseRate; // 0x00a4, 0x4 bytes
-                float m_flSpinDecayRate; // 0x00a8, 0x4 bytes
-                float m_flBuildUpRate; // 0x00ac, 0x4 bytes
-                bool m_bIsSemiAuto; // 0x00b0, 0x1 bytes
-                std::uint8_t pad_00b1[0x3]; // 0x00b1, 0x3 bytes
-                float m_flBulletSpeed; // 0x00b4, 0x4 bytes
-                float m_flBulletSpeedRandomFactor; // 0x00b8, 0x4 bytes
-                float m_flBulletGravityScale; // 0x00bc, 0x4 bytes
-                float m_flBulletRadius; // 0x00c0, 0x4 bytes
-                float m_flBulletRadiusVsWorld; // 0x00c4, 0x4 bytes
-                float m_flBulletLifetime; // 0x00c8, 0x4 bytes
-                float m_flVerticalAimBias; // 0x00cc, 0x4 bytes
-                float m_flBulletInheritShooterVelocityScale; // 0x00d0, 0x4 bytes
-                bool m_bCanZoom; // 0x00d4, 0x1 bytes
-                std::uint8_t pad_00d5[0x3]; // 0x00d5, 0x3 bytes
-                float m_flZoomFOV; // 0x00d8, 0x4 bytes
-                float m_flZoomFOV_Relative; // 0x00dc, 0x4 bytes
-                float m_flZoomMoveSpeedPercent; // 0x00e0, 0x4 bytes
-                float m_flShootMoveSpeedPercent; // 0x00e4, 0x4 bytes
-                float m_flReloadMoveSpeedPercent; // 0x00e8, 0x4 bytes
-                bool m_bUsesSpreadPattern; // 0x00ec, 0x1 bytes
-                std::uint8_t pad_00ed[0x3]; // 0x00ed, 0x3 bytes
-                float m_Spread; // 0x00f0, 0x4 bytes
-                bool m_bFirstShotPerfectAccuracy; // 0x00f4, 0x1 bytes
-                std::uint8_t pad_00f5[0x3]; // 0x00f5, 0x3 bytes
-                shade::sdk::tier2::CRangeFloat m_AimingShootSpreadPenalty; // 0x00f8, 0x8 bytes
-                float m_flScatterYawScale; // 0x0100, 0x4 bytes
-                float m_flShootSpreadPenaltyPerShot; // 0x0104, 0x4 bytes
-                shade::sdk::client::CitadelSpreadPerShotNormalization_t m_ShootSpreadPenaltyPerShotNormalization; // 0x0108, 0x14 bytes
-                float m_flShootSpreadPenaltyDecayDelay; // 0x011c, 0x4 bytes
-                float m_flShootSpreadPenaltyDecay; // 0x0120, 0x4 bytes
-                float m_flSpreadPenaltyDecay; // 0x0124, 0x4 bytes
-                float m_flShootingUpSpreadPenalty; // 0x0128, 0x4 bytes
-                float m_flAutoReplenishClip; // 0x012c, 0x4 bytes
-                shade::sdk::tier2::CRangeFloat m_NpcAimingSpread; // 0x0130, 0x8 bytes
-                CUtlVector<Vector2D> m_vecScatterOffsets; // 0x0138, 0x18 bytes
-                float m_flPelletScatterFactor; // 0x0150, 0x4 bytes
-                float m_flPelletScatterSpreadFactor; // 0x0154, 0x4 bytes
-                bool m_bApplySpreadToFirstPellet; // 0x0158, 0x1 bytes
-                std::uint8_t pad_0159[0x7]; // 0x0159, 0x7 bytes
-                CUtlVector<Vector2D> m_vecOriginOffsets; // 0x0160, 0x18 bytes
-                float m_flVerticalPunch; // 0x0178, 0x4 bytes
-                float m_flHorizontalPunch; // 0x017c, 0x4 bytes
-                shade::sdk::client::CitadelWeaponRecoilData_t m_HorizontalRecoil; // 0x0180, 0x14 bytes
-                shade::sdk::client::CitadelWeaponRecoilData_t m_VerticallRecoil; // 0x0194, 0x14 bytes
-                float m_flRecoilSpeed; // 0x01a8, 0x4 bytes
-                float m_flRecoilRecoveryDelayFactor; // 0x01ac, 0x4 bytes
-                float m_flRecoilRecoverySpeed; // 0x01b0, 0x4 bytes
-                float m_flRecoilShotIndexRecoveryTimeFactor; // 0x01b4, 0x4 bytes
-                std::int32_t m_nRecoilSeed; // 0x01b8, 0x4 bytes
-                std::uint8_t pad_01bc[0x4]; // 0x01bc, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szBulletTravelTracerParticle; // 0x01c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szSelfBulletTravelTracerParticle; // 0x02a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szBulletLinkParticle; // 0x0380, 0xe0 bytes
-                bool m_bUseDesatForFriendlyNonHeroTracer; // 0x0460, 0x1 bytes
-                std::uint8_t pad_0461[0x3]; // 0x0461, 0x3 bytes
-                shade::sdk::client::EAttachmentSourceType m_eAttachmentSourceType; // 0x0464, 0x4 bytes
-                CUtlString m_strCustomAttachmentSource; // 0x0468, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szMuzzleFlashEffectName; // 0x0470, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strWeaponImpactEffect; // 0x0550, 0xe0 bytes
-                CUtlOrderedMap<CUtlStringToken, shade::sdk::client::PerSurfaceImpactEffects_t> m_mapImpactEffects; // 0x0630, 0x28 bytes
-                bool m_bUseWeaponAbilityName; // 0x0658, 0x1 bytes
-                std::uint8_t pad_0659[0x3]; // 0x0659, 0x3 bytes
-                float m_flDamageForce; // 0x065c, 0x4 bytes
-                CSoundEventName m_strShootSound; // 0x0660, 0x10 bytes
-                CSoundEventName m_strFirstShotSound; // 0x0670, 0x10 bytes
-                CSoundEventName m_strShotReleaseSound; // 0x0680, 0x10 bytes
-                CSoundEventName m_strBulletLoopingSound; // 0x0690, 0x10 bytes
-                CSoundEventName m_strBulletWhizSound; // 0x06a0, 0x10 bytes
-                CSoundEventName m_strBulletImpactSound; // 0x06b0, 0x10 bytes
-                float m_flBulletWhizDistance; // 0x06c0, 0x4 bytes
-                std::uint8_t pad_06c4[0x4]; // 0x06c4, 0x4 bytes
-                CSoundEventName m_strReloadSound; // 0x06c8, 0x10 bytes
-                CSoundEventName m_strReloadEndSound; // 0x06d8, 0x10 bytes
-                CSoundEventName m_strLocalPlayerBulletImpactSound; // 0x06e8, 0x10 bytes
-                CSoundEventName m_strLocalPlayerBulletImpactHeavySound; // 0x06f8, 0x10 bytes
-                CSoundEventName m_strZoomInSound; // 0x0708, 0x10 bytes
-                CSoundEventName m_strZoomOutSound; // 0x0718, 0x10 bytes
-                CSoundEventName m_strSpinUpSound; // 0x0728, 0x10 bytes
-                CSoundEventName m_strSpinDownSound; // 0x0738, 0x10 bytes
-                CSoundEventName m_strSpinUpLoopSound; // 0x0748, 0x10 bytes
-                std::uint8_t pad_0758[0x1c]; // 0x0758, 0x1c bytes
-                float m_flMaxLagCompensation; // 0x0774, 0x4 bytes
+                std::uint8_t pad_0000[0xc]; // 0x0000, 0xc bytes
+                shade::sdk::client::EBulletHandlerType_t m_eBulletHandlerType; // 0x000c, 0x4 bytes
+                float m_flBulletDamage; // 0x0010, 0x4 bytes
+                shade::sdk::client::ECitadelDamageType m_eDamageType; // 0x0014, 0x4 bytes
+                std::int32_t m_iBullets; // 0x0018, 0x4 bytes
+                std::int32_t m_iSplitShotsMax; // 0x001c, 0x4 bytes
+                float m_flSplitShotAngles; // 0x0020, 0x4 bytes
+                bool m_bExpressShotDisabled; // 0x0024, 0x1 bytes
+                bool m_bHitOnceAcrossAllBullets; // 0x0025, 0x1 bytes
+                std::uint8_t pad_0026[0x2]; // 0x0026, 0x2 bytes
+                std::int32_t m_iBulletsToFullyClaimOrb; // 0x0028, 0x4 bytes
+                float m_flExplosionRadius; // 0x002c, 0x4 bytes
+                float m_flExplosionDamageScaleAtMaxRadius; // 0x0030, 0x4 bytes
+                bool m_bAllowExplosionToCollectGold; // 0x0034, 0x1 bytes
+                std::uint8_t pad_0035[0x3]; // 0x0035, 0x3 bytes
+                std::int32_t m_iClipSize; // 0x0038, 0x4 bytes
+                float m_flCycleTime; // 0x003c, 0x4 bytes
+                float m_flBulletCreationDelay; // 0x0040, 0x4 bytes
+                std::int32_t m_iBurstShotCount; // 0x0044, 0x4 bytes
+                float m_flIntraBurstCycleTime; // 0x0048, 0x4 bytes
+                std::int32_t m_iAmmoConsumedPerShot; // 0x004c, 0x4 bytes
+                float m_flRange; // 0x0050, 0x4 bytes
+                float m_flRangeWhileZoomed; // 0x0054, 0x4 bytes
+                float m_flDamageFalloffStartRange; // 0x0058, 0x4 bytes
+                float m_flDamageFalloffEndRange; // 0x005c, 0x4 bytes
+                float m_flDamageFalloffBias; // 0x0060, 0x4 bytes
+                float m_flDamageFalloffStartScale; // 0x0064, 0x4 bytes
+                float m_flDamageFalloffEndScale; // 0x0068, 0x4 bytes
+                bool m_bDontPassThroughPortals; // 0x006c, 0x1 bytes
+                bool m_bPlayImpactEffectsOnTeammates; // 0x006d, 0x1 bytes
+                std::uint8_t pad_006e[0x2]; // 0x006e, 0x2 bytes
+                float m_flPenetrationPercent; // 0x0070, 0x4 bytes
+                float m_flIronSightsTime; // 0x0074, 0x4 bytes
+                float m_reloadDuration; // 0x0078, 0x4 bytes
+                bool m_bReloadUseActiveWeaponInfoDuration; // 0x007c, 0x1 bytes
+                bool m_bReloadSingleBullets; // 0x007d, 0x1 bytes
+                bool m_bReloadSingleBulletsAllowCancel; // 0x007e, 0x1 bytes
+                std::uint8_t pad_007f[0x1]; // 0x007f, 0x1 bytes
+                float m_flReloadSingleBulletsInitialDelay; // 0x0080, 0x4 bytes
+                bool m_bCanCrit; // 0x0084, 0x1 bytes
+                std::uint8_t pad_0085[0x3]; // 0x0085, 0x3 bytes
+                float m_flCritBonusStartRange; // 0x0088, 0x4 bytes
+                float m_flCritBonusEndRange; // 0x008c, 0x4 bytes
+                float m_flCritBonusStart; // 0x0090, 0x4 bytes
+                float m_flCritBonusEnd; // 0x0094, 0x4 bytes
+                float m_flCritBonusAgainstNPCs; // 0x0098, 0x4 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_eCritFilter; // 0x009c, 0x4 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_eCritAlwaysFilter; // 0x00a0, 0x4 bytes
+                bool m_bSpinsUp; // 0x00a4, 0x1 bytes
+                std::uint8_t pad_00a5[0x3]; // 0x00a5, 0x3 bytes
+                float m_flMaxSpinCycleTime; // 0x00a8, 0x4 bytes
+                float m_flSpinIncreaseRate; // 0x00ac, 0x4 bytes
+                float m_flSpinDecayRate; // 0x00b0, 0x4 bytes
+                float m_flBuildUpRate; // 0x00b4, 0x4 bytes
+                bool m_bIsSemiAuto; // 0x00b8, 0x1 bytes
+                bool m_bSemiAutoFireOnRelease; // 0x00b9, 0x1 bytes
+                bool m_bChargesUp; // 0x00ba, 0x1 bytes
+                bool m_bChargeWaitForInputRelease; // 0x00bb, 0x1 bytes
+                float m_flChargeUpTime; // 0x00bc, 0x4 bytes
+                float m_flChargedBulletDamage; // 0x00c0, 0x4 bytes
+                float m_flChargedExplosionRadius; // 0x00c4, 0x4 bytes
+                float m_flChargedBulletGravityScale; // 0x00c8, 0x4 bytes
+                float m_flChargedBulletSpeed; // 0x00cc, 0x4 bytes
+                float m_flFireAtChargePercent; // 0x00d0, 0x4 bytes
+                std::int32_t m_iChargedAmmoConsumedPerShot; // 0x00d4, 0x4 bytes
+                float m_flBulletSpeed; // 0x00d8, 0x4 bytes
+                float m_flBulletSpeedRandomFactor; // 0x00dc, 0x4 bytes
+                float m_flBulletGravityScale; // 0x00e0, 0x4 bytes
+                float m_flBulletRadius; // 0x00e4, 0x4 bytes
+                float m_flBulletRadiusVsWorld; // 0x00e8, 0x4 bytes
+                float m_flBulletLifetime; // 0x00ec, 0x4 bytes
+                float m_flVerticalAimBias; // 0x00f0, 0x4 bytes
+                float m_flBulletInheritShooterVelocityScale; // 0x00f4, 0x4 bytes
+                bool m_bUseBulletGravityScaleCurve; // 0x00f8, 0x1 bytes
+                std::uint8_t pad_00f9[0x7]; // 0x00f9, 0x7 bytes
+                CPiecewiseCurve m_flBulletGravityScaleOverDistance; // 0x0100, 0x40 bytes
+                float m_flCurveTime; // 0x0140, 0x4 bytes
+                bool m_bCanZoom; // 0x0144, 0x1 bytes
+                std::uint8_t pad_0145[0x3]; // 0x0145, 0x3 bytes
+                float m_flZoomFOV; // 0x0148, 0x4 bytes
+                float m_flZoomFOV_Relative; // 0x014c, 0x4 bytes
+                float m_flZoomMoveSpeedPercent; // 0x0150, 0x4 bytes
+                float m_flShootMoveSpeedPercent; // 0x0154, 0x4 bytes
+                float m_flReloadMoveSpeedPercent; // 0x0158, 0x4 bytes
+                bool m_bUsesSpreadPattern; // 0x015c, 0x1 bytes
+                std::uint8_t pad_015d[0x3]; // 0x015d, 0x3 bytes
+                float m_Spread; // 0x0160, 0x4 bytes
+                bool m_bFirstShotPerfectAccuracy; // 0x0164, 0x1 bytes
+                std::uint8_t pad_0165[0x3]; // 0x0165, 0x3 bytes
+                shade::sdk::tier2::CRangeFloat m_AimingShootSpreadPenalty; // 0x0168, 0x8 bytes
+                float m_flScatterYawScale; // 0x0170, 0x4 bytes
+                float m_flShootSpreadPenaltyPerShot; // 0x0174, 0x4 bytes
+                shade::sdk::client::CitadelSpreadPerShotNormalization_t m_ShootSpreadPenaltyPerShotNormalization; // 0x0178, 0x14 bytes
+                float m_flShootSpreadPenaltyDecayDelay; // 0x018c, 0x4 bytes
+                float m_flShootSpreadPenaltyDecay; // 0x0190, 0x4 bytes
+                float m_flSpreadPenaltyDecay; // 0x0194, 0x4 bytes
+                float m_flShootingUpSpreadPenalty; // 0x0198, 0x4 bytes
+                float m_flAutoReplenishClip; // 0x019c, 0x4 bytes
+                shade::sdk::tier2::CRangeFloat m_NpcAimingSpread; // 0x01a0, 0x8 bytes
+                CUtlVector<Vector2D> m_vecScatterOffsets; // 0x01a8, 0x18 bytes
+                float m_flPelletScatterFactor; // 0x01c0, 0x4 bytes
+                float m_flPelletScatterSpreadFactor; // 0x01c4, 0x4 bytes
+                bool m_bApplySpreadToFirstPellet; // 0x01c8, 0x1 bytes
+                std::uint8_t pad_01c9[0x7]; // 0x01c9, 0x7 bytes
+                CUtlVector<Vector2D> m_vecOriginOffsets; // 0x01d0, 0x18 bytes
+                float m_flVerticalPunch; // 0x01e8, 0x4 bytes
+                float m_flHorizontalPunch; // 0x01ec, 0x4 bytes
+                shade::sdk::client::CitadelWeaponRecoilData_t m_HorizontalRecoil; // 0x01f0, 0x14 bytes
+                shade::sdk::client::CitadelWeaponRecoilData_t m_VerticallRecoil; // 0x0204, 0x14 bytes
+                float m_flRecoilSpeed; // 0x0218, 0x4 bytes
+                float m_flRecoilRecoveryDelayFactor; // 0x021c, 0x4 bytes
+                float m_flRecoilRecoverySpeed; // 0x0220, 0x4 bytes
+                float m_flRecoilShotIndexRecoveryTimeFactor; // 0x0224, 0x4 bytes
+                std::int32_t m_nRecoilSeed; // 0x0228, 0x4 bytes
+                std::uint8_t pad_022c[0x4]; // 0x022c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szBulletTravelTracerParticle; // 0x0230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szSelfBulletTravelTracerParticle; // 0x0310, 0xe0 bytes
+                float m_flRecycleTime; // 0x03f0, 0x4 bytes
+                std::uint8_t pad_03f4[0x4]; // 0x03f4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szBulletLinkParticle; // 0x03f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szChargedBulletTravelTracerParticle; // 0x04d8, 0xe0 bytes
+                bool m_bUseDesatForFriendlyNonHeroTracer; // 0x05b8, 0x1 bytes
+                std::uint8_t pad_05b9[0x3]; // 0x05b9, 0x3 bytes
+                shade::sdk::client::EAttachmentSourceType m_eAttachmentSourceType; // 0x05bc, 0x4 bytes
+                CUtlString m_strCustomAttachmentSource; // 0x05c0, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szMuzzleFlashEffectName; // 0x05c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strWeaponImpactEffect; // 0x06a8, 0xe0 bytes
+                CUtlOrderedMap<CUtlStringToken, shade::sdk::client::PerSurfaceImpactEffects_t> m_mapImpactEffects; // 0x0788, 0x28 bytes
+                bool m_bUseWeaponAbilityName; // 0x07b0, 0x1 bytes
+                std::uint8_t pad_07b1[0x3]; // 0x07b1, 0x3 bytes
+                float m_flDamageForce; // 0x07b4, 0x4 bytes
+                CSoundEventName m_strShootSound; // 0x07b8, 0x10 bytes
+                CSoundEventName m_strFirstShotSound; // 0x07c8, 0x10 bytes
+                CSoundEventName m_strShotReleaseSound; // 0x07d8, 0x10 bytes
+                CSoundEventName m_strBulletLoopingSound; // 0x07e8, 0x10 bytes
+                CSoundEventName m_strBulletWhizSound; // 0x07f8, 0x10 bytes
+                CSoundEventName m_strBulletImpactSound; // 0x0808, 0x10 bytes
+                float m_flBulletWhizDistance; // 0x0818, 0x4 bytes
+                std::uint8_t pad_081c[0x4]; // 0x081c, 0x4 bytes
+                CSoundEventName m_strReloadSound; // 0x0820, 0x10 bytes
+                CSoundEventName m_strReloadEndSound; // 0x0830, 0x10 bytes
+                CSoundEventName m_strLocalPlayerBulletImpactSound; // 0x0840, 0x10 bytes
+                CSoundEventName m_strLocalPlayerBulletImpactHeavySound; // 0x0850, 0x10 bytes
+                CSoundEventName m_strZoomInSound; // 0x0860, 0x10 bytes
+                CSoundEventName m_strZoomOutSound; // 0x0870, 0x10 bytes
+                CSoundEventName m_strSpinUpSound; // 0x0880, 0x10 bytes
+                CSoundEventName m_strSpinDownSound; // 0x0890, 0x10 bytes
+                CSoundEventName m_strSpinUpLoopSound; // 0x08a0, 0x10 bytes
+                std::uint8_t pad_08b0[0x1c]; // 0x08b0, 0x1c bytes
+                float m_flMaxLagCompensation; // 0x08cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelWeaponInfo) == 0x778, "CCitadelWeaponInfo size mismatch");
+            static_assert(sizeof(CCitadelWeaponInfo) == 0x8D0, "CCitadelWeaponInfo size mismatch");
         }
     }
 }

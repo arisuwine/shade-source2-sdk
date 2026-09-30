@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1820
+             * Size: 0x13a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_NPCAbility_Shield_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flShieldOffset; // 0x1818, 0x4 bytes
-                float m_flShieldScale; // 0x181c, 0x4 bytes
+                float m_flShieldOffset; // 0x13a0, 0x4 bytes
+                float m_flShieldScale; // 0x13a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_NPCAbility_Shield_VData) == 0x1820, "CCitadel_NPCAbility_Shield_VData size mismatch");
+            static_assert(sizeof(CCitadel_NPCAbility_Shield_VData) == 0x13A8, "CCitadel_NPCAbility_Shield_VData size mismatch");
         }
     }
 }

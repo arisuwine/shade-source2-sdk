@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd50
+             * Size: 0xe48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,39 +32,39 @@ namespace shade {
             #pragma pack(push, 1)
             class C_LocalTempEntity : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::int32_t flags; // 0x0ca8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t die; // 0x0cac, 0x4 bytes
-                float m_flFrameMax; // 0x0cb0, 0x4 bytes
-                float x; // 0x0cb4, 0x4 bytes
-                float y; // 0x0cb8, 0x4 bytes
-                float fadeSpeed; // 0x0cbc, 0x4 bytes
-                float bounceFactor; // 0x0cc0, 0x4 bytes
-                std::int32_t hitSound; // 0x0cc4, 0x4 bytes
-                std::int32_t priority; // 0x0cc8, 0x4 bytes
-                Vector tentOffset; // 0x0ccc, 0xc bytes
-                QAngle m_vecTempEntAngVelocity; // 0x0cd8, 0xc bytes
-                std::int32_t tempent_renderamt; // 0x0ce4, 0x4 bytes
-                Vector m_vecNormal; // 0x0ce8, 0xc bytes
-                float m_flSpriteScale; // 0x0cf4, 0x4 bytes
-                std::int32_t m_nFlickerFrame; // 0x0cf8, 0x4 bytes
-                float m_flFrameRate; // 0x0cfc, 0x4 bytes
-                float m_flFrame; // 0x0d00, 0x4 bytes
-                std::uint8_t pad_0d04[0x4]; // 0x0d04, 0x4 bytes
-                char *m_pszImpactEffect; // 0x0d08, 0x8 bytes
-                char *m_pszParticleEffect; // 0x0d10, 0x8 bytes
-                bool m_bParticleCollision; // 0x0d18, 0x1 bytes
-                std::uint8_t pad_0d19[0x3]; // 0x0d19, 0x3 bytes
-                std::int32_t m_iLastCollisionFrame; // 0x0d1c, 0x4 bytes
-                Vector m_vLastCollisionOrigin; // 0x0d20, 0xc bytes
-                Vector m_vecTempEntVelocity; // 0x0d2c, 0xc bytes
-                Vector m_vecPrevAbsOrigin; // 0x0d38, 0xc bytes
-                Vector m_vecTempEntAcceleration; // 0x0d44, 0xc bytes
+                std::int32_t flags; // 0x0da0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t die; // 0x0da4, 0x4 bytes
+                float m_flFrameMax; // 0x0da8, 0x4 bytes
+                float x; // 0x0dac, 0x4 bytes
+                float y; // 0x0db0, 0x4 bytes
+                float fadeSpeed; // 0x0db4, 0x4 bytes
+                float bounceFactor; // 0x0db8, 0x4 bytes
+                std::int32_t hitSound; // 0x0dbc, 0x4 bytes
+                std::int32_t priority; // 0x0dc0, 0x4 bytes
+                Vector tentOffset; // 0x0dc4, 0xc bytes
+                QAngle m_vecTempEntAngVelocity; // 0x0dd0, 0xc bytes
+                std::int32_t tempent_renderamt; // 0x0ddc, 0x4 bytes
+                Vector m_vecNormal; // 0x0de0, 0xc bytes
+                float m_flSpriteScale; // 0x0dec, 0x4 bytes
+                std::int32_t m_nFlickerFrame; // 0x0df0, 0x4 bytes
+                float m_flFrameRate; // 0x0df4, 0x4 bytes
+                float m_flFrame; // 0x0df8, 0x4 bytes
+                std::uint8_t pad_0dfc[0x4]; // 0x0dfc, 0x4 bytes
+                char *m_pszImpactEffect; // 0x0e00, 0x8 bytes
+                char *m_pszParticleEffect; // 0x0e08, 0x8 bytes
+                bool m_bParticleCollision; // 0x0e10, 0x1 bytes
+                std::uint8_t pad_0e11[0x3]; // 0x0e11, 0x3 bytes
+                std::int32_t m_iLastCollisionFrame; // 0x0e14, 0x4 bytes
+                VectorWS m_vLastCollisionOrigin; // 0x0e18, 0xc bytes
+                Vector m_vecTempEntVelocity; // 0x0e24, 0xc bytes
+                VectorWS m_vecPrevAbsOrigin; // 0x0e30, 0xc bytes
+                Vector m_vecTempEntAcceleration; // 0x0e3c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_LocalTempEntity) == 0xD50, "C_LocalTempEntity size mismatch");
+            static_assert(sizeof(C_LocalTempEntity) == 0xE48, "C_LocalTempEntity size mismatch");
         }
     }
 }

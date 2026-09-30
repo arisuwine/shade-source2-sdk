@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,29 +20,27 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x24
+             * Size: 0x1c
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct AI_CommonMovementSettings_t {
-                float m_flSpringConstant; // 0x0000, 0x4 bytes
-                float m_flMaxSpringTension; // 0x0004, 0x4 bytes
-                float m_flSharpStartAngle; // 0x0008, 0x4 bytes
-                float m_flMinIdleTurnAngle; // 0x000c, 0x4 bytes
-                bool m_bUseSmoothPaths; // 0x0010, 0x1 bytes
-                std::uint8_t pad_0011[0x3]; // 0x0011, 0x3 bytes
-                float m_flMovementMaxPathEndDirectionAngleDifferenceForStop; // 0x0014, 0x4 bytes
-                float m_flMaxHopFacingDelta; // 0x0018, 0x4 bytes
-                float m_flNavLinkSmoothMaxEntryAngle; // 0x001c, 0x4 bytes
-                float m_flNavLinkSmoothMinSegmentLength; // 0x0020, 0x4 bytes
+                float m_flSharpStartAngle; // 0x0000, 0x4 bytes
+                float m_flMinIdleTurnAngle; // 0x0004, 0x4 bytes
+                bool m_bUseSmoothPaths; // 0x0008, 0x1 bytes
+                std::uint8_t pad_0009[0x3]; // 0x0009, 0x3 bytes
+                float m_flMovementMaxPathEndDirectionAngleDifferenceForStop; // 0x000c, 0x4 bytes
+                float m_flMaxHopFacingDelta; // 0x0010, 0x4 bytes
+                float m_flNavLinkSmoothMaxEntryAngle; // 0x0014, 0x4 bytes
+                float m_flNavLinkSmoothMinSegmentLength; // 0x0018, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_CommonMovementSettings_t) == 0x24, "AI_CommonMovementSettings_t size mismatch");
+            static_assert(sizeof(AI_CommonMovementSettings_t) == 0x1C, "AI_CommonMovementSettings_t size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x2c8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SilencerProcActive) == 0x1F8, "CCitadel_Modifier_SilencerProcActive size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SilencerProcActive) == 0x2C8, "CCitadel_Modifier_SilencerProcActive size mismatch");
         }
     }
 }

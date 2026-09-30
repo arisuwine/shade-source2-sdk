@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2a8
+             * Size: 0x3a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GarbageAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0108[0x180]; // 0x0108, 0x180 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hEnemyHeroInVacuum; // 0x0288, 0x18 bytes
-                std::int32_t m_nNumPlayersKilled; // 0x02a0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastDamageTime; // 0x02a4, 0x4 bytes
+                std::uint8_t pad_0178[0x210]; // 0x0178, 0x210 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hEnemyHeroInVacuum; // 0x0388, 0x18 bytes
+                std::int32_t m_nNumPlayersKilled; // 0x03a0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastDamageTime; // 0x03a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GarbageAura) == 0x2A8, "CCitadel_Modifier_GarbageAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GarbageAura) == 0x3A8, "CCitadel_Modifier_GarbageAura size mismatch");
         }
     }
 }

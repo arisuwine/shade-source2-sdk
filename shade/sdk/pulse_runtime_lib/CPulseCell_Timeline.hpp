@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x140
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_Timeline : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulseCell_Timeline__TimelineEvent_t> m_TimelineEvents; // 0x0048, 0x18 bytes
-                bool m_bWaitForChildOutflows; // 0x0060, 0x1 bytes
-                std::uint8_t pad_0061[0x7]; // 0x0061, 0x7 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x0068, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnCanceled; // 0x00b0, 0x48 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulseCell_Timeline__TimelineEvent_t> m_TimelineEvents; // 0x00d8, 0x18 bytes
+                bool m_bWaitForChildOutflows; // 0x00f0, 0x1 bytes
+                std::uint8_t pad_00f1[0x7]; // 0x00f1, 0x7 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x00f8, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Timeline) == 0xF8, "CPulseCell_Timeline size mismatch");
+            static_assert(sizeof(CPulseCell_Timeline) == 0x140, "CPulseCell_Timeline size mismatch");
         }
     }
 }

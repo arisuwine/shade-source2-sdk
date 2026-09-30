@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5e8
+             * Size: 0x838
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,19 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PunkgoatTethered : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorCaster; // 0x00d0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorParent; // 0x00d4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastLOSTime; // 0x00d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x00dc, 0x4 bytes
-                std::uint8_t pad_00e0[0x500]; // 0x00e0, 0x500 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTetheredTo; // 0x05e0, 0x4 bytes
-                std::uint8_t pad_05e4[0x4]; // 0x05e4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorCaster; // 0x0140, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorParent; // 0x0144, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastLOSTime; // 0x0148, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x014c, 0x4 bytes
+                std::uint8_t pad_0150[0x6e0]; // 0x0150, 0x6e0 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTetheredTo; // 0x0830, 0x4 bytes
+                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PunkgoatTethered) == 0x5E8, "CCitadel_Modifier_PunkgoatTethered size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PunkgoatTethered) == 0x838, "CCitadel_Modifier_PunkgoatTethered size mismatch");
         }
     }
 }

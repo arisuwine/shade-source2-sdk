@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a28
+             * Size: 0x15c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,22 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FissureWallVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FriendlyWallParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyWallParticle; // 0x18f8, 0xe0 bytes
-                CSoundEventName m_WallTravelSoundLoop; // 0x19d8, 0x10 bytes
-                CSoundEventName m_strWallRemoveSound; // 0x19e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_WallModifier; // 0x19f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1a08, 0x10 bytes
-                float m_flWallPreviewDropdownRate; // 0x1a18, 0x4 bytes
-                float m_flWallStepHeight; // 0x1a1c, 0x4 bytes
-                float m_flWallTraceRadius; // 0x1a20, 0x4 bytes
-                std::uint8_t pad_1a24[0x4]; // 0x1a24, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FriendlyWallParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyWallParticle; // 0x1480, 0xe0 bytes
+                CSoundEventName m_WallTravelSoundLoop; // 0x1560, 0x10 bytes
+                CSoundEventName m_strWallRemoveSound; // 0x1570, 0x10 bytes
+                CSoundEventName m_strApplySlowSound; // 0x1580, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_WallModifier; // 0x1590, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x15a0, 0x10 bytes
+                float m_flWallPreviewDropdownRate; // 0x15b0, 0x4 bytes
+                float m_flWallStepHeight; // 0x15b4, 0x4 bytes
+                float m_flWallTraceRadius; // 0x15b8, 0x4 bytes
+                std::uint8_t pad_15bc[0x4]; // 0x15bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FissureWallVData) == 0x1A28, "CCitadel_Ability_FissureWallVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FissureWallVData) == 0x15C0, "CCitadel_Ability_FissureWallVData size mismatch");
         }
     }
 }

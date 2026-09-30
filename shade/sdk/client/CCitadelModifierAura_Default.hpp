@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x110
+             * Size: 0x180
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierAura_Default) == 0x110, "CCitadelModifierAura_Default size mismatch");
+            static_assert(sizeof(CCitadelModifierAura_Default) == 0x180, "CCitadelModifierAura_Default size mismatch");
         }
     }
 }

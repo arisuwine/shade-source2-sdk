@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,20 +20,19 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1
-             * Alignment: 0x1
-             * Has Trivial Destructor
+             * Size: 0x8
+             * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct AbilityCosmeticInfo_t {
-                bool m_bIsSeasonal; // 0x0000, 0x1 bytes
+                CUtlString m_strTooltipCSSClass; // 0x0000, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AbilityCosmeticInfo_t) == 0x1, "AbilityCosmeticInfo_t size mismatch");
+            static_assert(sizeof(AbilityCosmeticInfo_t) == 0x8, "AbilityCosmeticInfo_t size mismatch");
         }
     }
 }

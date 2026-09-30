@@ -12,18 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/ParticleIndex_t.hpp"
-#include "shade/sdk/client/ShotID_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CCitadelBaseAbility.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
-            class CBaseEntity;
+            class CCitadel_MagicianTurret;
         }
     }
 }
@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1490
+             * Size: 0x1aa8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,24 +41,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TurretClone : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x280]; // 0x0f70, 0x280 bytes
-                bool m_bHasTurretReady; // 0x11f0, 0x1 bytes
-                std::uint8_t pad_11f1[0x3]; // 0x11f1, 0x3 bytes
-                std::int32_t m_iCurrentSwapCount; // 0x11f4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTurretExpireTime; // 0x11f8, 0x4 bytes
-                std::uint8_t pad_11fc[0x4]; // 0x11fc, 0x4 bytes
-                shade::sdk::client::ShotID_t m_nLastBulletShotID; // 0x1200, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_pActiveTurret; // 0x1204, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTurretFXIndex; // 0x1208, 0x4 bytes
-                std::uint8_t pad_120c[0x284]; // 0x120c, 0x284 bytes
+                std::uint8_t pad_14a0[0x370]; // 0x14a0, 0x370 bytes
+                bool m_bHasTurretReady; // 0x1810, 0x1 bytes
+                std::uint8_t pad_1811[0x3]; // 0x1811, 0x3 bytes
+                std::int32_t m_iCurrentSwapCount; // 0x1814, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTurretExpireTime; // 0x1818, 0x4 bytes
+                std::uint8_t pad_181c[0x4]; // 0x181c, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadel_MagicianTurret> m_pActiveTurret; // 0x1820, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTurretFXIndex; // 0x1824, 0x4 bytes
+                std::uint8_t pad_1828[0x280]; // 0x1828, 0x280 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TurretClone) == 0x1490, "CCitadel_Ability_TurretClone size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TurretClone) == 0x1AA8, "CCitadel_Ability_TurretClone size mismatch");
         }
     }
 }

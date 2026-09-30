@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -38,8 +39,8 @@ namespace shade {
                 FIELD_INPUT = 0x12,
                 FIELD_FUNCTION = 0x13,
                 FIELD_VMATRIX = 0x14,
-                FIELD_VMATRIX_WORLDSPACE = 0x15,
-                FIELD_MATRIX3X4_WORLDSPACE = 0x16,
+                FIELD_xxxAvail1 = 0x15,
+                FIELD_xxxAvail2 = 0x16,
                 FIELD_INTERVAL = 0x17,
                 FIELD_UNUSED = 0x18,
                 FIELD_VECTOR2D = 0x19,
@@ -86,7 +87,7 @@ namespace shade {
                 FIELD_ATTACHMENT_HANDLE = 0x42,
                 FIELD_AMMO_INDEX = 0x43,
                 FIELD_CONDITION_ID = 0x44,
-                FIELD_AI_SCHEDULE_BITS = 0x45,
+                DEPRECATED_FIELD_AI_SCHEDULE_BITS = 0x45,
                 FIELD_MODIFIER_HANDLE = 0x46,
                 FIELD_ROTATION_VECTOR = 0x47,
                 FIELD_ROTATION_VECTOR_WORLDSPACE = 0x48,
@@ -98,7 +99,9 @@ namespace shade {
                 FIELD_WORLD_GROUP_ID = 0x4e,
                 FIELD_GLOBALSYMBOL = 0x4f,
                 FIELD_HNMGRAPHDEFINITION = 0x50,
-                FIELD_TYPECOUNT = 0x51
+                FIELD_NETWORK_QUANTIZED_VECTORWS = 0x51,
+                FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTORWS = 0x52,
+                FIELD_TYPECOUNT = 0x53
             };
         }
     }

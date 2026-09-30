@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class FilterDamageType : public shade::sdk::server::CBaseFilter {
             public:
-                std::int32_t m_iDamageType; // 0x04d8, 0x4 bytes
-                std::uint8_t pad_04dc[0x4]; // 0x04dc, 0x4 bytes
+                std::int32_t m_iDamageType; // 0x04e8, 0x4 bytes
+                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(FilterDamageType) == 0x4E0, "FilterDamageType size mismatch");
+            static_assert(sizeof(FilterDamageType) == 0x4F0, "FilterDamageType size mismatch");
         }
     }
 }

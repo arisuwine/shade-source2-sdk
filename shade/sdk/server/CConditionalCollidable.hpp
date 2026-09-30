@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x878
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,7 +40,7 @@ namespace shade {
              * CUtlSymbolLarge interactExclude; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CConditionalCollidable) == 0x780, "CConditionalCollidable size mismatch");
+            static_assert(sizeof(CConditionalCollidable) == 0x878, "CConditionalCollidable size mismatch");
         }
     }
 }

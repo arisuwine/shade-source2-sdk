@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1518
+             * Size: 0x1b38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Synth_PlasmaFlux : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x28]; // 0x11d8, 0x28 bytes
-                bool m_bTeleported; // 0x1200, 0x1 bytes
-                std::uint8_t pad_1201[0x3]; // 0x1201, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0x1204, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0x1208, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hActiveProjectile; // 0x120c, 0x4 bytes
-                std::uint8_t pad_1210[0x308]; // 0x1210, 0x308 bytes
+                std::uint8_t pad_16d8[0x28]; // 0x16d8, 0x28 bytes
+                bool m_bTeleported; // 0x1700, 0x1 bytes
+                std::uint8_t pad_1701[0x3]; // 0x1701, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0x1704, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0x1708, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hActiveProjectile; // 0x170c, 0x4 bytes
+                std::uint8_t pad_1710[0x428]; // 0x1710, 0x428 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Synth_PlasmaFlux) == 0x1518, "CAbility_Synth_PlasmaFlux size mismatch");
+            static_assert(sizeof(CAbility_Synth_PlasmaFlux) == 0x1B38, "CAbility_Synth_PlasmaFlux size mismatch");
         }
     }
 }

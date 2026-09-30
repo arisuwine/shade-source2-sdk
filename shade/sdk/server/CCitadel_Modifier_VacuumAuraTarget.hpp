@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x210
+             * Size: 0x2e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VacuumAuraTarget : public shade::sdk::server::CCitadel_Modifier_Stunned {
             public:
-                std::uint8_t pad_00d8[0x100]; // 0x00d8, 0x100 bytes
-                float m_flMaxDist; // 0x01d8, 0x4 bytes
-                Vector m_vecOffsetDir; // 0x01dc, 0xc bytes
-                Vector m_vecStartPosition; // 0x01e8, 0xc bytes
-                float m_flAOERadius; // 0x01f4, 0x4 bytes
-                std::uint8_t pad_01f8[0x18]; // 0x01f8, 0x18 bytes
+                std::uint8_t pad_0148[0x160]; // 0x0148, 0x160 bytes
+                float m_flMaxDist; // 0x02a8, 0x4 bytes
+                Vector m_vecOffsetDir; // 0x02ac, 0xc bytes
+                VectorWS m_vecStartPosition; // 0x02b8, 0xc bytes
+                float m_flAOERadius; // 0x02c4, 0x4 bytes
+                std::uint8_t pad_02c8[0x18]; // 0x02c8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VacuumAuraTarget) == 0x210, "CCitadel_Modifier_VacuumAuraTarget size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VacuumAuraTarget) == 0x2E0, "CCitadel_Modifier_VacuumAuraTarget size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,8 +37,8 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x270
-             * Alignment: 0x8
+             * Size: 0x3d60
+             * Alignment: 0x10
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
@@ -45,35 +46,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierProperty {
             public:
-                std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0008, 0x28 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0030, 0x4 bytes
-                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
-                CUtlVector<shade::sdk::server::CBaseModifier*> m_vecModifiers; // 0x0038, 0x18 bytes
-                std::uint8_t pad_0050[0x177]; // 0x0050, 0x177 bytes
-                bool m_bModifierStatesDirty; // 0x01c7, 0x1 bytes
-                bool m_bPredictedOwner; // 0x01c8, 0x1 bytes
-                bool m_bAllowModifiersOnDeadEntities; // 0x01c9, 0x1 bytes
-                std::int8_t m_iLockRefCount; // 0x01ca, 0x1 bytes
-                std::uint8_t pad_01cb[0x1]; // 0x01cb, 0x1 bytes
-                shade::sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x01cc, 0x2 bytes
-                std::uint8_t pad_01ce[0x2]; // 0x01ce, 0x2 bytes
-                std::uint32_t m_nBroadcastEventListenerMask; // 0x01d0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nCachedHighestParticleIndex; // 0x01d4, 0x4 bytes
-                CUtlVector<shade::sdk::client::OwnerModifierEventListener_t> *m_pNotifyOwnerEvents; // 0x01d8, 0x8 bytes
-                std::uint32_t m_nDisabledGroups; // 0x01e0, 0x4 bytes
-                std::uint32_t m_bvEnabledStateMask[0xa]; // 0x01e4, 0x28 bytes
-                std::uint32_t m_bvDisabledStateMask[0xa]; // 0x020c, 0x28 bytes
-                std::uint32_t m_bvEnabledPredictedStateMask[0xa]; // 0x0234, 0x28 bytes
-                std::uint8_t pad_025c[0xc]; // 0x025c, 0xc bytes
-                bool m_bParentWantsModifierStateChangeCallback; // 0x0268, 0x1 bytes
-                std::uint8_t pad_0269[0x7]; // 0x0269, 0x7 bytes
+                std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
+                shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0010, 0x28 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0038, 0x4 bytes
+                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
+                CUtlVector<shade::sdk::server::CBaseModifier*> m_vecModifiers; // 0x0040, 0x18 bytes
+                std::uint8_t pad_0058[0x3c51]; // 0x0058, 0x3c51 bytes
+                bool m_bPredictedOwner; // 0x3ca9, 0x1 bytes
+                bool m_bAllowModifiersOnDeadEntities; // 0x3caa, 0x1 bytes
+                std::int8_t m_iLockRefCount; // 0x3cab, 0x1 bytes
+                shade::sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x3cac, 0x2 bytes
+                std::uint8_t pad_3cae[0x2]; // 0x3cae, 0x2 bytes
+                std::uint32_t m_nBroadcastEventListenerMask; // 0x3cb0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nCachedHighestParticleIndex; // 0x3cb4, 0x4 bytes
+                CUtlVector<shade::sdk::client::OwnerModifierEventListener_t> *m_pNotifyOwnerEvents; // 0x3cb8, 0x8 bytes
+                std::uint32_t m_nDisabledGroups; // 0x3cc0, 0x4 bytes
+                std::uint32_t m_bvEnabledStateMask[0xb]; // 0x3cc4, 0x2c bytes
+                std::uint32_t m_bvDisabledStateMask[0xb]; // 0x3cf0, 0x2c bytes
+                std::uint32_t m_bvEnabledPredictedStateMask[0xb]; // 0x3d1c, 0x2c bytes
+                std::uint8_t pad_3d48[0x8]; // 0x3d48, 0x8 bytes
+                bool m_bParentWantsModifierStateChangeCallback; // 0x3d50, 0x1 bytes
+                std::uint8_t pad_3d51[0xf]; // 0x3d51, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierProperty) == 0x270, "CModifierProperty size mismatch");
+            static_assert(sizeof(CModifierProperty) == 0x3D60, "CModifierProperty size mismatch");
         }
     }
 }

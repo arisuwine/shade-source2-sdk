@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x278
+             * Size: 0x378
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,16 +38,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ConeWaveProjectile : public shade::sdk::server::CCitadel_Modifier_Intrinsic_Base {
             public:
-                std::uint8_t pad_00d0[0x180]; // 0x00d0, 0x180 bytes
-                Vector m_vInitialCastPosition; // 0x0250, 0xc bytes
-                float m_flProjectileSpeed; // 0x025c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x0260, 0x18 bytes
+                std::uint8_t pad_0140[0x210]; // 0x0140, 0x210 bytes
+                VectorWS m_vInitialCastPosition; // 0x0350, 0xc bytes
+                float m_flProjectileSpeed; // 0x035c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x0360, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ConeWaveProjectile) == 0x278, "CCitadel_Modifier_ConeWaveProjectile size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ConeWaveProjectile) == 0x378, "CCitadel_Modifier_ConeWaveProjectile size mismatch");
         }
     }
 }

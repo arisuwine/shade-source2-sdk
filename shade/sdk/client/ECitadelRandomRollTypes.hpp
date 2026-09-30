@@ -12,16 +12,15 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace client {
             enum class ECitadelRandomRollTypes : std::uint32_t {
-                ECitadelRandomRoll_BulletCritChance = 0x0,
-                ECitadelRandomRoll_BulletCritDebuffChance = 0x1,
-                ECitadelRandomRoll_BreakableGoldPickup = 0x2,
-                ECitadelRandomRoll_BreakablePowerupPickup = 0x3,
-                ECitadelRandomRoll_LastEnum = 0x4
+                ECitadelRandomRoll_BreakableGoldPickup = 0x0,
+                ECitadelRandomRoll_BreakablePowerupPickup = 0x1,
+                ECitadelRandomRoll_LastEnum = 0x2
             };
         }
     }

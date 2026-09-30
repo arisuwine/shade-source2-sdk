@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x540
+             * Size: 0x550
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,33 +41,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointAngleSensor : public shade::sdk::server::CPointEntity {
             public:
-                bool m_bDisabled; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x7]; // 0x04a1, 0x7 bytes
-                CUtlSymbolLarge m_nLookAtName; // 0x04a8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x04b0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLookAtEntity; // 0x04b4, 0x4 bytes
-                float m_flDuration; // 0x04b8, 0x4 bytes
-                float m_flDotTolerance; // 0x04bc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFacingTime; // 0x04c0, 0x4 bytes
-                bool m_bFired; // 0x04c4, 0x1 bytes
-                std::uint8_t pad_04c5[0x3]; // 0x04c5, 0x3 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFacingLookat; // 0x04c8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNotFacingLookat; // 0x04e0, 0x18 bytes
-                CEntityOutputTemplate<Vector> m_TargetDir; // 0x04f8, 0x28 bytes
-                CEntityOutputTemplate<float> m_FacingPercentage; // 0x0520, 0x20 bytes
+                bool m_bDisabled; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x7]; // 0x04b1, 0x7 bytes
+                CUtlSymbolLarge m_nLookAtName; // 0x04b8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x04c0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLookAtEntity; // 0x04c4, 0x4 bytes
+                float m_flDuration; // 0x04c8, 0x4 bytes
+                float m_flDotTolerance; // 0x04cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFacingTime; // 0x04d0, 0x4 bytes
+                bool m_bFired; // 0x04d4, 0x1 bytes
+                std::uint8_t pad_04d5[0x3]; // 0x04d5, 0x3 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFacingLookat; // 0x04d8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNotFacingLookat; // 0x04f0, 0x18 bytes
+                CEntityOutputTemplate<Vector> m_TargetDir; // 0x0508, 0x28 bytes
+                CEntityOutputTemplate<float> m_FacingPercentage; // 0x0530, 0x20 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTargetEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * float tolerance; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPointAngleSensor) == 0x540, "CPointAngleSensor size mismatch");
+            static_assert(sizeof(CPointAngleSensor) == 0x550, "CPointAngleSensor size mismatch");
         }
     }
 }

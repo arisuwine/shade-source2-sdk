@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,11 +30,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_vecSamples; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x18
-             * std::int32_t m_nSamples; // Offset: 0x18, Size: 0x1, Size In Bytes: 0x4
-             * std::int32_t m_nCurrentSampleIndex; // Offset: 0x1c, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CVectorMovingAverage) == 0x20, "CVectorMovingAverage size mismatch");
         }

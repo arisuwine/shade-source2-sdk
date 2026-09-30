@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x770
+             * Size: 0x780
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HideoutIntroVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                shade::sdk::client::CameraEntityOverride_t m_preIntroCamera; // 0x0750, 0x10 bytes
-                shade::sdk::client::CameraEntityOverride_t m_introCamera; // 0x0760, 0x10 bytes
+                shade::sdk::client::CameraEntityOverride_t m_preIntroCamera; // 0x0760, 0x10 bytes
+                shade::sdk::client::CameraEntityOverride_t m_introCamera; // 0x0770, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HideoutIntroVData) == 0x770, "CCitadel_Modifier_HideoutIntroVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HideoutIntroVData) == 0x780, "CCitadel_Modifier_HideoutIntroVData size mismatch");
         }
     }
 }

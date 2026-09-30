@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x520
+             * Size: 0x530
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,29 +40,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvEntityMaker : public shade::sdk::server::CPointEntity {
             public:
-                Vector m_vecEntityMins; // 0x04a0, 0xc bytes
-                Vector m_vecEntityMaxs; // 0x04ac, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentInstance; // 0x04b8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentBlocker; // 0x04bc, 0x4 bytes
-                Vector m_vecBlockerOrigin; // 0x04c0, 0xc bytes
-                QAngle m_angPostSpawnDirection; // 0x04cc, 0xc bytes
-                float m_flPostSpawnDirectionVariance; // 0x04d8, 0x4 bytes
-                float m_flPostSpawnSpeed; // 0x04dc, 0x4 bytes
-                bool m_bPostSpawnUseAngles; // 0x04e0, 0x1 bytes
-                std::uint8_t pad_04e1[0x7]; // 0x04e1, 0x7 bytes
-                CUtlSymbolLarge m_iszTemplate; // 0x04e8, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputOnSpawned; // 0x04f0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputOnFailedSpawn; // 0x0508, 0x18 bytes
+                Vector m_vecEntityMins; // 0x04b0, 0xc bytes
+                Vector m_vecEntityMaxs; // 0x04bc, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentInstance; // 0x04c8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentBlocker; // 0x04cc, 0x4 bytes
+                VectorWS m_vecBlockerOrigin; // 0x04d0, 0xc bytes
+                QAngle m_angPostSpawnDirection; // 0x04dc, 0xc bytes
+                float m_flPostSpawnDirectionVariance; // 0x04e8, 0x4 bytes
+                float m_flPostSpawnSpeed; // 0x04ec, 0x4 bytes
+                bool m_bPostSpawnUseAngles; // 0x04f0, 0x1 bytes
+                std::uint8_t pad_04f1[0x7]; // 0x04f1, 0x7 bytes
+                CUtlSymbolLarge m_iszTemplate; // 0x04f8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputOnSpawned; // 0x0500, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputOnFailedSpawn; // 0x0518, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputForceSpawn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputForceSpawnAtEntityOrigin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CEnvEntityMakerCheckSpawnThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvEntityMaker) == 0x520, "CEnvEntityMaker size mismatch");
+            static_assert(sizeof(CEnvEntityMaker) == 0x530, "CEnvEntityMaker size mismatch");
         }
     }
 }

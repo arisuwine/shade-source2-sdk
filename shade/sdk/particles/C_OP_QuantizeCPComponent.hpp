@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_QuantizeCPComponent : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputValue; // 0x01e0, 0x170 bytes
-                std::int32_t m_nCPOutput; // 0x0350, 0x4 bytes
-                std::int32_t m_nOutVectorField; // 0x0354, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flQuantizeValue; // 0x0358, 0x170 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInputValue; // 0x01e8, 0x178 bytes
+                std::int32_t m_nCPOutput; // 0x0360, 0x4 bytes
+                std::int32_t m_nOutVectorField; // 0x0364, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flQuantizeValue; // 0x0368, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_QuantizeCPComponent) == 0x4C8, "C_OP_QuantizeCPComponent size mismatch");
+            static_assert(sizeof(C_OP_QuantizeCPComponent) == 0x4E0, "C_OP_QuantizeCPComponent size mismatch");
         }
     }
 }

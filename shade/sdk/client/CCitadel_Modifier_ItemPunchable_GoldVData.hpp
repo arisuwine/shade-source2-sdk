@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x7d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ItemPunchable_GoldVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                float m_flPhysicsRadius; // 0x07a8, 0x4 bytes
-                std::uint8_t pad_07ac[0x4]; // 0x07ac, 0x4 bytes
-                CSoundEventName m_sHitSound; // 0x07b0, 0x10 bytes
+                float m_flPhysicsRadius; // 0x07b8, 0x4 bytes
+                std::uint8_t pad_07bc[0x4]; // 0x07bc, 0x4 bytes
+                CSoundEventName m_sHitSound; // 0x07c0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ItemPunchable_GoldVData) == 0x7C0, "CCitadel_Modifier_ItemPunchable_GoldVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ItemPunchable_GoldVData) == 0x7D0, "CCitadel_Modifier_ItemPunchable_GoldVData size mismatch");
         }
     }
 }

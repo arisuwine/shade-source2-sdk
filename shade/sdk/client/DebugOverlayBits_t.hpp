@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -56,7 +57,10 @@ namespace shade {
                 OVERLAY_ACTORNAME_BIT = 0x4000000000,
                 OVERLAY_NPC_CONDITIONS_TEXT_BIT = 0x8000000000,
                 OVERLAY_NPC_ABILITY_RANGE_DEBUG_BIT = 0x10000000000,
-                OVERLAY_MINIMAL_TEXT = 0x20000000000
+                OVERLAY_MINIMAL_TEXT = 0x20000000000,
+                OVERLAY_NPC_GOD_MODE = 0x40000000000,
+                OVERLAY_NPC_ANIM_AI_HANDSHAKES_BIT = 0x80000000000,
+                OVERLAY_NPC_PATH_QUERIES_BIT = 0x100000000000
             };
         }
     }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xdf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,24 +43,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0750, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusPlayerParticle; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusVictimParticle; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusNPCParticle; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackDamageParticle; // 0x0a00, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackReadyParticle; // 0x0ae0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackAppliedParticle; // 0x0bc0, 0xe0 bytes
-                CSoundEventName m_ConsumeMaxStacksSound; // 0x0ca0, 0x10 bytes
-                CSoundEventName m_ConsumeMaxStacksHeroSound; // 0x0cb0, 0x10 bytes
-                CSoundEventName m_ApplyStackSound; // 0x0cc0, 0x10 bytes
-                CSoundEventName m_ApplyStackNPCSound; // 0x0cd0, 0x10 bytes
-                CSoundEventName m_StunSound; // 0x0ce0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0760, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RevealModifier; // 0x0770, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusPlayerParticle; // 0x0780, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusVictimParticle; // 0x0860, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusNPCParticle; // 0x0940, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackDamageParticle; // 0x0a20, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0b00, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackReadyParticle; // 0x0be0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackAppliedParticle; // 0x0cc0, 0xe0 bytes
+                CSoundEventName m_ConsumeMaxStacksSound; // 0x0da0, 0x10 bytes
+                CSoundEventName m_ConsumeMaxStacksHeroSound; // 0x0db0, 0x10 bytes
+                CSoundEventName m_ApplyStackSound; // 0x0dc0, 0x10 bytes
+                CSoundEventName m_ApplyStackNPCSound; // 0x0dd0, 0x10 bytes
+                CSoundEventName m_StunSound; // 0x0de0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData) == 0xCF0, "CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData) == 0xDF0, "CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData size mismatch");
         }
     }
 }

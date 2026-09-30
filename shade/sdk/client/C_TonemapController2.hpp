@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -39,14 +40,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMinExposure; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxExposure; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetExposureAdaptationSpeedUp; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetExposureAdaptationSpeedDown; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_TonemapController2) == 0x608, "C_TonemapController2 size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xde0
+             * Size: 0xed8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,26 +40,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_Pickup : public shade::sdk::client::CBaseAnimGraph {
             public:
-                bool m_bActive; // 0x0ca8, 0x1 bytes
-                bool m_bInteractive; // 0x0ca9, 0x1 bytes
-                std::uint8_t pad_0caa[0x2]; // 0x0caa, 0x2 bytes
-                Vector m_vVacuumStartPos; // 0x0cac, 0xc bytes
-                Vector m_vInitialVacuumVel; // 0x0cb8, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hVacuumTarget; // 0x0cc4, 0x4 bytes
-                std::uint8_t pad_0cc8[0x100]; // 0x0cc8, 0x100 bytes
-                shade::sdk::entity2::GameTime_t m_flVacuumStartTime; // 0x0dc8, 0x4 bytes
-                VectorWS m_vVacuumPos; // 0x0dcc, 0xc bytes
-                float m_flLastFrameTime; // 0x0dd8, 0x4 bytes
-                bool m_bVacuumFinished; // 0x0ddc, 0x1 bytes
-                std::uint8_t pad_0ddd[0x3]; // 0x0ddd, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAssignedClaimer; // 0x0da0, 0x4 bytes
+                bool m_bActive; // 0x0da4, 0x1 bytes
+                bool m_bInteractive; // 0x0da5, 0x1 bytes
+                std::uint8_t pad_0da6[0x2]; // 0x0da6, 0x2 bytes
+                VectorWS m_vVacuumStartPos; // 0x0da8, 0xc bytes
+                Vector m_vInitialVacuumVel; // 0x0db4, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hVacuumTarget; // 0x0dc0, 0x4 bytes
+                std::uint8_t pad_0dc4[0xfc]; // 0x0dc4, 0xfc bytes
+                shade::sdk::entity2::GameTime_t m_flVacuumStartTime; // 0x0ec0, 0x4 bytes
+                VectorWS m_vVacuumPos; // 0x0ec4, 0xc bytes
+                float m_flLastFrameTime; // 0x0ed0, 0x4 bytes
+                bool m_bVacuumFinished; // 0x0ed4, 0x1 bytes
+                std::uint8_t pad_0ed5[0x3]; // 0x0ed5, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Pickup) == 0xDE0, "C_Citadel_Pickup size mismatch");
+            static_assert(sizeof(C_Citadel_Pickup) == 0xED8, "C_Citadel_Pickup size mismatch");
         }
     }
 }

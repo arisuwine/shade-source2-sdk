@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18b0
+             * Size: 0x1870
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,28 +34,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Boss_Tier3 : public shade::sdk::server::CAI_CitadelNPC {
             public:
-                std::uint8_t pad_17b0[0x4]; // 0x17b0, 0x4 bytes
-                std::int32_t m_iLane; // 0x17b4, 0x4 bytes
-                std::uint8_t pad_17b8[0x34]; // 0x17b8, 0x34 bytes
-                Vector m_vecElectricBeamTargetEnd; // 0x17ec, 0xc bytes
-                std::uint8_t pad_17f8[0x10]; // 0x17f8, 0x10 bytes
-                shade::sdk::entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1808, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_eventOnPhase1End; // 0x1820, 0x18 bytes
-                CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x1838, 0x8 bytes
-                std::uint8_t pad_1840[0x4]; // 0x1840, 0x4 bytes
-                shade::sdk::client::ETier3State_t m_eAliveState; // 0x1844, 0x4 bytes
-                shade::sdk::client::ETier3Phase_t m_ePhase; // 0x1848, 0x4 bytes
-                std::uint8_t pad_184c[0x2c]; // 0x184c, 0x2c bytes
-                Vector m_vShrineAttackTargetPos; // 0x1878, 0xc bytes
-                std::uint8_t pad_1884[0x2c]; // 0x1884, 0x2c bytes
+                std::uint8_t pad_1710[0x4]; // 0x1710, 0x4 bytes
+                std::int32_t m_iLane; // 0x1714, 0x4 bytes
+                std::uint8_t pad_1718[0x28]; // 0x1718, 0x28 bytes
+                VectorWS m_vecElectricBeamTargetEnd; // 0x1740, 0xc bytes
+                std::uint8_t pad_174c[0xc]; // 0x174c, 0xc bytes
+                shade::sdk::entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1758, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_eventOnPhase1End; // 0x1770, 0x18 bytes
+                CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x1788, 0x8 bytes
+                std::uint8_t pad_1790[0x4]; // 0x1790, 0x4 bytes
+                shade::sdk::client::ETier3State_t m_eAliveState; // 0x1794, 0x4 bytes
+                shade::sdk::client::ETier3Phase_t m_ePhase; // 0x1798, 0x4 bytes
+                std::uint8_t pad_179c[0x94]; // 0x179c, 0x94 bytes
+                VectorWS m_vShrineAttackTargetPos; // 0x1830, 0xc bytes
+                std::uint8_t pad_183c[0x34]; // 0x183c, 0x34 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_vecStartingPosition; // Offset: 0x17c8, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CNPC_Boss_Tier3) == 0x18B0, "CNPC_Boss_Tier3 size mismatch");
+            static_assert(sizeof(CNPC_Boss_Tier3) == 0x1870, "CNPC_Boss_Tier3 size mismatch");
         }
     }
 }

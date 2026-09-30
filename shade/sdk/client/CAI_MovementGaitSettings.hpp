@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/AI_MovementHeadingSettings_t.hpp"
+#include "shade/sdk/client/AI_StrafeMode_t.hpp"
 #include "shade/sdk/modellib/MovementCapability_t.hpp"
 #include "shade/sdk/tier2/CRangeFloat.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc0
+             * Size: 0xb0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -41,22 +42,26 @@ namespace shade {
                 float m_flDeceleration; // 0x002c, 0x4 bytes
                 CPiecewiseCurve m_decelerationCurve; // 0x0030, 0x40 bytes
                 float m_flProceduralIdleTurnSpeed; // 0x0070, 0x4 bytes
-                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
-                shade::sdk::client::AI_MovementHeadingSettings_t m_heading; // 0x0078, 0x28 bytes
-                float m_flMaxIdleTurnScaleUp; // 0x00a0, 0x4 bytes
-                float m_flMovementPlantedTurnAngleThreshold; // 0x00a4, 0x4 bytes
-                float m_flBashStartDistance; // 0x00a8, 0x4 bytes
-                float m_flMinBashDelay; // 0x00ac, 0x4 bytes
-                shade::sdk::tier2::CRangeFloat m_flMantleDelayRange; // 0x00b0, 0x8 bytes
-                float m_flMantleStartDistance; // 0x00b8, 0x4 bytes
-                bool m_bEnabled; // 0x00bc, 0x1 bytes
-                std::uint8_t pad_00bd[0x3]; // 0x00bd, 0x3 bytes
+                shade::sdk::client::AI_StrafeMode_t m_eStrafeMode; // 0x0074, 0x4 bytes
+                float m_flStrafeTransitionAimLeftHysteresis; // 0x0078, 0x4 bytes
+                float m_flStrafeTransitionAimRightHysteresis; // 0x007c, 0x4 bytes
+                float m_flStrafeTransitionMinPathLength; // 0x0080, 0x4 bytes
+                float m_flMaxIdleTurnScaleUp; // 0x0084, 0x4 bytes
+                float m_flMovementPlantedTurnAngleThreshold; // 0x0088, 0x4 bytes
+                float m_flBashStartDistance; // 0x008c, 0x4 bytes
+                float m_flMinBashDelay; // 0x0090, 0x4 bytes
+                shade::sdk::tier2::CRangeFloat m_flMantleDelayRange; // 0x0094, 0x8 bytes
+                float m_flMantleStartDistance; // 0x009c, 0x4 bytes
+                float m_flLeanCalculationLookAheadDistance; // 0x00a0, 0x4 bytes
+                float m_flLeanSmoothingFactor; // 0x00a4, 0x4 bytes
+                bool m_bEnabled; // 0x00a8, 0x1 bytes
+                std::uint8_t pad_00a9[0x7]; // 0x00a9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_MovementGaitSettings) == 0xC0, "CAI_MovementGaitSettings size mismatch");
+            static_assert(sizeof(CAI_MovementGaitSettings) == 0xB0, "CAI_MovementGaitSettings size mismatch");
         }
     }
 }

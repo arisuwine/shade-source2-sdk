@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1eb0
+             * Size: 0x1a08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,43 +44,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelAbilityFlyingStrikeVData : public shade::sdk::server::CCitadelYamatoBaseVData {
             public:
-                float m_flJumpFallSpeedMax; // 0x1820, 0x4 bytes
-                float m_flJumpAirDrag; // 0x1824, 0x4 bytes
-                float m_flJumpAirSpeedMax; // 0x1828, 0x4 bytes
-                float m_flOnCancelVerticalSpeedBonus; // 0x182c, 0x4 bytes
-                float m_flFlyingCloseEnoughToTarget; // 0x1830, 0x4 bytes
-                std::uint8_t pad_1834[0x4]; // 0x1834, 0x4 bytes
-                CPiecewiseCurve m_curveSpeedScale; // 0x1838, 0x40 bytes
-                float m_flAnimToStrikePointTime; // 0x1878, 0x4 bytes
-                float m_flAnimToStrikeArrivalBias; // 0x187c, 0x4 bytes
-                float m_flGrappleShotFloatTime; // 0x1880, 0x4 bytes
-                float m_flGrappleShotDelayToFlyOnHit; // 0x1884, 0x4 bytes
-                float m_flGrappleSpeed; // 0x1888, 0x4 bytes
-                std::uint8_t pad_188c[0x4]; // 0x188c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x1890, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GrappleTargetModifier; // 0x18a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_BuffModifier; // 0x18b0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LeapParticle; // 0x18c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x19a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashParticle; // 0x1a80, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletGrappleTracerParticle; // 0x1b60, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyGrappleParticle; // 0x1c40, 0xe0 bytes
-                CSoundEventName m_strDamageTarget; // 0x1d20, 0x10 bytes
-                CSoundEventName m_strStartFlyingToTarget; // 0x1d30, 0x10 bytes
-                CSoundEventName m_strStartAttack; // 0x1d40, 0x10 bytes
-                CSoundEventName m_strGrappleHitTarget; // 0x1d50, 0x10 bytes
-                CSoundEventName m_strGrappleHitWorld; // 0x1d60, 0x10 bytes
-                CSoundEventName m_strGrappleHitNothing; // 0x1d70, 0x10 bytes
-                CSoundEventName m_strGrappleLoop; // 0x1d80, 0x10 bytes
-                CSoundEventName m_strFlyingLoop; // 0x1d90, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x1da0, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttacking; // 0x1e28, 0x88 bytes
+                float m_flJumpFallSpeedMax; // 0x13a8, 0x4 bytes
+                float m_flJumpAirDrag; // 0x13ac, 0x4 bytes
+                float m_flJumpAirSpeedMax; // 0x13b0, 0x4 bytes
+                float m_flOnCancelVerticalSpeedBonus; // 0x13b4, 0x4 bytes
+                float m_flFlyingCloseEnoughToTarget; // 0x13b8, 0x4 bytes
+                std::uint8_t pad_13bc[0x4]; // 0x13bc, 0x4 bytes
+                CPiecewiseCurve m_curveSpeedScale; // 0x13c0, 0x40 bytes
+                float m_flAnimToStrikePointTime; // 0x1400, 0x4 bytes
+                float m_flAnimToStrikeArrivalBias; // 0x1404, 0x4 bytes
+                float m_flGrappleShotFloatTime; // 0x1408, 0x4 bytes
+                float m_flGrappleShotDelayToFlyOnHit; // 0x140c, 0x4 bytes
+                float m_flGrappleSpeed; // 0x1410, 0x4 bytes
+                std::uint8_t pad_1414[0x4]; // 0x1414, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x1418, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GrappleTargetModifier; // 0x1428, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_BuffModifier; // 0x1438, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LeapParticle; // 0x1448, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1528, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashParticle; // 0x1608, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletGrappleTracerParticle; // 0x16e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyGrappleParticle; // 0x17c8, 0xe0 bytes
+                CSoundEventName m_strStartFlyingToTarget; // 0x18a8, 0x10 bytes
+                CSoundEventName m_strStartAttack; // 0x18b8, 0x10 bytes
+                CSoundEventName m_strGrappleHitTarget; // 0x18c8, 0x10 bytes
+                CSoundEventName m_strGrappleLoop; // 0x18d8, 0x10 bytes
+                CSoundEventName m_strFlyingLoop; // 0x18e8, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x18f8, 0x88 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttacking; // 0x1980, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelAbilityFlyingStrikeVData) == 0x1EB0, "CCitadelAbilityFlyingStrikeVData size mismatch");
+            static_assert(sizeof(CCitadelAbilityFlyingStrikeVData) == 0x1A08, "CCitadelAbilityFlyingStrikeVData size mismatch");
         }
     }
 }

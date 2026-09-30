@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6910
+             * Size: 0x6f58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_PrismBlast : public shade::sdk::client::CCitadel_Item_Bubble {
             public:
-                std::uint8_t pad_1360[0x1a0]; // 0x1360, 0x1a0 bytes
-                shade::sdk::client::CCitadelAbilityBeam_t m_beam00; // 0x1500, 0x10d0 bytes
-                shade::sdk::client::CCitadelAbilityBeam_t m_beam01; // 0x25d0, 0x10d0 bytes
-                shade::sdk::client::CCitadelAbilityBeam_t m_beam02; // 0x36a0, 0x10d0 bytes
-                shade::sdk::client::CCitadelAbilityBeam_t m_beam03; // 0x4770, 0x10d0 bytes
-                shade::sdk::client::CCitadelAbilityBeam_t m_beam04; // 0x5840, 0x10d0 bytes
+                std::uint8_t pad_18f0[0x230]; // 0x18f0, 0x230 bytes
+                shade::sdk::client::CCitadelAbilityBeam_t m_beam00; // 0x1b20, 0x10d8 bytes
+                shade::sdk::client::CCitadelAbilityBeam_t m_beam01; // 0x2bf8, 0x10d8 bytes
+                shade::sdk::client::CCitadelAbilityBeam_t m_beam02; // 0x3cd0, 0x10d8 bytes
+                shade::sdk::client::CCitadelAbilityBeam_t m_beam03; // 0x4da8, 0x10d8 bytes
+                shade::sdk::client::CCitadelAbilityBeam_t m_beam04; // 0x5e80, 0x10d8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_PrismBlast) == 0x6910, "CCitadel_Item_PrismBlast size mismatch");
+            static_assert(sizeof(CCitadel_Item_PrismBlast) == 0x6F58, "CCitadel_Item_PrismBlast size mismatch");
         }
     }
 }

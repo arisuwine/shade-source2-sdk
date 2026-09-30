@@ -12,13 +12,16 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace client {
             enum class EAbilityResourceType : std::uint32_t {
                 EResourceType_None = 0x0,
-                EResourceType_Rage = 0x1
+                EResourceType_Rage = 0x1,
+                EResourceType_Heat = 0x2,
+                EResourceType_Ink = 0x3
             };
         }
     }

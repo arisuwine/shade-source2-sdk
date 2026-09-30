@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x16b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,21 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_StealLifeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1818, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1828, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastLifeLeechParticle; // 0x1908, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageTargetParticle; // 0x19e8, 0xe0 bytes
-                CSoundEventName m_strSlashSound; // 0x1ac8, 0x10 bytes
-                CSoundEventName m_strHitConfirmSound; // 0x1ad8, 0x10 bytes
-                CSoundEventName m_strKillConfirmSound; // 0x1ae8, 0x10 bytes
-                bool m_bAllowFloating; // 0x1af8, 0x1 bytes
-                std::uint8_t pad_1af9[0x7]; // 0x1af9, 0x7 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x13b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastLifeLeechParticle; // 0x1490, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageTargetParticle; // 0x1570, 0xe0 bytes
+                CSoundEventName m_strSlashSound; // 0x1650, 0x10 bytes
+                CSoundEventName m_strHitConfirmSound; // 0x1660, 0x10 bytes
+                CSoundEventName m_strKillConfirmSound; // 0x1670, 0x10 bytes
+                CSoundEventName m_strFloatStartSound; // 0x1680, 0x10 bytes
+                CSoundEventName m_strFloatLoopSound; // 0x1690, 0x10 bytes
+                CSoundEventName m_strFloatEndSound; // 0x16a0, 0x10 bytes
+                bool m_bAllowFloating; // 0x16b0, 0x1 bytes
+                std::uint8_t pad_16b1[0x7]; // 0x16b1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_StealLifeVData) == 0x1B00, "CCitadel_Ability_VampireBat_StealLifeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_StealLifeVData) == 0x16B8, "CCitadel_Ability_VampireBat_StealLifeVData size mismatch");
         }
     }
 }

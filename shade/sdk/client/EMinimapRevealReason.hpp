@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -20,8 +21,7 @@ namespace shade {
                 EVisibleByEnemyPlayer = 0x0,
                 EVisibleFromAttackingEnemyPlayer = 0x1,
                 EVisibleByNPC = 0x2,
-                EVisibleByObjective = 0x3,
-                EVisibleByMirageTeleport = 0x4
+                EVisibleByObjective = 0x3
             };
         }
     }

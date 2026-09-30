@@ -12,8 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
+
+#include "shade/sdk/server/CNavLinkMetrics_Base.hpp"
 
 namespace shade {
     namespace sdk {
@@ -32,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x118
+             * Size: 0x130
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,12 +47,13 @@ namespace shade {
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sToolsOnlyOwnerModelName; // 0x0008, 0xe0 bytes
                 CUtlVector<shade::sdk::server::CNavLinkAnimgraphVar> m_vecAnimgraphVars; // 0x00e8, 0x18 bytes
                 CUtlVector<shade::sdk::server::CNavLinkMovementVariantDefinition> m_vecVariants; // 0x0100, 0x18 bytes
+                shade::sdk::server::CNavLinkMetrics_Base m_baseMetrics; // 0x0118, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNavLinkMovementVData) == 0x118, "CNavLinkMovementVData size mismatch");
+            static_assert(sizeof(CNavLinkMovementVData) == 0x130, "CNavLinkMovementVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,25 +31,26 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x2c8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CCitadel_Modifier_BaseEventProc : public shade::sdk::client::CCitadelModifier {
             public:
-                CUtlVector<shade::sdk::client::C_BaseEntity*> m_vecProcdUnitsThisShot; // 0x00c0, 0x18 bytes
-                CUtlVector<shade::sdk::client::C_BaseEntity*> m_vecTrackedUnitsThisFrame; // 0x00d8, 0x18 bytes
-                shade::sdk::client::ShotID_t m_nLastShotId; // 0x00f0, 0x4 bytes
-                std::uint8_t pad_00f4[0x104]; // 0x00f4, 0x104 bytes
+                CUtlVector<shade::sdk::client::C_BaseEntity*> m_vecProcdUnitsThisShot; // 0x0130, 0x18 bytes
+                CUtlVector<shade::sdk::client::C_BaseEntity*> m_vecTrackedUnitsThisFrame; // 0x0148, 0x18 bytes
+                shade::sdk::client::ShotID_t m_nLastShotId; // 0x0160, 0x4 bytes
+                std::uint8_t pad_0164[0x164]; // 0x0164, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BaseEventProc) == 0x1F8, "CCitadel_Modifier_BaseEventProc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BaseEventProc) == 0x2C8, "CCitadel_Modifier_BaseEventProc size mismatch");
         }
     }
 }

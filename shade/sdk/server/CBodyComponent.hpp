@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,6 +34,7 @@ namespace shade {
              * Size: 0x78
              * Alignment: 0xff
              * Has VTable
+             * Construct Allowed
              * Construct Disallowed
              * Module Local Type Scope
              */

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19f8
+             * Size: 0x1580
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SettingSun_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamTargetParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UnitTargetParticle; // 0x18f8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SettingSunThinkerModifier; // 0x19d8, 0x10 bytes
-                float m_flSSCameraPreviewOffset; // 0x19e8, 0x4 bytes
-                float m_flSSCameraPreviewSpeed; // 0x19ec, 0x4 bytes
-                float m_flSSCameraPreviewDistance; // 0x19f0, 0x4 bytes
-                std::uint8_t pad_19f4[0x4]; // 0x19f4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamTargetParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UnitTargetParticle; // 0x1480, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SettingSunThinkerModifier; // 0x1560, 0x10 bytes
+                float m_flSSCameraPreviewOffset; // 0x1570, 0x4 bytes
+                float m_flSSCameraPreviewSpeed; // 0x1574, 0x4 bytes
+                float m_flSSCameraPreviewDistance; // 0x1578, 0x4 bytes
+                std::uint8_t pad_157c[0x4]; // 0x157c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SettingSun_VData) == 0x19F8, "CCitadel_Ability_SettingSun_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SettingSun_VData) == 0x1580, "CCitadel_Ability_SettingSun_VData size mismatch");
         }
     }
 }

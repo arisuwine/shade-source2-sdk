@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x768
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StreetBrawl_Phase_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CBitVecEnum<shade::sdk::client::EStreetBrawlGameState> m_eValidStates; // 0x0750, 0x4 bytes
-                std::uint8_t pad_0754[0x4]; // 0x0754, 0x4 bytes
+                CBitVecEnum<shade::sdk::client::EStreetBrawlGameState> m_eValidStates; // 0x0760, 0x4 bytes
+                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StreetBrawl_Phase_VData) == 0x758, "CCitadel_Modifier_StreetBrawl_Phase_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StreetBrawl_Phase_VData) == 0x768, "CCitadel_Modifier_StreetBrawl_Phase_VData size mismatch");
         }
     }
 }

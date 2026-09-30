@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -20,16 +21,24 @@ namespace shade {
                 eYawToDest = 0x1,
                 eDisableUpdateGoalPos = 0x2,
                 eLocalSucceedOnWithinTolerance = 0x4,
-                eGoalOffsetInLocalYaw = 0x8,
-                eGoalOffsetInLocalSpace = 0x10,
-                eDestInWorldSpace = 0x20,
                 eDontLimitGoalOffset = 0x40,
                 eInterruptPath = 0x80,
                 eDisablePathSmoothing = 0x100,
-                eClearGoalOffsetOnRepathForMovement = 0x200,
+                eIgnoreOffsetFromEntityWhenRepathing = 0x200,
                 eUseTargetPredictedPosition = 0x400,
                 eDisableTargetPredictedPositionForDynamicPathing = 0x800,
                 eDisableStopAtGoal = 0x1000,
+                eModifyGoalConstraints = 0x2000,
+                eStopMovingOnPathFindFailure = 0x4000,
+                eFailScheduleOnFailure = 0x8000,
+                eFailTacticOnFailure = 0x10000,
+                eDontMarkUnreachableOnPathFindFailure = 0x20000,
+                eDisableGoalValidation = 0x40000,
+                eSpeculativePathQueryGoal = 0x8000000,
+                eIsRepathGoal = 0x10000000,
+                eMotorDrivenGoal = 0x20000000,
+                eFromTacticalSearchResult = 0x40000000,
+                eLongDistancePathQueryGoal = 0x80000000,
                 eDefault = 0x0
             };
         }

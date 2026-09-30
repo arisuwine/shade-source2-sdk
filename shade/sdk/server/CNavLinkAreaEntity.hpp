@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x630
+             * Size: 0x640
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -43,48 +44,41 @@ namespace shade {
             #pragma pack(push, 1)
             class CNavLinkAreaEntity : public shade::sdk::server::CPointEntity {
             public:
-                float m_flWidth; // 0x04a0, 0x4 bytes
-                Vector m_vLocatorOffset; // 0x04a4, 0xc bytes
-                QAngle m_qLocatorAnglesOffset; // 0x04b0, 0xc bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
-                CUtlSymbolLarge m_strEndLocatorParentName; // 0x04c0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEndLocatorParent; // 0x04c8, 0x4 bytes
-                std::uint8_t pad_04cc[0x4]; // 0x04cc, 0x4 bytes
-                shade::sdk::server::CRelativeTransform m_endLocator; // 0x04d0, 0x30 bytes
-                CUtlSymbolLarge m_strMovementForward; // 0x0500, 0x8 bytes
-                CUtlSymbolLarge m_strMovementReverse; // 0x0508, 0x8 bytes
-                std::uint8_t pad_0510[0x30]; // 0x0510, 0x30 bytes
-                bool m_bEnabled; // 0x0540, 0x1 bytes
-                bool m_bAllowCrossMovableConnections; // 0x0541, 0x1 bytes
-                std::uint8_t pad_0542[0x6]; // 0x0542, 0x6 bytes
-                CUtlSymbolLarge m_strFilterName; // 0x0548, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseFilter> m_hFilter; // 0x0550, 0x4 bytes
-                std::uint8_t pad_0554[0x4]; // 0x0554, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNavLinkStart; // 0x0558, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNavLinkFinish; // 0x0570, 0x18 bytes
-                bool m_bIsTerminus; // 0x0588, 0x1 bytes
-                std::uint8_t pad_0589[0x7]; // 0x0589, 0x7 bytes
-                CUtlVector<shade::sdk::server::CNavLinkConnectionSave> m_vecSavedConnections; // 0x0590, 0x18 bytes
-                CUtlVector<shade::sdk::server::CNavLinkAreaEntity__NpcUserList_t> m_vecNpcUsersByNavLink; // 0x05a8, 0x18 bytes
-                CUtlSymbolLarge m_szListenForAnimTag; // 0x05c0, 0x8 bytes
-                bool m_bIsListeningForAnimTag; // 0x05c8, 0x1 bytes
-                std::uint8_t pad_05c9[0xf]; // 0x05c9, 0xf bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAnimTagFired; // 0x05d8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAnimTagStart; // 0x05f0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAnimTagEnd; // 0x0608, 0x18 bytes
-                std::int32_t m_nProcessOrder; // 0x0620, 0x4 bytes
-                std::int32_t m_nSplits; // 0x0624, 0x4 bytes
-                std::uint8_t pad_0628[0x8]; // 0x0628, 0x8 bytes
+                float m_flWidth; // 0x04b0, 0x4 bytes
+                Vector m_vLocatorOffset; // 0x04b4, 0xc bytes
+                QAngle m_qLocatorAnglesOffset; // 0x04c0, 0xc bytes
+                VectorWS m_vPrevEntry; // 0x04cc, 0xc bytes
+                VectorWS m_vPrevExit; // 0x04d8, 0xc bytes
+                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                CUtlSymbolLarge m_strEndLocatorParentName; // 0x04e8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEndLocatorParent; // 0x04f0, 0x4 bytes
+                std::uint8_t pad_04f4[0xc]; // 0x04f4, 0xc bytes
+                shade::sdk::server::CRelativeTransform m_endLocator; // 0x0500, 0x60 bytes
+                CUtlSymbolLarge m_strMovementForward; // 0x0560, 0x8 bytes
+                CUtlSymbolLarge m_strMovementReverse; // 0x0568, 0x8 bytes
+                std::uint8_t pad_0570[0x48]; // 0x0570, 0x48 bytes
+                bool m_bEnabled; // 0x05b8, 0x1 bytes
+                bool m_bAllowCrossMovableConnections; // 0x05b9, 0x1 bytes
+                bool m_bSuspendConnectionsWhileMoving; // 0x05ba, 0x1 bytes
+                std::uint8_t pad_05bb[0x5]; // 0x05bb, 0x5 bytes
+                CUtlSymbolLarge m_strFilterName; // 0x05c0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseFilter> m_hFilter; // 0x05c8, 0x4 bytes
+                std::uint8_t pad_05cc[0x4]; // 0x05cc, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNavLinkStart; // 0x05d0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNavLinkFinish; // 0x05e8, 0x18 bytes
+                bool m_bIsTerminus; // 0x0600, 0x1 bytes
+                bool m_bIsAutoAdjustForward; // 0x0601, 0x1 bytes
+                std::uint8_t pad_0602[0x6]; // 0x0602, 0x6 bytes
+                CUtlVector<shade::sdk::server::CNavLinkConnectionSave> m_vecSavedConnections; // 0x0608, 0x18 bytes
+                CUtlVector<shade::sdk::server::CNavLinkAreaEntity__NpcUserList_t> m_vecNpcUsersByNavLink; // 0x0620, 0x18 bytes
+                std::int32_t m_nProcessOrder; // 0x0638, 0x4 bytes
+                std::int32_t m_nSplits; // 0x063c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUpdate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CNavLinkAreaEntity) == 0x630, "CNavLinkAreaEntity size mismatch");
+            static_assert(sizeof(CNavLinkAreaEntity) == 0x640, "CNavLinkAreaEntity size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1560
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Operative_UmbrellaManeuver : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x11d8, 0x4 bytes
-                std::uint8_t pad_11dc[0x384]; // 0x11dc, 0x384 bytes
+                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x16d8, 0x4 bytes
+                std::uint8_t pad_16dc[0x4d4]; // 0x16dc, 0x4d4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Operative_UmbrellaManeuver) == 0x1560, "CAbility_Operative_UmbrellaManeuver size mismatch");
+            static_assert(sizeof(CAbility_Operative_UmbrellaManeuver) == 0x1BB0, "CAbility_Operative_UmbrellaManeuver size mismatch");
         }
     }
 }

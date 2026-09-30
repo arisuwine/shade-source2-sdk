@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -23,7 +24,6 @@ namespace shade {
                 CM_DevPaletteVisibilityChanged = 0x11b,
                 CM_WorldUIControllerHasPanelChanged = 0x11c,
                 CM_RotateAnchor = 0x11d,
-                CM_ListenForResponseFound = 0x11e,
                 CM_MAX_BASE = 0x12c
             };
         }

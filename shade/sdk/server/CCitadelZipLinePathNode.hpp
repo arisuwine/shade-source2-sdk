@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,24 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelZipLinePathNode : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x18]; // 0x04a0, 0x18 bytes
-                bool m_bCornerNode; // 0x04b8, 0x1 bytes
-                bool m_bDisableZippingToByPlayers; // 0x04b9, 0x1 bytes
-                bool m_bCapturable; // 0x04ba, 0x1 bytes
-                std::uint8_t pad_04bb[0x5]; // 0x04bb, 0x5 bytes
-                CUtlSymbolLarge m_strGuardBossName; // 0x04c0, 0x8 bytes
-                CUtlSymbolLarge m_strGuardBossName2; // 0x04c8, 0x8 bytes
-                CUtlSymbolLarge m_strGuardBossName3; // 0x04d0, 0x8 bytes
-                std::uint8_t pad_04d8[0x4]; // 0x04d8, 0x4 bytes
-                float m_flSpeedMultiplierToBaseBonus; // 0x04dc, 0x4 bytes
-                float m_flSpeedMultiplierFromBaseBonus; // 0x04e0, 0x4 bytes
-                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                std::uint8_t pad_04b0[0x10]; // 0x04b0, 0x10 bytes
+                bool m_bCornerNode; // 0x04c0, 0x1 bytes
+                bool m_bDisableZippingToByPlayers; // 0x04c1, 0x1 bytes
+                bool m_bCapturable; // 0x04c2, 0x1 bytes
+                std::uint8_t pad_04c3[0x5]; // 0x04c3, 0x5 bytes
+                CUtlSymbolLarge m_strGuardBossName; // 0x04c8, 0x8 bytes
+                CUtlSymbolLarge m_strGuardBossName2; // 0x04d0, 0x8 bytes
+                CUtlSymbolLarge m_strGuardBossName3; // 0x04d8, 0x8 bytes
+                float m_flSpeedMultiplierToBaseBonus; // 0x04e0, 0x4 bytes
+                float m_flSpeedMultiplierFromBaseBonus; // 0x04e4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pNode; // Offset: 0x4d8, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCitadelZipLinePathNode) == 0x4E8, "CCitadelZipLinePathNode size mismatch");
         }

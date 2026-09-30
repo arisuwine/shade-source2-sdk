@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9c0
+             * Size: 0xbc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelViscousBall : public shade::sdk::client::CCitadelModelEntity {
             public:
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x09b0, 0x4 bytes
-                float m_flBallRadius; // 0x09b4, 0x4 bytes
-                bool m_bNeedsPhysicsUpdate; // 0x09b8, 0x1 bytes
-                std::uint8_t pad_09b9[0x7]; // 0x09b9, 0x7 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0bb8, 0x4 bytes
+                std::uint8_t pad_0bbc[0xc]; // 0x0bbc, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_CitadelViscousBall) == 0x9C0, "C_CitadelViscousBall size mismatch");
+            static_assert(sizeof(C_CitadelViscousBall) == 0xBC8, "C_CitadelViscousBall size mismatch");
         }
     }
 }

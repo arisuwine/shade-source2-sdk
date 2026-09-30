@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -28,10 +29,10 @@ namespace shade {
             class STrooperFOWEntity {
             public:
                 std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
-                CEntityIndex m_nEntIndex; // 0x0030, 0x4 bytes
-                std::int8_t m_nTeam; // 0x0034, 0x1 bytes
-                std::uint8_t pad_0035[0x1]; // 0x0035, 0x1 bytes
-                std::uint16_t m_nPositionXY; // 0x0036, 0x2 bytes
+                std::uint8_t m_nPosX; // 0x0030, 0x1 bytes
+                std::uint8_t m_nPosY; // 0x0031, 0x1 bytes
+                std::uint8_t m_nFlags; // 0x0032, 0x1 bytes
+                std::uint8_t pad_0033[0x5]; // 0x0033, 0x5 bytes
             };
             #pragma pack(pop)
 

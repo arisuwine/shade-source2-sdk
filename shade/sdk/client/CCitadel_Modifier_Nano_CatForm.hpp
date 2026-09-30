@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a8
+             * Size: 0x218
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Nano_CatForm : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::ModelChange_t m_ModelChange; // 0x00c0, 0xe8 bytes
+                shade::sdk::client::ModelChange_t m_ModelChange; // 0x0130, 0xe8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Nano_CatForm) == 0x1A8, "CCitadel_Modifier_Nano_CatForm size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Nano_CatForm) == 0x218, "CCitadel_Modifier_Nano_CatForm size mismatch");
         }
     }
 }

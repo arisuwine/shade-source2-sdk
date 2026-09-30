@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_SetMoveType : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::MoveType_t m_nMoveType; // 0x00c0, 0x1 bytes
-                std::uint8_t pad_00c1[0x7]; // 0x00c1, 0x7 bytes
+                shade::sdk::client::MoveType_t m_nMoveType; // 0x0130, 0x1 bytes
+                std::uint8_t pad_0131[0x7]; // 0x0131, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_SetMoveType) == 0xC8, "CGameModifier_SetMoveType size mismatch");
+            static_assert(sizeof(CGameModifier_SetMoveType) == 0x138, "CGameModifier_SetMoveType size mismatch");
         }
     }
 }

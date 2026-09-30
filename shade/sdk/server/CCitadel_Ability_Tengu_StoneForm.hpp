@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1320
+             * Size: 0x19b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,25 +41,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tengu_StoneForm : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x380]; // 0x0f70, 0x380 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x12f0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLandedTime; // 0x12f4, 0x4 bytes
-                bool m_bLanded; // 0x12f8, 0x1 bytes
-                bool m_bFalling; // 0x12f9, 0x1 bytes
-                bool m_bInStoneForm; // 0x12fa, 0x1 bytes
-                std::uint8_t pad_12fb[0x1]; // 0x12fb, 0x1 bytes
-                float m_flStartHeight; // 0x12fc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0x1300, 0x4 bytes
-                std::uint8_t pad_1304[0x4]; // 0x1304, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x1308, 0x18 bytes
+                std::uint8_t pad_14a0[0x4e8]; // 0x14a0, 0x4e8 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1988, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLandedTime; // 0x198c, 0x4 bytes
+                bool m_bLanded; // 0x1990, 0x1 bytes
+                bool m_bFalling; // 0x1991, 0x1 bytes
+                bool m_bInStoneForm; // 0x1992, 0x1 bytes
+                std::uint8_t pad_1993[0x1]; // 0x1993, 0x1 bytes
+                float m_flStartHeight; // 0x1994, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0x1998, 0x4 bytes
+                std::uint8_t pad_199c[0x4]; // 0x199c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x19a0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tengu_StoneForm) == 0x1320, "CCitadel_Ability_Tengu_StoneForm size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tengu_StoneForm) == 0x19B8, "CCitadel_Ability_Tengu_StoneForm size mismatch");
         }
     }
 }

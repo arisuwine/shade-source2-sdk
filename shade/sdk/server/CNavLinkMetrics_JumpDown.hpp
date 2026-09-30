@@ -12,16 +12,15 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
-
-#include "shade/sdk/tier2/CRangeFloat.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14
+             * Size: 0x4
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -30,14 +29,12 @@ namespace shade {
             class CNavLinkMetrics_JumpDown {
             public:
                 float m_flEntryDistance; // 0x0000, 0x4 bytes
-                shade::sdk::tier2::CRangeFloat m_horizontalRange; // 0x0004, 0x8 bytes
-                shade::sdk::tier2::CRangeFloat m_verticalRange; // 0x000c, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNavLinkMetrics_JumpDown) == 0x14, "CNavLinkMetrics_JumpDown size mismatch");
+            static_assert(sizeof(CNavLinkMetrics_JumpDown) == 0x4, "CNavLinkMetrics_JumpDown size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointVelocitySensor : public shade::sdk::server::CPointEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x04a0, 0x4 bytes
-                Vector m_vecAxis; // 0x04a4, 0xc bytes
-                bool m_bEnabled; // 0x04b0, 0x1 bytes
-                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
-                float m_fPrevVelocity; // 0x04b4, 0x4 bytes
-                float m_flAvgInterval; // 0x04b8, 0x4 bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
-                CEntityOutputTemplate<float> m_Velocity; // 0x04c0, 0x20 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x04b0, 0x4 bytes
+                Vector m_vecAxis; // 0x04b4, 0xc bytes
+                bool m_bEnabled; // 0x04c0, 0x1 bytes
+                std::uint8_t pad_04c1[0x3]; // 0x04c1, 0x3 bytes
+                float m_fPrevVelocity; // 0x04c4, 0x4 bytes
+                float m_flAvgInterval; // 0x04c8, 0x4 bytes
+                std::uint8_t pad_04cc[0x4]; // 0x04cc, 0x4 bytes
+                CEntityOutputTemplate<float> m_Velocity; // 0x04d0, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointVelocitySensor) == 0x4E0, "CPointVelocitySensor size mismatch");
+            static_assert(sizeof(CPointVelocitySensor) == 0x4F0, "CPointVelocitySensor size mismatch");
         }
     }
 }

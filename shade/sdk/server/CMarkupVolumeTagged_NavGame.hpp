@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7f0
+             * Size: 0x8e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,10 +32,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CMarkupVolumeTagged_NavGame : public shade::sdk::server::CMarkupVolumeWithRef {
             public:
-                shade::sdk::server::NavScopeFlags_t m_nScopes; // 0x07e8, 0x1 bytes
-                bool m_bFloodFillAttribute; // 0x07e9, 0x1 bytes
-                bool m_bSplitNavSpace; // 0x07ea, 0x1 bytes
-                std::uint8_t pad_07eb[0x5]; // 0x07eb, 0x5 bytes
+                shade::sdk::server::NavScopeFlags_t m_nScopes; // 0x08e0, 0x1 bytes
+                bool m_bFloodFillAttribute; // 0x08e1, 0x1 bytes
+                bool m_bSplitNavSpace; // 0x08e2, 0x1 bytes
+                std::uint8_t pad_08e3[0x5]; // 0x08e3, 0x5 bytes
             };
             #pragma pack(pop)
 
@@ -43,7 +44,7 @@ namespace shade {
              * CUtlSymbolLarge navProperty_NavAttributesGame; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CMarkupVolumeTagged_NavGame) == 0x7F0, "CMarkupVolumeTagged_NavGame size mismatch");
+            static_assert(sizeof(CMarkupVolumeTagged_NavGame) == 0x8E8, "CMarkupVolumeTagged_NavGame size mismatch");
         }
     }
 }

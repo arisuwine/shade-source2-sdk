@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xfe8
+             * Size: 0x1530
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Mantle : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                float m_flVertOffset; // 0x0f70, 0x4 bytes
-                float m_flHorizGap; // 0x0f74, 0x4 bytes
-                Vector m_vStartPos; // 0x0f78, 0xc bytes
-                Vector m_vTargetPos; // 0x0f84, 0xc bytes
-                QAngle m_angFacing; // 0x0f90, 0xc bytes
-                std::int32_t m_nMantleTypeIndex; // 0x0f9c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0fa0, 0x4 bytes
-                std::uint8_t pad_0fa4[0x44]; // 0x0fa4, 0x44 bytes
+                float m_flVertOffset; // 0x14a0, 0x4 bytes
+                float m_flHorizGap; // 0x14a4, 0x4 bytes
+                VectorWS m_vStartPos; // 0x14a8, 0xc bytes
+                VectorWS m_vTargetPos; // 0x14b4, 0xc bytes
+                QAngle m_angFacing; // 0x14c0, 0xc bytes
+                std::int32_t m_nMantleTypeIndex; // 0x14cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x14d0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAutoMantlePushStartTime; // 0x14d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAutoMantleLastPushTime; // 0x14d8, 0x4 bytes
+                VectorWS m_vAutoMantleLastPushPos; // 0x14dc, 0xc bytes
+                std::uint8_t pad_14e8[0x48]; // 0x14e8, 0x48 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Mantle) == 0xFE8, "CCitadel_Ability_Mantle size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Mantle) == 0x1530, "CCitadel_Ability_Mantle size mismatch");
         }
     }
 }

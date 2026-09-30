@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x240
+             * Size: 0x258
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -41,21 +42,24 @@ namespace shade {
                 std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
                 std::uint64_t m_nToggleButtonDownMask; // 0x0190, 0x8 bytes
                 std::uint8_t pad_0198[0x8]; // 0x0198, 0x8 bytes
-                float m_flMaxspeed; // 0x01a0, 0x4 bytes
-                float m_arrForceSubtickMoveWhen[0x4]; // 0x01a4, 0x10 bytes
-                float m_flForwardMove; // 0x01b4, 0x4 bytes
-                float m_flLeftMove; // 0x01b8, 0x4 bytes
-                float m_flUpMove; // 0x01bc, 0x4 bytes
-                Vector m_vecLastMovementImpulses; // 0x01c0, 0xc bytes
-                std::uint8_t pad_01cc[0x5c]; // 0x01cc, 0x5c bytes
-                QAngle m_vecOldViewAngles; // 0x0228, 0xc bytes
-                std::uint8_t pad_0234[0xc]; // 0x0234, 0xc bytes
+                float m_flCmdForwardMove; // 0x01a0, 0x4 bytes
+                float m_flCmdLeftMove; // 0x01a4, 0x4 bytes
+                float m_flCmdUpMove; // 0x01a8, 0x4 bytes
+                float m_flMaxspeed; // 0x01ac, 0x4 bytes
+                float m_arrForceSubtickMoveWhen[0x4]; // 0x01b0, 0x10 bytes
+                float m_flForwardMove; // 0x01c0, 0x4 bytes
+                float m_flLeftMove; // 0x01c4, 0x4 bytes
+                float m_flUpMove; // 0x01c8, 0x4 bytes
+                Vector m_vecLastMovementImpulses; // 0x01cc, 0xc bytes
+                std::uint8_t pad_01d8[0x68]; // 0x01d8, 0x68 bytes
+                QAngle m_vecOldViewAngles; // 0x0240, 0xc bytes
+                std::uint8_t pad_024c[0xc]; // 0x024c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPlayer_MovementServices) == 0x240, "CPlayer_MovementServices size mismatch");
+            static_assert(sizeof(CPlayer_MovementServices) == 0x258, "CPlayer_MovementServices size mismatch");
         }
     }
 }

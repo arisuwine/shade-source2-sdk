@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9f8
+             * Size: 0xc00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +33,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_Ice_Path_Shard_Physics : public shade::sdk::client::C_BaseModelEntity {
             public:
-                shade::sdk::client::ice_path_shard_model_desc_t m_ShardDesc; // 0x09a8, 0x38 bytes
-                QAngle m_qForward; // 0x09e0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x09ec, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndTime; // 0x09f0, 0x4 bytes
-                float m_flShardWidth; // 0x09f4, 0x4 bytes
+                shade::sdk::client::ice_path_shard_model_desc_t m_ShardDesc; // 0x0bb0, 0x38 bytes
+                QAngle m_qForward; // 0x0be8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0bf4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndTime; // 0x0bf8, 0x4 bytes
+                float m_flShardWidth; // 0x0bfc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Ice_Path_Shard_Physics) == 0x9F8, "C_Citadel_Ice_Path_Shard_Physics size mismatch");
+            static_assert(sizeof(C_Citadel_Ice_Path_Shard_Physics) == 0xC00, "C_Citadel_Ice_Path_Shard_Physics size mismatch");
         }
     }
 }

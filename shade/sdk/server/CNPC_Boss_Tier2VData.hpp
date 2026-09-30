@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1790
+             * Size: 0x1170
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,73 +44,72 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Boss_Tier2VData : public shade::sdk::server::CAI_CitadelNPCVData {
             public:
-                float m_flSightRange; // 0x1348, 0x4 bytes
-                float m_flPlayerInitialSightRange; // 0x134c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName; // 0x1350, 0xe0 bytes
-                CSoundEventName m_BeamHitSound; // 0x1430, 0x10 bytes
-                CSoundEventName m_BeamAnnounceSound; // 0x1440, 0x10 bytes
-                CSoundEventName m_BarrageAnnounceSound; // 0x1450, 0x10 bytes
-                CSoundEventName m_MeleeAnnounceSound; // 0x1460, 0x10 bytes
-                bool m_bBeamTurnToFire; // 0x1470, 0x1 bytes
-                std::uint8_t pad_1471[0x7]; // 0x1471, 0x7 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompImpactEffect; // 0x1478, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompWarningEffect; // 0x1558, 0xe0 bytes
-                float m_flTossSpeed; // 0x1638, 0x4 bytes
-                float m_flStompDamage; // 0x163c, 0x4 bytes
-                float m_flStompDamageMaxHealthPercent; // 0x1640, 0x4 bytes
-                float m_flStompDamageTrooperRate; // 0x1644, 0x4 bytes
-                float m_flStompTossUpMagnitude; // 0x1648, 0x4 bytes
-                float m_flStunDuration; // 0x164c, 0x4 bytes
-                float m_flStompAttemptRadius; // 0x1650, 0x4 bytes
-                float m_flStompImpactRadius; // 0x1654, 0x4 bytes
-                float m_flStompImpactHeight; // 0x1658, 0x4 bytes
-                float m_flStompParryRadius; // 0x165c, 0x4 bytes
-                float m_flStompParryImpulse; // 0x1660, 0x4 bytes
-                float m_flStompParryImpulseInAir; // 0x1664, 0x4 bytes
-                float m_flStompParryDamageMult; // 0x1668, 0x4 bytes
-                float m_flSweepRadius; // 0x166c, 0x4 bytes
-                float m_flSweepSpeed; // 0x1670, 0x4 bytes
-                float m_flSweepZScale; // 0x1674, 0x4 bytes
-                float m_flSweepMaxAngle; // 0x1678, 0x4 bytes
-                float m_flSweepMaxRange; // 0x167c, 0x4 bytes
-                float m_flSweepAdjustSpeed; // 0x1680, 0x4 bytes
-                std::uint8_t pad_1684[0x4]; // 0x1684, 0x4 bytes
-                CSoundEventName m_StompAnnounceSound; // 0x1688, 0x10 bytes
-                CSoundEventName m_StompParriedSound; // 0x1698, 0x10 bytes
-                CSoundEventName m_StompImpactSound; // 0x16a8, 0x10 bytes
-                float m_flBurstDuration; // 0x16b8, 0x4 bytes
-                float m_flBurstCooldown; // 0x16bc, 0x4 bytes
-                float m_flMeleeDuration; // 0x16c0, 0x4 bytes
-                float m_flMeleeHitTime; // 0x16c4, 0x4 bytes
-                float m_flMeleeAttackRadius; // 0x16c8, 0x4 bytes
-                float m_flMeleeDamage; // 0x16cc, 0x4 bytes
-                float m_flMeleeDamageHealthPct; // 0x16d0, 0x4 bytes
-                float m_flMeleeTrooperStunTime; // 0x16d4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BackdoorProtectionModifier; // 0x16d8, 0x10 bytes
-                float m_flBackDoorProtectionRange; // 0x16e8, 0x4 bytes
-                std::uint8_t pad_16ec[0x4]; // 0x16ec, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvulModifier; // 0x16f0, 0x10 bytes
-                float m_flInvulModifierRange; // 0x1700, 0x4 bytes
-                std::uint8_t pad_1704[0x4]; // 0x1704, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RangedArmorModifier; // 0x1708, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FriendlyAuraModifier; // 0x1718, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NearbyEnemyResist; // 0x1728, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StatTrackerAuraModifier; // 0x1738, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EmpoweredModifierLevel1; // 0x1748, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EmpoweredModifierLevel2; // 0x1758, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StaggerWatcherModifier; // 0x1768, 0x10 bytes
-                float m_flMaxStaggerBuildup; // 0x1778, 0x4 bytes
-                float m_flStaggerDuration; // 0x177c, 0x4 bytes
-                float m_flStaggerMeleeMult; // 0x1780, 0x4 bytes
-                float m_flStaggerDamageMult; // 0x1784, 0x4 bytes
-                float m_flAoeWaveHealthThreshold; // 0x1788, 0x4 bytes
-                std::uint8_t pad_178c[0x4]; // 0x178c, 0x4 bytes
+                float m_flPlayerInitialSightRange; // 0x0c50, 0x4 bytes
+                std::uint8_t pad_0c54[0x4]; // 0x0c54, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName; // 0x0c58, 0xe0 bytes
+                CSoundEventName m_BeamHitSound; // 0x0d38, 0x10 bytes
+                CSoundEventName m_BeamAnnounceSound; // 0x0d48, 0x10 bytes
+                CSoundEventName m_BarrageAnnounceSound; // 0x0d58, 0x10 bytes
+                CSoundEventName m_MeleeAnnounceSound; // 0x0d68, 0x10 bytes
+                bool m_bBeamTurnToFire; // 0x0d78, 0x1 bytes
+                std::uint8_t pad_0d79[0x7]; // 0x0d79, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompImpactEffect; // 0x0d80, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompWarningEffect; // 0x0e60, 0xe0 bytes
+                float m_flTossSpeed; // 0x0f40, 0x4 bytes
+                float m_flStompDamage; // 0x0f44, 0x4 bytes
+                float m_flStompDamageMaxHealthPercent; // 0x0f48, 0x4 bytes
+                float m_flStompDamageTrooperRate; // 0x0f4c, 0x4 bytes
+                float m_flStompTossUpMagnitude; // 0x0f50, 0x4 bytes
+                float m_flStunDuration; // 0x0f54, 0x4 bytes
+                float m_flStompAttemptRadius; // 0x0f58, 0x4 bytes
+                float m_flStompImpactRadius; // 0x0f5c, 0x4 bytes
+                float m_flStompImpactHeight; // 0x0f60, 0x4 bytes
+                float m_flStompParryRadius; // 0x0f64, 0x4 bytes
+                float m_flStompParryImpulse; // 0x0f68, 0x4 bytes
+                float m_flStompParryImpulseInAir; // 0x0f6c, 0x4 bytes
+                float m_flStompParryDamageMult; // 0x0f70, 0x4 bytes
+                std::uint8_t pad_0f74[0x4]; // 0x0f74, 0x4 bytes
+                CSoundEventName m_StompAnnounceSound; // 0x0f78, 0x10 bytes
+                CSoundEventName m_StompParriedSound; // 0x0f88, 0x10 bytes
+                CSoundEventName m_StompImpactSound; // 0x0f98, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RangeRingParticle; // 0x0fa8, 0xe0 bytes
+                float m_flRangeRingShowDistance; // 0x1088, 0x4 bytes
+                float m_flRangeRingFadeDistance; // 0x108c, 0x4 bytes
+                float m_flRangeRingAlpha; // 0x1090, 0x4 bytes
+                float m_flBurstDuration; // 0x1094, 0x4 bytes
+                float m_flBurstCooldown; // 0x1098, 0x4 bytes
+                float m_flMeleeDuration; // 0x109c, 0x4 bytes
+                float m_flMeleeHitTime; // 0x10a0, 0x4 bytes
+                float m_flMeleeAttackRadius; // 0x10a4, 0x4 bytes
+                float m_flMeleeDamage; // 0x10a8, 0x4 bytes
+                float m_flMeleeDamageHealthPct; // 0x10ac, 0x4 bytes
+                float m_flMeleeTrooperStunTime; // 0x10b0, 0x4 bytes
+                std::uint8_t pad_10b4[0x4]; // 0x10b4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BackdoorProtectionModifier; // 0x10b8, 0x10 bytes
+                float m_flBackDoorProtectionRange; // 0x10c8, 0x4 bytes
+                std::uint8_t pad_10cc[0x4]; // 0x10cc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvulModifier; // 0x10d0, 0x10 bytes
+                float m_flInvulModifierRange; // 0x10e0, 0x4 bytes
+                std::uint8_t pad_10e4[0x4]; // 0x10e4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RangedArmorModifier; // 0x10e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FriendlyAuraModifier; // 0x10f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NearbyEnemyResist; // 0x1108, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StatTrackerAuraModifier; // 0x1118, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EmpoweredModifierLevel1; // 0x1128, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EmpoweredModifierLevel2; // 0x1138, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StaggerWatcherModifier; // 0x1148, 0x10 bytes
+                float m_flMaxStaggerBuildup; // 0x1158, 0x4 bytes
+                float m_flStaggerDuration; // 0x115c, 0x4 bytes
+                float m_flStaggerMeleeMult; // 0x1160, 0x4 bytes
+                float m_flStaggerDamageMult; // 0x1164, 0x4 bytes
+                float m_flAoeWaveHealthThreshold; // 0x1168, 0x4 bytes
+                std::uint8_t pad_116c[0x4]; // 0x116c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Boss_Tier2VData) == 0x1790, "CNPC_Boss_Tier2VData size mismatch");
+            static_assert(sizeof(CNPC_Boss_Tier2VData) == 0x1170, "CNPC_Boss_Tier2VData size mismatch");
         }
     }
 }

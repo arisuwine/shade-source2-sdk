@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x848
+             * Size: 0x940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,57 +32,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncRotating : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnStopped; // 0x0780, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStarted; // 0x0798, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnReachedStart; // 0x07b0, 0x18 bytes
-                RotationVector m_localRotationVector; // 0x07c8, 0xc bytes
-                float m_flFanFriction; // 0x07d4, 0x4 bytes
-                float m_flAttenuation; // 0x07d8, 0x4 bytes
-                float m_flVolume; // 0x07dc, 0x4 bytes
-                float m_flTargetSpeed; // 0x07e0, 0x4 bytes
-                float m_flMaxSpeed; // 0x07e4, 0x4 bytes
-                float m_flBlockDamage; // 0x07e8, 0x4 bytes
-                std::uint8_t pad_07ec[0x4]; // 0x07ec, 0x4 bytes
-                CUtlSymbolLarge m_NoiseRunning; // 0x07f0, 0x8 bytes
-                bool m_bReversed; // 0x07f8, 0x1 bytes
-                bool m_bAccelDecel; // 0x07f9, 0x1 bytes
-                std::uint8_t pad_07fa[0x16]; // 0x07fa, 0x16 bytes
-                QAngle m_prevLocalAngles; // 0x0810, 0xc bytes
-                QAngle m_angStart; // 0x081c, 0xc bytes
-                bool m_bStopAtStartPos; // 0x0828, 0x1 bytes
-                std::uint8_t pad_0829[0x3]; // 0x0829, 0x3 bytes
-                Vector m_vecClientOrigin; // 0x082c, 0xc bytes
-                QAngle m_vecClientAngles; // 0x0838, 0xc bytes
-                std::uint8_t pad_0844[0x4]; // 0x0844, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStopped; // 0x0878, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStarted; // 0x0890, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnReachedStart; // 0x08a8, 0x18 bytes
+                RotationVector m_localRotationVector; // 0x08c0, 0xc bytes
+                float m_flSpeed; // 0x08cc, 0x4 bytes
+                float m_flFanFriction; // 0x08d0, 0x4 bytes
+                float m_flAttenuation; // 0x08d4, 0x4 bytes
+                float m_flVolume; // 0x08d8, 0x4 bytes
+                float m_flTargetSpeed; // 0x08dc, 0x4 bytes
+                float m_flMaxSpeed; // 0x08e0, 0x4 bytes
+                float m_flBlockDamage; // 0x08e4, 0x4 bytes
+                CGameSoundEventName m_NoiseRunning; // 0x08e8, 0x8 bytes
+                bool m_bReversed; // 0x08f0, 0x1 bytes
+                bool m_bAccelDecel; // 0x08f1, 0x1 bytes
+                std::uint8_t pad_08f2[0x16]; // 0x08f2, 0x16 bytes
+                QAngle m_prevLocalAngles; // 0x0908, 0xc bytes
+                QAngle m_angStart; // 0x0914, 0xc bytes
+                bool m_bStopAtStartPos; // 0x0920, 0x1 bytes
+                std::uint8_t pad_0921[0x3]; // 0x0921, 0x3 bytes
+                Vector m_vecClientOrigin; // 0x0924, 0xc bytes
+                QAngle m_vecClientAngles; // 0x0930, 0xc bytes
+                std::uint8_t pad_093c[0x4]; // 0x093c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * bool movewithoutpushingblockers; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncRotatingSpinUpMove; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncRotatingSpinDownMove; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncRotatingHurtTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncRotatingRotatingUse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncRotatingRotateMove; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncRotatingReverseMove; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputReverse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartForward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartBackward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopAtStartPos; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSnapToStartPos; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Vector InputSetStartPos; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableAccelDecel; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableAccelDecel; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_nNoiseRunningGuid; // Offset: 0x7fc, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t fanfriction; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t Volume; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFuncRotating) == 0x848, "CFuncRotating size mismatch");
+            static_assert(sizeof(CFuncRotating) == 0x940, "CFuncRotating size mismatch");
         }
     }
 }

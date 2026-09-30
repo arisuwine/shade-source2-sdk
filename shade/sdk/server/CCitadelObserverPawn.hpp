@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd70
+             * Size: 0xd40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,12 +35,10 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_pObserverServices[0x58]; // Offset: 0xbb8, Size: 0x1, Size In Bytes: 0x58
-             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xbd8, Size: 0x1, Size In Bytes: 0x8
-             * std::uint8_t m_pMovementServices[0x240]; // Offset: 0xbe0, Size: 0x1, Size In Bytes: 0x240
+             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xb98, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(CCitadelObserverPawn) == 0xD70, "CCitadelObserverPawn size mismatch");
+            static_assert(sizeof(CCitadelObserverPawn) == 0xD40, "CCitadelObserverPawn size mismatch");
         }
     }
 }

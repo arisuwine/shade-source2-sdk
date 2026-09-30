@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7f0
+             * Size: 0x388
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,37 +30,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_CitadelNPC_GraphController : public shade::sdk::client::CAI_BaseNPCGraphController {
             public:
-                CAnimGraph2ParamOptionalRef<float> m_flRandomSeed; // 0x0500, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flTimeScale; // 0x0518, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flHealthPct; // 0x0530, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bHasTarget; // 0x0548, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bInAir; // 0x0560, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeed; // 0x0578, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flForwardSpeed; // 0x0590, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flStrafeSpeed; // 0x05a8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flVerticalSpeed; // 0x05c0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flLookHeading; // 0x05d8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flLookPitch; // 0x05f0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<Vector> m_vLookTarget; // 0x0608, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bMeleeAttack; // 0x0620, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bRangedAttack; // 0x0638, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bKill; // 0x0650, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eFlinch; // 0x0668, 0x18 bytes
-                CAnimGraphParamRef<std::int32_t> m_nHitLayerTrigger; // 0x0680, 0x28 bytes
-                CAnimGraphParamRef<char*> m_pszDamageState; // 0x06a8, 0x30 bytes
-                CAnimGraphParamRef<float> m_flHealth; // 0x06d8, 0x28 bytes
-                CAnimGraphParamRef<float> m_flTimeScale1; // 0x0700, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bBeam; // 0x0728, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bCrouching; // 0x0750, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bInAir1; // 0x0778, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bHasTarget1; // 0x07a0, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bReloading; // 0x07c8, 0x28 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flRandomSeed; // 0x0180, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flTimeScale; // 0x0198, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flHealthPct; // 0x01b0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bHasTarget; // 0x01c8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bInAir; // 0x01e0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eMovementBlockedID; // 0x01f8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eHitReactID; // 0x0210, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flHitReactDuration; // 0x0228, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeed; // 0x0240, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flForwardSpeed; // 0x0258, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flStrafeSpeed; // 0x0270, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flVerticalSpeed; // 0x0288, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLookHeading; // 0x02a0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLookPitch; // 0x02b8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<Vector> m_vLookTarget; // 0x02d0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bMeleeAttack; // 0x02e8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bRangedAttack; // 0x0300, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bKill; // 0x0318, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eFlinch; // 0x0330, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eTurn; // 0x0348, 0x18 bytes
+                std::uint8_t pad_0360[0x28]; // 0x0360, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_CitadelNPC_GraphController) == 0x7F0, "CAI_CitadelNPC_GraphController size mismatch");
+            static_assert(sizeof(CAI_CitadelNPC_GraphController) == 0x388, "CAI_CitadelNPC_GraphController size mismatch");
         }
     }
 }

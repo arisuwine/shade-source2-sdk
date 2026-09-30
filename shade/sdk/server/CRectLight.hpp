@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa70
+             * Size: 0xb68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CRectLight : public shade::sdk::server::CBarnLight {
             public:
-                bool m_bShowLight; // 0x0a68, 0x1 bytes
-                std::uint8_t pad_0a69[0x7]; // 0x0a69, 0x7 bytes
+                bool m_bShowLight; // 0x0b60, 0x1 bytes
+                std::uint8_t pad_0b61[0x7]; // 0x0b61, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRectLight) == 0xA70, "CRectLight size mismatch");
+            static_assert(sizeof(CRectLight) == 0xB68, "CRectLight size mismatch");
         }
     }
 }

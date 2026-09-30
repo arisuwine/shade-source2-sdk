@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1298
+             * Size: 0x18e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HealingSlash : public shade::sdk::server::CCitadelBaseYamatoAbility {
             public:
-                std::uint8_t pad_0f78[0x320]; // 0x0f78, 0x320 bytes
+                std::uint8_t pad_14a8[0x440]; // 0x14a8, 0x440 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HealingSlash) == 0x1298, "CCitadel_Ability_HealingSlash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HealingSlash) == 0x18E8, "CCitadel_Ability_HealingSlash size mismatch");
         }
     }
 }

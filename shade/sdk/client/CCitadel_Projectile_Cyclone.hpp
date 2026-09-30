@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd58
+             * Size: 0x1058
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_Cyclone : public shade::sdk::client::C_CitadelProjectile {
             public:
-                std::uint8_t pad_0ad8[0x280]; // 0x0ad8, 0x280 bytes
+                std::uint8_t pad_0ce8[0x370]; // 0x0ce8, 0x370 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_Cyclone) == 0xD58, "CCitadel_Projectile_Cyclone size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_Cyclone) == 0x1058, "CCitadel_Projectile_Cyclone size mismatch");
         }
     }
 }

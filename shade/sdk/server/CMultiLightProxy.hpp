@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,29 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CMultiLightProxy : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_iszLightNameFilter; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszLightClassFilter; // 0x04a8, 0x8 bytes
-                float m_flLightRadiusFilter; // 0x04b0, 0x4 bytes
-                float m_flBrightnessDelta; // 0x04b4, 0x4 bytes
-                bool m_bPerformScreenFade; // 0x04b8, 0x1 bytes
-                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
-                float m_flTargetBrightnessMultiplier; // 0x04bc, 0x4 bytes
-                float m_flCurrentBrightnessMultiplier; // 0x04c0, 0x4 bytes
-                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CLightEntity>> m_vecLights; // 0x04c8, 0x18 bytes
+                CUtlSymbolLarge m_iszLightNameFilter; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszLightClassFilter; // 0x04b8, 0x8 bytes
+                float m_flLightRadiusFilter; // 0x04c0, 0x4 bytes
+                float m_flBrightnessDelta; // 0x04c4, 0x4 bytes
+                bool m_bPerformScreenFade; // 0x04c8, 0x1 bytes
+                std::uint8_t pad_04c9[0x3]; // 0x04c9, 0x3 bytes
+                float m_flTargetBrightnessMultiplier; // 0x04cc, 0x4 bytes
+                float m_flCurrentBrightnessMultiplier; // 0x04d0, 0x4 bytes
+                std::uint8_t pad_04d4[0x4]; // 0x04d4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CLightEntity>> m_vecLights; // 0x04d8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputFlickerLights; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputDisableLights; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLightsBrightnessMultiplier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetBrightnessDelta; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CMultiLightProxyRestoreFlashlightThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CMultiLightProxyApproachBrightnessThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CMultiLightProxy) == 0x4E0, "CMultiLightProxy size mismatch");
+            static_assert(sizeof(CMultiLightProxy) == 0x4F0, "CMultiLightProxy size mismatch");
         }
     }
 }

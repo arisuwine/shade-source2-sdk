@@ -12,8 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
+
+#include "shade/sdk/client/AbilityUpgradeBits_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -26,7 +29,8 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct CCitadelAbilityUpgradeInfo_t {
-                std::int32_t m_nUpgradeBits; // 0x0000, 0x4 bytes
+                shade::sdk::client::AbilityUpgradeBits_t m_nUpgradeBits; // 0x0000, 0x2 bytes
+                std::uint8_t pad_0002[0x2]; // 0x0002, 0x2 bytes
                 std::int32_t m_nUpgradeLevel; // 0x0004, 0x4 bytes
             };
             #pragma pack(pop)

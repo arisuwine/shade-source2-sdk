@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x168
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DPSTracker : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x18]; // 0x00d0, 0x18 bytes
-                float m_flInterval; // 0x00e8, 0x4 bytes
-                float m_flProgress; // 0x00ec, 0x4 bytes
-                float m_flDistToTarget; // 0x00f0, 0x4 bytes
-                std::uint8_t pad_00f4[0x4]; // 0x00f4, 0x4 bytes
+                std::uint8_t pad_0140[0x18]; // 0x0140, 0x18 bytes
+                float m_flInterval; // 0x0158, 0x4 bytes
+                float m_flProgress; // 0x015c, 0x4 bytes
+                float m_flDistToTarget; // 0x0160, 0x4 bytes
+                std::uint8_t pad_0164[0x4]; // 0x0164, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DPSTracker) == 0xF8, "CCitadel_Modifier_DPSTracker size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DPSTracker) == 0x168, "CCitadel_Modifier_DPSTracker size mismatch");
         }
     }
 }

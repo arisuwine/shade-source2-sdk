@@ -12,11 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CAttributeContainer.hpp"
-#include "shade/sdk/client/C_BaseFlex.hpp"
+#include "shade/sdk/client/CBaseAnimGraph.hpp"
 #include "shade/sdk/client/EconEntityParticleDisableMode_t.hpp"
 #include "shade/sdk/client/IHasAttributes.hpp"
 #include "shade/sdk/client/style_index_t.hpp"
@@ -24,9 +25,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            class CBaseAnimGraph;
             class C_BaseEntity;
-            struct C_EconEntity__AttachedModelData_t;
             struct C_EconEntity__AttachedParticleInfo_t;
         }
     }
@@ -36,39 +35,36 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1018
+             * Size: 0xf40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class C_EconEntity : public shade::sdk::client::C_BaseFlex, public shade::sdk::client::IHasAttributes {
+            class C_EconEntity : public shade::sdk::client::CBaseAnimGraph, public shade::sdk::client::IHasAttributes {
             public:
-                std::uint8_t pad_0e68[0x8]; // 0x0e68, 0x8 bytes
-                shade::sdk::client::CAttributeContainer m_AttributeManager; // 0x0e70, 0x158 bytes
-                bool m_bClientside; // 0x0fc8, 0x1 bytes
-                std::uint8_t pad_0fc9[0x3]; // 0x0fc9, 0x3 bytes
-                shade::sdk::client::EconEntityParticleDisableMode_t m_nDisableMode; // 0x0fcc, 0x4 bytes
-                bool m_bParticleSystemsCreated; // 0x0fd0, 0x1 bytes
-                bool m_bForceDestroyAttachedParticlesImmediately; // 0x0fd1, 0x1 bytes
-                std::uint8_t pad_0fd2[0x6]; // 0x0fd2, 0x6 bytes
-                CUtlVector<shade::sdk::client::C_EconEntity__AttachedParticleInfo_t> m_vecAttachedParticles; // 0x0fd8, 0x18 bytes
-                CHandle<shade::sdk::client::CBaseAnimGraph> m_hViewmodelAttachment; // 0x0ff0, 0x4 bytes
-                std::int32_t m_iOldTeam; // 0x0ff4, 0x4 bytes
-                bool m_bAttachmentDirty; // 0x0ff8, 0x1 bytes
-                shade::sdk::client::style_index_t m_iOldStyle; // 0x0ff9, 0x1 bytes
-                std::uint8_t pad_0ffa[0x2]; // 0x0ffa, 0x2 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hOldProvidee; // 0x0ffc, 0x4 bytes
-                CUtlVector<shade::sdk::client::C_EconEntity__AttachedModelData_t> m_vecAttachedModels; // 0x1000, 0x18 bytes
+                std::uint8_t pad_0da8[0x8]; // 0x0da8, 0x8 bytes
+                shade::sdk::client::CAttributeContainer m_AttributeManager; // 0x0db0, 0x158 bytes
+                bool m_bClientside; // 0x0f08, 0x1 bytes
+                std::uint8_t pad_0f09[0x3]; // 0x0f09, 0x3 bytes
+                shade::sdk::client::EconEntityParticleDisableMode_t m_nDisableMode; // 0x0f0c, 0x4 bytes
+                bool m_bParticleSystemsCreated; // 0x0f10, 0x1 bytes
+                bool m_bForceDestroyAttachedParticlesImmediately; // 0x0f11, 0x1 bytes
+                std::uint8_t pad_0f12[0x6]; // 0x0f12, 0x6 bytes
+                CUtlVector<shade::sdk::client::C_EconEntity__AttachedParticleInfo_t> m_vecAttachedParticles; // 0x0f18, 0x18 bytes
+                CHandle<shade::sdk::client::CBaseAnimGraph> m_hViewmodelAttachment; // 0x0f30, 0x4 bytes
+                std::int32_t m_iOldTeam; // 0x0f34, 0x4 bytes
+                bool m_bAttachmentDirty; // 0x0f38, 0x1 bytes
+                shade::sdk::client::style_index_t m_iOldStyle; // 0x0f39, 0x1 bytes
+                std::uint8_t pad_0f3a[0x2]; // 0x0f3a, 0x2 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hOldProvidee; // 0x0f3c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_EconEntity) == 0x1018, "C_EconEntity size mismatch");
+            static_assert(sizeof(C_EconEntity) == 0xF40, "C_EconEntity size mismatch");
         }
     }
 }

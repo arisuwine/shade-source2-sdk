@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Passive_Camouflage : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_flRate; // 0x00c0, 0x4 bytes
-                Vector m_vLastPosition; // 0x00c4, 0xc bytes
+                float m_flRate; // 0x0130, 0x4 bytes
+                VectorWS m_vLastPosition; // 0x0134, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Passive_Camouflage) == 0xD0, "CCitadel_Modifier_Passive_Camouflage size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Passive_Camouflage) == 0x140, "CCitadel_Modifier_Passive_Camouflage size mismatch");
         }
     }
 }

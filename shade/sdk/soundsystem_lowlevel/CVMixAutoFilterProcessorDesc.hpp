@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixAutoFilterProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
-                shade::sdk::soundsystem_lowlevel::VMixAutoFilterDesc_t m_desc; // 0x0020, 0x2c bytes
-                std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::VMixAutoFilterDesc_t m_desc; // 0x0028, 0x2c bytes
+                std::uint8_t pad_0054[0x4]; // 0x0054, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixAutoFilterProcessorDesc) == 0x50, "CVMixAutoFilterProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixAutoFilterProcessorDesc) == 0x58, "CVMixAutoFilterProcessorDesc size mismatch");
         }
     }
 }

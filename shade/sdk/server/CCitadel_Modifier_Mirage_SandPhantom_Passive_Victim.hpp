@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x788
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x10]; // 0x00d0, 0x10 bytes
-                shade::sdk::entity2::GameTime_t m_flLastProcTime; // 0x00e0, 0x4 bytes
-                std::uint8_t pad_00e4[0x404]; // 0x00e4, 0x404 bytes
+                std::uint8_t pad_0140[0x10]; // 0x0140, 0x10 bytes
+                shade::sdk::entity2::GameTime_t m_flLastProcTime; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x634]; // 0x0154, 0x634 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim) == 0x4E8, "CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim) == 0x788, "CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x828
+             * Size: 0x920
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CBasePlatTrain : public shade::sdk::server::CBaseToggle {
             public:
-                CUtlSymbolLarge m_NoiseMoving; // 0x0800, 0x8 bytes
-                CUtlSymbolLarge m_NoiseArrived; // 0x0808, 0x8 bytes
-                std::uint8_t pad_0810[0x8]; // 0x0810, 0x8 bytes
-                float m_volume; // 0x0818, 0x4 bytes
-                float m_flTWidth; // 0x081c, 0x4 bytes
-                float m_flTLength; // 0x0820, 0x4 bytes
-                std::uint8_t pad_0824[0x4]; // 0x0824, 0x4 bytes
+                CGameSoundEventName m_NoiseMoving; // 0x08f8, 0x8 bytes
+                CGameSoundEventName m_NoiseArrived; // 0x0900, 0x8 bytes
+                std::uint8_t pad_0908[0x8]; // 0x0908, 0x8 bytes
+                float m_volume; // 0x0910, 0x4 bytes
+                float m_flTWidth; // 0x0914, 0x4 bytes
+                float m_flTLength; // 0x0918, 0x4 bytes
+                std::uint8_t pad_091c[0x4]; // 0x091c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void m_pMovementSound; // Offset: 0x810, Size: 0x1, Size In Bytes: 0x8
              * float rotation; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBasePlatTrain) == 0x828, "CBasePlatTrain size mismatch");
+            static_assert(sizeof(CBasePlatTrain) == 0x920, "CBasePlatTrain size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x920
+             * Size: 0x930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierVandalOverflowVData : public shade::sdk::server::CCitadel_Modifier_StunnedVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LiftParticle; // 0x0830, 0xe0 bytes
-                CSoundEventName m_strStartSound; // 0x0910, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LiftParticle; // 0x0840, 0xe0 bytes
+                CSoundEventName m_strStartSound; // 0x0920, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierVandalOverflowVData) == 0x920, "CModifierVandalOverflowVData size mismatch");
+            static_assert(sizeof(CModifierVandalOverflowVData) == 0x930, "CModifierVandalOverflowVData size mismatch");
         }
     }
 }

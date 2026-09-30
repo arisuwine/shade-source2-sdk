@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,24 +23,24 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x308
+             * Size: 0x2c8
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CAI_NPCMovementStanceSettings_t {
-                shade::sdk::client::CAI_MovementGaitSettings m_slow; // 0x0000, 0xc0 bytes
-                shade::sdk::client::CAI_OptionalMovementGaitSettings m_medium; // 0x00c0, 0xc0 bytes
-                shade::sdk::client::CAI_OptionalMovementGaitSettings m_fast; // 0x0180, 0xc0 bytes
-                shade::sdk::client::CAI_OptionalMovementGaitSettings m_veryFast; // 0x0240, 0xc0 bytes
-                bool m_bEnabled; // 0x0300, 0x1 bytes
-                std::uint8_t pad_0301[0x7]; // 0x0301, 0x7 bytes
+                shade::sdk::client::CAI_MovementGaitSettings m_slow; // 0x0000, 0xb0 bytes
+                shade::sdk::client::CAI_OptionalMovementGaitSettings m_medium; // 0x00b0, 0xb0 bytes
+                shade::sdk::client::CAI_OptionalMovementGaitSettings m_fast; // 0x0160, 0xb0 bytes
+                shade::sdk::client::CAI_OptionalMovementGaitSettings m_veryFast; // 0x0210, 0xb0 bytes
+                bool m_bEnabled; // 0x02c0, 0x1 bytes
+                std::uint8_t pad_02c1[0x7]; // 0x02c1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_NPCMovementStanceSettings_t) == 0x308, "CAI_NPCMovementStanceSettings_t size mismatch");
+            static_assert(sizeof(CAI_NPCMovementStanceSettings_t) == 0x2C8, "CAI_NPCMovementStanceSettings_t size mismatch");
         }
     }
 }

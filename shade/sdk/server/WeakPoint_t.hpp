@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -49,12 +50,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_OnBreakDelegate; // Offset: 0x60, Size: 0x1, Size In Bytes: 0x0
-             * void m_params; // Offset: 0x38, Size: 0x1, Size In Bytes: 0x0
-             * void m_nBreakEffectsAttachment; // Offset: 0x30, Size: 0x1, Size In Bytes: 0x0
-             * void m_nBreakTick; // Offset: 0x70, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(WeakPoint_t) == 0x98, "WeakPoint_t size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xe20
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_InWorldKeyBindPanel : public shade::sdk::client::C_PointClientUIWorldPanel {
             public:
-                CHandle<shade::sdk::client::C_CitadelPlayerPawn> m_hPlayer; // 0x0c00, 0x4 bytes
-                std::uint8_t pad_0c04[0xc]; // 0x0c04, 0xc bytes
+                CHandle<shade::sdk::client::C_CitadelPlayerPawn> m_hPlayer; // 0x0e10, 0x4 bytes
+                std::uint8_t pad_0e14[0xc]; // 0x0e14, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_InWorldKeyBindPanel) == 0xC10, "C_InWorldKeyBindPanel size mismatch");
+            static_assert(sizeof(C_InWorldKeyBindPanel) == 0xE20, "C_InWorldKeyBindPanel size mismatch");
         }
     }
 }

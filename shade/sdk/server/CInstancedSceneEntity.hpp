@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CInstancedSceneEntity : public shade::sdk::server::CSceneEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0790, 0x4 bytes
-                bool m_bHadOwner; // 0x0794, 0x1 bytes
-                std::uint8_t pad_0795[0x3]; // 0x0795, 0x3 bytes
-                float m_flPostSpeakDelay; // 0x0798, 0x4 bytes
-                float m_flPreDelay; // 0x079c, 0x4 bytes
-                bool m_bIsBackground; // 0x07a0, 0x1 bytes
-                bool m_bRemoveOnCompletion; // 0x07a1, 0x1 bytes
-                std::uint8_t pad_07a2[0x2]; // 0x07a2, 0x2 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x07a4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0830, 0x4 bytes
+                bool m_bHadOwner; // 0x0834, 0x1 bytes
+                std::uint8_t pad_0835[0x3]; // 0x0835, 0x3 bytes
+                float m_flPostSpeakDelay; // 0x0838, 0x4 bytes
+                float m_flPreDelay; // 0x083c, 0x4 bytes
+                bool m_bIsBackground; // 0x0840, 0x1 bytes
+                std::uint8_t pad_0841[0x3]; // 0x0841, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0844, 0x4 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * bool m_bRemoveOnCompletion; // Offset: 0x541, Size: 0x1, Size In Bytes: 0x1
+             */
 
-            static_assert(sizeof(CInstancedSceneEntity) == 0x7A8, "CInstancedSceneEntity size mismatch");
+            static_assert(sizeof(CInstancedSceneEntity) == 0x848, "CInstancedSceneEntity size mismatch");
         }
     }
 }

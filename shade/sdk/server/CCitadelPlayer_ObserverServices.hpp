@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -41,7 +42,7 @@ namespace shade {
                 CHandle<shade::sdk::server::CBaseEntity> m_hLastObserverTarget; // 0x005c, 0x4 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hPreviousTeamTarget; // 0x0060, 0x4 bytes
                 QAngle m_angTargetCamera; // 0x0064, 0xc bytes
-                Vector m_vTargetCameraPos; // 0x0070, 0xc bytes
+                VectorWS m_vTargetCameraPos; // 0x0070, 0xc bytes
                 std::uint8_t pad_007c[0x4]; // 0x007c, 0x4 bytes
             };
             #pragma pack(pop)

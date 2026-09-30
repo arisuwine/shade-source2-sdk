@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,9 +21,10 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x40
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CConstantForceController {
@@ -36,9 +38,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool m_bLocalSpace; // Offset: 0x8, Size: 0x1, Size In Bytes: 0x1
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CConstantForceController) == 0x40, "CConstantForceController size mismatch");
         }

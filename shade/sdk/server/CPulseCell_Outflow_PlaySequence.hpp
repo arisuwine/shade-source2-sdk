@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x140
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_Outflow_PlaySequence : public shade::sdk::server::CPulseCell_Outflow_PlaySceneBase {
             public:
-                CUtlString m_ParamSequenceName; // 0x00f0, 0x8 bytes
+                CUtlString m_ParamSequenceName; // 0x0138, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Outflow_PlaySequence) == 0xF8, "CPulseCell_Outflow_PlaySequence size mismatch");
+            static_assert(sizeof(CPulseCell_Outflow_PlaySequence) == 0x140, "CPulseCell_Outflow_PlaySequence size mismatch");
         }
     }
 }

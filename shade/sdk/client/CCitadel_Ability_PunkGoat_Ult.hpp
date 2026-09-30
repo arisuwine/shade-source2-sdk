@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1878
+             * Size: 0x2000
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_Ult : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x14]; // 0x11d8, 0x14 bytes
-                std::uint8_t m_nSlamTravelType; // 0x11ec, 0x1 bytes
-                std::uint8_t pad_11ed[0x3]; // 0x11ed, 0x3 bytes
-                float m_flDistanceToTravel; // 0x11f0, 0x4 bytes
-                bool m_bHoldingAbilityButton; // 0x11f4, 0x1 bytes
-                std::uint8_t pad_11f5[0x683]; // 0x11f5, 0x683 bytes
+                std::uint8_t pad_16d8[0x2c]; // 0x16d8, 0x2c bytes
+                std::uint8_t m_nSlamTravelType; // 0x1704, 0x1 bytes
+                std::uint8_t pad_1705[0x3]; // 0x1705, 0x3 bytes
+                float m_flDistanceToTravel; // 0x1708, 0x4 bytes
+                bool m_bHoldingAbilityButton; // 0x170c, 0x1 bytes
+                std::uint8_t pad_170d[0x8f3]; // 0x170d, 0x8f3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_Ult) == 0x1878, "CCitadel_Ability_PunkGoat_Ult size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_Ult) == 0x2000, "CCitadel_Ability_PunkGoat_Ult size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5b0
+             * Size: 0x5b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPCMaker : public shade::sdk::server::CBaseNPCMaker {
             public:
-                CUtlSymbolLarge m_iszNPCSubClass; // 0x0588, 0x8 bytes
-                CUtlSymbolLarge m_iszSquadName; // 0x0590, 0x8 bytes
-                CUtlSymbolLarge m_iszHintGroup; // 0x0598, 0x8 bytes
-                CUtlSymbolLarge m_RelationshipString; // 0x05a0, 0x8 bytes
-                CUtlSymbolLarge m_ChildTargetName; // 0x05a8, 0x8 bytes
+                CUtlSymbolLarge m_iszNPCSubClass; // 0x0590, 0x8 bytes
+                CUtlSymbolLarge m_iszSquadName; // 0x0598, 0x8 bytes
+                CUtlSymbolLarge m_iszHintGroup; // 0x05a0, 0x8 bytes
+                CUtlSymbolLarge m_RelationshipString; // 0x05a8, 0x8 bytes
+                CUtlSymbolLarge m_ChildTargetName; // 0x05b0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPCMaker) == 0x5B0, "CNPCMaker size mismatch");
+            static_assert(sizeof(CNPCMaker) == 0x5B8, "CNPCMaker size mismatch");
         }
     }
 }

@@ -12,23 +12,24 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CAI_Component.hpp"
-#include "shade/sdk/client/CSimTimer.hpp"
-#include "shade/sdk/client/StanceType_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
+#include "shade/sdk/server/AI_NavGoalFlags_t.hpp"
 #include "shade/sdk/server/AI_NavGoal_t.hpp"
 #include "shade/sdk/server/AI_NavSetGoalFlags_t.hpp"
-#include "shade/sdk/server/CAI_WaypointList.hpp"
-#include "shade/sdk/server/CNavSmartGoalHelper.hpp"
-#include "shade/sdk/server/Navigation_t.hpp"
+#include "shade/sdk/server/AI_NavigatorConfig_t.hpp"
+#include "shade/sdk/server/NavType_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
+            struct CAI_Navigator__QueuedGoal_t;
             class CAI_Path;
+            class CAI_PathCost;
             class CBaseEntity;
         }
     }
@@ -38,7 +39,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x350
+             * Size: 0x9a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -47,65 +48,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_Navigator : public shade::sdk::client::CAI_Component {
             public:
-                std::uint8_t pad_0050[0x8]; // 0x0050, 0x8 bytes
-                float m_flGoalStoppingDistance; // 0x0058, 0x4 bytes
-                shade::sdk::server::Navigation_t m_navType; // 0x005c, 0x4 bytes
-                bool m_bNavComplete; // 0x0060, 0x1 bytes
-                std::uint8_t pad_0061[0x27]; // 0x0061, 0x27 bytes
-                shade::sdk::server::CAI_Path *m_pPath; // 0x0088, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLosTarget; // 0x0090, 0x4 bytes
-                VectorWS m_vThreatPos; // 0x0094, 0xc bytes
-                shade::sdk::server::CAI_WaypointList m_interruptPathWaypoints; // 0x00a0, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSuccessfulSimplifyTime; // 0x00a8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeLastAvoidanceTriangulate; // 0x00ac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartWaitingForFacingTime; // 0x00b0, 0x4 bytes
-                std::uint8_t pad_00b4[0x4]; // 0x00b4, 0x4 bytes
-                shade::sdk::server::AI_NavGoal_t m_queuedGoal; // 0x00b8, 0xc0 bytes
-                shade::sdk::server::AI_NavSetGoalFlags_t m_queuedGoalFlags; // 0x0178, 0x4 bytes
-                bool m_bQueuedGoalSuccess; // 0x017c, 0x1 bytes
-                std::uint8_t pad_017d[0x3]; // 0x017d, 0x3 bytes
-                CGlobalSymbol m_sQueuedGoalName; // 0x0180, 0x8 bytes
-                bool m_bPeerMoveWait; // 0x0188, 0x1 bytes
-                std::uint8_t pad_0189[0x3]; // 0x0189, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPeerWaitingOn; // 0x018c, 0x4 bytes
-                shade::sdk::client::CSimTimer m_PeerWaitMoveTimer; // 0x0190, 0xc bytes
-                shade::sdk::client::CSimTimer m_PeerWaitClearTimer; // 0x019c, 0xc bytes
-                shade::sdk::client::CSimTimer m_NextSidestepTimer; // 0x01a8, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBigStepGroundEnt; // 0x01b4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLastBlockingEnt; // 0x01b8, 0x4 bytes
-                VectorWS m_vPosBeginFailedSteer; // 0x01bc, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_timeBeginFailedSteer; // 0x01c8, 0x4 bytes
-                std::int32_t m_nNavFailCounter; // 0x01cc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastNavFailTime; // 0x01d0, 0x4 bytes
-                bool m_bShouldBruteForceFailedNav; // 0x01d4, 0x1 bytes
-                bool m_bNavChangedAlongPath; // 0x01d5, 0x1 bytes
-                std::uint8_t pad_01d6[0x2]; // 0x01d6, 0x2 bytes
-                std::int32_t m_nPreviousCollisionGroup; // 0x01d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastNpcOverlapTime; // 0x01dc, 0x4 bytes
-                float m_flGoalBlockedTolerance; // 0x01e0, 0x4 bytes
-                float m_flWaypointBlockedTolerance; // 0x01e4, 0x4 bytes
-                Vector m_vGoalDirection; // 0x01e8, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hGoalDirectionTarget; // 0x01f4, 0x4 bytes
-                float m_flGoalDirectionToleranceDot; // 0x01f8, 0x4 bytes
-                float m_flGoalArrivalTolerance; // 0x01fc, 0x4 bytes
-                shade::sdk::client::StanceType_t m_eGoalStance; // 0x0200, 0x4 bytes
-                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
-                CGlobalSymbol m_sGoalMovementGaitSet; // 0x0208, 0x8 bytes
-                float m_flArrivalFlyingSpeedScale; // 0x0210, 0x4 bytes
-                float m_flPathEndGoalRange; // 0x0214, 0x4 bytes
-                float m_flPathEndGoalRange_Repathing; // 0x0218, 0x4 bytes
-                float m_flGoalMaxPathLength; // 0x021c, 0x4 bytes
-                float m_flGoalMaxTravelDist; // 0x0220, 0x4 bytes
-                std::uint8_t pad_0224[0x4]; // 0x0224, 0x4 bytes
-                CUtlString m_pathRestrictionTag; // 0x0228, 0x8 bytes
-                std::uint8_t pad_0230[0x18]; // 0x0230, 0x18 bytes
-                shade::sdk::server::CNavSmartGoalHelper m_smartGoalHelper; // 0x0248, 0x108 bytes
+                std::uint8_t pad_0048[0x18]; // 0x0048, 0x18 bytes
+                shade::sdk::server::AI_NavigatorConfig_t m_config; // 0x0060, 0x5 bytes
+                std::uint8_t pad_0065[0x3]; // 0x0065, 0x3 bytes
+                shade::sdk::server::CAI_PathCost *m_pPathCost; // 0x0068, 0x8 bytes
+                shade::sdk::server::NavType_t m_navType; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x24]; // 0x0074, 0x24 bytes
+                shade::sdk::server::CAI_Path *m_pPath; // 0x0098, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flGoalChangeTime; // 0x00a0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeLastAvoidanceTriangulate; // 0x00a4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartWaitingForFacingTime; // 0x00a8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_gtSpeedAvoidanceTimer; // 0x00ac, 0x4 bytes
+                shade::sdk::server::AI_NavGoal_t m_queuedGoal; // 0x00b0, 0x448 bytes
+                shade::sdk::server::AI_NavSetGoalFlags_t m_queuedGoalFlags; // 0x04f8, 0x4 bytes
+                std::uint8_t pad_04fc[0x4]; // 0x04fc, 0x4 bytes
+                shade::sdk::server::CAI_Path *m_pQueuedPath; // 0x0500, 0x8 bytes
+                CUtlVector<shade::sdk::server::CAI_Navigator__QueuedGoal_t*> m_vecSpeculativeGoals; // 0x0508, 0x18 bytes
+                std::int32_t m_nActiveSpeculativePathIndex; // 0x0520, 0x4 bytes
+                std::uint32_t m_nPathSerialNumber; // 0x0524, 0x4 bytes
+                shade::sdk::server::CAI_Path *m_pMotorQueuedPath; // 0x0528, 0x8 bytes
+                shade::sdk::server::AI_NavGoal_t m_motorQueuedGoal; // 0x0530, 0x448 bytes
+                bool m_bUpdatingPathQuery; // 0x0978, 0x1 bytes
+                std::uint8_t pad_0979[0x3]; // 0x0979, 0x3 bytes
+                shade::sdk::server::AI_NavGoalFlags_t m_nExtraPathQueryGoalFlags; // 0x097c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBigStepGroundEnt; // 0x0980, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLastBlockingEnt; // 0x0984, 0x4 bytes
+                std::int32_t m_nPreviousCollisionGroup; // 0x0988, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastNpcOverlapTime; // 0x098c, 0x4 bytes
+                std::uint8_t pad_0990[0x10]; // 0x0990, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_Navigator) == 0x350, "CAI_Navigator size mismatch");
+            static_assert(sizeof(CAI_Navigator) == 0x9A0, "CAI_Navigator size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1120
+             * Size: 0x16e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SkyRunner_SwingLine : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ESwingState_t m_eSwingState; // 0x0f70, 0x1 bytes
-                std::uint8_t pad_0f71[0x3]; // 0x0f71, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_SwingStartTime; // 0x0f74, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_SwingEndTime; // 0x0f78, 0x4 bytes
-                Vector m_vecSwingPoint; // 0x0f7c, 0xc bytes
-                Vector m_vecCurrentPosition; // 0x0f88, 0xc bytes
-                float m_flIdealSpringLength; // 0x0f94, 0x4 bytes
-                std::uint8_t pad_0f98[0x188]; // 0x0f98, 0x188 bytes
+                shade::sdk::client::ESwingState_t m_eSwingState; // 0x14a0, 0x1 bytes
+                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_SwingStartTime; // 0x14a4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_SwingEndTime; // 0x14a8, 0x4 bytes
+                VectorWS m_vecSwingPoint; // 0x14ac, 0xc bytes
+                VectorWS m_vecCurrentPosition; // 0x14b8, 0xc bytes
+                float m_flIdealSpringLength; // 0x14c4, 0x4 bytes
+                std::uint8_t pad_14c8[0x218]; // 0x14c8, 0x218 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SkyRunner_SwingLine) == 0x1120, "CCitadel_Ability_SkyRunner_SwingLine size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SkyRunner_SwingLine) == 0x16E0, "CCitadel_Ability_SkyRunner_SwingLine size mismatch");
         }
     }
 }

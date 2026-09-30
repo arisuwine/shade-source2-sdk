@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1000
+             * Size: 0x1560
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_TechUpgrade_SuperAcolyteGloves : public shade::sdk::server::CCitadel_Item {
             public:
-                std::uint8_t pad_0f78[0x80]; // 0x0f78, 0x80 bytes
-                float fl_StoredDamage; // 0x0ff8, 0x4 bytes
-                std::uint8_t pad_0ffc[0x4]; // 0x0ffc, 0x4 bytes
+                std::uint8_t pad_14a8[0xb0]; // 0x14a8, 0xb0 bytes
+                float fl_StoredDamage; // 0x1558, 0x4 bytes
+                std::uint8_t pad_155c[0x4]; // 0x155c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_TechUpgrade_SuperAcolyteGloves) == 0x1000, "CCitadel_TechUpgrade_SuperAcolyteGloves size mismatch");
+            static_assert(sizeof(CCitadel_TechUpgrade_SuperAcolyteGloves) == 0x1560, "CCitadel_TechUpgrade_SuperAcolyteGloves size mismatch");
         }
     }
 }

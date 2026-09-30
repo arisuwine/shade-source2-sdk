@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0x140
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPunchableNeutralGoldVData : public shade::sdk::server::CCitadelItemPickupVData {
             public:
-                float m_flGroundOffset; // 0x0108, 0x4 bytes
-                float m_flSpinRate; // 0x010c, 0x4 bytes
-                float m_flBobHeight; // 0x0110, 0x4 bytes
-                float m_flBobFrequency; // 0x0114, 0x4 bytes
-                float m_flSpinSpeed; // 0x0118, 0x4 bytes
-                std::uint8_t pad_011c[0x4]; // 0x011c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PunchPickupModifier; // 0x0120, 0x10 bytes
+                float m_flGroundOffset; // 0x0118, 0x4 bytes
+                float m_flSpinRate; // 0x011c, 0x4 bytes
+                float m_flBobHeight; // 0x0120, 0x4 bytes
+                float m_flBobFrequency; // 0x0124, 0x4 bytes
+                float m_flSpinSpeed; // 0x0128, 0x4 bytes
+                std::uint8_t pad_012c[0x4]; // 0x012c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PunchPickupModifier; // 0x0130, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPunchableNeutralGoldVData) == 0x130, "CCitadelItemPunchableNeutralGoldVData size mismatch");
+            static_assert(sizeof(CCitadelItemPunchableNeutralGoldVData) == 0x140, "CCitadelItemPunchableNeutralGoldVData size mismatch");
         }
     }
 }

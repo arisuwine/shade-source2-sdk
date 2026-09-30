@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcd8
+             * Size: 0xdd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_DruidPlantShield : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                bool m_bSolid; // 0x0cb0, 0x1 bytes
-                std::uint8_t pad_0cb1[0x3]; // 0x0cb1, 0x3 bytes
-                VectorWS m_vStartPos; // 0x0cb4, 0xc bytes
-                VectorWS m_vEndPos; // 0x0cc0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartGrowTime; // 0x0ccc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndGrowTime; // 0x0cd0, 0x4 bytes
-                std::uint8_t pad_0cd4[0x4]; // 0x0cd4, 0x4 bytes
+                bool m_bSolid; // 0x0da8, 0x1 bytes
+                std::uint8_t pad_0da9[0x3]; // 0x0da9, 0x3 bytes
+                VectorWS m_vStartPos; // 0x0dac, 0xc bytes
+                VectorWS m_vEndPos; // 0x0db8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartGrowTime; // 0x0dc4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndGrowTime; // 0x0dc8, 0x4 bytes
+                std::uint8_t pad_0dcc[0x4]; // 0x0dcc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_DruidPlantShield) == 0xCD8, "C_Citadel_DruidPlantShield size mismatch");
+            static_assert(sizeof(C_Citadel_DruidPlantShield) == 0xDD0, "C_Citadel_DruidPlantShield size mismatch");
         }
     }
 }

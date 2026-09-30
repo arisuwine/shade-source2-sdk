@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1698
+             * Size: 0x1d00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Drifter_Hunger : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecCurrentTargets; // 0x0f70, 0x18 bytes
-                std::uint8_t pad_0f88[0x4]; // 0x0f88, 0x4 bytes
-                std::int32_t m_nKillsEarned; // 0x0f8c, 0x4 bytes
-                std::int32_t m_nAssistsEarned; // 0x0f90, 0x4 bytes
-                CUtlStringToken m_TypeIDDarkness; // 0x0f94, 0x4 bytes
-                std::uint8_t pad_0f98[0x700]; // 0x0f98, 0x700 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecCurrentTargets; // 0x14a0, 0x18 bytes
+                std::uint8_t pad_14b8[0x4]; // 0x14b8, 0x4 bytes
+                CUtlStringToken m_TypeIDDarkness; // 0x14bc, 0x4 bytes
+                std::uint8_t pad_14c0[0x840]; // 0x14c0, 0x840 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Drifter_Hunger) == 0x1698, "CCitadel_Ability_Drifter_Hunger size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Drifter_Hunger) == 0x1D00, "CCitadel_Ability_Drifter_Hunger size mismatch");
         }
     }
 }

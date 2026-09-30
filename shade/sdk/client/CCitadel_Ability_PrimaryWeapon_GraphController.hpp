@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x298
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,30 +30,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PrimaryWeapon_GraphController : public shade::sdk::client::CCitadelBaseAbilityGraphController {
             public:
-                CAnimGraphParamRef<bool> m_bAiming; // 0x0090, 0x28 bytes
-                CAnimGraphParamRef<float> m_flReloadSpeed; // 0x00b8, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bReloadingSingleRoundStart; // 0x00e0, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bReloadingSingleRound; // 0x0108, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bReloading; // 0x0130, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bShootAlt; // 0x0158, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bShoot; // 0x0180, 0x28 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Shoot; // 0x01a8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Muzzle; // 0x01c0, 0x18 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_ReloadState; // 0x01d8, 0x30 bytes
-                CAnimGraphParamRef<float> m_ReloadFraction; // 0x0208, 0x28 bytes
-                CAnimGraphParamRef<float> m_ReloadSpeed; // 0x0230, 0x28 bytes
-                CAnimGraphParamRef<float> m_AmmoFraction; // 0x0258, 0x28 bytes
-                std::int32_t m_nShootPriority; // 0x0280, 0x4 bytes
-                std::int32_t m_nReloadPriority; // 0x0284, 0x4 bytes
-                float m_flLatchedReloadSpeed; // 0x0288, 0x4 bytes
-                std::uint8_t pad_028c[0x4]; // 0x028c, 0x4 bytes
-                CGlobalSymbol m_symLastMuzzle; // 0x0290, 0x8 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Shoot; // 0x00c0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Muzzle; // 0x00d8, 0x18 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_ReloadState; // 0x00f0, 0x30 bytes
+                CAnimGraphParamRef<float> m_ReloadFraction; // 0x0120, 0x28 bytes
+                CAnimGraphParamRef<float> m_ReloadSpeed; // 0x0148, 0x28 bytes
+                CAnimGraphParamRef<float> m_AmmoFraction; // 0x0170, 0x28 bytes
+                CAnimGraphParamRef<float> m_Ammo; // 0x0198, 0x28 bytes
+                CAnimGraphParamRef<float> m_AmmoMax; // 0x01c0, 0x28 bytes
+                std::int32_t m_nShootPriority; // 0x01e8, 0x4 bytes
+                std::int32_t m_nReloadPriority; // 0x01ec, 0x4 bytes
+                float m_flLatchedReloadSpeed; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                CGlobalSymbol m_symLastMuzzle; // 0x01f8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_GraphController) == 0x298, "CCitadel_Ability_PrimaryWeapon_GraphController size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_GraphController) == 0x200, "CCitadel_Ability_PrimaryWeapon_GraphController size mismatch");
         }
     }
 }

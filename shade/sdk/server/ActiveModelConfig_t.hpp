@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,9 +30,10 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x70
-             * Alignment: 0xff
+             * Size: 0xa0
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -42,12 +44,15 @@ namespace shade {
                 CUtlSymbolLarge m_Name; // 0x0038, 0x8 bytes
                 CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseModelEntity>> m_AssociatedEntities; // 0x0040, 0x18 bytes
                 CNetworkUtlVectorBase<CUtlSymbolLarge> m_AssociatedEntityNames; // 0x0058, 0x18 bytes
+                CUtlLeanVector<bool> m_vecAssociatedEntityCollidesWithHierarchy; // 0x0070, 0x10 bytes
+                CUtlLeanVector<bool> m_vecAssociatedEntityCollidesOutsideHierarchy; // 0x0080, 0x10 bytes
+                std::uint8_t pad_0090[0x10]; // 0x0090, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ActiveModelConfig_t) == 0x70, "ActiveModelConfig_t size mismatch");
+            static_assert(sizeof(ActiveModelConfig_t) == 0xA0, "ActiveModelConfig_t size mismatch");
         }
     }
 }

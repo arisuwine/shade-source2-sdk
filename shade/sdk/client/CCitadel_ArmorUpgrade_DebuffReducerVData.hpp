@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_DebuffReducerVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffReducedParticle; // 0x18b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle; // 0x1998, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveSpeedModifier; // 0x1a78, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffReducedParticle; // 0x14b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle; // 0x1590, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveSpeedModifier; // 0x1670, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_DebuffReducerVData) == 0x1A88, "CCitadel_ArmorUpgrade_DebuffReducerVData size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_DebuffReducerVData) == 0x1680, "CCitadel_ArmorUpgrade_DebuffReducerVData size mismatch");
         }
     }
 }

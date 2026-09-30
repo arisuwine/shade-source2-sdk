@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_IdolReturnTimer : public shade::sdk::server::CCitadelModifier {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTrigger; // 0x00d0, 0x4 bytes
-                Vector m_vGroundOrigin; // 0x00d4, 0xc bytes
+                VectorWS m_vGroundOrigin; // 0x0140, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTrigger; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_IdolReturnTimer) == 0xE0, "CCitadel_Modifier_IdolReturnTimer size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_IdolReturnTimer) == 0x150, "CCitadel_Modifier_IdolReturnTimer size mismatch");
         }
     }
 }

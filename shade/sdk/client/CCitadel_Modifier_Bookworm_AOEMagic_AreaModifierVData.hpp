@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa30
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Bookworm_AOEMagic_AreaModifierVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0750, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RootModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x0770, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect; // 0x0780, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeEffect; // 0x0860, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoECastEffect; // 0x0940, 0xe0 bytes
-                CSoundEventName m_strHitSound; // 0x0a20, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0760, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RootModifier; // 0x0770, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x0780, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeEffect; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoECastEffect; // 0x0950, 0xe0 bytes
+                CSoundEventName m_strHitSound; // 0x0a30, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Bookworm_AOEMagic_AreaModifierVData) == 0xA30, "CCitadel_Modifier_Bookworm_AOEMagic_AreaModifierVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Bookworm_AOEMagic_AreaModifierVData) == 0xA40, "CCitadel_Modifier_Bookworm_AOEMagic_AreaModifierVData size mismatch");
         }
     }
 }

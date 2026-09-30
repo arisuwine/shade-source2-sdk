@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,16 +25,8 @@
 namespace shade {
     namespace sdk {
         namespace server {
-            class CNPC_Escort;
-        }
-    }
-}
-
-namespace shade {
-    namespace sdk {
-        namespace server {
             /* Class Parameters
-             * Size: 0x10e8
+             * Size: 0x11f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,27 +35,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTriggerCapturePoint : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x08e0, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x0900, 0x18 bytes
-                CEntityOutputTemplate<std::int32_t> m_OnFullyCaptured; // 0x0918, 0x20 bytes
-                CUtlSymbolLarge m_iszGroupName; // 0x0938, 0x8 bytes
-                shade::sdk::client::ParticleIndex_t m_nEnabledParticle; // 0x0940, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nPreEnableFX; // 0x0944, 0x4 bytes
-                std::uint8_t pad_0948[0x780]; // 0x0948, 0x780 bytes
-                CHandle<shade::sdk::server::CNPC_Escort> m_hEscort; // 0x10c8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0x10cc, 0x4 bytes
-                float m_flCaptureProgress; // 0x10d0, 0x4 bytes
-                std::int32_t m_nCaptureProgressOwner; // 0x10d4, 0x4 bytes
-                std::int32_t m_nActivelyCapturingTeam; // 0x10d8, 0x4 bytes
-                std::int32_t m_nActiveCapturers; // 0x10dc, 0x4 bytes
-                std::uint8_t m_nEnableState; // 0x10e0, 0x1 bytes
-                std::uint8_t pad_10e1[0x7]; // 0x10e1, 0x7 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x09f0, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x0a10, 0x18 bytes
+                CEntityOutputTemplate<std::int32_t> m_OnFullyCaptured; // 0x0a28, 0x20 bytes
+                CUtlSymbolLarge m_iszGroupName; // 0x0a48, 0x8 bytes
+                shade::sdk::client::ParticleIndex_t m_nEnabledParticle; // 0x0a50, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nPreEnableFX; // 0x0a54, 0x4 bytes
+                std::uint8_t pad_0a58[0x780]; // 0x0a58, 0x780 bytes
+                shade::sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0x11d8, 0x4 bytes
+                float m_flCaptureProgress; // 0x11dc, 0x4 bytes
+                std::int32_t m_nCaptureProgressOwner; // 0x11e0, 0x4 bytes
+                std::int32_t m_nActivelyCapturingTeam; // 0x11e4, 0x4 bytes
+                std::int32_t m_nActiveCapturers; // 0x11e8, 0x4 bytes
+                std::uint8_t m_nEnableState; // 0x11ec, 0x1 bytes
+                std::uint8_t pad_11ed[0x3]; // 0x11ed, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelTriggerCapturePoint) == 0x10E8, "CCitadelTriggerCapturePoint size mismatch");
+            static_assert(sizeof(CCitadelTriggerCapturePoint) == 0x11F0, "CCitadelTriggerCapturePoint size mismatch");
         }
     }
 }

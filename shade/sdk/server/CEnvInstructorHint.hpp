@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x520
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,42 +31,39 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvInstructorHint : public shade::sdk::server::CPointEntity {
             public:
-                CUtlSymbolLarge m_iszName; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszReplace_Key; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_iszHintTargetEntity; // 0x04b0, 0x8 bytes
-                std::int32_t m_iTimeout; // 0x04b8, 0x4 bytes
-                std::int32_t m_iDisplayLimit; // 0x04bc, 0x4 bytes
-                CUtlSymbolLarge m_iszIcon_Onscreen; // 0x04c0, 0x8 bytes
-                CUtlSymbolLarge m_iszIcon_Offscreen; // 0x04c8, 0x8 bytes
-                CUtlSymbolLarge m_iszCaption; // 0x04d0, 0x8 bytes
-                CUtlSymbolLarge m_iszActivatorCaption; // 0x04d8, 0x8 bytes
-                Color m_Color; // 0x04e0, 0x4 bytes
-                float m_fIconOffset; // 0x04e4, 0x4 bytes
-                float m_fRange; // 0x04e8, 0x4 bytes
-                std::uint8_t m_iPulseOption; // 0x04ec, 0x1 bytes
-                std::uint8_t m_iAlphaOption; // 0x04ed, 0x1 bytes
-                std::uint8_t m_iShakeOption; // 0x04ee, 0x1 bytes
-                bool m_bStatic; // 0x04ef, 0x1 bytes
-                bool m_bNoOffscreen; // 0x04f0, 0x1 bytes
-                bool m_bForceCaption; // 0x04f1, 0x1 bytes
-                std::uint8_t pad_04f2[0x2]; // 0x04f2, 0x2 bytes
-                std::int32_t m_iInstanceType; // 0x04f4, 0x4 bytes
-                bool m_bSuppressRest; // 0x04f8, 0x1 bytes
-                std::uint8_t pad_04f9[0x7]; // 0x04f9, 0x7 bytes
-                CUtlSymbolLarge m_iszBinding; // 0x0500, 0x8 bytes
-                bool m_bAllowNoDrawTarget; // 0x0508, 0x1 bytes
-                bool m_bAutoStart; // 0x0509, 0x1 bytes
-                bool m_bLocalPlayerOnly; // 0x050a, 0x1 bytes
-                std::uint8_t pad_050b[0x5]; // 0x050b, 0x5 bytes
+                CUtlSymbolLarge m_iszName; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszReplace_Key; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_iszHintTargetEntity; // 0x04c0, 0x8 bytes
+                std::int32_t m_iTimeout; // 0x04c8, 0x4 bytes
+                std::int32_t m_iDisplayLimit; // 0x04cc, 0x4 bytes
+                CUtlSymbolLarge m_iszIcon_Onscreen; // 0x04d0, 0x8 bytes
+                CUtlSymbolLarge m_iszIcon_Offscreen; // 0x04d8, 0x8 bytes
+                CUtlSymbolLarge m_iszCaption; // 0x04e0, 0x8 bytes
+                CUtlSymbolLarge m_iszActivatorCaption; // 0x04e8, 0x8 bytes
+                Color m_Color; // 0x04f0, 0x4 bytes
+                float m_fIconOffset; // 0x04f4, 0x4 bytes
+                float m_fRange; // 0x04f8, 0x4 bytes
+                std::uint8_t m_iPulseOption; // 0x04fc, 0x1 bytes
+                std::uint8_t m_iAlphaOption; // 0x04fd, 0x1 bytes
+                std::uint8_t m_iShakeOption; // 0x04fe, 0x1 bytes
+                bool m_bStatic; // 0x04ff, 0x1 bytes
+                bool m_bNoOffscreen; // 0x0500, 0x1 bytes
+                bool m_bForceCaption; // 0x0501, 0x1 bytes
+                std::uint8_t pad_0502[0x2]; // 0x0502, 0x2 bytes
+                std::int32_t m_iInstanceType; // 0x0504, 0x4 bytes
+                bool m_bSuppressRest; // 0x0508, 0x1 bytes
+                std::uint8_t pad_0509[0x7]; // 0x0509, 0x7 bytes
+                CUtlSymbolLarge m_iszBinding; // 0x0510, 0x8 bytes
+                bool m_bAllowNoDrawTarget; // 0x0518, 0x1 bytes
+                bool m_bAutoStart; // 0x0519, 0x1 bytes
+                bool m_bLocalPlayerOnly; // 0x051a, 0x1 bytes
+                std::uint8_t pad_051b[0x5]; // 0x051b, 0x5 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputShowHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEndHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvInstructorHint) == 0x510, "CEnvInstructorHint size mismatch");
+            static_assert(sizeof(CEnvInstructorHint) == 0x520, "CEnvInstructorHint size mismatch");
         }
     }
 }

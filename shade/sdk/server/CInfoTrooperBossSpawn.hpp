@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x558
+             * Size: 0x560
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoTrooperBossSpawn : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                std::uint8_t pad_04a0[0x28]; // 0x04a0, 0x28 bytes
-                CUtlSymbolLarge m_strBossEntityName; // 0x04c8, 0x8 bytes
-                std::int32_t m_iLane; // 0x04d0, 0x4 bytes
-                std::int32_t m_iCoverGroupID; // 0x04d4, 0x4 bytes
-                std::uint8_t pad_04d8[0x8]; // 0x04d8, 0x8 bytes
-                bool m_bReinforcementsOnly; // 0x04e0, 0x1 bytes
-                bool m_bTrooperTestSpawner; // 0x04e1, 0x1 bytes
-                std::uint8_t pad_04e2[0xe]; // 0x04e2, 0xe bytes
-                shade::sdk::entity2::CEntityIOOutput m_eventOnTrooperKilled; // 0x04f0, 0x18 bytes
-                std::uint8_t pad_0508[0x50]; // 0x0508, 0x50 bytes
+                std::uint8_t pad_04b0[0x20]; // 0x04b0, 0x20 bytes
+                CUtlSymbolLarge m_strBossEntityName; // 0x04d0, 0x8 bytes
+                std::int32_t m_iLane; // 0x04d8, 0x4 bytes
+                std::uint8_t pad_04dc[0x8]; // 0x04dc, 0x8 bytes
+                bool m_bReinforcementsOnly; // 0x04e4, 0x1 bytes
+                bool m_bTrooperTestSpawner; // 0x04e5, 0x1 bytes
+                std::uint8_t pad_04e6[0x12]; // 0x04e6, 0x12 bytes
+                shade::sdk::entity2::CEntityIOOutput m_eventOnTrooperKilled; // 0x04f8, 0x18 bytes
+                std::uint8_t pad_0510[0x50]; // 0x0510, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoTrooperBossSpawn) == 0x558, "CInfoTrooperBossSpawn size mismatch");
+            static_assert(sizeof(CInfoTrooperBossSpawn) == 0x560, "CInfoTrooperBossSpawn size mismatch");
         }
     }
 }

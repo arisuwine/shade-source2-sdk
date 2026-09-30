@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x890
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CritShotVData : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CSoundEventName m_strHitProcSound; // 0x0880, 0x10 bytes
+                CSoundEventName m_strHitProcSound; // 0x0890, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CritShotVData) == 0x890, "CCitadel_Modifier_CritShotVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CritShotVData) == 0x8A0, "CCitadel_Modifier_CritShotVData size mismatch");
         }
     }
 }

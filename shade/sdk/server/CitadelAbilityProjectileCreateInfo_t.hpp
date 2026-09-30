@@ -12,14 +12,23 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 namespace shade {
     namespace sdk {
+        namespace resourcesystem {
+            class InfoForResourceTypeIParticleSystemDefinition;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x60
+             * Size: 0x130
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
@@ -27,26 +36,25 @@ namespace shade {
                 VectorWS m_vecCreatePosition; // 0x0000, 0xc bytes
                 QAngle m_angAngles; // 0x000c, 0xc bytes
                 Vector m_vecVelocity; // 0x0018, 0xc bytes
-                float m_flGravity; // 0x0024, 0x4 bytes
-                float m_flLifeTime; // 0x0028, 0x4 bytes
-                bool m_bWantsInitialVelocity; // 0x002c, 0x1 bytes
-                std::uint8_t pad_002d[0x3]; // 0x002d, 0x3 bytes
-                float m_flChargeAmount; // 0x0030, 0x4 bytes
-                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
-                CUtlString m_sOverrideClassName; // 0x0038, 0x8 bytes
-                bool m_bShouldHitThrower; // 0x0040, 0x1 bytes
-                bool m_bLagCompensatePosition; // 0x0041, 0x1 bytes
-                std::uint8_t pad_0042[0x2]; // 0x0042, 0x2 bytes
-                float m_flHitThrowerDelay; // 0x0044, 0x4 bytes
-                CUtlString m_sModelOverrideName; // 0x0048, 0x8 bytes
-                CUtlString m_sTrailParticleOverrideName; // 0x0050, 0x8 bytes
-                std::uint8_t pad_0058[0x8]; // 0x0058, 0x8 bytes
+                float m_flLifeTime; // 0x0024, 0x4 bytes
+                bool m_bWantsInitialVelocity; // 0x0028, 0x1 bytes
+                std::uint8_t pad_0029[0x3]; // 0x0029, 0x3 bytes
+                float m_flChargeAmount; // 0x002c, 0x4 bytes
+                CUtlString m_sOverrideClassName; // 0x0030, 0x8 bytes
+                bool m_bShouldHitThrower; // 0x0038, 0x1 bytes
+                bool m_bLagCompensatePosition; // 0x0039, 0x1 bytes
+                std::uint8_t pad_003a[0x2]; // 0x003a, 0x2 bytes
+                float m_flHitThrowerDelay; // 0x003c, 0x4 bytes
+                CUtlString m_sModelOverrideName; // 0x0040, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sTrailParticleOverrideName; // 0x0048, 0xe0 bytes
+                std::int32_t m_nNumDetonations; // 0x0128, 0x4 bytes
+                std::uint8_t pad_012c[0x4]; // 0x012c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelAbilityProjectileCreateInfo_t) == 0x60, "CitadelAbilityProjectileCreateInfo_t size mismatch");
+            static_assert(sizeof(CitadelAbilityProjectileCreateInfo_t) == 0x130, "CitadelAbilityProjectileCreateInfo_t size mismatch");
         }
     }
 }

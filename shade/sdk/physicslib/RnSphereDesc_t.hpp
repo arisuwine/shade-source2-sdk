@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -27,7 +28,7 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct RnSphereDesc_t : public shade::sdk::physicslib::RnShapeDesc_t {
-                SphereBase_t<float> m_Sphere; // 0x0018, 0x10 bytes
+                RnSphere_t m_Sphere; // 0x0018, 0x10 bytes
             };
             #pragma pack(pop)
 

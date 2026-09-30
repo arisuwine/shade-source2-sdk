@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,24 +20,22 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x18
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct AbilityPropertyInfo_t {
                 CUtlString m_strImportantProperty; // 0x0000, 0x8 bytes
-                bool m_bRequiresAbilityUpgrade; // 0x0008, 0x1 bytes
-                std::uint8_t pad_0009[0x7]; // 0x0009, 0x7 bytes
-                CUtlString m_strStatusEffectValue; // 0x0010, 0x8 bytes
-                bool m_bShowPropertyValue; // 0x0018, 0x1 bytes
-                std::uint8_t pad_0019[0x7]; // 0x0019, 0x7 bytes
+                CUtlString m_strStatusEffectValue; // 0x0008, 0x8 bytes
+                bool m_bShowPropertyValue; // 0x0010, 0x1 bytes
+                std::uint8_t pad_0011[0x7]; // 0x0011, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AbilityPropertyInfo_t) == 0x20, "AbilityPropertyInfo_t size mismatch");
+            static_assert(sizeof(AbilityPropertyInfo_t) == 0x18, "AbilityPropertyInfo_t size mismatch");
         }
     }
 }

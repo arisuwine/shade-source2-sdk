@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1188
+             * Size: 0x1778
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chrono_PulseGrenade : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                VectorWS m_vLaunchPosition; // 0x0f70, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x0f7c, 0xc bytes
-                std::uint8_t pad_0f88[0x200]; // 0x0f88, 0x200 bytes
+                VectorWS m_vLaunchPosition; // 0x14a0, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x14ac, 0xc bytes
+                std::uint8_t pad_14b8[0x2c0]; // 0x14b8, 0x2c0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chrono_PulseGrenade) == 0x1188, "CCitadel_Ability_Chrono_PulseGrenade size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chrono_PulseGrenade) == 0x1778, "CCitadel_Ability_Chrono_PulseGrenade size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -37,7 +38,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x858
+             * Size: 0x950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,37 +47,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CBreakable : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t pad_0780[0x8]; // 0x0780, 0x8 bytes
-                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x0788, 0x40 bytes
-                shade::sdk::server::Materials m_Material; // 0x07c8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBreaker; // 0x07cc, 0x4 bytes
-                shade::sdk::server::Explosions m_Explosion; // 0x07d0, 0x4 bytes
-                std::uint8_t pad_07d4[0x4]; // 0x07d4, 0x4 bytes
-                CUtlSymbolLarge m_iszSpawnObject; // 0x07d8, 0x8 bytes
-                float m_flPressureDelay; // 0x07e0, 0x4 bytes
-                std::int32_t m_iMinHealthDmg; // 0x07e4, 0x4 bytes
-                CUtlSymbolLarge m_iszPropData; // 0x07e8, 0x8 bytes
-                float m_impactEnergyScale; // 0x07f0, 0x4 bytes
-                shade::sdk::server::EOverrideBlockLOS_t m_nOverrideBlockLOS; // 0x07f4, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x07f8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x0810, 0x18 bytes
-                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x0828, 0x20 bytes
-                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x0848, 0x4 bytes
-                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x084c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0850, 0x4 bytes
-                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
+                std::uint8_t pad_0878[0x8]; // 0x0878, 0x8 bytes
+                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x0880, 0x40 bytes
+                shade::sdk::server::Materials m_Material; // 0x08c0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBreaker; // 0x08c4, 0x4 bytes
+                shade::sdk::server::Explosions m_Explosion; // 0x08c8, 0x4 bytes
+                std::uint8_t pad_08cc[0x4]; // 0x08cc, 0x4 bytes
+                CUtlSymbolLarge m_iszSpawnObject; // 0x08d0, 0x8 bytes
+                float m_flPressureDelay; // 0x08d8, 0x4 bytes
+                std::int32_t m_iMinHealthDmg; // 0x08dc, 0x4 bytes
+                CUtlSymbolLarge m_iszPropData; // 0x08e0, 0x8 bytes
+                float m_impactEnergyScale; // 0x08e8, 0x4 bytes
+                shade::sdk::server::EOverrideBlockLOS_t m_nOverrideBlockLOS; // 0x08ec, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x08f0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x0908, 0x18 bytes
+                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x0920, 0x20 bytes
+                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x0940, 0x4 bytes
+                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x0944, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0948, 0x4 bytes
+                std::uint8_t pad_094c[0x4]; // 0x094c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputAddHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputRemoveHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetEnableBreaking; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetEnableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBreakableDie; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t material; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t spawnobject; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t propdata; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
@@ -87,7 +80,7 @@ namespace shade {
              * float fluiddragscale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBreakable) == 0x858, "CBreakable size mismatch");
+            static_assert(sizeof(CBreakable) == 0x950, "CBreakable size mismatch");
         }
     }
 }

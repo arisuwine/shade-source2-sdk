@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,21 +45,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysicsNPCSolver : public shade::sdk::server::CLogicalEntity {
             public:
-                std::uint8_t pad_04a0[0x8]; // 0x04a0, 0x8 bytes
-                shade::sdk::server::CPhysicsNPCSolver *m_pNext; // 0x04a8, 0x8 bytes
-                CHandle<shade::sdk::server::CAI_BaseNPC> m_hNPC; // 0x04b0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x04b4, 0x4 bytes
-                shade::sdk::client::IPhysicsMotionController *m_pController; // 0x04b8, 0x8 bytes
-                float m_separationDuration; // 0x04c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_cancelTime; // 0x04c4, 0x4 bytes
-                bool m_allowIntersection; // 0x04c8, 0x1 bytes
-                std::uint8_t pad_04c9[0x7]; // 0x04c9, 0x7 bytes
+                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
+                shade::sdk::server::CPhysicsNPCSolver *m_pNext; // 0x04b8, 0x8 bytes
+                CHandle<shade::sdk::server::CAI_BaseNPC> m_hNPC; // 0x04c0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x04c4, 0x4 bytes
+                shade::sdk::client::IPhysicsMotionController *m_pController; // 0x04c8, 0x8 bytes
+                float m_separationDuration; // 0x04d0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_cancelTime; // 0x04d4, 0x4 bytes
+                bool m_allowIntersection; // 0x04d8, 0x1 bytes
+                std::uint8_t pad_04d9[0x7]; // 0x04d9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysicsNPCSolver) == 0x4D0, "CPhysicsNPCSolver size mismatch");
+            static_assert(sizeof(CPhysicsNPCSolver) == 0x4E0, "CPhysicsNPCSolver size mismatch");
         }
     }
 }

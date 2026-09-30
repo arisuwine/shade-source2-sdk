@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x260
+             * Size: 0x330
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,34 +41,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Tier3Boss_LaserBeam : public shade::sdk::client::CCitadel_Modifier_Tier3Boss_Base {
             public:
-                std::uint8_t pad_00c0[0x14]; // 0x00c0, 0x14 bytes
-                shade::sdk::entity2::GameTime_t m_flSoundStartTime; // 0x00d4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nHandEffect1; // 0x00d8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nHandEffect2; // 0x00dc, 0x4 bytes
-                std::uint8_t pad_00e0[0x4]; // 0x00e0, 0x4 bytes
-                Vector m_vStart; // 0x00e4, 0xc bytes
-                Vector m_vEnd; // 0x00f0, 0xc bytes
-                Vector m_vPrevEnd; // 0x00fc, 0xc bytes
-                float m_flAngleBetweenTrace; // 0x0108, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x010c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAuraDropTick; // 0x0110, 0x4 bytes
-                std::uint8_t pad_0114[0x4]; // 0x0114, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecEntitiesHit; // 0x0118, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x0130, 0x4 bytes
-                Vector m_vecBeamTarget; // 0x0134, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastBeamUpdateTime; // 0x0140, 0x4 bytes
-                Vector m_vecEnemyPosition; // 0x0144, 0xc bytes
-                bool m_bPreviewMode; // 0x0150, 0x1 bytes
-                std::uint8_t pad_0151[0x3]; // 0x0151, 0x3 bytes
-                std::int32_t m_iAttachmentIndex; // 0x0154, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x0158, 0x1 bytes
-                std::uint8_t pad_0159[0x107]; // 0x0159, 0x107 bytes
+                std::uint8_t pad_0130[0x14]; // 0x0130, 0x14 bytes
+                shade::sdk::entity2::GameTime_t m_flSoundStartTime; // 0x0144, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nHandEffect1; // 0x0148, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nHandEffect2; // 0x014c, 0x4 bytes
+                std::uint8_t pad_0150[0x4]; // 0x0150, 0x4 bytes
+                VectorWS m_vStart; // 0x0154, 0xc bytes
+                VectorWS m_vEnd; // 0x0160, 0xc bytes
+                VectorWS m_vPrevEnd; // 0x016c, 0xc bytes
+                float m_flAngleBetweenTrace; // 0x0178, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x017c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAuraDropTick; // 0x0180, 0x4 bytes
+                std::uint8_t pad_0184[0x4]; // 0x0184, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecEntitiesHit; // 0x0188, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x01a0, 0x4 bytes
+                VectorWS m_vecBeamTarget; // 0x01a4, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastBeamUpdateTime; // 0x01b0, 0x4 bytes
+                VectorWS m_vecEnemyPosition; // 0x01b4, 0xc bytes
+                bool m_bPreviewMode; // 0x01c0, 0x1 bytes
+                std::uint8_t pad_01c1[0x3]; // 0x01c1, 0x3 bytes
+                std::int32_t m_iAttachmentIndex; // 0x01c4, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x01c8, 0x1 bytes
+                std::uint8_t pad_01c9[0x167]; // 0x01c9, 0x167 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_LaserBeam) == 0x260, "CCitadel_Modifier_Tier3Boss_LaserBeam size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_LaserBeam) == 0x330, "CCitadel_Modifier_Tier3Boss_LaserBeam size mismatch");
         }
     }
 }

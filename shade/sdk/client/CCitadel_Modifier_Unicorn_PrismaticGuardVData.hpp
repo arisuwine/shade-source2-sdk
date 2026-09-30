@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9e0
+             * Size: 0x9f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,22 +41,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Unicorn_PrismaticGuardVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CSoundEventName m_strExplodeSound; // 0x0750, 0x10 bytes
-                CSoundEventName m_strDestroyedSound; // 0x0760, 0x10 bytes
-                CSoundEventName m_strCrackingSound; // 0x0770, 0x10 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_eExplosionTargetingType; // 0x0780, 0x4 bytes
-                std::uint8_t pad_0784[0x4]; // 0x0784, 0x4 bytes
-                shade::sdk::client::CCitadelProjectileTrackingParams m_TrackingParams; // 0x0788, 0x90 bytes
-                float m_flVerticalBoost; // 0x0818, 0x4 bytes
-                std::uint8_t pad_081c[0x4]; // 0x081c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0820, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle; // 0x0900, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x0760, 0x10 bytes
+                CSoundEventName m_strDestroyedSound; // 0x0770, 0x10 bytes
+                CSoundEventName m_strCrackingSound; // 0x0780, 0x10 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_eExplosionTargetingType; // 0x0790, 0x4 bytes
+                std::uint8_t pad_0794[0x4]; // 0x0794, 0x4 bytes
+                shade::sdk::client::CCitadelProjectileTrackingParams m_TrackingParams; // 0x0798, 0x90 bytes
+                float m_flVerticalBoost; // 0x0828, 0x4 bytes
+                std::uint8_t pad_082c[0x4]; // 0x082c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0830, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle; // 0x0910, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Unicorn_PrismaticGuardVData) == 0x9E0, "CCitadel_Modifier_Unicorn_PrismaticGuardVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Unicorn_PrismaticGuardVData) == 0x9F0, "CCitadel_Modifier_Unicorn_PrismaticGuardVData size mismatch");
         }
     }
 }

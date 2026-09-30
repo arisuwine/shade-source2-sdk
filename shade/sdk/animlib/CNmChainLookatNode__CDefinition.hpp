@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x38
+             * Size: 0x78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmChainLookatNode__CDefinition : public shade::sdk::animlib::CNmPassthroughNode__CDefinition {
             public:
-                CGlobalSymbol m_chainEndBoneID; // 0x0018, 0x8 bytes
-                std::int16_t m_nLookatTargetNodeIdx; // 0x0020, 0x2 bytes
-                std::int16_t m_nEnabledNodeIdx; // 0x0022, 0x2 bytes
-                float m_flBlendTimeSeconds; // 0x0024, 0x4 bytes
-                std::uint8_t m_nChainLength; // 0x0028, 0x1 bytes
-                bool m_bIsTargetInWorldSpace; // 0x0029, 0x1 bytes
-                std::uint8_t pad_002a[0x2]; // 0x002a, 0x2 bytes
-                Vector m_chainForwardDir; // 0x002c, 0xc bytes
+                CGlobalSymbol m_endEffectorBoneID; // 0x0018, 0x8 bytes
+                Vector m_endEffectorForwardAxis; // 0x0020, 0xc bytes
+                Vector m_endEffectorOffset; // 0x002c, 0xc bytes
+                std::int16_t m_nLookatTargetNodeIdx; // 0x0038, 0x2 bytes
+                std::int16_t m_nEnabledNodeIdx; // 0x003a, 0x2 bytes
+                float m_flBlendTimeSeconds; // 0x003c, 0x4 bytes
+                CUtlVectorFixedGrowable<float, 5> m_chainWeights; // 0x0040, 0x30 bytes
+                std::uint8_t m_nChainLength; // 0x0070, 0x1 bytes
+                bool m_bIsTargetInWorldSpace; // 0x0071, 0x1 bytes
+                std::uint8_t pad_0072[0x6]; // 0x0072, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmChainLookatNode__CDefinition) == 0x38, "CNmChainLookatNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmChainLookatNode__CDefinition) == 0x78, "CNmChainLookatNode__CDefinition size mismatch");
         }
     }
 }

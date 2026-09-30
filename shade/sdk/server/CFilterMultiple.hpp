@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x558
+             * Size: 0x568
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CFilterMultiple : public shade::sdk::server::CBaseFilter {
             public:
-                shade::sdk::client::filter_t m_nFilterType; // 0x04d8, 0x4 bytes
-                std::uint8_t pad_04dc[0x4]; // 0x04dc, 0x4 bytes
-                CUtlSymbolLarge m_iFilterName[0xa]; // 0x04e0, 0x50 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hFilter[0xa]; // 0x0530, 0x28 bytes
+                shade::sdk::client::filter_t m_nFilterType; // 0x04e8, 0x4 bytes
+                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
+                CUtlSymbolLarge m_iFilterName[0xa]; // 0x04f0, 0x50 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFilter[0xa]; // 0x0540, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFilterMultiple) == 0x558, "CFilterMultiple size mismatch");
+            static_assert(sizeof(CFilterMultiple) == 0x568, "CFilterMultiple size mismatch");
         }
     }
 }

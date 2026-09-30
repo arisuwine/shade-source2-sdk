@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe30
+             * Size: 0xf20
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PhysicsProp : public shade::sdk::client::C_BreakableProp {
             public:
-                bool m_bAwake; // 0x0e20, 0x1 bytes
-                std::uint8_t pad_0e21[0xf]; // 0x0e21, 0xf bytes
+                bool m_bAwake; // 0x0f10, 0x1 bytes
+                std::uint8_t pad_0f11[0xf]; // 0x0f11, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PhysicsProp) == 0xE30, "C_PhysicsProp size mismatch");
+            static_assert(sizeof(C_PhysicsProp) == 0xF20, "C_PhysicsProp size mismatch");
         }
     }
 }

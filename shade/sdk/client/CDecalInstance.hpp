@@ -12,11 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/DecalFlags_t.hpp"
-#include "shade/sdk/client/DecalRtEncoding_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
@@ -35,8 +35,9 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb0
-             * Alignment: 0xff
+             * Size: 0x108
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CDecalInstance {
@@ -48,37 +49,35 @@ namespace shade {
                 std::int32_t m_nBoneIndex; // 0x0018, 0x4 bytes
                 std::int32_t m_nTriangleIndex; // 0x001c, 0x4 bytes
                 Vector m_vPositionLS; // 0x0020, 0xc bytes
-                Vector m_vNormalLS; // 0x002c, 0xc bytes
-                Vector m_vSAxisLS; // 0x0038, 0xc bytes
-                shade::sdk::client::DecalFlags_t m_nFlags; // 0x0044, 0x4 bytes
-                Color m_Color; // 0x0048, 0x4 bytes
-                float m_flWidth; // 0x004c, 0x4 bytes
-                float m_flHeight; // 0x0050, 0x4 bytes
-                float m_flDepth; // 0x0054, 0x4 bytes
-                std::uint8_t pad_0058[0x8]; // 0x0058, 0x8 bytes
-                CTransformWS m_transform; // 0x0060, 0x20 bytes
-                float m_flAnimationScale; // 0x0080, 0x4 bytes
-                float m_flAnimationStartTime; // 0x0084, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPlaceTime; // 0x0088, 0x4 bytes
-                float m_flFadeStartTime; // 0x008c, 0x4 bytes
-                float m_flFadeDuration; // 0x0090, 0x4 bytes
-                float m_flLightingOriginOffset; // 0x0094, 0x4 bytes
-                std::uint8_t pad_0098[0x8]; // 0x0098, 0x8 bytes
-                float m_flBoundingRadiusSqr; // 0x00a0, 0x4 bytes
-                std::int16_t m_nSequenceIndex; // 0x00a4, 0x2 bytes
-                bool m_bIsAdjacent; // 0x00a6, 0x1 bytes
-                bool m_bDoDecalLightmapping; // 0x00a7, 0x1 bytes
-                shade::sdk::client::DecalRtEncoding_t m_nDecalRtEncoding; // 0x00a8, 0x1 bytes
-                bool m_bProjectToBackfaces; // 0x00a9, 0x1 bytes
-                std::uint8_t pad_00aa[0x6]; // 0x00aa, 0x6 bytes
+                Vector m_vPositionOS; // 0x002c, 0xc bytes
+                Vector m_vNormalLS; // 0x0038, 0xc bytes
+                Vector m_vNormalOS; // 0x0044, 0xc bytes
+                Vector m_vSAxisLS; // 0x0050, 0xc bytes
+                shade::sdk::client::DecalFlags_t m_nFlags; // 0x005c, 0x4 bytes
+                Color m_Color; // 0x0060, 0x4 bytes
+                float m_flWidth; // 0x0064, 0x4 bytes
+                float m_flHeight; // 0x0068, 0x4 bytes
+                float m_flDepth; // 0x006c, 0x4 bytes
+                matrix3x4_t m_mTransform; // 0x0070, 0x30 bytes
+                matrix3x4_t m_mLocalToTriangle; // 0x00a0, 0x30 bytes
+                float m_flAnimationScale; // 0x00d0, 0x4 bytes
+                float m_flAnimationStartTime; // 0x00d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPlaceTime; // 0x00d8, 0x4 bytes
+                float m_flFadeStartTime; // 0x00dc, 0x4 bytes
+                float m_flFadeDuration; // 0x00e0, 0x4 bytes
+                float m_flLightingOriginOffset; // 0x00e4, 0x4 bytes
+                std::uint8_t pad_00e8[0x10]; // 0x00e8, 0x10 bytes
+                float m_flBoundingRadiusSqr; // 0x00f8, 0x4 bytes
+                std::int16_t m_nSequenceIndex; // 0x00fc, 0x2 bytes
+                bool m_bIsAdjacent; // 0x00fe, 0x1 bytes
+                bool m_bDoDecalLightmapping; // 0x00ff, 0x1 bytes
+                std::uint8_t pad_0100[0x8]; // 0x0100, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_hProjectedDecal; // Offset: 0x98, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDecalInstance) == 0xB0, "CDecalInstance size mismatch");
+            static_assert(sizeof(CDecalInstance) == 0x108, "CDecalInstance size mismatch");
         }
     }
 }

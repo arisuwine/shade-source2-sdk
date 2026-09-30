@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x98
+             * Size: 0x78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,16 +34,16 @@ namespace shade {
                 std::int16_t m_parameterValueNodeIdx; // 0x0012, 0x2 bytes
                 bool m_bSwitchDynamically; // 0x0014, 0x1 bytes
                 std::uint8_t pad_0015[0x3]; // 0x0015, 0x3 bytes
-                CUtlVectorFixedGrowable<std::int16_t, 7> m_maskNodeIndices; // 0x0018, 0x28 bytes
-                CUtlVectorFixedGrowable<CGlobalSymbol, 7> m_parameterValues; // 0x0040, 0x50 bytes
-                float m_flBlendTimeSeconds; // 0x0090, 0x4 bytes
-                std::uint8_t pad_0094[0x4]; // 0x0094, 0x4 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 8> m_maskNodeIndices; // 0x0018, 0x18 bytes
+                CUtlLeanVectorFixedGrowable<CGlobalSymbol, 7> m_parameterValues; // 0x0030, 0x40 bytes
+                float m_flBlendTimeSeconds; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmBoneMaskSelectorNode__CDefinition) == 0x98, "CNmBoneMaskSelectorNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmBoneMaskSelectorNode__CDefinition) == 0x78, "CNmBoneMaskSelectorNode__CDefinition size mismatch");
         }
     }
 }

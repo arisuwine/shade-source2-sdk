@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x38
+             * Size: 0x40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,19 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmTargetSelectorNode__CDefinition : public shade::sdk::animlib::CNmClipReferenceNode__CDefinition {
             public:
-                CUtlLeanVectorFixedGrowable<std::int16_t, 5> m_optionNodeIndices; // 0x0010, 0x18 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 8> m_optionNodeIndices; // 0x0010, 0x18 bytes
                 float m_flOrientationScoreWeight; // 0x0028, 0x4 bytes
                 float m_flPositionScoreWeight; // 0x002c, 0x4 bytes
                 std::int16_t m_parameterNodeIdx; // 0x0030, 0x2 bytes
                 bool m_bIgnoreInvalidOptions; // 0x0032, 0x1 bytes
                 bool m_bIsWorldSpaceTarget; // 0x0033, 0x1 bytes
                 std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
+                CGlobalSymbol m_alignmentBoneID; // 0x0038, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmTargetSelectorNode__CDefinition) == 0x38, "CNmTargetSelectorNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmTargetSelectorNode__CDefinition) == 0x40, "CNmTargetSelectorNode__CDefinition size mismatch");
         }
     }
 }

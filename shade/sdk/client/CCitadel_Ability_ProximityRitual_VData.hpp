@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e98
+             * Size: 0x1a20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,31 +44,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ProximityRitual_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_PredatoryStatueModel; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatReappearParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatDisappearParticle; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatEyesParticle; // 0x1ab8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatSummonParticle; // 0x1b98, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatRecallParticle; // 0x1c78, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RecallLineParticle; // 0x1d58, 0xe0 bytes
-                CSoundEventName m_strRecallSound; // 0x1e38, 0x10 bytes
-                CSoundEventName m_strKilledSound; // 0x1e48, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PredatoryStatueModifier; // 0x1e58, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RecentDamageModifier; // 0x1e68, 0x10 bytes
-                float m_flHeavyMeleeDmg; // 0x1e78, 0x4 bytes
-                float m_flLightMeleeDmg; // 0x1e7c, 0x4 bytes
-                float m_flAbilityDamageScale; // 0x1e80, 0x4 bytes
-                float m_flNPCDamageScale; // 0x1e84, 0x4 bytes
-                float m_flCastDelayMin; // 0x1e88, 0x4 bytes
-                float m_flCastDelayMax; // 0x1e8c, 0x4 bytes
-                float m_flCastDelayMaxDist; // 0x1e90, 0x4 bytes
-                float m_flPostCastCooldown; // 0x1e94, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_PredatoryStatueModel; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatReappearParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatDisappearParticle; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatEyesParticle; // 0x1640, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatSummonParticle; // 0x1720, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatRecallParticle; // 0x1800, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RecallLineParticle; // 0x18e0, 0xe0 bytes
+                CSoundEventName m_strRecallSound; // 0x19c0, 0x10 bytes
+                CSoundEventName m_strKilledSound; // 0x19d0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PredatoryStatueModifier; // 0x19e0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RecentDamageModifier; // 0x19f0, 0x10 bytes
+                float m_flHeavyMeleeDmg; // 0x1a00, 0x4 bytes
+                float m_flLightMeleeDmg; // 0x1a04, 0x4 bytes
+                float m_flAbilityDamageScale; // 0x1a08, 0x4 bytes
+                float m_flNPCDamageScale; // 0x1a0c, 0x4 bytes
+                float m_flCastDelayMin; // 0x1a10, 0x4 bytes
+                float m_flCastDelayMax; // 0x1a14, 0x4 bytes
+                float m_flCastDelayMaxDist; // 0x1a18, 0x4 bytes
+                float m_flPostCastCooldown; // 0x1a1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ProximityRitual_VData) == 0x1E98, "CCitadel_Ability_ProximityRitual_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ProximityRitual_VData) == 0x1A20, "CCitadel_Ability_ProximityRitual_VData size mismatch");
         }
     }
 }

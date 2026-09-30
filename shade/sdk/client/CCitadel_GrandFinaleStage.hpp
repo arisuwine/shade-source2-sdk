@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcd0
+             * Size: 0xdc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_GrandFinaleStage : public shade::sdk::client::CBaseAnimGraph {
             public:
-                Vector m_vStartPos; // 0x0ca8, 0xc bytes
-                Vector m_vEndPos; // 0x0cb4, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0cc0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0cc4, 0x4 bytes
-                std::int32_t m_nTouchCount; // 0x0cc8, 0x4 bytes
-                std::uint8_t pad_0ccc[0x4]; // 0x0ccc, 0x4 bytes
+                VectorWS m_vStartPos; // 0x0da0, 0xc bytes
+                VectorWS m_vEndPos; // 0x0dac, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0db8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0dbc, 0x4 bytes
+                std::int32_t m_nTouchCount; // 0x0dc0, 0x4 bytes
+                std::uint8_t pad_0dc4[0x4]; // 0x0dc4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_GrandFinaleStage) == 0xCD0, "CCitadel_GrandFinaleStage size mismatch");
+            static_assert(sizeof(CCitadel_GrandFinaleStage) == 0xDC8, "CCitadel_GrandFinaleStage size mismatch");
         }
     }
 }

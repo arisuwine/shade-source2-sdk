@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class FilterHealth : public shade::sdk::server::CBaseFilter {
             public:
-                bool m_bAdrenalineActive; // 0x04d8, 0x1 bytes
-                std::uint8_t pad_04d9[0x3]; // 0x04d9, 0x3 bytes
-                std::int32_t m_iHealthMin; // 0x04dc, 0x4 bytes
-                std::int32_t m_iHealthMax; // 0x04e0, 0x4 bytes
-                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                bool m_bAdrenalineActive; // 0x04e8, 0x1 bytes
+                std::uint8_t pad_04e9[0x3]; // 0x04e9, 0x3 bytes
+                std::int32_t m_iHealthMin; // 0x04ec, 0x4 bytes
+                std::int32_t m_iHealthMax; // 0x04f0, 0x4 bytes
+                std::uint8_t pad_04f4[0x4]; // 0x04f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(FilterHealth) == 0x4E8, "FilterHealth size mismatch");
+            static_assert(sizeof(FilterHealth) == 0x4F8, "FilterHealth size mismatch");
         }
     }
 }

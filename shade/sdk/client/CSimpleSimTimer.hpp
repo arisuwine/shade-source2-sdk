@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,6 +25,8 @@ namespace shade {
              * Size: 0x8
              * Alignment: 0xff
              * Has Trivial Destructor
+             * Construct Allowed
+             * Construct Disallowed
              */
             #pragma pack(push, 1)
             class CSimpleSimTimer {

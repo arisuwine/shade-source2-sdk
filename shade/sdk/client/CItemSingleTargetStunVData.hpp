@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19a8
+             * Size: 0x15b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,14 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemSingleTargetStunVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunDelayModifier; // 0x18b8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x18c8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunDelayModifier; // 0x14b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x14c0, 0xe0 bytes
+                CSoundEventName m_strCastHitSound; // 0x15a0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemSingleTargetStunVData) == 0x19A8, "CItemSingleTargetStunVData size mismatch");
+            static_assert(sizeof(CItemSingleTargetStunVData) == 0x15B0, "CItemSingleTargetStunVData size mismatch");
         }
     }
 }

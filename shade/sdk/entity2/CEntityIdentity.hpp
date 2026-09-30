@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,6 +32,7 @@ namespace shade {
             /* Class Parameters
              * Size: 0x70
              * Alignment: 0xff
+             * Construct Allowed
              * Construct Disallowed
              * Module Local Type Scope
              */
@@ -38,7 +40,7 @@ namespace shade {
             class CEntityIdentity {
             public:
                 std::uint8_t pad_0000[0x14]; // 0x0000, 0x14 bytes
-                std::int32_t m_nameStringableIndex; // 0x0014, 0x4 bytes
+                std::int32_t m_nameStringTableIndex; // 0x0014, 0x4 bytes
                 CUtlSymbolLarge m_name; // 0x0018, 0x8 bytes
                 CUtlSymbolLarge m_designerName; // 0x0020, 0x8 bytes
                 std::uint8_t pad_0028[0x8]; // 0x0028, 0x8 bytes

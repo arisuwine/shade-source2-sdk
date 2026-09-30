@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x838
+             * Size: 0x848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Boss_Damage_ProtectionVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle; // 0x0750, 0xe0 bytes
-                float m_flShieldRadius; // 0x0830, 0x4 bytes
-                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle; // 0x0760, 0xe0 bytes
+                float m_flShieldRadius; // 0x0840, 0x4 bytes
+                std::uint8_t pad_0844[0x4]; // 0x0844, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Boss_Damage_ProtectionVData) == 0x838, "CCitadel_Modifier_Boss_Damage_ProtectionVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Boss_Damage_ProtectionVData) == 0x848, "CCitadel_Modifier_Boss_Damage_ProtectionVData size mismatch");
         }
     }
 }

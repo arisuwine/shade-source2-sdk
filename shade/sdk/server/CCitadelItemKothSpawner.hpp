@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x57a0
+             * Size: 0x5a10
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemKothSpawner : public shade::sdk::server::CCitadelItemPickup {
             public:
-                std::uint8_t pad_5510[0x290]; // 0x5510, 0x290 bytes
+                std::uint8_t pad_5500[0x510]; // 0x5500, 0x510 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             * float koth_early_warning_time; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelItemKothSpawner) == 0x57A0, "CCitadelItemKothSpawner size mismatch");
+            static_assert(sizeof(CCitadelItemKothSpawner) == 0x5A10, "CCitadelItemKothSpawner size mismatch");
         }
     }
 }

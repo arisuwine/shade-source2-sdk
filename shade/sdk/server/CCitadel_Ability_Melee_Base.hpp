@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,34 +23,33 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x10a0
+             * Size: 0x1630
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CCitadel_Ability_Melee_Base : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x18]; // 0x0f70, 0x18 bytes
-                std::int32_t m_nHitNumber; // 0x0f88, 0x4 bytes
-                std::int32_t m_nPlayerKillNumber; // 0x0f8c, 0x4 bytes
-                bool m_bUsingThisMelee; // 0x0f90, 0x1 bytes
-                bool m_bUsingMeleeTagActive; // 0x0f91, 0x1 bytes
-                bool m_bHitWithThisAttack; // 0x0f92, 0x1 bytes
-                std::uint8_t pad_0f93[0x1]; // 0x0f93, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x0f94, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0x0f98, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x0f9c, 0x4 bytes
-                std::uint8_t pad_0fa0[0x100]; // 0x0fa0, 0x100 bytes
+                std::uint8_t pad_14a0[0x18]; // 0x14a0, 0x18 bytes
+                std::int32_t m_nHitNumber; // 0x14b8, 0x4 bytes
+                std::int32_t m_nPlayerKillNumber; // 0x14bc, 0x4 bytes
+                bool m_bUsingThisMelee; // 0x14c0, 0x1 bytes
+                bool m_bUsingMeleeTagActive; // 0x14c1, 0x1 bytes
+                bool m_bHitWithThisAttack; // 0x14c2, 0x1 bytes
+                std::uint8_t pad_14c3[0x1]; // 0x14c3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x14c4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0x14c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x14cc, 0x4 bytes
+                std::uint8_t pad_14d0[0x160]; // 0x14d0, 0x160 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Melee_Base) == 0x10A0, "CCitadel_Ability_Melee_Base size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Melee_Base) == 0x1630, "CCitadel_Ability_Melee_Base size mismatch");
         }
     }
 }

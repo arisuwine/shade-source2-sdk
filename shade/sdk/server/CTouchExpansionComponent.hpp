@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,8 +23,9 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x50
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -33,9 +35,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CTouchExpansionComponent) == 0x50, "CTouchExpansionComponent size mismatch");
         }

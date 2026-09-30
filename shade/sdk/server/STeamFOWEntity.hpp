@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -41,7 +42,7 @@ namespace shade {
                 bool m_bBackdoorProtectionActive; // 0x0042, 0x1 bytes
                 std::uint8_t pad_0043[0x1]; // 0x0043, 0x1 bytes
                 shade::sdk::entity2::GameTick_t m_nTickHidden; // 0x0044, 0x4 bytes
-                CUtlString m_strEntityName; // 0x0048, 0x8 bytes
+                CUtlString m_strCSSClass; // 0x0048, 0x8 bytes
                 std::uint8_t m_nHealthPercent; // 0x0050, 0x1 bytes
                 std::uint8_t m_nPositionX; // 0x0051, 0x1 bytes
                 std::uint8_t m_nPositionY; // 0x0052, 0x1 bytes

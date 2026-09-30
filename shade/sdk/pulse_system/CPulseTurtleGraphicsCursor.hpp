@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0xe8
+             * Size: 0xf0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseTurtleGraphicsCursor : public shade::sdk::pulse_runtime_lib::CPulseExecCursor {
             public:
-                Color m_Color; // 0x00d0, 0x4 bytes
-                Vector2D m_vPos; // 0x00d4, 0x8 bytes
-                float m_flHeadingDeg; // 0x00dc, 0x4 bytes
-                bool m_bPenUp; // 0x00e0, 0x1 bytes
-                std::uint8_t pad_00e1[0x7]; // 0x00e1, 0x7 bytes
+                Color m_Color; // 0x00d8, 0x4 bytes
+                Vector2D m_vPos; // 0x00dc, 0x8 bytes
+                float m_flHeadingDeg; // 0x00e4, 0x4 bytes
+                bool m_bPenUp; // 0x00e8, 0x1 bytes
+                std::uint8_t pad_00e9[0x7]; // 0x00e9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseTurtleGraphicsCursor) == 0xE8, "CPulseTurtleGraphicsCursor size mismatch");
+            static_assert(sizeof(CPulseTurtleGraphicsCursor) == 0xF0, "CPulseTurtleGraphicsCursor size mismatch");
         }
     }
 }

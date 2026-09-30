@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1440
+             * Size: 0x1b20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_RocketBarrage : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::server::CCitadelAutoScaledTime m_flBarrageEndTime; // 0x0f70, 0x18 bytes
-                std::uint8_t pad_0f88[0x480]; // 0x0f88, 0x480 bytes
-                float m_flCurrentTimeScale; // 0x1408, 0x4 bytes
-                Vector m_vecAimPos; // 0x140c, 0xc bytes
-                Vector m_vecAimVel; // 0x1418, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastUpdateTime; // 0x1424, 0x4 bytes
-                std::uint8_t pad_1428[0x18]; // 0x1428, 0x18 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flBarrageEndTime; // 0x14a0, 0x18 bytes
+                std::uint8_t pad_14b8[0x630]; // 0x14b8, 0x630 bytes
+                float m_flCurrentTimeScale; // 0x1ae8, 0x4 bytes
+                VectorWS m_vecAimPos; // 0x1aec, 0xc bytes
+                Vector m_vecAimVel; // 0x1af8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastUpdateTime; // 0x1b04, 0x4 bytes
+                std::uint8_t pad_1b08[0x18]; // 0x1b08, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_RocketBarrage) == 0x1440, "CCitadel_Ability_RocketBarrage size mismatch");
+            static_assert(sizeof(CCitadel_Ability_RocketBarrage) == 0x1B20, "CCitadel_Ability_RocketBarrage size mismatch");
         }
     }
 }

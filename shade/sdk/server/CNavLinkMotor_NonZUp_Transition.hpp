@@ -12,11 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/server/CountdownTimer.hpp"
-#include "shade/sdk/server/INavLinkMotor.hpp"
+#include "shade/sdk/server/INavLinkSubMotor.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,7 +30,7 @@ namespace shade {
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CNavLinkMotor_NonZUp_Transition : public shade::sdk::server::INavLinkMotor {
+            class CNavLinkMotor_NonZUp_Transition : public shade::sdk::server::INavLinkSubMotor {
             public:
                 shade::sdk::server::CountdownTimer m_transitionTimer; // 0x0018, 0x18 bytes
                 CTransformWS m_xTransitionOrigin; // 0x0030, 0x20 bytes

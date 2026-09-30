@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmSoundEvent : public shade::sdk::animlib::CNmEvent {
             public:
-                shade::sdk::animlib::CNmEventRelevance_t m_relevance; // 0x0020, 0x4 bytes
-                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
-                CUtlString m_name; // 0x0028, 0x8 bytes
-                shade::sdk::animlib::CNmSoundEvent__Position_t m_position; // 0x0030, 0x4 bytes
-                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
-                CUtlString m_attachmentName; // 0x0038, 0x8 bytes
-                CUtlString m_tags; // 0x0040, 0x8 bytes
-                bool m_bContinuePlayingSoundAtDurationEnd; // 0x0048, 0x1 bytes
-                std::uint8_t pad_0049[0x3]; // 0x0049, 0x3 bytes
-                float m_flDurationInterruptionThreshold; // 0x004c, 0x4 bytes
+                shade::sdk::animlib::CNmEventRelevance_t m_relevance; // 0x0018, 0x4 bytes
+                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                CUtlString m_name; // 0x0020, 0x8 bytes
+                shade::sdk::animlib::CNmSoundEvent__Position_t m_position; // 0x0028, 0x4 bytes
+                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
+                CUtlString m_attachmentName; // 0x0030, 0x8 bytes
+                CUtlString m_tags; // 0x0038, 0x8 bytes
+                bool m_bContinuePlayingSoundAtDurationEnd; // 0x0040, 0x1 bytes
+                std::uint8_t pad_0041[0x3]; // 0x0041, 0x3 bytes
+                float m_flDurationInterruptionThreshold; // 0x0044, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmSoundEvent) == 0x50, "CNmSoundEvent size mismatch");
+            static_assert(sizeof(CNmSoundEvent) == 0x48, "CNmSoundEvent size mismatch");
         }
     }
 }

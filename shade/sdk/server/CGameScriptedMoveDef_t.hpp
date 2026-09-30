@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,9 +31,8 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x30
-             * Alignment: 0x4
+             * Alignment: 0xff
              * Has Trivial Destructor
-             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CGameScriptedMoveDef_t {

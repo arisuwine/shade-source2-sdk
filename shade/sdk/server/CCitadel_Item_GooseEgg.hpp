@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1108
+             * Size: 0x16c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_GooseEgg : public shade::sdk::server::CCitadel_Item {
             public:
-                std::uint8_t pad_0f78[0x8]; // 0x0f78, 0x8 bytes
-                std::int32_t m_iAccruedGold; // 0x0f80, 0x4 bytes
-                std::uint8_t pad_0f84[0x184]; // 0x0f84, 0x184 bytes
+                std::uint8_t pad_14a8[0x8]; // 0x14a8, 0x8 bytes
+                std::int32_t m_iAccruedGold; // 0x14b0, 0x4 bytes
+                std::uint8_t pad_14b4[0x214]; // 0x14b4, 0x214 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_GooseEgg) == 0x1108, "CCitadel_Item_GooseEgg size mismatch");
+            static_assert(sizeof(CCitadel_Item_GooseEgg) == 0x16C8, "CCitadel_Item_GooseEgg size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x538
+             * Size: 0x548
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,31 +39,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysWheelConstraint : public shade::sdk::server::CPhysConstraint {
             public:
-                float m_flSuspensionFrequency; // 0x0500, 0x4 bytes
-                float m_flSuspensionDampingRatio; // 0x0504, 0x4 bytes
-                float m_flSuspensionHeightOffset; // 0x0508, 0x4 bytes
-                bool m_bEnableSuspensionLimit; // 0x050c, 0x1 bytes
-                std::uint8_t pad_050d[0x3]; // 0x050d, 0x3 bytes
-                float m_flMinSuspensionOffset; // 0x0510, 0x4 bytes
-                float m_flMaxSuspensionOffset; // 0x0514, 0x4 bytes
-                bool m_bEnableSteeringLimit; // 0x0518, 0x1 bytes
-                std::uint8_t pad_0519[0x3]; // 0x0519, 0x3 bytes
-                float m_flMinSteeringAngle; // 0x051c, 0x4 bytes
-                float m_flMaxSteeringAngle; // 0x0520, 0x4 bytes
-                float m_flSteeringAxisFriction; // 0x0524, 0x4 bytes
-                float m_flSpinAxisFriction; // 0x0528, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hSteeringMimicsEntity; // 0x052c, 0x4 bytes
-                std::uint8_t pad_0530[0x8]; // 0x0530, 0x8 bytes
+                float m_flSuspensionFrequency; // 0x0510, 0x4 bytes
+                float m_flSuspensionDampingRatio; // 0x0514, 0x4 bytes
+                float m_flSuspensionHeightOffset; // 0x0518, 0x4 bytes
+                bool m_bEnableSuspensionLimit; // 0x051c, 0x1 bytes
+                std::uint8_t pad_051d[0x3]; // 0x051d, 0x3 bytes
+                float m_flMinSuspensionOffset; // 0x0520, 0x4 bytes
+                float m_flMaxSuspensionOffset; // 0x0524, 0x4 bytes
+                bool m_bEnableSteeringLimit; // 0x0528, 0x1 bytes
+                std::uint8_t pad_0529[0x3]; // 0x0529, 0x3 bytes
+                float m_flMinSteeringAngle; // 0x052c, 0x4 bytes
+                float m_flMaxSteeringAngle; // 0x0530, 0x4 bytes
+                float m_flSteeringAxisFriction; // 0x0534, 0x4 bytes
+                float m_flSpinAxisFriction; // 0x0538, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hSteeringMimicsEntity; // 0x053c, 0x4 bytes
+                std::uint8_t pad_0540[0x8]; // 0x0540, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetMinSuspensionOffset; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxSuspensionOffset; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSteeringMimicsEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysWheelConstraint) == 0x538, "CPhysWheelConstraint size mismatch");
+            static_assert(sizeof(CPhysWheelConstraint) == 0x548, "CPhysWheelConstraint size mismatch");
         }
     }
 }

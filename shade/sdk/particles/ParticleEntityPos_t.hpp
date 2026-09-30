@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -19,7 +20,8 @@ namespace shade {
             enum class ParticleEntityPos_t : std::uint32_t {
                 PARTICLE_ABS_ORIGIN = 0x0,
                 PARTICLE_WORLDSPACE_CENTER = 0x1,
-                PARTICLE_EYES = 0x2
+                PARTICLE_EYES = 0x2,
+                PARTICLE_FLASHLIGHT = 0x3
             };
         }
     }

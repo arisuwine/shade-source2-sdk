@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xe20
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelUnitStatusStagger : public shade::sdk::client::C_PointClientUIWorldPanel {
             public:
-                std::uint8_t pad_0c00[0x10]; // 0x0c00, 0x10 bytes
+                std::uint8_t pad_0e10[0x10]; // 0x0e10, 0x10 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelUnitStatusStagger) == 0xC10, "CCitadelUnitStatusStagger size mismatch");
+            static_assert(sizeof(CCitadelUnitStatusStagger) == 0xE20, "CCitadelUnitStatusStagger size mismatch");
         }
     }
 }

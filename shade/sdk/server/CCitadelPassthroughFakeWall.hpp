@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c8
+             * Size: 0x8c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPassthroughFakeWall : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bAllowAnyone; // 0x0780, 0x1 bytes
-                bool m_bAllowTinyCharacters; // 0x0781, 0x1 bytes
-                std::uint8_t pad_0782[0x2]; // 0x0782, 0x2 bytes
-                float m_flTriggerDistanceMeters; // 0x0784, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTrigger; // 0x0788, 0x4 bytes
-                std::uint8_t pad_078c[0x4]; // 0x078c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_eventOnOpen; // 0x0790, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_eventOnClose; // 0x07a8, 0x18 bytes
-                std::uint8_t pad_07c0[0x8]; // 0x07c0, 0x8 bytes
+                bool m_bAllowAnyone; // 0x0878, 0x1 bytes
+                bool m_bAllowTinyCharacters; // 0x0879, 0x1 bytes
+                std::uint8_t pad_087a[0x2]; // 0x087a, 0x2 bytes
+                float m_flTriggerDistanceMeters; // 0x087c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTrigger; // 0x0880, 0x4 bytes
+                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_eventOnOpen; // 0x0888, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_eventOnClose; // 0x08a0, 0x18 bytes
+                std::uint8_t pad_08b8[0x8]; // 0x08b8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelPassthroughFakeWall) == 0x7C8, "CCitadelPassthroughFakeWall size mismatch");
+            static_assert(sizeof(CCitadelPassthroughFakeWall) == 0x8C0, "CCitadelPassthroughFakeWall size mismatch");
         }
     }
 }

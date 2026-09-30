@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x538
+             * Size: 0x548
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,28 +32,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CMathRemap : public shade::sdk::server::CLogicalEntity {
             public:
-                float m_flInMin; // 0x04a0, 0x4 bytes
-                float m_flInMax; // 0x04a4, 0x4 bytes
-                float m_flOut1; // 0x04a8, 0x4 bytes
-                float m_flOut2; // 0x04ac, 0x4 bytes
-                float m_flOldInValue; // 0x04b0, 0x4 bytes
-                bool m_bEnabled; // 0x04b4, 0x1 bytes
-                std::uint8_t pad_04b5[0x3]; // 0x04b5, 0x3 bytes
-                CEntityOutputTemplate<float> m_OutValue; // 0x04b8, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnRoseAboveMin; // 0x04d8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnRoseAboveMax; // 0x04f0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFellBelowMin; // 0x0508, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFellBelowMax; // 0x0520, 0x18 bytes
+                float m_flInMin; // 0x04b0, 0x4 bytes
+                float m_flInMax; // 0x04b4, 0x4 bytes
+                float m_flOut1; // 0x04b8, 0x4 bytes
+                float m_flOut2; // 0x04bc, 0x4 bytes
+                float m_flOldInValue; // 0x04c0, 0x4 bytes
+                bool m_bEnabled; // 0x04c4, 0x1 bytes
+                std::uint8_t pad_04c5[0x3]; // 0x04c5, 0x3 bytes
+                CEntityOutputTemplate<float> m_OutValue; // 0x04c8, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnRoseAboveMin; // 0x04e8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnRoseAboveMax; // 0x0500, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFellBelowMin; // 0x0518, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFellBelowMax; // 0x0530, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CMathRemap) == 0x538, "CMathRemap size mismatch");
+            static_assert(sizeof(CMathRemap) == 0x548, "CMathRemap size mismatch");
         }
     }
 }

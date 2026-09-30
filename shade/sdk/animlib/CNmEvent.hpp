@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x18
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -34,14 +35,12 @@ namespace shade {
                 shade::sdk::animlib::NmPercent_t m_flStartTime; // 0x0008, 0x4 bytes
                 shade::sdk::animlib::NmPercent_t m_flDuration; // 0x000c, 0x4 bytes
                 CGlobalSymbol m_syncID; // 0x0010, 0x8 bytes
-                bool m_bClientOnly; // 0x0018, 0x1 bytes
-                std::uint8_t pad_0019[0x7]; // 0x0019, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmEvent) == 0x20, "CNmEvent size mismatch");
+            static_assert(sizeof(CNmEvent) == 0x18, "CNmEvent size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -35,35 +36,33 @@ namespace shade {
                 ELaneTrooperKill = 0xe,
                 ENeutralTrooperKill = 0xf,
                 ENeutralBossKill = 0x10,
-                EBaseSentryKill = 0x11,
-                EDeniedFromEnemy = 0x12,
-                EAssassinatePlayerKill = 0x13,
-                EItemTrophyCollector = 0x14,
-                EItemCultistSacrifice = 0x15,
-                EItemGooseEgg = 0x16,
-                EOrbPlayer = 0x17,
-                EOrbDeny = 0x18,
-                EOrbLaneTrooper = 0x19,
-                EOrbNeutralTrooper = 0x1a,
-                EOrbTier1TrooperBoss = 0x1b,
-                EOrbTier2TrooperBoss = 0x1c,
-                EOrbBaseGuardians = 0x1d,
-                EOrbShrines = 0x1e,
-                EOrbTier3TrooperBoss = 0x1f,
-                EOrbBaseSentry = 0x20,
-                EOrbDeployable = 0x21,
-                EOrbTrophyKill = 0x22,
-                EOrbTreasureChest = 0x23,
-                EOrbSiegeTrooper = 0x24,
-                EOrbSpawner = 0x25,
-                ENeutralWorldPickup = 0x26,
-                EBreakablePickup = 0x27,
-                EPlayerKillComeback = 0x28,
-                ETeamBonus = 0x29,
-                EItemDraftRerollUsed = 0x2a,
-                EItemEnhacementUsed = 0x2b,
-                EStreetBrawlRoundReset = 0x2c,
-                ECurrencySourceCount = 0x2d
+                EDeniedFromEnemy = 0x11,
+                EAssassinatePlayerKill = 0x12,
+                EItemTrophyCollector = 0x13,
+                EItemCultistSacrifice = 0x14,
+                EItemGooseEgg = 0x15,
+                EOrbPlayer = 0x16,
+                EOrbDeny = 0x17,
+                EOrbLaneTrooper = 0x18,
+                EOrbNeutralTrooper = 0x19,
+                EOrbTier1TrooperBoss = 0x1a,
+                EOrbTier2TrooperBoss = 0x1b,
+                EOrbBaseGuardians = 0x1c,
+                EOrbShrines = 0x1d,
+                EOrbTier3TrooperBoss = 0x1e,
+                EOrbDeployable = 0x1f,
+                EOrbTrophyKill = 0x20,
+                EOrbTreasureChest = 0x21,
+                EOrbSiegeTrooper = 0x22,
+                EOrbSpawner = 0x23,
+                ENeutralWorldPickup = 0x24,
+                EBreakablePickup = 0x25,
+                EPlayerKillComeback = 0x26,
+                ETeamBonus = 0x27,
+                EItemDraftRerollUsed = 0x28,
+                EItemEnhacementUsed = 0x29,
+                EStreetBrawlRoundReset = 0x2a,
+                ECurrencySourceCount = 0x2b
             };
         }
     }

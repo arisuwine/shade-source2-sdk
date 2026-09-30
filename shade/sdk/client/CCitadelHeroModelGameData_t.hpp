@@ -12,8 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
+
+#include "shade/sdk/client/EHeroAimAnimSet.hpp"
 
 namespace shade {
     namespace sdk {
@@ -31,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x128
+             * Size: 0x140
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -39,20 +42,31 @@ namespace shade {
             struct CCitadelHeroModelGameData_t {
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hAmbientParticle; // 0x0000, 0xe0 bytes
                 CUtlVector<shade::sdk::client::AmbientParticleSettings_t> m_vecAmbientParticleSettings; // 0x00e0, 0x18 bytes
-                float m_flTurnThreshold; // 0x00f8, 0x4 bytes
-                float m_flTurnDuration; // 0x00fc, 0x4 bytes
-                float m_flStepHeight; // 0x0100, 0x4 bytes
-                float m_flCollisionRadius; // 0x0104, 0x4 bytes
-                float m_flCollisionHeight; // 0x0108, 0x4 bytes
-                Vector m_vCollisionHullMins; // 0x010c, 0xc bytes
-                Vector m_vCollisionHullMaxs; // 0x0118, 0xc bytes
-                std::uint8_t pad_0124[0x4]; // 0x0124, 0x4 bytes
+                CUtlString m_strZiplineAttachFX_AttachmentName; // 0x00f8, 0x8 bytes
+                bool m_bTurnToFaceVelocity; // 0x0100, 0x1 bytes
+                std::uint8_t pad_0101[0x3]; // 0x0101, 0x3 bytes
+                float m_flTurnThreshold; // 0x0104, 0x4 bytes
+                float m_flTurnDuration; // 0x0108, 0x4 bytes
+                shade::sdk::client::EHeroAimAnimSet m_eUniqueAims; // 0x010c, 0x1 bytes
+                std::uint8_t pad_010d[0x3]; // 0x010d, 0x3 bytes
+                float m_flStepHeight; // 0x0110, 0x4 bytes
+                float m_flCollisionRadius; // 0x0114, 0x4 bytes
+                float m_flCollisionHeight; // 0x0118, 0x4 bytes
+                float m_flLookTargetMaxDistance; // 0x011c, 0x4 bytes
+                float m_flLookTargetMaxAngleUp; // 0x0120, 0x4 bytes
+                float m_flLookTargetMaxAngleDown; // 0x0124, 0x4 bytes
+                float m_flLookTargetMaxAngleLeft; // 0x0128, 0x4 bytes
+                float m_flLookTargetMaxAngleRight; // 0x012c, 0x4 bytes
+                float m_flLookTargetMaxAngleScaleWhileJumping; // 0x0130, 0x4 bytes
+                float m_flLookTargetMaxAngleScaleWhileRunning; // 0x0134, 0x4 bytes
+                float m_flArtistGestureDrawingScale; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHeroModelGameData_t) == 0x128, "CCitadelHeroModelGameData_t size mismatch");
+            static_assert(sizeof(CCitadelHeroModelGameData_t) == 0x140, "CCitadelHeroModelGameData_t size mismatch");
         }
     }
 }

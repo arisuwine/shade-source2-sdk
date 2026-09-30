@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvViewPunch : public shade::sdk::server::CPointEntity {
             public:
-                float m_flRadius; // 0x04a0, 0x4 bytes
-                QAngle m_angViewPunch; // 0x04a4, 0xc bytes
+                float m_flRadius; // 0x04b0, 0x4 bytes
+                QAngle m_angViewPunch; // 0x04b4, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputViewPunch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvViewPunch) == 0x4B0, "CEnvViewPunch size mismatch");
+            static_assert(sizeof(CEnvViewPunch) == 0x4C0, "CEnvViewPunch size mismatch");
         }
     }
 }

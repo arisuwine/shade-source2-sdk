@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1848
+             * Size: 0x13d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityMeleeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flMeleeInputBufferTime; // 0x1818, 0x4 bytes
-                float m_flCollisionDistance; // 0x181c, 0x4 bytes
-                float m_flHeavyAttackRequiredHoldTime; // 0x1820, 0x4 bytes
-                float m_flLightAttackMaxHoldTime; // 0x1824, 0x4 bytes
-                float m_flSideDashDodgeDist; // 0x1828, 0x4 bytes
-                float m_flBackDashDodgeDist; // 0x182c, 0x4 bytes
-                shade::sdk::client::TakeDamageFlags_t m_MeleeDamageFlags; // 0x1830, 0x8 bytes
-                CUtlString m_strEffectsAttachName; // 0x1838, 0x8 bytes
-                float m_flChargeAnimDelayTime; // 0x1840, 0x4 bytes
-                std::uint8_t pad_1844[0x4]; // 0x1844, 0x4 bytes
+                float m_flMeleeInputBufferTime; // 0x13a0, 0x4 bytes
+                float m_flCollisionDistance; // 0x13a4, 0x4 bytes
+                float m_flHeavyAttackRequiredHoldTime; // 0x13a8, 0x4 bytes
+                float m_flLightAttackMaxHoldTime; // 0x13ac, 0x4 bytes
+                float m_flSideDashDodgeDist; // 0x13b0, 0x4 bytes
+                float m_flBackDashDodgeDist; // 0x13b4, 0x4 bytes
+                shade::sdk::client::TakeDamageFlags_t m_MeleeDamageFlags; // 0x13b8, 0x8 bytes
+                CUtlString m_strEffectsAttachName; // 0x13c0, 0x8 bytes
+                float m_flChargeAnimDelayTime; // 0x13c8, 0x4 bytes
+                std::uint8_t pad_13cc[0x4]; // 0x13cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityMeleeVData) == 0x1848, "CAbilityMeleeVData size mismatch");
+            static_assert(sizeof(CAbilityMeleeVData) == 0x13D0, "CAbilityMeleeVData size mismatch");
         }
     }
 }

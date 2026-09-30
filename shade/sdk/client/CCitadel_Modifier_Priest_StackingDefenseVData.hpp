@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa00
+             * Size: 0xa10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Priest_StackingDefenseVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackBuffParticle; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackChangedParticle; // 0x0830, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackLvlChangedParticle; // 0x0910, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x09f0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackBuffParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackChangedParticle; // 0x0840, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackLvlChangedParticle; // 0x0920, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0a00, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Priest_StackingDefenseVData) == 0xA00, "CCitadel_Modifier_Priest_StackingDefenseVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Priest_StackingDefenseVData) == 0xA10, "CCitadel_Modifier_Priest_StackingDefenseVData size mismatch");
         }
     }
 }

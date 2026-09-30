@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9f8
+             * Size: 0xa28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Pickup_Gold_VData : public shade::sdk::client::CCitadel_Pickup_VData {
             public:
-                float m_flGoldAmount; // 0x09f0, 0x4 bytes
-                float m_flGoldPerMinuteAmount; // 0x09f4, 0x4 bytes
+                float m_flGoldAmount; // 0x0a18, 0x4 bytes
+                float m_flGoldPerMinuteAmount; // 0x0a1c, 0x4 bytes
+                bool m_bUseLabelPanel; // 0x0a20, 0x1 bytes
+                std::uint8_t pad_0a21[0x7]; // 0x0a21, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Pickup_Gold_VData) == 0x9F8, "CCitadel_Pickup_Gold_VData size mismatch");
+            static_assert(sizeof(CCitadel_Pickup_Gold_VData) == 0xA28, "CCitadel_Pickup_Gold_VData size mismatch");
         }
     }
 }

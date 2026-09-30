@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1930
+             * Size: 0x14b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_RocketBarrageVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_LaunchAngle; // 0x1818, 0x4 bytes
-                std::uint8_t pad_181c[0x4]; // 0x181c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1820, 0xe0 bytes
-                CSoundEventName m_ExplosionSound; // 0x1900, 0x10 bytes
-                CSoundEventName m_RocketFireSound; // 0x1910, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AuraModifier; // 0x1920, 0x10 bytes
+                float m_LaunchAngle; // 0x13a0, 0x4 bytes
+                std::uint8_t pad_13a4[0x4]; // 0x13a4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x13a8, 0xe0 bytes
+                CSoundEventName m_ExplosionSound; // 0x1488, 0x10 bytes
+                CSoundEventName m_RocketFireSound; // 0x1498, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AuraModifier; // 0x14a8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_RocketBarrageVData) == 0x1930, "CCitadel_Ability_Tier3Boss_RocketBarrageVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_RocketBarrageVData) == 0x14B8, "CCitadel_Ability_Tier3Boss_RocketBarrageVData size mismatch");
         }
     }
 }

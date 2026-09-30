@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x760
+             * Size: 0x770
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_FireConCommandVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CUtlString m_FireOnAdded; // 0x0750, 0x8 bytes
-                CUtlString m_FireOnRemoved; // 0x0758, 0x8 bytes
+                CUtlString m_FireOnAdded; // 0x0760, 0x8 bytes
+                CUtlString m_FireOnRemoved; // 0x0768, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_FireConCommandVData) == 0x760, "CGameModifier_FireConCommandVData size mismatch");
+            static_assert(sizeof(CGameModifier_FireConCommandVData) == 0x770, "CGameModifier_FireConCommandVData size mismatch");
         }
     }
 }

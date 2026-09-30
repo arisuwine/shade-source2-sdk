@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -37,8 +38,10 @@ namespace shade {
                 PBF_DisableRemoveOnDoneTracking = 0x10000,
                 PBF_DontTravelThroughPortals = 0x20000,
                 PBF_LocationTrackingOnTargetDeath = 0x40000,
-                PBF_DetonateWhenReachingTrackedPosition = 0x80000,
-                PBF_TouchAllEntitiesEachTick = 0x100000
+                PBF_HitWhenReachingTrackedPosition = 0x80000,
+                PBF_TouchAllEntitiesEachTick = 0x100000,
+                PBF_StopTrackingOnDetonateStart = 0x200000,
+                PBF_DetonateWhenReachingTrackedPosition = 0x400000
             };
         }
     }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,26 +43,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CKeepUpright : public shade::sdk::server::CPointEntity {
             public:
-                std::uint8_t pad_04a0[0x8]; // 0x04a0, 0x8 bytes
-                Vector m_worldGoalAxis; // 0x04a8, 0xc bytes
-                Vector m_localTestAxis; // 0x04b4, 0xc bytes
-                shade::sdk::client::IPhysicsMotionController *m_pController; // 0x04c0, 0x8 bytes
-                CUtlSymbolLarge m_nameAttach; // 0x04c8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_attachedObject; // 0x04d0, 0x4 bytes
-                float m_angularLimit; // 0x04d4, 0x4 bytes
-                bool m_bActive; // 0x04d8, 0x1 bytes
-                bool m_bDampAllRotation; // 0x04d9, 0x1 bytes
-                std::uint8_t pad_04da[0x6]; // 0x04da, 0x6 bytes
+                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
+                Vector m_worldGoalAxis; // 0x04b8, 0xc bytes
+                Vector m_localTestAxis; // 0x04c4, 0xc bytes
+                shade::sdk::client::IPhysicsMotionController *m_pController; // 0x04d0, 0x8 bytes
+                CUtlSymbolLarge m_nameAttach; // 0x04d8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_attachedObject; // 0x04e0, 0x4 bytes
+                float m_angularLimit; // 0x04e4, 0x4 bytes
+                bool m_bActive; // 0x04e8, 0x1 bytes
+                bool m_bDampAllRotation; // 0x04e9, 0x1 bytes
+                std::uint8_t pad_04ea[0x6]; // 0x04ea, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularLimit; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CKeepUpright) == 0x4E0, "CKeepUpright size mismatch");
+            static_assert(sizeof(CKeepUpright) == 0x4F0, "CKeepUpright size mismatch");
         }
     }
 }

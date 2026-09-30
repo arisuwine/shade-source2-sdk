@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,9 +30,10 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x40
-             * Alignment: 0xff
+             * Size: 0x48
+             * Alignment: 0x8
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CRelativeLocation {
@@ -42,14 +44,16 @@ namespace shade {
                 Vector m_vRelativeOffset; // 0x001c, 0xc bytes
                 VectorWS m_vWorldSpacePos; // 0x0028, 0xc bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x0034, 0x4 bytes
-                std::uint32_t m_nNavAreaID; // 0x0038, 0x4 bytes
-                std::uint32_t m_nSpaceBlockID; // 0x003c, 0x4 bytes
+                std::uint32_t m_nLastKnownNavAreaVersion; // 0x0038, 0x4 bytes
+                std::uint32_t m_nNavAreaID; // 0x003c, 0x4 bytes
+                std::uint32_t m_nNavBlockID; // 0x0040, 0x4 bytes
+                std::uint8_t pad_0044[0x4]; // 0x0044, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRelativeLocation) == 0x40, "CRelativeLocation size mismatch");
+            static_assert(sizeof(CRelativeLocation) == 0x48, "CRelativeLocation size mismatch");
         }
     }
 }

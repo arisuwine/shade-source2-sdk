@@ -12,12 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CitadelStatsDisplay_t.hpp"
 #include "shade/sdk/client/EAbilityResourceType.hpp"
 #include "shade/sdk/client/EAbilitySlots_t.hpp"
+#include "shade/sdk/client/EHeroDevelopmentState.hpp"
 #include "shade/sdk/client/EHeroType.hpp"
 #include "shade/sdk/client/EItemSlotTypes_t.hpp"
 #include "shade/sdk/client/EModifierValue.hpp"
@@ -25,13 +27,13 @@
 #include "shade/sdk/client/HeroID_t.hpp"
 #include "shade/sdk/client/HeroStatsDisplay_t.hpp"
 #include "shade/sdk/client/HeroStatsUI_t.hpp"
+#include "shade/sdk/client/ItemPopularity_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             struct HeroAnimGraphDefaultValueOverride_t;
             struct HeroLevel_t;
-            struct HeroPurchaseBonus_t;
             struct HeroScalingStat_t;
             struct ItemDraftWeight_t;
             struct ItemSlotInfo_t;
@@ -50,7 +52,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf08
+             * Size: 0x1078
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -65,105 +67,112 @@ namespace shade {
                 std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
                 CUtlString m_strHeroSortName; // 0x0030, 0x8 bytes
                 CUtlString m_strHeroSearchName; // 0x0038, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hDamageTakenParticle; // 0x0040, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hGroundDamageTakenParticle; // 0x0120, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hDeathParticle; // 0x0200, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hLowHealthParticle; // 0x02e0, 0xe0 bytes
-                CPanoramaImageName m_strIconImageSmall; // 0x03c0, 0x10 bytes
-                CPanoramaImageName m_strIconHeroCard; // 0x03d0, 0x10 bytes
-                CPanoramaImageName m_strIconHeroCardCritical; // 0x03e0, 0x10 bytes
-                CPanoramaImageName m_strIconHeroCardGloat; // 0x03f0, 0x10 bytes
-                CPanoramaImageName m_strMinimapImage; // 0x0400, 0x10 bytes
-                CPanoramaImageName m_strTopBarVertical; // 0x0410, 0x10 bytes
-                CPanoramaImageName m_strLogoImageEnglish; // 0x0420, 0x10 bytes
-                CPanoramaImageName m_strLogoImageLocalized; // 0x0430, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hRespawnParticle; // 0x0440, 0xe0 bytes
-                Color m_colorUI; // 0x0520, 0x4 bytes
-                std::uint8_t pad_0524[0x4]; // 0x0524, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strModelName; // 0x0528, 0xe0 bytes
-                std::int32_t m_nModelSkin; // 0x0608, 0x4 bytes
-                std::uint8_t pad_060c[0x4]; // 0x060c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName; // 0x0610, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strMainOnlyModelName; // 0x06f0, 0xe0 bytes
-                bool m_bUseMainOnlyModelForExperimental; // 0x07d0, 0x1 bytes
-                std::uint8_t pad_07d1[0x7]; // 0x07d1, 0x7 bytes
-                CUtlString m_strUIPortraitMap; // 0x07d8, 0x8 bytes
-                CUtlString m_strUIShoppingMap; // 0x07e0, 0x8 bytes
-                CUtlString m_strUITeamRevealMap; // 0x07e8, 0x8 bytes
-                CUtlString m_strUIPostgamePortraitMap; // 0x07f0, 0x8 bytes
-                shade::sdk::client::HeroStatsUI_t m_heroStatsUI; // 0x07f8, 0x30 bytes
-                shade::sdk::client::HeroStatsDisplay_t m_heroStatsDisplay; // 0x0828, 0x90 bytes
-                shade::sdk::client::CitadelStatsDisplay_t m_ShopStatDisplay; // 0x08b8, 0xa8 bytes
-                CSoundEventName m_strDeathVOSound; // 0x0960, 0x10 bytes
-                CSoundEventName m_strDeathSound; // 0x0970, 0x10 bytes
-                CSoundEventName m_strLastHitSound; // 0x0980, 0x10 bytes
-                CSoundEventName m_strRosterSelectedSound; // 0x0990, 0x10 bytes
-                CSoundEventName m_strRosterRemovedSound; // 0x09a0, 0x10 bytes
-                CSoundEventName m_strRosterAvoidedSound; // 0x09b0, 0x10 bytes
-                CSoundEventName m_strVoteRevealSound; // 0x09c0, 0x10 bytes
-                CSoundEventName m_strLowHealthSound; // 0x09d0, 0x10 bytes
-                CSoundEventName m_strHeroSpecificLowHealthSound; // 0x09e0, 0x10 bytes
-                CSoundEventName m_strMovementLoop; // 0x09f0, 0x10 bytes
-                CSoundEventName m_strPostGameVictorySound; // 0x0a00, 0x10 bytes
-                CSoundEventName m_strPostGameDefeatSound; // 0x0a10, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGameSoundEventScript; // 0x0a20, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGeneratedVOEventScript; // 0x0b00, 0xe0 bytes
-                float m_flStealthSpeedMetersPerSecond; // 0x0be0, 0x4 bytes
-                bool m_bInDevelopment; // 0x0be4, 0x1 bytes
-                bool m_bAssignedPlayersOnly; // 0x0be5, 0x1 bytes
-                bool m_bNewPlayerRecommended; // 0x0be6, 0x1 bytes
-                bool m_bLaneTestingRecommended; // 0x0be7, 0x1 bytes
-                bool m_bNeedsTesting; // 0x0be8, 0x1 bytes
-                bool m_bLimitedTesting; // 0x0be9, 0x1 bytes
-                bool m_bDisabled; // 0x0bea, 0x1 bytes
-                bool m_bPlayerSelectable; // 0x0beb, 0x1 bytes
-                bool m_bPrereleaseOnly; // 0x0bec, 0x1 bytes
-                std::uint8_t pad_0bed[0x3]; // 0x0bed, 0x3 bytes
-                std::int32_t m_nComplexity; // 0x0bf0, 0x4 bytes
-                std::int32_t m_nAllyBotDifficulty; // 0x0bf4, 0x4 bytes
-                std::int32_t m_nEnemyBotDifficulty; // 0x0bf8, 0x4 bytes
-                float m_flMinLowHealthPercentage; // 0x0bfc, 0x4 bytes
-                float m_flMaxLowHealthPercentage; // 0x0c00, 0x4 bytes
-                float m_flMinMidHealthPercentage; // 0x0c04, 0x4 bytes
-                float m_flMaxMidHealthPercentage; // 0x0c08, 0x4 bytes
-                float m_flMinHealthForThreshold; // 0x0c0c, 0x4 bytes
-                float m_flMaxHealthForThreshold; // 0x0c10, 0x4 bytes
-                float m_flInCombatWithHeroDuration; // 0x0c14, 0x4 bytes
-                float m_flInCombatWithNonHeroDuration; // 0x0c18, 0x4 bytes
-                float m_flInCombatWithNeutralDuration; // 0x0c1c, 0x4 bytes
-                bool m_bNAGunFalloffRange; // 0x0c20, 0x1 bytes
-                bool m_bAllowedInTunnels; // 0x0c21, 0x1 bytes
-                std::uint8_t pad_0c22[0x6]; // 0x0c22, 0x6 bytes
-                CUtlOrderedMap<shade::sdk::client::EStatsType, float> m_mapStartingStats; // 0x0c28, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EStatsType, shade::sdk::client::HeroScalingStat_t> m_mapScalingStats; // 0x0c50, 0x28 bytes
-                CPiecewiseCurve m_groundDashPositionCurve; // 0x0c78, 0x40 bytes
-                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, CUtlVector<shade::sdk::client::ModCostBonuses_t>> m_mapModCostBonuses; // 0x0cb8, 0x28 bytes
-                std::uint8_t pad_0ce0[0x18]; // 0x0ce0, 0x18 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapBoundAbilities; // 0x0cf8, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapWIPAbilities; // 0x0d20, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, shade::sdk::client::ItemSlotInfo_t> m_mapItemSlotInfo; // 0x0d48, 0x28 bytes
-                std::uint8_t pad_0d70[0x50]; // 0x0d70, 0x50 bytes
-                shade::sdk::client::EAbilityResourceType m_eAbilityResourceType; // 0x0dc0, 0x4 bytes
-                std::uint8_t pad_0dc4[0x4]; // 0x0dc4, 0x4 bytes
-                CUtlString m_strGunTag; // 0x0dc8, 0x8 bytes
-                CUtlVector<CUtlString> m_vecHeroTags; // 0x0dd0, 0x18 bytes
-                shade::sdk::client::EHeroType m_eHeroType; // 0x0de8, 0x4 bytes
-                std::uint8_t pad_0dec[0x4]; // 0x0dec, 0x4 bytes
-                CUtlString m_strRosterBackgroundLayout; // 0x0df0, 0x8 bytes
-                CUtlString m_strHideoutRichPresence; // 0x0df8, 0x8 bytes
-                CUtlOrderedMap<CUtlString, float> m_mapItemDraftCounterWeights; // 0x0e00, 0x28 bytes
-                std::uint8_t pad_0e28[0x18]; // 0x0e28, 0x18 bytes
-                CUtlOrderedMap<shade::sdk::client::EModifierValue, float> m_mapStandardLevelUpUpgrades; // 0x0e40, 0x28 bytes
-                CUtlOrderedMap<std::int32_t, shade::sdk::client::HeroLevel_t> m_mapLevelInfo; // 0x0e68, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, CUtlVector<shade::sdk::client::HeroPurchaseBonus_t>> m_mapPurchaseBonuses; // 0x0e90, 0x28 bytes
-                CUtlOrderedMap<CUtlString, shade::sdk::client::ItemDraftWeight_t> m_mapItemDraftBucketing; // 0x0eb8, 0x28 bytes
-                std::uint8_t pad_0ee0[0x28]; // 0x0ee0, 0x28 bytes
+                CUtlString m_strHeroGender; // 0x0040, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hDamageTakenParticle; // 0x0048, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hGroundDamageTakenParticle; // 0x0128, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hDeathParticle; // 0x0208, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hLowHealthParticle; // 0x02e8, 0xe0 bytes
+                CPanoramaImageName m_strIconImageSmall; // 0x03c8, 0x10 bytes
+                CPanoramaImageName m_strIconHeroCard; // 0x03d8, 0x10 bytes
+                CPanoramaImageName m_strIconHeroCardCritical; // 0x03e8, 0x10 bytes
+                CPanoramaImageName m_strIconHeroCardGloat; // 0x03f8, 0x10 bytes
+                CPanoramaImageName m_strMinimapImage; // 0x0408, 0x10 bytes
+                CPanoramaImageName m_strTopBarVertical; // 0x0418, 0x10 bytes
+                CPanoramaImageName m_strVoteSticker; // 0x0428, 0x10 bytes
+                CPanoramaImageName m_strLogoImageEnglish; // 0x0438, 0x10 bytes
+                CPanoramaImageName m_strLogoImageLocalized; // 0x0448, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hRespawnParticle; // 0x0458, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hVisibilityParticle; // 0x0538, 0xe0 bytes
+                Color m_colorUI; // 0x0618, 0x4 bytes
+                std::uint8_t pad_061c[0x4]; // 0x061c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strModelName; // 0x0620, 0xe0 bytes
+                std::int32_t m_nModelSkin; // 0x0700, 0x4 bytes
+                std::uint8_t pad_0704[0x4]; // 0x0704, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName; // 0x0708, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strMainOnlyModelName; // 0x07e8, 0xe0 bytes
+                bool m_bUseMainOnlyModelForExperimental; // 0x08c8, 0x1 bytes
+                std::uint8_t pad_08c9[0x7]; // 0x08c9, 0x7 bytes
+                CUtlString m_strUIPortraitMap; // 0x08d0, 0x8 bytes
+                CUtlString m_strUIShoppingMap; // 0x08d8, 0x8 bytes
+                CUtlString m_strUITeamRevealMap; // 0x08e0, 0x8 bytes
+                CUtlString m_strUIPostgamePortraitMap; // 0x08e8, 0x8 bytes
+                CUtlString m_strUIHeroRevealMap; // 0x08f0, 0x8 bytes
+                shade::sdk::client::HeroStatsUI_t m_heroStatsUI; // 0x08f8, 0x30 bytes
+                shade::sdk::client::HeroStatsDisplay_t m_heroStatsDisplay; // 0x0928, 0x90 bytes
+                shade::sdk::client::CitadelStatsDisplay_t m_ShopStatDisplay; // 0x09b8, 0xa8 bytes
+                CSoundEventName m_strDeathVOSound; // 0x0a60, 0x10 bytes
+                CSoundEventName m_strDeathSound; // 0x0a70, 0x10 bytes
+                CSoundEventName m_strLastHitSound; // 0x0a80, 0x10 bytes
+                CSoundEventName m_strRosterSelectedSound; // 0x0a90, 0x10 bytes
+                CSoundEventName m_strRosterRemovedSound; // 0x0aa0, 0x10 bytes
+                CSoundEventName m_strRosterAvoidedSound; // 0x0ab0, 0x10 bytes
+                CSoundEventName m_strHeroVotedSound; // 0x0ac0, 0x10 bytes
+                CSoundEventName m_strCharacterRevealDialog; // 0x0ad0, 0x10 bytes
+                CSoundEventName m_strCharacterRevealSfxStart; // 0x0ae0, 0x10 bytes
+                CSoundEventName m_strCharacterRevealSfxStop; // 0x0af0, 0x10 bytes
+                CSoundEventName m_strLowHealthSound; // 0x0b00, 0x10 bytes
+                CSoundEventName m_strHeroSpecificLowHealthSound; // 0x0b10, 0x10 bytes
+                CSoundEventName m_strMovementLoop; // 0x0b20, 0x10 bytes
+                CSoundEventName m_strMovementLoopStart; // 0x0b30, 0x10 bytes
+                CSoundEventName m_strMovementLoopStop; // 0x0b40, 0x10 bytes
+                CSoundEventName m_strSlideLoop; // 0x0b50, 0x10 bytes
+                CSoundEventName m_strPostGameVictorySound; // 0x0b60, 0x10 bytes
+                CSoundEventName m_strPostGameDefeatSound; // 0x0b70, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGameSoundEventScript; // 0x0b80, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGeneratedVOEventScript; // 0x0c60, 0xe0 bytes
+                float m_flStealthSpeedMetersPerSecond; // 0x0d40, 0x4 bytes
+                shade::sdk::client::EHeroDevelopmentState m_eHeroDevelopmentState; // 0x0d44, 0x1 bytes
+                bool m_bInDevelopment; // 0x0d45, 0x1 bytes
+                bool m_bNewPlayerRecommended; // 0x0d46, 0x1 bytes
+                bool m_bLaneTestingRecommended; // 0x0d47, 0x1 bytes
+                bool m_bNeedsTesting; // 0x0d48, 0x1 bytes
+                bool m_bLimitedTesting; // 0x0d49, 0x1 bytes
+                bool m_bDisabled; // 0x0d4a, 0x1 bytes
+                std::uint8_t pad_0d4b[0x1]; // 0x0d4b, 0x1 bytes
+                std::int32_t m_nComplexity; // 0x0d4c, 0x4 bytes
+                std::int32_t m_nAllyBotDifficulty; // 0x0d50, 0x4 bytes
+                std::int32_t m_nEnemyBotDifficulty; // 0x0d54, 0x4 bytes
+                float m_flMinLowHealthPercentage; // 0x0d58, 0x4 bytes
+                float m_flMaxLowHealthPercentage; // 0x0d5c, 0x4 bytes
+                float m_flMinMidHealthPercentage; // 0x0d60, 0x4 bytes
+                float m_flMaxMidHealthPercentage; // 0x0d64, 0x4 bytes
+                float m_flMinHealthForThreshold; // 0x0d68, 0x4 bytes
+                float m_flMaxHealthForThreshold; // 0x0d6c, 0x4 bytes
+                float m_flInCombatWithHeroDuration; // 0x0d70, 0x4 bytes
+                float m_flInCombatWithNonHeroDuration; // 0x0d74, 0x4 bytes
+                float m_flInCombatWithNeutralDuration; // 0x0d78, 0x4 bytes
+                bool m_bNAGunFalloffRange; // 0x0d7c, 0x1 bytes
+                bool m_bAllowedInTunnels; // 0x0d7d, 0x1 bytes
+                std::uint8_t pad_0d7e[0x2]; // 0x0d7e, 0x2 bytes
+                CUtlOrderedMap<shade::sdk::client::EStatsType, float> m_mapStartingStats; // 0x0d80, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EStatsType, shade::sdk::client::HeroScalingStat_t> m_mapScalingStats; // 0x0da8, 0x28 bytes
+                CPiecewiseCurve m_groundDashPositionCurve; // 0x0dd0, 0x40 bytes
+                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, CUtlVector<shade::sdk::client::ModCostBonuses_t>> m_mapModCostBonuses; // 0x0e10, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, shade::sdk::client::ItemSlotInfo_t> m_mapItemSlotInfo; // 0x0e38, 0x28 bytes
+                std::uint8_t pad_0e60[0x50]; // 0x0e60, 0x50 bytes
+                shade::sdk::client::EAbilityResourceType m_eAbilityResourceType; // 0x0eb0, 0x4 bytes
+                std::uint8_t pad_0eb4[0x4]; // 0x0eb4, 0x4 bytes
+                CUtlString m_strGunTag; // 0x0eb8, 0x8 bytes
+                CUtlVector<CUtlString> m_vecHeroTags; // 0x0ec0, 0x18 bytes
+                shade::sdk::client::EHeroType m_eHeroType; // 0x0ed8, 0x4 bytes
+                std::uint8_t pad_0edc[0x4]; // 0x0edc, 0x4 bytes
+                CUtlString m_strRosterBackgroundLayout; // 0x0ee0, 0x8 bytes
+                CUtlString m_strHideoutRichPresence; // 0x0ee8, 0x8 bytes
+                CUtlDict<float> m_mapItemDraftCounterWeights; // 0x0ef0, 0x28 bytes
+                std::uint8_t pad_0f18[0x18]; // 0x0f18, 0x18 bytes
+                CUtlOrderedMap<shade::sdk::client::EModifierValue, float> m_mapStandardLevelUpUpgrades; // 0x0f30, 0x28 bytes
+                shade::sdk::client::ItemPopularity_t m_PopularItems; // 0x0f58, 0x58 bytes
+                CUtlOrderedMap<std::int32_t, shade::sdk::client::HeroLevel_t> m_mapLevelInfo; // 0x0fb0, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapBoundAbilities; // 0x0fd8, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapWIPAbilities; // 0x1000, 0x28 bytes
+                CUtlOrderedMap<CUtlString, shade::sdk::client::ItemDraftWeight_t> m_mapItemDraftBucketing; // 0x1028, 0x28 bytes
+                std::uint8_t pad_1050[0x28]; // 0x1050, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelHeroData_t) == 0xF08, "CitadelHeroData_t size mismatch");
+            static_assert(sizeof(CitadelHeroData_t) == 0x1078, "CitadelHeroData_t size mismatch");
         }
     }
 }

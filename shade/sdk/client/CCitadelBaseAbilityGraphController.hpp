@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x90
+             * Size: 0xc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBaseAbilityGraphController) == 0x90, "CCitadelBaseAbilityGraphController size mismatch");
+            static_assert(sizeof(CCitadelBaseAbilityGraphController) == 0xC0, "CCitadelBaseAbilityGraphController size mismatch");
         }
     }
 }

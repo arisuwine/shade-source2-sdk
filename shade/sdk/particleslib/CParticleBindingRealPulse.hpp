@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particleslib {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0xb0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleBindingRealPulse) == 0x138, "CParticleBindingRealPulse size mismatch");
+            static_assert(sizeof(CParticleBindingRealPulse) == 0xB0, "CParticleBindingRealPulse size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1658
+             * Size: 0x1df8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_NanoDash : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                Vector m_vStartPosition; // 0x0f70, 0xc bytes
-                Vector m_vEndPosition; // 0x0f7c, 0xc bytes
-                bool m_bIsDashing; // 0x0f88, 0x1 bytes
-                std::uint8_t pad_0f89[0x7]; // 0x0f89, 0x7 bytes
-                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x0f90, 0x18 bytes
-                Vector m_vecLastPosition; // 0x0fa8, 0xc bytes
-                std::uint8_t pad_0fb4[0x684]; // 0x0fb4, 0x684 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1638, 0x4 bytes
-                std::uint8_t pad_163c[0x1c]; // 0x163c, 0x1c bytes
+                VectorWS m_vStartPosition; // 0x14a0, 0xc bytes
+                VectorWS m_vEndPosition; // 0x14ac, 0xc bytes
+                bool m_bIsDashing; // 0x14b8, 0x1 bytes
+                std::uint8_t pad_14b9[0x7]; // 0x14b9, 0x7 bytes
+                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x14c0, 0x18 bytes
+                VectorWS m_vecLastPosition; // 0x14d8, 0xc bytes
+                std::uint8_t pad_14e4[0x8f4]; // 0x14e4, 0x8f4 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1dd8, 0x4 bytes
+                std::uint8_t pad_1ddc[0x1c]; // 0x1ddc, 0x1c bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_NanoDash) == 0x1658, "CCitadel_Ability_NanoDash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_NanoDash) == 0x1DF8, "CCitadel_Ability_NanoDash size mismatch");
         }
     }
 }

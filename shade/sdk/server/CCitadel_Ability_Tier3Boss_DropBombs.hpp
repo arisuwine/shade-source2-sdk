@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf98
+             * Size: 0x14c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,20 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_DropBombs : public shade::sdk::server::CTier3BossAbility {
             public:
-                std::uint8_t pad_0f70[0x4]; // 0x0f70, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tNextBombTime; // 0x0f74, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitTargets; // 0x0f78, 0x18 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x0f90, 0x1 bytes
-                std::uint8_t pad_0f91[0x3]; // 0x0f91, 0x3 bytes
-                float m_flDetonationTime; // 0x0f94, 0x4 bytes
+                std::uint8_t pad_14a0[0x4]; // 0x14a0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tNextBombTime; // 0x14a4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitTargets; // 0x14a8, 0x18 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x14c0, 0x1 bytes
+                std::uint8_t pad_14c1[0x3]; // 0x14c1, 0x3 bytes
+                float m_flDetonationTime; // 0x14c4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombs) == 0xF98, "CCitadel_Ability_Tier3Boss_DropBombs size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombs) == 0x14C8, "CCitadel_Ability_Tier3Boss_DropBombs size mismatch");
         }
     }
 }

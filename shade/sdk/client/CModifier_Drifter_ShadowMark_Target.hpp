@@ -12,32 +12,30 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CCitadelModifier.hpp"
-#include "shade/sdk/entity2/GameTime_t.hpp"
+#include "shade/sdk/client/CCitadelModifier_BleedBase.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x248
+             * Size: 0x298
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CModifier_Drifter_ShadowMark_Target : public shade::sdk::client::CCitadelModifier {
+            class CModifier_Drifter_ShadowMark_Target : public shade::sdk::client::CCitadelModifier_BleedBase {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastTickTime; // 0x00c0, 0x4 bytes
-                std::uint8_t pad_00c4[0x184]; // 0x00c4, 0x184 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Drifter_ShadowMark_Target) == 0x248, "CModifier_Drifter_ShadowMark_Target size mismatch");
+            static_assert(sizeof(CModifier_Drifter_ShadowMark_Target) == 0x298, "CModifier_Drifter_ShadowMark_Target size mismatch");
         }
     }
 }

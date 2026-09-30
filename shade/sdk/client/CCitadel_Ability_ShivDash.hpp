@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17b8
+             * Size: 0x1ec8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,24 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ShivDash : public shade::sdk::client::CCitadelBaseShivAbility {
             public:
-                Vector m_vStartPosition; // 0x11d8, 0xc bytes
-                Vector m_vDashDirection; // 0x11e4, 0xc bytes
-                bool m_bIsDashing; // 0x11f0, 0x1 bytes
-                std::uint8_t pad_11f1[0x7]; // 0x11f1, 0x7 bytes
-                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x11f8, 0x18 bytes
-                Vector m_vecLastPosition; // 0x1210, 0xc bytes
-                std::int32_t m_nReductionsLeft; // 0x121c, 0x4 bytes
-                std::uint8_t pad_1220[0x580]; // 0x1220, 0x580 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x17a0, 0x4 bytes
-                std::uint8_t pad_17a4[0x14]; // 0x17a4, 0x14 bytes
+                VectorWS m_vStartPosition; // 0x16d8, 0xc bytes
+                Vector m_vDashDirection; // 0x16e4, 0xc bytes
+                bool m_bIsDashing; // 0x16f0, 0x1 bytes
+                std::uint8_t pad_16f1[0x7]; // 0x16f1, 0x7 bytes
+                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x16f8, 0x18 bytes
+                VectorWS m_vecLastPosition; // 0x1710, 0xc bytes
+                std::int32_t m_nReductionsLeft; // 0x171c, 0x4 bytes
+                std::uint8_t pad_1720[0x790]; // 0x1720, 0x790 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1eb0, 0x4 bytes
+                std::uint8_t pad_1eb4[0x14]; // 0x1eb4, 0x14 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ShivDash) == 0x17B8, "CCitadel_Ability_ShivDash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ShivDash) == 0x1EC8, "CCitadel_Ability_ShivDash size mismatch");
         }
     }
 }

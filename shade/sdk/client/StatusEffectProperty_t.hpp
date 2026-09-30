@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -37,7 +38,8 @@ namespace shade {
                 EStatusEffect_Unstoppable = 0x11,
                 EStatusEffect_Displacement = 0x12,
                 EStatusEffect_Silence = 0x13,
-                EStatusEffect_Count = 0x14
+                EStatusEffect_Curse = 0x14,
+                EStatusEffect_Count = 0x15
             };
         }
     }

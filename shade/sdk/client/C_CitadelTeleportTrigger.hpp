@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa88
+             * Size: 0xca8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelTeleportTrigger : public shade::sdk::client::C_BaseTrigger {
             public:
-                Vector m_vExitOrigin; // 0x0a78, 0xc bytes
-                std::uint8_t pad_0a84[0x4]; // 0x0a84, 0x4 bytes
+                VectorWS m_vExitOrigin; // 0x0c98, 0xc bytes
+                std::uint8_t pad_0ca4[0x4]; // 0x0ca4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CitadelTeleportTrigger) == 0xA88, "C_CitadelTeleportTrigger size mismatch");
+            static_assert(sizeof(C_CitadelTeleportTrigger) == 0xCA8, "C_CitadelTeleportTrigger size mismatch");
         }
     }
 }

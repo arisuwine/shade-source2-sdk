@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x26d8
+             * Size: 0x1fd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,100 +44,98 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Boss_Tier3VData : public shade::sdk::server::CAI_CitadelNPCVData {
             public:
-                float m_flAllyPitTimeMin; // 0x1348, 0x4 bytes
-                std::int32_t m_nPhase2Health; // 0x134c, 0x4 bytes
-                float m_flEyeZOffset; // 0x1350, 0x4 bytes
-                float m_flDefaultMoveSpeed; // 0x1354, 0x4 bytes
-                float m_flEnemyTrooperProtectionRange; // 0x1358, 0x4 bytes
-                Vector m_vPhase1ObserverOrigin; // 0x135c, 0xc bytes
-                Vector m_vPhase2ObserverOrigin; // 0x1368, 0xc bytes
-                float m_flPhase1ObserverPitch; // 0x1374, 0x4 bytes
-                float m_flPhase2ObserverPitch; // 0x1378, 0x4 bytes
-                float m_flPhase2MaxAnimSpinRate; // 0x137c, 0x4 bytes
-                float m_flPhase2AttackBias; // 0x1380, 0x4 bytes
-                float m_flRotateSpeed; // 0x1384, 0x4 bytes
-                float m_flPhase2SightRange; // 0x1388, 0x4 bytes
-                float m_flCoreRadius; // 0x138c, 0x4 bytes
-                float m_flCoreDeathTime; // 0x1390, 0x4 bytes
-                float m_flTransitionLightTime01; // 0x1394, 0x4 bytes
-                float m_flTransitionLightTime02; // 0x1398, 0x4 bytes
-                float m_flTransitionLightTime03; // 0x139c, 0x4 bytes
-                float m_flTransitionLightTime04; // 0x13a0, 0x4 bytes
-                float m_flShrineAttackHealthLossPerAttack; // 0x13a4, 0x4 bytes
-                float m_flShrineAttackMinTimeBetweenAttacks; // 0x13a8, 0x4 bytes
-                std::uint8_t pad_13ac[0x4]; // 0x13ac, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberEffigyExplosionParticle; // 0x13b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberTransformUpExplosionParticle; // 0x1490, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberBeginDyingParticle; // 0x1570, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberDeathLargeExplosionParticle; // 0x1650, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberHitResponseParticle; // 0x1730, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberPhase2AmbientParticle; // 0x1810, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphEffigyExplosionParticle; // 0x18f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphTransformUpExplosionParticle; // 0x19d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphBeginDyingParticle; // 0x1ab0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphDeathLargeExplosionParticle; // 0x1b90, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphHitResponseParticle; // 0x1c70, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphPhase2AmbientParticle; // 0x1d50, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PatronTransformDownEyeParticle; // 0x1e30, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName; // 0x1f10, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strTeamAmberModel; // 0x1ff0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_AmberEffigyModel; // 0x20d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SapphEffigyModel; // 0x21b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_AmberCoreModel; // 0x2290, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SapphCoreModel; // 0x2370, 0xe0 bytes
-                float m_flCoreVerticalOffset; // 0x2450, 0x4 bytes
-                std::uint8_t pad_2454[0x4]; // 0x2454, 0x4 bytes
-                CSoundEventName m_PatronTransformStartSound; // 0x2458, 0x10 bytes
-                CSoundEventName m_PatronKilledSound; // 0x2468, 0x10 bytes
-                CSoundEventName m_EffigySapphireExplodeSound; // 0x2478, 0x10 bytes
-                CSoundEventName m_EffigyAmberExplodeSound; // 0x2488, 0x10 bytes
-                CSoundEventName m_AmberReformSound; // 0x2498, 0x10 bytes
-                CSoundEventName m_SapphireReformSound; // 0x24a8, 0x10 bytes
-                CSoundEventName m_AmberReformingLoopSound; // 0x24b8, 0x10 bytes
-                CSoundEventName m_SapphireReformingLoopSound; // 0x24c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_LaserBeamModifier; // 0x24d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DyingModifier; // 0x24e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_VulnerableModifier; // 0x24f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_Phase1Modifier; // 0x2508, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_EffigyModifier; // 0x2518, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_Phase2DamagePulseModifier; // 0x2528, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_BackdoorProtection; // 0x2538, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_RangedArmorModifier; // 0x2548, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ObjectiveRegen; // 0x2558, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ObjectiveHealthGrowthPhase1; // 0x2568, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ObjectiveHealthGrowthPhase2; // 0x2578, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DefenderInPitInvulnerable; // 0x2588, 0x10 bytes
-                float m_flLaserMoveSpeed; // 0x2598, 0x4 bytes
-                float m_flLaserCooldownPhase1; // 0x259c, 0x4 bytes
-                float m_flLaserCooldownPhase2; // 0x25a0, 0x4 bytes
-                float m_flLaserDurationPhase1; // 0x25a4, 0x4 bytes
-                float m_flLaserDurationPhase2; // 0x25a8, 0x4 bytes
-                float m_flPhase1DyingBegin; // 0x25ac, 0x4 bytes
-                float m_flPhase1DyingDrop; // 0x25b0, 0x4 bytes
-                float m_flPhase2DyingDropScale; // 0x25b4, 0x4 bytes
-                float m_flPhase1DyingWait; // 0x25b8, 0x4 bytes
-                float m_flPhase1DyingTransformUp; // 0x25bc, 0x4 bytes
-                float m_flPhase1BossScale; // 0x25c0, 0x4 bytes
-                float m_flPhase2BossScale; // 0x25c4, 0x4 bytes
-                float m_flPostShrineTransition; // 0x25c8, 0x4 bytes
-                std::uint8_t pad_25cc[0x4]; // 0x25cc, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ArmAttackGroundHit; // 0x25d0, 0xe0 bytes
-                float m_flArmAttackHealthMin; // 0x26b0, 0x4 bytes
-                float m_flArmAttackHealthMax; // 0x26b4, 0x4 bytes
-                float m_flArmAttackCooldownMin; // 0x26b8, 0x4 bytes
-                float m_flArmAttackCooldownMax; // 0x26bc, 0x4 bytes
-                float m_flArmAttackTimeToHit; // 0x26c0, 0x4 bytes
-                float m_flArmAttackRadius; // 0x26c4, 0x4 bytes
-                float m_flArmAttackPosDotThres; // 0x26c8, 0x4 bytes
-                float m_flArmAttackDamage; // 0x26cc, 0x4 bytes
-                float m_flArmAttackKnockbackStrength; // 0x26d0, 0x4 bytes
-                float m_flArmAttackInvulCooldownScale; // 0x26d4, 0x4 bytes
+                float m_flAllyPitTimeMin; // 0x0c50, 0x4 bytes
+                std::int32_t m_nPhase2Health; // 0x0c54, 0x4 bytes
+                float m_flEyeZOffset; // 0x0c58, 0x4 bytes
+                float m_flEnemyTrooperProtectionRange; // 0x0c5c, 0x4 bytes
+                Vector m_vPhase1ObserverOrigin; // 0x0c60, 0xc bytes
+                Vector m_vPhase2ObserverOrigin; // 0x0c6c, 0xc bytes
+                float m_flPhase1ObserverPitch; // 0x0c78, 0x4 bytes
+                float m_flPhase2ObserverPitch; // 0x0c7c, 0x4 bytes
+                float m_flPhase2MaxAnimSpinRate; // 0x0c80, 0x4 bytes
+                float m_flPhase2AttackBias; // 0x0c84, 0x4 bytes
+                float m_flRotateSpeed; // 0x0c88, 0x4 bytes
+                float m_flPhase2SightRange; // 0x0c8c, 0x4 bytes
+                float m_flCoreRadius; // 0x0c90, 0x4 bytes
+                float m_flCoreDeathTime; // 0x0c94, 0x4 bytes
+                float m_flTransitionLightTime01; // 0x0c98, 0x4 bytes
+                float m_flTransitionLightTime02; // 0x0c9c, 0x4 bytes
+                float m_flTransitionLightTime03; // 0x0ca0, 0x4 bytes
+                float m_flTransitionLightTime04; // 0x0ca4, 0x4 bytes
+                float m_flShrineAttackHealthLossPerAttack; // 0x0ca8, 0x4 bytes
+                float m_flShrineAttackMinTimeBetweenAttacks; // 0x0cac, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberEffigyExplosionParticle; // 0x0cb0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberTransformUpExplosionParticle; // 0x0d90, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberBeginDyingParticle; // 0x0e70, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberDeathLargeExplosionParticle; // 0x0f50, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberHitResponseParticle; // 0x1030, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberPhase2AmbientParticle; // 0x1110, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphEffigyExplosionParticle; // 0x11f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphTransformUpExplosionParticle; // 0x12d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphBeginDyingParticle; // 0x13b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphDeathLargeExplosionParticle; // 0x1490, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphHitResponseParticle; // 0x1570, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphPhase2AmbientParticle; // 0x1650, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PatronTransformDownEyeParticle; // 0x1730, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName; // 0x1810, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strTeamAmberModel; // 0x18f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_AmberEffigyModel; // 0x19d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SapphEffigyModel; // 0x1ab0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_AmberCoreModel; // 0x1b90, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SapphCoreModel; // 0x1c70, 0xe0 bytes
+                float m_flCoreVerticalOffset; // 0x1d50, 0x4 bytes
+                std::uint8_t pad_1d54[0x4]; // 0x1d54, 0x4 bytes
+                CSoundEventName m_PatronTransformStartSound; // 0x1d58, 0x10 bytes
+                CSoundEventName m_PatronKilledSound; // 0x1d68, 0x10 bytes
+                CSoundEventName m_EffigySapphireExplodeSound; // 0x1d78, 0x10 bytes
+                CSoundEventName m_EffigyAmberExplodeSound; // 0x1d88, 0x10 bytes
+                CSoundEventName m_AmberReformSound; // 0x1d98, 0x10 bytes
+                CSoundEventName m_SapphireReformSound; // 0x1da8, 0x10 bytes
+                CSoundEventName m_AmberReformingLoopSound; // 0x1db8, 0x10 bytes
+                CSoundEventName m_SapphireReformingLoopSound; // 0x1dc8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_LaserBeamModifier; // 0x1dd8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DyingModifier; // 0x1de8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_VulnerableModifier; // 0x1df8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_Phase1Modifier; // 0x1e08, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_EffigyModifier; // 0x1e18, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_Phase2DamagePulseModifier; // 0x1e28, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_BackdoorProtection; // 0x1e38, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_RangedArmorModifier; // 0x1e48, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ObjectiveRegen; // 0x1e58, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ObjectiveHealthGrowthPhase1; // 0x1e68, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ObjectiveHealthGrowthPhase2; // 0x1e78, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DefenderInPitInvulnerable; // 0x1e88, 0x10 bytes
+                float m_flLaserMoveSpeed; // 0x1e98, 0x4 bytes
+                float m_flLaserCooldownPhase1; // 0x1e9c, 0x4 bytes
+                float m_flLaserCooldownPhase2; // 0x1ea0, 0x4 bytes
+                float m_flLaserDurationPhase1; // 0x1ea4, 0x4 bytes
+                float m_flLaserDurationPhase2; // 0x1ea8, 0x4 bytes
+                float m_flPhase1DyingBegin; // 0x1eac, 0x4 bytes
+                float m_flPhase1DyingDrop; // 0x1eb0, 0x4 bytes
+                float m_flPhase2DyingDropScale; // 0x1eb4, 0x4 bytes
+                float m_flPhase1DyingWait; // 0x1eb8, 0x4 bytes
+                float m_flPhase1DyingTransformUp; // 0x1ebc, 0x4 bytes
+                float m_flPhase1BossScale; // 0x1ec0, 0x4 bytes
+                float m_flPhase2BossScale; // 0x1ec4, 0x4 bytes
+                float m_flPostShrineTransition; // 0x1ec8, 0x4 bytes
+                std::uint8_t pad_1ecc[0x4]; // 0x1ecc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ArmAttackGroundHit; // 0x1ed0, 0xe0 bytes
+                float m_flArmAttackHealthMin; // 0x1fb0, 0x4 bytes
+                float m_flArmAttackHealthMax; // 0x1fb4, 0x4 bytes
+                float m_flArmAttackCooldownMin; // 0x1fb8, 0x4 bytes
+                float m_flArmAttackCooldownMax; // 0x1fbc, 0x4 bytes
+                float m_flArmAttackTimeToHit; // 0x1fc0, 0x4 bytes
+                float m_flArmAttackRadius; // 0x1fc4, 0x4 bytes
+                float m_flArmAttackPosDotThres; // 0x1fc8, 0x4 bytes
+                float m_flArmAttackDamage; // 0x1fcc, 0x4 bytes
+                float m_flArmAttackKnockbackStrength; // 0x1fd0, 0x4 bytes
+                float m_flArmAttackInvulCooldownScale; // 0x1fd4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Boss_Tier3VData) == 0x26D8, "CNPC_Boss_Tier3VData size mismatch");
+            static_assert(sizeof(CNPC_Boss_Tier3VData) == 0x1FD8, "CNPC_Boss_Tier3VData size mismatch");
         }
     }
 }

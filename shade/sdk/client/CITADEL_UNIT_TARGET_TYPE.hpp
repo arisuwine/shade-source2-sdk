@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -38,7 +39,7 @@ namespace shade {
                 CITADEL_UNIT_TARGET_ZIPLINE = 0x20000,
                 CITADEL_UNIT_TARGET_BREAKABLE_PROP = 0x40000,
                 CITADEL_UNIT_TARGET_DYNAMIC_PROP = 0x40000,
-                CITADEL_UNIT_TARGET_ABILLITY_TRIGGER = 0x80000,
+                CITADEL_UNIT_TARGET_ABILITY_TRIGGER = 0x80000,
                 CITADEL_UNIT_TARGET_HERO = 0x101,
                 CITADEL_UNIT_TARGET_TROOPER = 0x202,
                 CITADEL_UNIT_TARGET_CREEP_FRIENDLY = 0x6,

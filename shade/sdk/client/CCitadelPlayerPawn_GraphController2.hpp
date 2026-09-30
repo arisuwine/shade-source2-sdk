@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x390
+             * Size: 0x570
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,39 +30,51 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayerPawn_GraphController2 : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                std::uint8_t pad_0090[0x30]; // 0x0090, 0x30 bytes
-                CAnimGraph2ParamRef<float> m_flTimeScale; // 0x00c0, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_flForwardSpeed; // 0x00d8, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_flLookHeading; // 0x00f0, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_flLookPitch; // 0x0108, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_flMoveSpeed; // 0x0120, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_flStrafeSpeed; // 0x0138, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_flVerticalSpeed; // 0x0150, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_flRandomSeed; // 0x0168, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<Vector> m_vLocomotionFacing; // 0x0180, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<Vector> m_vLookTarget; // 0x0198, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_HeroActionSource; // 0x01b0, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_HeroAction; // 0x01c8, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_HeroState; // 0x01e0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_InstantCast; // 0x01f8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_AltCast; // 0x0210, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_BaseAction; // 0x0228, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_BaseState; // 0x0240, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_FlinchType; // 0x0258, 0x18 bytes
-                CAnimGraph2ParamRef<float> m_CrouchFraction; // 0x0270, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_MoveType; // 0x0288, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_CornerLean; // 0x02a0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Environment; // 0x02b8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flDirectionCommitment; // 0x02d0, 0x18 bytes
-                std::uint8_t pad_02e8[0x28]; // 0x02e8, 0x28 bytes
-                bool m_bInGraphParamUpdateFlow; // 0x0310, 0x1 bytes
-                std::uint8_t pad_0311[0x7f]; // 0x0311, 0x7f bytes
+                std::uint8_t pad_00c0[0x8]; // 0x00c0, 0x8 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flTimeScale; // 0x00c8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flForwardSpeed; // 0x00e0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLookHeading; // 0x00f8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLookPitch; // 0x0110, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLookHeadingSpeed; // 0x0128, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flLookPitchSpeed; // 0x0140, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flMoveSpeed; // 0x0158, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flTurnSpeed; // 0x0170, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flStrafeSpeed; // 0x0188, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flVerticalSpeed; // 0x01a0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flRandomSeed; // 0x01b8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bHasLookTarget; // 0x01d0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<Vector> m_vLookTarget; // 0x01e8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_HeroActionSource; // 0x0200, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_HeroAction; // 0x0218, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_HeroState; // 0x0230, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_InstantCast; // 0x0248, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_AltCast; // 0x0260, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_BaseAction; // 0x0278, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_BaseState; // 0x0290, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_FlinchType; // 0x02a8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_CrouchFraction; // 0x02c0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_MoveType; // 0x02d8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_CornerLean; // 0x02f0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Environment; // 0x0308, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_CameraMode; // 0x0320, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Emote; // 0x0338, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flDirectionCommitment; // 0x0350, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flFireRateScale; // 0x0368, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_aim; // 0x0380, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flZipLineAttachBlend; // 0x0398, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flInputForward; // 0x03b0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flInputRight; // 0x03c8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flHeroFloat1; // 0x03e0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flHeroFloat2; // 0x03f8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flHeroFloat3; // 0x0410, 0x18 bytes
+                CAnimGraphTagOptionalRef m_tagEmote; // 0x0428, 0x18 bytes
+                std::uint8_t pad_0440[0x130]; // 0x0440, 0x130 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelPlayerPawn_GraphController2) == 0x390, "CCitadelPlayerPawn_GraphController2 size mismatch");
+            static_assert(sizeof(CCitadelPlayerPawn_GraphController2) == 0x570, "CCitadelPlayerPawn_GraphController2 size mismatch");
         }
     }
 }

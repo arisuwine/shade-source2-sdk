@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCommentaryAuto : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnCommentaryNewGame; // 0x04a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnCommentaryMidGame; // 0x04b8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnCommentaryMultiplayerSpawn; // 0x04d0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnCommentaryNewGame; // 0x04b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnCommentaryMidGame; // 0x04c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnCommentaryMultiplayerSpawn; // 0x04e0, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputMultiplayerSpawned; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCommentaryAuto) == 0x4E8, "CCommentaryAuto size mismatch");
+            static_assert(sizeof(CCommentaryAuto) == 0x4F8, "CCommentaryAuto size mismatch");
         }
     }
 }

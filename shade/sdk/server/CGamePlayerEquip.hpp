@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CGamePlayerEquip : public shade::sdk::server::CRulePointEntity {
             public:
-                std::uint8_t pad_0790[0x18]; // 0x0790, 0x18 bytes
+                std::uint8_t pad_0888[0x18]; // 0x0888, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * CUtlString weapon%d; // Offset: 0x7fffffff, Size: 0x20, Size In Bytes: 0x0
-             * void InputTriggerForAllPlayers; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTriggerForActivatedPlayer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CGamePlayerEquip) == 0x7A8, "CGamePlayerEquip size mismatch");
+            static_assert(sizeof(CGamePlayerEquip) == 0x8A0, "CGamePlayerEquip size mismatch");
         }
     }
 }

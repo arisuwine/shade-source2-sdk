@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1868
+             * Size: 0x1fa8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Lash_Ultimate : public shade::sdk::client::CCitadelBaseLockonAbility {
             public:
-                std::uint8_t pad_1550[0x2]; // 0x1550, 0x2 bytes
-                shade::sdk::client::ELashGrappleState m_EGrappleState; // 0x1552, 0x1 bytes
-                std::uint8_t pad_1553[0x1]; // 0x1553, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flStateEnterTime; // 0x1554, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x1558, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBoostEndTime; // 0x155c, 0x4 bytes
-                std::uint8_t pad_1560[0x308]; // 0x1560, 0x308 bytes
+                std::uint8_t pad_1b70[0x2]; // 0x1b70, 0x2 bytes
+                shade::sdk::client::ELashGrappleState m_EGrappleState; // 0x1b72, 0x1 bytes
+                std::uint8_t pad_1b73[0x1]; // 0x1b73, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flStateEnterTime; // 0x1b74, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x1b78, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBoostEndTime; // 0x1b7c, 0x4 bytes
+                std::uint8_t pad_1b80[0x428]; // 0x1b80, 0x428 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Lash_Ultimate) == 0x1868, "CCitadel_Ability_Lash_Ultimate size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Lash_Ultimate) == 0x1FA8, "CCitadel_Ability_Lash_Ultimate size mismatch");
         }
     }
 }

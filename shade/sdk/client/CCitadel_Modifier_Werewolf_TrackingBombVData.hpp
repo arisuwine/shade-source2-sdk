@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x838
+             * Size: 0x848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf_TrackingBombVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffParticle; // 0x0750, 0xe0 bytes
-                bool m_bAllowAlliesToAlsoTrack; // 0x0830, 0x1 bytes
-                std::uint8_t pad_0831[0x3]; // 0x0831, 0x3 bytes
-                float m_flLabelOffset; // 0x0834, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffParticle; // 0x0760, 0xe0 bytes
+                bool m_bAllowAlliesToAlsoTrack; // 0x0840, 0x1 bytes
+                std::uint8_t pad_0841[0x3]; // 0x0841, 0x3 bytes
+                float m_flLabelOffset; // 0x0844, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf_TrackingBombVData) == 0x838, "CCitadel_Modifier_Werewolf_TrackingBombVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_TrackingBombVData) == 0x848, "CCitadel_Modifier_Werewolf_TrackingBombVData size mismatch");
         }
     }
 }

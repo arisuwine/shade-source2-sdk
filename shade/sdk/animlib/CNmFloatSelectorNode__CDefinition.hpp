@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0x58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmFloatSelectorNode__CDefinition : public shade::sdk::animlib::CNmFloatValueNode__CDefinition {
             public:
-                CUtlVectorFixedGrowable<std::int16_t, 5> m_conditionNodeIndices; // 0x0010, 0x28 bytes
-                CUtlVectorFixedGrowable<float, 5> m_values; // 0x0038, 0x30 bytes
-                float m_flDefaultValue; // 0x0068, 0x4 bytes
-                float m_flEaseTime; // 0x006c, 0x4 bytes
-                shade::sdk::animlib::NmEasingOperation_t m_easingOp; // 0x0070, 0x1 bytes
-                std::uint8_t pad_0071[0x7]; // 0x0071, 0x7 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 5> m_conditionNodeIndices; // 0x0010, 0x18 bytes
+                CUtlLeanVectorFixedGrowable<float, 5> m_values; // 0x0028, 0x20 bytes
+                float m_flDefaultValue; // 0x0048, 0x4 bytes
+                float m_flEaseTime; // 0x004c, 0x4 bytes
+                shade::sdk::animlib::NmEasingOperation_t m_easingOp; // 0x0050, 0x1 bytes
+                std::uint8_t pad_0051[0x7]; // 0x0051, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmFloatSelectorNode__CDefinition) == 0x78, "CNmFloatSelectorNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmFloatSelectorNode__CDefinition) == 0x58, "CNmFloatSelectorNode__CDefinition size mismatch");
         }
     }
 }

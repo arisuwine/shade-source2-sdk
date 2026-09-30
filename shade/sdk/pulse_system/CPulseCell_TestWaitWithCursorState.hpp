@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x120
+             * Size: 0x168
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_TestWaitWithCursorState : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WakeResume; // 0x0048, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WakeCancel; // 0x0090, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WakeFail; // 0x00d8, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WakeResume; // 0x00d8, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WakeFail; // 0x0120, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_TestWaitWithCursorState) == 0x120, "CPulseCell_TestWaitWithCursorState size mismatch");
+            static_assert(sizeof(CPulseCell_TestWaitWithCursorState) == 0x168, "CPulseCell_TestWaitWithCursorState size mismatch");
         }
     }
 }

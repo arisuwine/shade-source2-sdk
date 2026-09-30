@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/C_SoundOpvarSetPointEntity.hpp"
+#include "shade/sdk/client/CSoundOpvarSetBoxEntity.hpp"
 
 namespace shade {
     namespace sdk {
@@ -28,14 +29,12 @@ namespace shade {
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class C_SoundOpvarSetAABBEntity : public shade::sdk::client::C_SoundOpvarSetPointEntity {
+            class C_SoundOpvarSetAABBEntity : public shade::sdk::client::CSoundOpvarSetBoxEntity {
             public:
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_SoundOpvarSetAABBEntity) == 0x610, "C_SoundOpvarSetAABBEntity size mismatch");
         }

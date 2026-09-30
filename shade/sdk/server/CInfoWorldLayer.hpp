@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,27 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoWorldLayer : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_pOutputOnEntitiesSpawned; // 0x04a0, 0x18 bytes
-                CUtlSymbolLarge m_worldName; // 0x04b8, 0x8 bytes
-                CUtlSymbolLarge m_layerName; // 0x04c0, 0x8 bytes
-                bool m_bWorldLayerVisible; // 0x04c8, 0x1 bytes
-                bool m_bEntitiesSpawned; // 0x04c9, 0x1 bytes
-                bool m_bCreateAsChildSpawnGroup; // 0x04ca, 0x1 bytes
-                std::uint8_t pad_04cb[0x1]; // 0x04cb, 0x1 bytes
-                std::uint32_t m_hLayerSpawnGroup; // 0x04cc, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputOnEntitiesSpawned; // 0x04b0, 0x18 bytes
+                CUtlSymbolLarge m_worldName; // 0x04c8, 0x8 bytes
+                CUtlSymbolLarge m_layerName; // 0x04d0, 0x8 bytes
+                bool m_bWorldLayerVisible; // 0x04d8, 0x1 bytes
+                bool m_bEntitiesSpawned; // 0x04d9, 0x1 bytes
+                bool m_bCreateAsChildSpawnGroup; // 0x04da, 0x1 bytes
+                std::uint8_t pad_04db[0x1]; // 0x04db, 0x1 bytes
+                std::uint32_t m_hLayerSpawnGroup; // 0x04dc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void ShowWorldLayer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void HideWorldLayer; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void SpawnEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void DestroyEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void ShowWorldLayerAndSpawnEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void HideWorldLayerAndDestroyEntities; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoWorldLayer) == 0x4D0, "CInfoWorldLayer size mismatch");
+            static_assert(sizeof(CInfoWorldLayer) == 0x4E0, "CInfoWorldLayer size mismatch");
         }
     }
 }

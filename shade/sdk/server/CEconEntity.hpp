@@ -12,12 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/IHasAttributes.hpp"
 #include "shade/sdk/server/CAttributeContainer.hpp"
-#include "shade/sdk/server/CBaseFlex.hpp"
+#include "shade/sdk/server/CBaseAnimGraph.hpp"
 
 namespace shade {
     namespace sdk {
@@ -31,27 +32,26 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc50
+             * Size: 0xc10
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CEconEntity : public shade::sdk::server::CBaseFlex, public shade::sdk::client::IHasAttributes {
+            class CEconEntity : public shade::sdk::server::CBaseAnimGraph, public shade::sdk::client::IHasAttributes {
             public:
-                std::uint8_t pad_0ae8[0x8]; // 0x0ae8, 0x8 bytes
-                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0af0, 0x158 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOldProvidee; // 0x0c48, 0x4 bytes
-                std::int32_t m_iOldOwnerClass; // 0x0c4c, 0x4 bytes
+                std::uint8_t pad_0a98[0x10]; // 0x0a98, 0x10 bytes
+                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0aa8, 0x158 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOldProvidee; // 0x0c00, 0x4 bytes
+                std::int32_t m_iOldOwnerClass; // 0x0c04, 0x4 bytes
+                std::uint8_t pad_0c08[0x8]; // 0x0c08, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEconEntity) == 0xC50, "CEconEntity size mismatch");
+            static_assert(sizeof(CEconEntity) == 0xC10, "CEconEntity size mismatch");
         }
     }
 }

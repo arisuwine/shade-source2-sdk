@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3d0
+             * Size: 0x560
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Gunslinger_DemonCarbine : public shade::sdk::client::CCitadelModifier {
             public:
-                std::int32_t m_nBulletCount; // 0x00c0, 0x4 bytes
-                float m_flElapsedPct; // 0x00c4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFullyChargedParticle; // 0x00c8, 0x4 bytes
-                std::uint8_t pad_00cc[0x304]; // 0x00cc, 0x304 bytes
+                std::int32_t m_nBulletCount; // 0x0130, 0x4 bytes
+                float m_flElapsedPct; // 0x0134, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFullyChargedParticle; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x424]; // 0x013c, 0x424 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Gunslinger_DemonCarbine) == 0x3D0, "CCitadel_Modifier_Gunslinger_DemonCarbine size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Gunslinger_DemonCarbine) == 0x560, "CCitadel_Modifier_Gunslinger_DemonCarbine size mismatch");
         }
     }
 }

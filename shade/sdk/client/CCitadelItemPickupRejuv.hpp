@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xee0
+             * Size: 0xfc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPickupRejuv : public shade::sdk::client::C_CitadelItemPickup {
             public:
-                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0cf0, 0x1e8 bytes
-                bool m_bPickedUp; // 0x0ed8, 0x1 bytes
-                std::uint8_t pad_0ed9[0x7]; // 0x0ed9, 0x7 bytes
+                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0de0, 0x1e0 bytes
+                bool m_bPickedUp; // 0x0fc0, 0x1 bytes
+                std::uint8_t pad_0fc1[0x7]; // 0x0fc1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPickupRejuv) == 0xEE0, "CCitadelItemPickupRejuv size mismatch");
+            static_assert(sizeof(CCitadelItemPickupRejuv) == 0xFC8, "CCitadelItemPickupRejuv size mismatch");
         }
     }
 }

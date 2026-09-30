@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,7 +20,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4bd8
+             * Size: 0x4be8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -27,15 +28,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayerBot {
             public:
-                std::uint8_t pad_0000[0x4bd8]; // 0x0000, 0x4bd8 bytes
+                std::uint8_t pad_0000[0x4be8]; // 0x0000, 0x4be8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelPlayerBot) == 0x4BD8, "CCitadelPlayerBot size mismatch");
+            static_assert(sizeof(CCitadelPlayerBot) == 0x4BE8, "CCitadelPlayerBot size mismatch");
         }
     }
 }

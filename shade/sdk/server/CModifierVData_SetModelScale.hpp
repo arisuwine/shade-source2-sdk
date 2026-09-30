@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x768
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +32,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierVData_SetModelScale : public shade::sdk::server::CCitadelModifierVData {
             public:
-                shade::sdk::tier2::CRangeFloat m_flScale; // 0x0750, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flScale; // 0x0760, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierVData_SetModelScale) == 0x758, "CModifierVData_SetModelScale size mismatch");
+            static_assert(sizeof(CModifierVData_SetModelScale) == 0x768, "CModifierVData_SetModelScale size mismatch");
         }
     }
 }

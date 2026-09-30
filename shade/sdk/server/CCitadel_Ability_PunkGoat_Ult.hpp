@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1618
+             * Size: 0x1dd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_Ult : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nBatChargingFX; // 0x0f70, 0x4 bytes
-                std::uint8_t pad_0f74[0x14]; // 0x0f74, 0x14 bytes
-                std::uint8_t m_nSlamTravelType; // 0x0f88, 0x1 bytes
-                std::uint8_t pad_0f89[0x3]; // 0x0f89, 0x3 bytes
-                float m_flDistanceToTravel; // 0x0f8c, 0x4 bytes
-                bool m_bHoldingAbilityButton; // 0x0f90, 0x1 bytes
-                bool m_bFirstFrameGoingDown; // 0x0f91, 0x1 bytes
-                std::uint8_t pad_0f92[0x686]; // 0x0f92, 0x686 bytes
+                shade::sdk::client::ParticleIndex_t m_nBatChargingFX; // 0x14a0, 0x4 bytes
+                std::uint8_t pad_14a4[0x30]; // 0x14a4, 0x30 bytes
+                std::uint8_t m_nSlamTravelType; // 0x14d4, 0x1 bytes
+                std::uint8_t pad_14d5[0x3]; // 0x14d5, 0x3 bytes
+                float m_flDistanceToTravel; // 0x14d8, 0x4 bytes
+                bool m_bHoldingAbilityButton; // 0x14dc, 0x1 bytes
+                bool m_bFirstFrameGoingDown; // 0x14dd, 0x1 bytes
+                std::uint8_t pad_14de[0x8f2]; // 0x14de, 0x8f2 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_Ult) == 0x1618, "CCitadel_Ability_PunkGoat_Ult size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_Ult) == 0x1DD0, "CCitadel_Ability_PunkGoat_Ult size mismatch");
         }
     }
 }

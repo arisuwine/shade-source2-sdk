@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1310
+             * Size: 0x1990
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,19 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HornetSting : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::int32_t m_BounceCount; // 0x0f70, 0x4 bytes
-                bool m_bHitHero; // 0x0f74, 0x1 bytes
-                std::uint8_t pad_0f75[0x3]; // 0x0f75, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecValidBounceTargets; // 0x0f78, 0x18 bytes
-                std::uint8_t pad_0f90[0x380]; // 0x0f90, 0x380 bytes
+                std::int32_t m_BounceCount; // 0x14a0, 0x4 bytes
+                bool m_bHitHero; // 0x14a4, 0x1 bytes
+                std::uint8_t pad_14a5[0x3]; // 0x14a5, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecValidBounceTargets; // 0x14a8, 0x18 bytes
+                std::uint8_t pad_14c0[0x4d0]; // 0x14c0, 0x4d0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HornetSting) == 0x1310, "CCitadel_Ability_HornetSting size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HornetSting) == 0x1990, "CCitadel_Ability_HornetSting size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1210
+             * Size: 0x1830
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_RestorativeLocket : public shade::sdk::server::CCitadel_Item {
             public:
-                std::uint8_t pad_0f78[0x280]; // 0x0f78, 0x280 bytes
-                std::int32_t m_nNumStacks; // 0x11f8, 0x4 bytes
-                std::uint8_t pad_11fc[0x14]; // 0x11fc, 0x14 bytes
+                std::uint8_t pad_14a8[0x370]; // 0x14a8, 0x370 bytes
+                std::int32_t m_nNumStacks; // 0x1818, 0x4 bytes
+                std::uint8_t pad_181c[0x14]; // 0x181c, 0x14 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CItem_RestorativeLocket) == 0x1210, "CItem_RestorativeLocket size mismatch");
+            static_assert(sizeof(CItem_RestorativeLocket) == 0x1830, "CItem_RestorativeLocket size mismatch");
         }
     }
 }

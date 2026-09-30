@@ -12,41 +12,42 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CAI_Component.hpp"
 #include "shade/sdk/server/AIScheduleState_t.hpp"
+#include "shade/sdk/server/ScheduleId_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb0
+             * Size: 0xc8
              * Alignment: 0xff
              * Has VTable
+             * Construct Allowed
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CAI_Scheduler : public shade::sdk::client::CAI_Component {
             public:
-                shade::sdk::server::AIScheduleState_t m_ScheduleState; // 0x0050, 0x14 bytes
-                std::uint8_t pad_0064[0xc]; // 0x0064, 0xc bytes
-                CUtlSymbolLarge m_failSchedule; // 0x0070, 0x8 bytes
-                CUtlSymbolLarge m_translatedSchedule; // 0x0078, 0x8 bytes
-                CUtlSymbolLarge m_untranslatedSchedule; // 0x0080, 0x8 bytes
-                std::uint8_t pad_0088[0x20]; // 0x0088, 0x20 bytes
-                CUtlString m_sInterruptText; // 0x00a8, 0x8 bytes
+                shade::sdk::server::AIScheduleState_t m_ScheduleState; // 0x0048, 0x18 bytes
+                std::uint8_t pad_0060[0x8]; // 0x0060, 0x8 bytes
+                shade::sdk::server::ScheduleId_t m_failSchedule; // 0x0068, 0x8 bytes
+                shade::sdk::server::ScheduleId_t m_translatedSchedule; // 0x0070, 0x8 bytes
+                shade::sdk::server::ScheduleId_t m_untranslatedSchedule; // 0x0078, 0x8 bytes
+                std::uint8_t pad_0080[0x38]; // 0x0080, 0x38 bytes
+                CUtlString m_sInterruptText; // 0x00b8, 0x8 bytes
+                std::uint8_t pad_00c0[0x8]; // 0x00c0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pSchedule; // Offset: 0x68, Size: 0x1, Size In Bytes: 0x0
-             * void m_pFailedSchedule; // Offset: 0x88, Size: 0x1, Size In Bytes: 0x0
-             * void m_pInterruptedSchedule; // Offset: 0xa0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_Scheduler) == 0xB0, "CAI_Scheduler size mismatch");
+            static_assert(sizeof(CAI_Scheduler) == 0xC8, "CAI_Scheduler size mismatch");
         }
     }
 }

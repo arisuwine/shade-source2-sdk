@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1c28
+             * Size: 0x2608
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bookworm_KnightCharge : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x0f70, 0x18 bytes
-                std::uint8_t pad_0f88[0xc9c]; // 0x0f88, 0xc9c bytes
-                bool m_bAffectedAnyTargets; // 0x1c24, 0x1 bytes
-                std::uint8_t pad_1c25[0x3]; // 0x1c25, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x14a0, 0x18 bytes
+                std::uint8_t pad_14b8[0x114c]; // 0x14b8, 0x114c bytes
+                bool m_bAffectedAnyTargets; // 0x2604, 0x1 bytes
+                std::uint8_t pad_2605[0x3]; // 0x2605, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bookworm_KnightCharge) == 0x1C28, "CCitadel_Ability_Bookworm_KnightCharge size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bookworm_KnightCharge) == 0x2608, "CCitadel_Ability_Bookworm_KnightCharge size mismatch");
         }
     }
 }

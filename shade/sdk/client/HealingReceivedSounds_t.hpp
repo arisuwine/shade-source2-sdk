@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x60
+             * Size: 0x70
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -33,12 +34,13 @@ namespace shade {
                 std::int32_t m_nPriority; // 0x0048, 0x4 bytes
                 std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
                 CSoundEventName m_strHOTToppedOff; // 0x0050, 0x10 bytes
+                CSoundEventName m_strHighThresholdOneshot; // 0x0060, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(HealingReceivedSounds_t) == 0x60, "HealingReceivedSounds_t size mismatch");
+            static_assert(sizeof(HealingReceivedSounds_t) == 0x70, "HealingReceivedSounds_t size mismatch");
         }
     }
 }

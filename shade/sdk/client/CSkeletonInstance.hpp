@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,25 +23,25 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x450
-             * Alignment: 0xff
+             * Size: 0x4b0
+             * Alignment: 0x10
              * Has VTable
-             * Construct Disallowed
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CSkeletonInstance : public shade::sdk::client::CGameSceneNode {
             public:
-                std::uint8_t pad_0140[0x10]; // 0x0140, 0x10 bytes
-                shade::sdk::client::CModelState m_modelState; // 0x0150, 0x260 bytes
-                bool m_bUseParentRenderBounds; // 0x03b0, 0x1 bytes
-                bool m_bDisableSolidCollisionsForHierarchy; // 0x03b1, 0x1 bytes
-                std::uint8_t m_bDirtyMotionType : 1; // 0x03b2, 0x1 bytes
-                std::uint8_t m_bIsGeneratingLatchedParentSpaceState : 1; // 0x03b2, 0x1 bytes
-                std::uint8_t pad_03b3[0x1]; // 0x03b3, 0x1 bytes
-                CUtlStringToken m_materialGroup; // 0x03b4, 0x4 bytes
-                std::uint8_t m_nHitboxSet; // 0x03b8, 0x1 bytes
-                std::uint8_t pad_03b9[0x97]; // 0x03b9, 0x97 bytes
+                std::uint8_t pad_0130[0x10]; // 0x0130, 0x10 bytes
+                shade::sdk::client::CModelState m_modelState; // 0x0140, 0x2c0 bytes
+                bool m_bUseParentRenderBounds; // 0x0400, 0x1 bytes
+                bool m_bDisableSolidCollisionsForHierarchy; // 0x0401, 0x1 bytes
+                bool m_bDirtyMotionType; // 0x0402, 0x1 bytes
+                bool m_bIsGeneratingLatchedParentSpaceState; // 0x0403, 0x1 bytes
+                std::uint8_t pad_0404[0x4]; // 0x0404, 0x4 bytes
+                CUtlStringToken m_materialGroup; // 0x0408, 0x4 bytes
+                std::uint8_t m_nHitboxSet; // 0x040c, 0x1 bytes
+                std::uint8_t pad_040d[0xa3]; // 0x040d, 0xa3 bytes
             };
             #pragma pack(pop)
 
@@ -50,7 +51,7 @@ namespace shade {
              * float rotationSpeed; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CSkeletonInstance) == 0x450, "CSkeletonInstance size mismatch");
+            static_assert(sizeof(CSkeletonInstance) == 0x4B0, "CSkeletonInstance size mismatch");
         }
     }
 }

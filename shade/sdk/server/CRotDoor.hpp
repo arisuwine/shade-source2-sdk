@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x988
+             * Size: 0xa88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CRotDoor : public shade::sdk::server::CBaseDoor {
             public:
-                bool m_bSolidBsp; // 0x0980, 0x1 bytes
-                std::uint8_t pad_0981[0x7]; // 0x0981, 0x7 bytes
+                bool m_bSolidBsp; // 0x0a80, 0x1 bytes
+                std::uint8_t pad_0a81[0x7]; // 0x0a81, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRotDoor) == 0x988, "CRotDoor size mismatch");
+            static_assert(sizeof(CRotDoor) == 0xA88, "CRotDoor size mismatch");
         }
     }
 }

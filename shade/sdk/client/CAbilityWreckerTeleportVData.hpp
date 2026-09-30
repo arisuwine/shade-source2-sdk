@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bf0
+             * Size: 0x1778
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,29 +43,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityWreckerTeleportVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpectatingProjectileParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelParticle; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1ab8, 0xe0 bytes
-                float m_ArrowOffsetX; // 0x1b98, 0x4 bytes
-                float m_ArrowCameraDistance; // 0x1b9c, 0x4 bytes
-                float m_ArrowCameraHeightOffset; // 0x1ba0, 0x4 bytes
-                float m_ArrowInitialPitch; // 0x1ba4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GuidingModifier; // 0x1ba8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1bb8, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1bc8, 0x10 bytes
-                float m_flTrackAmount; // 0x1bd8, 0x4 bytes
-                float m_flSpeedAccel; // 0x1bdc, 0x4 bytes
-                float m_flSpeedDeccel; // 0x1be0, 0x4 bytes
-                float m_flBaseProjectileSpeed; // 0x1be4, 0x4 bytes
-                float m_flMaxProjectileSpeed; // 0x1be8, 0x4 bytes
-                std::uint8_t pad_1bec[0x4]; // 0x1bec, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpectatingProjectileParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelParticle; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1640, 0xe0 bytes
+                float m_ArrowOffsetX; // 0x1720, 0x4 bytes
+                float m_ArrowCameraDistance; // 0x1724, 0x4 bytes
+                float m_ArrowCameraHeightOffset; // 0x1728, 0x4 bytes
+                float m_ArrowInitialPitch; // 0x172c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GuidingModifier; // 0x1730, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1740, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1750, 0x10 bytes
+                float m_flTrackAmount; // 0x1760, 0x4 bytes
+                float m_flSpeedAccel; // 0x1764, 0x4 bytes
+                float m_flSpeedDeccel; // 0x1768, 0x4 bytes
+                float m_flBaseProjectileSpeed; // 0x176c, 0x4 bytes
+                float m_flMaxProjectileSpeed; // 0x1770, 0x4 bytes
+                std::uint8_t pad_1774[0x4]; // 0x1774, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityWreckerTeleportVData) == 0x1BF0, "CAbilityWreckerTeleportVData size mismatch");
+            static_assert(sizeof(CAbilityWreckerTeleportVData) == 0x1778, "CAbilityWreckerTeleportVData size mismatch");
         }
     }
 }

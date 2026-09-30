@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,9 +31,9 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPortalTrigger : public shade::sdk::server::CBaseTrigger {
             public:
-                std::uint8_t pad_08e0[0x18]; // 0x08e0, 0x18 bytes
-                CHandle<shade::sdk::server::CCitadelPortalTrigger> m_hOtherPortal; // 0x08f8, 0x4 bytes
-                std::uint8_t pad_08fc[0x4]; // 0x08fc, 0x4 bytes
+                std::uint8_t pad_09f0[0x10]; // 0x09f0, 0x10 bytes
+                CHandle<shade::sdk::server::CCitadelPortalTrigger> m_hOtherPortal; // 0x0a00, 0x4 bytes
+                std::uint8_t pad_0a04[0x4]; // 0x0a04, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -41,7 +42,7 @@ namespace shade {
              * Vector trigger_maxs; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelPortalTrigger) == 0x900, "CCitadelPortalTrigger size mismatch");
+            static_assert(sizeof(CCitadelPortalTrigger) == 0xA08, "CCitadelPortalTrigger size mismatch");
         }
     }
 }

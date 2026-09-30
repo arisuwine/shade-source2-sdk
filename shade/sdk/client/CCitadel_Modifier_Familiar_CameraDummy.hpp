@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Familiar_CameraDummy : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bCamOverrideActive; // 0x00c0, 0x1 bytes
-                std::uint8_t pad_00c1[0x3]; // 0x00c1, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDummy; // 0x00c4, 0x4 bytes
+                bool m_bCamOverrideActive; // 0x0130, 0x1 bytes
+                std::uint8_t pad_0131[0x3]; // 0x0131, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hDummy; // 0x0134, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Familiar_CameraDummy) == 0xC8, "CCitadel_Modifier_Familiar_CameraDummy size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Familiar_CameraDummy) == 0x138, "CCitadel_Modifier_Familiar_CameraDummy size mismatch");
         }
     }
 }

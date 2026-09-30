@@ -12,20 +12,17 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/C_BaseCombatCharacter.hpp"
-#include "shade/sdk/client/CitadelPortraitEnvironmentType_t.hpp"
-#include "shade/sdk/client/HeroID_t.hpp"
-#include "shade/sdk/client/ParticleIndex_t.hpp"
-#include "shade/sdk/client/StartupBehavior_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x10f0
+             * Size: 0xfd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,42 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PortraitWorldUnit : public shade::sdk::client::C_BaseCombatCharacter {
             public:
-                bool m_bSuppressIntroEffects; // 0x0ee8, 0x1 bytes
-                bool m_bIsAlternateLoadout; // 0x0ee9, 0x1 bytes
-                bool m_bSpawnBackgroundModels; // 0x0eea, 0x1 bytes
-                bool m_bAnimateCloth; // 0x0eeb, 0x1 bytes
-                bool m_bDeferredPortrait; // 0x0eec, 0x1 bytes
-                bool m_bShowParticleAssetModifiers; // 0x0eed, 0x1 bytes
-                bool m_bIgnorePortraitInfo; // 0x0eee, 0x1 bytes
-                std::uint8_t pad_0eef[0x1]; // 0x0eef, 0x1 bytes
-                CUtlSymbolLarge m_BodyGroup; // 0x0ef0, 0x8 bytes
-                float m_flStartingAnimationCycle; // 0x0ef8, 0x4 bytes
-                float m_flRareLoadoutAnimChance; // 0x0efc, 0x4 bytes
-                std::uint8_t pad_0f00[0x10]; // 0x0f00, 0x10 bytes
-                shade::sdk::client::CitadelPortraitEnvironmentType_t m_environment; // 0x0f10, 0x4 bytes
-                shade::sdk::client::StartupBehavior_t m_nStartupBehavior; // 0x0f14, 0x4 bytes
-                std::uint8_t pad_0f18[0x170]; // 0x0f18, 0x170 bytes
-                CUtlSymbolLarge m_cameraName; // 0x1088, 0x8 bytes
-                std::uint8_t pad_1090[0x30]; // 0x1090, 0x30 bytes
-                shade::sdk::client::ParticleIndex_t m_nPortraitParticle; // 0x10c0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nAmbientParticle; // 0x10c4, 0x4 bytes
-                shade::sdk::client::HeroID_t m_heroID; // 0x10c8, 0x4 bytes
-                std::uint8_t pad_10cc[0x4]; // 0x10cc, 0x4 bytes
-                CUtlSymbolLarge m_strGraphBaseState; // 0x10d0, 0x8 bytes
-                CUtlSymbolLarge m_sceneName; // 0x10d8, 0x8 bytes
-                std::int32_t m_nThinksUntilPresent; // 0x10e0, 0x4 bytes
-                std::uint8_t pad_10e4[0xc]; // 0x10e4, 0xc bytes
+                std::uint8_t pad_0e28[0x60]; // 0x0e28, 0x60 bytes
+                bool m_bAnimateCloth; // 0x0e88, 0x1 bytes
+                bool m_bClothGroundCollision; // 0x0e89, 0x1 bytes
+                std::uint8_t pad_0e8a[0x6]; // 0x0e8a, 0x6 bytes
+                CUtlSymbolLarge m_strGraphBaseState; // 0x0e90, 0x8 bytes
+                CUtlSymbolLarge m_sceneName; // 0x0e98, 0x8 bytes
+                std::uint8_t pad_0ea0[0x130]; // 0x0ea0, 0x130 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint32_t heroid; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * bool skip_pet_spawn; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t model_index; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool StartDisabled; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_PortraitWorldUnit) == 0x10F0, "C_PortraitWorldUnit size mismatch");
+            static_assert(sizeof(C_PortraitWorldUnit) == 0xFD0, "C_PortraitWorldUnit size mismatch");
         }
     }
 }

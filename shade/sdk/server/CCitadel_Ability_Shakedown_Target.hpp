@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1100
+             * Size: 0x16c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Shakedown_Target : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CHandle<shade::sdk::server::CCitadel_Ability_Yakuza_Shakedown> m_hShadowdownAbility; // 0x0f70, 0x4 bytes
-                Vector m_AimPos; // 0x0f74, 0xc bytes
-                std::uint8_t pad_0f80[0x180]; // 0x0f80, 0x180 bytes
+                CHandle<shade::sdk::server::CCitadel_Ability_Yakuza_Shakedown> m_hShadowdownAbility; // 0x14a0, 0x4 bytes
+                VectorWS m_AimPos; // 0x14a4, 0xc bytes
+                std::uint8_t pad_14b0[0x210]; // 0x14b0, 0x210 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Shakedown_Target) == 0x1100, "CCitadel_Ability_Shakedown_Target size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Shakedown_Target) == 0x16C0, "CCitadel_Ability_Shakedown_Target size mismatch");
         }
     }
 }

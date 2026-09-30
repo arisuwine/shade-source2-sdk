@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -25,7 +26,8 @@ namespace shade {
                 EItemSlotType_UniversalLocked = 0x4,
                 EItemSlotType_All = 0x5,
                 EItemSlotType_Favorites = 0x6,
-                EMaxItemSlotTypes = 0x7
+                EItemSlotType_Ability = 0x7,
+                EMaxItemSlotTypes = 0x8
             };
         }
     }

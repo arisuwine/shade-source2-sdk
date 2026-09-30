@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_SpeechFilter : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x8]; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszSubject; // 0x04a8, 0x8 bytes
-                float m_flIdleModifier; // 0x04b0, 0x4 bytes
-                bool m_bNeverSayHello; // 0x04b4, 0x1 bytes
-                bool m_bDisabled; // 0x04b5, 0x1 bytes
-                std::uint8_t pad_04b6[0x2]; // 0x04b6, 0x2 bytes
+                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszSubject; // 0x04b8, 0x8 bytes
+                float m_flIdleModifier; // 0x04c0, 0x4 bytes
+                bool m_bNeverSayHello; // 0x04c4, 0x1 bytes
+                bool m_bDisabled; // 0x04c5, 0x1 bytes
+                std::uint8_t pad_04c6[0x2]; // 0x04c6, 0x2 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetIdleModifier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_SpeechFilter) == 0x4B8, "CAI_SpeechFilter size mismatch");
+            static_assert(sizeof(CAI_SpeechFilter) == 0x4C8, "CAI_SpeechFilter size mismatch");
         }
     }
 }

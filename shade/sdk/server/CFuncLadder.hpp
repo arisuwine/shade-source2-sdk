@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x810
+             * Size: 0x908
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,29 +40,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncLadder : public shade::sdk::server::CBaseModelEntity {
             public:
-                Vector m_vecLadderDir; // 0x0780, 0xc bytes
-                std::uint8_t pad_078c[0x4]; // 0x078c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CInfoLadderDismount>> m_Dismounts; // 0x0790, 0x18 bytes
-                Vector m_vecLocalTop; // 0x07a8, 0xc bytes
-                VectorWS m_vecPlayerMountPositionTop; // 0x07b4, 0xc bytes
-                VectorWS m_vecPlayerMountPositionBottom; // 0x07c0, 0xc bytes
-                float m_flAutoRideSpeed; // 0x07cc, 0x4 bytes
-                bool m_bDisabled; // 0x07d0, 0x1 bytes
-                bool m_bFakeLadder; // 0x07d1, 0x1 bytes
-                bool m_bHasSlack; // 0x07d2, 0x1 bytes
-                std::uint8_t pad_07d3[0x5]; // 0x07d3, 0x5 bytes
-                CUtlSymbolLarge m_surfacePropName; // 0x07d8, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerGotOnLadder; // 0x07e0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerGotOffLadder; // 0x07f8, 0x18 bytes
+                Vector m_vecLadderDir; // 0x0878, 0xc bytes
+                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CInfoLadderDismount>> m_Dismounts; // 0x0888, 0x18 bytes
+                Vector m_vecLocalTop; // 0x08a0, 0xc bytes
+                VectorWS m_vecPlayerMountPositionTop; // 0x08ac, 0xc bytes
+                VectorWS m_vecPlayerMountPositionBottom; // 0x08b8, 0xc bytes
+                float m_flAutoRideSpeed; // 0x08c4, 0x4 bytes
+                bool m_bDisabled; // 0x08c8, 0x1 bytes
+                bool m_bFakeLadder; // 0x08c9, 0x1 bytes
+                bool m_bHasSlack; // 0x08ca, 0x1 bytes
+                std::uint8_t pad_08cb[0x5]; // 0x08cb, 0x5 bytes
+                CUtlSymbolLarge m_surfacePropName; // 0x08d0, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerGotOnLadder; // 0x08d8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerGotOffLadder; // 0x08f0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncLadder) == 0x810, "CFuncLadder size mismatch");
+            static_assert(sizeof(CFuncLadder) == 0x908, "CFuncLadder size mismatch");
         }
     }
 }

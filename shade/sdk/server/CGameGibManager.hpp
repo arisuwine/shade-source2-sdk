@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameGibManager : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x18]; // 0x04a0, 0x18 bytes
-                bool m_bAllowNewGibs; // 0x04b8, 0x1 bytes
-                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
-                std::int32_t m_iCurrentMaxPieces; // 0x04bc, 0x4 bytes
-                std::int32_t m_iMaxPieces; // 0x04c0, 0x4 bytes
-                std::int32_t m_iLastFrame; // 0x04c4, 0x4 bytes
+                std::uint8_t pad_04b0[0x18]; // 0x04b0, 0x18 bytes
+                bool m_bAllowNewGibs; // 0x04c8, 0x1 bytes
+                std::uint8_t pad_04c9[0x3]; // 0x04c9, 0x3 bytes
+                std::int32_t m_iCurrentMaxPieces; // 0x04cc, 0x4 bytes
+                std::int32_t m_iMaxPieces; // 0x04d0, 0x4 bytes
+                std::int32_t m_iLastFrame; // 0x04d4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t InputSetMaxPieces; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetMaxPiecesDX8; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_LRU; // Offset: 0x4a0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CGameGibManager) == 0x4C8, "CGameGibManager size mismatch");
+            static_assert(sizeof(CGameGibManager) == 0x4D8, "CGameGibManager size mismatch");
         }
     }
 }

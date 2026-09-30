@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c08
+             * Size: 0x1b38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +33,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_BarrackBoss : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                shade::sdk::client::CCitadelPlayerClipComponent m_CCitadelPlayerClipComponent; // 0x1bd0, 0x20 bytes
-                std::uint8_t pad_1bf0[0xc]; // 0x1bf0, 0xc bytes
-                std::int32_t m_iLane; // 0x1bfc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1c00, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1c04, 0x4 bytes
+                shade::sdk::client::CCitadelPlayerClipComponent m_CCitadelPlayerClipComponent; // 0x1b08, 0x20 bytes
+                std::int32_t m_iLane; // 0x1b28, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1b2c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1b30, 0x4 bytes
+                std::uint8_t pad_1b34[0x4]; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_BarrackBoss) == 0x1C08, "C_NPC_BarrackBoss size mismatch");
+            static_assert(sizeof(C_NPC_BarrackBoss) == 0x1B38, "C_NPC_BarrackBoss size mismatch");
         }
     }
 }

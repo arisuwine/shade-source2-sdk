@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x818
+             * Size: 0x910
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemXP : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t pad_0780[0x5c]; // 0x0780, 0x5c bytes
-                shade::sdk::entity2::GameTime_t m_timeLaunch; // 0x07dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAttackableTime; // 0x07e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndAttackableTime; // 0x07e4, 0x4 bytes
-                std::int32_t m_nLaunchNum; // 0x07e8, 0x4 bytes
-                std::uint8_t pad_07ec[0x2c]; // 0x07ec, 0x2c bytes
+                std::uint8_t pad_0878[0x5c]; // 0x0878, 0x5c bytes
+                shade::sdk::entity2::GameTime_t m_timeLaunch; // 0x08d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAttackableTime; // 0x08d8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndAttackableTime; // 0x08dc, 0x4 bytes
+                std::int32_t m_nLaunchNum; // 0x08e0, 0x4 bytes
+                std::uint8_t pad_08e4[0x2c]; // 0x08e4, 0x2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemXP) == 0x818, "CItemXP size mismatch");
+            static_assert(sizeof(CItemXP) == 0x910, "CItemXP size mismatch");
         }
     }
 }

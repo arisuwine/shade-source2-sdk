@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x268
+             * Size: 0x368
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Uppercutted : public shade::sdk::server::CCitadelModifier {
             public:
-                Vector m_vecFromBebop; // 0x00d0, 0xc bytes
-                float m_flDamage; // 0x00dc, 0x4 bytes
-                bool m_bExplodeOnLand; // 0x00e0, 0x1 bytes
-                std::uint8_t pad_00e1[0x187]; // 0x00e1, 0x187 bytes
+                Vector m_vecFromBebop; // 0x0140, 0xc bytes
+                float m_flDamage; // 0x014c, 0x4 bytes
+                bool m_bExplodeOnLand; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x217]; // 0x0151, 0x217 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Uppercutted) == 0x268, "CCitadel_Modifier_Uppercutted size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Uppercutted) == 0x368, "CCitadel_Modifier_Uppercutted size mismatch");
         }
     }
 }

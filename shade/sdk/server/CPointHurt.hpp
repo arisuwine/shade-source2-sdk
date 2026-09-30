@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,25 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointHurt : public shade::sdk::server::CPointEntity {
             public:
-                std::int32_t m_nDamage; // 0x04a0, 0x4 bytes
-                shade::sdk::client::DamageTypes_t m_bitsDamageType; // 0x04a4, 0x4 bytes
-                float m_flRadius; // 0x04a8, 0x4 bytes
-                float m_flDelay; // 0x04ac, 0x4 bytes
-                CUtlSymbolLarge m_strTarget; // 0x04b0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_pActivator; // 0x04b8, 0x4 bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
+                std::int32_t m_nDamage; // 0x04b0, 0x4 bytes
+                shade::sdk::client::DamageTypes_t m_bitsDamageType; // 0x04b4, 0x4 bytes
+                float m_flRadius; // 0x04b8, 0x4 bytes
+                float m_flDelay; // 0x04bc, 0x4 bytes
+                CUtlSymbolLarge m_strTarget; // 0x04c0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_pActivator; // 0x04c8, 0x4 bytes
+                std::uint8_t pad_04cc[0x4]; // 0x04cc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CPointHurtHurtThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputHurt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointHurt) == 0x4C0, "CPointHurt size mismatch");
+            static_assert(sizeof(CPointHurt) == 0x4D0, "CPointHurt size mismatch");
         }
     }
 }

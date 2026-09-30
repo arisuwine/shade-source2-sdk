@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x2a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Out_Of_Combat_Health_Regen : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x100]; // 0x00d0, 0x100 bytes
-                shade::sdk::entity2::GameTime_t m_LastDamageTaken; // 0x01d0, 0x4 bytes
-                std::uint8_t pad_01d4[0x4]; // 0x01d4, 0x4 bytes
+                std::uint8_t pad_0140[0x160]; // 0x0140, 0x160 bytes
+                shade::sdk::entity2::GameTime_t m_LastDamageTaken; // 0x02a0, 0x4 bytes
+                std::uint8_t pad_02a4[0x4]; // 0x02a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Out_Of_Combat_Health_Regen) == 0x1D8, "CCitadel_Modifier_Out_Of_Combat_Health_Regen size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Out_Of_Combat_Health_Regen) == 0x2A8, "CCitadel_Modifier_Out_Of_Combat_Health_Regen size mismatch");
         }
     }
 }

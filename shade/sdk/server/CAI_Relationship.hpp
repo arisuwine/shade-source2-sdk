@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,34 +32,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_Relationship : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x10]; // 0x04a0, 0x10 bytes
-                CUtlSymbolLarge m_iszSubject; // 0x04b0, 0x8 bytes
-                CUtlSymbolLarge m_iszSubjectClass; // 0x04b8, 0x8 bytes
-                shade::sdk::client::Class_T m_nSubjectClassifyAs; // 0x04c0, 0x4 bytes
-                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
-                CUtlSymbolLarge m_iszTargetClass; // 0x04c8, 0x8 bytes
-                shade::sdk::client::Class_T m_nTargetClassifyAs; // 0x04d0, 0x4 bytes
-                std::int32_t m_iDisposition; // 0x04d4, 0x4 bytes
-                std::int32_t m_iRank; // 0x04d8, 0x4 bytes
-                bool m_fStartActive; // 0x04dc, 0x1 bytes
-                bool m_bIsActive; // 0x04dd, 0x1 bytes
-                std::uint8_t pad_04de[0x2]; // 0x04de, 0x2 bytes
-                std::int32_t m_iPreviousDisposition; // 0x04e0, 0x4 bytes
-                float m_flRadius; // 0x04e4, 0x4 bytes
-                std::int32_t m_iPreviousRank; // 0x04e8, 0x4 bytes
-                bool m_bReciprocal; // 0x04ec, 0x1 bytes
-                std::uint8_t pad_04ed[0x3]; // 0x04ed, 0x3 bytes
+                std::uint8_t pad_04b0[0x10]; // 0x04b0, 0x10 bytes
+                CUtlSymbolLarge m_iszSubject; // 0x04c0, 0x8 bytes
+                CUtlSymbolLarge m_iszSubjectClass; // 0x04c8, 0x8 bytes
+                shade::sdk::client::Class_T m_nSubjectClassifyAs; // 0x04d0, 0x4 bytes
+                std::uint8_t pad_04d4[0x4]; // 0x04d4, 0x4 bytes
+                CUtlSymbolLarge m_iszTargetClass; // 0x04d8, 0x8 bytes
+                shade::sdk::client::Class_T m_nTargetClassifyAs; // 0x04e0, 0x4 bytes
+                std::int32_t m_iDisposition; // 0x04e4, 0x4 bytes
+                std::int32_t m_iRank; // 0x04e8, 0x4 bytes
+                bool m_fStartActive; // 0x04ec, 0x1 bytes
+                bool m_bIsActive; // 0x04ed, 0x1 bytes
+                std::uint8_t pad_04ee[0x2]; // 0x04ee, 0x2 bytes
+                std::int32_t m_iPreviousDisposition; // 0x04f0, 0x4 bytes
+                float m_flRadius; // 0x04f4, 0x4 bytes
+                std::int32_t m_iPreviousRank; // 0x04f8, 0x4 bytes
+                bool m_bReciprocal; // 0x04fc, 0x1 bytes
+                std::uint8_t pad_04fd[0x3]; // 0x04fd, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CAI_RelationshipApplyRelationshipThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputApplyRelationship; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputRevertRelationship; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputRevertToDefaultRelationship; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_Relationship) == 0x4F0, "CAI_Relationship size mismatch");
+            static_assert(sizeof(CAI_Relationship) == 0x500, "CAI_Relationship size mismatch");
         }
     }
 }

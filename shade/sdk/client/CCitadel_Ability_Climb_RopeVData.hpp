@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18a0
+             * Size: 0x1428
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,40 +39,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Climb_RopeVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flMinButtonHoldTimeToActivate; // 0x1818, 0x4 bytes
-                float m_flClimbSpeedUp; // 0x181c, 0x4 bytes
-                float m_flClimbSpeedDown; // 0x1820, 0x4 bytes
-                float m_flClimbSpeedDownMax; // 0x1824, 0x4 bytes
-                float m_flClimbDownAccelTime; // 0x1828, 0x4 bytes
-                float m_flLatchSpeed; // 0x182c, 0x4 bytes
-                float m_flAttachOffset; // 0x1830, 0x4 bytes
-                float m_flMinReconnectTime; // 0x1834, 0x4 bytes
-                float m_flSideMoveReduction; // 0x1838, 0x4 bytes
-                float m_flTopOffset; // 0x183c, 0x4 bytes
-                float m_flBottomOffset; // 0x1840, 0x4 bytes
-                float m_flTraceRadiusSize; // 0x1844, 0x4 bytes
-                float m_flStopTimeToShoot; // 0x1848, 0x4 bytes
-                float m_flJumpOffVertical; // 0x184c, 0x4 bytes
-                float m_flJumpOffHorizontal; // 0x1850, 0x4 bytes
-                float m_flDuckOffVertical; // 0x1854, 0x4 bytes
-                float m_flDuckOffHorizontal; // 0x1858, 0x4 bytes
-                float m_flActivateRange; // 0x185c, 0x4 bytes
-                float m_flJumpToRoofRayCheckDist; // 0x1860, 0x4 bytes
-                float m_flMinTimeToRoofCheck; // 0x1864, 0x4 bytes
-                float m_flTimeToHintRefresh; // 0x1868, 0x4 bytes
-                float m_iMaxHintCount; // 0x186c, 0x4 bytes
-                float m_flClimbRopeSlowDurationOnHit; // 0x1870, 0x4 bytes
-                float m_flCameraRotateSpeed; // 0x1874, 0x4 bytes
-                float m_flCameraRotateMaxTime; // 0x1878, 0x4 bytes
-                std::uint8_t pad_187c[0x4]; // 0x187c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ClimbRopeSlowOnHitModifier; // 0x1880, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ClimbRopeSlowFromRecentDamageModifier; // 0x1890, 0x10 bytes
+                float m_flMinButtonHoldTimeToActivate; // 0x13a0, 0x4 bytes
+                float m_flClimbSpeedUp; // 0x13a4, 0x4 bytes
+                float m_flClimbSpeedDown; // 0x13a8, 0x4 bytes
+                float m_flClimbSpeedDownMax; // 0x13ac, 0x4 bytes
+                float m_flClimbDownAccelTime; // 0x13b0, 0x4 bytes
+                float m_flLatchSpeed; // 0x13b4, 0x4 bytes
+                float m_flAttachOffset; // 0x13b8, 0x4 bytes
+                float m_flMinReconnectTime; // 0x13bc, 0x4 bytes
+                float m_flSideMoveReduction; // 0x13c0, 0x4 bytes
+                float m_flTopOffset; // 0x13c4, 0x4 bytes
+                float m_flBottomOffset; // 0x13c8, 0x4 bytes
+                float m_flTraceRadiusSize; // 0x13cc, 0x4 bytes
+                float m_flStopTimeToShoot; // 0x13d0, 0x4 bytes
+                float m_flJumpOffVertical; // 0x13d4, 0x4 bytes
+                float m_flJumpOffHorizontal; // 0x13d8, 0x4 bytes
+                float m_flDuckOffVertical; // 0x13dc, 0x4 bytes
+                float m_flDuckOffHorizontal; // 0x13e0, 0x4 bytes
+                float m_flActivateRange; // 0x13e4, 0x4 bytes
+                float m_flJumpToRoofRayCheckDist; // 0x13e8, 0x4 bytes
+                float m_flMinTimeToRoofCheck; // 0x13ec, 0x4 bytes
+                float m_flTimeToHintRefresh; // 0x13f0, 0x4 bytes
+                float m_iMaxHintCount; // 0x13f4, 0x4 bytes
+                float m_flClimbRopeSlowDurationOnHit; // 0x13f8, 0x4 bytes
+                float m_flCameraRotateSpeed; // 0x13fc, 0x4 bytes
+                float m_flCameraRotateMaxTime; // 0x1400, 0x4 bytes
+                std::uint8_t pad_1404[0x4]; // 0x1404, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ClimbRopeSlowOnHitModifier; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ClimbRopeSlowFromRecentDamageModifier; // 0x1418, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Climb_RopeVData) == 0x18A0, "CCitadel_Ability_Climb_RopeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Climb_RopeVData) == 0x1428, "CCitadel_Ability_Climb_RopeVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16e8
+             * Size: 0x1dc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_RocketBarrage : public shade::sdk::client::CTier3BossAbility {
             public:
-                std::int32_t m_nGrenadeIndex; // 0x11d8, 0x4 bytes
-                std::int32_t m_nTotalGrenades; // 0x11dc, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x11e0, 0x1 bytes
-                std::uint8_t pad_11e1[0x507]; // 0x11e1, 0x507 bytes
+                std::int32_t m_nGrenadeIndex; // 0x16d8, 0x4 bytes
+                std::int32_t m_nTotalGrenades; // 0x16dc, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x6e7]; // 0x16e1, 0x6e7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_RocketBarrage) == 0x16E8, "CCitadel_Ability_Tier3Boss_RocketBarrage size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_RocketBarrage) == 0x1DC8, "CCitadel_Ability_Tier3Boss_RocketBarrage size mismatch");
         }
     }
 }

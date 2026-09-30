@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe8
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HeroUpgradeBonuses : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::server::CCitadelPlayerPawn *m_pOwningPlayer; // 0x00d0, 0x8 bytes
-                float m_flWeaponPower; // 0x00d8, 0x4 bytes
-                float m_flArmorPower; // 0x00dc, 0x4 bytes
-                float m_flTechPower; // 0x00e0, 0x4 bytes
-                std::uint8_t pad_00e4[0x4]; // 0x00e4, 0x4 bytes
+                shade::sdk::server::CCitadelPlayerPawn *m_pOwningPlayer; // 0x0140, 0x8 bytes
+                float m_flWeaponPower; // 0x0148, 0x4 bytes
+                float m_flArmorPower; // 0x014c, 0x4 bytes
+                float m_flTechPower; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x4]; // 0x0154, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HeroUpgradeBonuses) == 0xE8, "CCitadel_Modifier_HeroUpgradeBonuses size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HeroUpgradeBonuses) == 0x158, "CCitadel_Modifier_HeroUpgradeBonuses size mismatch");
         }
     }
 }

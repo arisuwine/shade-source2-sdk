@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,8 +32,9 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x130
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -61,10 +63,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float m_Sim.m_fWindDir; // Offset: 0x74, Size: 0x1, Size In Bytes: 0x4
-             * float m_Sim.m_flWindSpeed; // Offset: 0x78, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CEnvWindShared) == 0x130, "CEnvWindShared size mismatch");
         }

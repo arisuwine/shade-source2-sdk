@@ -12,24 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CCitadelModifierVData.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace resourcesystem {
-            class InfoForResourceTypeCModel;
-        }
-    }
-}
+#include "shade/sdk/client/ModelChange_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x838
+             * Size: 0x850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CheaterCurseVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_CursedModel; // 0x0750, 0xe0 bytes
-                float m_flModelScale; // 0x0830, 0x4 bytes
-                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
+                shade::sdk::client::ModelChange_t m_ModelChange; // 0x0760, 0xe8 bytes
+                float m_flModelScale; // 0x0848, 0x4 bytes
+                std::uint8_t pad_084c[0x4]; // 0x084c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CheaterCurseVData) == 0x838, "CCitadel_Modifier_CheaterCurseVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CheaterCurseVData) == 0x850, "CCitadel_Modifier_CheaterCurseVData size mismatch");
         }
     }
 }

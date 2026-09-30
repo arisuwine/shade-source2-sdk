@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,6 +35,7 @@ namespace shade {
              * Size: 0x1b8
              * Alignment: 0xff
              * Has VTable
+             * Construct Allowed
              * Construct Disallowed
              * Module Local Type Scope
              */
@@ -42,10 +44,9 @@ namespace shade {
             public:
                 std::uint8_t pad_0008[0x30]; // 0x0008, 0x30 bytes
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0038, 0x28 bytes
-                std::uint8_t pad_0060[0x15]; // 0x0060, 0x15 bytes
-                Color m_Color; // 0x0075, 0x4 bytes
-                Color m_SecondaryColor; // 0x0079, 0x4 bytes
-                std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
+                std::uint8_t pad_0060[0x18]; // 0x0060, 0x18 bytes
+                Color m_Color; // 0x0078, 0x4 bytes
+                Color m_SecondaryColor; // 0x007c, 0x4 bytes
                 float m_flBrightness; // 0x0080, 0x4 bytes
                 float m_flBrightnessScale; // 0x0084, 0x4 bytes
                 float m_flBrightnessMult; // 0x0088, 0x4 bytes
@@ -91,9 +92,8 @@ namespace shade {
                 bool m_bAllowSSTGeneration; // 0x0121, 0x1 bytes
                 std::uint8_t pad_0122[0x2]; // 0x0122, 0x2 bytes
                 std::int32_t m_nDirectLight; // 0x0124, 0x4 bytes
-                std::int32_t m_nIndirectLight; // 0x0128, 0x4 bytes
-                bool m_bDynamicBounce; // 0x012c, 0x1 bytes
-                std::uint8_t pad_012d[0x3]; // 0x012d, 0x3 bytes
+                std::int32_t m_nBounceLight; // 0x0128, 0x4 bytes
+                float m_flBounceScale; // 0x012c, 0x4 bytes
                 float m_flFadeMinDist; // 0x0130, 0x4 bytes
                 float m_flFadeMaxDist; // 0x0134, 0x4 bytes
                 float m_flShadowFadeMinDist; // 0x0138, 0x4 bytes
@@ -124,10 +124,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * SHIM m_bRenderSpecular; // Offset: 0xc4, Size: 0x1, Size In Bytes: 0x1
-             * SHIM m_bCastShadows; // Offset: 0xb4, Size: 0x1, Size In Bytes: 0x1
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CLightComponent) == 0x1B8, "CLightComponent size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0xe8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_MagicianTurret_GraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraphParamRef<float> m_flDrainScale; // 0x0090, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bStartDrain; // 0x00b8, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bShoot; // 0x00c0, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_MagicianTurret_GraphController) == 0xE0, "CCitadel_MagicianTurret_GraphController size mismatch");
+            static_assert(sizeof(CCitadel_MagicianTurret_GraphController) == 0xE8, "CCitadel_MagicianTurret_GraphController size mismatch");
         }
     }
 }

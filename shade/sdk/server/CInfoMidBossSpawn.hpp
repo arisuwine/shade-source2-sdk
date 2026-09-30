@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,9 +31,6 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoMidBossSpawn : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                std::int32_t m_iCoverGroupID; // 0x04a0, 0x4 bytes
-                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
-                CUtlSymbolLarge m_iszSquadName; // 0x04a8, 0x8 bytes
                 std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
             };
             #pragma pack(pop)

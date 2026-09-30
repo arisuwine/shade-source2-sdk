@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a10
+             * Size: 0x16a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_PrimaryWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x19c0, 0x40 bytes
-                CSoundEventName m_strShootDelaySound; // 0x1a00, 0x10 bytes
+                CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1658, 0x40 bytes
+                CSoundEventName m_strShootDelaySound; // 0x1698, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_PrimaryWeaponVData) == 0x1A10, "CCitadel_Ability_Frank_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_PrimaryWeaponVData) == 0x16A8, "CCitadel_Ability_Frank_PrimaryWeaponVData size mismatch");
         }
     }
 }

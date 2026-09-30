@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa68
+             * Size: 0xb60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,102 +41,97 @@ namespace shade {
             #pragma pack(push, 1)
             class CBarnLight : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bEnabled; // 0x0780, 0x1 bytes
-                std::uint8_t pad_0781[0x3]; // 0x0781, 0x3 bytes
-                std::int32_t m_nColorMode; // 0x0784, 0x4 bytes
-                Color m_Color; // 0x0788, 0x4 bytes
-                float m_flColorTemperature; // 0x078c, 0x4 bytes
-                float m_flBrightness; // 0x0790, 0x4 bytes
-                float m_flBrightnessScale; // 0x0794, 0x4 bytes
-                std::int32_t m_nDirectLight; // 0x0798, 0x4 bytes
-                std::int32_t m_nBakedShadowIndex; // 0x079c, 0x4 bytes
-                std::int32_t m_nLightPathUniqueId; // 0x07a0, 0x4 bytes
-                std::int32_t m_nLightMapUniqueId; // 0x07a4, 0x4 bytes
-                std::int32_t m_nLuminaireShape; // 0x07a8, 0x4 bytes
-                float m_flLuminaireSize; // 0x07ac, 0x4 bytes
-                float m_flLuminaireAnisotropy; // 0x07b0, 0x4 bytes
-                std::uint8_t pad_07b4[0x4]; // 0x07b4, 0x4 bytes
-                CUtlString m_LightStyleString; // 0x07b8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flLightStyleStartTime; // 0x07c0, 0x4 bytes
-                std::uint8_t pad_07c4[0x4]; // 0x07c4, 0x4 bytes
-                CNetworkUtlVectorBase<CUtlString> m_QueuedLightStyleStrings; // 0x07c8, 0x18 bytes
-                CNetworkUtlVectorBase<CUtlString> m_LightStyleEvents; // 0x07e0, 0x18 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseModelEntity>> m_LightStyleTargets; // 0x07f8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_StyleEvent[0x4]; // 0x0810, 0x60 bytes
-                std::uint8_t pad_0870[0x20]; // 0x0870, 0x20 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hLightCookie; // 0x0890, 0x8 bytes
-                float m_flShape; // 0x0898, 0x4 bytes
-                float m_flSoftX; // 0x089c, 0x4 bytes
-                float m_flSoftY; // 0x08a0, 0x4 bytes
-                float m_flSkirt; // 0x08a4, 0x4 bytes
-                float m_flSkirtNear; // 0x08a8, 0x4 bytes
-                Vector m_vSizeParams; // 0x08ac, 0xc bytes
-                float m_flRange; // 0x08b8, 0x4 bytes
-                Vector m_vShear; // 0x08bc, 0xc bytes
-                std::int32_t m_nBakeSpecularToCubemaps; // 0x08c8, 0x4 bytes
-                Vector m_vBakeSpecularToCubemapsSize; // 0x08cc, 0xc bytes
-                std::int32_t m_nCastShadows; // 0x08d8, 0x4 bytes
-                std::int32_t m_nShadowMapSize; // 0x08dc, 0x4 bytes
-                std::int32_t m_nShadowPriority; // 0x08e0, 0x4 bytes
-                bool m_bContactShadow; // 0x08e4, 0x1 bytes
-                bool m_bForceShadowsEnabled; // 0x08e5, 0x1 bytes
-                std::uint8_t pad_08e6[0x2]; // 0x08e6, 0x2 bytes
-                std::int32_t m_nBounceLight; // 0x08e8, 0x4 bytes
-                float m_flBounceScale; // 0x08ec, 0x4 bytes
-                bool m_bDynamicBounce; // 0x08f0, 0x1 bytes
-                std::uint8_t pad_08f1[0x3]; // 0x08f1, 0x3 bytes
-                float m_flMinRoughness; // 0x08f4, 0x4 bytes
-                Vector m_vAlternateColor; // 0x08f8, 0xc bytes
-                float m_fAlternateColorBrightness; // 0x0904, 0x4 bytes
-                std::int32_t m_nFog; // 0x0908, 0x4 bytes
-                float m_flFogStrength; // 0x090c, 0x4 bytes
-                std::int32_t m_nFogShadows; // 0x0910, 0x4 bytes
-                float m_flFogScale; // 0x0914, 0x4 bytes
-                float m_flFadeSizeStart; // 0x0918, 0x4 bytes
-                float m_flFadeSizeEnd; // 0x091c, 0x4 bytes
-                float m_flShadowFadeSizeStart; // 0x0920, 0x4 bytes
-                float m_flShadowFadeSizeEnd; // 0x0924, 0x4 bytes
-                bool m_bPrecomputedFieldsValid; // 0x0928, 0x1 bytes
-                std::uint8_t pad_0929[0x3]; // 0x0929, 0x3 bytes
-                Vector m_vPrecomputedBoundsMins; // 0x092c, 0xc bytes
-                Vector m_vPrecomputedBoundsMaxs; // 0x0938, 0xc bytes
-                Vector m_vPrecomputedOBBOrigin; // 0x0944, 0xc bytes
-                QAngle m_vPrecomputedOBBAngles; // 0x0950, 0xc bytes
-                Vector m_vPrecomputedOBBExtent; // 0x095c, 0xc bytes
-                std::int32_t m_nPrecomputedSubFrusta; // 0x0968, 0x4 bytes
-                Vector m_vPrecomputedOBBOrigin0; // 0x096c, 0xc bytes
-                QAngle m_vPrecomputedOBBAngles0; // 0x0978, 0xc bytes
-                Vector m_vPrecomputedOBBExtent0; // 0x0984, 0xc bytes
-                Vector m_vPrecomputedOBBOrigin1; // 0x0990, 0xc bytes
-                QAngle m_vPrecomputedOBBAngles1; // 0x099c, 0xc bytes
-                Vector m_vPrecomputedOBBExtent1; // 0x09a8, 0xc bytes
-                Vector m_vPrecomputedOBBOrigin2; // 0x09b4, 0xc bytes
-                QAngle m_vPrecomputedOBBAngles2; // 0x09c0, 0xc bytes
-                Vector m_vPrecomputedOBBExtent2; // 0x09cc, 0xc bytes
-                Vector m_vPrecomputedOBBOrigin3; // 0x09d8, 0xc bytes
-                QAngle m_vPrecomputedOBBAngles3; // 0x09e4, 0xc bytes
-                Vector m_vPrecomputedOBBExtent3; // 0x09f0, 0xc bytes
-                Vector m_vPrecomputedOBBOrigin4; // 0x09fc, 0xc bytes
-                QAngle m_vPrecomputedOBBAngles4; // 0x0a08, 0xc bytes
-                Vector m_vPrecomputedOBBExtent4; // 0x0a14, 0xc bytes
-                Vector m_vPrecomputedOBBOrigin5; // 0x0a20, 0xc bytes
-                QAngle m_vPrecomputedOBBAngles5; // 0x0a2c, 0xc bytes
-                Vector m_vPrecomputedOBBExtent5; // 0x0a38, 0xc bytes
-                bool m_bPvsModifyEntity; // 0x0a44, 0x1 bytes
-                std::uint8_t pad_0a45[0x3]; // 0x0a45, 0x3 bytes
-                CNetworkUtlVectorBase<std::uint16_t> m_VisClusters; // 0x0a48, 0x18 bytes
-                std::uint8_t pad_0a60[0x8]; // 0x0a60, 0x8 bytes
+                bool m_bEnabled; // 0x0878, 0x1 bytes
+                std::uint8_t pad_0879[0x3]; // 0x0879, 0x3 bytes
+                std::int32_t m_nColorMode; // 0x087c, 0x4 bytes
+                Color m_Color; // 0x0880, 0x4 bytes
+                float m_flColorTemperature; // 0x0884, 0x4 bytes
+                float m_flBrightness; // 0x0888, 0x4 bytes
+                float m_flBrightnessScale; // 0x088c, 0x4 bytes
+                std::int32_t m_nDirectLight; // 0x0890, 0x4 bytes
+                std::int32_t m_nBakedShadowIndex; // 0x0894, 0x4 bytes
+                std::int32_t m_nLightPathUniqueId; // 0x0898, 0x4 bytes
+                std::int32_t m_nLightMapUniqueId; // 0x089c, 0x4 bytes
+                std::int32_t m_nLuminaireShape; // 0x08a0, 0x4 bytes
+                float m_flLuminaireSize; // 0x08a4, 0x4 bytes
+                float m_flLuminaireAnisotropy; // 0x08a8, 0x4 bytes
+                std::uint8_t pad_08ac[0x4]; // 0x08ac, 0x4 bytes
+                CUtlString m_LightStyleString; // 0x08b0, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flLightStyleStartTime; // 0x08b8, 0x4 bytes
+                std::uint8_t pad_08bc[0x4]; // 0x08bc, 0x4 bytes
+                CNetworkUtlVectorBase<CUtlString> m_QueuedLightStyleStrings; // 0x08c0, 0x18 bytes
+                CNetworkUtlVectorBase<CUtlString> m_LightStyleEvents; // 0x08d8, 0x18 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseModelEntity>> m_LightStyleTargets; // 0x08f0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_StyleEvent[0x4]; // 0x0908, 0x60 bytes
+                std::uint8_t pad_0968[0x20]; // 0x0968, 0x20 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hLightCookie; // 0x0988, 0x8 bytes
+                float m_flShape; // 0x0990, 0x4 bytes
+                float m_flSoftX; // 0x0994, 0x4 bytes
+                float m_flSoftY; // 0x0998, 0x4 bytes
+                float m_flSkirt; // 0x099c, 0x4 bytes
+                float m_flSkirtNear; // 0x09a0, 0x4 bytes
+                Vector m_vSizeParams; // 0x09a4, 0xc bytes
+                float m_flRange; // 0x09b0, 0x4 bytes
+                Vector m_vShear; // 0x09b4, 0xc bytes
+                std::int32_t m_nBakeSpecularToCubemaps; // 0x09c0, 0x4 bytes
+                Vector m_vBakeSpecularToCubemapsSize; // 0x09c4, 0xc bytes
+                float m_flBakeSpecularToCubemapsScale; // 0x09d0, 0x4 bytes
+                std::int32_t m_nCastShadows; // 0x09d4, 0x4 bytes
+                std::int32_t m_nShadowMapSize; // 0x09d8, 0x4 bytes
+                std::int32_t m_nShadowPriority; // 0x09dc, 0x4 bytes
+                bool m_bContactShadow; // 0x09e0, 0x1 bytes
+                bool m_bForceShadowsEnabled; // 0x09e1, 0x1 bytes
+                std::uint8_t pad_09e2[0x2]; // 0x09e2, 0x2 bytes
+                std::int32_t m_nBounceLight; // 0x09e4, 0x4 bytes
+                float m_flBounceScale; // 0x09e8, 0x4 bytes
+                float m_flMinRoughness; // 0x09ec, 0x4 bytes
+                Vector m_vAlternateColor; // 0x09f0, 0xc bytes
+                float m_fAlternateColorBrightness; // 0x09fc, 0x4 bytes
+                std::int32_t m_nFog; // 0x0a00, 0x4 bytes
+                float m_flFogStrength; // 0x0a04, 0x4 bytes
+                std::int32_t m_nFogShadows; // 0x0a08, 0x4 bytes
+                float m_flFogScale; // 0x0a0c, 0x4 bytes
+                float m_flFadeSizeStart; // 0x0a10, 0x4 bytes
+                float m_flFadeSizeEnd; // 0x0a14, 0x4 bytes
+                float m_flShadowFadeSizeStart; // 0x0a18, 0x4 bytes
+                float m_flShadowFadeSizeEnd; // 0x0a1c, 0x4 bytes
+                bool m_bPrecomputedFieldsValid; // 0x0a20, 0x1 bytes
+                std::uint8_t pad_0a21[0x3]; // 0x0a21, 0x3 bytes
+                Vector m_vPrecomputedBoundsMins; // 0x0a24, 0xc bytes
+                Vector m_vPrecomputedBoundsMaxs; // 0x0a30, 0xc bytes
+                Vector m_vPrecomputedOBBOrigin; // 0x0a3c, 0xc bytes
+                QAngle m_vPrecomputedOBBAngles; // 0x0a48, 0xc bytes
+                Vector m_vPrecomputedOBBExtent; // 0x0a54, 0xc bytes
+                std::int32_t m_nPrecomputedSubFrusta; // 0x0a60, 0x4 bytes
+                Vector m_vPrecomputedOBBOrigin0; // 0x0a64, 0xc bytes
+                QAngle m_vPrecomputedOBBAngles0; // 0x0a70, 0xc bytes
+                Vector m_vPrecomputedOBBExtent0; // 0x0a7c, 0xc bytes
+                Vector m_vPrecomputedOBBOrigin1; // 0x0a88, 0xc bytes
+                QAngle m_vPrecomputedOBBAngles1; // 0x0a94, 0xc bytes
+                Vector m_vPrecomputedOBBExtent1; // 0x0aa0, 0xc bytes
+                Vector m_vPrecomputedOBBOrigin2; // 0x0aac, 0xc bytes
+                QAngle m_vPrecomputedOBBAngles2; // 0x0ab8, 0xc bytes
+                Vector m_vPrecomputedOBBExtent2; // 0x0ac4, 0xc bytes
+                Vector m_vPrecomputedOBBOrigin3; // 0x0ad0, 0xc bytes
+                QAngle m_vPrecomputedOBBAngles3; // 0x0adc, 0xc bytes
+                Vector m_vPrecomputedOBBExtent3; // 0x0ae8, 0xc bytes
+                Vector m_vPrecomputedOBBOrigin4; // 0x0af4, 0xc bytes
+                QAngle m_vPrecomputedOBBAngles4; // 0x0b00, 0xc bytes
+                Vector m_vPrecomputedOBBExtent4; // 0x0b0c, 0xc bytes
+                Vector m_vPrecomputedOBBOrigin5; // 0x0b18, 0xc bytes
+                QAngle m_vPrecomputedOBBAngles5; // 0x0b24, 0xc bytes
+                Vector m_vPrecomputedOBBExtent5; // 0x0b30, 0xc bytes
+                bool m_bPvsModifyEntity; // 0x0b3c, 0x1 bytes
+                bool m_bTransmitAlways; // 0x0b3d, 0x1 bytes
+                std::uint8_t pad_0b3e[0x2]; // 0x0b3e, 0x2 bytes
+                CNetworkUtlVectorBase<std::uint16_t> m_VisClusters; // 0x0b40, 0x18 bytes
+                std::uint8_t pad_0b58[0x8]; // 0x0b58, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputCastDynamicShadows; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBarnLightThink_SetNextQueuedLightStyle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBarnLightThink_ApplyLightStylesToTargets; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBarnLightThink_LightStyleEvent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBarnLight) == 0xA68, "CBarnLight size mismatch");
+            static_assert(sizeof(CBarnLight) == 0xB60, "CBarnLight size mismatch");
         }
     }
 }

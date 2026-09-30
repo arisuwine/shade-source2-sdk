@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,70 +34,50 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x590
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CBaseNPCMaker : public shade::sdk::server::CBaseEntity {
             public:
-                std::int32_t m_nMaxNumNPCs; // 0x04a0, 0x4 bytes
-                float m_flSpawnFrequency; // 0x04a4, 0x4 bytes
-                float m_flRetryFrequency; // 0x04a8, 0x4 bytes
-                std::int32_t m_nHullCheckMode; // 0x04ac, 0x4 bytes
-                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnSpawnNPC; // 0x04b0, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnSpawnedNPCDied; // 0x04d0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAllSpawned; // 0x04e8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAllSpawnedDead; // 0x0500, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAllLiveChildrenDead; // 0x0518, 0x18 bytes
-                std::int32_t m_nLiveChildren; // 0x0530, 0x4 bytes
-                std::int32_t m_nMaxLiveChildren; // 0x0534, 0x4 bytes
-                std::int32_t m_nMinSpawnDistance; // 0x0538, 0x4 bytes
-                std::int32_t m_nSpawnThreshold; // 0x053c, 0x4 bytes
-                std::int32_t m_nBatchCount; // 0x0540, 0x4 bytes
-                float m_flRadius; // 0x0544, 0x4 bytes
-                bool m_bDisabled; // 0x0548, 0x1 bytes
-                bool m_bSpawning; // 0x0549, 0x1 bytes
-                bool m_bZeroPitchAndRoll; // 0x054a, 0x1 bytes
-                std::uint8_t pad_054b[0x1]; // 0x054b, 0x1 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hIgnoreEntity; // 0x054c, 0x4 bytes
-                CUtlSymbolLarge m_iszIgnoreEnt; // 0x0550, 0x8 bytes
-                CUtlSymbolLarge m_iszDestinationGroup; // 0x0558, 0x8 bytes
-                CHandle<shade::sdk::server::CNPCSpawnDestination> m_hSpawnEntity; // 0x0560, 0x4 bytes
-                CHandle<shade::sdk::server::CAI_BaseNPC> m_hSpawnedNPC; // 0x0564, 0x4 bytes
-                std::int32_t m_nCurrentBatchCount; // 0x0568, 0x4 bytes
-                std::int32_t m_nNumSpawnDestinations; // 0x056c, 0x4 bytes
-                std::int32_t m_nNumValidDestinations; // 0x0570, 0x4 bytes
-                shade::sdk::server::CBaseNPCMaker__VisibilityCriterion_t m_CriterionVisibility; // 0x0574, 0x4 bytes
-                shade::sdk::server::CBaseNPCMaker__ThreeStateDist_t m_CriterionDistance; // 0x0578, 0x4 bytes
-                std::uint8_t pad_057c[0xc]; // 0x057c, 0xc bytes
+                std::int32_t m_nMaxNumNPCs; // 0x04b0, 0x4 bytes
+                float m_flSpawnFrequency; // 0x04b4, 0x4 bytes
+                float m_flRetryFrequency; // 0x04b8, 0x4 bytes
+                std::int32_t m_nHullCheckMode; // 0x04bc, 0x4 bytes
+                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnSpawnNPC; // 0x04c0, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnSpawnedNPCDied; // 0x04e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAllSpawned; // 0x04f8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAllSpawnedDead; // 0x0510, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAllLiveChildrenDead; // 0x0528, 0x18 bytes
+                std::int32_t m_nLiveChildren; // 0x0540, 0x4 bytes
+                std::int32_t m_nMaxLiveChildren; // 0x0544, 0x4 bytes
+                std::int32_t m_nMinSpawnDistance; // 0x0548, 0x4 bytes
+                std::int32_t m_nSpawnThreshold; // 0x054c, 0x4 bytes
+                std::int32_t m_nBatchCount; // 0x0550, 0x4 bytes
+                float m_flRadius; // 0x0554, 0x4 bytes
+                bool m_bDisabled; // 0x0558, 0x1 bytes
+                bool m_bSpawning; // 0x0559, 0x1 bytes
+                bool m_bZeroPitchAndRoll; // 0x055a, 0x1 bytes
+                std::uint8_t pad_055b[0x1]; // 0x055b, 0x1 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hIgnoreEntity; // 0x055c, 0x4 bytes
+                CUtlSymbolLarge m_iszIgnoreEnt; // 0x0560, 0x8 bytes
+                CUtlSymbolLarge m_iszDestinationGroup; // 0x0568, 0x8 bytes
+                CHandle<shade::sdk::server::CNPCSpawnDestination> m_hSpawnEntity; // 0x0570, 0x4 bytes
+                CHandle<shade::sdk::server::CAI_BaseNPC> m_hSpawnedNPC; // 0x0574, 0x4 bytes
+                std::int32_t m_nCurrentBatchCount; // 0x0578, 0x4 bytes
+                shade::sdk::server::CBaseNPCMaker__VisibilityCriterion_t m_CriterionVisibility; // 0x057c, 0x4 bytes
+                shade::sdk::server::CBaseNPCMaker__ThreeStateDist_t m_CriterionDistance; // 0x0580, 0x4 bytes
+                std::uint8_t pad_0584[0xc]; // 0x0584, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputSpawn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetMaxChildren; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputAddMaxChildren; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetMaxLiveChildren; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpawnFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSpawnInRadius; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSpawnInLine; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSpawnMultiple; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputChangeDestinationGroup; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetMinimumSpawnDistance; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSpawnEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetBatchCount; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableInfinite; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputDisableInfinite; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseNPCMakerMakerThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseNPCMaker) == 0x588, "CBaseNPCMaker size mismatch");
+            static_assert(sizeof(CBaseNPCMaker) == 0x590, "CBaseNPCMaker size mismatch");
         }
     }
 }

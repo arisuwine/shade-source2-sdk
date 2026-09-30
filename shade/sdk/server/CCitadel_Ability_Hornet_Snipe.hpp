@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1628
+             * Size: 0x2560
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Hornet_Snipe : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x69c]; // 0x0f70, 0x69c bytes
-                shade::sdk::entity2::GameTime_t m_flScopeStartTime; // 0x160c, 0x4 bytes
-                std::int32_t m_iSnipeKills; // 0x1610, 0x4 bytes
-                std::uint8_t pad_1614[0x14]; // 0x1614, 0x14 bytes
+                std::uint8_t pad_14a0[0x90c]; // 0x14a0, 0x90c bytes
+                shade::sdk::entity2::GameTime_t m_flScopeStartTime; // 0x1dac, 0x4 bytes
+                std::uint8_t pad_1db0[0x7b0]; // 0x1db0, 0x7b0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Hornet_Snipe) == 0x1628, "CCitadel_Ability_Hornet_Snipe size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Hornet_Snipe) == 0x2560, "CCitadel_Ability_Hornet_Snipe size mismatch");
         }
     }
 }

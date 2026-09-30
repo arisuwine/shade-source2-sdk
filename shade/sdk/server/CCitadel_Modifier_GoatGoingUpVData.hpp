@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x7a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GoatGoingUpVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CPiecewiseCurve m_GoingUpSpeedCurve; // 0x0750, 0x40 bytes
+                CPiecewiseCurve m_GoingUpSpeedCurve; // 0x0760, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GoatGoingUpVData) == 0x790, "CCitadel_Modifier_GoatGoingUpVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GoatGoingUpVData) == 0x7A0, "CCitadel_Modifier_GoatGoingUpVData size mismatch");
         }
     }
 }

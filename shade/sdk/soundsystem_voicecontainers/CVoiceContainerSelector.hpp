@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x120
+             * Size: 0xe8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerSelector : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                shade::sdk::soundsystem_voicecontainers::PlayBackMode_t m_mode; // 0x00a8, 0x4 bytes
-                std::uint8_t pad_00ac[0x4]; // 0x00ac, 0x4 bytes
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReferenceArray m_soundsToPlay; // 0x00b0, 0x38 bytes
-                CUtlVector<float> m_fProbabilityWeights; // 0x00e8, 0x18 bytes
-                std::uint8_t pad_0100[0x20]; // 0x0100, 0x20 bytes
+                shade::sdk::soundsystem_voicecontainers::PlayBackMode_t m_mode; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReferenceArray m_soundsToPlay; // 0x0078, 0x38 bytes
+                CUtlVector<float> m_fProbabilityWeights; // 0x00b0, 0x18 bytes
+                std::uint8_t pad_00c8[0x20]; // 0x00c8, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerSelector) == 0x120, "CVoiceContainerSelector size mismatch");
+            static_assert(sizeof(CVoiceContainerSelector) == 0xE8, "CVoiceContainerSelector size mismatch");
         }
     }
 }

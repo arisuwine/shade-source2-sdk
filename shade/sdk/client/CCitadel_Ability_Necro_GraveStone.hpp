@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1588
+             * Size: 0x1bd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_GraveStone : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedGravestones; // 0x11d8, 0x18 bytes
-                Vector m_vCastPosition; // 0x11f0, 0xc bytes
-                QAngle m_qCastAngle; // 0x11fc, 0xc bytes
-                std::uint8_t pad_1208[0x380]; // 0x1208, 0x380 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedGravestones; // 0x16d8, 0x18 bytes
+                VectorWS m_vCastPosition; // 0x16f0, 0xc bytes
+                QAngle m_qCastAngle; // 0x16fc, 0xc bytes
+                std::uint8_t pad_1708[0x4d0]; // 0x1708, 0x4d0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_GraveStone) == 0x1588, "CCitadel_Ability_Necro_GraveStone size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_GraveStone) == 0x1BD8, "CCitadel_Ability_Necro_GraveStone size mismatch");
         }
     }
 }

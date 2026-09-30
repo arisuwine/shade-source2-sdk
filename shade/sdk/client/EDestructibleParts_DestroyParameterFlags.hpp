@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -24,6 +25,7 @@ namespace shade {
                 ForceDamageApply = 0x8,
                 IgnoreKillEntityFlag = 0x10,
                 IgnoreHealthCheck = 0x20,
+                ApplyPhysicsForce = 0x40,
                 Default = 0x7
             };
         }

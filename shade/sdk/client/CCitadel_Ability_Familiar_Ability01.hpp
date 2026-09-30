@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1688
+             * Size: 0x1d38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_Ability01 : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x18]; // 0x11d8, 0x18 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecTargetsInCone; // 0x11f0, 0x18 bytes
-                std::uint8_t pad_1208[0x480]; // 0x1208, 0x480 bytes
+                std::uint8_t pad_16d8[0x18]; // 0x16d8, 0x18 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecTargetsInCone; // 0x16f0, 0x18 bytes
+                std::uint8_t pad_1708[0x630]; // 0x1708, 0x630 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_Ability01) == 0x1688, "CCitadel_Ability_Familiar_Ability01 size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_Ability01) == 0x1D38, "CCitadel_Ability_Familiar_Ability01 size mismatch");
         }
     }
 }

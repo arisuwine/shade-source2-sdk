@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1560
+             * Size: 0x1b80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,23 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_WeaponUpgrade_SplitShot : public shade::sdk::client::CCitadel_Item {
             public:
-                shade::sdk::client::ShotID_t m_nLastShotID; // 0x11d8, 0x4 bytes
-                shade::sdk::client::ShotID_t m_nLastHitShotID; // 0x11dc, 0x4 bytes
-                std::int32_t m_nWpnBatchCount; // 0x11e0, 0x4 bytes
-                std::uint8_t pad_11e4[0x6c]; // 0x11e4, 0x6c bytes
-                shade::sdk::client::ShotID_t m_nLastBulletHitShotID; // 0x1250, 0x4 bytes
-                std::int32_t m_nLastBulletHitCount; // 0x1254, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_eLastBulletHitEnt; // 0x1258, 0x4 bytes
-                bool m_bSplitShotActive; // 0x125c, 0x1 bytes
-                std::uint8_t pad_125d[0x303]; // 0x125d, 0x303 bytes
+                shade::sdk::client::ShotID_t m_nLastShotID; // 0x16d8, 0x4 bytes
+                shade::sdk::client::ShotID_t m_nLastHitShotID; // 0x16dc, 0x4 bytes
+                std::int32_t m_nWpnBatchCount; // 0x16e0, 0x4 bytes
+                std::uint8_t pad_16e4[0x6c]; // 0x16e4, 0x6c bytes
+                shade::sdk::client::ShotID_t m_nLastBulletHitShotID; // 0x1750, 0x4 bytes
+                std::int32_t m_nLastBulletHitCount; // 0x1754, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_eLastBulletHitEnt; // 0x1758, 0x4 bytes
+                bool m_bSplitShotActive; // 0x175c, 0x1 bytes
+                std::uint8_t pad_175d[0x423]; // 0x175d, 0x423 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_WeaponUpgrade_SplitShot) == 0x1560, "CCitadel_WeaponUpgrade_SplitShot size mismatch");
+            static_assert(sizeof(CCitadel_WeaponUpgrade_SplitShot) == 0x1B80, "CCitadel_WeaponUpgrade_SplitShot size mismatch");
         }
     }
 }

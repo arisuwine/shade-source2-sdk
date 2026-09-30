@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -40,7 +41,12 @@ namespace shade {
                 k_EMsgServerToGCRequestPlayerHeroData = 0x273c,
                 k_EMsgServerToGCRequestPlayerHeroDataResponse = 0x273d,
                 k_EMsgGCToServerAllocateForHideout = 0x273e,
-                k_EMsgGCToServerAllocateForHideoutResponse = 0x273f
+                k_EMsgGCToServerAllocateForHideoutResponse = 0x273f,
+                k_EMsgServerToGCInternalMatchStats = 0x2740,
+                k_EMsgGCToServerRequestPlayerChatLog = 0x2741,
+                k_EMsgGCToServerRequestPlayerChatLogResponse = 0x2742,
+                k_EMsgGCToServerToxicChatEvaluationResult = 0x2743,
+                k_EMsgServerToGCTestToxicChatEval = 0x2744
             };
         }
     }

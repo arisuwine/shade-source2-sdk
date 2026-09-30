@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf0
+             * Size: 0x138
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +40,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_Outflow_PlaySceneBase : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x0048, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnCanceled; // 0x0090, 0x48 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection> m_Triggers; // 0x00d8, 0x18 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x00d8, 0x48 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection> m_Triggers; // 0x0120, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Outflow_PlaySceneBase) == 0xF0, "CPulseCell_Outflow_PlaySceneBase size mismatch");
+            static_assert(sizeof(CPulseCell_Outflow_PlaySceneBase) == 0x138, "CPulseCell_Outflow_PlaySceneBase size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x760
+             * Size: 0xa10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,25 +38,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_FissureWall : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x600]; // 0x00d0, 0x600 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecFissureWallEntities; // 0x06d0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecFisureEntitiesHit; // 0x06e8, 0x18 bytes
-                std::int32_t m_nSegment; // 0x0700, 0x4 bytes
-                Vector m_vPosition; // 0x0704, 0xc bytes
-                Vector m_vDirection; // 0x0710, 0xc bytes
-                Vector m_vLeft; // 0x071c, 0xc bytes
-                float m_Length; // 0x0728, 0x4 bytes
-                Vector m_vBiasDirLeft; // 0x072c, 0xc bytes
-                Vector m_vBiasPosLeft; // 0x0738, 0xc bytes
-                Vector m_vBiasDirRight; // 0x0744, 0xc bytes
-                Vector m_vBiasPosRight; // 0x0750, 0xc bytes
-                std::uint8_t pad_075c[0x4]; // 0x075c, 0x4 bytes
+                std::uint8_t pad_0140[0x840]; // 0x0140, 0x840 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecFissureWallEntities; // 0x0980, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecFisureEntitiesHit; // 0x0998, 0x18 bytes
+                std::int32_t m_nSegment; // 0x09b0, 0x4 bytes
+                VectorWS m_vPosition; // 0x09b4, 0xc bytes
+                Vector m_vDirection; // 0x09c0, 0xc bytes
+                Vector m_vLeft; // 0x09cc, 0xc bytes
+                float m_Length; // 0x09d8, 0x4 bytes
+                Vector m_vBiasDirLeft; // 0x09dc, 0xc bytes
+                VectorWS m_vBiasPosLeft; // 0x09e8, 0xc bytes
+                Vector m_vBiasDirRight; // 0x09f4, 0xc bytes
+                VectorWS m_vBiasPosRight; // 0x0a00, 0xc bytes
+                std::uint8_t pad_0a0c[0x4]; // 0x0a0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_FissureWall) == 0x760, "CCitadel_Modifier_FissureWall size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_FissureWall) == 0xA10, "CCitadel_Modifier_FissureWall size mismatch");
         }
     }
 }

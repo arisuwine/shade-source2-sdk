@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19f8
+             * Size: 0x1580
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Magician_MagicBoltVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetDebuffModifier; // 0x1818, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1828, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RetargetParticle; // 0x1908, 0xe0 bytes
-                CSoundEventName m_strRedirect; // 0x19e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetDebuffModifier; // 0x13a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RetargetParticle; // 0x1490, 0xe0 bytes
+                CSoundEventName m_strRedirect; // 0x1570, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_MagicBoltVData) == 0x19F8, "CCitadel_Ability_Magician_MagicBoltVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_MagicBoltVData) == 0x1580, "CCitadel_Ability_Magician_MagicBoltVData size mismatch");
         }
     }
 }

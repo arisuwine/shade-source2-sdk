@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13a0
+             * Size: 0x1930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Mirage_Teleport : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x18]; // 0x11d8, 0x18 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x11f0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tTeleportCompletedTime; // 0x11f4, 0x4 bytes
-                VectorWS m_vTargetPosition; // 0x11f8, 0xc bytes
-                QAngle m_vTargetAngles; // 0x1204, 0xc bytes
-                std::uint8_t pad_1210[0x190]; // 0x1210, 0x190 bytes
+                std::uint8_t pad_16d8[0x18]; // 0x16d8, 0x18 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x16f0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tTeleportCompletedTime; // 0x16f4, 0x4 bytes
+                VectorWS m_vTargetPosition; // 0x16f8, 0xc bytes
+                QAngle m_vTargetAngles; // 0x1704, 0xc bytes
+                std::uint8_t pad_1710[0x220]; // 0x1710, 0x220 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Mirage_Teleport) == 0x13A0, "CCitadel_Ability_Mirage_Teleport size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Mirage_Teleport) == 0x1930, "CCitadel_Ability_Mirage_Teleport size mismatch");
         }
     }
 }

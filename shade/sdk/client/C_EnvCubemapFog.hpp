@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x640
+             * Size: 0x6f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -56,19 +57,23 @@ namespace shade {
                 std::int32_t m_nCubemapSourceType; // 0x061c, 0x4 bytes
                 CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterial; // 0x0620, 0x8 bytes
                 CUtlSymbolLarge m_iszSkyEntity; // 0x0628, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hFogCubemapTexture; // 0x0630, 0x8 bytes
-                bool m_bHasHeightFogEnd; // 0x0638, 0x1 bytes
-                bool m_bFirstTime; // 0x0639, 0x1 bytes
-                std::uint8_t pad_063a[0x6]; // 0x063a, 0x6 bytes
+                std::int32_t m_nHeightFogType; // 0x0630, 0x4 bytes
+                std::int32_t m_nFogHeightBlendMode; // 0x0634, 0x4 bytes
+                std::int32_t m_nFogHeightCoordinateSpace; // 0x0638, 0x4 bytes
+                std::int32_t m_nDistanceFogType; // 0x063c, 0x4 bytes
+                CUtlSymbolLarge m_DistanceFogCurveString; // 0x0640, 0x8 bytes
+                CUtlSymbolLarge m_HeightFogCurveString; // 0x0648, 0x8 bytes
+                std::uint8_t pad_0650[0x90]; // 0x0650, 0x90 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hFogCubemapTexture; // 0x06e0, 0x8 bytes
+                bool m_bHasHeightFogEnd; // 0x06e8, 0x1 bytes
+                bool m_bFirstTime; // 0x06e9, 0x1 bytes
+                std::uint8_t pad_06ea[0x6]; // 0x06ea, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_EnvCubemapFog) == 0x640, "C_EnvCubemapFog size mismatch");
+            static_assert(sizeof(C_EnvCubemapFog) == 0x6F0, "C_EnvCubemapFog size mismatch");
         }
     }
 }

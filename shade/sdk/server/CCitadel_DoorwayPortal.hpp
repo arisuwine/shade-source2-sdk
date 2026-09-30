@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,9 +33,8 @@ namespace shade {
             class CCitadel_DoorwayPortal : public shade::sdk::server::CBaseAnimGraph {
             public:
                 shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0a90, 0x20 bytes
-                std::uint8_t pad_0ab0[0xf8]; // 0x0ab0, 0xf8 bytes
-                CHandle<shade::sdk::server::CCitadel_DoorwayPortal> m_hLinkedDoorway; // 0x0ba8, 0x4 bytes
-                std::uint8_t pad_0bac[0x24]; // 0x0bac, 0x24 bytes
+                CHandle<shade::sdk::server::CCitadel_DoorwayPortal> m_hLinkedDoorway; // 0x0ab0, 0x4 bytes
+                std::uint8_t pad_0ab4[0x11c]; // 0x0ab4, 0x11c bytes
             };
             #pragma pack(pop)
 

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15b0
+             * Size: 0x1c00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_LuminousStrike : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastStackChangeTime; // 0x11d8, 0x4 bytes
-                std::int32_t m_nLastStackCount; // 0x11dc, 0x4 bytes
-                std::uint8_t pad_11e0[0x18]; // 0x11e0, 0x18 bytes
-                C_NetworkUtlVectorBase<shade::sdk::entity2::GameTime_t> m_vecNextExplosionTime; // 0x11f8, 0x18 bytes
-                C_NetworkUtlVectorBase<Vector> m_vecNextExplosionLocation; // 0x1210, 0x18 bytes
-                std::int32_t m_nStackCount; // 0x1228, 0x4 bytes
-                bool m_bPendingStackUpdate; // 0x122c, 0x1 bytes
-                std::uint8_t pad_122d[0x383]; // 0x122d, 0x383 bytes
+                shade::sdk::entity2::GameTime_t m_flLastStackChangeTime; // 0x16d8, 0x4 bytes
+                std::int32_t m_nLastStackCount; // 0x16dc, 0x4 bytes
+                std::uint8_t pad_16e0[0x18]; // 0x16e0, 0x18 bytes
+                C_NetworkUtlVectorBase<shade::sdk::entity2::GameTime_t> m_vecNextExplosionTime; // 0x16f8, 0x18 bytes
+                C_NetworkUtlVectorBase<VectorWS> m_vecNextExplosionLocation; // 0x1710, 0x18 bytes
+                std::int32_t m_nStackCount; // 0x1728, 0x4 bytes
+                bool m_bPendingStackUpdate; // 0x172c, 0x1 bytes
+                std::uint8_t pad_172d[0x4d3]; // 0x172d, 0x4d3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_LuminousStrike) == 0x15B0, "CCitadel_Ability_Unicorn_LuminousStrike size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_LuminousStrike) == 0x1C00, "CCitadel_Ability_Unicorn_LuminousStrike size mismatch");
         }
     }
 }

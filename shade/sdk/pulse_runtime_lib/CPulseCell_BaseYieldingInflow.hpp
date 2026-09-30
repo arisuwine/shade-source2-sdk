@@ -12,16 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/pulse_runtime_lib/CPulseCell_BaseFlow.hpp"
+#include "shade/sdk/pulse_runtime_lib/CPulse_ResumePoint.hpp"
 
 namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x48
+             * Size: 0xd8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -31,12 +33,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_BaseYieldingInflow : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseFlow {
             public:
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_BaseFlow_OnAfterCancel; // 0x0048, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_BaseFlow_WhileActive; // 0x0090, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_BaseYieldingInflow) == 0x48, "CPulseCell_BaseYieldingInflow size mismatch");
+            static_assert(sizeof(CPulseCell_BaseYieldingInflow) == 0xD8, "CPulseCell_BaseYieldingInflow size mismatch");
         }
     }
 }

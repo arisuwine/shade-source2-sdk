@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,7 +20,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x40
+             * Size: 0x38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -28,17 +29,16 @@ namespace shade {
             class STrooperFOWEntity {
             public:
                 std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
-                CEntityIndex m_nEntIndex; // 0x0030, 0x4 bytes
-                std::int8_t m_nTeam; // 0x0034, 0x1 bytes
-                std::uint8_t pad_0035[0x1]; // 0x0035, 0x1 bytes
-                std::uint16_t m_nPositionXY; // 0x0036, 0x2 bytes
-                std::uint8_t pad_0038[0x8]; // 0x0038, 0x8 bytes
+                std::uint8_t m_nPosX; // 0x0030, 0x1 bytes
+                std::uint8_t m_nPosY; // 0x0031, 0x1 bytes
+                std::uint8_t m_nFlags; // 0x0032, 0x1 bytes
+                std::uint8_t pad_0033[0x5]; // 0x0033, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(STrooperFOWEntity) == 0x40, "STrooperFOWEntity size mismatch");
+            static_assert(sizeof(STrooperFOWEntity) == 0x38, "STrooperFOWEntity size mismatch");
         }
     }
 }

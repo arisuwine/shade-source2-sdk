@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1278
+             * Size: 0x18c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Kobun : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bFlipOffset; // 0x0f70, 0x1 bytes
-                std::uint8_t pad_0f71[0x307]; // 0x0f71, 0x307 bytes
+                bool m_bFlipOffset; // 0x14a0, 0x1 bytes
+                std::uint8_t pad_14a1[0x427]; // 0x14a1, 0x427 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Kobun) == 0x1278, "CCitadel_Ability_Kobun size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Kobun) == 0x18C8, "CCitadel_Ability_Kobun size mismatch");
         }
     }
 }

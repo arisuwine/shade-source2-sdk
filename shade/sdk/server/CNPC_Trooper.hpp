@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,6 @@ namespace shade {
     namespace sdk {
         namespace server {
             class CBaseEntity;
-            class CCitadelModifier;
             class CInfoTrooperBossSpawn;
             class CInfoTrooperSpawn;
         }
@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18d0
+             * Size: 0x1780
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,26 +41,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Trooper : public shade::sdk::server::CAI_CitadelNPC {
             public:
-                std::uint8_t pad_17b0[0x18]; // 0x17b0, 0x18 bytes
-                std::int32_t m_iLane; // 0x17c8, 0x4 bytes
-                std::int32_t m_iLaneSlot; // 0x17cc, 0x4 bytes
-                std::uint8_t pad_17d0[0x30]; // 0x17d0, 0x30 bytes
-                CHandle<shade::sdk::server::CInfoTrooperBossSpawn> m_hSpawnWaveController; // 0x1800, 0x4 bytes
-                CHandle<shade::sdk::server::CInfoTrooperSpawn> m_hTrooperSpawnPoint; // 0x1804, 0x4 bytes
-                std::uint8_t pad_1808[0x20]; // 0x1808, 0x20 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hNearDeathModifier; // 0x1828, 0x18 bytes
-                std::uint8_t pad_1840[0x8]; // 0x1840, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetedEnemy; // 0x1848, 0x4 bytes
-                float m_flHealingChargeParticlePct; // 0x184c, 0x4 bytes
-                std::uint8_t pad_1850[0x80]; // 0x1850, 0x80 bytes
+                std::uint8_t pad_1710[0x10]; // 0x1710, 0x10 bytes
+                std::int32_t m_iLane; // 0x1720, 0x4 bytes
+                std::uint8_t pad_1724[0x20]; // 0x1724, 0x20 bytes
+                CHandle<shade::sdk::server::CInfoTrooperBossSpawn> m_hSpawnWaveController; // 0x1744, 0x4 bytes
+                CHandle<shade::sdk::server::CInfoTrooperSpawn> m_hTrooperSpawnPoint; // 0x1748, 0x4 bytes
+                std::uint8_t pad_174c[0x10]; // 0x174c, 0x10 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetedEnemy; // 0x175c, 0x4 bytes
+                bool m_bUsingBossWeapon; // 0x1760, 0x1 bytes
+                std::uint8_t pad_1761[0x1f]; // 0x1761, 0x1f bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::int32_t m_iCoverGroupID; // Offset: 0x16d0, Size: 0x1, Size In Bytes: 0x4
+             * std::int32_t m_iLaneSlot; // Offset: 0x1724, Size: 0x1, Size In Bytes: 0x4
              */
 
-            static_assert(sizeof(CNPC_Trooper) == 0x18D0, "CNPC_Trooper size mismatch");
+            static_assert(sizeof(CNPC_Trooper) == 0x1780, "CNPC_Trooper size mismatch");
         }
     }
 }

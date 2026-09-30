@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -19,7 +20,8 @@ namespace shade {
             enum class ParticleVolumetricSmokeType_t : std::uint32_t {
                 PARTICLE_VOLUMETRIC_SMOKE_TYPE_EMISSION = 0x0,
                 PARTICLE_VOLUMETRIC_SMOKE_TYPE_SINK = 0x1,
-                PARTICLE_VOLUMETRIC_SMOKE_TYPE_REPEL = 0x2
+                PARTICLE_VOLUMETRIC_SMOKE_TYPE_REPEL = 0x2,
+                PARTICLE_VOLUMETRIC_SMOKE_TYPE_TRACE = 0x3
             };
         }
     }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,8 +37,9 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x78
-             * Alignment: 0xff
+             * Size: 0x80
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CAI_VolumetricEvent {
@@ -54,15 +56,15 @@ namespace shade {
                 float m_flRadius; // 0x0020, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flExpireTime; // 0x0024, 0x4 bytes
                 std::uint8_t pad_0028[0x8]; // 0x0028, 0x8 bytes
-                shade::sdk::server::CRelativeLocation m_vOrigin; // 0x0030, 0x40 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0070, 0x4 bytes
-                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                shade::sdk::server::CRelativeLocation m_vOrigin; // 0x0030, 0x48 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0078, 0x4 bytes
+                std::uint8_t pad_007c[0x4]; // 0x007c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_VolumetricEvent) == 0x78, "CAI_VolumetricEvent size mismatch");
+            static_assert(sizeof(CAI_VolumetricEvent) == 0x80, "CAI_VolumetricEvent size mismatch");
         }
     }
 }

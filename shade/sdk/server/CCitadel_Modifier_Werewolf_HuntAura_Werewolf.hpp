@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x198
+             * Size: 0x238
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf_HuntAura_Werewolf : public shade::sdk::server::CCitadelModifierAura_Cone {
             public:
-                QAngle m_playerAngles; // 0x0108, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x0114, 0x4 bytes
-                std::uint8_t pad_0118[0x80]; // 0x0118, 0x80 bytes
+                QAngle m_playerAngles; // 0x0178, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x0184, 0x4 bytes
+                std::uint8_t pad_0188[0xb0]; // 0x0188, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf_HuntAura_Werewolf) == 0x198, "CCitadel_Modifier_Werewolf_HuntAura_Werewolf size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_HuntAura_Werewolf) == 0x238, "CCitadel_Modifier_Werewolf_HuntAura_Werewolf size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x90
+             * Size: 0x80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmBlend1DNode__CDefinition : public shade::sdk::animlib::CNmParameterizedBlendNode__CDefinition {
             public:
-                shade::sdk::animlib::CNmParameterizedBlendNode__Parameterization_t m_parameterization; // 0x0040, 0x50 bytes
+                shade::sdk::animlib::CNmParameterizedBlendNode__Parameterization_t m_parameterization; // 0x0030, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmBlend1DNode__CDefinition) == 0x90, "CNmBlend1DNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmBlend1DNode__CDefinition) == 0x80, "CNmBlend1DNode__CDefinition size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcc0
+             * Size: 0xdb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,7 +31,7 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_DruidHealingFruit : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0cb0[0x10]; // 0x0cb0, 0x10 bytes
+                std::uint8_t pad_0da8[0x10]; // 0x0da8, 0x10 bytes
             };
             #pragma pack(pop)
 
@@ -39,7 +40,7 @@ namespace shade {
              * CHandle<CBaseEntity> caster; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_Citadel_DruidHealingFruit) == 0xCC0, "C_Citadel_DruidHealingFruit size mismatch");
+            static_assert(sizeof(C_Citadel_DruidHealingFruit) == 0xDB8, "C_Citadel_DruidHealingFruit size mismatch");
         }
     }
 }

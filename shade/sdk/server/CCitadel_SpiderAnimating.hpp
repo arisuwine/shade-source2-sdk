@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xc00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_SpiderAnimating : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0x20]; // 0x0bf0, 0x20 bytes
+                std::uint8_t pad_0bf0[0x10]; // 0x0bf0, 0x10 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_SpiderAnimating) == 0xC10, "CCitadel_SpiderAnimating size mismatch");
+            static_assert(sizeof(CCitadel_SpiderAnimating) == 0xC00, "CCitadel_SpiderAnimating size mismatch");
         }
     }
 }

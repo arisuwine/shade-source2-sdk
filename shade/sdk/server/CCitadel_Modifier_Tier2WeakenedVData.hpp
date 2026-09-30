@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0x940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Tier2WeakenedVData : public shade::sdk::server::CCitadel_Modifier_StunnedVData {
             public:
-                float m_flTechDamagePctIncrease; // 0x0830, 0x4 bytes
-                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
-                CSoundEventName m_WeakenedSound; // 0x0838, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeakenedEffect; // 0x0848, 0xe0 bytes
-                CUtlString m_sWeakenedEffectAttachment; // 0x0928, 0x8 bytes
+                float m_flTechDamagePctIncrease; // 0x0840, 0x4 bytes
+                std::uint8_t pad_0844[0x4]; // 0x0844, 0x4 bytes
+                CSoundEventName m_WeakenedSound; // 0x0848, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeakenedEffect; // 0x0858, 0xe0 bytes
+                CUtlString m_sWeakenedEffectAttachment; // 0x0938, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Tier2WeakenedVData) == 0x930, "CCitadel_Modifier_Tier2WeakenedVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Tier2WeakenedVData) == 0x940, "CCitadel_Modifier_Tier2WeakenedVData size mismatch");
         }
     }
 }

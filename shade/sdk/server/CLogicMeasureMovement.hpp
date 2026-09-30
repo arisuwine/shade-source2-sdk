@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,30 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicMeasureMovement : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_strMeasureTarget; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_strMeasureReference; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_strTargetReference; // 0x04b0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hMeasureTarget; // 0x04b8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hMeasureReference; // 0x04bc, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x04c0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetReference; // 0x04c4, 0x4 bytes
-                float m_flScale; // 0x04c8, 0x4 bytes
-                std::int32_t m_nMeasureType; // 0x04cc, 0x4 bytes
+                CUtlSymbolLarge m_strMeasureTarget; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_strMeasureReference; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_strTargetReference; // 0x04c0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hMeasureTarget; // 0x04c8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hMeasureReference; // 0x04cc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x04d0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetReference; // 0x04d4, 0x4 bytes
+                float m_flScale; // 0x04d8, 0x4 bytes
+                std::int32_t m_nMeasureType; // 0x04dc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputSetMeasureTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetMeasureReference; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTargetReference; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetTargetScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CLogicMeasureMovementMeasureThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicMeasureMovement) == 0x4D0, "CLogicMeasureMovement size mismatch");
+            static_assert(sizeof(CLogicMeasureMovement) == 0x4E0, "CLogicMeasureMovement size mismatch");
         }
     }
 }

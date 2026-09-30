@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,12 +23,13 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x20
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct thinkfunc_t {
-                std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
+                BASEPTR m_think; // 0x0000, 0x8 bytes
                 HSCRIPT m_hFn; // 0x0008, 0x8 bytes
                 CUtlStringToken m_nContext; // 0x0010, 0x4 bytes
                 shade::sdk::entity2::GameTick_t m_nNextThinkTick; // 0x0014, 0x4 bytes
@@ -36,9 +38,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_think; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(thinkfunc_t) == 0x20, "thinkfunc_t size mismatch");
         }

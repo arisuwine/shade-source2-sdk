@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x440
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,15 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Boss_Tier1_GraphController : public shade::sdk::server::CAI_CitadelNPC_GraphController {
             public:
-                CAnimGraphParamRef<char*> m_pszActivity; // 0x07f0, 0x30 bytes
-                CAnimGraphParamRef<char*> m_pszLaneSide; // 0x0820, 0x30 bytes
-                CAnimGraphParamRef<bool> m_bShieldMode; // 0x0850, 0x28 bytes
+                CAnimGraphParamRef<char*> m_pszActivity; // 0x0388, 0x30 bytes
+                CAnimGraphParamRef<char*> m_pszLaneSide; // 0x03b8, 0x30 bytes
+                CAnimGraphParamRef<bool> m_bShieldMode; // 0x03e8, 0x28 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_Activity; // 0x0410, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Boss_Tier1_GraphController) == 0x878, "CNPC_Boss_Tier1_GraphController size mismatch");
+            static_assert(sizeof(CNPC_Boss_Tier1_GraphController) == 0x440, "CNPC_Boss_Tier1_GraphController size mismatch");
         }
     }
 }

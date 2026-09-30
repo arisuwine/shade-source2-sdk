@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x6e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Wrecker_Ultimate : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecGrabbed; // 0x00d0, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x00e8, 0x4 bytes
-                std::uint8_t pad_00ec[0x404]; // 0x00ec, 0x404 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecGrabbed; // 0x0140, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x584]; // 0x015c, 0x584 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate) == 0x4F0, "CCitadel_Modifier_Wrecker_Ultimate size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate) == 0x6E0, "CCitadel_Modifier_Wrecker_Ultimate size mismatch");
         }
     }
 }

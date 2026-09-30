@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1398
+             * Size: 0xca0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_NPC_NecroSkeleVData : public shade::sdk::server::CAI_CitadelNPCVData {
             public:
-                float m_flMeleeDuration; // 0x1348, 0x4 bytes
-                float m_flMeleeFireDelay; // 0x134c, 0x4 bytes
-                float m_flNonPlayerDamageResist; // 0x1350, 0x4 bytes
-                std::uint8_t pad_1354[0x4]; // 0x1354, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ExplodeModifier; // 0x1358, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamageSlowModifier; // 0x1368, 0x10 bytes
-                float m_flHeroLockRange; // 0x1378, 0x4 bytes
-                float m_flHeroLockBreakRange; // 0x137c, 0x4 bytes
-                CUtlVector<shade::sdk::client::NecroSkeleTargetTier_t> m_vecTargettingTiers; // 0x1380, 0x18 bytes
+                float m_flMeleeDuration; // 0x0c50, 0x4 bytes
+                float m_flMeleeFireDelay; // 0x0c54, 0x4 bytes
+                float m_flNonPlayerDamageResist; // 0x0c58, 0x4 bytes
+                std::uint8_t pad_0c5c[0x4]; // 0x0c5c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ExplodeModifier; // 0x0c60, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamageSlowModifier; // 0x0c70, 0x10 bytes
+                float m_flHeroLockRange; // 0x0c80, 0x4 bytes
+                float m_flHeroLockBreakRange; // 0x0c84, 0x4 bytes
+                CUtlVector<shade::sdk::client::NecroSkeleTargetTier_t> m_vecTargettingTiers; // 0x0c88, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_NPC_NecroSkeleVData) == 0x1398, "CAI_NPC_NecroSkeleVData size mismatch");
+            static_assert(sizeof(CAI_NPC_NecroSkeleVData) == 0xCA0, "CAI_NPC_NecroSkeleVData size mismatch");
         }
     }
 }

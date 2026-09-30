@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1da8
+             * Size: 0x1940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +40,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityUppercutVData : public shade::sdk::server::CAbilityMeleeVData {
             public:
-                shade::sdk::client::AttackData_t m_UppercutAttackData; // 0x1848, 0x528 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_UppercutModifier; // 0x1d70, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1d80, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ClipModifier; // 0x1d90, 0x10 bytes
-                float m_flMaxPitchUp; // 0x1da0, 0x4 bytes
-                float m_flDamageTriggerTime; // 0x1da4, 0x4 bytes
+                shade::sdk::client::AttackData_t m_UppercutAttackData; // 0x13d0, 0x530 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_UppercutModifier; // 0x1900, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1910, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ClipModifier; // 0x1920, 0x10 bytes
+                float m_flMaxPitchUp; // 0x1930, 0x4 bytes
+                float m_flDamageTriggerTime; // 0x1934, 0x4 bytes
+                float m_flMeleeLockoutDuration; // 0x1938, 0x4 bytes
+                std::uint8_t pad_193c[0x4]; // 0x193c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityUppercutVData) == 0x1DA8, "CAbilityUppercutVData size mismatch");
+            static_assert(sizeof(CAbilityUppercutVData) == 0x1940, "CAbilityUppercutVData size mismatch");
         }
     }
 }

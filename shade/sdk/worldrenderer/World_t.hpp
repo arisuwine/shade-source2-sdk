@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/worldrenderer/BakedLightingInfo_t.hpp"
+#include "shade/sdk/scenesystem/BakedLightingInfo_t.hpp"
 #include "shade/sdk/worldrenderer/WorldBuilderParams_t.hpp"
 
 namespace shade {
@@ -42,7 +43,7 @@ namespace shade {
             struct World_t {
                 shade::sdk::worldrenderer::WorldBuilderParams_t m_builderParams; // 0x0000, 0x60 bytes
                 CUtlVector<shade::sdk::worldrenderer::NodeData_t> m_worldNodes; // 0x0060, 0x18 bytes
-                shade::sdk::worldrenderer::BakedLightingInfo_t m_worldLightingInfo; // 0x0078, 0x48 bytes
+                shade::sdk::scenesystem::BakedLightingInfo_t m_worldLightingInfo; // 0x0078, 0x48 bytes
                 CUtlVector<CStrongHandleCopyable<shade::sdk::resourcesystem::InfoForResourceTypeCEntityLump>> m_entityLumps; // 0x00c0, 0x18 bytes
             };
             #pragma pack(pop)

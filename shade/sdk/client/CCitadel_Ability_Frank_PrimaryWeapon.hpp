@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1548
+             * Size: 0x1ae8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_PrimaryWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1430[0x8]; // 0x1430, 0x8 bytes
-                shade::sdk::client::C_CitadelPlayerPawn *m_pNextShooter; // 0x1438, 0x8 bytes
-                std::uint8_t pad_1440[0x108]; // 0x1440, 0x108 bytes
+                std::uint8_t pad_1970[0x8]; // 0x1970, 0x8 bytes
+                shade::sdk::client::C_CitadelPlayerPawn *m_pNextShooter; // 0x1978, 0x8 bytes
+                std::uint8_t pad_1980[0x168]; // 0x1980, 0x168 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_PrimaryWeapon) == 0x1548, "CCitadel_Ability_Frank_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_PrimaryWeapon) == 0x1AE8, "CCitadel_Ability_Frank_PrimaryWeapon size mismatch");
         }
     }
 }

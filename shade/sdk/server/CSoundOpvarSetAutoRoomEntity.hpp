@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x658
+             * Size: 0x670
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetAutoRoomEntity : public shade::sdk::server::CSoundOpvarSetPointEntity {
             public:
-                CUtlVector<shade::sdk::server::SoundOpvarTraceResult_t> m_traceResults; // 0x0618, 0x18 bytes
-                CUtlVector<shade::sdk::server::AutoRoomDoorwayPairs_t> m_doorwayPairs; // 0x0630, 0x18 bytes
-                float m_flSize; // 0x0648, 0x4 bytes
-                float m_flHeightTolerance; // 0x064c, 0x4 bytes
-                float m_flSizeSqr; // 0x0650, 0x4 bytes
-                std::uint8_t pad_0654[0x4]; // 0x0654, 0x4 bytes
+                CUtlVector<shade::sdk::server::SoundOpvarTraceResult_t> m_traceResults; // 0x0630, 0x18 bytes
+                CUtlVector<shade::sdk::server::AutoRoomDoorwayPairs_t> m_doorwayPairs; // 0x0648, 0x18 bytes
+                float m_flSize; // 0x0660, 0x4 bytes
+                float m_flHeightTolerance; // 0x0664, 0x4 bytes
+                float m_flSizeSqr; // 0x0668, 0x4 bytes
+                std::uint8_t pad_066c[0x4]; // 0x066c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSoundOpvarSetAutoRoomEntitySetOpvarThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetAutoRoomEntity) == 0x658, "CSoundOpvarSetAutoRoomEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetAutoRoomEntity) == 0x670, "CSoundOpvarSetAutoRoomEntity size mismatch");
         }
     }
 }

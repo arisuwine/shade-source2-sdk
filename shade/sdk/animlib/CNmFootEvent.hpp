@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmFootEvent : public shade::sdk::animlib::CNmEvent {
             public:
-                shade::sdk::animlib::NmFootPhase_t m_phase; // 0x0020, 0x1 bytes
-                std::uint8_t pad_0021[0x7]; // 0x0021, 0x7 bytes
+                shade::sdk::animlib::NmFootPhase_t m_phase; // 0x0018, 0x1 bytes
+                std::uint8_t pad_0019[0x7]; // 0x0019, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmFootEvent) == 0x28, "CNmFootEvent size mismatch");
+            static_assert(sizeof(CNmFootEvent) == 0x20, "CNmFootEvent size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x880
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BaseBulletPreRollProcVData : public shade::sdk::client::CCitadel_Modifier_BaseEventProcVData {
             public:
-                bool m_bRollOnceForAllBulletsInAShot; // 0x0780, 0x1 bytes
-                std::uint8_t pad_0781[0x3]; // 0x0781, 0x3 bytes
-                float m_flMaxBulletsToProcInShot; // 0x0784, 0x4 bytes
-                bool m_bCanProcMultipleTimesFromSameShot; // 0x0788, 0x1 bytes
-                bool m_bRequiresTargetFilter; // 0x0789, 0x1 bytes
-                bool m_bCanBeEvaded; // 0x078a, 0x1 bytes
-                std::uint8_t pad_078b[0x5]; // 0x078b, 0x5 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x0790, 0xe0 bytes
-                CSoundEventName m_OnBulletRolledProcSound; // 0x0870, 0x10 bytes
+                bool m_bRollOnceForAllBulletsInAShot; // 0x0790, 0x1 bytes
+                std::uint8_t pad_0791[0x3]; // 0x0791, 0x3 bytes
+                float m_flMaxBulletsToProcInShot; // 0x0794, 0x4 bytes
+                bool m_bCanProcMultipleTimesFromSameShot; // 0x0798, 0x1 bytes
+                bool m_bRequiresTargetFilter; // 0x0799, 0x1 bytes
+                bool m_bCanBeEvaded; // 0x079a, 0x1 bytes
+                std::uint8_t pad_079b[0x5]; // 0x079b, 0x5 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x07a0, 0xe0 bytes
+                CSoundEventName m_OnBulletRolledProcSound; // 0x0880, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProcVData) == 0x880, "CCitadel_Modifier_BaseBulletPreRollProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProcVData) == 0x890, "CCitadel_Modifier_BaseBulletPreRollProcVData size mismatch");
         }
     }
 }

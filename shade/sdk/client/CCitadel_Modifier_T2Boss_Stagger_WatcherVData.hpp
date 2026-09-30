@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x790
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_T2Boss_Stagger_WatcherVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flDecayDuration; // 0x0750, 0x4 bytes
-                float m_flStaggeredDuration; // 0x0754, 0x4 bytes
-                float m_flBuildUpMax; // 0x0758, 0x4 bytes
-                float m_flAdditionlPlayerMinContribution; // 0x075c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StaggeredModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x0770, 0x10 bytes
+                float m_flDecayDuration; // 0x0760, 0x4 bytes
+                float m_flStaggeredDuration; // 0x0764, 0x4 bytes
+                float m_flBuildUpMax; // 0x0768, 0x4 bytes
+                float m_flAdditionlPlayerMinContribution; // 0x076c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StaggeredModifier; // 0x0770, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x0780, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_T2Boss_Stagger_WatcherVData) == 0x780, "CCitadel_Modifier_T2Boss_Stagger_WatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_T2Boss_Stagger_WatcherVData) == 0x790, "CCitadel_Modifier_T2Boss_Stagger_WatcherVData size mismatch");
         }
     }
 }

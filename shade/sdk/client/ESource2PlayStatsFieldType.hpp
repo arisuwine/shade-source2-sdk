@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -32,7 +33,9 @@ namespace shade {
                 Source2PlayStats_String = 0xc,
                 Source2PlayStats_LowCardinalityString = 0xd,
                 Source2PlayStats_UTCDateTime = 0xe,
-                Source2PlayStats_SteamIDTrustBucket = 0xf
+                Source2PlayStats_SteamIDTrustBucket = 0xf,
+                Source2PlayStats_SteamIDTrustBucketMin = 0x10,
+                Source2PlayStats_SteamID = 0x11
             };
         }
     }

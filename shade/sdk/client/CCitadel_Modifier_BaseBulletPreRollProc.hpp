@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,24 +31,25 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x218
+             * Size: 0x2e8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CCitadel_Modifier_BaseBulletPreRollProc : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                shade::sdk::client::ShotID_t m_nSuppressProcShotID; // 0x01f8, 0x4 bytes
-                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
-                CUtlVector<shade::sdk::client::BulletID_t> m_vecProcdBulletIDs; // 0x0200, 0x18 bytes
+                shade::sdk::client::ShotID_t m_nSuppressProcShotID; // 0x02c8, 0x4 bytes
+                std::uint8_t pad_02cc[0x4]; // 0x02cc, 0x4 bytes
+                CUtlVector<shade::sdk::client::BulletID_t> m_vecProcdBulletIDs; // 0x02d0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProc) == 0x218, "CCitadel_Modifier_BaseBulletPreRollProc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProc) == 0x2E8, "CCitadel_Modifier_BaseBulletPreRollProc size mismatch");
         }
     }
 }

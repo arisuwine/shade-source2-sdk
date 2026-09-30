@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x480
+             * Size: 0x640
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Fencer_Ultimate_Target : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bDamageDone; // 0x00d0, 0x1 bytes
-                std::uint8_t pad_00d1[0x3]; // 0x00d1, 0x3 bytes
-                float m_flDamageTime; // 0x00d4, 0x4 bytes
-                std::uint8_t pad_00d8[0x380]; // 0x00d8, 0x380 bytes
-                Vector m_vDashDirection; // 0x0458, 0xc bytes
-                std::uint8_t pad_0464[0x1c]; // 0x0464, 0x1c bytes
+                bool m_bDamageDone; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
+                float m_flDamageTime; // 0x0144, 0x4 bytes
+                std::uint8_t pad_0148[0x4d0]; // 0x0148, 0x4d0 bytes
+                Vector m_vDashDirection; // 0x0618, 0xc bytes
+                std::uint8_t pad_0624[0x1c]; // 0x0624, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Fencer_Ultimate_Target) == 0x480, "CModifier_Fencer_Ultimate_Target size mismatch");
+            static_assert(sizeof(CModifier_Fencer_Ultimate_Target) == 0x640, "CModifier_Fencer_Ultimate_Target size mismatch");
         }
     }
 }

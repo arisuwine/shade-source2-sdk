@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -24,7 +25,13 @@ namespace shade {
                 RS_CMP_GREATER = 0x4,
                 RS_CMP_NOT_EQUAL = 0x5,
                 RS_CMP_GREATER_EQUAL = 0x6,
-                RS_CMP_ALWAYS = 0x7
+                RS_CMP_ALWAYS = 0x7,
+                RS_CMP_FUNC_MASK = 0x7,
+                RS_CMP_CLOSER_FARTHER_FLAG = 0x8,
+                RS_CMP_CLOSER = 0x9,
+                RS_CMP_CLOSER_EQUAL = 0xb,
+                RS_CMP_FARTHER = 0xc,
+                RS_CMP_FARTHER_EQUAL = 0xe
             };
         }
     }

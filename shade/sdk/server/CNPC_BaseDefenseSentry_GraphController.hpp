@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x160
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_BaseDefenseSentry_GraphController : public shade::sdk::server::CNPC_SimpleAnimatingAI_GraphController {
             public:
-                CAnimGraphParamRef<float> m_flPanel1; // 0x00b8, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bUnpackInstant; // 0x00e0, 0x28 bytes
-                CAnimGraphParamRef<float> m_flVelocity; // 0x0108, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bAlert; // 0x0130, 0x28 bytes
+                CAnimGraphParamRef<float> m_flPanel1; // 0x00c0, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bUnpackInstant; // 0x00e8, 0x28 bytes
+                CAnimGraphParamRef<float> m_flVelocity; // 0x0110, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bAlert; // 0x0138, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_BaseDefenseSentry_GraphController) == 0x158, "CNPC_BaseDefenseSentry_GraphController size mismatch");
+            static_assert(sizeof(CNPC_BaseDefenseSentry_GraphController) == 0x160, "CNPC_BaseDefenseSentry_GraphController size mismatch");
         }
     }
 }

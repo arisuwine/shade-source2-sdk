@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcd0
+             * Size: 0xdc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_FissureWall : public shade::sdk::client::CBaseAnimGraph {
             public:
-                Vector m_vStartPos; // 0x0ca8, 0xc bytes
-                Vector m_vEndPos; // 0x0cb4, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0cc0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0cc4, 0x4 bytes
-                bool m_bSolid; // 0x0cc8, 0x1 bytes
-                std::uint8_t pad_0cc9[0x3]; // 0x0cc9, 0x3 bytes
-                std::int32_t m_nTouchCount; // 0x0ccc, 0x4 bytes
+                VectorWS m_vStartPos; // 0x0da0, 0xc bytes
+                VectorWS m_vEndPos; // 0x0dac, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0db8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0dbc, 0x4 bytes
+                bool m_bSolid; // 0x0dc0, 0x1 bytes
+                std::uint8_t pad_0dc1[0x3]; // 0x0dc1, 0x3 bytes
+                std::int32_t m_nTouchCount; // 0x0dc4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_FissureWall) == 0xCD0, "C_Citadel_FissureWall size mismatch");
+            static_assert(sizeof(C_Citadel_FissureWall) == 0xDC8, "C_Citadel_FissureWall size mismatch");
         }
     }
 }

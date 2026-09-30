@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0xb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,13 +30,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmEventConsumerAttributes : public shade::sdk::client::CNmEventConsumer {
             public:
-                std::uint8_t pad_0010[0x40]; // 0x0010, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmEventConsumerAttributes) == 0x50, "CNmEventConsumerAttributes size mismatch");
+            static_assert(sizeof(CNmEventConsumerAttributes) == 0xB0, "CNmEventConsumerAttributes size mismatch");
         }
     }
 }

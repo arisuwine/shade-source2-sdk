@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,29 +30,27 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x110
+             * Size: 0x180
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Allowed
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CBaseModifierAura : public shade::sdk::client::CCitadelModifier {
             public:
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAuraUnits; // 0x00c0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hOldAuraUnits; // 0x00d8, 0x18 bytes
-                float m_flOverrideRadius; // 0x00f0, 0x4 bytes
-                std::uint8_t pad_00f4[0x1c]; // 0x00f4, 0x1c bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAuraUnits; // 0x0130, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hOldAuraUnits; // 0x0148, 0x18 bytes
+                float m_flOverrideRadius; // 0x0160, 0x4 bytes
+                std::uint8_t pad_0164[0x1c]; // 0x0164, 0x1c bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_hAmbientEffect; // Offset: 0x108, Size: 0x1, Size In Bytes: 0x0
-             * void m_hAmbientSound; // Offset: 0xf4, Size: 0x1, Size In Bytes: 0x0
-             * void m_flLastRadius; // Offset: 0x10c, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseModifierAura) == 0x110, "CBaseModifierAura size mismatch");
+            static_assert(sizeof(CBaseModifierAura) == 0x180, "CBaseModifierAura size mismatch");
         }
     }
 }

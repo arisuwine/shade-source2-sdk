@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,6 @@ namespace shade {
             /* Class Parameters
              * Size: 0x10
              * Alignment: 0xff
-             * Has Trivial Constructor
              * Has Trivial Destructor
              */
             #pragma pack(push, 1)

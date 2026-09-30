@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x1f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Containment_Victim : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_flTetherRadius; // 0x00c0, 0x4 bytes
-                Vector m_vecOrigin; // 0x00c4, 0xc bytes
-                std::uint8_t pad_00d0[0x80]; // 0x00d0, 0x80 bytes
+                float m_flTetherRadius; // 0x0130, 0x4 bytes
+                VectorWS m_vecOrigin; // 0x0134, 0xc bytes
+                std::uint8_t pad_0140[0xb0]; // 0x0140, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Containment_Victim) == 0x150, "CCitadel_Modifier_Containment_Victim size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Containment_Victim) == 0x1F0, "CCitadel_Modifier_Containment_Victim size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x528
+             * Size: 0x530
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,7 +44,8 @@ namespace shade {
                 float m_flEnemySlowOnHitSpeed; // 0x0014, 0x4 bytes
                 bool bIsHeavyAttack; // 0x0018, 0x1 bytes
                 bool m_bCanBeParried; // 0x0019, 0x1 bytes
-                std::uint8_t pad_001a[0x2]; // 0x001a, 0x2 bytes
+                bool m_bParryOnlyBlocksParrier; // 0x001a, 0x1 bytes
+                bool m_bParryStunsAttacker; // 0x001b, 0x1 bytes
                 float m_flCooldownOnMiss; // 0x001c, 0x4 bytes
                 float m_flCooldownOnHit; // 0x0020, 0x4 bytes
                 float m_flTraceConeHalfWidth; // 0x0024, 0x4 bytes
@@ -54,24 +56,26 @@ namespace shade {
                 CPiecewiseCurve m_MovementSpeedCurve; // 0x0070, 0x40 bytes
                 float m_flMovementAcc; // 0x00b0, 0x4 bytes
                 float m_flAttackStateTime; // 0x00b4, 0x4 bytes
-                CGlobalSymbol m_Trigger; // 0x00b8, 0x8 bytes
-                CSoundEventName m_strActivateSound; // 0x00c0, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x00d0, 0x10 bytes
-                CSoundEventName m_strHitHeroSound; // 0x00e0, 0x10 bytes
-                CSoundEventName m_strHitDebrisSound; // 0x00f0, 0x10 bytes
-                CSoundEventName m_strMissSound; // 0x0100, 0x10 bytes
-                CSoundEventName m_strMeleeDashSound; // 0x0110, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeActivateParticle; // 0x0120, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x0200, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeAttackParticle; // 0x02e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x03c0, 0xe0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttackStart; // 0x04a0, 0x88 bytes
+                bool m_bWaitForGroundToTrigger; // 0x00b8, 0x1 bytes
+                std::uint8_t pad_00b9[0x7]; // 0x00b9, 0x7 bytes
+                CGlobalSymbol m_Trigger; // 0x00c0, 0x8 bytes
+                CSoundEventName m_strActivateSound; // 0x00c8, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x00d8, 0x10 bytes
+                CSoundEventName m_strHitHeroSound; // 0x00e8, 0x10 bytes
+                CSoundEventName m_strHitDebrisSound; // 0x00f8, 0x10 bytes
+                CSoundEventName m_strMissSound; // 0x0108, 0x10 bytes
+                CSoundEventName m_strMeleeDashSound; // 0x0118, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeActivateParticle; // 0x0128, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x0208, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeAttackParticle; // 0x02e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x03c8, 0xe0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttackStart; // 0x04a8, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AttackData_t) == 0x528, "AttackData_t size mismatch");
+            static_assert(sizeof(AttackData_t) == 0x530, "AttackData_t size mismatch");
         }
     }
 }

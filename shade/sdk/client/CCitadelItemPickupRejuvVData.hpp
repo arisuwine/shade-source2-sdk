@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x230
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPickupRejuvVData : public shade::sdk::client::CCitadelItemPickupVData {
             public:
-                CSubclassName<4> m_AbilityProjectile; // 0x0108, 0x10 bytes
-                float m_flMaxDistForHeal; // 0x0118, 0x4 bytes
-                float m_flPhysicsRadius; // 0x011c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RebirthModifier; // 0x0120, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PunchPickupModifier; // 0x0130, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsFrozenParticle; // 0x0140, 0xe0 bytes
+                CSubclassName<4> m_AbilityProjectile; // 0x0118, 0x10 bytes
+                float m_flMaxDistForHeal; // 0x0128, 0x4 bytes
+                std::uint8_t pad_012c[0x4]; // 0x012c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RebirthModifier; // 0x0130, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PunchPickupModifier; // 0x0140, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsFrozenParticle; // 0x0150, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPickupRejuvVData) == 0x220, "CCitadelItemPickupRejuvVData size mismatch");
+            static_assert(sizeof(CCitadelItemPickupRejuvVData) == 0x230, "CCitadelItemPickupRejuvVData size mismatch");
         }
     }
 }

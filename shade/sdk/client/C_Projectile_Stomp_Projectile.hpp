@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd60
+             * Size: 0x1060
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Projectile_Stomp_Projectile : public shade::sdk::client::C_CitadelProjectile {
             public:
-                float m_flWidth; // 0x0ad8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tDieTime; // 0x0adc, 0x4 bytes
-                std::uint8_t pad_0ae0[0x280]; // 0x0ae0, 0x280 bytes
+                float m_flWidth; // 0x0ce8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tDieTime; // 0x0cec, 0x4 bytes
+                std::uint8_t pad_0cf0[0x370]; // 0x0cf0, 0x370 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Projectile_Stomp_Projectile) == 0xD60, "C_Projectile_Stomp_Projectile size mismatch");
+            static_assert(sizeof(C_Projectile_Stomp_Projectile) == 0x1060, "C_Projectile_Stomp_Projectile size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1848
+             * Size: 0x13d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_IcePathVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_IcePathModifier; // 0x1818, 0x10 bytes
-                float m_flMomentumDecayRate; // 0x1828, 0x4 bytes
-                float m_flMomentumWeight; // 0x182c, 0x4 bytes
-                float m_flMaxPitchChange; // 0x1830, 0x4 bytes
-                float m_flMaxPitchUp; // 0x1834, 0x4 bytes
-                float m_flMaxPitchDown; // 0x1838, 0x4 bytes
-                float m_flMaxHeight; // 0x183c, 0x4 bytes
-                float m_flForwardAngleBias; // 0x1840, 0x4 bytes
-                std::uint8_t pad_1844[0x4]; // 0x1844, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_IcePathModifier; // 0x13a0, 0x10 bytes
+                float m_flMomentumDecayRate; // 0x13b0, 0x4 bytes
+                float m_flMomentumWeight; // 0x13b4, 0x4 bytes
+                float m_flMaxPitchChange; // 0x13b8, 0x4 bytes
+                float m_flMaxPitchUp; // 0x13bc, 0x4 bytes
+                float m_flMaxPitchDown; // 0x13c0, 0x4 bytes
+                float m_flMaxHeight; // 0x13c4, 0x4 bytes
+                float m_flForwardAngleBias; // 0x13c8, 0x4 bytes
+                std::uint8_t pad_13cc[0x4]; // 0x13cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_IcePathVData) == 0x1848, "CCitadel_Ability_IcePathVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_IcePathVData) == 0x13D0, "CCitadel_Ability_IcePathVData size mismatch");
         }
     }
 }

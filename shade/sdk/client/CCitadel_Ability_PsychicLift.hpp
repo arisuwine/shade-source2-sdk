@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1298
+             * Size: 0x17c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PsychicLift : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x80]; // 0x11d8, 0x80 bytes
-                Vector m_vLiftPosition; // 0x1258, 0xc bytes
-                Vector m_vCrashPosition; // 0x1264, 0xc bytes
-                std::uint8_t pad_1270[0x8]; // 0x1270, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecLiftTargets; // 0x1278, 0x18 bytes
-                std::uint8_t pad_1290[0x8]; // 0x1290, 0x8 bytes
+                std::uint8_t pad_16d8[0xb0]; // 0x16d8, 0xb0 bytes
+                VectorWS m_vLiftPosition; // 0x1788, 0xc bytes
+                VectorWS m_vCrashPosition; // 0x1794, 0xc bytes
+                std::uint8_t pad_17a0[0x8]; // 0x17a0, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecLiftTargets; // 0x17a8, 0x18 bytes
+                std::uint8_t pad_17c0[0x8]; // 0x17c0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PsychicLift) == 0x1298, "CCitadel_Ability_PsychicLift size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PsychicLift) == 0x17C8, "CCitadel_Ability_PsychicLift size mismatch");
         }
     }
 }

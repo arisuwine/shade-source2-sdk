@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x520
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPlayerTrackedStatsEntity : public shade::sdk::server::CBaseTrackedStatsEntity {
             public:
-                CPlayerSlot m_nPlayerSlot; // 0x0508, 0x4 bytes
-                std::int32_t m_nTeam; // 0x050c, 0x4 bytes
+                CPlayerSlot m_nPlayerSlot; // 0x0518, 0x4 bytes
+                std::int32_t m_nTeam; // 0x051c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPlayerTrackedStatsEntity) == 0x510, "CPlayerTrackedStatsEntity size mismatch");
+            static_assert(sizeof(CPlayerTrackedStatsEntity) == 0x520, "CPlayerTrackedStatsEntity size mismatch");
         }
     }
 }

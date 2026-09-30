@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,21 +22,21 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c8
+             * Size: 0x1e0
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CitadelMusicCueOverrides_t {
-                shade::sdk::client::CitadelMusicCueData_t m_MusicStateDefault; // 0x0000, 0x98 bytes
-                shade::sdk::client::CitadelMusicCueData_t m_MusicStateAmber; // 0x0098, 0x98 bytes
-                shade::sdk::client::CitadelMusicCueData_t m_MusicStateSapphire; // 0x0130, 0x98 bytes
+                shade::sdk::client::CitadelMusicCueData_t m_MusicStateDefault; // 0x0000, 0xa0 bytes
+                shade::sdk::client::CitadelMusicCueData_t m_MusicStateAmber; // 0x00a0, 0xa0 bytes
+                shade::sdk::client::CitadelMusicCueData_t m_MusicStateSapphire; // 0x0140, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelMusicCueOverrides_t) == 0x1C8, "CitadelMusicCueOverrides_t size mismatch");
+            static_assert(sizeof(CitadelMusicCueOverrides_t) == 0x1E0, "CitadelMusicCueOverrides_t size mismatch");
         }
     }
 }

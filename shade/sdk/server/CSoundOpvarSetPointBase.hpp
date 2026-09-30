@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x548
+             * Size: 0x560
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,39 +31,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetPointBase : public shade::sdk::server::CBaseEntity {
             public:
-                bool m_bDisabled; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x3]; // 0x04a1, 0x3 bytes
-                CEntityHandle m_hSource; // 0x04a4, 0x4 bytes
-                std::uint8_t pad_04a8[0x18]; // 0x04a8, 0x18 bytes
-                CUtlSymbolLarge m_iszSourceEntityName; // 0x04c0, 0x8 bytes
-                std::uint8_t pad_04c8[0x50]; // 0x04c8, 0x50 bytes
-                Vector m_vLastPosition; // 0x0518, 0xc bytes
-                float m_flRefreshTime; // 0x0524, 0x4 bytes
-                CUtlSymbolLarge m_iszStackName; // 0x0528, 0x8 bytes
-                CUtlSymbolLarge m_iszOperatorName; // 0x0530, 0x8 bytes
-                CUtlSymbolLarge m_iszOpvarName; // 0x0538, 0x8 bytes
-                std::int32_t m_iOpvarIndex; // 0x0540, 0x4 bytes
-                bool m_bUseAutoCompare; // 0x0544, 0x1 bytes
-                bool m_bFastRefresh; // 0x0545, 0x1 bytes
-                std::uint8_t pad_0546[0x2]; // 0x0546, 0x2 bytes
+                bool m_bDisabled; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                CEntityHandle m_hSource; // 0x04b4, 0x4 bytes
+                std::uint8_t pad_04b8[0x18]; // 0x04b8, 0x18 bytes
+                CUtlSymbolLarge m_iszSourceEntityName; // 0x04d0, 0x8 bytes
+                std::uint8_t pad_04d8[0x58]; // 0x04d8, 0x58 bytes
+                VectorWS m_vLastPosition; // 0x0530, 0xc bytes
+                float m_flRefreshTime; // 0x053c, 0x4 bytes
+                CUtlSymbolLarge m_iszStackName; // 0x0540, 0x8 bytes
+                CUtlSymbolLarge m_iszOperatorName; // 0x0548, 0x8 bytes
+                CUtlSymbolLarge m_iszOpvarName; // 0x0550, 0x8 bytes
+                std::int32_t m_iOpvarIndex; // 0x0558, 0x4 bytes
+                bool m_bUseAutoCompare; // 0x055c, 0x1 bytes
+                bool m_bFastRefresh; // 0x055d, 0x1 bytes
+                std::uint8_t pad_055e[0x2]; // 0x055e, 0x2 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::uint64_t InputSetEventGuid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetStackName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetOperatorName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetOpvarName; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetOpvarIndex; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSourceEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CSoundOpvarSetPointBaseSetOpvarThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_nGUID; // Offset: 0x4a8, Size: 0x1, Size In Bytes: 0x0
-             * void m_hOpvarData; // Offset: 0x4c8, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetPointBase) == 0x548, "CSoundOpvarSetPointBase size mismatch");
+            static_assert(sizeof(CSoundOpvarSetPointBase) == 0x560, "CSoundOpvarSetPointBase size mismatch");
         }
     }
 }

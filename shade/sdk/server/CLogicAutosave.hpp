@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicAutosave : public shade::sdk::server::CLogicalEntity {
             public:
-                bool m_bForceNewLevelUnit; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x3]; // 0x04a1, 0x3 bytes
-                std::int32_t m_minHitPoints; // 0x04a4, 0x4 bytes
-                std::int32_t m_minHitPointsToCommit; // 0x04a8, 0x4 bytes
-                std::uint8_t pad_04ac[0x4]; // 0x04ac, 0x4 bytes
+                bool m_bForceNewLevelUnit; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                std::int32_t m_minHitPoints; // 0x04b4, 0x4 bytes
+                std::int32_t m_minHitPointsToCommit; // 0x04b8, 0x4 bytes
+                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputSave; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSaveDangerous; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetMinHitpointsThreshold; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicAutosave) == 0x4B0, "CLogicAutosave size mismatch");
+            static_assert(sizeof(CLogicAutosave) == 0x4C0, "CLogicAutosave size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1bb0
+             * Size: 0x1848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_ClawWeaponVData : public shade::sdk::server::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeParticle; // 0x19c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeHitParticle; // 0x1aa8, 0xe0 bytes
-                CUtlVector<shade::sdk::client::ClawSwipeInfo_t> m_vecClawSwipeInfos; // 0x1b88, 0x18 bytes
-                CSoundEventName m_strSwipeHitSound; // 0x1ba0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeParticle; // 0x1660, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeHitParticle; // 0x1740, 0xe0 bytes
+                CUtlVector<shade::sdk::client::ClawSwipeInfo_t> m_vecClawSwipeInfos; // 0x1820, 0x18 bytes
+                CSoundEventName m_strSwipeHitSound; // 0x1838, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_ClawWeaponVData) == 0x1BB0, "CCitadel_Ability_Werewolf_ClawWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_ClawWeaponVData) == 0x1848, "CCitadel_Ability_Werewolf_ClawWeaponVData size mismatch");
         }
     }
 }

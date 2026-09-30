@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa90
+             * Size: 0xcb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerPassthroughFakeWall : public shade::sdk::client::C_BaseTrigger {
             public:
-                std::uint8_t pad_0a78[0x18]; // 0x0a78, 0x18 bytes
+                std::uint8_t pad_0c98[0x18]; // 0x0c98, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CTriggerPassthroughFakeWallTouchingThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTriggerPassthroughFakeWall) == 0xA90, "CTriggerPassthroughFakeWall size mismatch");
+            static_assert(sizeof(CTriggerPassthroughFakeWall) == 0xCB0, "CTriggerPassthroughFakeWall size mismatch");
         }
     }
 }

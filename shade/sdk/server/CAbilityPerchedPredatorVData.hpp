@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityPerchedPredatorVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeBaseParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeFriendlyParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeEnemyParticle; // 0x19d8, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x1ab8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ModifierDragEnemy; // 0x1ac8, 0x10 bytes
-                float m_flOnHitDetonateTimer; // 0x1ad8, 0x4 bytes
-                float m_flTraceTravelRadius; // 0x1adc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeBaseParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeFriendlyParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeEnemyParticle; // 0x1560, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1640, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ModifierDragEnemy; // 0x1650, 0x10 bytes
+                float m_flOnHitDetonateTimer; // 0x1660, 0x4 bytes
+                float m_flTraceTravelRadius; // 0x1664, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityPerchedPredatorVData) == 0x1AE0, "CAbilityPerchedPredatorVData size mismatch");
+            static_assert(sizeof(CAbilityPerchedPredatorVData) == 0x1668, "CAbilityPerchedPredatorVData size mismatch");
         }
     }
 }

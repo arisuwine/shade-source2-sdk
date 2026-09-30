@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x7b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf_TransformationWatcherVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WerewolfModifier; // 0x0750, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HunterModifier; // 0x0760, 0x10 bytes
-                CUtlVector<shade::sdk::client::EAbilitySlots_t> m_vecWerewolfAbilitySlots; // 0x0770, 0x18 bytes
-                CUtlVector<shade::sdk::client::EAbilitySlots_t> m_vecHunterAbilitySlots; // 0x0788, 0x18 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WerewolfModifier; // 0x0760, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HunterModifier; // 0x0770, 0x10 bytes
+                CUtlVector<shade::sdk::client::EAbilitySlots_t> m_vecWerewolfAbilitySlots; // 0x0780, 0x18 bytes
+                CUtlVector<shade::sdk::client::EAbilitySlots_t> m_vecHunterAbilitySlots; // 0x0798, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf_TransformationWatcherVData) == 0x7A0, "CCitadel_Modifier_Werewolf_TransformationWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_TransformationWatcherVData) == 0x7B0, "CCitadel_Modifier_Werewolf_TransformationWatcherVData size mismatch");
         }
     }
 }

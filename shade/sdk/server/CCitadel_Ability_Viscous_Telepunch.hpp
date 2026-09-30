@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16a0
+             * Size: 0x1e70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Viscous_Telepunch : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x700]; // 0x0f70, 0x700 bytes
-                Vector m_vecTeleportPosition; // 0x1670, 0xc bytes
-                Vector m_vecTeleportPositionNormal; // 0x167c, 0xc bytes
-                shade::sdk::client::ETelepunchState_t m_eTelepunchState; // 0x1688, 0x1 bytes
-                std::uint8_t pad_1689[0x3]; // 0x1689, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x168c, 0x4 bytes
-                std::uint8_t pad_1690[0x10]; // 0x1690, 0x10 bytes
+                std::uint8_t pad_14a0[0x9a0]; // 0x14a0, 0x9a0 bytes
+                VectorWS m_vecTeleportPosition; // 0x1e40, 0xc bytes
+                Vector m_vecTeleportPositionNormal; // 0x1e4c, 0xc bytes
+                shade::sdk::client::ETelepunchState_t m_eTelepunchState; // 0x1e58, 0x1 bytes
+                std::uint8_t pad_1e59[0x3]; // 0x1e59, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x1e5c, 0x4 bytes
+                std::uint8_t pad_1e60[0x10]; // 0x1e60, 0x10 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Viscous_Telepunch) == 0x16A0, "CCitadel_Ability_Viscous_Telepunch size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Viscous_Telepunch) == 0x1E70, "CCitadel_Ability_Viscous_Telepunch size mismatch");
         }
     }
 }

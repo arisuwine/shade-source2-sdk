@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xaf0
+             * Size: 0xb00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BubbleVData : public shade::sdk::client::CCitadel_Modifier_SilencedVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x09f0, 0xe0 bytes
-                CSoundEventName m_ExplodeSound; // 0x0ad0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x0ae0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0a00, 0xe0 bytes
+                CSoundEventName m_ExplodeSound; // 0x0ae0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x0af0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BubbleVData) == 0xAF0, "CCitadel_Modifier_BubbleVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BubbleVData) == 0xB00, "CCitadel_Modifier_BubbleVData size mismatch");
         }
     }
 }

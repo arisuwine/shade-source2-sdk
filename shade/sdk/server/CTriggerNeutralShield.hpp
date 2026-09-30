@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0xa20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerNeutralShield : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecPlayers; // 0x08e0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecNeutrals; // 0x08f8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecPlayers; // 0x09f0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecNeutrals; // 0x0a08, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerNeutralShield) == 0x910, "CTriggerNeutralShield size mismatch");
+            static_assert(sizeof(CTriggerNeutralShield) == 0xA20, "CTriggerNeutralShield size mismatch");
         }
     }
 }

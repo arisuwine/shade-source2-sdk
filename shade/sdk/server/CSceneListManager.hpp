@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x578
+             * Size: 0x588
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CSceneListManager : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CSceneListManager>> m_hListManagers; // 0x04a0, 0x18 bytes
-                CUtlSymbolLarge m_iszScenes[0x10]; // 0x04b8, 0x80 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hScenes[0x10]; // 0x0538, 0x40 bytes
+                CUtlVector<CHandle<shade::sdk::server::CSceneListManager>> m_hListManagers; // 0x04b0, 0x18 bytes
+                CUtlSymbolLarge m_iszScenes[0x10]; // 0x04c8, 0x80 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hScenes[0x10]; // 0x0548, 0x40 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputShutdown; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSceneListManager) == 0x578, "CSceneListManager size mismatch");
+            static_assert(sizeof(CSceneListManager) == 0x588, "CSceneListManager size mismatch");
         }
     }
 }

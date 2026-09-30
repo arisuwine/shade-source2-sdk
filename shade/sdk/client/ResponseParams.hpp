@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -28,8 +29,9 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x20
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class ResponseParams {
@@ -42,10 +44,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t delay; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x4
-             * std::int32_t respeakdelay; // Offset: 0x4, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
             static_assert(sizeof(ResponseParams) == 0x20, "ResponseParams size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x860
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Cadence_GrandFinale_BuffVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x0750, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0760, 0xe0 bytes
-                CSoundEventName m_ExplodeSound; // 0x0840, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x0760, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0770, 0xe0 bytes
+                CSoundEventName m_ExplodeSound; // 0x0850, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Cadence_GrandFinale_BuffVData) == 0x850, "CCitadel_Modifier_Cadence_GrandFinale_BuffVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Cadence_GrandFinale_BuffVData) == 0x860, "CCitadel_Modifier_Cadence_GrandFinale_BuffVData size mismatch");
         }
     }
 }

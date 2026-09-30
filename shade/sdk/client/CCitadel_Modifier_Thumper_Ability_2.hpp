@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2d0
+             * Size: 0x400
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Thumper_Ability_2 : public shade::sdk::client::CCitadelModifier {
             public:
-                Vector m_vLastPosition; // 0x00c0, 0xc bytes
-                std::uint8_t pad_00cc[0x204]; // 0x00cc, 0x204 bytes
+                VectorWS m_vLastPosition; // 0x0130, 0xc bytes
+                std::uint8_t pad_013c[0x2c4]; // 0x013c, 0x2c4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Thumper_Ability_2) == 0x2D0, "CCitadel_Modifier_Thumper_Ability_2 size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Thumper_Ability_2) == 0x400, "CCitadel_Modifier_Thumper_Ability_2 size mismatch");
         }
     }
 }

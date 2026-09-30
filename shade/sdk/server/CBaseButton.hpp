@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0x9f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,60 +42,43 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseButton : public shade::sdk::server::CBaseToggle {
             public:
-                QAngle m_angMoveEntitySpace; // 0x0800, 0xc bytes
-                bool m_fStayPushed; // 0x080c, 0x1 bytes
-                bool m_fRotating; // 0x080d, 0x1 bytes
-                std::uint8_t pad_080e[0x2]; // 0x080e, 0x2 bytes
-                shade::sdk::server::locksound_t m_ls; // 0x0810, 0x20 bytes
-                CUtlSymbolLarge m_sUseSound; // 0x0830, 0x8 bytes
-                CUtlSymbolLarge m_sLockedSound; // 0x0838, 0x8 bytes
-                CUtlSymbolLarge m_sUnlockedSound; // 0x0840, 0x8 bytes
-                CUtlSymbolLarge m_sOverrideAnticipationName; // 0x0848, 0x8 bytes
-                bool m_bLocked; // 0x0850, 0x1 bytes
-                bool m_bDisabled; // 0x0851, 0x1 bytes
-                std::uint8_t pad_0852[0x2]; // 0x0852, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flUseLockedTime; // 0x0854, 0x4 bytes
-                bool m_bSolidBsp; // 0x0858, 0x1 bytes
-                std::uint8_t pad_0859[0x7]; // 0x0859, 0x7 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0860, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPressed; // 0x0878, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUseLocked; // 0x0890, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnIn; // 0x08a8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOut; // 0x08c0, 0x18 bytes
-                std::int32_t m_nState; // 0x08d8, 0x4 bytes
-                CEntityHandle m_hConstraint; // 0x08dc, 0x4 bytes
-                CEntityHandle m_hConstraintParent; // 0x08e0, 0x4 bytes
-                bool m_bForceNpcExclude; // 0x08e4, 0x1 bytes
-                std::uint8_t pad_08e5[0x3]; // 0x08e5, 0x3 bytes
-                CUtlSymbolLarge m_sGlowEntity; // 0x08e8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseModelEntity> m_glowEntity; // 0x08f0, 0x4 bytes
-                bool m_usable; // 0x08f4, 0x1 bytes
-                std::uint8_t pad_08f5[0x3]; // 0x08f5, 0x3 bytes
-                CUtlSymbolLarge m_szDisplayText; // 0x08f8, 0x8 bytes
+                QAngle m_angMoveEntitySpace; // 0x08f8, 0xc bytes
+                bool m_fStayPushed; // 0x0904, 0x1 bytes
+                bool m_fRotating; // 0x0905, 0x1 bytes
+                std::uint8_t pad_0906[0x2]; // 0x0906, 0x2 bytes
+                shade::sdk::server::locksound_t m_ls; // 0x0908, 0x20 bytes
+                CGameSoundEventName m_sUseSound; // 0x0928, 0x8 bytes
+                CGameSoundEventName m_sLockedSound; // 0x0930, 0x8 bytes
+                CGameSoundEventName m_sUnlockedSound; // 0x0938, 0x8 bytes
+                CUtlSymbolLarge m_sOverrideAnticipationName; // 0x0940, 0x8 bytes
+                bool m_bLocked; // 0x0948, 0x1 bytes
+                bool m_bDisabled; // 0x0949, 0x1 bytes
+                std::uint8_t pad_094a[0x2]; // 0x094a, 0x2 bytes
+                float m_flSpeed; // 0x094c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flUseLockedTime; // 0x0950, 0x4 bytes
+                bool m_bSolidBsp; // 0x0954, 0x1 bytes
+                std::uint8_t pad_0955[0x3]; // 0x0955, 0x3 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0958, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPressed; // 0x0970, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUseLocked; // 0x0988, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnIn; // 0x09a0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOut; // 0x09b8, 0x18 bytes
+                std::int32_t m_nState; // 0x09d0, 0x4 bytes
+                CEntityHandle m_hConstraint; // 0x09d4, 0x4 bytes
+                CEntityHandle m_hConstraintParent; // 0x09d8, 0x4 bytes
+                bool m_bForceNpcExclude; // 0x09dc, 0x1 bytes
+                std::uint8_t pad_09dd[0x3]; // 0x09dd, 0x3 bytes
+                CUtlSymbolLarge m_sGlowEntity; // 0x09e0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseModelEntity> m_glowEntity; // 0x09e8, 0x4 bytes
+                bool m_usable; // 0x09ec, 0x1 bytes
+                std::uint8_t pad_09ed[0x3]; // 0x09ed, 0x3 bytes
+                CUtlSymbolLarge m_szDisplayText; // 0x09f0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t m_ls.sLockedSound; // Offset: 0x818, Size: 0x1, Size In Bytes: 0x8
-             * std::int32_t m_ls.sUnlockedSound; // Offset: 0x820, Size: 0x1, Size In Bytes: 0x8
-             * void CBaseButtonButtonTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseButtonButtonSpark; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseButtonTriggerAndWait; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseButtonButtonReturn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseButtonButtonBackHome; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseButtonButtonUse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBaseButtonActivateTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputLock; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUnlock; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPress; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPressIn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPressOut; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlString displaytext; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseButton) == 0x900, "CBaseButton size mismatch");
+            static_assert(sizeof(CBaseButton) == 0x9F8, "CBaseButton size mismatch");
         }
     }
 }

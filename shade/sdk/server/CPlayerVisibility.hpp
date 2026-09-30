@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,25 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CPlayerVisibility : public shade::sdk::server::CBaseEntity {
             public:
-                float m_flVisibilityStrength; // 0x04a0, 0x4 bytes
-                float m_flFogDistanceMultiplier; // 0x04a4, 0x4 bytes
-                float m_flFogMaxDensityMultiplier; // 0x04a8, 0x4 bytes
-                float m_flFadeTime; // 0x04ac, 0x4 bytes
-                bool m_bStartDisabled; // 0x04b0, 0x1 bytes
-                bool m_bIsEnabled; // 0x04b1, 0x1 bytes
-                std::uint8_t pad_04b2[0x6]; // 0x04b2, 0x6 bytes
+                float m_flVisibilityStrength; // 0x04b0, 0x4 bytes
+                float m_flFogDistanceMultiplier; // 0x04b4, 0x4 bytes
+                float m_flFogMaxDensityMultiplier; // 0x04b8, 0x4 bytes
+                float m_flFadeTime; // 0x04bc, 0x4 bytes
+                bool m_bStartDisabled; // 0x04c0, 0x1 bytes
+                bool m_bIsEnabled; // 0x04c1, 0x1 bytes
+                std::uint8_t pad_04c2[0x6]; // 0x04c2, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPlayerVisibilityStrength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPlayerFogDistanceMultiplier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPlayerFogMaxDensityMultiplier; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPlayerVisibility) == 0x4B8, "CPlayerVisibility size mismatch");
+            static_assert(sizeof(CPlayerVisibility) == 0x4C8, "CPlayerVisibility size mismatch");
         }
     }
 }

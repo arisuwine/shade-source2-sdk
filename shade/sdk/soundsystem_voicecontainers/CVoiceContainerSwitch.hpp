@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xc0
+             * Size: 0x88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,13 +38,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerSwitch : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                CUtlVector<shade::sdk::soundsystem_voicecontainers::CSoundContainerReference> m_soundsToPlay; // 0x00a8, 0x18 bytes
+                CUtlVector<shade::sdk::soundsystem_voicecontainers::CSoundContainerReference> m_soundsToPlay; // 0x0070, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerSwitch) == 0xC0, "CVoiceContainerSwitch size mismatch");
+            static_assert(sizeof(CVoiceContainerSwitch) == 0x88, "CVoiceContainerSwitch size mismatch");
         }
     }
 }

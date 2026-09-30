@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -43,15 +44,13 @@ namespace shade {
                 CUtlString m_strParentPathUniqueID; // 0x0608, 0x8 bytes
                 CUtlString m_strPathNodeParameter; // 0x0610, 0x8 bytes
                 std::uint8_t pad_0618[0x8]; // 0x0618, 0x8 bytes
-                CTransform m_xWSPrevParent; // 0x0620, 0x20 bytes
+                CTransformWS m_xWSPrevParent; // 0x0620, 0x20 bytes
                 CHandle<shade::sdk::client::CPathWithDynamicNodes> m_hPath; // 0x0640, 0x4 bytes
                 std::uint8_t pad_0644[0xc]; // 0x0644, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CPathNodeParentedMoveThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPathNode) == 0x650, "CPathNode size mismatch");
         }

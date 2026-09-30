@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x448
+             * Size: 0x608
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_StackingDebuff : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x388]; // 0x00c0, 0x388 bytes
+                std::uint8_t pad_0130[0x4d8]; // 0x0130, 0x4d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_StackingDebuff) == 0x448, "CCitadel_Modifier_Necro_StackingDebuff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_StackingDebuff) == 0x608, "CCitadel_Modifier_Necro_StackingDebuff size mismatch");
         }
     }
 }

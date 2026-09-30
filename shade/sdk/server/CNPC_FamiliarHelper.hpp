@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ba0
+             * Size: 0x1b00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_FamiliarHelper : public shade::sdk::server::CAI_CitadelNPC {
             public:
-                std::uint8_t pad_17b0[0x3e0]; // 0x17b0, 0x3e0 bytes
-                shade::sdk::entity2::GameTime_t m_tCooldownStartTime; // 0x1b90, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tCooldownEndTime; // 0x1b94, 0x4 bytes
-                bool m_bIsHelperAvailableNet; // 0x1b98, 0x1 bytes
-                std::uint8_t pad_1b99[0x7]; // 0x1b99, 0x7 bytes
+                std::uint8_t pad_1710[0x3d8]; // 0x1710, 0x3d8 bytes
+                shade::sdk::entity2::GameTime_t m_tCooldownStartTime; // 0x1ae8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tCooldownEndTime; // 0x1aec, 0x4 bytes
+                bool m_bIsHelperAvailableNet; // 0x1af0, 0x1 bytes
+                std::uint8_t pad_1af1[0xf]; // 0x1af1, 0xf bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_nHelperIdx; // Offset: 0x1824, Size: 0x1, Size In Bytes: 0x1
+             * std::uint8_t m_nHelperIdx; // Offset: 0x177c, Size: 0x1, Size In Bytes: 0x1
              */
 
-            static_assert(sizeof(CNPC_FamiliarHelper) == 0x1BA0, "CNPC_FamiliarHelper size mismatch");
+            static_assert(sizeof(CNPC_FamiliarHelper) == 0x1B00, "CNPC_FamiliarHelper size mismatch");
         }
     }
 }

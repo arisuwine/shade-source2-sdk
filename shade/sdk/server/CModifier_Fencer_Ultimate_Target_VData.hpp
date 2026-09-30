@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x868
+             * Size: 0x878
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Fencer_Ultimate_Target_VData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                float m_flDamageTimeOffset; // 0x0750, 0x4 bytes
-                float m_flEndTimeScaleForFlinch; // 0x0754, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x0758, 0xe0 bytes
-                CSoundEventName m_strDashHitEnemy; // 0x0838, 0x10 bytes
-                CSoundEventName m_strTimerSound; // 0x0848, 0x10 bytes
-                CSoundEventName m_sSlashSound; // 0x0858, 0x10 bytes
+                float m_flDamageTimeOffset; // 0x0760, 0x4 bytes
+                float m_flEndTimeScaleForFlinch; // 0x0764, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x0768, 0xe0 bytes
+                CSoundEventName m_strDashHitEnemy; // 0x0848, 0x10 bytes
+                CSoundEventName m_strTimerSound; // 0x0858, 0x10 bytes
+                CSoundEventName m_sSlashSound; // 0x0868, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Fencer_Ultimate_Target_VData) == 0x868, "CModifier_Fencer_Ultimate_Target_VData size mismatch");
+            static_assert(sizeof(CModifier_Fencer_Ultimate_Target_VData) == 0x878, "CModifier_Fencer_Ultimate_Target_VData size mismatch");
         }
     }
 }

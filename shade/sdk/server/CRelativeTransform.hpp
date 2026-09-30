@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -27,7 +28,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x30
+             * Size: 0x60
              * Alignment: 0x10
              * Has Trivial Destructor
              * Construct Allowed
@@ -35,15 +36,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CRelativeTransform {
             public:
-                CTransform m_transform; // 0x0000, 0x20 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x0020, 0x4 bytes
-                std::uint8_t pad_0024[0xc]; // 0x0024, 0xc bytes
+                bool m_bTransformIsWorldSpace; // 0x0000, 0x1 bytes
+                std::uint8_t pad_0001[0xf]; // 0x0001, 0xf bytes
+                CTransform m_transform; // 0x0010, 0x20 bytes
+                CTransformWS m_transformWS; // 0x0030, 0x20 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x0050, 0x4 bytes
+                std::uint8_t pad_0054[0xc]; // 0x0054, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRelativeTransform) == 0x30, "CRelativeTransform size mismatch");
+            static_assert(sizeof(CRelativeTransform) == 0x60, "CRelativeTransform size mismatch");
         }
     }
 }

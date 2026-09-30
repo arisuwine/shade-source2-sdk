@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1938
+             * Size: 0x14c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,17 +43,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityStompVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompParticle; // 0x1818, 0xe0 bytes
-                CSoundEventName m_strStompExplosionSound; // 0x18f8, 0x10 bytes
-                CSoundEventName m_strCastDelayLocalPlayerSound; // 0x1908, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1918, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletResistModifier; // 0x1928, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompParticle; // 0x13a0, 0xe0 bytes
+                CSoundEventName m_strStompExplosionSound; // 0x1480, 0x10 bytes
+                CSoundEventName m_strCastDelayLocalPlayerSound; // 0x1490, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x14a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletResistModifier; // 0x14b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityStompVData) == 0x1938, "CAbilityStompVData size mismatch");
+            static_assert(sizeof(CAbilityStompVData) == 0x14C0, "CAbilityStompVData size mismatch");
         }
     }
 }

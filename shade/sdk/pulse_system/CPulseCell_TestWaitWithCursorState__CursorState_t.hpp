@@ -12,16 +12,24 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 namespace shade {
     namespace sdk {
         namespace pulse_system {
+            class CPulseCell_TestWaitWithCursorState;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace pulse_system {
             /* Class Parameters
-             * Size: 0x8
+             * Size: 0x24
              * Alignment: 0x4
-             * Has Trivial Constructor
              * Has Trivial Destructor
              * Construct Allowed
              * Module Local Type Scope
@@ -29,14 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             struct CPulseCell_TestWaitWithCursorState__CursorState_t {
                 float flWaitValue; // 0x0000, 0x4 bytes
-                bool bFailOnCancel; // 0x0004, 0x1 bytes
+                bool bFail; // 0x0004, 0x1 bytes
                 std::uint8_t pad_0005[0x3]; // 0x0005, 0x3 bytes
+                HYieldedCursor m_hSelfCursor; // 0x0008, 0xc bytes
+                HPulseCellBase m_hSelfCellInstanceUntyped; // 0x0014, 0x8 bytes
+                HPulseCell<shade::sdk::pulse_system::CPulseCell_TestWaitWithCursorState> m_hSelfCellInstance; // 0x001c, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_TestWaitWithCursorState__CursorState_t) == 0x8, "CPulseCell_TestWaitWithCursorState__CursorState_t size mismatch");
+            static_assert(sizeof(CPulseCell_TestWaitWithCursorState__CursorState_t) == 0x24, "CPulseCell_TestWaitWithCursorState__CursorState_t size mismatch");
         }
     }
 }

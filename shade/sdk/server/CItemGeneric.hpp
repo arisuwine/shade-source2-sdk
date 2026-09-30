@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -79,20 +80,16 @@ namespace shade {
                 float m_flTriggerRadius; // 0x0c3c, 0x4 bytes
                 CUtlSymbolLarge m_pTriggerSoundEffect; // 0x0c40, 0x8 bytes
                 bool m_bGlowWhenInTrigger; // 0x0c48, 0x1 bytes
-                Color m_glowColor; // 0x0c49, 0x4 bytes
-                bool m_bUseable; // 0x0c4d, 0x1 bytes
-                std::uint8_t pad_0c4e[0x2]; // 0x0c4e, 0x2 bytes
-                CHandle<shade::sdk::server::CItemGenericTriggerHelper> m_hTriggerHelper; // 0x0c50, 0x4 bytes
-                std::uint8_t pad_0c54[0xc]; // 0x0c54, 0xc bytes
+                std::uint8_t pad_0c49[0x3]; // 0x0c49, 0x3 bytes
+                Color m_glowColor; // 0x0c4c, 0x4 bytes
+                bool m_bUseable; // 0x0c50, 0x1 bytes
+                std::uint8_t pad_0c51[0x3]; // 0x0c51, 0x3 bytes
+                CHandle<shade::sdk::server::CItemGenericTriggerHelper> m_hTriggerHelper; // 0x0c54, 0x4 bytes
+                std::uint8_t pad_0c58[0x8]; // 0x0c58, 0x8 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void CItemGenericItemGenericTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartAmbientSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopAmbientSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleAmbientSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_hAmbientSound; // Offset: 0xb30, Size: 0x1, Size In Bytes: 0x0
              * float auto_remove_timeout; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float drag_override; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float damping_override; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0

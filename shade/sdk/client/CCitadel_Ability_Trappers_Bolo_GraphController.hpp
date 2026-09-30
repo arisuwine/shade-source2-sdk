@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0xe8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Trappers_Bolo_GraphController : public shade::sdk::client::CCitadelBaseAbilityGraphController {
             public:
-                CAnimGraphParamRef<bool> m_bBoomerangCatch; // 0x0090, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bBoomerangCatch; // 0x00c0, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Trappers_Bolo_GraphController) == 0xB8, "CCitadel_Ability_Trappers_Bolo_GraphController size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Trappers_Bolo_GraphController) == 0xE8, "CCitadel_Ability_Trappers_Bolo_GraphController size mismatch");
         }
     }
 }

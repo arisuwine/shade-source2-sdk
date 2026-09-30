@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x258
+             * Size: 0x358
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GoatGoingUp : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bAtTargetElevation; // 0x00c0, 0x1 bytes
-                std::uint8_t pad_00c1[0x3]; // 0x00c1, 0x3 bytes
-                Vector m_vKnockAwayVector; // 0x00c4, 0xc bytes
-                std::uint8_t pad_00d0[0x180]; // 0x00d0, 0x180 bytes
-                float m_flTargetElevation; // 0x0250, 0x4 bytes
-                std::uint8_t pad_0254[0x4]; // 0x0254, 0x4 bytes
+                bool m_bAtTargetElevation; // 0x0130, 0x1 bytes
+                std::uint8_t pad_0131[0x217]; // 0x0131, 0x217 bytes
+                Vector m_vKnockAwayVector; // 0x0348, 0xc bytes
+                float m_flTargetElevation; // 0x0354, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GoatGoingUp) == 0x258, "CCitadel_Modifier_GoatGoingUp size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GoatGoingUp) == 0x358, "CCitadel_Modifier_GoatGoingUp size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -20,7 +21,8 @@ namespace shade {
                 CITADEL_TARGET_ABILITY_BEHAVIOR_NONE = 0x0,
                 CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_MODIFIER_VALUE = 0x1,
                 CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_ACTIVE = 0x2,
-                CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_ACTIVE_NON_ULT = 0x4
+                CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_ACTIVE_NON_ULT = 0x4,
+                CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_ENHANCE = 0x8
             };
         }
     }

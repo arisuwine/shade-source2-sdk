@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Knockback : public shade::sdk::client::CCitadel_Modifier_Stunned {
             public:
-                float m_flForce; // 0x00c8, 0x4 bytes
-                bool m_bKnockedBack; // 0x00cc, 0x1 bytes
-                std::uint8_t pad_00cd[0x3]; // 0x00cd, 0x3 bytes
+                float m_flForce; // 0x0138, 0x4 bytes
+                bool m_bKnockedBack; // 0x013c, 0x1 bytes
+                std::uint8_t pad_013d[0x3]; // 0x013d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Knockback) == 0xD0, "CCitadel_Modifier_Knockback size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Knockback) == 0x140, "CCitadel_Modifier_Knockback size mismatch");
         }
     }
 }

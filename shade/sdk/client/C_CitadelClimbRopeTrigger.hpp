@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa88
+             * Size: 0xca8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelClimbRopeTrigger : public shade::sdk::client::C_BaseTrigger {
             public:
-                bool m_bAlignCameraOnAutoDismount; // 0x0a78, 0x1 bytes
-                std::uint8_t pad_0a79[0xf]; // 0x0a79, 0xf bytes
+                bool m_bAlignCameraOnAutoDismount; // 0x0c98, 0x1 bytes
+                std::uint8_t pad_0c99[0xf]; // 0x0c99, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CitadelClimbRopeTrigger) == 0xA88, "C_CitadelClimbRopeTrigger size mismatch");
+            static_assert(sizeof(C_CitadelClimbRopeTrigger) == 0xCA8, "C_CitadelClimbRopeTrigger size mismatch");
         }
     }
 }

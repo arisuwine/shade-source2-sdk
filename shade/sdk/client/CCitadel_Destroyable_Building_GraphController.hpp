@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d8
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Destroyable_Building_GraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraphParamRef<bool> m_bHitTrigger; // 0x0090, 0x28 bytes
-                CAnimGraphParamRef<char*> m_eState; // 0x00b8, 0x30 bytes
-                CAnimGraphParamRef<float> m_flHealth; // 0x00e8, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bActive; // 0x0110, 0x28 bytes
-                CAnimGraphParamRef<float> m_flHealthPercent; // 0x0138, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bVulnerable; // 0x0160, 0x28 bytes
-                CAnimGraphParamRef<bool> m_bDestroyed; // 0x0188, 0x28 bytes
-                CAnimGraphParamRef<float> m_flExposedDurationFraction; // 0x01b0, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bHitTrigger; // 0x00c0, 0x28 bytes
+                CAnimGraphParamRef<char*> m_eState; // 0x00e8, 0x30 bytes
+                CAnimGraphParamRef<float> m_flHealth; // 0x0118, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bActive; // 0x0140, 0x28 bytes
+                CAnimGraphParamRef<float> m_flHealthPercent; // 0x0168, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bVulnerable; // 0x0190, 0x28 bytes
+                CAnimGraphParamRef<bool> m_bDestroyed; // 0x01b8, 0x28 bytes
+                CAnimGraphParamRef<float> m_flExposedDurationFraction; // 0x01e0, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Destroyable_Building_GraphController) == 0x1D8, "CCitadel_Destroyable_Building_GraphController size mismatch");
+            static_assert(sizeof(CCitadel_Destroyable_Building_GraphController) == 0x208, "CCitadel_Destroyable_Building_GraphController size mismatch");
         }
     }
 }

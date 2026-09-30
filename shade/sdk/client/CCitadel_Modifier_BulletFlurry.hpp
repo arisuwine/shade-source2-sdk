@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d0
+             * Size: 0x2a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BulletFlurry : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x100]; // 0x00c0, 0x100 bytes
-                shade::sdk::client::ParticleIndex_t m_nEffectId; // 0x01c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextSequenceChange; // 0x01c4, 0x4 bytes
-                std::int32_t m_nCurrentPose; // 0x01c8, 0x4 bytes
-                std::uint8_t pad_01cc[0x4]; // 0x01cc, 0x4 bytes
+                std::uint8_t pad_0130[0x160]; // 0x0130, 0x160 bytes
+                shade::sdk::client::ParticleIndex_t m_nEffectId; // 0x0290, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextSequenceChange; // 0x0294, 0x4 bytes
+                std::int32_t m_nCurrentPose; // 0x0298, 0x4 bytes
+                std::uint8_t pad_029c[0x4]; // 0x029c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BulletFlurry) == 0x1D0, "CCitadel_Modifier_BulletFlurry size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BulletFlurry) == 0x2A0, "CCitadel_Modifier_BulletFlurry size mismatch");
         }
     }
 }

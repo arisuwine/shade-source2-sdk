@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc00
+             * Size: 0xc10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StickyBombOnGroundVData : public shade::sdk::server::CCitadel_Modifier_StickyBombAttachedVData {
             public:
-                float m_flGroundOffset; // 0x0b18, 0x4 bytes
-                std::uint8_t pad_0b1c[0x4]; // 0x0b1c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombParticle; // 0x0b20, 0xe0 bytes
+                float m_flGroundOffset; // 0x0b28, 0x4 bytes
+                std::uint8_t pad_0b2c[0x4]; // 0x0b2c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombParticle; // 0x0b30, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StickyBombOnGroundVData) == 0xC00, "CCitadel_Modifier_StickyBombOnGroundVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StickyBombOnGroundVData) == 0xC10, "CCitadel_Modifier_StickyBombOnGroundVData size mismatch");
         }
     }
 }

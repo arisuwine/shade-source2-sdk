@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,6 +22,9 @@ namespace shade {
     namespace sdk {
         namespace animgraphlib {
             class CMotionNode;
+        }
+
+        namespace server {
             struct TagSpan_t;
         }
     }
@@ -40,7 +44,7 @@ namespace shade {
             public:
                 std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
                 shade::sdk::animgraphlib::CParamSpanUpdater m_paramSpans; // 0x0010, 0x18 bytes
-                CUtlVector<shade::sdk::animgraphlib::TagSpan_t> m_tags; // 0x0028, 0x18 bytes
+                CUtlVector<shade::sdk::server::TagSpan_t> m_tags; // 0x0028, 0x18 bytes
                 CSmartPtr<shade::sdk::animgraphlib::CMotionNode> m_pRootNode; // 0x0040, 0x8 bytes
                 std::int32_t m_nParameterCount; // 0x0048, 0x4 bytes
                 std::int32_t m_nConfigStartIndex; // 0x004c, 0x4 bytes

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f8
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerMultiple : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x08e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x09f0, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void CTriggerMultipleMultiTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CTriggerMultipleMultiWaitOver; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CTriggerMultiple) == 0x8F8, "CTriggerMultiple size mismatch");
+            static_assert(sizeof(CTriggerMultiple) == 0xA08, "CTriggerMultiple size mismatch");
         }
     }
 }

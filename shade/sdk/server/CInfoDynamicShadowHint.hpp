@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,22 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoDynamicShadowHint : public shade::sdk::server::CPointEntity {
             public:
-                bool m_bDisabled; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x3]; // 0x04a1, 0x3 bytes
-                float m_flRange; // 0x04a4, 0x4 bytes
-                std::int32_t m_nImportance; // 0x04a8, 0x4 bytes
-                std::int32_t m_nLightChoice; // 0x04ac, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLight; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                bool m_bDisabled; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                float m_flRange; // 0x04b4, 0x4 bytes
+                std::int32_t m_nImportance; // 0x04b8, 0x4 bytes
+                std::int32_t m_nLightChoice; // 0x04bc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLight; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoDynamicShadowHint) == 0x4B8, "CInfoDynamicShadowHint size mismatch");
+            static_assert(sizeof(CInfoDynamicShadowHint) == 0x4C8, "CInfoDynamicShadowHint size mismatch");
         }
     }
 }

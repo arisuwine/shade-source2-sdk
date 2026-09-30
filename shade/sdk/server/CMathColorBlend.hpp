@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CMathColorBlend : public shade::sdk::server::CLogicalEntity {
             public:
-                float m_flInMin; // 0x04a0, 0x4 bytes
-                float m_flInMax; // 0x04a4, 0x4 bytes
-                Color m_OutColor1; // 0x04a8, 0x4 bytes
-                Color m_OutColor2; // 0x04ac, 0x4 bytes
-                CEntityOutputTemplate<Color> m_OutValue; // 0x04b0, 0x20 bytes
+                float m_flInMin; // 0x04b0, 0x4 bytes
+                float m_flInMax; // 0x04b4, 0x4 bytes
+                Color m_OutColor1; // 0x04b8, 0x4 bytes
+                Color m_OutColor2; // 0x04bc, 0x4 bytes
+                CEntityOutputTemplate<Color> m_OutValue; // 0x04c0, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CMathColorBlend) == 0x4D0, "CMathColorBlend size mismatch");
+            static_assert(sizeof(CMathColorBlend) == 0x4E0, "CMathColorBlend size mismatch");
         }
     }
 }

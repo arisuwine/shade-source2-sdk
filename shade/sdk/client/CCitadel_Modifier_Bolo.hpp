@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x448
+             * Size: 0x608
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Bolo : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_hRingEffect; // 0x00c0, 0x4 bytes
-                std::uint8_t pad_00c4[0x384]; // 0x00c4, 0x384 bytes
+                shade::sdk::client::ParticleIndex_t m_hRingEffect; // 0x0130, 0x4 bytes
+                std::uint8_t pad_0134[0x4d4]; // 0x0134, 0x4d4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Bolo) == 0x448, "CCitadel_Modifier_Bolo size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Bolo) == 0x608, "CCitadel_Modifier_Bolo size mismatch");
         }
     }
 }

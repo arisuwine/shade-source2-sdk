@@ -12,17 +12,21 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace server {
             enum class AI_MovementGaitRequestSource_t : std::int32_t {
                 eInvalid = -0x1,
-                eOverride = 0x0,
-                eModifier = 0x1,
-                eMoveStrategy = 0x2,
-                eBase = 0x3,
-                eCount = 0x4
+                eNavLinkEntry = 0x0,
+                eOverride = 0x1,
+                eModifier = 0x2,
+                eSchedule = 0x3,
+                eMovement = 0x4,
+                eStrategy = 0x5,
+                eBase = 0x6,
+                eCount = 0x7
             };
         }
     }

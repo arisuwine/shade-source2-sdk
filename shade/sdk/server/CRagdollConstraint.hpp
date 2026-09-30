@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x528
+             * Size: 0x538
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CRagdollConstraint : public shade::sdk::server::CPhysConstraint {
             public:
-                float m_xmin; // 0x0500, 0x4 bytes
-                float m_xmax; // 0x0504, 0x4 bytes
-                float m_ymin; // 0x0508, 0x4 bytes
-                float m_ymax; // 0x050c, 0x4 bytes
-                float m_zmin; // 0x0510, 0x4 bytes
-                float m_zmax; // 0x0514, 0x4 bytes
-                float m_xfriction; // 0x0518, 0x4 bytes
-                float m_yfriction; // 0x051c, 0x4 bytes
-                float m_zfriction; // 0x0520, 0x4 bytes
-                std::uint8_t pad_0524[0x4]; // 0x0524, 0x4 bytes
+                float m_xmin; // 0x0510, 0x4 bytes
+                float m_xmax; // 0x0514, 0x4 bytes
+                float m_ymin; // 0x0518, 0x4 bytes
+                float m_ymax; // 0x051c, 0x4 bytes
+                float m_zmin; // 0x0520, 0x4 bytes
+                float m_zmax; // 0x0524, 0x4 bytes
+                float m_xfriction; // 0x0528, 0x4 bytes
+                float m_yfriction; // 0x052c, 0x4 bytes
+                float m_zfriction; // 0x0530, 0x4 bytes
+                std::uint8_t pad_0534[0x4]; // 0x0534, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRagdollConstraint) == 0x528, "CRagdollConstraint size mismatch");
+            static_assert(sizeof(CRagdollConstraint) == 0x538, "CRagdollConstraint size mismatch");
         }
     }
 }

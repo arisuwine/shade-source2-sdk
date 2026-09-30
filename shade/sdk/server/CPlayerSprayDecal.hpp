@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7f8
+             * Size: 0x8f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,31 +31,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CPlayerSprayDecal : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::int32_t m_nUniqueID; // 0x0780, 0x4 bytes
-                std::uint32_t m_unAccountID; // 0x0784, 0x4 bytes
-                std::uint32_t m_unTraceID; // 0x0788, 0x4 bytes
-                Vector m_vecEndPos; // 0x078c, 0xc bytes
-                Vector m_vecStart; // 0x0798, 0xc bytes
-                Vector m_vecLeft; // 0x07a4, 0xc bytes
-                Vector m_vecNormal; // 0x07b0, 0xc bytes
-                CPlayerSlot m_nPlayerSlot; // 0x07bc, 0x4 bytes
-                std::int32_t m_nEntity; // 0x07c0, 0x4 bytes
-                std::int32_t m_nHitbox; // 0x07c4, 0x4 bytes
-                float m_flCreationTime; // 0x07c8, 0x4 bytes
-                std::int32_t m_nTintID; // 0x07cc, 0x4 bytes
-                std::uint8_t m_nVersion; // 0x07d0, 0x1 bytes
-                std::uint8_t pad_07d1[0x7]; // 0x07d1, 0x7 bytes
-                CUtlString m_sTextureName; // 0x07d8, 0x8 bytes
-                CUtlString m_sTextureNameDamaged; // 0x07e0, 0x8 bytes
-                CUtlString m_sSoundNameDamaged; // 0x07e8, 0x8 bytes
-                bool m_bDamaged; // 0x07f0, 0x1 bytes
-                std::uint8_t pad_07f1[0x7]; // 0x07f1, 0x7 bytes
+                std::int32_t m_nUniqueID; // 0x0878, 0x4 bytes
+                std::uint32_t m_unAccountID; // 0x087c, 0x4 bytes
+                std::uint32_t m_unTraceID; // 0x0880, 0x4 bytes
+                VectorWS m_vecEndPos; // 0x0884, 0xc bytes
+                VectorWS m_vecStart; // 0x0890, 0xc bytes
+                Vector m_vecLeft; // 0x089c, 0xc bytes
+                Vector m_vecNormal; // 0x08a8, 0xc bytes
+                CPlayerSlot m_nPlayerSlot; // 0x08b4, 0x4 bytes
+                std::int32_t m_nEntity; // 0x08b8, 0x4 bytes
+                std::int32_t m_nHitbox; // 0x08bc, 0x4 bytes
+                float m_flCreationTime; // 0x08c0, 0x4 bytes
+                std::int32_t m_nTintID; // 0x08c4, 0x4 bytes
+                std::uint8_t m_nVersion; // 0x08c8, 0x1 bytes
+                std::uint8_t pad_08c9[0x7]; // 0x08c9, 0x7 bytes
+                CUtlString m_sTextureName; // 0x08d0, 0x8 bytes
+                CUtlString m_sTextureNameDamaged; // 0x08d8, 0x8 bytes
+                CUtlString m_sSoundNameDamaged; // 0x08e0, 0x8 bytes
+                bool m_bDamaged; // 0x08e8, 0x1 bytes
+                std::uint8_t pad_08e9[0x7]; // 0x08e9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPlayerSprayDecal) == 0x7F8, "CPlayerSprayDecal size mismatch");
+            static_assert(sizeof(CPlayerSprayDecal) == 0x8F0, "CPlayerSprayDecal size mismatch");
         }
     }
 }

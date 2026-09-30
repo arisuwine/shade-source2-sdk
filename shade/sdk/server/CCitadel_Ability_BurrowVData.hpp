@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1c58
+             * Size: 0x17e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,22 +44,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_BurrowVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowStartParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowEndParticle; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowInGroundParticle; // 0x1ab8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BurrowModifier; // 0x1b98, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SpinModifier; // 0x1ba8, 0x10 bytes
-                CSoundEventName m_strBurrowEndSound; // 0x1bb8, 0x10 bytes
-                float m_flChannelEndEnemyPopUpForce; // 0x1bc8, 0x4 bytes
-                float m_flChannelEndEnemyPopUpCylinderHeight; // 0x1bcc, 0x4 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSpinStart; // 0x1bd0, 0x88 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowStartParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowEndParticle; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowInGroundParticle; // 0x1640, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BurrowModifier; // 0x1720, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SpinModifier; // 0x1730, 0x10 bytes
+                CSoundEventName m_strBurrowEndSound; // 0x1740, 0x10 bytes
+                float m_flChannelEndEnemyPopUpForce; // 0x1750, 0x4 bytes
+                float m_flChannelEndEnemyPopUpCylinderHeight; // 0x1754, 0x4 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSpinStart; // 0x1758, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_BurrowVData) == 0x1C58, "CCitadel_Ability_BurrowVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_BurrowVData) == 0x17E0, "CCitadel_Ability_BurrowVData size mismatch");
         }
     }
 }

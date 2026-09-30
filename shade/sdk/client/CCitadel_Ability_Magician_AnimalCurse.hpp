@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x12e0
+             * Size: 0x1840
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Magician_AnimalCurse : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_CachedTarget; // 0x11d8, 0x4 bytes
-                std::uint8_t pad_11dc[0x104]; // 0x11dc, 0x104 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_CachedTarget; // 0x16d8, 0x4 bytes
+                std::uint8_t pad_16dc[0x164]; // 0x16dc, 0x164 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_AnimalCurse) == 0x12E0, "CCitadel_Ability_Magician_AnimalCurse size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_AnimalCurse) == 0x1840, "CCitadel_Ability_Magician_AnimalCurse size mismatch");
         }
     }
 }

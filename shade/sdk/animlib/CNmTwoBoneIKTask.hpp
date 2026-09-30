@@ -12,18 +12,17 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/animlib/CNmPoseTask.hpp"
-#include "shade/sdk/animlib/CNmTarget.hpp"
-#include "shade/sdk/animlib/NmIKBlendMode_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0xf0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,25 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmTwoBoneIKTask : public shade::sdk::animlib::CNmPoseTask {
             public:
-                std::int32_t m_nEffectorBoneIdx; // 0x0058, 0x4 bytes
-                std::int32_t m_nEffectorTargetBoneIdx; // 0x005c, 0x4 bytes
-                CTransform m_targetTransform; // 0x0060, 0x20 bytes
-                shade::sdk::animlib::CNmTarget m_effectorTarget; // 0x0080, 0x30 bytes
-                shade::sdk::animlib::NmIKBlendMode_t m_blendMode; // 0x00b0, 0x1 bytes
-                std::uint8_t pad_00b1[0x3]; // 0x00b1, 0x3 bytes
-                float m_flBlendWeight; // 0x00b4, 0x4 bytes
-                bool m_bIsTargetInWorldSpace; // 0x00b8, 0x1 bytes
-                bool m_bIsRunningFromDeserializedData; // 0x00b9, 0x1 bytes
-                std::uint8_t pad_00ba[0x2]; // 0x00ba, 0x2 bytes
-                float m_flReferencePoseTwistWeight; // 0x00bc, 0x4 bytes
-                CGlobalSymbol m_debugEffectorBoneID; // 0x00c0, 0x8 bytes
-                std::uint8_t pad_00c8[0x8]; // 0x00c8, 0x8 bytes
+                std::int32_t m_nEffectorBoneIdx; // 0x0070, 0x4 bytes
+                std::int32_t m_nEffectorTargetBoneIdx; // 0x0074, 0x4 bytes
+                std::uint8_t pad_0078[0x8]; // 0x0078, 0x8 bytes
+                CTransform m_targetTransform; // 0x0080, 0x20 bytes
+                std::uint8_t pad_00a0[0x50]; // 0x00a0, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmTwoBoneIKTask) == 0xD0, "CNmTwoBoneIKTask size mismatch");
+            static_assert(sizeof(CNmTwoBoneIKTask) == 0xF0, "CNmTwoBoneIKTask size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,7 +21,8 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x10
-             * Alignment: 0xff
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CWorldCompositionChunkReferenceElement_t {

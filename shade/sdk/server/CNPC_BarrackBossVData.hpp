@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x13f8
+             * Size: 0xd00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,35 +39,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_BarrackBossVData : public shade::sdk::server::CAI_CitadelNPCVData {
             public:
-                float m_flPlayerAutoAttackRange; // 0x1348, 0x4 bytes
-                float m_flMinMeleeAttackTime; // 0x134c, 0x4 bytes
-                float m_flMeleeDuration; // 0x1350, 0x4 bytes
-                float m_flInvulRange; // 0x1354, 0x4 bytes
-                float m_flTrooperDamageResistPct; // 0x1358, 0x4 bytes
-                float m_flPlayerDamageResistPct; // 0x135c, 0x4 bytes
-                float m_flBackDoorProtectionRange; // 0x1360, 0x4 bytes
-                float m_flDeathFadeTimeStart; // 0x1364, 0x4 bytes
-                float m_flDeathFadeTimeEnd; // 0x1368, 0x4 bytes
-                float m_flTier1PlayerClipCapsuleRadius; // 0x136c, 0x4 bytes
-                float m_flTier1PlayerClipCapsuleHeight; // 0x1370, 0x4 bytes
-                std::uint8_t pad_1374[0x4]; // 0x1374, 0x4 bytes
-                CSoundEventName m_sAngryStart; // 0x1378, 0x10 bytes
-                CSoundEventName m_sAngryLoop; // 0x1388, 0x10 bytes
-                CSoundEventName m_sAngryStop; // 0x1398, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BackdoorProtectionModifier; // 0x13a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TrooperBossInvulnModifier; // 0x13b8, 0x10 bytes
-                float m_flTrooperDPS; // 0x13c8, 0x4 bytes
-                float m_flPlayerDPS; // 0x13cc, 0x4 bytes
-                float m_flDPSPctGrowthPerMinute; // 0x13d0, 0x4 bytes
-                float m_flEnemyTrooperProtectionRange; // 0x13d4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BackdoorBulletResistModifier; // 0x13d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ObjectiveRegen; // 0x13e8, 0x10 bytes
+                float m_flPlayerAutoAttackRange; // 0x0c50, 0x4 bytes
+                float m_flMinMeleeAttackTime; // 0x0c54, 0x4 bytes
+                float m_flMeleeDuration; // 0x0c58, 0x4 bytes
+                float m_flInvulRange; // 0x0c5c, 0x4 bytes
+                float m_flTrooperDamageResistPct; // 0x0c60, 0x4 bytes
+                float m_flPlayerDamageResistPct; // 0x0c64, 0x4 bytes
+                float m_flBackDoorProtectionRange; // 0x0c68, 0x4 bytes
+                float m_flDeathFadeTimeStart; // 0x0c6c, 0x4 bytes
+                float m_flDeathFadeTimeEnd; // 0x0c70, 0x4 bytes
+                float m_flTier1PlayerClipCapsuleRadius; // 0x0c74, 0x4 bytes
+                float m_flTier1PlayerClipCapsuleHeight; // 0x0c78, 0x4 bytes
+                std::uint8_t pad_0c7c[0x4]; // 0x0c7c, 0x4 bytes
+                CSoundEventName m_sAngryStart; // 0x0c80, 0x10 bytes
+                CSoundEventName m_sAngryLoop; // 0x0c90, 0x10 bytes
+                CSoundEventName m_sAngryStop; // 0x0ca0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BackdoorProtectionModifier; // 0x0cb0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TrooperBossInvulnModifier; // 0x0cc0, 0x10 bytes
+                float m_flTrooperDPS; // 0x0cd0, 0x4 bytes
+                float m_flPlayerDPS; // 0x0cd4, 0x4 bytes
+                float m_flDPSPctGrowthPerMinute; // 0x0cd8, 0x4 bytes
+                float m_flEnemyTrooperProtectionRange; // 0x0cdc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BackdoorBulletResistModifier; // 0x0ce0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ObjectiveRegen; // 0x0cf0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_BarrackBossVData) == 0x13F8, "CNPC_BarrackBossVData size mismatch");
+            static_assert(sizeof(CNPC_BarrackBossVData) == 0xD00, "CNPC_BarrackBossVData size mismatch");
         }
     }
 }

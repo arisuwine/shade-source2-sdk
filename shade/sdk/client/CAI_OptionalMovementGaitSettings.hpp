@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc0
+             * Size: 0xb0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -33,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_OptionalMovementGaitSettings) == 0xC0, "CAI_OptionalMovementGaitSettings size mismatch");
+            static_assert(sizeof(CAI_OptionalMovementGaitSettings) == 0xB0, "CAI_OptionalMovementGaitSettings size mismatch");
         }
     }
 }

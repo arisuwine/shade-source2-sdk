@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x268
+             * Size: 0x368
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,20 +41,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SmokeGrenade : public shade::sdk::client::CCitadelModifier {
             public:
-                CHandle<shade::sdk::client::C_Citadel_SmokeGrenade_Blocker> m_hBlocker; // 0x00c0, 0x4 bytes
-                CHandle<shade::sdk::client::CPointModifierThinker> m_hFriendlyAura; // 0x00c4, 0x4 bytes
-                CHandle<shade::sdk::client::CPointModifierThinker> m_hEnemyAura; // 0x00c8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x00cc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x184]; // 0x00d4, 0x184 bytes
-                Vector m_vOrigin; // 0x0258, 0xc bytes
-                std::uint8_t pad_0264[0x4]; // 0x0264, 0x4 bytes
+                CHandle<shade::sdk::client::C_Citadel_SmokeGrenade_Blocker> m_hBlocker; // 0x0130, 0x4 bytes
+                CHandle<shade::sdk::client::CPointModifierThinker> m_hFriendlyAura; // 0x0134, 0x4 bytes
+                CHandle<shade::sdk::client::CPointModifierThinker> m_hEnemyAura; // 0x0138, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x013c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x214]; // 0x0144, 0x214 bytes
+                VectorWS m_vOrigin; // 0x0358, 0xc bytes
+                std::uint8_t pad_0364[0x4]; // 0x0364, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SmokeGrenade) == 0x268, "CCitadel_Modifier_SmokeGrenade size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SmokeGrenade) == 0x368, "CCitadel_Modifier_SmokeGrenade size mismatch");
         }
     }
 }

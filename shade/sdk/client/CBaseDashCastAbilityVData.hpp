@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18a0
+             * Size: 0x1428
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseDashCastAbilityVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CSubclassName<4> m_AbilityToTrigger; // 0x1818, 0x10 bytes
-                float m_flDashCastTriggerRadius; // 0x1828, 0x4 bytes
-                float m_flDashSpeed; // 0x182c, 0x4 bytes
-                bool m_bSnapToZeroSpeedOnEnd; // 0x1830, 0x1 bytes
-                bool m_bUseCurveToDefineSpeed; // 0x1831, 0x1 bytes
-                std::uint8_t pad_1832[0x6]; // 0x1832, 0x6 bytes
-                CPiecewiseCurve m_MovementSpeedCurve; // 0x1838, 0x40 bytes
-                float m_flMovementSpeedCurveAvgSpeed; // 0x1878, 0x4 bytes
-                std::uint8_t pad_187c[0x4]; // 0x187c, 0x4 bytes
-                CSoundEventName m_strTargetHitSound; // 0x1880, 0x10 bytes
-                CSoundEventName m_strMissSound; // 0x1890, 0x10 bytes
+                CSubclassName<4> m_AbilityToTrigger; // 0x13a0, 0x10 bytes
+                float m_flDashCastTriggerRadius; // 0x13b0, 0x4 bytes
+                float m_flDashSpeed; // 0x13b4, 0x4 bytes
+                bool m_bSnapToZeroSpeedOnEnd; // 0x13b8, 0x1 bytes
+                bool m_bUseCurveToDefineSpeed; // 0x13b9, 0x1 bytes
+                std::uint8_t pad_13ba[0x6]; // 0x13ba, 0x6 bytes
+                CPiecewiseCurve m_MovementSpeedCurve; // 0x13c0, 0x40 bytes
+                float m_flMovementSpeedCurveAvgSpeed; // 0x1400, 0x4 bytes
+                std::uint8_t pad_1404[0x4]; // 0x1404, 0x4 bytes
+                CSoundEventName m_strTargetHitSound; // 0x1408, 0x10 bytes
+                CSoundEventName m_strMissSound; // 0x1418, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseDashCastAbilityVData) == 0x18A0, "CBaseDashCastAbilityVData size mismatch");
+            static_assert(sizeof(CBaseDashCastAbilityVData) == 0x1428, "CBaseDashCastAbilityVData size mismatch");
         }
     }
 }

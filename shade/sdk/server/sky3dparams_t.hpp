@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,9 +23,10 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x90
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Has Trivial Destructor
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -32,7 +34,7 @@ namespace shade {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 std::int16_t scale; // 0x0008, 0x2 bytes
                 std::uint8_t pad_000a[0x2]; // 0x000a, 0x2 bytes
-                Vector origin; // 0x000c, 0xc bytes
+                VectorWS origin; // 0x000c, 0xc bytes
                 bool bClip3DSkyBoxNearToWorldFar; // 0x0018, 0x1 bytes
                 std::uint8_t pad_0019[0x3]; // 0x0019, 0x3 bytes
                 float flClip3DSkyBoxNearToWorldFarOffset; // 0x001c, 0x4 bytes

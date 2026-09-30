@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xde8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,25 +40,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_Bounce_Pad : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                float m_flUpFactor; // 0x0cb0, 0x4 bytes
-                float m_flBounceVelocity; // 0x0cb4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tDeactivationTime; // 0x0cb8, 0x4 bytes
-                bool m_bDeactivated; // 0x0cbc, 0x1 bytes
-                std::uint8_t pad_0cbd[0x3]; // 0x0cbd, 0x3 bytes
-                float m_flBarrelBounceVelocity; // 0x0cc0, 0x4 bytes
-                float m_flBarrelUpFactor; // 0x0cc4, 0x4 bytes
-                bool m_bSpeedOnLand; // 0x0cc8, 0x1 bytes
-                std::uint8_t pad_0cc9[0x7]; // 0x0cc9, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vBouncedPlayerBefore; // 0x0cd0, 0x18 bytes
-                std::uint8_t pad_0ce8[0x8]; // 0x0ce8, 0x8 bytes
+                float m_flUpFactor; // 0x0da8, 0x4 bytes
+                float m_flBounceVelocity; // 0x0dac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tDeactivationTime; // 0x0db0, 0x4 bytes
+                bool m_bDeactivated; // 0x0db4, 0x1 bytes
+                std::uint8_t pad_0db5[0x3]; // 0x0db5, 0x3 bytes
+                float m_flBarrelBounceVelocity; // 0x0db8, 0x4 bytes
+                float m_flBarrelUpFactor; // 0x0dbc, 0x4 bytes
+                bool m_bSpeedOnLand; // 0x0dc0, 0x1 bytes
+                std::uint8_t pad_0dc1[0x7]; // 0x0dc1, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vBouncedPlayerBefore; // 0x0dc8, 0x18 bytes
+                std::uint8_t pad_0de0[0x8]; // 0x0de0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Bounce_Pad) == 0xCF0, "C_Citadel_Bounce_Pad size mismatch");
+            static_assert(sizeof(C_Citadel_Bounce_Pad) == 0xDE8, "C_Citadel_Bounce_Pad size mismatch");
         }
     }
 }

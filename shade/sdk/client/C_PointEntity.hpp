@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * Vector InputSetPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(C_PointEntity) == 0x5F0, "C_PointEntity size mismatch");

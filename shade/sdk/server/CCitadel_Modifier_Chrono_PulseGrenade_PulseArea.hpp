@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x3d8
+             * Size: 0x568
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Chrono_PulseGrenade_PulseArea : public shade::sdk::server::CCitadelModifier {
             public:
-                std::int32_t m_iPulseCount; // 0x00d0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_hPreviewRingParticle; // 0x00d4, 0x4 bytes
-                std::uint8_t pad_00d8[0x300]; // 0x00d8, 0x300 bytes
+                std::int32_t m_iPulseCount; // 0x0140, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_hPreviewRingParticle; // 0x0144, 0x4 bytes
+                std::uint8_t pad_0148[0x420]; // 0x0148, 0x420 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Chrono_PulseGrenade_PulseArea) == 0x3D8, "CCitadel_Modifier_Chrono_PulseGrenade_PulseArea size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Chrono_PulseGrenade_PulseArea) == 0x568, "CCitadel_Modifier_Chrono_PulseGrenade_PulseArea size mismatch");
         }
     }
 }

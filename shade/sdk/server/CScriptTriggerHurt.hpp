@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x978
+             * Size: 0xa88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CScriptTriggerHurt : public shade::sdk::server::CTriggerHurt {
             public:
-                Vector m_vExtent; // 0x0968, 0xc bytes
-                std::uint8_t pad_0974[0x4]; // 0x0974, 0x4 bytes
+                Vector m_vExtent; // 0x0a78, 0xc bytes
+                std::uint8_t pad_0a84[0x4]; // 0x0a84, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CScriptTriggerHurt) == 0x978, "CScriptTriggerHurt size mismatch");
+            static_assert(sizeof(CScriptTriggerHurt) == 0xA88, "CScriptTriggerHurt size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18f0
+             * Size: 0x1170
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,43 +39,50 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_NeutralSinnerSacrificeVData : public shade::sdk::client::CNPC_TrooperNeutralVData {
             public:
-                float m_flRetaliateDamage; // 0x16c0, 0x4 bytes
-                float m_flVaultMiniGameTime; // 0x16c4, 0x4 bytes
-                float m_flVaultMiniGameHitWindow; // 0x16c8, 0x4 bytes
-                float m_flVaultMiniGameWheelScrollTime; // 0x16cc, 0x4 bytes
-                std::int32_t m_iVaultSuccessLightBuffDropCount; // 0x16d0, 0x4 bytes
-                std::int32_t m_iVaultSuccessHeavyBuffDropCount; // 0x16d4, 0x4 bytes
-                float m_flVaultLightScrollTime; // 0x16d8, 0x4 bytes
-                float m_flVaultWheelScrollTime; // 0x16dc, 0x4 bytes
-                float m_flVaultSuccessLightsScroll; // 0x16e0, 0x4 bytes
-                float m_flVaultSuccessWheelScroll; // 0x16e4, 0x4 bytes
-                float m_flVaultSuccessDestroyTime; // 0x16e8, 0x4 bytes
-                std::uint8_t pad_16ec[0x4]; // 0x16ec, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VaultSuccessParticle; // 0x16f0, 0xe0 bytes
-                CSoundEventName m_VaultIdleLoopSound; // 0x17d0, 0x10 bytes
-                CSoundEventName m_VaultStartActiveSound; // 0x17e0, 0x10 bytes
-                CSoundEventName m_VaultActiveLoopSound; // 0x17f0, 0x10 bytes
-                CSoundEventName m_VaultStartCriticalSound; // 0x1800, 0x10 bytes
-                CSoundEventName m_VaultCriticalLoopSound; // 0x1810, 0x10 bytes
-                CSoundEventName m_VaultHitSuccessSoundLight; // 0x1820, 0x10 bytes
-                CSoundEventName m_VaultHitSuccessSoundHeavy; // 0x1830, 0x10 bytes
-                CSoundEventName m_VaultHitFailSound; // 0x1840, 0x10 bytes
-                CSoundEventName m_VaultHit01; // 0x1850, 0x10 bytes
-                CSoundEventName m_VaultHit02; // 0x1860, 0x10 bytes
-                CSoundEventName m_VaultHit03; // 0x1870, 0x10 bytes
-                CSoundEventName m_VaultHit04; // 0x1880, 0x10 bytes
-                CSoundEventName m_VaultHit05; // 0x1890, 0x10 bytes
-                CSoundEventName m_VaultHit06; // 0x18a0, 0x10 bytes
-                CSoundEventName m_VaultHit07; // 0x18b0, 0x10 bytes
-                CSoundEventName m_VaultLight; // 0x18c0, 0x10 bytes
-                CSoundEventName m_VaultLightHitWindow; // 0x18d0, 0x10 bytes
-                CSoundEventName m_VaultWheelSuccessDing; // 0x18e0, 0x10 bytes
+                float m_flRetaliateDamage; // 0x0ef0, 0x4 bytes
+                float m_flVaultMiniGameTime; // 0x0ef4, 0x4 bytes
+                float m_flVaultMiniGameHitWindow; // 0x0ef8, 0x4 bytes
+                float m_flVaultMiniGameWheelScrollTime; // 0x0efc, 0x4 bytes
+                std::int32_t m_iVaultSuccessLightBuffDropCount; // 0x0f00, 0x4 bytes
+                std::int32_t m_iVaultSuccessHeavyBuffDropCount; // 0x0f04, 0x4 bytes
+                float m_flMiniGameFastSpeed; // 0x0f08, 0x4 bytes
+                float m_flMiniGameFastChance; // 0x0f0c, 0x4 bytes
+                CModelMaterialGroupName m_strFastMaterialGroup; // 0x0f10, 0x8 bytes
+                float m_flVaultLightScrollTime; // 0x0f18, 0x4 bytes
+                float m_flVaultWheelScrollTime; // 0x0f1c, 0x4 bytes
+                float m_flVaultLightFastFlashTime; // 0x0f20, 0x4 bytes
+                float m_flVaultSuccessLightsScroll; // 0x0f24, 0x4 bytes
+                float m_flVaultSuccessWheelScroll; // 0x0f28, 0x4 bytes
+                float m_flVaultSuccessDestroyTime; // 0x0f2c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VaultSuccessParticle; // 0x0f30, 0xe0 bytes
+                CSoundEventName m_VaultIdleLoopSound; // 0x1010, 0x10 bytes
+                CSoundEventName m_VaultStartActiveSound; // 0x1020, 0x10 bytes
+                CSoundEventName m_VaultActiveLoopSound; // 0x1030, 0x10 bytes
+                CSoundEventName m_VaultStartCriticalSound; // 0x1040, 0x10 bytes
+                CSoundEventName m_VaultStartFastCriticalSound; // 0x1050, 0x10 bytes
+                CSoundEventName m_VaultCriticalLoopSound; // 0x1060, 0x10 bytes
+                CSoundEventName m_VaultHitSuccessSoundLight; // 0x1070, 0x10 bytes
+                CSoundEventName m_VaultHitSuccessSoundHeavy; // 0x1080, 0x10 bytes
+                CSoundEventName m_VaultHitFailSound; // 0x1090, 0x10 bytes
+                CSoundEventName m_VaultLightPowerupGainedSound; // 0x10a0, 0x10 bytes
+                CSoundEventName m_VaultHeavyPowerupGainedSound; // 0x10b0, 0x10 bytes
+                CSoundEventName m_VaultHit01; // 0x10c0, 0x10 bytes
+                CSoundEventName m_VaultHit02; // 0x10d0, 0x10 bytes
+                CSoundEventName m_VaultHit03; // 0x10e0, 0x10 bytes
+                CSoundEventName m_VaultHit04; // 0x10f0, 0x10 bytes
+                CSoundEventName m_VaultHit05; // 0x1100, 0x10 bytes
+                CSoundEventName m_VaultHit06; // 0x1110, 0x10 bytes
+                CSoundEventName m_VaultHit07; // 0x1120, 0x10 bytes
+                CSoundEventName m_VaultLight; // 0x1130, 0x10 bytes
+                CSoundEventName m_VaultFastLightFlash; // 0x1140, 0x10 bytes
+                CSoundEventName m_VaultLightHitWindow; // 0x1150, 0x10 bytes
+                CSoundEventName m_VaultWheelSuccessDing; // 0x1160, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_NeutralSinnerSacrificeVData) == 0x18F0, "CNPC_NeutralSinnerSacrificeVData size mismatch");
+            static_assert(sizeof(CNPC_NeutralSinnerSacrificeVData) == 0x1170, "CNPC_NeutralSinnerSacrificeVData size mismatch");
         }
     }
 }

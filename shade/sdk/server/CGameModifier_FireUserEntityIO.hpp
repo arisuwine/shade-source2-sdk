@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_FireUserEntityIO) == 0xD0, "CGameModifier_FireUserEntityIO size mismatch");
+            static_assert(sizeof(CGameModifier_FireUserEntityIO) == 0x140, "CGameModifier_FireUserEntityIO size mismatch");
         }
     }
 }

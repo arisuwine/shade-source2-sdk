@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1010
+             * Size: 0x1570
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +41,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier2Boss_LaserBeam : public shade::sdk::server::CCitadelBaseAbilityServerOnly {
             public:
-                std::uint8_t pad_0f70[0x80]; // 0x0f70, 0x80 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosHigh; // 0x0ff0, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosLow; // 0x0ff1, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosLeft; // 0x0ff2, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosRight; // 0x0ff3, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_tCastCompleteTime; // 0x0ff4, 0x4 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pBeamModifier; // 0x0ff8, 0x18 bytes
+                std::uint8_t pad_14a0[0xb0]; // 0x14a0, 0xb0 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosHigh; // 0x1550, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosLow; // 0x1551, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosLeft; // 0x1552, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttackPosRight; // 0x1553, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_tCastCompleteTime; // 0x1554, 0x4 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pBeamModifier; // 0x1558, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier2Boss_LaserBeam) == 0x1010, "CCitadel_Ability_Tier2Boss_LaserBeam size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier2Boss_LaserBeam) == 0x1570, "CCitadel_Ability_Tier2Boss_LaserBeam size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf70
+             * Size: 0x1198
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EnvParticleGlow : public shade::sdk::client::C_ParticleSystem {
             public:
-                float m_flAlphaScale; // 0x0f58, 0x4 bytes
-                float m_flRadiusScale; // 0x0f5c, 0x4 bytes
-                float m_flSelfIllumScale; // 0x0f60, 0x4 bytes
-                Color m_ColorTint; // 0x0f64, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTextureOverride; // 0x0f68, 0x8 bytes
+                float m_flAlphaScale; // 0x1180, 0x4 bytes
+                float m_flRadiusScale; // 0x1184, 0x4 bytes
+                float m_flSelfIllumScale; // 0x1188, 0x4 bytes
+                Color m_ColorTint; // 0x118c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTextureOverride; // 0x1190, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAlphaScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputSetColorTint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_EnvParticleGlow) == 0xF70, "C_EnvParticleGlow size mismatch");
+            static_assert(sizeof(C_EnvParticleGlow) == 0x1198, "C_EnvParticleGlow size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1848
+             * Size: 0x13d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_StalkersMark_Teleport_VData : public shade::sdk::client::CBaseTriggerAbilityVData {
             public:
-                CSoundEventName m_strCastStartSound; // 0x1838, 0x10 bytes
+                CSoundEventName m_strCastStartSound; // 0x13c0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport_VData) == 0x1848, "CAbility_Drifter_StalkersMark_Teleport_VData size mismatch");
+            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport_VData) == 0x13D0, "CAbility_Drifter_StalkersMark_Teleport_VData size mismatch");
         }
     }
 }

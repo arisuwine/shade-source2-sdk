@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1198
+             * Size: 0x1788
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Shiv_Defer_Damage : public shade::sdk::server::CCitadelBaseShivAbility {
             public:
-                std::uint8_t pad_0f70[0x200]; // 0x0f70, 0x200 bytes
-                float m_flTotalPendingDamage; // 0x1170, 0x4 bytes
-                std::uint8_t pad_1174[0x1c]; // 0x1174, 0x1c bytes
-                shade::sdk::entity2::GameTime_t m_flLastDeferredDamageApplicationTime; // 0x1190, 0x4 bytes
-                std::uint8_t pad_1194[0x4]; // 0x1194, 0x4 bytes
+                std::uint8_t pad_14a0[0x2c0]; // 0x14a0, 0x2c0 bytes
+                float m_flTotalPendingDamage; // 0x1760, 0x4 bytes
+                std::uint8_t pad_1764[0x1c]; // 0x1764, 0x1c bytes
+                shade::sdk::entity2::GameTime_t m_flLastDeferredDamageApplicationTime; // 0x1780, 0x4 bytes
+                std::uint8_t pad_1784[0x4]; // 0x1784, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Shiv_Defer_Damage) == 0x1198, "CCitadel_Ability_Shiv_Defer_Damage size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Shiv_Defer_Damage) == 0x1788, "CCitadel_Ability_Shiv_Defer_Damage size mismatch");
         }
     }
 }

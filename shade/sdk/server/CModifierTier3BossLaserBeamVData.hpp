@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xce8
+             * Size: 0xcf8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,28 +43,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierTier3BossLaserBeamVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_GroundAuraModifier; // 0x0750, 0x10 bytes
-                float m_flAuraDropTickRate; // 0x0760, 0x4 bytes
-                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberLaserBeamEffect; // 0x0768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberLaserPreviewEffect; // 0x0848, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphLaserBeamEffect; // 0x0928, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphLaserPreviewEffect; // 0x0a08, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberLaserChargingEffect; // 0x0ae8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphLaserChargingEffect; // 0x0bc8, 0xe0 bytes
-                CSoundEventName m_strLaserLoopSound; // 0x0ca8, 0x10 bytes
-                CSoundEventName m_strLaserFireSound; // 0x0cb8, 0x10 bytes
-                CSoundEventName m_strLaserHitSound; // 0x0cc8, 0x10 bytes
-                float m_flLaserDPSToPlayers; // 0x0cd8, 0x4 bytes
-                float m_flLaserDPSMaxHealth; // 0x0cdc, 0x4 bytes
-                float m_flLaserDPSToNPCs; // 0x0ce0, 0x4 bytes
-                float m_flLaserDPSTickRate; // 0x0ce4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_GroundAuraModifier; // 0x0760, 0x10 bytes
+                float m_flAuraDropTickRate; // 0x0770, 0x4 bytes
+                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberLaserBeamEffect; // 0x0778, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberLaserPreviewEffect; // 0x0858, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphLaserBeamEffect; // 0x0938, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphLaserPreviewEffect; // 0x0a18, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberLaserChargingEffect; // 0x0af8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphLaserChargingEffect; // 0x0bd8, 0xe0 bytes
+                CSoundEventName m_strLaserLoopSound; // 0x0cb8, 0x10 bytes
+                CSoundEventName m_strLaserFireSound; // 0x0cc8, 0x10 bytes
+                CSoundEventName m_strLaserHitSound; // 0x0cd8, 0x10 bytes
+                float m_flLaserDPSToPlayers; // 0x0ce8, 0x4 bytes
+                float m_flLaserDPSMaxHealth; // 0x0cec, 0x4 bytes
+                float m_flLaserDPSToNPCs; // 0x0cf0, 0x4 bytes
+                float m_flLaserDPSTickRate; // 0x0cf4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierTier3BossLaserBeamVData) == 0xCE8, "CModifierTier3BossLaserBeamVData size mismatch");
+            static_assert(sizeof(CModifierTier3BossLaserBeamVData) == 0xCF8, "CModifierTier3BossLaserBeamVData size mismatch");
         }
     }
 }

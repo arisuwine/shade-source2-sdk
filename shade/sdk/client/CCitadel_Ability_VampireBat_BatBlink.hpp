@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1538
+             * Size: 0x1b58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_BatBlink : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x308]; // 0x11d8, 0x308 bytes
-                std::int32_t m_iRemainingCasts; // 0x14e0, 0x4 bytes
-                bool m_bIsBlinking; // 0x14e4, 0x1 bytes
-                std::uint8_t pad_14e5[0x3]; // 0x14e5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x14e8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_BlinkEndTime; // 0x14ec, 0x4 bytes
-                std::uint8_t pad_14f0[0x48]; // 0x14f0, 0x48 bytes
+                std::uint8_t pad_16d8[0x428]; // 0x16d8, 0x428 bytes
+                std::int32_t m_iRemainingCasts; // 0x1b00, 0x4 bytes
+                bool m_bIsBlinking; // 0x1b04, 0x1 bytes
+                std::uint8_t pad_1b05[0x3]; // 0x1b05, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x1b08, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_BlinkEndTime; // 0x1b0c, 0x4 bytes
+                std::uint8_t pad_1b10[0x48]; // 0x1b10, 0x48 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_BatBlink) == 0x1538, "CCitadel_Ability_VampireBat_BatBlink size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_BatBlink) == 0x1B58, "CCitadel_Ability_VampireBat_BatBlink size mismatch");
         }
     }
 }

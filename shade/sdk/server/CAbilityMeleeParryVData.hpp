@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b58
+             * Size: 0x16e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,31 +43,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityMeleeParryVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flWhiffDuration; // 0x1818, 0x4 bytes
-                float m_flMovementRestrictionTime; // 0x181c, 0x4 bytes
-                float m_flActiveTime; // 0x1820, 0x4 bytes
-                float m_flParryEndVisualTime; // 0x1824, 0x4 bytes
-                float m_flSuccessActiveTime; // 0x1828, 0x4 bytes
-                float m_flMashProtectTime; // 0x182c, 0x4 bytes
-                float m_flBossVictimNoMeleeTime; // 0x1830, 0x4 bytes
-                float m_flBossVictimCalmTime; // 0x1834, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulParryParticle; // 0x1838, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulAbilityParryParticle; // 0x1918, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveParryParticle; // 0x19f8, 0xe0 bytes
-                CSoundEventName m_strSuccessfulParrySound; // 0x1ad8, 0x10 bytes
-                CSoundEventName m_strSuccessfulParryTrooperSound; // 0x1ae8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryActiveModifier; // 0x1af8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryVictimModifier; // 0x1b08, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryCooldownModifier; // 0x1b18, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryEndVisualModifier; // 0x1b28, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryBossVictimNoMeleeModifier; // 0x1b38, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryBossVictimCalmModifier; // 0x1b48, 0x10 bytes
+                float m_flWhiffDuration; // 0x13a0, 0x4 bytes
+                float m_flMovementRestrictionTime; // 0x13a4, 0x4 bytes
+                float m_flActiveTime; // 0x13a8, 0x4 bytes
+                float m_flParryEndVisualTime; // 0x13ac, 0x4 bytes
+                float m_flSuccessActiveTime; // 0x13b0, 0x4 bytes
+                float m_flMashProtectTime; // 0x13b4, 0x4 bytes
+                float m_flBossVictimNoMeleeTime; // 0x13b8, 0x4 bytes
+                float m_flBossVictimCalmTime; // 0x13bc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulParryParticle; // 0x13c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulAbilityParryParticle; // 0x14a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveParryParticle; // 0x1580, 0xe0 bytes
+                CSoundEventName m_strSuccessfulParrySound; // 0x1660, 0x10 bytes
+                CSoundEventName m_strSuccessfulParryTrooperSound; // 0x1670, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryActiveModifier; // 0x1680, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryVictimModifier; // 0x1690, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryCooldownModifier; // 0x16a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryEndVisualModifier; // 0x16b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryBossVictimNoMeleeModifier; // 0x16c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryBossVictimCalmModifier; // 0x16d0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityMeleeParryVData) == 0x1B58, "CAbilityMeleeParryVData size mismatch");
+            static_assert(sizeof(CAbilityMeleeParryVData) == 0x16E0, "CAbilityMeleeParryVData size mismatch");
         }
     }
 }

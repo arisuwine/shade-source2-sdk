@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x5c0
+             * Size: 0x7e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Nano_PredatoryStatue : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x58]; // 0x00c0, 0x58 bytes
-                shade::sdk::entity2::GameTime_t m_GameTimeEnabled; // 0x0118, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_LastCatInAreaTime; // 0x011c, 0x4 bytes
-                bool m_bIsAttacking; // 0x0120, 0x1 bytes
-                std::uint8_t pad_0121[0x3]; // 0x0121, 0x3 bytes
-                std::int32_t m_iTargetID; // 0x0124, 0x4 bytes
-                std::uint8_t pad_0128[0x498]; // 0x0128, 0x498 bytes
+                std::uint8_t pad_0130[0x58]; // 0x0130, 0x58 bytes
+                shade::sdk::entity2::GameTime_t m_GameTimeEnabled; // 0x0188, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastCatInAreaTime; // 0x018c, 0x4 bytes
+                bool m_bIsAttacking; // 0x0190, 0x1 bytes
+                std::uint8_t pad_0191[0x3]; // 0x0191, 0x3 bytes
+                std::int32_t m_iTargetID; // 0x0194, 0x4 bytes
+                std::uint8_t pad_0198[0x648]; // 0x0198, 0x648 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Nano_PredatoryStatue) == 0x5C0, "CCitadel_Modifier_Nano_PredatoryStatue size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Nano_PredatoryStatue) == 0x7E0, "CCitadel_Modifier_Nano_PredatoryStatue size mismatch");
         }
     }
 }

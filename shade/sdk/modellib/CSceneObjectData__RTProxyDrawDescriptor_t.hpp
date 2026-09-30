@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,25 +23,34 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0x140
+             * Size: 0x170
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CSceneObjectData__RTProxyDrawDescriptor_t {
-                shade::sdk::modellib::CMaterialDrawDescriptor m_drawDesc; // 0x0000, 0x108 bytes
-                matrix3x4_t m_mWorldFromLocal; // 0x0108, 0x30 bytes
-                shade::sdk::modellib::VertexAlbedoFormat_t m_nVertexAlbedoFormat; // 0x0138, 0x1 bytes
-                std::int8_t m_nVertexAlbedoVB; // 0x0139, 0x1 bytes
-                std::uint16_t m_nVertexAlbedoOffset; // 0x013a, 0x2 bytes
-                std::uint16_t m_nVertexAlbedoStride; // 0x013c, 0x2 bytes
-                std::uint8_t pad_013e[0x2]; // 0x013e, 0x2 bytes
+                std::uint32_t m_materialGroupToken; // 0x0000, 0x4 bytes
+                std::int32_t m_nSrcDrawIndex; // 0x0004, 0x4 bytes
+                shade::sdk::modellib::CMaterialDrawDescriptor m_drawDesc; // 0x0008, 0x120 bytes
+                matrix3x4_t m_mWorldFromLocal; // 0x0128, 0x30 bytes
+                shade::sdk::modellib::VertexAlbedoFormat_t m_nVertexAlbedoFormat; // 0x0158, 0x1 bytes
+                std::int8_t m_nVertexAlbedoVB; // 0x0159, 0x1 bytes
+                std::uint16_t m_nVertexAlbedoOffset; // 0x015a, 0x2 bytes
+                std::uint16_t m_nVertexAlbedoStride; // 0x015c, 0x2 bytes
+                shade::sdk::modellib::VertexAlbedoFormat_t m_nVertexEmissiveFormat; // 0x015e, 0x1 bytes
+                std::int8_t m_nVertexEmissiveVB; // 0x015f, 0x1 bytes
+                std::uint16_t m_nVertexEmissiveOffset; // 0x0160, 0x2 bytes
+                std::uint16_t m_nVertexEmissiveStride; // 0x0162, 0x2 bytes
+                float m_fEmissiveFactor; // 0x0164, 0x4 bytes
+                std::int8_t m_nAliasTableIB; // 0x0168, 0x1 bytes
+                std::uint8_t pad_0169[0x3]; // 0x0169, 0x3 bytes
+                float m_fTriangleAreaSize; // 0x016c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSceneObjectData__RTProxyDrawDescriptor_t) == 0x140, "CSceneObjectData__RTProxyDrawDescriptor_t size mismatch");
+            static_assert(sizeof(CSceneObjectData__RTProxyDrawDescriptor_t) == 0x170, "CSceneObjectData__RTProxyDrawDescriptor_t size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x778
+             * Size: 0xa58
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_RestorativeGoo : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flEarliestBreakoutTime; // 0x00d0, 0x4 bytes
-                float m_flTotalPendingHeal; // 0x00d4, 0x4 bytes
-                std::uint8_t pad_00d8[0x680]; // 0x00d8, 0x680 bytes
-                CHandle<shade::sdk::server::CCitadel_RestorativeGooCube> m_hGooCube; // 0x0758, 0x4 bytes
-                float m_flBreakoutPercentage; // 0x075c, 0x4 bytes
-                std::uint8_t pad_0760[0x18]; // 0x0760, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flEarliestBreakoutTime; // 0x0140, 0x4 bytes
+                float m_flTotalPendingHeal; // 0x0144, 0x4 bytes
+                std::uint8_t pad_0148[0x8f0]; // 0x0148, 0x8f0 bytes
+                CHandle<shade::sdk::server::CCitadel_RestorativeGooCube> m_hGooCube; // 0x0a38, 0x4 bytes
+                float m_flBreakoutPercentage; // 0x0a3c, 0x4 bytes
+                std::uint8_t pad_0a40[0x18]; // 0x0a40, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_RestorativeGoo) == 0x778, "CCitadel_Modifier_RestorativeGoo size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_RestorativeGoo) == 0xA58, "CCitadel_Modifier_RestorativeGoo size mismatch");
         }
     }
 }

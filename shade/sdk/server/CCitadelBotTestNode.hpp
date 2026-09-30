@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d8
+             * Size: 0x4e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +40,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelBotTestNode : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                shade::sdk::server::EBotTestNodeType m_eNodeType; // 0x04a0, 0x4 bytes
-                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
-                CUtlSymbolLarge m_sNextNode; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_sShootTarget; // 0x04b0, 0x8 bytes
-                CHandle<shade::sdk::server::CCitadelBotTestNode> m_hNextNode; // 0x04b8, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelBotTestNode> m_hShootTarget; // 0x04bc, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelPlayerPawn> m_hLockingEntity; // 0x04c0, 0x4 bytes
-                std::uint8_t pad_04c4[0x14]; // 0x04c4, 0x14 bytes
+                shade::sdk::server::EBotTestNodeType m_eNodeType; // 0x04b0, 0x4 bytes
+                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlSymbolLarge m_sNextNode; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_sShootTarget; // 0x04c0, 0x8 bytes
+                CHandle<shade::sdk::server::CCitadelBotTestNode> m_hNextNode; // 0x04c8, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelBotTestNode> m_hShootTarget; // 0x04cc, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelPlayerPawn> m_hLockingEntity; // 0x04d0, 0x4 bytes
+                std::uint8_t pad_04d4[0x14]; // 0x04d4, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBotTestNode) == 0x4D8, "CCitadelBotTestNode size mismatch");
+            static_assert(sizeof(CCitadelBotTestNode) == 0x4E8, "CCitadelBotTestNode size mismatch");
         }
     }
 }

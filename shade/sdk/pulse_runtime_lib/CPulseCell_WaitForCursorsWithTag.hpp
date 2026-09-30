@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0xa0
+             * Size: 0x130
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_WaitForCursorsWithTag : public shade::sdk::pulse_runtime_lib::CPulseCell_WaitForCursorsWithTagBase {
             public:
-                bool m_bTagSelfWhenComplete; // 0x0098, 0x1 bytes
-                std::uint8_t pad_0099[0x3]; // 0x0099, 0x3 bytes
-                shade::sdk::pulse_runtime_lib::PulseCursorCancelPriority_t m_nDesiredKillPriority; // 0x009c, 0x4 bytes
+                bool m_bTagSelfWhenComplete; // 0x0128, 0x1 bytes
+                std::uint8_t pad_0129[0x3]; // 0x0129, 0x3 bytes
+                shade::sdk::pulse_runtime_lib::PulseCursorCancelPriority_t m_nDesiredKillPriority; // 0x012c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_WaitForCursorsWithTag) == 0xA0, "CPulseCell_WaitForCursorsWithTag size mismatch");
+            static_assert(sizeof(CPulseCell_WaitForCursorsWithTag) == 0x130, "CPulseCell_WaitForCursorsWithTag size mismatch");
         }
     }
 }

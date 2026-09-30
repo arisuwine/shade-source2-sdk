@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x528
+             * Size: 0x538
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,26 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysFixed : public shade::sdk::server::CPhysConstraint {
             public:
-                float m_flLinearFrequency; // 0x0500, 0x4 bytes
-                float m_flLinearDampingRatio; // 0x0504, 0x4 bytes
-                float m_flAngularFrequency; // 0x0508, 0x4 bytes
-                float m_flAngularDampingRatio; // 0x050c, 0x4 bytes
-                bool m_bEnableLinearConstraint; // 0x0510, 0x1 bytes
-                bool m_bEnableAngularConstraint; // 0x0511, 0x1 bytes
-                std::uint8_t pad_0512[0x6]; // 0x0512, 0x6 bytes
-                CUtlSymbolLarge m_sBoneName1; // 0x0518, 0x8 bytes
-                CUtlSymbolLarge m_sBoneName2; // 0x0520, 0x8 bytes
+                float m_flLinearFrequency; // 0x0510, 0x4 bytes
+                float m_flLinearDampingRatio; // 0x0514, 0x4 bytes
+                float m_flAngularFrequency; // 0x0518, 0x4 bytes
+                float m_flAngularDampingRatio; // 0x051c, 0x4 bytes
+                bool m_bEnableLinearConstraint; // 0x0520, 0x1 bytes
+                bool m_bEnableAngularConstraint; // 0x0521, 0x1 bytes
+                std::uint8_t pad_0522[0x6]; // 0x0522, 0x6 bytes
+                CUtlSymbolLarge m_sBoneName1; // 0x0528, 0x8 bytes
+                CUtlSymbolLarge m_sBoneName2; // 0x0530, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetLinearFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLinearDampingRatio; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetAngularDampingRatio; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysFixed) == 0x528, "CPhysFixed size mismatch");
+            static_assert(sizeof(CPhysFixed) == 0x538, "CPhysFixed size mismatch");
         }
     }
 }

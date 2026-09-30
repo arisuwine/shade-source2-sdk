@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x820
+             * Size: 0x3b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_NecroSkele_GraphController : public shade::sdk::server::CAI_CitadelNPC_GraphController {
             public:
-                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eBaseAction; // 0x07f0, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bNewTarget; // 0x0808, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eBaseAction; // 0x0388, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bNewTarget; // 0x03a0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_NecroSkele_GraphController) == 0x820, "CNPC_NecroSkele_GraphController size mismatch");
+            static_assert(sizeof(CNPC_NecroSkele_GraphController) == 0x3B8, "CNPC_NecroSkele_GraphController size mismatch");
         }
     }
 }

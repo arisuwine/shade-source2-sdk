@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x948
+             * Size: 0xa58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CFogTrigger : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::server::fogparams_t m_fog; // 0x08e0, 0x68 bytes
+                shade::sdk::server::fogparams_t m_fog; // 0x09f0, 0x68 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * Color m_fog.colorPrimary; // Offset: 0x8f4, Size: 0x1, Size In Bytes: 0x4
-             * Color m_fog.colorSecondary; // Offset: 0x8f8, Size: 0x1, Size In Bytes: 0x4
-             * Vector m_fog.dirPrimary; // Offset: 0x8e8, Size: 0x1, Size In Bytes: 0xc
-             * bool m_fog.enable; // Offset: 0x944, Size: 0x1, Size In Bytes: 0x1
-             * bool m_fog.blend; // Offset: 0x945, Size: 0x1, Size In Bytes: 0x1
-             * float m_fog.start; // Offset: 0x904, Size: 0x1, Size In Bytes: 0x4
-             * float m_fog.end; // Offset: 0x908, Size: 0x1, Size In Bytes: 0x4
-             * float m_fog.farz; // Offset: 0x90c, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFogTrigger) == 0x948, "CFogTrigger size mismatch");
+            static_assert(sizeof(CFogTrigger) == 0xA58, "CFogTrigger size mismatch");
         }
     }
 }

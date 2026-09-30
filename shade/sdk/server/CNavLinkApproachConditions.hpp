@@ -12,32 +12,30 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
-
-#include "shade/sdk/modellib/MovementGaitId_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x10
-             * Alignment: 0x8
+             * Size: 0x8
+             * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
              */
             #pragma pack(push, 1)
             class CNavLinkApproachConditions {
             public:
-                shade::sdk::modellib::MovementGaitId_t m_sMovementGait; // 0x0000, 0x8 bytes
-                float m_flFacingAlignmentDegrees; // 0x0008, 0x4 bytes
-                std::uint8_t pad_000c[0x4]; // 0x000c, 0x4 bytes
+                float m_flFacingAlignmentDegrees; // 0x0000, 0x4 bytes
+                float m_flMaxPathEntryAngle; // 0x0004, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNavLinkApproachConditions) == 0x10, "CNavLinkApproachConditions size mismatch");
+            static_assert(sizeof(CNavLinkApproachConditions) == 0x8, "CNavLinkApproachConditions size mismatch");
         }
     }
 }

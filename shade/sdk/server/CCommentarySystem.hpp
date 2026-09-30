@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,6 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             class CPointCommentaryNode;
+            struct modifiedconvars_t;
         }
     }
 }
@@ -30,21 +32,22 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x60
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CCommentarySystem {
             public:
-                std::uint8_t pad_0000[0x11]; // 0x0000, 0x11 bytes
-                bool m_bCommentaryConvarsChanging; // 0x0011, 0x1 bytes
+                std::uint8_t pad_0000[0x12]; // 0x0000, 0x12 bytes
                 bool m_bCommentaryEnabledMidGame; // 0x0012, 0x1 bytes
                 std::uint8_t pad_0013[0x1]; // 0x0013, 0x1 bytes
                 shade::sdk::entity2::GameTime_t m_flNextTeleportTime; // 0x0014, 0x4 bytes
                 std::int32_t m_iTeleportStage; // 0x0018, 0x4 bytes
                 bool m_bCheatState; // 0x001c, 0x1 bytes
                 bool m_bIsFirstSpawnGroupToLoad; // 0x001d, 0x1 bytes
-                std::uint8_t pad_001e[0x1a]; // 0x001e, 0x1a bytes
+                std::uint8_t pad_001e[0x2]; // 0x001e, 0x2 bytes
+                CUtlVector<shade::sdk::server::modifiedconvars_t> m_ModifiedConvars; // 0x0020, 0x18 bytes
                 CHandle<shade::sdk::server::CPointCommentaryNode> m_hCurrentNode; // 0x0038, 0x4 bytes
                 CHandle<shade::sdk::server::CPointCommentaryNode> m_hActiveCommentaryNode; // 0x003c, 0x4 bytes
                 CHandle<shade::sdk::server::CPointCommentaryNode> m_hLastCommentaryNode; // 0x0040, 0x4 bytes
@@ -53,9 +56,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_ModifiedConvars; // Offset: 0x20, Size: 0x1, Size In Bytes: 0x18
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCommentarySystem) == 0x60, "CCommentarySystem size mismatch");
         }

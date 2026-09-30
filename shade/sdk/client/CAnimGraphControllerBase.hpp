@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x90
+             * Size: 0xc0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAnimGraphControllerBase {
             public:
-                std::uint8_t pad_0000[0x18]; // 0x0000, 0x18 bytes
-                shade::sdk::client::ExternalAnimGraphHandle_t m_hExternalGraph; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x74]; // 0x001c, 0x74 bytes
+                std::uint8_t pad_0000[0x4c]; // 0x0000, 0x4c bytes
+                shade::sdk::client::ExternalAnimGraphHandle_t m_hExternalGraph; // 0x004c, 0x4 bytes
+                std::uint8_t pad_0050[0x70]; // 0x0050, 0x70 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAnimGraphControllerBase) == 0x90, "CAnimGraphControllerBase size mismatch");
+            static_assert(sizeof(CAnimGraphControllerBase) == 0xC0, "CAnimGraphControllerBase size mismatch");
         }
     }
 }

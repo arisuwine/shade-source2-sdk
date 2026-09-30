@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1178
+             * Size: 0x1768
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PowerJump : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x0f70, 0x4 bytes
-                bool m_bAirRaiding; // 0x0f74, 0x1 bytes
-                std::uint8_t pad_0f75[0x203]; // 0x0f75, 0x203 bytes
+                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x14a0, 0x4 bytes
+                bool m_bAirRaiding; // 0x14a4, 0x1 bytes
+                std::uint8_t pad_14a5[0x2c3]; // 0x14a5, 0x2c3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PowerJump) == 0x1178, "CCitadel_Ability_PowerJump size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PowerJump) == 0x1768, "CCitadel_Ability_PowerJump size mismatch");
         }
     }
 }

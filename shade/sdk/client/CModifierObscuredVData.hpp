@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x768
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierObscuredVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flHideDuration; // 0x0750, 0x4 bytes
-                float m_flRevealDuration; // 0x0754, 0x4 bytes
+                float m_flHideDuration; // 0x0760, 0x4 bytes
+                float m_flRevealDuration; // 0x0764, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierObscuredVData) == 0x758, "CModifierObscuredVData size mismatch");
+            static_assert(sizeof(CModifierObscuredVData) == 0x768, "CModifierObscuredVData size mismatch");
         }
     }
 }

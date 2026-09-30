@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x778
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Priest_ImmobilizeVData : public shade::sdk::client::CCitadel_Modifier_RootVData {
             public:
-                float flMaxDrag; // 0x0758, 0x4 bytes
-                float flSpeedForNoDrag; // 0x075c, 0x4 bytes
-                float flSpeedForMaxDrag; // 0x0760, 0x4 bytes
-                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
+                float flMaxDrag; // 0x0768, 0x4 bytes
+                float flSpeedForNoDrag; // 0x076c, 0x4 bytes
+                float flSpeedForMaxDrag; // 0x0770, 0x4 bytes
+                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Priest_ImmobilizeVData) == 0x768, "CCitadel_Modifier_Priest_ImmobilizeVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Priest_ImmobilizeVData) == 0x778, "CCitadel_Modifier_Priest_ImmobilizeVData size mismatch");
         }
     }
 }

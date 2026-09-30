@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -41,8 +42,8 @@ namespace shade {
                 shade::sdk::client::PhysInterfaceId_t type; // 0x0000, 0x4 bytes
                 CHandle<shade::sdk::client::C_BaseEntity> hEntity; // 0x0004, 0x4 bytes
                 CUtlSymbolLarge fieldName; // 0x0008, 0x8 bytes
-                std::int32_t nObjects; // 0x0010, 0x4 bytes
-                std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
+                bool bSaveObject; // 0x0010, 0x1 bytes
+                std::uint8_t pad_0011[0x7]; // 0x0011, 0x7 bytes
                 CUtlSymbolLarge modelName; // 0x0018, 0x8 bytes
                 shade::sdk::mathlib_extended::AABB_t bbox; // 0x0020, 0x18 bytes
                 shade::sdk::client::physics_save_sphere_t sphere; // 0x0038, 0x4 bytes

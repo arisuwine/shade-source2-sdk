@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x460
+             * Size: 0x620
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,23 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Invis : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x380]; // 0x00c0, 0x380 bytes
-                bool m_bInvis; // 0x0440, 0x1 bytes
-                std::uint8_t pad_0441[0x3]; // 0x0441, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStartInvisTime; // 0x0444, 0x4 bytes
-                bool m_bFullyInvis; // 0x0448, 0x1 bytes
-                std::uint8_t pad_0449[0x3]; // 0x0449, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTaken; // 0x044c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSpotted; // 0x0450, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nDetectionRangeRing; // 0x0454, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFullInvisEffect; // 0x0458, 0x4 bytes
-                std::uint8_t pad_045c[0x4]; // 0x045c, 0x4 bytes
+                std::uint8_t pad_0130[0x4d0]; // 0x0130, 0x4d0 bytes
+                bool m_bInvis; // 0x0600, 0x1 bytes
+                std::uint8_t pad_0601[0x3]; // 0x0601, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStartInvisTime; // 0x0604, 0x4 bytes
+                bool m_bFullyInvis; // 0x0608, 0x1 bytes
+                std::uint8_t pad_0609[0x3]; // 0x0609, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTaken; // 0x060c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSpotted; // 0x0610, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nDetectionRangeRing; // 0x0614, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFullInvisEffect; // 0x0618, 0x4 bytes
+                std::uint8_t pad_061c[0x4]; // 0x061c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Invis) == 0x460, "CCitadel_Modifier_Invis size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Invis) == 0x620, "CCitadel_Modifier_Invis size mismatch");
         }
     }
 }

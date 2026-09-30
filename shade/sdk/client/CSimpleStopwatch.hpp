@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,6 +25,7 @@ namespace shade {
              * Size: 0xc
              * Alignment: 0xff
              * Has Trivial Destructor
+             * Construct Disallowed
              */
             #pragma pack(push, 1)
             class CSimpleStopwatch : public shade::sdk::client::CStopwatchBase {

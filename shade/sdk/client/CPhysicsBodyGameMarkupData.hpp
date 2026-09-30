@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysicsBodyGameMarkupData {
             public:
-                CUtlOrderedMap<CUtlString, shade::sdk::client::CPhysicsBodyGameMarkup> m_PhysicsBodyMarkupByBoneName; // 0x0000, 0x28 bytes
+                CUtlDict<shade::sdk::client::CPhysicsBodyGameMarkup> m_PhysicsBodyMarkupByBoneName; // 0x0000, 0x28 bytes
             };
             #pragma pack(pop)
 

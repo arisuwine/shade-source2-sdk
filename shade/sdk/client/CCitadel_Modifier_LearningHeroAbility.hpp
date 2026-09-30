@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LearningHeroAbility : public shade::sdk::client::CCitadelModifier {
             public:
-                CBufferString m_sDescription; // 0x00c0, 0x10 bytes
+                CBufferString m_sDescription; // 0x0130, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LearningHeroAbility) == 0xD0, "CCitadel_Modifier_LearningHeroAbility size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LearningHeroAbility) == 0x140, "CCitadel_Modifier_LearningHeroAbility size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -25,7 +26,10 @@ namespace shade {
                 PF_MAP_TYPE_CURVE = 0x4,
                 PF_MAP_TYPE_NOTCHED = 0x5,
                 PF_MAP_TYPE_ROUND = 0x6,
-                PF_MAP_TYPE_COUNT = 0x7
+                PF_MAP_TYPE_MIN = 0x7,
+                PF_MAP_TYPE_MAX = 0x8,
+                PF_MAP_TYPE_MOD = 0x9,
+                PF_MAP_TYPE_COUNT = 0xa
             };
         }
     }

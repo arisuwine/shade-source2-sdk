@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,21 +20,28 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8
+             * Size: 0x1c
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CCitadelNPCModelGameData_t {
-                float m_flTurnThreshold; // 0x0000, 0x4 bytes
-                float m_flTurnDuration; // 0x0004, 0x4 bytes
+                bool m_bTurnEnabled; // 0x0000, 0x1 bytes
+                bool m_bDisablePivotAnim; // 0x0001, 0x1 bytes
+                std::uint8_t pad_0002[0x2]; // 0x0002, 0x2 bytes
+                float m_flTurnThreshold; // 0x0004, 0x4 bytes
+                float m_flTurnDuration; // 0x0008, 0x4 bytes
+                float m_flLookAtPitchMin; // 0x000c, 0x4 bytes
+                float m_flLookAtPitchMax; // 0x0010, 0x4 bytes
+                float m_flLookAtYawMin; // 0x0014, 0x4 bytes
+                float m_flLookAtYawMax; // 0x0018, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelNPCModelGameData_t) == 0x8, "CCitadelNPCModelGameData_t size mismatch");
+            static_assert(sizeof(CCitadelNPCModelGameData_t) == 0x1C, "CCitadelNPCModelGameData_t size mismatch");
         }
     }
 }

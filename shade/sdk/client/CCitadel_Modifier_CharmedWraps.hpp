@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x300
+             * Size: 0x430
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CharmedWraps : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                shade::sdk::entity2::GameTime_t m_fLastPrimingLightAttackTime; // 0x01f8, 0x4 bytes
-                std::uint8_t pad_01fc[0x104]; // 0x01fc, 0x104 bytes
+                shade::sdk::entity2::GameTime_t m_fLastPrimingLightAttackTime; // 0x02c8, 0x4 bytes
+                std::uint8_t pad_02cc[0x164]; // 0x02cc, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CharmedWraps) == 0x300, "CCitadel_Modifier_CharmedWraps size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CharmedWraps) == 0x430, "CCitadel_Modifier_CharmedWraps size mismatch");
         }
     }
 }

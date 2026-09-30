@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x478
+             * Size: 0x638
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x380]; // 0x00d0, 0x380 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapHunterAbilities; // 0x0450, 0x28 bytes
+                std::uint8_t pad_0140[0x4d0]; // 0x0140, 0x4d0 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapHunterAbilities; // 0x0610, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf) == 0x478, "CCitadel_Modifier_Werewolf size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf) == 0x638, "CCitadel_Modifier_Werewolf size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,26 +22,25 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x11e0
+             * Size: 0x16e0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CCitadelBaseYamatoAbility : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                float m_flCachedCastTime; // 0x11d8, 0x4 bytes
-                bool m_bIsShadowFormCast; // 0x11dc, 0x1 bytes
-                std::uint8_t pad_11dd[0x3]; // 0x11dd, 0x3 bytes
+                float m_flCachedCastTime; // 0x16d8, 0x4 bytes
+                bool m_bIsShadowFormCast; // 0x16dc, 0x1 bytes
+                std::uint8_t pad_16dd[0x3]; // 0x16dd, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelBaseYamatoAbility) == 0x11E0, "CCitadelBaseYamatoAbility size mismatch");
+            static_assert(sizeof(CCitadelBaseYamatoAbility) == 0x16E0, "CCitadelBaseYamatoAbility size mismatch");
         }
     }
 }

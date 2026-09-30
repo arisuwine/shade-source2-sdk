@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -52,13 +53,12 @@ namespace shade {
                 std::int32_t m_damageType; // 0x0ce4, 0x4 bytes
                 std::int32_t m_damageToEnableMotion; // 0x0ce8, 0x4 bytes
                 float m_flForceToEnableMotion; // 0x0cec, 0x4 bytes
-                bool m_bThrownByPlayer; // 0x0cf0, 0x1 bytes
-                bool m_bDroppedByPlayer; // 0x0cf1, 0x1 bytes
-                bool m_bTouchedByPlayer; // 0x0cf2, 0x1 bytes
-                bool m_bFirstCollisionAfterLaunch; // 0x0cf3, 0x1 bytes
-                bool m_bHasBeenAwakened; // 0x0cf4, 0x1 bytes
-                bool m_bIsOverrideProp; // 0x0cf5, 0x1 bytes
-                std::uint8_t pad_0cf6[0x2]; // 0x0cf6, 0x2 bytes
+                bool m_bDroppedByPlayer; // 0x0cf0, 0x1 bytes
+                bool m_bTouchedByPlayer; // 0x0cf1, 0x1 bytes
+                bool m_bFirstCollisionAfterLaunch; // 0x0cf2, 0x1 bytes
+                bool m_bHasBeenAwakened; // 0x0cf3, 0x1 bytes
+                bool m_bIsOverrideProp; // 0x0cf4, 0x1 bytes
+                std::uint8_t pad_0cf5[0x3]; // 0x0cf5, 0x3 bytes
                 shade::sdk::entity2::GameTime_t m_flLastBurn; // 0x0cf8, 0x4 bytes
                 shade::sdk::physicslib::DynamicContinuousContactBehavior_t m_nDynamicContinuousContactBehavior; // 0x0cfc, 0x1 bytes
                 std::uint8_t pad_0cfd[0x3]; // 0x0cfd, 0x3 bytes
@@ -73,11 +73,10 @@ namespace shade {
                 shade::sdk::server::INavObstacle__NavObstacleType_t m_nNavObstacleType; // 0x0d18, 0x4 bytes
                 bool m_bUpdateNavWhenMoving; // 0x0d1c, 0x1 bytes
                 bool m_bForceNavObstacleCut; // 0x0d1d, 0x1 bytes
-                bool m_bAllowObstacleConvexHullMerging; // 0x0d1e, 0x1 bytes
-                bool m_bAcceptDamageFromHeldObjects; // 0x0d1f, 0x1 bytes
-                bool m_bEnableUseOutput; // 0x0d20, 0x1 bytes
-                std::uint8_t pad_0d21[0x3]; // 0x0d21, 0x3 bytes
-                shade::sdk::server::CPhysicsProp__CrateType_t m_CrateType; // 0x0d24, 0x4 bytes
+                bool m_bAcceptDamageFromHeldObjects; // 0x0d1e, 0x1 bytes
+                bool m_bEnableUseOutput; // 0x0d1f, 0x1 bytes
+                shade::sdk::server::CPhysicsProp__CrateType_t m_CrateType; // 0x0d20, 0x4 bytes
+                std::uint8_t pad_0d24[0x4]; // 0x0d24, 0x4 bytes
                 CUtlSymbolLarge m_strItemClass[0x4]; // 0x0d28, 0x20 bytes
                 std::int32_t m_nItemCount[0x4]; // 0x0d48, 0x10 bytes
                 bool m_bRemovableForAmmoBalancing; // 0x0d58, 0x1 bytes
@@ -88,25 +87,8 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputEnableMotion; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableMotion; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputWake; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetAutoConvertBackFromDebris; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSleep; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartGlowing; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopGlowing; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Vector InputSetGlowOverride; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetGlowRange; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableGravity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableGravity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableDrag; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableDrag; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * bool forcemotiondisabled; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool phys_start_asleep; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysicsPropClearFlagsThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t health; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 

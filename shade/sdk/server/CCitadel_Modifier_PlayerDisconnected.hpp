@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x49f0
+             * Size: 0x4a50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PlayerDisconnected : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flTimePathUpdated; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x491c]; // 0x00d4, 0x491c bytes
+                shade::sdk::entity2::GameTime_t m_flTimePathUpdated; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x490c]; // 0x0144, 0x490c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PlayerDisconnected) == 0x49F0, "CCitadel_Modifier_PlayerDisconnected size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PlayerDisconnected) == 0x4A50, "CCitadel_Modifier_PlayerDisconnected size mismatch");
         }
     }
 }

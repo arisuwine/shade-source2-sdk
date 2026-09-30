@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1600
+             * Size: 0x1da0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_Blasted : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_tTimeOfLastBulletHit; // 0x0f70, 0x4 bytes
-                float m_flPendingBlastedTimeToAdd; // 0x0f74, 0x4 bytes
-                float m_flDeferredHealingFromBlasted; // 0x0f78, 0x4 bytes
-                float m_flBlastedCurrentDuration; // 0x0f7c, 0x4 bytes
-                std::uint8_t pad_0f80[0x680]; // 0x0f80, 0x680 bytes
+                shade::sdk::entity2::GameTime_t m_tTimeOfLastBulletHit; // 0x14a0, 0x4 bytes
+                float m_flPendingBlastedTimeToAdd; // 0x14a4, 0x4 bytes
+                float m_flDeferredHealingFromBlasted; // 0x14a8, 0x4 bytes
+                float m_flBlastedCurrentDuration; // 0x14ac, 0x4 bytes
+                std::uint8_t pad_14b0[0x8f0]; // 0x14b0, 0x8f0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_Blasted) == 0x1600, "CCitadel_Ability_PunkGoat_Blasted size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_Blasted) == 0x1DA0, "CCitadel_Ability_PunkGoat_Blasted size mismatch");
         }
     }
 }

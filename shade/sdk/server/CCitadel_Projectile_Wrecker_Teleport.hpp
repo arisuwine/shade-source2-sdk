@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x880
+             * Size: 0x988
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +32,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_Wrecker_Teleport : public shade::sdk::server::CCitadelProjectile {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0860, 0x20 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0968, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_Wrecker_Teleport) == 0x880, "CCitadel_Projectile_Wrecker_Teleport size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_Wrecker_Teleport) == 0x988, "CCitadel_Projectile_Wrecker_Teleport size mismatch");
         }
     }
 }

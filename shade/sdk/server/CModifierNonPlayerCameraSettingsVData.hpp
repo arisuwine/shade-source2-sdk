@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x760
+             * Size: 0x770
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierNonPlayerCameraSettingsVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                float m_flCameraSideOffset; // 0x0750, 0x4 bytes
-                float m_flCameraBackOffset; // 0x0754, 0x4 bytes
-                float m_flCameraHeightStanding; // 0x0758, 0x4 bytes
-                std::uint8_t pad_075c[0x4]; // 0x075c, 0x4 bytes
+                float m_flCameraSideOffset; // 0x0760, 0x4 bytes
+                float m_flCameraBackOffset; // 0x0764, 0x4 bytes
+                float m_flCameraHeightStanding; // 0x0768, 0x4 bytes
+                std::uint8_t pad_076c[0x4]; // 0x076c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierNonPlayerCameraSettingsVData) == 0x760, "CModifierNonPlayerCameraSettingsVData size mismatch");
+            static_assert(sizeof(CModifierNonPlayerCameraSettingsVData) == 0x770, "CModifierNonPlayerCameraSettingsVData size mismatch");
         }
     }
 }

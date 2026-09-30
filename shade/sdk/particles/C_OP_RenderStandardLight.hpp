@@ -12,12 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
-#include "shade/sdk/particles/ParticleColorBlendType_t.hpp"
 #include "shade/sdk/particles/ParticleLightBehaviorChoiceList_t.hpp"
 #include "shade/sdk/particles/ParticleLightFogLightingMode_t.hpp"
 #include "shade/sdk/particles/ParticleLightTypeChoiceList_t.hpp"
@@ -26,12 +25,14 @@
 #include "shade/sdk/particleslib/CParticleCollectionRendererFloatInput.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionVecInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleColorBlendType_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x14c8
+             * Size: 0x1828
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,49 +40,54 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderStandardLight : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particles::ParticleLightTypeChoiceList_t m_nLightType; // 0x0228, 0x4 bytes
-                std::uint8_t pad_022c[0x4]; // 0x022c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0230, 0x6b8 bytes
-                shade::sdk::particles::ParticleColorBlendType_t m_nColorBlendType; // 0x08e8, 0x4 bytes
-                std::uint8_t pad_08ec[0x4]; // 0x08ec, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flIntensity; // 0x08f0, 0x170 bytes
-                bool m_bCastShadows; // 0x0a60, 0x1 bytes
-                std::uint8_t pad_0a61[0x7]; // 0x0a61, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTheta; // 0x0a68, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flPhi; // 0x0bd8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusMultiplier; // 0x0d48, 0x170 bytes
-                shade::sdk::particles::StandardLightingAttenuationStyle_t m_nAttenuationStyle; // 0x0eb8, 0x4 bytes
-                std::uint8_t pad_0ebc[0x4]; // 0x0ebc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flFalloffLinearity; // 0x0ec0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flFiftyPercentFalloff; // 0x1030, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flZeroPercentFalloff; // 0x11a0, 0x170 bytes
-                bool m_bRenderDiffuse; // 0x1310, 0x1 bytes
-                bool m_bRenderSpecular; // 0x1311, 0x1 bytes
-                std::uint8_t pad_1312[0x6]; // 0x1312, 0x6 bytes
-                CUtlString m_lightCookie; // 0x1318, 0x8 bytes
-                std::int32_t m_nPriority; // 0x1320, 0x4 bytes
-                shade::sdk::particles::ParticleLightFogLightingMode_t m_nFogLightingMode; // 0x1324, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFogContribution; // 0x1328, 0x170 bytes
-                shade::sdk::particles::ParticleLightBehaviorChoiceList_t m_nCapsuleLightBehavior; // 0x1498, 0x4 bytes
-                float m_flCapsuleLength; // 0x149c, 0x4 bytes
-                bool m_bReverseOrder; // 0x14a0, 0x1 bytes
-                bool m_bClosedLoop; // 0x14a1, 0x1 bytes
-                std::uint8_t pad_14a2[0x2]; // 0x14a2, 0x2 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nPrevPntSource; // 0x14a4, 0x4 bytes
-                float m_flMaxLength; // 0x14a8, 0x4 bytes
-                float m_flMinLength; // 0x14ac, 0x4 bytes
-                bool m_bIgnoreDT; // 0x14b0, 0x1 bytes
-                std::uint8_t pad_14b1[0x3]; // 0x14b1, 0x3 bytes
-                float m_flConstrainRadiusToLengthRatio; // 0x14b4, 0x4 bytes
-                float m_flLengthScale; // 0x14b8, 0x4 bytes
-                float m_flLengthFadeInTime; // 0x14bc, 0x4 bytes
-                std::uint8_t pad_14c0[0x8]; // 0x14c0, 0x8 bytes
+                shade::sdk::particles::ParticleLightTypeChoiceList_t m_nLightType; // 0x0230, 0x4 bytes
+                std::uint16_t m_nMaxAllowed; // 0x0234, 0x2 bytes
+                std::uint8_t pad_0236[0x2]; // 0x0236, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0238, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0910, 0x4 bytes
+                std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes
+                CUtlString m_strLightStyle; // 0x0918, 0x8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLightStyleTime; // 0x0920, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flIntensity; // 0x0a98, 0x178 bytes
+                bool m_bCastShadows; // 0x0c10, 0x1 bytes
+                bool m_bDynamicBounce; // 0x0c11, 0x1 bytes
+                std::uint8_t pad_0c12[0x6]; // 0x0c12, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBounceScale; // 0x0c18, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flTheta; // 0x0d90, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flPhi; // 0x0f08, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusMultiplier; // 0x1080, 0x178 bytes
+                shade::sdk::particles::StandardLightingAttenuationStyle_t m_nAttenuationStyle; // 0x11f8, 0x4 bytes
+                std::uint8_t pad_11fc[0x4]; // 0x11fc, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flFalloffLinearity; // 0x1200, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flFiftyPercentFalloff; // 0x1378, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flZeroPercentFalloff; // 0x14f0, 0x178 bytes
+                bool m_bRenderDiffuse; // 0x1668, 0x1 bytes
+                bool m_bRenderSpecular; // 0x1669, 0x1 bytes
+                std::uint8_t pad_166a[0x6]; // 0x166a, 0x6 bytes
+                CUtlString m_lightCookie; // 0x1670, 0x8 bytes
+                std::int32_t m_nPriority; // 0x1678, 0x4 bytes
+                shade::sdk::particles::ParticleLightFogLightingMode_t m_nFogLightingMode; // 0x167c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFogContribution; // 0x1680, 0x178 bytes
+                shade::sdk::particles::ParticleLightBehaviorChoiceList_t m_nCapsuleLightBehavior; // 0x17f8, 0x4 bytes
+                float m_flCapsuleLength; // 0x17fc, 0x4 bytes
+                bool m_bReverseOrder; // 0x1800, 0x1 bytes
+                bool m_bClosedLoop; // 0x1801, 0x1 bytes
+                std::uint8_t pad_1802[0x2]; // 0x1802, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nPrevPntSource; // 0x1804, 0x4 bytes
+                float m_flMaxLength; // 0x1808, 0x4 bytes
+                float m_flMinLength; // 0x180c, 0x4 bytes
+                bool m_bIgnoreDT; // 0x1810, 0x1 bytes
+                std::uint8_t pad_1811[0x3]; // 0x1811, 0x3 bytes
+                float m_flConstrainRadiusToLengthRatio; // 0x1814, 0x4 bytes
+                float m_flLengthScale; // 0x1818, 0x4 bytes
+                float m_flLengthFadeInTime; // 0x181c, 0x4 bytes
+                std::uint8_t pad_1820[0x8]; // 0x1820, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderStandardLight) == 0x14C8, "C_OP_RenderStandardLight size mismatch");
+            static_assert(sizeof(C_OP_RenderStandardLight) == 0x1828, "C_OP_RenderStandardLight size mismatch");
         }
     }
 }

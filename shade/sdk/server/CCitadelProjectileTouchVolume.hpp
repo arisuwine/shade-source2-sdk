@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x898
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelProjectileTouchVolume : public shade::sdk::server::CBaseModelEntity {
             public:
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0780, 0x4 bytes
-                std::uint8_t pad_0784[0x1c]; // 0x0784, 0x1c bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0878, 0x4 bytes
+                std::uint8_t pad_087c[0x1c]; // 0x087c, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelProjectileTouchVolume) == 0x7A0, "CCitadelProjectileTouchVolume size mismatch");
+            static_assert(sizeof(CCitadelProjectileTouchVolume) == 0x898, "CCitadelProjectileTouchVolume size mismatch");
         }
     }
 }

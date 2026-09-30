@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -27,19 +28,20 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8
+             * Size: 0x10
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
             class CAI_WaypointList {
             public:
                 shade::sdk::server::AI_Waypoint_t *m_pFirstWaypoint; // 0x0000, 0x8 bytes
+                shade::sdk::server::AI_Waypoint_t *m_pLastWaypoint; // 0x0008, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_WaypointList) == 0x8, "CAI_WaypointList size mismatch");
+            static_assert(sizeof(CAI_WaypointList) == 0x10, "CAI_WaypointList size mismatch");
         }
     }
 }

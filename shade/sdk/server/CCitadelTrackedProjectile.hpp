@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x890
+             * Size: 0x998
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,24 +41,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTrackedProjectile : public shade::sdk::server::CCitadelProjectile {
             public:
-                shade::sdk::client::ETrackedProjectileTarget_t m_eTrackedTargetType; // 0x0860, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0864, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTrackingStartTime; // 0x0868, 0x4 bytes
-                float m_flTrackingDampingCoefficient; // 0x086c, 0x4 bytes
-                float m_flTrackingSpeed; // 0x0870, 0x4 bytes
-                float m_flTrackingDuration; // 0x0874, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTrackingWindowStart; // 0x0878, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTrackingWindowEnd; // 0x087c, 0x4 bytes
-                Vector m_vLastValidPosition; // 0x0880, 0xc bytes
-                std::uint8_t pad_088c[0x4]; // 0x088c, 0x4 bytes
+                shade::sdk::client::ETrackedProjectileTarget_t m_eTrackedTargetType; // 0x0968, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x096c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTrackingStartTime; // 0x0970, 0x4 bytes
+                float m_flTrackingDampingCoefficient; // 0x0974, 0x4 bytes
+                float m_flTrackingSpeed; // 0x0978, 0x4 bytes
+                float m_flTrackingDuration; // 0x097c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTrackingWindowStart; // 0x0980, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTrackingWindowEnd; // 0x0984, 0x4 bytes
+                VectorWS m_vLastValidPosition; // 0x0988, 0xc bytes
+                std::uint8_t pad_0994[0x4]; // 0x0994, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelTrackedProjectile) == 0x890, "CCitadelTrackedProjectile size mismatch");
+            static_assert(sizeof(CCitadelTrackedProjectile) == 0x998, "CCitadelTrackedProjectile size mismatch");
         }
     }
 }

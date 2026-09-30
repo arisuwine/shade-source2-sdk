@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1950
+             * Size: 0x1870
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -40,28 +41,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Boss_Tier2 : public shade::sdk::server::CAI_CitadelNPC {
             public:
-                std::uint8_t pad_17b0[0x30]; // 0x17b0, 0x30 bytes
-                Vector m_vecStartingPosition; // 0x17e0, 0xc bytes
-                std::int32_t m_iLane; // 0x17ec, 0x4 bytes
-                std::uint8_t pad_17f0[0x8]; // 0x17f0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetedEnemy; // 0x17f8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x17fc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1800, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastWeakpointHitTime; // 0x1804, 0x4 bytes
-                std::uint8_t pad_1808[0x4c]; // 0x1808, 0x4c bytes
-                VectorWS m_vecElectricBeamLookTarget; // 0x1854, 0xc bytes
-                std::int32_t m_nElectricBeamCasts; // 0x1860, 0x4 bytes
-                std::uint8_t pad_1864[0xc]; // 0x1864, 0xc bytes
-                shade::sdk::entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1870, 0x18 bytes
-                std::uint8_t pad_1888[0x8]; // 0x1888, 0x8 bytes
-                CUtlSymbolLarge m_strBossEntityName; // 0x1890, 0x8 bytes
-                std::uint8_t pad_1898[0xb8]; // 0x1898, 0xb8 bytes
+                std::uint8_t pad_1710[0x28]; // 0x1710, 0x28 bytes
+                std::int32_t m_iLane; // 0x1738, 0x4 bytes
+                std::uint8_t pad_173c[0x8]; // 0x173c, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetedEnemy; // 0x1744, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1748, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x174c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastWeakpointHitTime; // 0x1750, 0x4 bytes
+                std::uint8_t pad_1754[0x48]; // 0x1754, 0x48 bytes
+                VectorWS m_vecElectricBeamLookTarget; // 0x179c, 0xc bytes
+                std::int32_t m_nElectricBeamCasts; // 0x17a8, 0x4 bytes
+                std::uint8_t pad_17ac[0xc]; // 0x17ac, 0xc bytes
+                shade::sdk::entity2::CEntityIOOutput m_eventOnBossKilled; // 0x17b8, 0x18 bytes
+                std::uint8_t pad_17d0[0xa0]; // 0x17d0, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Boss_Tier2) == 0x1950, "CNPC_Boss_Tier2 size mismatch");
+            static_assert(sizeof(CNPC_Boss_Tier2) == 0x1870, "CNPC_Boss_Tier2 size mismatch");
         }
     }
 }

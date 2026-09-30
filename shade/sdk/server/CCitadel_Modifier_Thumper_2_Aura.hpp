@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x230
+             * Size: 0x300
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Thumper_2_Aura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                Vector m_vecOrigin; // 0x0108, 0xc bytes
-                Vector m_vecWorldSpaceMins; // 0x0114, 0xc bytes
-                Vector m_vecWorldSpaceMaxs; // 0x0120, 0xc bytes
-                float m_flBarbedWireAuraRadius; // 0x012c, 0x4 bytes
-                std::uint8_t pad_0130[0x100]; // 0x0130, 0x100 bytes
+                VectorWS m_vecOrigin; // 0x0178, 0xc bytes
+                VectorWS m_vecWorldSpaceMins; // 0x0184, 0xc bytes
+                VectorWS m_vecWorldSpaceMaxs; // 0x0190, 0xc bytes
+                float m_flBarbedWireAuraRadius; // 0x019c, 0x4 bytes
+                std::uint8_t pad_01a0[0x160]; // 0x01a0, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Thumper_2_Aura) == 0x230, "CCitadel_Modifier_Thumper_2_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Thumper_2_Aura) == 0x300, "CCitadel_Modifier_Thumper_2_Aura size mismatch");
         }
     }
 }

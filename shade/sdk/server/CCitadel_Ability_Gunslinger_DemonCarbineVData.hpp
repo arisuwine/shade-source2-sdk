@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18c8
+             * Size: 0x1450
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Gunslinger_DemonCarbineVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flShotTimeScaleLingerDuration; // 0x1818, 0x4 bytes
-                std::uint8_t pad_181c[0x4]; // 0x181c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ChargingModifier; // 0x1820, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1830, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraDemonCarbineShotFired; // 0x1840, 0x88 bytes
+                float m_flShotTimeScaleLingerDuration; // 0x13a0, 0x4 bytes
+                std::uint8_t pad_13a4[0x4]; // 0x13a4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ChargingModifier; // 0x13a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13b8, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraDemonCarbineShotFired; // 0x13c8, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Gunslinger_DemonCarbineVData) == 0x18C8, "CCitadel_Ability_Gunslinger_DemonCarbineVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Gunslinger_DemonCarbineVData) == 0x1450, "CCitadel_Ability_Gunslinger_DemonCarbineVData size mismatch");
         }
     }
 }

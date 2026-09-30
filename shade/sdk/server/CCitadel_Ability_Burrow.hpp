@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1428
+             * Size: 0x1b08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Burrow : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x480]; // 0x0f70, 0x480 bytes
-                bool m_bInGround; // 0x13f0, 0x1 bytes
-                std::uint8_t pad_13f1[0x3]; // 0x13f1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x13f4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_SpinEndTime; // 0x13f8, 0x4 bytes
-                std::uint8_t pad_13fc[0x2c]; // 0x13fc, 0x2c bytes
+                std::uint8_t pad_14a0[0x630]; // 0x14a0, 0x630 bytes
+                bool m_bInGround; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1ad4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_SpinEndTime; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x2c]; // 0x1adc, 0x2c bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Burrow) == 0x1428, "CCitadel_Ability_Burrow size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Burrow) == 0x1B08, "CCitadel_Ability_Burrow size mismatch");
         }
     }
 }

@@ -12,10 +12,9 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
-
-#include "shade/sdk/client/DebugSnapshotBaseStructuredData_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,23 +28,26 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x40
+             * Size: 0x50
              * Alignment: 0x8
-             * Has VTable
              * Construct Allowed
              */
             #pragma pack(push, 1)
-            struct AI_Navigator_DebugSnapshotData_t : public shade::sdk::client::DebugSnapshotBaseStructuredData_t {
-                CGlobalSymbol s_npc_nav_authority; // 0x0008, 0x8 bytes
-                VectorWS goal_actual_pos; // 0x0010, 0xc bytes
-                VectorWS goal_base_pos; // 0x001c, 0xc bytes
-                CUtlVector<shade::sdk::client::AI_Navigator_DebugSnapshotData_t__Waypoint_t> waypoints; // 0x0028, 0x18 bytes
+            struct AI_Navigator_DebugSnapshotData_t {
+                CGlobalSymbol s_movement_id; // 0x0000, 0x8 bytes
+                std::uint32_t s_movement_serial_number; // 0x0008, 0x4 bytes
+                std::uint8_t pad_000c[0x4]; // 0x000c, 0x4 bytes
+                CUtlString s_goal_source_location; // 0x0010, 0x8 bytes
+                VectorWS last_waypoint_pos; // 0x0018, 0xc bytes
+                VectorWS goal_location; // 0x0024, 0xc bytes
+                CUtlVector<shade::sdk::client::AI_Navigator_DebugSnapshotData_t__Waypoint_t> waypoints; // 0x0030, 0x18 bytes
+                CGlobalSymbol s_arrival_movement_gait_set; // 0x0048, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_Navigator_DebugSnapshotData_t) == 0x40, "AI_Navigator_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_Navigator_DebugSnapshotData_t) == 0x50, "AI_Navigator_DebugSnapshotData_t size mismatch");
         }
     }
 }

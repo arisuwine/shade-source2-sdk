@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xde0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelItemPickup : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0cb0[0x18]; // 0x0cb0, 0x18 bytes
-                std::int32_t m_eLootType; // 0x0cc8, 0x4 bytes
-                std::int32_t m_nCurrencyValue; // 0x0ccc, 0x4 bytes
-                CUtlSymbolLarge m_iszModelName; // 0x0cd0, 0x8 bytes
-                float m_flModelScale; // 0x0cd8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetPlayer; // 0x0cdc, 0x4 bytes
-                float m_flFallRate; // 0x0ce0, 0x4 bytes
-                std::uint8_t pad_0ce4[0xc]; // 0x0ce4, 0xc bytes
+                std::uint8_t pad_0da8[0x10]; // 0x0da8, 0x10 bytes
+                std::int32_t m_eLootType; // 0x0db8, 0x4 bytes
+                std::int32_t m_nCurrencyValue; // 0x0dbc, 0x4 bytes
+                CUtlSymbolLarge m_iszModelName; // 0x0dc0, 0x8 bytes
+                float m_flModelScale; // 0x0dc8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetPlayer; // 0x0dcc, 0x4 bytes
+                float m_flFallRate; // 0x0dd0, 0x4 bytes
+                std::uint8_t pad_0dd4[0xc]; // 0x0dd4, 0xc bytes
             };
             #pragma pack(pop)
 
@@ -53,7 +54,7 @@ namespace shade {
              * bool from_crate; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_CitadelItemPickup) == 0xCF0, "C_CitadelItemPickup size mismatch");
+            static_assert(sizeof(C_CitadelItemPickup) == 0xDE0, "C_CitadelItemPickup size mismatch");
         }
     }
 }

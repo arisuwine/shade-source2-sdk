@@ -12,11 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/entity2/CEntityIOOutput.hpp"
 #include "shade/sdk/server/CLogicalEntity.hpp"
+#include "shade/sdk/server/CTestPulseIOComponent_Derived.hpp"
 #include "shade/sdk/server/TestInputOutputCombinationsEnum_t.hpp"
 
 namespace shade {
@@ -35,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x7a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,43 +46,36 @@ namespace shade {
             #pragma pack(push, 1)
             class CTestPulseIO : public shade::sdk::server::CLogicalEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnVariantVoid; // 0x04a0, 0x18 bytes
-                CEntityOutputTemplate<bool> m_OnVariantBool; // 0x04b8, 0x20 bytes
-                CEntityOutputTemplate<std::int32_t> m_OnVariantInt; // 0x04d8, 0x20 bytes
-                CEntityOutputTemplate<float> m_OnVariantFloat; // 0x04f8, 0x20 bytes
-                CEntityOutputTemplate<CUtlSymbolLarge> m_OnVariantString; // 0x0518, 0x20 bytes
-                CEntityOutputTemplate<Color> m_OnVariantColor; // 0x0538, 0x20 bytes
-                CEntityOutputTemplate<Vector> m_OnVariantVector; // 0x0558, 0x28 bytes
-                bool m_bAllowEmptyInputs; // 0x0580, 0x1 bytes
-                std::uint8_t pad_0581[0x7]; // 0x0581, 0x7 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnInternalTestVoid; // 0x0588, 0x18 bytes
-                CEntityOutputTemplate<bool> m_OnInternalTestBool; // 0x05a0, 0x20 bytes
-                CEntityOutputTemplate<std::int32_t> m_OnInternalTestInt; // 0x05c0, 0x20 bytes
-                CEntityOutputTemplate<float> m_OnInternalTestFloat; // 0x05e0, 0x20 bytes
-                CEntityOutputTemplate<CUtlSymbolLarge> m_OnInternalTestString; // 0x0600, 0x20 bytes
-                CEntityOutputTemplate<Color> m_OnInternalTestColor; // 0x0620, 0x20 bytes
-                CEntityOutputTemplate<Vector> m_OnInternalTestVector; // 0x0640, 0x28 bytes
-                CEntityOutputTemplate<CEntityNameString> m_OnInternalTestEntityName; // 0x0668, 0x20 bytes
-                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnInternalTestEntityHandle; // 0x0688, 0x20 bytes
-                CEntityOutputTemplate<shade::sdk::server::TestInputOutputCombinationsEnum_t> m_OnInternalTestSchemaEnum; // 0x06a8, 0x20 bytes
-                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__FloatStringArgs_t> m_OnInternalTestFloatString; // 0x06c8, 0x28 bytes
-                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__EntityNameStringArgs_t> m_OnInternalTestEntityNameString; // 0x06f0, 0x28 bytes
-                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__EntityHandleIntArgs_t> m_OnInternalTestEntityHandleInt; // 0x0718, 0x20 bytes
-                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__ThreeStringArgs_t> m_OnInternalTestStringStringString; // 0x0738, 0x30 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnVariantVoid; // 0x04b0, 0x18 bytes
+                CEntityOutputTemplate<bool> m_OnVariantBool; // 0x04c8, 0x20 bytes
+                CEntityOutputTemplate<std::int32_t> m_OnVariantInt; // 0x04e8, 0x20 bytes
+                CEntityOutputTemplate<float> m_OnVariantFloat; // 0x0508, 0x20 bytes
+                CEntityOutputTemplate<CUtlSymbolLarge> m_OnVariantString; // 0x0528, 0x20 bytes
+                CEntityOutputTemplate<Color> m_OnVariantColor; // 0x0548, 0x20 bytes
+                CEntityOutputTemplate<Vector> m_OnVariantVector; // 0x0568, 0x28 bytes
+                bool m_bAllowEmptyInputs; // 0x0590, 0x1 bytes
+                std::uint8_t pad_0591[0x7]; // 0x0591, 0x7 bytes
+                shade::sdk::server::CTestPulseIOComponent_Derived m_TestComponent; // 0x0598, 0x30 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnInternalTestVoid; // 0x05c8, 0x18 bytes
+                CEntityOutputTemplate<bool> m_OnInternalTestBool; // 0x05e0, 0x20 bytes
+                CEntityOutputTemplate<std::int32_t> m_OnInternalTestInt; // 0x0600, 0x20 bytes
+                CEntityOutputTemplate<float> m_OnInternalTestFloat; // 0x0620, 0x20 bytes
+                CEntityOutputTemplate<CUtlSymbolLarge> m_OnInternalTestString; // 0x0640, 0x20 bytes
+                CEntityOutputTemplate<Color> m_OnInternalTestColor; // 0x0660, 0x20 bytes
+                CEntityOutputTemplate<Vector> m_OnInternalTestVector; // 0x0680, 0x28 bytes
+                CEntityOutputTemplate<CEntityNameString> m_OnInternalTestEntityName; // 0x06a8, 0x20 bytes
+                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnInternalTestEntityHandle; // 0x06c8, 0x20 bytes
+                CEntityOutputTemplate<shade::sdk::server::TestInputOutputCombinationsEnum_t> m_OnInternalTestSchemaEnum; // 0x06e8, 0x20 bytes
+                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__FloatStringArgs_t> m_OnInternalTestFloatString; // 0x0708, 0x28 bytes
+                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__EntityNameStringArgs_t> m_OnInternalTestEntityNameString; // 0x0730, 0x28 bytes
+                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__EntityHandleIntArgs_t> m_OnInternalTestEntityHandleInt; // 0x0758, 0x20 bytes
+                CEntityOutputTemplate<shade::sdk::server::CTestPulseIO__ThreeStringArgs_t> m_OnInternalTestStringStringString; // 0x0778, 0x30 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputVariantVoid; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputVariantBool; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputVariantInt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputVariantFloat; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputVariantString; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Color InputVariantColor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Vector InputVariantVector; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTestPulseIO) == 0x768, "CTestPulseIO size mismatch");
+            static_assert(sizeof(CTestPulseIO) == 0x7A8, "CTestPulseIO size mismatch");
         }
     }
 }

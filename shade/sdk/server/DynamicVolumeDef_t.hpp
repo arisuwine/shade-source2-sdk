@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -28,16 +29,17 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x30
-             * Alignment: 0xff
+             * Alignment: 0x4
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct DynamicVolumeDef_t {
                 CHandle<shade::sdk::server::CBaseEntity> m_source; // 0x0000, 0x4 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_target; // 0x0004, 0x4 bytes
                 std::int32_t m_nHullIdx; // 0x0008, 0x4 bytes
-                Vector m_vSourceAnchorPos; // 0x000c, 0xc bytes
-                Vector m_vTargetAnchorPos; // 0x0018, 0xc bytes
+                VectorWS m_vSourceAnchorPos; // 0x000c, 0xc bytes
+                VectorWS m_vTargetAnchorPos; // 0x0018, 0xc bytes
                 std::uint32_t m_nAreaSrc; // 0x0024, 0x4 bytes
                 std::uint32_t m_nAreaDst; // 0x0028, 0x4 bytes
                 bool m_bAttached; // 0x002c, 0x1 bytes

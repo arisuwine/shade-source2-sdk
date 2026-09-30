@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,24 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CFogVolume : public shade::sdk::server::CServerOnlyModelEntity {
             public:
-                CUtlSymbolLarge m_fogName; // 0x0780, 0x8 bytes
-                CUtlSymbolLarge m_postProcessName; // 0x0788, 0x8 bytes
-                CUtlSymbolLarge m_colorCorrectionName; // 0x0790, 0x8 bytes
-                std::uint8_t pad_0798[0x8]; // 0x0798, 0x8 bytes
-                bool m_bDisabled; // 0x07a0, 0x1 bytes
-                bool m_bInFogVolumesList; // 0x07a1, 0x1 bytes
-                std::uint8_t pad_07a2[0x6]; // 0x07a2, 0x6 bytes
+                CUtlSymbolLarge m_fogName; // 0x0878, 0x8 bytes
+                CUtlSymbolLarge m_postProcessName; // 0x0880, 0x8 bytes
+                CUtlSymbolLarge m_colorCorrectionName; // 0x0888, 0x8 bytes
+                std::uint8_t pad_0890[0x8]; // 0x0890, 0x8 bytes
+                bool m_bDisabled; // 0x0898, 0x1 bytes
+                bool m_bInFogVolumesList; // 0x0899, 0x1 bytes
+                std::uint8_t pad_089a[0x6]; // 0x089a, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CHandle<CBaseEntity> m_hFogController; // Offset: 0x798, Size: 0x1, Size In Bytes: 0x4
-             * CHandle<CBaseEntity> m_hColorCorrectionController; // Offset: 0x79c, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFogVolume) == 0x7A8, "CFogVolume size mismatch");
+            static_assert(sizeof(CFogVolume) == 0x8A0, "CFogVolume size mismatch");
         }
     }
 }

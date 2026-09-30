@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x2480
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_GoatFlip : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0xb80]; // 0x0f70, 0xb80 bytes
-                shade::sdk::client::PG_RisingRamState m_eState; // 0x1af0, 0x1 bytes
-                std::uint8_t pad_1af1[0x3]; // 0x1af1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tStateStartTime; // 0x1af4, 0x4 bytes
-                float m_flGoingUpTargetElevation; // 0x1af8, 0x4 bytes
-                float m_flGoingUpStartElevation; // 0x1afc, 0x4 bytes
+                std::uint8_t pad_14a0[0xfd0]; // 0x14a0, 0xfd0 bytes
+                shade::sdk::client::PG_RisingRamState m_eState; // 0x2470, 0x1 bytes
+                std::uint8_t pad_2471[0x3]; // 0x2471, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tStateStartTime; // 0x2474, 0x4 bytes
+                float m_flGoingUpTargetElevation; // 0x2478, 0x4 bytes
+                float m_flGoingUpStartElevation; // 0x247c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_GoatFlip) == 0x1B00, "CCitadel_Ability_PunkGoat_GoatFlip size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_GoatFlip) == 0x2480, "CCitadel_Ability_PunkGoat_GoatFlip size mismatch");
         }
     }
 }

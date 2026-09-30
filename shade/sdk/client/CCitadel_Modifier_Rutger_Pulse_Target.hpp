@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2d0
+             * Size: 0x400
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Rutger_Pulse_Target : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x200]; // 0x00c0, 0x200 bytes
-                Vector m_vAuraCenter; // 0x02c0, 0xc bytes
-                std::uint8_t pad_02cc[0x4]; // 0x02cc, 0x4 bytes
+                std::uint8_t pad_0130[0x2c0]; // 0x0130, 0x2c0 bytes
+                VectorWS m_vAuraCenter; // 0x03f0, 0xc bytes
+                std::uint8_t pad_03fc[0x4]; // 0x03fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Rutger_Pulse_Target) == 0x2D0, "CCitadel_Modifier_Rutger_Pulse_Target size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Rutger_Pulse_Target) == 0x400, "CCitadel_Modifier_Rutger_Pulse_Target size mismatch");
         }
     }
 }

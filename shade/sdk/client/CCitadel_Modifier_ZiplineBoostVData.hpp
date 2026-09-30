@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7e8
+             * Size: 0x7f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ZiplineBoostVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flRampUpTime; // 0x0750, 0x4 bytes
-                float m_flPercentageSpeedIncreaseRampFrom; // 0x0754, 0x4 bytes
-                float m_flPercentageSpeedIncreaseRampTo; // 0x0758, 0x4 bytes
-                std::uint8_t pad_075c[0x4]; // 0x075c, 0x4 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceStartBoost; // 0x0760, 0x88 bytes
+                float m_flRampUpTime; // 0x0760, 0x4 bytes
+                float m_flPercentageSpeedIncreaseRampFrom; // 0x0764, 0x4 bytes
+                float m_flPercentageSpeedIncreaseRampTo; // 0x0768, 0x4 bytes
+                std::uint8_t pad_076c[0x4]; // 0x076c, 0x4 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceStartBoost; // 0x0770, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ZiplineBoostVData) == 0x7E8, "CCitadel_Modifier_ZiplineBoostVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ZiplineBoostVData) == 0x7F8, "CCitadel_Modifier_ZiplineBoostVData size mismatch");
         }
     }
 }

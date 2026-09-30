@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCredits : public shade::sdk::server::CPointEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnCreditsDone; // 0x04a0, 0x18 bytes
-                bool m_bRolledOutroCredits; // 0x04b8, 0x1 bytes
-                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
-                float m_flLogoLength; // 0x04bc, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnCreditsDone; // 0x04b0, 0x18 bytes
+                bool m_bRolledOutroCredits; // 0x04c8, 0x1 bytes
+                std::uint8_t pad_04c9[0x3]; // 0x04c9, 0x3 bytes
+                float m_flLogoLength; // 0x04cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputRollCredits; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputRollOutroCredits; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputShowLogo; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLogoLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCredits) == 0x4C0, "CCredits size mismatch");
+            static_assert(sizeof(CCredits) == 0x4D0, "CCredits size mismatch");
         }
     }
 }

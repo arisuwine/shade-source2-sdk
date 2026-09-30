@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x888
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CRevertSaved : public shade::sdk::server::CModelPointEntity {
             public:
-                float m_loadTime; // 0x0780, 0x4 bytes
-                float m_Duration; // 0x0784, 0x4 bytes
-                float m_HoldTime; // 0x0788, 0x4 bytes
-                std::uint8_t pad_078c[0x4]; // 0x078c, 0x4 bytes
+                float m_loadTime; // 0x0878, 0x4 bytes
+                float m_Duration; // 0x087c, 0x4 bytes
+                float m_HoldTime; // 0x0880, 0x4 bytes
+                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputReload; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CRevertSavedLoadThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CRevertSaved) == 0x790, "CRevertSaved size mismatch");
+            static_assert(sizeof(CRevertSaved) == 0x888, "CRevertSaved size mismatch");
         }
     }
 }

@@ -12,11 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CEntitySubclassVDataBase.hpp"
-#include "shade/sdk/client/ENeutralTrooperType.hpp"
+#include "shade/sdk/client/ENeutralNPCType.hpp"
 
 namespace shade {
     namespace sdk {
@@ -35,8 +36,8 @@ namespace shade {
                 std::int32_t m_iSpawnIntervalInSeconds; // 0x002c, 0x4 bytes
                 std::int32_t m_iSpawnIntervalChange; // 0x0030, 0x4 bytes
                 std::int32_t m_iSpawnIntervalMin; // 0x0034, 0x4 bytes
-                shade::sdk::client::ENeutralTrooperType m_eNeutralType; // 0x0038, 0x4 bytes
-                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
+                float m_flNeutralMovementRadius; // 0x0038, 0x4 bytes
+                shade::sdk::client::ENeutralNPCType m_eNeutralType; // 0x003c, 0x4 bytes
                 CSoundEventName m_sIdleAmbient; // 0x0040, 0x10 bytes
                 CSoundEventName m_sAlertAmbient; // 0x0050, 0x10 bytes
             };

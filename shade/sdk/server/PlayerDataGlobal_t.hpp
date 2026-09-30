@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x340
+             * Size: 0x348
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -52,62 +53,64 @@ namespace shade {
                 shade::sdk::client::HeroID_t m_nHeroID; // 0x001c, 0x4 bytes
                 shade::sdk::client::HeroID_t m_nPreGameHeroID; // 0x0020, 0x4 bytes
                 shade::sdk::client::HeroBadgeXP_t m_unHeroBadgeXP; // 0x0024, 0x4 bytes
-                std::int32_t m_iGoldNetWorth; // 0x0028, 0x4 bytes
-                std::int32_t m_iAPNetWorth; // 0x002c, 0x4 bytes
-                std::int32_t m_iCreepGold; // 0x0030, 0x4 bytes
-                std::int32_t m_iCreepGoldSoloBonus; // 0x0034, 0x4 bytes
-                std::int32_t m_iCreepGoldKill; // 0x0038, 0x4 bytes
-                std::int32_t m_iCreepGoldAirOrb; // 0x003c, 0x4 bytes
-                std::int32_t m_iCreepGoldGroundOrb; // 0x0040, 0x4 bytes
-                std::int32_t m_iCreepGoldDeny; // 0x0044, 0x4 bytes
-                std::int32_t m_iCreepGoldNeutral; // 0x0048, 0x4 bytes
-                std::int32_t m_iFarmBaseline; // 0x004c, 0x4 bytes
-                std::int32_t m_iHealth; // 0x0050, 0x4 bytes
-                std::int32_t m_iPlayerKills; // 0x0054, 0x4 bytes
-                std::int32_t m_iPlayerAssists; // 0x0058, 0x4 bytes
-                std::int32_t m_iDeaths; // 0x005c, 0x4 bytes
-                std::int32_t m_iDenies; // 0x0060, 0x4 bytes
-                std::int32_t m_iLastHits; // 0x0064, 0x4 bytes
-                std::int32_t m_iKillStreak; // 0x0068, 0x4 bytes
-                bool m_bAlive; // 0x006c, 0x1 bytes
-                std::uint8_t pad_006d[0x3]; // 0x006d, 0x3 bytes
-                std::int32_t m_nHeroDraftPosition; // 0x0070, 0x4 bytes
-                bool m_bUltimateTrained; // 0x0074, 0x1 bytes
+                std::int32_t m_iGold; // 0x0028, 0x4 bytes
+                std::int32_t m_iGoldNetWorth; // 0x002c, 0x4 bytes
+                std::int32_t m_iAPNetWorth; // 0x0030, 0x4 bytes
+                std::int32_t m_iCreepGold; // 0x0034, 0x4 bytes
+                std::int32_t m_iCreepGoldSoloBonus; // 0x0038, 0x4 bytes
+                std::int32_t m_iCreepGoldKill; // 0x003c, 0x4 bytes
+                std::int32_t m_iCreepGoldAirOrb; // 0x0040, 0x4 bytes
+                std::int32_t m_iCreepGoldGroundOrb; // 0x0044, 0x4 bytes
+                std::int32_t m_iCreepGoldDeny; // 0x0048, 0x4 bytes
+                std::int32_t m_iCreepGoldNeutral; // 0x004c, 0x4 bytes
+                std::int32_t m_iFarmBaseline; // 0x0050, 0x4 bytes
+                std::int32_t m_iHealth; // 0x0054, 0x4 bytes
+                std::int32_t m_iPlayerKills; // 0x0058, 0x4 bytes
+                std::int32_t m_iNPCKills; // 0x005c, 0x4 bytes
+                std::int32_t m_iPlayerAssists; // 0x0060, 0x4 bytes
+                std::int32_t m_iDeaths; // 0x0064, 0x4 bytes
+                std::int32_t m_iDenies; // 0x0068, 0x4 bytes
+                std::int32_t m_iLastHits; // 0x006c, 0x4 bytes
+                std::int32_t m_iKillStreak; // 0x0070, 0x4 bytes
+                bool m_bAlive; // 0x0074, 0x1 bytes
                 std::uint8_t pad_0075[0x3]; // 0x0075, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flUltimateCooldownStart; // 0x0078, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flUltimateCooldownEnd; // 0x007c, 0x4 bytes
-                bool m_bHasRejuvenator; // 0x0080, 0x1 bytes
-                bool m_bHasRebirth; // 0x0081, 0x1 bytes
-                bool m_bFlaggedAsCheater; // 0x0082, 0x1 bytes
-                bool m_bAbandon; // 0x0083, 0x1 bytes
-                std::int32_t m_iHeroDamage; // 0x0084, 0x4 bytes
-                std::int32_t m_iHeroHealing; // 0x0088, 0x4 bytes
-                std::int32_t m_iSelfHealing; // 0x008c, 0x4 bytes
-                std::int32_t m_iObjectiveDamage; // 0x0090, 0x4 bytes
-                std::uint8_t pad_0094[0x4]; // 0x0094, 0x4 bytes
-                CNetworkUtlVectorBase<CUtlStringToken> m_vecUpgrades; // 0x0098, 0x18 bytes
-                CNetworkUtlVectorBase<CUtlStringToken> m_vecBonusCounterAbilities; // 0x00b0, 0x18 bytes
-                CNetworkUtlVectorBase<std::int32_t> m_vecBonusCounterValues; // 0x00c8, 0x18 bytes
-                CNetworkUtlVectorBase<CUtlStringToken> m_vecBonusCounterModifiers; // 0x00e0, 0x18 bytes
-                CNetworkUtlVectorBase<std::int32_t> m_vecModifierBonusCounterValues; // 0x00f8, 0x18 bytes
-                CUtlStringToken m_tHeldItem; // 0x0110, 0x4 bytes
-                std::uint8_t pad_0114[0x4]; // 0x0114, 0x4 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ItemImbuementPair_t> m_vecImbuements; // 0x0118, 0x68 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::DynamicAbilityValues_t> m_vecDynamicAbilityValues; // 0x0180, 0x68 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::StatViewerModifierValues_t> m_vecStatViewerModifierValues; // 0x01e8, 0x68 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::StolenAbilityPair_t> m_vecStolenAbilities; // 0x0250, 0x68 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::AbilityUpgradeState_t> m_vecAbilityUpgradeState; // 0x02b8, 0x68 bytes
-                CUtlString m_strIconHeroCardOverride; // 0x0320, 0x8 bytes
-                CUtlString m_strIconHeroCardCriticalOverride; // 0x0328, 0x8 bytes
-                CUtlString m_strIconHeroCardGloatOverride; // 0x0330, 0x8 bytes
-                shade::sdk::client::PackedRank_t m_unPackedRank; // 0x0338, 0x1 bytes
-                std::uint8_t pad_0339[0x7]; // 0x0339, 0x7 bytes
+                std::int32_t m_nHeroDraftPosition; // 0x0078, 0x4 bytes
+                bool m_bUltimateTrained; // 0x007c, 0x1 bytes
+                std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flUltimateCooldownStart; // 0x0080, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flUltimateCooldownEnd; // 0x0084, 0x4 bytes
+                bool m_bHasRejuvenator; // 0x0088, 0x1 bytes
+                bool m_bHasRebirth; // 0x0089, 0x1 bytes
+                bool m_bFlaggedAsCheater; // 0x008a, 0x1 bytes
+                bool m_bAbandon; // 0x008b, 0x1 bytes
+                std::int32_t m_iHeroDamage; // 0x008c, 0x4 bytes
+                std::int32_t m_iHeroHealing; // 0x0090, 0x4 bytes
+                std::int32_t m_iSelfHealing; // 0x0094, 0x4 bytes
+                std::int32_t m_iObjectiveDamage; // 0x0098, 0x4 bytes
+                std::uint8_t pad_009c[0x4]; // 0x009c, 0x4 bytes
+                CNetworkUtlVectorBase<CUtlStringToken> m_vecUpgrades; // 0x00a0, 0x18 bytes
+                CNetworkUtlVectorBase<CUtlStringToken> m_vecBonusCounterAbilities; // 0x00b8, 0x18 bytes
+                CNetworkUtlVectorBase<std::int32_t> m_vecBonusCounterValues; // 0x00d0, 0x18 bytes
+                CNetworkUtlVectorBase<CUtlStringToken> m_vecBonusCounterModifiers; // 0x00e8, 0x18 bytes
+                CNetworkUtlVectorBase<std::int32_t> m_vecModifierBonusCounterValues; // 0x0100, 0x18 bytes
+                CUtlStringToken m_tHeldItem; // 0x0118, 0x4 bytes
+                std::uint8_t pad_011c[0x4]; // 0x011c, 0x4 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ItemImbuementPair_t> m_vecImbuements; // 0x0120, 0x68 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::DynamicAbilityValues_t> m_vecDynamicAbilityValues; // 0x0188, 0x68 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::StatViewerModifierValues_t> m_vecStatViewerModifierValues; // 0x01f0, 0x68 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::StolenAbilityPair_t> m_vecStolenAbilities; // 0x0258, 0x68 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::AbilityUpgradeState_t> m_vecAbilityUpgradeState; // 0x02c0, 0x68 bytes
+                CUtlString m_strIconHeroCardOverride; // 0x0328, 0x8 bytes
+                CUtlString m_strIconHeroCardCriticalOverride; // 0x0330, 0x8 bytes
+                CUtlString m_strIconHeroCardGloatOverride; // 0x0338, 0x8 bytes
+                shade::sdk::client::PackedRank_t m_unPackedRank; // 0x0340, 0x1 bytes
+                std::uint8_t pad_0341[0x7]; // 0x0341, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PlayerDataGlobal_t) == 0x340, "PlayerDataGlobal_t size mismatch");
+            static_assert(sizeof(PlayerDataGlobal_t) == 0x348, "PlayerDataGlobal_t size mismatch");
         }
     }
 }

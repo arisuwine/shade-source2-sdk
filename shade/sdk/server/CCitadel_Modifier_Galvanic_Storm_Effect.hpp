@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x430
+             * Size: 0x5c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Galvanic_Storm_Effect : public shade::sdk::server::CCitadel_Modifier_ChainLightningEffect {
             public:
-                std::uint8_t pad_03b0[0x80]; // 0x03b0, 0x80 bytes
+                std::uint8_t pad_0510[0xb0]; // 0x0510, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Galvanic_Storm_Effect) == 0x430, "CCitadel_Modifier_Galvanic_Storm_Effect size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Galvanic_Storm_Effect) == 0x5C0, "CCitadel_Modifier_Galvanic_Storm_Effect size mismatch");
         }
     }
 }

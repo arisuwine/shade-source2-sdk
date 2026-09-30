@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticalPianoVData : public shade::sdk::server::CCitadelModifierAuraVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StunModifier; // 0x07a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DazeModifier; // 0x07b8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x07c8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StunModifier; // 0x07b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DazeModifier; // 0x07c8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x07d8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticalPianoVData) == 0x8A8, "CCitadel_Modifier_MysticalPianoVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticalPianoVData) == 0x8B8, "CCitadel_Modifier_MysticalPianoVData size mismatch");
         }
     }
 }

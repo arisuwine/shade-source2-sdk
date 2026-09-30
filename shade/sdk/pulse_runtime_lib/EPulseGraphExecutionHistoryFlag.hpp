@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -21,8 +22,11 @@ namespace shade {
                 CURSOR_ADD_TAG = 0x1,
                 CURSOR_REMOVE_TAG = 0x2,
                 CURSOR_RETIRED = 0x4,
-                REQUIREMENT_PASS = 0x8,
-                REQUIREMENT_FAIL = 0x10
+                CURSOR_CREATE_CHILD = 0x8,
+                REQUIREMENT_PASS = 0x10,
+                REQUIREMENT_FAIL = 0x20,
+                CALL_TO_PULSE = 0x40,
+                RETURN = 0x80
             };
         }
     }

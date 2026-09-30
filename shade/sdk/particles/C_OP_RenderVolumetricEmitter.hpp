@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -26,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1ca0
+             * Size: 0x2290
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,28 +35,28 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderVolumetricEmitter : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                CUtlString m_strSmokeType; // 0x0228, 0x8 bytes
-                shade::sdk::particles::ParticleVolumetricSmokeType_t m_nType; // 0x0230, 0x4 bytes
-                shade::sdk::particles::ParticleVolumetricSmokeCreationType_t m_nCreationType; // 0x0234, 0x4 bytes
-                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x0238, 0x4 bytes
-                std::uint8_t pad_023c[0x4]; // 0x023c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecPos; // 0x0240, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecVelocity; // 0x08f8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x0fb0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flDensity; // 0x1120, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flTemperature; // 0x1290, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flFuel; // 0x1400, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flDust; // 0x1570, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLifespan; // 0x16e0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMagnitude; // 0x1850, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flKillRadius; // 0x19c0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flFalloff; // 0x1b30, 0x170 bytes
+                CUtlString m_strChannelType; // 0x0230, 0x8 bytes
+                shade::sdk::particles::ParticleVolumetricSmokeType_t m_nType; // 0x0238, 0x4 bytes
+                shade::sdk::particles::ParticleVolumetricSmokeCreationType_t m_nCreationType; // 0x023c, 0x4 bytes
+                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x0240, 0x4 bytes
+                std::uint8_t pad_0244[0x4]; // 0x0244, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecPos; // 0x0248, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecVelocity; // 0x0920, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vPrevPosition; // 0x0ff8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flSpeed; // 0x16d0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x1848, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flDensity; // 0x19c0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flTemperature; // 0x1b38, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMagnitude; // 0x1cb0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flKillRadius; // 0x1e28, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flKillDensityScale; // 0x1fa0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flFalloff; // 0x2118, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderVolumetricEmitter) == 0x1CA0, "C_OP_RenderVolumetricEmitter size mismatch");
+            static_assert(sizeof(C_OP_RenderVolumetricEmitter) == 0x2290, "C_OP_RenderVolumetricEmitter size mismatch");
         }
     }
 }

@@ -12,11 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CAI_CitadelNPCVData.hpp"
-#include "shade/sdk/client/CCitadelWeaponInfo.hpp"
 #include "shade/sdk/client/TrooperType_t.hpp"
 #include "shade/sdk/client/TrooperVsConfig_t.hpp"
 
@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x23e0
+             * Size: 0x1528
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,48 +45,44 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_NPC_TrooperVData : public shade::sdk::client::CAI_CitadelNPCVData {
             public:
-                shade::sdk::client::TrooperType_t m_TrooperType; // 0x1348, 0x4 bytes
-                float m_flNearDeathDuration; // 0x134c, 0x4 bytes
-                float m_flFlySpeed; // 0x1350, 0x4 bytes
-                float m_flFlyHeight; // 0x1354, 0x4 bytes
-                float m_flMeleeDamage; // 0x1358, 0x4 bytes
-                float m_flMeleeDuration; // 0x135c, 0x4 bytes
-                float m_flMeleeChargeRange; // 0x1360, 0x4 bytes
-                float m_flHealthBarOffsetDucking; // 0x1364, 0x4 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSPlayer; // 0x1368, 0x14 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSTrooper; // 0x137c, 0x14 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSGuardian; // 0x1390, 0x14 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSWalker; // 0x13a4, 0x14 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSWatcher; // 0x13b8, 0x14 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSShrine; // 0x13cc, 0x14 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSPatron; // 0x13e0, 0x14 bytes
-                shade::sdk::client::TrooperVsConfig_t m_VSPatronPhase2; // 0x13f4, 0x14 bytes
-                float m_flDPSPctGrowthPerMinute; // 0x1408, 0x4 bytes
-                bool m_bBossWeaponEnabled; // 0x140c, 0x1 bytes
-                std::uint8_t pad_140d[0x3]; // 0x140d, 0x3 bytes
-                shade::sdk::client::CCitadelWeaponInfo m_BossWeapon; // 0x1410, 0x778 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BossAttackParticle; // 0x1b88, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LastHitParticle; // 0x1c68, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingLaserParticle; // 0x1d48, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingEyeFlashParticle; // 0x1e28, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sZiplineContainerBreakFromDamageParticle; // 0x1f08, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sZiplineContainerBreakFromLandingParticle; // 0x1fe8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MedicHealActiveParticle; // 0x20c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeadHealthChangeAmberParticle; // 0x21a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeadHealthChangeSapphireParticle; // 0x2288, 0xe0 bytes
-                CSoundEventName m_sPlayerLastHitSound; // 0x2368, 0x10 bytes
-                CSoundEventName m_sCelebrationSound; // 0x2378, 0x10 bytes
-                CSoundEventName m_sZiplineContainerBreakSound; // 0x2388, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NearDeathModifier; // 0x2398, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShrinesDownBuffModifier; // 0x23a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NpcOutOfCombatRegenModifier; // 0x23b8, 0x10 bytes
-                std::uint8_t pad_23c8[0x18]; // 0x23c8, 0x18 bytes
+                shade::sdk::client::TrooperType_t m_TrooperType; // 0x0c30, 0x4 bytes
+                float m_flNearDeathDuration; // 0x0c34, 0x4 bytes
+                float m_flFlySpeed; // 0x0c38, 0x4 bytes
+                float m_flFlyHeight; // 0x0c3c, 0x4 bytes
+                float m_flMeleeDamage; // 0x0c40, 0x4 bytes
+                float m_flMeleeDuration; // 0x0c44, 0x4 bytes
+                float m_flMeleeHitTime; // 0x0c48, 0x4 bytes
+                float m_flMeleeChargeRange; // 0x0c4c, 0x4 bytes
+                float m_flDPSPctGrowthPerMinute; // 0x0c50, 0x4 bytes
+                std::uint8_t pad_0c54[0x4]; // 0x0c54, 0x4 bytes
+                CGlobalSymbol m_BossWeaponName; // 0x0c58, 0x8 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSPlayer; // 0x0c60, 0x14 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSTrooper; // 0x0c74, 0x14 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSGuardian; // 0x0c88, 0x14 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSWalker; // 0x0c9c, 0x14 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSWatcher; // 0x0cb0, 0x14 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSShrine; // 0x0cc4, 0x14 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSPatron; // 0x0cd8, 0x14 bytes
+                shade::sdk::client::TrooperVsConfig_t m_VSPatronPhase2; // 0x0cec, 0x14 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BossAttackParticle; // 0x0d00, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LastHitParticle; // 0x0de0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingLaserParticle; // 0x0ec0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingEyeFlashParticle; // 0x0fa0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sZiplineContainerBreakFromDamageParticle; // 0x1080, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sZiplineContainerBreakFromLandingParticle; // 0x1160, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MedicHealActiveParticle; // 0x1240, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeadHealthChangeAmberParticle; // 0x1320, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeadHealthChangeSapphireParticle; // 0x1400, 0xe0 bytes
+                CSoundEventName m_sPlayerLastHitSound; // 0x14e0, 0x10 bytes
+                CSoundEventName m_sZiplineContainerBreakSound; // 0x14f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShrinesDownBuffModifier; // 0x1500, 0x10 bytes
+                std::uint8_t pad_1510[0x18]; // 0x1510, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_NPC_TrooperVData) == 0x23E0, "CAI_NPC_TrooperVData size mismatch");
+            static_assert(sizeof(CAI_NPC_TrooperVData) == 0x1528, "CAI_NPC_TrooperVData size mismatch");
         }
     }
 }

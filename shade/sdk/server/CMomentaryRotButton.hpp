@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9b8
+             * Size: 0xab0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,37 +32,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CMomentaryRotButton : public shade::sdk::server::CRotButton {
             public:
-                CEntityOutputTemplate<float> m_Position; // 0x0900, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUnpressed; // 0x0920, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x0938, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x0950, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnReachedPosition; // 0x0968, 0x18 bytes
-                std::int32_t m_lastUsed; // 0x0980, 0x4 bytes
-                QAngle m_start; // 0x0984, 0xc bytes
-                QAngle m_end; // 0x0990, 0xc bytes
-                float m_IdealYaw; // 0x099c, 0x4 bytes
-                CUtlSymbolLarge m_sNoise; // 0x09a0, 0x8 bytes
-                bool m_bUpdateTarget; // 0x09a8, 0x1 bytes
-                std::uint8_t pad_09a9[0x3]; // 0x09a9, 0x3 bytes
-                std::int32_t m_direction; // 0x09ac, 0x4 bytes
-                float m_returnSpeed; // 0x09b0, 0x4 bytes
-                float m_flStartPosition; // 0x09b4, 0x4 bytes
+                CEntityOutputTemplate<float> m_Position; // 0x09f8, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUnpressed; // 0x0a18, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x0a30, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x0a48, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnReachedPosition; // 0x0a60, 0x18 bytes
+                std::int32_t m_lastUsed; // 0x0a78, 0x4 bytes
+                QAngle m_start; // 0x0a7c, 0xc bytes
+                QAngle m_end; // 0x0a88, 0xc bytes
+                float m_IdealYaw; // 0x0a94, 0x4 bytes
+                CUtlSymbolLarge m_sNoise; // 0x0a98, 0x8 bytes
+                bool m_bUpdateTarget; // 0x0aa0, 0x1 bytes
+                std::uint8_t pad_0aa1[0x3]; // 0x0aa1, 0x3 bytes
+                std::int32_t m_direction; // 0x0aa4, 0x4 bytes
+                float m_returnSpeed; // 0x0aa8, 0x4 bytes
+                float m_flStartPosition; // 0x0aac, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * bool m_bSolidBsp; // Offset: 0x858, Size: 0x1, Size In Bytes: 0x1
-             * void CMomentaryRotButtonUseMoveDone; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CMomentaryRotButtonReturnMoveDone; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CMomentaryRotButtonSetPositionMoveDone; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CMomentaryRotButtonUpdateThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPositionImmediately; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableUpdateTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableUpdateTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * bool m_bSolidBsp; // Offset: 0x954, Size: 0x1, Size In Bytes: 0x1
              */
 
-            static_assert(sizeof(CMomentaryRotButton) == 0x9B8, "CMomentaryRotButton size mismatch");
+            static_assert(sizeof(CMomentaryRotButton) == 0xAB0, "CMomentaryRotButton size mismatch");
         }
     }
 }

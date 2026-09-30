@@ -12,17 +12,17 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CSimpleSimTimer.hpp"
 #include "shade/sdk/server/CAI_LocalNavigatorBase.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x118
+             * Size: 0x50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_LocalNavigator : public shade::sdk::server::CAI_LocalNavigatorBase {
             public:
-                bool m_bLastWasClear; // 0x0060, 0x1 bytes
-                std::uint8_t pad_0061[0x9f]; // 0x0061, 0x9f bytes
-                shade::sdk::client::CSimpleSimTimer m_FullDirectTimer; // 0x0100, 0x8 bytes
-                std::uint8_t pad_0108[0x10]; // 0x0108, 0x10 bytes
+                std::uint8_t pad_0048[0x8]; // 0x0048, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_LocalNavigator) == 0x118, "CAI_LocalNavigator size mismatch");
+            static_assert(sizeof(CAI_LocalNavigator) == 0x50, "CAI_LocalNavigator size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,16 +21,8 @@
 namespace shade {
     namespace sdk {
         namespace server {
-            class CBaseEntity;
-        }
-    }
-}
-
-namespace shade {
-    namespace sdk {
-        namespace server {
             /* Class Parameters
-             * Size: 0x58
+             * Size: 0x48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +31,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_MoveProbe : public shade::sdk::client::CAI_Component {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hLastBlockingEnt; // 0x0050, 0x4 bytes
-                std::uint8_t pad_0054[0x4]; // 0x0054, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_MoveProbe) == 0x58, "CAI_MoveProbe size mismatch");
+            static_assert(sizeof(CAI_MoveProbe) == 0x48, "CAI_MoveProbe size mismatch");
         }
     }
 }

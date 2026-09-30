@@ -12,10 +12,10 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CBaseEntity.hpp"
 
 namespace shade {
@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x520
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTrooperMinimap : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::entity2::GameTime_t m_timeLastUpdate; // 0x04a0, 0x4 bytes
-                std::uint8_t pad_04a4[0x4]; // 0x04a4, 0x4 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::STrooperFOWEntity> m_vecFOWEntities; // 0x04a8, 0x68 bytes
+                float m_flUpdateInterval; // 0x04b0, 0x4 bytes
+                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::STrooperFOWEntity> m_vecFOWEntities; // 0x04b8, 0x68 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelTrooperMinimap) == 0x510, "CCitadelTrooperMinimap size mismatch");
+            static_assert(sizeof(CCitadelTrooperMinimap) == 0x520, "CCitadelTrooperMinimap size mismatch");
         }
     }
 }

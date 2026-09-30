@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x578
+             * Size: 0x588
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,33 +32,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoSpawnGroupLoadUnload : public shade::sdk::server::CLogicalEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupLoadStarted; // 0x04a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupLoadFinished; // 0x04b8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupUnloadStarted; // 0x04d0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupUnloadFinished; // 0x04e8, 0x18 bytes
-                CUtlSymbolLarge m_iszSpawnGroupName; // 0x0500, 0x8 bytes
-                CUtlSymbolLarge m_iszSpawnGroupFilterName; // 0x0508, 0x8 bytes
-                CUtlSymbolLarge m_iszLandmarkName; // 0x0510, 0x8 bytes
-                CUtlString m_sFixedSpawnGroupName; // 0x0518, 0x8 bytes
-                float m_flTimeoutInterval; // 0x0520, 0x4 bytes
-                bool m_bAutoActivate; // 0x0524, 0x1 bytes
-                bool m_bUnloadingStarted; // 0x0525, 0x1 bytes
-                bool m_bQueueActiveSpawnGroupChange; // 0x0526, 0x1 bytes
-                bool m_bQueueFinishLoading; // 0x0527, 0x1 bytes
-                std::uint8_t pad_0528[0x50]; // 0x0528, 0x50 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupLoadStarted; // 0x04b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupLoadFinished; // 0x04c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupUnloadStarted; // 0x04e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnSpawnGroupUnloadFinished; // 0x04f8, 0x18 bytes
+                CUtlSymbolLarge m_iszSpawnGroupName; // 0x0510, 0x8 bytes
+                CUtlSymbolLarge m_iszSpawnGroupFilterName; // 0x0518, 0x8 bytes
+                CUtlSymbolLarge m_iszLandmarkName; // 0x0520, 0x8 bytes
+                CUtlString m_sFixedSpawnGroupName; // 0x0528, 0x8 bytes
+                float m_flTimeoutInterval; // 0x0530, 0x4 bytes
+                bool m_bAutoActivate; // 0x0534, 0x1 bytes
+                bool m_bUnloadingStarted; // 0x0535, 0x1 bytes
+                bool m_bQueueActiveSpawnGroupChange; // 0x0536, 0x1 bytes
+                bool m_bQueueFinishLoading; // 0x0537, 0x1 bytes
+                std::uint8_t pad_0538[0x50]; // 0x0538, 0x50 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CInfoSpawnGroupLoadUnloadSpawnGroupLoadingThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CInfoSpawnGroupLoadUnloadSpawnGroupUnloadingThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartSpawnGroupLoad; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputActivateSpawnGroup; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartSpawnGroupUnload; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSpawnGroup; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoSpawnGroupLoadUnload) == 0x578, "CInfoSpawnGroupLoadUnload size mismatch");
+            static_assert(sizeof(CInfoSpawnGroupLoadUnload) == 0x588, "CInfoSpawnGroupLoadUnload size mismatch");
         }
     }
 }

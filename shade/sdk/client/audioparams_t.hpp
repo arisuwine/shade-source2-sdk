@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,15 +21,16 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x78
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Has Trivial Destructor
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             struct audioparams_t {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                Vector localSound[0x8]; // 0x0008, 0x60 bytes
+                VectorWS localSound[0x8]; // 0x0008, 0x60 bytes
                 std::int32_t soundscapeIndex; // 0x0068, 0x4 bytes
                 std::uint8_t localBits; // 0x006c, 0x1 bytes
                 std::uint8_t pad_006d[0x3]; // 0x006d, 0x3 bytes

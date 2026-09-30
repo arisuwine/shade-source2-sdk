@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x520
+             * Size: 0x538
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointPrefab : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                CUtlSymbolLarge m_targetMapName; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_forceWorldGroupID; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_associatedRelayTargetName; // 0x04b0, 0x8 bytes
-                bool m_fixupNames; // 0x04b8, 0x1 bytes
-                bool m_bLoadDynamic; // 0x04b9, 0x1 bytes
-                std::uint8_t pad_04ba[0x2]; // 0x04ba, 0x2 bytes
-                CHandle<shade::sdk::server::CPointPrefab> m_associatedRelayEntity; // 0x04bc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_ProceduralRelaySources; // 0x04c0, 0x18 bytes
-                std::uint8_t pad_04d8[0x48]; // 0x04d8, 0x48 bytes
+                CUtlSymbolLarge m_targetMapName; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_forceWorldGroupID; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_associatedRelayTargetName; // 0x04c0, 0x8 bytes
+                bool m_fixupNames; // 0x04c8, 0x1 bytes
+                bool m_bLoadDynamic; // 0x04c9, 0x1 bytes
+                std::uint8_t pad_04ca[0x2]; // 0x04ca, 0x2 bytes
+                CHandle<shade::sdk::server::CPointPrefab> m_associatedRelayEntity; // 0x04cc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_ProceduralRelaySources; // 0x04d0, 0x18 bytes
+                std::uint8_t pad_04e8[0x50]; // 0x04e8, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPointPrefab) == 0x520, "CPointPrefab size mismatch");
+            static_assert(sizeof(CPointPrefab) == 0x538, "CPointPrefab size mismatch");
         }
     }
 }

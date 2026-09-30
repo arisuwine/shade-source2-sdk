@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd8
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NeutralShield : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flShieldActivateDelay; // 0x00d0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_timeEnemyDisappeared; // 0x00d4, 0x4 bytes
+                float m_flShieldActivateDelay; // 0x0140, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_timeEnemyDisappeared; // 0x0144, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NeutralShield) == 0xD8, "CCitadel_Modifier_NeutralShield size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NeutralShield) == 0x148, "CCitadel_Modifier_NeutralShield size mismatch");
         }
     }
 }

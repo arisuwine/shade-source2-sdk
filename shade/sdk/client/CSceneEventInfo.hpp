@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x80
+             * Size: 0x90
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
@@ -46,28 +47,33 @@ namespace shade {
                 std::int32_t m_iPriority; // 0x0004, 0x4 bytes
                 shade::sdk::animationsystem::HSequence m_hSequence; // 0x0008, 0x4 bytes
                 float m_flWeight; // 0x000c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmClip> m_hAnimClip; // 0x0010, 0x8 bytes
-                CGlobalSymbol m_sAnimClipSlot; // 0x0018, 0x8 bytes
-                CGlobalSymbol m_sAnimClipSlotWeight; // 0x0020, 0x8 bytes
-                bool m_bHasArrived; // 0x0028, 0x1 bytes
-                std::uint8_t pad_0029[0x3]; // 0x0029, 0x3 bytes
-                std::int32_t m_nType; // 0x002c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNext; // 0x0030, 0x4 bytes
-                bool m_bIsGesture; // 0x0034, 0x1 bytes
-                bool m_bShouldRemove; // 0x0035, 0x1 bytes
-                std::uint8_t pad_0036[0x26]; // 0x0036, 0x26 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x005c, 0x4 bytes
-                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_hModifier; // 0x0060, 0x18 bytes
-                shade::sdk::client::SceneEventId_t m_nSceneEventId; // 0x0078, 0x4 bytes
-                bool m_bClientSide; // 0x007c, 0x1 bytes
-                bool m_bStarted; // 0x007d, 0x1 bytes
-                std::uint8_t pad_007e[0x2]; // 0x007e, 0x2 bytes
+                float m_flLastAccumulatedTime; // 0x0010, 0x4 bytes
+                float m_flLastJumpFromTime; // 0x0014, 0x4 bytes
+                float m_flLastJumpToTime; // 0x0018, 0x4 bytes
+                float m_flLastCycle; // 0x001c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmClip> m_hAnimClip; // 0x0020, 0x8 bytes
+                CGlobalSymbol m_sAnimClipSlot; // 0x0028, 0x8 bytes
+                CGlobalSymbol m_sAnimClipSlotWeight; // 0x0030, 0x8 bytes
+                bool m_bHasArrived; // 0x0038, 0x1 bytes
+                bool m_bExternalGraphFinished; // 0x0039, 0x1 bytes
+                std::uint8_t pad_003a[0x2]; // 0x003a, 0x2 bytes
+                std::int32_t m_nType; // 0x003c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNext; // 0x0040, 0x4 bytes
+                bool m_bIsGesture; // 0x0044, 0x1 bytes
+                bool m_bShouldRemove; // 0x0045, 0x1 bytes
+                std::uint8_t pad_0046[0x26]; // 0x0046, 0x26 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x006c, 0x4 bytes
+                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_hBlinkModifier; // 0x0070, 0x18 bytes
+                shade::sdk::client::SceneEventId_t m_nSceneEventId; // 0x0088, 0x4 bytes
+                bool m_bClientSide; // 0x008c, 0x1 bytes
+                bool m_bStarted; // 0x008d, 0x1 bytes
+                std::uint8_t pad_008e[0x2]; // 0x008e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSceneEventInfo) == 0x80, "CSceneEventInfo size mismatch");
+            static_assert(sizeof(CSceneEventInfo) == 0x90, "CSceneEventInfo size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x60
+             * Size: 0x48
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -30,15 +31,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_LocalNavigatorBase : public shade::sdk::client::CAI_Component {
             public:
-                std::uint8_t pad_0050[0x10]; // 0x0050, 0x10 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_LocalNavigatorBase) == 0x60, "CAI_LocalNavigatorBase size mismatch");
+            static_assert(sizeof(CAI_LocalNavigatorBase) == 0x48, "CAI_LocalNavigatorBase size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -38,9 +39,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Priest_CrossbowEquippedVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeaponBuffParticle; // 0x0750, 0xe0 bytes
-                CSoundEventName m_BlessedLoopSound; // 0x0830, 0x10 bytes
-                CSoundEventName m_AimLoopSound; // 0x0840, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeaponBuffParticle; // 0x0760, 0xe0 bytes
+                CSoundEventName m_BlessedLoopSound; // 0x0840, 0x10 bytes
             };
             #pragma pack(pop)
 

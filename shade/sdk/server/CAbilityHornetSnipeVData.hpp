@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1c38
+             * Size: 0x17d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,30 +43,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityHornetSnipeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AssassinateShotParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AssassinateShotParticleOwnerOnly; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticle; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticleOwnerOnly; // 0x1ab8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SnipeModifier; // 0x1b98, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GlowEnemyModifier; // 0x1ba8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KillCheckModifier; // 0x1bb8, 0x10 bytes
-                CSoundEventName m_strSnipeImpactSound; // 0x1bc8, 0x10 bytes
-                CSoundEventName m_strZoomIn; // 0x1bd8, 0x10 bytes
-                CSoundEventName m_strZoomOut; // 0x1be8, 0x10 bytes
-                CSoundEventName m_strFullyChargedSound; // 0x1bf8, 0x10 bytes
-                float m_flMinScopeTimeToShoot; // 0x1c08, 0x4 bytes
-                float m_flFadeToBlackTime; // 0x1c0c, 0x4 bytes
-                float m_flFoVChangeTime; // 0x1c10, 0x4 bytes
-                std::uint8_t pad_1c14[0x4]; // 0x1c14, 0x4 bytes
-                CUtlVector<float> m_ScopeFoV; // 0x1c18, 0x18 bytes
-                float m_flKillCheckDuration; // 0x1c30, 0x4 bytes
-                std::uint8_t pad_1c34[0x4]; // 0x1c34, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AssassinateShotParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AssassinateShotParticleOwnerOnly; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticle; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticleOwnerOnly; // 0x1640, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SnipeModifier; // 0x1720, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GlowEnemyModifier; // 0x1730, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KillCheckModifier; // 0x1740, 0x10 bytes
+                CSoundEventName m_strSnipeImpactSound; // 0x1750, 0x10 bytes
+                CSoundEventName m_strZoomIn; // 0x1760, 0x10 bytes
+                CSoundEventName m_strZoomOut; // 0x1770, 0x10 bytes
+                CSoundEventName m_strFullyChargedSound; // 0x1780, 0x10 bytes
+                CSoundEventName m_strBeamPointClosestLoopSound; // 0x1790, 0x10 bytes
+                float m_flMinScopeTimeToShoot; // 0x17a0, 0x4 bytes
+                float m_flFadeToBlackTime; // 0x17a4, 0x4 bytes
+                float m_flFoVChangeTime; // 0x17a8, 0x4 bytes
+                std::uint8_t pad_17ac[0x4]; // 0x17ac, 0x4 bytes
+                CUtlVector<float> m_ScopeFoV; // 0x17b0, 0x18 bytes
+                float m_flKillCheckDuration; // 0x17c8, 0x4 bytes
+                std::uint8_t pad_17cc[0x4]; // 0x17cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityHornetSnipeVData) == 0x1C38, "CAbilityHornetSnipeVData size mismatch");
+            static_assert(sizeof(CAbilityHornetSnipeVData) == 0x17D0, "CAbilityHornetSnipeVData size mismatch");
         }
     }
 }

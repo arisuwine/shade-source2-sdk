@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xbd0
+             * Size: 0xbf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,19 +45,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierIcePathVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_FrontModel; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BodyModel; // 0x0830, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x0910, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FloatingParticle; // 0x09f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IcePathBuffParticle; // 0x0ad0, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_FriendlyAuraModifier; // 0x0bb0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BonusSpiritLingerModifier; // 0x0bc0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_FrontModel; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BodyModel; // 0x0840, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x0920, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FloatingParticle; // 0x0a00, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IcePathBuffParticle; // 0x0ae0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ExplodeModifier; // 0x0bc0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_FriendlyAuraModifier; // 0x0bd0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BonusSpiritLingerModifier; // 0x0be0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierIcePathVData) == 0xBD0, "CModifierIcePathVData size mismatch");
+            static_assert(sizeof(CModifierIcePathVData) == 0xBF0, "CModifierIcePathVData size mismatch");
         }
     }
 }

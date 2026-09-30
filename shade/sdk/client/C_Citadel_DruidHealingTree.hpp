@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcf8
+             * Size: 0xdf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,12 +31,12 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_DruidHealingTree : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0cb0[0x20]; // 0x0cb0, 0x20 bytes
-                CUtlString m_strFruitModelName; // 0x0cd0, 0x8 bytes
-                VectorWS m_vStartPos; // 0x0cd8, 0xc bytes
-                VectorWS m_vEndPos; // 0x0ce4, 0xc bytes
-                float m_flGrowDuration; // 0x0cf0, 0x4 bytes
-                std::uint8_t pad_0cf4[0x4]; // 0x0cf4, 0x4 bytes
+                std::uint8_t pad_0da8[0x20]; // 0x0da8, 0x20 bytes
+                CUtlString m_strFruitModelName; // 0x0dc8, 0x8 bytes
+                VectorWS m_vStartPos; // 0x0dd0, 0xc bytes
+                VectorWS m_vEndPos; // 0x0ddc, 0xc bytes
+                float m_flGrowDuration; // 0x0de8, 0x4 bytes
+                std::uint8_t pad_0dec[0x4]; // 0x0dec, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -44,7 +45,7 @@ namespace shade {
              * CHandle<CBaseEntity> caster; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_Citadel_DruidHealingTree) == 0xCF8, "C_Citadel_DruidHealingTree size mismatch");
+            static_assert(sizeof(C_Citadel_DruidHealingTree) == 0xDF0, "C_Citadel_DruidHealingTree size mismatch");
         }
     }
 }

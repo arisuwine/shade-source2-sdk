@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -22,7 +23,8 @@ namespace shade {
                 RELATIVE_TO_ENTITY_YAW_ONLY = 0x2,
                 RELATIVE_TO_ENTITY_IN_WORLD_SPACE = 0x3,
                 RELATIVE_TO_NAV_AREA = 0x4,
-                RELATIVE_TO_NAV_BLOCK = 0x5
+                RELATIVE_TO_NAV_BLOCK = 0x5,
+                RELATIVE_TO_ENTITY_NAV = 0xff
             };
         }
     }

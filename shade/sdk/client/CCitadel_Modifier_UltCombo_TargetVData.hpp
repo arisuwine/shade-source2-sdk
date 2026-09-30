@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,8 +21,16 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            class CCitadelModifier;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace client {
             /* Class Parameters
-             * Size: 0x848
+             * Size: 0x868
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_UltCombo_TargetVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                float m_flTargetPosDistance; // 0x0830, 0x4 bytes
-                float m_flTargetPosRange; // 0x0834, 0x4 bytes
-                float m_flPullSpeedMin; // 0x0838, 0x4 bytes
-                float m_flPullSpeedMax; // 0x083c, 0x4 bytes
-                float m_flPullDistanceMin; // 0x0840, 0x4 bytes
-                float m_flPullDistanceMax; // 0x0844, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AttachModifier; // 0x0840, 0x10 bytes
+                float m_flTargetPosDistance; // 0x0850, 0x4 bytes
+                float m_flTargetPosRange; // 0x0854, 0x4 bytes
+                float m_flPullSpeedMin; // 0x0858, 0x4 bytes
+                float m_flPullSpeedMax; // 0x085c, 0x4 bytes
+                float m_flPullDistanceMin; // 0x0860, 0x4 bytes
+                float m_flPullDistanceMax; // 0x0864, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UltCombo_TargetVData) == 0x848, "CCitadel_Modifier_UltCombo_TargetVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UltCombo_TargetVData) == 0x868, "CCitadel_Modifier_UltCombo_TargetVData size mismatch");
         }
     }
 }

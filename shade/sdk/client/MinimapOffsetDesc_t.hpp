@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x10
+             * Size: 0x14
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -31,12 +32,14 @@ namespace shade {
                 shade::sdk::client::Class_T eEntityClass; // 0x0000, 0x4 bytes
                 Vector2D vOffset2D; // 0x0004, 0x8 bytes
                 std::int32_t iLane; // 0x000c, 0x4 bytes
+                bool bAllLanes; // 0x0010, 0x1 bytes
+                std::uint8_t pad_0011[0x3]; // 0x0011, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(MinimapOffsetDesc_t) == 0x10, "MinimapOffsetDesc_t size mismatch");
+            static_assert(sizeof(MinimapOffsetDesc_t) == 0x14, "MinimapOffsetDesc_t size mismatch");
         }
     }
 }

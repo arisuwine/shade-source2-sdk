@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xdb0
+             * Size: 0xe30
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,27 +31,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_NewYears_Fireworks : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint32_t m_unShowDurationSeconds; // 0x0cd0, 0x4 bytes
-                std::uint32_t m_unShowDelaySeconds; // 0x0cd4, 0x4 bytes
-                float m_flFireworkIntervalMin; // 0x0cd8, 0x4 bytes
-                float m_flFireworkIntervalMax; // 0x0cdc, 0x4 bytes
-                CUtlString m_sFireworkParticle1; // 0x0ce0, 0x8 bytes
-                CUtlString m_sFireworkParticle2; // 0x0ce8, 0x8 bytes
-                CUtlString m_sFireworkParticle3; // 0x0cf0, 0x8 bytes
-                CUtlString m_sFireworkParticle4; // 0x0cf8, 0x8 bytes
-                CUtlString m_sFireworkParticle5; // 0x0d00, 0x8 bytes
-                CUtlString m_sFireworkParticle6; // 0x0d08, 0x8 bytes
-                CUtlString m_sFireworkParticle7; // 0x0d10, 0x8 bytes
-                CUtlString m_sFireworkParticle8; // 0x0d18, 0x8 bytes
-                CUtlSymbolLarge m_iszSoundName; // 0x0d20, 0x8 bytes
-                float m_flStartSoundVerticalOffset; // 0x0d28, 0x4 bytes
-                std::uint8_t pad_0d2c[0x84]; // 0x0d2c, 0x84 bytes
+                std::uint32_t m_unShowDurationSeconds; // 0x0d50, 0x4 bytes
+                std::uint32_t m_unShowDelaySeconds; // 0x0d54, 0x4 bytes
+                float m_flFireworkIntervalMin; // 0x0d58, 0x4 bytes
+                float m_flFireworkIntervalMax; // 0x0d5c, 0x4 bytes
+                CUtlString m_sFireworkParticle1; // 0x0d60, 0x8 bytes
+                CUtlString m_sFireworkParticle2; // 0x0d68, 0x8 bytes
+                CUtlString m_sFireworkParticle3; // 0x0d70, 0x8 bytes
+                CUtlString m_sFireworkParticle4; // 0x0d78, 0x8 bytes
+                CUtlString m_sFireworkParticle5; // 0x0d80, 0x8 bytes
+                CUtlString m_sFireworkParticle6; // 0x0d88, 0x8 bytes
+                CUtlString m_sFireworkParticle7; // 0x0d90, 0x8 bytes
+                CUtlString m_sFireworkParticle8; // 0x0d98, 0x8 bytes
+                CUtlSymbolLarge m_iszSoundName; // 0x0da0, 0x8 bytes
+                float m_flStartSoundVerticalOffset; // 0x0da8, 0x4 bytes
+                std::uint8_t pad_0dac[0x84]; // 0x0dac, 0x84 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_NewYears_Fireworks) == 0xDB0, "CCitadel_NewYears_Fireworks size mismatch");
+            static_assert(sizeof(CCitadel_NewYears_Fireworks) == 0xE30, "CCitadel_NewYears_Fireworks size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,27 +23,27 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x420
-             * Alignment: 0xff
+             * Size: 0x470
+             * Alignment: 0x10
              * Has VTable
-             * Construct Disallowed
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CSkeletonInstance : public shade::sdk::server::CGameSceneNode {
             public:
-                std::uint8_t pad_0120[0x10]; // 0x0120, 0x10 bytes
-                shade::sdk::server::CModelState m_modelState; // 0x0130, 0x250 bytes
-                bool m_bUseParentRenderBounds; // 0x0380, 0x1 bytes
-                bool m_bDisableSolidCollisionsForHierarchy; // 0x0381, 0x1 bytes
-                std::uint8_t m_bDirtyMotionType : 1; // 0x0382, 0x1 bytes
-                std::uint8_t m_bIsGeneratingLatchedParentSpaceState : 1; // 0x0382, 0x1 bytes
-                std::uint8_t pad_0383[0x1]; // 0x0383, 0x1 bytes
-                CUtlStringToken m_materialGroup; // 0x0384, 0x4 bytes
-                std::uint8_t m_nHitboxSet; // 0x0388, 0x1 bytes
-                std::uint8_t pad_0389[0x5b]; // 0x0389, 0x5b bytes
-                bool m_bForceServerConstraintsEnabled; // 0x03e4, 0x1 bytes
-                std::uint8_t pad_03e5[0x3b]; // 0x03e5, 0x3b bytes
+                std::uint8_t pad_0110[0x10]; // 0x0110, 0x10 bytes
+                shade::sdk::server::CModelState m_modelState; // 0x0120, 0x2a0 bytes
+                bool m_bUseParentRenderBounds; // 0x03c0, 0x1 bytes
+                bool m_bDisableSolidCollisionsForHierarchy; // 0x03c1, 0x1 bytes
+                bool m_bDirtyMotionType; // 0x03c2, 0x1 bytes
+                bool m_bIsGeneratingLatchedParentSpaceState; // 0x03c3, 0x1 bytes
+                std::uint8_t pad_03c4[0x4]; // 0x03c4, 0x4 bytes
+                CUtlStringToken m_materialGroup; // 0x03c8, 0x4 bytes
+                std::uint8_t m_nHitboxSet; // 0x03cc, 0x1 bytes
+                std::uint8_t pad_03cd[0x63]; // 0x03cd, 0x63 bytes
+                bool m_bForceServerConstraintsEnabled; // 0x0430, 0x1 bytes
+                std::uint8_t pad_0431[0x3f]; // 0x0431, 0x3f bytes
             };
             #pragma pack(pop)
 
@@ -52,7 +53,7 @@ namespace shade {
              * float rotationSpeed; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CSkeletonInstance) == 0x420, "CSkeletonInstance size mismatch");
+            static_assert(sizeof(CSkeletonInstance) == 0x470, "CSkeletonInstance size mismatch");
         }
     }
 }

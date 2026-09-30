@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x278
+             * Size: 0x290
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,22 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CPlayer_MovementServices_Humanoid : public shade::sdk::server::CPlayer_MovementServices {
             public:
-                float m_flStepSoundTime; // 0x0240, 0x4 bytes
-                float m_flFallVelocity; // 0x0244, 0x4 bytes
-                Vector m_groundNormal; // 0x0248, 0xc bytes
-                float m_flSurfaceFriction; // 0x0254, 0x4 bytes
-                CUtlStringToken m_surfaceProps; // 0x0258, 0x4 bytes
-                std::uint8_t pad_025c[0xc]; // 0x025c, 0xc bytes
-                std::int32_t m_nStepside; // 0x0268, 0x4 bytes
-                Vector m_vecSmoothedVelocity; // 0x026c, 0xc bytes
+                float m_flStepSoundTime; // 0x0258, 0x4 bytes
+                float m_flFallVelocity; // 0x025c, 0x4 bytes
+                Vector m_groundNormal; // 0x0260, 0xc bytes
+                float m_flSurfaceFriction; // 0x026c, 0x4 bytes
+                CUtlStringToken m_surfaceProps; // 0x0270, 0x4 bytes
+                std::uint8_t pad_0274[0xc]; // 0x0274, 0xc bytes
+                std::int32_t m_nStepside; // 0x0280, 0x4 bytes
+                Vector m_vecSmoothedVelocity; // 0x0284, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pSurfaceData; // Offset: 0x260, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPlayer_MovementServices_Humanoid) == 0x278, "CPlayer_MovementServices_Humanoid size mismatch");
+            static_assert(sizeof(CPlayer_MovementServices_Humanoid) == 0x290, "CPlayer_MovementServices_Humanoid size mismatch");
         }
     }
 }

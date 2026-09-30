@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe8
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Hideout_Teleport : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlString m_sDestMap; // 0x00d0, 0x8 bytes
-                CUtlString m_sDestLocString; // 0x00d8, 0x8 bytes
-                CUtlString m_sLandmarkName; // 0x00e0, 0x8 bytes
+                CUtlString m_sDestMap; // 0x0140, 0x8 bytes
+                CUtlString m_sDestLocString; // 0x0148, 0x8 bytes
+                CUtlString m_sLandmarkName; // 0x0150, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Hideout_Teleport) == 0xE8, "CCitadel_Modifier_Hideout_Teleport size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Hideout_Teleport) == 0x158, "CCitadel_Modifier_Hideout_Teleport size mismatch");
         }
     }
 }

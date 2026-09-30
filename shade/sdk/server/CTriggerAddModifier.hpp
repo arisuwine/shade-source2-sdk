@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f0
+             * Size: 0xa00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerAddModifier : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlSymbolLarge m_strModifier; // 0x08e0, 0x8 bytes
-                float m_flDuration; // 0x08e8, 0x4 bytes
-                bool m_bMomentary; // 0x08ec, 0x1 bytes
-                std::uint8_t pad_08ed[0x3]; // 0x08ed, 0x3 bytes
+                CUtlSymbolLarge m_strModifier; // 0x09f0, 0x8 bytes
+                float m_flDuration; // 0x09f8, 0x4 bytes
+                bool m_bMomentary; // 0x09fc, 0x1 bytes
+                std::uint8_t pad_09fd[0x3]; // 0x09fd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerAddModifier) == 0x8F0, "CTriggerAddModifier size mismatch");
+            static_assert(sizeof(CTriggerAddModifier) == 0xA00, "CTriggerAddModifier size mismatch");
         }
     }
 }

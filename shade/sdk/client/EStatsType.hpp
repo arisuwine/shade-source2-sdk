@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -115,8 +116,17 @@ namespace shade {
                 EDashSpeedInMeters = 0x5f,
                 EEnableAbilityCharges = 0x60,
                 EAbilityLevel = 0x61,
-                EStatsCount = 0x62,
-                EStatsInvalid = 0x62
+                EIntraBurstCycleTime = 0x62,
+                EBurstShotCount = 0x63,
+                EHealingAmp = 0x64,
+                EWeaponCritChance = 0x65,
+                ECurrentHealth = 0x66,
+                EMovementTimeScale = 0x67,
+                EGameplayTimeScale = 0x68,
+                EAnimationTimeScale = 0x69,
+                EParticleTimeScale = 0x6a,
+                EStatsCount = 0x6b,
+                EStatsInvalid = 0x6b
             };
         }
     }

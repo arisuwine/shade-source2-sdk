@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -26,7 +27,7 @@ namespace shade {
             class CEntityAttributeTable {
             public:
                 std::uint8_t m_Attributes[0x28]; // 0x0000, 0x28 bytes
-                CUtlOrderedMap<CUtlStringToken, CUtlString> m_Names; // 0x0028, 0x28 bytes
+                CUtlOrderedMap<CUtlStringTokenNoRegistration, CUtlString> m_Names; // 0x0028, 0x28 bytes
             };
             #pragma pack(pop)
 

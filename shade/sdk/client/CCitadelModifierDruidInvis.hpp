@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf0
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierDruidInvis : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_flCurrentObscureLevel; // 0x00c0, 0x4 bytes
-                std::int32_t m_nInvisModifierID; // 0x00c4, 0x4 bytes
-                CUtlVectorFixedGrowable<shade::sdk::client::ParticleIndex_t, 3> m_AmbientParticles; // 0x00c8, 0x28 bytes
+                float m_flCurrentObscureLevel; // 0x0130, 0x4 bytes
+                std::int32_t m_nInvisModifierID; // 0x0134, 0x4 bytes
+                CUtlVectorFixedGrowable<shade::sdk::client::ParticleIndex_t, 3> m_AmbientParticles; // 0x0138, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierDruidInvis) == 0xF0, "CCitadelModifierDruidInvis size mismatch");
+            static_assert(sizeof(CCitadelModifierDruidInvis) == 0x160, "CCitadelModifierDruidInvis size mismatch");
         }
     }
 }

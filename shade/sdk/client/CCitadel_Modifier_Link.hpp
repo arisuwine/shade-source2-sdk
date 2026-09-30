@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x168
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Link : public shade::sdk::client::CCitadelModifier {
             public:
-                CHandle<shade::sdk::client::CCitadelPortalTrigger> m_hPortalToCaster; // 0x00c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPortalStartTime; // 0x00c4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPortalEndTime; // 0x00c8, 0x4 bytes
-                std::uint8_t pad_00cc[0x4]; // 0x00cc, 0x4 bytes
-                CUtlString m_sCasterAttachment; // 0x00d0, 0x8 bytes
-                CUtlString m_sParentAttachment; // 0x00d8, 0x8 bytes
-                VectorWS m_vecLinkPosition; // 0x00e0, 0xc bytes
-                std::uint8_t pad_00ec[0xc]; // 0x00ec, 0xc bytes
+                CHandle<shade::sdk::client::CCitadelPortalTrigger> m_hPortalToSource; // 0x0130, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPortalStartTime; // 0x0134, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPortalEndTime; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
+                CUtlString m_sSourceAttachment; // 0x0140, 0x8 bytes
+                CUtlString m_sParentAttachment; // 0x0148, 0x8 bytes
+                VectorWS m_vecLinkPosition; // 0x0150, 0xc bytes
+                std::uint8_t pad_015c[0xc]; // 0x015c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Link) == 0xF8, "CCitadel_Modifier_Link size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Link) == 0x168, "CCitadel_Modifier_Link size mismatch");
         }
     }
 }

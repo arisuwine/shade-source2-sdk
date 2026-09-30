@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1300
+             * Size: 0x1860
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SettingSun : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_TargetPreviews; // 0x11d8, 0x18 bytes
-                std::uint8_t pad_11f0[0x108]; // 0x11f0, 0x108 bytes
-                bool m_bWasSelected; // 0x12f8, 0x1 bytes
-                std::uint8_t pad_12f9[0x7]; // 0x12f9, 0x7 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_TargetPreviews; // 0x16d8, 0x18 bytes
+                std::uint8_t pad_16f0[0x168]; // 0x16f0, 0x168 bytes
+                bool m_bWasSelected; // 0x1858, 0x1 bytes
+                std::uint8_t pad_1859[0x7]; // 0x1859, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SettingSun) == 0x1300, "CCitadel_Ability_SettingSun size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SettingSun) == 0x1860, "CCitadel_Ability_SettingSun size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7d8
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ice_Path_Shard_Physics : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::server::ice_path_shard_model_desc_t m_ShardDesc; // 0x0780, 0x38 bytes
-                QAngle m_qForward; // 0x07b8, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x07c4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndTime; // 0x07c8, 0x4 bytes
-                float m_flShardWidth; // 0x07cc, 0x4 bytes
-                std::uint8_t pad_07d0[0x8]; // 0x07d0, 0x8 bytes
+                shade::sdk::server::ice_path_shard_model_desc_t m_ShardDesc; // 0x0878, 0x38 bytes
+                QAngle m_qForward; // 0x08b0, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x08bc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndTime; // 0x08c0, 0x4 bytes
+                float m_flShardWidth; // 0x08c4, 0x4 bytes
+                std::uint8_t pad_08c8[0x8]; // 0x08c8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_bIsBase; // Offset: 0x7d0, Size: 0x1, Size In Bytes: 0x0
-             * void m_hTrooperTrigger; // Offset: 0x7d4, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ice_Path_Shard_Physics) == 0x7D8, "CCitadel_Ice_Path_Shard_Physics size mismatch");
+            static_assert(sizeof(CCitadel_Ice_Path_Shard_Physics) == 0x8D0, "CCitadel_Ice_Path_Shard_Physics size mismatch");
         }
     }
 }

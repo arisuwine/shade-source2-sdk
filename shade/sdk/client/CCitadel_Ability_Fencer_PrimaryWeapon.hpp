@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1438
+             * Size: 0x1978
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fencer_PrimaryWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::int32_t m_iCurrentShotCount; // 0x1430, 0x4 bytes
-                std::uint8_t pad_1434[0x4]; // 0x1434, 0x4 bytes
+                std::int32_t m_iCurrentShotCount; // 0x1970, 0x4 bytes
+                std::uint8_t pad_1974[0x4]; // 0x1974, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fencer_PrimaryWeapon) == 0x1438, "CCitadel_Ability_Fencer_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fencer_PrimaryWeapon) == 0x1978, "CCitadel_Ability_Fencer_PrimaryWeapon size mismatch");
         }
     }
 }

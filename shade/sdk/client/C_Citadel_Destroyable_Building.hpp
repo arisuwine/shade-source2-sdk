@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf08
+             * Size: 0x1008
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_Destroyable_Building : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0cb0, 0x1e8 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::WeakPoint_t> m_vecWeakPoints; // 0x0e98, 0x68 bytes
-                bool m_bDestroyed; // 0x0f00, 0x1 bytes
-                bool m_bActive; // 0x0f01, 0x1 bytes
-                bool m_bFinal; // 0x0f02, 0x1 bytes
-                std::uint8_t pad_0f03[0x5]; // 0x0f03, 0x5 bytes
+                std::uint8_t pad_0da8[0x10]; // 0x0da8, 0x10 bytes
+                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0db8, 0x1e0 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::WeakPoint_t> m_vecWeakPoints; // 0x0f98, 0x68 bytes
+                bool m_bDestroyed; // 0x1000, 0x1 bytes
+                bool m_bActive; // 0x1001, 0x1 bytes
+                bool m_bFinal; // 0x1002, 0x1 bytes
+                std::uint8_t pad_1003[0x5]; // 0x1003, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Destroyable_Building) == 0xF08, "C_Citadel_Destroyable_Building size mismatch");
+            static_assert(sizeof(C_Citadel_Destroyable_Building) == 0x1008, "C_Citadel_Destroyable_Building size mismatch");
         }
     }
 }

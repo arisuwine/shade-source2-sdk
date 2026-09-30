@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc0
+             * Size: 0xf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PortraitWorldUnit_GraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraph2ParamRef<CGlobalSymbol> m_BaseState; // 0x0090, 0x18 bytes
-                CAnimGraph2ParamRef<CGlobalSymbol> m_ShopState; // 0x00a8, 0x18 bytes
+                CAnimGraph2ParamRef<CGlobalSymbol> m_BaseState; // 0x00c0, 0x18 bytes
+                CAnimGraph2ParamRef<CGlobalSymbol> m_ShopState; // 0x00d8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PortraitWorldUnit_GraphController) == 0xC0, "C_PortraitWorldUnit_GraphController size mismatch");
+            static_assert(sizeof(C_PortraitWorldUnit_GraphController) == 0xF0, "C_PortraitWorldUnit_GraphController size mismatch");
         }
     }
 }

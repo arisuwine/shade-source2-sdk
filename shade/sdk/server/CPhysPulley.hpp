@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x530
+             * Size: 0x540
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysPulley : public shade::sdk::server::CPhysConstraint {
             public:
-                VectorWS m_position2; // 0x0500, 0xc bytes
-                Vector m_offset[0x2]; // 0x050c, 0x18 bytes
-                float m_addLength; // 0x0524, 0x4 bytes
-                float m_gearRatio; // 0x0528, 0x4 bytes
-                std::uint8_t pad_052c[0x4]; // 0x052c, 0x4 bytes
+                VectorWS m_position2; // 0x0510, 0xc bytes
+                Vector m_offset[0x2]; // 0x051c, 0x18 bytes
+                float m_addLength; // 0x0534, 0x4 bytes
+                float m_gearRatio; // 0x0538, 0x4 bytes
+                std::uint8_t pad_053c[0x4]; // 0x053c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysPulley) == 0x530, "CPhysPulley size mismatch");
+            static_assert(sizeof(CPhysPulley) == 0x540, "CPhysPulley size mismatch");
         }
     }
 }

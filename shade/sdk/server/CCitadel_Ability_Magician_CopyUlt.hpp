@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1298
+             * Size: 0x17e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,25 +42,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Magician_CopyUlt : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x200]; // 0x0f70, 0x200 bytes
-                bool m_bHasUsedCopiedUlt; // 0x1170, 0x1 bytes
-                bool m_bHasCopiedUlt; // 0x1171, 0x1 bytes
-                bool m_bIsModelSwapped; // 0x1172, 0x1 bytes
-                std::uint8_t pad_1173[0x1]; // 0x1173, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_timeSwappedModel; // 0x1174, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_pActiveCopyUltimateAbility; // 0x1178, 0x4 bytes
-                shade::sdk::client::HeroID_t m_nCopiedHeroID; // 0x117c, 0x4 bytes
-                CUtlVector<shade::sdk::client::LingeringCopiedAbility_t> m_vecLingeringCopiedAbilities; // 0x1180, 0x18 bytes
-                shade::sdk::client::ModelChange_t m_ModelChange; // 0x1198, 0xe8 bytes
-                std::uint8_t pad_1280[0x18]; // 0x1280, 0x18 bytes
+                std::uint8_t pad_14a0[0x210]; // 0x14a0, 0x210 bytes
+                bool m_bHasUsedCopiedUlt; // 0x16b0, 0x1 bytes
+                bool m_bHasCopiedUlt; // 0x16b1, 0x1 bytes
+                bool m_bIsModelSwapped; // 0x16b2, 0x1 bytes
+                std::uint8_t pad_16b3[0x1]; // 0x16b3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_timeSwappedModel; // 0x16b4, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_pActiveCopyUltimateAbility; // 0x16b8, 0x4 bytes
+                shade::sdk::client::HeroID_t m_nCopiedHeroID; // 0x16bc, 0x4 bytes
+                CUtlVector<shade::sdk::client::LingeringCopiedAbility_t> m_vecLingeringCopiedAbilities; // 0x16c0, 0x18 bytes
+                shade::sdk::client::ModelChange_t m_ModelChange; // 0x16d8, 0xe8 bytes
+                std::uint8_t pad_17c0[0x28]; // 0x17c0, 0x28 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_CopyUlt) == 0x1298, "CCitadel_Ability_Magician_CopyUlt size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_CopyUlt) == 0x17E8, "CCitadel_Ability_Magician_CopyUlt size mismatch");
         }
     }
 }

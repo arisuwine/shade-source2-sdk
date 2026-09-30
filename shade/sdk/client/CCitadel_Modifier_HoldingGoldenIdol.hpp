@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4d0
+             * Size: 0x6c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HoldingGoldenIdol : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x400]; // 0x00c0, 0x400 bytes
-                shade::sdk::client::ParticleIndex_t m_iIdolParticle; // 0x04c0, 0x4 bytes
-                std::int32_t m_nGoldValue; // 0x04c4, 0x4 bytes
-                std::int32_t m_nTeamBias; // 0x04c8, 0x4 bytes
-                bool m_bRevealed; // 0x04cc, 0x1 bytes
-                std::uint8_t pad_04cd[0x3]; // 0x04cd, 0x3 bytes
+                std::uint8_t pad_0130[0x580]; // 0x0130, 0x580 bytes
+                shade::sdk::client::ParticleIndex_t m_iIdolParticle; // 0x06b0, 0x4 bytes
+                std::int32_t m_nGoldValue; // 0x06b4, 0x4 bytes
+                std::int32_t m_nTeamBias; // 0x06b8, 0x4 bytes
+                bool m_bRevealed; // 0x06bc, 0x1 bytes
+                std::uint8_t pad_06bd[0x3]; // 0x06bd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HoldingGoldenIdol) == 0x4D0, "CCitadel_Modifier_HoldingGoldenIdol size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HoldingGoldenIdol) == 0x6C0, "CCitadel_Modifier_HoldingGoldenIdol size mismatch");
         }
     }
 }

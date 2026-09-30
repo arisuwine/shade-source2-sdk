@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8e0
+             * Size: 0x9f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,7 +38,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPrecipitation) == 0x8E0, "CPrecipitation size mismatch");
+            static_assert(sizeof(CPrecipitation) == 0x9F0, "CPrecipitation size mismatch");
         }
     }
 }

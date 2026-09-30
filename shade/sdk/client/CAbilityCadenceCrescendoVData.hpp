@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1828
+             * Size: 0x13b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCadenceCrescendoVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifierAura> m_CrescendoAOEModifier; // 0x1818, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifierAura> m_CrescendoAOEModifier; // 0x13a0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCadenceCrescendoVData) == 0x1828, "CAbilityCadenceCrescendoVData size mismatch");
+            static_assert(sizeof(CAbilityCadenceCrescendoVData) == 0x13B0, "CAbilityCadenceCrescendoVData size mismatch");
         }
     }
 }

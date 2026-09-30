@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1968
+             * Size: 0x2138
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Uppercut : public shade::sdk::client::CCitadel_Ability_Melee_Base {
             public:
-                std::uint8_t pad_12e8[0x680]; // 0x12e8, 0x680 bytes
+                std::uint8_t pad_1848[0x8f0]; // 0x1848, 0x8f0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Uppercut) == 0x1968, "CCitadel_Ability_Uppercut size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Uppercut) == 0x2138, "CCitadel_Ability_Uppercut size mismatch");
         }
     }
 }

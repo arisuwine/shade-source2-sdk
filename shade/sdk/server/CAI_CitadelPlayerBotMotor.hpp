@@ -12,33 +12,30 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CAI_Motor.hpp"
+#include "shade/sdk/server/IAI_Motor.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf70
-             * Alignment: 0x10
+             * Size: 0x38
+             * Alignment: 0xff
              * Has VTable
-             * Construct Allowed
-             * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CAI_CitadelPlayerBotMotor : public shade::sdk::server::CAI_Motor {
+            class CAI_CitadelPlayerBotMotor : public shade::sdk::server::IAI_Motor {
             public:
-                std::uint8_t pad_0f40[0x30]; // 0x0f40, 0x30 bytes
+                std::uint8_t pad_0010[0x28]; // 0x0010, 0x28 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_CitadelPlayerBotMotor) == 0xF70, "CAI_CitadelPlayerBotMotor size mismatch");
+            static_assert(sizeof(CAI_CitadelPlayerBotMotor) == 0x38, "CAI_CitadelPlayerBotMotor size mismatch");
         }
     }
 }

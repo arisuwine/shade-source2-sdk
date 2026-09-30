@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1358
+             * Size: 0x18c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,28 +34,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HoldMelee : public shade::sdk::client::CCitadel_Ability_Melee_Base {
             public:
-                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x12e8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDashStartTime; // 0x12ec, 0x4 bytes
-                shade::sdk::client::EMeleeHold_AttackState m_eCurrentAttackState; // 0x12f0, 0x4 bytes
-                shade::sdk::client::EMeleeHold_AttackType m_eCurrentAttackType; // 0x12f4, 0x4 bytes
-                Vector m_vAirDashDir; // 0x12f8, 0xc bytes
-                bool m_bAttackStartedWhileSliding; // 0x1304, 0x1 bytes
-                std::uint8_t pad_1305[0x3]; // 0x1305, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLightChainEndTime; // 0x1308, 0x4 bytes
-                std::int32_t m_nLightChainCount; // 0x130c, 0x4 bytes
-                bool m_bCreatedChargeEffects; // 0x1310, 0x1 bytes
-                std::uint8_t pad_1311[0x3]; // 0x1311, 0x3 bytes
-                QAngle m_angForced; // 0x1314, 0xc bytes
-                Vector m_vGoalDir; // 0x1320, 0xc bytes
-                std::uint8_t pad_132c[0x2c]; // 0x132c, 0x2c bytes
+                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x1848, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDashStartTime; // 0x184c, 0x4 bytes
+                shade::sdk::client::EMeleeHold_AttackState m_eCurrentAttackState; // 0x1850, 0x4 bytes
+                shade::sdk::client::EMeleeHold_AttackType m_eCurrentAttackType; // 0x1854, 0x4 bytes
+                Vector m_vAirDashDir; // 0x1858, 0xc bytes
+                bool m_bAttackStartedWhileSliding; // 0x1864, 0x1 bytes
+                std::uint8_t pad_1865[0x3]; // 0x1865, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLightChainEndTime; // 0x1868, 0x4 bytes
+                std::int32_t m_nLightChainCount; // 0x186c, 0x4 bytes
+                bool m_bCreatedChargeEffects; // 0x1870, 0x1 bytes
+                std::uint8_t pad_1871[0x3]; // 0x1871, 0x3 bytes
+                QAngle m_angForced; // 0x1874, 0xc bytes
+                Vector m_vGoalDir; // 0x1880, 0xc bytes
+                std::uint8_t pad_188c[0x3c]; // 0x188c, 0x3c bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HoldMelee) == 0x1358, "CCitadel_Ability_HoldMelee size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HoldMelee) == 0x18C8, "CCitadel_Ability_HoldMelee size mismatch");
         }
     }
 }

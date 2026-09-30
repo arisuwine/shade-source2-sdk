@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelFilterModifier : public shade::sdk::server::CBaseFilter {
             public:
-                CUtlSymbolLarge m_iModifierName; // 0x04d8, 0x8 bytes
-                std::uint8_t pad_04e0[0x8]; // 0x04e0, 0x8 bytes
+                CUtlSymbolLarge m_iModifierName; // 0x04e8, 0x8 bytes
+                std::uint8_t pad_04f0[0x8]; // 0x04f0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelFilterModifier) == 0x4E8, "CCitadelFilterModifier size mismatch");
+            static_assert(sizeof(CCitadelFilterModifier) == 0x4F8, "CCitadelFilterModifier size mismatch");
         }
     }
 }

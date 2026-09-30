@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,7 +20,7 @@ namespace shade {
     namespace sdk {
         namespace materialsystem2 {
             /* Class Parameters
-             * Size: 0x14
+             * Size: 0x20
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -31,12 +32,15 @@ namespace shade {
                 float m_fCubemapScale; // 0x0008, 0x4 bytes
                 float m_fVolumetricScale; // 0x000c, 0x4 bytes
                 float m_fGradientScale; // 0x0010, 0x4 bytes
+                float m_fWaterScale; // 0x0014, 0x4 bytes
+                float m_fWaterDensity; // 0x0018, 0x4 bytes
+                float m_fWaterDepthBlurRadius; // 0x001c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PostProcessingFogScatteringParameters_t) == 0x14, "PostProcessingFogScatteringParameters_t size mismatch");
+            static_assert(sizeof(PostProcessingFogScatteringParameters_t) == 0x20, "PostProcessingFogScatteringParameters_t size mismatch");
         }
     }
 }

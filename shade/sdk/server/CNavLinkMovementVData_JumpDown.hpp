@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0x138
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CNavLinkMovementVData_JumpDown : public shade::sdk::server::CNavLinkMovementVData {
             public:
-                shade::sdk::server::CNavLinkMetrics_JumpDown m_metrics; // 0x0118, 0x14 bytes
-                bool m_bAlignWithExitDirectionDuringFall; // 0x012c, 0x1 bytes
-                std::uint8_t pad_012d[0x3]; // 0x012d, 0x3 bytes
+                shade::sdk::server::CNavLinkMetrics_JumpDown m_metrics; // 0x0130, 0x4 bytes
+                bool m_bAlignWithExitDirectionDuringFall; // 0x0134, 0x1 bytes
+                std::uint8_t pad_0135[0x3]; // 0x0135, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNavLinkMovementVData_JumpDown) == 0x130, "CNavLinkMovementVData_JumpDown size mismatch");
+            static_assert(sizeof(CNavLinkMovementVData_JumpDown) == 0x138, "CNavLinkMovementVData_JumpDown size mismatch");
         }
     }
 }

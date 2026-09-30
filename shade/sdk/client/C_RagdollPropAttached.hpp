@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd70
+             * Size: 0xe60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_RagdollPropAttached : public shade::sdk::client::C_RagdollProp {
             public:
-                std::uint32_t m_boneIndexAttached; // 0x0d38, 0x4 bytes
-                std::uint32_t m_ragdollAttachedObjectIndex; // 0x0d3c, 0x4 bytes
-                Vector m_attachmentPointBoneSpace; // 0x0d40, 0xc bytes
-                Vector m_attachmentPointRagdollSpace; // 0x0d4c, 0xc bytes
-                Vector m_vecOffset; // 0x0d58, 0xc bytes
-                float m_parentTime; // 0x0d64, 0x4 bytes
-                bool m_bHasParent; // 0x0d68, 0x1 bytes
-                std::uint8_t pad_0d69[0x7]; // 0x0d69, 0x7 bytes
+                std::uint32_t m_boneIndexAttached; // 0x0e28, 0x4 bytes
+                std::uint32_t m_ragdollAttachedObjectIndex; // 0x0e2c, 0x4 bytes
+                Vector m_attachmentPointBoneSpace; // 0x0e30, 0xc bytes
+                Vector m_attachmentPointRagdollSpace; // 0x0e3c, 0xc bytes
+                Vector m_vecOffset; // 0x0e48, 0xc bytes
+                float m_parentTime; // 0x0e54, 0x4 bytes
+                bool m_bHasParent; // 0x0e58, 0x1 bytes
+                std::uint8_t pad_0e59[0x7]; // 0x0e59, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_RagdollPropAttached) == 0xD70, "C_RagdollPropAttached size mismatch");
+            static_assert(sizeof(C_RagdollPropAttached) == 0xE60, "C_RagdollPropAttached size mismatch");
         }
     }
 }

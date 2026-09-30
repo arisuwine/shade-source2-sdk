@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xbf0
+             * Size: 0xc00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,24 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ItemPunchable_RejuvVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                std::int32_t m_iRejuvBossKill01; // 0x0750, 0x4 bytes
-                std::int32_t m_iRejuvBossKill02; // 0x0754, 0x4 bytes
-                float m_flPhysicsRadius; // 0x0758, 0x4 bytes
-                float m_flMaxDistForHeal; // 0x075c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsDroppingParticle; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsPunchableParticle; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsFrozenParticle; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamagedParticle; // 0x0a00, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEHealParticle; // 0x0ae0, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NearRejuvAuraModifier; // 0x0bc0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryCheckModifier; // 0x0bd0, 0x10 bytes
-                CSoundEventName m_sHitSound; // 0x0be0, 0x10 bytes
+                std::int32_t m_iRejuvBossKill01; // 0x0760, 0x4 bytes
+                std::int32_t m_iRejuvBossKill02; // 0x0764, 0x4 bytes
+                float m_flPhysicsRadius; // 0x0768, 0x4 bytes
+                float m_flMaxDistForHeal; // 0x076c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsDroppingParticle; // 0x0770, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsPunchableParticle; // 0x0850, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsFrozenParticle; // 0x0930, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamagedParticle; // 0x0a10, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEHealParticle; // 0x0af0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NearRejuvAuraModifier; // 0x0bd0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParryCheckModifier; // 0x0be0, 0x10 bytes
+                CSoundEventName m_sHitSound; // 0x0bf0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ItemPunchable_RejuvVData) == 0xBF0, "CCitadel_Modifier_ItemPunchable_RejuvVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ItemPunchable_RejuvVData) == 0xC00, "CCitadel_Modifier_ItemPunchable_RejuvVData size mismatch");
         }
     }
 }

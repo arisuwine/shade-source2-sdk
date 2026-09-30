@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1748
+             * Size: 0x1e28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,31 +41,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_Pounce_Instant : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x500]; // 0x11d8, 0x500 bytes
-                bool m_bActive; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentTarget; // 0x16dc, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLastCastTarget; // 0x16e0, 0x4 bytes
-                Vector m_vStartPosition; // 0x16e4, 0xc bytes
-                Vector m_vDeparturePosition; // 0x16f0, 0xc bytes
-                std::uint8_t pad_16fc[0x4]; // 0x16fc, 0x4 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flDepartureTime; // 0x1700, 0x18 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flArrivalTime; // 0x1718, 0x18 bytes
-                Vector m_vLastKnownSafePos; // 0x1730, 0xc bytes
-                bool m_bStartedPhase01; // 0x173c, 0x1 bytes
-                bool m_bStartedPhase02; // 0x173d, 0x1 bytes
-                bool m_bIsFirstCastCompleted; // 0x173e, 0x1 bytes
-                std::uint8_t pad_173f[0x1]; // 0x173f, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_tDoubleCastWindow; // 0x1740, 0x4 bytes
-                std::uint8_t pad_1744[0x4]; // 0x1744, 0x4 bytes
+                std::uint8_t pad_16d8[0x6e0]; // 0x16d8, 0x6e0 bytes
+                bool m_bActive; // 0x1db8, 0x1 bytes
+                std::uint8_t pad_1db9[0x3]; // 0x1db9, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentTarget; // 0x1dbc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLastCastTarget; // 0x1dc0, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1dc4, 0xc bytes
+                VectorWS m_vDeparturePosition; // 0x1dd0, 0xc bytes
+                std::uint8_t pad_1ddc[0x4]; // 0x1ddc, 0x4 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flDepartureTime; // 0x1de0, 0x18 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flArrivalTime; // 0x1df8, 0x18 bytes
+                VectorWS m_vLastKnownSafePos; // 0x1e10, 0xc bytes
+                bool m_bStartedPhase01; // 0x1e1c, 0x1 bytes
+                bool m_bStartedPhase02; // 0x1e1d, 0x1 bytes
+                bool m_bIsFirstCastCompleted; // 0x1e1e, 0x1 bytes
+                std::uint8_t pad_1e1f[0x1]; // 0x1e1f, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_tDoubleCastWindow; // 0x1e20, 0x4 bytes
+                std::uint8_t pad_1e24[0x4]; // 0x1e24, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_Pounce_Instant) == 0x1748, "CCitadel_Ability_Nano_Pounce_Instant size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_Pounce_Instant) == 0x1E28, "CCitadel_Ability_Nano_Pounce_Instant size mismatch");
         }
     }
 }

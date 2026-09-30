@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1460
+             * Size: 0x1a50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_NPCAbility_Vanguard_AOEBuff : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x280]; // 0x11d8, 0x280 bytes
-                shade::sdk::entity2::GameTime_t m_timeNextCast; // 0x1458, 0x4 bytes
-                std::uint8_t pad_145c[0x4]; // 0x145c, 0x4 bytes
+                std::uint8_t pad_16d8[0x370]; // 0x16d8, 0x370 bytes
+                shade::sdk::entity2::GameTime_t m_timeNextCast; // 0x1a48, 0x4 bytes
+                std::uint8_t pad_1a4c[0x4]; // 0x1a4c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_NPCAbility_Vanguard_AOEBuff) == 0x1460, "CCitadel_NPCAbility_Vanguard_AOEBuff size mismatch");
+            static_assert(sizeof(CCitadel_NPCAbility_Vanguard_AOEBuff) == 0x1A50, "CCitadel_NPCAbility_Vanguard_AOEBuff size mismatch");
         }
     }
 }

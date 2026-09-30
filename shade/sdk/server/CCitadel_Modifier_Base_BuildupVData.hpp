@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x778
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Base_BuildupVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                bool m_bUseBaseWeaponCycleTimeForDelay; // 0x0750, 0x1 bytes
-                std::uint8_t pad_0751[0x3]; // 0x0751, 0x3 bytes
-                float m_flCycleTimeDelayAdd; // 0x0754, 0x4 bytes
-                float m_flBuildUpDecayDelay; // 0x0758, 0x4 bytes
-                shade::sdk::client::BuildupMode_t m_eBuildupMode; // 0x075c, 0x4 bytes
-                bool m_bBuildupAffectedByEffectiveness; // 0x0760, 0x1 bytes
-                bool m_bPassBuildupEffectivenessToFillModifier; // 0x0761, 0x1 bytes
-                std::uint8_t pad_0762[0x6]; // 0x0762, 0x6 bytes
+                bool m_bUseBaseWeaponCycleTimeForDelay; // 0x0760, 0x1 bytes
+                std::uint8_t pad_0761[0x3]; // 0x0761, 0x3 bytes
+                float m_flCycleTimeDelayAdd; // 0x0764, 0x4 bytes
+                float m_flBuildUpDecayDelay; // 0x0768, 0x4 bytes
+                shade::sdk::client::BuildupMode_t m_eBuildupMode; // 0x076c, 0x4 bytes
+                bool m_bBuildupAffectedByEffectiveness; // 0x0770, 0x1 bytes
+                bool m_bPassBuildupEffectivenessToFillModifier; // 0x0771, 0x1 bytes
+                std::uint8_t pad_0772[0x6]; // 0x0772, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Base_BuildupVData) == 0x768, "CCitadel_Modifier_Base_BuildupVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Base_BuildupVData) == 0x778, "CCitadel_Modifier_Base_BuildupVData size mismatch");
         }
     }
 }

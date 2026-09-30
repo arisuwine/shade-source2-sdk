@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x570
+             * Size: 0x580
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,32 +41,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointAngularVelocitySensor : public shade::sdk::server::CPointEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x04a0, 0x4 bytes
-                float m_flThreshold; // 0x04a4, 0x4 bytes
-                std::int32_t m_nLastCompareResult; // 0x04a8, 0x4 bytes
-                std::int32_t m_nLastFireResult; // 0x04ac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFireTime; // 0x04b0, 0x4 bytes
-                float m_flFireInterval; // 0x04b4, 0x4 bytes
-                float m_flLastAngVelocity; // 0x04b8, 0x4 bytes
-                QAngle m_lastOrientation; // 0x04bc, 0xc bytes
-                VectorWS m_vecAxis; // 0x04c8, 0xc bytes
-                bool m_bUseHelper; // 0x04d4, 0x1 bytes
-                std::uint8_t pad_04d5[0x3]; // 0x04d5, 0x3 bytes
-                CEntityOutputTemplate<float> m_AngularVelocity; // 0x04d8, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLessThan; // 0x04f8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLessThanOrEqualTo; // 0x0510, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnGreaterThan; // 0x0528, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnGreaterThanOrEqualTo; // 0x0540, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEqualTo; // 0x0558, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x04b0, 0x4 bytes
+                float m_flThreshold; // 0x04b4, 0x4 bytes
+                std::int32_t m_nLastCompareResult; // 0x04b8, 0x4 bytes
+                std::int32_t m_nLastFireResult; // 0x04bc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFireTime; // 0x04c0, 0x4 bytes
+                float m_flFireInterval; // 0x04c4, 0x4 bytes
+                float m_flLastAngVelocity; // 0x04c8, 0x4 bytes
+                QAngle m_lastOrientation; // 0x04cc, 0xc bytes
+                VectorWS m_vecAxis; // 0x04d8, 0xc bytes
+                bool m_bUseHelper; // 0x04e4, 0x1 bytes
+                std::uint8_t pad_04e5[0x3]; // 0x04e5, 0x3 bytes
+                CEntityOutputTemplate<float> m_AngularVelocity; // 0x04e8, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLessThan; // 0x0508, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLessThanOrEqualTo; // 0x0520, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnGreaterThan; // 0x0538, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnGreaterThanOrEqualTo; // 0x0550, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEqualTo; // 0x0568, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputTest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTestWithInterval; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointAngularVelocitySensor) == 0x570, "CPointAngularVelocitySensor size mismatch");
+            static_assert(sizeof(CPointAngularVelocitySensor) == 0x580, "CPointAngularVelocitySensor size mismatch");
         }
     }
 }

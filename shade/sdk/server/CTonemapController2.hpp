@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,25 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CTonemapController2 : public shade::sdk::server::CBaseEntity {
             public:
-                float m_flAutoExposureMin; // 0x04a0, 0x4 bytes
-                float m_flAutoExposureMax; // 0x04a4, 0x4 bytes
-                float m_flExposureAdaptationSpeedUp; // 0x04a8, 0x4 bytes
-                float m_flExposureAdaptationSpeedDown; // 0x04ac, 0x4 bytes
-                float m_flTonemapEVSmoothingRange; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                float m_flAutoExposureMin; // 0x04b0, 0x4 bytes
+                float m_flAutoExposureMax; // 0x04b4, 0x4 bytes
+                float m_flExposureAdaptationSpeedUp; // 0x04b8, 0x4 bytes
+                float m_flExposureAdaptationSpeedDown; // 0x04bc, 0x4 bytes
+                float m_flTonemapEVSmoothingRange; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMinExposure; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMaxExposure; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetExposureAdaptationSpeedUp; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetExposureAdaptationSpeedDown; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTonemapController2) == 0x4B8, "CTonemapController2 size mismatch");
+            static_assert(sizeof(CTonemapController2) == 0x4C8, "CTonemapController2 size mismatch");
         }
     }
 }

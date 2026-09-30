@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd00
+             * Size: 0xdf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPickupIdol : public shade::sdk::client::C_CitadelItemPickup {
             public:
-                std::uint8_t pad_0cf0[0x8]; // 0x0cf0, 0x8 bytes
-                std::int32_t m_nTeamBias; // 0x0cf8, 0x4 bytes
-                bool m_bPlaySpawnMusic; // 0x0cfc, 0x1 bytes
-                std::uint8_t pad_0cfd[0x3]; // 0x0cfd, 0x3 bytes
+                std::uint8_t pad_0de0[0x8]; // 0x0de0, 0x8 bytes
+                std::int32_t m_nTeamBias; // 0x0de8, 0x4 bytes
+                std::uint8_t pad_0dec[0x4]; // 0x0dec, 0x4 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CCitadelItemPickupIdol) == 0xD00, "CCitadelItemPickupIdol size mismatch");
+            static_assert(sizeof(CCitadelItemPickupIdol) == 0xDF0, "CCitadelItemPickupIdol size mismatch");
         }
     }
 }

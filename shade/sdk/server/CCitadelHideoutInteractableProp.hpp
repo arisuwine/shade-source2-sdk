@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -25,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xde0
+             * Size: 0xe60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,26 +35,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHideoutInteractableProp : public shade::sdk::server::CDynamicProp, public shade::sdk::client::IHideoutInteractable {
             public:
-                std::uint8_t pad_0cd8[0x18]; // 0x0cd8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x0cf0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0x0d08, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x0d20, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0x0d38, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnInteracted; // 0x0d50, 0x18 bytes
-                CUtlString m_strInteractLocString; // 0x0d68, 0x8 bytes
-                shade::sdk::client::EHideoutButtonInteractStyle m_eInteractStyle; // 0x0d70, 0x4 bytes
-                shade::sdk::client::EHideoutButtonAction m_eHideoutAction; // 0x0d74, 0x4 bytes
-                float m_flInteractDistance; // 0x0d78, 0x4 bytes
-                std::uint8_t pad_0d7c[0x4]; // 0x0d7c, 0x4 bytes
-                CUtlString m_strWorldPanelEntity; // 0x0d80, 0x8 bytes
-                CUtlString m_strOpacityCurveString; // 0x0d88, 0x8 bytes
-                std::uint8_t pad_0d90[0x50]; // 0x0d90, 0x50 bytes
+                std::uint8_t pad_0d58[0x18]; // 0x0d58, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x0d70, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0x0d88, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x0da0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0x0db8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnInteracted; // 0x0dd0, 0x18 bytes
+                CUtlString m_strInteractLocString; // 0x0de8, 0x8 bytes
+                shade::sdk::client::EHideoutButtonInteractStyle m_eInteractStyle; // 0x0df0, 0x4 bytes
+                shade::sdk::client::EHideoutButtonAction m_eHideoutAction; // 0x0df4, 0x4 bytes
+                float m_flInteractDistance; // 0x0df8, 0x4 bytes
+                std::uint8_t pad_0dfc[0x4]; // 0x0dfc, 0x4 bytes
+                CUtlString m_strWorldPanelEntity; // 0x0e00, 0x8 bytes
+                CUtlString m_strOpacityCurveString; // 0x0e08, 0x8 bytes
+                std::uint8_t pad_0e10[0x50]; // 0x0e10, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHideoutInteractableProp) == 0xDE0, "CCitadelHideoutInteractableProp size mismatch");
+            static_assert(sizeof(CCitadelHideoutInteractableProp) == 0xE60, "CCitadelHideoutInteractableProp size mismatch");
         }
     }
 }

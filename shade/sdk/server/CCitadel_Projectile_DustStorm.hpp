@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc68
+             * Size: 0xef0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_DustStorm : public shade::sdk::server::CCitadelProjectile {
             public:
-                std::int32_t m_cTicksNoMovement; // 0x0860, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadel_Ability_Dust_Storm> m_DustStormAbility; // 0x0864, 0x4 bytes
-                std::uint8_t pad_0868[0x400]; // 0x0868, 0x400 bytes
+                std::int32_t m_cTicksNoMovement; // 0x0968, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadel_Ability_Dust_Storm> m_DustStormAbility; // 0x096c, 0x4 bytes
+                std::uint8_t pad_0970[0x580]; // 0x0970, 0x580 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_DustStorm) == 0xC68, "CCitadel_Projectile_DustStorm size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_DustStorm) == 0xEF0, "CCitadel_Projectile_DustStorm size mismatch");
         }
     }
 }

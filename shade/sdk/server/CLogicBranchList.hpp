@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x598
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,23 +41,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicBranchList : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_nLogicBranchNames[0x10]; // 0x04a0, 0x80 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_LogicBranchList; // 0x0520, 0x18 bytes
-                shade::sdk::server::CLogicBranchList__LogicBranchListenerLastState_t m_eLastState; // 0x0538, 0x4 bytes
-                std::uint8_t pad_053c[0x4]; // 0x053c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAllTrue; // 0x0540, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAllFalse; // 0x0558, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMixed; // 0x0570, 0x18 bytes
+                CUtlSymbolLarge m_nLogicBranchNames[0x10]; // 0x04b0, 0x80 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_LogicBranchList; // 0x0530, 0x18 bytes
+                shade::sdk::server::CLogicBranchList__LogicBranchListenerLastState_t m_eLastState; // 0x0548, 0x4 bytes
+                std::uint8_t pad_054c[0x4]; // 0x054c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAllTrue; // 0x0550, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAllFalse; // 0x0568, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMixed; // 0x0580, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputTest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void Input_OnLogicBranchChanged; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void Input_OnLogicBranchRemoved; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicBranchList) == 0x588, "CLogicBranchList size mismatch");
+            static_assert(sizeof(CLogicBranchList) == 0x598, "CLogicBranchList size mismatch");
         }
     }
 }

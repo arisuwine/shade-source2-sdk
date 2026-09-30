@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x1b0
+             * Size: 0x240
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +33,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_Test_MultiOutflow_WithParams_Yielding : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                shade::sdk::pulse_runtime_lib::SignatureOutflow_Continue m_Out1; // 0x0048, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::SignatureOutflow_Continue m_AsyncChild1; // 0x0090, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::SignatureOutflow_Continue m_AsyncChild2; // 0x00d8, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::SignatureOutflow_Resume m_YieldResume1; // 0x0120, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::SignatureOutflow_Resume m_YieldResume2; // 0x0168, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::SignatureOutflow_Continue m_Out1; // 0x00d8, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::SignatureOutflow_Continue m_AsyncChild1; // 0x0120, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::SignatureOutflow_Continue m_AsyncChild2; // 0x0168, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::SignatureOutflow_Resume m_YieldResume1; // 0x01b0, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::SignatureOutflow_Resume m_YieldResume2; // 0x01f8, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Test_MultiOutflow_WithParams_Yielding) == 0x1B0, "CPulseCell_Test_MultiOutflow_WithParams_Yielding size mismatch");
+            static_assert(sizeof(CPulseCell_Test_MultiOutflow_WithParams_Yielding) == 0x240, "CPulseCell_Test_MultiOutflow_WithParams_Yielding size mismatch");
         }
     }
 }

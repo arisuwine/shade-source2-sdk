@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcc8
+             * Size: 0xdb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,12 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_BaseDefenseSentry : public shade::sdk::client::C_NPC_SimpleAnimatingAI {
             public:
-                Vector m_vecUnitStatusOffset; // 0x0cb8, 0xc bytes
-                std::uint8_t pad_0cc4[0x4]; // 0x0cc4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_BaseDefenseSentry) == 0xCC8, "C_NPC_BaseDefenseSentry size mismatch");
+            static_assert(sizeof(C_NPC_BaseDefenseSentry) == 0xDB8, "C_NPC_BaseDefenseSentry size mismatch");
         }
     }
 }

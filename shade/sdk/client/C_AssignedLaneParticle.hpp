@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9d0
+             * Size: 0xbd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_AssignedLaneParticle : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_09a8[0x20]; // 0x09a8, 0x20 bytes
-                std::int32_t m_iLane; // 0x09c8, 0x4 bytes
-                std::uint8_t pad_09cc[0x4]; // 0x09cc, 0x4 bytes
+                std::uint8_t pad_0bb0[0x20]; // 0x0bb0, 0x20 bytes
+                std::int32_t m_iLane; // 0x0bd0, 0x4 bytes
+                std::uint8_t pad_0bd4[0x4]; // 0x0bd4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_AssignedLaneParticle) == 0x9D0, "C_AssignedLaneParticle size mismatch");
+            static_assert(sizeof(C_AssignedLaneParticle) == 0xBD8, "C_AssignedLaneParticle size mismatch");
         }
     }
 }

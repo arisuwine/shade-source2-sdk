@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1698
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,22 +43,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Mirage_Teleport_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InterruptNotificationModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1828, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_preTeleportParticle; // 0x1838, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportStartParticle; // 0x1918, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportEndParticle; // 0x19f8, 0xe0 bytes
-                CSoundEventName m_strArriveSound; // 0x1ad8, 0x10 bytes
-                CSoundEventName m_strDepartSound; // 0x1ae8, 0x10 bytes
-                CSoundEventName m_strChannelDestinationSound; // 0x1af8, 0x10 bytes
-                float m_flObjectiveOffset; // 0x1b08, 0x4 bytes
-                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InterruptNotificationModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x13b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_preTeleportParticle; // 0x13c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportStartParticle; // 0x14a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportEndParticle; // 0x1580, 0xe0 bytes
+                CSoundEventName m_strArriveSound; // 0x1660, 0x10 bytes
+                CSoundEventName m_strDepartSound; // 0x1670, 0x10 bytes
+                CSoundEventName m_strChannelDestinationSound; // 0x1680, 0x10 bytes
+                float m_flObjectiveOffset; // 0x1690, 0x4 bytes
+                std::uint8_t pad_1694[0x4]; // 0x1694, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Mirage_Teleport_VData) == 0x1B10, "CAbility_Mirage_Teleport_VData size mismatch");
+            static_assert(sizeof(CAbility_Mirage_Teleport_VData) == 0x1698, "CAbility_Mirage_Teleport_VData size mismatch");
         }
     }
 }

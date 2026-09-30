@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x480
+             * Size: 0x640
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,27 +30,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BurstFire_Actuator : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bLastShotInFlight; // 0x00d0, 0x1 bytes
-                bool m_bBonusTracked; // 0x00d1, 0x1 bytes
-                std::uint8_t pad_00d2[0x2]; // 0x00d2, 0x2 bytes
-                std::int32_t m_nHitCounter; // 0x00d4, 0x4 bytes
-                std::int32_t m_nTotalBurstFireShots; // 0x00d8, 0x4 bytes
-                std::int32_t m_nInitialzedClipSize; // 0x00dc, 0x4 bytes
-                std::int32_t m_nBonusPitch; // 0x00e0, 0x4 bytes
-                bool m_bInitialized; // 0x00e4, 0x1 bytes
-                std::uint8_t pad_00e5[0x3]; // 0x00e5, 0x3 bytes
-                std::int32_t m_nIncreasedBurstShotCount; // 0x00e8, 0x4 bytes
-                float m_flIntraBurstCycleTime; // 0x00ec, 0x4 bytes
-                float m_flCycleTimePct; // 0x00f0, 0x4 bytes
-                float m_flMaxCycleTimeOverride; // 0x00f4, 0x4 bytes
-                float m_flMaxBurstFireCooldownOverride; // 0x00f8, 0x4 bytes
-                std::uint8_t pad_00fc[0x384]; // 0x00fc, 0x384 bytes
+                bool m_bLastShotInFlight; // 0x0140, 0x1 bytes
+                bool m_bBonusTracked; // 0x0141, 0x1 bytes
+                std::uint8_t pad_0142[0x2]; // 0x0142, 0x2 bytes
+                std::int32_t m_nHitCounter; // 0x0144, 0x4 bytes
+                std::int32_t m_nTotalBurstFireShots; // 0x0148, 0x4 bytes
+                std::int32_t m_nInitialzedClipSize; // 0x014c, 0x4 bytes
+                std::int32_t m_nBonusPitch; // 0x0150, 0x4 bytes
+                bool m_bInitialized; // 0x0154, 0x1 bytes
+                std::uint8_t pad_0155[0x3]; // 0x0155, 0x3 bytes
+                std::int32_t m_nIncreasedBurstShotCount; // 0x0158, 0x4 bytes
+                float m_flIntraBurstCycleTime; // 0x015c, 0x4 bytes
+                float m_flCycleTimePct; // 0x0160, 0x4 bytes
+                float m_flMaxCycleTimeOverride; // 0x0164, 0x4 bytes
+                float m_flMaxBurstFireCooldownOverride; // 0x0168, 0x4 bytes
+                std::uint8_t pad_016c[0x4d4]; // 0x016c, 0x4d4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BurstFire_Actuator) == 0x480, "CCitadel_Modifier_BurstFire_Actuator size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BurstFire_Actuator) == 0x640, "CCitadel_Modifier_BurstFire_Actuator size mismatch");
         }
     }
 }

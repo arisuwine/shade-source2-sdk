@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1000
+             * Size: 0x1560
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -39,19 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_BaseHeldItem : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x80]; // 0x0f70, 0x80 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x0ff0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tFirstPickupTime; // 0x0ff4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastPickupTime; // 0x0ff8, 0x4 bytes
-                std::uint8_t pad_0ffc[0x4]; // 0x0ffc, 0x4 bytes
+                std::uint8_t pad_14a0[0xb0]; // 0x14a0, 0xb0 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x1550, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tFirstPickupTime; // 0x1554, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastPickupTime; // 0x1558, 0x4 bytes
+                std::uint8_t pad_155c[0x4]; // 0x155c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_BaseHeldItem) == 0x1000, "CCitadel_Ability_BaseHeldItem size mismatch");
+            static_assert(sizeof(CCitadel_Ability_BaseHeldItem) == 0x1560, "CCitadel_Ability_BaseHeldItem size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x508
+             * Size: 0x518
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,32 +45,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysMotor : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_nameAttach; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_nameAnchor; // 0x04a8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAttachedObject; // 0x04b0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAnchorObject; // 0x04b4, 0x4 bytes
-                float m_spinUp; // 0x04b8, 0x4 bytes
-                float m_spinDown; // 0x04bc, 0x4 bytes
-                float m_flMotorFriction; // 0x04c0, 0x4 bytes
-                float m_additionalAcceleration; // 0x04c4, 0x4 bytes
-                float m_angularAcceleration; // 0x04c8, 0x4 bytes
-                float m_flTorqueScale; // 0x04cc, 0x4 bytes
-                float m_flTargetSpeed; // 0x04d0, 0x4 bytes
-                float m_flSpeedWhenSpinUpOrSpinDownStarted; // 0x04d4, 0x4 bytes
-                shade::sdk::vphysics2::IPhysicsBody *m_pFixedWorldBody; // 0x04d8, 0x8 bytes
-                shade::sdk::vphysics2::IPhysicsJoint *m_pMotorJoint; // 0x04e0, 0x8 bytes
-                shade::sdk::server::CMotorController m_motor; // 0x04e8, 0x20 bytes
+                CUtlSymbolLarge m_nameAttach; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_nameAnchor; // 0x04b8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAttachedObject; // 0x04c0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAnchorObject; // 0x04c4, 0x4 bytes
+                float m_spinUp; // 0x04c8, 0x4 bytes
+                float m_spinDown; // 0x04cc, 0x4 bytes
+                float m_flMotorFriction; // 0x04d0, 0x4 bytes
+                float m_additionalAcceleration; // 0x04d4, 0x4 bytes
+                float m_angularAcceleration; // 0x04d8, 0x4 bytes
+                float m_flTorqueScale; // 0x04dc, 0x4 bytes
+                float m_flTargetSpeed; // 0x04e0, 0x4 bytes
+                float m_flSpeedWhenSpinUpOrSpinDownStarted; // 0x04e4, 0x4 bytes
+                shade::sdk::vphysics2::IPhysicsBody *m_pFixedWorldBody; // 0x04e8, 0x8 bytes
+                shade::sdk::vphysics2::IPhysicsJoint *m_pMotorJoint; // 0x04f0, 0x8 bytes
+                shade::sdk::server::CMotorController m_motor; // 0x04f8, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetTargetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFriction; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysMotor) == 0x508, "CPhysMotor size mismatch");
+            static_assert(sizeof(CPhysMotor) == 0x518, "CPhysMotor size mismatch");
         }
     }
 }

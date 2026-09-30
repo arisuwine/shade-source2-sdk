@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -20,7 +21,8 @@ namespace shade {
                 None = 0x0,
                 LinkImbues = 0x1,
                 LinkUpgrades = 0x2,
-                DisplayAsSubAbility = 0x4
+                DisplayAsSubAbility = 0x4,
+                AssignAsAltFire = 0x8
             };
         }
     }

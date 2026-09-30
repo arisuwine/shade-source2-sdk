@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1118
+             * Size: 0x1648
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,32 +41,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TangoTether : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::int32_t m_iTargetPosIndex; // 0x0f70, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLockOnTarget; // 0x0f74, 0x4 bytes
-                Vector m_vecCastStartPos; // 0x0f78, 0xc bytes
-                Vector m_vecDashStartPos; // 0x0f84, 0xc bytes
-                Vector m_vecDashEndPos; // 0x0f90, 0xc bytes
-                QAngle m_angDashStartAng; // 0x0f9c, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flDashStartTime; // 0x0fa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGrappleStartTime; // 0x0fac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0x0fb0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0fb4, 0x4 bytes
-                float m_flVelSpring; // 0x0fb8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0x0fbc, 0x4 bytes
-                std::int32_t m_nTicksNotMoving; // 0x0fc0, 0x4 bytes
-                Vector m_vecPrevPos; // 0x0fc4, 0xc bytes
-                Vector m_rgTargetPos[0x14]; // 0x0fd0, 0xf0 bytes
-                shade::sdk::entity2::GameTime_t m_rgTargetPosTime[0x14]; // 0x10c0, 0x50 bytes
-                shade::sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0x1110, 0x4 bytes
-                std::uint8_t pad_1114[0x4]; // 0x1114, 0x4 bytes
+                std::int32_t m_iTargetPosIndex; // 0x14a0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLockOnTarget; // 0x14a4, 0x4 bytes
+                Vector m_vecCastStartPos; // 0x14a8, 0xc bytes
+                Vector m_vecDashStartPos; // 0x14b4, 0xc bytes
+                Vector m_vecDashEndPos; // 0x14c0, 0xc bytes
+                QAngle m_angDashStartAng; // 0x14cc, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flDashStartTime; // 0x14d8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGrappleStartTime; // 0x14dc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0x14e0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x14e4, 0x4 bytes
+                float m_flVelSpring; // 0x14e8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0x14ec, 0x4 bytes
+                std::int32_t m_nTicksNotMoving; // 0x14f0, 0x4 bytes
+                Vector m_vecPrevPos; // 0x14f4, 0xc bytes
+                Vector m_rgTargetPos[0x14]; // 0x1500, 0xf0 bytes
+                shade::sdk::entity2::GameTime_t m_rgTargetPosTime[0x14]; // 0x15f0, 0x50 bytes
+                shade::sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0x1640, 0x4 bytes
+                std::uint8_t pad_1644[0x4]; // 0x1644, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TangoTether) == 0x1118, "CCitadel_Ability_TangoTether size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TangoTether) == 0x1648, "CCitadel_Ability_TangoTether size mismatch");
         }
     }
 }

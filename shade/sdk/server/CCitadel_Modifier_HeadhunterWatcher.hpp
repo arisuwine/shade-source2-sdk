@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x430
+             * Size: 0x5c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HeadhunterWatcher : public shade::sdk::server::CCitadel_Modifier_HeadshotBoosterWatcher {
             public:
-                std::uint8_t pad_02b0[0x180]; // 0x02b0, 0x180 bytes
+                std::uint8_t pad_03b0[0x210]; // 0x03b0, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HeadhunterWatcher) == 0x430, "CCitadel_Modifier_HeadhunterWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HeadhunterWatcher) == 0x5C0, "CCitadel_Modifier_HeadhunterWatcher size mismatch");
         }
     }
 }

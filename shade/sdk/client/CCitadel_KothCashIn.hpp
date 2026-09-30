@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xcb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,7 +38,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_KothCashIn) == 0xAA0, "CCitadel_KothCashIn size mismatch");
+            static_assert(sizeof(CCitadel_KothCashIn) == 0xCB8, "CCitadel_KothCashIn size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc50
+             * Size: 0xc00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_MagicianTurret : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0x50]; // 0x0bf0, 0x50 bytes
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c40, 0x4 bytes
-                std::uint8_t pad_0c44[0xc]; // 0x0c44, 0xc bytes
+                std::uint8_t pad_0bf0[0x4]; // 0x0bf0, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0bf4, 0x4 bytes
+                std::uint8_t pad_0bf8[0x8]; // 0x0bf8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_MagicianTurret) == 0xC50, "CCitadel_MagicianTurret size mismatch");
+            static_assert(sizeof(CCitadel_MagicianTurret) == 0xC00, "CCitadel_MagicianTurret size mismatch");
         }
     }
 }

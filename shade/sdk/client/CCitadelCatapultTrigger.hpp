@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa98
+             * Size: 0xcf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelCatapultTrigger : public shade::sdk::client::C_BaseTrigger {
             public:
-                std::uint8_t pad_0a78[0x4]; // 0x0a78, 0x4 bytes
-                Vector m_vLaunchTarget; // 0x0a7c, 0xc bytes
-                float m_flLaunchSpeed; // 0x0a88, 0x4 bytes
-                std::uint8_t pad_0a8c[0x4]; // 0x0a8c, 0x4 bytes
-                CUtlSymbolLarge m_nameTarget; // 0x0a90, 0x8 bytes
+                std::uint8_t pad_0c98[0x14]; // 0x0c98, 0x14 bytes
+                VectorWS m_vLaunchTarget; // 0x0cac, 0xc bytes
+                float m_flLaunchSpeed; // 0x0cb8, 0x4 bytes
+                std::uint8_t pad_0cbc[0x4]; // 0x0cbc, 0x4 bytes
+                CUtlSymbolLarge m_nameTarget; // 0x0cc0, 0x8 bytes
+                bool m_bPickupTrailEnabled; // 0x0cc8, 0x1 bytes
+                std::uint8_t pad_0cc9[0x7]; // 0x0cc9, 0x7 bytes
+                CUtlSymbolLarge m_iszTrailPickupSubclass; // 0x0cd0, 0x8 bytes
+                std::int32_t m_nTrailPickupCount; // 0x0cd8, 0x4 bytes
+                float m_flTrailStartDelay; // 0x0cdc, 0x4 bytes
+                float m_flTrailSpawnInterval; // 0x0ce0, 0x4 bytes
+                bool m_bTrailAutoSpace; // 0x0ce4, 0x1 bytes
+                std::uint8_t pad_0ce5[0x3]; // 0x0ce5, 0x3 bytes
+                float m_flTrailTrajectoryTimeSpacing; // 0x0ce8, 0x4 bytes
+                std::uint8_t pad_0cec[0x4]; // 0x0cec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelCatapultTrigger) == 0xA98, "CCitadelCatapultTrigger size mismatch");
+            static_assert(sizeof(CCitadelCatapultTrigger) == 0xCF0, "CCitadelCatapultTrigger size mismatch");
         }
     }
 }

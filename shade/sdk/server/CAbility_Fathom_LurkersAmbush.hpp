@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1448
+             * Size: 0x1b28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,27 +41,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Fathom_LurkersAmbush : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x480]; // 0x0f70, 0x480 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hRegenModifier; // 0x13f0, 0x18 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hInvisModifier; // 0x1408, 0x18 bytes
-                bool m_bIsVisibleOnMinimap; // 0x1420, 0x1 bytes
-                std::uint8_t pad_1421[0x3]; // 0x1421, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStoppedMovingStartTime; // 0x1424, 0x4 bytes
-                Vector m_vLastPos; // 0x1428, 0xc bytes
-                float m_flDebuffDuration; // 0x1434, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChannelTimeStarted; // 0x1438, 0x4 bytes
-                bool m_bWasLatchedWhenCast; // 0x143c, 0x1 bytes
-                std::uint8_t pad_143d[0x3]; // 0x143d, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_ChargeUpParticle; // 0x1440, 0x4 bytes
-                std::uint8_t pad_1444[0x4]; // 0x1444, 0x4 bytes
+                std::uint8_t pad_14a0[0x630]; // 0x14a0, 0x630 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hRegenModifier; // 0x1ad0, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hInvisModifier; // 0x1ae8, 0x18 bytes
+                bool m_bIsVisibleOnMinimap; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x3]; // 0x1b01, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStoppedMovingStartTime; // 0x1b04, 0x4 bytes
+                VectorWS m_vLastPos; // 0x1b08, 0xc bytes
+                float m_flDebuffDuration; // 0x1b14, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChannelTimeStarted; // 0x1b18, 0x4 bytes
+                bool m_bWasLatchedWhenCast; // 0x1b1c, 0x1 bytes
+                std::uint8_t pad_1b1d[0x3]; // 0x1b1d, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_ChargeUpParticle; // 0x1b20, 0x4 bytes
+                std::uint8_t pad_1b24[0x4]; // 0x1b24, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Fathom_LurkersAmbush) == 0x1448, "CAbility_Fathom_LurkersAmbush size mismatch");
+            static_assert(sizeof(CAbility_Fathom_LurkersAmbush) == 0x1B28, "CAbility_Fathom_LurkersAmbush size mismatch");
         }
     }
 }

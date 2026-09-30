@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1850
+             * Size: 0x13d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_ShadowVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShadowModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PurgeModifier; // 0x1828, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EnemyAura; // 0x1838, 0x10 bytes
-                float m_flAuraRadius; // 0x1848, 0x4 bytes
-                std::uint8_t pad_184c[0x4]; // 0x184c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShadowModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PurgeModifier; // 0x13b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EnemyAura; // 0x13c0, 0x10 bytes
+                float m_flAuraRadius; // 0x13d0, 0x4 bytes
+                std::uint8_t pad_13d4[0x4]; // 0x13d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_ShadowVData) == 0x1850, "CCitadel_Ability_Nano_ShadowVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_ShadowVData) == 0x13D8, "CCitadel_Ability_Nano_ShadowVData size mismatch");
         }
     }
 }

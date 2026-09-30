@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -38,7 +39,12 @@ namespace shade {
                 CITADEL_CM_HideoutMatchmakingState = 0x3fc,
                 CITADEL_CM_PlayerStatsUpdated = 0x3fd,
                 CITADEL_CM_HideoutUpdateHeroReleaseVoteTally = 0x3fe,
-                CITADEL_CM_ExecuteMapPositionAbility = 0x3ff
+                CITADEL_CM_ExecuteMapPositionAbility = 0x3ff,
+                CITADEL_CM_HeroEconChanged = 0x400,
+                CITADEL_CM_RequestBulkCombatLog = 0x401,
+                CITADEL_CM_PlayerTyping = 0x402,
+                CITADEL_CM_HideoutInteract = 0x403,
+                CITADEL_CM_HeroReleaseVote = 0x404
             };
         }
     }

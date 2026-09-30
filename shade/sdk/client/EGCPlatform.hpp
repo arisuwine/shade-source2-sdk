@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -20,9 +21,7 @@ namespace shade {
                 k_eGCPlatform_None = 0x0,
                 k_eGCPlatform_PC = 0x1,
                 k_eGCPlatform_Mac = 0x2,
-                k_eGCPlatform_Linux = 0x3,
-                k_eGCPlatform_Android = 0x4,
-                k_eGCPlatform_iOS = 0x5
+                k_eGCPlatform_Linux = 0x3
             };
         }
     }

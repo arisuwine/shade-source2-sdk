@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1780
+             * Size: 0x1e88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Magician_MagicBolt : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x8]; // 0x11d8, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_CitadelProjectile>> m_vecDeployedProjectiles; // 0x11e0, 0x18 bytes
-                std::int32_t m_iCurrentRedirects; // 0x11f8, 0x4 bytes
-                std::uint8_t pad_11fc[0x584]; // 0x11fc, 0x584 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_CitadelProjectile>> m_vecDeployedProjectiles; // 0x16d8, 0x18 bytes
+                std::int32_t m_iCurrentRedirects; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0x794]; // 0x16f4, 0x794 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_MagicBolt) == 0x1780, "CCitadel_Ability_Magician_MagicBolt size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_MagicBolt) == 0x1E88, "CCitadel_Ability_Magician_MagicBolt size mismatch");
         }
     }
 }

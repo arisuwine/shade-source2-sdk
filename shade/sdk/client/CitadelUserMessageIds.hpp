@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -69,7 +70,7 @@ namespace shade {
                 k_EUserMsg_MeleeHit = 0x163,
                 k_EUserMsg_FlexSlotUnlocked = 0x164,
                 k_EUserMsg_SeasonalKill = 0x165,
-                k_EUserMsg_AG2ParamTrigger = 0x167,
+                k_EUserMsg_MusicQueue = 0x166,
                 k_EUserMsg_ItemPurchaseNotification = 0x168,
                 k_EUserMsg_EntityPortalled = 0x169,
                 k_EUserMsg_StreetBrawlScoring = 0x16a,
@@ -77,7 +78,13 @@ namespace shade {
                 k_EUserMsg_ItemDraftReaction = 0x16c,
                 k_EUserMsg_ImportantAbilityUsed = 0x16d,
                 k_EUserMsg_BannedHeroes = 0x16e,
-                k_EUserMsg_ChangeHeroStatus = 0x172
+                k_EUserMsg_CombatLogEntry = 0x16f,
+                k_EUserMsg_CombatLogBulkData = 0x170,
+                k_EUserMsg_PlayerTyping = 0x171,
+                k_EUserMsg_ChangeHeroStatus = 0x172,
+                k_EUserMsg_LocalLobby = 0x173,
+                k_EUserMsg_SoulBagPickup = 0x174,
+                k_EUserMsg_HeroReleaseVote = 0x175
             };
         }
     }

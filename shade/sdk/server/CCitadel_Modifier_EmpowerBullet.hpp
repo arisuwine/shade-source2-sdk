@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x330
+             * Size: 0x460
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_EmpowerBullet : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_0228[0x100]; // 0x0228, 0x100 bytes
-                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0328, 0x4 bytes
-                std::uint8_t pad_032c[0x4]; // 0x032c, 0x4 bytes
+                std::uint8_t pad_02f8[0x160]; // 0x02f8, 0x160 bytes
+                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0458, 0x4 bytes
+                std::uint8_t pad_045c[0x4]; // 0x045c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_EmpowerBullet) == 0x330, "CCitadel_Modifier_EmpowerBullet size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_EmpowerBullet) == 0x460, "CCitadel_Modifier_EmpowerBullet size mismatch");
         }
     }
 }

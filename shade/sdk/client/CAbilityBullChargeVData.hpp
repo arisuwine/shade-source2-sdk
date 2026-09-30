@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19f8
+             * Size: 0x1580
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +44,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityBullChargeVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceImpact; // 0x1818, 0x88 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierTossAirControlLockout; // 0x18a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierWeaponPowerIncrease; // 0x18b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierChargeDragEnemy; // 0x18c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierBullCharging; // 0x18d0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x18e0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x18f0, 0xe0 bytes
-                CSoundEventName m_strWallSlamSound; // 0x19d0, 0x10 bytes
-                CSoundEventName m_strHitEnemySound; // 0x19e0, 0x10 bytes
-                float m_flWallStunLookAheadDist; // 0x19f0, 0x4 bytes
-                float m_flEndChargeVelocityScale; // 0x19f4, 0x4 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceImpact; // 0x13a0, 0x88 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierTossAirControlLockout; // 0x1428, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierWeaponPowerIncrease; // 0x1438, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierChargeDragEnemy; // 0x1448, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ModifierBullCharging; // 0x1458, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x1468, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x1478, 0xe0 bytes
+                CSoundEventName m_strWallSlamSound; // 0x1558, 0x10 bytes
+                CSoundEventName m_strHitEnemySound; // 0x1568, 0x10 bytes
+                float m_flWallStunLookAheadDist; // 0x1578, 0x4 bytes
+                float m_flEndChargeVelocityScale; // 0x157c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityBullChargeVData) == 0x19F8, "CAbilityBullChargeVData size mismatch");
+            static_assert(sizeof(CAbilityBullChargeVData) == 0x1580, "CAbilityBullChargeVData size mismatch");
         }
     }
 }

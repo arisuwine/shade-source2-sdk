@@ -12,10 +12,9 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
-
-#include "shade/sdk/client/WeightedChance_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -36,8 +35,8 @@ namespace shade {
             #pragma pack(push, 1)
             struct StreetBrawlGameRoundDrafts_t {
                 CUtlVector<shade::sdk::client::StreetBrawlItemDraftRoundParams_t> m_vecItemDraftRounds; // 0x0000, 0x18 bytes
-                shade::sdk::client::WeightedChance_t m_chanceRare; // 0x0018, 0x28 bytes
-                shade::sdk::client::WeightedChance_t m_chanceEnhanced; // 0x0040, 0x28 bytes
+                CUtlOrderedMap<std::int32_t, float> m_chanceRare; // 0x0018, 0x28 bytes
+                CUtlOrderedMap<std::int32_t, float> m_chanceEnhanced; // 0x0040, 0x28 bytes
                 std::uint8_t pad_0068[0x50]; // 0x0068, 0x50 bytes
             };
             #pragma pack(pop)

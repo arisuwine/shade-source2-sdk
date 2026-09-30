@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
                 std::int32_t m_nModelID; // 0x0008, 0x4 bytes
                 Vector2D m_vecPanelSize; // 0x000c, 0x8 bytes
                 std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
-                C_NetworkUtlVectorBase<Vector> m_vecPanelVertices; // 0x0018, 0x18 bytes
+                C_NetworkUtlVectorBase<VectorWS> m_vecPanelVertices; // 0x0018, 0x18 bytes
                 float m_flThickness; // 0x0030, 0x4 bytes
                 CUtlStringToken m_SurfacePropStringToken; // 0x0034, 0x4 bytes
             };

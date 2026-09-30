@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x578
+             * Size: 0x588
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundEventConeEntity : public shade::sdk::server::CSoundEventEntity {
             public:
-                float m_flEmitterAngle; // 0x0560, 0x4 bytes
-                float m_flSweetSpotAngle; // 0x0564, 0x4 bytes
-                float m_flAttenMin; // 0x0568, 0x4 bytes
-                float m_flAttenMax; // 0x056c, 0x4 bytes
-                CUtlSymbolLarge m_iszParameterName; // 0x0570, 0x8 bytes
+                float m_flEmitterAngle; // 0x0570, 0x4 bytes
+                float m_flSweetSpotAngle; // 0x0574, 0x4 bytes
+                float m_flAttenMin; // 0x0578, 0x4 bytes
+                float m_flAttenMax; // 0x057c, 0x4 bytes
+                CUtlSymbolLarge m_iszParameterName; // 0x0580, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSoundEventConeEntitySoundEventConeThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundEventConeEntity) == 0x578, "CSoundEventConeEntity size mismatch");
+            static_assert(sizeof(CSoundEventConeEntity) == 0x588, "CSoundEventConeEntity size mismatch");
         }
     }
 }

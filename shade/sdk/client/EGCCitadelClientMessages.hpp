@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -33,9 +34,6 @@ namespace shade {
                 k_EMsgClientToGCUpdateRoster = 0x2342,
                 k_EMsgClientToGCUpdateRosterResponse = 0x2343,
                 k_EMsgGCToClientProfileCardUpdated = 0x2344,
-                k_EMsgGCToClientDevAnnouncements = 0x2345,
-                k_EMsgClientToGCModifyDevAnnouncements = 0x2346,
-                k_EMsgClientToGCModifyDevAnnouncementsResponse = 0x2347,
                 k_EMsgGCToClientSDRTicket = 0x238c,
                 k_EMsgClientToGCReplacementSDRTicket = 0x238d,
                 k_EMsgClientToGCReplacementSDRTicketResponse = 0x238e,
@@ -171,10 +169,35 @@ namespace shade {
                 k_EMsgGCToClientUpdateHeroReleaseVoteTally = 0x2441,
                 k_EMsgClientToGCSetAccountPrivacySetting = 0x2442,
                 k_EMsgClientToGCSetAccountPrivacySettingResponse = 0x2443,
+                k_EMsgClientToGCVariantItemChangeSlotStyles = 0x2444,
+                k_EMsgClientToGCVariantItemChangeSlotStylesResponse = 0x2445,
+                k_EMsgClientToGCPartyPlayerTyping = 0x2446,
+                k_EMsgClientToGCPartyPlayerTypingResponse = 0x2447,
+                k_EMsgGCToClientPartyPlayerTyping = 0x2448,
                 k_EMsgClientToGCStartRankedInterval = 0x2449,
                 k_EMsgClientToGCStartRankedIntervalResponse = 0x244a,
+                k_EMsgClientToGCGetInternalLeaderboards = 0x244b,
+                k_EMsgClientToGCGetInternalLeaderboardsResponse = 0x244c,
                 k_EMsgClientToGCGetLeaderboardStatus = 0x244d,
-                k_EMsgClientToGCGetLeaderboardStatusResponse = 0x244e
+                k_EMsgClientToGCGetLeaderboardStatusResponse = 0x244e,
+                k_EMsgClientToGCRequestReporterUpdates = 0x244f,
+                k_EMsgClientToGCRequestReporterUpdatesResponse = 0x2450,
+                k_EMsgClientToGCAcknowledgeReporterUpdates = 0x2451,
+                k_EMsgClientToGCCabalCreate = 0x2452,
+                k_EMsgClientToGCCabalCreateResponse = 0x2453,
+                k_EMsgClientToGCCabalInviteAccount = 0x2454,
+                k_EMsgClientToGCCabalInviteAccountResponse = 0x2455,
+                k_EMsgClientToGCCabalAnswerInvite = 0x2456,
+                k_EMsgClientToGCCabalAnswerInviteResponse = 0x2457,
+                k_EMsgClientToGCCabalLeave = 0x2458,
+                k_EMsgClientToGCCabalLeaveResponse = 0x2459,
+                k_EMsgClientToGCCabalGetDetails = 0x245a,
+                k_EMsgClientToGCCabalGetDetailsResponse = 0x245b,
+                k_EMsgGCToClientCabalUpdated = 0x245c,
+                k_EMsgClientToGCCabalKickPlayer = 0x245d,
+                k_EMsgClientToGCCabalKickPlayerResponse = 0x245e,
+                k_EMsgClientToGCCabalGetMatchHistory = 0x245f,
+                k_EMsgClientToGCCabalGetMatchHistoryResponse = 0x2460
             };
         }
     }

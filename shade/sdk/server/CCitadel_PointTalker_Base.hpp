@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xba0
+             * Size: 0xb60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,10 +35,10 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * CUtlSymbolLarge InputSpeak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_PointTalker_Base) == 0xBA0, "CCitadel_PointTalker_Base size mismatch");
+            static_assert(sizeof(CCitadel_PointTalker_Base) == 0xB60, "CCitadel_PointTalker_Base size mismatch");
         }
     }
 }

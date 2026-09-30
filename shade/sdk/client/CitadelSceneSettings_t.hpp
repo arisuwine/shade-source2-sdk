@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,25 +20,27 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x38
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct CitadelSceneSettings_t {
                 bool m_bDontPreSettleCloth; // 0x0000, 0x1 bytes
-                std::uint8_t pad_0001[0x7]; // 0x0001, 0x7 bytes
-                CUtlString m_strAttachmentName; // 0x0008, 0x8 bytes
-                float m_flFOV; // 0x0010, 0x4 bytes
-                float m_flZNear; // 0x0014, 0x4 bytes
-                float m_flZFar; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                bool m_bDisableFreezeCloth; // 0x0001, 0x1 bytes
+                std::uint8_t pad_0002[0x6]; // 0x0002, 0x6 bytes
+                CUtlStringTokenWithStorage m_strClothEffect; // 0x0008, 0x18 bytes
+                CUtlString m_strAttachmentName; // 0x0020, 0x8 bytes
+                float m_flFOV; // 0x0028, 0x4 bytes
+                float m_flZNear; // 0x002c, 0x4 bytes
+                float m_flZFar; // 0x0030, 0x4 bytes
+                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelSceneSettings_t) == 0x20, "CitadelSceneSettings_t size mismatch");
+            static_assert(sizeof(CitadelSceneSettings_t) == 0x38, "CitadelSceneSettings_t size mismatch");
         }
     }
 }

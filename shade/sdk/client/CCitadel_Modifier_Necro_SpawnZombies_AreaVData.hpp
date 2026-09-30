@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x880
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,25 +43,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_SpawnZombies_AreaVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x0750, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonModifier; // 0x0830, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonDecayModifier; // 0x0840, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SpawningInModifier; // 0x0850, 0x10 bytes
-                bool m_bDebug; // 0x0860, 0x1 bytes
-                std::uint8_t pad_0861[0x3]; // 0x0861, 0x3 bytes
-                float m_flRandomSpawnOffsetPerSummon; // 0x0864, 0x4 bytes
-                float m_flZombieSpawnVerticalOffset; // 0x0868, 0x4 bytes
-                float m_flZombieSpawnForwardOffset; // 0x086c, 0x4 bytes
-                float m_flZombieSpawnNavMeshSearchDistance; // 0x0870, 0x4 bytes
-                float m_flForwardWalkDistance; // 0x0874, 0x4 bytes
-                float m_flWalkDestinationRandomness; // 0x0878, 0x4 bytes
-                float m_flSpawningInTime; // 0x087c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x0760, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonModifier; // 0x0840, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonDecayModifier; // 0x0850, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SpawningInModifier; // 0x0860, 0x10 bytes
+                bool m_bDebug; // 0x0870, 0x1 bytes
+                std::uint8_t pad_0871[0x3]; // 0x0871, 0x3 bytes
+                float m_flRandomSpawnOffsetPerSummon; // 0x0874, 0x4 bytes
+                float m_flZombieSpawnVerticalOffset; // 0x0878, 0x4 bytes
+                float m_flZombieSpawnForwardOffset; // 0x087c, 0x4 bytes
+                float m_flZombieSpawnNavMeshSearchDistance; // 0x0880, 0x4 bytes
+                float m_flForwardWalkDistance; // 0x0884, 0x4 bytes
+                float m_flWalkDestinationRandomness; // 0x0888, 0x4 bytes
+                float m_flSpawningInTime; // 0x088c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_SpawnZombies_AreaVData) == 0x880, "CCitadel_Modifier_Necro_SpawnZombies_AreaVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_SpawnZombies_AreaVData) == 0x890, "CCitadel_Modifier_Necro_SpawnZombies_AreaVData size mismatch");
         }
     }
 }

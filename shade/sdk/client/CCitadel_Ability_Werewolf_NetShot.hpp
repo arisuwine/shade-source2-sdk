@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1578
+             * Size: 0x1bc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_NetShot : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x3a0]; // 0x11d8, 0x3a0 bytes
+                std::uint8_t pad_16d8[0x4f0]; // 0x16d8, 0x4f0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_NetShot) == 0x1578, "CCitadel_Ability_Werewolf_NetShot size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_NetShot) == 0x1BC8, "CCitadel_Ability_Werewolf_NetShot size mismatch");
         }
     }
 }

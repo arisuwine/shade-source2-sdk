@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ca8
+             * Size: 0x18b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,29 +46,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityHoldMelee_VData : public shade::sdk::server::CAbilityMeleeVData {
             public:
-                CUtlOrderedMap<shade::sdk::client::EMeleeHold_AttackType, shade::sdk::client::AttackData_t> m_mapAttacks; // 0x1848, 0x28 bytes
-                float m_flLightMeleeAnimChainTime; // 0x1870, 0x4 bytes
-                float m_flMinDashTime; // 0x1874, 0x4 bytes
-                bool m_bUseCasterFacing; // 0x1878, 0x1 bytes
-                std::uint8_t pad_1879[0x3]; // 0x1879, 0x3 bytes
-                shade::sdk::client::CRemapFloat m_AirMeleeUpScale; // 0x187c, 0x10 bytes
-                std::uint8_t pad_188c[0x4]; // 0x188c, 0x4 bytes
-                CPiecewiseCurve m_HeavyTurnSpeedCurve; // 0x1890, 0x40 bytes
-                float m_flCameraMaxTurnRate; // 0x18d0, 0x4 bytes
-                float m_flHeavyMeleeMaxTurnRate; // 0x18d4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoldBeginEffect; // 0x18d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulParryParticle; // 0x19b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParryActivateParticle; // 0x1a98, 0xe0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHoldStart; // 0x1b78, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHitImpact; // 0x1c00, 0x88 bytes
-                CSoundEventName m_strHoldBegin; // 0x1c88, 0x10 bytes
-                CSoundEventName m_strSuccessfulParrySound; // 0x1c98, 0x10 bytes
+                CUtlOrderedMap<shade::sdk::client::EMeleeHold_AttackType, shade::sdk::client::AttackData_t> m_mapAttacks; // 0x13d0, 0x28 bytes
+                float m_flLightMeleeAnimChainTime; // 0x13f8, 0x4 bytes
+                float m_flMinDashTime; // 0x13fc, 0x4 bytes
+                bool m_bUseCasterFacing; // 0x1400, 0x1 bytes
+                std::uint8_t pad_1401[0x3]; // 0x1401, 0x3 bytes
+                shade::sdk::client::CRemapFloat m_AirMeleeUpScale; // 0x1404, 0x10 bytes
+                std::uint8_t pad_1414[0x4]; // 0x1414, 0x4 bytes
+                CPiecewiseCurve m_HeavyTurnSpeedCurve; // 0x1418, 0x40 bytes
+                float m_flCameraMaxTurnRate; // 0x1458, 0x4 bytes
+                float m_flHeavyMeleeMaxTurnRate; // 0x145c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoldBeginEffect; // 0x1460, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulParryParticle; // 0x1540, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParryActivateParticle; // 0x1620, 0xe0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHoldStart; // 0x1700, 0x88 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHitImpact; // 0x1788, 0x88 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceMiss; // 0x1810, 0x88 bytes
+                CSoundEventName m_strHoldBegin; // 0x1898, 0x10 bytes
+                CSoundEventName m_strSuccessfulParrySound; // 0x18a8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityHoldMelee_VData) == 0x1CA8, "CAbilityHoldMelee_VData size mismatch");
+            static_assert(sizeof(CAbilityHoldMelee_VData) == 0x18B8, "CAbilityHoldMelee_VData size mismatch");
         }
     }
 }

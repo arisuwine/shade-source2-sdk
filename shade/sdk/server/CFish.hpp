@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -48,7 +49,7 @@ namespace shade {
                 float m_angleChange; // 0x0aa8, 0x4 bytes
                 Vector m_forward; // 0x0aac, 0xc bytes
                 Vector m_perp; // 0x0ab8, 0xc bytes
-                Vector m_poolOrigin; // 0x0ac4, 0xc bytes
+                VectorWS m_poolOrigin; // 0x0ac4, 0xc bytes
                 float m_waterLevel; // 0x0ad0, 0x4 bytes
                 float m_speed; // 0x0ad4, 0x4 bytes
                 float m_desiredSpeed; // 0x0ad8, 0x4 bytes

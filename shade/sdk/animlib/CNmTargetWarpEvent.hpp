@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmTargetWarpEvent : public shade::sdk::animlib::CNmEvent {
             public:
-                shade::sdk::animlib::NmTargetWarpRule_t m_rule; // 0x0020, 0x1 bytes
-                shade::sdk::animlib::NmTargetWarpAlgorithm_t m_algorithm; // 0x0021, 0x1 bytes
-                std::uint8_t pad_0022[0x6]; // 0x0022, 0x6 bytes
+                shade::sdk::animlib::NmTargetWarpRule_t m_rule; // 0x0018, 0x1 bytes
+                shade::sdk::animlib::NmTargetWarpAlgorithm_t m_algorithm; // 0x0019, 0x1 bytes
+                std::uint8_t pad_001a[0x6]; // 0x001a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmTargetWarpEvent) == 0x28, "CNmTargetWarpEvent size mismatch");
+            static_assert(sizeof(CNmTargetWarpEvent) == 0x20, "CNmTargetWarpEvent size mismatch");
         }
     }
 }

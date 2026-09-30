@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x500
+             * Size: 0x510
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,57 +31,43 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointCamera : public shade::sdk::server::CBaseEntity {
             public:
-                float m_FOV; // 0x04a0, 0x4 bytes
-                float m_Resolution; // 0x04a4, 0x4 bytes
-                bool m_bFogEnable; // 0x04a8, 0x1 bytes
-                Color m_FogColor; // 0x04a9, 0x4 bytes
-                std::uint8_t pad_04ad[0x3]; // 0x04ad, 0x3 bytes
-                float m_flFogStart; // 0x04b0, 0x4 bytes
-                float m_flFogEnd; // 0x04b4, 0x4 bytes
-                float m_flFogMaxDensity; // 0x04b8, 0x4 bytes
-                bool m_bActive; // 0x04bc, 0x1 bytes
-                bool m_bUseScreenAspectRatio; // 0x04bd, 0x1 bytes
-                std::uint8_t pad_04be[0x2]; // 0x04be, 0x2 bytes
-                float m_flAspectRatio; // 0x04c0, 0x4 bytes
-                bool m_bNoSky; // 0x04c4, 0x1 bytes
-                std::uint8_t pad_04c5[0x3]; // 0x04c5, 0x3 bytes
-                float m_fBrightness; // 0x04c8, 0x4 bytes
-                float m_flZFar; // 0x04cc, 0x4 bytes
-                float m_flZNear; // 0x04d0, 0x4 bytes
-                bool m_bCanHLTVUse; // 0x04d4, 0x1 bytes
-                bool m_bAlignWithParent; // 0x04d5, 0x1 bytes
-                bool m_bDofEnabled; // 0x04d6, 0x1 bytes
-                std::uint8_t pad_04d7[0x1]; // 0x04d7, 0x1 bytes
-                float m_flDofNearBlurry; // 0x04d8, 0x4 bytes
-                float m_flDofNearCrisp; // 0x04dc, 0x4 bytes
-                float m_flDofFarCrisp; // 0x04e0, 0x4 bytes
-                float m_flDofFarBlurry; // 0x04e4, 0x4 bytes
-                float m_flDofTiltToGround; // 0x04e8, 0x4 bytes
-                float m_TargetFOV; // 0x04ec, 0x4 bytes
-                float m_DegreesPerSecond; // 0x04f0, 0x4 bytes
-                bool m_bIsOn; // 0x04f4, 0x1 bytes
-                std::uint8_t pad_04f5[0x3]; // 0x04f5, 0x3 bytes
-                shade::sdk::server::CPointCamera *m_pNext; // 0x04f8, 0x8 bytes
+                float m_FOV; // 0x04b0, 0x4 bytes
+                float m_Resolution; // 0x04b4, 0x4 bytes
+                bool m_bFogEnable; // 0x04b8, 0x1 bytes
+                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
+                Color m_FogColor; // 0x04bc, 0x4 bytes
+                float m_flFogStart; // 0x04c0, 0x4 bytes
+                float m_flFogEnd; // 0x04c4, 0x4 bytes
+                float m_flFogMaxDensity; // 0x04c8, 0x4 bytes
+                bool m_bActive; // 0x04cc, 0x1 bytes
+                bool m_bUseScreenAspectRatio; // 0x04cd, 0x1 bytes
+                std::uint8_t pad_04ce[0x2]; // 0x04ce, 0x2 bytes
+                float m_flAspectRatio; // 0x04d0, 0x4 bytes
+                bool m_bNoSky; // 0x04d4, 0x1 bytes
+                std::uint8_t pad_04d5[0x3]; // 0x04d5, 0x3 bytes
+                float m_fBrightness; // 0x04d8, 0x4 bytes
+                float m_flZFar; // 0x04dc, 0x4 bytes
+                float m_flZNear; // 0x04e0, 0x4 bytes
+                bool m_bCanHLTVUse; // 0x04e4, 0x1 bytes
+                bool m_bAlignWithParent; // 0x04e5, 0x1 bytes
+                bool m_bDofEnabled; // 0x04e6, 0x1 bytes
+                std::uint8_t pad_04e7[0x1]; // 0x04e7, 0x1 bytes
+                float m_flDofNearBlurry; // 0x04e8, 0x4 bytes
+                float m_flDofNearCrisp; // 0x04ec, 0x4 bytes
+                float m_flDofFarCrisp; // 0x04f0, 0x4 bytes
+                float m_flDofFarBlurry; // 0x04f4, 0x4 bytes
+                float m_flDofTiltToGround; // 0x04f8, 0x4 bytes
+                float m_TargetFOV; // 0x04fc, 0x4 bytes
+                float m_DegreesPerSecond; // 0x0500, 0x4 bytes
+                bool m_bIsOn; // 0x0504, 0x1 bytes
+                std::uint8_t pad_0505[0x3]; // 0x0505, 0x3 bytes
+                shade::sdk::server::CPointCamera *m_pNext; // 0x0508, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputChangeFOV; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOnAndTurnOthersOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputForceActive; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputForceInactive; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableDOF; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableDOF; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFNearBlurry; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFNearCrisp; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFFarCrisp; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFFarBlurry; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDOFTiltToGround; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointCamera) == 0x500, "CPointCamera size mismatch");
+            static_assert(sizeof(CPointCamera) == 0x510, "CPointCamera size mismatch");
         }
     }
 }

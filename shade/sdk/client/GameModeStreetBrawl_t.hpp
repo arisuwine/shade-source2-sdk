@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -76,9 +77,9 @@ namespace shade {
                 float m_flZipBoostCooldownOnStart; // 0x0208, 0x4 bytes
                 float m_flBuyTimeGracePeriod; // 0x020c, 0x4 bytes
                 std::int32_t m_iUltimateUnlockRound; // 0x0210, 0x4 bytes
-                float m_flTier1MaxResistTime; // 0x0214, 0x4 bytes
-                float m_flTier2MaxResistTime; // 0x0218, 0x4 bytes
-                std::uint8_t pad_021c[0x4]; // 0x021c, 0x4 bytes
+                std::int32_t m_iCorruptItemRound; // 0x0214, 0x4 bytes
+                float m_flTier1MaxResistTime; // 0x0218, 0x4 bytes
+                float m_flTier2MaxResistTime; // 0x021c, 0x4 bytes
             };
             #pragma pack(pop)
 

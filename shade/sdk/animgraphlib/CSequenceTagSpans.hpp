@@ -12,12 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 namespace shade {
     namespace sdk {
-        namespace animgraphlib {
+        namespace server {
             struct TagSpan_t;
         }
     }
@@ -35,7 +36,7 @@ namespace shade {
             class CSequenceTagSpans {
             public:
                 CGlobalSymbol m_sSequenceName; // 0x0000, 0x8 bytes
-                CUtlVector<shade::sdk::animgraphlib::TagSpan_t> m_tags; // 0x0008, 0x18 bytes
+                CUtlVector<shade::sdk::server::TagSpan_t> m_tags; // 0x0008, 0x18 bytes
             };
             #pragma pack(pop)
 

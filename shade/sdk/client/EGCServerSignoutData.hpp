@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -31,7 +32,8 @@ namespace shade {
                 k_EServerSignoutData_MatchKills = 0xe,
                 k_EServerSignoutData_PlayerBehavior = 0xf,
                 k_EServerSignoutData_StreetBrawlData = 0x10,
-                k_EServerSignoutData_HeroDraftData = 0x11
+                k_EServerSignoutData_HeroDraftData = 0x11,
+                k_EServerSignoutData_HeroReleaseVotes = 0x12
             };
         }
     }

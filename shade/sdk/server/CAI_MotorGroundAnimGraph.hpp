@@ -12,85 +12,99 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CFloatExponentialMovingAverage.hpp"
+#include "shade/sdk/client/CAnimGraphControllerPtr.hpp"
+#include "shade/sdk/client/StanceType_t.hpp"
+#include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/AI_MotorGroundAnimGraph_Flags_t.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_Custom.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_CustomMantle.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_Hop.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_Idle.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_IdleTurn.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_InstantStop.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_Loop.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_Other.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_PlantedTurn.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_Start.hpp"
-#include "shade/sdk/server/CAI_MotorGroundAnimGraph_State_Stop.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace server {
-            class CAI_GroundLocomotion_AG1_GraphController;
-            class CAI_GroundLocomotion_GraphController;
-        }
-    }
-}
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_Custom.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_CustomMantle.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_Hop.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_Idle.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_IdleTurn.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_InstantStop.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_Loop.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_Other.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_PlantedTurn.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_PoseTransition.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_Start.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_Stop.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__CState_StrafeTransition.hpp"
+#include "shade/sdk/server/CAI_MotorGroundAnimGraph__MovementGaitAndSpeed_t.hpp"
+#include "shade/sdk/server/IAI_Motor.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x720
+             * Size: 0xda0
              * Alignment: 0xff
+             * Has VTable
              */
             #pragma pack(push, 1)
-            class CAI_MotorGroundAnimGraph {
+            class CAI_MotorGroundAnimGraph : public shade::sdk::server::IAI_Motor {
             public:
-                std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_Idle m_stateIdle; // 0x0008, 0x20 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_IdleTurn m_stateIdleTurn; // 0x0028, 0x48 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_Loop m_stateLoop; // 0x0070, 0x28 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_Start m_stateStart; // 0x0098, 0x28 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_Stop m_stateStop; // 0x00c0, 0x80 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_InstantStop m_stateInstantStop; // 0x0140, 0x80 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_Hop m_stateHop; // 0x01c0, 0x80 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_Custom m_stateCustom; // 0x0240, 0x78 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_CustomMantle m_stateCustomMantle; // 0x02b8, 0x30 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_PlantedTurn m_statePlantedTurn; // 0x02e8, 0x28 bytes
-                shade::sdk::server::CAI_MotorGroundAnimGraph_State_Other m_stateOther; // 0x0310, 0x28 bytes
-                std::uint8_t pad_0338[0x18]; // 0x0338, 0x18 bytes
-                std::int32_t m_nCurrentState; // 0x0350, 0x4 bytes
-                float m_flDistanceCoveredInCurrentState; // 0x0354, 0x4 bytes
-                bool m_bEnableStop; // 0x0358, 0x1 bytes
-                bool m_bEnableStart; // 0x0359, 0x1 bytes
-                bool m_bHadPath; // 0x035a, 0x1 bytes
-                bool m_bEnableAdvancedFeatures; // 0x035b, 0x1 bytes
-                bool m_bTeleported; // 0x035c, 0x1 bytes
-                bool m_bAllTransitionsBlocked; // 0x035d, 0x1 bytes
-                bool m_bIsAG2; // 0x035e, 0x1 bytes
-                std::uint8_t pad_035f[0x1]; // 0x035f, 0x1 bytes
-                shade::sdk::server::AI_MotorGroundAnimGraph_Flags_t m_eFlags; // 0x0360, 0x4 bytes
-                VectorWS m_vPreviousPosition; // 0x0364, 0xc bytes
-                Vector m_vPreviousMoveDirection; // 0x0370, 0xc bytes
-                std::uint8_t pad_037c[0x4]; // 0x037c, 0x4 bytes
-                float m_flCurrentLean; // 0x0380, 0x4 bytes
-                float m_flCurrentSpeed; // 0x0384, 0x4 bytes
-                float m_flMovementDesiredHeading; // 0x0388, 0x4 bytes
-                RotationVector m_vDesiredMovementHeadingChangeVelocity; // 0x038c, 0xc bytes
-                shade::sdk::client::CFloatExponentialMovingAverage m_smoothedDesiredMoveHeading; // 0x0398, 0x14 bytes
-                std::uint8_t pad_03ac[0x2dc]; // 0x03ac, 0x2dc bytes
-                CMotionTransform m_proceduralRootMotion; // 0x0688, 0x10 bytes
-                shade::sdk::server::CAI_GroundLocomotion_GraphController *m_pGraphController; // 0x0698, 0x8 bytes
-                shade::sdk::server::CAI_GroundLocomotion_AG1_GraphController *m_pAG1GraphController; // 0x06a0, 0x8 bytes
-                std::uint8_t pad_06a8[0x78]; // 0x06a8, 0x78 bytes
+                std::uint8_t pad_0010[0x28]; // 0x0010, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_flStartWaitingForFacingTime; // 0x0038, 0x4 bytes
+                std::uint8_t pad_003c[0x674]; // 0x003c, 0x674 bytes
+                CGlobalSymbol m_sDesiredMovementGaitSetId; // 0x06b0, 0x8 bytes
+                CGlobalSymbol m_sDesiredMovementSettingsId; // 0x06b8, 0x8 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__MovementGaitAndSpeed_t m_desiredMovementGait; // 0x06c0, 0xc bytes
+                std::uint8_t pad_06cc[0x4]; // 0x06cc, 0x4 bytes
+                CGlobalSymbol m_sCurrentMovementGaitSetId; // 0x06d0, 0x8 bytes
+                CGlobalSymbol m_sCurrentMovementSettingsId; // 0x06d8, 0x8 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__MovementGaitAndSpeed_t m_currentMovementGait; // 0x06e0, 0xc bytes
+                shade::sdk::client::StanceType_t m_nDesiredStance; // 0x06ec, 0x4 bytes
+                shade::sdk::client::StanceType_t m_nCurrentStance; // 0x06f0, 0x4 bytes
+                std::uint8_t pad_06f4[0x4]; // 0x06f4, 0x4 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_Idle m_stateIdle; // 0x06f8, 0x28 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_IdleTurn m_stateIdleTurn; // 0x0720, 0x48 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_Loop m_stateLoop; // 0x0768, 0x30 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_Start m_stateStart; // 0x0798, 0x30 bytes
+                std::uint8_t pad_07c8[0x8]; // 0x07c8, 0x8 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_Stop m_stateStop; // 0x07d0, 0xe0 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_InstantStop m_stateInstantStop; // 0x08b0, 0xe0 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_Hop m_stateHop; // 0x0990, 0xe0 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_Custom m_stateCustom; // 0x0a70, 0x88 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_CustomMantle m_stateCustomMantle; // 0x0af8, 0x38 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_PlantedTurn m_statePlantedTurn; // 0x0b30, 0x30 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_StrafeTransition m_stateStrafeTransition; // 0x0b60, 0x28 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_PoseTransition m_statePoseTransition; // 0x0b88, 0x40 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__CState_Other m_stateOther; // 0x0bc8, 0x28 bytes
+                std::uint8_t pad_0bf0[0x18]; // 0x0bf0, 0x18 bytes
+                std::int32_t m_nCurrentState; // 0x0c08, 0x4 bytes
+                float m_flDistanceCoveredInCurrentState; // 0x0c0c, 0x4 bytes
+                bool m_bEnableAdvancedFeatures; // 0x0c10, 0x1 bytes
+                bool m_bTeleported; // 0x0c11, 0x1 bytes
+                bool m_bAllTransitionsBlocked; // 0x0c12, 0x1 bytes
+                bool m_bIsAG2; // 0x0c13, 0x1 bytes
+                bool m_bPathIsTooShort; // 0x0c14, 0x1 bytes
+                std::uint8_t pad_0c15[0x3]; // 0x0c15, 0x3 bytes
+                shade::sdk::server::AI_MotorGroundAnimGraph_Flags_t m_eFlags; // 0x0c18, 0x4 bytes
+                VectorWS m_vPreviousPosition; // 0x0c1c, 0xc bytes
+                float m_flCurrentLean; // 0x0c28, 0x4 bytes
+                float m_flCurrentSpeed; // 0x0c2c, 0x4 bytes
+                Vector m_vPathDirectionLS; // 0x0c30, 0xc bytes
+                float m_flCommittedStrafeAngle; // 0x0c3c, 0x4 bytes
+                float m_flAvoidanceSpeedScale; // 0x0c40, 0x4 bytes
+                shade::sdk::server::CAI_MotorGroundAnimGraph__MovementGaitAndSpeed_t m_avoidanceMovementGait; // 0x0c44, 0xc bytes
+                std::uint8_t pad_0c50[0x34]; // 0x0c50, 0x34 bytes
+                CMotionTransform m_proceduralRootMotion; // 0x0c84, 0x10 bytes
+                std::uint8_t pad_0c94[0x4]; // 0x0c94, 0x4 bytes
+                shade::sdk::client::CAnimGraphControllerPtr m_pGraphController; // 0x0c98, 0x8 bytes
+                shade::sdk::client::CAnimGraphControllerPtr m_pAG1GraphController; // 0x0ca0, 0x8 bytes
+                std::uint8_t pad_0ca8[0xd0]; // 0x0ca8, 0xd0 bytes
+                Vector m_vPhysicsVelocity; // 0x0d78, 0xc bytes
+                std::uint8_t pad_0d84[0x1c]; // 0x0d84, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_MotorGroundAnimGraph) == 0x720, "CAI_MotorGroundAnimGraph size mismatch");
+            static_assert(sizeof(CAI_MotorGroundAnimGraph) == 0xDA0, "CAI_MotorGroundAnimGraph size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x258
+             * Size: 0x358
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Upgrade_OverdriveClip_Reload : public shade::sdk::server::CCitadelModifier {
             public:
-                std::int32_t m_nStartingClipSize; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x184]; // 0x00d4, 0x184 bytes
+                std::int32_t m_nStartingClipSize; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x214]; // 0x0144, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Upgrade_OverdriveClip_Reload) == 0x258, "CCitadel_Modifier_Upgrade_OverdriveClip_Reload size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Upgrade_OverdriveClip_Reload) == 0x358, "CCitadel_Modifier_Upgrade_OverdriveClip_Reload size mismatch");
         }
     }
 }

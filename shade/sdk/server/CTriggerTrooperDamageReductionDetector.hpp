@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8e8
+             * Size: 0x9f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerTrooperDamageReductionDetector : public shade::sdk::server::CBaseTrigger {
             public:
-                float m_flRadius; // 0x08e0, 0x4 bytes
-                std::uint8_t pad_08e4[0x4]; // 0x08e4, 0x4 bytes
+                float m_flRadius; // 0x09f0, 0x4 bytes
+                std::uint8_t pad_09f4[0x4]; // 0x09f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerTrooperDamageReductionDetector) == 0x8E8, "CTriggerTrooperDamageReductionDetector size mismatch");
+            static_assert(sizeof(CTriggerTrooperDamageReductionDetector) == 0x9F8, "CTriggerTrooperDamageReductionDetector size mismatch");
         }
     }
 }

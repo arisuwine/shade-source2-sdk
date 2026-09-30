@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc40
+             * Size: 0xe50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelInWorldEventTimer : public shade::sdk::client::C_PointClientUIWorldPanel {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTrackedEntity; // 0x0c00, 0x4 bytes
-                std::int32_t m_nTrackedEntity; // 0x0c04, 0x4 bytes
-                std::uint8_t pad_0c08[0x38]; // 0x0c08, 0x38 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTrackedEntity; // 0x0e10, 0x4 bytes
+                std::int32_t m_nTrackedEntity; // 0x0e14, 0x4 bytes
+                std::uint8_t pad_0e18[0x38]; // 0x0e18, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelInWorldEventTimer) == 0xC40, "CCitadelInWorldEventTimer size mismatch");
+            static_assert(sizeof(CCitadelInWorldEventTimer) == 0xE50, "CCitadelInWorldEventTimer size mismatch");
         }
     }
 }

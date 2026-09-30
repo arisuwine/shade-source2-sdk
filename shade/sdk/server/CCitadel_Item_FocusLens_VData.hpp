@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19f8
+             * Size: 0x15f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_FocusLens_VData : public shade::sdk::server::CCitadel_Item_TrackingProjectileApplyModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x19c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamageModifier; // 0x19d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ResistReductionModifier; // 0x19e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x15c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamageModifier; // 0x15d0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ResistReductionModifier; // 0x15e0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_FocusLens_VData) == 0x19F8, "CCitadel_Item_FocusLens_VData size mismatch");
+            static_assert(sizeof(CCitadel_Item_FocusLens_VData) == 0x15F0, "CCitadel_Item_FocusLens_VData size mismatch");
         }
     }
 }

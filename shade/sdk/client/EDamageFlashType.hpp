@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -23,7 +24,8 @@ namespace shade {
                 EFlashType_CritDamage = 0x3,
                 EFlashType_MeleeActivate = 0x4,
                 EFlashType_PatronHit = 0x5,
-                EFlshTypeCount = 0x6
+                EFlashType_GenericDamage = 0x6,
+                EFlshTypeCount = 0x7
             };
         }
     }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x40
              * Alignment: 0xff
              * Has VTable
              * Has Trivial Destructor
@@ -33,15 +34,15 @@ namespace shade {
                 float m_flCurrentValue; // 0x0008, 0x4 bytes
                 float m_flPrevRegenRate; // 0x000c, 0x4 bytes
                 float m_flMaxValue; // 0x0010, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLatchTime; // 0x0014, 0x4 bytes
-                float m_flLatchValue; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                std::uint8_t pad_0014[0x24]; // 0x0014, 0x24 bytes
+                shade::sdk::entity2::GameTime_t m_flLatchTime; // 0x0038, 0x4 bytes
+                float m_flLatchValue; // 0x003c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AbilityResource_t) == 0x20, "AbilityResource_t size mismatch");
+            static_assert(sizeof(AbilityResource_t) == 0x40, "AbilityResource_t size mismatch");
         }
     }
 }

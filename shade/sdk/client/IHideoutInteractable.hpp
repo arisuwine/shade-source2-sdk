@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,6 @@ namespace shade {
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
-             * Has Trivial Destructor
              */
             #pragma pack(push, 1)
             class IHideoutInteractable {

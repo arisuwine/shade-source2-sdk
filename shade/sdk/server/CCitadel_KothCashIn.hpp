@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1400
+             * Size: 0x1508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,34 +40,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_KothCashIn : public shade::sdk::server::CCitadelTriggerMultiCapturePoint {
             public:
-                float m_flAmberFavored; // 0x0c28, 0x4 bytes
-                float m_flSapphireFavored; // 0x0c2c, 0x4 bytes
-                std::int32_t m_iWinningTeam; // 0x0c30, 0x4 bytes
-                std::int32_t m_iTroopersToSpawn; // 0x0c34, 0x4 bytes
-                std::uint8_t pad_0c38[0x79c]; // 0x0c38, 0x79c bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hDropOffPlayer; // 0x13d4, 0x4 bytes
-                std::int32_t m_nGold; // 0x13d8, 0x4 bytes
-                std::int32_t m_nTeamBias; // 0x13dc, 0x4 bytes
-                std::int32_t m_nKOTHIdx; // 0x13e0, 0x4 bytes
-                std::int32_t m_nAmberNetworth; // 0x13e4, 0x4 bytes
-                std::int32_t m_nSapphireNetworth; // 0x13e8, 0x4 bytes
-                std::int32_t m_nAmberGoldValue; // 0x13ec, 0x4 bytes
-                std::int32_t m_nSapphireGoldValue; // 0x13f0, 0x4 bytes
-                bool m_bGiveUpHasWarned; // 0x13f4, 0x1 bytes
-                bool m_bGivenUp; // 0x13f5, 0x1 bytes
-                bool m_bWasBlockedAtAnyPoint; // 0x13f6, 0x1 bytes
-                std::uint8_t pad_13f7[0x1]; // 0x13f7, 0x1 bytes
-                shade::sdk::client::ParticleIndex_t m_nZoneParticle; // 0x13f8, 0x4 bytes
-                bool m_bCashedIn; // 0x13fc, 0x1 bytes
-                bool m_bPlayBlock; // 0x13fd, 0x1 bytes
-                bool m_bPlayContested; // 0x13fe, 0x1 bytes
-                std::uint8_t pad_13ff[0x1]; // 0x13ff, 0x1 bytes
+                float m_flAmberFavored; // 0x0d30, 0x4 bytes
+                float m_flSapphireFavored; // 0x0d34, 0x4 bytes
+                std::int32_t m_iWinningTeam; // 0x0d38, 0x4 bytes
+                std::int32_t m_iTroopersToSpawn; // 0x0d3c, 0x4 bytes
+                std::uint8_t pad_0d40[0x79c]; // 0x0d40, 0x79c bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hDropOffPlayer; // 0x14dc, 0x4 bytes
+                std::int32_t m_nGold; // 0x14e0, 0x4 bytes
+                std::int32_t m_nTeamBias; // 0x14e4, 0x4 bytes
+                std::int32_t m_nKOTHIdx; // 0x14e8, 0x4 bytes
+                std::int32_t m_nAmberNetworth; // 0x14ec, 0x4 bytes
+                std::int32_t m_nSapphireNetworth; // 0x14f0, 0x4 bytes
+                std::int32_t m_nAmberGoldValue; // 0x14f4, 0x4 bytes
+                std::int32_t m_nSapphireGoldValue; // 0x14f8, 0x4 bytes
+                bool m_bGiveUpHasWarned; // 0x14fc, 0x1 bytes
+                bool m_bGivenUp; // 0x14fd, 0x1 bytes
+                bool m_bWasBlockedAtAnyPoint; // 0x14fe, 0x1 bytes
+                std::uint8_t pad_14ff[0x1]; // 0x14ff, 0x1 bytes
+                shade::sdk::client::ParticleIndex_t m_nZoneParticle; // 0x1500, 0x4 bytes
+                bool m_bCashedIn; // 0x1504, 0x1 bytes
+                bool m_bPlayBlock; // 0x1505, 0x1 bytes
+                bool m_bPlayContested; // 0x1506, 0x1 bytes
+                std::uint8_t pad_1507[0x1]; // 0x1507, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_KothCashIn) == 0x1400, "CCitadel_KothCashIn size mismatch");
+            static_assert(sizeof(CCitadel_KothCashIn) == 0x1508, "CCitadel_KothCashIn size mismatch");
         }
     }
 }

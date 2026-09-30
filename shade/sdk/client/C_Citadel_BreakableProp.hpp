@@ -12,16 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CBaseAnimGraph.hpp"
+#include "shade/sdk/client/ParticleIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xce0
+             * Size: 0xed0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_BreakableProp : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::int32_t m_nHitIndex; // 0x0ca8, 0x4 bytes
-                std::uint8_t pad_0cac[0x34]; // 0x0cac, 0x34 bytes
+                std::uint8_t pad_0da0[0x10]; // 0x0da0, 0x10 bytes
+                std::int32_t m_nGoldCost; // 0x0db0, 0x4 bytes
+                std::uint8_t pad_0db4[0x8]; // 0x0db4, 0x8 bytes
+                std::int32_t m_nMeleeHitsTaken; // 0x0dbc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x0dc0, 0x4 bytes
+                std::uint8_t pad_0dc4[0x10c]; // 0x0dc4, 0x10c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_BreakableProp) == 0xCE0, "C_Citadel_BreakableProp size mismatch");
+            static_assert(sizeof(C_Citadel_BreakableProp) == 0xED0, "C_Citadel_BreakableProp size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x320
+             * Size: 0x450
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Fathom_ScaldingSpray_Aura : public shade::sdk::server::CCitadelModifierAura_Cone {
             public:
-                QAngle m_playerAngles; // 0x0108, 0xc bytes
-                bool m_bHasAnyTargets; // 0x0114, 0x1 bytes
-                std::uint8_t pad_0115[0x3]; // 0x0115, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastStackTime; // 0x0118, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x011c, 0x4 bytes
-                std::uint8_t pad_0120[0x200]; // 0x0120, 0x200 bytes
+                QAngle m_playerAngles; // 0x0178, 0xc bytes
+                bool m_bHasAnyTargets; // 0x0184, 0x1 bytes
+                std::uint8_t pad_0185[0x3]; // 0x0185, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastStackTime; // 0x0188, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x018c, 0x4 bytes
+                std::uint8_t pad_0190[0x2c0]; // 0x0190, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Fathom_ScaldingSpray_Aura) == 0x320, "CCitadel_Modifier_Fathom_ScaldingSpray_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Fathom_ScaldingSpray_Aura) == 0x450, "CCitadel_Modifier_Fathom_ScaldingSpray_Aura size mismatch");
         }
     }
 }

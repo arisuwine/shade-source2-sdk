@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,24 +30,23 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x48
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct HeroLevel_t {
                 std::uint32_t m_unRequiredGold; // 0x0000, 0x4 bytes
-                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
+                bool m_bUseStandardUpgrade; // 0x0004, 0x1 bytes
+                std::uint8_t pad_0005[0x3]; // 0x0005, 0x3 bytes
                 CUtlOrderedMap<shade::sdk::client::ECurrencyType, std::int32_t> m_mapBonusCurrencies; // 0x0008, 0x28 bytes
-                bool m_bUseStandardUpgrade; // 0x0030, 0x1 bytes
-                std::uint8_t pad_0031[0x7]; // 0x0031, 0x7 bytes
-                CUtlVector<shade::sdk::client::BonusUpgrade_t> m_vecBonusUpgrades; // 0x0038, 0x18 bytes
+                CUtlVector<shade::sdk::client::BonusUpgrade_t> m_vecBonusUpgrades; // 0x0030, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(HeroLevel_t) == 0x50, "HeroLevel_t size mismatch");
+            static_assert(sizeof(HeroLevel_t) == 0x48, "HeroLevel_t size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,7 +20,6 @@
 #include "shade/sdk/client/ECitadelMatchMode.hpp"
 #include "shade/sdk/client/EGameState.hpp"
 #include "shade/sdk/client/MatchID_t.hpp"
-#include "shade/sdk/client/ParticleIndex_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CStreetBrawlController.hpp"
 #include "shade/sdk/server/CTeamplayRules.hpp"
@@ -44,7 +44,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2bd8
+             * Size: 0x29b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -68,113 +68,115 @@ namespace shade {
                 bool m_bEnemyInSapphireBase; // 0x0109, 0x1 bytes
                 bool m_bEnemyPlayersInAmberBase; // 0x010a, 0x1 bytes
                 bool m_bEnemyPlayersInSapphireBase; // 0x010b, 0x1 bytes
-                Vector m_vMinimapMins; // 0x010c, 0xc bytes
-                Vector m_vMinimapMaxs; // 0x0118, 0xc bytes
+                VectorWS m_vMinimapMins; // 0x010c, 0xc bytes
+                VectorWS m_vMinimapMaxs; // 0x0118, 0xc bytes
                 bool m_bMatchSafeToAbandon; // 0x0124, 0x1 bytes
                 bool m_bMatchNotScored; // 0x0125, 0x1 bytes
                 std::uint8_t pad_0126[0x2]; // 0x0126, 0x2 bytes
                 shade::sdk::entity2::GameTime_t m_tAbandonTriggerEarlyTime; // 0x0128, 0x4 bytes
                 bool m_bAbandonTriggerSapphire; // 0x012c, 0x1 bytes
                 bool m_bAbandonTriggerAmber; // 0x012d, 0x1 bytes
-                bool m_bNoDeathEnabled; // 0x012e, 0x1 bytes
-                bool m_bFastCooldownsEnabled; // 0x012f, 0x1 bytes
-                bool m_bStaminaCooldownsEnabled; // 0x0130, 0x1 bytes
-                bool m_bUnlimitedAmmoEnabled; // 0x0131, 0x1 bytes
-                bool m_bInfiniteResourcesEnabled; // 0x0132, 0x1 bytes
-                bool m_bFlexSlotsForcedUnlocked; // 0x0133, 0x1 bytes
-                shade::sdk::client::ECitadelMatchMode m_eMatchMode; // 0x0134, 0x4 bytes
-                shade::sdk::client::ECitadelGameMode m_eGameMode; // 0x0138, 0x4 bytes
-                std::uint32_t m_unSpectatorCount; // 0x013c, 0x4 bytes
-                std::uint32_t m_unExpectedPlayerCount; // 0x0140, 0x4 bytes
-                std::uint32_t m_nHideoutOwner; // 0x0144, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelTrooperMinimap> m_hTrooperMinimap; // 0x0148, 0x4 bytes
-                std::int32_t m_iWinningTeam; // 0x014c, 0x4 bytes
+                std::uint8_t pad_012e[0x2]; // 0x012e, 0x2 bytes
+                shade::sdk::client::ECitadelMatchMode m_eMatchMode; // 0x0130, 0x4 bytes
+                shade::sdk::client::ECitadelGameMode m_eGameMode; // 0x0134, 0x4 bytes
+                std::uint32_t m_unSpectatorCount; // 0x0138, 0x4 bytes
+                std::uint32_t m_unExpectedPlayerCount; // 0x013c, 0x4 bytes
+                std::uint32_t m_nHideoutOwner; // 0x0140, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelTrooperMinimap> m_hTrooperMinimap; // 0x0144, 0x4 bytes
+                std::int32_t m_iWinningTeam; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
                 CNetworkUtlVectorBase<shade::sdk::client::HeroID_t> m_vecBannedHeroes; // 0x0150, 0x18 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::TeamKothState_t> m_vecTeamKothStates; // 0x0168, 0x128 bytes
-                std::int32_t m_nKothScoringTeam; // 0x0290, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_timeKothScoring; // 0x0294, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_timeKothCashInStarted; // 0x0298, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_timeKothGiveUp; // 0x029c, 0x4 bytes
-                std::int32_t m_nAmberGold; // 0x02a0, 0x4 bytes
-                std::int32_t m_nSapphireGold; // 0x02a4, 0x4 bytes
-                VectorWS m_vKothCashInCurrentLocation; // 0x02a8, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentHeroDrafterRebels; // 0x02b4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentHeroDrafterCombine; // 0x02b8, 0x4 bytes
-                bool m_bDontUploadStats; // 0x02bc, 0x1 bytes
-                bool m_bIsEndGameTest; // 0x02bd, 0x1 bytes
-                std::uint8_t pad_02be[0x6a]; // 0x02be, 0x6a bytes
-                bool m_bSpawnedBots; // 0x0328, 0x1 bytes
-                bool m_bGuideBotAssigned; // 0x0329, 0x1 bytes
-                std::uint8_t pad_032a[0x2]; // 0x032a, 0x2 bytes
-                shade::sdk::client::ParticleIndex_t m_nKothWindowWarning; // 0x032c, 0x4 bytes
-                float m_timeLastSpawnCrates; // 0x0330, 0x4 bytes
-                float m_timeNextKothSpawn; // 0x0334, 0x4 bytes
-                float m_timeNextKothSpawnWindowTime; // 0x0338, 0x4 bytes
-                VectorWS m_vNextKothLocation; // 0x033c, 0xc bytes
-                SndOpEventGuid_t m_KothWarningSound; // 0x0348, 0x14 bytes
-                std::uint8_t pad_035c[0x4]; // 0x035c, 0x4 bytes
-                CUtlVector<VectorWS> m_vKothSpawnLocationDeck; // 0x0360, 0x18 bytes
-                bool m_bNotifiedClientsOfNextCrateSpawn; // 0x0378, 0x1 bytes
-                bool m_bEarlyCratesSpawned; // 0x0379, 0x1 bytes
-                bool m_bIsEarlyCrateGamestate; // 0x037a, 0x1 bytes
-                std::uint8_t pad_037b[0x26d]; // 0x037b, 0x26d bytes
-                shade::sdk::entity2::GameTime_t m_flGameTimeAllPlayersDisconnected; // 0x05e8, 0x4 bytes
-                std::int32_t m_nNextHeroDraftPosition; // 0x05ec, 0x4 bytes
-                std::uint8_t pad_05f0[0x1248]; // 0x05f0, 0x1248 bytes
-                shade::sdk::server::CountdownTimer m_CheckIdleTimer; // 0x1838, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_CheckCheatersTimer; // 0x1850, 0x18 bytes
-                std::uint8_t pad_1868[0x160]; // 0x1868, 0x160 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleStart; // 0x19c8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleEndTime; // 0x19cc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleRampInEndTime; // 0x19d0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeScaleRampOutStartTime; // 0x19d4, 0x4 bytes
-                float m_flTimeScaleRampInTime; // 0x19d8, 0x4 bytes
-                float m_flTimeScaleDuration; // 0x19dc, 0x4 bytes
-                float m_flTimeScaleRampOutTime; // 0x19e0, 0x4 bytes
-                float m_flTimeScale; // 0x19e4, 0x4 bytes
-                float m_flOriginalTimeScale; // 0x19e8, 0x4 bytes
-                bool m_bTimeScaleActive; // 0x19ec, 0x1 bytes
-                std::uint8_t pad_19ed[0x3]; // 0x19ed, 0x3 bytes
-                std::int32_t m_iMidbossKillCount; // 0x19f0, 0x4 bytes
-                std::int32_t m_iAmberRejuvCount; // 0x19f4, 0x4 bytes
-                std::int32_t m_iSapphireRejuvCount; // 0x19f8, 0x4 bytes
-                float m_tNextMidBossSpawnTime; // 0x19fc, 0x4 bytes
-                std::uint8_t pad_1a00[0xfc0]; // 0x1a00, 0xfc0 bytes
-                bool m_bServerPaused; // 0x29c0, 0x1 bytes
-                std::uint8_t pad_29c1[0x3]; // 0x29c1, 0x3 bytes
-                std::int32_t m_iPauseTeam; // 0x29c4, 0x4 bytes
-                std::int32_t m_nMatchClockUpdateTick; // 0x29c8, 0x4 bytes
-                float m_flMatchClockAtLastUpdate; // 0x29cc, 0x4 bytes
-                double m_flPauseTime; // 0x29d0, 0x8 bytes
-                CPlayerSlot m_pausingPlayerId; // 0x29d8, 0x4 bytes
-                CPlayerSlot m_unpausingPlayerId; // 0x29dc, 0x4 bytes
-                float m_fPauseRawTime; // 0x29e0, 0x4 bytes
-                float m_fPauseCurTime; // 0x29e4, 0x4 bytes
-                float m_fUnpauseRawTime; // 0x29e8, 0x4 bytes
-                float m_fUnpauseCurTime; // 0x29ec, 0x4 bytes
-                std::uint8_t pad_29f0[0x50]; // 0x29f0, 0x50 bytes
-                std::int32_t m_nLastPreGameCount; // 0x2a40, 0x4 bytes
-                std::int32_t m_eGGTeam; // 0x2a44, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x2a48, 0x4 bytes
-                std::uint8_t pad_2a4c[0x4]; // 0x2a4c, 0x4 bytes
-                shade::sdk::client::MatchID_t m_unMatchID; // 0x2a50, 0x8 bytes
-                CUtlString m_sGameplayExperiment; // 0x2a58, 0x8 bytes
-                std::uint32_t m_ExperimentTokenHashCode; // 0x2a60, 0x4 bytes
-                std::int32_t m_nPlayerDeathEventID; // 0x2a64, 0x4 bytes
-                std::int32_t m_nReplayChangedEvent; // 0x2a68, 0x4 bytes
-                std::int32_t m_nGameOverEvent; // 0x2a6c, 0x4 bytes
-                std::uint8_t pad_2a70[0x20]; // 0x2a70, 0x20 bytes
-                shade::sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x2a90, 0x4 bytes
-                std::uint8_t pad_2a94[0x4]; // 0x2a94, 0x4 bytes
-                shade::sdk::server::CCitadelPlayOfTheGame *m_pPlayOfTheGame; // 0x2a98, 0x8 bytes
-                shade::sdk::server::CStreetBrawlController m_tStreetBrawl; // 0x2aa0, 0x130 bytes
-                std::uint8_t pad_2bd0[0x8]; // 0x2bd0, 0x8 bytes
+                std::uint32_t m_nCorruptedPenaltySeed; // 0x0168, 0x4 bytes
+                std::int32_t m_nNumCorruptedItemsLimit; // 0x016c, 0x4 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::TeamKothState_t> m_vecTeamKothStates; // 0x0170, 0x128 bytes
+                std::int32_t m_nKothScoringTeam; // 0x0298, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_timeKothScoring; // 0x029c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_timeKothCashInStarted; // 0x02a0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_timeKothGiveUp; // 0x02a4, 0x4 bytes
+                std::int32_t m_nAmberGold; // 0x02a8, 0x4 bytes
+                std::int32_t m_nSapphireGold; // 0x02ac, 0x4 bytes
+                VectorWS m_vKothCashInCurrentLocation; // 0x02b0, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentHeroDrafterRebels; // 0x02bc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentHeroDrafterCombine; // 0x02c0, 0x4 bytes
+                bool m_bDontUploadStats; // 0x02c4, 0x1 bytes
+                bool m_bIsEndGameTest; // 0x02c5, 0x1 bytes
+                std::uint8_t pad_02c6[0x52]; // 0x02c6, 0x52 bytes
+                bool m_bSpawnedBots; // 0x0318, 0x1 bytes
+                bool m_bGuideBotAssigned; // 0x0319, 0x1 bytes
+                std::uint8_t pad_031a[0x2]; // 0x031a, 0x2 bytes
+                float m_timeLastSpawnCrates; // 0x031c, 0x4 bytes
+                float m_timeNextKothSpawn; // 0x0320, 0x4 bytes
+                float m_timeNextKothSpawnWindowTime; // 0x0324, 0x4 bytes
+                VectorWS m_vNextKothLocation; // 0x0328, 0xc bytes
+                std::uint8_t pad_0334[0x4]; // 0x0334, 0x4 bytes
+                CUtlVector<VectorWS> m_vKothSpawnLocationDeck; // 0x0338, 0x18 bytes
+                bool m_bNotifiedClientsOfNextCrateSpawn; // 0x0350, 0x1 bytes
+                bool m_bEarlyCratesSpawned; // 0x0351, 0x1 bytes
+                bool m_bIsEarlyCrateGamestate; // 0x0352, 0x1 bytes
+                std::uint8_t pad_0353[0x1]; // 0x0353, 0x1 bytes
+                std::int32_t m_nNumCorruptedItemShopSpawns; // 0x0354, 0x4 bytes
+                std::uint8_t pad_0358[0x28]; // 0x0358, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_flGameTimeAllPlayersDisconnected; // 0x0380, 0x4 bytes
+                std::int32_t m_nNextHeroDraftPosition; // 0x0384, 0x4 bytes
+                std::uint8_t pad_0388[0x1248]; // 0x0388, 0x1248 bytes
+                shade::sdk::server::CountdownTimer m_CheckIdleTimer; // 0x15d0, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_CheckCheatersTimer; // 0x15e8, 0x18 bytes
+                std::uint8_t pad_1600[0x160]; // 0x1600, 0x160 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleStart; // 0x1760, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleEndTime; // 0x1764, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleRampInEndTime; // 0x1768, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeScaleRampOutStartTime; // 0x176c, 0x4 bytes
+                float m_flTimeScaleRampInTime; // 0x1770, 0x4 bytes
+                float m_flTimeScaleDuration; // 0x1774, 0x4 bytes
+                float m_flTimeScaleRampOutTime; // 0x1778, 0x4 bytes
+                float m_flTimeScale; // 0x177c, 0x4 bytes
+                float m_flOriginalTimeScale; // 0x1780, 0x4 bytes
+                bool m_bTimeScaleActive; // 0x1784, 0x1 bytes
+                std::uint8_t pad_1785[0x3]; // 0x1785, 0x3 bytes
+                std::int32_t m_iMidbossKillCount; // 0x1788, 0x4 bytes
+                std::int32_t m_iAmberRejuvCount; // 0x178c, 0x4 bytes
+                std::int32_t m_iSapphireRejuvCount; // 0x1790, 0x4 bytes
+                float m_tNextMidBossSpawnTime; // 0x1794, 0x4 bytes
+                CNetworkUtlVectorBase<VectorWS> m_vecNeutralCampTimerOrigins; // 0x1798, 0x18 bytes
+                CNetworkUtlVectorBase<float> m_vecNeutralCampNextSpawnTimes; // 0x17b0, 0x18 bytes
+                CNetworkUtlVectorBase<bool> m_vecNeutralCampTimerIsMidBoss; // 0x17c8, 0x18 bytes
+                std::uint8_t pad_17e0[0xfc0]; // 0x17e0, 0xfc0 bytes
+                bool m_bServerPaused; // 0x27a0, 0x1 bytes
+                std::uint8_t pad_27a1[0x3]; // 0x27a1, 0x3 bytes
+                std::int32_t m_iPauseTeam; // 0x27a4, 0x4 bytes
+                std::int32_t m_nMatchClockUpdateTick; // 0x27a8, 0x4 bytes
+                float m_flMatchClockAtLastUpdate; // 0x27ac, 0x4 bytes
+                double m_flPauseTime; // 0x27b0, 0x8 bytes
+                CPlayerSlot m_pausingPlayerId; // 0x27b8, 0x4 bytes
+                CPlayerSlot m_unpausingPlayerId; // 0x27bc, 0x4 bytes
+                float m_fPauseRawTime; // 0x27c0, 0x4 bytes
+                float m_fPauseCurTime; // 0x27c4, 0x4 bytes
+                float m_fUnpauseRawTime; // 0x27c8, 0x4 bytes
+                float m_fUnpauseCurTime; // 0x27cc, 0x4 bytes
+                std::uint8_t pad_27d0[0x50]; // 0x27d0, 0x50 bytes
+                std::int32_t m_nLastPreGameCount; // 0x2820, 0x4 bytes
+                std::int32_t m_eGGTeam; // 0x2824, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x2828, 0x4 bytes
+                bool m_bGGMarkAsNotScored; // 0x282c, 0x1 bytes
+                std::uint8_t pad_282d[0x3]; // 0x282d, 0x3 bytes
+                shade::sdk::client::MatchID_t m_unMatchID; // 0x2830, 0x8 bytes
+                CUtlString m_sGameplayExperiment; // 0x2838, 0x8 bytes
+                std::uint32_t m_ExperimentTokenHashCode; // 0x2840, 0x4 bytes
+                std::int32_t m_nPlayerDeathEventID; // 0x2844, 0x4 bytes
+                std::int32_t m_nReplayChangedEvent; // 0x2848, 0x4 bytes
+                std::int32_t m_nGameOverEvent; // 0x284c, 0x4 bytes
+                std::uint8_t pad_2850[0x20]; // 0x2850, 0x20 bytes
+                shade::sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x2870, 0x4 bytes
+                std::uint8_t pad_2874[0x4]; // 0x2874, 0x4 bytes
+                shade::sdk::server::CCitadelPlayOfTheGame *m_pPlayOfTheGame; // 0x2878, 0x8 bytes
+                shade::sdk::server::CStreetBrawlController m_tStreetBrawl; // 0x2880, 0x130 bytes
+                std::uint8_t pad_29b0[0x8]; // 0x29b0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelGameRules) == 0x2BD8, "CCitadelGameRules size mismatch");
+            static_assert(sizeof(CCitadelGameRules) == 0x29B8, "CCitadelGameRules size mismatch");
         }
     }
 }

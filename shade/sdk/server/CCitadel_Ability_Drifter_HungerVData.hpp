@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1938
+             * Size: 0x14c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,17 +43,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Drifter_HungerVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TargetModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1828, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvisModifier; // 0x1838, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HungerTargetKillParticle; // 0x1848, 0xe0 bytes
-                CSoundEventName m_strStackGainedSound; // 0x1928, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TargetModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x13b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvisModifier; // 0x13c0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HungerTargetKillParticle; // 0x13d0, 0xe0 bytes
+                CSoundEventName m_strStackGainedSound; // 0x14b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Drifter_HungerVData) == 0x1938, "CCitadel_Ability_Drifter_HungerVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Drifter_HungerVData) == 0x14C0, "CCitadel_Ability_Drifter_HungerVData size mismatch");
         }
     }
 }

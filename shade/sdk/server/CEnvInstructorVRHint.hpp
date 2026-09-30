@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,26 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvInstructorVRHint : public shade::sdk::server::CPointEntity {
             public:
-                CUtlSymbolLarge m_iszName; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszHintTargetEntity; // 0x04a8, 0x8 bytes
-                std::int32_t m_iTimeout; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
-                CUtlSymbolLarge m_iszCaption; // 0x04b8, 0x8 bytes
-                CUtlSymbolLarge m_iszStartSound; // 0x04c0, 0x8 bytes
-                std::int32_t m_iLayoutFileType; // 0x04c8, 0x4 bytes
-                std::uint8_t pad_04cc[0x4]; // 0x04cc, 0x4 bytes
-                CUtlSymbolLarge m_iszCustomLayoutFile; // 0x04d0, 0x8 bytes
-                std::int32_t m_iAttachType; // 0x04d8, 0x4 bytes
-                float m_flHeightOffset; // 0x04dc, 0x4 bytes
+                CUtlSymbolLarge m_iszName; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszHintTargetEntity; // 0x04b8, 0x8 bytes
+                std::int32_t m_iTimeout; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
+                CUtlSymbolLarge m_iszCaption; // 0x04c8, 0x8 bytes
+                CUtlSymbolLarge m_iszStartSound; // 0x04d0, 0x8 bytes
+                std::int32_t m_iLayoutFileType; // 0x04d8, 0x4 bytes
+                std::uint8_t pad_04dc[0x4]; // 0x04dc, 0x4 bytes
+                CUtlSymbolLarge m_iszCustomLayoutFile; // 0x04e0, 0x8 bytes
+                std::int32_t m_iAttachType; // 0x04e8, 0x4 bytes
+                float m_flHeightOffset; // 0x04ec, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge InputShowHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEndHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvInstructorVRHint) == 0x4E0, "CEnvInstructorVRHint size mismatch");
+            static_assert(sizeof(CEnvInstructorVRHint) == 0x4F0, "CEnvInstructorVRHint size mismatch");
         }
     }
 }

@@ -12,9 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/AbilityUpgradeBits_t.hpp"
 #include "shade/sdk/client/EModifierValue.hpp"
 #include "shade/sdk/client/EStatsType.hpp"
 #include "shade/sdk/client/ModifierValueDisplayUnits_t.hpp"
@@ -33,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0xf8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -51,13 +53,14 @@ namespace shade {
                 std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
                 CUtlString m_strDisableValue; // 0x0068, 0x8 bytes
                 bool m_bDamageAffectedByEffectiveness; // 0x0070, 0x1 bytes
-                bool m_bReturnZeroIfUnupgraded; // 0x0071, 0x1 bytes
-                std::uint8_t pad_0072[0x2]; // 0x0072, 0x2 bytes
+                std::uint8_t pad_0071[0x1]; // 0x0071, 0x1 bytes
+                shade::sdk::client::AbilityUpgradeBits_t m_nRequiredUpgradeBits; // 0x0072, 0x2 bytes
                 shade::sdk::client::EStatsType m_eDisplayType; // 0x0074, 0x4 bytes
                 shade::sdk::client::ModifierValueDisplayUnits_t m_eDisplayUnits; // 0x0078, 0x4 bytes
                 bool m_bIsHidden; // 0x007c, 0x1 bytes
                 bool m_bIsNegativeAttribute; // 0x007d, 0x1 bytes
-                std::uint8_t pad_007e[0x2]; // 0x007e, 0x2 bytes
+                bool m_bIsDetailedOnly; // 0x007e, 0x1 bytes
+                std::uint8_t pad_007f[0x1]; // 0x007f, 0x1 bytes
                 CUtlString m_strCSSClass; // 0x0080, 0x8 bytes
                 CUtlString m_strLocTokenOverride; // 0x0088, 0x8 bytes
                 bool m_bCanSetTokenOverride; // 0x0090, 0x1 bytes
@@ -67,13 +70,13 @@ namespace shade {
                 bool m_bIsAbilityDamageProperty; // 0x00a1, 0x1 bytes
                 std::uint8_t pad_00a2[0x2]; // 0x00a2, 0x2 bytes
                 shade::sdk::client::StatsUsageFlags_t m_eStatsUsageFlags; // 0x00a4, 0x4 bytes
-                std::uint8_t pad_00a8[0x20]; // 0x00a8, 0x20 bytes
+                std::uint8_t pad_00a8[0x50]; // 0x00a8, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelAbilityProperty_t) == 0xC8, "CitadelAbilityProperty_t size mismatch");
+            static_assert(sizeof(CitadelAbilityProperty_t) == 0xF8, "CitadelAbilityProperty_t size mismatch");
         }
     }
 }

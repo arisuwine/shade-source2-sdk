@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a38
+             * Size: 0x15c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelAbilityTangoTetherVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_TetherModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_GrappleTargetModifier; // 0x1828, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletGrappleTracerParticle; // 0x1838, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyGrappleParticle; // 0x1918, 0xe0 bytes
-                CSoundEventName m_strDamageTarget; // 0x19f8, 0x10 bytes
-                CSoundEventName m_strGrappleHitTarget; // 0x1a08, 0x10 bytes
-                CSoundEventName m_strGrappleHitWorld; // 0x1a18, 0x10 bytes
-                CSoundEventName m_strGrappleHitNothing; // 0x1a28, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_TetherModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_GrappleTargetModifier; // 0x13b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletGrappleTracerParticle; // 0x13c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyGrappleParticle; // 0x14a0, 0xe0 bytes
+                CSoundEventName m_strDamageTarget; // 0x1580, 0x10 bytes
+                CSoundEventName m_strGrappleHitTarget; // 0x1590, 0x10 bytes
+                CSoundEventName m_strGrappleHitWorld; // 0x15a0, 0x10 bytes
+                CSoundEventName m_strGrappleHitNothing; // 0x15b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelAbilityTangoTetherVData) == 0x1A38, "CCitadelAbilityTangoTetherVData size mismatch");
+            static_assert(sizeof(CCitadelAbilityTangoTetherVData) == 0x15C0, "CCitadelAbilityTangoTetherVData size mismatch");
         }
     }
 }

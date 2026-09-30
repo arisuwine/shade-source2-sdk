@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa00
+             * Size: 0xc08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +39,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FuncLadder : public shade::sdk::client::C_BaseModelEntity {
             public:
-                Vector m_vecLadderDir; // 0x09a8, 0xc bytes
-                std::uint8_t pad_09b4[0x4]; // 0x09b4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_InfoLadderDismount>> m_Dismounts; // 0x09b8, 0x18 bytes
-                Vector m_vecLocalTop; // 0x09d0, 0xc bytes
-                VectorWS m_vecPlayerMountPositionTop; // 0x09dc, 0xc bytes
-                VectorWS m_vecPlayerMountPositionBottom; // 0x09e8, 0xc bytes
-                float m_flAutoRideSpeed; // 0x09f4, 0x4 bytes
-                bool m_bDisabled; // 0x09f8, 0x1 bytes
-                bool m_bFakeLadder; // 0x09f9, 0x1 bytes
-                bool m_bHasSlack; // 0x09fa, 0x1 bytes
-                std::uint8_t pad_09fb[0x5]; // 0x09fb, 0x5 bytes
+                Vector m_vecLadderDir; // 0x0bb0, 0xc bytes
+                std::uint8_t pad_0bbc[0x4]; // 0x0bbc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_InfoLadderDismount>> m_Dismounts; // 0x0bc0, 0x18 bytes
+                Vector m_vecLocalTop; // 0x0bd8, 0xc bytes
+                VectorWS m_vecPlayerMountPositionTop; // 0x0be4, 0xc bytes
+                VectorWS m_vecPlayerMountPositionBottom; // 0x0bf0, 0xc bytes
+                float m_flAutoRideSpeed; // 0x0bfc, 0x4 bytes
+                bool m_bDisabled; // 0x0c00, 0x1 bytes
+                bool m_bFakeLadder; // 0x0c01, 0x1 bytes
+                bool m_bHasSlack; // 0x0c02, 0x1 bytes
+                std::uint8_t pad_0c03[0x5]; // 0x0c03, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FuncLadder) == 0xA00, "C_FuncLadder size mismatch");
+            static_assert(sizeof(C_FuncLadder) == 0xC08, "C_FuncLadder size mismatch");
         }
     }
 }

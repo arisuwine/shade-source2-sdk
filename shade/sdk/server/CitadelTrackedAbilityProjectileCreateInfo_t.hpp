@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,19 +30,19 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x68
+             * Size: 0x138
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
             struct CitadelTrackedAbilityProjectileCreateInfo_t : public shade::sdk::server::CitadelAbilityProjectileCreateInfo_t {
-                CHandle<shade::sdk::server::CBaseEntity> m_hTrackedTarget; // 0x0060, 0x4 bytes
-                std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTrackedTarget; // 0x0130, 0x4 bytes
+                std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelTrackedAbilityProjectileCreateInfo_t) == 0x68, "CitadelTrackedAbilityProjectileCreateInfo_t size mismatch");
+            static_assert(sizeof(CitadelTrackedAbilityProjectileCreateInfo_t) == 0x138, "CitadelTrackedAbilityProjectileCreateInfo_t size mismatch");
         }
     }
 }

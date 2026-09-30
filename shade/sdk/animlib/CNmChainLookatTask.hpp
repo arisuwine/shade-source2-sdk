@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,32 +22,21 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x90
-             * Alignment: 0x8
+             * Size: 0x120
+             * Alignment: 0x10
              * Has VTable
              * Construct Allowed
              */
             #pragma pack(push, 1)
             class CNmChainLookatTask : public shade::sdk::animlib::CNmPoseTask {
             public:
-                std::int32_t m_nChainEndBoneIdx; // 0x0058, 0x4 bytes
-                std::int32_t m_nNumBonesInChain; // 0x005c, 0x4 bytes
-                Vector m_chainForwardDir; // 0x0060, 0xc bytes
-                float m_flBlendWeight; // 0x006c, 0x4 bytes
-                float m_flHorizontalAngleLimitDegrees; // 0x0070, 0x4 bytes
-                float m_flVerticalAngleLimitDegrees; // 0x0074, 0x4 bytes
-                Vector m_lookatTarget; // 0x0078, 0xc bytes
-                bool m_bIsTargetInWorldSpace; // 0x0084, 0x1 bytes
-                bool m_bIsRunningFromDeserializedData; // 0x0085, 0x1 bytes
-                std::uint8_t pad_0086[0x2]; // 0x0086, 0x2 bytes
-                float m_flHorizontalAngleDegrees; // 0x0088, 0x4 bytes
-                float m_flVerticalAngleDegrees; // 0x008c, 0x4 bytes
+                std::uint8_t pad_0070[0xb0]; // 0x0070, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmChainLookatTask) == 0x90, "CNmChainLookatTask size mismatch");
+            static_assert(sizeof(CNmChainLookatTask) == 0x120, "CNmChainLookatTask size mismatch");
         }
     }
 }

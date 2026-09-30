@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,11 +25,13 @@ namespace shade {
              * Size: 0xc
              * Alignment: 0xff
              * Has Trivial Destructor
+             * Construct Allowed
+             * Construct Disallowed
              */
             #pragma pack(push, 1)
             class CStopwatchBase : public shade::sdk::client::CSimpleSimTimer {
             public:
-                bool m_fIsRunning; // 0x0008, 0x1 bytes
+                bool m_bIsRunning; // 0x0008, 0x1 bytes
                 std::uint8_t pad_0009[0x3]; // 0x0009, 0x3 bytes
             };
             #pragma pack(pop)

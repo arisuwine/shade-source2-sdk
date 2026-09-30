@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x258
+             * Size: 0x358
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CounterspellWatcher : public shade::sdk::server::CCitadel_Modifier_Intrinsic_Base {
             public:
-                bool m_bSpellBlockActivated; // 0x00d0, 0x1 bytes
-                bool m_bSpellBlocked; // 0x00d1, 0x1 bytes
-                std::uint8_t pad_00d2[0x186]; // 0x00d2, 0x186 bytes
+                bool m_bSpellBlockActivated; // 0x0140, 0x1 bytes
+                bool m_bSpellBlocked; // 0x0141, 0x1 bytes
+                std::uint8_t pad_0142[0x216]; // 0x0142, 0x216 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CounterspellWatcher) == 0x258, "CCitadel_Modifier_CounterspellWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CounterspellWatcher) == 0x358, "CCitadel_Modifier_CounterspellWatcher size mismatch");
         }
     }
 }

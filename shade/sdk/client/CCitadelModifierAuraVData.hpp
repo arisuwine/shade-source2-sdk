@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -24,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x7b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +34,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierAuraVData : public shade::sdk::client::CModifierVData_BaseAura {
             public:
-                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_iAuraSearchType; // 0x0790, 0x4 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_iAuraSearchFlags; // 0x0794, 0x4 bytes
-                shade::sdk::client::ELOSCheck m_eLosCheck; // 0x0798, 0x4 bytes
-                float m_flModifierProvidedByAuraDuration; // 0x079c, 0x4 bytes
-                bool m_bRemoveProvidedModifierOnAuraRemoval; // 0x07a0, 0x1 bytes
-                std::uint8_t pad_07a1[0x7]; // 0x07a1, 0x7 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_iAuraSearchType; // 0x07a0, 0x4 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_iAuraSearchFlags; // 0x07a4, 0x4 bytes
+                shade::sdk::client::ELOSCheck m_eLosCheck; // 0x07a8, 0x4 bytes
+                float m_flModifierProvidedByAuraDuration; // 0x07ac, 0x4 bytes
+                bool m_bRemoveProvidedModifierOnAuraRemoval; // 0x07b0, 0x1 bytes
+                std::uint8_t pad_07b1[0x7]; // 0x07b1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierAuraVData) == 0x7A8, "CCitadelModifierAuraVData size mismatch");
+            static_assert(sizeof(CCitadelModifierAuraVData) == 0x7B8, "CCitadelModifierAuraVData size mismatch");
         }
     }
 }

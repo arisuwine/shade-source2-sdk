@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x120
+             * Size: 0x190
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Item_AOESilence : public shade::sdk::client::CCitadelModifierAura {
             public:
-                float m_flStartRadius; // 0x0110, 0x4 bytes
-                float m_flEndRadius; // 0x0114, 0x4 bytes
-                float m_flSpreadDuration; // 0x0118, 0x4 bytes
-                std::uint8_t pad_011c[0x4]; // 0x011c, 0x4 bytes
+                float m_flStartRadius; // 0x0180, 0x4 bytes
+                float m_flEndRadius; // 0x0184, 0x4 bytes
+                float m_flSpreadDuration; // 0x0188, 0x4 bytes
+                std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Item_AOESilence) == 0x120, "CCitadel_Modifier_Item_AOESilence size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Item_AOESilence) == 0x190, "CCitadel_Modifier_Item_AOESilence size mismatch");
         }
     }
 }

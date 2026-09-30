@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,11 +21,14 @@
 #include "shade/sdk/entity2/GameTick_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CBaseModelEntity.hpp"
+#include "shade/sdk/server/CFuncMover__FindFollowMoverStrategy_t.hpp"
 #include "shade/sdk/server/CFuncMover__FollowConstraint_t.hpp"
 #include "shade/sdk/server/CFuncMover__FollowEntityDirection_t.hpp"
 #include "shade/sdk/server/CFuncMover__Move_t.hpp"
 #include "shade/sdk/server/CFuncMover__OrientationUpdate_t.hpp"
+#include "shade/sdk/server/CFuncMover__PathRebuildStrategy_t.hpp"
 #include "shade/sdk/server/CFuncMover__TransitionToPathNodeAction_t.hpp"
+#include "shade/sdk/server/FuncMoverMovementSummary_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -32,6 +36,8 @@ namespace shade {
             class CBaseEntity;
             class CMoverPathNode;
             class CPathMover;
+            class CPathMoverEntitySpawner;
+            struct FuncMoverTransitionRecord_t;
         }
     }
 }
@@ -40,7 +46,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa00
+             * Size: 0xbc0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -49,149 +55,141 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncMover : public shade::sdk::server::CBaseModelEntity {
             public:
-                CUtlSymbolLarge m_iszPathName; // 0x0780, 0x8 bytes
-                CHandle<shade::sdk::server::CPathMover> m_hPathMover; // 0x0788, 0x4 bytes
-                CHandle<shade::sdk::server::CPathMover> m_hPrevPathMover; // 0x078c, 0x4 bytes
-                CUtlSymbolLarge m_iszPathNodeStart; // 0x0790, 0x8 bytes
-                CUtlSymbolLarge m_iszPathNodeEnd; // 0x0798, 0x8 bytes
-                bool m_bIgnoreEndNode; // 0x07a0, 0x1 bytes
-                std::uint8_t pad_07a1[0x3]; // 0x07a1, 0x3 bytes
-                shade::sdk::server::CFuncMover__Move_t m_eMoveType; // 0x07a4, 0x4 bytes
-                bool m_bIsReversing; // 0x07a8, 0x1 bytes
-                std::uint8_t pad_07a9[0x3]; // 0x07a9, 0x3 bytes
-                float m_flStartSpeed; // 0x07ac, 0x4 bytes
-                float m_flPathLocation; // 0x07b0, 0x4 bytes
-                float m_flT; // 0x07b4, 0x4 bytes
-                std::int32_t m_nCurrentNodeIndex; // 0x07b8, 0x4 bytes
-                std::int32_t m_nPreviousNodeIndex; // 0x07bc, 0x4 bytes
-                shade::sdk::client::SolidType_t m_eSolidType; // 0x07c0, 0x1 bytes
-                bool m_bIsMoving; // 0x07c1, 0x1 bytes
-                std::uint8_t pad_07c2[0x2]; // 0x07c2, 0x2 bytes
-                float m_flTimeToReachMaxSpeed; // 0x07c4, 0x4 bytes
-                float m_flDistanceToReachMaxSpeed; // 0x07c8, 0x4 bytes
-                float m_flTimeToReachZeroSpeed; // 0x07cc, 0x4 bytes
-                float m_flComputedDistanceToReachMaxSpeed; // 0x07d0, 0x4 bytes
-                float m_flComputedDistanceToReachZeroSpeed; // 0x07d4, 0x4 bytes
-                float m_flStartCurveScale; // 0x07d8, 0x4 bytes
-                float m_flStopCurveScale; // 0x07dc, 0x4 bytes
-                float m_flDistanceToReachZeroSpeed; // 0x07e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeMovementStart; // 0x07e4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeMovementStop; // 0x07e8, 0x4 bytes
-                CHandle<shade::sdk::server::CMoverPathNode> m_hStopAtNode; // 0x07ec, 0x4 bytes
-                float m_flPathLocationToBeginStop; // 0x07f0, 0x4 bytes
-                float m_flPathLocationStart; // 0x07f4, 0x4 bytes
-                float m_flBeginStopT; // 0x07f8, 0x4 bytes
-                std::uint8_t pad_07fc[0x4]; // 0x07fc, 0x4 bytes
-                CUtlSymbolLarge m_iszStartForwardSound; // 0x0800, 0x8 bytes
-                CUtlSymbolLarge m_iszLoopForwardSound; // 0x0808, 0x8 bytes
-                CUtlSymbolLarge m_iszStopForwardSound; // 0x0810, 0x8 bytes
-                CUtlSymbolLarge m_iszStartReverseSound; // 0x0818, 0x8 bytes
-                CUtlSymbolLarge m_iszLoopReverseSound; // 0x0820, 0x8 bytes
-                CUtlSymbolLarge m_iszStopReverseSound; // 0x0828, 0x8 bytes
-                CUtlSymbolLarge m_iszArriveAtDestinationSound; // 0x0830, 0x8 bytes
-                std::uint8_t pad_0838[0x18]; // 0x0838, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMovementEnd; // 0x0850, 0x18 bytes
-                bool m_bStartAtClosestPoint; // 0x0868, 0x1 bytes
-                bool m_bStartAtEnd; // 0x0869, 0x1 bytes
-                bool m_bStartFollowingClosestMover; // 0x086a, 0x1 bytes
-                std::uint8_t pad_086b[0x1]; // 0x086b, 0x1 bytes
-                shade::sdk::server::CFuncMover__OrientationUpdate_t m_eOrientationUpdate; // 0x086c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeStartOrientationChange; // 0x0870, 0x4 bytes
-                float m_flTimeToBlendToNewOrientation; // 0x0874, 0x4 bytes
-                float m_flDurationBlendToNewOrientationRan; // 0x0878, 0x4 bytes
-                bool m_bCreateMovableNavMesh; // 0x087c, 0x1 bytes
-                bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x087d, 0x1 bytes
-                std::uint8_t pad_087e[0x2]; // 0x087e, 0x2 bytes
-                CEntityOutputTemplate<CUtlString> m_OnNodePassed; // 0x0880, 0x20 bytes
-                CUtlSymbolLarge m_iszOrientationMatchEntityName; // 0x08a0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOrientationMatchEntity; // 0x08a8, 0x4 bytes
-                float m_flTimeToTraverseToNextNode; // 0x08ac, 0x4 bytes
-                Vector m_vLerpToNewPosStartInPathEntitySpace; // 0x08b0, 0xc bytes
-                Vector m_vLerpToNewPosEndInPathEntitySpace; // 0x08bc, 0xc bytes
-                float m_flLerpToPositionT; // 0x08c8, 0x4 bytes
-                float m_flLerpToPositionDeltaT; // 0x08cc, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLerpToPositionComplete; // 0x08d0, 0x18 bytes
-                bool m_bIsPaused; // 0x08e8, 0x1 bytes
-                std::uint8_t pad_08e9[0x3]; // 0x08e9, 0x3 bytes
-                shade::sdk::server::CFuncMover__TransitionToPathNodeAction_t m_eTransitionedToPathNodeAction; // 0x08ec, 0x4 bytes
-                Quaternion m_qTransitionSourceOrientation; // 0x08f0, 0x10 bytes
-                std::int32_t m_nDelayedTeleportToNode; // 0x0900, 0x4 bytes
-                bool m_bIsImGuiLogging; // 0x0904, 0x1 bytes
-                std::uint8_t pad_0905[0x3]; // 0x0905, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hFollowEntity; // 0x0908, 0x4 bytes
-                float m_flFollowDistance; // 0x090c, 0x4 bytes
-                float m_flFollowMinimumSpeed; // 0x0910, 0x4 bytes
-                float m_flCurFollowEntityT; // 0x0914, 0x4 bytes
-                float m_flCurFollowSpeed; // 0x0918, 0x4 bytes
-                std::uint8_t pad_091c[0x4]; // 0x091c, 0x4 bytes
-                CUtlSymbolLarge m_strOrientationFaceEntityName; // 0x0920, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOrientationFaceEntity; // 0x0928, 0x4 bytes
-                std::uint8_t pad_092c[0x4]; // 0x092c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStart; // 0x0930, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartForward; // 0x0948, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartReverse; // 0x0960, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStop; // 0x0978, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStopped; // 0x0990, 0x18 bytes
-                bool m_bNextNodeReturnsCurrent; // 0x09a8, 0x1 bytes
-                bool m_bStartedMoving; // 0x09a9, 0x1 bytes
-                std::uint8_t pad_09aa[0x1e]; // 0x09aa, 0x1e bytes
-                shade::sdk::server::CFuncMover__FollowEntityDirection_t m_eFollowEntityDirection; // 0x09c8, 0x4 bytes
-                CHandle<shade::sdk::server::CFuncMover> m_hFollowMover; // 0x09cc, 0x4 bytes
-                CUtlSymbolLarge m_iszFollowMoverEntityName; // 0x09d0, 0x8 bytes
-                float m_flFollowMoverDistance; // 0x09d8, 0x4 bytes
-                float m_flFollowMoverCalculatedDistance; // 0x09dc, 0x4 bytes
-                float m_flFollowMoverSpringStrength; // 0x09e0, 0x4 bytes
-                bool m_bFollowConstraintsInitialized; // 0x09e4, 0x1 bytes
-                std::uint8_t pad_09e5[0x3]; // 0x09e5, 0x3 bytes
-                shade::sdk::server::CFuncMover__FollowConstraint_t m_eFollowConstraint; // 0x09e8, 0x4 bytes
-                float m_flFollowMoverSpeed; // 0x09ec, 0x4 bytes
-                float m_flFollowMoverVelocity; // 0x09f0, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nTickMovementRan; // 0x09f4, 0x4 bytes
-                std::uint8_t pad_09f8[0x8]; // 0x09f8, 0x8 bytes
+                CUtlSymbolLarge m_iszPathName; // 0x0878, 0x8 bytes
+                CHandle<shade::sdk::server::CPathMover> m_hPathMover; // 0x0880, 0x4 bytes
+                CHandle<shade::sdk::server::CPathMover> m_hPrevPathMover; // 0x0884, 0x4 bytes
+                CUtlSymbolLarge m_iszPathNodeStart; // 0x0888, 0x8 bytes
+                CUtlSymbolLarge m_iszPathNodeEnd; // 0x0890, 0x8 bytes
+                bool m_bIgnoreEndNode; // 0x0898, 0x1 bytes
+                std::uint8_t pad_0899[0x3]; // 0x0899, 0x3 bytes
+                shade::sdk::server::CFuncMover__Move_t m_eMoveType; // 0x089c, 0x4 bytes
+                bool m_bIsReversing; // 0x08a0, 0x1 bytes
+                std::uint8_t pad_08a1[0x3]; // 0x08a1, 0x3 bytes
+                float m_flStartSpeed; // 0x08a4, 0x4 bytes
+                float m_flPathLocation; // 0x08a8, 0x4 bytes
+                float m_flT; // 0x08ac, 0x4 bytes
+                std::int32_t m_nCurrentNodeIndex; // 0x08b0, 0x4 bytes
+                std::int32_t m_nPreviousNodeIndex; // 0x08b4, 0x4 bytes
+                shade::sdk::client::SolidType_t m_eSolidType; // 0x08b8, 0x1 bytes
+                bool m_bIsMoving; // 0x08b9, 0x1 bytes
+                std::uint8_t pad_08ba[0x2]; // 0x08ba, 0x2 bytes
+                float m_flTimeToReachMaxSpeed; // 0x08bc, 0x4 bytes
+                float m_flDistanceToReachMaxSpeed; // 0x08c0, 0x4 bytes
+                float m_flTimeToReachZeroSpeed; // 0x08c4, 0x4 bytes
+                float m_flComputedDistanceToReachMaxSpeed; // 0x08c8, 0x4 bytes
+                float m_flComputedDistanceToReachZeroSpeed; // 0x08cc, 0x4 bytes
+                float m_flStartCurveScale; // 0x08d0, 0x4 bytes
+                float m_flStopCurveScale; // 0x08d4, 0x4 bytes
+                float m_flDistanceToReachZeroSpeed; // 0x08d8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeMovementStart; // 0x08dc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeMovementStop; // 0x08e0, 0x4 bytes
+                CHandle<shade::sdk::server::CMoverPathNode> m_hStopAtNode; // 0x08e4, 0x4 bytes
+                float m_flPathLocationToBeginStop; // 0x08e8, 0x4 bytes
+                float m_flPathLocationStart; // 0x08ec, 0x4 bytes
+                float m_flBeginStopT; // 0x08f0, 0x4 bytes
+                std::uint8_t pad_08f4[0x4]; // 0x08f4, 0x4 bytes
+                CGameSoundEventName m_iszStartForwardSound; // 0x08f8, 0x8 bytes
+                CGameSoundEventName m_iszLoopForwardSound; // 0x0900, 0x8 bytes
+                CGameSoundEventName m_iszStopForwardSound; // 0x0908, 0x8 bytes
+                CGameSoundEventName m_iszStartReverseSound; // 0x0910, 0x8 bytes
+                CGameSoundEventName m_iszLoopReverseSound; // 0x0918, 0x8 bytes
+                CGameSoundEventName m_iszStopReverseSound; // 0x0920, 0x8 bytes
+                CGameSoundEventName m_iszArriveAtDestinationSound; // 0x0928, 0x8 bytes
+                std::uint8_t pad_0930[0x18]; // 0x0930, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMovementEnd; // 0x0948, 0x18 bytes
+                bool m_bStartAtClosestPoint; // 0x0960, 0x1 bytes
+                bool m_bStartAtEnd; // 0x0961, 0x1 bytes
+                bool m_bStartFollowingClosestMover; // 0x0962, 0x1 bytes
+                std::uint8_t pad_0963[0x1]; // 0x0963, 0x1 bytes
+                float m_flStartFollowingClosestMoverWhenWithinDistance; // 0x0964, 0x4 bytes
+                float m_flStartFollowingClosestMoverWhenOutsideDistance; // 0x0968, 0x4 bytes
+                shade::sdk::server::CFuncMover__OrientationUpdate_t m_eOrientationUpdate; // 0x096c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeStartOrientationChange; // 0x0970, 0x4 bytes
+                float m_flTimeToBlendToNewOrientation; // 0x0974, 0x4 bytes
+                float m_flDurationBlendToNewOrientationRan; // 0x0978, 0x4 bytes
+                bool m_bCreateMovableNavMesh; // 0x097c, 0x1 bytes
+                bool m_bCreateMovableSurfaceGraph; // 0x097d, 0x1 bytes
+                bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x097e, 0x1 bytes
+                std::uint8_t pad_097f[0x1]; // 0x097f, 0x1 bytes
+                CEntityOutputTemplate<CUtlString> m_OnNodePassed; // 0x0980, 0x20 bytes
+                CUtlSymbolLarge m_iszOrientationMatchEntityName; // 0x09a0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOrientationMatchEntity; // 0x09a8, 0x4 bytes
+                VectorWS m_vLerpToNewPosStartWS; // 0x09ac, 0xc bytes
+                float m_flLerpToPositionTargetT; // 0x09b8, 0x4 bytes
+                float m_flLerpToPositionT; // 0x09bc, 0x4 bytes
+                float m_flLerpToPositionDeltaT; // 0x09c0, 0x4 bytes
+                CHandle<shade::sdk::server::CPathMover> m_hTransitionSourcePath; // 0x09c4, 0x4 bytes
+                float m_flTransitionSourceT; // 0x09c8, 0x4 bytes
+                float m_flTransitionSourcePathLocation; // 0x09cc, 0x4 bytes
+                CUtlSymbolLarge m_iszTransitionSourcePathNodeStart; // 0x09d0, 0x8 bytes
+                bool m_bStoppedDuringTransition; // 0x09d8, 0x1 bytes
+                std::uint8_t pad_09d9[0x7]; // 0x09d9, 0x7 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLerpToPositionComplete; // 0x09e0, 0x18 bytes
+                bool m_bIsPaused; // 0x09f8, 0x1 bytes
+                std::uint8_t pad_09f9[0x3]; // 0x09f9, 0x3 bytes
+                shade::sdk::server::CFuncMover__TransitionToPathNodeAction_t m_eTransitionedToPathNodeAction; // 0x09fc, 0x4 bytes
+                Quaternion m_qTransitionSourceOrientation; // 0x0a00, 0x10 bytes
+                std::int32_t m_nDelayedTeleportToNode; // 0x0a10, 0x4 bytes
+                bool m_bIsImGuiLogging; // 0x0a14, 0x1 bytes
+                bool m_bIsImGuiEntTextLogging; // 0x0a15, 0x1 bytes
+                std::uint8_t pad_0a16[0x2]; // 0x0a16, 0x2 bytes
+                float m_flSpeed; // 0x0a18, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFollowEntity; // 0x0a1c, 0x4 bytes
+                float m_flFollowDistance; // 0x0a20, 0x4 bytes
+                float m_flFollowMinimumSpeed; // 0x0a24, 0x4 bytes
+                float m_flCurFollowEntityT; // 0x0a28, 0x4 bytes
+                float m_flCurFollowSpeed; // 0x0a2c, 0x4 bytes
+                CUtlSymbolLarge m_strOrientationFaceEntityName; // 0x0a30, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOrientationFaceEntity; // 0x0a38, 0x4 bytes
+                std::uint8_t pad_0a3c[0x4]; // 0x0a3c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStart; // 0x0a40, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartForward; // 0x0a58, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartReverse; // 0x0a70, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStop; // 0x0a88, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStopped; // 0x0aa0, 0x18 bytes
+                bool m_bNextNodeReturnsCurrent; // 0x0ab8, 0x1 bytes
+                bool m_bStartedMoving; // 0x0ab9, 0x1 bytes
+                std::uint8_t pad_0aba[0x1e]; // 0x0aba, 0x1e bytes
+                shade::sdk::server::CFuncMover__FollowEntityDirection_t m_eFollowEntityDirection; // 0x0ad8, 0x4 bytes
+                CHandle<shade::sdk::server::CFuncMover> m_hFollowMover; // 0x0adc, 0x4 bytes
+                CUtlSymbolLarge m_iszFollowEntityName; // 0x0ae0, 0x8 bytes
+                CUtlSymbolLarge m_iszFollowMoverEntityName; // 0x0ae8, 0x8 bytes
+                float m_flFollowMoverDistance; // 0x0af0, 0x4 bytes
+                float m_flFollowMoverRatio; // 0x0af4, 0x4 bytes
+                float m_flFollowMoverCalculatedDistance; // 0x0af8, 0x4 bytes
+                float m_flFollowMoverSpringStrength; // 0x0afc, 0x4 bytes
+                std::int32_t m_nFollowMoverConstraintPriority; // 0x0b00, 0x4 bytes
+                Vector2D m_vecFollowMoverCouplerRange; // 0x0b04, 0x8 bytes
+                bool m_bFollowConstraintsInitialized; // 0x0b0c, 0x1 bytes
+                std::uint8_t pad_0b0d[0x3]; // 0x0b0d, 0x3 bytes
+                shade::sdk::server::CFuncMover__FollowConstraint_t m_eFollowConstraint; // 0x0b10, 0x4 bytes
+                float m_flFollowMoverSpeed; // 0x0b14, 0x4 bytes
+                float m_flFollowMoverVelocity; // 0x0b18, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nTickMovementRan; // 0x0b1c, 0x4 bytes
+                shade::sdk::server::FuncMoverMovementSummary_t m_movementSummary; // 0x0b20, 0x20 bytes
+                shade::sdk::server::FuncMoverMovementSummary_t m_movementSummaryAfterTransition; // 0x0b40, 0x20 bytes
+                std::uint8_t pad_0b60[0x18]; // 0x0b60, 0x18 bytes
+                CUtlVector<shade::sdk::server::FuncMoverTransitionRecord_t> m_vecTransitionHistory; // 0x0b78, 0x18 bytes
+                std::int32_t m_nNextTransitionId; // 0x0b90, 0x4 bytes
+                std::int32_t m_nNextFollowMoverTransitionId; // 0x0b94, 0x4 bytes
+                std::int32_t m_nReplayingFollowMoverTransitionId; // 0x0b98, 0x4 bytes
+                bool m_bStopFromBeginStopTarget; // 0x0b9c, 0x1 bytes
+                bool m_bQueueStop; // 0x0b9d, 0x1 bytes
+                bool m_bQueueStopMoving; // 0x0b9e, 0x1 bytes
+                bool m_bQueueSetupPathMover; // 0x0b9f, 0x1 bytes
+                shade::sdk::server::CFuncMover__PathRebuildStrategy_t m_ePathRebuildStrategy; // 0x0ba0, 0x4 bytes
+                shade::sdk::server::CFuncMover__FindFollowMoverStrategy_t m_eFindFollowMoverStrategy; // 0x0ba4, 0x4 bytes
+                bool m_bDisableDecelerationToStop; // 0x0ba8, 0x1 bytes
+                std::uint8_t pad_0ba9[0x3]; // 0x0ba9, 0x3 bytes
+                Vector m_vOffsetFromPath; // 0x0bac, 0xc bytes
+                std::uint8_t pad_0bb8[0x4]; // 0x0bb8, 0x4 bytes
+                CHandle<shade::sdk::server::CPathMoverEntitySpawner> m_hPathMoverEntitySpawner; // 0x0bbc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartForward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartReverse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopImmediate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleDirection; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPause; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUnpause; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTeleportToPathNode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputMoveToPathNode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTransitionToPathNode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTransitionToPathNodeStartForward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTransitionToPathNodeStartReverse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTransitionToPath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTransitionToPathStartForward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTransitionToPathStartReverse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeedImmediate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetTimeToReachMaxSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetTimeToReachZeroSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetTimeToBlendToNewOrientation; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetOrientationMode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetFollowEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetFollowEntityForward; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetFollowEntityReverse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetFaceEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFollowDistance; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFollowMinimumSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetFollowMoverConstraintType; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetFollowMoverSpringStrength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetTimeToTraverseToNextNode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetMoveType; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetFollowMoverEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSetFollowMoverEntityToClosestOnSpline; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDeleteFollowMoverSpringConstraint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncMoverLerpToNewPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncMover) == 0xA00, "CFuncMover size mismatch");
+            static_assert(sizeof(CFuncMover) == 0xBC0, "CFuncMover size mismatch");
         }
     }
 }

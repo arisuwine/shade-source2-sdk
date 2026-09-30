@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,7 +37,7 @@ namespace shade {
                 bool m_bUseAdvancedLocomotion; // 0x0010, 0x1 bytes
                 bool m_bEnableFootSweeps; // 0x0011, 0x1 bytes
                 bool m_bDetailedLookTargets; // 0x0012, 0x1 bytes
-                bool m_bShouldPlayFootstepSounds; // 0x0013, 0x1 bytes
+                bool m_bShouldGenerateAIFootstepEvents; // 0x0013, 0x1 bytes
                 bool m_bRagdollEnabled; // 0x0014, 0x1 bytes
                 bool m_bEnableFlinching; // 0x0015, 0x1 bytes
                 bool m_bEnableWarnNPCsOfIncomingFire; // 0x0016, 0x1 bytes

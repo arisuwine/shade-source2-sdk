@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -22,7 +23,8 @@ namespace shade {
                 CITADEL_UNIT_TARGET_FLAG_NO_INVIS = 0x4,
                 CITADEL_UNIT_TARGET_FLAG_NO_DORMANT_NEUTRALS = 0x8,
                 CITADEL_UNIT_TARGET_FLAG_ALLOW_BREAKABLES = 0x10,
-                CITADEL_UNIT_TARGET_FLAG_ALLOW_SMALL_DEPLOYABLES = 0x20
+                CITADEL_UNIT_TARGET_FLAG_ALLOW_SMALL_DEPLOYABLES = 0x20,
+                CITADEL_UNIT_TARGET_FLAG_NO_OBSCURE = 0x40
             };
         }
     }

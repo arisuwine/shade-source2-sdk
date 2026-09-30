@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5c8
+             * Size: 0x5d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,30 +32,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysSlideConstraint : public shade::sdk::server::CPhysConstraint {
             public:
-                std::uint8_t pad_0500[0x8]; // 0x0500, 0x8 bytes
-                VectorWS m_axisEnd; // 0x0508, 0xc bytes
-                float m_slideFriction; // 0x0514, 0x4 bytes
-                float m_systemLoadScale; // 0x0518, 0x4 bytes
-                float m_initialOffset; // 0x051c, 0x4 bytes
-                bool m_bEnableLinearConstraint; // 0x0520, 0x1 bytes
-                bool m_bEnableAngularConstraint; // 0x0521, 0x1 bytes
-                std::uint8_t pad_0522[0x2]; // 0x0522, 0x2 bytes
-                float m_flMotorFrequency; // 0x0524, 0x4 bytes
-                float m_flMotorDampingRatio; // 0x0528, 0x4 bytes
-                bool m_bUseEntityPivot; // 0x052c, 0x1 bytes
-                std::uint8_t pad_052d[0x3]; // 0x052d, 0x3 bytes
-                shade::sdk::server::ConstraintSoundInfo m_soundInfo; // 0x0530, 0x98 bytes
+                std::uint8_t pad_0510[0x8]; // 0x0510, 0x8 bytes
+                VectorWS m_axisEnd; // 0x0518, 0xc bytes
+                float m_slideFriction; // 0x0524, 0x4 bytes
+                float m_systemLoadScale; // 0x0528, 0x4 bytes
+                float m_initialOffset; // 0x052c, 0x4 bytes
+                bool m_bEnableLinearConstraint; // 0x0530, 0x1 bytes
+                bool m_bEnableAngularConstraint; // 0x0531, 0x1 bytes
+                std::uint8_t pad_0532[0x2]; // 0x0532, 0x2 bytes
+                float m_flMotorFrequency; // 0x0534, 0x4 bytes
+                float m_flMotorDampingRatio; // 0x0538, 0x4 bytes
+                bool m_bUseEntityPivot; // 0x053c, 0x1 bytes
+                std::uint8_t pad_053d[0x3]; // 0x053d, 0x3 bytes
+                shade::sdk::server::ConstraintSoundInfo m_soundInfo; // 0x0540, 0x98 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetOffset; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetVelocity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSlideFriction; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPhysSlideConstraintSoundThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysSlideConstraint) == 0x5C8, "CPhysSlideConstraint size mismatch");
+            static_assert(sizeof(CPhysSlideConstraint) == 0x5D8, "CPhysSlideConstraint size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a60
+             * Size: 0x21b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,31 +41,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Shiv_KillingBlow : public shade::sdk::client::CCitadelBaseShivAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vHitEnts; // 0x11d8, 0x18 bytes
-                std::uint8_t pad_11f0[0x488]; // 0x11f0, 0x488 bytes
-                bool m_bDamagedAnyHero; // 0x1678, 0x1 bytes
-                bool m_bActive; // 0x1679, 0x1 bytes
-                bool m_bStartedOnGround; // 0x167a, 0x1 bytes
-                bool m_bIsBonusCast; // 0x167b, 0x1 bytes
-                Vector m_vStartPosition; // 0x167c, 0xc bytes
-                QAngle m_qCurrentAngles; // 0x1688, 0xc bytes
-                std::uint8_t pad_1694[0x4]; // 0x1694, 0x4 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flDepartureTime; // 0x1698, 0x18 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flArrivalTime; // 0x16b0, 0x18 bytes
-                Vector m_vLastKnownSafePos; // 0x16c8, 0xc bytes
-                bool m_bMadeSlashParticle; // 0x16d4, 0x1 bytes
-                std::uint8_t pad_16d5[0x3]; // 0x16d5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flDrainSuppressEndTime; // 0x16d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRecastWindowEnd; // 0x16dc, 0x4 bytes
-                std::uint8_t pad_16e0[0x380]; // 0x16e0, 0x380 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vHitEnts; // 0x16d8, 0x18 bytes
+                std::uint8_t pad_16f0[0x638]; // 0x16f0, 0x638 bytes
+                bool m_bDamagedAnyHero; // 0x1d28, 0x1 bytes
+                bool m_bActive; // 0x1d29, 0x1 bytes
+                bool m_bStartedOnGround; // 0x1d2a, 0x1 bytes
+                bool m_bIsBonusCast; // 0x1d2b, 0x1 bytes
+                VectorWS m_vStartPosition; // 0x1d2c, 0xc bytes
+                QAngle m_qCurrentAngles; // 0x1d38, 0xc bytes
+                std::uint8_t pad_1d44[0x4]; // 0x1d44, 0x4 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flDepartureTime; // 0x1d48, 0x18 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flArrivalTime; // 0x1d60, 0x18 bytes
+                VectorWS m_vLastKnownSafePos; // 0x1d78, 0xc bytes
+                bool m_bMadeSlashParticle; // 0x1d84, 0x1 bytes
+                std::uint8_t pad_1d85[0x3]; // 0x1d85, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flRecastWindowEnd; // 0x1d88, 0x4 bytes
+                std::uint8_t pad_1d8c[0x424]; // 0x1d8c, 0x424 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x1A60, "CCitadel_Ability_Shiv_KillingBlow size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x21B0, "CCitadel_Ability_Shiv_KillingBlow size mismatch");
         }
     }
 }

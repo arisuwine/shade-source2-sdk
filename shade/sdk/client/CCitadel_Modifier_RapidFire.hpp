@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3c8
+             * Size: 0x558
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_RapidFire : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x300]; // 0x00c0, 0x300 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttackTime; // 0x03c0, 0x4 bytes
-                std::uint8_t pad_03c4[0x4]; // 0x03c4, 0x4 bytes
+                std::uint8_t pad_0130[0x420]; // 0x0130, 0x420 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttackTime; // 0x0550, 0x4 bytes
+                std::uint8_t pad_0554[0x4]; // 0x0554, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_RapidFire) == 0x3C8, "CCitadel_Modifier_RapidFire size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_RapidFire) == 0x558, "CCitadel_Modifier_RapidFire size mismatch");
         }
     }
 }

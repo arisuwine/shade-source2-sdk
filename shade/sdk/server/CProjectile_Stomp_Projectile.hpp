@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xaf8
+             * Size: 0xcf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CProjectile_Stomp_Projectile : public shade::sdk::server::CCitadelProjectile {
             public:
-                Vector m_vLastStompPos; // 0x0860, 0xc bytes
-                bool m_bFinished; // 0x086c, 0x1 bytes
-                std::uint8_t pad_086d[0x3]; // 0x086d, 0x3 bytes
-                float m_flWidth; // 0x0870, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tDieTime; // 0x0874, 0x4 bytes
-                std::uint8_t pad_0878[0x280]; // 0x0878, 0x280 bytes
+                VectorWS m_vLastStompPos; // 0x0968, 0xc bytes
+                bool m_bFinished; // 0x0974, 0x1 bytes
+                std::uint8_t pad_0975[0x3]; // 0x0975, 0x3 bytes
+                float m_flWidth; // 0x0978, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tDieTime; // 0x097c, 0x4 bytes
+                std::uint8_t pad_0980[0x370]; // 0x0980, 0x370 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CProjectile_Stomp_Projectile) == 0xAF8, "CProjectile_Stomp_Projectile size mismatch");
+            static_assert(sizeof(CProjectile_Stomp_Projectile) == 0xCF0, "CProjectile_Stomp_Projectile size mismatch");
         }
     }
 }

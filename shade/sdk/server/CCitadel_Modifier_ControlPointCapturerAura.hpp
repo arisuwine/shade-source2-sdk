@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x110
+             * Size: 0x180
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ControlPointCapturerAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                shade::sdk::client::ParticleIndex_t m_particle; // 0x0108, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelControlPointTrigger> m_hCP; // 0x010c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particle; // 0x0178, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelControlPointTrigger> m_hCP; // 0x017c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ControlPointCapturerAura) == 0x110, "CCitadel_Modifier_ControlPointCapturerAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ControlPointCapturerAura) == 0x180, "CCitadel_Modifier_ControlPointCapturerAura size mismatch");
         }
     }
 }

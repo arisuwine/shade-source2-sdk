@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x12b0
+             * Size: 0x1900
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FlameDash : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x0f70, 0x18 bytes
-                shade::sdk::server::CCitadelAutoScaledTime m_flDashEndTime; // 0x0f88, 0x18 bytes
-                bool m_bIsSpeedBursting; // 0x0fa0, 0x1 bytes
-                std::uint8_t pad_0fa1[0x30f]; // 0x0fa1, 0x30f bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x14a0, 0x18 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flDashEndTime; // 0x14b8, 0x18 bytes
+                bool m_bIsSpeedBursting; // 0x14d0, 0x1 bytes
+                std::uint8_t pad_14d1[0x42f]; // 0x14d1, 0x42f bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FlameDash) == 0x12B0, "CCitadel_Ability_FlameDash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FlameDash) == 0x1900, "CCitadel_Ability_FlameDash size mismatch");
         }
     }
 }

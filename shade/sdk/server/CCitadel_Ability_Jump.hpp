@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -26,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1330
+             * Size: 0x1988
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,49 +36,48 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Jump : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastTimeOnZipLine; // 0x0f70, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastOnGroundTime; // 0x0f74, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPhaseStartTime; // 0x0f78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flJumpTime; // 0x0f7c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flWallJumpFatigueStartTime; // 0x0f80, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x0f84, 0x4 bytes
-                Vector m_vCurrentWallNormal; // 0x0f88, 0xc bytes
-                Vector m_vLastWallCollidedWithNormal; // 0x0f94, 0xc bytes
-                Vector m_vLastValidWallJumpNormal; // 0x0fa0, 0xc bytes
-                Vector m_vLastValidWallJumpNormal_PlayerPosition; // 0x0fac, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastWallJumpTime; // 0x0fb8, 0x4 bytes
-                Vector m_vWallJumpFacingDir; // 0x0fbc, 0xc bytes
-                shade::sdk::client::EWallJumpFacing m_eWallJumpFacing; // 0x0fc8, 0x2 bytes
-                std::uint8_t pad_0fca[0x2]; // 0x0fca, 0x2 bytes
-                float m_flLastWallJumpFatigueStrength; // 0x0fcc, 0x4 bytes
-                shade::sdk::client::EJumpType_t m_LastJumpType; // 0x0fd0, 0x1 bytes
-                bool m_bShouldCreateAirJumpEffects; // 0x0fd1, 0x1 bytes
-                std::uint8_t pad_0fd2[0x2]; // 0x0fd2, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flDoubleJumpFailTime; // 0x0fd4, 0x4 bytes
-                shade::sdk::client::ECitadelAbilityOrders m_eDoubleJumpFailReason; // 0x0fd8, 0x4 bytes
-                Vector m_vWallJumpNormalUsed; // 0x0fdc, 0xc bytes
-                std::uint8_t pad_0fe8[0x300]; // 0x0fe8, 0x300 bytes
-                shade::sdk::server::CCitadelAutoScaledTime m_flGroundDashJumpStartTime; // 0x12e8, 0x18 bytes
-                shade::sdk::server::CCitadelAutoScaledTime m_flGroundDashJumpEndTime; // 0x1300, 0x18 bytes
-                bool m_bJumped; // 0x1318, 0x1 bytes
-                bool m_bCanDashJump; // 0x1319, 0x1 bytes
-                std::uint8_t pad_131a[0x2]; // 0x131a, 0x2 bytes
-                std::int32_t m_nDesiredAirJumpCount; // 0x131c, 0x4 bytes
-                std::int32_t m_nExecutedAirJumpCount; // 0x1320, 0x4 bytes
-                bool m_bInSlideJump; // 0x1324, 0x1 bytes
-                std::int8_t m_nConsecutiveAirJumps; // 0x1325, 0x1 bytes
-                std::int8_t m_nConsecutiveWallJumps; // 0x1326, 0x1 bytes
-                std::uint8_t pad_1327[0x1]; // 0x1327, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flLateralInputSuppressEndTime; // 0x1328, 0x4 bytes
-                std::uint8_t pad_132c[0x4]; // 0x132c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTimeOnZipLine; // 0x14a0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastOnGroundTime; // 0x14a4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPhaseStartTime; // 0x14a8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flJumpTime; // 0x14ac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flWallJumpFatigueStartTime; // 0x14b0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x14b4, 0x4 bytes
+                Vector m_vCurrentWallNormal; // 0x14b8, 0xc bytes
+                Vector m_vLastWallCollidedWithNormal; // 0x14c4, 0xc bytes
+                Vector m_vLastValidWallJumpNormal; // 0x14d0, 0xc bytes
+                VectorWS m_vLastValidWallJumpNormal_PlayerPosition; // 0x14dc, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastWallJumpTime; // 0x14e8, 0x4 bytes
+                Vector m_vWallJumpFacingDir; // 0x14ec, 0xc bytes
+                shade::sdk::client::EWallJumpFacing m_eWallJumpFacing; // 0x14f8, 0x2 bytes
+                std::uint8_t pad_14fa[0x2]; // 0x14fa, 0x2 bytes
+                float m_flLastWallJumpFatigueStrength; // 0x14fc, 0x4 bytes
+                shade::sdk::client::EJumpType_t m_LastJumpType; // 0x1500, 0x1 bytes
+                bool m_bShouldCreateAirJumpEffects; // 0x1501, 0x1 bytes
+                std::uint8_t pad_1502[0x2]; // 0x1502, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flDoubleJumpFailTime; // 0x1504, 0x4 bytes
+                shade::sdk::client::ECitadelAbilityOrders m_eDoubleJumpFailReason; // 0x1508, 0x4 bytes
+                Vector m_vWallJumpNormalUsed; // 0x150c, 0xc bytes
+                bool m_bResolvingAirJump; // 0x1518, 0x1 bytes
+                std::uint8_t pad_1519[0x427]; // 0x1519, 0x427 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flDashJumpStartTime; // 0x1940, 0x18 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flDashJumpEndTime; // 0x1958, 0x18 bytes
+                bool m_bJumped; // 0x1970, 0x1 bytes
+                bool m_bCanDashJump; // 0x1971, 0x1 bytes
+                std::uint8_t pad_1972[0x2]; // 0x1972, 0x2 bytes
+                std::int32_t m_nDesiredAirJumpCount; // 0x1974, 0x4 bytes
+                std::int32_t m_nExecutedAirJumpCount; // 0x1978, 0x4 bytes
+                bool m_bInSlideJump; // 0x197c, 0x1 bytes
+                std::int8_t m_nConsecutiveAirJumps; // 0x197d, 0x1 bytes
+                std::int8_t m_nConsecutiveWallJumps; // 0x197e, 0x1 bytes
+                std::uint8_t pad_197f[0x1]; // 0x197f, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLateralInputSuppressEndTime; // 0x1980, 0x4 bytes
+                std::uint8_t pad_1984[0x4]; // 0x1984, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Jump) == 0x1330, "CCitadel_Ability_Jump size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Jump) == 0x1988, "CCitadel_Ability_Jump size mismatch");
         }
     }
 }

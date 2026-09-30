@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xcb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,10 +39,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTriggerMultiCapturePoint : public shade::sdk::client::C_BaseTrigger {
             public:
-                std::uint8_t pad_0a78[0x18]; // 0x0a78, 0x18 bytes
-                shade::sdk::client::CCitadelInWorldEventTimer *m_pUIWorldEventTimer; // 0x0a90, 0x8 bytes
-                std::uint8_t m_nEnableState; // 0x0a98, 0x1 bytes
-                std::uint8_t pad_0a99[0x7]; // 0x0a99, 0x7 bytes
+                std::uint8_t pad_0c98[0x10]; // 0x0c98, 0x10 bytes
+                shade::sdk::client::CCitadelInWorldEventTimer *m_pUIWorldEventTimer; // 0x0ca8, 0x8 bytes
+                std::uint8_t m_nEnableState; // 0x0cb0, 0x1 bytes
+                std::uint8_t pad_0cb1[0x7]; // 0x0cb1, 0x7 bytes
             };
             #pragma pack(pop)
 
@@ -49,7 +50,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelTriggerMultiCapturePoint) == 0xAA0, "CCitadelTriggerMultiCapturePoint size mismatch");
+            static_assert(sizeof(CCitadelTriggerMultiCapturePoint) == 0xCB8, "CCitadelTriggerMultiCapturePoint size mismatch");
         }
     }
 }

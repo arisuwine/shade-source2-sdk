@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x898
+             * Size: 0x8a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HeldItemPickupAuraVData : public shade::sdk::client::CCitadel_Modifier_ItemPickupAuraVData {
             public:
-                CSubclassName<4> m_strFilterAbilityName; // 0x0888, 0x10 bytes
+                CSubclassName<4> m_strFilterAbilityName; // 0x0898, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HeldItemPickupAuraVData) == 0x898, "CCitadel_Modifier_HeldItemPickupAuraVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HeldItemPickupAuraVData) == 0x8A8, "CCitadel_Modifier_HeldItemPickupAuraVData size mismatch");
         }
     }
 }

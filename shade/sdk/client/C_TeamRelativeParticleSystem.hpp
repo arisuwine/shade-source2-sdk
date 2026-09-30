@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf90
+             * Size: 0x11b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_TeamRelativeParticleSystem : public shade::sdk::client::C_ParticleSystem {
             public:
-                std::uint8_t pad_0f58[0x18]; // 0x0f58, 0x18 bytes
-                CUtlSymbolLarge m_iszFriendlyEffectName; // 0x0f70, 0x8 bytes
-                CUtlSymbolLarge m_iszEnemyEffectName; // 0x0f78, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iFriendlyEffectIndex; // 0x0f80, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEnemyEffectIndex; // 0x0f88, 0x8 bytes
+                std::uint8_t pad_1180[0x18]; // 0x1180, 0x18 bytes
+                CUtlSymbolLarge m_iszFriendlyEffectName; // 0x1198, 0x8 bytes
+                CUtlSymbolLarge m_iszEnemyEffectName; // 0x11a0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iFriendlyEffectIndex; // 0x11a8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEnemyEffectIndex; // 0x11b0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_TeamRelativeParticleSystem) == 0xF90, "C_TeamRelativeParticleSystem size mismatch");
+            static_assert(sizeof(C_TeamRelativeParticleSystem) == 0x11B8, "C_TeamRelativeParticleSystem size mismatch");
         }
     }
 }

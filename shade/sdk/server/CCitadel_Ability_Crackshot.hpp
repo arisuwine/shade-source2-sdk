@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1378
+             * Size: 0x1a28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Crackshot : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x4]; // 0x0f70, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_ReadyParticleIndex; // 0x0f74, 0x4 bytes
-                std::uint8_t pad_0f78[0x400]; // 0x0f78, 0x400 bytes
+                std::uint8_t pad_14a0[0x4]; // 0x14a0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_ReadyParticleIndex; // 0x14a4, 0x4 bytes
+                std::uint8_t pad_14a8[0x580]; // 0x14a8, 0x580 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Crackshot) == 0x1378, "CCitadel_Ability_Crackshot size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Crackshot) == 0x1A28, "CCitadel_Ability_Crackshot size mismatch");
         }
     }
 }

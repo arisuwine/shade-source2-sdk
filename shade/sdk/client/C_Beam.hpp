@@ -12,10 +12,10 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/BeamClipStyle_t.hpp"
 #include "shade/sdk/client/BeamType_t.hpp"
 #include "shade/sdk/client/C_BaseModelEntity.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa68
+             * Size: 0xc68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,41 +46,39 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Beam : public shade::sdk::client::C_BaseModelEntity {
             public:
-                float m_flFrameRate; // 0x09a8, 0x4 bytes
-                float m_flHDRColorScale; // 0x09ac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFireTime; // 0x09b0, 0x4 bytes
-                float m_flDamage; // 0x09b4, 0x4 bytes
-                std::uint8_t m_nNumBeamEnts; // 0x09b8, 0x1 bytes
-                std::uint8_t pad_09b9[0x3]; // 0x09b9, 0x3 bytes
-                std::int32_t m_queryHandleHalo; // 0x09bc, 0x4 bytes
-                std::uint8_t pad_09c0[0x20]; // 0x09c0, 0x20 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hBaseMaterial; // 0x09e0, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_nHaloIndex; // 0x09e8, 0x8 bytes
-                shade::sdk::client::BeamType_t m_nBeamType; // 0x09f0, 0x4 bytes
-                std::uint32_t m_nBeamFlags; // 0x09f4, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAttachEntity[0xa]; // 0x09f8, 0x28 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_nAttachIndex[0xa]; // 0x0a20, 0xa bytes
-                std::uint8_t pad_0a2a[0x2]; // 0x0a2a, 0x2 bytes
-                float m_fWidth; // 0x0a2c, 0x4 bytes
-                float m_fEndWidth; // 0x0a30, 0x4 bytes
-                float m_fFadeLength; // 0x0a34, 0x4 bytes
-                float m_fHaloScale; // 0x0a38, 0x4 bytes
-                float m_fAmplitude; // 0x0a3c, 0x4 bytes
-                float m_fStartFrame; // 0x0a40, 0x4 bytes
-                float m_fSpeed; // 0x0a44, 0x4 bytes
-                float m_flFrame; // 0x0a48, 0x4 bytes
-                shade::sdk::client::BeamClipStyle_t m_nClipStyle; // 0x0a4c, 0x4 bytes
-                bool m_bTurnedOff; // 0x0a50, 0x1 bytes
-                std::uint8_t pad_0a51[0x3]; // 0x0a51, 0x3 bytes
-                VectorWS m_vecEndPos; // 0x0a54, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hEndEntity; // 0x0a60, 0x4 bytes
-                std::uint8_t pad_0a64[0x4]; // 0x0a64, 0x4 bytes
+                float m_flFrameRate; // 0x0bb0, 0x4 bytes
+                float m_flHDRColorScale; // 0x0bb4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFireTime; // 0x0bb8, 0x4 bytes
+                float m_flDamage; // 0x0bbc, 0x4 bytes
+                std::uint8_t m_nNumBeamEnts; // 0x0bc0, 0x1 bytes
+                std::uint8_t pad_0bc1[0x3]; // 0x0bc1, 0x3 bytes
+                std::int32_t m_queryHandleHalo; // 0x0bc4, 0x4 bytes
+                std::uint8_t pad_0bc8[0x20]; // 0x0bc8, 0x20 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hBaseMaterial; // 0x0be8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_nHaloIndex; // 0x0bf0, 0x8 bytes
+                shade::sdk::client::BeamType_t m_nBeamType; // 0x0bf8, 0x4 bytes
+                std::uint32_t m_nBeamFlags; // 0x0bfc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAttachEntity[0xa]; // 0x0c00, 0x28 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_nAttachIndex[0xa]; // 0x0c28, 0xa bytes
+                std::uint8_t pad_0c32[0x2]; // 0x0c32, 0x2 bytes
+                float m_fWidth; // 0x0c34, 0x4 bytes
+                float m_fEndWidth; // 0x0c38, 0x4 bytes
+                float m_fFadeLength; // 0x0c3c, 0x4 bytes
+                float m_fHaloScale; // 0x0c40, 0x4 bytes
+                float m_fAmplitude; // 0x0c44, 0x4 bytes
+                float m_fStartFrame; // 0x0c48, 0x4 bytes
+                float m_fSpeed; // 0x0c4c, 0x4 bytes
+                float m_flFrame; // 0x0c50, 0x4 bytes
+                bool m_bTurnedOff; // 0x0c54, 0x1 bytes
+                std::uint8_t pad_0c55[0x3]; // 0x0c55, 0x3 bytes
+                VectorWS m_vecEndPos; // 0x0c58, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hEndEntity; // 0x0c64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Beam) == 0xA68, "C_Beam size mismatch");
+            static_assert(sizeof(C_Beam) == 0xC68, "C_Beam size mismatch");
         }
     }
 }

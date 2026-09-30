@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e10
+             * Size: 0x1998
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,40 +43,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_DropBombsVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberExplodeParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningParticle; // 0x18f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningGroundParticle; // 0x19d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphExplodeParticle; // 0x1ab8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningParticle; // 0x1b98, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningGroundParticle; // 0x1c78, 0xe0 bytes
-                CSoundEventName m_AmberAOEWarningSound; // 0x1d58, 0x10 bytes
-                CSoundEventName m_AmberAOEImpactSound; // 0x1d68, 0x10 bytes
-                CSoundEventName m_SapphireAOEWarningSound; // 0x1d78, 0x10 bytes
-                CSoundEventName m_SapphireAOEImpactSound; // 0x1d88, 0x10 bytes
-                CSoundEventName m_strLaunchSound; // 0x1d98, 0x10 bytes
-                CSoundEventName m_strLandSound; // 0x1da8, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1db8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CurseModifier; // 0x1dc8, 0x10 bytes
-                float m_flExplodeRadius; // 0x1dd8, 0x4 bytes
-                float m_flBombOffsets; // 0x1ddc, 0x4 bytes
-                float m_flBaseDamage; // 0x1de0, 0x4 bytes
-                float m_flDamageNonPlayer; // 0x1de4, 0x4 bytes
-                float m_flMaxHealthPctDamage; // 0x1de8, 0x4 bytes
-                float m_flDebuffDuration; // 0x1dec, 0x4 bytes
-                float m_flCooldownMax; // 0x1df0, 0x4 bytes
-                float m_flCooldownMin; // 0x1df4, 0x4 bytes
-                float m_flDetonationTimeMax; // 0x1df8, 0x4 bytes
-                float m_flDetonationTimeMin; // 0x1dfc, 0x4 bytes
-                float m_flBossHealthMax; // 0x1e00, 0x4 bytes
-                float m_flBossHealthMin; // 0x1e04, 0x4 bytes
-                float m_flBombDropDist; // 0x1e08, 0x4 bytes
-                float m_flWarningOffset; // 0x1e0c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberExplodeParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningParticle; // 0x1480, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningGroundParticle; // 0x1560, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphExplodeParticle; // 0x1640, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningParticle; // 0x1720, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningGroundParticle; // 0x1800, 0xe0 bytes
+                CSoundEventName m_AmberAOEWarningSound; // 0x18e0, 0x10 bytes
+                CSoundEventName m_AmberAOEImpactSound; // 0x18f0, 0x10 bytes
+                CSoundEventName m_SapphireAOEWarningSound; // 0x1900, 0x10 bytes
+                CSoundEventName m_SapphireAOEImpactSound; // 0x1910, 0x10 bytes
+                CSoundEventName m_strLaunchSound; // 0x1920, 0x10 bytes
+                CSoundEventName m_strLandSound; // 0x1930, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1940, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CurseModifier; // 0x1950, 0x10 bytes
+                float m_flExplodeRadius; // 0x1960, 0x4 bytes
+                float m_flBombOffsets; // 0x1964, 0x4 bytes
+                float m_flBaseDamage; // 0x1968, 0x4 bytes
+                float m_flDamageNonPlayer; // 0x196c, 0x4 bytes
+                float m_flMaxHealthPctDamage; // 0x1970, 0x4 bytes
+                float m_flDebuffDuration; // 0x1974, 0x4 bytes
+                float m_flCooldownMax; // 0x1978, 0x4 bytes
+                float m_flCooldownMin; // 0x197c, 0x4 bytes
+                float m_flDetonationTimeMax; // 0x1980, 0x4 bytes
+                float m_flDetonationTimeMin; // 0x1984, 0x4 bytes
+                float m_flBossHealthMax; // 0x1988, 0x4 bytes
+                float m_flBossHealthMin; // 0x198c, 0x4 bytes
+                float m_flBombDropDist; // 0x1990, 0x4 bytes
+                float m_flWarningOffset; // 0x1994, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombsVData) == 0x1E10, "CCitadel_Ability_Tier3Boss_DropBombsVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombsVData) == 0x1998, "CCitadel_Ability_Tier3Boss_DropBombsVData size mismatch");
         }
     }
 }

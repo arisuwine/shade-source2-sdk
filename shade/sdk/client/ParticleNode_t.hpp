@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x24
+             * Size: 0x38
              * Alignment: 0xff
              * Has Trivial Destructor
              */
@@ -40,16 +41,16 @@ namespace shade {
                 shade::sdk::client::ParticleIndex_t m_iIndex; // 0x0004, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0008, 0x4 bytes
                 float m_flGrowthDuration; // 0x000c, 0x4 bytes
-                Vector m_vecGrowthOrigin; // 0x0010, 0xc bytes
+                VectorWS m_vecGrowthOrigin; // 0x0010, 0xc bytes
                 float m_flEndcapTime; // 0x001c, 0x4 bytes
                 bool m_bMarkedForDelete; // 0x0020, 0x1 bytes
-                std::uint8_t pad_0021[0x3]; // 0x0021, 0x3 bytes
+                std::uint8_t pad_0021[0x17]; // 0x0021, 0x17 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ParticleNode_t) == 0x24, "ParticleNode_t size mismatch");
+            static_assert(sizeof(ParticleNode_t) == 0x38, "ParticleNode_t size mismatch");
         }
     }
 }

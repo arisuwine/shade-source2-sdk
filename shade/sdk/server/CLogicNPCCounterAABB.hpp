@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x750
+             * Size: 0x760
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicNPCCounterAABB : public shade::sdk::server::CLogicNPCCounter {
             public:
-                Vector m_vDistanceOuterMins; // 0x0720, 0xc bytes
-                Vector m_vDistanceOuterMaxs; // 0x072c, 0xc bytes
-                Vector m_vOuterMins; // 0x0738, 0xc bytes
-                Vector m_vOuterMaxs; // 0x0744, 0xc bytes
+                Vector m_vDistanceOuterMins; // 0x0730, 0xc bytes
+                Vector m_vDistanceOuterMaxs; // 0x073c, 0xc bytes
+                VectorWS m_vOuterMins; // 0x0748, 0xc bytes
+                VectorWS m_vOuterMaxs; // 0x0754, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CLogicNPCCounterAABB) == 0x750, "CLogicNPCCounterAABB size mismatch");
+            static_assert(sizeof(CLogicNPCCounterAABB) == 0x760, "CLogicNPCCounterAABB size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x518
+             * Size: 0x528
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysBallSocket : public shade::sdk::server::CPhysConstraint {
             public:
-                float m_flJointFriction; // 0x0500, 0x4 bytes
-                bool m_bEnableSwingLimit; // 0x0504, 0x1 bytes
-                std::uint8_t pad_0505[0x3]; // 0x0505, 0x3 bytes
-                float m_flSwingLimit; // 0x0508, 0x4 bytes
-                bool m_bEnableTwistLimit; // 0x050c, 0x1 bytes
-                std::uint8_t pad_050d[0x3]; // 0x050d, 0x3 bytes
-                float m_flMinTwistAngle; // 0x0510, 0x4 bytes
-                float m_flMaxTwistAngle; // 0x0514, 0x4 bytes
+                float m_flJointFriction; // 0x0510, 0x4 bytes
+                bool m_bEnableSwingLimit; // 0x0514, 0x1 bytes
+                std::uint8_t pad_0515[0x3]; // 0x0515, 0x3 bytes
+                float m_flSwingLimit; // 0x0518, 0x4 bytes
+                bool m_bEnableTwistLimit; // 0x051c, 0x1 bytes
+                std::uint8_t pad_051d[0x3]; // 0x051d, 0x3 bytes
+                float m_flMinTwistAngle; // 0x0520, 0x4 bytes
+                float m_flMaxTwistAngle; // 0x0524, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysBallSocket) == 0x518, "CPhysBallSocket size mismatch");
+            static_assert(sizeof(CPhysBallSocket) == 0x528, "CPhysBallSocket size mismatch");
         }
     }
 }

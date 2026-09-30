@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16e0
+             * Size: 0x1eb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,28 +42,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Fencer_Ultimate : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                Vector m_vStartPosition; // 0x0f70, 0xc bytes
-                Vector m_vDashDirection; // 0x0f7c, 0xc bytes
-                Vector m_vecLastPosition; // 0x0f88, 0xc bytes
-                shade::sdk::client::EFencerUltState_t m_eUltState; // 0x0f94, 0x1 bytes
-                std::uint8_t pad_0f95[0x3]; // 0x0f95, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x0f98, 0x4 bytes
-                bool m_bHitSomeone; // 0x0f9c, 0x1 bytes
-                std::uint8_t pad_0f9d[0x3]; // 0x0f9d, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x0fa0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitHeroes; // 0x0fb8, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x0fd0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_UltHoldVFX; // 0x0fd4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_DirPreviewVFX; // 0x0fd8, 0x4 bytes
-                std::uint8_t pad_0fdc[0x704]; // 0x0fdc, 0x704 bytes
+                VectorWS m_vStartPosition; // 0x14a0, 0xc bytes
+                Vector m_vDashDirection; // 0x14ac, 0xc bytes
+                VectorWS m_vecLastPosition; // 0x14b8, 0xc bytes
+                shade::sdk::client::EFencerUltState_t m_eUltState; // 0x14c4, 0x1 bytes
+                std::uint8_t pad_14c5[0x3]; // 0x14c5, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x14c8, 0x4 bytes
+                bool m_bHitSomeone; // 0x14cc, 0x1 bytes
+                std::uint8_t pad_14cd[0x3]; // 0x14cd, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x14d0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitHeroes; // 0x14e8, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1500, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_UltHoldVFX; // 0x1504, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_DirPreviewVFX; // 0x1508, 0x4 bytes
+                std::uint8_t pad_150c[0x9a4]; // 0x150c, 0x9a4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Fencer_Ultimate) == 0x16E0, "CAbility_Fencer_Ultimate size mismatch");
+            static_assert(sizeof(CAbility_Fencer_Ultimate) == 0x1EB0, "CAbility_Fencer_Ultimate size mismatch");
         }
     }
 }

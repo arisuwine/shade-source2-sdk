@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c80
+             * Size: 0x2570
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_HauntingSkull : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_tPriorityTargetTime; // 0x11d8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_eSkullPriorityTarget; // 0x11dc, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x11e0, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x11ec, 0xc bytes
-                std::uint8_t pad_11f8[0x1]; // 0x11f8, 0x1 bytes
-                bool m_bIsFullyCharged; // 0x11f9, 0x1 bytes
-                std::uint8_t pad_11fa[0xa86]; // 0x11fa, 0xa86 bytes
+                shade::sdk::entity2::GameTime_t m_tPriorityTargetTime; // 0x16d8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_eSkullPriorityTarget; // 0x16dc, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x16e0, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16ec, 0xc bytes
+                std::uint8_t pad_16f8[0x1]; // 0x16f8, 0x1 bytes
+                bool m_bIsFullyCharged; // 0x16f9, 0x1 bytes
+                std::uint8_t pad_16fa[0xe76]; // 0x16fa, 0xe76 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSkull) == 0x1C80, "CCitadel_Ability_Necro_HauntingSkull size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSkull) == 0x2570, "CCitadel_Ability_Necro_HauntingSkull size mismatch");
         }
     }
 }

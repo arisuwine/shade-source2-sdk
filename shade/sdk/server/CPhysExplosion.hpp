@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,26 +32,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysExplosion : public shade::sdk::server::CPointEntity {
             public:
-                bool m_bExplodeOnSpawn; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x3]; // 0x04a1, 0x3 bytes
-                float m_flMagnitude; // 0x04a4, 0x4 bytes
-                float m_flDamage; // 0x04a8, 0x4 bytes
-                float m_radius; // 0x04ac, 0x4 bytes
-                CUtlSymbolLarge m_targetEntityName; // 0x04b0, 0x8 bytes
-                float m_flInnerRadius; // 0x04b8, 0x4 bytes
-                float m_flPushScale; // 0x04bc, 0x4 bytes
-                bool m_bConvertToDebrisWhenPossible; // 0x04c0, 0x1 bytes
-                bool m_bAffectInvulnerableEnts; // 0x04c1, 0x1 bytes
-                std::uint8_t pad_04c2[0x6]; // 0x04c2, 0x6 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPushedPlayer; // 0x04c8, 0x18 bytes
+                bool m_bExplodeOnSpawn; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                float m_flMagnitude; // 0x04b4, 0x4 bytes
+                float m_flDamage; // 0x04b8, 0x4 bytes
+                float m_radius; // 0x04bc, 0x4 bytes
+                CUtlSymbolLarge m_targetEntityName; // 0x04c0, 0x8 bytes
+                CUtlSymbolLarge m_ignoreEntityName; // 0x04c8, 0x8 bytes
+                float m_flInnerRadius; // 0x04d0, 0x4 bytes
+                float m_flPushScale; // 0x04d4, 0x4 bytes
+                bool m_bConvertToDebrisWhenPossible; // 0x04d8, 0x1 bytes
+                bool m_bAffectInvulnerableEnts; // 0x04d9, 0x1 bytes
+                bool m_bDisablePushClamp; // 0x04da, 0x1 bytes
+                std::uint8_t pad_04db[0x5]; // 0x04db, 0x5 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPushedPlayer; // 0x04e0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputExplode; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPhysExplosion) == 0x4E0, "CPhysExplosion size mismatch");
+            static_assert(sizeof(CPhysExplosion) == 0x4F8, "CPhysExplosion size mismatch");
         }
     }
 }

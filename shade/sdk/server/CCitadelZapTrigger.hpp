@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x800
+             * Size: 0x8f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelZapTrigger : public shade::sdk::server::CFuncBrush {
             public:
-                float m_flShootAfterEnteringTime; // 0x07a0, 0x4 bytes
-                float m_flWaitForNextShootTime; // 0x07a4, 0x4 bytes
-                float m_flPercentMaxHealthDamage; // 0x07a8, 0x4 bytes
-                std::uint8_t pad_07ac[0x4]; // 0x07ac, 0x4 bytes
-                CUtlSymbolLarge m_strShootOrigin; // 0x07b0, 0x8 bytes
-                std::uint8_t pad_07b8[0x48]; // 0x07b8, 0x48 bytes
+                float m_flShootAfterEnteringTime; // 0x0898, 0x4 bytes
+                float m_flWaitForNextShootTime; // 0x089c, 0x4 bytes
+                float m_flPercentMaxHealthDamage; // 0x08a0, 0x4 bytes
+                std::uint8_t pad_08a4[0x4]; // 0x08a4, 0x4 bytes
+                CUtlSymbolLarge m_strShootOrigin; // 0x08a8, 0x8 bytes
+                std::uint8_t pad_08b0[0x48]; // 0x08b0, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelZapTrigger) == 0x800, "CCitadelZapTrigger size mismatch");
+            static_assert(sizeof(CCitadelZapTrigger) == 0x8F8, "CCitadelZapTrigger size mismatch");
         }
     }
 }

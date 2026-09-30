@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x848
+             * Size: 0x940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,26 +39,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvLaser : public shade::sdk::server::CBeam {
             public:
-                CUtlSymbolLarge m_iszLaserTarget; // 0x0820, 0x8 bytes
-                shade::sdk::server::CSprite *m_pSprite; // 0x0828, 0x8 bytes
-                CUtlSymbolLarge m_iszSpriteName; // 0x0830, 0x8 bytes
-                Vector m_firePosition; // 0x0838, 0xc bytes
-                float m_flStartFrame; // 0x0844, 0x4 bytes
+                CUtlSymbolLarge m_iszLaserTarget; // 0x0918, 0x8 bytes
+                CHandle<shade::sdk::server::CSprite> m_pSprite; // 0x0920, 0x4 bytes
+                std::uint8_t pad_0924[0x4]; // 0x0924, 0x4 bytes
+                CUtlSymbolLarge m_iszSpriteName; // 0x0928, 0x8 bytes
+                Vector m_firePosition; // 0x0930, 0xc bytes
+                float m_flStartFrame; // 0x093c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void CEnvLaserStrikeThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * float width; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t NoiseAmplitude; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t TextureScroll; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CUtlString texture; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CEnvLaser) == 0x848, "CEnvLaser size mismatch");
+            static_assert(sizeof(CEnvLaser) == 0x940, "CEnvLaser size mismatch");
         }
     }
 }

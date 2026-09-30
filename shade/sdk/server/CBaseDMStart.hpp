@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4a8
+             * Size: 0x4b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseDMStart : public shade::sdk::server::CPointEntity {
             public:
-                CUtlSymbolLarge m_Master; // 0x04a0, 0x8 bytes
+                CUtlSymbolLarge m_Master; // 0x04b0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseDMStart) == 0x4A8, "CBaseDMStart size mismatch");
+            static_assert(sizeof(CBaseDMStart) == 0x4B8, "CBaseDMStart size mismatch");
         }
     }
 }

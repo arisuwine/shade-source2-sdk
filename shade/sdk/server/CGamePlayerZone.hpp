@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7f8
+             * Size: 0x8f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CGamePlayerZone : public shade::sdk::server::CRuleBrushEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerInZone; // 0x0788, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerOutZone; // 0x07a0, 0x18 bytes
-                CEntityOutputTemplate<std::int32_t> m_PlayersInCount; // 0x07b8, 0x20 bytes
-                CEntityOutputTemplate<std::int32_t> m_PlayersOutCount; // 0x07d8, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerInZone; // 0x0880, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerOutZone; // 0x0898, 0x18 bytes
+                CEntityOutputTemplate<std::int32_t> m_PlayersInCount; // 0x08b0, 0x20 bytes
+                CEntityOutputTemplate<std::int32_t> m_PlayersOutCount; // 0x08d0, 0x20 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputCountPlayersInZone; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CGamePlayerZone) == 0x7F8, "CGamePlayerZone size mismatch");
+            static_assert(sizeof(CGamePlayerZone) == 0x8F0, "CGamePlayerZone size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c10
+             * Size: 0x24d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_Leap : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bWillLeapOff; // 0x11d8, 0x1 bytes
-                bool m_bIsLeaping; // 0x11d9, 0x1 bytes
-                std::uint8_t pad_11da[0x2]; // 0x11da, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x11dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x11e0, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x11e4, 0xc bytes
-                VectorWS m_vLaunchVelocity; // 0x11f0, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x11fc, 0xc bytes
-                std::uint8_t pad_1208[0xa08]; // 0x1208, 0xa08 bytes
+                bool m_bWillLeapOff; // 0x16d8, 0x1 bytes
+                bool m_bIsLeaping; // 0x16d9, 0x1 bytes
+                std::uint8_t pad_16da[0x2]; // 0x16da, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x16dc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x16e0, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x16e4, 0xc bytes
+                Vector m_vLaunchVelocity; // 0x16f0, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16fc, 0xc bytes
+                std::uint8_t pad_1708[0xdc8]; // 0x1708, 0xdc8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_Leap) == 0x1C10, "CCitadel_Ability_Werewolf_Leap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_Leap) == 0x24D0, "CCitadel_Ability_Werewolf_Leap size mismatch");
         }
     }
 }

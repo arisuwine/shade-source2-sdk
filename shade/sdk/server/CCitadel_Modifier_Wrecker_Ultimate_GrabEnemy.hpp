@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x3e8
+             * Size: 0x578
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bAddedStasisParticle; // 0x00d0, 0x1 bytes
-                std::uint8_t pad_00d1[0x3]; // 0x00d1, 0x3 bytes
-                Vector m_vHoldOffset; // 0x00d4, 0xc bytes
-                float m_flLastTouchTime; // 0x00e0, 0x4 bytes
-                std::uint8_t pad_00e4[0x304]; // 0x00e4, 0x304 bytes
+                bool m_bAddedStasisParticle; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
+                Vector m_vHoldOffset; // 0x0144, 0xc bytes
+                float m_flLastTouchTime; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x424]; // 0x0154, 0x424 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x3E8, "CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x578, "CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncTimescale : public shade::sdk::server::CBaseEntity {
             public:
-                float m_flDesiredTimescale; // 0x04a0, 0x4 bytes
-                float m_flAcceleration; // 0x04a4, 0x4 bytes
-                float m_flMinBlendRate; // 0x04a8, 0x4 bytes
-                float m_flBlendDeltaMultiplier; // 0x04ac, 0x4 bytes
-                bool m_isStarted; // 0x04b0, 0x1 bytes
-                std::uint8_t pad_04b1[0x7]; // 0x04b1, 0x7 bytes
+                float m_flDesiredTimescale; // 0x04b0, 0x4 bytes
+                float m_flAcceleration; // 0x04b4, 0x4 bytes
+                float m_flMinBlendRate; // 0x04b8, 0x4 bytes
+                float m_flBlendDeltaMultiplier; // 0x04bc, 0x4 bytes
+                bool m_isStarted; // 0x04c0, 0x1 bytes
+                std::uint8_t pad_04c1[0x7]; // 0x04c1, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputReset; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncTimescale) == 0x4B8, "CFuncTimescale size mismatch");
+            static_assert(sizeof(CFuncTimescale) == 0x4C8, "CFuncTimescale size mismatch");
         }
     }
 }

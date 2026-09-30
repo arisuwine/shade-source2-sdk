@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -39,7 +40,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x750
+             * Size: 0x760
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -48,57 +49,61 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierVData : public shade::sdk::client::CModifierVData {
             public:
-                bool m_bIsBuildup; // 0x0408, 0x1 bytes
-                bool m_bNetworkValuesForStatsPreview; // 0x0409, 0x1 bytes
-                std::uint8_t pad_040a[0x6]; // 0x040a, 0x6 bytes
-                CUtlVector<CUtlString> m_vecAutoRegisterModifierValueFromAbilityPropertyName; // 0x0410, 0x18 bytes
-                bool m_bCasterCountsAsAssister; // 0x0428, 0x1 bytes
-                std::uint8_t pad_0429[0x3]; // 0x0429, 0x3 bytes
-                float m_flLingeringAssistWindow; // 0x042c, 0x4 bytes
-                bool m_bDurationCanBeTimeScaled; // 0x0430, 0x1 bytes
-                bool m_bDurationReducible; // 0x0431, 0x1 bytes
-                bool m_bDurationReducibleByCrowdControlDiminish; // 0x0432, 0x1 bytes
-                std::uint8_t pad_0433[0x1]; // 0x0433, 0x1 bytes
-                shade::sdk::client::ModifierTimeScaleSource_t m_eTimeScaleSource; // 0x0434, 0x4 bytes
-                bool m_bDurationAffectedByEffectiveness; // 0x0438, 0x1 bytes
-                std::uint8_t pad_0439[0x7]; // 0x0439, 0x7 bytes
-                shade::sdk::client::ParamAndPriority_t m_AG2BaseAction; // 0x0440, 0x10 bytes
-                shade::sdk::client::ParamAndPriority_t m_AG2BaseState; // 0x0450, 0x10 bytes
-                shade::sdk::client::ParamAndPriority_t m_AG2HeroState; // 0x0460, 0x10 bytes
-                shade::sdk::client::ModifierOverheadDrawType_t m_eDrawOverheadStatus; // 0x0470, 0x4 bytes
-                bool m_bReverseHudProgressBar; // 0x0474, 0x1 bytes
-                std::uint8_t pad_0475[0x3]; // 0x0475, 0x3 bytes
-                CUtlString m_strSmallIconCssClass; // 0x0478, 0x8 bytes
-                CUtlString m_strHintText; // 0x0480, 0x8 bytes
-                CUtlString m_strModifierOverrideStatusID; // 0x0488, 0x8 bytes
-                CPanoramaImageName m_strHudIcon; // 0x0490, 0x10 bytes
-                shade::sdk::client::HudDisplayLocation_t m_eHudDisplayLocation; // 0x04a0, 0x4 bytes
-                shade::sdk::client::ModifiersDisplayLocation_t m_eModifierDisplayLocaiton; // 0x04a4, 0x4 bytes
-                CUtlString m_strHudMessageText; // 0x04a8, 0x8 bytes
-                bool m_bIsHiddenOverhead; // 0x04b0, 0x1 bytes
-                std::uint8_t pad_04b1[0x7]; // 0x04b1, 0x7 bytes
-                CUtlVector<shade::sdk::client::EModifierValue> m_vecAlwaysShowInStatModifierUI; // 0x04b8, 0x18 bytes
-                shade::sdk::client::CCitadelModifierResponseRules_t m_OnCreateResponse; // 0x04d0, 0x38 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCreated; // 0x0508, 0x88 bytes
-                bool m_bEndCreatedSequenceOnRemove; // 0x0590, 0x1 bytes
-                std::uint8_t pad_0591[0x7]; // 0x0591, 0x7 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceRemoved; // 0x0598, 0x88 bytes
-                shade::sdk::client::ModifierBarrierBehavior_t m_BarrierBehavior; // 0x0620, 0x4 bytes
-                std::uint8_t pad_0624[0x4]; // 0x0624, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierCreateParticle; // 0x0628, 0xe0 bytes
-                bool m_bSupressDefaultBarrierBreakParticle; // 0x0708, 0x1 bytes
-                std::uint8_t pad_0709[0x7]; // 0x0709, 0x7 bytes
-                CSoundEventName m_sExpiredSound; // 0x0710, 0x10 bytes
-                shade::sdk::client::FootstepSound_t m_FootstepOverride; // 0x0720, 0x18 bytes
-                CSoundEventName m_FootstepAdditional; // 0x0738, 0x10 bytes
-                bool m_bRemoveOnInterrupted; // 0x0748, 0x1 bytes
-                std::uint8_t pad_0749[0x7]; // 0x0749, 0x7 bytes
+                bool m_bIsBuildup; // 0x0410, 0x1 bytes
+                bool m_bNetworkValuesForStatsPreview; // 0x0411, 0x1 bytes
+                std::uint8_t pad_0412[0x6]; // 0x0412, 0x6 bytes
+                CUtlVector<CUtlString> m_vecAutoRegisterModifierValueFromAbilityPropertyName; // 0x0418, 0x18 bytes
+                bool m_bPersistWhileAbilityDormant; // 0x0430, 0x1 bytes
+                bool m_bCasterCountsAsAssister; // 0x0431, 0x1 bytes
+                std::uint8_t pad_0432[0x2]; // 0x0432, 0x2 bytes
+                float m_flLingeringAssistWindow; // 0x0434, 0x4 bytes
+                bool m_bDurationCanBeTimeScaled; // 0x0438, 0x1 bytes
+                bool m_bDurationReducible; // 0x0439, 0x1 bytes
+                bool m_bDurationReducibleByCrowdControlDiminish; // 0x043a, 0x1 bytes
+                std::uint8_t pad_043b[0x1]; // 0x043b, 0x1 bytes
+                shade::sdk::client::ModifierTimeScaleSource_t m_eTimeScaleSource; // 0x043c, 0x4 bytes
+                bool m_bDurationAffectedByEffectiveness; // 0x0440, 0x1 bytes
+                std::uint8_t pad_0441[0x7]; // 0x0441, 0x7 bytes
+                shade::sdk::client::ParamAndPriority_t m_AG2BaseAction; // 0x0448, 0x10 bytes
+                shade::sdk::client::ParamAndPriority_t m_AG2BaseState; // 0x0458, 0x10 bytes
+                shade::sdk::client::ParamAndPriority_t m_AG2HeroState; // 0x0468, 0x10 bytes
+                shade::sdk::client::ModifierOverheadDrawType_t m_eDrawOverheadStatus; // 0x0478, 0x4 bytes
+                bool m_bReverseHudProgressBar; // 0x047c, 0x1 bytes
+                std::uint8_t pad_047d[0x3]; // 0x047d, 0x3 bytes
+                CUtlString m_strSmallIconCssClass; // 0x0480, 0x8 bytes
+                CUtlString m_strHintText; // 0x0488, 0x8 bytes
+                CUtlString m_strModifierOverrideStatusID; // 0x0490, 0x8 bytes
+                CPanoramaImageName m_strHudIcon; // 0x0498, 0x10 bytes
+                shade::sdk::client::HudDisplayLocation_t m_eHudDisplayLocation; // 0x04a8, 0x4 bytes
+                shade::sdk::client::ModifiersDisplayLocation_t m_eModifierDisplayLocaiton; // 0x04ac, 0x4 bytes
+                CUtlString m_strHudMessageText; // 0x04b0, 0x8 bytes
+                bool m_bIsHiddenOverhead; // 0x04b8, 0x1 bytes
+                std::uint8_t pad_04b9[0x7]; // 0x04b9, 0x7 bytes
+                CUtlVector<shade::sdk::client::EModifierValue> m_vecAlwaysShowInStatModifierUI; // 0x04c0, 0x18 bytes
+                bool m_bHideInStatModifierUI; // 0x04d8, 0x1 bytes
+                std::uint8_t pad_04d9[0x7]; // 0x04d9, 0x7 bytes
+                shade::sdk::client::CCitadelModifierResponseRules_t m_OnCreateResponse; // 0x04e0, 0x38 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCreated; // 0x0518, 0x88 bytes
+                bool m_bEndCreatedSequenceOnRemove; // 0x05a0, 0x1 bytes
+                std::uint8_t pad_05a1[0x7]; // 0x05a1, 0x7 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceRemoved; // 0x05a8, 0x88 bytes
+                shade::sdk::client::ModifierBarrierBehavior_t m_BarrierBehavior; // 0x0630, 0x4 bytes
+                std::uint8_t pad_0634[0x4]; // 0x0634, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierCreateParticle; // 0x0638, 0xe0 bytes
+                bool m_bSupressDefaultBarrierBreakParticle; // 0x0718, 0x1 bytes
+                bool m_bSuppressBarrierRefreshSound; // 0x0719, 0x1 bytes
+                std::uint8_t pad_071a[0x6]; // 0x071a, 0x6 bytes
+                CSoundEventName m_sExpiredSound; // 0x0720, 0x10 bytes
+                shade::sdk::client::FootstepSound_t m_FootstepOverride; // 0x0730, 0x18 bytes
+                CSoundEventName m_FootstepAdditional; // 0x0748, 0x10 bytes
+                bool m_bRemoveOnInterrupted; // 0x0758, 0x1 bytes
+                std::uint8_t pad_0759[0x7]; // 0x0759, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierVData) == 0x750, "CCitadelModifierVData size mismatch");
+            static_assert(sizeof(CCitadelModifierVData) == 0x760, "CCitadelModifierVData size mismatch");
         }
     }
 }

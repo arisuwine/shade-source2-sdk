@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15e8
+             * Size: 0x1c68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +33,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HealthSwap : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x11d8, 0x4 bytes
-                std::uint8_t pad_11dc[0x384]; // 0x11dc, 0x384 bytes
-                shade::sdk::entity2::GameTime_t m_flPostCastHoldEndTime; // 0x1560, 0x4 bytes
-                std::uint8_t pad_1564[0x84]; // 0x1564, 0x84 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x16d8, 0x4 bytes
+                std::uint8_t pad_16dc[0x4d4]; // 0x16dc, 0x4d4 bytes
+                shade::sdk::entity2::GameTime_t m_flPostCastHoldEndTime; // 0x1bb0, 0x4 bytes
+                std::uint8_t pad_1bb4[0xb4]; // 0x1bb4, 0xb4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HealthSwap) == 0x15E8, "CCitadel_Ability_HealthSwap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HealthSwap) == 0x1C68, "CCitadel_Ability_HealthSwap size mismatch");
         }
     }
 }

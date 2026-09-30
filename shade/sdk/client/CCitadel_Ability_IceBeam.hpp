@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2708
+             * Size: 0x2f80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,20 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_IceBeam : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bIceBeaming; // 0x11d8, 0x1 bytes
-                std::uint8_t pad_11d9[0x40b]; // 0x11d9, 0x40b bytes
-                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x15e4, 0x4 bytes
-                shade::sdk::client::CCitadelAbilityBeam_t m_beam; // 0x15e8, 0x10d0 bytes
-                std::uint8_t pad_26b8[0x38]; // 0x26b8, 0x38 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecEntitiesHit; // 0x26f0, 0x18 bytes
+                bool m_bIceBeaming; // 0x16d8, 0x1 bytes
+                std::uint8_t pad_16d9[0x79b]; // 0x16d9, 0x79b bytes
+                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x1e74, 0x4 bytes
+                shade::sdk::client::CCitadelAbilityBeam_t m_beam; // 0x1e78, 0x10d8 bytes
+                std::uint8_t pad_2f50[0x18]; // 0x2f50, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecEntitiesHit; // 0x2f68, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_IceBeam) == 0x2708, "CCitadel_Ability_IceBeam size mismatch");
+            static_assert(sizeof(CCitadel_Ability_IceBeam) == 0x2F80, "CCitadel_Ability_IceBeam size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xae0
+             * Size: 0xd00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,24 +40,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerFan : public shade::sdk::client::C_BaseTrigger {
             public:
-                Vector m_vFanOriginOffset; // 0x0a78, 0xc bytes
-                Vector m_vDirection; // 0x0a84, 0xc bytes
-                bool m_bPushTowardsInfoTarget; // 0x0a90, 0x1 bytes
-                bool m_bPushAwayFromInfoTarget; // 0x0a91, 0x1 bytes
-                std::uint8_t pad_0a92[0xe]; // 0x0a92, 0xe bytes
-                Quaternion m_qNoiseDelta; // 0x0aa0, 0x10 bytes
-                CHandle<shade::sdk::client::CInfoFan> m_hInfoFan; // 0x0ab0, 0x4 bytes
-                float m_flForce; // 0x0ab4, 0x4 bytes
-                bool m_bFalloff; // 0x0ab8, 0x1 bytes
-                std::uint8_t pad_0ab9[0x7]; // 0x0ab9, 0x7 bytes
-                shade::sdk::client::CountdownTimer m_RampTimer; // 0x0ac0, 0x18 bytes
-                std::uint8_t pad_0ad8[0x8]; // 0x0ad8, 0x8 bytes
+                Vector m_vFanOriginOffset; // 0x0c98, 0xc bytes
+                Vector m_vDirection; // 0x0ca4, 0xc bytes
+                bool m_bPushTowardsInfoTarget; // 0x0cb0, 0x1 bytes
+                bool m_bPushAwayFromInfoTarget; // 0x0cb1, 0x1 bytes
+                std::uint8_t pad_0cb2[0xe]; // 0x0cb2, 0xe bytes
+                Quaternion m_qNoiseDelta; // 0x0cc0, 0x10 bytes
+                CHandle<shade::sdk::client::CInfoFan> m_hInfoFan; // 0x0cd0, 0x4 bytes
+                float m_flForce; // 0x0cd4, 0x4 bytes
+                bool m_bFalloff; // 0x0cd8, 0x1 bytes
+                std::uint8_t pad_0cd9[0x7]; // 0x0cd9, 0x7 bytes
+                shade::sdk::client::CountdownTimer m_RampTimer; // 0x0ce0, 0x18 bytes
+                std::uint8_t pad_0cf8[0x8]; // 0x0cf8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerFan) == 0xAE0, "CTriggerFan size mismatch");
+            static_assert(sizeof(CTriggerFan) == 0xD00, "CTriggerFan size mismatch");
         }
     }
 }

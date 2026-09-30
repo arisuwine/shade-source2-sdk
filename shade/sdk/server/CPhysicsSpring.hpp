@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,30 +39,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysicsSpring : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::vphysics2::IPhysicsJoint *m_pSpringJoint; // 0x04a0, 0x8 bytes
-                float m_flFrequency; // 0x04a8, 0x4 bytes
-                float m_flDampingRatio; // 0x04ac, 0x4 bytes
-                float m_flRestLength; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
-                CUtlSymbolLarge m_nameAttachStart; // 0x04b8, 0x8 bytes
-                CUtlSymbolLarge m_nameAttachEnd; // 0x04c0, 0x8 bytes
-                VectorWS m_start; // 0x04c8, 0xc bytes
-                VectorWS m_end; // 0x04d4, 0xc bytes
-                std::uint32_t m_teleportTick; // 0x04e0, 0x4 bytes
-                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                shade::sdk::vphysics2::IPhysicsJoint *m_pSpringJoint; // 0x04b0, 0x8 bytes
+                float m_flFrequency; // 0x04b8, 0x4 bytes
+                float m_flDampingRatio; // 0x04bc, 0x4 bytes
+                float m_flRestLength; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
+                CUtlSymbolLarge m_nameAttachStart; // 0x04c8, 0x8 bytes
+                CUtlSymbolLarge m_nameAttachEnd; // 0x04d0, 0x8 bytes
+                VectorWS m_start; // 0x04d8, 0xc bytes
+                VectorWS m_end; // 0x04e4, 0xc bytes
+                std::uint32_t m_teleportTick; // 0x04f0, 0x4 bytes
+                std::uint8_t pad_04f4[0x4]; // 0x04f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * float lengthscale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetFrequency; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDampingRatio; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetRestLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputAddRestLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputRemoveRestLength; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPhysicsSpring) == 0x4E8, "CPhysicsSpring size mismatch");
+            static_assert(sizeof(CPhysicsSpring) == 0x4F8, "CPhysicsSpring size mismatch");
         }
     }
 }

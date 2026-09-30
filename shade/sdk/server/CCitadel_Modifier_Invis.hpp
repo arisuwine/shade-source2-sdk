@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x468
+             * Size: 0x628
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Invis : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x380]; // 0x00d0, 0x380 bytes
-                bool m_bInvis; // 0x0450, 0x1 bytes
-                std::uint8_t pad_0451[0x3]; // 0x0451, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStartInvisTime; // 0x0454, 0x4 bytes
-                bool m_bFullyInvis; // 0x0458, 0x1 bytes
-                std::uint8_t pad_0459[0x3]; // 0x0459, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTaken; // 0x045c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSpotted; // 0x0460, 0x4 bytes
-                std::uint8_t pad_0464[0x4]; // 0x0464, 0x4 bytes
+                std::uint8_t pad_0140[0x4d0]; // 0x0140, 0x4d0 bytes
+                bool m_bInvis; // 0x0610, 0x1 bytes
+                std::uint8_t pad_0611[0x3]; // 0x0611, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStartInvisTime; // 0x0614, 0x4 bytes
+                bool m_bFullyInvis; // 0x0618, 0x1 bytes
+                std::uint8_t pad_0619[0x3]; // 0x0619, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTaken; // 0x061c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSpotted; // 0x0620, 0x4 bytes
+                std::uint8_t pad_0624[0x4]; // 0x0624, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Invis) == 0x468, "CCitadel_Modifier_Invis size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Invis) == 0x628, "CCitadel_Modifier_Invis size mismatch");
         }
     }
 }

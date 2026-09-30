@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,10 +35,11 @@ namespace shade {
                 std::int16_t m_desiredFacingDirectionNodeIdx; // 0x001a, 0x2 bytes
                 std::int16_t m_linearVelocityLimitNodeIdx; // 0x001c, 0x2 bytes
                 std::int16_t m_angularVelocityLimitNodeIdx; // 0x001e, 0x2 bytes
-                float m_maxLinearVelocity; // 0x0020, 0x4 bytes
-                float m_maxAngularVelocityRadians; // 0x0024, 0x4 bytes
-                shade::sdk::animlib::CNmBitFlags m_overrideFlags; // 0x0028, 0x4 bytes
-                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
+                std::int16_t m_enabledNodeIdx; // 0x0020, 0x2 bytes
+                std::uint8_t pad_0022[0x2]; // 0x0022, 0x2 bytes
+                float m_maxLinearVelocity; // 0x0024, 0x4 bytes
+                float m_maxAngularVelocityRadians; // 0x0028, 0x4 bytes
+                shade::sdk::animlib::CNmBitFlags m_overrideFlags; // 0x002c, 0x4 bytes
             };
             #pragma pack(pop)
 

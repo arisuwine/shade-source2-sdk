@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa50
+             * Size: 0xa60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,26 +43,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Mirage_SandPhantom_Proc_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                bool m_bRollOnceForAllBulletsInAShot; // 0x0750, 0x1 bytes
-                std::uint8_t pad_0751[0x3]; // 0x0751, 0x3 bytes
-                float m_flMaxBulletsToProcInShot; // 0x0754, 0x4 bytes
-                bool m_bCanProcMultipleTimesFromSameShot; // 0x0758, 0x1 bytes
-                bool m_bRequiresTargetFilter; // 0x0759, 0x1 bytes
-                std::uint8_t pad_075a[0x6]; // 0x075a, 0x6 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProcReadyModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PassiveVictimModifier; // 0x0770, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcReadyParticle; // 0x0780, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x0860, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0940, 0xe0 bytes
-                CSoundEventName m_OnBulletRolledProcSound; // 0x0a20, 0x10 bytes
-                CSoundEventName m_ProcSound; // 0x0a30, 0x10 bytes
-                CSoundEventName m_ExplodeSound; // 0x0a40, 0x10 bytes
+                bool m_bRollOnceForAllBulletsInAShot; // 0x0760, 0x1 bytes
+                std::uint8_t pad_0761[0x3]; // 0x0761, 0x3 bytes
+                float m_flMaxBulletsToProcInShot; // 0x0764, 0x4 bytes
+                bool m_bCanProcMultipleTimesFromSameShot; // 0x0768, 0x1 bytes
+                bool m_bRequiresTargetFilter; // 0x0769, 0x1 bytes
+                std::uint8_t pad_076a[0x6]; // 0x076a, 0x6 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProcReadyModifier; // 0x0770, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PassiveVictimModifier; // 0x0780, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcReadyParticle; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0950, 0xe0 bytes
+                CSoundEventName m_OnBulletRolledProcSound; // 0x0a30, 0x10 bytes
+                CSoundEventName m_ProcSound; // 0x0a40, 0x10 bytes
+                CSoundEventName m_ExplodeSound; // 0x0a50, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Proc_VData) == 0xA50, "CCitadel_Modifier_Mirage_SandPhantom_Proc_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Proc_VData) == 0xA60, "CCitadel_Modifier_Mirage_SandPhantom_Proc_VData size mismatch");
         }
     }
 }

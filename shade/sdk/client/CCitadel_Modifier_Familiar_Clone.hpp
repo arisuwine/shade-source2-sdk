@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b8
+             * Size: 0x228
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Familiar_Clone : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0xc]; // 0x00c0, 0xc bytes
-                std::int32_t m_nCopiedHeroID; // 0x00cc, 0x4 bytes
-                shade::sdk::client::ModelChange_t m_ModelChange; // 0x00d0, 0xe8 bytes
+                std::uint8_t pad_0130[0xc]; // 0x0130, 0xc bytes
+                std::int32_t m_nCopiedHeroID; // 0x013c, 0x4 bytes
+                shade::sdk::client::ModelChange_t m_ModelChange; // 0x0140, 0xe8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Familiar_Clone) == 0x1B8, "CCitadel_Modifier_Familiar_Clone size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Familiar_Clone) == 0x228, "CCitadel_Modifier_Familiar_Clone size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x570
+             * Size: 0x790
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StormCloud : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flNextRandomLightningStrike; // 0x00c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x00c4, 0x4 bytes
-                float m_flRadiusIncrementPerSecond; // 0x00c8, 0x4 bytes
-                Vector m_vCastPosition; // 0x00cc, 0xc bytes
-                bool m_bFiredEndingSoonSound; // 0x00d8, 0x1 bytes
-                std::uint8_t pad_00d9[0x3]; // 0x00d9, 0x3 bytes
-                std::int32_t m_nLastTickForLightningCenterCalc; // 0x00dc, 0x4 bytes
-                Vector m_vecLightningCenter; // 0x00e0, 0xc bytes
-                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x00ec, 0x4 bytes
-                std::uint8_t pad_00f0[0x480]; // 0x00f0, 0x480 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRandomLightningStrike; // 0x0130, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0134, 0x4 bytes
+                float m_flRadiusIncrementPerSecond; // 0x0138, 0x4 bytes
+                VectorWS m_vCastPosition; // 0x013c, 0xc bytes
+                bool m_bFiredEndingSoonSound; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x3]; // 0x0149, 0x3 bytes
+                std::int32_t m_nLastTickForLightningCenterCalc; // 0x014c, 0x4 bytes
+                VectorWS m_vecLightningCenter; // 0x0150, 0xc bytes
+                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x015c, 0x4 bytes
+                std::uint8_t pad_0160[0x630]; // 0x0160, 0x630 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StormCloud) == 0x570, "CCitadel_Modifier_StormCloud size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StormCloud) == 0x790, "CCitadel_Modifier_StormCloud size mismatch");
         }
     }
 }

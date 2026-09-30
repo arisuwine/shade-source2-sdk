@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c20
+             * Size: 0x1b30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_Trooper : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                std::int32_t m_iLane; // 0x1bd0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetedEnemy; // 0x1bd4, 0x4 bytes
-                float m_flHealingChargeParticlePct; // 0x1bd8, 0x4 bytes
-                std::uint8_t pad_1bdc[0x44]; // 0x1bdc, 0x44 bytes
+                std::int32_t m_iLane; // 0x1b08, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetedEnemy; // 0x1b0c, 0x4 bytes
+                bool m_bUsingBossWeapon; // 0x1b10, 0x1 bytes
+                std::uint8_t pad_1b11[0x1f]; // 0x1b11, 0x1f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_Trooper) == 0x1C20, "C_NPC_Trooper size mismatch");
+            static_assert(sizeof(C_NPC_Trooper) == 0x1B30, "C_NPC_Trooper size mismatch");
         }
     }
 }

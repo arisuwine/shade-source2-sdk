@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,16 +21,16 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x18
-             * Alignment: 0xff
+             * Alignment: 0x4
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct RagdollCreationParams_t {
                 Vector m_vForce; // 0x0000, 0xc bytes
                 std::int32_t m_nForceBone; // 0x000c, 0x4 bytes
                 bool m_bForceCurrentWorldTransform; // 0x0010, 0x1 bytes
-                bool m_bUseLRURetirement; // 0x0011, 0x1 bytes
-                std::uint8_t pad_0012[0x2]; // 0x0012, 0x2 bytes
+                std::uint8_t pad_0011[0x3]; // 0x0011, 0x3 bytes
                 std::int32_t m_nHealthToGrant; // 0x0014, 0x4 bytes
             };
             #pragma pack(pop)

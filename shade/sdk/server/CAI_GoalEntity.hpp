@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f8
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -39,28 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_GoalEntity : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x8]; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszActor; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_iszGoal; // 0x04b0, 0x8 bytes
-                bool m_fStartActive; // 0x04b8, 0x1 bytes
-                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
-                shade::sdk::server::CAI_GoalEntity__SearchType_t m_SearchType; // 0x04bc, 0x4 bytes
-                CUtlSymbolLarge m_iszConceptModifiers; // 0x04c0, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::server::CAI_BaseNPC>> m_actors; // 0x04c8, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hGoalEntity; // 0x04e0, 0x4 bytes
-                std::uint32_t m_flags; // 0x04e4, 0x4 bytes
+                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszActor; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_iszGoal; // 0x04c0, 0x8 bytes
+                bool m_fStartActive; // 0x04c8, 0x1 bytes
+                std::uint8_t pad_04c9[0x3]; // 0x04c9, 0x3 bytes
+                shade::sdk::server::CAI_GoalEntity__SearchType_t m_SearchType; // 0x04cc, 0x4 bytes
+                CUtlSymbolLarge m_iszConceptModifiers; // 0x04d0, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::server::CAI_BaseNPC>> m_actors; // 0x04d8, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hGoalEntity; // 0x04f0, 0x4 bytes
+                std::uint32_t m_flags; // 0x04f4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CAI_GoalEntityDelayedRefresh; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputActivate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputUpdateActors; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDeactivate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_GoalEntity) == 0x4E8, "CAI_GoalEntity size mismatch");
+            static_assert(sizeof(CAI_GoalEntity) == 0x4F8, "CAI_GoalEntity size mismatch");
         }
     }
 }

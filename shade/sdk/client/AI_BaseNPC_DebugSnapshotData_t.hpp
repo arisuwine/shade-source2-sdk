@@ -12,9 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/AI_BaseNPCAnimGraph_DebugSnapshotData_t.hpp"
+#include "shade/sdk/client/AI_FacingServices_DebugSnapshotData_t.hpp"
+#include "shade/sdk/client/AI_MotorServices_DebugSnapshotData_t.hpp"
+#include "shade/sdk/client/AI_Navigator_DebugSnapshotData_t.hpp"
 #include "shade/sdk/client/DebugSnapshotBaseStructuredData_t.hpp"
 
 namespace shade {
@@ -29,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0x180
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,18 +46,21 @@ namespace shade {
                 std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
                 CUtlString s_current_schedule; // 0x0018, 0x8 bytes
                 CGlobalSymbol s_current_task; // 0x0020, 0x8 bytes
-                CUtlString s_schedule_interrupt_reason; // 0x0028, 0x8 bytes
-                CUtlString s_schedule_fail_reason; // 0x0030, 0x8 bytes
-                CUtlVector<CGlobalSymbol> conditions; // 0x0038, 0x18 bytes
-                CUtlVector<CGlobalSymbol> anim_events; // 0x0050, 0x18 bytes
-                CGlobalSymbol e_action_body_section; // 0x0068, 0x8 bytes
-                CGlobalSymbol e_movement_body_section; // 0x0070, 0x8 bytes
+                CUtlString s_prev_schedule; // 0x0028, 0x8 bytes
+                CUtlString s_npc_current_movement; // 0x0030, 0x8 bytes
+                CUtlString s_last_task_end_location; // 0x0038, 0x8 bytes
+                CUtlVector<CGlobalSymbol> conditions; // 0x0040, 0x18 bytes
+                CUtlVector<CGlobalSymbol> anim_events; // 0x0058, 0x18 bytes
+                shade::sdk::client::AI_BaseNPCAnimGraph_DebugSnapshotData_t animgraph; // 0x0070, 0x48 bytes
+                shade::sdk::client::AI_Navigator_DebugSnapshotData_t navigator; // 0x00b8, 0x50 bytes
+                shade::sdk::client::AI_MotorServices_DebugSnapshotData_t motorServices; // 0x0108, 0x38 bytes
+                shade::sdk::client::AI_FacingServices_DebugSnapshotData_t facingServices; // 0x0140, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_BaseNPC_DebugSnapshotData_t) == 0x78, "AI_BaseNPC_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_BaseNPC_DebugSnapshotData_t) == 0x180, "AI_BaseNPC_DebugSnapshotData_t size mismatch");
         }
     }
 }

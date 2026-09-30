@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x3b8
+             * Size: 0x518
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TimeWall_Aura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0108[0x280]; // 0x0108, 0x280 bytes
-                CUtlVector<CHandle<shade::sdk::server::CCitadelBulletTimeWarp>> m_vecTimeWarps; // 0x0388, 0x18 bytes
-                std::uint8_t pad_03a0[0x18]; // 0x03a0, 0x18 bytes
+                std::uint8_t pad_0178[0x370]; // 0x0178, 0x370 bytes
+                CUtlVector<CHandle<shade::sdk::server::CCitadelBulletTimeWarp>> m_vecTimeWarps; // 0x04e8, 0x18 bytes
+                std::uint8_t pad_0500[0x18]; // 0x0500, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TimeWall_Aura) == 0x3B8, "CCitadel_Modifier_TimeWall_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TimeWall_Aura) == 0x518, "CCitadel_Modifier_TimeWall_Aura size mismatch");
         }
     }
 }

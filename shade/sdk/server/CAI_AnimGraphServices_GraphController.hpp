@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2c8
+             * Size: 0x368
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,25 +30,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_AnimGraphServices_GraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraphParamRef<CGlobalSymbol> m_sTaskHandshakeType; // 0x0090, 0x30 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_sTaskHandshakeTypeShared; // 0x00c0, 0x30 bytes
-                CAnimGraphParamRef<bool> m_bTaskHandshakeRestart; // 0x00f0, 0x28 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_sMovementHandshakeType; // 0x0118, 0x30 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_sMovementHandshakeTypeShared; // 0x0148, 0x30 bytes
-                CAnimGraphParamRef<bool> m_bMovementHandshakeRestart; // 0x0178, 0x28 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_sNavLinkType; // 0x01a0, 0x30 bytes
-                CAnimGraphParamRef<CGlobalSymbol> m_sNavLinkTypeShared; // 0x01d0, 0x30 bytes
-                CAnimGraphParamRef<Vector> m_vecHitDirection; // 0x0200, 0x28 bytes
-                CAnimGraphParamRef<float> m_flHitHeading; // 0x0228, 0x28 bytes
-                CAnimGraphParamRef<Vector> m_vecHitOffset; // 0x0250, 0x28 bytes
-                CAnimGraphParamRef<float> m_flHitStrength; // 0x0278, 0x28 bytes
-                CAnimGraphParamRef<std::int32_t> m_nHitBone; // 0x02a0, 0x28 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sTaskHandshakeType; // 0x00c0, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sTaskHandshakeTypeShared; // 0x00f0, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_eTaskHandshakeRestart; // 0x0120, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sTaskHandshakeBodySectionDesired; // 0x0150, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sMovementHandshakeType; // 0x0180, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sMovementHandshakeTypeShared; // 0x01b0, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_eMovementHandshakeRestart; // 0x01e0, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sMovementHandshakeBodySectionDesired; // 0x0210, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sNavLinkType; // 0x0240, 0x30 bytes
+                CAnimGraphParamRef<CGlobalSymbol> m_sNavLinkTypeShared; // 0x0270, 0x30 bytes
+                CAnimGraphParamRef<Vector> m_vecHitDirection; // 0x02a0, 0x28 bytes
+                CAnimGraphParamRef<float> m_flHitHeading; // 0x02c8, 0x28 bytes
+                CAnimGraphParamRef<Vector> m_vecHitOffset; // 0x02f0, 0x28 bytes
+                CAnimGraphParamRef<float> m_flHitStrength; // 0x0318, 0x28 bytes
+                CAnimGraphParamRef<std::int32_t> m_nHitBone; // 0x0340, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_AnimGraphServices_GraphController) == 0x2C8, "CAI_AnimGraphServices_GraphController size mismatch");
+            static_assert(sizeof(CAI_AnimGraphServices_GraphController) == 0x368, "CAI_AnimGraphServices_GraphController size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x888
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,41 +33,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncMoveLinear : public shade::sdk::server::CBaseToggle {
             public:
-                shade::sdk::server::MoveLinearAuthoredPos_t m_authoredPosition; // 0x0800, 0x4 bytes
-                QAngle m_angMoveEntitySpace; // 0x0804, 0xc bytes
-                Vector m_vecMoveDirParentSpace; // 0x0810, 0xc bytes
-                std::uint8_t pad_081c[0x4]; // 0x081c, 0x4 bytes
-                CUtlSymbolLarge m_soundStart; // 0x0820, 0x8 bytes
-                CUtlSymbolLarge m_soundStop; // 0x0828, 0x8 bytes
-                CUtlSymbolLarge m_currentSound; // 0x0830, 0x8 bytes
-                float m_flBlockDamage; // 0x0838, 0x4 bytes
-                float m_flStartPosition; // 0x083c, 0x4 bytes
-                std::uint8_t pad_0840[0x8]; // 0x0840, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x0848, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x0860, 0x18 bytes
-                bool m_bCreateMovableNavMesh; // 0x0878, 0x1 bytes
-                bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x0879, 0x1 bytes
-                bool m_bCreateNavObstacle; // 0x087a, 0x1 bytes
-                std::uint8_t pad_087b[0xd]; // 0x087b, 0xd bytes
+                shade::sdk::server::MoveLinearAuthoredPos_t m_authoredPosition; // 0x08f8, 0x4 bytes
+                QAngle m_angMoveEntitySpace; // 0x08fc, 0xc bytes
+                Vector m_vecMoveDirParentSpace; // 0x0908, 0xc bytes
+                std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes
+                CGameSoundEventName m_soundStart; // 0x0918, 0x8 bytes
+                CGameSoundEventName m_soundStop; // 0x0920, 0x8 bytes
+                CUtlSymbolLarge m_currentSound; // 0x0928, 0x8 bytes
+                float m_flBlockDamage; // 0x0930, 0x4 bytes
+                float m_flStartPosition; // 0x0934, 0x4 bytes
+                std::uint8_t pad_0938[0x8]; // 0x0938, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x0940, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x0958, 0x18 bytes
+                float m_flSpeed; // 0x0970, 0x4 bytes
+                bool m_bCreateMovableNavMesh; // 0x0974, 0x1 bytes
+                bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x0975, 0x1 bytes
+                bool m_bCreateNavObstacle; // 0x0976, 0x1 bytes
+                std::uint8_t pad_0977[0x9]; // 0x0977, 0x9 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * bool movewithoutpushingblockers; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncMoveLinearNavObstacleThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncMoveLinearNavMovableThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputOpen; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputClose; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputTeleportToTarget; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputResetPosition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMoveDistanceFromStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMoveDistanceFromEnd; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncMoveLinearStopMoveSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFuncMoveLinear) == 0x888, "CFuncMoveLinear size mismatch");
+            static_assert(sizeof(CFuncMoveLinear) == 0x980, "CFuncMoveLinear size mismatch");
         }
     }
 }

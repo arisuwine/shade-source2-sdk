@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x7a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SlowingTech_ProcVData : public shade::sdk::client::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x0780, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x0790, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SlowingTech_ProcVData) == 0x790, "CCitadel_Modifier_SlowingTech_ProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SlowingTech_ProcVData) == 0x7A0, "CCitadel_Modifier_SlowingTech_ProcVData size mismatch");
         }
     }
 }

@@ -12,18 +12,21 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/CAnimGraphControllerPtr.hpp"
 #include "shade/sdk/entity2/CNetworkVarChainer.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x48
              * Alignment: 0xff
              * Has VTable
+             * Construct Allowed
              * Construct Disallowed
              */
             #pragma pack(push, 1)
@@ -31,13 +34,14 @@ namespace shade {
             public:
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0008, 0x28 bytes
-                std::uint8_t pad_0030[0x20]; // 0x0030, 0x20 bytes
+                shade::sdk::client::CAnimGraphControllerPtr m_pComponentGraphController; // 0x0030, 0x8 bytes
+                std::uint8_t pad_0038[0x10]; // 0x0038, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_Component) == 0x50, "CAI_Component size mismatch");
+            static_assert(sizeof(CAI_Component) == 0x48, "CAI_Component size mismatch");
         }
     }
 }

@@ -12,30 +12,31 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CCitadelModifier.hpp"
+#include "shade/sdk/server/CCitadel_Modifier_Drag.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x240
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_AirLift_Grab : public shade::sdk::server::CCitadelModifier {
+            class CCitadel_Modifier_AirLift_Grab : public shade::sdk::server::CCitadel_Modifier_Drag {
             public:
-                std::uint8_t pad_00d0[0x80]; // 0x00d0, 0x80 bytes
+                std::uint8_t pad_0190[0xb0]; // 0x0190, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_AirLift_Grab) == 0x150, "CCitadel_Modifier_AirLift_Grab size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_AirLift_Grab) == 0x240, "CCitadel_Modifier_AirLift_Grab size mismatch");
         }
     }
 }

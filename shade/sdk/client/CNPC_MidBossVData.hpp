@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,10 +20,6 @@
 
 namespace shade {
     namespace sdk {
-        namespace client {
-            class CCitadelModifier;
-        }
-
         namespace resourcesystem {
             class InfoForResourceTypeIParticleSystemDefinition;
         }
@@ -33,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1540
+             * Size: 0xe08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,22 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_MidBossVData : public shade::sdk::client::CAI_CitadelNPCVData {
             public:
-                std::int32_t m_iStartingHealth; // 0x1348, 0x4 bytes
-                std::int32_t m_iHealthGainPerMinute; // 0x134c, 0x4 bytes
-                float m_flAggroTime; // 0x1350, 0x4 bytes
-                std::uint8_t pad_1354[0x4]; // 0x1354, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DyingSmallExplosion; // 0x1358, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DyingFinalExplosion; // 0x1438, 0xe0 bytes
-                float m_flDyingDuration; // 0x1518, 0x4 bytes
-                std::uint8_t pad_151c[0x4]; // 0x151c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KnockbackAura; // 0x1520, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AggroEnemy; // 0x1530, 0x10 bytes
+                std::int32_t m_iStartingHealth; // 0x0c30, 0x4 bytes
+                std::int32_t m_iHealthGainPerMinute; // 0x0c34, 0x4 bytes
+                float m_flAggroDuration; // 0x0c38, 0x4 bytes
+                std::uint8_t pad_0c3c[0x4]; // 0x0c3c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DyingSmallExplosion; // 0x0c40, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DyingFinalExplosion; // 0x0d20, 0xe0 bytes
+                float m_flDyingDuration; // 0x0e00, 0x4 bytes
+                std::uint8_t pad_0e04[0x4]; // 0x0e04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_MidBossVData) == 0x1540, "CNPC_MidBossVData size mismatch");
+            static_assert(sizeof(CNPC_MidBossVData) == 0xE08, "CNPC_MidBossVData size mismatch");
         }
     }
 }

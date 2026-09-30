@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x248
+             * Size: 0x348
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LightningBall : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_00c0[0x180]; // 0x00c0, 0x180 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hProjectile; // 0x0240, 0x4 bytes
-                std::uint8_t pad_0244[0x4]; // 0x0244, 0x4 bytes
+                std::uint8_t pad_0130[0x210]; // 0x0130, 0x210 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hProjectile; // 0x0340, 0x4 bytes
+                std::uint8_t pad_0344[0x4]; // 0x0344, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LightningBall) == 0x248, "CCitadel_Modifier_LightningBall size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LightningBall) == 0x348, "CCitadel_Modifier_LightningBall size mismatch");
         }
     }
 }

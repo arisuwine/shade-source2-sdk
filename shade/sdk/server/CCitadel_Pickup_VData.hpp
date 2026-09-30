@@ -12,11 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CEntitySubclassVDataBase.hpp"
 #include "shade/sdk/client/CRemapFloat.hpp"
+#include "shade/sdk/client/EPermanentBuffValueUnit.hpp"
 #include "shade/sdk/client/EPickupCollectionMethod.hpp"
 #include "shade/sdk/client/TimeScalingValue_t.hpp"
 #include "shade/sdk/tier2/CRangeFloat.hpp"
@@ -39,7 +41,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9d8
+             * Size: 0xa10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -59,59 +61,71 @@ namespace shade {
                 Color m_Color; // 0x0728, 0x4 bytes
                 std::uint8_t pad_072c[0x4]; // 0x072c, 0x4 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hModel; // 0x0730, 0xe0 bytes
-                CModelMaterialGroupName m_sDefaultMaterialGroupName; // 0x0810, 0x8 bytes
-                CUtlString m_sNameLocString; // 0x0818, 0x8 bytes
-                std::int32_t m_nNameOffset; // 0x0820, 0x4 bytes
-                bool m_bShowOnMinimap; // 0x0824, 0x1 bytes
-                bool m_bIsPermanentPickup; // 0x0825, 0x1 bytes
-                std::uint8_t pad_0826[0x2]; // 0x0826, 0x2 bytes
-                std::int32_t m_iTempParticleSheetIndex; // 0x0828, 0x4 bytes
-                float m_flParticleRadius; // 0x082c, 0x4 bytes
-                CUtlVector<CUtlString> m_vecMinimapCssClasses; // 0x0830, 0x18 bytes
-                CSoundEventName m_sPickupSound; // 0x0848, 0x10 bytes
-                CSoundEventName m_sSpawnSound; // 0x0858, 0x10 bytes
-                CSoundEventName m_sBecomeInteractiveSound; // 0x0868, 0x10 bytes
-                CSoundEventName m_strVacuumStartSound; // 0x0878, 0x10 bytes
-                CSoundEventName m_sAmbientSound; // 0x0888, 0x10 bytes
-                CSoundEventName m_sHitSound; // 0x0898, 0x10 bytes
-                shade::sdk::client::EPickupCollectionMethod m_eCollectionMethod; // 0x08a8, 0x4 bytes
-                shade::sdk::client::TimeScalingValue_t m_flPickupRadius; // 0x08ac, 0x10 bytes
-                bool m_bPickupExpires; // 0x08bc, 0x1 bytes
-                std::uint8_t pad_08bd[0x3]; // 0x08bd, 0x3 bytes
-                shade::sdk::client::TimeScalingValue_t m_flPickupExpirationDuration; // 0x08c0, 0x10 bytes
-                bool bPhysicallyDropToTheGroundOnSpawn; // 0x08d0, 0x1 bytes
-                std::uint8_t pad_08d1[0x3]; // 0x08d1, 0x3 bytes
-                float m_flSolidRadius; // 0x08d4, 0x4 bytes
-                shade::sdk::tier2::CRangeFloat m_fInitialSpawnXYSpeed; // 0x08d8, 0x8 bytes
-                shade::sdk::tier2::CRangeFloat m_fInitialSpawnZSpeed; // 0x08e0, 0x8 bytes
-                float m_flFallGravity; // 0x08e8, 0x4 bytes
-                float m_flHoverOffset; // 0x08ec, 0x4 bytes
-                std::int32_t m_iHitsRequired; // 0x08f0, 0x4 bytes
-                bool m_bHeavyMeleeOnly; // 0x08f4, 0x1 bytes
-                std::uint8_t pad_08f5[0x3]; // 0x08f5, 0x3 bytes
-                float m_flCollisionRadius; // 0x08f8, 0x4 bytes
-                float m_flCenterHeightOffset; // 0x08fc, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ParryCheckModifier; // 0x0900, 0x10 bytes
-                bool m_bPicupIsVacuum; // 0x0910, 0x1 bytes
-                std::uint8_t pad_0911[0x3]; // 0x0911, 0x3 bytes
-                shade::sdk::tier2::CRangeFloat m_flInitialVacuumSideSpeed; // 0x0914, 0x8 bytes
-                shade::sdk::tier2::CRangeFloat m_flInitialVacuumUpSpeed; // 0x091c, 0x8 bytes
-                std::uint8_t pad_0924[0x4]; // 0x0924, 0x4 bytes
-                CPiecewiseCurve m_VacuumToPlayerSpeedCurve; // 0x0928, 0x40 bytes
-                CPiecewiseCurve m_VacuumInitialVelSpeedCurve; // 0x0968, 0x40 bytes
-                float m_flVacuumCloseEnoughToPickup; // 0x09a8, 0x4 bytes
-                shade::sdk::client::CRemapFloat m_EffectDistanceToRadiusRemap; // 0x09ac, 0x10 bytes
-                bool m_bSameTeamOnly; // 0x09bc, 0x1 bytes
-                std::uint8_t pad_09bd[0x3]; // 0x09bd, 0x3 bytes
-                float m_flOutlineRange; // 0x09c0, 0x4 bytes
-                Color m_OutlineColor; // 0x09c4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AuraModifier; // 0x09c8, 0x10 bytes
+                bool m_bShowModelOverhead; // 0x0810, 0x1 bytes
+                std::uint8_t pad_0811[0x7]; // 0x0811, 0x7 bytes
+                CModelMaterialGroupName m_sDefaultMaterialGroupName; // 0x0818, 0x8 bytes
+                CUtlString m_sVacuumAttachmentTarget; // 0x0820, 0x8 bytes
+                CUtlString m_sNameLocString; // 0x0828, 0x8 bytes
+                std::int32_t m_nNameOffset; // 0x0830, 0x4 bytes
+                bool m_bShowOnMinimap; // 0x0834, 0x1 bytes
+                bool m_bIsPermanentPickup; // 0x0835, 0x1 bytes
+                std::uint8_t pad_0836[0x2]; // 0x0836, 0x2 bytes
+                CUtlString m_sBuffTypeLocString; // 0x0838, 0x8 bytes
+                Color m_BuffTypeGraphColor; // 0x0840, 0x4 bytes
+                shade::sdk::client::EPermanentBuffValueUnit m_eBuffTypeValueUnit; // 0x0844, 0x4 bytes
+                std::int32_t m_iTempParticleSheetIndex; // 0x0848, 0x4 bytes
+                float m_flParticleRadius; // 0x084c, 0x4 bytes
+                CUtlString m_strMinimapClass; // 0x0850, 0x8 bytes
+                CPanoramaImageName m_strPingIcon; // 0x0858, 0x10 bytes
+                CSoundEventName m_sPickupSound; // 0x0868, 0x10 bytes
+                CSoundEventName m_strGainedSound; // 0x0878, 0x10 bytes
+                CSoundEventName m_sSpawnSound; // 0x0888, 0x10 bytes
+                CSoundEventName m_sBecomeInteractiveSound; // 0x0898, 0x10 bytes
+                CSoundEventName m_strVacuumStartSound; // 0x08a8, 0x10 bytes
+                CSoundEventName m_sAmbientSound; // 0x08b8, 0x10 bytes
+                CSoundEventName m_sHitSound; // 0x08c8, 0x10 bytes
+                shade::sdk::client::EPickupCollectionMethod m_eCollectionMethod; // 0x08d8, 0x4 bytes
+                bool m_bGiveToWholeTeam; // 0x08dc, 0x1 bytes
+                std::uint8_t pad_08dd[0x3]; // 0x08dd, 0x3 bytes
+                shade::sdk::client::TimeScalingValue_t m_flPickupRadius; // 0x08e0, 0x10 bytes
+                bool m_bLosCheckOnTouchRadius; // 0x08f0, 0x1 bytes
+                bool m_bPickupExpires; // 0x08f1, 0x1 bytes
+                std::uint8_t pad_08f2[0x2]; // 0x08f2, 0x2 bytes
+                shade::sdk::client::TimeScalingValue_t m_flPickupExpirationDuration; // 0x08f4, 0x10 bytes
+                bool bPhysicallyDropToTheGroundOnSpawn; // 0x0904, 0x1 bytes
+                std::uint8_t pad_0905[0x3]; // 0x0905, 0x3 bytes
+                float m_flSolidRadius; // 0x0908, 0x4 bytes
+                shade::sdk::tier2::CRangeFloat m_fInitialSpawnXYSpeed; // 0x090c, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_fInitialSpawnZSpeed; // 0x0914, 0x8 bytes
+                float m_flFallGravity; // 0x091c, 0x4 bytes
+                float m_flHoverOffset; // 0x0920, 0x4 bytes
+                std::int32_t m_iHitsRequired; // 0x0924, 0x4 bytes
+                bool m_bHeavyMeleeOnly; // 0x0928, 0x1 bytes
+                std::uint8_t pad_0929[0x3]; // 0x0929, 0x3 bytes
+                float m_flCollisionRadius; // 0x092c, 0x4 bytes
+                float m_flCenterHeightOffset; // 0x0930, 0x4 bytes
+                std::uint8_t pad_0934[0x4]; // 0x0934, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ParryCheckModifier; // 0x0938, 0x10 bytes
+                bool m_bPicupIsVacuum; // 0x0948, 0x1 bytes
+                std::uint8_t pad_0949[0x3]; // 0x0949, 0x3 bytes
+                shade::sdk::tier2::CRangeFloat m_flInitialVacuumSideSpeed; // 0x094c, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flInitialVacuumUpSpeed; // 0x0954, 0x8 bytes
+                std::uint8_t pad_095c[0x4]; // 0x095c, 0x4 bytes
+                CPiecewiseCurve m_VacuumToPlayerSpeedCurve; // 0x0960, 0x40 bytes
+                CPiecewiseCurve m_VacuumInitialVelSpeedCurve; // 0x09a0, 0x40 bytes
+                float m_flVacuumCloseEnoughToPickup; // 0x09e0, 0x4 bytes
+                shade::sdk::client::CRemapFloat m_EffectDistanceToRadiusRemap; // 0x09e4, 0x10 bytes
+                bool m_bSameTeamOnly; // 0x09f4, 0x1 bytes
+                std::uint8_t pad_09f5[0x3]; // 0x09f5, 0x3 bytes
+                float m_flOutlineRange; // 0x09f8, 0x4 bytes
+                Color m_OutlineColor; // 0x09fc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AuraModifier; // 0x0a00, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Pickup_VData) == 0x9D8, "CCitadel_Pickup_VData size mismatch");
+            static_assert(sizeof(CCitadel_Pickup_VData) == 0xA10, "CCitadel_Pickup_VData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CRenderPortal : public shade::sdk::server::CBaseModelEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hLocalPortalLink; // 0x0780, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hRemotePortalLink; // 0x0784, 0x4 bytes
-                CUtlString m_brushModelName; // 0x0788, 0x8 bytes
-                float m_flFadeStartDist; // 0x0790, 0x4 bytes
-                float m_flFadeEndDist; // 0x0794, 0x4 bytes
-                float m_flFadeStartAngle; // 0x0798, 0x4 bytes
-                float m_flFadeEndAngle; // 0x079c, 0x4 bytes
-                float m_flRemoteViewForwardOffset; // 0x07a0, 0x4 bytes
-                Color m_fadeToColor; // 0x07a4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLocalPortalLink; // 0x0878, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hRemotePortalLink; // 0x087c, 0x4 bytes
+                CUtlString m_brushModelName; // 0x0880, 0x8 bytes
+                float m_flFadeStartDist; // 0x0888, 0x4 bytes
+                float m_flFadeEndDist; // 0x088c, 0x4 bytes
+                float m_flFadeStartAngle; // 0x0890, 0x4 bytes
+                float m_flFadeEndAngle; // 0x0894, 0x4 bytes
+                float m_flRemoteViewForwardOffset; // 0x0898, 0x4 bytes
+                Color m_fadeToColor; // 0x089c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRenderPortal) == 0x7A8, "CRenderPortal size mismatch");
+            static_assert(sizeof(CRenderPortal) == 0x8A0, "CRenderPortal size mismatch");
         }
     }
 }

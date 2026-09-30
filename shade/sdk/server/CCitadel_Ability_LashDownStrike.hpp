@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1600
+             * Size: 0x1d88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,28 +41,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_LashDownStrike : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x180]; // 0x0f70, 0x180 bytes
-                shade::sdk::entity2::GameTime_t m_ImpactTime; // 0x10f0, 0x4 bytes
-                Vector m_vDamagePos; // 0x10f4, 0xc bytes
-                Vector m_vDamageDir; // 0x1100, 0xc bytes
-                std::uint8_t pad_110c[0x4]; // 0x110c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnemies; // 0x1110, 0x18 bytes
-                std::uint8_t pad_1128[0x20]; // 0x1128, 0x20 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x1148, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_PreviewEffect; // 0x1160, 0x4 bytes
-                std::uint8_t pad_1164[0x484]; // 0x1164, 0x484 bytes
-                Vector m_vStrikeVel; // 0x15e8, 0xc bytes
-                float m_flInitialYaw; // 0x15f4, 0x4 bytes
-                float m_flStartHeight; // 0x15f8, 0x4 bytes
-                std::uint8_t pad_15fc[0x4]; // 0x15fc, 0x4 bytes
+                std::uint8_t pad_14a0[0x210]; // 0x14a0, 0x210 bytes
+                shade::sdk::entity2::GameTime_t m_ImpactTime; // 0x16b0, 0x4 bytes
+                VectorWS m_vDamagePos; // 0x16b4, 0xc bytes
+                Vector m_vDamageDir; // 0x16c0, 0xc bytes
+                std::uint8_t pad_16cc[0x4]; // 0x16cc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnemies; // 0x16d0, 0x18 bytes
+                std::uint8_t pad_16e8[0x20]; // 0x16e8, 0x20 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x1708, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_PreviewEffect; // 0x1720, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_ActiveEffect; // 0x1724, 0x4 bytes
+                std::uint8_t pad_1728[0x648]; // 0x1728, 0x648 bytes
+                bool m_bIsCrashingDown; // 0x1d70, 0x1 bytes
+                std::uint8_t pad_1d71[0x3]; // 0x1d71, 0x3 bytes
+                Vector m_vStrikeVel; // 0x1d74, 0xc bytes
+                float m_flInitialYaw; // 0x1d80, 0x4 bytes
+                float m_flStartHeight; // 0x1d84, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_LashDownStrike) == 0x1600, "CCitadel_Ability_LashDownStrike size mismatch");
+            static_assert(sizeof(CCitadel_Ability_LashDownStrike) == 0x1D88, "CCitadel_Ability_LashDownStrike size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,26 +22,25 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CCitadelModifier : public shade::sdk::server::CBaseModifier {
             public:
-                std::uint8_t pad_0098[0x18]; // 0x0098, 0x18 bytes
-                float m_flEffectiveness; // 0x00b0, 0x4 bytes
-                std::uint8_t pad_00b4[0x1c]; // 0x00b4, 0x1c bytes
+                std::uint8_t pad_0098[0x88]; // 0x0098, 0x88 bytes
+                float m_flEffectiveness; // 0x0120, 0x4 bytes
+                std::uint8_t pad_0124[0x1c]; // 0x0124, 0x1c bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pVecAbilityValues; // Offset: 0xa8, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifier) == 0xD0, "CCitadelModifier size mismatch");
+            static_assert(sizeof(CCitadelModifier) == 0x140, "CCitadelModifier size mismatch");
         }
     }
 }

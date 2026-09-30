@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1a60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,23 +42,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_BarrackBoss : public shade::sdk::server::CAI_CitadelNPC {
             public:
-                std::uint8_t pad_17b0[0x18]; // 0x17b0, 0x18 bytes
-                shade::sdk::server::CCitadelPlayerClipComponent m_CCitadelPlayerClipComponent; // 0x17c8, 0x20 bytes
-                std::uint8_t pad_17e8[0x4]; // 0x17e8, 0x4 bytes
-                std::int32_t m_iLane; // 0x17ec, 0x4 bytes
-                std::uint8_t pad_17f0[0x300]; // 0x17f0, 0x300 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTrooperSpawnPoint; // 0x1af0, 0x4 bytes
-                shade::sdk::client::LaneSide_t m_LaneSide; // 0x1af4, 0x1 bytes
-                std::uint8_t pad_1af5[0x3]; // 0x1af5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1af8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1afc, 0x4 bytes
-                std::uint8_t pad_1b00[0x10]; // 0x1b00, 0x10 bytes
+                std::uint8_t pad_1710[0x10]; // 0x1710, 0x10 bytes
+                shade::sdk::server::CCitadelPlayerClipComponent m_CCitadelPlayerClipComponent; // 0x1720, 0x20 bytes
+                std::uint8_t pad_1740[0x4]; // 0x1740, 0x4 bytes
+                std::int32_t m_iLane; // 0x1744, 0x4 bytes
+                std::uint8_t pad_1748[0x300]; // 0x1748, 0x300 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTrooperSpawnPoint; // 0x1a48, 0x4 bytes
+                shade::sdk::client::LaneSide_t m_LaneSide; // 0x1a4c, 0x1 bytes
+                std::uint8_t pad_1a4d[0x3]; // 0x1a4d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1a50, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1a54, 0x4 bytes
+                std::uint8_t pad_1a58[0x8]; // 0x1a58, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_BarrackBoss) == 0x1B10, "CNPC_BarrackBoss size mismatch");
+            static_assert(sizeof(CNPC_BarrackBoss) == 0x1A60, "CNPC_BarrackBoss size mismatch");
         }
     }
 }

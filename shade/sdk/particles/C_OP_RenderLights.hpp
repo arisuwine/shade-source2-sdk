@@ -12,17 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/particles/AnimationType_t.hpp"
 #include "shade/sdk/particles/C_OP_RenderPoints.hpp"
+#include "shade/sdk/particleslib/AnimationType_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x250
+             * Size: 0x258
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderLights : public shade::sdk::particles::C_OP_RenderPoints {
             public:
-                float m_flAnimationRate; // 0x0230, 0x4 bytes
-                shade::sdk::particles::AnimationType_t m_nAnimationType; // 0x0234, 0x4 bytes
-                bool m_bAnimateInFPS; // 0x0238, 0x1 bytes
-                std::uint8_t pad_0239[0x3]; // 0x0239, 0x3 bytes
-                float m_flMinSize; // 0x023c, 0x4 bytes
-                float m_flMaxSize; // 0x0240, 0x4 bytes
-                float m_flStartFadeSize; // 0x0244, 0x4 bytes
-                float m_flEndFadeSize; // 0x0248, 0x4 bytes
-                std::uint8_t pad_024c[0x4]; // 0x024c, 0x4 bytes
+                float m_flAnimationRate; // 0x0238, 0x4 bytes
+                shade::sdk::particleslib::AnimationType_t m_nAnimationType; // 0x023c, 0x4 bytes
+                bool m_bAnimateInFPS; // 0x0240, 0x1 bytes
+                std::uint8_t pad_0241[0x3]; // 0x0241, 0x3 bytes
+                float m_flMinSize; // 0x0244, 0x4 bytes
+                float m_flMaxSize; // 0x0248, 0x4 bytes
+                float m_flStartFadeSize; // 0x024c, 0x4 bytes
+                float m_flEndFadeSize; // 0x0250, 0x4 bytes
+                std::uint8_t pad_0254[0x4]; // 0x0254, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderLights) == 0x250, "C_OP_RenderLights size mismatch");
+            static_assert(sizeof(C_OP_RenderLights) == 0x258, "C_OP_RenderLights size mismatch");
         }
     }
 }

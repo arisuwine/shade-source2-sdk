@@ -12,11 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/pulse_runtime_lib/CPulse_OutflowConnection.hpp"
-#include "shade/sdk/server/CPulseCell_Outflow_PlaySceneBase.hpp"
+#include "shade/sdk/server/CPulseCell_Outflow_PlayVCDBase.hpp"
 
 namespace shade {
     namespace sdk {
@@ -25,7 +26,7 @@ namespace shade {
         }
 
         namespace server {
-            struct CPulseCell_Outflow_PlayVCD__VCDRequirementInfo_t;
+            struct CPulseCell_Outflow_PlayVCD__VCDEventCursorInfo_t;
         }
     }
 }
@@ -34,25 +35,25 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a0
+             * Size: 0x1e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CPulseCell_Outflow_PlayVCD : public shade::sdk::server::CPulseCell_Outflow_PlaySceneBase {
+            class CPulseCell_Outflow_PlayVCD : public shade::sdk::server::CPulseCell_Outflow_PlayVCDBase {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCChoreoSceneResource> m_hChoreoScene; // 0x00f0, 0x8 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_OnPaused; // 0x00f8, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_OnResumed; // 0x0140, 0x48 bytes
-                CUtlVector<shade::sdk::server::CPulseCell_Outflow_PlayVCD__VCDRequirementInfo_t> m_OutRequirements; // 0x0188, 0x18 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCChoreoSceneResource> m_hChoreoScene; // 0x0138, 0x8 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_OnPaused; // 0x0140, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_OnResumed; // 0x0188, 0x48 bytes
+                CUtlVector<shade::sdk::server::CPulseCell_Outflow_PlayVCD__VCDEventCursorInfo_t> m_OutRequirements; // 0x01d0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Outflow_PlayVCD) == 0x1A0, "CPulseCell_Outflow_PlayVCD size mismatch");
+            static_assert(sizeof(CPulseCell_Outflow_PlayVCD) == 0x1E8, "CPulseCell_Outflow_PlayVCD size mismatch");
         }
     }
 }

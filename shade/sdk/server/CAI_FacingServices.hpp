@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x288
+             * Size: 0x280
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,21 +42,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_FacingServices : public shade::sdk::client::CAI_Component {
             public:
-                shade::sdk::server::CAI_InterestTarget m_pEntityFacingRequests[0xa]; // 0x0050, 0x208 bytes
-                shade::sdk::server::AI_ScheduleFacingTargetPriority_t m_eScheduleFacingRequestPriority; // 0x0258, 0x1 bytes
-                shade::sdk::server::AI_Strafing_t m_strafingRequests[0x7]; // 0x0259, 0x7 bytes
-                bool m_pEnableForceFacing[0x2]; // 0x0260, 0x2 bytes
-                std::uint8_t m_nEntityFacingLockCount; // 0x0262, 0x1 bytes
-                std::uint8_t pad_0263[0x5]; // 0x0263, 0x5 bytes
-                CUtlVector<shade::sdk::server::ChoreoEntityFacing_t> m_vecChoreoEntityFacings; // 0x0268, 0x18 bytes
-                bool m_bFailedTargetValidation; // 0x0280, 0x1 bytes
-                std::uint8_t pad_0281[0x7]; // 0x0281, 0x7 bytes
+                shade::sdk::server::CAI_InterestTarget m_pEntityFacingRequests[0xa]; // 0x0048, 0x208 bytes
+                shade::sdk::server::AI_ScheduleFacingTargetPriority_t m_eScheduleFacingRequestPriority; // 0x0250, 0x1 bytes
+                shade::sdk::server::AI_Strafing_t m_strafingRequests[0x7]; // 0x0251, 0x7 bytes
+                bool m_pEnableForceFacing[0x2]; // 0x0258, 0x2 bytes
+                std::uint8_t m_nEntityFacingLockCount; // 0x025a, 0x1 bytes
+                std::uint8_t pad_025b[0x5]; // 0x025b, 0x5 bytes
+                CUtlVector<shade::sdk::server::ChoreoEntityFacing_t> m_vecChoreoEntityFacings; // 0x0260, 0x18 bytes
+                bool m_bFailedTargetValidation; // 0x0278, 0x1 bytes
+                std::uint8_t pad_0279[0x7]; // 0x0279, 0x7 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CAI_FacingServices) == 0x288, "CAI_FacingServices size mismatch");
+            static_assert(sizeof(CAI_FacingServices) == 0x280, "CAI_FacingServices size mismatch");
         }
     }
 }

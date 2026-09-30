@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,8 +32,7 @@ namespace shade {
             class C_CitadelZiplinePath : public shade::sdk::client::C_PathParticleRope {
             public:
                 std::int32_t m_iLaneNumber; // 0x0700, 0x4 bytes
-                bool m_bUseBaseLaneColor; // 0x0704, 0x1 bytes
-                std::uint8_t pad_0705[0x3]; // 0x0705, 0x3 bytes
+                std::uint8_t pad_0704[0x4]; // 0x0704, 0x4 bytes
             };
             #pragma pack(pop)
 

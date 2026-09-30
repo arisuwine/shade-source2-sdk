@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,19 +22,19 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x68
+             * Size: 0x138
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
             struct CitadelCurvedAbilityProjectileCreateInfo_t : public shade::sdk::server::CitadelAbilityProjectileCreateInfo_t {
-                float m_flTimeToReturn; // 0x0060, 0x4 bytes
-                std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
+                float m_flTimeToReturn; // 0x0130, 0x4 bytes
+                std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelCurvedAbilityProjectileCreateInfo_t) == 0x68, "CitadelCurvedAbilityProjectileCreateInfo_t size mismatch");
+            static_assert(sizeof(CitadelCurvedAbilityProjectileCreateInfo_t) == 0x138, "CitadelCurvedAbilityProjectileCreateInfo_t size mismatch");
         }
     }
 }

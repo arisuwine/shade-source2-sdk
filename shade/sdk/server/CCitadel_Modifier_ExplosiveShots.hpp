@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x270
+             * Size: 0x370
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ExplosiveShots : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<shade::sdk::server::CCitadel_Modifier_ExplosiveShots__BulletEntityPair_t> m_vecHitEnts; // 0x00d0, 0x18 bytes
-                bool m_bExplosionCanHitMultipleTimes; // 0x00e8, 0x1 bytes
-                std::uint8_t pad_00e9[0x187]; // 0x00e9, 0x187 bytes
+                CUtlVector<shade::sdk::server::CCitadel_Modifier_ExplosiveShots__BulletEntityPair_t> m_vecHitEnts; // 0x0140, 0x18 bytes
+                bool m_bExplosionCanHitMultipleTimes; // 0x0158, 0x1 bytes
+                std::uint8_t pad_0159[0x217]; // 0x0159, 0x217 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ExplosiveShots) == 0x270, "CCitadel_Modifier_ExplosiveShots size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ExplosiveShots) == 0x370, "CCitadel_Modifier_ExplosiveShots size mismatch");
         }
     }
 }

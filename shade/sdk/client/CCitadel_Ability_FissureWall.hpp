@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1448
+             * Size: 0x1a08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,27 +40,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FissureWall : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x10]; // 0x11d8, 0x10 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecWallPreviewParticles; // 0x11e8, 0x18 bytes
-                std::uint8_t pad_1200[0x200]; // 0x1200, 0x200 bytes
-                VectorWS m_vecPosition; // 0x1400, 0xc bytes
-                VectorWS m_vecTravellingPosition; // 0x140c, 0xc bytes
-                VectorWS m_vecInitialPosition; // 0x1418, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_CastTime; // 0x1424, 0x4 bytes
-                Vector m_vecDirection; // 0x1428, 0xc bytes
-                Vector m_vecLeft; // 0x1434, 0xc bytes
-                float m_Length; // 0x1440, 0x4 bytes
-                bool m_bTraveling; // 0x1444, 0x1 bytes
-                bool m_bPreview; // 0x1445, 0x1 bytes
-                std::uint8_t pad_1446[0x2]; // 0x1446, 0x2 bytes
+                std::uint8_t pad_16d8[0x10]; // 0x16d8, 0x10 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecWallPreviewParticles; // 0x16e8, 0x18 bytes
+                std::uint8_t pad_1700[0x2c0]; // 0x1700, 0x2c0 bytes
+                VectorWS m_vecPosition; // 0x19c0, 0xc bytes
+                VectorWS m_vecTravellingPosition; // 0x19cc, 0xc bytes
+                VectorWS m_vecInitialPosition; // 0x19d8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_CastTime; // 0x19e4, 0x4 bytes
+                Vector m_vecDirection; // 0x19e8, 0xc bytes
+                Vector m_vecLeft; // 0x19f4, 0xc bytes
+                float m_Length; // 0x1a00, 0x4 bytes
+                bool m_bTraveling; // 0x1a04, 0x1 bytes
+                bool m_bPreview; // 0x1a05, 0x1 bytes
+                std::uint8_t pad_1a06[0x2]; // 0x1a06, 0x2 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FissureWall) == 0x1448, "CCitadel_Ability_FissureWall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FissureWall) == 0x1A08, "CCitadel_Ability_FissureWall size mismatch");
         }
     }
 }

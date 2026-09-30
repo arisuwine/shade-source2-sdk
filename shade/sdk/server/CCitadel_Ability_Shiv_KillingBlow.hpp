@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1818
+             * Size: 0x1fc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,33 +43,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Shiv_KillingBlow : public shade::sdk::server::CCitadelBaseShivAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnts; // 0x0f70, 0x18 bytes
-                std::uint8_t pad_0f88[0x488]; // 0x0f88, 0x488 bytes
-                bool m_bDamagedAnyHero; // 0x1410, 0x1 bytes
-                bool m_bActive; // 0x1411, 0x1 bytes
-                bool m_bStartedOnGround; // 0x1412, 0x1 bytes
-                bool m_bIsBonusCast; // 0x1413, 0x1 bytes
-                Vector m_vStartPosition; // 0x1414, 0xc bytes
-                QAngle m_qCurrentAngles; // 0x1420, 0xc bytes
-                std::uint8_t pad_142c[0x4]; // 0x142c, 0x4 bytes
-                shade::sdk::server::CCitadelAutoScaledTime m_flDepartureTime; // 0x1430, 0x18 bytes
-                shade::sdk::server::CCitadelAutoScaledTime m_flArrivalTime; // 0x1448, 0x18 bytes
-                Vector m_vLastKnownSafePos; // 0x1460, 0xc bytes
-                bool m_bMadeSlashParticle; // 0x146c, 0x1 bytes
-                std::uint8_t pad_146d[0x3]; // 0x146d, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x1470, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDrainSuppressEndTime; // 0x1474, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRecastWindowEnd; // 0x1478, 0x4 bytes
-                std::uint8_t pad_147c[0x384]; // 0x147c, 0x384 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1800, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnts; // 0x14a0, 0x18 bytes
+                std::uint8_t pad_14b8[0x638]; // 0x14b8, 0x638 bytes
+                bool m_bDamagedAnyHero; // 0x1af0, 0x1 bytes
+                bool m_bActive; // 0x1af1, 0x1 bytes
+                bool m_bStartedOnGround; // 0x1af2, 0x1 bytes
+                bool m_bIsBonusCast; // 0x1af3, 0x1 bytes
+                VectorWS m_vStartPosition; // 0x1af4, 0xc bytes
+                QAngle m_qCurrentAngles; // 0x1b00, 0xc bytes
+                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flDepartureTime; // 0x1b10, 0x18 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flArrivalTime; // 0x1b28, 0x18 bytes
+                VectorWS m_vLastKnownSafePos; // 0x1b40, 0xc bytes
+                bool m_bMadeSlashParticle; // 0x1b4c, 0x1 bytes
+                std::uint8_t pad_1b4d[0x3]; // 0x1b4d, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x1b50, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRecastWindowEnd; // 0x1b54, 0x4 bytes
+                std::uint8_t pad_1b58[0x420]; // 0x1b58, 0x420 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1f78, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_RecastWindowModifierHandle; // 0x1f90, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_RageDrainSuppressedHandle; // 0x1fa8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x1818, "CCitadel_Ability_Shiv_KillingBlow size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x1FC0, "CCitadel_Ability_Shiv_KillingBlow size mismatch");
         }
     }
 }

@@ -12,17 +12,19 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/modellib/MovementGaitId_t.hpp"
+#include "shade/sdk/modellib/SharedMovementGait_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x50
-             * Alignment: 0xff
+             * Size: 0x48
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct PathAccompanyNode_t {
@@ -30,12 +32,14 @@ namespace shade {
                 Vector m_vInitialPosition; // 0x0008, 0xc bytes
                 float m_flRadius; // 0x0014, 0x4 bytes
                 float m_flRoll; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
-                shade::sdk::modellib::MovementGaitId_t m_eMovementGaitOverride; // 0x0020, 0x8 bytes
-                VectorWS m_vWorldPosition; // 0x0028, 0xc bytes
-                Vector m_vForward; // 0x0034, 0xc bytes
-                Vector m_vLeft; // 0x0040, 0xc bytes
-                float m_flDistToNext; // 0x004c, 0x4 bytes
+                bool m_bOverrideGaitInCombat; // 0x001c, 0x1 bytes
+                shade::sdk::modellib::SharedMovementGait_t m_eMinMovementGait; // 0x001d, 0x1 bytes
+                shade::sdk::modellib::SharedMovementGait_t m_eMaxMovementGait; // 0x001e, 0x1 bytes
+                std::uint8_t pad_001f[0x1]; // 0x001f, 0x1 bytes
+                VectorWS m_vWorldPosition; // 0x0020, 0xc bytes
+                Vector m_vForward; // 0x002c, 0xc bytes
+                Vector m_vLeft; // 0x0038, 0xc bytes
+                float m_flDistToNext; // 0x0044, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -44,7 +48,7 @@ namespace shade {
              * CUtlSymbolLarge customGaitOverride; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(PathAccompanyNode_t) == 0x50, "PathAccompanyNode_t size mismatch");
+            static_assert(sizeof(PathAccompanyNode_t) == 0x48, "PathAccompanyNode_t size mismatch");
         }
     }
 }

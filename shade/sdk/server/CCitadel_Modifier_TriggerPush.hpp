@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TriggerPush : public shade::sdk::server::CCitadelModifier {
             public:
-                Vector m_vPush; // 0x00d0, 0xc bytes
-                std::uint8_t pad_00dc[0x4]; // 0x00dc, 0x4 bytes
+                Vector m_vPush; // 0x0140, 0xc bytes
+                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TriggerPush) == 0xE0, "CCitadel_Modifier_TriggerPush size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TriggerPush) == 0x150, "CCitadel_Modifier_TriggerPush size mismatch");
         }
     }
 }

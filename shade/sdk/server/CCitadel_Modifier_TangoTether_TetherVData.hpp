@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7d0
+             * Size: 0x7e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +39,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TangoTether_TetherVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CSoundEventName m_HealSound; // 0x0750, 0x10 bytes
-                CSoundEventName m_GrappleHitSound; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x0770, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisconnectingModifier; // 0x0780, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisconnectedModifier; // 0x0790, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LockedTargetModifier; // 0x07a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoConnectionModifier; // 0x07b0, 0x10 bytes
-                float m_flMinConnectTime; // 0x07c0, 0x4 bytes
-                float m_flDisconnectDistanceBuffer; // 0x07c4, 0x4 bytes
-                float m_flCandidateCloserDistance; // 0x07c8, 0x4 bytes
-                float m_flTargetAwayDistance; // 0x07cc, 0x4 bytes
+                CSoundEventName m_HealSound; // 0x0760, 0x10 bytes
+                CSoundEventName m_GrappleHitSound; // 0x0770, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x0780, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisconnectingModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisconnectedModifier; // 0x07a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LockedTargetModifier; // 0x07b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoConnectionModifier; // 0x07c0, 0x10 bytes
+                float m_flMinConnectTime; // 0x07d0, 0x4 bytes
+                float m_flDisconnectDistanceBuffer; // 0x07d4, 0x4 bytes
+                float m_flCandidateCloserDistance; // 0x07d8, 0x4 bytes
+                float m_flTargetAwayDistance; // 0x07dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TangoTether_TetherVData) == 0x7D0, "CCitadel_Modifier_TangoTether_TetherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TangoTether_TetherVData) == 0x7E0, "CCitadel_Modifier_TangoTether_TetherVData size mismatch");
         }
     }
 }

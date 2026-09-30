@@ -12,14 +12,13 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace client {
             enum class EBaseUserMessages : std::uint32_t {
                 UM_AchievementEvent = 0x65,
-                UM_CloseCaption = 0x66,
-                UM_CloseCaptionDirect = 0x67,
                 UM_CurrentTimescale = 0x68,
                 UM_DesiredTimescale = 0x69,
                 UM_Fade = 0x6a,
@@ -67,6 +66,10 @@ namespace shade {
                 UM_ExtraUserData = 0xa4,
                 UM_NotifyResponseFound = 0xa5,
                 UM_PlayResponseConditional = 0xa6,
+                UM_UserSentBugBug = 0xa7,
+                UM_UsageReport = 0xa8,
+                UM_RemoteServerCommand = 0xa9,
+                UM_RemoteServerResponse = 0xaa,
                 UM_MAX_BASE = 0xc8
             };
         }

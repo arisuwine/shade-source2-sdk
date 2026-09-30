@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1090
+             * Size: 0x1620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Mirage_SandPhantom : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bHasVictims; // 0x0f70, 0x1 bytes
-                std::uint8_t pad_0f71[0x7]; // 0x0f71, 0x7 bytes
-                CUtlVector<CModifierHandleTyped<shade::sdk::server::CCitadelModifier>> m_vecVictimModifiers; // 0x0f78, 0x18 bytes
-                std::uint8_t pad_0f90[0x100]; // 0x0f90, 0x100 bytes
+                bool m_bHasVictims; // 0x14a0, 0x1 bytes
+                std::uint8_t pad_14a1[0x7]; // 0x14a1, 0x7 bytes
+                CUtlVector<CModifierHandleTyped<shade::sdk::server::CCitadelModifier>> m_vecVictimModifiers; // 0x14a8, 0x18 bytes
+                std::uint8_t pad_14c0[0x160]; // 0x14c0, 0x160 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Mirage_SandPhantom) == 0x1090, "CAbility_Mirage_SandPhantom size mismatch");
+            static_assert(sizeof(CAbility_Mirage_SandPhantom) == 0x1620, "CAbility_Mirage_SandPhantom size mismatch");
         }
     }
 }

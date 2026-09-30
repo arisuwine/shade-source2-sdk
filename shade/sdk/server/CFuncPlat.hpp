@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x830
+             * Size: 0x930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncPlat : public shade::sdk::server::CBasePlatTrain {
             public:
-                CUtlSymbolLarge m_sNoise; // 0x0828, 0x8 bytes
+                float m_flSpeed; // 0x0920, 0x4 bytes
+                std::uint8_t pad_0924[0x4]; // 0x0924, 0x4 bytes
+                CUtlSymbolLarge m_sNoise; // 0x0928, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CFuncPlatPlatUse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncPlatCallGoDown; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncPlatCallHitTop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CFuncPlatCallHitBottom; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputGoUp; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputGoDown; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncPlat) == 0x830, "CFuncPlat size mismatch");
+            static_assert(sizeof(CFuncPlat) == 0x930, "CFuncPlat size mismatch");
         }
     }
 }

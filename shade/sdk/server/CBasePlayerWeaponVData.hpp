@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -26,10 +27,6 @@ namespace shade {
             class InfoForResourceTypeCModel;
             class InfoForResourceTypeIParticleSystemDefinition;
         }
-
-        namespace server {
-            class CCitadelModifier;
-        }
     }
 }
 
@@ -37,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x448
+             * Size: 0x510
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -49,48 +46,48 @@ namespace shade {
                 std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
                 CUtlString m_szClassName; // 0x0010, 0x8 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_szWorldModel; // 0x0018, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sToolsOnlyOwnerModelName; // 0x00f8, 0xe0 bytes
-                bool m_bBuiltRightHanded; // 0x01d8, 0x1 bytes
-                bool m_bAllowFlipping; // 0x01d9, 0x1 bytes
-                std::uint8_t pad_01da[0x6]; // 0x01da, 0x6 bytes
-                CAttachmentNameSymbolWithStorage m_sMuzzleAttachment; // 0x01e0, 0x20 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szMuzzleFlashParticle; // 0x0200, 0xe0 bytes
-                CUtlString m_szMuzzleFlashParticleConfig; // 0x02e0, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szBarrelSmokeParticle; // 0x02e8, 0xe0 bytes
-                std::uint8_t m_nMuzzleSmokeShotThreshold; // 0x03c8, 0x1 bytes
-                std::uint8_t pad_03c9[0x3]; // 0x03c9, 0x3 bytes
-                float m_flMuzzleSmokeTimeout; // 0x03cc, 0x4 bytes
-                float m_flMuzzleSmokeDecrementRate; // 0x03d0, 0x4 bytes
-                bool m_bGenerateMuzzleLight; // 0x03d4, 0x1 bytes
-                bool m_bLinkedCooldowns; // 0x03d5, 0x1 bytes
-                std::uint8_t pad_03d6[0x2]; // 0x03d6, 0x2 bytes
-                CUtlVector<CEmbeddedSubclass<shade::sdk::server::CCitadelModifier>> m_vecIntrinsicModifiers; // 0x03d8, 0x18 bytes
-                shade::sdk::client::ItemFlagTypes_t m_iFlags; // 0x03f0, 0x1 bytes
-                std::uint8_t pad_03f1[0x3]; // 0x03f1, 0x3 bytes
-                std::int32_t m_iWeight; // 0x03f4, 0x4 bytes
-                bool m_bAutoSwitchTo; // 0x03f8, 0x1 bytes
-                bool m_bAutoSwitchFrom; // 0x03f9, 0x1 bytes
-                shade::sdk::client::AmmoIndex_t m_nPrimaryAmmoType; // 0x03fa, 0x1 bytes
-                shade::sdk::client::AmmoIndex_t m_nSecondaryAmmoType; // 0x03fb, 0x1 bytes
-                std::int32_t m_iMaxClip1; // 0x03fc, 0x4 bytes
-                std::int32_t m_iMaxClip2; // 0x0400, 0x4 bytes
-                std::int32_t m_iDefaultClip1; // 0x0404, 0x4 bytes
-                std::int32_t m_iDefaultClip2; // 0x0408, 0x4 bytes
-                bool m_bReserveAmmoAsClips; // 0x040c, 0x1 bytes
-                bool m_bTreatAsSingleClip; // 0x040d, 0x1 bytes
-                bool m_bKeepLoadedAmmo; // 0x040e, 0x1 bytes
-                std::uint8_t pad_040f[0x1]; // 0x040f, 0x1 bytes
-                shade::sdk::client::RumbleEffect_t m_iRumbleEffect; // 0x0410, 0x4 bytes
-                float m_flDropSpeed; // 0x0414, 0x4 bytes
-                std::int32_t m_iSlot; // 0x0418, 0x4 bytes
-                std::int32_t m_iPosition; // 0x041c, 0x4 bytes
-                CUtlOrderedMap<shade::sdk::client::WeaponSound_t, CSoundEventName> m_aShootSounds; // 0x0420, 0x28 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_szWorldModelAg2Override; // 0x00f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sToolsOnlyOwnerModelName; // 0x01d8, 0xe0 bytes
+                bool m_bBuiltRightHanded; // 0x02b8, 0x1 bytes
+                bool m_bAllowFlipping; // 0x02b9, 0x1 bytes
+                std::uint8_t pad_02ba[0x6]; // 0x02ba, 0x6 bytes
+                CAttachmentNameSymbolWithStorage m_sMuzzleAttachment; // 0x02c0, 0x20 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szMuzzleFlashParticle; // 0x02e0, 0xe0 bytes
+                CUtlString m_szMuzzleFlashParticleConfig; // 0x03c0, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szBarrelSmokeParticle; // 0x03c8, 0xe0 bytes
+                std::uint8_t m_nMuzzleSmokeShotThreshold; // 0x04a8, 0x1 bytes
+                std::uint8_t pad_04a9[0x3]; // 0x04a9, 0x3 bytes
+                float m_flMuzzleSmokeTimeout; // 0x04ac, 0x4 bytes
+                float m_flMuzzleSmokeDecrementRate; // 0x04b0, 0x4 bytes
+                bool m_bGenerateMuzzleLight; // 0x04b4, 0x1 bytes
+                bool m_bShouldAnimateInWorld; // 0x04b5, 0x1 bytes
+                bool m_bLinkedCooldowns; // 0x04b6, 0x1 bytes
+                shade::sdk::client::ItemFlagTypes_t m_iFlags; // 0x04b7, 0x1 bytes
+                std::int32_t m_iWeight; // 0x04b8, 0x4 bytes
+                bool m_bAutoSwitchTo; // 0x04bc, 0x1 bytes
+                bool m_bAutoSwitchFrom; // 0x04bd, 0x1 bytes
+                shade::sdk::client::AmmoIndex_t m_nPrimaryAmmoType; // 0x04be, 0x1 bytes
+                shade::sdk::client::AmmoIndex_t m_nSecondaryAmmoType; // 0x04bf, 0x1 bytes
+                std::int32_t m_iMaxClip1; // 0x04c0, 0x4 bytes
+                std::int32_t m_iMaxClip2; // 0x04c4, 0x4 bytes
+                std::int32_t m_iDefaultClip1; // 0x04c8, 0x4 bytes
+                std::int32_t m_iDefaultClip2; // 0x04cc, 0x4 bytes
+                bool m_bReserveAmmoAsClips; // 0x04d0, 0x1 bytes
+                bool m_bTreatAsSingleClip; // 0x04d1, 0x1 bytes
+                bool m_bKeepLoadedAmmo; // 0x04d2, 0x1 bytes
+                std::uint8_t pad_04d3[0x1]; // 0x04d3, 0x1 bytes
+                shade::sdk::client::RumbleEffect_t m_iRumbleEffect; // 0x04d4, 0x4 bytes
+                float m_flDropSpeed; // 0x04d8, 0x4 bytes
+                std::int32_t m_iSlot; // 0x04dc, 0x4 bytes
+                std::int32_t m_iPosition; // 0x04e0, 0x4 bytes
+                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                CUtlOrderedMap<shade::sdk::client::WeaponSound_t, CSoundEventName> m_aShootSounds; // 0x04e8, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBasePlayerWeaponVData) == 0x448, "CBasePlayerWeaponVData size mismatch");
+            static_assert(sizeof(CBasePlayerWeaponVData) == 0x510, "CBasePlayerWeaponVData size mismatch");
         }
     }
 }

@@ -12,13 +12,19 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace client {
             enum class EHeroReleaseVoteOption_None : std::uint32_t {
-                hero_base = 0x0,
-                Count = 0x1
+                hero_ratking = 0x0,
+                hero_chessmaster = 0x1,
+                hero_artist = 0x2,
+                hero_nurse = 0x3,
+                hero_baba = 0x4,
+                hero_deadpack = 0x5,
+                Count = 0x6
             };
         }
     }

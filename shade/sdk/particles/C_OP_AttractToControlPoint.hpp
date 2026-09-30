@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x550
+             * Size: 0x6e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_AttractToControlPoint : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                Vector m_vecComponentScale; // 0x01e8, 0xc bytes
-                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fForceAmount; // 0x01f8, 0x170 bytes
-                float m_fFalloffPower; // 0x0368, 0x4 bytes
-                std::uint8_t pad_036c[0x4]; // 0x036c, 0x4 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x0370, 0x68 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fForceAmountMin; // 0x03d8, 0x170 bytes
-                bool m_bApplyMinForce; // 0x0548, 0x1 bytes
-                std::uint8_t pad_0549[0x7]; // 0x0549, 0x7 bytes
+                Vector m_vecComponentScale; // 0x01f0, 0xc bytes
+                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fForceAmount; // 0x0200, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fMinimumDistance; // 0x0378, 0x178 bytes
+                float m_fFalloffPower; // 0x04f0, 0x4 bytes
+                std::uint8_t pad_04f4[0x4]; // 0x04f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x04f8, 0x68 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fForceAmountMin; // 0x0560, 0x178 bytes
+                bool m_bApplyMinForce; // 0x06d8, 0x1 bytes
+                std::uint8_t pad_06d9[0x7]; // 0x06d9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_AttractToControlPoint) == 0x550, "C_OP_AttractToControlPoint size mismatch");
+            static_assert(sizeof(C_OP_AttractToControlPoint) == 0x6E0, "C_OP_AttractToControlPoint size mismatch");
         }
     }
 }

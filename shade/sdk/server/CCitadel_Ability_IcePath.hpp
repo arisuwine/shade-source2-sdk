@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1190
+             * Size: 0x1720
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,26 +33,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_IcePath : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x100]; // 0x0f70, 0x100 bytes
-                VectorWS m_vInitialPosition; // 0x1070, 0xc bytes
-                std::uint8_t pad_107c[0x4]; // 0x107c, 0x4 bytes
-                shade::sdk::server::CIcePathShardGenerator m_cShardGenerator; // 0x1080, 0xe8 bytes
-                bool m_bIcePathing; // 0x1168, 0x1 bytes
-                std::uint8_t pad_1169[0x3]; // 0x1169, 0x3 bytes
-                QAngle m_qLastAngles; // 0x116c, 0xc bytes
-                Vector m_vLastVelocity; // 0x1178, 0xc bytes
-                bool m_bFirstMovementTick; // 0x1184, 0x1 bytes
-                std::uint8_t pad_1185[0x3]; // 0x1185, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0x1188, 0x4 bytes
-                std::uint8_t pad_118c[0x4]; // 0x118c, 0x4 bytes
+                std::uint8_t pad_14a0[0x160]; // 0x14a0, 0x160 bytes
+                VectorWS m_vInitialPosition; // 0x1600, 0xc bytes
+                std::uint8_t pad_160c[0x4]; // 0x160c, 0x4 bytes
+                shade::sdk::server::CIcePathShardGenerator m_cShardGenerator; // 0x1610, 0xe8 bytes
+                bool m_bIcePathing; // 0x16f8, 0x1 bytes
+                std::uint8_t pad_16f9[0x3]; // 0x16f9, 0x3 bytes
+                QAngle m_qLastAngles; // 0x16fc, 0xc bytes
+                Vector m_vLastVelocity; // 0x1708, 0xc bytes
+                bool m_bFirstMovementTick; // 0x1714, 0x1 bytes
+                std::uint8_t pad_1715[0x3]; // 0x1715, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0x1718, 0x4 bytes
+                std::uint8_t pad_171c[0x4]; // 0x171c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_IcePath) == 0x1190, "CCitadel_Ability_IcePath size mismatch");
+            static_assert(sizeof(CCitadel_Ability_IcePath) == 0x1720, "CCitadel_Ability_IcePath size mismatch");
         }
     }
 }

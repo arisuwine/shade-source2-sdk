@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1fe8
+             * Size: 0x1b70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,42 +43,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_Ability01VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EffectModifier; // 0x1818, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StaringModifier; // 0x1828, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1838, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UnstoppableWhileChannelingModifier; // 0x1848, 0x10 bytes
-                float m_AirSpeedMax; // 0x1858, 0x4 bytes
-                float m_FallSpeedMax; // 0x185c, 0x4 bytes
-                float m_VerticalDrag; // 0x1860, 0x4 bytes
-                float m_AirDrag; // 0x1864, 0x4 bytes
-                float m_CameraTurnRateMax; // 0x1868, 0x4 bytes
-                float m_flShotCosmeticVarianceMagnitude; // 0x186c, 0x4 bytes
-                float m_JumpCeilingCheckDistance; // 0x1870, 0x4 bytes
-                float m_JumpSpeed; // 0x1874, 0x4 bytes
-                float m_JumpPitch; // 0x1878, 0x4 bytes
-                float m_JumpUpDownSpeed; // 0x187c, 0x4 bytes
-                float m_ConeSpacingMeters; // 0x1880, 0x4 bytes
-                std::uint8_t pad_1884[0x4]; // 0x1884, 0x4 bytes
-                CPiecewiseCurve m_RadiusGrowthCurve; // 0x1888, 0x40 bytes
-                Color aimColorDesat; // 0x18c8, 0x4 bytes
-                Color aimColorSat; // 0x18cc, 0x4 bytes
-                Color aimColorOutline; // 0x18d0, 0x4 bytes
-                float m_flSatVolumeInnerConeSize; // 0x18d4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x18d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EyeGlowParticle; // 0x19b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetDebuffParticle; // 0x1a98, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x1b78, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusIndicatorParticle; // 0x1c58, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusIndicatorClientParticle; // 0x1d38, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1e18, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WakeUpDamageParticle; // 0x1ef8, 0xe0 bytes
-                CSoundEventName m_SleepHitSound; // 0x1fd8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EffectModifier; // 0x13a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StaringModifier; // 0x13b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x13c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UnstoppableWhileChannelingModifier; // 0x13d0, 0x10 bytes
+                float m_AirSpeedMax; // 0x13e0, 0x4 bytes
+                float m_FallSpeedMax; // 0x13e4, 0x4 bytes
+                float m_VerticalDrag; // 0x13e8, 0x4 bytes
+                float m_AirDrag; // 0x13ec, 0x4 bytes
+                float m_CameraTurnRateMax; // 0x13f0, 0x4 bytes
+                float m_flShotCosmeticVarianceMagnitude; // 0x13f4, 0x4 bytes
+                float m_JumpCeilingCheckDistance; // 0x13f8, 0x4 bytes
+                float m_JumpSpeed; // 0x13fc, 0x4 bytes
+                float m_JumpPitch; // 0x1400, 0x4 bytes
+                float m_JumpUpDownSpeed; // 0x1404, 0x4 bytes
+                float m_ConeSpacingMeters; // 0x1408, 0x4 bytes
+                std::uint8_t pad_140c[0x4]; // 0x140c, 0x4 bytes
+                CPiecewiseCurve m_RadiusGrowthCurve; // 0x1410, 0x40 bytes
+                Color aimColorDesat; // 0x1450, 0x4 bytes
+                Color aimColorSat; // 0x1454, 0x4 bytes
+                Color aimColorOutline; // 0x1458, 0x4 bytes
+                float m_flSatVolumeInnerConeSize; // 0x145c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x1460, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EyeGlowParticle; // 0x1540, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetDebuffParticle; // 0x1620, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x1700, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusIndicatorParticle; // 0x17e0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusIndicatorClientParticle; // 0x18c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x19a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WakeUpDamageParticle; // 0x1a80, 0xe0 bytes
+                CSoundEventName m_SleepHitSound; // 0x1b60, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_Ability01VData) == 0x1FE8, "CCitadel_Ability_Familiar_Ability01VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_Ability01VData) == 0x1B70, "CCitadel_Ability_Familiar_Ability01VData size mismatch");
         }
     }
 }

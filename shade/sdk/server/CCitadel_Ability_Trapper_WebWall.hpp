@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1220
+             * Size: 0x1840
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Trapper_WebWall : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x280]; // 0x0f70, 0x280 bytes
-                Vector m_vecCastPosition; // 0x11f0, 0xc bytes
-                Vector m_vecCastPositionNormal; // 0x11fc, 0xc bytes
-                Vector m_vecEndPosition; // 0x1208, 0xc bytes
-                Vector m_vecEndPositionNormal; // 0x1214, 0xc bytes
+                std::uint8_t pad_14a0[0x370]; // 0x14a0, 0x370 bytes
+                VectorWS m_vecCastPosition; // 0x1810, 0xc bytes
+                Vector m_vecCastPositionNormal; // 0x181c, 0xc bytes
+                VectorWS m_vecEndPosition; // 0x1828, 0xc bytes
+                Vector m_vecEndPositionNormal; // 0x1834, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Trapper_WebWall) == 0x1220, "CCitadel_Ability_Trapper_WebWall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Trapper_WebWall) == 0x1840, "CCitadel_Ability_Trapper_WebWall size mismatch");
         }
     }
 }

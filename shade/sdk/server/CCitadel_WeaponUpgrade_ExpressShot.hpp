@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1228
+             * Size: 0x1848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_WeaponUpgrade_ExpressShot : public shade::sdk::server::CCitadel_Item {
             public:
-                std::uint8_t pad_0f78[0x280]; // 0x0f78, 0x280 bytes
-                std::int32_t m_iShotsToCreate; // 0x11f8, 0x4 bytes
-                bool m_bIsInExpressShot; // 0x11fc, 0x1 bytes
-                std::uint8_t pad_11fd[0x3]; // 0x11fd, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tNextShotTime; // 0x1200, 0x4 bytes
-                std::uint8_t pad_1204[0x1c]; // 0x1204, 0x1c bytes
-                bool m_bIsPrimaryProc; // 0x1220, 0x1 bytes
-                std::uint8_t pad_1221[0x7]; // 0x1221, 0x7 bytes
+                std::uint8_t pad_14a8[0x370]; // 0x14a8, 0x370 bytes
+                std::int32_t m_iShotsToCreate; // 0x1818, 0x4 bytes
+                bool m_bIsInExpressShot; // 0x181c, 0x1 bytes
+                bool m_bProcShotCharged; // 0x181d, 0x1 bytes
+                std::uint8_t pad_181e[0x2]; // 0x181e, 0x2 bytes
+                float m_flProcChargeBonusDamage; // 0x1820, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tNextShotTime; // 0x1824, 0x4 bytes
+                std::uint8_t pad_1828[0x18]; // 0x1828, 0x18 bytes
+                bool m_bIsPrimaryProc; // 0x1840, 0x1 bytes
+                std::uint8_t pad_1841[0x7]; // 0x1841, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_WeaponUpgrade_ExpressShot) == 0x1228, "CCitadel_WeaponUpgrade_ExpressShot size mismatch");
+            static_assert(sizeof(CCitadel_WeaponUpgrade_ExpressShot) == 0x1848, "CCitadel_WeaponUpgrade_ExpressShot size mismatch");
         }
     }
 }

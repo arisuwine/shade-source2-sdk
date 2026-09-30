@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoTrooperSpawn : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                std::uint8_t pad_04a0[0x4]; // 0x04a0, 0x4 bytes
-                std::int32_t m_iLane; // 0x04a4, 0x4 bytes
-                bool m_bDisableZiplining; // 0x04a8, 0x1 bytes
-                std::uint8_t pad_04a9[0x1f]; // 0x04a9, 0x1f bytes
+                std::uint8_t pad_04b0[0x4]; // 0x04b0, 0x4 bytes
+                std::int32_t m_iLane; // 0x04b4, 0x4 bytes
+                bool m_bDisableZiplining; // 0x04b8, 0x1 bytes
+                std::uint8_t pad_04b9[0x1f]; // 0x04b9, 0x1f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoTrooperSpawn) == 0x4C8, "CInfoTrooperSpawn size mismatch");
+            static_assert(sizeof(CInfoTrooperSpawn) == 0x4D8, "CInfoTrooperSpawn size mismatch");
         }
     }
 }

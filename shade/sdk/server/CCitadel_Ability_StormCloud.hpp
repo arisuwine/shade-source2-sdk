@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1300
+             * Size: 0x1980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_StormCloud : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x0f70, 0x4 bytes
-                std::uint8_t pad_0f74[0x384]; // 0x0f74, 0x384 bytes
-                float m_flFloat; // 0x12f8, 0x4 bytes
-                std::int32_t m_nLightningStrikesRemaining; // 0x12fc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x14a0, 0x4 bytes
+                std::uint8_t pad_14a4[0x4d4]; // 0x14a4, 0x4d4 bytes
+                float m_flFloat; // 0x1978, 0x4 bytes
+                std::int32_t m_nLightningStrikesRemaining; // 0x197c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_StormCloud) == 0x1300, "CCitadel_Ability_StormCloud size mismatch");
+            static_assert(sizeof(CCitadel_Ability_StormCloud) == 0x1980, "CCitadel_Ability_StormCloud size mismatch");
         }
     }
 }

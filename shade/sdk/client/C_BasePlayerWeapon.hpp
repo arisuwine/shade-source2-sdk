@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xce0
+             * Size: 0xdd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BasePlayerWeapon : public shade::sdk::client::CBaseAnimGraph {
             public:
-                shade::sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0x0ca8, 0x4 bytes
-                float m_flNextPrimaryAttackTickRatio; // 0x0cac, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0x0cb0, 0x4 bytes
-                float m_flNextSecondaryAttackTickRatio; // 0x0cb4, 0x4 bytes
-                std::int32_t m_iClip1; // 0x0cb8, 0x4 bytes
-                std::int32_t m_iClip2; // 0x0cbc, 0x4 bytes
-                std::int32_t m_pReserveAmmo[0x2]; // 0x0cc0, 0x8 bytes
-                std::uint8_t pad_0cc8[0x18]; // 0x0cc8, 0x18 bytes
+                shade::sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0x0da0, 0x4 bytes
+                float m_flNextPrimaryAttackTickRatio; // 0x0da4, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0x0da8, 0x4 bytes
+                float m_flNextSecondaryAttackTickRatio; // 0x0dac, 0x4 bytes
+                std::int32_t m_iClip1; // 0x0db0, 0x4 bytes
+                std::int32_t m_iClip2; // 0x0db4, 0x4 bytes
+                std::int32_t m_pReserveAmmo[0x2]; // 0x0db8, 0x8 bytes
+                std::uint8_t pad_0dc0[0x18]; // 0x0dc0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(C_BasePlayerWeapon) == 0xCE0, "C_BasePlayerWeapon size mismatch");
+            static_assert(sizeof(C_BasePlayerWeapon) == 0xDD8, "C_BasePlayerWeapon size mismatch");
         }
     }
 }

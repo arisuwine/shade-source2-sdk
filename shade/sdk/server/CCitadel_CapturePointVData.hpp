@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x490
+             * Size: 0x498
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -60,15 +61,18 @@ namespace shade {
                 shade::sdk::client::CRemapFloat m_remapCapturersToCaptureTime; // 0x0464, 0x10 bytes
                 float m_flEnemyProgressRemoveScale; // 0x0474, 0x4 bytes
                 float m_flTotalHealthToCapture; // 0x0478, 0x4 bytes
-                shade::sdk::tier2::CRangeFloat m_flInitialEnableTimeInSeconds; // 0x047c, 0x8 bytes
-                float m_flPreEnableWindowInSeconds; // 0x0484, 0x4 bytes
-                shade::sdk::tier2::CRangeFloat m_flRespawnRangeInSeconds; // 0x0488, 0x8 bytes
+                bool m_bDestroyNearbyNeutrals; // 0x047c, 0x1 bytes
+                std::uint8_t pad_047d[0x3]; // 0x047d, 0x3 bytes
+                shade::sdk::tier2::CRangeFloat m_flInitialEnableTimeInSeconds; // 0x0480, 0x8 bytes
+                float m_flPreEnableWindowInSeconds; // 0x0488, 0x4 bytes
+                shade::sdk::tier2::CRangeFloat m_flRespawnRangeInSeconds; // 0x048c, 0x8 bytes
+                std::uint8_t pad_0494[0x4]; // 0x0494, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_CapturePointVData) == 0x490, "CCitadel_CapturePointVData size mismatch");
+            static_assert(sizeof(CCitadel_CapturePointVData) == 0x498, "CCitadel_CapturePointVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xbf8
+             * Size: 0xe50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_SpiderProjectile : public shade::sdk::server::CCitadelProjectile {
             public:
-                shade::sdk::entity2::GameTime_t m_flNextRandomPositionTime; // 0x0860, 0x4 bytes
-                std::uint8_t pad_0864[0x394]; // 0x0864, 0x394 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRandomPositionTime; // 0x0968, 0x4 bytes
+                std::uint8_t pad_096c[0x4e4]; // 0x096c, 0x4e4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_SpiderProjectile) == 0xBF8, "CCitadel_Projectile_SpiderProjectile size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_SpiderProjectile) == 0xE50, "CCitadel_Projectile_SpiderProjectile size mismatch");
         }
     }
 }

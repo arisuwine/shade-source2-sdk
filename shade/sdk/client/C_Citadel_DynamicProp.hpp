@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf30
+             * Size: 0x1090
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,23 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_DynamicProp : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_0ef0[0x10]; // 0x0ef0, 0x10 bytes
-                std::int32_t m_nPlayerTeamEvent; // 0x0f00, 0x4 bytes
-                std::uint8_t pad_0f04[0x4]; // 0x0f04, 0x4 bytes
-                CUtlString m_strDefaultSkin; // 0x0f08, 0x8 bytes
-                CUtlString m_strFriendlySkin; // 0x0f10, 0x8 bytes
-                CUtlString m_strEnemySkin; // 0x0f18, 0x8 bytes
-                bool m_bIsWorld; // 0x0f20, 0x1 bytes
-                std::uint8_t pad_0f21[0xf]; // 0x0f21, 0xf bytes
+                std::uint8_t pad_1050[0x10]; // 0x1050, 0x10 bytes
+                std::int32_t m_nPlayerTeamEvent; // 0x1060, 0x4 bytes
+                std::uint8_t pad_1064[0x4]; // 0x1064, 0x4 bytes
+                CUtlString m_strDefaultSkin; // 0x1068, 0x8 bytes
+                CUtlString m_strFriendlySkin; // 0x1070, 0x8 bytes
+                CUtlString m_strEnemySkin; // 0x1078, 0x8 bytes
+                bool m_bIsWorld; // 0x1080, 0x1 bytes
+                std::uint8_t pad_1081[0xf]; // 0x1081, 0xf bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * CUtlSymbolLarge SetFriendlySkin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge SetEnemySkin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_DynamicProp) == 0xF30, "C_Citadel_DynamicProp size mismatch");
+            static_assert(sizeof(C_Citadel_DynamicProp) == 0x1090, "C_Citadel_DynamicProp size mismatch");
         }
     }
 }

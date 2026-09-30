@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x508
+             * Size: 0x518
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseTrackedStatsEntity : public shade::sdk::server::CBaseEntity {
             public:
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::TrackedStatNetworkData_t> m_vecTrackedStats; // 0x04a0, 0x68 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::TrackedStatNetworkData_t> m_vecTrackedStats; // 0x04b0, 0x68 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBaseTrackedStatsEntity) == 0x508, "CBaseTrackedStatsEntity size mismatch");
+            static_assert(sizeof(CBaseTrackedStatsEntity) == 0x518, "CBaseTrackedStatsEntity size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x520
+             * Size: 0x530
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,32 +39,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoOffscreenPanoramaTexture : public shade::sdk::server::CPointEntity {
             public:
-                bool m_bDisabled; // 0x04a0, 0x1 bytes
-                bool m_bEnableMipGen; // 0x04a1, 0x1 bytes
-                std::uint8_t pad_04a2[0x2]; // 0x04a2, 0x2 bytes
-                std::int32_t m_nResolutionX; // 0x04a4, 0x4 bytes
-                std::int32_t m_nResolutionY; // 0x04a8, 0x4 bytes
-                std::uint8_t pad_04ac[0x4]; // 0x04ac, 0x4 bytes
-                CUtlSymbolLarge m_szPanelType; // 0x04b0, 0x8 bytes
-                CUtlSymbolLarge m_szLayoutFileName; // 0x04b8, 0x8 bytes
-                CUtlSymbolLarge m_RenderAttrName; // 0x04c0, 0x8 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseModelEntity>> m_TargetEntities; // 0x04c8, 0x18 bytes
-                std::int32_t m_nTargetChangeCount; // 0x04e0, 0x4 bytes
-                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
-                CNetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x04e8, 0x18 bytes
-                CUtlSymbolLarge m_szTargetsName; // 0x0500, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseModelEntity>> m_AdditionalTargetEntities; // 0x0508, 0x18 bytes
+                bool m_bDisabled; // 0x04b0, 0x1 bytes
+                bool m_bEnableMipGen; // 0x04b1, 0x1 bytes
+                std::uint8_t pad_04b2[0x2]; // 0x04b2, 0x2 bytes
+                std::int32_t m_nResolutionX; // 0x04b4, 0x4 bytes
+                std::int32_t m_nResolutionY; // 0x04b8, 0x4 bytes
+                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
+                CUtlSymbolLarge m_szPanelType; // 0x04c0, 0x8 bytes
+                CUtlSymbolLarge m_szLayoutFileName; // 0x04c8, 0x8 bytes
+                CUtlSymbolLarge m_RenderAttrName; // 0x04d0, 0x8 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseModelEntity>> m_TargetEntities; // 0x04d8, 0x18 bytes
+                std::int32_t m_nTargetChangeCount; // 0x04f0, 0x4 bytes
+                std::uint8_t pad_04f4[0x4]; // 0x04f4, 0x4 bytes
+                CNetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x04f8, 0x18 bytes
+                CUtlSymbolLarge m_szTargetsName; // 0x0510, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseModelEntity>> m_AdditionalTargetEntities; // 0x0518, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoOffscreenPanoramaTexture) == 0x520, "CInfoOffscreenPanoramaTexture size mismatch");
+            static_assert(sizeof(CInfoOffscreenPanoramaTexture) == 0x530, "CInfoOffscreenPanoramaTexture size mismatch");
         }
     }
 }

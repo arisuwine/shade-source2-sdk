@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -54,7 +55,7 @@ namespace shade {
                 bool m_bUnstoppable; // 0x0aca, 0x1 bytes
                 std::uint8_t pad_0acb[0x1]; // 0x0acb, 0x1 bytes
                 shade::sdk::entity2::GameTime_t m_flFinishedTime; // 0x0acc, 0x4 bytes
-                Vector m_vecFinishOrigin; // 0x0ad0, 0xc bytes
+                VectorWS m_vecFinishOrigin; // 0x0ad0, 0xc bytes
                 QAngle m_vecOriginalAngles; // 0x0adc, 0xc bytes
                 QAngle m_vecFinishAngles; // 0x0ae8, 0xc bytes
                 bool m_bPreventChangesWhileMoving; // 0x0af4, 0x1 bytes
@@ -78,16 +79,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartCommentary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartUnstoppableCommentary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPointCommentaryNodeSpinThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPointCommentaryNodeUpdateViewThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPointCommentaryNodeUpdateViewPostThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CPointCommentaryNodeAcculumatePlayTimeThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPointCommentaryNode) == 0xB70, "CPointCommentaryNode size mismatch");
         }

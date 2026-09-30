@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf30
+             * Size: 0x1080
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,22 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BasePropDoor : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_0ef0[0x10]; // 0x0ef0, 0x10 bytes
-                shade::sdk::client::DoorState_t m_eDoorState; // 0x0f00, 0x4 bytes
-                bool m_modelChanged; // 0x0f04, 0x1 bytes
-                bool m_bLocked; // 0x0f05, 0x1 bytes
-                bool m_bNoNPCs; // 0x0f06, 0x1 bytes
-                std::uint8_t pad_0f07[0x1]; // 0x0f07, 0x1 bytes
-                Vector m_closedPosition; // 0x0f08, 0xc bytes
-                QAngle m_closedAngles; // 0x0f14, 0xc bytes
-                CHandle<shade::sdk::client::C_BasePropDoor> m_hMaster; // 0x0f20, 0x4 bytes
-                Vector m_vWhereToSetLightingOrigin; // 0x0f24, 0xc bytes
+                shade::sdk::client::DoorState_t m_eDoorState; // 0x1050, 0x4 bytes
+                bool m_modelChanged; // 0x1054, 0x1 bytes
+                bool m_bLocked; // 0x1055, 0x1 bytes
+                bool m_bNoNPCs; // 0x1056, 0x1 bytes
+                std::uint8_t pad_1057[0x1]; // 0x1057, 0x1 bytes
+                VectorWS m_closedPosition; // 0x1058, 0xc bytes
+                QAngle m_closedAngles; // 0x1064, 0xc bytes
+                CHandle<shade::sdk::client::C_BasePropDoor> m_hMaster; // 0x1070, 0x4 bytes
+                std::uint8_t pad_1074[0xc]; // 0x1074, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BasePropDoor) == 0xF30, "C_BasePropDoor size mismatch");
+            static_assert(sizeof(C_BasePropDoor) == 0x1080, "C_BasePropDoor size mismatch");
         }
     }
 }

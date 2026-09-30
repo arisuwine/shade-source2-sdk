@@ -12,18 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp"
-#include "shade/sdk/pulse_runtime_lib/CPulse_ResumePoint.hpp"
 #include "shade/sdk/pulse_runtime_lib/SignatureOutflow_Resume.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf0
+             * Size: 0x130
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_Outflow_ListenForEntityOutput : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                shade::sdk::pulse_runtime_lib::SignatureOutflow_Resume m_OnFired; // 0x0048, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnCanceled; // 0x0090, 0x48 bytes
-                CGlobalSymbol m_strEntityOutput; // 0x00d8, 0x8 bytes
-                CUtlString m_strEntityOutputParam; // 0x00e0, 0x8 bytes
-                bool m_bListenUntilCanceled; // 0x00e8, 0x1 bytes
-                std::uint8_t pad_00e9[0x7]; // 0x00e9, 0x7 bytes
+                shade::sdk::pulse_runtime_lib::SignatureOutflow_Resume m_OnFired; // 0x00d8, 0x48 bytes
+                CGlobalSymbol m_strEntityOutput; // 0x0120, 0x8 bytes
+                bool m_bListenUntilCanceled; // 0x0128, 0x1 bytes
+                std::uint8_t pad_0129[0x7]; // 0x0129, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Outflow_ListenForEntityOutput) == 0xF0, "CPulseCell_Outflow_ListenForEntityOutput size mismatch");
+            static_assert(sizeof(CPulseCell_Outflow_ListenForEntityOutput) == 0x130, "CPulseCell_Outflow_ListenForEntityOutput size mismatch");
         }
     }
 }

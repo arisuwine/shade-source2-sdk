@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a40
+             * Size: 0x15c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Werewolf_UnloadGun2VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1818, 0x10 bytes
-                CSoundEventName m_strShootSound; // 0x1828, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GunReloadParticle; // 0x1838, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MuzzleFlashParticle; // 0x1918, 0xe0 bytes
-                bool m_bGrantAmmoOnCast; // 0x19f8, 0x1 bytes
-                std::uint8_t pad_19f9[0x7]; // 0x19f9, 0x7 bytes
-                CPiecewiseCurve m_InaccuracyCurveScaleDuringPrecast; // 0x1a00, 0x40 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x13a0, 0x10 bytes
+                CSoundEventName m_strShootSound; // 0x13b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GunReloadParticle; // 0x13c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MuzzleFlashParticle; // 0x14a0, 0xe0 bytes
+                bool m_bGrantAmmoOnCast; // 0x1580, 0x1 bytes
+                std::uint8_t pad_1581[0x7]; // 0x1581, 0x7 bytes
+                CPiecewiseCurve m_InaccuracyCurveScaleDuringPrecast; // 0x1588, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Werewolf_UnloadGun2VData) == 0x1A40, "CCitadel_Werewolf_UnloadGun2VData size mismatch");
+            static_assert(sizeof(CCitadel_Werewolf_UnloadGun2VData) == 0x15C8, "CCitadel_Werewolf_UnloadGun2VData size mismatch");
         }
     }
 }

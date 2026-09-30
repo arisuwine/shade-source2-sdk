@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x760
+             * Size: 0x770
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DamageResistanceVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flDamageResistancePerSecond; // 0x0750, 0x4 bytes
-                float m_flTickInterval; // 0x0754, 0x4 bytes
-                float m_flDamageResistanceBonusPerGameMinute; // 0x0758, 0x4 bytes
-                std::uint8_t pad_075c[0x4]; // 0x075c, 0x4 bytes
+                float m_flDamageResistancePerSecond; // 0x0760, 0x4 bytes
+                float m_flTickInterval; // 0x0764, 0x4 bytes
+                float m_flDamageResistanceBonusPerGameMinute; // 0x0768, 0x4 bytes
+                bool m_bIsForMidBoss; // 0x076c, 0x1 bytes
+                std::uint8_t pad_076d[0x3]; // 0x076d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DamageResistanceVData) == 0x760, "CCitadel_Modifier_DamageResistanceVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DamageResistanceVData) == 0x770, "CCitadel_Modifier_DamageResistanceVData size mismatch");
         }
     }
 }

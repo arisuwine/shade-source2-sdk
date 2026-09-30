@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9b0
+             * Size: 0xbb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseDoor : public shade::sdk::client::C_BaseToggle {
             public:
-                bool m_bIsUsable; // 0x09a8, 0x1 bytes
-                std::uint8_t pad_09a9[0x7]; // 0x09a9, 0x7 bytes
+                bool m_bIsUsable; // 0x0bb0, 0x1 bytes
+                std::uint8_t pad_0bb1[0x7]; // 0x0bb1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseDoor) == 0x9B0, "C_BaseDoor size mismatch");
+            static_assert(sizeof(C_BaseDoor) == 0xBB8, "C_BaseDoor size mismatch");
         }
     }
 }

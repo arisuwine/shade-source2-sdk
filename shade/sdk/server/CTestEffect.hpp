@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x570
+             * Size: 0x580
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CTestEffect : public shade::sdk::server::CBaseEntity {
             public:
-                std::int32_t m_iLoop; // 0x04a0, 0x4 bytes
-                std::int32_t m_iBeam; // 0x04a4, 0x4 bytes
-                CHandle<shade::sdk::server::CBeam> m_pBeam[0x18]; // 0x04a8, 0x60 bytes
-                shade::sdk::entity2::GameTime_t m_flBeamTime[0x18]; // 0x0508, 0x60 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0568, 0x4 bytes
-                std::uint8_t pad_056c[0x4]; // 0x056c, 0x4 bytes
+                std::int32_t m_iLoop; // 0x04b0, 0x4 bytes
+                std::int32_t m_iBeam; // 0x04b4, 0x4 bytes
+                CHandle<shade::sdk::server::CBeam> m_pBeam[0x18]; // 0x04b8, 0x60 bytes
+                shade::sdk::entity2::GameTime_t m_flBeamTime[0x18]; // 0x0518, 0x60 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0578, 0x4 bytes
+                std::uint8_t pad_057c[0x4]; // 0x057c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTestEffect) == 0x570, "CTestEffect size mismatch");
+            static_assert(sizeof(CTestEffect) == 0x580, "CTestEffect size mismatch");
         }
     }
 }

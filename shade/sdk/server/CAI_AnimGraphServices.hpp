@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa0
+             * Size: 0xb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,14 +33,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_AnimGraphServices : public shade::sdk::client::CAI_Component {
             public:
-                shade::sdk::server::HandshakeInfo_t m_pHandshakeInfo[0x2]; // 0x0050, 0x30 bytes
-                shade::sdk::server::LastIncomingHit_t m_LastIncomingHit; // 0x0080, 0x20 bytes
+                shade::sdk::server::HandshakeInfo_t m_pHandshakeInfo[0x2]; // 0x0048, 0x50 bytes
+                shade::sdk::server::LastIncomingHit_t m_LastIncomingHit; // 0x0098, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_AnimGraphServices) == 0xA0, "CAI_AnimGraphServices size mismatch");
+            static_assert(sizeof(CAI_AnimGraphServices) == 0xB8, "CAI_AnimGraphServices size mismatch");
         }
     }
 }

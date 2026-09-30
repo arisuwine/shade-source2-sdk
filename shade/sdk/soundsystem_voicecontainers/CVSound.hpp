@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,34 +30,30 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0x40
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             class CVSound {
             public:
-                std::int32_t m_nRate; // 0x0000, 0x4 bytes
-                shade::sdk::soundsystem_voicecontainers::CVSoundFormat_t m_nFormat; // 0x0004, 0x1 bytes
-                std::uint8_t pad_0005[0x3]; // 0x0005, 0x3 bytes
-                std::uint32_t m_nChannels; // 0x0008, 0x4 bytes
-                std::int32_t m_nLoopStart; // 0x000c, 0x4 bytes
-                std::uint32_t m_nSampleCount; // 0x0010, 0x4 bytes
-                float m_flDuration; // 0x0014, 0x4 bytes
-                CUtlVector<shade::sdk::soundsystem_voicecontainers::CAudioSentence> m_Sentences; // 0x0018, 0x18 bytes
-                std::uint32_t m_nStreamingSize; // 0x0030, 0x4 bytes
-                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
-                CUtlVector<std::int32_t> m_nSeekTable; // 0x0038, 0x18 bytes
-                std::int32_t m_nLoopEnd; // 0x0050, 0x4 bytes
-                std::uint8_t pad_0054[0x4]; // 0x0054, 0x4 bytes
-                CUtlBinaryBlock m_encodedHeader; // 0x0058, 0x10 bytes
-                std::uint8_t pad_0068[0x10]; // 0x0068, 0x10 bytes
+                CUtlLeanVector<shade::sdk::soundsystem_voicecontainers::CAudioSentence> m_Sentences; // 0x0000, 0x10 bytes
+                std::int32_t m_nRate; // 0x0010, 0x4 bytes
+                shade::sdk::soundsystem_voicecontainers::CVSoundFormat_t m_nFormat; // 0x0014, 0x1 bytes
+                std::uint8_t pad_0015[0x3]; // 0x0015, 0x3 bytes
+                std::uint32_t m_nChannels; // 0x0018, 0x4 bytes
+                std::int32_t m_nLoopStart; // 0x001c, 0x4 bytes
+                std::uint32_t m_nSampleCount; // 0x0020, 0x4 bytes
+                float m_flDuration; // 0x0024, 0x4 bytes
+                std::uint32_t m_nStreamingSize; // 0x0028, 0x4 bytes
+                std::int32_t m_nLoopEnd; // 0x002c, 0x4 bytes
+                std::uint8_t pad_0030[0x10]; // 0x0030, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVSound) == 0x78, "CVSound size mismatch");
+            static_assert(sizeof(CVSound) == 0x40, "CVSound size mismatch");
         }
     }
 }

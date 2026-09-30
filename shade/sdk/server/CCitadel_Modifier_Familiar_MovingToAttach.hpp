@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,16 +38,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Familiar_MovingToAttach : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_00d0[0x4]; // 0x00d0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x00d4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x00d8, 0x4 bytes
-                std::uint8_t pad_00dc[0x4]; // 0x00dc, 0x4 bytes
+                std::uint8_t pad_0140[0x4]; // 0x0140, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0144, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Familiar_MovingToAttach) == 0xE0, "CCitadel_Modifier_Familiar_MovingToAttach size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Familiar_MovingToAttach) == 0x150, "CCitadel_Modifier_Familiar_MovingToAttach size mismatch");
         }
     }
 }

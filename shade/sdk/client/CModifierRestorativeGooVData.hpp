@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa58
+             * Size: 0xa68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +44,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierRestorativeGooVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RestorativeGooEndParticle; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_ModelName; // 0x0830, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SelfCubeModelName; // 0x0910, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BreakoutProgressBarModifier; // 0x09f0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PostCubeBuffModifier; // 0x0a00, 0x10 bytes
-                CSoundEventName m_NonTargetLoopingSound; // 0x0a10, 0x10 bytes
-                CSoundEventName m_TargetLoopingSound; // 0x0a20, 0x10 bytes
-                CSoundEventName m_LightMeleeImpact; // 0x0a30, 0x10 bytes
-                CSoundEventName m_HeavyMeleeImpact; // 0x0a40, 0x10 bytes
-                float m_flBreakoutProectionTime; // 0x0a50, 0x4 bytes
-                std::uint8_t pad_0a54[0x4]; // 0x0a54, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RestorativeGooEndParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_ModelName; // 0x0840, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SelfCubeModelName; // 0x0920, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BreakoutProgressBarModifier; // 0x0a00, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PostCubeBuffModifier; // 0x0a10, 0x10 bytes
+                CSoundEventName m_NonTargetLoopingSound; // 0x0a20, 0x10 bytes
+                CSoundEventName m_TargetLoopingSound; // 0x0a30, 0x10 bytes
+                CSoundEventName m_LightMeleeImpact; // 0x0a40, 0x10 bytes
+                CSoundEventName m_HeavyMeleeImpact; // 0x0a50, 0x10 bytes
+                float m_flBreakoutProectionTime; // 0x0a60, 0x4 bytes
+                std::uint8_t pad_0a64[0x4]; // 0x0a64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierRestorativeGooVData) == 0xA58, "CModifierRestorativeGooVData size mismatch");
+            static_assert(sizeof(CModifierRestorativeGooVData) == 0xA68, "CModifierRestorativeGooVData size mismatch");
         }
     }
 }

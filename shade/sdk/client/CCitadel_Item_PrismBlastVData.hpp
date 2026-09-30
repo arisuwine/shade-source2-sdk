@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c78
+             * Size: 0x1870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_PrismBlastVData : public shade::sdk::client::CCitadel_Item_BubbleVData {
             public:
-                float m_flBeamRotateSpeed; // 0x19b8, 0x4 bytes
-                float m_flTickRate; // 0x19bc, 0x4 bytes
-                float m_flOscilateRate; // 0x19c0, 0x4 bytes
-                float m_flOscilateMaxPitch; // 0x19c4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x19c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticleLocal; // 0x1aa8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamHitParticle; // 0x1b88, 0xe0 bytes
-                CSoundEventName m_strLaserLoopSound; // 0x1c68, 0x10 bytes
+                float m_flBeamRotateSpeed; // 0x15b0, 0x4 bytes
+                float m_flTickRate; // 0x15b4, 0x4 bytes
+                float m_flOscilateRate; // 0x15b8, 0x4 bytes
+                float m_flOscilateMaxPitch; // 0x15bc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x15c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticleLocal; // 0x16a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamHitParticle; // 0x1780, 0xe0 bytes
+                CSoundEventName m_strLaserLoopSound; // 0x1860, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_PrismBlastVData) == 0x1C78, "CCitadel_Item_PrismBlastVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_PrismBlastVData) == 0x1870, "CCitadel_Item_PrismBlastVData size mismatch");
         }
     }
 }

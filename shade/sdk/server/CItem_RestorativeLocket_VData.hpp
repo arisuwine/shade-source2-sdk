@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x16a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_RestorativeLocket_VData : public shade::sdk::server::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x18b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TrailParticle; // 0x1998, 0xe0 bytes
-                CSoundEventName m_strStackSound; // 0x1a78, 0x10 bytes
-                CSoundEventName m_strMaxStackSound; // 0x1a88, 0x10 bytes
-                CSoundEventName m_strTargetHealSound; // 0x1a98, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x14b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TrailParticle; // 0x1590, 0xe0 bytes
+                CSoundEventName m_strStackSound; // 0x1670, 0x10 bytes
+                CSoundEventName m_strMaxStackSound; // 0x1680, 0x10 bytes
+                CSoundEventName m_strTargetHealSound; // 0x1690, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_RestorativeLocket_VData) == 0x1AA8, "CItem_RestorativeLocket_VData size mismatch");
+            static_assert(sizeof(CItem_RestorativeLocket_VData) == 0x16A0, "CItem_RestorativeLocket_VData size mismatch");
         }
     }
 }

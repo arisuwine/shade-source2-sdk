@@ -12,34 +12,34 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/C_PhysicsProp.hpp"
+#include "shade/sdk/client/C_BaseModelEntity.hpp"
 #include "shade/sdk/client/shard_model_desc_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xec0
-             * Alignment: 0x10
+             * Size: 0xc38
+             * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class C_ShatterGlassShardPhysics : public shade::sdk::client::C_PhysicsProp {
+            class C_ShatterGlassShardPhysics : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_0e30[0x8]; // 0x0e30, 0x8 bytes
-                shade::sdk::client::shard_model_desc_t m_ShardDesc; // 0x0e38, 0x80 bytes
-                std::uint8_t pad_0eb8[0x8]; // 0x0eb8, 0x8 bytes
+                std::uint8_t pad_0bb0[0x8]; // 0x0bb0, 0x8 bytes
+                shade::sdk::client::shard_model_desc_t m_ShardDesc; // 0x0bb8, 0x80 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_ShatterGlassShardPhysics) == 0xEC0, "C_ShatterGlassShardPhysics size mismatch");
+            static_assert(sizeof(C_ShatterGlassShardPhysics) == 0xC38, "C_ShatterGlassShardPhysics size mismatch");
         }
     }
 }

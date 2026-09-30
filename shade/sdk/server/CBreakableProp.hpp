@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -87,19 +88,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputAddHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputRemoveHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetEnableBreaking; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetEnableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetNavIgnore; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnablePuntSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisablePuntSound; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBreakablePropBreakThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CBreakablePropRampToDefaultFadeScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CBreakableProp) == 0xC20, "CBreakableProp size mismatch");
         }

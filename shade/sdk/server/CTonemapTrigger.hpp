@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f0
+             * Size: 0xa00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CTonemapTrigger : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlSymbolLarge m_tonemapControllerName; // 0x08e0, 0x8 bytes
-                CEntityHandle m_hTonemapController; // 0x08e8, 0x4 bytes
-                std::uint8_t pad_08ec[0x4]; // 0x08ec, 0x4 bytes
+                CUtlSymbolLarge m_tonemapControllerName; // 0x09f0, 0x8 bytes
+                CEntityHandle m_hTonemapController; // 0x09f8, 0x4 bytes
+                std::uint8_t pad_09fc[0x4]; // 0x09fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTonemapTrigger) == 0x8F0, "CTonemapTrigger size mismatch");
+            static_assert(sizeof(CTonemapTrigger) == 0xA00, "CTonemapTrigger size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x940
+             * Size: 0x950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,17 +43,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_Ghoul_ExplodeVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WarningParticle; // 0x0830, 0xe0 bytes
-                CSoundEventName m_ExplodeSound; // 0x0910, 0x10 bytes
-                CSoundEventName m_WarningSound; // 0x0920, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x0930, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WarningParticle; // 0x0840, 0xe0 bytes
+                CSoundEventName m_ExplodeSound; // 0x0920, 0x10 bytes
+                CSoundEventName m_WarningSound; // 0x0930, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x0940, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_Ghoul_ExplodeVData) == 0x940, "CCitadel_Modifier_Necro_Ghoul_ExplodeVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_Ghoul_ExplodeVData) == 0x950, "CCitadel_Modifier_Necro_Ghoul_ExplodeVData size mismatch");
         }
     }
 }

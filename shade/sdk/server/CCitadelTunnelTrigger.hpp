@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f0
+             * Size: 0xa00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTunnelTrigger : public shade::sdk::server::CCitadelSpeedBoostTrigger {
             public:
-                std::uint8_t pad_08e8[0x1]; // 0x08e8, 0x1 bytes
-                bool m_bKillWhenNotTiny; // 0x08e9, 0x1 bytes
-                std::uint8_t pad_08ea[0x6]; // 0x08ea, 0x6 bytes
+                std::uint8_t pad_09f8[0x1]; // 0x09f8, 0x1 bytes
+                bool m_bKillWhenNotTiny; // 0x09f9, 0x1 bytes
+                std::uint8_t pad_09fa[0x2]; // 0x09fa, 0x2 bytes
+                std::int32_t m_nTunnelID; // 0x09fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelTunnelTrigger) == 0x8F0, "CCitadelTunnelTrigger size mismatch");
+            static_assert(sizeof(CCitadelTunnelTrigger) == 0xA00, "CCitadelTunnelTrigger size mismatch");
         }
     }
 }

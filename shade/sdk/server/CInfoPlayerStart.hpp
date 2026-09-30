@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoPlayerStart : public shade::sdk::server::CPointEntity {
             public:
-                bool m_bDisabled; // 0x04a0, 0x1 bytes
-                bool m_bIsMaster; // 0x04a1, 0x1 bytes
-                std::uint8_t pad_04a2[0x6]; // 0x04a2, 0x6 bytes
-                CGlobalSymbol m_pPawnSubclass; // 0x04a8, 0x8 bytes
+                bool m_bDisabled; // 0x04b0, 0x1 bytes
+                bool m_bIsMaster; // 0x04b1, 0x1 bytes
+                std::uint8_t pad_04b2[0x6]; // 0x04b2, 0x6 bytes
+                CGlobalSymbol m_pPawnSubclass; // 0x04b8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoPlayerStart) == 0x4B0, "CInfoPlayerStart size mismatch");
+            static_assert(sizeof(CInfoPlayerStart) == 0x4C0, "CInfoPlayerStart size mismatch");
         }
     }
 }

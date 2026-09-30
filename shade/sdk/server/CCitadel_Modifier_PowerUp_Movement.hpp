@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PowerUp_Movement : public shade::sdk::server::CCitadel_Modifier_ScalingPowerUp {
             public:
-                bool m_bFilled; // 0x00d8, 0x1 bytes
-                std::uint8_t pad_00d9[0x7]; // 0x00d9, 0x7 bytes
+                bool m_bFilled; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PowerUp_Movement) == 0xE0, "CCitadel_Modifier_PowerUp_Movement size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PowerUp_Movement) == 0x150, "CCitadel_Modifier_PowerUp_Movement size mismatch");
         }
     }
 }

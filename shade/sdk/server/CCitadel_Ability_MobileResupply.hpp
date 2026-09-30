@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1008
+             * Size: 0x1568
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_MobileResupply : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                Vector m_vDeployPosition; // 0x0f70, 0xc bytes
-                QAngle m_angDeploy; // 0x0f7c, 0xc bytes
-                std::uint8_t pad_0f88[0x80]; // 0x0f88, 0x80 bytes
+                VectorWS m_vDeployPosition; // 0x14a0, 0xc bytes
+                QAngle m_angDeploy; // 0x14ac, 0xc bytes
+                std::uint8_t pad_14b8[0xb0]; // 0x14b8, 0xb0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_MobileResupply) == 0x1008, "CCitadel_Ability_MobileResupply size mismatch");
+            static_assert(sizeof(CCitadel_Ability_MobileResupply) == 0x1568, "CCitadel_Ability_MobileResupply size mismatch");
         }
     }
 }

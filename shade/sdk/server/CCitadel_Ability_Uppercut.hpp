@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1728
+             * Size: 0x1f28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Uppercut : public shade::sdk::server::CCitadel_Ability_Melee_Base {
             public:
-                CUtlStringToken m_TypeIDStickyBombAttached; // 0x10a0, 0x4 bytes
-                std::uint8_t pad_10a4[0x684]; // 0x10a4, 0x684 bytes
+                CUtlStringToken m_TypeIDStickyBombAttached; // 0x1630, 0x4 bytes
+                std::uint8_t pad_1634[0x8f4]; // 0x1634, 0x8f4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Uppercut) == 0x1728, "CCitadel_Ability_Uppercut size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Uppercut) == 0x1F28, "CCitadel_Ability_Uppercut size mismatch");
         }
     }
 }

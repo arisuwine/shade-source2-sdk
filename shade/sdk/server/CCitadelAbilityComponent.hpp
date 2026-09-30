@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -42,7 +43,7 @@ namespace shade {
             public:
                 std::uint8_t pad_0008[0x78]; // 0x0008, 0x78 bytes
                 CNetworkUtlVectorBase<CHandle<shade::sdk::server::CCitadelBaseAbility>> m_vecAbilities; // 0x0080, 0x18 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CCitadelBaseAbility>> m_vecThinkableAbilities; // 0x0098, 0x18 bytes
+                std::uint8_t pad_0098[0x18]; // 0x0098, 0x18 bytes
                 CNetworkUtlVectorBase<std::int32_t> m_arPendingAsyncAbilityReservationSlots; // 0x00b0, 0x18 bytes
                 CNetworkUtlVectorBase<std::int32_t> m_arPendingAsyncAbilityReservationAbilityIDs; // 0x00c8, 0x18 bytes
                 CHandle<shade::sdk::server::CCitadelBaseAbility> m_hSelectedAbility; // 0x00e0, 0x4 bytes
@@ -55,20 +56,19 @@ namespace shade {
                 float m_flParticleTimeScale; // 0x00f8, 0x4 bytes
                 bool m_bInInterruptState; // 0x00fc, 0x1 bytes
                 std::uint8_t pad_00fd[0x3]; // 0x00fd, 0x3 bytes
-                shade::sdk::server::AbilityResource_t m_ResourceStamina; // 0x0100, 0x20 bytes
-                shade::sdk::server::AbilityResource_t m_ResourceAbility; // 0x0120, 0x20 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ConsumedComponentState_t> m_vecConsumedComponents; // 0x0140, 0x68 bytes
-                std::uint8_t pad_01a8[0x48]; // 0x01a8, 0x48 bytes
-                std::uint32_t m_nExecuteAbilityMask; // 0x01f0, 0x4 bytes
-                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
-                bool m_bSelectedEffectsStarted; // 0x01f8, 0x1 bytes
-                std::uint8_t pad_01f9[0x6f]; // 0x01f9, 0x6f bytes
+                shade::sdk::server::AbilityResource_t m_ResourceStamina; // 0x0100, 0x40 bytes
+                shade::sdk::server::AbilityResource_t m_ResourceAbility; // 0x0140, 0x40 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::ConsumedComponentState_t> m_vecConsumedComponents; // 0x0180, 0x68 bytes
+                bool m_bThinkableAbilitiesDirty; // 0x01e8, 0x1 bytes
+                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
+                std::uint32_t m_nExecuteAbilityMask; // 0x01ec, 0x4 bytes
+                std::uint8_t pad_01f0[0x4]; // 0x01f0, 0x4 bytes
+                bool m_bSelectedEffectsStarted; // 0x01f4, 0x1 bytes
+                std::uint8_t pad_01f5[0x73]; // 0x01f5, 0x73 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CCitadelAbilityComponent) == 0x268, "CCitadelAbilityComponent size mismatch");
         }

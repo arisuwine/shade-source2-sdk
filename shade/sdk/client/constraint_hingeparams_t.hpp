@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,13 +24,13 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x40
-             * Alignment: 0xff
-             * Has Trivial Constructor
+             * Alignment: 0x4
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct constraint_hingeparams_t {
-                Vector worldPosition; // 0x0000, 0xc bytes
+                VectorWS worldPosition; // 0x0000, 0xc bytes
                 Vector worldAxisDirection; // 0x000c, 0xc bytes
                 shade::sdk::client::constraint_axislimit_t hingeAxis; // 0x0018, 0x10 bytes
                 shade::sdk::client::constraint_breakableparams_t constraint; // 0x0028, 0x18 bytes

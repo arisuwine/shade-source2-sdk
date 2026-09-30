@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x530
+             * Size: 0x540
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysLength : public shade::sdk::server::CPhysConstraint {
             public:
-                Vector m_offset[0x2]; // 0x0500, 0x18 bytes
-                VectorWS m_vecAttach; // 0x0518, 0xc bytes
-                float m_addLength; // 0x0524, 0x4 bytes
-                float m_minLength; // 0x0528, 0x4 bytes
-                float m_totalLength; // 0x052c, 0x4 bytes
+                Vector m_offset[0x2]; // 0x0510, 0x18 bytes
+                VectorWS m_vecAttach; // 0x0528, 0xc bytes
+                float m_addLength; // 0x0534, 0x4 bytes
+                float m_minLength; // 0x0538, 0x4 bytes
+                float m_totalLength; // 0x053c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysLength) == 0x530, "CPhysLength size mismatch");
+            static_assert(sizeof(CPhysLength) == 0x540, "CPhysLength size mismatch");
         }
     }
 }

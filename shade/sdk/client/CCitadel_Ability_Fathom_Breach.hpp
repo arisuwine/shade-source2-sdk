@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1460
+             * Size: 0x1a50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fathom_Breach : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nRollFXIndex; // 0x11d8, 0x4 bytes
-                bool m_bInFlight; // 0x11dc, 0x1 bytes
-                std::uint8_t pad_11dd[0x283]; // 0x11dd, 0x283 bytes
+                shade::sdk::client::ParticleIndex_t m_nRollFXIndex; // 0x16d8, 0x4 bytes
+                bool m_bInFlight; // 0x16dc, 0x1 bytes
+                std::uint8_t pad_16dd[0x373]; // 0x16dd, 0x373 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fathom_Breach) == 0x1460, "CCitadel_Ability_Fathom_Breach size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fathom_Breach) == 0x1A50, "CCitadel_Ability_Fathom_Breach size mismatch");
         }
     }
 }

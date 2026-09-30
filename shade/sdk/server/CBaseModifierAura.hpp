@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,25 +30,27 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x108
+             * Size: 0x178
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Allowed
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
             class CBaseModifierAura : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAuraUnits; // 0x00d0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hOldAuraUnits; // 0x00e8, 0x18 bytes
-                float m_flOverrideRadius; // 0x0100, 0x4 bytes
-                std::uint8_t pad_0104[0x4]; // 0x0104, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAuraUnits; // 0x0140, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hOldAuraUnits; // 0x0158, 0x18 bytes
+                float m_flOverrideRadius; // 0x0170, 0x4 bytes
+                std::uint8_t pad_0174[0x4]; // 0x0174, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseModifierAura) == 0x108, "CBaseModifierAura size mismatch");
+            static_assert(sizeof(CBaseModifierAura) == 0x178, "CBaseModifierAura size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -48,6 +49,7 @@ namespace shade {
                 HINT_TACTICAL_COVER_RIGHT = 0x6d,
                 HINT_TACTICAL_COVER_NARROW = 0x6e,
                 HINT_TACTICAL_CREATE_COVER = 0x6f,
+                HINT_TACTICAL_THRESHOLD = 0x70,
                 HINT_NOT_USED_URBAN_STREETCORNER = 0xc8,
                 HINT_NOT_USED_URBAN_STREETLAMP = 0xc9,
                 HINT_NOT_USED_URBAN_DARK_SPOT = 0xca,

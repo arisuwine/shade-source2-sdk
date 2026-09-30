@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd8
+             * Size: 0x108
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_GuidedArrow_OwlModel_GraphController : public shade::sdk::client::CAnimGraphControllerBase {
             public:
-                CAnimGraph2ParamOptionalRef<float> m_flRoll; // 0x0090, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<float> m_flPitch; // 0x00a8, 0x18 bytes
-                CAnimGraph2ParamOptionalRef<bool> m_bFast; // 0x00c0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flRoll; // 0x00c0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<float> m_flPitch; // 0x00d8, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<bool> m_bFast; // 0x00f0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_GuidedArrow_OwlModel_GraphController) == 0xD8, "CCitadel_GuidedArrow_OwlModel_GraphController size mismatch");
+            static_assert(sizeof(CCitadel_GuidedArrow_OwlModel_GraphController) == 0x108, "CCitadel_GuidedArrow_OwlModel_GraphController size mismatch");
         }
     }
 }

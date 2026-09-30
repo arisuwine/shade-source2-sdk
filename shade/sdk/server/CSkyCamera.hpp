@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x540
+             * Size: 0x550
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,31 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CSkyCamera : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::server::sky3dparams_t m_skyboxData; // 0x04a0, 0x90 bytes
-                CUtlStringToken m_skyboxSlotToken; // 0x0530, 0x4 bytes
-                bool m_bUseAngles; // 0x0534, 0x1 bytes
-                std::uint8_t pad_0535[0x3]; // 0x0535, 0x3 bytes
-                shade::sdk::server::CSkyCamera *m_pNext; // 0x0538, 0x8 bytes
+                shade::sdk::server::sky3dparams_t m_skyboxData; // 0x04b0, 0x90 bytes
+                CUtlStringToken m_skyboxSlotToken; // 0x0540, 0x4 bytes
+                bool m_bUseAngles; // 0x0544, 0x1 bytes
+                std::uint8_t pad_0545[0x3]; // 0x0545, 0x3 bytes
+                shade::sdk::server::CSkyCamera *m_pNext; // 0x0548, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int16_t m_skyboxData.scale; // Offset: 0x4a8, Size: 0x1, Size In Bytes: 0x2
-             * Vector m_skyboxData.origin; // Offset: 0x4ac, Size: 0x1, Size In Bytes: 0xc
-             * bool m_skyboxData.bClip3DSkyBoxNearToWorldFar; // Offset: 0x4b8, Size: 0x1, Size In Bytes: 0x1
-             * float m_skyboxData.flClip3DSkyBoxNearToWorldFarOffset; // Offset: 0x4bc, Size: 0x1, Size In Bytes: 0x4
-             * bool m_skyboxData.fog.enable; // Offset: 0x524, Size: 0x1, Size In Bytes: 0x1
-             * bool m_skyboxData.fog.blend; // Offset: 0x525, Size: 0x1, Size In Bytes: 0x1
-             * Vector m_skyboxData.fog.dirPrimary; // Offset: 0x4c8, Size: 0x1, Size In Bytes: 0xc
-             * Color m_skyboxData.fog.colorPrimary; // Offset: 0x4d4, Size: 0x1, Size In Bytes: 0x4
-             * Color m_skyboxData.fog.colorSecondary; // Offset: 0x4d8, Size: 0x1, Size In Bytes: 0x4
-             * float m_skyboxData.fog.start; // Offset: 0x4e4, Size: 0x1, Size In Bytes: 0x4
-             * float m_skyboxData.fog.end; // Offset: 0x4e8, Size: 0x1, Size In Bytes: 0x4
-             * float m_skyboxData.fog.maxdensity; // Offset: 0x4f0, Size: 0x1, Size In Bytes: 0x4
-             * void InputActivateSkybox; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSkyCamera) == 0x540, "CSkyCamera size mismatch");
+            static_assert(sizeof(CSkyCamera) == 0x550, "CSkyCamera size mismatch");
         }
     }
 }

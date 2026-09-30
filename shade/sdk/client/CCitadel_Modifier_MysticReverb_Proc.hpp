@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3f8
+             * Size: 0x588
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticReverb_Proc : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_01f8[0x200]; // 0x01f8, 0x200 bytes
+                std::uint8_t pad_02c8[0x2c0]; // 0x02c8, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticReverb_Proc) == 0x3F8, "CCitadel_Modifier_MysticReverb_Proc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticReverb_Proc) == 0x588, "CCitadel_Modifier_MysticReverb_Proc size mismatch");
         }
     }
 }

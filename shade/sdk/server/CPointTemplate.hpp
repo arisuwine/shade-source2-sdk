@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x538
+             * Size: 0x548
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,26 +33,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointTemplate : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_iszWorldName; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_iszSource2EntityLumpName; // 0x04a8, 0x8 bytes
-                CUtlSymbolLarge m_iszEntityFilterName; // 0x04b0, 0x8 bytes
-                float m_flTimeoutInterval; // 0x04b8, 0x4 bytes
-                bool m_bAsynchronouslySpawnEntities; // 0x04bc, 0x1 bytes
-                std::uint8_t pad_04bd[0x3]; // 0x04bd, 0x3 bytes
-                shade::sdk::client::PointTemplateClientOnlyEntityBehavior_t m_clientOnlyEntityBehavior; // 0x04c0, 0x4 bytes
-                shade::sdk::client::PointTemplateOwnerSpawnGroupType_t m_ownerSpawnGroupType; // 0x04c4, 0x4 bytes
-                CUtlVector<std::uint32_t> m_createdSpawnGroupHandles; // 0x04c8, 0x18 bytes
-                CUtlVector<CEntityHandle> m_SpawnedEntityHandles; // 0x04e0, 0x18 bytes
-                HSCRIPT m_ScriptSpawnCallback; // 0x04f8, 0x8 bytes
-                HSCRIPT m_ScriptCallbackScope; // 0x0500, 0x8 bytes
+                CUtlSymbolLarge m_iszWorldName; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_iszSource2EntityLumpName; // 0x04b8, 0x8 bytes
+                CUtlSymbolLarge m_iszEntityFilterName; // 0x04c0, 0x8 bytes
+                float m_flTimeoutInterval; // 0x04c8, 0x4 bytes
+                bool m_bAsynchronouslySpawnEntities; // 0x04cc, 0x1 bytes
+                std::uint8_t pad_04cd[0x3]; // 0x04cd, 0x3 bytes
+                shade::sdk::client::PointTemplateClientOnlyEntityBehavior_t m_clientOnlyEntityBehavior; // 0x04d0, 0x4 bytes
+                shade::sdk::client::PointTemplateOwnerSpawnGroupType_t m_ownerSpawnGroupType; // 0x04d4, 0x4 bytes
+                CUtlVector<std::uint32_t> m_createdSpawnGroupHandles; // 0x04d8, 0x18 bytes
+                CUtlVector<CEntityHandle> m_SpawnedEntityHandles; // 0x04f0, 0x18 bytes
+                HSCRIPT m_ScriptSpawnCallback; // 0x0508, 0x8 bytes
+                HSCRIPT m_ScriptCallbackScope; // 0x0510, 0x8 bytes
                 // Original type 'CEntityOutputTemplate<CUtlVector<CEntityHandle>>' replaced with byte storage: generated size 0x20, schema field size 0x30
-                std::uint8_t m_OnEntitySpawned[0x30]; // 0x0508, 0x30 bytes
+                std::uint8_t m_OnEntitySpawned[0x30]; // 0x0518, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPointTemplate) == 0x538, "CPointTemplate size mismatch");
+            static_assert(sizeof(CPointTemplate) == 0x548, "CPointTemplate size mismatch");
         }
     }
 }

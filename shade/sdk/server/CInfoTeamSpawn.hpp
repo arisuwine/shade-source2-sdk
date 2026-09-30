@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoTeamSpawn : public shade::sdk::server::CServerOnlyPointEntity {
             public:
-                bool m_bIntroSpawn; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x3]; // 0x04a1, 0x3 bytes
-                std::int32_t m_iLaneNum; // 0x04a4, 0x4 bytes
-                CUtlSymbolLarge m_strGroupTag; // 0x04a8, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAssignedPlayer; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                bool m_bIntroSpawn; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x3]; // 0x04b1, 0x3 bytes
+                std::int32_t m_iLaneNum; // 0x04b4, 0x4 bytes
+                CUtlSymbolLarge m_strGroupTag; // 0x04b8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAssignedPlayer; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoTeamSpawn) == 0x4B8, "CInfoTeamSpawn size mismatch");
+            static_assert(sizeof(CInfoTeamSpawn) == 0x4C8, "CInfoTeamSpawn size mismatch");
         }
     }
 }

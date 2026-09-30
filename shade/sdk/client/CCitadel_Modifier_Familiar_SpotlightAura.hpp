@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x420
+             * Size: 0x5b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Familiar_SpotlightAura : public shade::sdk::client::CCitadelModifierAura {
             public:
-                VectorWS m_vRightVectorWS; // 0x0110, 0xc bytes
-                std::uint8_t pad_011c[0x304]; // 0x011c, 0x304 bytes
+                Vector m_vRightVectorWS; // 0x0180, 0xc bytes
+                std::uint8_t pad_018c[0x424]; // 0x018c, 0x424 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Familiar_SpotlightAura) == 0x420, "CCitadel_Modifier_Familiar_SpotlightAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Familiar_SpotlightAura) == 0x5B0, "CCitadel_Modifier_Familiar_SpotlightAura size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1478
+             * Size: 0x1a68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bounce_Pad : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                Vector m_vForward; // 0x11d8, 0xc bytes
-                bool m_bShouldDeploy; // 0x11e4, 0x1 bytes
-                bool m_bAnglesSet; // 0x11e5, 0x1 bytes
-                bool m_bCanCancel; // 0x11e6, 0x1 bytes
-                std::uint8_t pad_11e7[0x281]; // 0x11e7, 0x281 bytes
-                QAngle m_angFacing; // 0x1468, 0xc bytes
-                std::uint8_t pad_1474[0x4]; // 0x1474, 0x4 bytes
+                Vector m_vForward; // 0x16d8, 0xc bytes
+                bool m_bShouldDeploy; // 0x16e4, 0x1 bytes
+                bool m_bAnglesSet; // 0x16e5, 0x1 bytes
+                bool m_bCanCancel; // 0x16e6, 0x1 bytes
+                std::uint8_t pad_16e7[0x371]; // 0x16e7, 0x371 bytes
+                QAngle m_angFacing; // 0x1a58, 0xc bytes
+                std::uint8_t pad_1a64[0x4]; // 0x1a64, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bounce_Pad) == 0x1478, "CCitadel_Ability_Bounce_Pad size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bounce_Pad) == 0x1A68, "CCitadel_Ability_Bounce_Pad size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,14 +40,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CP_Capturer : public shade::sdk::client::CCitadelModifier, public shade::sdk::client::ICitadelModifierCustomHudDisplay {
             public:
-                CHandle<shade::sdk::client::CCitadelTriggerCapturePoint> m_hCP; // 0x00c8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hEscort; // 0x00cc, 0x4 bytes
+                CHandle<shade::sdk::client::CCitadelTriggerCapturePoint> m_hCP; // 0x0138, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hEscort; // 0x013c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CP_Capturer) == 0xD0, "CCitadel_Modifier_CP_Capturer size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CP_Capturer) == 0x140, "CCitadel_Modifier_CP_Capturer size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -28,7 +29,8 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x20
-             * Alignment: 0xff
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CUnreachableTargetList {
@@ -38,9 +40,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pOuter; // Offset: 0x18, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CUnreachableTargetList) == 0x20, "CUnreachableTargetList size mismatch");
         }

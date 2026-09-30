@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x568
+             * Size: 0x578
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundEventSphereEntity : public shade::sdk::server::CSoundEventEntity {
             public:
-                float m_flRadius; // 0x0560, 0x4 bytes
-                std::uint8_t pad_0564[0x4]; // 0x0564, 0x4 bytes
+                float m_flRadius; // 0x0570, 0x4 bytes
+                std::uint8_t pad_0574[0x4]; // 0x0574, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSoundEventSphereEntitySoundEventSphereThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundEventSphereEntity) == 0x568, "CSoundEventSphereEntity size mismatch");
+            static_assert(sizeof(CSoundEventSphereEntity) == 0x578, "CSoundEventSphereEntity size mismatch");
         }
     }
 }

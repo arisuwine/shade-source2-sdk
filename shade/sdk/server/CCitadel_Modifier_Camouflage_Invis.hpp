@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x578
+             * Size: 0x798
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Camouflage_Invis : public shade::sdk::server::CCitadel_Modifier_Invis {
             public:
-                Vector m_vCastPosition; // 0x0468, 0xc bytes
-                std::uint8_t pad_0474[0x104]; // 0x0474, 0x104 bytes
+                VectorWS m_vCastPosition; // 0x0628, 0xc bytes
+                std::uint8_t pad_0634[0x164]; // 0x0634, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Camouflage_Invis) == 0x578, "CCitadel_Modifier_Camouflage_Invis size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Camouflage_Invis) == 0x798, "CCitadel_Modifier_Camouflage_Invis size mismatch");
         }
     }
 }

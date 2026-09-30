@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13e8
+             * Size: 0x19a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Gravity_Lasso : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x210]; // 0x11d8, 0x210 bytes
+                std::uint8_t pad_16d8[0x2d0]; // 0x16d8, 0x2d0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Gravity_Lasso) == 0x13E8, "CCitadel_Ability_Gravity_Lasso size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Gravity_Lasso) == 0x19A8, "CCitadel_Ability_Gravity_Lasso size mismatch");
         }
     }
 }

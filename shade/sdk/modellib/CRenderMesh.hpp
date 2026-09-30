@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0x210
+             * Size: 0x230
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,22 +42,22 @@ namespace shade {
             class CRenderMesh {
             public:
                 std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
-                CUtlLeanVectorFixedGrowable<shade::sdk::modellib::CSceneObjectData, 1> m_sceneObjects; // 0x0010, 0xa8 bytes
-                CUtlLeanVector<shade::sdk::modellib::CBaseConstraint*> m_constraints; // 0x00b8, 0x10 bytes
-                shade::sdk::modellib::CRenderSkeleton m_skeleton; // 0x00c8, 0x50 bytes
-                std::uint8_t pad_0118[0xbc]; // 0x0118, 0xbc bytes
-                bool m_bUseUV2ForCharting; // 0x01d4, 0x1 bytes
-                bool m_bEmbeddedMapMesh; // 0x01d5, 0x1 bytes
-                std::uint8_t pad_01d6[0x22]; // 0x01d6, 0x22 bytes
-                shade::sdk::modellib::DynamicMeshDeformParams_t m_meshDeformParams; // 0x01f8, 0xc bytes
-                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
-                shade::sdk::modellib::CRenderGroom *m_pGroomData; // 0x0208, 0x8 bytes
+                CUtlLeanVectorFixedGrowable<shade::sdk::modellib::CSceneObjectData, 1> m_sceneObjects; // 0x0010, 0xc0 bytes
+                CUtlLeanVector<shade::sdk::modellib::CBaseConstraint*> m_constraints; // 0x00d0, 0x10 bytes
+                shade::sdk::modellib::CRenderSkeleton m_skeleton; // 0x00e0, 0x50 bytes
+                std::uint8_t pad_0130[0xc4]; // 0x0130, 0xc4 bytes
+                bool m_bUseUV2ForCharting; // 0x01f4, 0x1 bytes
+                bool m_bEmbeddedMapMesh; // 0x01f5, 0x1 bytes
+                std::uint8_t pad_01f6[0x22]; // 0x01f6, 0x22 bytes
+                shade::sdk::modellib::DynamicMeshDeformParams_t m_meshDeformParams; // 0x0218, 0xc bytes
+                std::uint8_t pad_0224[0x4]; // 0x0224, 0x4 bytes
+                shade::sdk::modellib::CRenderGroom *m_pGroomData; // 0x0228, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRenderMesh) == 0x210, "CRenderMesh size mismatch");
+            static_assert(sizeof(CRenderMesh) == 0x230, "CRenderMesh size mismatch");
         }
     }
 }

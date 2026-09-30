@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -22,7 +23,8 @@ namespace shade {
                 EDelayReason_Disarmed = 0x2,
                 EDelayReason_Stunned = 0x3,
                 EDelayReason_BebopSpinUp = 0x4,
-                EDelayReasonCount = 0x5
+                EDelayReason_WeaponSwap = 0x5,
+                EDelayReasonCount = 0x6
             };
         }
     }

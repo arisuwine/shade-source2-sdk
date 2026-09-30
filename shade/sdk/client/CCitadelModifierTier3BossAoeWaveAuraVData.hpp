@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x970
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierTier3BossAoeWaveAuraVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                float m_flWaveHeight; // 0x07a8, 0x4 bytes
-                std::uint8_t pad_07ac[0x4]; // 0x07ac, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberWaveParticle; // 0x07b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphWaveParticle; // 0x0890, 0xe0 bytes
+                float m_flWaveHeight; // 0x07b8, 0x4 bytes
+                std::uint8_t pad_07bc[0x4]; // 0x07bc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberWaveParticle; // 0x07c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphWaveParticle; // 0x08a0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierTier3BossAoeWaveAuraVData) == 0x970, "CCitadelModifierTier3BossAoeWaveAuraVData size mismatch");
+            static_assert(sizeof(CCitadelModifierTier3BossAoeWaveAuraVData) == 0x980, "CCitadelModifierTier3BossAoeWaveAuraVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -45,8 +46,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::int32_t InputSetClipPrimary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetClipSecondary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CBasePlayerWeapon) == 0xAD0, "CBasePlayerWeapon size mismatch");

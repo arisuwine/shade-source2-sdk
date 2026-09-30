@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x11b0
+             * Size: 0x17a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +40,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_WreckingBall : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x14]; // 0x0f70, 0x14 bytes
-                shade::sdk::client::ParticleIndex_t m_nBallParticle; // 0x0f84, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastCompleteParticle; // 0x0f88, 0x4 bytes
-                std::uint8_t pad_0f8c[0x4]; // 0x0f8c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetsHit; // 0x0f90, 0x18 bytes
-                std::uint8_t pad_0fa8[0x200]; // 0x0fa8, 0x200 bytes
-                bool m_bHoldingBall; // 0x11a8, 0x1 bytes
-                std::uint8_t pad_11a9[0x7]; // 0x11a9, 0x7 bytes
+                std::uint8_t pad_14a0[0x14]; // 0x14a0, 0x14 bytes
+                shade::sdk::client::ParticleIndex_t m_nBallParticle; // 0x14b4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastCompleteParticle; // 0x14b8, 0x4 bytes
+                std::uint8_t pad_14bc[0x4]; // 0x14bc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetsHit; // 0x14c0, 0x18 bytes
+                std::uint8_t pad_14d8[0x2c0]; // 0x14d8, 0x2c0 bytes
+                bool m_bHoldingBall; // 0x1798, 0x1 bytes
+                std::uint8_t pad_1799[0x7]; // 0x1799, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_WreckingBall) == 0x11B0, "CCitadel_Ability_WreckingBall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_WreckingBall) == 0x17A0, "CCitadel_Ability_WreckingBall size mismatch");
         }
     }
 }

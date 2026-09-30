@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0x148
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_LerpCameraSettings : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseLerp {
             public:
-                float m_flSeconds; // 0x0090, 0x4 bytes
-                shade::sdk::client::PointCameraSettings_t m_Start; // 0x0094, 0x10 bytes
-                shade::sdk::client::PointCameraSettings_t m_End; // 0x00a4, 0x10 bytes
-                std::uint8_t pad_00b4[0x4]; // 0x00b4, 0x4 bytes
+                float m_flSeconds; // 0x0120, 0x4 bytes
+                shade::sdk::client::PointCameraSettings_t m_Start; // 0x0124, 0x10 bytes
+                shade::sdk::client::PointCameraSettings_t m_End; // 0x0134, 0x10 bytes
+                std::uint8_t pad_0144[0x4]; // 0x0144, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_LerpCameraSettings) == 0xB8, "CPulseCell_LerpCameraSettings size mismatch");
+            static_assert(sizeof(CPulseCell_LerpCameraSettings) == 0x148, "CPulseCell_LerpCameraSettings size mismatch");
         }
     }
 }

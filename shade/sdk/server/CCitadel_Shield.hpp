@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8e8
+             * Size: 0x9e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Shield : public shade::sdk::server::CCitadelModelEntity {
             public:
-                bool m_bAllowRotatingUp; // 0x08e0, 0x1 bytes
-                bool m_bFixedPosition; // 0x08e1, 0x1 bytes
-                std::uint8_t pad_08e2[0x2]; // 0x08e2, 0x2 bytes
-                float m_flShieldOffset; // 0x08e4, 0x4 bytes
+                bool m_bAllowRotatingUp; // 0x09d8, 0x1 bytes
+                bool m_bFixedPosition; // 0x09d9, 0x1 bytes
+                std::uint8_t pad_09da[0x2]; // 0x09da, 0x2 bytes
+                float m_flShieldOffset; // 0x09dc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Shield) == 0x8E8, "CCitadel_Shield size mismatch");
+            static_assert(sizeof(CCitadel_Shield) == 0x9E0, "CCitadel_Shield size mismatch");
         }
     }
 }

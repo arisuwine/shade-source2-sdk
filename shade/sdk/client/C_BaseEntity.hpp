@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -98,16 +99,16 @@ namespace shade {
                 std::uint16_t m_ListEntry[0xb]; // 0x03d0, 0x16 bytes
                 std::uint8_t pad_03e6[0x2]; // 0x03e6, 0x2 bytes
                 shade::sdk::entity2::GameTime_t m_flCreateTime; // 0x03e8, 0x4 bytes
-                float m_flSpeed; // 0x03ec, 0x4 bytes
-                std::uint16_t m_EntClientFlags; // 0x03f0, 0x2 bytes
-                bool m_bClientSideRagdoll; // 0x03f2, 0x1 bytes
-                std::uint8_t m_iTeamNum; // 0x03f3, 0x1 bytes
-                std::uint32_t m_spawnflags; // 0x03f4, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nNextThinkTick; // 0x03f8, 0x4 bytes
-                std::uint8_t pad_03fc[0x4]; // 0x03fc, 0x4 bytes
-                std::uint32_t m_fFlags; // 0x0400, 0x4 bytes
-                Vector m_vecAbsVelocity; // 0x0404, 0xc bytes
-                shade::sdk::client::CNetworkVelocityVector m_vecServerVelocity; // 0x0410, 0x28 bytes
+                std::uint16_t m_EntClientFlags; // 0x03ec, 0x2 bytes
+                bool m_bClientSideRagdoll; // 0x03ee, 0x1 bytes
+                std::uint8_t m_iTeamNum; // 0x03ef, 0x1 bytes
+                std::uint32_t m_spawnflags; // 0x03f0, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nNextThinkTick; // 0x03f4, 0x4 bytes
+                std::uint8_t pad_03f8[0x4]; // 0x03f8, 0x4 bytes
+                std::uint32_t m_fFlags; // 0x03fc, 0x4 bytes
+                Vector m_vecAbsVelocity; // 0x0400, 0xc bytes
+                shade::sdk::client::CNetworkVelocityVector m_vecServerVelocity; // 0x040c, 0x28 bytes
+                std::uint8_t pad_0434[0x4]; // 0x0434, 0x4 bytes
                 shade::sdk::client::CNetworkVelocityVector m_vecVelocity; // 0x0438, 0x28 bytes
                 std::uint8_t pad_0460[0xb8]; // 0x0460, 0xb8 bytes
                 CHandle<shade::sdk::client::C_BaseEntity> m_hEffectEntity; // 0x0518, 0x4 bytes
@@ -156,9 +157,7 @@ namespace shade {
 
             /* Data Map Fields
              * CUtlSymbolLarge m_iszPrivateVScripts; // Offset: 0x8, Size: 0x1, Size In Bytes: 0x8
-             * void m_CScriptComponent; // Offset: 0x28, Size: 0x1, Size In Bytes: 0x8
              * CUtlSymbolLarge subclass_name; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void m_pSubclassVData; // Offset: 0x390, Size: 0x1, Size In Bytes: 0x0
              * QAngle angles; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector origin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CStrongHandle<InfoForResourceTypeCModel> model; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0

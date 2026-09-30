@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x648
+             * Size: 0x660
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetPathCornerEntity : public shade::sdk::server::CSoundOpvarSetPointEntity {
             public:
-                std::uint8_t pad_0618[0x18]; // 0x0618, 0x18 bytes
-                bool m_bUseParentedPath; // 0x0630, 0x1 bytes
-                std::uint8_t pad_0631[0x3]; // 0x0631, 0x3 bytes
-                float m_flDistMinSqr; // 0x0634, 0x4 bytes
-                float m_flDistMaxSqr; // 0x0638, 0x4 bytes
-                std::uint8_t pad_063c[0x4]; // 0x063c, 0x4 bytes
-                CUtlSymbolLarge m_iszPathCornerEntityName; // 0x0640, 0x8 bytes
+                std::uint8_t pad_0630[0x18]; // 0x0630, 0x18 bytes
+                bool m_bUseParentedPath; // 0x0648, 0x1 bytes
+                std::uint8_t pad_0649[0x3]; // 0x0649, 0x3 bytes
+                float m_flDistMinSqr; // 0x064c, 0x4 bytes
+                float m_flDistMaxSqr; // 0x0650, 0x4 bytes
+                std::uint8_t pad_0654[0x4]; // 0x0654, 0x4 bytes
+                CUtlSymbolLarge m_iszPathCornerEntityName; // 0x0658, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSoundOpvarSetPathCornerEntitySetOpvarThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetPathCornerEntity) == 0x648, "CSoundOpvarSetPathCornerEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetPathCornerEntity) == 0x660, "CSoundOpvarSetPathCornerEntity size mismatch");
         }
     }
 }

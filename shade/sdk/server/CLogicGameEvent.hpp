@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4a8
+             * Size: 0x4b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicGameEvent : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_iszEventName; // 0x04a0, 0x8 bytes
+                CUtlSymbolLarge m_iszEventName; // 0x04b0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputFireEvent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicGameEvent) == 0x4A8, "CLogicGameEvent size mismatch");
+            static_assert(sizeof(CLogicGameEvent) == 0x4B8, "CLogicGameEvent size mismatch");
         }
     }
 }

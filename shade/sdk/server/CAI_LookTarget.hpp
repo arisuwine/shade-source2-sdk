@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_LookTarget : public shade::sdk::server::CPointEntity {
             public:
-                std::int32_t m_iContext; // 0x04a0, 0x4 bytes
-                std::int32_t m_iPriority; // 0x04a4, 0x4 bytes
-                bool m_bDisabled; // 0x04a8, 0x1 bytes
-                std::uint8_t pad_04a9[0x3]; // 0x04a9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeNextAvailable; // 0x04ac, 0x4 bytes
-                float m_flMaxDist; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                std::int32_t m_iContext; // 0x04b0, 0x4 bytes
+                std::int32_t m_iPriority; // 0x04b4, 0x4 bytes
+                bool m_bDisabled; // 0x04b8, 0x1 bytes
+                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeNextAvailable; // 0x04bc, 0x4 bytes
+                float m_flMaxDist; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_LookTarget) == 0x4B8, "CAI_LookTarget size mismatch");
+            static_assert(sizeof(CAI_LookTarget) == 0x4C8, "CAI_LookTarget size mismatch");
         }
     }
 }

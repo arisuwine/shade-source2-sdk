@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc60
+             * Size: 0xc10
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_MobileResupply : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0x5c]; // 0x0bf0, 0x5c bytes
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c4c, 0x4 bytes
-                bool m_bFloating; // 0x0c50, 0x1 bytes
-                std::uint8_t pad_0c51[0xf]; // 0x0c51, 0xf bytes
+                std::uint8_t pad_0bf0[0x10]; // 0x0bf0, 0x10 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c00, 0x4 bytes
+                bool m_bFloating; // 0x0c04, 0x1 bytes
+                std::uint8_t pad_0c05[0xb]; // 0x0c05, 0xb bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_MobileResupply) == 0xC60, "CCitadel_MobileResupply size mismatch");
+            static_assert(sizeof(CCitadel_MobileResupply) == 0xC10, "CCitadel_MobileResupply size mismatch");
         }
     }
 }

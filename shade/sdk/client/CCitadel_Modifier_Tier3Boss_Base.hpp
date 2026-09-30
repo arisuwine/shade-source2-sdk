@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,10 +22,11 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc0
+             * Size: 0x130
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Disallowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -35,7 +37,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_Base) == 0xC0, "CCitadel_Modifier_Tier3Boss_Base size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_Base) == 0x130, "CCitadel_Modifier_Tier3Boss_Base size mismatch");
         }
     }
 }

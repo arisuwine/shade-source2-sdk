@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2220
+             * Size: 0x2230
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,17 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelFamiliarClonePlayerPawn : public shade::sdk::server::CCitadelPlayerPawn {
             public:
-                std::uint8_t pad_2210[0x8]; // 0x2210, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hFamiliar; // 0x2218, 0x4 bytes
-                std::uint8_t pad_221c[0x4]; // 0x221c, 0x4 bytes
+                std::uint8_t pad_2220[0x8]; // 0x2220, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFamiliar; // 0x2228, 0x4 bytes
+                std::uint8_t pad_222c[0x4]; // 0x222c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::uint8_t m_pMovementServices[0x240]; // Offset: 0xbe0, Size: 0x1, Size In Bytes: 0x240
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelFamiliarClonePlayerPawn) == 0x2220, "CCitadelFamiliarClonePlayerPawn size mismatch");
+            static_assert(sizeof(CCitadelFamiliarClonePlayerPawn) == 0x2230, "CCitadelFamiliarClonePlayerPawn size mismatch");
         }
     }
 }

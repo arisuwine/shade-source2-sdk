@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f8
+             * Size: 0x508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoFan : public shade::sdk::server::CPointEntity {
             public:
-                std::uint8_t pad_04a0[0x40]; // 0x04a0, 0x40 bytes
-                float m_fFanForceMaxRadius; // 0x04e0, 0x4 bytes
-                float m_fFanForceMinRadius; // 0x04e4, 0x4 bytes
-                float m_flCurveDistRange; // 0x04e8, 0x4 bytes
-                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
-                CUtlSymbolLarge m_FanForceCurveString; // 0x04f0, 0x8 bytes
+                std::uint8_t pad_04b0[0x40]; // 0x04b0, 0x40 bytes
+                float m_fFanForceMaxRadius; // 0x04f0, 0x4 bytes
+                float m_fFanForceMinRadius; // 0x04f4, 0x4 bytes
+                float m_flCurveDistRange; // 0x04f8, 0x4 bytes
+                std::uint8_t pad_04fc[0x4]; // 0x04fc, 0x4 bytes
+                CUtlSymbolLarge m_FanForceCurveString; // 0x0500, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoFan) == 0x4F8, "CInfoFan size mismatch");
+            static_assert(sizeof(CInfoFan) == 0x508, "CInfoFan size mismatch");
         }
     }
 }

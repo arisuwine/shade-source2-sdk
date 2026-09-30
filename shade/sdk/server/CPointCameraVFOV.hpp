@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x508
+             * Size: 0x518
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointCameraVFOV : public shade::sdk::server::CPointCamera {
             public:
-                float m_flVerticalFOV; // 0x0500, 0x4 bytes
-                std::uint8_t pad_0504[0x4]; // 0x0504, 0x4 bytes
+                float m_flVerticalFOV; // 0x0510, 0x4 bytes
+                std::uint8_t pad_0514[0x4]; // 0x0514, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * float m_flDofFarCrisp; // Offset: 0x4e0, Size: 0x1, Size In Bytes: 0x4
-             * float m_flDofFarBlurry; // Offset: 0x4e4, Size: 0x1, Size In Bytes: 0x4
-             * float m_flDofTiltToGround; // Offset: 0x4e8, Size: 0x1, Size In Bytes: 0x4
+             * float m_flDofFarCrisp; // Offset: 0x4f0, Size: 0x1, Size In Bytes: 0x4
+             * float m_flDofFarBlurry; // Offset: 0x4f4, Size: 0x1, Size In Bytes: 0x4
+             * float m_flDofTiltToGround; // Offset: 0x4f8, Size: 0x1, Size In Bytes: 0x4
              */
 
-            static_assert(sizeof(CPointCameraVFOV) == 0x508, "CPointCameraVFOV size mismatch");
+            static_assert(sizeof(CPointCameraVFOV) == 0x518, "CPointCameraVFOV size mismatch");
         }
     }
 }

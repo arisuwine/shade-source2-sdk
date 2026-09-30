@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4a8
+             * Size: 0x4b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CSkyboxReference : public shade::sdk::server::CBaseEntity {
             public:
-                WorldGroupId_t m_worldGroupId; // 0x04a0, 0x4 bytes
-                CHandle<shade::sdk::server::CSkyCamera> m_hSkyCamera; // 0x04a4, 0x4 bytes
+                WorldGroupId_t m_worldGroupId; // 0x04b0, 0x4 bytes
+                CHandle<shade::sdk::server::CSkyCamera> m_hSkyCamera; // 0x04b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * char *worldGroupID; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlString worldGroupID; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CSkyboxReference) == 0x4A8, "CSkyboxReference size mismatch");
+            static_assert(sizeof(CSkyboxReference) == 0x4B8, "CSkyboxReference size mismatch");
         }
     }
 }

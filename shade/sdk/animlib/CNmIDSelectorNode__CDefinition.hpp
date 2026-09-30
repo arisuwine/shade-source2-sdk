@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x80
+             * Size: 0x60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmIDSelectorNode__CDefinition : public shade::sdk::animlib::CNmIDValueNode__CDefinition {
             public:
-                CUtlVectorFixedGrowable<std::int16_t, 5> m_conditionNodeIndices; // 0x0010, 0x28 bytes
-                CUtlVectorFixedGrowable<CGlobalSymbol, 5> m_values; // 0x0038, 0x40 bytes
-                CGlobalSymbol m_defaultValue; // 0x0078, 0x8 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 5> m_conditionNodeIndices; // 0x0010, 0x18 bytes
+                CUtlLeanVectorFixedGrowable<CGlobalSymbol, 5> m_values; // 0x0028, 0x30 bytes
+                CGlobalSymbol m_defaultValue; // 0x0058, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmIDSelectorNode__CDefinition) == 0x80, "CNmIDSelectorNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmIDSelectorNode__CDefinition) == 0x60, "CNmIDSelectorNode__CDefinition size mismatch");
         }
     }
 }

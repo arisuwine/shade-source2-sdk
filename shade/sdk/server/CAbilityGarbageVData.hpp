@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1918
+             * Size: 0x14a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityGarbageVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GarbageAuraModifier; // 0x1818, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1828, 0xe0 bytes
-                float m_flAirSpeedMax; // 0x1908, 0x4 bytes
-                float m_flFallSpeedMax; // 0x190c, 0x4 bytes
-                float m_flAirDrag; // 0x1910, 0x4 bytes
-                float m_flMaxMovespeed; // 0x1914, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GarbageAuraModifier; // 0x13a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13b0, 0xe0 bytes
+                float m_flAirSpeedMax; // 0x1490, 0x4 bytes
+                float m_flFallSpeedMax; // 0x1494, 0x4 bytes
+                float m_flAirDrag; // 0x1498, 0x4 bytes
+                float m_flMaxMovespeed; // 0x149c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityGarbageVData) == 0x1918, "CAbilityGarbageVData size mismatch");
+            static_assert(sizeof(CAbilityGarbageVData) == 0x14A0, "CAbilityGarbageVData size mismatch");
         }
     }
 }

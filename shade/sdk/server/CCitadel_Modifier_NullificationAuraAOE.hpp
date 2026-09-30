@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x368
+             * Size: 0x4c8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NullificationAuraAOE : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<shade::sdk::server::CBaseEntity*> m_vecDamagedTargets; // 0x00d0, 0x18 bytes
-                std::uint8_t pad_00e8[0x280]; // 0x00e8, 0x280 bytes
+                CUtlVector<shade::sdk::server::CBaseEntity*> m_vecDamagedTargets; // 0x0140, 0x18 bytes
+                std::uint8_t pad_0158[0x370]; // 0x0158, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NullificationAuraAOE) == 0x368, "CCitadel_Modifier_NullificationAuraAOE size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NullificationAuraAOE) == 0x4C8, "CCitadel_Modifier_NullificationAuraAOE size mismatch");
         }
     }
 }

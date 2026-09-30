@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,24 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicDistanceAutosave : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_iszTargetEntity; // 0x04a0, 0x8 bytes
-                float m_flDistanceToPlayer; // 0x04a8, 0x4 bytes
-                bool m_bForceNewLevelUnit; // 0x04ac, 0x1 bytes
-                bool m_bCheckCough; // 0x04ad, 0x1 bytes
-                bool m_bThinkDangerous; // 0x04ae, 0x1 bytes
-                std::uint8_t pad_04af[0x1]; // 0x04af, 0x1 bytes
-                float m_flDangerousTime; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlSymbolLarge m_iszTargetEntity; // 0x04b0, 0x8 bytes
+                float m_flDistanceToPlayer; // 0x04b8, 0x4 bytes
+                bool m_bForceNewLevelUnit; // 0x04bc, 0x1 bytes
+                bool m_bCheckCough; // 0x04bd, 0x1 bytes
+                bool m_bThinkDangerous; // 0x04be, 0x1 bytes
+                std::uint8_t pad_04bf[0x1]; // 0x04bf, 0x1 bytes
+                float m_flDangerousTime; // 0x04c0, 0x4 bytes
+                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputSave; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSaveDangerous; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CLogicDistanceAutosaveSaveThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicDistanceAutosave) == 0x4B8, "CLogicDistanceAutosave size mismatch");
+            static_assert(sizeof(CLogicDistanceAutosave) == 0x4C8, "CLogicDistanceAutosave size mismatch");
         }
     }
 }

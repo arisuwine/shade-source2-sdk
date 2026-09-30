@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9b0
+             * Size: 0xbb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_LightEntity : public shade::sdk::client::C_BaseModelEntity {
             public:
-                shade::sdk::client::CLightComponent *m_CLightComponent; // 0x09a8, 0x8 bytes
+                shade::sdk::client::CLightComponent *m_CLightComponent; // 0x0bb0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(C_LightEntity) == 0x9B0, "C_LightEntity size mismatch");
+            static_assert(sizeof(C_LightEntity) == 0xBB8, "C_LightEntity size mismatch");
         }
     }
 }

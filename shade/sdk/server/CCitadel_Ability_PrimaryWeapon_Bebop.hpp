@@ -12,38 +12,37 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/entity2/GameTime_t.hpp"
-#include "shade/sdk/server/CCitadel_Ability_PrimaryWeapon_BeamWeapon.hpp"
+#include "shade/sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17b8
+             * Size: 0x1b10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Ability_PrimaryWeapon_Bebop : public shade::sdk::server::CCitadel_Ability_PrimaryWeapon_BeamWeapon {
+            class CCitadel_Ability_PrimaryWeapon_Bebop : public shade::sdk::server::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1198[0x380]; // 0x1198, 0x380 bytes
-                shade::sdk::entity2::GameTime_t m_flStartWindUpTime; // 0x1518, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartFiringTime; // 0x151c, 0x4 bytes
-                bool m_bFiring; // 0x1520, 0x1 bytes
-                std::uint8_t pad_1521[0x297]; // 0x1521, 0x297 bytes
+                std::uint8_t pad_1708[0x168]; // 0x1708, 0x168 bytes
+                shade::sdk::entity2::GameTime_t m_flStartWindUpTime; // 0x1870, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartFiringTime; // 0x1874, 0x4 bytes
+                bool m_bFiring; // 0x1878, 0x1 bytes
+                std::uint8_t pad_1879[0x297]; // 0x1879, 0x297 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_Bebop) == 0x17B8, "CCitadel_Ability_PrimaryWeapon_Bebop size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_Bebop) == 0x1B10, "CCitadel_Ability_PrimaryWeapon_Bebop size mismatch");
         }
     }
 }

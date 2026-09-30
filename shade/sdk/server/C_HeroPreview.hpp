@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +32,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_HeroPreview : public shade::sdk::server::CBaseEntity {
             public:
-                shade::sdk::server::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x04a0, 0x40 bytes
+                shade::sdk::server::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x04b0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_HeroPreview) == 0x4E0, "C_HeroPreview size mismatch");
+            static_assert(sizeof(C_HeroPreview) == 0x4F0, "C_HeroPreview size mismatch");
         }
     }
 }

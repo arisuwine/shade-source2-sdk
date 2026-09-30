@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,9 +21,10 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x18
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Has Trivial Destructor
+             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
@@ -34,9 +36,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_hRuntimeListHandle; // Offset: 0x10, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CModifierHandleBase) == 0x18, "CModifierHandleBase size mismatch");
         }

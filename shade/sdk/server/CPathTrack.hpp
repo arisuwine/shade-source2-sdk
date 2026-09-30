@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,29 +33,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathTrack : public shade::sdk::server::CPointEntity {
             public:
-                shade::sdk::server::CPathTrack *m_pnext; // 0x04a0, 0x8 bytes
-                shade::sdk::server::CPathTrack *m_pprevious; // 0x04a8, 0x8 bytes
-                shade::sdk::server::CPathTrack *m_paltpath; // 0x04b0, 0x8 bytes
-                float m_flRadius; // 0x04b8, 0x4 bytes
-                float m_length; // 0x04bc, 0x4 bytes
-                CUtlSymbolLarge m_altName; // 0x04c0, 0x8 bytes
-                std::int32_t m_nIterVal; // 0x04c8, 0x4 bytes
-                shade::sdk::server::TrackOrientationType_t m_eOrientationType; // 0x04cc, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPass; // 0x04d0, 0x18 bytes
+                CHandle<shade::sdk::server::CPathTrack> m_pnext; // 0x04b0, 0x4 bytes
+                CHandle<shade::sdk::server::CPathTrack> m_pprevious; // 0x04b4, 0x4 bytes
+                CHandle<shade::sdk::server::CPathTrack> m_paltpath; // 0x04b8, 0x4 bytes
+                float m_flSpeed; // 0x04bc, 0x4 bytes
+                float m_flRadius; // 0x04c0, 0x4 bytes
+                float m_length; // 0x04c4, 0x4 bytes
+                CUtlSymbolLarge m_altName; // 0x04c8, 0x8 bytes
+                std::int32_t m_nIterVal; // 0x04d0, 0x4 bytes
+                shade::sdk::server::TrackOrientationType_t m_eOrientationType; // 0x04d4, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPass; // 0x04d8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputPass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableAlternatePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableAlternatePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleAlternatePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnablePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisablePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTogglePath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPathTrack) == 0x4E8, "CPathTrack size mismatch");
+            static_assert(sizeof(CPathTrack) == 0x4F0, "CPathTrack size mismatch");
         }
     }
 }

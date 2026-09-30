@@ -12,15 +12,21 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/EPowerupValueScaling.hpp"
 #include "shade/sdk/server/CCitadelModifierVData.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             struct ScalingPowerupDefinition_t;
+        }
+
+        namespace resourcesystem {
+            class InfoForResourceTypeIParticleSystemDefinition;
         }
     }
 }
@@ -29,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x770
+             * Size: 0x870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +44,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ScalingPowerUpVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CUtlVector<shade::sdk::client::ScalingPowerupDefinition_t> m_vecModifierValues; // 0x0750, 0x18 bytes
-                float m_flTimeMin; // 0x0768, 0x4 bytes
-                float m_flTimeMax; // 0x076c, 0x4 bytes
+                CUtlVector<shade::sdk::client::ScalingPowerupDefinition_t> m_vecModifierValues; // 0x0760, 0x18 bytes
+                shade::sdk::client::EPowerupValueScaling m_eValueScaling; // 0x0778, 0x4 bytes
+                float m_flTimeMin; // 0x077c, 0x4 bytes
+                float m_flTimeMax; // 0x0780, 0x4 bytes
+                std::uint8_t pad_0784[0x4]; // 0x0784, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle; // 0x0788, 0xe0 bytes
+                Color m_Color; // 0x0868, 0x4 bytes
+                std::uint8_t pad_086c[0x4]; // 0x086c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ScalingPowerUpVData) == 0x770, "CCitadel_Modifier_ScalingPowerUpVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ScalingPowerUpVData) == 0x870, "CCitadel_Modifier_ScalingPowerUpVData size mismatch");
         }
     }
 }

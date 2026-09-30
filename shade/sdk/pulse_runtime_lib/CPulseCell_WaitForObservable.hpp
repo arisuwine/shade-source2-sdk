@@ -12,18 +12,18 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp"
 #include "shade/sdk/pulse_runtime_lib/CPulse_ResumePoint.hpp"
-#include "shade/sdk/pulse_runtime_lib/PulseObservableBoolExpression_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x108
+             * Size: 0x1b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_WaitForObservable : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                shade::sdk::pulse_runtime_lib::PulseObservableBoolExpression_t m_Condition; // 0x0048, 0x78 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnTrue; // 0x00c0, 0x48 bytes
+                CPulseObservableExpression<bool> m_Condition; // 0x00d8, 0x90 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnTrue; // 0x0168, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_WaitForObservable) == 0x108, "CPulseCell_WaitForObservable size mismatch");
+            static_assert(sizeof(CPulseCell_WaitForObservable) == 0x1B0, "CPulseCell_WaitForObservable size mismatch");
         }
     }
 }

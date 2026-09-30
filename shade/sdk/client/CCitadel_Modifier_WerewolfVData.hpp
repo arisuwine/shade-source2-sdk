@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -36,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x988
+             * Size: 0x998
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,19 +46,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_WerewolfVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapWerewolfAbilities; // 0x0750, 0x28 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StackingBuffModifier; // 0x0778, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffEndingParticle; // 0x0788, 0xe0 bytes
-                shade::sdk::client::ModelChange_t m_WerewolfModel; // 0x0868, 0xe8 bytes
-                float m_flModelScale; // 0x0950, 0x4 bytes
-                std::uint8_t pad_0954[0x4]; // 0x0954, 0x4 bytes
-                shade::sdk::client::HeroCardOverride_t m_HeroCardOverride; // 0x0958, 0x30 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapWerewolfAbilities; // 0x0760, 0x28 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StackingBuffModifier; // 0x0788, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffEndingParticle; // 0x0798, 0xe0 bytes
+                shade::sdk::client::ModelChange_t m_WerewolfModel; // 0x0878, 0xe8 bytes
+                float m_flModelScale; // 0x0960, 0x4 bytes
+                std::uint8_t pad_0964[0x4]; // 0x0964, 0x4 bytes
+                shade::sdk::client::HeroCardOverride_t m_HeroCardOverride; // 0x0968, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_WerewolfVData) == 0x988, "CCitadel_Modifier_WerewolfVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_WerewolfVData) == 0x998, "CCitadel_Modifier_WerewolfVData size mismatch");
         }
     }
 }

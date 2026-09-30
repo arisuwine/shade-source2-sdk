@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -62,7 +63,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
             static_assert(sizeof(CPlayer_CameraServices) == 0x180, "CPlayer_CameraServices size mismatch");
         }

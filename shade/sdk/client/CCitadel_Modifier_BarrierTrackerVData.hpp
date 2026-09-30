@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa18
+             * Size: 0xa28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BarrierTrackerVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeaponImpactParticle; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TechImpactParticle; // 0x0830, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldBreakParticle; // 0x0910, 0xe0 bytes
-                CSoundEventName m_ShieldBreakSound; // 0x09f0, 0x10 bytes
-                CSoundEventName m_strShieldRefreshSound; // 0x0a00, 0x10 bytes
-                float m_flShieldImpactEffectDuration; // 0x0a10, 0x4 bytes
-                std::uint8_t pad_0a14[0x4]; // 0x0a14, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeaponImpactParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TechImpactParticle; // 0x0840, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldBreakParticle; // 0x0920, 0xe0 bytes
+                CSoundEventName m_ShieldBreakSound; // 0x0a00, 0x10 bytes
+                CSoundEventName m_strShieldRefreshSound; // 0x0a10, 0x10 bytes
+                float m_flShieldImpactEffectDuration; // 0x0a20, 0x4 bytes
+                std::uint8_t pad_0a24[0x4]; // 0x0a24, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BarrierTrackerVData) == 0xA18, "CCitadel_Modifier_BarrierTrackerVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BarrierTrackerVData) == 0xA28, "CCitadel_Modifier_BarrierTrackerVData size mismatch");
         }
     }
 }

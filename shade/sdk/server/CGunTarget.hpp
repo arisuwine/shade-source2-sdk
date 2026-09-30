@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x820
+             * Size: 0x920
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,23 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CGunTarget : public shade::sdk::server::CBaseToggle {
             public:
-                bool m_on; // 0x0800, 0x1 bytes
-                std::uint8_t pad_0801[0x3]; // 0x0801, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEnt; // 0x0804, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x0808, 0x18 bytes
+                float m_flSpeed; // 0x08f8, 0x4 bytes
+                bool m_on; // 0x08fc, 0x1 bytes
+                std::uint8_t pad_08fd[0x3]; // 0x08fd, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEnt; // 0x0900, 0x4 bytes
+                std::uint8_t pad_0904[0x4]; // 0x0904, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x0908, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CGunTargetNext; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CGunTargetStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CGunTargetWait; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CGunTarget) == 0x820, "CGunTarget size mismatch");
+            static_assert(sizeof(CGunTarget) == 0x920, "CGunTarget size mismatch");
         }
     }
 }

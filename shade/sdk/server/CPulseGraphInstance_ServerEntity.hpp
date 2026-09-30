@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b8
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,20 +38,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_ServerEntity : public shade::sdk::pulse_runtime_lib::CBasePulseGraphInstance {
             public:
-                std::uint8_t pad_0118[0x78]; // 0x0118, 0x78 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0190, 0x4 bytes
-                bool m_bActivated; // 0x0194, 0x1 bytes
-                std::uint8_t pad_0195[0x3]; // 0x0195, 0x3 bytes
-                CUtlSymbolLarge m_sNameFixupStaticPrefix; // 0x0198, 0x8 bytes
-                CUtlSymbolLarge m_sNameFixupParent; // 0x01a0, 0x8 bytes
-                CUtlSymbolLarge m_sNameFixupLocal; // 0x01a8, 0x8 bytes
-                CUtlSymbolLarge m_sProceduralWorldNameForRelays; // 0x01b0, 0x8 bytes
+                std::uint8_t pad_0090[0x90]; // 0x0090, 0x90 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0120, 0x4 bytes
+                bool m_bActivated; // 0x0124, 0x1 bytes
+                std::uint8_t pad_0125[0x3]; // 0x0125, 0x3 bytes
+                CUtlSymbolLarge m_sNameFixupStaticPrefix; // 0x0128, 0x8 bytes
+                CUtlSymbolLarge m_sNameFixupParent; // 0x0130, 0x8 bytes
+                CUtlSymbolLarge m_sNameFixupLocal; // 0x0138, 0x8 bytes
+                CUtlSymbolLarge m_sProceduralWorldNameForRelays; // 0x0140, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_ServerEntity) == 0x1B8, "CPulseGraphInstance_ServerEntity size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_ServerEntity) == 0x148, "CPulseGraphInstance_ServerEntity size mismatch");
         }
     }
 }

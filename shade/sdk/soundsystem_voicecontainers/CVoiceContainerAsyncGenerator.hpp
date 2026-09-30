@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0x80
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerAsyncGenerator : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerGenerator {
             public:
-                std::uint8_t pad_00a8[0x10]; // 0x00a8, 0x10 bytes
+                std::uint8_t pad_0070[0x10]; // 0x0070, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerAsyncGenerator) == 0xB8, "CVoiceContainerAsyncGenerator size mismatch");
+            static_assert(sizeof(CVoiceContainerAsyncGenerator) == 0x80, "CVoiceContainerAsyncGenerator size mismatch");
         }
     }
 }

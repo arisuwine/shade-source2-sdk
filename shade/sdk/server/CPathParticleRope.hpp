@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x598
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,41 +39,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CPathParticleRope : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x8]; // 0x04a0, 0x8 bytes
-                bool m_bStartActive; // 0x04a8, 0x1 bytes
-                std::uint8_t pad_04a9[0x3]; // 0x04a9, 0x3 bytes
-                float m_flMaxSimulationTime; // 0x04ac, 0x4 bytes
-                CUtlSymbolLarge m_iszEffectName; // 0x04b0, 0x8 bytes
-                CUtlVector<CUtlSymbolLarge> m_PathNodes_Name; // 0x04b8, 0x18 bytes
-                float m_flParticleSpacing; // 0x04d0, 0x4 bytes
-                float m_flSlack; // 0x04d4, 0x4 bytes
-                float m_flRadius; // 0x04d8, 0x4 bytes
-                Color m_ColorTint; // 0x04dc, 0x4 bytes
-                std::int32_t m_nEffectState; // 0x04e0, 0x4 bytes
-                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x04e8, 0x8 bytes
-                CNetworkUtlVectorBase<Vector> m_PathNodes_Position; // 0x04f0, 0x18 bytes
-                CNetworkUtlVectorBase<Vector> m_PathNodes_TangentIn; // 0x0508, 0x18 bytes
-                CNetworkUtlVectorBase<Vector> m_PathNodes_TangentOut; // 0x0520, 0x18 bytes
-                CNetworkUtlVectorBase<Vector> m_PathNodes_Color; // 0x0538, 0x18 bytes
-                CNetworkUtlVectorBase<bool> m_PathNodes_PinEnabled; // 0x0550, 0x18 bytes
-                CNetworkUtlVectorBase<float> m_PathNodes_RadiusScale; // 0x0568, 0x18 bytes
-                std::uint8_t pad_0580[0x8]; // 0x0580, 0x8 bytes
+                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
+                bool m_bStartActive; // 0x04b8, 0x1 bytes
+                std::uint8_t pad_04b9[0x3]; // 0x04b9, 0x3 bytes
+                float m_flMaxSimulationTime; // 0x04bc, 0x4 bytes
+                CUtlSymbolLarge m_iszEffectName; // 0x04c0, 0x8 bytes
+                CUtlVector<CUtlSymbolLarge> m_PathNodes_Name; // 0x04c8, 0x18 bytes
+                float m_flParticleSpacing; // 0x04e0, 0x4 bytes
+                float m_flSlack; // 0x04e4, 0x4 bytes
+                float m_flRadius; // 0x04e8, 0x4 bytes
+                Color m_ColorTint; // 0x04ec, 0x4 bytes
+                std::int32_t m_nEffectState; // 0x04f0, 0x4 bytes
+                std::uint8_t pad_04f4[0x4]; // 0x04f4, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x04f8, 0x8 bytes
+                CNetworkUtlVectorBase<Vector> m_PathNodes_Position; // 0x0500, 0x18 bytes
+                CNetworkUtlVectorBase<Vector> m_PathNodes_TangentIn; // 0x0518, 0x18 bytes
+                CNetworkUtlVectorBase<Vector> m_PathNodes_TangentOut; // 0x0530, 0x18 bytes
+                CNetworkUtlVectorBase<Vector> m_PathNodes_Color; // 0x0548, 0x18 bytes
+                CNetworkUtlVectorBase<bool> m_PathNodes_PinEnabled; // 0x0560, 0x18 bytes
+                CNetworkUtlVectorBase<float> m_PathNodes_RadiusScale; // 0x0578, 0x18 bytes
+                std::uint8_t pad_0590[0x8]; // 0x0590, 0x8 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * CUtlSymbolLarge pathNodes; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopEndCap; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDestroy; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputDisablePin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetRadius; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSlack; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPathParticleRope) == 0x588, "CPathParticleRope size mismatch");
+            static_assert(sizeof(CPathParticleRope) == 0x598, "CPathParticleRope size mismatch");
         }
     }
 }

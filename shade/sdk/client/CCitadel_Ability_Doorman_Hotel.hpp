@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1668
+             * Size: 0x1d18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Hotel : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bSpendCooldown; // 0x11d8, 0x1 bytes
-                std::uint8_t pad_11d9[0x3]; // 0x11d9, 0x3 bytes
-                Vector m_vLookTarget; // 0x11dc, 0xc bytes
-                std::uint8_t pad_11e8[0x480]; // 0x11e8, 0x480 bytes
+                bool m_bSpendCooldown; // 0x16d8, 0x1 bytes
+                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
+                VectorWS m_vLookTarget; // 0x16dc, 0xc bytes
+                std::uint8_t pad_16e8[0x630]; // 0x16e8, 0x630 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Hotel) == 0x1668, "CCitadel_Ability_Doorman_Hotel size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Hotel) == 0x1D18, "CCitadel_Ability_Doorman_Hotel size mismatch");
         }
     }
 }

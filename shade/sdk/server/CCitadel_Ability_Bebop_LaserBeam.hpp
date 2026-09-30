@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2748
+             * Size: 0x2f80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,23 +33,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bebop_LaserBeam : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x800]; // 0x0f70, 0x800 bytes
-                bool m_bZoomed; // 0x1770, 0x1 bytes
-                bool m_bAirCast; // 0x1771, 0x1 bytes
-                std::uint8_t pad_1772[0x6]; // 0x1772, 0x6 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam; // 0x1778, 0xfc0 bytes
-                std::uint8_t pad_2738[0x4]; // 0x2738, 0x4 bytes
-                float m_flAngleBetweenTrace; // 0x273c, 0x4 bytes
-                std::int32_t m_nTotalDamage; // 0x2740, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextDamageTime; // 0x2744, 0x4 bytes
+                std::uint8_t pad_14a0[0xb00]; // 0x14a0, 0xb00 bytes
+                bool m_bZoomed; // 0x1fa0, 0x1 bytes
+                bool m_bAirCast; // 0x1fa1, 0x1 bytes
+                std::uint8_t pad_1fa2[0x6]; // 0x1fa2, 0x6 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam; // 0x1fa8, 0xfc8 bytes
+                std::uint8_t pad_2f70[0x4]; // 0x2f70, 0x4 bytes
+                float m_flAngleBetweenTrace; // 0x2f74, 0x4 bytes
+                std::int32_t m_nTotalDamage; // 0x2f78, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextDamageTime; // 0x2f7c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0x2748, "CCitadel_Ability_Bebop_LaserBeam size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0x2F80, "CCitadel_Ability_Bebop_LaserBeam size mismatch");
         }
     }
 }

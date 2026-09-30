@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x880
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +44,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Item_Bleeding_Bullets_ActiveVData : public shade::sdk::server::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BleedModifier; // 0x0780, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x0790, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletImpactParticle; // 0x07a0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BleedModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x07a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletImpactParticle; // 0x07b0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Item_Bleeding_Bullets_ActiveVData) == 0x880, "CCitadel_Modifier_Item_Bleeding_Bullets_ActiveVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Item_Bleeding_Bullets_ActiveVData) == 0x890, "CCitadel_Modifier_Item_Bleeding_Bullets_ActiveVData size mismatch");
         }
     }
 }

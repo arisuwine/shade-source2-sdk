@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -43,7 +44,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x408
+             * Size: 0x410
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -69,28 +70,28 @@ namespace shade {
                 shade::sdk::client::ModifierSourceType_t m_nAmbientLoopingSoundSource; // 0x0338, 0x4 bytes
                 shade::sdk::client::ModifierSoundRecipients_t m_nAmbientLoopingSoundRecipients; // 0x033c, 0x4 bytes
                 CSoundEventName m_sEndSound; // 0x0340, 0x10 bytes
-                CBitVecEnum<shade::sdk::client::EModifierState> m_nEnabledStateMask; // 0x0350, 0x28 bytes
-                CBitVecEnum<shade::sdk::client::EModifierState> m_nDisabledStateMask; // 0x0378, 0x28 bytes
-                shade::sdk::client::ModifierAttribute_t m_nAttributes; // 0x03a0, 0x4 bytes
-                std::uint8_t pad_03a4[0x4]; // 0x03a4, 0x4 bytes
-                CUtlVector<shade::sdk::client::ModifierScriptValue_t> m_vecScriptValues; // 0x03a8, 0x18 bytes
-                CUtlVector<shade::sdk::client::ModifierScriptedEventHandler_t> m_vecScriptEventHandlers; // 0x03c0, 0x18 bytes
-                shade::sdk::client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x03d8, 0x4 bytes
-                bool m_bIsHidden; // 0x03dc, 0x1 bytes
-                std::uint8_t pad_03dd[0x3]; // 0x03dd, 0x3 bytes
-                shade::sdk::client::ModifierHiddenType_t m_eHiddenType; // 0x03e0, 0x4 bytes
-                std::uint8_t pad_03e4[0x4]; // 0x03e4, 0x4 bytes
-                CUtlString m_sLocalizationName; // 0x03e8, 0x8 bytes
-                shade::sdk::client::ModifierDebuffType_t m_eDebuffType; // 0x03f0, 0x4 bytes
-                bool m_bAutomaticallyDecayStacks; // 0x03f4, 0x1 bytes
-                bool m_bAllowApplicationPrediction; // 0x03f5, 0x1 bytes
-                std::uint8_t pad_03f6[0x12]; // 0x03f6, 0x12 bytes
+                CBitVecEnum<shade::sdk::client::EModifierState> m_nEnabledStateMask; // 0x0350, 0x2c bytes
+                CBitVecEnum<shade::sdk::client::EModifierState> m_nDisabledStateMask; // 0x037c, 0x2c bytes
+                shade::sdk::client::ModifierAttribute_t m_nAttributes; // 0x03a8, 0x4 bytes
+                std::uint8_t pad_03ac[0x4]; // 0x03ac, 0x4 bytes
+                CUtlVector<shade::sdk::client::ModifierScriptValue_t> m_vecScriptValues; // 0x03b0, 0x18 bytes
+                CUtlVector<shade::sdk::client::ModifierScriptedEventHandler_t> m_vecScriptEventHandlers; // 0x03c8, 0x18 bytes
+                shade::sdk::client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x03e0, 0x4 bytes
+                bool m_bIsHidden; // 0x03e4, 0x1 bytes
+                std::uint8_t pad_03e5[0x3]; // 0x03e5, 0x3 bytes
+                shade::sdk::client::ModifierHiddenType_t m_eHiddenType; // 0x03e8, 0x4 bytes
+                std::uint8_t pad_03ec[0x4]; // 0x03ec, 0x4 bytes
+                CUtlString m_sLocalizationName; // 0x03f0, 0x8 bytes
+                shade::sdk::client::ModifierDebuffType_t m_eDebuffType; // 0x03f8, 0x4 bytes
+                bool m_bAutomaticallyDecayStacks; // 0x03fc, 0x1 bytes
+                bool m_bAllowApplicationPrediction; // 0x03fd, 0x1 bytes
+                std::uint8_t pad_03fe[0x12]; // 0x03fe, 0x12 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierVData) == 0x408, "CModifierVData size mismatch");
+            static_assert(sizeof(CModifierVData) == 0x410, "CModifierVData size mismatch");
         }
     }
 }

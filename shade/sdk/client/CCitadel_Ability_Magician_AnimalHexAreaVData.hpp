@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1928
+             * Size: 0x14b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Magician_AnimalHexAreaVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HexAreaModifier; // 0x1818, 0x10 bytes
-                CSoundEventName m_TargetWarningSound; // 0x1828, 0x10 bytes
-                CSoundEventName m_ProjectileHitConfirm; // 0x1838, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect; // 0x1848, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HexAreaModifier; // 0x13a0, 0x10 bytes
+                CSoundEventName m_TargetWarningSound; // 0x13b0, 0x10 bytes
+                CSoundEventName m_ProjectileHitConfirm; // 0x13c0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect; // 0x13d0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_AnimalHexAreaVData) == 0x1928, "CCitadel_Ability_Magician_AnimalHexAreaVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_AnimalHexAreaVData) == 0x14B0, "CCitadel_Ability_Magician_AnimalHexAreaVData size mismatch");
         }
     }
 }

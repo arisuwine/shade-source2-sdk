@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1830
+             * Size: 0x13b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityRollingFireBallVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flBallLifetime; // 0x1818, 0x4 bytes
-                float m_flBallStepUpHeight; // 0x181c, 0x4 bytes
-                float m_flBallDistAboveGround; // 0x1820, 0x4 bytes
-                float m_flBallFloatDownRate; // 0x1824, 0x4 bytes
-                float m_flBallSpeed; // 0x1828, 0x4 bytes
-                float m_flBallTraceRadius; // 0x182c, 0x4 bytes
+                float m_flBallLifetime; // 0x13a0, 0x4 bytes
+                float m_flBallStepUpHeight; // 0x13a4, 0x4 bytes
+                float m_flBallDistAboveGround; // 0x13a8, 0x4 bytes
+                float m_flBallFloatDownRate; // 0x13ac, 0x4 bytes
+                float m_flBallSpeed; // 0x13b0, 0x4 bytes
+                float m_flBallTraceRadius; // 0x13b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityRollingFireBallVData) == 0x1830, "CAbilityRollingFireBallVData size mismatch");
+            static_assert(sizeof(CAbilityRollingFireBallVData) == 0x13B8, "CAbilityRollingFireBallVData size mismatch");
         }
     }
 }

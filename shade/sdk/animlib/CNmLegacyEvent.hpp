@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x58
+             * Size: 0x50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmLegacyEvent : public shade::sdk::animlib::CNmEvent {
             public:
-                CUtlString m_animEventClassName; // 0x0020, 0x8 bytes
-                KeyValues3 m_KV; // 0x0028, 0x10 bytes
-                std::uint8_t pad_0038[0x20]; // 0x0038, 0x20 bytes
+                CUtlString m_animEventClassName; // 0x0018, 0x8 bytes
+                KeyValues3 m_KV; // 0x0020, 0x10 bytes
+                std::uint8_t pad_0030[0x20]; // 0x0030, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmLegacyEvent) == 0x58, "CNmLegacyEvent size mismatch");
+            static_assert(sizeof(CNmLegacyEvent) == 0x50, "CNmLegacyEvent size mismatch");
         }
     }
 }

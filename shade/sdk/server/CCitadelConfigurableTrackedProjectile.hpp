@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0xa18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,21 +42,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelConfigurableTrackedProjectile : public shade::sdk::server::CCitadelProjectile {
             public:
-                shade::sdk::client::ETrackedProjectileTarget_t m_eTrackedTargetType; // 0x0860, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0864, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTrackingStartTime; // 0x0868, 0x4 bytes
-                Vector m_vLastValidPosition; // 0x086c, 0xc bytes
-                float m_flTrackingDuration; // 0x0878, 0x4 bytes
-                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
-                shade::sdk::client::CCitadelProjectileTrackingParams m_TrackingParams; // 0x0880, 0x90 bytes
+                shade::sdk::client::ETrackedProjectileTarget_t m_eTrackedTargetType; // 0x0968, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x096c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTrackingStartTime; // 0x0970, 0x4 bytes
+                VectorWS m_vLastValidPosition; // 0x0974, 0xc bytes
+                float m_flTrackingDuration; // 0x0980, 0x4 bytes
+                std::uint8_t pad_0984[0x4]; // 0x0984, 0x4 bytes
+                shade::sdk::client::CCitadelProjectileTrackingParams m_TrackingParams; // 0x0988, 0x90 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelConfigurableTrackedProjectile) == 0x910, "CCitadelConfigurableTrackedProjectile size mismatch");
+            static_assert(sizeof(CCitadelConfigurableTrackedProjectile) == 0xA18, "CCitadelConfigurableTrackedProjectile size mismatch");
         }
     }
 }

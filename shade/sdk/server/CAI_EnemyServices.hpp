@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0x50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,25 +40,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_EnemyServices : public shade::sdk::client::CAI_Component {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0050, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLastEnemy; // 0x0054, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeEnemyAcquired; // 0x0058, 0x4 bytes
-                bool m_bHasEnemyAcquired; // 0x005c, 0x1 bytes
-                std::uint8_t pad_005d[0x3]; // 0x005d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeLastHadEnemy; // 0x0060, 0x4 bytes
-                bool m_bHasLastHadEnemy; // 0x0064, 0x1 bytes
-                std::uint8_t pad_0065[0x3]; // 0x0065, 0x3 bytes
-                std::int32_t m_nEnemiesSerialNumber; // 0x0068, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEnemyOccluder; // 0x006c, 0x4 bytes
-                std::uint8_t pad_0070[0x8]; // 0x0070, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0048, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeEnemyChanged; // 0x004c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pEnemies; // Offset: 0x70, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_EnemyServices) == 0x78, "CAI_EnemyServices size mismatch");
+            static_assert(sizeof(CAI_EnemyServices) == 0x50, "CAI_EnemyServices size mismatch");
         }
     }
 }

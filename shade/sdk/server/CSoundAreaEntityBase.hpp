@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4d0
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -30,20 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundAreaEntityBase : public shade::sdk::server::CBaseEntity {
             public:
-                bool m_bDisabled; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x7]; // 0x04a1, 0x7 bytes
-                CUtlSymbolLarge m_iszSoundAreaType; // 0x04a8, 0x8 bytes
-                Vector m_vPos; // 0x04b0, 0xc bytes
-                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
+                bool m_bDisabled; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x7]; // 0x04b1, 0x7 bytes
+                CUtlSymbolLarge m_iszSoundAreaType; // 0x04b8, 0x8 bytes
+                Vector m_vPos; // 0x04c0, 0xc bytes
+                std::uint8_t pad_04cc[0x4]; // 0x04cc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundAreaEntityBase) == 0x4C0, "CSoundAreaEntityBase size mismatch");
+            static_assert(sizeof(CSoundAreaEntityBase) == 0x4D0, "CSoundAreaEntityBase size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x678
+             * Size: 0x8f8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_RocketBarrageVolley : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flFiringInterval; // 0x00d0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x00d4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextRocketTime; // 0x00d8, 0x4 bytes
-                std::int32_t m_nGrenadesLeft; // 0x00dc, 0x4 bytes
-                std::uint8_t pad_00e0[0x598]; // 0x00e0, 0x598 bytes
+                float m_flFiringInterval; // 0x0140, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x0144, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRocketTime; // 0x0148, 0x4 bytes
+                std::int32_t m_nGrenadesLeft; // 0x014c, 0x4 bytes
+                std::uint8_t pad_0150[0x7a8]; // 0x0150, 0x7a8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_RocketBarrageVolley) == 0x678, "CCitadel_Modifier_RocketBarrageVolley size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_RocketBarrageVolley) == 0x8F8, "CCitadel_Modifier_RocketBarrageVolley size mismatch");
         }
     }
 }

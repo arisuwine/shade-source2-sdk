@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5c8
+             * Size: 0x5d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CMultiSource : public shade::sdk::server::CLogicalEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_rgEntities[0x20]; // 0x04a0, 0x80 bytes
-                std::int32_t m_rgTriggered[0x20]; // 0x0520, 0x80 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x05a0, 0x18 bytes
-                std::int32_t m_iTotal; // 0x05b8, 0x4 bytes
-                std::uint8_t pad_05bc[0x4]; // 0x05bc, 0x4 bytes
-                CUtlSymbolLarge m_globalstate; // 0x05c0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_rgEntities[0x20]; // 0x04b0, 0x80 bytes
+                std::int32_t m_rgTriggered[0x20]; // 0x0530, 0x80 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x05b0, 0x18 bytes
+                std::int32_t m_iTotal; // 0x05c8, 0x4 bytes
+                std::uint8_t pad_05cc[0x4]; // 0x05cc, 0x4 bytes
+                CUtlSymbolLarge m_globalstate; // 0x05d0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CMultiSourceRegister; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CMultiSource) == 0x5C8, "CMultiSource size mismatch");
+            static_assert(sizeof(CMultiSource) == 0x5D8, "CMultiSource size mismatch");
         }
     }
 }

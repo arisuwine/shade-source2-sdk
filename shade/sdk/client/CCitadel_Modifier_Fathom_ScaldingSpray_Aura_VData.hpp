@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x7d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData : public shade::sdk::client::CCitadelModifierAura_ConeVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x07b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x07c0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData) == 0x7C0, "CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData) == 0x7D0, "CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData size mismatch");
         }
     }
 }

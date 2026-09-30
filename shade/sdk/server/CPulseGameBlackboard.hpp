@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGameBlackboard : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x8]; // 0x04a0, 0x8 bytes
-                CUtlString m_strGraphName; // 0x04a8, 0x8 bytes
-                CUtlString m_strStateBlob; // 0x04b0, 0x8 bytes
+                std::uint8_t pad_04b0[0x8]; // 0x04b0, 0x8 bytes
+                CUtlString m_strGraphName; // 0x04b8, 0x8 bytes
+                CUtlString m_strStateBlob; // 0x04c0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGameBlackboard) == 0x4B8, "CPulseGameBlackboard size mismatch");
+            static_assert(sizeof(CPulseGameBlackboard) == 0x4C8, "CPulseGameBlackboard size mismatch");
         }
     }
 }

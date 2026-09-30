@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -35,7 +36,6 @@ namespace shade {
 
             /* Data Map Fields
              * Vector bullet_direction; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void CWaterBulletBulletThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CWaterBullet) == 0xA90, "CWaterBullet size mismatch");

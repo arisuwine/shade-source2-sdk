@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x7c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierAura_CylinderVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                float m_flAuraTargetingCylinderUpOffset; // 0x07a8, 0x4 bytes
-                float m_flAuraTargetingCylinderHalfHeight; // 0x07ac, 0x4 bytes
+                float m_flAuraTargetingCylinderUpOffset; // 0x07b8, 0x4 bytes
+                float m_flAuraTargetingCylinderHalfHeight; // 0x07bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierAura_CylinderVData) == 0x7B0, "CCitadelModifierAura_CylinderVData size mismatch");
+            static_assert(sizeof(CCitadelModifierAura_CylinderVData) == 0x7C0, "CCitadelModifierAura_CylinderVData size mismatch");
         }
     }
 }

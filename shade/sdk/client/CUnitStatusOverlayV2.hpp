@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd00
+             * Size: 0xf70
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CUnitStatusOverlayV2 : public shade::sdk::client::CUnitStatusOverlay {
             public:
-                std::uint8_t pad_0c00[0xb8]; // 0x0c00, 0xb8 bytes
-                float m_flUIScale; // 0x0cb8, 0x4 bytes
-                std::uint8_t pad_0cbc[0x44]; // 0x0cbc, 0x44 bytes
+                std::uint8_t pad_0e20[0x150]; // 0x0e20, 0x150 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CUnitStatusOverlayV2) == 0xD00, "CUnitStatusOverlayV2 size mismatch");
+            static_assert(sizeof(CUnitStatusOverlayV2) == 0xF70, "CUnitStatusOverlayV2 size mismatch");
         }
     }
 }

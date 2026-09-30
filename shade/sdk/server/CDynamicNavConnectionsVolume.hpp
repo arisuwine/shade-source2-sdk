@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDynamicNavConnectionsVolume : public shade::sdk::server::CTriggerMultiple {
             public:
-                CUtlSymbolLarge m_iszConnectionTarget; // 0x08f8, 0x8 bytes
-                CUtlVector<shade::sdk::server::DynamicVolumeDef_t> m_vecConnections; // 0x0900, 0x18 bytes
-                CGlobalSymbol m_sTransitionType; // 0x0918, 0x8 bytes
-                bool m_bConnectionsEnabled; // 0x0920, 0x1 bytes
-                std::uint8_t pad_0921[0x3]; // 0x0921, 0x3 bytes
-                float m_flTargetAreaSearchRadius; // 0x0924, 0x4 bytes
-                float m_flUpdateDistance; // 0x0928, 0x4 bytes
-                float m_flMaxConnectionDistance; // 0x092c, 0x4 bytes
+                CUtlSymbolLarge m_iszConnectionTarget; // 0x0a08, 0x8 bytes
+                CUtlVector<shade::sdk::server::DynamicVolumeDef_t> m_vecConnections; // 0x0a10, 0x18 bytes
+                CGlobalSymbol m_sTransitionType; // 0x0a28, 0x8 bytes
+                bool m_bConnectionsEnabled; // 0x0a30, 0x1 bytes
+                std::uint8_t pad_0a31[0x3]; // 0x0a31, 0x3 bytes
+                float m_flTargetAreaSearchRadius; // 0x0a34, 0x4 bytes
+                float m_flUpdateDistance; // 0x0a38, 0x4 bytes
+                float m_flMaxConnectionDistance; // 0x0a3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDynamicNavConnectionsVolume) == 0x930, "CDynamicNavConnectionsVolume size mismatch");
+            static_assert(sizeof(CDynamicNavConnectionsVolume) == 0xA40, "CDynamicNavConnectionsVolume size mismatch");
         }
     }
 }

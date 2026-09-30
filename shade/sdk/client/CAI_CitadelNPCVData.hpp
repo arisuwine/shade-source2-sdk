@@ -12,15 +12,23 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CAI_BaseNPCVData.hpp"
-#include "shade/sdk/client/CCitadelWeaponInfo.hpp"
 #include "shade/sdk/client/EAbilitySlots_t.hpp"
+#include "shade/sdk/client/NPCFlightMotion_t.hpp"
 
 namespace shade {
     namespace sdk {
+        namespace client {
+            class CCitadelModifier;
+            class CCitadelWeaponInfo;
+            struct NPCHitReactClip_t;
+            struct NPCMovementBlockedClip_t;
+        }
+
         namespace resourcesystem {
             class InfoForResourceTypeCModel;
             class InfoForResourceTypeIParticleSystemDefinition;
@@ -32,7 +40,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1348
+             * Size: 0xc30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,76 +49,95 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_CitadelNPCVData : public shade::sdk::client::CAI_BaseNPCVData {
             public:
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapBoundAbilities; // 0x0330, 0x28 bytes
-                float m_flSightRangePlayers; // 0x0358, 0x4 bytes
-                float m_flSightRangeNPCs; // 0x035c, 0x4 bytes
-                CGlobalSymbol m_MeleeAnimName; // 0x0360, 0x8 bytes
-                float m_flMeleeAttemptRange; // 0x0368, 0x4 bytes
-                float m_flMeleeHitRange; // 0x036c, 0x4 bytes
-                CUtlVector<float> m_MeleeAttackPoints; // 0x0370, 0x18 bytes
-                float m_flMaxHealthBarDrawDistance; // 0x0388, 0x4 bytes
-                float m_flWalkSpeed; // 0x038c, 0x4 bytes
-                float m_flRunSpeed; // 0x0390, 0x4 bytes
-                float m_flTurnRate; // 0x0394, 0x4 bytes
-                float m_flAcceleration; // 0x0398, 0x4 bytes
-                float m_flStepHeight; // 0x039c, 0x4 bytes
-                float m_flJumpAnticipationTime; // 0x03a0, 0x4 bytes
-                std::uint8_t pad_03a4[0x4]; // 0x03a4, 0x4 bytes
-                CSoundEventName m_BeamStartSound; // 0x03a8, 0x10 bytes
-                CSoundEventName m_BeamStopSound; // 0x03b8, 0x10 bytes
-                CSoundEventName m_BeamPointStartLoopSound; // 0x03c8, 0x10 bytes
-                CSoundEventName m_BeamPointEndLoopSound; // 0x03d8, 0x10 bytes
-                CSoundEventName m_BeamPointClosestLoopSound; // 0x03e8, 0x10 bytes
-                CSoundEventName m_strAmbientLoopSound; // 0x03f8, 0x10 bytes
-                CSoundEventName m_DeathSound; // 0x0408, 0x10 bytes
-                CSoundEventName m_strLastHitSound; // 0x0418, 0x10 bytes
-                bool m_bPlayLastHitSound; // 0x0428, 0x1 bytes
-                std::uint8_t pad_0429[0x3]; // 0x0429, 0x3 bytes
-                float m_flLastHitSoundWindowTime; // 0x042c, 0x4 bytes
-                CSoundEventName m_MeleeHitSound; // 0x0430, 0x10 bytes
-                CSoundEventName m_MeleeHitPlayerSound; // 0x0440, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sAmberModelName; // 0x0450, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sSapphireModelName; // 0x0530, 0xe0 bytes
-                CModelMaterialGroupName m_sDefaultMaterialGroupName; // 0x0610, 0x8 bytes
-                CModelMaterialGroupName m_sEnemyMaterialGroupName; // 0x0618, 0x8 bytes
-                CModelMaterialGroupName m_sTeam1MaterialGroupName; // 0x0620, 0x8 bytes
-                CModelMaterialGroupName m_sTeam2MaterialGroupName; // 0x0628, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x0630, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeActivateParticle; // 0x0710, 0xe0 bytes
-                float m_flModelScale; // 0x07f0, 0x4 bytes
-                std::uint8_t pad_07f4[0x4]; // 0x07f4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathParticle; // 0x07f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JumpParticle; // 0x08d8, 0xe0 bytes
-                float m_flOutlineRange; // 0x09b8, 0x4 bytes
-                float m_flOutlineWidth; // 0x09bc, 0x4 bytes
-                bool m_bOutlineThroughWalls; // 0x09c0, 0x1 bytes
-                bool m_bOutlineWhenVisible; // 0x09c1, 0x1 bytes
-                bool m_bSuppressOtherOutlinesWhenVisible; // 0x09c2, 0x1 bytes
-                std::uint8_t pad_09c3[0x5]; // 0x09c3, 0x5 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealthBarParticle; // 0x09c8, 0xe0 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapBoundAbilities; // 0x02d8, 0x28 bytes
+                bool m_bSpawnOnGround; // 0x0300, 0x1 bytes
+                std::uint8_t pad_0301[0x3]; // 0x0301, 0x3 bytes
+                float m_flSightRangePlayers; // 0x0304, 0x4 bytes
+                float m_flSightRangeNPCs; // 0x0308, 0x4 bytes
+                std::uint8_t pad_030c[0x4]; // 0x030c, 0x4 bytes
+                CGlobalSymbol m_MeleeAnimName; // 0x0310, 0x8 bytes
+                float m_flMeleeAttemptRange; // 0x0318, 0x4 bytes
+                float m_flMeleeHitRange; // 0x031c, 0x4 bytes
+                float m_flWalkSpeed; // 0x0320, 0x4 bytes
+                float m_flRunSpeed; // 0x0324, 0x4 bytes
+                float m_flStrafeSpeed; // 0x0328, 0x4 bytes
+                float m_flTurnRate; // 0x032c, 0x4 bytes
+                float m_flAcceleration; // 0x0330, 0x4 bytes
+                float m_flStepHeight; // 0x0334, 0x4 bytes
+                float m_flJumpAnticipationTime; // 0x0338, 0x4 bytes
+                float m_flJumpUpBaseCostSeconds; // 0x033c, 0x4 bytes
+                shade::sdk::client::NPCFlightMotion_t m_FlightMotion; // 0x0340, 0x18 bytes
+                float m_flSquadDistance; // 0x0358, 0x4 bytes
+                std::uint8_t pad_035c[0x4]; // 0x035c, 0x4 bytes
+                CGlobalSymbol m_sAnimGraphIdentifier; // 0x0360, 0x8 bytes
+                CUtlVector<shade::sdk::client::NPCMovementBlockedClip_t> m_MovementBlockedClips; // 0x0368, 0x18 bytes
+                CUtlVector<shade::sdk::client::NPCHitReactClip_t> m_HitReactClips; // 0x0380, 0x18 bytes
+                CSoundEventName m_BeamStartSound; // 0x0398, 0x10 bytes
+                CSoundEventName m_BeamStopSound; // 0x03a8, 0x10 bytes
+                CSoundEventName m_BeamPointStartLoopSound; // 0x03b8, 0x10 bytes
+                CSoundEventName m_BeamPointEndLoopSound; // 0x03c8, 0x10 bytes
+                CSoundEventName m_BeamPointClosestLoopSound; // 0x03d8, 0x10 bytes
+                CSoundEventName m_strAmbientLoopSound; // 0x03e8, 0x10 bytes
+                CSoundEventName m_DeathSound; // 0x03f8, 0x10 bytes
+                CSoundEventName m_strLastHitSound; // 0x0408, 0x10 bytes
+                float m_flLastHitSoundWindowTime; // 0x0418, 0x4 bytes
+                std::uint8_t pad_041c[0x4]; // 0x041c, 0x4 bytes
+                CSoundEventName m_MeleeHitSound; // 0x0420, 0x10 bytes
+                CSoundEventName m_strMeleeAttackSound; // 0x0430, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sAmberModelName; // 0x0440, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sSapphireModelName; // 0x0520, 0xe0 bytes
+                bool m_bUseTeamRelativeMaterialGroups; // 0x0600, 0x1 bytes
+                std::uint8_t pad_0601[0x7]; // 0x0601, 0x7 bytes
+                CModelMaterialGroupName m_sDefaultMaterialGroupName; // 0x0608, 0x8 bytes
+                CModelMaterialGroupName m_sEnemyMaterialGroupName; // 0x0610, 0x8 bytes
+                CModelMaterialGroupName m_sTeam1MaterialGroupName; // 0x0618, 0x8 bytes
+                CModelMaterialGroupName m_sTeam2MaterialGroupName; // 0x0620, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x0628, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeActivateParticle; // 0x0708, 0xe0 bytes
+                float m_flModelScale; // 0x07e8, 0x4 bytes
+                std::uint8_t pad_07ec[0x4]; // 0x07ec, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathParticle; // 0x07f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JumpParticle; // 0x08d0, 0xe0 bytes
+                float m_flOutlineRange; // 0x09b0, 0x4 bytes
+                float m_flOutlineWidth; // 0x09b4, 0x4 bytes
+                bool m_bOutlineThroughWalls; // 0x09b8, 0x1 bytes
+                bool m_bOutlineWhenVisible; // 0x09b9, 0x1 bytes
+                bool m_bSuppressOtherOutlinesWhenVisible; // 0x09ba, 0x1 bytes
+                std::uint8_t pad_09bb[0x1]; // 0x09bb, 0x1 bytes
+                float m_flMaxHealthBarDrawDistance; // 0x09bc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealthBarParticle; // 0x09c0, 0xe0 bytes
+                CUtlString m_sLocUnitName; // 0x0aa0, 0x8 bytes
                 CUtlString m_sHealthBarAttachment; // 0x0aa8, 0x8 bytes
                 Color m_HealthBarColorFriend; // 0x0ab0, 0x4 bytes
                 Color m_HealthBarColorEnemy; // 0x0ab4, 0x4 bytes
                 Color m_HealthBarColorTeam1; // 0x0ab8, 0x4 bytes
                 Color m_HealthBarColorTeam2; // 0x0abc, 0x4 bytes
                 Color m_HealthBarColorTeamNeutral; // 0x0ac0, 0x4 bytes
-                float m_flMeleeTargetRadius; // 0x0ac4, 0x4 bytes
-                float m_flHealthBarOffset; // 0x0ac8, 0x4 bytes
-                bool m_bSpawnBreakablesOnDeath; // 0x0acc, 0x1 bytes
-                std::uint8_t pad_0acd[0x3]; // 0x0acd, 0x3 bytes
-                float m_flBreakableForceScale; // 0x0ad0, 0x4 bytes
-                float m_flPhysicsImpulseMultiplier; // 0x0ad4, 0x4 bytes
-                float m_flBeamWeaponWidth; // 0x0ad8, 0x4 bytes
-                float m_flBeamTurnRate; // 0x0adc, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamWeaponParticle; // 0x0ae0, 0xe0 bytes
-                CPanoramaImageName m_strCustomUnitIcon; // 0x0bc0, 0x10 bytes
-                shade::sdk::client::CCitadelWeaponInfo m_WeaponInfo; // 0x0bd0, 0x778 bytes
+                std::uint8_t pad_0ac4[0x4]; // 0x0ac4, 0x4 bytes
+                CPanoramaImageName m_strCustomUnitIcon; // 0x0ac8, 0x10 bytes
+                bool m_bTrackOutOfCombatStatus; // 0x0ad8, 0x1 bytes
+                std::uint8_t pad_0ad9[0x7]; // 0x0ad9, 0x7 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NpcOutOfCombatModifier; // 0x0ae0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NpcInCombatModifier; // 0x0af0, 0x10 bytes
+                float m_flMeleeTargetRadius; // 0x0b00, 0x4 bytes
+                bool m_bSpawnBreakablesOnDeath; // 0x0b04, 0x1 bytes
+                std::uint8_t pad_0b05[0x3]; // 0x0b05, 0x3 bytes
+                float m_flBreakableForceScale; // 0x0b08, 0x4 bytes
+                float m_flPhysicsImpulseMultiplier; // 0x0b0c, 0x4 bytes
+                float m_flBeamWeaponWidth; // 0x0b10, 0x4 bytes
+                float m_flBeamTurnRate; // 0x0b14, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamWeaponParticle; // 0x0b18, 0xe0 bytes
+                CUtlOrderedMap<CGlobalSymbol, shade::sdk::client::CCitadelWeaponInfo> m_mapWeaponInfos; // 0x0bf8, 0x28 bytes
+                bool m_bDamageBreakableWithMelee; // 0x0c20, 0x1 bytes
+                std::uint8_t pad_0c21[0x3]; // 0x0c21, 0x3 bytes
+                std::int32_t m_nSquadPriority; // 0x0c24, 0x4 bytes
+                std::uint8_t pad_0c28[0x8]; // 0x0c28, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_CitadelNPCVData) == 0x1348, "CAI_CitadelNPCVData size mismatch");
+            static_assert(sizeof(CAI_CitadelNPCVData) == 0xC30, "CAI_CitadelNPCVData size mismatch");
         }
     }
 }

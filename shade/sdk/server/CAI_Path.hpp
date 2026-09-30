@@ -12,14 +12,17 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/entity2/GameTime_t.hpp"
-#include "shade/sdk/navlib/NavGravity_t.hpp"
-#include "shade/sdk/server/AI_NavGoalFlags_t.hpp"
+#include "shade/sdk/navlib/NavHull_t.hpp"
+#include "shade/sdk/server/AI_PathGoal_t.hpp"
+#include "shade/sdk/server/AI_TaskFailureCode_t.hpp"
 #include "shade/sdk/server/CAI_WaypointList.hpp"
-#include "shade/sdk/server/NavGoalType_t.hpp"
+#include "shade/sdk/server/CRelativeLocation.hpp"
+#include "shade/sdk/server/IAI_Path.hpp"
 
 namespace shade {
     namespace sdk {
@@ -33,56 +36,46 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe8
-             * Alignment: 0xff
+             * Size: 0x3e8
+             * Alignment: 0x8
              * Has VTable
+             * Construct Allowed
              */
             #pragma pack(push, 1)
-            class CAI_Path {
+            class CAI_Path : public shade::sdk::server::IAI_Path {
             public:
-                std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                shade::sdk::server::CAI_WaypointList m_Waypoints; // 0x0008, 0x8 bytes
-                VectorWS m_vPrevWaypoint; // 0x0010, 0xc bytes
-                VectorWS m_vPrevWaypointBase; // 0x001c, 0xc bytes
-                shade::sdk::server::CAI_WaypointList m_WaypointsLocal; // 0x0028, 0x8 bytes
-                std::uint8_t pad_0030[0x8]; // 0x0030, 0x8 bytes
-                std::uint32_t m_nLocalPathHash; // 0x0038, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x003c, 0x4 bytes
-                Vector m_vTargetOffset; // 0x0040, 0xc bytes
-                bool m_bGoalPosSet; // 0x004c, 0x1 bytes
-                std::uint8_t pad_004d[0x3]; // 0x004d, 0x3 bytes
-                VectorWS m_vGoalActualPos; // 0x0050, 0xc bytes
-                VectorWS m_vGoalBasePos; // 0x005c, 0xc bytes
-                VectorWS m_vGoalActualPos_Initial; // 0x0068, 0xc bytes
-                VectorWS m_vGoalBasePos_Initial; // 0x0074, 0xc bytes
-                VectorWS m_vGoalPosBlocked; // 0x0080, 0xc bytes
-                shade::sdk::navlib::NavGravity_t m_GravityAtGoalPos; // 0x008c, 0x10 bytes
-                bool m_bGoalTypeSet; // 0x009c, 0x1 bytes
-                std::uint8_t pad_009d[0x3]; // 0x009d, 0x3 bytes
-                shade::sdk::server::NavGoalType_t m_goalType; // 0x00a0, 0x4 bytes
-                shade::sdk::server::AI_NavGoalFlags_t m_goalFlags; // 0x00a4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGoalChangeTime; // 0x00a8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPathChangeTime; // 0x00ac, 0x4 bytes
-                float m_flDistAdvancedToCurWaypoint; // 0x00b0, 0x4 bytes
-                std::uint8_t pad_00b4[0x10]; // 0x00b4, 0x10 bytes
-                bool m_bOnMovableNavMesh; // 0x00c4, 0x1 bytes
-                std::uint8_t pad_00c5[0x3]; // 0x00c5, 0x3 bytes
-                std::uint32_t m_unGoalActualMovableMeshId; // 0x00c8, 0x4 bytes
-                std::uint32_t m_unGoalBaseMovableMeshId; // 0x00cc, 0x4 bytes
-                std::uint32_t m_unPrevWaypointMovableMeshId; // 0x00d0, 0x4 bytes
-                std::uint32_t m_unPrevWaypointBaseMovableMeshId; // 0x00d4, 0x4 bytes
-                std::uint32_t m_unGoalActualMovableMeshId_Initial; // 0x00d8, 0x4 bytes
-                std::uint32_t m_unGoalBaseMovableMeshId_Initial; // 0x00dc, 0x4 bytes
-                std::uint32_t m_unGoalPosBlockedMovableMeshId; // 0x00e0, 0x4 bytes
-                std::uint8_t pad_00e4[0x4]; // 0x00e4, 0x4 bytes
+                std::uint8_t pad_0008[0x8]; // 0x0008, 0x8 bytes
+                shade::sdk::server::CAI_WaypointList m_Waypoints; // 0x0010, 0x10 bytes
+                shade::sdk::server::CRelativeLocation m_vPrevWaypoint; // 0x0020, 0x48 bytes
+                shade::sdk::server::CAI_WaypointList m_WaypointsLocal; // 0x0068, 0x10 bytes
+                std::uint8_t pad_0078[0x8]; // 0x0078, 0x8 bytes
+                std::uint32_t m_nLocalPathHash; // 0x0080, 0x4 bytes
+                std::uint8_t pad_0084[0x4]; // 0x0084, 0x4 bytes
+                shade::sdk::server::AI_PathGoal_t m_goal; // 0x0088, 0x258 bytes
+                std::uint32_t m_nSerialNumber; // 0x02e0, 0x4 bytes
+                shade::sdk::server::AI_TaskFailureCode_t m_nFailureCode; // 0x02e4, 0x2 bytes
+                std::uint8_t pad_02e6[0x2]; // 0x02e6, 0x2 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBlockingEntity; // 0x02e8, 0x4 bytes
+                bool m_bSuppressRepathing; // 0x02ec, 0x1 bytes
+                bool m_bUnbuilt; // 0x02ed, 0x1 bytes
+                bool m_bSuccess; // 0x02ee, 0x1 bytes
+                bool m_bNeedsRebuild; // 0x02ef, 0x1 bytes
+                bool m_bOwnsCoverLocation; // 0x02f0, 0x1 bytes
+                bool m_bCanRepathFromGoalMovement; // 0x02f1, 0x1 bytes
+                std::uint8_t pad_02f2[0x6]; // 0x02f2, 0x6 bytes
+                shade::sdk::server::CRelativeLocation m_vGoalActualPos_Initial; // 0x02f8, 0x48 bytes
+                shade::sdk::server::CRelativeLocation m_vGoalBasePos_Initial; // 0x0340, 0x48 bytes
+                shade::sdk::server::CRelativeLocation m_vGoalActualPos_ForClipping; // 0x0388, 0x48 bytes
+                shade::sdk::entity2::GameTime_t m_flPathCreationTime; // 0x03d0, 0x4 bytes
+                std::uint8_t pad_03d4[0xc]; // 0x03d4, 0xc bytes
+                shade::sdk::navlib::NavHull_t m_nNavHullIdx; // 0x03e0, 0x4 bytes
+                std::uint8_t pad_03e4[0x4]; // 0x03e4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t m_nNavHullIdx; // Offset: 0xc0, Size: 0x1, Size In Bytes: 0x4
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_Path) == 0xE8, "CAI_Path size mismatch");
+            static_assert(sizeof(CAI_Path) == 0x3E8, "CAI_Path size mismatch");
         }
     }
 }

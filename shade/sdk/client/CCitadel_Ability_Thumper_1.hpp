@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1578
+             * Size: 0x1bc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Thumper_1 : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                Vector m_vecAimPos; // 0x11d8, 0xc bytes
-                Vector m_vecAimNormal; // 0x11e4, 0xc bytes
-                float m_flPushForce; // 0x11f0, 0x4 bytes
-                std::uint8_t pad_11f4[0x384]; // 0x11f4, 0x384 bytes
+                VectorWS m_vecAimPos; // 0x16d8, 0xc bytes
+                Vector m_vecAimNormal; // 0x16e4, 0xc bytes
+                float m_flPushForce; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0x4d4]; // 0x16f4, 0x4d4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Thumper_1) == 0x1578, "CCitadel_Ability_Thumper_1 size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Thumper_1) == 0x1BC8, "CCitadel_Ability_Thumper_1 size mismatch");
         }
     }
 }

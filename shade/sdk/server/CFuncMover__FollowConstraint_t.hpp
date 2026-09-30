@@ -12,13 +12,16 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace server {
             enum class CFuncMover__FollowConstraint_t : std::uint32_t {
                 FOLLOW_CONSTRAINT_DISTANCE = 0x0,
-                FOLLOW_CONSTRAINT_SPRING = 0x1
+                FOLLOW_CONSTRAINT_SPRING = 0x1,
+                FOLLOW_CONSTRAINT_RATIO = 0x2,
+                FOLLOW_CONSTRAINT_COUPLER = 0x3
             };
         }
     }

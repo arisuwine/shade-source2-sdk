@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x598
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,40 +41,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_Hint : public shade::sdk::server::CServerOnlyEntity {
             public:
-                shade::sdk::server::HintNodeData m_NodeData; // 0x04a0, 0x40 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hHintOwner; // 0x04e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextUseTime; // 0x04e4, 0x4 bytes
-                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnNPCStartedUsing; // 0x04e8, 0x20 bytes
-                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnNPCStoppedUsing; // 0x0508, 0x20 bytes
-                float m_nodeFOV; // 0x0528, 0x4 bytes
-                bool m_bNodeFOVCheckBehind; // 0x052c, 0x1 bytes
-                std::uint8_t pad_052d[0x3]; // 0x052d, 0x3 bytes
-                Vector m_vecForward; // 0x0530, 0xc bytes
-                std::uint8_t pad_053c[0x4]; // 0x053c, 0x4 bytes
-                CUtlSymbolLarge m_iszAnimgraphEntryAction; // 0x0540, 0x8 bytes
-                CUtlSymbolLarge m_iszAnimgraphExitAction; // 0x0548, 0x8 bytes
-                CUtlSymbolLarge m_iszAnimgraphEntryCmd; // 0x0550, 0x8 bytes
-                CUtlSymbolLarge m_iszAnimgraphExitCmd; // 0x0558, 0x8 bytes
-                CUtlSymbolLarge m_iszNavlinkTargetName; // 0x0560, 0x8 bytes
-                bool m_bRemoveOnUnreserved; // 0x0568, 0x1 bytes
-                std::uint8_t pad_0569[0x3]; // 0x0569, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAssociatedEntity; // 0x056c, 0x4 bytes
-                float m_flInteractionDistance; // 0x0570, 0x4 bytes
-                float m_flCooldown; // 0x0574, 0x4 bytes
-                CUtlSymbolLarge m_iszNPCFollowsEntity; // 0x0578, 0x8 bytes
-                float m_flNPCSnapToHintDistance; // 0x0580, 0x4 bytes
-                std::uint8_t pad_0584[0x4]; // 0x0584, 0x4 bytes
+                shade::sdk::server::HintNodeData m_NodeData; // 0x04b0, 0x40 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hHintOwner; // 0x04f0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextUseTime; // 0x04f4, 0x4 bytes
+                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnNPCStartedUsing; // 0x04f8, 0x20 bytes
+                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnNPCStoppedUsing; // 0x0518, 0x20 bytes
+                float m_nodeFOV; // 0x0538, 0x4 bytes
+                bool m_bNodeFOVCheckBehind; // 0x053c, 0x1 bytes
+                std::uint8_t pad_053d[0x3]; // 0x053d, 0x3 bytes
+                Vector m_vecForward; // 0x0540, 0xc bytes
+                std::uint8_t pad_054c[0x4]; // 0x054c, 0x4 bytes
+                CUtlSymbolLarge m_iszAnimgraphEntryAction; // 0x0550, 0x8 bytes
+                CUtlSymbolLarge m_iszAnimgraphExitAction; // 0x0558, 0x8 bytes
+                CUtlSymbolLarge m_iszAnimgraphEntryCmd; // 0x0560, 0x8 bytes
+                CUtlSymbolLarge m_iszAnimgraphExitCmd; // 0x0568, 0x8 bytes
+                CUtlSymbolLarge m_iszNavlinkTargetName; // 0x0570, 0x8 bytes
+                bool m_bRemoveOnUnreserved; // 0x0578, 0x1 bytes
+                std::uint8_t pad_0579[0x3]; // 0x0579, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAssociatedEntity; // 0x057c, 0x4 bytes
+                float m_flInteractionDistance; // 0x0580, 0x4 bytes
+                float m_flCooldown; // 0x0584, 0x4 bytes
+                CUtlSymbolLarge m_iszNPCFollowsEntity; // 0x0588, 0x8 bytes
+                float m_flNPCSnapToHintDistance; // 0x0590, 0x4 bytes
+                std::uint8_t pad_0594[0x4]; // 0x0594, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CAI_HintEnableThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggleHint; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_Hint) == 0x588, "CAI_Hint size mismatch");
+            static_assert(sizeof(CAI_Hint) == 0x598, "CAI_Hint size mismatch");
         }
     }
 }

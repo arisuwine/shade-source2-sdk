@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_BodyGroupChoice : public shade::sdk::client::CCitadelModifier {
             public:
-                CUtlStringToken m_nBodyGroupName; // 0x00c0, 0x4 bytes
-                std::int32_t m_nBodyGroupChoice; // 0x00c4, 0x4 bytes
+                CUtlStringToken m_nBodyGroupName; // 0x0130, 0x4 bytes
+                std::int32_t m_nBodyGroupChoice; // 0x0134, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_BodyGroupChoice) == 0xC8, "CGameModifier_BodyGroupChoice size mismatch");
+            static_assert(sizeof(CGameModifier_BodyGroupChoice) == 0x138, "CGameModifier_BodyGroupChoice size mismatch");
         }
     }
 }

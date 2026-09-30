@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1950
+             * Size: 0x14d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,17 +43,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_DazzlingOrbVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CPiecewiseCurve m_FallSpeedCurve; // 0x1818, 0x40 bytes
-                float m_flAirSpeedMax; // 0x1858, 0x4 bytes
-                float m_flAirDrag; // 0x185c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_OrbWatcherModifier; // 0x1860, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x1870, 0xe0 bytes
+                CPiecewiseCurve m_FallSpeedCurve; // 0x13a0, 0x40 bytes
+                float m_flAirSpeedMax; // 0x13e0, 0x4 bytes
+                float m_flAirDrag; // 0x13e4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_OrbWatcherModifier; // 0x13e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x13f8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_DazzlingOrbVData) == 0x1950, "CCitadel_Ability_Unicorn_DazzlingOrbVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_DazzlingOrbVData) == 0x14D8, "CCitadel_Ability_Unicorn_DazzlingOrbVData size mismatch");
         }
     }
 }

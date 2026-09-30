@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x798
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,29 +31,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDynamicLight : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t m_ActualFlags; // 0x0780, 0x1 bytes
-                std::uint8_t m_Flags; // 0x0781, 0x1 bytes
-                std::uint8_t m_LightStyle; // 0x0782, 0x1 bytes
-                bool m_On; // 0x0783, 0x1 bytes
-                float m_Radius; // 0x0784, 0x4 bytes
-                std::int32_t m_Exponent; // 0x0788, 0x4 bytes
-                float m_InnerAngle; // 0x078c, 0x4 bytes
-                float m_OuterAngle; // 0x0790, 0x4 bytes
-                float m_SpotRadius; // 0x0794, 0x4 bytes
+                std::uint8_t m_ActualFlags; // 0x0878, 0x1 bytes
+                std::uint8_t m_Flags; // 0x0879, 0x1 bytes
+                std::uint8_t m_LightStyle; // 0x087a, 0x1 bytes
+                bool m_On; // 0x087b, 0x1 bytes
+                float m_Radius; // 0x087c, 0x4 bytes
+                std::int32_t m_Exponent; // 0x0880, 0x4 bytes
+                float m_InnerAngle; // 0x0884, 0x4 bytes
+                float m_OuterAngle; // 0x0888, 0x4 bytes
+                float m_SpotRadius; // 0x088c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void CDynamicLightDynamicLightThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * Color _light; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float pitch; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t spawnflags; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDynamicLight) == 0x798, "CDynamicLight size mismatch");
+            static_assert(sizeof(CDynamicLight) == 0x890, "CDynamicLight size mismatch");
         }
     }
 }

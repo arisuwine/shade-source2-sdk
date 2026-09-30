@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x16b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,23 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_WarpStone_VData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x18b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterDebuffModifier; // 0x18c8, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x18d8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x18e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x19c8, 0xe0 bytes
-                float m_flGroundProbeSpeed; // 0x1aa8, 0x4 bytes
-                float m_flGroundStepDown; // 0x1aac, 0x4 bytes
-                float m_flGroundStepUp; // 0x1ab0, 0x4 bytes
-                std::int32_t m_iMaxGroundIterations; // 0x1ab4, 0x4 bytes
-                float m_flVelocityScale; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x14b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterDebuffModifier; // 0x14c0, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x14d0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x14e0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x15c0, 0xe0 bytes
+                float m_flGroundProbeSpeed; // 0x16a0, 0x4 bytes
+                float m_flGroundStepDown; // 0x16a4, 0x4 bytes
+                float m_flGroundStepUp; // 0x16a8, 0x4 bytes
+                std::int32_t m_iMaxGroundIterations; // 0x16ac, 0x4 bytes
+                float m_flVelocityScale; // 0x16b0, 0x4 bytes
+                std::uint8_t pad_16b4[0x4]; // 0x16b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_WarpStone_VData) == 0x1AC0, "CItem_WarpStone_VData size mismatch");
+            static_assert(sizeof(CItem_WarpStone_VData) == 0x16B8, "CItem_WarpStone_VData size mismatch");
         }
     }
 }

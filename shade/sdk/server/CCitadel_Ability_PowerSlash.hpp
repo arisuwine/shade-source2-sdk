@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1640
+             * Size: 0x1de0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PowerSlash : public shade::sdk::server::CCitadelBaseYamatoAbility {
             public:
-                std::uint8_t pad_0f78[0x20]; // 0x0f78, 0x20 bytes
-                std::int32_t m_nPowerLevel; // 0x0f98, 0x4 bytes
-                std::uint8_t pad_0f9c[0x4]; // 0x0f9c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x0fa0, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticle; // 0x0fb8, 0x4 bytes
-                std::uint8_t pad_0fbc[0x684]; // 0x0fbc, 0x684 bytes
+                std::uint8_t pad_14a8[0x20]; // 0x14a8, 0x20 bytes
+                std::int32_t m_nPowerLevel; // 0x14c8, 0x4 bytes
+                std::uint8_t pad_14cc[0x4]; // 0x14cc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x14d0, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticle; // 0x14e8, 0x4 bytes
+                std::uint8_t pad_14ec[0x8f4]; // 0x14ec, 0x8f4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PowerSlash) == 0x1640, "CCitadel_Ability_PowerSlash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PowerSlash) == 0x1DE0, "CCitadel_Ability_PowerSlash size mismatch");
         }
     }
 }

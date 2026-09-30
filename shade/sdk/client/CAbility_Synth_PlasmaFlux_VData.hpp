@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -34,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1648
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +44,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Synth_PlasmaFlux_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_WeaponDamageBonusModifier; // 0x1818, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x1828, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1908, 0xe0 bytes
-                CSoundEventName m_strCasterLoopingSound; // 0x19e8, 0x10 bytes
-                CSoundEventName m_strProjectileExpireSound; // 0x19f8, 0x10 bytes
-                CSoundEventName m_strImpactSound; // 0x1a08, 0x10 bytes
-                CSoundEventName m_strTimerSound; // 0x1a18, 0x10 bytes
-                CSoundEventName m_strArrivedSound; // 0x1a28, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1a38, 0x88 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_WeaponDamageBonusModifier; // 0x13a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x13b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1490, 0xe0 bytes
+                CSoundEventName m_strCasterLoopingSound; // 0x1570, 0x10 bytes
+                CSoundEventName m_strProjectileExpireSound; // 0x1580, 0x10 bytes
+                CSoundEventName m_strImpactSound; // 0x1590, 0x10 bytes
+                CSoundEventName m_strTimerSound; // 0x15a0, 0x10 bytes
+                CSoundEventName m_strArrivedSound; // 0x15b0, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x15c0, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Synth_PlasmaFlux_VData) == 0x1AC0, "CAbility_Synth_PlasmaFlux_VData size mismatch");
+            static_assert(sizeof(CAbility_Synth_PlasmaFlux_VData) == 0x1648, "CAbility_Synth_PlasmaFlux_VData size mismatch");
         }
     }
 }

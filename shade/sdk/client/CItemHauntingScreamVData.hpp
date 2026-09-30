@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18d8
+             * Size: 0x14d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemHauntingScreamVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x18b8, 0x10 bytes
-                CSoundEventName m_strHitConfirmSound; // 0x18c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x14b0, 0x10 bytes
+                CSoundEventName m_strHitConfirmSound; // 0x14c0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemHauntingScreamVData) == 0x18D8, "CItemHauntingScreamVData size mismatch");
+            static_assert(sizeof(CItemHauntingScreamVData) == 0x14D0, "CItemHauntingScreamVData size mismatch");
         }
     }
 }

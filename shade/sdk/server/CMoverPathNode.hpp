@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5a0
+             * Size: 0x5b0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CMoverPathNode : public shade::sdk::server::CPathNode {
             public:
-                CEntityOutputTemplate<CUtlString> m_OnStartFromOrInSegment; // 0x0500, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_OnStoppedAtOrInSegment; // 0x0520, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_OnPassThrough; // 0x0540, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_OnPassThroughForward; // 0x0560, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_OnPassThroughReverse; // 0x0580, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_OnStartFromOrInSegment; // 0x0510, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_OnStoppedAtOrInSegment; // 0x0530, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_OnPassThrough; // 0x0550, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_OnPassThroughForward; // 0x0570, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_OnPassThroughReverse; // 0x0590, 0x20 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CMoverPathNode) == 0x5A0, "CMoverPathNode size mismatch");
+            static_assert(sizeof(CMoverPathNode) == 0x5B0, "CMoverPathNode size mismatch");
         }
     }
 }

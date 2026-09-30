@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,29 +33,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CEntityFlame : public shade::sdk::server::CBaseEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hEntAttached; // 0x04a0, 0x4 bytes
-                bool m_bCheapEffect; // 0x04a4, 0x1 bytes
-                std::uint8_t pad_04a5[0x3]; // 0x04a5, 0x3 bytes
-                float m_flSize; // 0x04a8, 0x4 bytes
-                bool m_bUseHitboxes; // 0x04ac, 0x1 bytes
-                std::uint8_t pad_04ad[0x3]; // 0x04ad, 0x3 bytes
-                std::int32_t m_iNumHitboxFires; // 0x04b0, 0x4 bytes
-                float m_flHitboxFireScale; // 0x04b4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLifetime; // 0x04b8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAttacker; // 0x04bc, 0x4 bytes
-                shade::sdk::server::AI_VolumetricEventHandle_t m_iDangerSound; // 0x04c0, 0x8 bytes
-                float m_flDirectDamagePerSecond; // 0x04c8, 0x4 bytes
-                std::int32_t m_iCustomDamageType; // 0x04cc, 0x4 bytes
-                std::uint8_t pad_04d0[0x18]; // 0x04d0, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEntAttached; // 0x04b0, 0x4 bytes
+                bool m_bCheapEffect; // 0x04b4, 0x1 bytes
+                std::uint8_t pad_04b5[0x3]; // 0x04b5, 0x3 bytes
+                float m_flSize; // 0x04b8, 0x4 bytes
+                bool m_bUseHitboxes; // 0x04bc, 0x1 bytes
+                std::uint8_t pad_04bd[0x3]; // 0x04bd, 0x3 bytes
+                std::int32_t m_iNumHitboxFires; // 0x04c0, 0x4 bytes
+                float m_flHitboxFireScale; // 0x04c4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLifetime; // 0x04c8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAttacker; // 0x04cc, 0x4 bytes
+                shade::sdk::server::AI_VolumetricEventHandle_t m_pMoveAwaySound[0x2]; // 0x04d0, 0x10 bytes
+                float m_flDirectDamagePerSecond; // 0x04e0, 0x4 bytes
+                std::int32_t m_iCustomDamageType; // 0x04e4, 0x4 bytes
+                std::uint8_t pad_04e8[0x18]; // 0x04e8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_hPlayingSound; // Offset: 0x4d0, Size: 0x1, Size In Bytes: 0x0
-             * void CEntityFlameFlameThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEntityFlame) == 0x4E8, "CEntityFlame size mismatch");
+            static_assert(sizeof(CEntityFlame) == 0x500, "CEntityFlame size mismatch");
         }
     }
 }

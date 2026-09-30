@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x12f0
+             * Size: 0x1850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Skyrunner_MagicBeam : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                Vector m_vCastPosition; // 0x11d8, 0xc bytes
-                QAngle m_qCastAngle; // 0x11e4, 0xc bytes
-                std::uint8_t pad_11f0[0x100]; // 0x11f0, 0x100 bytes
+                VectorWS m_vCastPosition; // 0x16d8, 0xc bytes
+                QAngle m_qCastAngle; // 0x16e4, 0xc bytes
+                std::uint8_t pad_16f0[0x160]; // 0x16f0, 0x160 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Skyrunner_MagicBeam) == 0x12F0, "CCitadel_Ability_Skyrunner_MagicBeam size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Skyrunner_MagicBeam) == 0x1850, "CCitadel_Ability_Skyrunner_MagicBeam size mismatch");
         }
     }
 }

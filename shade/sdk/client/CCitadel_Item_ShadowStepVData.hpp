@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c78
+             * Size: 0x1870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,26 +39,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_ShadowStepVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle; // 0x18b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1998, 0xe0 bytes
-                CSoundEventName m_strPulseTickSound; // 0x1a78, 0x10 bytes
-                std::int32_t m_iMaxTargets; // 0x1a88, 0x4 bytes
-                std::uint8_t pad_1a8c[0x4]; // 0x1a8c, 0x4 bytes
-                CSoundEventName m_strExplodeSound; // 0x1a90, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x1aa0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x1b80, 0xe0 bytes
-                float m_flGroundProbeSpeed; // 0x1c60, 0x4 bytes
-                float m_flGroundStepDown; // 0x1c64, 0x4 bytes
-                float m_flGroundStepUp; // 0x1c68, 0x4 bytes
-                std::int32_t m_iMaxGroundIterations; // 0x1c6c, 0x4 bytes
-                float m_flVelocityScale; // 0x1c70, 0x4 bytes
-                std::uint8_t pad_1c74[0x4]; // 0x1c74, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle; // 0x14b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1590, 0xe0 bytes
+                CSoundEventName m_strPulseTickSound; // 0x1670, 0x10 bytes
+                std::int32_t m_iMaxTargets; // 0x1680, 0x4 bytes
+                std::uint8_t pad_1684[0x4]; // 0x1684, 0x4 bytes
+                CSoundEventName m_strExplodeSound; // 0x1688, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x1698, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x1778, 0xe0 bytes
+                float m_flGroundProbeSpeed; // 0x1858, 0x4 bytes
+                float m_flGroundStepDown; // 0x185c, 0x4 bytes
+                float m_flGroundStepUp; // 0x1860, 0x4 bytes
+                std::int32_t m_iMaxGroundIterations; // 0x1864, 0x4 bytes
+                float m_flVelocityScale; // 0x1868, 0x4 bytes
+                std::uint8_t pad_186c[0x4]; // 0x186c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_ShadowStepVData) == 0x1C78, "CCitadel_Item_ShadowStepVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_ShadowStepVData) == 0x1870, "CCitadel_Item_ShadowStepVData size mismatch");
         }
     }
 }

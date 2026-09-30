@@ -12,32 +12,33 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CCitadel_Modifier_Link.hpp"
+#include "shade/sdk/client/CCitadel_Modifier_Drag.hpp"
 #include "shade/sdk/client/ELassoHoldPosition.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x600
+             * Size: 0x710
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_Gravity_Lasso_Enemy : public shade::sdk::client::CCitadel_Modifier_Link {
+            class CCitadel_Modifier_Gravity_Lasso_Enemy : public shade::sdk::client::CCitadel_Modifier_Drag {
             public:
-                shade::sdk::client::ELassoHoldPosition m_eHoldPosition; // 0x00f8, 0x1 bytes
-                std::uint8_t pad_00f9[0x507]; // 0x00f9, 0x507 bytes
+                shade::sdk::client::ELassoHoldPosition m_eHoldPosition; // 0x0188, 0x1 bytes
+                std::uint8_t pad_0189[0x587]; // 0x0189, 0x587 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Enemy) == 0x600, "CCitadel_Modifier_Gravity_Lasso_Enemy size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Enemy) == 0x710, "CCitadel_Modifier_Gravity_Lasso_Enemy size mismatch");
         }
     }
 }

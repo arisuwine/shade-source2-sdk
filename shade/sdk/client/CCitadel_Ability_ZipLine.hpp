@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1cd8
+             * Size: 0x25a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,46 +43,46 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ZipLine : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0xa08]; // 0x11d8, 0xa08 bytes
-                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x1be0, 0x4 bytes
-                bool m_bThinking; // 0x1be4, 0x1 bytes
-                bool m_bMoveCollidedPushUp; // 0x1be5, 0x1 bytes
-                bool m_bNoDelayNeeded; // 0x1be6, 0x1 bytes
-                bool m_bMouseWheelBind; // 0x1be7, 0x1 bytes
-                shade::sdk::client::EAttachState_t m_eCommittedAttachState; // 0x1be8, 0x4 bytes
-                std::uint8_t pad_1bec[0x38]; // 0x1bec, 0x38 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeStartZipping; // 0x1c24, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeForKnockdownProtection; // 0x1c28, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeStopZipping; // 0x1c2c, 0x4 bytes
-                float m_flCasterSpeed; // 0x1c30, 0x4 bytes
-                shade::sdk::client::CNetworkVelocityVector m_vecInitialVel; // 0x1c34, 0x28 bytes
-                std::uint8_t pad_1c5c[0xc]; // 0x1c5c, 0xc bytes
-                Vector m_vecAttachPoint; // 0x1c68, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_pPrevNode; // 0x1c74, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_pNextNode; // 0x1c78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeEnterState; // 0x1c7c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLatchTime; // 0x1c80, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDamagedTime; // 0x1c84, 0x4 bytes
-                shade::sdk::client::EAttachState_t m_eAttachState; // 0x1c88, 0x4 bytes
-                std::int32_t m_iAttachedZipLineLane; // 0x1c8c, 0x4 bytes
-                bool m_bDroppedFromZipline; // 0x1c90, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttachZipLine; // 0x1c91, 0x1 bytes
-                std::uint8_t pad_1c92[0x2]; // 0x1c92, 0x2 bytes
-                Vector m_vAttachZipLineOffset; // 0x1c94, 0xc bytes
-                float m_flZiplineAirDrag; // 0x1ca0, 0x4 bytes
-                Vector m_vPendulumVelocity; // 0x1ca4, 0xc bytes
-                Vector m_vPendulumPosition; // 0x1cb0, 0xc bytes
-                Vector m_vVelocityHistory1; // 0x1cbc, 0xc bytes
-                Vector m_vVelocityHistory2; // 0x1cc8, 0xc bytes
-                std::int32_t m_iDesiredLane; // 0x1cd4, 0x4 bytes
+                std::uint8_t pad_16d8[0xdc8]; // 0x16d8, 0xdc8 bytes
+                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x24a0, 0x4 bytes
+                bool m_bThinking; // 0x24a4, 0x1 bytes
+                bool m_bMoveCollidedPushUp; // 0x24a5, 0x1 bytes
+                bool m_bNoDelayNeeded; // 0x24a6, 0x1 bytes
+                bool m_bMouseWheelBind; // 0x24a7, 0x1 bytes
+                shade::sdk::client::EAttachState_t m_eCommittedAttachState; // 0x24a8, 0x4 bytes
+                std::uint8_t pad_24ac[0x38]; // 0x24ac, 0x38 bytes
+                VectorWS m_vVisualTaperPos; // 0x24e4, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flTimeStartZipping; // 0x24f0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeForKnockdownProtection; // 0x24f4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeStopZipping; // 0x24f8, 0x4 bytes
+                float m_flCasterSpeed; // 0x24fc, 0x4 bytes
+                shade::sdk::client::CNetworkVelocityVector m_vecInitialVel; // 0x2500, 0x28 bytes
+                std::uint8_t pad_2528[0x8]; // 0x2528, 0x8 bytes
+                VectorWS m_vecAttachPoint; // 0x2530, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_pPrevNode; // 0x253c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_pNextNode; // 0x2540, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeEnterState; // 0x2544, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLatchTime; // 0x2548, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDamagedTime; // 0x254c, 0x4 bytes
+                shade::sdk::client::EAttachState_t m_eAttachState; // 0x2550, 0x4 bytes
+                std::int32_t m_iAttachedZipLineLane; // 0x2554, 0x4 bytes
+                bool m_bDroppedFromZipline; // 0x2558, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttachZipLine; // 0x2559, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hZiplineLatchEffectHandle; // 0x255a, 0x1 bytes
+                std::uint8_t pad_255b[0x1]; // 0x255b, 0x1 bytes
+                Vector m_vAttachZipLineOffset; // 0x255c, 0xc bytes
+                float m_flZiplineAirDrag; // 0x2568, 0x4 bytes
+                Vector m_vPendulumVelocity; // 0x256c, 0xc bytes
+                Vector m_vPendulumPosition; // 0x2578, 0xc bytes
+                Vector m_vVelocityHistory1; // 0x2584, 0xc bytes
+                Vector m_vVelocityHistory2; // 0x2590, 0xc bytes
+                std::int32_t m_iDesiredLane; // 0x259c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ZipLine) == 0x1CD8, "CCitadel_Ability_ZipLine size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ZipLine) == 0x25A0, "CCitadel_Ability_ZipLine size mismatch");
         }
     }
 }

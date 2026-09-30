@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x598
+             * Size: 0x5a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CTemplateNPCMaker : public shade::sdk::server::CBaseNPCMaker {
             public:
-                CUtlSymbolLarge m_iszWorldName; // 0x0588, 0x8 bytes
-                CUtlSymbolLarge m_iszSource2EntityLumpName; // 0x0590, 0x8 bytes
+                CUtlSymbolLarge m_iszWorldName; // 0x0590, 0x8 bytes
+                CUtlSymbolLarge m_iszSource2EntityLumpName; // 0x0598, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTemplateNPCMaker) == 0x598, "CTemplateNPCMaker size mismatch");
+            static_assert(sizeof(CTemplateNPCMaker) == 0x5A0, "CTemplateNPCMaker size mismatch");
         }
     }
 }

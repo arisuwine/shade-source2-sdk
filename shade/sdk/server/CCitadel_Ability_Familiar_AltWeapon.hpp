@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1340
+             * Size: 0x1940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_AltWeapon : public shade::sdk::server::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1198[0x1a0]; // 0x1198, 0x1a0 bytes
-                std::int16_t m_nAmmoToBeConsumedForChannel; // 0x1338, 0x2 bytes
-                bool m_bForceFiring; // 0x133a, 0x1 bytes
-                std::uint8_t pad_133b[0x5]; // 0x133b, 0x5 bytes
+                std::uint8_t pad_1708[0x230]; // 0x1708, 0x230 bytes
+                std::int16_t m_nAmmoToBeConsumedForChannel; // 0x1938, 0x2 bytes
+                bool m_bForceFiring; // 0x193a, 0x1 bytes
+                std::uint8_t pad_193b[0x5]; // 0x193b, 0x5 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_AltWeapon) == 0x1340, "CCitadel_Ability_Familiar_AltWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_AltWeapon) == 0x1940, "CCitadel_Ability_Familiar_AltWeapon size mismatch");
         }
     }
 }

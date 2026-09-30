@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x778
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CatapultDamageWatcherVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunModifier; // 0x0750, 0x10 bytes
-                float m_flDamageHealthPct; // 0x0760, 0x4 bytes
-                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunModifier; // 0x0760, 0x10 bytes
+                float m_flDamageHealthPct; // 0x0770, 0x4 bytes
+                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CatapultDamageWatcherVData) == 0x768, "CCitadel_Modifier_CatapultDamageWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CatapultDamageWatcherVData) == 0x778, "CCitadel_Modifier_CatapultDamageWatcherVData size mismatch");
         }
     }
 }

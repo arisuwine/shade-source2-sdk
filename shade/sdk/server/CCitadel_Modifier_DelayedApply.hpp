@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DelayedApply : public shade::sdk::server::CCitadelModifier {
             public:
-                KeyValues3 m_kvCopy; // 0x00d0, 0x10 bytes
+                KeyValues3 m_kvCopy; // 0x0140, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DelayedApply) == 0xE0, "CCitadel_Modifier_DelayedApply size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DelayedApply) == 0x150, "CCitadel_Modifier_DelayedApply size mismatch");
         }
     }
 }

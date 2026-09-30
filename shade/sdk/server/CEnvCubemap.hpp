@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x598
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,37 +39,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvCubemap : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a0[0x80]; // 0x04a0, 0x80 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hCubemapTexture; // 0x0520, 0x8 bytes
-                bool m_Entity_bCustomCubemapTexture; // 0x0528, 0x1 bytes
-                std::uint8_t pad_0529[0x3]; // 0x0529, 0x3 bytes
-                float m_Entity_flInfluenceRadius; // 0x052c, 0x4 bytes
-                Vector m_Entity_vBoxProjectMins; // 0x0530, 0xc bytes
-                Vector m_Entity_vBoxProjectMaxs; // 0x053c, 0xc bytes
-                bool m_Entity_bMoveable; // 0x0548, 0x1 bytes
-                std::uint8_t pad_0549[0x3]; // 0x0549, 0x3 bytes
-                std::int32_t m_Entity_nHandshake; // 0x054c, 0x4 bytes
-                std::int32_t m_Entity_nEnvCubeMapArrayIndex; // 0x0550, 0x4 bytes
-                std::int32_t m_Entity_nPriority; // 0x0554, 0x4 bytes
-                float m_Entity_flEdgeFadeDist; // 0x0558, 0x4 bytes
-                Vector m_Entity_vEdgeFadeDists; // 0x055c, 0xc bytes
-                float m_Entity_flDiffuseScale; // 0x0568, 0x4 bytes
-                bool m_Entity_bStartDisabled; // 0x056c, 0x1 bytes
-                bool m_Entity_bDefaultEnvMap; // 0x056d, 0x1 bytes
-                bool m_Entity_bDefaultSpecEnvMap; // 0x056e, 0x1 bytes
-                bool m_Entity_bIndoorCubeMap; // 0x056f, 0x1 bytes
-                bool m_Entity_bCopyDiffuseFromDefaultCubemap; // 0x0570, 0x1 bytes
-                std::uint8_t pad_0571[0xf]; // 0x0571, 0xf bytes
-                bool m_Entity_bEnabled; // 0x0580, 0x1 bytes
-                std::uint8_t pad_0581[0x7]; // 0x0581, 0x7 bytes
+                std::uint8_t pad_04b0[0x80]; // 0x04b0, 0x80 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hCubemapTexture; // 0x0530, 0x8 bytes
+                bool m_Entity_bCustomCubemapTexture; // 0x0538, 0x1 bytes
+                std::uint8_t pad_0539[0x3]; // 0x0539, 0x3 bytes
+                float m_Entity_flInfluenceRadius; // 0x053c, 0x4 bytes
+                Vector m_Entity_vBoxProjectMins; // 0x0540, 0xc bytes
+                Vector m_Entity_vBoxProjectMaxs; // 0x054c, 0xc bytes
+                bool m_Entity_bMoveable; // 0x0558, 0x1 bytes
+                std::uint8_t pad_0559[0x3]; // 0x0559, 0x3 bytes
+                std::int32_t m_Entity_nHandshake; // 0x055c, 0x4 bytes
+                std::int32_t m_Entity_nEnvCubeMapArrayIndex; // 0x0560, 0x4 bytes
+                std::int32_t m_Entity_nPriority; // 0x0564, 0x4 bytes
+                float m_Entity_flEdgeFadeDist; // 0x0568, 0x4 bytes
+                Vector m_Entity_vEdgeFadeDists; // 0x056c, 0xc bytes
+                float m_Entity_flDiffuseScale; // 0x0578, 0x4 bytes
+                bool m_Entity_bStartDisabled; // 0x057c, 0x1 bytes
+                bool m_Entity_bDefaultEnvMap; // 0x057d, 0x1 bytes
+                bool m_Entity_bDefaultSpecEnvMap; // 0x057e, 0x1 bytes
+                bool m_Entity_bIndoorCubeMap; // 0x057f, 0x1 bytes
+                bool m_Entity_bCopyDiffuseFromDefaultCubemap; // 0x0580, 0x1 bytes
+                std::uint8_t pad_0581[0xf]; // 0x0581, 0xf bytes
+                bool m_Entity_bEnabled; // 0x0590, 0x1 bytes
+                std::uint8_t pad_0591[0x7]; // 0x0591, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_Entity_pSceneObject; // Offset: 0x578, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvCubemap) == 0x588, "CEnvCubemap size mismatch");
+            static_assert(sizeof(CEnvCubemap) == 0x598, "CEnvCubemap size mismatch");
         }
     }
 }

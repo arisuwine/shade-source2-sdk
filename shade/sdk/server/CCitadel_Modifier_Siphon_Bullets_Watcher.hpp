@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x2f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Siphon_Bullets_Watcher) == 0x220, "CCitadel_Modifier_Siphon_Bullets_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Siphon_Bullets_Watcher) == 0x2F0, "CCitadel_Modifier_Siphon_Bullets_Watcher size mismatch");
         }
     }
 }

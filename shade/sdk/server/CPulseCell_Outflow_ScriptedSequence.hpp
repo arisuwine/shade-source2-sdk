@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x198
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,23 +41,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_Outflow_ScriptedSequence : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
             public:
-                CUtlString m_szSyncGroup; // 0x0048, 0x8 bytes
-                std::int32_t m_nExpectedNumSequencesInSyncGroup; // 0x0050, 0x4 bytes
-                bool m_bEnsureOnNavmeshOnFinish; // 0x0054, 0x1 bytes
-                bool m_bDontTeleportAtEnd; // 0x0055, 0x1 bytes
-                bool m_bDisallowInterrupts; // 0x0056, 0x1 bytes
-                std::uint8_t pad_0057[0x1]; // 0x0057, 0x1 bytes
-                shade::sdk::server::PulseScriptedSequenceData_t m_scriptedSequenceDataMain; // 0x0058, 0x38 bytes
-                CUtlVector<shade::sdk::server::PulseScriptedSequenceData_t> m_vecAdditionalActors; // 0x0090, 0x18 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x00a8, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnCanceled; // 0x00f0, 0x48 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection> m_Triggers; // 0x0138, 0x18 bytes
+                CUtlString m_szSyncGroup; // 0x00d8, 0x8 bytes
+                std::int32_t m_nExpectedNumSequencesInSyncGroup; // 0x00e0, 0x4 bytes
+                bool m_bEnsureOnNavmeshOnFinish; // 0x00e4, 0x1 bytes
+                bool m_bDontTeleportAtEnd; // 0x00e5, 0x1 bytes
+                bool m_bDisallowInterrupts; // 0x00e6, 0x1 bytes
+                std::uint8_t pad_00e7[0x1]; // 0x00e7, 0x1 bytes
+                shade::sdk::server::PulseScriptedSequenceData_t m_scriptedSequenceDataMain; // 0x00e8, 0x38 bytes
+                CUtlVector<shade::sdk::server::PulseScriptedSequenceData_t> m_vecAdditionalActors; // 0x0120, 0x18 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnFinished; // 0x0138, 0x48 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection> m_Triggers; // 0x0180, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Outflow_ScriptedSequence) == 0x150, "CPulseCell_Outflow_ScriptedSequence size mismatch");
+            static_assert(sizeof(CPulseCell_Outflow_ScriptedSequence) == 0x198, "CPulseCell_Outflow_ScriptedSequence size mismatch");
         }
     }
 }

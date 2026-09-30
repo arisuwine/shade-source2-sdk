@@ -12,11 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CCitadel_Modifier_Stunned.hpp"
-#include "shade/sdk/client/EKnockDownTypes.hpp"
 #include "shade/sdk/client/SatVolumeIndex_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 
@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf0
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Knockdown : public shade::sdk::client::CCitadel_Modifier_Stunned {
             public:
-                QAngle m_angStunAngles; // 0x00c8, 0xc bytes
-                shade::sdk::client::EKnockDownTypes m_ePreferredKnockdownType; // 0x00d4, 0x4 bytes
-                bool m_bForceTakePreferred; // 0x00d8, 0x1 bytes
-                std::uint8_t pad_00d9[0x3]; // 0x00d9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0x00dc, 0x4 bytes
-                bool m_bGetUpCamSeqStarted; // 0x00e0, 0x1 bytes
-                std::uint8_t pad_00e1[0x3]; // 0x00e1, 0x3 bytes
-                float m_flOnGroundDuration; // 0x00e4, 0x4 bytes
-                shade::sdk::client::SatVolumeIndex_t m_satIndex; // 0x00e8, 0x4 bytes
-                std::uint8_t pad_00ec[0x4]; // 0x00ec, 0x4 bytes
+                QAngle m_angStunAngles; // 0x0138, 0xc bytes
+                std::int32_t m_ePreferredKnockdownType; // 0x0144, 0x4 bytes
+                bool m_bForceTakePreferred; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x3]; // 0x0149, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0x014c, 0x4 bytes
+                bool m_bGetUpCamSeqStarted; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x3]; // 0x0151, 0x3 bytes
+                float m_flOnGroundDuration; // 0x0154, 0x4 bytes
+                shade::sdk::client::SatVolumeIndex_t m_satIndex; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x4]; // 0x015c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Knockdown) == 0xF0, "CCitadel_Modifier_Knockdown size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Knockdown) == 0x160, "CCitadel_Modifier_Knockdown size mismatch");
         }
     }
 }

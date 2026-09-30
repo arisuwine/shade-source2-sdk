@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvTilt : public shade::sdk::server::CPointEntity {
             public:
-                float m_Duration; // 0x04a0, 0x4 bytes
-                float m_Radius; // 0x04a4, 0x4 bytes
-                float m_TiltTime; // 0x04a8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_stopTime; // 0x04ac, 0x4 bytes
+                float m_Duration; // 0x04b0, 0x4 bytes
+                float m_Radius; // 0x04b4, 0x4 bytes
+                float m_TiltTime; // 0x04b8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_stopTime; // 0x04bc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartTilt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopTilt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvTilt) == 0x4B0, "CEnvTilt size mismatch");
+            static_assert(sizeof(CEnvTilt) == 0x4C0, "CEnvTilt size mismatch");
         }
     }
 }

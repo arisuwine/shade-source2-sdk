@@ -12,10 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CCitadel_Modifier_LinkVData.hpp"
+#include "shade/sdk/client/CCitadel_Modifier_DragVData.hpp"
 
 namespace shade {
     namespace sdk {
@@ -33,23 +34,23 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x920
+             * Size: 0x960
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CModifierGravityLassoEnemyVData : public shade::sdk::client::CCitadel_Modifier_LinkVData {
+            class CModifierGravityLassoEnemyVData : public shade::sdk::client::CCitadel_Modifier_DragVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LassoEffect; // 0x0830, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunModifier; // 0x0910, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LassoEffect; // 0x0870, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunModifier; // 0x0950, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierGravityLassoEnemyVData) == 0x920, "CModifierGravityLassoEnemyVData size mismatch");
+            static_assert(sizeof(CModifierGravityLassoEnemyVData) == 0x960, "CModifierGravityLassoEnemyVData size mismatch");
         }
     }
 }

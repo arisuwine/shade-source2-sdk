@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,7 +21,7 @@
 
 namespace shade {
     namespace sdk {
-        namespace animgraphlib {
+        namespace server {
             struct TagSpan_t;
         }
     }
@@ -36,7 +37,7 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct BlendItem_t {
-                CUtlVector<shade::sdk::animgraphlib::TagSpan_t> m_tags; // 0x0000, 0x18 bytes
+                CUtlVector<shade::sdk::server::TagSpan_t> m_tags; // 0x0000, 0x18 bytes
                 shade::sdk::animgraphlib::CAnimUpdateNodeRef m_pChild; // 0x0018, 0x10 bytes
                 shade::sdk::animationsystem::HSequence m_hSequence; // 0x0028, 0x4 bytes
                 Vector2D m_vPos; // 0x002c, 0x8 bytes

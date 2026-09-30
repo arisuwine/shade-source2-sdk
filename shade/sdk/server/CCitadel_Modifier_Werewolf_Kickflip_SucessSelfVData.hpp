@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7d0
+             * Size: 0x7e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf_Kickflip_SucessSelfVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CPiecewiseCurve m_InitialVelocityCurve; // 0x0750, 0x40 bytes
-                CPiecewiseCurve m_KickOffVelocityCurve; // 0x0790, 0x40 bytes
+                CPiecewiseCurve m_InitialVelocityCurve; // 0x0760, 0x40 bytes
+                CPiecewiseCurve m_KickOffVelocityCurve; // 0x07a0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf_Kickflip_SucessSelfVData) == 0x7D0, "CCitadel_Modifier_Werewolf_Kickflip_SucessSelfVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_Kickflip_SucessSelfVData) == 0x7E0, "CCitadel_Modifier_Werewolf_Kickflip_SucessSelfVData size mismatch");
         }
     }
 }

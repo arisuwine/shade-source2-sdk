@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x770
+             * Size: 0x780
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Basic_RangedArmorBonusVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                float m_flBulletResistancePctMin; // 0x0750, 0x4 bytes
-                float m_flBulletResistancePctMax; // 0x0754, 0x4 bytes
-                float m_flTechResistancePctMin; // 0x0758, 0x4 bytes
-                float m_flTechResistancePctMax; // 0x075c, 0x4 bytes
-                float m_flRangeMin; // 0x0760, 0x4 bytes
-                float m_flRangeMax; // 0x0764, 0x4 bytes
-                float m_flInvulnRange; // 0x0768, 0x4 bytes
-                bool m_bPlayersOnly; // 0x076c, 0x1 bytes
-                std::uint8_t pad_076d[0x3]; // 0x076d, 0x3 bytes
+                float m_flBulletResistancePctMin; // 0x0760, 0x4 bytes
+                float m_flBulletResistancePctMax; // 0x0764, 0x4 bytes
+                float m_flTechResistancePctMin; // 0x0768, 0x4 bytes
+                float m_flTechResistancePctMax; // 0x076c, 0x4 bytes
+                float m_flRangeMin; // 0x0770, 0x4 bytes
+                float m_flRangeMax; // 0x0774, 0x4 bytes
+                float m_flInvulnRange; // 0x0778, 0x4 bytes
+                bool m_bPlayersOnly; // 0x077c, 0x1 bytes
+                std::uint8_t pad_077d[0x3]; // 0x077d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Basic_RangedArmorBonusVData) == 0x770, "CCitadel_Modifier_Basic_RangedArmorBonusVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Basic_RangedArmorBonusVData) == 0x780, "CCitadel_Modifier_Basic_RangedArmorBonusVData size mismatch");
         }
     }
 }

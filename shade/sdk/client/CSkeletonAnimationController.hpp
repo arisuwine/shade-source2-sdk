@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,6 +34,8 @@ namespace shade {
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
+             * Construct Allowed
+             * Construct Disallowed
              */
             #pragma pack(push, 1)
             class CSkeletonAnimationController : public shade::sdk::client::ISkeletonAnimationController {
@@ -41,7 +44,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
             static_assert(sizeof(CSkeletonAnimationController) == 0x10, "CSkeletonAnimationController size mismatch");
         }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -45,11 +46,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CItemItemTouch; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CItemMaterialize; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CItemComeToRest; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CItem) == 0xB30, "CItem size mismatch");
         }

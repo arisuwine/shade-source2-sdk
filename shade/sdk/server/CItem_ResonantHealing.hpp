@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1130
+             * Size: 0x16f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_ResonantHealing : public shade::sdk::server::CCitadel_Item {
             public:
-                std::uint8_t pad_0f78[0x2c]; // 0x0f78, 0x2c bytes
-                bool m_bForceModUpdate; // 0x0fa4, 0x1 bytes
-                std::uint8_t pad_0fa5[0x3]; // 0x0fa5, 0x3 bytes
-                std::int32_t m_iRegenStacks; // 0x0fa8, 0x4 bytes
-                std::uint8_t pad_0fac[0x184]; // 0x0fac, 0x184 bytes
+                std::uint8_t pad_14a8[0x2c]; // 0x14a8, 0x2c bytes
+                bool m_bForceModUpdate; // 0x14d4, 0x1 bytes
+                std::uint8_t pad_14d5[0x3]; // 0x14d5, 0x3 bytes
+                std::int32_t m_iResonantHealingRegenStacks; // 0x14d8, 0x4 bytes
+                std::uint8_t pad_14dc[0x214]; // 0x14dc, 0x214 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CItem_ResonantHealing) == 0x1130, "CItem_ResonantHealing size mismatch");
+            static_assert(sizeof(CItem_ResonantHealing) == 0x16F0, "CItem_ResonantHealing size mismatch");
         }
     }
 }

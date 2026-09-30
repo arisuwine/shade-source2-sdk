@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd80
+             * Size: 0xe00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoTutorialController : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint8_t pad_0cd0[0xb0]; // 0x0cd0, 0xb0 bytes
+                std::uint8_t pad_0d50[0xb0]; // 0x0d50, 0xb0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoTutorialController) == 0xD80, "CInfoTutorialController size mismatch");
+            static_assert(sizeof(CInfoTutorialController) == 0xE00, "CInfoTutorialController size mismatch");
         }
     }
 }

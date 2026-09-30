@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicCollisionPair : public shade::sdk::server::CLogicalEntity {
             public:
-                CUtlSymbolLarge m_nameAttach1; // 0x04a0, 0x8 bytes
-                CUtlSymbolLarge m_nameAttach2; // 0x04a8, 0x8 bytes
-                bool m_includeHierarchy; // 0x04b0, 0x1 bytes
-                bool m_supportMultipleEntitiesWithSameName; // 0x04b1, 0x1 bytes
-                bool m_disabled; // 0x04b2, 0x1 bytes
-                bool m_succeeded; // 0x04b3, 0x1 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                CUtlSymbolLarge m_nameAttach1; // 0x04b0, 0x8 bytes
+                CUtlSymbolLarge m_nameAttach2; // 0x04b8, 0x8 bytes
+                bool m_includeHierarchy; // 0x04c0, 0x1 bytes
+                bool m_supportMultipleEntitiesWithSameName; // 0x04c1, 0x1 bytes
+                bool m_disabled; // 0x04c2, 0x1 bytes
+                bool m_succeeded; // 0x04c3, 0x1 bytes
+                bool m_allowMissing; // 0x04c4, 0x1 bytes
+                std::uint8_t pad_04c5[0x3]; // 0x04c5, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputDisableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputDisableCollisionsWith; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicCollisionPair) == 0x4B8, "CLogicCollisionPair size mismatch");
+            static_assert(sizeof(CLogicCollisionPair) == 0x4C8, "CLogicCollisionPair size mismatch");
         }
     }
 }

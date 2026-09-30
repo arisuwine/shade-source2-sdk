@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0xd8
+             * Size: 0xe0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CTestDomainDerived_Cursor : public shade::sdk::pulse_runtime_lib::CPulseExecCursor {
             public:
-                std::int32_t m_nCursorValueA; // 0x00d0, 0x4 bytes
-                std::int32_t m_nCursorValueB; // 0x00d4, 0x4 bytes
+                std::int32_t m_nCursorValueA; // 0x00d8, 0x4 bytes
+                std::int32_t m_nCursorValueB; // 0x00dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTestDomainDerived_Cursor) == 0xD8, "CTestDomainDerived_Cursor size mismatch");
+            static_assert(sizeof(CTestDomainDerived_Cursor) == 0xE0, "CTestDomainDerived_Cursor size mismatch");
         }
     }
 }

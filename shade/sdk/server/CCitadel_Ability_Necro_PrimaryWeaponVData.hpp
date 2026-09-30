@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1790
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_PrimaryWeaponVData : public shade::sdk::server::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TetherModifier; // 0x19c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DummyTetherModifier; // 0x19d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TetheredModifier; // 0x19e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SearchingModifier; // 0x19f8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveParticle; // 0x1a08, 0xe0 bytes
-                float m_flDefaultSpreadScale; // 0x1ae8, 0x4 bytes
-                float m_flSearchingSpreadScale; // 0x1aec, 0x4 bytes
-                float m_flTetheredSpreadScale; // 0x1af0, 0x4 bytes
-                float m_flApproachSpeed; // 0x1af4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TetherModifier; // 0x1660, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DummyTetherModifier; // 0x1670, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TetheredModifier; // 0x1680, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SearchingModifier; // 0x1690, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveParticle; // 0x16a0, 0xe0 bytes
+                float m_flDefaultSpreadScale; // 0x1780, 0x4 bytes
+                float m_flSearchingSpreadScale; // 0x1784, 0x4 bytes
+                float m_flTetheredSpreadScale; // 0x1788, 0x4 bytes
+                float m_flApproachSpeed; // 0x178c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_PrimaryWeaponVData) == 0x1AF8, "CCitadel_Ability_Necro_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_PrimaryWeaponVData) == 0x1790, "CCitadel_Ability_Necro_PrimaryWeaponVData size mismatch");
         }
     }
 }

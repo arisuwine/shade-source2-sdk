@@ -12,41 +12,35 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/AILOD_t.hpp"
 #include "shade/sdk/client/CAI_ScheduleBits.hpp"
-#include "shade/sdk/client/CRandStopwatch.hpp"
-#include "shade/sdk/client/CSimpleSimTimer.hpp"
+#include "shade/sdk/client/MovementId_t.hpp"
 #include "shade/sdk/client/NPC_STATE.hpp"
 #include "shade/sdk/entity2/CEntityIOOutput.hpp"
-#include "shade/sdk/entity2/GameTick_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/modellib/CNPCPhysicsHull.hpp"
-#include "shade/sdk/server/AI_VolumetricEventHandle_t.hpp"
+#include "shade/sdk/modellib/SharedMovementGait_t.hpp"
 #include "shade/sdk/server/CAI_Scheduler.hpp"
 #include "shade/sdk/server/CBaseCombatCharacter.hpp"
 #include "shade/sdk/server/CRelativeLocation.hpp"
 #include "shade/sdk/server/CUnreachableTargetList.hpp"
+#include "shade/sdk/server/MovementFailureBehavior_t.hpp"
 
 namespace shade {
     namespace sdk {
-        namespace client {
-            struct SquadSlotNPCEntry_t;
-        }
-
         namespace server {
             class CAI_AnimGraphServices;
-            class CAI_BehaviorHost;
             class CAI_EnemyServices;
             class CAI_FacingServices;
-            class CAI_Motor;
+            class CAI_MotorServices;
             class CAI_Navigator;
             class CAI_Pathfinder;
             class CAI_Senses;
             class CBaseEntity;
-            class CBaseFilter;
         }
     }
 }
@@ -55,7 +49,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1150
+             * Size: 0x10e0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -64,153 +58,111 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_BaseNPC : public shade::sdk::server::CBaseCombatCharacter {
             public:
-                std::uint8_t pad_0ba0[0x10]; // 0x0ba0, 0x10 bytes
-                shade::sdk::modellib::CNPCPhysicsHull m_currentNPCBasePhysicsHull; // 0x0bb0, 0x40 bytes
-                bool m_bCheckContacts; // 0x0bf0, 0x1 bytes
-                bool m_bForceDynamicHull; // 0x0bf1, 0x1 bytes
-                std::uint8_t pad_0bf2[0x26]; // 0x0bf2, 0x26 bytes
-                shade::sdk::server::CRelativeLocation m_lastNavLocation; // 0x0c18, 0x40 bytes
-                float m_flLastPositionTolerance; // 0x0c58, 0x4 bytes
-                CHandle<shade::sdk::server::CAI_BaseNPC> m_hSynchronizedPrimaryNPC; // 0x0c5c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CAI_BaseNPC>> m_vecSynchronizedSecondaryNPCs; // 0x0c60, 0x18 bytes
-                shade::sdk::client::NPC_STATE m_NPCState; // 0x0c78, 0x4 bytes
-                shade::sdk::client::NPC_STATE m_nPreModifierNPCState; // 0x0c7c, 0x4 bytes
-                shade::sdk::client::NPC_STATE m_IdealNPCState; // 0x0c80, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastStateChangeTime; // 0x0c84, 0x4 bytes
-                shade::sdk::server::CAI_Senses *m_pSenses; // 0x0c88, 0x8 bytes
-                shade::sdk::client::CAI_ScheduleBits m_Conditions; // 0x0c90, 0x24 bytes
-                shade::sdk::client::CAI_ScheduleBits m_ExistingConditionsAsync; // 0x0cb4, 0x24 bytes
-                shade::sdk::client::CAI_ScheduleBits m_NonGatherConditions; // 0x0cd8, 0x24 bytes
-                shade::sdk::client::CAI_ScheduleBits m_CustomInterruptConditions; // 0x0cfc, 0x24 bytes
-                bool m_bForceConditionsGather; // 0x0d20, 0x1 bytes
-                bool m_bConditionsGathered; // 0x0d21, 0x1 bytes
-                bool m_bConditionsGatheredAsync; // 0x0d22, 0x1 bytes
-                std::uint8_t pad_0d23[0x1]; // 0x0d23, 0x1 bytes
-                shade::sdk::entity2::GameTick_t m_nTickGatheredConditions; // 0x0d24, 0x4 bytes
-                std::uint8_t pad_0d28[0x4]; // 0x0d28, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTimeIgnited; // 0x0d2c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeIgnitionStarted; // 0x0d30, 0x4 bytes
-                bool m_bDoPostRestoreRefindPath; // 0x0d34, 0x1 bytes
-                std::uint8_t pad_0d35[0x3]; // 0x0d35, 0x3 bytes
-                shade::sdk::server::CAI_BehaviorHost *m_pBehaviorHost; // 0x0d38, 0x8 bytes
-                CGlobalSymbol m_sDeathAnim; // 0x0d40, 0x8 bytes
-                shade::sdk::server::CAI_EnemyServices *m_pEnemyServices; // 0x0d48, 0x8 bytes
-                shade::sdk::client::CRandStopwatch m_GiveUpOnDeadEnemyTimer; // 0x0d50, 0x14 bytes
-                shade::sdk::client::CSimpleSimTimer m_FailChooseEnemyTimer; // 0x0d64, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flAcceptableTimeSeenEnemy; // 0x0d6c, 0x4 bytes
-                bool m_bSkippedChooseEnemy; // 0x0d70, 0x1 bytes
-                bool m_bIgnoreUnseenEnemies; // 0x0d71, 0x1 bytes
-                std::uint8_t pad_0d72[0x2]; // 0x0d72, 0x2 bytes
-                CHandle<shade::sdk::server::CBaseFilter> m_hEnemyFilter; // 0x0d74, 0x4 bytes
-                CUtlSymbolLarge m_iszEnemyFilterName; // 0x0d78, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEnt; // 0x0d80, 0x4 bytes
-                bool m_bClearTargetOnScheduleEnd; // 0x0d84, 0x1 bytes
+                std::uint8_t pad_0b60[0x8]; // 0x0b60, 0x8 bytes
+                shade::sdk::modellib::CNPCPhysicsHull m_currentNPCBasePhysicsHull; // 0x0b68, 0x40 bytes
+                bool m_bCheckContacts; // 0x0ba8, 0x1 bytes
+                bool m_bForceDynamicHull; // 0x0ba9, 0x1 bytes
+                std::uint8_t pad_0baa[0x26]; // 0x0baa, 0x26 bytes
+                CHandle<shade::sdk::server::CAI_BaseNPC> m_hSynchronizedPrimaryNPC; // 0x0bd0, 0x4 bytes
+                std::uint8_t pad_0bd4[0x4]; // 0x0bd4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CAI_BaseNPC>> m_vecSynchronizedSecondaryNPCs; // 0x0bd8, 0x18 bytes
+                shade::sdk::client::NPC_STATE m_NPCState; // 0x0bf0, 0x4 bytes
+                shade::sdk::client::NPC_STATE m_nPreModifierNPCState; // 0x0bf4, 0x4 bytes
+                shade::sdk::client::NPC_STATE m_IdealNPCState; // 0x0bf8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastStateChangeTime; // 0x0bfc, 0x4 bytes
+                shade::sdk::server::CAI_Senses *m_pSenses; // 0x0c00, 0x8 bytes
+                shade::sdk::client::CAI_ScheduleBits m_Conditions; // 0x0c08, 0x24 bytes
+                shade::sdk::client::CAI_ScheduleBits m_PreviousConditionsAsync; // 0x0c2c, 0x24 bytes
+                shade::sdk::client::CAI_ScheduleBits m_NonGatherConditions; // 0x0c50, 0x24 bytes
+                shade::sdk::client::CAI_ScheduleBits m_CustomInterruptConditions; // 0x0c74, 0x24 bytes
+                shade::sdk::client::CAI_ScheduleBits m_ScheduleRelatedConditions; // 0x0c98, 0x24 bytes
+                shade::sdk::client::CAI_ScheduleBits m_ScheduleRelatedRemovalConditions; // 0x0cbc, 0x24 bytes
+                bool m_bForceConditionsGather; // 0x0ce0, 0x1 bytes
+                bool m_bConditionsGathered; // 0x0ce1, 0x1 bytes
+                bool m_bConditionsGatheredAsync; // 0x0ce2, 0x1 bytes
+                bool m_bGatheringConditions; // 0x0ce3, 0x1 bytes
+                bool m_bGatheringScheduleRelatedConditions; // 0x0ce4, 0x1 bytes
+                std::uint8_t pad_0ce5[0xb]; // 0x0ce5, 0xb bytes
+                shade::sdk::server::CAI_EnemyServices *m_pEnemyServices; // 0x0cf0, 0x8 bytes
+                bool m_bSkippedChooseEnemy; // 0x0cf8, 0x1 bytes
+                std::uint8_t pad_0cf9[0x3]; // 0x0cf9, 0x3 bytes
+                std::int32_t m_afCapability; // 0x0cfc, 0x4 bytes
+                std::uint8_t pad_0d00[0x8]; // 0x0d00, 0x8 bytes
+                shade::sdk::server::CRelativeLocation m_lastNavLocation; // 0x0d08, 0x48 bytes
+                float m_flLastPositionTolerance; // 0x0d50, 0x4 bytes
+                std::uint8_t pad_0d54[0x4]; // 0x0d54, 0x4 bytes
+                CGlobalSymbol m_sTaskWaitingForMovementId; // 0x0d58, 0x8 bytes
+                shade::sdk::server::MovementFailureBehavior_t m_nMovementFailureBehavior; // 0x0d60, 0x1 bytes
+                std::uint8_t pad_0d61[0x7]; // 0x0d61, 0x7 bytes
+                shade::sdk::client::MovementId_t m_nCurrentPathMovementId; // 0x0d68, 0x8 bytes
+                std::uint32_t m_nCurrentPathSerialNumber; // 0x0d70, 0x4 bytes
+                std::uint8_t pad_0d74[0x4]; // 0x0d74, 0x4 bytes
+                shade::sdk::client::MovementId_t m_nLastPathMovementId; // 0x0d78, 0x8 bytes
+                std::uint32_t m_nLastPathSerialNumber; // 0x0d80, 0x4 bytes
+                shade::sdk::modellib::SharedMovementGait_t m_nForcedGoGait; // 0x0d84, 0x1 bytes
                 std::uint8_t pad_0d85[0x3]; // 0x0d85, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flSoundWaitTime; // 0x0d88, 0x4 bytes
-                std::int32_t m_nSoundPriority; // 0x0d8c, 0x4 bytes
-                bool m_bSuppressFootsteps; // 0x0d90, 0x1 bytes
-                std::uint8_t pad_0d91[0x3]; // 0x0d91, 0x3 bytes
-                std::int32_t m_afCapability; // 0x0d94, 0x4 bytes
-                float m_flGroundSpeed; // 0x0d98, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_lastTimeBashedObstacle; // 0x0d9c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_nextMantleTime; // 0x0da0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flMoveWaitFinished; // 0x0da4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOpeningDoor; // 0x0da8, 0x4 bytes
-                std::uint8_t pad_0dac[0x4]; // 0x0dac, 0x4 bytes
-                shade::sdk::server::CUnreachableTargetList m_UnreachableTargets; // 0x0db0, 0x20 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPathObstructor; // 0x0dd0, 0x4 bytes
-                float m_flJumpMaxRise; // 0x0dd4, 0x4 bytes
-                float m_flJumpMaxDrop; // 0x0dd8, 0x4 bytes
-                float m_flJumpMaxDist; // 0x0ddc, 0x4 bytes
-                float m_flJumpMinDist; // 0x0de0, 0x4 bytes
-                std::uint8_t pad_0de4[0x4]; // 0x0de4, 0x4 bytes
-                shade::sdk::server::CAI_FacingServices *m_pFacingServices; // 0x0de8, 0x8 bytes
-                shade::sdk::server::CAI_AnimGraphServices *m_pAnimGraphServices; // 0x0df0, 0x8 bytes
-                bool m_bAnimGraphIsAnimatingDeath; // 0x0df8, 0x1 bytes
-                std::uint8_t pad_0df9[0x1]; // 0x0df9, 0x1 bytes
-                bool m_bDeferredNavigation; // 0x0dfa, 0x1 bytes
-                std::uint8_t pad_0dfb[0x5]; // 0x0dfb, 0x5 bytes
-                shade::sdk::server::CAI_Scheduler m_Scheduler; // 0x0e00, 0xb0 bytes
-                shade::sdk::server::CAI_Navigator *m_pNavigator; // 0x0eb0, 0x8 bytes
-                shade::sdk::server::CAI_Pathfinder *m_pPathfinder; // 0x0eb8, 0x8 bytes
-                shade::sdk::server::CAI_Pathfinder *m_pPathfinderNet; // 0x0ec0, 0x8 bytes
-                std::uint8_t pad_0ec8[0x10]; // 0x0ec8, 0x10 bytes
-                shade::sdk::server::CAI_Motor *m_pMotor; // 0x0ed8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeLastMovement; // 0x0ee0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeLastFootstep; // 0x0ee4, 0x4 bytes
-                shade::sdk::server::AI_VolumetricEventHandle_t m_hFootstepEvent; // 0x0ee8, 0x8 bytes
-                shade::sdk::client::CSimpleSimTimer m_CheckOnGroundTimer; // 0x0ef0, 0x8 bytes
-                CUtlSymbolLarge m_strNavRestrictionVolume; // 0x0ef8, 0x8 bytes
-                std::int32_t m_afMemory; // 0x0f00, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastAttackTime; // 0x0f04, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTookDamageTime; // 0x0f08, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTookDamageFromPlayerTime; // 0x0f0c, 0x4 bytes
-                Vector m_vecLastTookDamageAttackVector; // 0x0f10, 0xc bytes
-                std::uint8_t pad_0f1c[0x4]; // 0x0f1c, 0x4 bytes
-                CUtlSymbolLarge m_iszSquadName; // 0x0f20, 0x8 bytes
-                CUtlVector<shade::sdk::client::SquadSlotNPCEntry_t> m_vecMySquadSlots; // 0x0f28, 0x18 bytes
-                std::uint8_t pad_0f40[0x8]; // 0x0f40, 0x8 bytes
-                std::int32_t m_nPrevHealthDuringModifyDamage; // 0x0f48, 0x4 bytes
-                std::uint8_t pad_0f4c[0x4]; // 0x0f4c, 0x4 bytes
-                bool m_bFadeCorpse; // 0x0f50, 0x1 bytes
-                bool m_bImportantRagdoll; // 0x0f51, 0x1 bytes
-                bool m_bDidDeathCleanup; // 0x0f52, 0x1 bytes
-                bool m_bReceivedEnemyDeadNotification; // 0x0f53, 0x1 bytes
-                std::uint8_t pad_0f54[0x8]; // 0x0f54, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flWaitFinished; // 0x0f5c, 0x4 bytes
-                bool m_fNoDamageDecal; // 0x0f60, 0x1 bytes
-                std::uint8_t pad_0f61[0x7]; // 0x0f61, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> *m_pVecAttachments; // 0x0f68, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0f70, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x0f88, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x0fa0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnQuarterHealth; // 0x0fb8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnHalfHealth; // 0x0fd0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnThreeQuarterHealth; // 0x0fe8, 0x18 bytes
-                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnFoundEnemy; // 0x1000, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLostEnemy; // 0x1020, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLostPlayer; // 0x1038, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDamagedByPlayer; // 0x1050, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDamagedByPlayerSquad; // 0x1068, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x1080, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUse; // 0x1098, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouchMaterial; // 0x10b0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEndTouchMaterial; // 0x10c8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLostEnemyLOS; // 0x10e0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnLostPlayerLOS; // 0x10f8, 0x18 bytes
-                std::uint64_t m_nAITraceMask; // 0x1110, 0x8 bytes
-                bool m_bDynamicAILOD; // 0x1118, 0x1 bytes
-                std::uint8_t pad_1119[0x3]; // 0x1119, 0x3 bytes
-                shade::sdk::client::AILOD_t m_aiLOD; // 0x111c, 0x4 bytes
-                float m_flThinkTime; // 0x1120, 0x4 bytes
-                std::uint8_t pad_1124[0x1c]; // 0x1124, 0x1c bytes
-                std::int32_t m_nDebugCurIndex; // 0x1140, 0x4 bytes
-                std::uint8_t pad_1144[0xc]; // 0x1144, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_lastTimeBashedObstacle; // 0x0d88, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_nextMantleTime; // 0x0d8c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPathObstructor; // 0x0d90, 0x4 bytes
+                float m_flJumpMaxRise; // 0x0d94, 0x4 bytes
+                float m_flJumpMaxDrop; // 0x0d98, 0x4 bytes
+                float m_flJumpMaxDist; // 0x0d9c, 0x4 bytes
+                float m_flJumpMinDist; // 0x0da0, 0x4 bytes
+                std::uint8_t pad_0da4[0x4]; // 0x0da4, 0x4 bytes
+                shade::sdk::server::CAI_FacingServices *m_pFacingServices; // 0x0da8, 0x8 bytes
+                shade::sdk::server::CAI_AnimGraphServices *m_pAnimGraphServices; // 0x0db0, 0x8 bytes
+                shade::sdk::server::CAI_Scheduler m_Scheduler; // 0x0db8, 0xc8 bytes
+                shade::sdk::server::CAI_Navigator *m_pNavigator; // 0x0e80, 0x8 bytes
+                shade::sdk::server::CAI_Pathfinder *m_pPathfinder; // 0x0e88, 0x8 bytes
+                shade::sdk::server::CAI_Pathfinder *m_pPathfinderNet; // 0x0e90, 0x8 bytes
+                std::uint8_t pad_0e98[0x10]; // 0x0e98, 0x10 bytes
+                shade::sdk::server::CAI_MotorServices *m_pMotorServices; // 0x0ea8, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeLastMovement; // 0x0eb0, 0x4 bytes
+                std::uint8_t pad_0eb4[0x4]; // 0x0eb4, 0x4 bytes
+                CUtlSymbolLarge m_strNavRestrictionVolume; // 0x0eb8, 0x8 bytes
+                std::int32_t m_afMemory; // 0x0ec0, 0x4 bytes
+                std::uint8_t pad_0ec4[0x4]; // 0x0ec4, 0x4 bytes
+                shade::sdk::server::CUnreachableTargetList m_UnreachableTargets; // 0x0ec8, 0x20 bytes
+                std::uint8_t pad_0ee8[0x28]; // 0x0ee8, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTookDamageTime; // 0x0f10, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTookDamageFromPlayerTime; // 0x0f14, 0x4 bytes
+                bool m_bDidDeathCleanup; // 0x0f18, 0x1 bytes
+                bool m_bReceivedEnemyDeadNotification; // 0x0f19, 0x1 bytes
+                std::uint8_t pad_0f1a[0x2]; // 0x0f1a, 0x2 bytes
+                std::int32_t m_nPrevHealthDuringModifyDamage; // 0x0f1c, 0x4 bytes
+                std::uint8_t pad_0f20[0x4]; // 0x0f20, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flWaitFinished; // 0x0f24, 0x4 bytes
+                bool m_fNoDamageDecal; // 0x0f28, 0x1 bytes
+                std::uint8_t pad_0f29[0x7]; // 0x0f29, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecAttachments; // 0x0f30, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0f48, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x0f60, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x0f78, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnQuarterHealth; // 0x0f90, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnHalfHealth; // 0x0fa8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnThreeQuarterHealth; // 0x0fc0, 0x18 bytes
+                CEntityOutputTemplate<CHandle<shade::sdk::server::CBaseEntity>> m_OnFoundEnemy; // 0x0fd8, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLostEnemy; // 0x0ff8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLostPlayer; // 0x1010, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDamagedByPlayer; // 0x1028, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x1040, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUse; // 0x1058, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLostEnemyLOS; // 0x1070, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnLostPlayerLOS; // 0x1088, 0x18 bytes
+                std::uint64_t m_nAITraceMask; // 0x10a0, 0x8 bytes
+                bool m_bDynamicAILOD; // 0x10a8, 0x1 bytes
+                std::uint8_t pad_10a9[0x3]; // 0x10a9, 0x3 bytes
+                shade::sdk::client::AILOD_t m_aiLOD; // 0x10ac, 0x4 bytes
+                float m_flThinkTime; // 0x10b0, 0x4 bytes
+                std::uint8_t pad_10b4[0x1c]; // 0x10b4, 0x1c bytes
+                std::int32_t m_nDebugCurIndex; // 0x10d0, 0x4 bytes
+                std::uint8_t pad_10d4[0xc]; // 0x10d4, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void m_pSquad; // Offset: 0xf40, Size: 0x1, Size In Bytes: 0x0
-             * void CAI_BaseNPCForceSelectedGoLoopThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void m_vecTaskThinkTimes; // Offset: 0x1128, Size: 0x1, Size In Bytes: 0x0
-             * void m_hDamagedFX; // Offset: 0xf4c, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetEnemyFilter; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputOverrideHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetHealth; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetSquad; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputForgetEntity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputGagEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputGagDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputInsideTransition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputOutsideTransition; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputUpdateEnemyMemory; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetNavRestrictionVolume; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CAI_BaseNPCCallNPCThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CAI_BaseNPCCallNPCPerTickThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAI_BaseNPC) == 0x1150, "CAI_BaseNPC size mismatch");
+            static_assert(sizeof(CAI_BaseNPC) == 0x10E0, "CAI_BaseNPC size mismatch");
         }
     }
 }

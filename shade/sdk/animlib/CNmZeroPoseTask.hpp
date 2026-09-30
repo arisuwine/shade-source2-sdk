@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,8 +22,8 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x58
-             * Alignment: 0x8
+             * Size: 0x70
+             * Alignment: 0x10
              * Has VTable
              * Construct Allowed
              */
@@ -34,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmZeroPoseTask) == 0x58, "CNmZeroPoseTask size mismatch");
+            static_assert(sizeof(CNmZeroPoseTask) == 0x70, "CNmZeroPoseTask size mismatch");
         }
     }
 }

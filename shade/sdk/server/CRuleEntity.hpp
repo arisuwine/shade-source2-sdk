@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x788
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CRuleEntity : public shade::sdk::server::CBaseModelEntity {
             public:
-                CUtlSymbolLarge m_iszMaster; // 0x0780, 0x8 bytes
+                CUtlSymbolLarge m_iszMaster; // 0x0878, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRuleEntity) == 0x788, "CRuleEntity size mismatch");
+            static_assert(sizeof(CRuleEntity) == 0x880, "CRuleEntity size mismatch");
         }
     }
 }

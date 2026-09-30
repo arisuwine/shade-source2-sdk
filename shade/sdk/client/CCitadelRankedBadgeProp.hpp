@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf00
+             * Size: 0x1060
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelRankedBadgeProp : public shade::sdk::client::C_DynamicProp {
             public:
-                shade::sdk::client::PackedRank_t m_unPackedRank; // 0x0ef0, 0x1 bytes
-                std::uint8_t pad_0ef1[0xf]; // 0x0ef1, 0xf bytes
+                shade::sdk::client::PackedRank_t m_unPackedRank; // 0x1050, 0x1 bytes
+                std::uint8_t pad_1051[0xf]; // 0x1051, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelRankedBadgeProp) == 0xF00, "CCitadelRankedBadgeProp size mismatch");
+            static_assert(sizeof(CCitadelRankedBadgeProp) == 0x1060, "CCitadelRankedBadgeProp size mismatch");
         }
     }
 }

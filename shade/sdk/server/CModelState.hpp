@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,9 +32,10 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x250
+             * Size: 0x2a0
              * Alignment: 0xff
              * Has VTable
+             * Construct Allowed
              * Construct Disallowed
              * Module Local Type Scope
              */
@@ -45,24 +47,28 @@ namespace shade {
                 CUtlSymbolLarge m_ModelName; // 0x00a8, 0x8 bytes
                 std::uint8_t pad_00b0[0x30]; // 0x00b0, 0x30 bytes
                 shade::sdk::vphysics2::IPhysAggregateInstance *m_pVPhysicsAggregate; // 0x00e0, 0x8 bytes
-                Vector m_vRootBoneOffset; // 0x00e8, 0xc bytes
+                float m_flRootBoneOffset_x; // 0x00e8, 0x4 bytes
+                float m_flRootBoneOffset_y; // 0x00ec, 0x4 bytes
+                float m_flRootBoneOffset_z; // 0x00f0, 0x4 bytes
                 std::uint8_t m_nRootBoneOffsetResetSerialNumber; // 0x00f4, 0x1 bytes
                 bool m_bClientClothCreationSuppressed; // 0x00f5, 0x1 bytes
-                std::uint8_t pad_00f6[0xaa]; // 0x00f6, 0xaa bytes
-                std::uint64_t m_MeshGroupMask; // 0x01a0, 0x8 bytes
-                std::uint8_t pad_01a8[0x48]; // 0x01a8, 0x48 bytes
-                CNetworkUtlVectorBase<std::int32_t> m_nBodyGroupChoices; // 0x01f0, 0x18 bytes
-                std::uint8_t pad_0208[0x32]; // 0x0208, 0x32 bytes
-                std::int8_t m_nIdealMotionType; // 0x023a, 0x1 bytes
-                std::int8_t m_nForceLOD; // 0x023b, 0x1 bytes
-                std::int8_t m_nClothUpdateFlags; // 0x023c, 0x1 bytes
-                std::uint8_t pad_023d[0x13]; // 0x023d, 0x13 bytes
+                std::uint8_t pad_00f6[0xea]; // 0x00f6, 0xea bytes
+                std::uint8_t m_nAnimStateNoInterpSerialNumber; // 0x01e0, 0x1 bytes
+                std::uint8_t pad_01e1[0x7]; // 0x01e1, 0x7 bytes
+                std::uint64_t m_MeshGroupMask; // 0x01e8, 0x8 bytes
+                std::uint8_t pad_01f0[0x48]; // 0x01f0, 0x48 bytes
+                CNetworkUtlVectorBase<std::int32_t> m_nBodyGroupChoices; // 0x0238, 0x18 bytes
+                std::uint8_t pad_0250[0x32]; // 0x0250, 0x32 bytes
+                std::int8_t m_nIdealMotionType; // 0x0282, 0x1 bytes
+                std::int8_t m_nForceLOD; // 0x0283, 0x1 bytes
+                std::int8_t m_nClothUpdateFlags; // 0x0284, 0x1 bytes
+                std::uint8_t pad_0285[0x1b]; // 0x0285, 0x1b bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModelState) == 0x250, "CModelState size mismatch");
+            static_assert(sizeof(CModelState) == 0x2A0, "CModelState size mismatch");
         }
     }
 }

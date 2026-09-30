@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x38
+             * Size: 0x40
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -34,13 +35,15 @@ namespace shade {
                 std::uint8_t pad_0018[0x8]; // 0x0018, 0x8 bytes
                 shade::sdk::client::EAbilityUpgradeType m_eUpgradeType; // 0x0020, 0x4 bytes
                 shade::sdk::client::EStatsType m_eScaleStatFilter; // 0x0024, 0x4 bytes
-                std::uint8_t pad_0028[0x10]; // 0x0028, 0x10 bytes
+                bool m_bFixedCorruptedBonus; // 0x0028, 0x1 bytes
+                bool m_bRoundCorruptedBonus; // 0x0029, 0x1 bytes
+                std::uint8_t pad_002a[0x16]; // 0x002a, 0x16 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PropertyUpgrade_t) == 0x38, "PropertyUpgrade_t size mismatch");
+            static_assert(sizeof(PropertyUpgrade_t) == 0x40, "PropertyUpgrade_t size mismatch");
         }
     }
 }

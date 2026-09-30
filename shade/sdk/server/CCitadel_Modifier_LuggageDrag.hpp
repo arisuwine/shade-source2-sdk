@@ -12,41 +12,30 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CCitadelModifier.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace server {
-            class CBaseEntity;
-        }
-    }
-}
+#include "shade/sdk/server/CCitadel_Modifier_Drag.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe8
+             * Size: 0x190
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_LuggageDrag : public shade::sdk::server::CCitadelModifier {
+            class CCitadel_Modifier_LuggageDrag : public shade::sdk::server::CCitadel_Modifier_Drag {
             public:
-                float m_flRelativeDist; // 0x00d0, 0x4 bytes
-                float m_flCartSpeed; // 0x00d4, 0x4 bytes
-                QAngle m_qRelativeOffset; // 0x00d8, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hDragger; // 0x00e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LuggageDrag) == 0xE8, "CCitadel_Modifier_LuggageDrag size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LuggageDrag) == 0x190, "CCitadel_Modifier_LuggageDrag size mismatch");
         }
     }
 }

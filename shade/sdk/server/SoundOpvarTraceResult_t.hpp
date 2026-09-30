@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,12 +21,13 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x14
-             * Alignment: 0xff
+             * Alignment: 0x4
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct SoundOpvarTraceResult_t {
-                Vector vPos; // 0x0000, 0xc bytes
+                VectorWS vPos; // 0x0000, 0xc bytes
                 bool bDidHit; // 0x000c, 0x1 bytes
                 std::uint8_t pad_000d[0x3]; // 0x000d, 0x3 bytes
                 float flDistSqrToCenter; // 0x0010, 0x4 bytes

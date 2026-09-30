@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x918
+             * Size: 0xa28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerItemShop : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x08e0, 0x20 bytes
-                CUtlSymbolLarge m_iszSoundName; // 0x0900, 0x8 bytes
-                Vector m_vAudioOffset; // 0x0908, 0xc bytes
-                std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x09f0, 0x20 bytes
+                CUtlSymbolLarge m_iszSoundName; // 0x0a10, 0x8 bytes
+                std::int32_t m_iLane; // 0x0a18, 0x4 bytes
+                Vector m_vAudioOffset; // 0x0a1c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerItemShop) == 0x918, "CTriggerItemShop size mismatch");
+            static_assert(sizeof(CTriggerItemShop) == 0xA28, "CTriggerItemShop size mismatch");
         }
     }
 }

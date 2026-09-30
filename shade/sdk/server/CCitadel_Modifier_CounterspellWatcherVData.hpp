@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0x940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CounterspellWatcherVData : public shade::sdk::server::CCitadel_Modifier_Intrinsic_BaseVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x0750, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParryFXOverride; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealFX; // 0x0840, 0xe0 bytes
-                CSoundEventName m_strSuccessProcSound; // 0x0920, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x0760, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParryFXOverride; // 0x0770, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealFX; // 0x0850, 0xe0 bytes
+                CSoundEventName m_strSuccessProcSound; // 0x0930, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CounterspellWatcherVData) == 0x930, "CCitadel_Modifier_CounterspellWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CounterspellWatcherVData) == 0x940, "CCitadel_Modifier_CounterspellWatcherVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa98
+             * Size: 0xcb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +40,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTriggerCapturePoint : public shade::sdk::client::C_BaseTrigger {
             public:
-                shade::sdk::client::CCitadelInWorldEventTimer *m_pUIWorldEventTimer; // 0x0a78, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0x0a80, 0x4 bytes
-                float m_flCaptureProgress; // 0x0a84, 0x4 bytes
-                std::int32_t m_nCaptureProgressOwner; // 0x0a88, 0x4 bytes
-                std::int32_t m_nActivelyCapturingTeam; // 0x0a8c, 0x4 bytes
-                std::int32_t m_nActiveCapturers; // 0x0a90, 0x4 bytes
-                std::uint8_t m_nEnableState; // 0x0a94, 0x1 bytes
-                std::uint8_t pad_0a95[0x3]; // 0x0a95, 0x3 bytes
+                shade::sdk::client::CCitadelInWorldEventTimer *m_pUIWorldEventTimer; // 0x0c98, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0x0ca0, 0x4 bytes
+                float m_flCaptureProgress; // 0x0ca4, 0x4 bytes
+                std::int32_t m_nCaptureProgressOwner; // 0x0ca8, 0x4 bytes
+                std::int32_t m_nActivelyCapturingTeam; // 0x0cac, 0x4 bytes
+                std::int32_t m_nActiveCapturers; // 0x0cb0, 0x4 bytes
+                std::uint8_t m_nEnableState; // 0x0cb4, 0x1 bytes
+                std::uint8_t pad_0cb5[0x3]; // 0x0cb5, 0x3 bytes
             };
             #pragma pack(pop)
 
@@ -54,7 +55,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelTriggerCapturePoint) == 0xA98, "CCitadelTriggerCapturePoint size mismatch");
+            static_assert(sizeof(CCitadelTriggerCapturePoint) == 0xCB8, "CCitadelTriggerCapturePoint size mismatch");
         }
     }
 }

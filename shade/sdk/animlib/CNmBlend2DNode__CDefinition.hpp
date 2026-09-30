@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x110
+             * Size: 0xc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,21 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmBlend2DNode__CDefinition : public shade::sdk::animlib::CNmPoseNode__CDefinition {
             public:
-                CUtlVectorFixedGrowable<std::int16_t, 5> m_sourceNodeIndices; // 0x0010, 0x28 bytes
-                std::int16_t m_nInputParameterNodeIdx0; // 0x0038, 0x2 bytes
-                std::int16_t m_nInputParameterNodeIdx1; // 0x003a, 0x2 bytes
-                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
-                CUtlVectorFixedGrowable<Vector2D, 10> m_values; // 0x0040, 0x68 bytes
-                CUtlVectorFixedGrowable<std::uint8_t, 30> m_indices; // 0x00a8, 0x38 bytes
-                CUtlVectorFixedGrowable<std::uint8_t, 10> m_hullIndices; // 0x00e0, 0x28 bytes
-                bool m_bAllowLooping; // 0x0108, 0x1 bytes
-                std::uint8_t pad_0109[0x7]; // 0x0109, 0x7 bytes
+                CUtlLeanVectorFixedGrowable<std::int16_t, 5> m_sourceNodeIndices; // 0x0010, 0x18 bytes
+                CUtlLeanVectorFixedGrowable<Vector2D, 10> m_values; // 0x0028, 0x58 bytes
+                CUtlLeanVectorFixedGrowable<std::uint8_t, 30> m_indices; // 0x0080, 0x28 bytes
+                CUtlLeanVectorFixedGrowable<std::uint8_t, 10> m_hullIndices; // 0x00a8, 0x18 bytes
+                std::int16_t m_nInputParameterNodeIdx0; // 0x00c0, 0x2 bytes
+                std::int16_t m_nInputParameterNodeIdx1; // 0x00c2, 0x2 bytes
+                bool m_bAllowLooping; // 0x00c4, 0x1 bytes
+                std::uint8_t pad_00c5[0x3]; // 0x00c5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmBlend2DNode__CDefinition) == 0x110, "CNmBlend2DNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmBlend2DNode__CDefinition) == 0xC8, "CNmBlend2DNode__CDefinition size mismatch");
         }
     }
 }

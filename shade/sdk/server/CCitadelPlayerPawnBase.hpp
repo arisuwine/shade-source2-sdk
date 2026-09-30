@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd70
+             * Size: 0xd40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayerPawnBase : public shade::sdk::server::CBasePlayerPawn {
             public:
-                std::uint8_t pad_0d50[0x20]; // 0x0d50, 0x20 bytes
+                std::uint8_t pad_0d20[0x20]; // 0x0d20, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelPlayerPawnBase) == 0xD70, "CCitadelPlayerPawnBase size mismatch");
+            static_assert(sizeof(CCitadelPlayerPawnBase) == 0xD40, "CCitadelPlayerPawnBase size mismatch");
         }
     }
 }

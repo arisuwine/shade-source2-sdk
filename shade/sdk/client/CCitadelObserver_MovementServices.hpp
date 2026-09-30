@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x248
+             * Size: 0x260
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelObserver_MovementServices : public shade::sdk::client::CPlayer_MovementServices {
             public:
-                float m_flRoamingSpeed; // 0x0240, 0x4 bytes
-                bool m_bHasFreeCursor; // 0x0244, 0x1 bytes
-                std::uint8_t pad_0245[0x3]; // 0x0245, 0x3 bytes
+                float m_flRoamingSpeed; // 0x0258, 0x4 bytes
+                bool m_bHasFreeCursor; // 0x025c, 0x1 bytes
+                std::uint8_t pad_025d[0x3]; // 0x025d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelObserver_MovementServices) == 0x248, "CCitadelObserver_MovementServices size mismatch");
+            static_assert(sizeof(CCitadelObserver_MovementServices) == 0x260, "CCitadelObserver_MovementServices size mismatch");
         }
     }
 }

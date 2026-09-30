@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa18
+             * Size: 0xa28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,25 +39,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_InvisVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisLoopParticle; // 0x0750, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisDetectRadiusParticle; // 0x0830, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisRevealedParticle; // 0x0910, 0xe0 bytes
-                float m_flDesatFactor; // 0x09f0, 0x4 bytes
-                std::uint8_t pad_09f4[0x4]; // 0x09f4, 0x4 bytes
-                CSoundEventName m_strInvisRevealedSound; // 0x09f8, 0x10 bytes
-                bool m_bFadeInsteadOfRemoveOnBulletFire; // 0x0a08, 0x1 bytes
-                bool m_bFadeInsteadOfRemoveOnAbilityUse; // 0x0a09, 0x1 bytes
-                bool m_bBreakOnItemUse; // 0x0a0a, 0x1 bytes
-                bool m_bFadeToVisibleAtEndOfDuration; // 0x0a0b, 0x1 bytes
-                float m_flMinCloak; // 0x0a0c, 0x4 bytes
-                float m_flMaxCloak; // 0x0a10, 0x4 bytes
-                std::uint8_t pad_0a14[0x4]; // 0x0a14, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisLoopParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisDetectRadiusParticle; // 0x0840, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisRevealedParticle; // 0x0920, 0xe0 bytes
+                float m_flDesatFactor; // 0x0a00, 0x4 bytes
+                std::uint8_t pad_0a04[0x4]; // 0x0a04, 0x4 bytes
+                CSoundEventName m_strInvisRevealedSound; // 0x0a08, 0x10 bytes
+                bool m_bFadeInsteadOfRemoveOnBulletFire; // 0x0a18, 0x1 bytes
+                bool m_bFadeInsteadOfRemoveOnAbilityUse; // 0x0a19, 0x1 bytes
+                bool m_bBreakOnItemUse; // 0x0a1a, 0x1 bytes
+                bool m_bFadeToVisibleAtEndOfDuration; // 0x0a1b, 0x1 bytes
+                float m_flMinCloak; // 0x0a1c, 0x4 bytes
+                float m_flMaxCloak; // 0x0a20, 0x4 bytes
+                std::uint8_t pad_0a24[0x4]; // 0x0a24, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_InvisVData) == 0xA18, "CCitadel_Modifier_InvisVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_InvisVData) == 0xA28, "CCitadel_Modifier_InvisVData size mismatch");
         }
     }
 }

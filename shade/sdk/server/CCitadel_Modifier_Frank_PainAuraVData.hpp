@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x840
+             * Size: 0x850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Frank_PainAuraVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x0750, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraParticle; // 0x0760, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x0760, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraParticle; // 0x0770, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Frank_PainAuraVData) == 0x840, "CCitadel_Modifier_Frank_PainAuraVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Frank_PainAuraVData) == 0x850, "CCitadel_Modifier_Frank_PainAuraVData size mismatch");
         }
     }
 }

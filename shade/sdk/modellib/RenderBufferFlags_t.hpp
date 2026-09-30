@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -29,7 +30,8 @@ namespace shade {
                 RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
                 RENDER_BUFFER_POOL_ALLOCATED = 0x800,
                 RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x1000,
-                RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000
+                RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000,
+                RENDER_BUFFER_DYNAMIC_ZERO_COPY = 0x4000
             };
         }
     }

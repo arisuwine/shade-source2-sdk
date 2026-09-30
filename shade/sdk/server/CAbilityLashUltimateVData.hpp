@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1cf8
+             * Size: 0x1878
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,28 +43,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityLashUltimateVData : public shade::sdk::server::CBaseLockonAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x1838, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchParticle; // 0x1918, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastParticle; // 0x19f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastEnemyParticle; // 0x1ad8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AllyIndicatorParticle; // 0x1bb8, 0xe0 bytes
-                CGlobalSymbol m_strThrowEnemyAnimGraphParam; // 0x1c98, 0x8 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_LashGrappleEnemy_Debuff> m_GrappleEnemyModifier; // 0x1ca0, 0x10 bytes
-                CSoundEventName m_GrabSound; // 0x1cb0, 0x10 bytes
-                CSoundEventName m_MissSound; // 0x1cc0, 0x10 bytes
-                CSoundEventName m_ThrowSound; // 0x1cd0, 0x10 bytes
-                float m_flAirSpeedMax; // 0x1ce0, 0x4 bytes
-                float m_flFallSpeedMax; // 0x1ce4, 0x4 bytes
-                float m_flAirDrag; // 0x1ce8, 0x4 bytes
-                float m_flMaxPitchRangeScale; // 0x1cec, 0x4 bytes
-                float m_flThrowAnimTossPoint; // 0x1cf0, 0x4 bytes
-                std::uint8_t pad_1cf4[0x4]; // 0x1cf4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x13c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchParticle; // 0x14a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastParticle; // 0x1580, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastEnemyParticle; // 0x1660, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AllyIndicatorParticle; // 0x1740, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_LashGrappleEnemy_Debuff> m_GrappleEnemyModifier; // 0x1820, 0x10 bytes
+                CSoundEventName m_GrabSound; // 0x1830, 0x10 bytes
+                CSoundEventName m_MissSound; // 0x1840, 0x10 bytes
+                CSoundEventName m_ThrowSound; // 0x1850, 0x10 bytes
+                float m_flAirSpeedMax; // 0x1860, 0x4 bytes
+                float m_flFallSpeedMax; // 0x1864, 0x4 bytes
+                float m_flAirDrag; // 0x1868, 0x4 bytes
+                float m_flMaxPitchRangeScale; // 0x186c, 0x4 bytes
+                float m_flThrowAnimTossPoint; // 0x1870, 0x4 bytes
+                std::uint8_t pad_1874[0x4]; // 0x1874, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityLashUltimateVData) == 0x1CF8, "CAbilityLashUltimateVData size mismatch");
+            static_assert(sizeof(CAbilityLashUltimateVData) == 0x1878, "CAbilityLashUltimateVData size mismatch");
         }
     }
 }

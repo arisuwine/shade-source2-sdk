@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1918
+             * Size: 0x14a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCadenceGrandFinaleVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_StageModel; // 0x1818, 0xe0 bytes
-                float m_flStageModelHeight; // 0x18f8, 0x4 bytes
-                float m_flStageModelWidth; // 0x18fc, 0x4 bytes
-                float m_flStageModelLength; // 0x1900, 0x4 bytes
-                float m_flStageModelScale; // 0x1904, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GrandFinaleAOEModifier; // 0x1908, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_StageModel; // 0x13a0, 0xe0 bytes
+                float m_flStageModelHeight; // 0x1480, 0x4 bytes
+                float m_flStageModelWidth; // 0x1484, 0x4 bytes
+                float m_flStageModelLength; // 0x1488, 0x4 bytes
+                float m_flStageModelScale; // 0x148c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GrandFinaleAOEModifier; // 0x1490, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCadenceGrandFinaleVData) == 0x1918, "CAbilityCadenceGrandFinaleVData size mismatch");
+            static_assert(sizeof(CAbilityCadenceGrandFinaleVData) == 0x14A0, "CAbilityCadenceGrandFinaleVData size mismatch");
         }
     }
 }

@@ -12,14 +12,14 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
         namespace server {
             enum class AI_MotorGroundAnimGraph_PathAlignmentMode_t : std::uint32_t {
                 eNone = 0x0,
-                eCompensateAngleDelta = 0x1,
-                eAlign = 0x2
+                eAlign = 0x1
             };
         }
     }

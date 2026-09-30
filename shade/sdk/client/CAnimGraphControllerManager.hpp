@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -27,22 +28,22 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb0
+             * Size: 0x98
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
             class CAnimGraphControllerManager {
             public:
                 CUtlVector<shade::sdk::client::CAnimGraphControllerBase*> m_controllers; // 0x0000, 0x18 bytes
-                std::uint8_t pad_0018[0x90]; // 0x0018, 0x90 bytes
-                bool m_bGraphBindingsCreated; // 0x00a8, 0x1 bytes
-                std::uint8_t pad_00a9[0x7]; // 0x00a9, 0x7 bytes
+                std::uint8_t pad_0018[0x78]; // 0x0018, 0x78 bytes
+                bool m_bGraphBindingsCreated; // 0x0090, 0x1 bytes
+                std::uint8_t pad_0091[0x7]; // 0x0091, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAnimGraphControllerManager) == 0xB0, "CAnimGraphControllerManager size mismatch");
+            static_assert(sizeof(CAnimGraphControllerManager) == 0x98, "CAnimGraphControllerManager size mismatch");
         }
     }
 }

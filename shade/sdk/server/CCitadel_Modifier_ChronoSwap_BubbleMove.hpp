@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x390
+             * Size: 0x4f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,23 +39,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChronoSwap_BubbleMove : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bOtherIsInFrontAtStart; // 0x00d0, 0x1 bytes
-                std::uint8_t pad_00d1[0x3]; // 0x00d1, 0x3 bytes
-                Vector m_vOtherToDest; // 0x00d4, 0xc bytes
-                VectorWS m_vStart; // 0x00e0, 0xc bytes
-                VectorWS m_vDest; // 0x00ec, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOther; // 0x00f8, 0x4 bytes
-                VectorWS m_vLastSafePos; // 0x00fc, 0xc bytes
-                bool m_bDoFinalTeleport; // 0x0108, 0x1 bytes
-                std::uint8_t pad_0109[0x3]; // 0x0109, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nBeamIndex; // 0x010c, 0x4 bytes
-                std::uint8_t pad_0110[0x280]; // 0x0110, 0x280 bytes
+                bool m_bOtherIsInFrontAtStart; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
+                Vector m_vOtherToDest; // 0x0144, 0xc bytes
+                VectorWS m_vStart; // 0x0150, 0xc bytes
+                VectorWS m_vDest; // 0x015c, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOther; // 0x0168, 0x4 bytes
+                VectorWS m_vLastSafePos; // 0x016c, 0xc bytes
+                bool m_bDoFinalTeleport; // 0x0178, 0x1 bytes
+                std::uint8_t pad_0179[0x3]; // 0x0179, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nBeamIndex; // 0x017c, 0x4 bytes
+                std::uint8_t pad_0180[0x370]; // 0x0180, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChronoSwap_BubbleMove) == 0x390, "CCitadel_Modifier_ChronoSwap_BubbleMove size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChronoSwap_BubbleMove) == 0x4F0, "CCitadel_Modifier_ChronoSwap_BubbleMove size mismatch");
         }
     }
 }

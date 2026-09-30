@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_UltCombo_Self : public shade::sdk::client::CCitadelModifier {
             public:
-                QAngle m_angles; // 0x00c0, 0xc bytes
-                std::uint8_t pad_00cc[0x4]; // 0x00cc, 0x4 bytes
+                QAngle m_angles; // 0x0130, 0xc bytes
+                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UltCombo_Self) == 0xD0, "CCitadel_Modifier_UltCombo_Self size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UltCombo_Self) == 0x140, "CCitadel_Modifier_UltCombo_Self size mismatch");
         }
     }
 }

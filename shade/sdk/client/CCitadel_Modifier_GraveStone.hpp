@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7b8
+             * Size: 0xa98
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GraveStone : public shade::sdk::client::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0110[0x18]; // 0x0110, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndexAura; // 0x0128, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x012c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x684]; // 0x0134, 0x684 bytes
+                std::uint8_t pad_0180[0x18]; // 0x0180, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndexAura; // 0x0198, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x019c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x01a0, 0x4 bytes
+                std::uint8_t pad_01a4[0x8f4]; // 0x01a4, 0x8f4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GraveStone) == 0x7B8, "CCitadel_Modifier_GraveStone size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GraveStone) == 0xA98, "CCitadel_Modifier_GraveStone size mismatch");
         }
     }
 }

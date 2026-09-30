@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb30
+             * Size: 0xb40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Pickup_AssignedGold : public shade::sdk::server::CCitadel_Pickup {
             public:
-                std::uint8_t pad_0b10[0x20]; // 0x0b10, 0x20 bytes
+                std::uint8_t pad_0b20[0x20]; // 0x0b20, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Pickup_AssignedGold) == 0xB30, "CCitadel_Pickup_AssignedGold size mismatch");
+            static_assert(sizeof(CCitadel_Pickup_AssignedGold) == 0xB40, "CCitadel_Pickup_AssignedGold size mismatch");
         }
     }
 }

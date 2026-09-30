@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xba8
+             * Size: 0xdd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_WebWall : public shade::sdk::server::CCitadelProjectile {
             public:
-                bool bHasDetonatedOnTarget; // 0x0860, 0x1 bytes
-                std::uint8_t pad_0861[0x3]; // 0x0861, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nWebWallFxIndex; // 0x0864, 0x4 bytes
-                std::uint8_t pad_0868[0x10]; // 0x0868, 0x10 bytes
-                Vector m_vecCastPosition; // 0x0878, 0xc bytes
-                Vector m_vecCastPositionNormal; // 0x0884, 0xc bytes
-                Vector m_vecEndPosition; // 0x0890, 0xc bytes
-                Vector m_vecEndPositionNormal; // 0x089c, 0xc bytes
-                std::uint8_t pad_08a8[0x300]; // 0x08a8, 0x300 bytes
+                bool bHasDetonatedOnTarget; // 0x0968, 0x1 bytes
+                std::uint8_t pad_0969[0x3]; // 0x0969, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nWebWallFxIndex; // 0x096c, 0x4 bytes
+                std::uint8_t pad_0970[0x10]; // 0x0970, 0x10 bytes
+                VectorWS m_vecCastPosition; // 0x0980, 0xc bytes
+                Vector m_vecCastPositionNormal; // 0x098c, 0xc bytes
+                VectorWS m_vecEndPosition; // 0x0998, 0xc bytes
+                Vector m_vecEndPositionNormal; // 0x09a4, 0xc bytes
+                std::uint8_t pad_09b0[0x420]; // 0x09b0, 0x420 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_WebWall) == 0xBA8, "CCitadel_Projectile_WebWall size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_WebWall) == 0xDD0, "CCitadel_Projectile_WebWall size mismatch");
         }
     }
 }

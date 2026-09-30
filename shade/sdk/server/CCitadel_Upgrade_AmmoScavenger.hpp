@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1080
+             * Size: 0x1610
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Upgrade_AmmoScavenger : public shade::sdk::server::CCitadel_Item {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hLastOrbTarget; // 0x0f78, 0x4 bytes
-                std::uint8_t pad_0f7c[0x104]; // 0x0f7c, 0x104 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLastOrbTarget; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x164]; // 0x14ac, 0x164 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Upgrade_AmmoScavenger) == 0x1080, "CCitadel_Upgrade_AmmoScavenger size mismatch");
+            static_assert(sizeof(CCitadel_Upgrade_AmmoScavenger) == 0x1610, "CCitadel_Upgrade_AmmoScavenger size mismatch");
         }
     }
 }

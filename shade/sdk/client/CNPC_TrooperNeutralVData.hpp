@@ -12,13 +12,12 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CAI_CitadelNPCVData.hpp"
-#include "shade/sdk/client/ENeutralTrooperType.hpp"
-#include "shade/sdk/client/ENeutralWeakPointType.hpp"
-#include "shade/sdk/client/MoveType_t.hpp"
+#include "shade/sdk/client/ENeutralNPCType.hpp"
 
 namespace shade {
     namespace sdk {
@@ -36,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16c0
+             * Size: 0xef0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,50 +44,48 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_TrooperNeutralVData : public shade::sdk::client::CAI_CitadelNPCVData {
             public:
-                shade::sdk::client::ENeutralTrooperType m_eTrooperType; // 0x1348, 0x4 bytes
-                float m_flGoldReward; // 0x134c, 0x4 bytes
-                float m_flGoldRewardBonusPercentPerMinute; // 0x1350, 0x4 bytes
-                bool m_bCapSimultanousAttackers; // 0x1354, 0x1 bytes
-                std::uint8_t pad_1355[0x3]; // 0x1355, 0x3 bytes
-                float m_flShieldReactivateDelay; // 0x1358, 0x4 bytes
-                float m_flDyingDuration; // 0x135c, 0x4 bytes
-                bool m_bDamagedByBullets; // 0x1360, 0x1 bytes
-                bool m_bDamagedByMelee; // 0x1361, 0x1 bytes
-                bool m_bDamagedByAbilities; // 0x1362, 0x1 bytes
-                std::uint8_t pad_1363[0x5]; // 0x1363, 0x5 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle; // 0x1368, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_retaliateParticle; // 0x1448, 0xe0 bytes
-                bool m_bHasAOEAttack; // 0x1528, 0x1 bytes
-                std::uint8_t pad_1529[0x3]; // 0x1529, 0x3 bytes
-                float m_flAOERadius; // 0x152c, 0x4 bytes
-                float m_flAOEDamage; // 0x1530, 0x4 bytes
-                float m_flAOEAttackCooldown; // 0x1534, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEParticle; // 0x1538, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AOEDebuffToApply; // 0x1618, 0x10 bytes
-                CSoundEventName m_AOEInitiateSound; // 0x1628, 0x10 bytes
-                CSoundEventName m_AOESound; // 0x1638, 0x10 bytes
-                float m_AOEDebuffDuration; // 0x1648, 0x4 bytes
-                std::uint8_t pad_164c[0x4]; // 0x164c, 0x4 bytes
-                CUtlVector<CUtlString> m_vecRandomBodyGroup; // 0x1650, 0x18 bytes
-                CUtlVector<CUtlString> m_vecRandomSkin; // 0x1668, 0x18 bytes
-                float m_flHullCapsuleRadius; // 0x1680, 0x4 bytes
-                float m_flHullCapsuleHeight; // 0x1684, 0x4 bytes
-                bool m_bFaceEnemyWhileIdle; // 0x1688, 0x1 bytes
-                std::uint8_t pad_1689[0x7]; // 0x1689, 0x7 bytes
-                CSoundEventName m_IdleLoopSound; // 0x1690, 0x10 bytes
-                shade::sdk::client::MoveType_t m_MoveType; // 0x16a0, 0x1 bytes
-                std::uint8_t pad_16a1[0x3]; // 0x16a1, 0x3 bytes
-                std::int32_t m_iWeakPointCount; // 0x16a4, 0x4 bytes
-                shade::sdk::client::ENeutralWeakPointType m_iWeakPointType; // 0x16a8, 0x1 bytes
-                std::uint8_t pad_16a9[0x3]; // 0x16a9, 0x3 bytes
-                float m_iWeakPointRespawnTime; // 0x16ac, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NeutralDamageGrowth; // 0x16b0, 0x10 bytes
+                shade::sdk::client::ENeutralNPCType m_eNeutralType; // 0x0c30, 0x4 bytes
+                float m_flGoldReward; // 0x0c34, 0x4 bytes
+                float m_flGoldRewardBonusPercentPerMinute; // 0x0c38, 0x4 bytes
+                std::int32_t m_iMaxSquadAttackers; // 0x0c3c, 0x4 bytes
+                float m_flShieldReactivateDelay; // 0x0c40, 0x4 bytes
+                float m_flDyingDuration; // 0x0c44, 0x4 bytes
+                float m_flReturnToSpawnSpeed; // 0x0c48, 0x4 bytes
+                float m_flSpawnTetherRadius; // 0x0c4c, 0x4 bytes
+                float m_flAbilityChance01; // 0x0c50, 0x4 bytes
+                float m_flAbilityChance02; // 0x0c54, 0x4 bytes
+                float m_flAbilityChance03; // 0x0c58, 0x4 bytes
+                float m_flMinTimeBetweenAbilities; // 0x0c5c, 0x4 bytes
+                CSubclassName<2> m_sNeutralMelee; // 0x0c60, 0x10 bytes
+                CUtlVector<CSubclassName<2>> m_vNeutralAbilities; // 0x0c70, 0x18 bytes
+                bool m_bDamagedByBullets; // 0x0c88, 0x1 bytes
+                bool m_bDamagedByMelee; // 0x0c89, 0x1 bytes
+                bool m_bDamagedByAbilities; // 0x0c8a, 0x1 bytes
+                bool m_bNoMelee; // 0x0c8b, 0x1 bytes
+                bool m_bOnlyMelee; // 0x0c8c, 0x1 bytes
+                std::uint8_t pad_0c8d[0x3]; // 0x0c8d, 0x3 bytes
+                float m_flAttackRangeTarget; // 0x0c90, 0x4 bytes
+                float m_flStrafeAngleAmount; // 0x0c94, 0x4 bytes
+                float m_flStrafeSideDuration; // 0x0c98, 0x4 bytes
+                float m_flNonMoveAttackDuration; // 0x0c9c, 0x4 bytes
+                float m_flRNGTickRate; // 0x0ca0, 0x4 bytes
+                float m_flWakeUpTime; // 0x0ca4, 0x4 bytes
+                bool m_bUseSleepPoseWhenNoTarget; // 0x0ca8, 0x1 bytes
+                std::uint8_t pad_0ca9[0x7]; // 0x0ca9, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle; // 0x0cb0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_retaliateParticle; // 0x0d90, 0xe0 bytes
+                CUtlVector<CUtlString> m_vecRandomBodyGroup; // 0x0e70, 0x18 bytes
+                CUtlVector<CUtlString> m_vecRandomSkin; // 0x0e88, 0x18 bytes
+                CSoundEventName m_SpawnSound; // 0x0ea0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NeutralDamageGrowth; // 0x0eb0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SleepModifier; // 0x0ec0, 0x10 bytes
+                CUtlHashtable<std::int32_t, CUtlString> m_mapViewerSoulsClass; // 0x0ed0, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_TrooperNeutralVData) == 0x16C0, "CNPC_TrooperNeutralVData size mismatch");
+            static_assert(sizeof(CNPC_TrooperNeutralVData) == 0xEF0, "CNPC_TrooperNeutralVData size mismatch");
         }
     }
 }

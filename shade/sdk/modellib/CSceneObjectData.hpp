@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0xa0
+             * Size: 0xb8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -47,13 +48,13 @@ namespace shade {
                 CUtlLeanVector<shade::sdk::modellib::CMeshletDescriptor> m_meshlets; // 0x0038, 0x10 bytes
                 CUtlLeanVector<shade::sdk::modellib::CSceneObjectData__RTProxyDrawDescriptor_t> m_rtProxyDrawCalls; // 0x0048, 0x10 bytes
                 Vector4D m_vTintColor; // 0x0058, 0x10 bytes
-                std::uint8_t pad_0068[0x38]; // 0x0068, 0x38 bytes
+                std::uint8_t pad_0068[0x50]; // 0x0068, 0x50 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSceneObjectData) == 0xA0, "CSceneObjectData size mismatch");
+            static_assert(sizeof(CSceneObjectData) == 0xB8, "CSceneObjectData size mismatch");
         }
     }
 }

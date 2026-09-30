@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CLogicAchievement : public shade::sdk::server::CLogicalEntity {
             public:
-                bool m_bDisabled; // 0x04a0, 0x1 bytes
-                std::uint8_t pad_04a1[0x7]; // 0x04a1, 0x7 bytes
-                CUtlSymbolLarge m_iszAchievementEventID; // 0x04a8, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFired; // 0x04b0, 0x18 bytes
+                bool m_bDisabled; // 0x04b0, 0x1 bytes
+                std::uint8_t pad_04b1[0x7]; // 0x04b1, 0x7 bytes
+                CUtlSymbolLarge m_iszAchievementEventID; // 0x04b8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFired; // 0x04c0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputFireEvent; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CLogicAchievement) == 0x4C8, "CLogicAchievement size mismatch");
+            static_assert(sizeof(CLogicAchievement) == 0x4D8, "CLogicAchievement size mismatch");
         }
     }
 }

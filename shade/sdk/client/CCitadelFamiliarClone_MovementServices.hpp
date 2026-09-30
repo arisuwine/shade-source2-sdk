@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2f0
+             * Size: 0x318
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelFamiliarClone_MovementServices) == 0x2F0, "CCitadelFamiliarClone_MovementServices size mismatch");
+            static_assert(sizeof(CCitadelFamiliarClone_MovementServices) == 0x318, "CCitadelFamiliarClone_MovementServices size mismatch");
         }
     }
 }

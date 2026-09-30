@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,9 +21,10 @@ namespace shade {
         namespace client {
             /* Class Parameters
              * Size: 0x30
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct sndopvarlatchdata_t {
@@ -31,7 +33,7 @@ namespace shade {
                 CUtlSymbolLarge m_iszOperator; // 0x0010, 0x8 bytes
                 CUtlSymbolLarge m_iszOpvar; // 0x0018, 0x8 bytes
                 float m_flVal; // 0x0020, 0x4 bytes
-                Vector m_vPos; // 0x0024, 0xc bytes
+                VectorWS m_vPos; // 0x0024, 0xc bytes
             };
             #pragma pack(pop)
 

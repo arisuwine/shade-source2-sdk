@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0x80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerRealtimeFMSineWave : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerGenerator {
             public:
-                float m_flCarrierFrequency; // 0x00a8, 0x4 bytes
-                float m_flModulatorFrequency; // 0x00ac, 0x4 bytes
-                float m_flModulatorAmount; // 0x00b0, 0x4 bytes
-                std::uint8_t pad_00b4[0x4]; // 0x00b4, 0x4 bytes
+                float m_flCarrierFrequency; // 0x0070, 0x4 bytes
+                float m_flModulatorFrequency; // 0x0074, 0x4 bytes
+                float m_flModulatorAmount; // 0x0078, 0x4 bytes
+                std::uint8_t pad_007c[0x4]; // 0x007c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerRealtimeFMSineWave) == 0xB8, "CVoiceContainerRealtimeFMSineWave size mismatch");
+            static_assert(sizeof(CVoiceContainerRealtimeFMSineWave) == 0x80, "CVoiceContainerRealtimeFMSineWave size mismatch");
         }
     }
 }

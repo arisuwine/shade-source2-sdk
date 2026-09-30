@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1310
+             * Size: 0x1990
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Rutger_ForceField : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_hChargingParticle; // 0x0f70, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_hExplodeParticle; // 0x0f74, 0x4 bytes
-                Vector m_vSpawnPos; // 0x0f78, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_fTimeToDestroyForceField; // 0x0f84, 0x4 bytes
-                bool m_bFirstThink; // 0x0f88, 0x1 bytes
-                std::uint8_t pad_0f89[0x387]; // 0x0f89, 0x387 bytes
+                shade::sdk::client::ParticleIndex_t m_hChargingParticle; // 0x14a0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_hExplodeParticle; // 0x14a4, 0x4 bytes
+                VectorWS m_vSpawnPos; // 0x14a8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_fTimeToDestroyForceField; // 0x14b4, 0x4 bytes
+                bool m_bFirstThink; // 0x14b8, 0x1 bytes
+                std::uint8_t pad_14b9[0x4d7]; // 0x14b9, 0x4d7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Rutger_ForceField) == 0x1310, "CAbility_Rutger_ForceField size mismatch");
+            static_assert(sizeof(CAbility_Rutger_ForceField) == 0x1990, "CAbility_Rutger_ForceField size mismatch");
         }
     }
 }

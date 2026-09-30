@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x7a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Doorman_Hotel_TeleportFX_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CSoundEventName m_strKeyLoopSound; // 0x0750, 0x10 bytes
-                CSoundEventName m_strKeyLoopStartSound; // 0x0760, 0x10 bytes
-                CSoundEventName m_strKeyLoopEndSound; // 0x0770, 0x10 bytes
-                CSoundEventName m_HitSound; // 0x0780, 0x10 bytes
+                CSoundEventName m_strKeyLoopSound; // 0x0760, 0x10 bytes
+                CSoundEventName m_strKeyLoopStartSound; // 0x0770, 0x10 bytes
+                CSoundEventName m_strKeyLoopEndSound; // 0x0780, 0x10 bytes
+                CSoundEventName m_HitSound; // 0x0790, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Doorman_Hotel_TeleportFX_VData) == 0x790, "CCitadel_Modifier_Doorman_Hotel_TeleportFX_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Doorman_Hotel_TeleportFX_VData) == 0x7A0, "CCitadel_Modifier_Doorman_Hotel_TeleportFX_VData size mismatch");
         }
     }
 }

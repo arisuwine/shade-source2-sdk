@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 namespace shade {
     namespace sdk {
@@ -22,7 +23,8 @@ namespace shade {
                 SHAKE_AMPLITUDE = 0x2,
                 SHAKE_FREQUENCY = 0x3,
                 SHAKE_START_RUMBLEONLY = 0x4,
-                SHAKE_START_NORUMBLE = 0x5
+                SHAKE_START_NORUMBLE = 0x5,
+                SHAKE_DURATION = 0x6
             };
         }
     }

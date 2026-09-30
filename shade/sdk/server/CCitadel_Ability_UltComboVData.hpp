@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -25,6 +26,7 @@ namespace shade {
 
         namespace server {
             class CCitadelModifier;
+            class CCitadel_Modifier_UltCombo_Target;
         }
     }
 }
@@ -33,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a10
+             * Size: 0x1598
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,19 +44,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_UltComboVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x1818, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x18f8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SelfModifier; // 0x19d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TargetModifier; // 0x19e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KillCheckModifier; // 0x19f8, 0x10 bytes
-                float m_flKillCheckWindow; // 0x1a08, 0x4 bytes
-                float m_flDamageInterval; // 0x1a0c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x1480, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SelfModifier; // 0x1560, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_UltCombo_Target> m_TargetModifier; // 0x1570, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KillCheckModifier; // 0x1580, 0x10 bytes
+                float m_flKillCheckWindow; // 0x1590, 0x4 bytes
+                float m_flDamageInterval; // 0x1594, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_UltComboVData) == 0x1A10, "CCitadel_Ability_UltComboVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_UltComboVData) == 0x1598, "CCitadel_Ability_UltComboVData size mismatch");
         }
     }
 }

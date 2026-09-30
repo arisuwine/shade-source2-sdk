@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x958
+             * Size: 0x968
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierTier2BossLaserBeamVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                bool m_bIsSideHead; // 0x0750, 0x1 bytes
-                std::uint8_t pad_0751[0x3]; // 0x0751, 0x3 bytes
-                float m_flSideSearchRadius; // 0x0754, 0x4 bytes
-                float m_flSideSearchAngle; // 0x0758, 0x4 bytes
-                float m_flMinShootTime; // 0x075c, 0x4 bytes
-                CUtlString m_strBeamStartAttachmentPoint; // 0x0760, 0x8 bytes
-                CUtlString m_strBeamStartAttachmentPoint02; // 0x0768, 0x8 bytes
-                CUtlString m_strBeamStartSearchPos; // 0x0770, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamPreviewEffect; // 0x0778, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamActiveEffect; // 0x0858, 0xe0 bytes
-                CSoundEventName m_BeamLoopSound; // 0x0938, 0x10 bytes
-                CSoundEventName m_BeamFireSound; // 0x0948, 0x10 bytes
+                bool m_bIsSideHead; // 0x0760, 0x1 bytes
+                std::uint8_t pad_0761[0x3]; // 0x0761, 0x3 bytes
+                float m_flSideSearchRadius; // 0x0764, 0x4 bytes
+                float m_flSideSearchAngle; // 0x0768, 0x4 bytes
+                float m_flMinShootTime; // 0x076c, 0x4 bytes
+                CUtlString m_strBeamStartAttachmentPoint; // 0x0770, 0x8 bytes
+                CUtlString m_strBeamStartAttachmentPoint02; // 0x0778, 0x8 bytes
+                CUtlString m_strBeamStartSearchPos; // 0x0780, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamPreviewEffect; // 0x0788, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamActiveEffect; // 0x0868, 0xe0 bytes
+                CSoundEventName m_BeamClosestPointLoopSound; // 0x0948, 0x10 bytes
+                CSoundEventName m_BeamFireSound; // 0x0958, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierTier2BossLaserBeamVData) == 0x958, "CCitadelModifierTier2BossLaserBeamVData size mismatch");
+            static_assert(sizeof(CCitadelModifierTier2BossLaserBeamVData) == 0x968, "CCitadelModifierTier2BossLaserBeamVData size mismatch");
         }
     }
 }

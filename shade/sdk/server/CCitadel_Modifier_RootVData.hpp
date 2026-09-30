@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x768
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_RootVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                bool m_bStopMovementXY; // 0x0750, 0x1 bytes
-                bool m_bStopMovementPosZ; // 0x0751, 0x1 bytes
-                std::uint8_t pad_0752[0x6]; // 0x0752, 0x6 bytes
+                bool m_bStopMovementXY; // 0x0760, 0x1 bytes
+                bool m_bStopMovementPosZ; // 0x0761, 0x1 bytes
+                std::uint8_t pad_0762[0x6]; // 0x0762, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_RootVData) == 0x758, "CCitadel_Modifier_RootVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_RootVData) == 0x768, "CCitadel_Modifier_RootVData size mismatch");
         }
     }
 }

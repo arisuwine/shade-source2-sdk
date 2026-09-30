@@ -12,43 +12,31 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/C_Citadel_Pickup.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace client {
-            class CitadelItemVData;
-        }
-    }
-}
+#include "shade/sdk/client/C_Citadel_Pickup_Ability.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdf0
+             * Size: 0xef8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class C_Citadel_Pickup_Item : public shade::sdk::client::C_Citadel_Pickup {
+            class C_Citadel_Pickup_Item : public shade::sdk::client::C_Citadel_Pickup_Ability {
             public:
-                CUtlStringToken m_unItemID; // 0x0de0, 0x4 bytes
-                std::uint8_t pad_0de4[0x4]; // 0x0de4, 0x4 bytes
-                shade::sdk::client::CitadelItemVData *m_pItemData; // 0x0de8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Pickup_Item) == 0xDF0, "C_Citadel_Pickup_Item size mismatch");
+            static_assert(sizeof(C_Citadel_Pickup_Item) == 0xEF8, "C_Citadel_Pickup_Item size mismatch");
         }
     }
 }

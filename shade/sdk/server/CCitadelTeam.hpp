@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x610
+             * Size: 0x620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,28 +40,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTeam : public shade::sdk::server::CTeam {
             public:
-                std::uint8_t pad_0558[0xc]; // 0x0558, 0xc bytes
-                float m_flBaseObjectiveHealth; // 0x0564, 0x4 bytes
-                std::int32_t m_vecBaseLocationX; // 0x0568, 0x4 bytes
-                std::int32_t m_vecBaseLocationY; // 0x056c, 0x4 bytes
-                bool m_bHasValidBaseLocation; // 0x0570, 0x1 bytes
-                std::uint8_t pad_0571[0x1f]; // 0x0571, 0x1f bytes
-                std::int32_t m_nBossesAlive; // 0x0590, 0x4 bytes
-                std::int32_t m_nBossesMax; // 0x0594, 0x4 bytes
-                shade::sdk::client::EFlexSlotTypes_t m_nFlexSlotsUnlocked; // 0x0598, 0x2 bytes
-                std::uint8_t pad_059a[0x2]; // 0x059a, 0x2 bytes
-                std::int32_t m_nBaseGuardianLanesCleared; // 0x059c, 0x4 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::STeamFOWEntity> m_vecFOWEntities; // 0x05a0, 0x68 bytes
-                std::int32_t m_nStreetBrawlScore; // 0x0608, 0x4 bytes
-                std::int32_t m_nStreetBrawlScoreLastRound; // 0x060c, 0x4 bytes
+                std::uint8_t pad_0568[0xc]; // 0x0568, 0xc bytes
+                float m_flBaseObjectiveHealth; // 0x0574, 0x4 bytes
+                std::int32_t m_vecBaseLocationX; // 0x0578, 0x4 bytes
+                std::int32_t m_vecBaseLocationY; // 0x057c, 0x4 bytes
+                bool m_bHasValidBaseLocation; // 0x0580, 0x1 bytes
+                std::uint8_t pad_0581[0x1f]; // 0x0581, 0x1f bytes
+                std::int32_t m_nBossesAlive; // 0x05a0, 0x4 bytes
+                std::int32_t m_nBossesMax; // 0x05a4, 0x4 bytes
+                shade::sdk::client::EFlexSlotTypes_t m_nFlexSlotsUnlocked; // 0x05a8, 0x2 bytes
+                std::uint8_t pad_05aa[0x2]; // 0x05aa, 0x2 bytes
+                std::int32_t m_nBaseGuardianLanesCleared; // 0x05ac, 0x4 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::STeamFOWEntity> m_vecFOWEntities; // 0x05b0, 0x68 bytes
+                std::int32_t m_nStreetBrawlScore; // 0x0618, 0x4 bytes
+                std::int32_t m_nStreetBrawlScoreLastRound; // 0x061c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadelTeam) == 0x610, "CCitadelTeam size mismatch");
+            static_assert(sizeof(CCitadelTeam) == 0x620, "CCitadelTeam size mismatch");
         }
     }
 }

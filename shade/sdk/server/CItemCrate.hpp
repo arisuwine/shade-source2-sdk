@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -42,18 +43,15 @@ namespace shade {
             public:
                 shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0d60, 0x20 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hSpawner; // 0x0d80, 0x4 bytes
-                std::uint8_t pad_0d84[0x8]; // 0x0d84, 0x8 bytes
-                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x0d8c, 0x4 bytes
-                std::uint8_t pad_0d90[0x4]; // 0x0d90, 0x4 bytes
-                std::int32_t m_eLootType; // 0x0d94, 0x4 bytes
-                std::uint8_t pad_0d98[0x8]; // 0x0d98, 0x8 bytes
+                std::uint8_t pad_0d84[0x4]; // 0x0d84, 0x4 bytes
+                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x0d88, 0x4 bytes
+                std::uint8_t pad_0d8c[0x4]; // 0x0d8c, 0x4 bytes
+                std::int32_t m_eLootType; // 0x0d90, 0x4 bytes
+                std::uint8_t pad_0d94[0xc]; // 0x0d94, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputAttachedToParachute; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDetachedFromParachute; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CItemCrate) == 0xDA0, "CItemCrate size mismatch");
         }

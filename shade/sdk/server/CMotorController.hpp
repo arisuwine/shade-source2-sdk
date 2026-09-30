@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -20,9 +21,10 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x20
-             * Alignment: 0xff
+             * Alignment: 0x8
              * Has VTable
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CMotorController {
@@ -30,7 +32,7 @@ namespace shade {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 float m_speed; // 0x0008, 0x4 bytes
                 float m_maxTorque; // 0x000c, 0x4 bytes
-                VectorWS m_axis; // 0x0010, 0xc bytes
+                Vector m_axis; // 0x0010, 0xc bytes
                 float m_inertiaFactor; // 0x001c, 0x4 bytes
             };
             #pragma pack(pop)

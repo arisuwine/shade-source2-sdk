@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3a0
+             * Size: 0x500
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_QuickSilver_Watcher : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_01f8[0x184]; // 0x01f8, 0x184 bytes
-                bool m_bProcNextHit; // 0x037c, 0x1 bytes
-                std::uint8_t pad_037d[0x23]; // 0x037d, 0x23 bytes
+                std::uint8_t pad_02c8[0x214]; // 0x02c8, 0x214 bytes
+                bool m_bProcNextHit; // 0x04dc, 0x1 bytes
+                std::uint8_t pad_04dd[0x23]; // 0x04dd, 0x23 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_QuickSilver_Watcher) == 0x3A0, "CCitadel_Modifier_QuickSilver_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_QuickSilver_Watcher) == 0x500, "CCitadel_Modifier_QuickSilver_Watcher size mismatch");
         }
     }
 }

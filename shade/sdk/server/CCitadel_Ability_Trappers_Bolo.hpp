@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1298
+             * Size: 0x18e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Trappers_Bolo : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x80]; // 0x0f70, 0x80 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x0ff0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hNextTarget; // 0x0ff4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitTargets; // 0x0ff8, 0x18 bytes
-                std::int32_t m_iBounces; // 0x1010, 0x4 bytes
-                bool m_bReturning; // 0x1014, 0x1 bytes
-                std::uint8_t pad_1015[0x283]; // 0x1015, 0x283 bytes
+                std::uint8_t pad_14a0[0xb0]; // 0x14a0, 0xb0 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x1550, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hNextTarget; // 0x1554, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitTargets; // 0x1558, 0x18 bytes
+                std::int32_t m_iBounces; // 0x1570, 0x4 bytes
+                bool m_bReturning; // 0x1574, 0x1 bytes
+                std::uint8_t pad_1575[0x373]; // 0x1575, 0x373 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Trappers_Bolo) == 0x1298, "CCitadel_Ability_Trappers_Bolo size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Trappers_Bolo) == 0x18E8, "CCitadel_Ability_Trappers_Bolo size mismatch");
         }
     }
 }

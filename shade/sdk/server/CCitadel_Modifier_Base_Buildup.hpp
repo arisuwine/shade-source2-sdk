@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe0
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Base_Buildup : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastBuildupAppliedTime; // 0x00d0, 0x4 bytes
-                float m_flDelayedDieTimeRemaining; // 0x00d4, 0x4 bytes
-                bool m_bInDelayTime; // 0x00d8, 0x1 bytes
-                std::uint8_t pad_00d9[0x3]; // 0x00d9, 0x3 bytes
-                float m_flBuildUpDecayDelayFromWeaponCycleTime; // 0x00dc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBuildupAppliedTime; // 0x0140, 0x4 bytes
+                float m_flDelayedDieTimeRemaining; // 0x0144, 0x4 bytes
+                bool m_bInDelayTime; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x3]; // 0x0149, 0x3 bytes
+                float m_flBuildUpDecayDelayFromWeaponCycleTime; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Base_Buildup) == 0xE0, "CCitadel_Modifier_Base_Buildup size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Base_Buildup) == 0x150, "CCitadel_Modifier_Base_Buildup size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd38
+             * Size: 0xe28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,23 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_RagdollProp : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0ca8[0x8]; // 0x0ca8, 0x8 bytes
-                C_NetworkUtlVectorBase<bool> m_ragEnabled; // 0x0cb0, 0x18 bytes
-                C_NetworkUtlVectorBase<Vector> m_ragPos; // 0x0cc8, 0x18 bytes
-                C_NetworkUtlVectorBase<QAngle> m_ragAngles; // 0x0ce0, 0x18 bytes
-                float m_flBlendWeight; // 0x0cf8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hRagdollSource; // 0x0cfc, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_iEyeAttachment; // 0x0d00, 0x1 bytes
-                std::uint8_t pad_0d01[0x3]; // 0x0d01, 0x3 bytes
-                float m_flBlendWeightCurrent; // 0x0d04, 0x4 bytes
-                CUtlVector<std::int32_t> m_parentPhysicsBoneIndices; // 0x0d08, 0x18 bytes
-                CUtlVector<std::int32_t> m_worldSpaceBoneComputationOrder; // 0x0d20, 0x18 bytes
+                C_NetworkUtlVectorBase<bool> m_ragEnabled; // 0x0da0, 0x18 bytes
+                C_NetworkUtlVectorBase<Vector> m_ragPos; // 0x0db8, 0x18 bytes
+                C_NetworkUtlVectorBase<QAngle> m_ragAngles; // 0x0dd0, 0x18 bytes
+                float m_flBlendWeight; // 0x0de8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hRagdollSource; // 0x0dec, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_iEyeAttachment; // 0x0df0, 0x1 bytes
+                std::uint8_t pad_0df1[0x3]; // 0x0df1, 0x3 bytes
+                float m_flBlendWeightCurrent; // 0x0df4, 0x4 bytes
+                CUtlVector<std::int32_t> m_parentPhysicsBoneIndices; // 0x0df8, 0x18 bytes
+                CUtlVector<std::int32_t> m_worldSpaceBoneComputationOrder; // 0x0e10, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_RagdollProp) == 0xD38, "C_RagdollProp size mismatch");
+            static_assert(sizeof(C_RagdollProp) == 0xE28, "C_RagdollProp size mismatch");
         }
     }
 }

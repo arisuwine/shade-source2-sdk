@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9a0
+             * Size: 0xab0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,44 +40,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerFan : public shade::sdk::server::CBaseTrigger {
             public:
-                Vector m_vFanOriginOffset; // 0x08e0, 0xc bytes
-                Vector m_vDirection; // 0x08ec, 0xc bytes
-                bool m_bPushTowardsInfoTarget; // 0x08f8, 0x1 bytes
-                bool m_bPushAwayFromInfoTarget; // 0x08f9, 0x1 bytes
-                std::uint8_t pad_08fa[0x6]; // 0x08fa, 0x6 bytes
-                Quaternion m_qNoiseDelta; // 0x0900, 0x10 bytes
-                CHandle<shade::sdk::server::CInfoFan> m_hInfoFan; // 0x0910, 0x4 bytes
-                float m_flForce; // 0x0914, 0x4 bytes
-                bool m_bFalloff; // 0x0918, 0x1 bytes
-                std::uint8_t pad_0919[0x7]; // 0x0919, 0x7 bytes
-                shade::sdk::server::CountdownTimer m_RampTimer; // 0x0920, 0x18 bytes
-                VectorWS m_vFanOriginWS; // 0x0938, 0xc bytes
-                Vector m_vFanOriginLS; // 0x0944, 0xc bytes
-                Vector m_vFanEndLS; // 0x0950, 0xc bytes
-                Vector m_vNoiseDirectionTarget; // 0x095c, 0xc bytes
-                CUtlSymbolLarge m_iszInfoFan; // 0x0968, 0x8 bytes
-                float m_flRopeForceScale; // 0x0970, 0x4 bytes
-                float m_flParticleForceScale; // 0x0974, 0x4 bytes
-                float m_flPlayerForce; // 0x0978, 0x4 bytes
-                bool m_bPlayerWindblock; // 0x097c, 0x1 bytes
-                std::uint8_t pad_097d[0x3]; // 0x097d, 0x3 bytes
-                float m_flNPCForce; // 0x0980, 0x4 bytes
-                float m_flRampTime; // 0x0984, 0x4 bytes
-                float m_fNoiseDegrees; // 0x0988, 0x4 bytes
-                float m_fNoiseSpeed; // 0x098c, 0x4 bytes
-                bool m_bPushPlayer; // 0x0990, 0x1 bytes
-                bool m_bRampDown; // 0x0991, 0x1 bytes
-                std::uint8_t pad_0992[0x2]; // 0x0992, 0x2 bytes
-                std::int32_t m_nManagerFanIdx; // 0x0994, 0x4 bytes
-                std::uint8_t pad_0998[0x8]; // 0x0998, 0x8 bytes
+                Vector m_vFanOriginOffset; // 0x09f0, 0xc bytes
+                Vector m_vDirection; // 0x09fc, 0xc bytes
+                bool m_bPushTowardsInfoTarget; // 0x0a08, 0x1 bytes
+                bool m_bPushAwayFromInfoTarget; // 0x0a09, 0x1 bytes
+                std::uint8_t pad_0a0a[0x6]; // 0x0a0a, 0x6 bytes
+                Quaternion m_qNoiseDelta; // 0x0a10, 0x10 bytes
+                CHandle<shade::sdk::server::CInfoFan> m_hInfoFan; // 0x0a20, 0x4 bytes
+                float m_flForce; // 0x0a24, 0x4 bytes
+                bool m_bFalloff; // 0x0a28, 0x1 bytes
+                std::uint8_t pad_0a29[0x7]; // 0x0a29, 0x7 bytes
+                shade::sdk::server::CountdownTimer m_RampTimer; // 0x0a30, 0x18 bytes
+                VectorWS m_vFanOriginWS; // 0x0a48, 0xc bytes
+                Vector m_vFanOriginLS; // 0x0a54, 0xc bytes
+                Vector m_vFanEndLS; // 0x0a60, 0xc bytes
+                Vector m_vNoiseDirectionTarget; // 0x0a6c, 0xc bytes
+                CUtlSymbolLarge m_iszInfoFan; // 0x0a78, 0x8 bytes
+                float m_flRopeForceScale; // 0x0a80, 0x4 bytes
+                float m_flParticleForceScale; // 0x0a84, 0x4 bytes
+                float m_flPlayerForce; // 0x0a88, 0x4 bytes
+                bool m_bPlayerWindblock; // 0x0a8c, 0x1 bytes
+                std::uint8_t pad_0a8d[0x3]; // 0x0a8d, 0x3 bytes
+                float m_flNPCForce; // 0x0a90, 0x4 bytes
+                float m_flRampTime; // 0x0a94, 0x4 bytes
+                float m_fNoiseDegrees; // 0x0a98, 0x4 bytes
+                float m_fNoiseSpeed; // 0x0a9c, 0x4 bytes
+                bool m_bPushPlayer; // 0x0aa0, 0x1 bytes
+                bool m_bRampDown; // 0x0aa1, 0x1 bytes
+                std::uint8_t pad_0aa2[0x2]; // 0x0aa2, 0x2 bytes
+                std::int32_t m_nManagerFanIdx; // 0x0aa4, 0x4 bytes
+                std::uint8_t pad_0aa8[0x8]; // 0x0aa8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CTriggerFanPushThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTriggerFan) == 0x9A0, "CTriggerFan size mismatch");
+            static_assert(sizeof(CTriggerFan) == 0xAB0, "CTriggerFan size mismatch");
         }
     }
 }

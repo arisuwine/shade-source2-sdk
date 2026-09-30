@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -19,10 +20,6 @@
 
 namespace shade {
     namespace sdk {
-        namespace client {
-            struct BreakablePowerupDropDefinition_t;
-        }
-
         namespace resourcesystem {
             class InfoForResourceTypeCModel;
             class InfoForResourceTypeIParticleSystemDefinition;
@@ -34,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x310
+             * Size: 0x320
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -48,20 +45,22 @@ namespace shade {
                 std::uint8_t pad_010c[0x4]; // 0x010c, 0x4 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InactiveParticle; // 0x0110, 0xe0 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveParticle; // 0x01f0, 0xe0 bytes
-                CUtlVector<shade::sdk::client::BreakablePowerupDropDefinition_t> m_vecPrimaryPickups; // 0x02d0, 0x18 bytes
-                CSubclassName<0> m_sSinglePickupOverride; // 0x02e8, 0x10 bytes
-                float m_flInitialSpawnTime; // 0x02f8, 0x4 bytes
-                float m_flRespawnTime; // 0x02fc, 0x4 bytes
-                float m_flInitialSpawnTimeTest; // 0x0300, 0x4 bytes
-                float m_flRespawnTimeTest; // 0x0304, 0x4 bytes
-                bool m_bRespawnTimerStartsAfterPickup; // 0x0308, 0x1 bytes
-                std::uint8_t pad_0309[0x7]; // 0x0309, 0x7 bytes
+                CUtlOrderedMap<CSubclassName<0>, float> m_mapPickupChances; // 0x02d0, 0x28 bytes
+                CSubclassName<0> m_sSinglePickupOverride; // 0x02f8, 0x10 bytes
+                float m_flInitialSpawnTime; // 0x0308, 0x4 bytes
+                float m_flRespawnTime; // 0x030c, 0x4 bytes
+                float m_flInitialSpawnTimeTest; // 0x0310, 0x4 bytes
+                float m_flRespawnTimeTest; // 0x0314, 0x4 bytes
+                bool m_bRespawnTimerStartsAfterPickup; // 0x0318, 0x1 bytes
+                bool m_bPingFirstPowerupSpawn; // 0x0319, 0x1 bytes
+                std::uint8_t pad_031a[0x2]; // 0x031a, 0x2 bytes
+                float m_flInitialPingDelay; // 0x031c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_PickupItemSpawnerVData) == 0x310, "CCitadel_PickupItemSpawnerVData size mismatch");
+            static_assert(sizeof(CCitadel_PickupItemSpawnerVData) == 0x320, "CCitadel_PickupItemSpawnerVData size mismatch");
         }
     }
 }

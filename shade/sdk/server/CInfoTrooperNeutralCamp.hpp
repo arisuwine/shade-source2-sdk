@@ -12,9 +12,11 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/entity2/CEntityIOOutput.hpp"
 #include "shade/sdk/server/CCitadelMinimapComponent.hpp"
 #include "shade/sdk/server/CPointEntity.hpp"
 
@@ -22,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x508
+             * Size: 0x550
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoTrooperNeutralCamp : public shade::sdk::server::CPointEntity {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x04a0, 0x20 bytes
-                std::uint8_t pad_04c0[0x18]; // 0x04c0, 0x18 bytes
-                CUtlSymbolLarge m_iszCampName; // 0x04d8, 0x8 bytes
-                std::uint8_t pad_04e0[0x28]; // 0x04e0, 0x28 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x04b0, 0x20 bytes
+                std::uint8_t pad_04d0[0x18]; // 0x04d0, 0x18 bytes
+                CUtlSymbolLarge m_iszCampName; // 0x04e8, 0x8 bytes
+                float m_flTetherRadiusOverride; // 0x04f0, 0x4 bytes
+                std::uint8_t pad_04f4[0x44]; // 0x04f4, 0x44 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnCampCleared; // 0x0538, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * bool InputSetDisabled; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoTrooperNeutralCamp) == 0x508, "CInfoTrooperNeutralCamp size mismatch");
+            static_assert(sizeof(CInfoTrooperNeutralCamp) == 0x550, "CInfoTrooperNeutralCamp size mismatch");
         }
     }
 }

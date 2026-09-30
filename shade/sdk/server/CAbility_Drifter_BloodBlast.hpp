@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1790
+             * Size: 0x1fc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_BloodBlast : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x800]; // 0x0f70, 0x800 bytes
-                shade::sdk::client::ParticleIndex_t m_SandEffect; // 0x1770, 0x4 bytes
-                std::uint8_t pad_1774[0x4]; // 0x1774, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x1778, 0x18 bytes
+                std::uint8_t pad_14a0[0xb00]; // 0x14a0, 0xb00 bytes
+                shade::sdk::client::ParticleIndex_t m_SandEffect; // 0x1fa0, 0x4 bytes
+                std::uint8_t pad_1fa4[0x4]; // 0x1fa4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x1fa8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_BloodBlast) == 0x1790, "CAbility_Drifter_BloodBlast size mismatch");
+            static_assert(sizeof(CAbility_Drifter_BloodBlast) == 0x1FC0, "CAbility_Drifter_BloodBlast size mismatch");
         }
     }
 }

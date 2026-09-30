@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f8
+             * Size: 0x508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelMatchmakingStatusInfo : public shade::sdk::server::CPointEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnStartMatchmaking; // 0x04a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStopMatchmaking; // 0x04b8, 0x18 bytes
-                std::uint8_t pad_04d0[0x28]; // 0x04d0, 0x28 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartMatchmaking; // 0x04b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStopMatchmaking; // 0x04c8, 0x18 bytes
+                std::uint8_t pad_04e0[0x28]; // 0x04e0, 0x28 bytes
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
-            static_assert(sizeof(CCitadelMatchmakingStatusInfo) == 0x4F8, "CCitadelMatchmakingStatusInfo size mismatch");
+            static_assert(sizeof(CCitadelMatchmakingStatusInfo) == 0x508, "CCitadelMatchmakingStatusInfo size mismatch");
         }
     }
 }

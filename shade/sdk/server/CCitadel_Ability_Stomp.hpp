@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14a0
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Stomp : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                Vector m_vStompPos; // 0x0f70, 0xc bytes
-                Vector m_vStompDir; // 0x0f7c, 0xc bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecStompedEnemies; // 0x0f88, 0x18 bytes
-                std::uint8_t pad_0fa0[0x500]; // 0x0fa0, 0x500 bytes
+                Vector m_vStompPos; // 0x14a0, 0xc bytes
+                Vector m_vStompDir; // 0x14ac, 0xc bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecStompedEnemies; // 0x14b8, 0x18 bytes
+                std::uint8_t pad_14d0[0x6e0]; // 0x14d0, 0x6e0 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Stomp) == 0x14A0, "CCitadel_Ability_Stomp size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Stomp) == 0x1BB0, "CCitadel_Ability_Stomp size mismatch");
         }
     }
 }

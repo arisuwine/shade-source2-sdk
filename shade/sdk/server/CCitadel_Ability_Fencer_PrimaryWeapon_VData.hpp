@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1c88
+             * Size: 0x1920
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fencer_PrimaryWeapon_VData : public shade::sdk::server::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRight; // 0x19c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRightMove; // 0x1aa8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleLeft; // 0x1b88, 0xe0 bytes
-                float m_flMoveSlashThreshold; // 0x1c68, 0x4 bytes
-                std::uint8_t pad_1c6c[0x4]; // 0x1c6c, 0x4 bytes
-                CUtlVector<shade::sdk::client::SlashInfo_t> m_vecSlashInfos; // 0x1c70, 0x18 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRight; // 0x1660, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRightMove; // 0x1740, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleLeft; // 0x1820, 0xe0 bytes
+                float m_flMoveSlashThreshold; // 0x1900, 0x4 bytes
+                std::uint8_t pad_1904[0x4]; // 0x1904, 0x4 bytes
+                CUtlVector<shade::sdk::client::SlashInfo_t> m_vecSlashInfos; // 0x1908, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fencer_PrimaryWeapon_VData) == 0x1C88, "CCitadel_Ability_Fencer_PrimaryWeapon_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fencer_PrimaryWeapon_VData) == 0x1920, "CCitadel_Ability_Fencer_PrimaryWeapon_VData size mismatch");
         }
     }
 }

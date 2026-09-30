@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x830
+             * Size: 0x840
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,15 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoData : public shade::sdk::server::CServerOnlyEntity {
             public:
-                std::uint8_t pad_04a0[0x390]; // 0x04a0, 0x390 bytes
+                std::uint8_t pad_04b0[0x390]; // 0x04b0, 0x390 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CInfoData) == 0x830, "CInfoData size mismatch");
+            static_assert(sizeof(CInfoData) == 0x840, "CInfoData size mismatch");
         }
     }
 }

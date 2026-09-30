@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0xa0
+             * Size: 0xb0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -53,14 +54,15 @@ namespace shade {
                 std::int32_t m_nAttachBoneIdx; // 0x0090, 0x4 bytes
                 std::int32_t m_nAttachMeshIdx; // 0x0094, 0x4 bytes
                 std::int32_t m_nAttachMeshDrawCallIdx; // 0x0098, 0x4 bytes
-                bool m_bEnableSimulation; // 0x009c, 0x1 bytes
-                std::uint8_t pad_009d[0x3]; // 0x009d, 0x3 bytes
+                std::uint8_t pad_009c[0x10]; // 0x009c, 0x10 bytes
+                bool m_bEnableSimulation; // 0x00ac, 0x1 bytes
+                std::uint8_t pad_00ad[0x3]; // 0x00ad, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRenderGroom) == 0xA0, "CRenderGroom size mismatch");
+            static_assert(sizeof(CRenderGroom) == 0xB0, "CRenderGroom size mismatch");
         }
     }
 }

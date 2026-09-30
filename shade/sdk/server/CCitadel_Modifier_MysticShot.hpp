@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x338
+             * Size: 0x468
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticShot : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                shade::sdk::client::ShotID_t m_shotID; // 0x0228, 0x4 bytes
-                std::uint8_t pad_022c[0x104]; // 0x022c, 0x104 bytes
-                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0330, 0x4 bytes
-                std::uint8_t pad_0334[0x4]; // 0x0334, 0x4 bytes
+                shade::sdk::client::ShotID_t m_shotID; // 0x02f8, 0x4 bytes
+                std::uint8_t pad_02fc[0x164]; // 0x02fc, 0x164 bytes
+                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0460, 0x4 bytes
+                std::uint8_t pad_0464[0x4]; // 0x0464, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticShot) == 0x338, "CCitadel_Modifier_MysticShot size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticShot) == 0x468, "CCitadel_Modifier_MysticShot size mismatch");
         }
     }
 }

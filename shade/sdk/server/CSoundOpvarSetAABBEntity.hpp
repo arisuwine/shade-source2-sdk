@@ -12,42 +12,31 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CSoundOpvarSetPointEntity.hpp"
+#include "shade/sdk/server/CSoundOpvarSetBoxEntity.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x680
+             * Size: 0x698
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CSoundOpvarSetAABBEntity : public shade::sdk::server::CSoundOpvarSetPointEntity {
+            class CSoundOpvarSetAABBEntity : public shade::sdk::server::CSoundOpvarSetBoxEntity {
             public:
-                Vector m_vDistanceInnerMins; // 0x0618, 0xc bytes
-                Vector m_vDistanceInnerMaxs; // 0x0624, 0xc bytes
-                Vector m_vDistanceOuterMins; // 0x0630, 0xc bytes
-                Vector m_vDistanceOuterMaxs; // 0x063c, 0xc bytes
-                std::int32_t m_nAABBDirection; // 0x0648, 0x4 bytes
-                Vector m_vInnerMins; // 0x064c, 0xc bytes
-                Vector m_vInnerMaxs; // 0x0658, 0xc bytes
-                Vector m_vOuterMins; // 0x0664, 0xc bytes
-                Vector m_vOuterMaxs; // 0x0670, 0xc bytes
-                std::uint8_t pad_067c[0x4]; // 0x067c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void CSoundOpvarSetAABBEntitySetOpvarThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetAABBEntity) == 0x680, "CSoundOpvarSetAABBEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetAABBEntity) == 0x698, "CSoundOpvarSetAABBEntity size mismatch");
         }
     }
 }

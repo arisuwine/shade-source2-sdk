@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -29,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x68
+             * Size: 0x70
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -54,13 +55,13 @@ namespace shade {
                 bool m_bSequenceNameIsAnimClipPath; // 0x0055, 0x1 bytes
                 std::uint8_t pad_0056[0x2]; // 0x0056, 0x2 bytes
                 Vector m_vecPreviewGravity; // 0x0058, 0xc bytes
-                std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
+                Vector m_vecPreviewWind; // 0x0064, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ParticlePreviewState_t) == 0x68, "ParticlePreviewState_t size mismatch");
+            static_assert(sizeof(ParticlePreviewState_t) == 0x70, "ParticlePreviewState_t size mismatch");
         }
     }
 }

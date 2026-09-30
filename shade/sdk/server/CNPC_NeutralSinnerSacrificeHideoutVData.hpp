@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1908
+             * Size: 0x11a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_NeutralSinnerSacrificeHideoutVData : public shade::sdk::server::CNPC_NeutralSinnerSacrificeVData {
             public:
-                CUtlString m_sLocHint01; // 0x18f0, 0x8 bytes
-                CUtlString m_sLocHint02; // 0x18f8, 0x8 bytes
-                float m_flRespawnTime; // 0x1900, 0x4 bytes
-                std::uint8_t pad_1904[0x4]; // 0x1904, 0x4 bytes
+                CUtlString m_sLocHint01; // 0x1190, 0x8 bytes
+                CUtlString m_sLocHint02; // 0x1198, 0x8 bytes
+                float m_flRespawnTime; // 0x11a0, 0x4 bytes
+                std::uint8_t pad_11a4[0x4]; // 0x11a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_NeutralSinnerSacrificeHideoutVData) == 0x1908, "CNPC_NeutralSinnerSacrificeHideoutVData size mismatch");
+            static_assert(sizeof(CNPC_NeutralSinnerSacrificeHideoutVData) == 0x11A8, "CNPC_NeutralSinnerSacrificeHideoutVData size mismatch");
         }
     }
 }

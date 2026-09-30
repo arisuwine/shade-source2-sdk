@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,18 +23,17 @@ namespace shade {
         namespace server {
             /* Class Parameters
              * Size: 0x64
-             * Alignment: 0xff
+             * Alignment: 0x4
              * Has Trivial Constructor
              * Has Trivial Destructor
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             struct dynpitchvol_t : public shade::sdk::server::dynpitchvol_base_t {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(dynpitchvol_t) == 0x64, "dynpitchvol_t size mismatch");
         }

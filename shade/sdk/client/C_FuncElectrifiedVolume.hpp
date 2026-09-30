@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x9c0
+             * Size: 0xbc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FuncElectrifiedVolume : public shade::sdk::client::C_FuncBrush {
             public:
-                shade::sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x09a8, 0x4 bytes
-                std::uint8_t pad_09ac[0x4]; // 0x09ac, 0x4 bytes
-                CUtlSymbolLarge m_EffectName; // 0x09b0, 0x8 bytes
-                bool m_bState; // 0x09b8, 0x1 bytes
-                std::uint8_t pad_09b9[0x7]; // 0x09b9, 0x7 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x0bb0, 0x4 bytes
+                std::uint8_t pad_0bb4[0x4]; // 0x0bb4, 0x4 bytes
+                CUtlSymbolLarge m_EffectName; // 0x0bb8, 0x8 bytes
+                bool m_bState; // 0x0bc0, 0x1 bytes
+                std::uint8_t pad_0bc1[0x7]; // 0x0bc1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FuncElectrifiedVolume) == 0x9C0, "C_FuncElectrifiedVolume size mismatch");
+            static_assert(sizeof(C_FuncElectrifiedVolume) == 0xBC8, "C_FuncElectrifiedVolume size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4a0
+             * Size: 0x4a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -53,22 +54,24 @@ namespace shade {
                 float m_flMinPlayerHeavyMeleeForce; // 0x006c, 0x4 bytes
                 float m_flForceMultPlayer; // 0x0070, 0x4 bytes
                 float m_flInheritPlayerSpeedMultiplier; // 0x0074, 0x4 bytes
-                CPiecewiseCurve m_ForceVSCameraPitch; // 0x0078, 0x40 bytes
-                CPiecewiseCurve m_ConsecutiveJugglesVsRandomness; // 0x00b8, 0x40 bytes
-                float fl_MaxExtraGravityScale; // 0x00f8, 0x4 bytes
-                std::int32_t m_nMinJugglesBeforeDisplay; // 0x00fc, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BallApexParticle; // 0x0100, 0xe0 bytes
-                CSoundEventName m_strBallApexSound; // 0x01e0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JuggleRunEnded; // 0x01f0, 0xe0 bytes
-                CSoundEventName m_strJuggleRunEnded; // 0x02d0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hModel; // 0x02e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbientParticle; // 0x03c0, 0xe0 bytes
+                float m_flVPhysicsForceMul; // 0x0078, 0x4 bytes
+                std::uint8_t pad_007c[0x4]; // 0x007c, 0x4 bytes
+                CPiecewiseCurve m_ForceVSCameraPitch; // 0x0080, 0x40 bytes
+                CPiecewiseCurve m_ConsecutiveJugglesVsRandomness; // 0x00c0, 0x40 bytes
+                float fl_MaxExtraGravityScale; // 0x0100, 0x4 bytes
+                std::int32_t m_nMinJugglesBeforeDisplay; // 0x0104, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BallApexParticle; // 0x0108, 0xe0 bytes
+                CSoundEventName m_strBallApexSound; // 0x01e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JuggleRunEnded; // 0x01f8, 0xe0 bytes
+                CSoundEventName m_strJuggleRunEnded; // 0x02d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hModel; // 0x02e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbientParticle; // 0x03c8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Hideout_BallVData) == 0x4A0, "CCitadel_Hideout_BallVData size mismatch");
+            static_assert(sizeof(CCitadel_Hideout_BallVData) == 0x4A8, "CCitadel_Hideout_BallVData size mismatch");
         }
     }
 }

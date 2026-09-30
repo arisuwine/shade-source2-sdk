@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -35,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8b8
+             * Size: 0x9b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,43 +45,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvBeam : public shade::sdk::server::CBeam {
             public:
-                std::int32_t m_active; // 0x0820, 0x4 bytes
-                std::uint8_t pad_0824[0x4]; // 0x0824, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_spriteTexture; // 0x0828, 0x8 bytes
-                CUtlSymbolLarge m_iszStartEntity; // 0x0830, 0x8 bytes
-                CUtlSymbolLarge m_iszEndEntity; // 0x0838, 0x8 bytes
-                float m_life; // 0x0840, 0x4 bytes
-                float m_boltWidth; // 0x0844, 0x4 bytes
-                float m_noiseAmplitude; // 0x0848, 0x4 bytes
-                std::int32_t m_speed; // 0x084c, 0x4 bytes
-                float m_restrike; // 0x0850, 0x4 bytes
-                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
-                CUtlSymbolLarge m_iszSpriteName; // 0x0858, 0x8 bytes
-                std::int32_t m_frameStart; // 0x0860, 0x4 bytes
-                VectorWS m_vEndPointWorld; // 0x0864, 0xc bytes
-                Vector m_vEndPointRelative; // 0x0870, 0xc bytes
-                float m_radius; // 0x087c, 0x4 bytes
-                shade::sdk::server::Touch_t m_TouchType; // 0x0880, 0x4 bytes
-                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
-                CUtlSymbolLarge m_iFilterName; // 0x0888, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hFilter; // 0x0890, 0x4 bytes
-                std::uint8_t pad_0894[0x4]; // 0x0894, 0x4 bytes
-                CUtlSymbolLarge m_iszDecal; // 0x0898, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTouchedByEntity; // 0x08a0, 0x18 bytes
+                std::int32_t m_active; // 0x0918, 0x4 bytes
+                std::uint8_t pad_091c[0x4]; // 0x091c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_spriteTexture; // 0x0920, 0x8 bytes
+                CUtlSymbolLarge m_iszStartEntity; // 0x0928, 0x8 bytes
+                CUtlSymbolLarge m_iszEndEntity; // 0x0930, 0x8 bytes
+                float m_life; // 0x0938, 0x4 bytes
+                float m_boltWidth; // 0x093c, 0x4 bytes
+                float m_noiseAmplitude; // 0x0940, 0x4 bytes
+                std::int32_t m_speed; // 0x0944, 0x4 bytes
+                float m_restrike; // 0x0948, 0x4 bytes
+                std::uint8_t pad_094c[0x4]; // 0x094c, 0x4 bytes
+                CUtlSymbolLarge m_iszSpriteName; // 0x0950, 0x8 bytes
+                std::int32_t m_frameStart; // 0x0958, 0x4 bytes
+                VectorWS m_vEndPointWorld; // 0x095c, 0xc bytes
+                Vector m_vEndPointRelative; // 0x0968, 0xc bytes
+                float m_radius; // 0x0974, 0x4 bytes
+                shade::sdk::server::Touch_t m_TouchType; // 0x0978, 0x4 bytes
+                std::uint8_t pad_097c[0x4]; // 0x097c, 0x4 bytes
+                CUtlSymbolLarge m_iFilterName; // 0x0980, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFilter; // 0x0988, 0x4 bytes
+                std::uint8_t pad_098c[0x4]; // 0x098c, 0x4 bytes
+                CUtlSymbolLarge m_iszDecal; // 0x0990, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTouchedByEntity; // 0x0998, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * std::int32_t m_nClipStyle; // Offset: 0x804, Size: 0x1, Size In Bytes: 0x4
-             * void CEnvBeamStrikeThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void CEnvBeamUpdateThink; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStrikeOnce; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CEnvBeam) == 0x8B8, "CEnvBeam size mismatch");
+            static_assert(sizeof(CEnvBeam) == 0x9B0, "CEnvBeam size mismatch");
         }
     }
 }

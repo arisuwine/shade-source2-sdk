@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -33,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1628
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,24 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_MaulingLeapVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CPiecewiseCurve m_LeapingSpeedCurve; // 0x1818, 0x40 bytes
-                CPiecewiseCurve m_LeapingUpCurve; // 0x1858, 0x40 bytes
-                float m_flVelocityCarryoverOnHit; // 0x1898, 0x4 bytes
-                float m_flVelocityCarryoverOnMiss; // 0x189c, 0x4 bytes
-                float m_flFracToAllowUp; // 0x18a0, 0x4 bytes
-                std::uint8_t pad_18a4[0x4]; // 0x18a4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LeapHitImpact; // 0x18a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltLeapCastParticle; // 0x1988, 0xe0 bytes
-                CSoundEventName m_LeapHitSound; // 0x1a68, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapingModifier; // 0x1a78, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1a88, 0x10 bytes
-                CGlobalSymbol m_strAG2SuccessHeroState; // 0x1a98, 0x8 bytes
+                CPiecewiseCurve m_LeapingSpeedCurve; // 0x13a0, 0x40 bytes
+                CPiecewiseCurve m_LeapingUpCurve; // 0x13e0, 0x40 bytes
+                float m_flVelocityCarryoverOnHit; // 0x1420, 0x4 bytes
+                float m_flVelocityCarryoverOnMiss; // 0x1424, 0x4 bytes
+                float m_flFracToAllowUp; // 0x1428, 0x4 bytes
+                std::uint8_t pad_142c[0x4]; // 0x142c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LeapHitImpact; // 0x1430, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltLeapCastParticle; // 0x1510, 0xe0 bytes
+                CSoundEventName m_LeapHitSound; // 0x15f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapingModifier; // 0x1600, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1610, 0x10 bytes
+                CGlobalSymbol m_strAG2SuccessHeroState; // 0x1620, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_MaulingLeapVData) == 0x1AA0, "CCitadel_Ability_Werewolf_MaulingLeapVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_MaulingLeapVData) == 0x1628, "CCitadel_Ability_Werewolf_MaulingLeapVData size mismatch");
         }
     }
 }

@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -23,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1588
+             * Size: 0x1cf8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HornetLeap : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_0f70[0x2]; // 0x0f70, 0x2 bytes
-                bool m_bLeaping; // 0x0f72, 0x1 bytes
-                std::uint8_t pad_0f73[0x1]; // 0x0f73, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flLeapStartTime; // 0x0f74, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0f78, 0x4 bytes
-                std::uint8_t pad_0f7c[0x604]; // 0x0f7c, 0x604 bytes
-                shade::sdk::client::ParticleIndex_t m_TrailFX; // 0x1580, 0x4 bytes
-                std::uint8_t pad_1584[0x4]; // 0x1584, 0x4 bytes
+                std::uint8_t pad_14a0[0x2]; // 0x14a0, 0x2 bytes
+                bool m_bLeaping; // 0x14a2, 0x1 bytes
+                std::uint8_t pad_14a3[0x1]; // 0x14a3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLeapStartTime; // 0x14a4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x844]; // 0x14ac, 0x844 bytes
+                shade::sdk::client::ParticleIndex_t m_TrailFX; // 0x1cf0, 0x4 bytes
+                std::uint8_t pad_1cf4[0x4]; // 0x1cf4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HornetLeap) == 0x1588, "CCitadel_Ability_HornetLeap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HornetLeap) == 0x1CF8, "CCitadel_Ability_HornetLeap size mismatch");
         }
     }
 }

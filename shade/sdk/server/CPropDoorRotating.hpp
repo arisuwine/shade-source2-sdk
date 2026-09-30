@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xf70
+             * Size: 0xff0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,35 +42,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CPropDoorRotating : public shade::sdk::server::CBasePropDoor {
             public:
-                Vector m_vecAxis; // 0x0ed0, 0xc bytes
-                float m_flDistance; // 0x0edc, 0x4 bytes
-                shade::sdk::server::PropDoorRotatingSpawnPos_t m_eSpawnPosition; // 0x0ee0, 0x4 bytes
-                shade::sdk::server::PropDoorRotatingOpenDirection_e m_eOpenDirection; // 0x0ee4, 0x4 bytes
-                shade::sdk::server::PropDoorRotatingOpenDirection_e m_eCurrentOpenDirection; // 0x0ee8, 0x4 bytes
-                shade::sdk::server::doorCheck_e m_eDefaultCheckDirection; // 0x0eec, 0x4 bytes
-                float m_flAjarAngle; // 0x0ef0, 0x4 bytes
-                QAngle m_angRotationAjarDeprecated; // 0x0ef4, 0xc bytes
-                QAngle m_angRotationClosed; // 0x0f00, 0xc bytes
-                QAngle m_angRotationOpenForward; // 0x0f0c, 0xc bytes
-                QAngle m_angRotationOpenBack; // 0x0f18, 0xc bytes
-                QAngle m_angGoal; // 0x0f24, 0xc bytes
-                Vector m_vecForwardBoundsMin; // 0x0f30, 0xc bytes
-                Vector m_vecForwardBoundsMax; // 0x0f3c, 0xc bytes
-                Vector m_vecBackBoundsMin; // 0x0f48, 0xc bytes
-                Vector m_vecBackBoundsMax; // 0x0f54, 0xc bytes
-                bool m_bAjarDoorShouldntAlwaysOpen; // 0x0f60, 0x1 bytes
-                std::uint8_t pad_0f61[0x3]; // 0x0f61, 0x3 bytes
-                CHandle<shade::sdk::server::CEntityBlocker> m_hEntityBlocker; // 0x0f64, 0x4 bytes
-                std::uint8_t pad_0f68[0x8]; // 0x0f68, 0x8 bytes
+                Vector m_vecAxis; // 0x0f50, 0xc bytes
+                float m_flDistance; // 0x0f5c, 0x4 bytes
+                shade::sdk::server::PropDoorRotatingSpawnPos_t m_eSpawnPosition; // 0x0f60, 0x4 bytes
+                shade::sdk::server::PropDoorRotatingOpenDirection_e m_eOpenDirection; // 0x0f64, 0x4 bytes
+                shade::sdk::server::PropDoorRotatingOpenDirection_e m_eCurrentOpenDirection; // 0x0f68, 0x4 bytes
+                shade::sdk::server::doorCheck_e m_eDefaultCheckDirection; // 0x0f6c, 0x4 bytes
+                float m_flAjarAngle; // 0x0f70, 0x4 bytes
+                QAngle m_angRotationAjarDeprecated; // 0x0f74, 0xc bytes
+                QAngle m_angRotationClosed; // 0x0f80, 0xc bytes
+                QAngle m_angRotationOpenForward; // 0x0f8c, 0xc bytes
+                QAngle m_angRotationOpenBack; // 0x0f98, 0xc bytes
+                QAngle m_angGoal; // 0x0fa4, 0xc bytes
+                Vector m_vecForwardBoundsMin; // 0x0fb0, 0xc bytes
+                Vector m_vecForwardBoundsMax; // 0x0fbc, 0xc bytes
+                Vector m_vecBackBoundsMin; // 0x0fc8, 0xc bytes
+                Vector m_vecBackBoundsMax; // 0x0fd4, 0xc bytes
+                bool m_bAjarDoorShouldntAlwaysOpen; // 0x0fe0, 0x1 bytes
+                std::uint8_t pad_0fe1[0x3]; // 0x0fe1, 0x3 bytes
+                CHandle<shade::sdk::server::CEntityBlocker> m_hEntityBlocker; // 0x0fe4, 0x4 bytes
+                std::uint8_t pad_0fe8[0x8]; // 0x0fe8, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * float InputSetRotationDistance; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPropDoorRotating) == 0xF70, "CPropDoorRotating size mismatch");
+            static_assert(sizeof(CPropDoorRotating) == 0xFF0, "CPropDoorRotating size mismatch");
         }
     }
 }

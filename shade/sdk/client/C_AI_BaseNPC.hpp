@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -21,7 +22,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            class C_AI_Motor;
+            class C_AI_MotorServices;
         }
     }
 }
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf00
+             * Size: 0xe40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_AI_BaseNPC : public shade::sdk::client::C_BaseCombatCharacter {
             public:
-                std::uint8_t pad_0ee8[0x8]; // 0x0ee8, 0x8 bytes
-                shade::sdk::client::NPC_STATE m_NPCState; // 0x0ef0, 0x4 bytes
-                bool m_bFadeCorpse; // 0x0ef4, 0x1 bytes
-                bool m_bImportantRagdoll; // 0x0ef5, 0x1 bytes
-                std::uint8_t pad_0ef6[0x2]; // 0x0ef6, 0x2 bytes
-                shade::sdk::client::C_AI_Motor *m_pMotor; // 0x0ef8, 0x8 bytes
+                std::uint8_t pad_0e28[0x8]; // 0x0e28, 0x8 bytes
+                shade::sdk::client::NPC_STATE m_NPCState; // 0x0e30, 0x4 bytes
+                std::uint8_t pad_0e34[0x4]; // 0x0e34, 0x4 bytes
+                shade::sdk::client::C_AI_MotorServices *m_pMotorServices; // 0x0e38, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_AI_BaseNPC) == 0xF00, "C_AI_BaseNPC size mismatch");
+            static_assert(sizeof(C_AI_BaseNPC) == 0xE40, "C_AI_BaseNPC size mismatch");
         }
     }
 }

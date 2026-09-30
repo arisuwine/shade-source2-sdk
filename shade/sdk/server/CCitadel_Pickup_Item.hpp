@@ -12,34 +12,31 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CCitadel_Pickup.hpp"
+#include "shade/sdk/server/CCitadel_Pickup_Ability.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb20
+             * Size: 0xb40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Pickup_Item : public shade::sdk::server::CCitadel_Pickup {
+            class CCitadel_Pickup_Item : public shade::sdk::server::CCitadel_Pickup_Ability {
             public:
-                CUtlStringToken m_unItemID; // 0x0b10, 0x4 bytes
-                std::uint8_t pad_0b14[0xc]; // 0x0b14, 0xc bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Pickup_Item) == 0xB20, "CCitadel_Pickup_Item size mismatch");
+            static_assert(sizeof(CCitadel_Pickup_Item) == 0xB40, "CCitadel_Pickup_Item size mismatch");
         }
     }
 }

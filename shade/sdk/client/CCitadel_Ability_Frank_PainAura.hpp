@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13f0
+             * Size: 0x18f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_PainAura : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_11d8[0x4]; // 0x11d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_ToggleOnTime; // 0x11dc, 0x4 bytes
-                std::uint8_t pad_11e0[0x210]; // 0x11e0, 0x210 bytes
+                std::uint8_t pad_16d8[0x4]; // 0x16d8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_ToggleOnTime; // 0x16dc, 0x4 bytes
+                std::uint8_t pad_16e0[0x218]; // 0x16e0, 0x218 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_PainAura) == 0x13F0, "CCitadel_Ability_Frank_PainAura size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_PainAura) == 0x18F8, "CCitadel_Ability_Frank_PainAura size mismatch");
         }
     }
 }

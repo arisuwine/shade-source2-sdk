@@ -12,6 +12,7 @@
 #include <cstdint>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include "shade/sdk/types.hpp"
 
@@ -30,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x730
+             * Size: 0x9e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PunkgoatSigilAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x0108, 0x18 bytes
-                float m_flWaveRadius; // 0x0120, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nWaveParticleEnemy; // 0x0124, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nWaveParticleFriendly; // 0x0128, 0x4 bytes
-                std::uint8_t pad_012c[0x604]; // 0x012c, 0x604 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x0178, 0x18 bytes
+                float m_flWaveRadius; // 0x0190, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nWaveParticleEnemy; // 0x0194, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nWaveParticleFriendly; // 0x0198, 0x4 bytes
+                std::uint8_t pad_019c[0x844]; // 0x019c, 0x844 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PunkgoatSigilAura) == 0x730, "CCitadel_Modifier_PunkgoatSigilAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PunkgoatSigilAura) == 0x9E0, "CCitadel_Modifier_PunkgoatSigilAura size mismatch");
         }
     }
 }
