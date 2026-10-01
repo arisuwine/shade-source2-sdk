@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1290
+             * Size: 0x12a0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,24 +30,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSWeaponBaseGun : public shade::sdk::server::CCSWeaponBase {
             public:
-                std::int32_t m_zoomLevel; // 0x1270, 0x4 bytes
-                std::int32_t m_iBurstShotsRemaining; // 0x1274, 0x4 bytes
-                std::uint8_t pad_1278[0x8]; // 0x1278, 0x8 bytes
-                std::int32_t m_silencedModelIndex; // 0x1280, 0x4 bytes
-                bool m_inPrecache; // 0x1284, 0x1 bytes
-                bool m_bNeedsBoltAction; // 0x1285, 0x1 bytes
-                std::uint8_t pad_1286[0x2]; // 0x1286, 0x2 bytes
-                std::int32_t m_nRevolverCylinderIdx; // 0x1288, 0x4 bytes
-                bool m_bSkillReloadAvailable; // 0x128c, 0x1 bytes
-                bool m_bSkillReloadLiftedReloadKey; // 0x128d, 0x1 bytes
-                bool m_bSkillBoltInterruptAvailable; // 0x128e, 0x1 bytes
-                bool m_bSkillBoltLiftedFireKey; // 0x128f, 0x1 bytes
+                std::int32_t m_zoomLevel; // 0x1280, 0x4 bytes
+                std::int32_t m_iBurstShotsRemaining; // 0x1284, 0x4 bytes
+                std::uint8_t pad_1288[0x8]; // 0x1288, 0x8 bytes
+                std::int32_t m_silencedModelIndex; // 0x1290, 0x4 bytes
+                bool m_inPrecache; // 0x1294, 0x1 bytes
+                bool m_bNeedsBoltAction; // 0x1295, 0x1 bytes
+                std::uint8_t pad_1296[0x2]; // 0x1296, 0x2 bytes
+                std::int32_t m_nRevolverCylinderIdx; // 0x1298, 0x4 bytes
+                bool m_bSkillReloadAvailable; // 0x129c, 0x1 bytes
+                bool m_bSkillReloadLiftedReloadKey; // 0x129d, 0x1 bytes
+                bool m_bSkillBoltInterruptAvailable; // 0x129e, 0x1 bytes
+                bool m_bSkillBoltLiftedFireKey; // 0x129f, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSWeaponBaseGun) == 0x1290, "CCSWeaponBaseGun size mismatch");
+            static_assert(sizeof(CCSWeaponBaseGun) == 0x12A0, "CCSWeaponBaseGun size mismatch");
         }
     }
 }

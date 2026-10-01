@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x12c0
+             * Size: 0x12d0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CSmokeGrenade : public shade::sdk::server::CBaseCSGrenade {
             public:
-                std::uint8_t pad_12b0[0x10]; // 0x12b0, 0x10 bytes
+                std::uint8_t pad_12c0[0x10]; // 0x12c0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSmokeGrenade) == 0x12C0, "CSmokeGrenade size mismatch");
+            static_assert(sizeof(CSmokeGrenade) == 0x12D0, "CSmokeGrenade size mismatch");
         }
     }
 }

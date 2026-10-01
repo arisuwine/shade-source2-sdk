@@ -44,8 +44,7 @@ namespace shade {
                 CUtlVector<CEntityHandle> m_SpawnedEntityHandles; // 0x0640, 0x18 bytes
                 HSCRIPT m_ScriptSpawnCallback; // 0x0658, 0x8 bytes
                 HSCRIPT m_ScriptCallbackScope; // 0x0660, 0x8 bytes
-                // Original type 'CEntityOutputTemplate<CUtlVector<CEntityHandle>>' replaced with byte storage: generated size 0x20, schema field size 0x30
-                std::uint8_t m_OnEntitySpawned[0x30]; // 0x0668, 0x30 bytes
+                CEntityOutputTemplate<CUtlVector<CEntityHandle>> m_OnEntitySpawned; // 0x0668, 0x30 bytes
             };
             #pragma pack(pop)
 

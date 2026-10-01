@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x12f0
+             * Size: 0x1300
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,27 +32,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CC4 : public shade::sdk::server::CCSWeaponBase {
             public:
-                std::uint8_t pad_1270[0x30]; // 0x1270, 0x30 bytes
-                VectorWS m_vecLastValidPlayerHeldPosition; // 0x12a0, 0xc bytes
-                VectorWS m_vecLastValidDroppedPosition; // 0x12ac, 0xc bytes
-                bool m_bDoValidDroppedPositionCheck; // 0x12b8, 0x1 bytes
-                bool m_bStartedArming; // 0x12b9, 0x1 bytes
-                std::uint8_t pad_12ba[0x2]; // 0x12ba, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_fArmedTime; // 0x12bc, 0x4 bytes
-                bool m_bBombPlacedAnimation; // 0x12c0, 0x1 bytes
-                bool m_bIsPlantingViaUse; // 0x12c1, 0x1 bytes
-                std::uint8_t pad_12c2[0x6]; // 0x12c2, 0x6 bytes
-                shade::sdk::server::EntitySpottedState_t m_entitySpottedState; // 0x12c8, 0x18 bytes
-                std::int32_t m_nSpotRules; // 0x12e0, 0x4 bytes
-                bool m_bPlayedArmingBeeps[0x7]; // 0x12e4, 0x7 bytes
-                bool m_bBombPlanted; // 0x12eb, 0x1 bytes
-                std::uint8_t pad_12ec[0x4]; // 0x12ec, 0x4 bytes
+                std::uint8_t pad_1280[0x30]; // 0x1280, 0x30 bytes
+                VectorWS m_vecLastValidPlayerHeldPosition; // 0x12b0, 0xc bytes
+                VectorWS m_vecLastValidDroppedPosition; // 0x12bc, 0xc bytes
+                bool m_bDoValidDroppedPositionCheck; // 0x12c8, 0x1 bytes
+                bool m_bStartedArming; // 0x12c9, 0x1 bytes
+                std::uint8_t pad_12ca[0x2]; // 0x12ca, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_fArmedTime; // 0x12cc, 0x4 bytes
+                bool m_bBombPlacedAnimation; // 0x12d0, 0x1 bytes
+                bool m_bIsPlantingViaUse; // 0x12d1, 0x1 bytes
+                std::uint8_t pad_12d2[0x6]; // 0x12d2, 0x6 bytes
+                shade::sdk::server::EntitySpottedState_t m_entitySpottedState; // 0x12d8, 0x18 bytes
+                std::int32_t m_nSpotRules; // 0x12f0, 0x4 bytes
+                bool m_bPlayedArmingBeeps[0x7]; // 0x12f4, 0x7 bytes
+                bool m_bBombPlanted; // 0x12fb, 0x1 bytes
+                std::uint8_t pad_12fc[0x4]; // 0x12fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CC4) == 0x12F0, "CC4 size mismatch");
+            static_assert(sizeof(CC4) == 0x1300, "CC4 size mismatch");
         }
     }
 }

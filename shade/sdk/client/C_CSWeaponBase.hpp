@@ -73,25 +73,26 @@ namespace shade {
                 bool m_bInReload; // 0x1a3c, 0x1 bytes
                 std::uint8_t pad_1a3d[0x3]; // 0x1a3d, 0x3 bytes
                 shade::sdk::entity2::GameTick_t m_nDeployTick; // 0x1a40, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDroppedAtTime; // 0x1a44, 0x4 bytes
-                std::uint8_t pad_1a48[0x4]; // 0x1a48, 0x4 bytes
-                bool m_bIsHauledBack; // 0x1a4c, 0x1 bytes
-                bool m_bSilencerOn; // 0x1a4d, 0x1 bytes
-                std::uint8_t pad_1a4e[0x2]; // 0x1a4e, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeSilencerSwitchComplete; // 0x1a50, 0x4 bytes
-                bool m_bStealthy; // 0x1a54, 0x1 bytes
-                bool m_bInSilentReloadSection; // 0x1a55, 0x1 bytes
-                std::uint8_t pad_1a56[0x2]; // 0x1a56, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flStealthHoldStartTime; // 0x1a58, 0x4 bytes
-                bool m_bReloadHeldSinceStart; // 0x1a5c, 0x1 bytes
-                std::uint8_t pad_1a5d[0x3]; // 0x1a5d, 0x3 bytes
-                float m_flWeaponActionPlaybackRate; // 0x1a60, 0x4 bytes
-                std::int32_t m_iOriginalTeamNumber; // 0x1a64, 0x4 bytes
-                std::int32_t m_iMostRecentTeamNumber; // 0x1a68, 0x4 bytes
-                bool m_bDroppedNearBuyZone; // 0x1a6c, 0x1 bytes
-                std::uint8_t pad_1a6d[0x3]; // 0x1a6d, 0x3 bytes
-                float m_flNextAttackRenderTimeOffset; // 0x1a70, 0x4 bytes
-                std::uint8_t pad_1a74[0xac]; // 0x1a74, 0xac bytes
+                shade::sdk::entity2::GameTime_t m_flAttackHoldStartTime; // 0x1a44, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDroppedAtTime; // 0x1a48, 0x4 bytes
+                std::uint8_t pad_1a4c[0x4]; // 0x1a4c, 0x4 bytes
+                bool m_bIsHauledBack; // 0x1a50, 0x1 bytes
+                bool m_bSilencerOn; // 0x1a51, 0x1 bytes
+                std::uint8_t pad_1a52[0x2]; // 0x1a52, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeSilencerSwitchComplete; // 0x1a54, 0x4 bytes
+                bool m_bStealthy; // 0x1a58, 0x1 bytes
+                bool m_bInSilentReloadSection; // 0x1a59, 0x1 bytes
+                std::uint8_t pad_1a5a[0x2]; // 0x1a5a, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flStealthHoldStartTime; // 0x1a5c, 0x4 bytes
+                bool m_bReloadHeldSinceStart; // 0x1a60, 0x1 bytes
+                std::uint8_t pad_1a61[0x3]; // 0x1a61, 0x3 bytes
+                float m_flWeaponActionPlaybackRate; // 0x1a64, 0x4 bytes
+                std::int32_t m_iOriginalTeamNumber; // 0x1a68, 0x4 bytes
+                std::int32_t m_iMostRecentTeamNumber; // 0x1a6c, 0x4 bytes
+                bool m_bDroppedNearBuyZone; // 0x1a70, 0x1 bytes
+                std::uint8_t pad_1a71[0x3]; // 0x1a71, 0x3 bytes
+                float m_flNextAttackRenderTimeOffset; // 0x1a74, 0x4 bytes
+                std::uint8_t pad_1a78[0xa8]; // 0x1a78, 0xa8 bytes
                 bool m_bClearWeaponIdentifyingUGC; // 0x1b20, 0x1 bytes
                 bool m_bVisualsDataSet; // 0x1b21, 0x1 bytes
                 bool m_bUIWeapon; // 0x1b22, 0x1 bytes

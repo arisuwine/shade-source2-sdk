@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1280
+             * Size: 0x1290
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_Healthshot) == 0x1280, "CItem_Healthshot size mismatch");
+            static_assert(sizeof(CItem_Healthshot) == 0x1290, "CItem_Healthshot size mismatch");
         }
     }
 }

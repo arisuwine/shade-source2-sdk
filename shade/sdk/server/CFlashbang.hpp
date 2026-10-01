@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x12b0
+             * Size: 0x12c0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CFlashbang) == 0x12B0, "CFlashbang size mismatch");
+            static_assert(sizeof(CFlashbang) == 0x12C0, "CFlashbang size mismatch");
         }
     }
 }
