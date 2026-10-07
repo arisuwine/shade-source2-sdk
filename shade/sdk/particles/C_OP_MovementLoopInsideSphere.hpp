@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MovementLoopInsideSphere : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nCP; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDistance; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecScale; // 0x0350, 0x6b8 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nDistSqrAttr; // 0x0a08, 0x4 bytes
-                std::uint8_t pad_0a0c[0x4]; // 0x0a0c, 0x4 bytes
+                std::int32_t m_nCP; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDistance; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecScale; // 0x0360, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nDistSqrAttr; // 0x0a38, 0x4 bytes
+                std::uint8_t pad_0a3c[0x4]; // 0x0a3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MovementLoopInsideSphere) == 0xA10, "C_OP_MovementLoopInsideSphere size mismatch");
+            static_assert(sizeof(C_OP_MovementLoopInsideSphere) == 0xA40, "C_OP_MovementLoopInsideSphere size mismatch");
         }
     }
 }

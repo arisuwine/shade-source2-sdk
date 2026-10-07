@@ -29,6 +29,7 @@
 namespace shade {
     namespace sdk {
         namespace server {
+            struct CBaseModelEntity__BodyGroupRequest_t;
             struct CBaseModelEntity__OnDamageLevelChangedArgs_t;
             class CChoreoComponent;
             class CDestructiblePartsComponent;
@@ -42,7 +43,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x778
+             * Size: 0x858
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -87,8 +88,9 @@ namespace shade {
                 std::uint8_t pad_057c[0x4]; // 0x057c, 0x4 bytes
                 CUtlVectorEmbeddedNetworkVar<shade::sdk::server::EntityRenderAttribute_t> m_vecRenderAttributes; // 0x0580, 0x68 bytes
                 bool m_bRenderToCubemaps; // 0x05e8, 0x1 bytes
-                bool m_bNoInterpolate; // 0x05e9, 0x1 bytes
-                std::uint8_t pad_05ea[0x6]; // 0x05ea, 0x6 bytes
+                bool m_bExpandRenderBoundsToIncludeCloth; // 0x05e9, 0x1 bytes
+                bool m_bNoInterpolate; // 0x05ea, 0x1 bytes
+                std::uint8_t pad_05eb[0x5]; // 0x05eb, 0x5 bytes
                 shade::sdk::server::CCollisionProperty m_Collision; // 0x05f0, 0xb8 bytes
                 shade::sdk::server::CGlowProperty m_Glow; // 0x06a8, 0x58 bytes
                 float m_flGlowBackfaceMult; // 0x0700, 0x4 bytes
@@ -98,11 +100,14 @@ namespace shade {
                 float m_flShadowStrength; // 0x0710, 0x4 bytes
                 std::uint8_t m_nObjectCulling; // 0x0714, 0x1 bytes
                 std::uint8_t pad_0715[0x3]; // 0x0715, 0x3 bytes
-                CUtlOrderedMap<CGlobalSymbol, std::int32_t> m_bodyGroupChoices; // 0x0718, 0x28 bytes
-                shade::sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x0740, 0x28 bytes
-                std::uint8_t pad_0768[0x8]; // 0x0768, 0x8 bytes
-                std::uint32_t m_bvDisabledHitGroups[0x1]; // 0x0770, 0x4 bytes
-                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
+                std::uint32_t m_bodyGroupTotalRequestCount; // 0x0718, 0x4 bytes
+                std::uint8_t pad_071c[0x4]; // 0x071c, 0x4 bytes
+                CUtlVectorFixedGrowable<shade::sdk::server::CBaseModelEntity__BodyGroupRequest_t, 8> m_bodyGroupRequests; // 0x0720, 0xd8 bytes
+                CUtlOrderedMap<CGlobalSymbol, std::int32_t> m_bodyGroupChoices; // 0x07f8, 0x28 bytes
+                shade::sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x0820, 0x28 bytes
+                std::uint8_t pad_0848[0x8]; // 0x0848, 0x8 bytes
+                std::uint32_t m_bvDisabledHitGroups[0x1]; // 0x0850, 0x4 bytes
+                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -112,11 +117,11 @@ namespace shade {
              * std::int32_t renderamt; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector mins; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector maxs; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * char *skin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlString skin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CUtlString bodygroups; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBaseModelEntity) == 0x778, "CBaseModelEntity size mismatch");
+            static_assert(sizeof(CBaseModelEntity) == 0x858, "CBaseModelEntity size mismatch");
         }
     }
 }

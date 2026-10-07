@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,24 +29,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Disruptor_KineticField : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1a78, 0x4 bytes
-                float wall_thickness; // 0x1a7c, 0x4 bytes
-                float tick_rate; // 0x1a80, 0x4 bytes
-                std::int32_t strike_on_touch; // 0x1a84, 0x4 bytes
-                VectorWS m_vOriginLoc; // 0x1a88, 0xc bytes
-                bool m_bTruesight; // 0x1a94, 0x1 bytes
-                std::uint8_t pad_1a95[0x3]; // 0x1a95, 0x3 bytes
-                VectorWS m_vOrigin; // 0x1a98, 0xc bytes
-                Vector m_vWallRight; // 0x1aa4, 0xc bytes
-                std::uint8_t pad_1ab0[0x4]; // 0x1ab0, 0x4 bytes
-                bool is_wall; // 0x1ab4, 0x1 bytes
-                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
+                float radius; // 0x1aa8, 0x4 bytes
+                float wall_thickness; // 0x1aac, 0x4 bytes
+                float tick_rate; // 0x1ab0, 0x4 bytes
+                std::int32_t strike_on_touch; // 0x1ab4, 0x4 bytes
+                VectorWS m_vOriginLoc; // 0x1ab8, 0xc bytes
+                bool m_bTruesight; // 0x1ac4, 0x1 bytes
+                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
+                VectorWS m_vOrigin; // 0x1ac8, 0xc bytes
+                Vector m_vWallRight; // 0x1ad4, 0xc bytes
+                std::uint8_t pad_1ae0[0x4]; // 0x1ae0, 0x4 bytes
+                bool is_wall; // 0x1ae4, 0x1 bytes
+                std::uint8_t pad_1ae5[0x3]; // 0x1ae5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Disruptor_KineticField) == 0x1AB8, "CDOTA_Modifier_Disruptor_KineticField size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Disruptor_KineticField) == 0x1AE8, "CDOTA_Modifier_Disruptor_KineticField size mismatch");
         }
     }
 }

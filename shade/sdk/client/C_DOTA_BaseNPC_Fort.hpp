@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1bd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Fort : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                std::uint8_t pad_1a28[0xa8]; // 0x1a28, 0xa8 bytes
-                std::uint32_t m_unRandomSeed; // 0x1ad0, 0x4 bytes
-                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                std::uint8_t pad_1b28[0xa8]; // 0x1b28, 0xa8 bytes
+                std::uint32_t m_unRandomSeed; // 0x1bd0, 0x4 bytes
+                std::uint8_t pad_1bd4[0x4]; // 0x1bd4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Fort) == 0x1AD8, "C_DOTA_BaseNPC_Fort size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Fort) == 0x1BD8, "C_DOTA_BaseNPC_Fort size mismatch");
         }
     }
 }

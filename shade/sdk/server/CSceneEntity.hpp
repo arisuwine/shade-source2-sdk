@@ -22,10 +22,12 @@
 namespace shade {
     namespace sdk {
         namespace server {
+            struct ActorClipEntry_t;
             struct ActorMapping_t;
             class CBaseEntity;
             class CBaseModelEntity;
             class CSceneListManager;
+            struct SceneLocatorSettings_t;
         }
     }
 }
@@ -34,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7e0
+             * Size: 0x818
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -72,7 +74,8 @@ namespace shade {
                 float m_flCurrentTime; // 0x0520, 0x4 bytes
                 float m_flFrameTime; // 0x0524, 0x4 bytes
                 bool m_bCancelAtNextInterrupt; // 0x0528, 0x1 bytes
-                std::uint8_t pad_0529[0x3]; // 0x0529, 0x3 bytes
+                bool m_bRemoveOnCompletion; // 0x0529, 0x1 bytes
+                std::uint8_t pad_052a[0x2]; // 0x052a, 0x2 bytes
                 float m_fPitch; // 0x052c, 0x4 bytes
                 bool m_bAutomated; // 0x0530, 0x1 bytes
                 std::uint8_t pad_0531[0x3]; // 0x0531, 0x3 bytes
@@ -99,45 +102,38 @@ namespace shade {
                 shade::sdk::entity2::CEntityIOOutput m_OnPaused; // 0x0600, 0x18 bytes
                 shade::sdk::entity2::CEntityIOOutput m_OnResumed; // 0x0618, 0x18 bytes
                 shade::sdk::entity2::CEntityIOOutput m_OnPulseRequirement; // 0x0630, 0x18 bytes
-                std::uint8_t pad_0648[0xf0]; // 0x0648, 0xf0 bytes
-                CUtlVector<shade::sdk::server::ActorMapping_t> m_ActorMap; // 0x0738, 0x18 bytes
-                std::uint8_t pad_0750[0x28]; // 0x0750, 0x28 bytes
-                CHandle<shade::sdk::server::CSceneEntity> m_hInterruptScene; // 0x0778, 0x4 bytes
-                std::int32_t m_nInterruptCount; // 0x077c, 0x4 bytes
-                bool m_bSceneMissing; // 0x0780, 0x1 bytes
-                bool m_bInterrupted; // 0x0781, 0x1 bytes
-                bool m_bCompletedEarly; // 0x0782, 0x1 bytes
-                bool m_bInterruptSceneFinished; // 0x0783, 0x1 bytes
-                bool m_bRestoring; // 0x0784, 0x1 bytes
-                std::uint8_t pad_0785[0x3]; // 0x0785, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::server::CSceneEntity>> m_hNotifySceneCompletion; // 0x0788, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CSceneListManager>> m_hListManagers; // 0x07a0, 0x18 bytes
-                CUtlSymbolLarge m_iszSoundName; // 0x07b8, 0x8 bytes
-                CUtlSymbolLarge m_iszSequenceName; // 0x07c0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseModelEntity> m_hActor; // 0x07c8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hActivator; // 0x07cc, 0x4 bytes
-                std::int32_t m_BusyActor; // 0x07d0, 0x4 bytes
-                shade::sdk::server::SceneOnPlayerDeath_t m_iPlayerDeathBehavior; // 0x07d4, 0x4 bytes
-                std::uint8_t pad_07d8[0x8]; // 0x07d8, 0x8 bytes
+                CUtlDict<shade::sdk::server::SceneLocatorSettings_t> m_LocatorSettingsMap; // 0x0648, 0x28 bytes
+                std::uint8_t pad_0670[0x78]; // 0x0670, 0x78 bytes
+                CUtlDict<CUtlSymbolLarge> m_TargetNameMap; // 0x06e8, 0x28 bytes
+                CUtlDict<CUtlSymbolLarge> m_AnchorNameMap; // 0x0710, 0x28 bytes
+                CUtlDict<CUtlSymbolLarge> m_ActorGraphMap; // 0x0738, 0x28 bytes
+                CUtlDict<shade::sdk::server::ActorClipEntry_t> m_ActorClipMap; // 0x0760, 0x28 bytes
+                CUtlVector<shade::sdk::server::ActorMapping_t> m_ActorMap; // 0x0788, 0x18 bytes
+                CHandle<shade::sdk::server::CSceneEntity> m_hInterruptScene; // 0x07a0, 0x4 bytes
+                std::int32_t m_nInterruptCount; // 0x07a4, 0x4 bytes
+                CUtlString m_responseConcept; // 0x07a8, 0x8 bytes
+                CUtlString m_responseCriteria; // 0x07b0, 0x8 bytes
+                bool m_bSceneMissing; // 0x07b8, 0x1 bytes
+                bool m_bInterrupted; // 0x07b9, 0x1 bytes
+                bool m_bCompletedEarly; // 0x07ba, 0x1 bytes
+                bool m_bInterruptSceneFinished; // 0x07bb, 0x1 bytes
+                bool m_bRestoring; // 0x07bc, 0x1 bytes
+                std::uint8_t pad_07bd[0x3]; // 0x07bd, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CSceneEntity>> m_hNotifySceneCompletion; // 0x07c0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CSceneListManager>> m_hListManagers; // 0x07d8, 0x18 bytes
+                CUtlSymbolLarge m_iszSoundName; // 0x07f0, 0x8 bytes
+                CUtlSymbolLarge m_iszSequenceName; // 0x07f8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseModelEntity> m_hActor; // 0x0800, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hActivator; // 0x0804, 0x4 bytes
+                std::int32_t m_BusyActor; // 0x0808, 0x4 bytes
+                shade::sdk::server::SceneOnPlayerDeath_t m_iPlayerDeathBehavior; // 0x080c, 0x4 bytes
+                std::uint8_t pad_0810[0x8]; // 0x0810, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartPlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPausePlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputResumePlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputCancelPlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputCancelAtNextInterrupt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputPitchShiftPlayback; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputInterjectResponse; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopWaitingForActor; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTarget1; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetTarget2; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputScriptPlayerDeath; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputPauseAtNextInterrupt; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSceneEntity) == 0x7E0, "CSceneEntity size mismatch");
+            static_assert(sizeof(CSceneEntity) == 0x818, "CSceneEntity size mismatch");
         }
     }
 }

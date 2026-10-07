@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,24 +37,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Voidwalker_Phased : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t damage; // 0x1a78, 0x4 bytes
-                float max_damage_duration; // 0x1a7c, 0x4 bytes
-                std::int32_t attack_range_bonus; // 0x1a80, 0x4 bytes
-                std::uint8_t pad_1a84[0x4]; // 0x1a84, 0x4 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1a88, 0x18 bytes
-                bool bAttackRange; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x3]; // 0x1aa1, 0x3 bytes
-                float m_flStartTime; // 0x1aa4, 0x4 bytes
-                float m_flFadeTime; // 0x1aa8, 0x4 bytes
-                float m_flDamageScale; // 0x1aac, 0x4 bytes
-                float duration; // 0x1ab0, 0x4 bytes
+                std::int32_t damage; // 0x1aa8, 0x4 bytes
+                float max_damage_duration; // 0x1aac, 0x4 bytes
+                std::int32_t attack_range_bonus; // 0x1ab0, 0x4 bytes
                 std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1ab8, 0x18 bytes
+                bool bAttackRange; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
+                float m_flStartTime; // 0x1ad4, 0x4 bytes
+                float m_flFadeTime; // 0x1ad8, 0x4 bytes
+                float m_flDamageScale; // 0x1adc, 0x4 bytes
+                float duration; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Voidwalker_Phased) == 0x1AB8, "CDOTA_Modifier_Voidwalker_Phased size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Voidwalker_Phased) == 0x1AE8, "CDOTA_Modifier_Voidwalker_Phased size mismatch");
         }
     }
 }

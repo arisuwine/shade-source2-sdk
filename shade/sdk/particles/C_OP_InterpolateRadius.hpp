@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x230
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_InterpolateRadius : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flStartTime; // 0x01d8, 0x4 bytes
-                float m_flEndTime; // 0x01dc, 0x4 bytes
-                float m_flStartScale; // 0x01e0, 0x4 bytes
-                float m_flEndScale; // 0x01e4, 0x4 bytes
-                bool m_bEaseInAndOut; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
-                float m_flBias; // 0x01ec, 0x4 bytes
-                std::uint8_t pad_01f0[0x30]; // 0x01f0, 0x30 bytes
+                float m_flStartTime; // 0x01e0, 0x4 bytes
+                float m_flEndTime; // 0x01e4, 0x4 bytes
+                float m_flStartScale; // 0x01e8, 0x4 bytes
+                float m_flEndScale; // 0x01ec, 0x4 bytes
+                bool m_bEaseInAndOut; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x3]; // 0x01f1, 0x3 bytes
+                float m_flBias; // 0x01f4, 0x4 bytes
+                std::uint8_t pad_01f8[0x38]; // 0x01f8, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_InterpolateRadius) == 0x220, "C_OP_InterpolateRadius size mismatch");
+            static_assert(sizeof(C_OP_InterpolateRadius) == 0x230, "C_OP_InterpolateRadius size mismatch");
         }
     }
 }

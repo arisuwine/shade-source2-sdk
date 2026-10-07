@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1240
+             * Size: 0x1298
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,20 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointFieldFromVectorExpression : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particles::VectorFloatExpressionType_t m_nExpression; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput1; // 0x01e8, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput2; // 0x08a0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLerp; // 0x0f58, 0x170 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x10c8, 0x170 bytes
-                std::int32_t m_nOutputCP; // 0x1238, 0x4 bytes
-                std::int32_t m_nOutVectorField; // 0x123c, 0x4 bytes
+                shade::sdk::particles::VectorFloatExpressionType_t m_nExpression; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput1; // 0x01f0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput2; // 0x08c8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLerp; // 0x0fa0, 0x178 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x1118, 0x178 bytes
+                std::int32_t m_nOutputCP; // 0x1290, 0x4 bytes
+                std::int32_t m_nOutVectorField; // 0x1294, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointFieldFromVectorExpression) == 0x1240, "C_OP_SetControlPointFieldFromVectorExpression size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointFieldFromVectorExpression) == 0x1298, "C_OP_SetControlPointFieldFromVectorExpression size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1ac8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Creep_Neutral : public shade::sdk::client::C_DOTA_BaseNPC_Creep {
             public:
-                CUtlString m_sDisplayName; // 0x19c0, 0x8 bytes
+                CUtlString m_sDisplayName; // 0x1ac0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Creep_Neutral) == 0x19C8, "C_DOTA_BaseNPC_Creep_Neutral size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Creep_Neutral) == 0x1AC8, "C_DOTA_BaseNPC_Creep_Neutral size mismatch");
         }
     }
 }

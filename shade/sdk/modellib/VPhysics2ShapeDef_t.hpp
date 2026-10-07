@@ -19,6 +19,7 @@ namespace shade {
     namespace sdk {
         namespace physicslib {
             struct RnCapsuleDesc_t;
+            struct RnCompoundDesc_t;
             struct RnHullDesc_t;
             struct RnMeshDesc_t;
             struct RnSphereDesc_t;
@@ -30,23 +31,24 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0x68
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct VPhysics2ShapeDef_t {
-                CUtlVector<shade::sdk::physicslib::RnSphereDesc_t> m_spheres; // 0x0000, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnCapsuleDesc_t> m_capsules; // 0x0018, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnHullDesc_t> m_hulls; // 0x0030, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnMeshDesc_t> m_meshes; // 0x0048, 0x18 bytes
-                CUtlVector<std::uint16_t> m_CollisionAttributeIndices; // 0x0060, 0x18 bytes
+                CUtlLeanVector<shade::sdk::physicslib::RnSphereDesc_t> m_spheres; // 0x0000, 0x10 bytes
+                CUtlLeanVector<shade::sdk::physicslib::RnCapsuleDesc_t> m_capsules; // 0x0010, 0x10 bytes
+                CUtlLeanVector<shade::sdk::physicslib::RnHullDesc_t> m_hulls; // 0x0020, 0x10 bytes
+                CUtlLeanVector<shade::sdk::physicslib::RnMeshDesc_t> m_meshes; // 0x0030, 0x10 bytes
+                CUtlLeanVector<shade::sdk::physicslib::RnCompoundDesc_t> m_compounds; // 0x0040, 0x10 bytes
+                CUtlVector<std::uint16_t> m_CollisionAttributeIndices; // 0x0050, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(VPhysics2ShapeDef_t) == 0x78, "VPhysics2ShapeDef_t size mismatch");
+            static_assert(sizeof(VPhysics2ShapeDef_t) == 0x68, "VPhysics2ShapeDef_t size mismatch");
         }
     }
 }

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
-            enum class VMixFilterType_t : std::int16_t {
+            enum class VMixFilterType_t : std::int8_t {
                 FILTER_UNKNOWN = -0x1,
                 FILTER_LOWPASS = 0x0,
                 FILTER_HIGHPASS = 0x1,

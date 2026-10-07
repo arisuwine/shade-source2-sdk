@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Giant_Maul : public shade::sdk::server::CDOTA_Buff_Item {
             public:
-                float crit_multiplier; // 0x1a78, 0x4 bytes
-                float debuff_duration; // 0x1a7c, 0x4 bytes
-                shade::sdk::client::AttackRecord_t m_iInFlightRecord; // 0x1a80, 0x2 bytes
-                std::uint8_t pad_1a82[0x6]; // 0x1a82, 0x6 bytes
+                float crit_multiplier; // 0x1aa8, 0x4 bytes
+                float debuff_duration; // 0x1aac, 0x4 bytes
+                shade::sdk::client::AttackRecord_t m_iInFlightRecord; // 0x1ab0, 0x2 bytes
+                std::uint8_t pad_1ab2[0x6]; // 0x1ab2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Giant_Maul) == 0x1A88, "CDOTA_Modifier_Giant_Maul size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Giant_Maul) == 0x1AB8, "CDOTA_Modifier_Giant_Maul size mismatch");
         }
     }
 }

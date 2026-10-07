@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x270
+             * Size: 0x278
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InitialVelocityFromHitbox : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                float m_flVelocityMin; // 0x01e0, 0x4 bytes
-                float m_flVelocityMax; // 0x01e4, 0x4 bytes
-                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
-                char m_HitboxSetName[0x80]; // 0x01ec, 0x80 bytes
-                bool m_bUseBones; // 0x026c, 0x1 bytes
-                std::uint8_t pad_026d[0x3]; // 0x026d, 0x3 bytes
+                float m_flVelocityMin; // 0x01e8, 0x4 bytes
+                float m_flVelocityMax; // 0x01ec, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01f0, 0x4 bytes
+                char m_HitboxSetName[0x80]; // 0x01f4, 0x80 bytes
+                bool m_bUseBones; // 0x0274, 0x1 bytes
+                std::uint8_t pad_0275[0x3]; // 0x0275, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InitialVelocityFromHitbox) == 0x270, "C_INIT_InitialVelocityFromHitbox size mismatch");
+            static_assert(sizeof(C_INIT_InitialVelocityFromHitbox) == 0x278, "C_INIT_InitialVelocityFromHitbox size mismatch");
         }
     }
 }

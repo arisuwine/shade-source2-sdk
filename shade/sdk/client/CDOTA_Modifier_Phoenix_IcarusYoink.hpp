@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,27 +37,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Phoenix_IcarusYoink : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vSource; // 0x1a78, 0xc bytes
-                VectorWS m_vTarget; // 0x1a84, 0xc bytes
-                Vector m_vDirection; // 0x1a90, 0xc bytes
-                QAngle m_angDirection; // 0x1a9c, 0xc bytes
-                float m_flCurrentTime; // 0x1aa8, 0x4 bytes
-                float dash_length; // 0x1aac, 0x4 bytes
-                float dash_width; // 0x1ab0, 0x4 bytes
-                float hit_radius; // 0x1ab4, 0x4 bytes
-                float burn_duration; // 0x1ab8, 0x4 bytes
-                float dive_duration; // 0x1abc, 0x4 bytes
-                float impact_damage; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitEntities; // 0x1ac8, 0x18 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> hTarget; // 0x1ae0, 0x4 bytes
-                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                VectorWS m_vSource; // 0x1aa8, 0xc bytes
+                VectorWS m_vTarget; // 0x1ab4, 0xc bytes
+                Vector m_vDirection; // 0x1ac0, 0xc bytes
+                QAngle m_angDirection; // 0x1acc, 0xc bytes
+                float m_flCurrentTime; // 0x1ad8, 0x4 bytes
+                float dash_length; // 0x1adc, 0x4 bytes
+                float dash_width; // 0x1ae0, 0x4 bytes
+                float hit_radius; // 0x1ae4, 0x4 bytes
+                float burn_duration; // 0x1ae8, 0x4 bytes
+                float dive_duration; // 0x1aec, 0x4 bytes
+                float impact_damage; // 0x1af0, 0x4 bytes
+                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitEntities; // 0x1af8, 0x18 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> hTarget; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Phoenix_IcarusYoink) == 0x1AE8, "CDOTA_Modifier_Phoenix_IcarusYoink size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Phoenix_IcarusYoink) == 0x1B18, "CDOTA_Modifier_Phoenix_IcarusYoink size mismatch");
         }
     }
 }

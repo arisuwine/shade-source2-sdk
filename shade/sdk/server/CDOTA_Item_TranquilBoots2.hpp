@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x678
+             * Size: 0x680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_TranquilBoots2 : public shade::sdk::server::CDOTA_Item {
             public:
-                std::int32_t break_count; // 0x0658, 0x4 bytes
-                std::uint8_t pad_065c[0x4]; // 0x065c, 0x4 bytes
-                CUtlVector<shade::sdk::entity2::GameTime_t> m_DamageList; // 0x0660, 0x18 bytes
+                std::int32_t break_count; // 0x0660, 0x4 bytes
+                std::uint8_t pad_0664[0x4]; // 0x0664, 0x4 bytes
+                CUtlVector<shade::sdk::entity2::GameTime_t> m_DamageList; // 0x0668, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_TranquilBoots2) == 0x678, "CDOTA_Item_TranquilBoots2 size mismatch");
+            static_assert(sizeof(CDOTA_Item_TranquilBoots2) == 0x680, "CDOTA_Item_TranquilBoots2 size mismatch");
         }
     }
 }

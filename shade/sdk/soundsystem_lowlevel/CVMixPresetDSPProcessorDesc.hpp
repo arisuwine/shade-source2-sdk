@@ -16,13 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixParameterEffectName.hpp"
 #include "shade/sdk/soundsystem_lowlevel/VMixPresetDSPDesc_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x30
+             * Size: 0x40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixPresetDSPProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
-                shade::sdk::soundsystem_lowlevel::VMixPresetDSPDesc_t m_desc; // 0x0020, 0x10 bytes
+                shade::sdk::soundsystem_lowlevel::VMixPresetDSPDesc_t m_desc; // 0x0028, 0x10 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterEffectName m_paramEffectName; // 0x0038, 0x4 bytes
+                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixPresetDSPProcessorDesc) == 0x30, "CVMixPresetDSPProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixPresetDSPProcessorDesc) == 0x40, "CVMixPresetDSPProcessorDesc size mismatch");
         }
     }
 }

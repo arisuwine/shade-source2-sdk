@@ -15,28 +15,25 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/soundsystem_lowlevel/CVMixInputBase.hpp"
-
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x18
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
-            class CVMixVsndInput : public shade::sdk::soundsystem_lowlevel::CVMixInputBase {
+            class CVMixVsndInput {
             public:
-                CUtlString m_defaultValue; // 0x0010, 0x8 bytes
-                std::int32_t m_nProcessor; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                CUtlString m_defaultValue; // 0x0000, 0x8 bytes
+                std::uint8_t pad_0008[0x10]; // 0x0008, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixVsndInput) == 0x20, "CVMixVsndInput size mismatch");
+            static_assert(sizeof(CVMixVsndInput) == 0x18, "CVMixVsndInput size mismatch");
         }
     }
 }

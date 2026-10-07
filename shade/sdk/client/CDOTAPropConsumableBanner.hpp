@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd80
+             * Size: 0xef0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTAPropConsumableBanner : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_0d10[0x58]; // 0x0d10, 0x58 bytes
-                shade::sdk::client::PlayerID_t m_nPlayerID; // 0x0d68, 0x4 bytes
-                std::uint8_t pad_0d6c[0x4]; // 0x0d6c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hAvatarTexture; // 0x0d70, 0x8 bytes
-                bool m_bUseAvatar; // 0x0d78, 0x1 bytes
-                std::uint8_t pad_0d79[0x7]; // 0x0d79, 0x7 bytes
+                std::uint8_t pad_0e80[0x58]; // 0x0e80, 0x58 bytes
+                shade::sdk::client::PlayerID_t m_nPlayerID; // 0x0ed8, 0x4 bytes
+                std::uint8_t pad_0edc[0x4]; // 0x0edc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hAvatarTexture; // 0x0ee0, 0x8 bytes
+                bool m_bUseAvatar; // 0x0ee8, 0x1 bytes
+                std::uint8_t pad_0ee9[0x7]; // 0x0ee9, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTAPropConsumableBanner) == 0xD80, "CDOTAPropConsumableBanner size mismatch");
+            static_assert(sizeof(CDOTAPropConsumableBanner) == 0xEF0, "CDOTAPropConsumableBanner size mismatch");
         }
     }
 }

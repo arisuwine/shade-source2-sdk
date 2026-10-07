@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x198
+             * Size: 0x1a8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -42,32 +42,35 @@ namespace shade {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 CUtlString m_strBlessingEventAction; // 0x0008, 0x8 bytes
                 std::uint8_t pad_0010[0x8]; // 0x0010, 0x8 bytes
-                shade::sdk::client::BlessingTypeID_t m_nNextBlessingTypeID; // 0x0018, 0x4 bytes
-                shade::sdk::client::BlessingID_t m_nNextBlessingID; // 0x001c, 0x4 bytes
-                CUtlString m_UnlockHeroBlessingType; // 0x0020, 0x8 bytes
-                std::uint8_t pad_0028[0x8]; // 0x0028, 0x8 bytes
-                CUtlVector<CUtlString> m_vecHeroNames; // 0x0030, 0x18 bytes
-                std::uint8_t pad_0048[0x18]; // 0x0048, 0x18 bytes
-                std::int32_t m_nNumStartingHeroesUnlocked; // 0x0060, 0x4 bytes
-                std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
-                CUtlString m_UnlockLegacyHeroBlessingType; // 0x0068, 0x8 bytes
-                std::uint8_t pad_0070[0x8]; // 0x0070, 0x8 bytes
-                CUtlVector<CUtlString> m_vecLegacyHeroNames; // 0x0078, 0x18 bytes
-                std::uint8_t pad_0090[0x18]; // 0x0090, 0x18 bytes
-                std::int32_t m_nNumStartingLegacyHeroesUnlocked; // 0x00a8, 0x4 bytes
-                std::uint8_t pad_00ac[0x4]; // 0x00ac, 0x4 bytes
-                CUtlDict<shade::sdk::client::BlessingType_t> m_mapBlessingTypes; // 0x00b0, 0x28 bytes
-                std::uint8_t pad_00d8[0x40]; // 0x00d8, 0x40 bytes
-                CUtlDict<shade::sdk::client::Blessing_t> m_mapBlessings; // 0x0118, 0x28 bytes
-                std::uint8_t pad_0140[0x28]; // 0x0140, 0x28 bytes
-                CUtlVector<shade::sdk::client::BlessingPath_t> m_vecPaths; // 0x0168, 0x18 bytes
-                std::uint8_t pad_0180[0x18]; // 0x0180, 0x18 bytes
+                CUtlString m_strCurrencyPeriodicResource; // 0x0018, 0x8 bytes
+                std::uint8_t pad_0020[0x4]; // 0x0020, 0x4 bytes
+                shade::sdk::client::BlessingTypeID_t m_nNextBlessingTypeID; // 0x0024, 0x4 bytes
+                shade::sdk::client::BlessingID_t m_nNextBlessingID; // 0x0028, 0x4 bytes
+                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
+                CUtlString m_UnlockHeroBlessingType; // 0x0030, 0x8 bytes
+                std::uint8_t pad_0038[0x8]; // 0x0038, 0x8 bytes
+                CUtlVector<CUtlString> m_vecHeroNames; // 0x0040, 0x18 bytes
+                std::uint8_t pad_0058[0x18]; // 0x0058, 0x18 bytes
+                std::int32_t m_nNumStartingHeroesUnlocked; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                CUtlString m_UnlockLegacyHeroBlessingType; // 0x0078, 0x8 bytes
+                std::uint8_t pad_0080[0x8]; // 0x0080, 0x8 bytes
+                CUtlVector<CUtlString> m_vecLegacyHeroNames; // 0x0088, 0x18 bytes
+                std::uint8_t pad_00a0[0x18]; // 0x00a0, 0x18 bytes
+                std::int32_t m_nNumStartingLegacyHeroesUnlocked; // 0x00b8, 0x4 bytes
+                std::uint8_t pad_00bc[0x4]; // 0x00bc, 0x4 bytes
+                CUtlDict<shade::sdk::client::BlessingType_t> m_mapBlessingTypes; // 0x00c0, 0x28 bytes
+                std::uint8_t pad_00e8[0x40]; // 0x00e8, 0x40 bytes
+                CUtlDict<shade::sdk::client::Blessing_t> m_mapBlessings; // 0x0128, 0x28 bytes
+                std::uint8_t pad_0150[0x28]; // 0x0150, 0x28 bytes
+                CUtlVector<shade::sdk::client::BlessingPath_t> m_vecPaths; // 0x0178, 0x18 bytes
+                std::uint8_t pad_0190[0x18]; // 0x0190, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTALabyrinthBlessingsMap) == 0x198, "CDOTALabyrinthBlessingsMap size mismatch");
+            static_assert(sizeof(CDOTALabyrinthBlessingsMap) == 0x1A8, "CDOTALabyrinthBlessingsMap size mismatch");
         }
     }
 }

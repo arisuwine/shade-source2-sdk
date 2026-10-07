@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xac8
+             * Size: 0xbb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_World : public shade::sdk::client::C_BaseModelEntity {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_skyBoxFaces[0x6]; // 0x0a88, 0x30 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hHeightFogTexture; // 0x0ab8, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hHeightFogMaskTexture; // 0x0ac0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_skyBoxFaces[0x6]; // 0x0b78, 0x30 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hHeightFogTexture; // 0x0ba8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hHeightFogMaskTexture; // 0x0bb0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_World) == 0xAC8, "C_World size mismatch");
+            static_assert(sizeof(C_World) == 0xBB8, "C_World size mismatch");
         }
     }
 }

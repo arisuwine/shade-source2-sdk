@@ -46,42 +46,43 @@ namespace shade {
                 std::uint8_t pad_04ac[0x24]; // 0x04ac, 0x24 bytes
                 CHandle<shade::sdk::server::CBasePlayerPawn> m_hPawn; // 0x04d0, 0x4 bytes
                 bool m_bKnownTeamMismatch; // 0x04d4, 0x1 bytes
-                std::uint8_t pad_04d5[0x3]; // 0x04d5, 0x3 bytes
-                CSplitScreenSlot m_nSplitScreenSlot; // 0x04d8, 0x4 bytes
-                CHandle<shade::sdk::server::CBasePlayerController> m_hSplitOwner; // 0x04dc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBasePlayerController>> m_hSplitScreenPlayers; // 0x04e0, 0x18 bytes
-                bool m_bIsHLTV; // 0x04f8, 0x1 bytes
-                std::uint8_t pad_04f9[0x3]; // 0x04f9, 0x3 bytes
-                shade::sdk::client::PlayerConnectedState m_iConnected; // 0x04fc, 0x4 bytes
-                shade::sdk::client::PlayerConnectedState m_iMostConnected; // 0x0500, 0x4 bytes
-                char m_iszPlayerName[0x80]; // 0x0504, 0x80 bytes
-                std::uint8_t pad_0584[0x4]; // 0x0584, 0x4 bytes
-                CUtlString m_szNetworkIDString; // 0x0588, 0x8 bytes
-                float m_fLerpTime; // 0x0590, 0x4 bytes
-                bool m_bLagCompensation; // 0x0594, 0x1 bytes
-                bool m_bPredict; // 0x0595, 0x1 bytes
-                std::uint8_t pad_0596[0x6]; // 0x0596, 0x6 bytes
-                bool m_bIsLowViolence; // 0x059c, 0x1 bytes
-                bool m_bGamePaused; // 0x059d, 0x1 bytes
-                std::uint8_t pad_059e[0x132]; // 0x059e, 0x132 bytes
-                shade::sdk::client::ChatIgnoreType_t m_iIgnoreGlobalChat; // 0x06d0, 0x4 bytes
-                float m_flLastPlayerTalkTime; // 0x06d4, 0x4 bytes
-                float m_flLastEntitySteadyState; // 0x06d8, 0x4 bytes
-                std::int32_t m_nAvailableEntitySteadyState; // 0x06dc, 0x4 bytes
-                bool m_bHasAnySteadyStateEnts; // 0x06e0, 0x1 bytes
-                std::uint8_t pad_06e1[0xf]; // 0x06e1, 0xf bytes
-                std::uint64_t m_steamID; // 0x06f0, 0x8 bytes
-                bool m_bNoClipEnabled; // 0x06f8, 0x1 bytes
-                std::uint8_t pad_06f9[0x3]; // 0x06f9, 0x3 bytes
-                std::uint32_t m_iDesiredFOV; // 0x06fc, 0x4 bytes
-                std::uint8_t pad_0700[0xb8]; // 0x0700, 0xb8 bytes
+                std::uint8_t pad_04d5[0x7]; // 0x04d5, 0x7 bytes
+                CSplitScreenSlot m_nSplitScreenSlot; // 0x04dc, 0x4 bytes
+                CHandle<shade::sdk::server::CBasePlayerController> m_hSplitOwner; // 0x04e0, 0x4 bytes
+                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBasePlayerController>> m_hSplitScreenPlayers; // 0x04e8, 0x18 bytes
+                bool m_bIsHLTV; // 0x0500, 0x1 bytes
+                std::uint8_t pad_0501[0x3]; // 0x0501, 0x3 bytes
+                shade::sdk::client::PlayerConnectedState m_iConnected; // 0x0504, 0x4 bytes
+                shade::sdk::client::PlayerConnectedState m_iMostConnected; // 0x0508, 0x4 bytes
+                char m_iszPlayerName[0x80]; // 0x050c, 0x80 bytes
+                std::uint8_t pad_058c[0x4]; // 0x058c, 0x4 bytes
+                CUtlString m_szNetworkIDString; // 0x0590, 0x8 bytes
+                float m_fLerpTime; // 0x0598, 0x4 bytes
+                bool m_bLagCompensation; // 0x059c, 0x1 bytes
+                bool m_bPredict; // 0x059d, 0x1 bytes
+                std::uint8_t pad_059e[0x6]; // 0x059e, 0x6 bytes
+                bool m_bIsLowViolence; // 0x05a4, 0x1 bytes
+                bool m_bGamePaused; // 0x05a5, 0x1 bytes
+                std::uint8_t pad_05a6[0x132]; // 0x05a6, 0x132 bytes
+                shade::sdk::client::ChatIgnoreType_t m_iIgnoreGlobalChat; // 0x06d8, 0x4 bytes
+                float m_flLastPlayerTalkTime; // 0x06dc, 0x4 bytes
+                float m_flLastEntitySteadyState; // 0x06e0, 0x4 bytes
+                std::int32_t m_nAvailableEntitySteadyState; // 0x06e4, 0x4 bytes
+                bool m_bHasAnySteadyStateEnts; // 0x06e8, 0x1 bytes
+                std::uint8_t pad_06e9[0xf]; // 0x06e9, 0xf bytes
+                std::uint64_t m_steamID; // 0x06f8, 0x8 bytes
+                bool m_bNoClipEnabled; // 0x0700, 0x1 bytes
+                std::uint8_t pad_0701[0x3]; // 0x0701, 0x3 bytes
+                std::uint32_t m_iDesiredFOV; // 0x0704, 0x4 bytes
+                std::uint8_t pad_0708[0xb0]; // 0x0708, 0xb0 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * bool fakeclient; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool is_hltv; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * char *playername; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlString playername; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool reserving; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 

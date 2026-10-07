@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_TemplarAssassin_Meditation_Illusion : public shade::sdk::client::CDOTA_Buff {
             public:
-                float duration; // 0x1a78, 0x4 bytes
-                std::int32_t bonus_move_speed; // 0x1a7c, 0x4 bytes
-                float m_flMoveSpeed; // 0x1a80, 0x4 bytes
-                bool m_bVisuallyDestroyed; // 0x1a84, 0x1 bytes
-                std::uint8_t pad_1a85[0x3]; // 0x1a85, 0x3 bytes
+                float duration; // 0x1aa8, 0x4 bytes
+                std::int32_t bonus_move_speed; // 0x1aac, 0x4 bytes
+                float m_flMoveSpeed; // 0x1ab0, 0x4 bytes
+                bool m_bVisuallyDestroyed; // 0x1ab4, 0x1 bytes
+                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_TemplarAssassin_Meditation_Illusion) == 0x1A88, "CDOTA_Modifier_TemplarAssassin_Meditation_Illusion size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_TemplarAssassin_Meditation_Illusion) == 0x1AB8, "CDOTA_Modifier_TemplarAssassin_Meditation_Illusion size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_SpecialistsArray_ProcDamage : public shade::sdk::client::CDOTA_Buff_Item {
             public:
-                std::int32_t base_proc_dmg; // 0x1a78, 0x4 bytes
-                std::int32_t proc_dmg_pct; // 0x1a7c, 0x4 bytes
+                std::int32_t base_proc_dmg; // 0x1aa8, 0x4 bytes
+                std::int32_t proc_dmg_pct; // 0x1aac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_SpecialistsArray_ProcDamage) == 0x1A80, "CDOTA_Modifier_Item_SpecialistsArray_ProcDamage size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_SpecialistsArray_ProcDamage) == 0x1AB0, "CDOTA_Modifier_Item_SpecialistsArray_ProcDamage size mismatch");
         }
     }
 }

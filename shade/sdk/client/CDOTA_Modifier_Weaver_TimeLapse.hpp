@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b58
+             * Size: 0x1b88
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Weaver_TimeLapse : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_PositionIndex[0xb]; // 0x1a78, 0x84 bytes
-                float m_flLife[0xb]; // 0x1afc, 0x2c bytes
-                float m_flMana[0xb]; // 0x1b28, 0x2c bytes
-                bool m_bHasValidHistory; // 0x1b54, 0x1 bytes
-                std::uint8_t pad_1b55[0x3]; // 0x1b55, 0x3 bytes
+                VectorWS m_PositionIndex[0xb]; // 0x1aa8, 0x84 bytes
+                float m_flLife[0xb]; // 0x1b2c, 0x2c bytes
+                float m_flMana[0xb]; // 0x1b58, 0x2c bytes
+                bool m_bHasValidHistory; // 0x1b84, 0x1 bytes
+                std::uint8_t pad_1b85[0x3]; // 0x1b85, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Weaver_TimeLapse) == 0x1B58, "CDOTA_Modifier_Weaver_TimeLapse size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Weaver_TimeLapse) == 0x1B88, "CDOTA_Modifier_Weaver_TimeLapse size mismatch");
         }
     }
 }

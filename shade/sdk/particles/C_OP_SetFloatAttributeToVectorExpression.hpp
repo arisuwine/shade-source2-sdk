@@ -16,17 +16,17 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/VectorFloatExpressionType_t.hpp"
 #include "shade/sdk/particleslib/CParticleRemapFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x10c8
+             * Size: 0x1118
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,19 +34,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetFloatAttributeToVectorExpression : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::VectorFloatExpressionType_t m_nExpression; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vInput1; // 0x01e0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vInput2; // 0x0898, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x0f50, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x10c0, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x10c4, 0x4 bytes
+                shade::sdk::particles::VectorFloatExpressionType_t m_nExpression; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vInput1; // 0x01e8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vInput2; // 0x08c0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x0f98, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x1110, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x1114, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetFloatAttributeToVectorExpression) == 0x10C8, "C_OP_SetFloatAttributeToVectorExpression size mismatch");
+            static_assert(sizeof(C_OP_SetFloatAttributeToVectorExpression) == 0x1118, "C_OP_SetFloatAttributeToVectorExpression size mismatch");
         }
     }
 }

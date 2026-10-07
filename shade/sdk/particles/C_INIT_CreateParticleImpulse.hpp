@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x640
+             * Size: 0x660
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateParticleImpulse : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_InputRadius; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_InputMagnitude; // 0x0350, 0x170 bytes
-                shade::sdk::particles::ParticleFalloffFunction_t m_nFalloffFunction; // 0x04c0, 0x4 bytes
-                std::uint8_t pad_04c4[0x4]; // 0x04c4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_InputFalloffExp; // 0x04c8, 0x170 bytes
-                shade::sdk::particles::ParticleImpulseType_t m_nImpulseType; // 0x0638, 0x4 bytes
-                std::uint8_t pad_063c[0x4]; // 0x063c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_InputRadius; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_InputMagnitude; // 0x0360, 0x178 bytes
+                shade::sdk::particles::ParticleFalloffFunction_t m_nFalloffFunction; // 0x04d8, 0x4 bytes
+                std::uint8_t pad_04dc[0x4]; // 0x04dc, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_InputFalloffExp; // 0x04e0, 0x178 bytes
+                shade::sdk::particles::ParticleImpulseType_t m_nImpulseType; // 0x0658, 0x4 bytes
+                std::uint8_t pad_065c[0x4]; // 0x065c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateParticleImpulse) == 0x640, "C_INIT_CreateParticleImpulse size mismatch");
+            static_assert(sizeof(C_INIT_CreateParticleImpulse) == 0x660, "C_INIT_CreateParticleImpulse size mismatch");
         }
     }
 }

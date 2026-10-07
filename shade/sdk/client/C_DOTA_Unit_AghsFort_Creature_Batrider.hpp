@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1ac8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_AghsFort_Creature_Batrider) == 0x19C8, "C_DOTA_Unit_AghsFort_Creature_Batrider size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_AghsFort_Creature_Batrider) == 0x1AC8, "C_DOTA_Unit_AghsFort_Creature_Batrider size mismatch");
         }
     }
 }

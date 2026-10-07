@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd90
+             * Size: 0xe78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,22 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Item_Rune : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                std::uint8_t pad_0ac0[0x18]; // 0x0ac0, 0x18 bytes
-                std::int32_t m_iRuneType; // 0x0ad8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRuneTime; // 0x0adc, 0x4 bytes
-                std::int32_t m_nMapLocationTeam; // 0x0ae0, 0x4 bytes
-                char m_szLocation[0x200]; // 0x0ae4, 0x200 bytes
-                std::int32_t m_iOldRuneType; // 0x0ce4, 0x4 bytes
-                bool m_bShowingTooltip; // 0x0ce8, 0x1 bytes
-                std::uint8_t pad_0ce9[0xa7]; // 0x0ce9, 0xa7 bytes
+                std::uint8_t pad_0bb0[0x10]; // 0x0bb0, 0x10 bytes
+                std::int32_t m_iRuneType; // 0x0bc0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRuneTime; // 0x0bc4, 0x4 bytes
+                std::int32_t m_nMapLocationTeam; // 0x0bc8, 0x4 bytes
+                char m_szLocation[0x200]; // 0x0bcc, 0x200 bytes
+                std::int32_t m_iOldRuneType; // 0x0dcc, 0x4 bytes
+                bool m_bShowingTooltip; // 0x0dd0, 0x1 bytes
+                std::uint8_t pad_0dd1[0xa7]; // 0x0dd1, 0xa7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item_Rune) == 0xD90, "C_DOTA_Item_Rune size mismatch");
+            static_assert(sizeof(C_DOTA_Item_Rune) == 0xE78, "C_DOTA_Item_Rune size mismatch");
         }
     }
 }

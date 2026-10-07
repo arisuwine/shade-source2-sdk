@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0x930
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapGravityToVector : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vInput1; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x0890, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0894, 0x4 bytes
-                bool m_bNormalizedOutput; // 0x0898, 0x1 bytes
-                std::uint8_t pad_0899[0x67]; // 0x0899, 0x67 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vInput1; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x08b8, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x08bc, 0x4 bytes
+                bool m_bNormalizedOutput; // 0x08c0, 0x1 bytes
+                std::uint8_t pad_08c1[0x6f]; // 0x08c1, 0x6f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapGravityToVector) == 0x900, "C_OP_RemapGravityToVector size mismatch");
+            static_assert(sizeof(C_OP_RemapGravityToVector) == 0x930, "C_OP_RemapGravityToVector size mismatch");
         }
     }
 }

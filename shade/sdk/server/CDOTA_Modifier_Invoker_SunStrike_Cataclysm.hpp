@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,21 +29,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Invoker_SunStrike_Cataclysm : public shade::sdk::client::CDOTA_Buff {
             public:
-                float area_of_effect; // 0x1a78, 0x4 bytes
-                float damage; // 0x1a7c, 0x4 bytes
-                float vision_distance; // 0x1a80, 0x4 bytes
-                float vision_duration; // 0x1a84, 0x4 bytes
-                float spell_amp; // 0x1a88, 0x4 bytes
-                float spell_lifesteal; // 0x1a8c, 0x4 bytes
-                VectorWS m_vSoundPos; // 0x1a90, 0xc bytes
-                bool m_bPlaySound; // 0x1a9c, 0x1 bytes
-                std::uint8_t pad_1a9d[0x3]; // 0x1a9d, 0x3 bytes
+                float area_of_effect; // 0x1aa8, 0x4 bytes
+                float damage; // 0x1aac, 0x4 bytes
+                float vision_distance; // 0x1ab0, 0x4 bytes
+                float vision_duration; // 0x1ab4, 0x4 bytes
+                float spell_amp; // 0x1ab8, 0x4 bytes
+                float spell_lifesteal; // 0x1abc, 0x4 bytes
+                VectorWS m_vSoundPos; // 0x1ac0, 0xc bytes
+                bool m_bPlaySound; // 0x1acc, 0x1 bytes
+                std::uint8_t pad_1acd[0x3]; // 0x1acd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Invoker_SunStrike_Cataclysm) == 0x1AA0, "CDOTA_Modifier_Invoker_SunStrike_Cataclysm size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Invoker_SunStrike_Cataclysm) == 0x1AD0, "CDOTA_Modifier_Invoker_SunStrike_Cataclysm size mismatch");
         }
     }
 }

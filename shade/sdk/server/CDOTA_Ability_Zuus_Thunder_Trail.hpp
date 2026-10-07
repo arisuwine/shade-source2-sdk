@@ -48,9 +48,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CDOTA_Ability_Zuus_Thunder_Trail) == 0x5C8, "CDOTA_Ability_Zuus_Thunder_Trail size mismatch");
         }

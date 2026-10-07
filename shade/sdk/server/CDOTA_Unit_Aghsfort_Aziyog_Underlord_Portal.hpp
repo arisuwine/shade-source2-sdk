@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18b0
+             * Size: 0x19a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Aghsfort_Aziyog_Underlord_Portal : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hOtherPortal; // 0x18a8, 0x4 bytes
-                std::uint8_t pad_18ac[0x4]; // 0x18ac, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOtherPortal; // 0x1998, 0x4 bytes
+                std::uint8_t pad_199c[0x4]; // 0x199c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Aghsfort_Aziyog_Underlord_Portal) == 0x18B0, "CDOTA_Unit_Aghsfort_Aziyog_Underlord_Portal size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Aghsfort_Aziyog_Underlord_Portal) == 0x19A0, "CDOTA_Unit_Aghsfort_Aziyog_Underlord_Portal size mismatch");
         }
     }
 }

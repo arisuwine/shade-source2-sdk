@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x860
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPlatTrigger : public shade::sdk::server::CBaseModelEntity {
             public:
-                CHandle<shade::sdk::server::CFuncPlat> m_pPlatform; // 0x0778, 0x4 bytes
-                std::uint8_t pad_077c[0x4]; // 0x077c, 0x4 bytes
+                CHandle<shade::sdk::server::CFuncPlat> m_pPlatform; // 0x0858, 0x4 bytes
+                std::uint8_t pad_085c[0x4]; // 0x085c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPlatTrigger) == 0x780, "CPlatTrigger size mismatch");
+            static_assert(sizeof(CPlatTrigger) == 0x860, "CPlatTrigger size mismatch");
         }
     }
 }

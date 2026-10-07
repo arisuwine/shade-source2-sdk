@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Seasonal_TI9_Shovel_Pudgling : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1a78, 0x4 bytes
-                std::int32_t m_nActionCount; // 0x1a7c, 0x4 bytes
-                VectorWS m_vecStartingPos; // 0x1a80, 0xc bytes
-                Vector m_vecDestinationOffset; // 0x1a8c, 0xc bytes
-                std::uint8_t pad_1a98[0x18]; // 0x1a98, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1aa8, 0x4 bytes
+                std::int32_t m_nActionCount; // 0x1aac, 0x4 bytes
+                VectorWS m_vecStartingPos; // 0x1ab0, 0xc bytes
+                Vector m_vecDestinationOffset; // 0x1abc, 0xc bytes
+                std::uint8_t pad_1ac8[0x18]; // 0x1ac8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI9_Shovel_Pudgling) == 0x1AB0, "CDOTA_Modifier_Seasonal_TI9_Shovel_Pudgling size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI9_Shovel_Pudgling) == 0x1AE0, "CDOTA_Modifier_Seasonal_TI9_Shovel_Pudgling size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1030
+             * Size: 0x50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -29,13 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             struct DebugDrawBoneTransforms_t : public shade::sdk::client::DebugSnapshotBaseStructuredData_t {
                 std::uint8_t pad_0008[0x8]; // 0x0008, 0x8 bytes
-                CUtlVectorFixedGrowable<CTransform, 128> vecBones; // 0x0010, 0x1020 bytes
+                CTransform m_rootToWorld; // 0x0010, 0x20 bytes
+                std::int32_t m_nBoneCount; // 0x0030, 0x4 bytes
+                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
+                CUtlVector<std::uint16_t> m_packed; // 0x0038, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(DebugDrawBoneTransforms_t) == 0x1030, "DebugDrawBoneTransforms_t size mismatch");
+            static_assert(sizeof(DebugDrawBoneTransforms_t) == 0x50, "DebugDrawBoneTransforms_t size mismatch");
         }
     }
 }

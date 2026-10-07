@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa0
+             * Size: 0x98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CAI_ExpresserWithFollowup) == 0xA0, "CAI_ExpresserWithFollowup size mismatch");
+            static_assert(sizeof(CAI_ExpresserWithFollowup) == 0x98, "CAI_ExpresserWithFollowup size mismatch");
         }
     }
 }

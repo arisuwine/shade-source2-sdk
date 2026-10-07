@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x48
+             * Size: 0x40
              * Alignment: 0x8
              * Has Trivial Destructor
              * Construct Allowed
@@ -35,13 +35,12 @@ namespace shade {
                 CGlobalSymbol strafing_source; // 0x0030, 0x8 bytes
                 bool strafing_enabled; // 0x0038, 0x1 bytes
                 std::uint8_t pad_0039[0x7]; // 0x0039, 0x7 bytes
-                CGlobalSymbol movement_id; // 0x0040, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_FacingServices_DebugSnapshotData_t) == 0x48, "AI_FacingServices_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_FacingServices_DebugSnapshotData_t) == 0x40, "AI_FacingServices_DebugSnapshotData_t size mismatch");
         }
     }
 }

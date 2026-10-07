@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xad0
+             * Size: 0xbc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,27 +32,27 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EntityDissolve : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_0a88[0x8]; // 0x0a88, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0a90, 0x4 bytes
-                float m_flFadeInStart; // 0x0a94, 0x4 bytes
-                float m_flFadeInLength; // 0x0a98, 0x4 bytes
-                float m_flFadeOutModelStart; // 0x0a9c, 0x4 bytes
-                float m_flFadeOutModelLength; // 0x0aa0, 0x4 bytes
-                float m_flFadeOutStart; // 0x0aa4, 0x4 bytes
-                float m_flFadeOutLength; // 0x0aa8, 0x4 bytes
-                shade::sdk::client::EntityDissolveType_t m_nDissolveType; // 0x0aac, 0x4 bytes
-                std::uint32_t m_nMagnitude; // 0x0ab0, 0x4 bytes
-                VectorWS m_vDissolverOrigin; // 0x0ab4, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flNextSparkTime; // 0x0ac0, 0x4 bytes
-                bool m_bCoreExplode; // 0x0ac4, 0x1 bytes
-                bool m_bLinkedToServerEnt; // 0x0ac5, 0x1 bytes
-                std::uint8_t pad_0ac6[0xa]; // 0x0ac6, 0xa bytes
+                std::uint8_t pad_0b78[0x8]; // 0x0b78, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0b80, 0x4 bytes
+                float m_flFadeInStart; // 0x0b84, 0x4 bytes
+                float m_flFadeInLength; // 0x0b88, 0x4 bytes
+                float m_flFadeOutModelStart; // 0x0b8c, 0x4 bytes
+                float m_flFadeOutModelLength; // 0x0b90, 0x4 bytes
+                float m_flFadeOutStart; // 0x0b94, 0x4 bytes
+                float m_flFadeOutLength; // 0x0b98, 0x4 bytes
+                shade::sdk::client::EntityDissolveType_t m_nDissolveType; // 0x0b9c, 0x4 bytes
+                std::uint32_t m_nMagnitude; // 0x0ba0, 0x4 bytes
+                VectorWS m_vDissolverOrigin; // 0x0ba4, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flNextSparkTime; // 0x0bb0, 0x4 bytes
+                bool m_bCoreExplode; // 0x0bb4, 0x1 bytes
+                bool m_bLinkedToServerEnt; // 0x0bb5, 0x1 bytes
+                std::uint8_t pad_0bb6[0xa]; // 0x0bb6, 0xa bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_EntityDissolve) == 0xAD0, "C_EntityDissolve size mismatch");
+            static_assert(sizeof(C_EntityDissolve) == 0xBC0, "C_EntityDissolve size mismatch");
         }
     }
 }

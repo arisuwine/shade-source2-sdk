@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,29 +39,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Riki_TricksOfTheTrade_Phase : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFxIndex; // 0x1a78, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1a7c, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_Timer; // 0x1a80, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPreviousTarget; // 0x1a98, 0x4 bytes
-                std::int32_t m_nSucceessiveHits; // 0x1a9c, 0x4 bytes
-                bool m_bGrantedGem; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x3]; // 0x1aa1, 0x3 bytes
-                float attack_rate; // 0x1aa4, 0x4 bytes
-                float attack_damage; // 0x1aa8, 0x4 bytes
-                std::int32_t agility_pct; // 0x1aac, 0x4 bytes
-                float cooldown_reduction_per_creep_kill; // 0x1ab0, 0x4 bytes
-                float speed_per_attack; // 0x1ab4, 0x4 bytes
-                float radius; // 0x1ab8, 0x4 bytes
-                std::int32_t interval_targets; // 0x1abc, 0x4 bytes
-                bool pocket_riki_enabled; // 0x1ac0, 0x1 bytes
-                std::uint8_t pad_1ac1[0x3]; // 0x1ac1, 0x3 bytes
-                float base_attack_damage_pct; // 0x1ac4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFxIndex; // 0x1aa8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1aac, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_Timer; // 0x1ab0, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPreviousTarget; // 0x1ac8, 0x4 bytes
+                std::int32_t m_nSucceessiveHits; // 0x1acc, 0x4 bytes
+                bool m_bGrantedGem; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
+                float attack_rate; // 0x1ad4, 0x4 bytes
+                float attack_damage; // 0x1ad8, 0x4 bytes
+                std::int32_t agility_pct; // 0x1adc, 0x4 bytes
+                float cooldown_reduction_per_creep_kill; // 0x1ae0, 0x4 bytes
+                float speed_per_attack; // 0x1ae4, 0x4 bytes
+                float radius; // 0x1ae8, 0x4 bytes
+                std::int32_t interval_targets; // 0x1aec, 0x4 bytes
+                bool pocket_riki_enabled; // 0x1af0, 0x1 bytes
+                std::uint8_t pad_1af1[0x3]; // 0x1af1, 0x3 bytes
+                float base_attack_damage_pct; // 0x1af4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Riki_TricksOfTheTrade_Phase) == 0x1AC8, "CDOTA_Modifier_Riki_TricksOfTheTrade_Phase size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Riki_TricksOfTheTrade_Phase) == 0x1AF8, "CDOTA_Modifier_Riki_TricksOfTheTrade_Phase size mismatch");
         }
     }
 }

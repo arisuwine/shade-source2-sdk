@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,22 +37,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Zuus_ThundergodsWrathThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t damage; // 0x1a78, 0x4 bytes
-                float damage_pct; // 0x1a7c, 0x4 bytes
-                float sight_duration; // 0x1a80, 0x4 bytes
-                float growing_delay; // 0x1a84, 0x4 bytes
-                float grow_kill_amp; // 0x1a88, 0x4 bytes
-                bool m_bZeusHasArcana; // 0x1a8c, 0x1 bytes
-                std::uint8_t pad_1a8d[0x3]; // 0x1a8d, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hTargetEntities; // 0x1a90, 0x18 bytes
-                std::int32_t m_nFarKills; // 0x1aa8, 0x4 bytes
-                std::int32_t m_nKills; // 0x1aac, 0x4 bytes
+                std::int32_t damage; // 0x1aa8, 0x4 bytes
+                float damage_pct; // 0x1aac, 0x4 bytes
+                float sight_duration; // 0x1ab0, 0x4 bytes
+                float growing_delay; // 0x1ab4, 0x4 bytes
+                float grow_kill_amp; // 0x1ab8, 0x4 bytes
+                bool m_bZeusHasArcana; // 0x1abc, 0x1 bytes
+                std::uint8_t pad_1abd[0x3]; // 0x1abd, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hTargetEntities; // 0x1ac0, 0x18 bytes
+                std::int32_t m_nFarKills; // 0x1ad8, 0x4 bytes
+                std::int32_t m_nKills; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Zuus_ThundergodsWrathThinker) == 0x1AB0, "CDOTA_Modifier_Zuus_ThundergodsWrathThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Zuus_ThundergodsWrathThinker) == 0x1AE0, "CDOTA_Modifier_Zuus_ThundergodsWrathThinker size mismatch");
         }
     }
 }

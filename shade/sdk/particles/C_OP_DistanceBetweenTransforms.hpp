@@ -16,17 +16,17 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/ParticleTraceSet_t.hpp"
 #include "shade/sdk/particleslib/CParticleTransformInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x908
+             * Size: 0x930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,28 +34,28 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_DistanceBetweenTransforms : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformStart; // 0x01e0, 0x68 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformEnd; // 0x0248, 0x68 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMin; // 0x02b0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMax; // 0x0420, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMin; // 0x0590, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMax; // 0x0700, 0x170 bytes
-                float m_flMaxTraceLength; // 0x0870, 0x4 bytes
-                float m_flLOSScale; // 0x0874, 0x4 bytes
-                char m_CollisionGroupName[0x80]; // 0x0878, 0x80 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x08f8, 0x4 bytes
-                bool m_bLOS; // 0x08fc, 0x1 bytes
-                std::uint8_t pad_08fd[0x3]; // 0x08fd, 0x3 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0900, 0x4 bytes
-                std::uint8_t pad_0904[0x4]; // 0x0904, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformStart; // 0x01e8, 0x68 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformEnd; // 0x0250, 0x68 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMin; // 0x02b8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMax; // 0x0430, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMin; // 0x05a8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMax; // 0x0720, 0x178 bytes
+                float m_flMaxTraceLength; // 0x0898, 0x4 bytes
+                float m_flLOSScale; // 0x089c, 0x4 bytes
+                char m_CollisionGroupName[0x80]; // 0x08a0, 0x80 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0920, 0x4 bytes
+                bool m_bLOS; // 0x0924, 0x1 bytes
+                std::uint8_t pad_0925[0x3]; // 0x0925, 0x3 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0928, 0x4 bytes
+                std::uint8_t pad_092c[0x4]; // 0x092c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_DistanceBetweenTransforms) == 0x908, "C_OP_DistanceBetweenTransforms size mismatch");
+            static_assert(sizeof(C_OP_DistanceBetweenTransforms) == 0x930, "C_OP_DistanceBetweenTransforms size mismatch");
         }
     }
 }

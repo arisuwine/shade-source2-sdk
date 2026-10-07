@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd20
+             * Size: 0xe90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DynamicPropClientside : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_0d10[0x8]; // 0x0d10, 0x8 bytes
-                bool m_bSetupMaterialProxy; // 0x0d18, 0x1 bytes
-                std::uint8_t pad_0d19[0x7]; // 0x0d19, 0x7 bytes
+                std::uint8_t pad_0e80[0x8]; // 0x0e80, 0x8 bytes
+                bool m_bSetupMaterialProxy; // 0x0e88, 0x1 bytes
+                std::uint8_t pad_0e89[0x7]; // 0x0e89, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DynamicPropClientside) == 0xD20, "C_DynamicPropClientside size mismatch");
+            static_assert(sizeof(C_DynamicPropClientside) == 0xE90, "C_DynamicPropClientside size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb70
+             * Size: 0xc50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CRagdollPropAttached : public shade::sdk::server::CRagdollProp {
             public:
-                std::uint32_t m_boneIndexAttached; // 0x0b30, 0x4 bytes
-                std::uint32_t m_ragdollAttachedObjectIndex; // 0x0b34, 0x4 bytes
-                Vector m_attachmentPointBoneSpace; // 0x0b38, 0xc bytes
-                Vector m_attachmentPointRagdollSpace; // 0x0b44, 0xc bytes
-                bool m_bShouldDetach; // 0x0b50, 0x1 bytes
-                std::uint8_t pad_0b51[0xf]; // 0x0b51, 0xf bytes
-                bool m_bShouldDeleteAttachedActivationRecord; // 0x0b60, 0x1 bytes
-                std::uint8_t pad_0b61[0xf]; // 0x0b61, 0xf bytes
+                std::uint32_t m_boneIndexAttached; // 0x0c10, 0x4 bytes
+                std::uint32_t m_ragdollAttachedObjectIndex; // 0x0c14, 0x4 bytes
+                Vector m_attachmentPointBoneSpace; // 0x0c18, 0xc bytes
+                Vector m_attachmentPointRagdollSpace; // 0x0c24, 0xc bytes
+                bool m_bShouldDetach; // 0x0c30, 0x1 bytes
+                std::uint8_t pad_0c31[0xf]; // 0x0c31, 0xf bytes
+                bool m_bShouldDeleteAttachedActivationRecord; // 0x0c40, 0x1 bytes
+                std::uint8_t pad_0c41[0xf]; // 0x0c41, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRagdollPropAttached) == 0xB70, "CRagdollPropAttached size mismatch");
+            static_assert(sizeof(CRagdollPropAttached) == 0xC50, "CRagdollPropAttached size mismatch");
         }
     }
 }

@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x520
+             * Size: 0x530
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateSequentialPathV2 : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_fMaxDistance; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flNumToAssign; // 0x0350, 0x170 bytes
-                bool m_bLoop; // 0x04c0, 0x1 bytes
-                bool m_bCPPairs; // 0x04c1, 0x1 bytes
-                bool m_bSaveOffset; // 0x04c2, 0x1 bytes
-                std::uint8_t pad_04c3[0xd]; // 0x04c3, 0xd bytes
-                shade::sdk::particles::CPathParameters m_PathParams; // 0x04d0, 0x40 bytes
-                std::uint8_t pad_0510[0x10]; // 0x0510, 0x10 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fMaxDistance; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flNumToAssign; // 0x0360, 0x178 bytes
+                bool m_bLoop; // 0x04d8, 0x1 bytes
+                bool m_bCPPairs; // 0x04d9, 0x1 bytes
+                bool m_bSaveOffset; // 0x04da, 0x1 bytes
+                std::uint8_t pad_04db[0x5]; // 0x04db, 0x5 bytes
+                shade::sdk::particles::CPathParameters m_PathParams; // 0x04e0, 0x40 bytes
+                std::uint8_t pad_0520[0x10]; // 0x0520, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateSequentialPathV2) == 0x520, "C_INIT_CreateSequentialPathV2 size mismatch");
+            static_assert(sizeof(C_INIT_CreateSequentialPathV2) == 0x530, "C_INIT_CreateSequentialPathV2 size mismatch");
         }
     }
 }

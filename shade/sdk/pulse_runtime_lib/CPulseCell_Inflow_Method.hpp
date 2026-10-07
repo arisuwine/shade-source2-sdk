@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0xc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,14 +42,14 @@ namespace shade {
                 CUtlString m_Description; // 0x0090, 0x8 bytes
                 bool m_bIsPublic; // 0x0098, 0x1 bytes
                 std::uint8_t pad_0099[0x7]; // 0x0099, 0x7 bytes
-                CPulseValueFullType m_ReturnType; // 0x00a0, 0x18 bytes
-                CUtlLeanVector<shade::sdk::pulse_runtime_lib::CPulseRuntimeMethodArg> m_Args; // 0x00b8, 0x10 bytes
+                CUtlLeanVector<shade::sdk::pulse_runtime_lib::CPulseRuntimeMethodArg> m_Args; // 0x00a0, 0x10 bytes
+                CUtlLeanVector<shade::sdk::pulse_runtime_lib::CPulseRuntimeMethodArg> m_ReturnValues; // 0x00b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_Inflow_Method) == 0xC8, "CPulseCell_Inflow_Method size mismatch");
+            static_assert(sizeof(CPulseCell_Inflow_Method) == 0xC0, "CPulseCell_Inflow_Method size mismatch");
         }
     }
 }

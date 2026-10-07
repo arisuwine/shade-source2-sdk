@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a30
+             * Size: 0x1b30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_CustomEffigy : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                std::uint32_t m_unStatusEffectIndex; // 0x1a28, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hPedestal; // 0x1a2c, 0x4 bytes
+                std::uint32_t m_unStatusEffectIndex; // 0x1b28, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hPedestal; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_CustomEffigy) == 0x1A30, "CDOTA_BaseNPC_CustomEffigy size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_CustomEffigy) == 0x1B30, "CDOTA_BaseNPC_CustomEffigy size mismatch");
         }
     }
 }

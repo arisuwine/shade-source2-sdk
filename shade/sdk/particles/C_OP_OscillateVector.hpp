@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x670
+             * Size: 0x690
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,28 +31,28 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_OscillateVector : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                Vector m_RateMin; // 0x01d8, 0xc bytes
-                Vector m_RateMax; // 0x01e4, 0xc bytes
-                Vector m_FrequencyMin; // 0x01f0, 0xc bytes
-                Vector m_FrequencyMax; // 0x01fc, 0xc bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nField; // 0x0208, 0x4 bytes
-                bool m_bProportional; // 0x020c, 0x1 bytes
-                bool m_bProportionalOp; // 0x020d, 0x1 bytes
-                bool m_bOffset; // 0x020e, 0x1 bytes
-                std::uint8_t pad_020f[0x1]; // 0x020f, 0x1 bytes
-                float m_flStartTime_min; // 0x0210, 0x4 bytes
-                float m_flStartTime_max; // 0x0214, 0x4 bytes
-                float m_flEndTime_min; // 0x0218, 0x4 bytes
-                float m_flEndTime_max; // 0x021c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOscMult; // 0x0220, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOscAdd; // 0x0390, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRateScale; // 0x0500, 0x170 bytes
+                Vector m_RateMin; // 0x01e0, 0xc bytes
+                Vector m_RateMax; // 0x01ec, 0xc bytes
+                Vector m_FrequencyMin; // 0x01f8, 0xc bytes
+                Vector m_FrequencyMax; // 0x0204, 0xc bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nField; // 0x0210, 0x4 bytes
+                bool m_bProportional; // 0x0214, 0x1 bytes
+                bool m_bProportionalOp; // 0x0215, 0x1 bytes
+                bool m_bOffset; // 0x0216, 0x1 bytes
+                std::uint8_t pad_0217[0x1]; // 0x0217, 0x1 bytes
+                float m_flStartTime_min; // 0x0218, 0x4 bytes
+                float m_flStartTime_max; // 0x021c, 0x4 bytes
+                float m_flEndTime_min; // 0x0220, 0x4 bytes
+                float m_flEndTime_max; // 0x0224, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOscMult; // 0x0228, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOscAdd; // 0x03a0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRateScale; // 0x0518, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_OscillateVector) == 0x670, "C_OP_OscillateVector size mismatch");
+            static_assert(sizeof(C_OP_OscillateVector) == 0x690, "C_OP_OscillateVector size mismatch");
         }
     }
 }

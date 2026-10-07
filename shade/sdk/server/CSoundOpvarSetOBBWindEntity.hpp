@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x580
+             * Size: 0x588
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetOBBWindEntity : public shade::sdk::server::CSoundOpvarSetPointBase {
             public:
-                Vector m_vMins; // 0x0540, 0xc bytes
-                Vector m_vMaxs; // 0x054c, 0xc bytes
-                Vector m_vDistanceMins; // 0x0558, 0xc bytes
-                Vector m_vDistanceMaxs; // 0x0564, 0xc bytes
-                float m_flWindMin; // 0x0570, 0x4 bytes
-                float m_flWindMax; // 0x0574, 0x4 bytes
-                float m_flWindMapMin; // 0x0578, 0x4 bytes
-                float m_flWindMapMax; // 0x057c, 0x4 bytes
+                Vector m_vMins; // 0x0548, 0xc bytes
+                Vector m_vMaxs; // 0x0554, 0xc bytes
+                Vector m_vDistanceMins; // 0x0560, 0xc bytes
+                Vector m_vDistanceMaxs; // 0x056c, 0xc bytes
+                float m_flWindMin; // 0x0578, 0x4 bytes
+                float m_flWindMax; // 0x057c, 0x4 bytes
+                float m_flWindMapMin; // 0x0580, 0x4 bytes
+                float m_flWindMapMax; // 0x0584, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetOBBWindEntity) == 0x580, "CSoundOpvarSetOBBWindEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetOBBWindEntity) == 0x588, "CSoundOpvarSetOBBWindEntity size mismatch");
         }
     }
 }

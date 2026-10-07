@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x1f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_VelocityFromNormal : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                float m_fSpeedMin; // 0x01e0, 0x4 bytes
-                float m_fSpeedMax; // 0x01e4, 0x4 bytes
-                bool m_bIgnoreDt; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x7]; // 0x01e9, 0x7 bytes
+                float m_fSpeedMin; // 0x01e8, 0x4 bytes
+                float m_fSpeedMax; // 0x01ec, 0x4 bytes
+                bool m_bIgnoreDt; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x7]; // 0x01f1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_VelocityFromNormal) == 0x1F0, "C_INIT_VelocityFromNormal size mismatch");
+            static_assert(sizeof(C_INIT_VelocityFromNormal) == 0x1F8, "C_INIT_VelocityFromNormal size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Rubick_Telekinesis : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1a78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fEndTime; // 0x1a7c, 0x4 bytes
-                float m_fTargetHeight; // 0x1a80, 0x4 bytes
-                float m_fCurHeight; // 0x1a84, 0x4 bytes
-                VectorWS m_vStartLoc; // 0x1a88, 0xc bytes
-                VectorWS m_vCurLoc; // 0x1a94, 0xc bytes
-                std::int32_t max_land_distance; // 0x1aa0, 0x4 bytes
-                float fall_duration; // 0x1aa4, 0x4 bytes
-                bool m_bOverrideDuration; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                float m_flOverrideDuration; // 0x1aac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1aa8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fEndTime; // 0x1aac, 0x4 bytes
+                float m_fTargetHeight; // 0x1ab0, 0x4 bytes
+                float m_fCurHeight; // 0x1ab4, 0x4 bytes
+                VectorWS m_vStartLoc; // 0x1ab8, 0xc bytes
+                VectorWS m_vCurLoc; // 0x1ac4, 0xc bytes
+                std::int32_t max_land_distance; // 0x1ad0, 0x4 bytes
+                float fall_duration; // 0x1ad4, 0x4 bytes
+                bool m_bOverrideDuration; // 0x1ad8, 0x1 bytes
+                std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
+                float m_flOverrideDuration; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Rubick_Telekinesis) == 0x1AB0, "CDOTA_Modifier_Rubick_Telekinesis size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Rubick_Telekinesis) == 0x1AE0, "CDOTA_Modifier_Rubick_Telekinesis size mismatch");
         }
     }
 }

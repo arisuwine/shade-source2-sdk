@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xab0
+             * Size: 0xba0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysicsPropRespawnable : public shade::sdk::server::CPhysicsProp {
             public:
-                VectorWS m_vOriginalSpawnOrigin; // 0x0a70, 0xc bytes
-                QAngle m_vOriginalSpawnAngles; // 0x0a7c, 0xc bytes
-                Vector m_vOriginalMins; // 0x0a88, 0xc bytes
-                Vector m_vOriginalMaxs; // 0x0a94, 0xc bytes
-                float m_flRespawnDuration; // 0x0aa0, 0x4 bytes
-                std::uint8_t pad_0aa4[0xc]; // 0x0aa4, 0xc bytes
+                VectorWS m_vOriginalSpawnOrigin; // 0x0b60, 0xc bytes
+                QAngle m_vOriginalSpawnAngles; // 0x0b6c, 0xc bytes
+                Vector m_vOriginalMins; // 0x0b78, 0xc bytes
+                Vector m_vOriginalMaxs; // 0x0b84, 0xc bytes
+                float m_flRespawnDuration; // 0x0b90, 0x4 bytes
+                std::uint8_t pad_0b94[0xc]; // 0x0b94, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysicsPropRespawnable) == 0xAB0, "CPhysicsPropRespawnable size mismatch");
+            static_assert(sizeof(CPhysicsPropRespawnable) == 0xBA0, "CPhysicsPropRespawnable size mismatch");
         }
     }
 }

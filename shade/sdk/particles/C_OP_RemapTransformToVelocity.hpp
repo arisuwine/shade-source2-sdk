@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x240
+             * Size: 0x248
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapTransformToVelocity : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01d8, 0x68 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e0, 0x68 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapTransformToVelocity) == 0x240, "C_OP_RemapTransformToVelocity size mismatch");
+            static_assert(sizeof(C_OP_RemapTransformToVelocity) == 0x248, "C_OP_RemapTransformToVelocity size mismatch");
         }
     }
 }

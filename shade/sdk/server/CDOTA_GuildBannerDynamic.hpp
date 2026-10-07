@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xb80
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,26 +31,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_GuildBannerDynamic : public shade::sdk::server::CDynamicProp {
             public:
-                bool m_bRespawnClientEntity; // 0x09f0, 0x1 bytes
-                bool m_bPlaySpawnAnimation; // 0x09f1, 0x1 bytes
-                std::uint8_t m_unGuildTier; // 0x09f2, 0x1 bytes
-                std::uint8_t m_unPrimaryColor; // 0x09f3, 0x1 bytes
-                std::uint8_t m_unSecondaryColor; // 0x09f4, 0x1 bytes
-                std::uint8_t m_unPattern; // 0x09f5, 0x1 bytes
-                std::uint8_t pad_09f6[0x2]; // 0x09f6, 0x2 bytes
-                std::uint64_t m_unLogo; // 0x09f8, 0x8 bytes
-                shade::sdk::client::GuildID_t m_unGuildID; // 0x0a00, 0x4 bytes
-                std::uint32_t m_unGuildFlags; // 0x0a04, 0x4 bytes
-                bool m_bUsePanelCache; // 0x0a08, 0x1 bytes
-                std::uint8_t pad_0a09[0x7]; // 0x0a09, 0x7 bytes
+                bool m_bRespawnClientEntity; // 0x0b60, 0x1 bytes
+                bool m_bPlaySpawnAnimation; // 0x0b61, 0x1 bytes
+                std::uint8_t m_unGuildTier; // 0x0b62, 0x1 bytes
+                std::uint8_t m_unPrimaryColor; // 0x0b63, 0x1 bytes
+                std::uint8_t m_unSecondaryColor; // 0x0b64, 0x1 bytes
+                std::uint8_t m_unPattern; // 0x0b65, 0x1 bytes
+                std::uint8_t pad_0b66[0x2]; // 0x0b66, 0x2 bytes
+                std::uint64_t m_unLogo; // 0x0b68, 0x8 bytes
+                shade::sdk::client::GuildID_t m_unGuildID; // 0x0b70, 0x4 bytes
+                std::uint32_t m_unGuildFlags; // 0x0b74, 0x4 bytes
+                bool m_bUsePanelCache; // 0x0b78, 0x1 bytes
+                std::uint8_t pad_0b79[0x7]; // 0x0b79, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_GuildBannerDynamic) == 0xA10, "CDOTA_GuildBannerDynamic size mismatch");
+            static_assert(sizeof(CDOTA_GuildBannerDynamic) == 0xB80, "CDOTA_GuildBannerDynamic size mismatch");
         }
     }
 }

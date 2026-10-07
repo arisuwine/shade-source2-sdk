@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb60
+             * Size: 0xc50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseCombatCharacter : public shade::sdk::client::C_BaseAnimatingOverlay {
             public:
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_EconWearable>> m_hMyWearables; // 0x0ac0, 0x18 bytes
-                std::uint8_t pad_0ad8[0x18]; // 0x0ad8, 0x18 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_leftFootAttachment; // 0x0af0, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_rightFootAttachment; // 0x0af1, 0x1 bytes
-                std::uint8_t pad_0af2[0x2]; // 0x0af2, 0x2 bytes
-                shade::sdk::client::C_BaseCombatCharacter__WaterWakeMode_t m_nWaterWakeMode; // 0x0af4, 0x4 bytes
-                float m_flWaterWorldZ; // 0x0af8, 0x4 bytes
-                float m_flWaterNextTraceTime; // 0x0afc, 0x4 bytes
-                std::uint8_t pad_0b00[0x60]; // 0x0b00, 0x60 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_EconWearable>> m_hMyWearables; // 0x0bb0, 0x18 bytes
+                std::uint8_t pad_0bc8[0x18]; // 0x0bc8, 0x18 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_leftFootAttachment; // 0x0be0, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_rightFootAttachment; // 0x0be1, 0x1 bytes
+                std::uint8_t pad_0be2[0x2]; // 0x0be2, 0x2 bytes
+                shade::sdk::client::C_BaseCombatCharacter__WaterWakeMode_t m_nWaterWakeMode; // 0x0be4, 0x4 bytes
+                float m_flWaterWorldZ; // 0x0be8, 0x4 bytes
+                float m_flWaterNextTraceTime; // 0x0bec, 0x4 bytes
+                std::uint8_t pad_0bf0[0x60]; // 0x0bf0, 0x60 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseCombatCharacter) == 0xB60, "C_BaseCombatCharacter size mismatch");
+            static_assert(sizeof(C_BaseCombatCharacter) == 0xC50, "C_BaseCombatCharacter size mismatch");
         }
     }
 }

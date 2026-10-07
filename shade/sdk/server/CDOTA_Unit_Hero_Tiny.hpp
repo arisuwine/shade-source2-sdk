@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f18
+             * Size: 0x2030
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,19 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_Tiny : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTreeWearable; // 0x1f08, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexScepterAmbient; // 0x1f0c, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hIllusionOwner; // 0x1f10, 0x4 bytes
-                bool m_bIllusionHasTree; // 0x1f14, 0x1 bytes
-                std::uint8_t pad_1f15[0x3]; // 0x1f15, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTreeWearable; // 0x2020, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexScepterAmbient; // 0x2024, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hIllusionOwner; // 0x2028, 0x4 bytes
+                bool m_bIllusionHasTree; // 0x202c, 0x1 bytes
+                std::uint8_t pad_202d[0x3]; // 0x202d, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_Tiny) == 0x1F18, "CDOTA_Unit_Hero_Tiny size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_Tiny) == 0x2030, "CDOTA_Unit_Hero_Tiny size mismatch");
         }
     }
 }

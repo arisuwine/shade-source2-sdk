@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,30 +37,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Tiny_Toss : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1a78, 0x4 bytes
-                float m_flPredictedTotalTime; // 0x1a7c, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1a80, 0xc bytes
-                float m_flCurrentTimeHoriz; // 0x1a8c, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1a90, 0x4 bytes
-                bool m_bHorizontalMotionInterrupted; // 0x1a94, 0x1 bytes
-                bool m_bDamageApplied; // 0x1a95, 0x1 bytes
-                bool m_bTargetTeleported; // 0x1a96, 0x1 bytes
-                std::uint8_t pad_1a97[0x1]; // 0x1a97, 0x1 bytes
-                Vector m_vHorizontalVelocity; // 0x1a98, 0xc bytes
-                VectorWS m_vLastKnownTargetPosition; // 0x1aa4, 0xc bytes
-                float m_flInitialVelocityZ; // 0x1ab0, 0x4 bytes
-                bool m_bDone; // 0x1ab4, 0x1 bytes
-                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
-                float radius; // 0x1ab8, 0x4 bytes
-                std::int32_t toss_damage; // 0x1abc, 0x4 bytes
-                std::int32_t toss_land_damage_pct; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1aa8, 0x4 bytes
+                float m_flPredictedTotalTime; // 0x1aac, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1ab0, 0xc bytes
+                float m_flCurrentTimeHoriz; // 0x1abc, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1ac0, 0x4 bytes
+                bool m_bHorizontalMotionInterrupted; // 0x1ac4, 0x1 bytes
+                bool m_bDamageApplied; // 0x1ac5, 0x1 bytes
+                bool m_bTargetTeleported; // 0x1ac6, 0x1 bytes
+                std::uint8_t pad_1ac7[0x1]; // 0x1ac7, 0x1 bytes
+                Vector m_vHorizontalVelocity; // 0x1ac8, 0xc bytes
+                VectorWS m_vLastKnownTargetPosition; // 0x1ad4, 0xc bytes
+                float m_flInitialVelocityZ; // 0x1ae0, 0x4 bytes
+                bool m_bDone; // 0x1ae4, 0x1 bytes
+                std::uint8_t pad_1ae5[0x3]; // 0x1ae5, 0x3 bytes
+                float radius; // 0x1ae8, 0x4 bytes
+                std::int32_t toss_damage; // 0x1aec, 0x4 bytes
+                std::int32_t toss_land_damage_pct; // 0x1af0, 0x4 bytes
+                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Tiny_Toss) == 0x1AC8, "CDOTA_Modifier_Tiny_Toss size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Tiny_Toss) == 0x1AF8, "CDOTA_Modifier_Tiny_Toss size mismatch");
         }
     }
 }

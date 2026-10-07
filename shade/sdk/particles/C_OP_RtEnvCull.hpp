@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x280
+             * Size: 0x288
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,21 +29,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RtEnvCull : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                Vector m_vecTestDir; // 0x01d8, 0xc bytes
-                Vector m_vecTestNormal; // 0x01e4, 0xc bytes
-                bool m_bCullOnMiss; // 0x01f0, 0x1 bytes
-                bool m_bStickInsteadOfCull; // 0x01f1, 0x1 bytes
-                char m_RtEnvName[0x80]; // 0x01f2, 0x80 bytes
-                std::uint8_t pad_0272[0x2]; // 0x0272, 0x2 bytes
-                std::int32_t m_nRTEnvCP; // 0x0274, 0x4 bytes
-                std::int32_t m_nComponent; // 0x0278, 0x4 bytes
-                std::uint8_t pad_027c[0x4]; // 0x027c, 0x4 bytes
+                Vector m_vecTestDir; // 0x01e0, 0xc bytes
+                Vector m_vecTestNormal; // 0x01ec, 0xc bytes
+                bool m_bCullOnMiss; // 0x01f8, 0x1 bytes
+                bool m_bStickInsteadOfCull; // 0x01f9, 0x1 bytes
+                char m_RtEnvName[0x80]; // 0x01fa, 0x80 bytes
+                std::uint8_t pad_027a[0x2]; // 0x027a, 0x2 bytes
+                std::int32_t m_nRTEnvCP; // 0x027c, 0x4 bytes
+                std::int32_t m_nComponent; // 0x0280, 0x4 bytes
+                std::uint8_t pad_0284[0x4]; // 0x0284, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RtEnvCull) == 0x280, "C_OP_RtEnvCull size mismatch");
+            static_assert(sizeof(C_OP_RtEnvCull) == 0x288, "C_OP_RtEnvCull size mismatch");
         }
     }
 }

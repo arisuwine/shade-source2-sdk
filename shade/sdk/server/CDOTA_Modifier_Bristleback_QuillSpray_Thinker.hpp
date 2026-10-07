@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Bristleback_QuillSpray_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fCurRadius; // 0x1a78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1a7c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_entitiesHit; // 0x1a80, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_ViewerTimer; // 0x1a98, 0x18 bytes
-                std::int32_t projectile_speed; // 0x1ab0, 0x4 bytes
-                float radius; // 0x1ab4, 0x4 bytes
-                bool m_bTriggeredByBristleback; // 0x1ab8, 0x1 bytes
-                bool m_bDelayed; // 0x1ab9, 0x1 bytes
-                std::uint8_t pad_1aba[0x2]; // 0x1aba, 0x2 bytes
-                std::int32_t m_nAngleRestriction; // 0x1abc, 0x4 bytes
-                Vector m_vFacing; // 0x1ac0, 0xc bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                float m_fCurRadius; // 0x1aa8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1aac, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_entitiesHit; // 0x1ab0, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_ViewerTimer; // 0x1ac8, 0x18 bytes
+                std::int32_t projectile_speed; // 0x1ae0, 0x4 bytes
+                float radius; // 0x1ae4, 0x4 bytes
+                bool m_bTriggeredByBristleback; // 0x1ae8, 0x1 bytes
+                bool m_bDelayed; // 0x1ae9, 0x1 bytes
+                std::uint8_t pad_1aea[0x2]; // 0x1aea, 0x2 bytes
+                std::int32_t m_nAngleRestriction; // 0x1aec, 0x4 bytes
+                Vector m_vFacing; // 0x1af0, 0xc bytes
+                std::uint8_t pad_1afc[0x4]; // 0x1afc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Bristleback_QuillSpray_Thinker) == 0x1AD0, "CDOTA_Modifier_Bristleback_QuillSpray_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Bristleback_QuillSpray_Thinker) == 0x1B00, "CDOTA_Modifier_Bristleback_QuillSpray_Thinker size mismatch");
         }
     }
 }

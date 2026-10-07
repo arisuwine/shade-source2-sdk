@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x660
+             * Size: 0x668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_AghsFort_Arcanist_Potion : public shade::sdk::server::CDOTA_Item {
             public:
-                std::int32_t cooldown_reduction_pct; // 0x0658, 0x4 bytes
-                std::int32_t manacost_reduction_pct; // 0x065c, 0x4 bytes
+                std::int32_t cooldown_reduction_pct; // 0x0660, 0x4 bytes
+                std::int32_t manacost_reduction_pct; // 0x0664, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_AghsFort_Arcanist_Potion) == 0x660, "CDOTA_Ability_AghsFort_Arcanist_Potion size mismatch");
+            static_assert(sizeof(CDOTA_Ability_AghsFort_Arcanist_Potion) == 0x668, "CDOTA_Ability_AghsFort_Arcanist_Potion size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9b8
+             * Size: 0xaa0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTAPlayerPawn : public shade::sdk::server::CBasePlayerPawn {
             public:
-                shade::sdk::client::PlayerID_t m_nPlayerID; // 0x09b0, 0x4 bytes
-                std::uint8_t pad_09b4[0x4]; // 0x09b4, 0x4 bytes
+                shade::sdk::client::PlayerID_t m_nPlayerID; // 0x0a98, 0x4 bytes
+                std::uint8_t pad_0a9c[0x4]; // 0x0a9c, 0x4 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0x8a0, Size: 0x1, Size In Bytes: 0x8
+             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0x980, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(CDOTAPlayerPawn) == 0x9B8, "CDOTAPlayerPawn size mismatch");
+            static_assert(sizeof(CDOTAPlayerPawn) == 0xAA0, "CDOTAPlayerPawn size mismatch");
         }
     }
 }

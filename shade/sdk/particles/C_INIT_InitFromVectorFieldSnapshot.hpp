@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InitFromVectorFieldSnapshot : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                std::int32_t m_nLocalSpaceCP; // 0x01e4, 0x4 bytes
-                std::int32_t m_nWeightUpdateCP; // 0x01e8, 0x4 bytes
-                bool m_bUseVerticalVelocity; // 0x01ec, 0x1 bytes
-                std::uint8_t pad_01ed[0x3]; // 0x01ed, 0x3 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecScale; // 0x01f0, 0x6b8 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                std::int32_t m_nLocalSpaceCP; // 0x01ec, 0x4 bytes
+                std::int32_t m_nWeightUpdateCP; // 0x01f0, 0x4 bytes
+                bool m_bUseVerticalVelocity; // 0x01f4, 0x1 bytes
+                std::uint8_t pad_01f5[0x3]; // 0x01f5, 0x3 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecScale; // 0x01f8, 0x6d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InitFromVectorFieldSnapshot) == 0x8A8, "C_INIT_InitFromVectorFieldSnapshot size mismatch");
+            static_assert(sizeof(C_INIT_InitFromVectorFieldSnapshot) == 0x8D0, "C_INIT_InitFromVectorFieldSnapshot size mismatch");
         }
     }
 }

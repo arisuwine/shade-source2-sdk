@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x678
+             * Size: 0x680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_AghsFort_Dragon_Potion : public shade::sdk::server::CDOTA_Item {
             public:
-                std::int32_t bonus_movement_speed; // 0x0658, 0x4 bytes
-                std::int32_t bonus_attack_damage; // 0x065c, 0x4 bytes
-                std::int32_t bonus_attack_range; // 0x0660, 0x4 bytes
-                std::int32_t magic_resistance; // 0x0664, 0x4 bytes
-                std::int32_t model_scale; // 0x0668, 0x4 bytes
-                std::int32_t skin_number; // 0x066c, 0x4 bytes
-                bool flying_movement; // 0x0670, 0x1 bytes
-                std::uint8_t pad_0671[0x7]; // 0x0671, 0x7 bytes
+                std::int32_t bonus_movement_speed; // 0x0660, 0x4 bytes
+                std::int32_t bonus_attack_damage; // 0x0664, 0x4 bytes
+                std::int32_t bonus_attack_range; // 0x0668, 0x4 bytes
+                std::int32_t magic_resistance; // 0x066c, 0x4 bytes
+                std::int32_t model_scale; // 0x0670, 0x4 bytes
+                std::int32_t skin_number; // 0x0674, 0x4 bytes
+                bool flying_movement; // 0x0678, 0x1 bytes
+                std::uint8_t pad_0679[0x7]; // 0x0679, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_AghsFort_Dragon_Potion) == 0x678, "CDOTA_Ability_AghsFort_Dragon_Potion size mismatch");
+            static_assert(sizeof(CDOTA_Ability_AghsFort_Dragon_Potion) == 0x680, "CDOTA_Ability_AghsFort_Dragon_Potion size mismatch");
         }
     }
 }

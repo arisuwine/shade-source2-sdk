@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,26 +29,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Snapfire_FiresnapCookie_ShortHop : public shade::sdk::client::CDOTA_Buff {
             public:
-                float jump_duration; // 0x1a78, 0x4 bytes
-                std::int32_t jump_height; // 0x1a7c, 0x4 bytes
-                std::int32_t jump_horizontal_distance; // 0x1a80, 0x4 bytes
-                float pre_land_anim_time; // 0x1a84, 0x4 bytes
-                float landing_gesture_duration; // 0x1a88, 0x4 bytes
-                float impact_radius; // 0x1a8c, 0x4 bytes
-                std::int32_t impact_damage; // 0x1a90, 0x4 bytes
-                float impact_stun_duration; // 0x1a94, 0x4 bytes
-                float m_flStartZ; // 0x1a98, 0x4 bytes
-                float m_flCurTime; // 0x1a9c, 0x4 bytes
-                float m_flJumpDuration; // 0x1aa0, 0x4 bytes
-                float m_flJumpHeight; // 0x1aa4, 0x4 bytes
-                Vector m_vTargetHorizontalDirection; // 0x1aa8, 0xc bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                float jump_duration; // 0x1aa8, 0x4 bytes
+                std::int32_t jump_height; // 0x1aac, 0x4 bytes
+                std::int32_t jump_horizontal_distance; // 0x1ab0, 0x4 bytes
+                float pre_land_anim_time; // 0x1ab4, 0x4 bytes
+                float landing_gesture_duration; // 0x1ab8, 0x4 bytes
+                float impact_radius; // 0x1abc, 0x4 bytes
+                std::int32_t impact_damage; // 0x1ac0, 0x4 bytes
+                float impact_stun_duration; // 0x1ac4, 0x4 bytes
+                float m_flStartZ; // 0x1ac8, 0x4 bytes
+                float m_flCurTime; // 0x1acc, 0x4 bytes
+                float m_flJumpDuration; // 0x1ad0, 0x4 bytes
+                float m_flJumpHeight; // 0x1ad4, 0x4 bytes
+                Vector m_vTargetHorizontalDirection; // 0x1ad8, 0xc bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Snapfire_FiresnapCookie_ShortHop) == 0x1AB8, "CDOTA_Modifier_Snapfire_FiresnapCookie_ShortHop size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Snapfire_FiresnapCookie_ShortHop) == 0x1AE8, "CDOTA_Modifier_Snapfire_FiresnapCookie_ShortHop size mismatch");
         }
     }
 }

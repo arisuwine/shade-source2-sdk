@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x708
+             * Size: 0x710
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,36 +31,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_DataDriven : public shade::sdk::server::CDOTA_Item, public shade::sdk::server::CDOTA_ActionRunner {
             public:
-                bool m_bProcsMagicStick; // 0x0670, 0x1 bytes
-                bool m_bIsSharedWithTeammates; // 0x0671, 0x1 bytes
-                bool m_bCastFilterRejectCaster; // 0x0672, 0x1 bytes
-                std::uint8_t pad_0673[0x1]; // 0x0673, 0x1 bytes
-                float m_fAnimationPlaybackRate; // 0x0674, 0x4 bytes
-                float m_fAOERadius; // 0x0678, 0x4 bytes
-                std::uint8_t pad_067c[0x4]; // 0x067c, 0x4 bytes
-                CUtlVector<KeyValues*> m_ModifierKVDescriptions; // 0x0680, 0x18 bytes
-                KeyValues *m_pOnChannelFinishKV; // 0x0698, 0x8 bytes
-                KeyValues *m_pOnChannelSucceededKV; // 0x06a0, 0x8 bytes
-                KeyValues *m_pOnChannelInterruptedKV; // 0x06a8, 0x8 bytes
-                KeyValues *m_pOnOwnerSpawnedKV; // 0x06b0, 0x8 bytes
-                KeyValues *m_pOnOwnerDiedKV; // 0x06b8, 0x8 bytes
-                KeyValues *m_pOnProjectileHitUnitKV; // 0x06c0, 0x8 bytes
-                KeyValues *m_pOnProjectileFinishKV; // 0x06c8, 0x8 bytes
-                KeyValues *m_pOnSpellStartKV; // 0x06d0, 0x8 bytes
-                KeyValues *m_pOnAbilityPhaseStartKV; // 0x06d8, 0x8 bytes
-                KeyValues *m_pOnToggleOnKV; // 0x06e0, 0x8 bytes
-                KeyValues *m_pOnToggleOffKV; // 0x06e8, 0x8 bytes
-                KeyValues *m_pOnEquipKV; // 0x06f0, 0x8 bytes
-                KeyValues *m_pOnUnequipKV; // 0x06f8, 0x8 bytes
-                KeyValues *m_pOnCreatedKV; // 0x0700, 0x8 bytes
+                bool m_bProcsMagicStick; // 0x0678, 0x1 bytes
+                bool m_bIsSharedWithTeammates; // 0x0679, 0x1 bytes
+                bool m_bCastFilterRejectCaster; // 0x067a, 0x1 bytes
+                std::uint8_t pad_067b[0x1]; // 0x067b, 0x1 bytes
+                float m_fAnimationPlaybackRate; // 0x067c, 0x4 bytes
+                float m_fAOERadius; // 0x0680, 0x4 bytes
+                std::uint8_t pad_0684[0x4]; // 0x0684, 0x4 bytes
+                CUtlVector<KeyValues*> m_ModifierKVDescriptions; // 0x0688, 0x18 bytes
+                KeyValues *m_pOnChannelFinishKV; // 0x06a0, 0x8 bytes
+                KeyValues *m_pOnChannelSucceededKV; // 0x06a8, 0x8 bytes
+                KeyValues *m_pOnChannelInterruptedKV; // 0x06b0, 0x8 bytes
+                KeyValues *m_pOnOwnerSpawnedKV; // 0x06b8, 0x8 bytes
+                KeyValues *m_pOnOwnerDiedKV; // 0x06c0, 0x8 bytes
+                KeyValues *m_pOnProjectileHitUnitKV; // 0x06c8, 0x8 bytes
+                KeyValues *m_pOnProjectileFinishKV; // 0x06d0, 0x8 bytes
+                KeyValues *m_pOnSpellStartKV; // 0x06d8, 0x8 bytes
+                KeyValues *m_pOnAbilityPhaseStartKV; // 0x06e0, 0x8 bytes
+                KeyValues *m_pOnToggleOnKV; // 0x06e8, 0x8 bytes
+                KeyValues *m_pOnToggleOffKV; // 0x06f0, 0x8 bytes
+                KeyValues *m_pOnEquipKV; // 0x06f8, 0x8 bytes
+                KeyValues *m_pOnUnequipKV; // 0x0700, 0x8 bytes
+                KeyValues *m_pOnCreatedKV; // 0x0708, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_DataDriven) == 0x708, "CDOTA_Item_DataDriven size mismatch");
+            static_assert(sizeof(CDOTA_Item_DataDriven) == 0x710, "CDOTA_Item_DataDriven size mismatch");
         }
     }
 }

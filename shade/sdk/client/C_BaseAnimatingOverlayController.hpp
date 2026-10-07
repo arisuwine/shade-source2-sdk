@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x670
+             * Size: 0x5f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,16 +37,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BaseAnimatingOverlayController : public shade::sdk::client::C_BaseAnimatingController {
             public:
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CAnimationLayer> m_AnimOverlay; // 0x05e8, 0x68 bytes
-                std::uint8_t pad_0650[0x20]; // 0x0650, 0x20 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CAnimationLayer> m_AnimOverlay; // 0x0568, 0x68 bytes
+                std::uint8_t pad_05d0[0x20]; // 0x05d0, 0x20 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_BaseAnimatingOverlayController) == 0x670, "C_BaseAnimatingOverlayController size mismatch");
+            static_assert(sizeof(C_BaseAnimatingOverlayController) == 0x5F0, "C_BaseAnimatingOverlayController size mismatch");
         }
     }
 }

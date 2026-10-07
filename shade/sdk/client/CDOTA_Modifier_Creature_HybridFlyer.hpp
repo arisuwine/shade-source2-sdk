@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Creature_HybridFlyer : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::CountdownTimer m_ctTimer; // 0x1a78, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_ctTimer; // 0x1aa8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Creature_HybridFlyer) == 0x1A90, "CDOTA_Modifier_Creature_HybridFlyer size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Creature_HybridFlyer) == 0x1AC0, "CDOTA_Modifier_Creature_HybridFlyer size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18d8
+             * Size: 0x19c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Creep : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                shade::sdk::server::CDOTA_CreepKillInfo m_KillInfo; // 0x18a8, 0x20 bytes
-                shade::sdk::client::DOTA_LANE m_Lane; // 0x18c8, 0x4 bytes
-                bool m_bPushback; // 0x18cc, 0x1 bytes
-                std::uint8_t pad_18cd[0x3]; // 0x18cd, 0x3 bytes
-                float m_flAim; // 0x18d0, 0x4 bytes
-                std::uint8_t pad_18d4[0x4]; // 0x18d4, 0x4 bytes
+                shade::sdk::server::CDOTA_CreepKillInfo m_KillInfo; // 0x1998, 0x20 bytes
+                shade::sdk::client::DOTA_LANE m_Lane; // 0x19b8, 0x4 bytes
+                bool m_bPushback; // 0x19bc, 0x1 bytes
+                std::uint8_t pad_19bd[0x3]; // 0x19bd, 0x3 bytes
+                float m_flAim; // 0x19c0, 0x4 bytes
+                std::uint8_t pad_19c4[0x4]; // 0x19c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Creep) == 0x18D8, "CDOTA_BaseNPC_Creep size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Creep) == 0x19C8, "CDOTA_BaseNPC_Creep size mismatch");
         }
     }
 }

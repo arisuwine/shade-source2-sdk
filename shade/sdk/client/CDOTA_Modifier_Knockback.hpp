@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,27 +29,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Knockback : public shade::sdk::client::CDOTA_Buff {
             public:
-                float knockback_distance; // 0x1a78, 0x4 bytes
-                std::int32_t knockback_height; // 0x1a7c, 0x4 bytes
-                float knockback_duration; // 0x1a80, 0x4 bytes
-                Vector m_vHorizOffset; // 0x1a84, 0xc bytes
-                VectorWS m_vStartPosition; // 0x1a90, 0xc bytes
-                float m_flZDelta; // 0x1a9c, 0x4 bytes
-                float m_fCurrentTimeHoriz; // 0x1aa0, 0x4 bytes
-                float m_fCurrentTimeVert; // 0x1aa4, 0x4 bytes
-                bool m_bShouldStun; // 0x1aa8, 0x1 bytes
-                bool m_bRespectLeash; // 0x1aa9, 0x1 bytes
-                bool m_bReversePolarity; // 0x1aaa, 0x1 bytes
-                bool m_bRelativeToGround; // 0x1aab, 0x1 bytes
-                bool m_bDestroyTreesOnRoute; // 0x1aac, 0x1 bytes
-                bool m_bFindClearSpace; // 0x1aad, 0x1 bytes
-                std::uint8_t pad_1aae[0x2]; // 0x1aae, 0x2 bytes
+                float knockback_distance; // 0x1aa8, 0x4 bytes
+                std::int32_t knockback_height; // 0x1aac, 0x4 bytes
+                float knockback_duration; // 0x1ab0, 0x4 bytes
+                Vector m_vHorizOffset; // 0x1ab4, 0xc bytes
+                VectorWS m_vStartPosition; // 0x1ac0, 0xc bytes
+                float m_flZDelta; // 0x1acc, 0x4 bytes
+                float m_fCurrentTimeHoriz; // 0x1ad0, 0x4 bytes
+                float m_fCurrentTimeVert; // 0x1ad4, 0x4 bytes
+                bool m_bShouldStun; // 0x1ad8, 0x1 bytes
+                bool m_bRespectLeash; // 0x1ad9, 0x1 bytes
+                bool m_bReversePolarity; // 0x1ada, 0x1 bytes
+                bool m_bRelativeToGround; // 0x1adb, 0x1 bytes
+                bool m_bDestroyTreesOnRoute; // 0x1adc, 0x1 bytes
+                bool m_bFindClearSpace; // 0x1add, 0x1 bytes
+                std::uint8_t pad_1ade[0x2]; // 0x1ade, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Knockback) == 0x1AB0, "CDOTA_Modifier_Knockback size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Knockback) == 0x1AE0, "CDOTA_Modifier_Knockback size mismatch");
         }
     }
 }

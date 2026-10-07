@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_FadeAndKill : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flStartFadeInTime; // 0x01d8, 0x4 bytes
-                float m_flEndFadeInTime; // 0x01dc, 0x4 bytes
-                float m_flStartFadeOutTime; // 0x01e0, 0x4 bytes
-                float m_flEndFadeOutTime; // 0x01e4, 0x4 bytes
-                float m_flStartAlpha; // 0x01e8, 0x4 bytes
-                float m_flEndAlpha; // 0x01ec, 0x4 bytes
-                bool m_bForcePreserveParticleOrder; // 0x01f0, 0x1 bytes
-                std::uint8_t pad_01f1[0x7]; // 0x01f1, 0x7 bytes
+                float m_flStartFadeInTime; // 0x01e0, 0x4 bytes
+                float m_flEndFadeInTime; // 0x01e4, 0x4 bytes
+                float m_flStartFadeOutTime; // 0x01e8, 0x4 bytes
+                float m_flEndFadeOutTime; // 0x01ec, 0x4 bytes
+                float m_flStartAlpha; // 0x01f0, 0x4 bytes
+                float m_flEndAlpha; // 0x01f4, 0x4 bytes
+                bool m_bForcePreserveParticleOrder; // 0x01f8, 0x1 bytes
+                std::uint8_t pad_01f9[0x7]; // 0x01f9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_FadeAndKill) == 0x1F8, "C_OP_FadeAndKill size mismatch");
+            static_assert(sizeof(C_OP_FadeAndKill) == 0x200, "C_OP_FadeAndKill size mismatch");
         }
     }
 }

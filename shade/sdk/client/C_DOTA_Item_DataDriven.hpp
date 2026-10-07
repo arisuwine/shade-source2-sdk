@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7f0
+             * Size: 0x7f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,36 +30,34 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Item_DataDriven : public shade::sdk::client::C_DOTA_Item {
             public:
-                bool m_bProcsMagicStick; // 0x0758, 0x1 bytes
-                bool m_bIsSharedWithTeammates; // 0x0759, 0x1 bytes
-                bool m_bCastFilterRejectCaster; // 0x075a, 0x1 bytes
-                std::uint8_t pad_075b[0x1]; // 0x075b, 0x1 bytes
-                float m_fAnimationPlaybackRate; // 0x075c, 0x4 bytes
-                float m_fAOERadius; // 0x0760, 0x4 bytes
-                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
-                CUtlVector<KeyValues*> m_ModifierKVDescriptions; // 0x0768, 0x18 bytes
-                KeyValues *m_pOnChannelFinishKV; // 0x0780, 0x8 bytes
-                KeyValues *m_pOnChannelSucceededKV; // 0x0788, 0x8 bytes
-                KeyValues *m_pOnChannelInterruptedKV; // 0x0790, 0x8 bytes
-                KeyValues *m_pOnOwnerSpawnedKV; // 0x0798, 0x8 bytes
-                KeyValues *m_pOnOwnerDiedKV; // 0x07a0, 0x8 bytes
-                KeyValues *m_pOnProjectileHitUnitKV; // 0x07a8, 0x8 bytes
-                KeyValues *m_pOnProjectileFinishKV; // 0x07b0, 0x8 bytes
-                KeyValues *m_pOnSpellStartKV; // 0x07b8, 0x8 bytes
-                KeyValues *m_pOnAbilityPhaseStartKV; // 0x07c0, 0x8 bytes
-                KeyValues *m_pOnToggleOnKV; // 0x07c8, 0x8 bytes
-                KeyValues *m_pOnToggleOffKV; // 0x07d0, 0x8 bytes
-                KeyValues *m_pOnEquipKV; // 0x07d8, 0x8 bytes
-                KeyValues *m_pOnUnequipKV; // 0x07e0, 0x8 bytes
-                KeyValues *m_pOnCreatedKV; // 0x07e8, 0x8 bytes
+                bool m_bProcsMagicStick; // 0x0760, 0x1 bytes
+                bool m_bIsSharedWithTeammates; // 0x0761, 0x1 bytes
+                bool m_bCastFilterRejectCaster; // 0x0762, 0x1 bytes
+                std::uint8_t pad_0763[0x1]; // 0x0763, 0x1 bytes
+                float m_fAnimationPlaybackRate; // 0x0764, 0x4 bytes
+                float m_fAOERadius; // 0x0768, 0x4 bytes
+                std::uint8_t pad_076c[0x4]; // 0x076c, 0x4 bytes
+                CUtlVector<KeyValues*> m_ModifierKVDescriptions; // 0x0770, 0x18 bytes
+                KeyValues *m_pOnChannelFinishKV; // 0x0788, 0x8 bytes
+                KeyValues *m_pOnChannelSucceededKV; // 0x0790, 0x8 bytes
+                KeyValues *m_pOnChannelInterruptedKV; // 0x0798, 0x8 bytes
+                KeyValues *m_pOnOwnerSpawnedKV; // 0x07a0, 0x8 bytes
+                KeyValues *m_pOnOwnerDiedKV; // 0x07a8, 0x8 bytes
+                KeyValues *m_pOnProjectileHitUnitKV; // 0x07b0, 0x8 bytes
+                KeyValues *m_pOnProjectileFinishKV; // 0x07b8, 0x8 bytes
+                KeyValues *m_pOnSpellStartKV; // 0x07c0, 0x8 bytes
+                KeyValues *m_pOnAbilityPhaseStartKV; // 0x07c8, 0x8 bytes
+                KeyValues *m_pOnToggleOnKV; // 0x07d0, 0x8 bytes
+                KeyValues *m_pOnToggleOffKV; // 0x07d8, 0x8 bytes
+                KeyValues *m_pOnEquipKV; // 0x07e0, 0x8 bytes
+                KeyValues *m_pOnUnequipKV; // 0x07e8, 0x8 bytes
+                KeyValues *m_pOnCreatedKV; // 0x07f0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item_DataDriven) == 0x7F0, "C_DOTA_Item_DataDriven size mismatch");
+            static_assert(sizeof(C_DOTA_Item_DataDriven) == 0x7F8, "C_DOTA_Item_DataDriven size mismatch");
         }
     }
 }

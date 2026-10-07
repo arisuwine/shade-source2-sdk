@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,18 +37,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ConstrainDistanceToUserSpecifiedPath : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                float m_fMinDistance; // 0x01d8, 0x4 bytes
-                float m_flMaxDistance; // 0x01dc, 0x4 bytes
-                float m_flTimeScale; // 0x01e0, 0x4 bytes
-                bool m_bLoopedPath; // 0x01e4, 0x1 bytes
-                std::uint8_t pad_01e5[0x3]; // 0x01e5, 0x3 bytes
-                CUtlVector<shade::sdk::particles::PointDefinitionWithTimeValues_t> m_pointList; // 0x01e8, 0x18 bytes
+                float m_fMinDistance; // 0x01e0, 0x4 bytes
+                float m_flMaxDistance; // 0x01e4, 0x4 bytes
+                float m_flTimeScale; // 0x01e8, 0x4 bytes
+                bool m_bLoopedPath; // 0x01ec, 0x1 bytes
+                std::uint8_t pad_01ed[0x3]; // 0x01ed, 0x3 bytes
+                CUtlVector<shade::sdk::particles::PointDefinitionWithTimeValues_t> m_pointList; // 0x01f0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ConstrainDistanceToUserSpecifiedPath) == 0x200, "C_OP_ConstrainDistanceToUserSpecifiedPath size mismatch");
+            static_assert(sizeof(C_OP_ConstrainDistanceToUserSpecifiedPath) == 0x208, "C_OP_ConstrainDistanceToUserSpecifiedPath size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,21 +37,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Tiny_Avalanche : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<shade::sdk::client::C_DOTA_BaseNPC*> m_pHeroesHit; // 0x1a78, 0x18 bytes
-                float radius; // 0x1a90, 0x4 bytes
-                float total_duration; // 0x1a94, 0x4 bytes
-                float stun_duration; // 0x1a98, 0x4 bytes
-                std::int32_t tick_count; // 0x1a9c, 0x4 bytes
-                std::int32_t toss_damage_bonus_pct; // 0x1aa0, 0x4 bytes
-                std::int32_t m_damage; // 0x1aa4, 0x4 bytes
-                std::int32_t m_nTicks; // 0x1aa8, 0x4 bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                CUtlVector<shade::sdk::client::C_DOTA_BaseNPC*> m_pHeroesHit; // 0x1aa8, 0x18 bytes
+                float radius; // 0x1ac0, 0x4 bytes
+                float total_duration; // 0x1ac4, 0x4 bytes
+                float stun_duration; // 0x1ac8, 0x4 bytes
+                std::int32_t tick_count; // 0x1acc, 0x4 bytes
+                std::int32_t toss_damage_bonus_pct; // 0x1ad0, 0x4 bytes
+                std::int32_t m_damage; // 0x1ad4, 0x4 bytes
+                std::int32_t m_nTicks; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Tiny_Avalanche) == 0x1AB0, "CDOTA_Modifier_Tiny_Avalanche size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Tiny_Avalanche) == 0x1AE0, "CDOTA_Modifier_Tiny_Avalanche size mismatch");
         }
     }
 }

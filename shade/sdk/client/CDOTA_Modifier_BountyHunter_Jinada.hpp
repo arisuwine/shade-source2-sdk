@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_BountyHunter_Jinada : public shade::sdk::client::CDOTA_Buff {
             public:
-                float bonus_damage; // 0x1a78, 0x4 bytes
-                std::int32_t gold_steal; // 0x1a7c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexA; // 0x1a80, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1a84, 0x4 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1a88, 0x18 bytes
+                float bonus_damage; // 0x1aa8, 0x4 bytes
+                std::int32_t gold_steal; // 0x1aac, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexA; // 0x1ab0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1ab4, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1ab8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_BountyHunter_Jinada) == 0x1AA0, "CDOTA_Modifier_BountyHunter_Jinada size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_BountyHunter_Jinada) == 0x1AD0, "CDOTA_Modifier_BountyHunter_Jinada size mismatch");
         }
     }
 }

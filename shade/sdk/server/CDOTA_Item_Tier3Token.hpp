@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x680
+             * Size: 0x688
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Tier3Token) == 0x680, "CDOTA_Item_Tier3Token size mismatch");
+            static_assert(sizeof(CDOTA_Item_Tier3Token) == 0x688, "CDOTA_Item_Tier3Token size mismatch");
         }
     }
 }

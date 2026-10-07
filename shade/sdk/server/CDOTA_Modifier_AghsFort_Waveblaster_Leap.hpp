@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,23 +29,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_Waveblaster_Leap : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_flTotalTime; // 0x1a78, 0x4 bytes
-                float m_flInitialVelocity; // 0x1a7c, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1a80, 0xc bytes
-                Vector m_vTargetHorizontalDirection; // 0x1a8c, 0xc bytes
-                float m_flCurrentTimeHoriz; // 0x1a98, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1a9c, 0x4 bytes
-                bool m_bInterrupted; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x3]; // 0x1aa1, 0x3 bytes
-                float leap_speed; // 0x1aa4, 0x4 bytes
-                float leap_acceleration; // 0x1aa8, 0x4 bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                float m_flTotalTime; // 0x1aa8, 0x4 bytes
+                float m_flInitialVelocity; // 0x1aac, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1ab0, 0xc bytes
+                Vector m_vTargetHorizontalDirection; // 0x1abc, 0xc bytes
+                float m_flCurrentTimeHoriz; // 0x1ac8, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1acc, 0x4 bytes
+                bool m_bInterrupted; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
+                float leap_speed; // 0x1ad4, 0x4 bytes
+                float leap_acceleration; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_Waveblaster_Leap) == 0x1AB0, "CDOTA_Modifier_AghsFort_Waveblaster_Leap size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_Waveblaster_Leap) == 0x1AE0, "CDOTA_Modifier_AghsFort_Waveblaster_Leap size mismatch");
         }
     }
 }

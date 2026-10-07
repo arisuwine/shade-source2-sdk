@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Silencer_CurseOfTheSilent : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t damage; // 0x1a78, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t nFxIndex; // 0x1a7c, 0x4 bytes
-                std::int32_t penalty_duration; // 0x1a80, 0x4 bytes
-                float penalty_multiplier; // 0x1a84, 0x4 bytes
-                std::int32_t movespeed; // 0x1a88, 0x4 bytes
-                std::int32_t undispellable; // 0x1a8c, 0x4 bytes
-                bool from_global_silence; // 0x1a90, 0x1 bytes
-                std::uint8_t pad_1a91[0x7]; // 0x1a91, 0x7 bytes
+                std::int32_t damage; // 0x1aa8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t nFxIndex; // 0x1aac, 0x4 bytes
+                std::int32_t penalty_duration; // 0x1ab0, 0x4 bytes
+                float penalty_multiplier; // 0x1ab4, 0x4 bytes
+                std::int32_t movespeed; // 0x1ab8, 0x4 bytes
+                std::int32_t undispellable; // 0x1abc, 0x4 bytes
+                bool from_global_silence; // 0x1ac0, 0x1 bytes
+                std::uint8_t pad_1ac1[0x7]; // 0x1ac1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Silencer_CurseOfTheSilent) == 0x1A98, "CDOTA_Modifier_Silencer_CurseOfTheSilent size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Silencer_CurseOfTheSilent) == 0x1AC8, "CDOTA_Modifier_Silencer_CurseOfTheSilent size mismatch");
         }
     }
 }

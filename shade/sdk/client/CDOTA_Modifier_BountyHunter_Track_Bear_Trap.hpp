@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_BountyHunter_Track_Bear_Trap : public shade::sdk::client::CDOTA_Modifier_Invisible {
             public:
-                bool m_bActivated; // 0x1a88, 0x1 bytes
-                std::uint8_t pad_1a89[0x7]; // 0x1a89, 0x7 bytes
+                bool m_bActivated; // 0x1ab8, 0x1 bytes
+                std::uint8_t pad_1ab9[0x7]; // 0x1ab9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_BountyHunter_Track_Bear_Trap) == 0x1A90, "CDOTA_Modifier_BountyHunter_Track_Bear_Trap size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_BountyHunter_Track_Bear_Trap) == 0x1AC0, "CDOTA_Modifier_BountyHunter_Track_Bear_Trap size mismatch");
         }
     }
 }

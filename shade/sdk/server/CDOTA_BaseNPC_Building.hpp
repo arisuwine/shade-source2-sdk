@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19c0
+             * Size: 0x1ab0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,56 +43,56 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Building : public shade::sdk::server::CDOTA_BaseNPC {
             public:
-                std::int32_t m_iDamageLevel; // 0x18a8, 0x4 bytes
-                std::uint8_t pad_18ac[0x4]; // 0x18ac, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndex; // 0x18b0, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndexDestruction; // 0x18b8, 0x8 bytes
-                QAngle m_angInitialAngles; // 0x18c0, 0xc bytes
-                shade::sdk::animationsystem::HSequence m_hHeroStatueSequence; // 0x18cc, 0x4 bytes
-                shade::sdk::animationsystem::HSequence m_hConstantLayerSequence; // 0x18d0, 0x4 bytes
-                float m_fHeroStatueCycle; // 0x18d4, 0x4 bytes
-                std::int32_t m_iHeroStatueStatusEffectIndex; // 0x18d8, 0x4 bytes
-                bool m_bHeroStatue; // 0x18dc, 0x1 bytes
-                bool m_bBattleCup; // 0x18dd, 0x1 bytes
-                char m_HeroStatueInscription[0x20]; // 0x18de, 0x20 bytes
-                std::uint8_t pad_18fe[0x2]; // 0x18fe, 0x2 bytes
-                shade::sdk::client::PlayerID_t m_iHeroStatueOwnerPlayerID; // 0x1900, 0x4 bytes
-                Color m_ParticleTintColor; // 0x1904, 0x4 bytes
-                CGameSoundEventName m_sDestroySnd; // 0x1908, 0x8 bytes
-                CGameSoundEventName m_sDmgLvl1Snd; // 0x1910, 0x8 bytes
-                CGameSoundEventName m_sDmgLvl2Snd; // 0x1918, 0x8 bytes
-                CUtlSymbolLarge m_iszLinkedUnit; // 0x1920, 0x8 bytes
-                CUtlSymbolLarge m_iszAmbientEffectName; // 0x1928, 0x8 bytes
-                CUtlSymbolLarge m_iszDestructionEffectName; // 0x1930, 0x8 bytes
-                CUtlSymbolLarge m_iszDamageModelLevel1; // 0x1938, 0x8 bytes
-                CUtlSymbolLarge m_iszDamageModelLevel2; // 0x1940, 0x8 bytes
-                CUtlSymbolLarge m_iszDamageEffectLevel1; // 0x1948, 0x8 bytes
-                CUtlSymbolLarge m_iszDamageEffectLevel2; // 0x1950, 0x8 bytes
-                float m_flDamageThresholdLevel1; // 0x1958, 0x4 bytes
-                float m_flDamageThresholdLevel2; // 0x195c, 0x4 bytes
-                bool m_bVulnerableOnCreepSpawn; // 0x1960, 0x1 bytes
-                bool m_bHasOverriddenDestructionEffect; // 0x1961, 0x1 bytes
-                std::uint8_t pad_1962[0x2]; // 0x1962, 0x2 bytes
-                std::int32_t m_iUpgradeIdentifier; // 0x1964, 0x4 bytes
-                std::int32_t m_iInvulnCount; // 0x1968, 0x4 bytes
-                std::int32_t m_iPlayerOwner; // 0x196c, 0x4 bytes
-                bool m_bIsDireSide; // 0x1970, 0x1 bytes
-                std::uint8_t pad_1971[0x3]; // 0x1971, 0x3 bytes
-                shade::sdk::client::DOTA_LANE m_Lane; // 0x1974, 0x4 bytes
-                float m_fAmountAlongLane[0x2]; // 0x1978, 0x8 bytes
-                Vector m_vOverrideInitialAngles; // 0x1980, 0xc bytes
-                Vector m_vOverrideInitialAnglesBG; // 0x198c, 0xc bytes
-                std::int32_t m_nOverrideInitialAngles; // 0x1998, 0x4 bytes
+                std::int32_t m_iDamageLevel; // 0x1998, 0x4 bytes
                 std::uint8_t pad_199c[0x4]; // 0x199c, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_IdleRareAnimationTime; // 0x19a0, 0x18 bytes
-                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x19b8, 0x4 bytes
-                std::uint8_t pad_19bc[0x4]; // 0x19bc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndex; // 0x19a0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndexDestruction; // 0x19a8, 0x8 bytes
+                QAngle m_angInitialAngles; // 0x19b0, 0xc bytes
+                shade::sdk::animationsystem::HSequence m_hHeroStatueSequence; // 0x19bc, 0x4 bytes
+                shade::sdk::animationsystem::HSequence m_hConstantLayerSequence; // 0x19c0, 0x4 bytes
+                float m_fHeroStatueCycle; // 0x19c4, 0x4 bytes
+                std::int32_t m_iHeroStatueStatusEffectIndex; // 0x19c8, 0x4 bytes
+                bool m_bHeroStatue; // 0x19cc, 0x1 bytes
+                bool m_bBattleCup; // 0x19cd, 0x1 bytes
+                char m_HeroStatueInscription[0x20]; // 0x19ce, 0x20 bytes
+                std::uint8_t pad_19ee[0x2]; // 0x19ee, 0x2 bytes
+                shade::sdk::client::PlayerID_t m_iHeroStatueOwnerPlayerID; // 0x19f0, 0x4 bytes
+                Color m_ParticleTintColor; // 0x19f4, 0x4 bytes
+                CGameSoundEventName m_sDestroySnd; // 0x19f8, 0x8 bytes
+                CGameSoundEventName m_sDmgLvl1Snd; // 0x1a00, 0x8 bytes
+                CGameSoundEventName m_sDmgLvl2Snd; // 0x1a08, 0x8 bytes
+                CUtlSymbolLarge m_iszLinkedUnit; // 0x1a10, 0x8 bytes
+                CUtlSymbolLarge m_iszAmbientEffectName; // 0x1a18, 0x8 bytes
+                CUtlSymbolLarge m_iszDestructionEffectName; // 0x1a20, 0x8 bytes
+                CUtlSymbolLarge m_iszDamageModelLevel1; // 0x1a28, 0x8 bytes
+                CUtlSymbolLarge m_iszDamageModelLevel2; // 0x1a30, 0x8 bytes
+                CUtlSymbolLarge m_iszDamageEffectLevel1; // 0x1a38, 0x8 bytes
+                CUtlSymbolLarge m_iszDamageEffectLevel2; // 0x1a40, 0x8 bytes
+                float m_flDamageThresholdLevel1; // 0x1a48, 0x4 bytes
+                float m_flDamageThresholdLevel2; // 0x1a4c, 0x4 bytes
+                bool m_bVulnerableOnCreepSpawn; // 0x1a50, 0x1 bytes
+                bool m_bHasOverriddenDestructionEffect; // 0x1a51, 0x1 bytes
+                std::uint8_t pad_1a52[0x2]; // 0x1a52, 0x2 bytes
+                std::int32_t m_iUpgradeIdentifier; // 0x1a54, 0x4 bytes
+                std::int32_t m_iInvulnCount; // 0x1a58, 0x4 bytes
+                std::int32_t m_iPlayerOwner; // 0x1a5c, 0x4 bytes
+                bool m_bIsDireSide; // 0x1a60, 0x1 bytes
+                std::uint8_t pad_1a61[0x3]; // 0x1a61, 0x3 bytes
+                shade::sdk::client::DOTA_LANE m_Lane; // 0x1a64, 0x4 bytes
+                float m_fAmountAlongLane[0x2]; // 0x1a68, 0x8 bytes
+                Vector m_vOverrideInitialAngles; // 0x1a70, 0xc bytes
+                Vector m_vOverrideInitialAnglesBG; // 0x1a7c, 0xc bytes
+                std::int32_t m_nOverrideInitialAngles; // 0x1a88, 0x4 bytes
+                std::uint8_t pad_1a8c[0x4]; // 0x1a8c, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_IdleRareAnimationTime; // 0x1a90, 0x18 bytes
+                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x1aa8, 0x4 bytes
+                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Building) == 0x19C0, "CDOTA_BaseNPC_Building size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Building) == 0x1AB0, "CDOTA_BaseNPC_Building size mismatch");
         }
     }
 }

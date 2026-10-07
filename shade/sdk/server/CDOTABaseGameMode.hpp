@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7d8
+             * Size: 0x7e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -116,69 +116,69 @@ namespace shade {
                 float m_flIntelligenceSpellAmpPercent; // 0x057c, 0x4 bytes
                 float m_flStrengthMagicResistancePercent; // 0x0580, 0x4 bytes
                 float m_flAttributeAllDamage; // 0x0584, 0x4 bytes
-                float m_flDraftingHeroPickSelectTimeOverride; // 0x0588, 0x4 bytes
-                float m_flDraftingBanningTimeOverride; // 0x058c, 0x4 bytes
-                bool m_bPauseEnabled; // 0x0590, 0x1 bytes
-                std::uint8_t pad_0591[0x3]; // 0x0591, 0x3 bytes
-                std::int32_t m_iCustomScanMaxCharges; // 0x0594, 0x4 bytes
-                float m_flCustomScanCooldown; // 0x0598, 0x4 bytes
-                float m_flCustomGlyphCooldown; // 0x059c, 0x4 bytes
-                float m_flCustomBackpackSwapCooldown; // 0x05a0, 0x4 bytes
-                float m_flCustomBackpackCooldownPercent; // 0x05a4, 0x4 bytes
-                bool m_bDefaultRuneSpawnLogic; // 0x05a8, 0x1 bytes
-                bool m_bEnableFreeCourierMode; // 0x05a9, 0x1 bytes
-                bool m_bAllowNeutralItemDrops; // 0x05aa, 0x1 bytes
-                bool m_bEnableNeutralStash; // 0x05ab, 0x1 bytes
-                bool m_bEnableNeutralStashTeamViewOnly; // 0x05ac, 0x1 bytes
-                bool m_bEnableNeutralItemHideUndiscovered; // 0x05ad, 0x1 bytes
-                bool m_bEnableSendToStash; // 0x05ae, 0x1 bytes
-                bool m_bForceRightClickAttackDisabled; // 0x05af, 0x1 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::CDOTACustomShopInfo> m_vecCustomShopInfo; // 0x05b0, 0x68 bytes
-                bool m_bCanSellAnywhere; // 0x0618, 0x1 bytes
-                std::uint8_t pad_0619[0x3]; // 0x0619, 0x3 bytes
-                float m_flCameraNearZ; // 0x061c, 0x4 bytes
-                float m_flCameraFarZ; // 0x0620, 0x4 bytes
-                std::int32_t m_nCustomRadiantScore; // 0x0624, 0x4 bytes
-                std::int32_t m_nCustomDireScore; // 0x0628, 0x4 bytes
-                bool m_bAbilityUpgradeWhitelistEnabled; // 0x062c, 0x1 bytes
-                std::uint8_t pad_062d[0x3]; // 0x062d, 0x3 bytes
-                CNetworkUtlVectorBase<shade::sdk::client::AbilityID_t> m_vecAbilityUpgradeWhitelist; // 0x0630, 0x18 bytes
-                bool m_bGiveFreeTPOnDeath; // 0x0648, 0x1 bytes
-                std::uint8_t pad_0649[0x3]; // 0x0649, 0x3 bytes
-                std::int32_t m_nInnateMeleeDamageBlockPct; // 0x064c, 0x4 bytes
-                std::int32_t m_nInnateMeleeDamageBlockAmount; // 0x0650, 0x4 bytes
-                std::int32_t m_nInnateMeleeDamageBlockPerLevelAmount; // 0x0654, 0x4 bytes
-                float m_flWaterRuneSpawnInterval; // 0x0658, 0x4 bytes
-                std::uint8_t pad_065c[0x4]; // 0x065c, 0x4 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CDOTA_BaseNPC>> m_vecBigHealthBarUnits; // 0x0660, 0x18 bytes
-                std::uint8_t pad_0678[0x30]; // 0x0678, 0x30 bytes
-                bool m_bSelectionGoldPenaltyEnabled; // 0x06a8, 0x1 bytes
-                bool m_bRemoveIllusionsOnDeath; // 0x06a9, 0x1 bytes
-                bool m_bRandomHeroBonusItemGrantDisabled; // 0x06aa, 0x1 bytes
-                bool m_bDisableClumpingBehaviorByDefault; // 0x06ab, 0x1 bytes
-                bool m_bRuneTypeEnabled[0xa]; // 0x06ac, 0xa bytes
-                bool m_bOverrideBotLateGame; // 0x06b6, 0x1 bytes
-                bool m_bBotsAlwaysPushWithHuman; // 0x06b7, 0x1 bytes
-                bool m_bBotsInLateGame; // 0x06b8, 0x1 bytes
-                std::uint8_t pad_06b9[0x3]; // 0x06b9, 0x3 bytes
-                std::int32_t m_nBotMaxPushTier; // 0x06bc, 0x4 bytes
-                float m_flFountainPercentageHealthRegen; // 0x06c0, 0x4 bytes
-                float m_flFountainPercentageManaRegen; // 0x06c4, 0x4 bytes
-                float m_flFountainConstantManaRegen; // 0x06c8, 0x4 bytes
-                float m_flPowerRuneSpawnInterval; // 0x06cc, 0x4 bytes
-                float m_flBountyRuneSpawnInterval; // 0x06d0, 0x4 bytes
-                float m_flXPRuneSpawnInterval; // 0x06d4, 0x4 bytes
-                float m_flThinkInterval; // 0x06d8, 0x4 bytes
-                std::int32_t m_nForcedHeroCapOnReset; // 0x06dc, 0x4 bytes
-                std::uint8_t pad_06e0[0xf8]; // 0x06e0, 0xf8 bytes
+                float m_flCreepLifestealFactor; // 0x0588, 0x4 bytes
+                float m_flCreepSpellLifestealFactor; // 0x058c, 0x4 bytes
+                float m_flDraftingHeroPickSelectTimeOverride; // 0x0590, 0x4 bytes
+                float m_flDraftingBanningTimeOverride; // 0x0594, 0x4 bytes
+                bool m_bPauseEnabled; // 0x0598, 0x1 bytes
+                std::uint8_t pad_0599[0x3]; // 0x0599, 0x3 bytes
+                std::int32_t m_iCustomScanMaxCharges; // 0x059c, 0x4 bytes
+                float m_flCustomScanCooldown; // 0x05a0, 0x4 bytes
+                float m_flCustomGlyphCooldown; // 0x05a4, 0x4 bytes
+                float m_flCustomBackpackSwapCooldown; // 0x05a8, 0x4 bytes
+                float m_flCustomBackpackCooldownPercent; // 0x05ac, 0x4 bytes
+                bool m_bDefaultRuneSpawnLogic; // 0x05b0, 0x1 bytes
+                bool m_bEnableFreeCourierMode; // 0x05b1, 0x1 bytes
+                bool m_bAllowNeutralItemDrops; // 0x05b2, 0x1 bytes
+                bool m_bEnableNeutralStash; // 0x05b3, 0x1 bytes
+                bool m_bEnableNeutralStashTeamViewOnly; // 0x05b4, 0x1 bytes
+                bool m_bEnableNeutralItemHideUndiscovered; // 0x05b5, 0x1 bytes
+                bool m_bEnableSendToStash; // 0x05b6, 0x1 bytes
+                bool m_bForceRightClickAttackDisabled; // 0x05b7, 0x1 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::CDOTACustomShopInfo> m_vecCustomShopInfo; // 0x05b8, 0x68 bytes
+                bool m_bCanSellAnywhere; // 0x0620, 0x1 bytes
+                std::uint8_t pad_0621[0x3]; // 0x0621, 0x3 bytes
+                float m_flCameraNearZ; // 0x0624, 0x4 bytes
+                float m_flCameraFarZ; // 0x0628, 0x4 bytes
+                std::int32_t m_nCustomRadiantScore; // 0x062c, 0x4 bytes
+                std::int32_t m_nCustomDireScore; // 0x0630, 0x4 bytes
+                bool m_bAbilityUpgradeWhitelistEnabled; // 0x0634, 0x1 bytes
+                std::uint8_t pad_0635[0x3]; // 0x0635, 0x3 bytes
+                CNetworkUtlVectorBase<shade::sdk::client::AbilityID_t> m_vecAbilityUpgradeWhitelist; // 0x0638, 0x18 bytes
+                bool m_bGiveFreeTPOnDeath; // 0x0650, 0x1 bytes
+                std::uint8_t pad_0651[0x3]; // 0x0651, 0x3 bytes
+                std::int32_t m_nInnateMeleeDamageBlockPct; // 0x0654, 0x4 bytes
+                std::int32_t m_nInnateMeleeDamageBlockAmount; // 0x0658, 0x4 bytes
+                std::int32_t m_nInnateMeleeDamageBlockPerLevelAmount; // 0x065c, 0x4 bytes
+                float m_flWaterRuneSpawnInterval; // 0x0660, 0x4 bytes
+                std::uint8_t pad_0664[0x4]; // 0x0664, 0x4 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CDOTA_BaseNPC>> m_vecBigHealthBarUnits; // 0x0668, 0x18 bytes
+                std::uint8_t pad_0680[0x30]; // 0x0680, 0x30 bytes
+                bool m_bSelectionGoldPenaltyEnabled; // 0x06b0, 0x1 bytes
+                bool m_bRemoveIllusionsOnDeath; // 0x06b1, 0x1 bytes
+                bool m_bRandomHeroBonusItemGrantDisabled; // 0x06b2, 0x1 bytes
+                bool m_bDisableClumpingBehaviorByDefault; // 0x06b3, 0x1 bytes
+                bool m_bRuneTypeEnabled[0xa]; // 0x06b4, 0xa bytes
+                bool m_bOverrideBotLateGame; // 0x06be, 0x1 bytes
+                bool m_bBotsAlwaysPushWithHuman; // 0x06bf, 0x1 bytes
+                bool m_bBotsInLateGame; // 0x06c0, 0x1 bytes
+                std::uint8_t pad_06c1[0x3]; // 0x06c1, 0x3 bytes
+                std::int32_t m_nBotMaxPushTier; // 0x06c4, 0x4 bytes
+                float m_flFountainPercentageHealthRegen; // 0x06c8, 0x4 bytes
+                float m_flFountainPercentageManaRegen; // 0x06cc, 0x4 bytes
+                float m_flFountainConstantManaRegen; // 0x06d0, 0x4 bytes
+                float m_flPowerRuneSpawnInterval; // 0x06d4, 0x4 bytes
+                float m_flBountyRuneSpawnInterval; // 0x06d8, 0x4 bytes
+                float m_flXPRuneSpawnInterval; // 0x06dc, 0x4 bytes
+                float m_flThinkInterval; // 0x06e0, 0x4 bytes
+                std::int32_t m_nForcedHeroCapOnReset; // 0x06e4, 0x4 bytes
+                std::uint8_t pad_06e8[0xf8]; // 0x06e8, 0xf8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTABaseGameMode) == 0x7D8, "CDOTABaseGameMode size mismatch");
+            static_assert(sizeof(CDOTABaseGameMode) == 0x7E0, "CDOTABaseGameMode size mismatch");
         }
     }
 }

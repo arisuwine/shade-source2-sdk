@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Nian_Damage_Reflection : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::entity2::GameTime_t m_flReflectionStartTime; // 0x1a78, 0x4 bytes
-                float m_flReflectionAmount; // 0x1a7c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flReflectionStartTime; // 0x1aa8, 0x4 bytes
+                float m_flReflectionAmount; // 0x1aac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Nian_Damage_Reflection) == 0x1A80, "CDOTA_Modifier_Nian_Damage_Reflection size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Nian_Damage_Reflection) == 0x1AB0, "CDOTA_Modifier_Nian_Damage_Reflection size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,19 +29,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Mars_Bulwark : public shade::sdk::client::CDOTA_Buff {
             public:
-                float physical_damage_reduction; // 0x1a78, 0x4 bytes
-                float physical_damage_reduction_side; // 0x1a7c, 0x4 bytes
-                float forward_angle; // 0x1a80, 0x4 bytes
-                float side_angle; // 0x1a84, 0x4 bytes
-                std::uint8_t pad_1a88[0x18]; // 0x1a88, 0x18 bytes
-                float m_flRecentDamage; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
+                float physical_damage_reduction; // 0x1aa8, 0x4 bytes
+                float physical_damage_reduction_side; // 0x1aac, 0x4 bytes
+                float forward_angle; // 0x1ab0, 0x4 bytes
+                float side_angle; // 0x1ab4, 0x4 bytes
+                std::uint8_t pad_1ab8[0x18]; // 0x1ab8, 0x18 bytes
+                float m_flRecentDamage; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Mars_Bulwark) == 0x1AA8, "CDOTA_Modifier_Mars_Bulwark size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Mars_Bulwark) == 0x1AD8, "CDOTA_Modifier_Mars_Bulwark size mismatch");
         }
     }
 }

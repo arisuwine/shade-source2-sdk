@@ -23,6 +23,7 @@ namespace shade {
             class CDOTA_ArcanaDataEntity_DrowRanger;
             class CDOTA_ArcanaDataEntity_FacelessVoid;
             class CDOTA_ArcanaDataEntity_Razor;
+            class CDOTA_ArcanaDataEntity_Tidehunter;
         }
     }
 }
@@ -31,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x608
+             * Size: 0x610
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +44,13 @@ namespace shade {
                 shade::sdk::client::CDOTA_ArcanaDataEntity_DrowRanger *m_pArcanaData_CDOTA_ArcanaDataEntity_DrowRanger; // 0x05f0, 0x8 bytes
                 shade::sdk::client::CDOTA_ArcanaDataEntity_FacelessVoid *m_pArcanaData_CDOTA_ArcanaDataEntity_FacelessVoid; // 0x05f8, 0x8 bytes
                 shade::sdk::client::CDOTA_ArcanaDataEntity_Razor *m_pArcanaData_CDOTA_ArcanaDataEntity_Razor; // 0x0600, 0x8 bytes
+                shade::sdk::client::CDOTA_ArcanaDataEntity_Tidehunter *m_pArcanaData_CDOTA_ArcanaDataEntity_Tidehunter; // 0x0608, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_ArcanaDataEntity) == 0x608, "C_DOTA_ArcanaDataEntity size mismatch");
+            static_assert(sizeof(C_DOTA_ArcanaDataEntity) == 0x610, "C_DOTA_ArcanaDataEntity size mismatch");
         }
     }
 }

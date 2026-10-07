@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x278
+             * Size: 0x280
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,11 +32,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTAPlayer_CameraServices) == 0x278, "CDOTAPlayer_CameraServices size mismatch");
+            static_assert(sizeof(CDOTAPlayer_CameraServices) == 0x280, "CDOTAPlayer_CameraServices size mismatch");
         }
     }
 }

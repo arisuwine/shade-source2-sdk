@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,22 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Gyrocopter_Side_Gunner : public shade::sdk::client::CDOTA_Buff {
             public:
-                float sidegunner_radius; // 0x1a78, 0x4 bytes
-                float sidegunner_fire_rate; // 0x1a7c, 0x4 bytes
-                float m_flRotation; // 0x1a80, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hIdealTarget; // 0x1a84, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hSecondaryTarget; // 0x1a88, 0x4 bytes
-                float m_flLastFireTime; // 0x1a8c, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwnerNPC; // 0x1a90, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwningAbility; // 0x1a94, 0x4 bytes
-                shade::sdk::client::AttackRecord_t m_iAttackRecord; // 0x1a98, 0x2 bytes
-                std::uint8_t pad_1a9a[0x6]; // 0x1a9a, 0x6 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hIdealTarget; // 0x1aa8, 0x4 bytes
+                float sidegunner_radius; // 0x1aac, 0x4 bytes
+                float sidegunner_fire_rate; // 0x1ab0, 0x4 bytes
+                float m_flRotation; // 0x1ab4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hSecondaryTarget; // 0x1ab8, 0x4 bytes
+                float m_flLastFireTime; // 0x1abc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwnerNPC; // 0x1ac0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwningAbility; // 0x1ac4, 0x4 bytes
+                std::int32_t m_nSideGunnerIndex; // 0x1ac8, 0x4 bytes
+                shade::sdk::client::AttackRecord_t m_iAttackRecord; // 0x1acc, 0x2 bytes
+                std::uint8_t pad_1ace[0x2]; // 0x1ace, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Side_Gunner) == 0x1AA0, "CDOTA_Modifier_Gyrocopter_Side_Gunner size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Side_Gunner) == 0x1AD0, "CDOTA_Modifier_Gyrocopter_Side_Gunner size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,27 +30,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Invoker_IceWall_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage_per_second; // 0x1a78, 0x4 bytes
-                Vector m_vWallDirection; // 0x1a7c, 0xc bytes
-                VectorWS m_vWallStart; // 0x1a88, 0xc bytes
-                float wall_total_length; // 0x1a94, 0x4 bytes
-                float wall_width; // 0x1a98, 0x4 bytes
-                float slow_duration; // 0x1a9c, 0x4 bytes
-                std::int32_t slow; // 0x1aa0, 0x4 bytes
-                float root_damage; // 0x1aa4, 0x4 bytes
-                float root_duration; // 0x1aa8, 0x4 bytes
-                float tick_interval; // 0x1aac, 0x4 bytes
-                bool m_bGrantedGem; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x1ab4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndex2; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
+                float damage_per_second; // 0x1aa8, 0x4 bytes
+                Vector m_vWallDirection; // 0x1aac, 0xc bytes
+                VectorWS m_vWallStart; // 0x1ab8, 0xc bytes
+                float wall_total_length; // 0x1ac4, 0x4 bytes
+                float wall_width; // 0x1ac8, 0x4 bytes
+                float slow_duration; // 0x1acc, 0x4 bytes
+                std::int32_t slow; // 0x1ad0, 0x4 bytes
+                float root_damage; // 0x1ad4, 0x4 bytes
+                float root_duration; // 0x1ad8, 0x4 bytes
+                float tick_interval; // 0x1adc, 0x4 bytes
+                bool m_bGrantedGem; // 0x1ae0, 0x1 bytes
+                std::uint8_t pad_1ae1[0x3]; // 0x1ae1, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x1ae4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndex2; // 0x1ae8, 0x4 bytes
+                std::uint8_t pad_1aec[0x4]; // 0x1aec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Invoker_IceWall_Thinker) == 0x1AC0, "CDOTA_Modifier_Invoker_IceWall_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Invoker_IceWall_Thinker) == 0x1AF0, "CDOTA_Modifier_Invoker_IceWall_Thinker size mismatch");
         }
     }
 }

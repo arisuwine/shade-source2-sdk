@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x7d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapParticleCountToScalar : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nInputMin; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nInputMax; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x04c0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x0630, 0x170 bytes
-                bool m_bActiveRange; // 0x07a0, 0x1 bytes
-                std::uint8_t pad_07a1[0x3]; // 0x07a1, 0x3 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x07a4, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nInputMin; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nInputMax; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x04d8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x0650, 0x178 bytes
+                bool m_bActiveRange; // 0x07c8, 0x1 bytes
+                std::uint8_t pad_07c9[0x3]; // 0x07c9, 0x3 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x07cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapParticleCountToScalar) == 0x7A8, "C_OP_RemapParticleCountToScalar size mismatch");
+            static_assert(sizeof(C_OP_RemapParticleCountToScalar) == 0x7D0, "C_OP_RemapParticleCountToScalar size mismatch");
         }
     }
 }

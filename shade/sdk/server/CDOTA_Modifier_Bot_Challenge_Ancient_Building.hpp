@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a78
+             * Size: 0x1aa8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Bot_Challenge_Ancient_Building) == 0x1A78, "CDOTA_Modifier_Bot_Challenge_Ancient_Building size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Bot_Challenge_Ancient_Building) == 0x1AA8, "CDOTA_Modifier_Bot_Challenge_Ancient_Building size mismatch");
         }
     }
 }

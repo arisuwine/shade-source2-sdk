@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x680
+             * Size: 0x6a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_GameLiquidSpill : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flLiquidContentsField; // 0x0228, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flExpirationTime; // 0x0398, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadius; // 0x0508, 0x170 bytes
-                bool m_bCheckExposedToSky; // 0x0678, 0x1 bytes
-                std::uint8_t pad_0679[0x3]; // 0x0679, 0x3 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAmountAttribute; // 0x067c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flLiquidContentsField; // 0x0230, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flExpirationTime; // 0x03a8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadius; // 0x0520, 0x178 bytes
+                bool m_bCheckExposedToSky; // 0x0698, 0x1 bytes
+                std::uint8_t pad_0699[0x3]; // 0x0699, 0x3 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAmountAttribute; // 0x069c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_GameLiquidSpill) == 0x680, "C_OP_GameLiquidSpill size mismatch");
+            static_assert(sizeof(C_OP_GameLiquidSpill) == 0x6A0, "C_OP_GameLiquidSpill size mismatch");
         }
     }
 }

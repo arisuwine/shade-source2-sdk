@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xde0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,45 +38,45 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PointClientUIWorldPanel : public shade::sdk::client::C_BaseClientUIEntity {
             public:
-                std::uint8_t pad_0ab8[0x8]; // 0x0ab8, 0x8 bytes
-                bool m_bForceRecreateNextUpdate; // 0x0ac0, 0x1 bytes
-                bool m_bMoveViewToPlayerNextThink; // 0x0ac1, 0x1 bytes
-                bool m_bCheckCSSClasses; // 0x0ac2, 0x1 bytes
-                std::uint8_t pad_0ac3[0xd]; // 0x0ac3, 0xd bytes
-                CTransform m_anchorDeltaTransform; // 0x0ad0, 0x20 bytes
-                std::uint8_t pad_0af0[0x170]; // 0x0af0, 0x170 bytes
-                shade::sdk::client::CPointOffScreenIndicatorUi *m_pOffScreenIndicator; // 0x0c60, 0x8 bytes
-                std::uint8_t pad_0c68[0x20]; // 0x0c68, 0x20 bytes
-                bool m_bIgnoreInput; // 0x0c88, 0x1 bytes
-                bool m_bLit; // 0x0c89, 0x1 bytes
-                bool m_bFollowPlayerAcrossTeleport; // 0x0c8a, 0x1 bytes
-                std::uint8_t pad_0c8b[0x1]; // 0x0c8b, 0x1 bytes
-                float m_flWidth; // 0x0c8c, 0x4 bytes
-                float m_flHeight; // 0x0c90, 0x4 bytes
-                float m_flDPI; // 0x0c94, 0x4 bytes
-                float m_flWindowUIScale; // 0x0c98, 0x4 bytes
-                float m_flInteractDistance; // 0x0c9c, 0x4 bytes
-                float m_flDepthOffset; // 0x0ca0, 0x4 bytes
-                std::uint32_t m_unOwnerContext; // 0x0ca4, 0x4 bytes
-                std::uint32_t m_unHorizontalAlign; // 0x0ca8, 0x4 bytes
-                std::uint32_t m_unVerticalAlign; // 0x0cac, 0x4 bytes
-                std::uint32_t m_unOrientation; // 0x0cb0, 0x4 bytes
-                bool m_bAllowInteractionFromAllSceneWorlds; // 0x0cb4, 0x1 bytes
-                std::uint8_t pad_0cb5[0x3]; // 0x0cb5, 0x3 bytes
-                C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x0cb8, 0x18 bytes
-                bool m_bOpaque; // 0x0cd0, 0x1 bytes
-                bool m_bNoDepth; // 0x0cd1, 0x1 bytes
-                bool m_bVisibleWhenParentNoDraw; // 0x0cd2, 0x1 bytes
-                bool m_bRenderBackface; // 0x0cd3, 0x1 bytes
-                bool m_bUseOffScreenIndicator; // 0x0cd4, 0x1 bytes
-                bool m_bExcludeFromSaveGames; // 0x0cd5, 0x1 bytes
-                bool m_bGrabbable; // 0x0cd6, 0x1 bytes
-                bool m_bOnlyRenderToTexture; // 0x0cd7, 0x1 bytes
-                bool m_bDisableMipGen; // 0x0cd8, 0x1 bytes
-                std::uint8_t pad_0cd9[0x3]; // 0x0cd9, 0x3 bytes
-                std::int32_t m_nExplicitImageLayout; // 0x0cdc, 0x4 bytes
-                bool m_bIgnoreParentOrientation; // 0x0ce0, 0x1 bytes
-                std::uint8_t pad_0ce1[0xf]; // 0x0ce1, 0xf bytes
+                std::uint8_t pad_0ba8[0x8]; // 0x0ba8, 0x8 bytes
+                bool m_bForceRecreateNextUpdate; // 0x0bb0, 0x1 bytes
+                bool m_bMoveViewToPlayerNextThink; // 0x0bb1, 0x1 bytes
+                bool m_bCheckCSSClasses; // 0x0bb2, 0x1 bytes
+                std::uint8_t pad_0bb3[0xd]; // 0x0bb3, 0xd bytes
+                CTransform m_anchorDeltaTransform; // 0x0bc0, 0x20 bytes
+                std::uint8_t pad_0be0[0x170]; // 0x0be0, 0x170 bytes
+                shade::sdk::client::CPointOffScreenIndicatorUi *m_pOffScreenIndicator; // 0x0d50, 0x8 bytes
+                std::uint8_t pad_0d58[0x20]; // 0x0d58, 0x20 bytes
+                bool m_bIgnoreInput; // 0x0d78, 0x1 bytes
+                bool m_bLit; // 0x0d79, 0x1 bytes
+                bool m_bFollowPlayerAcrossTeleport; // 0x0d7a, 0x1 bytes
+                std::uint8_t pad_0d7b[0x1]; // 0x0d7b, 0x1 bytes
+                float m_flWidth; // 0x0d7c, 0x4 bytes
+                float m_flHeight; // 0x0d80, 0x4 bytes
+                float m_flDPI; // 0x0d84, 0x4 bytes
+                float m_flWindowUIScale; // 0x0d88, 0x4 bytes
+                float m_flInteractDistance; // 0x0d8c, 0x4 bytes
+                float m_flDepthOffset; // 0x0d90, 0x4 bytes
+                std::uint32_t m_unOwnerContext; // 0x0d94, 0x4 bytes
+                std::uint32_t m_unHorizontalAlign; // 0x0d98, 0x4 bytes
+                std::uint32_t m_unVerticalAlign; // 0x0d9c, 0x4 bytes
+                std::uint32_t m_unOrientation; // 0x0da0, 0x4 bytes
+                bool m_bAllowInteractionFromAllSceneWorlds; // 0x0da4, 0x1 bytes
+                std::uint8_t pad_0da5[0x3]; // 0x0da5, 0x3 bytes
+                C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x0da8, 0x18 bytes
+                bool m_bOpaque; // 0x0dc0, 0x1 bytes
+                bool m_bNoDepth; // 0x0dc1, 0x1 bytes
+                bool m_bVisibleWhenParentNoDraw; // 0x0dc2, 0x1 bytes
+                bool m_bRenderBackface; // 0x0dc3, 0x1 bytes
+                bool m_bUseOffScreenIndicator; // 0x0dc4, 0x1 bytes
+                bool m_bExcludeFromSaveGames; // 0x0dc5, 0x1 bytes
+                bool m_bGrabbable; // 0x0dc6, 0x1 bytes
+                bool m_bOnlyRenderToTexture; // 0x0dc7, 0x1 bytes
+                bool m_bDisableMipGen; // 0x0dc8, 0x1 bytes
+                std::uint8_t pad_0dc9[0x3]; // 0x0dc9, 0x3 bytes
+                std::int32_t m_nExplicitImageLayout; // 0x0dcc, 0x4 bytes
+                bool m_bIgnoreParentOrientation; // 0x0dd0, 0x1 bytes
+                std::uint8_t pad_0dd1[0xf]; // 0x0dd1, 0xf bytes
             };
             #pragma pack(pop)
 
@@ -84,7 +84,7 @@ namespace shade {
              * CUtlSymbolLarge css_class; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_PointClientUIWorldPanel) == 0xCF0, "C_PointClientUIWorldPanel size mismatch");
+            static_assert(sizeof(C_PointClientUIWorldPanel) == 0xDE0, "C_PointClientUIWorldPanel size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x660
+             * Size: 0x668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetPathCornerEntity : public shade::sdk::server::CSoundOpvarSetPointEntity {
             public:
-                std::uint8_t pad_0630[0x18]; // 0x0630, 0x18 bytes
-                bool m_bUseParentedPath; // 0x0648, 0x1 bytes
-                std::uint8_t pad_0649[0x3]; // 0x0649, 0x3 bytes
-                float m_flDistMinSqr; // 0x064c, 0x4 bytes
-                float m_flDistMaxSqr; // 0x0650, 0x4 bytes
-                std::uint8_t pad_0654[0x4]; // 0x0654, 0x4 bytes
-                CUtlSymbolLarge m_iszPathCornerEntityName; // 0x0658, 0x8 bytes
+                std::uint8_t pad_0638[0x18]; // 0x0638, 0x18 bytes
+                bool m_bUseParentedPath; // 0x0650, 0x1 bytes
+                std::uint8_t pad_0651[0x3]; // 0x0651, 0x3 bytes
+                float m_flDistMinSqr; // 0x0654, 0x4 bytes
+                float m_flDistMaxSqr; // 0x0658, 0x4 bytes
+                std::uint8_t pad_065c[0x4]; // 0x065c, 0x4 bytes
+                CUtlSymbolLarge m_iszPathCornerEntityName; // 0x0660, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetPathCornerEntity) == 0x660, "CSoundOpvarSetPathCornerEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetPathCornerEntity) == 0x668, "CSoundOpvarSetPathCornerEntity size mismatch");
         }
     }
 }

@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18
+             * Size: 0x138
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -28,17 +28,20 @@ namespace shade {
             class CBaseEventDefinition {
             public:
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                bool m_bMustBeOwned; // 0x0008, 0x1 bytes
-                std::uint8_t pad_0009[0x3]; // 0x0009, 0x3 bytes
-                std::uint32_t m_unDefaultEventPoints; // 0x000c, 0x4 bytes
-                std::uint32_t m_unEventPointsPerLevel; // 0x0010, 0x4 bytes
-                std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
+                std::uint32_t m_unEventStartTime; // 0x0008, 0x4 bytes
+                std::uint32_t m_unEventEndTime; // 0x000c, 0x4 bytes
+                std::uint32_t m_unExpirationDate; // 0x0010, 0x4 bytes
+                bool m_bMustBeOwned; // 0x0014, 0x1 bytes
+                std::uint8_t pad_0015[0x3]; // 0x0015, 0x3 bytes
+                std::uint32_t m_unDefaultEventPoints; // 0x0018, 0x4 bytes
+                std::uint32_t m_unEventPointsPerLevel; // 0x001c, 0x4 bytes
+                std::uint8_t pad_0020[0x118]; // 0x0020, 0x118 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseEventDefinition) == 0x18, "CBaseEventDefinition size mismatch");
+            static_assert(sizeof(CBaseEventDefinition) == 0x138, "CBaseEventDefinition size mismatch");
         }
     }
 }

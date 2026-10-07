@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x290
+             * Size: 0x2a0
              * Alignment: 0xff
              * Has VTable
              * Construct Allowed
@@ -61,13 +61,13 @@ namespace shade {
                 std::int8_t m_nIdealMotionType; // 0x0282, 0x1 bytes
                 std::int8_t m_nForceLOD; // 0x0283, 0x1 bytes
                 std::int8_t m_nClothUpdateFlags; // 0x0284, 0x1 bytes
-                std::uint8_t pad_0285[0xb]; // 0x0285, 0xb bytes
+                std::uint8_t pad_0285[0x1b]; // 0x0285, 0x1b bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModelState) == 0x290, "CModelState size mismatch");
+            static_assert(sizeof(CModelState) == 0x2A0, "CModelState size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6d0
+             * Size: 0x6e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,16 +41,15 @@ namespace shade {
                 CHandle<shade::sdk::client::C_BaseEntity> hPreviousMeepo; // 0x06a8, 0x4 bytes
                 CHandle<shade::sdk::client::C_BaseEntity> hMegameepoFrame; // 0x06ac, 0x4 bytes
                 CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> hListOfMeepos; // 0x06b0, 0x18 bytes
-                bool m_bHasSwappedAbilities; // 0x06c8, 0x1 bytes
-                std::uint8_t pad_06c9[0x7]; // 0x06c9, 0x7 bytes
+                CUtlVector<std::int32_t> hFlingHandles; // 0x06c8, 0x18 bytes
+                bool m_bHasSwappedAbilities; // 0x06e0, 0x1 bytes
+                std::uint8_t pad_06e1[0x7]; // 0x06e1, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Ability_Meepo_MegaMeepo) == 0x6D0, "C_DOTA_Ability_Meepo_MegaMeepo size mismatch");
+            static_assert(sizeof(C_DOTA_Ability_Meepo_MegaMeepo) == 0x6E8, "C_DOTA_Ability_Meepo_MegaMeepo size mismatch");
         }
     }
 }

@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x658
+             * Size: 0x660
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -114,14 +114,15 @@ namespace shade {
                 shade::sdk::client::AbilityID_t m_nImbuedAbility; // 0x0624, 0x4 bytes
                 bool m_bPurchasedWhileDead; // 0x0628, 0x1 bytes
                 std::uint8_t pad_0629[0x3]; // 0x0629, 0x3 bytes
-                std::int32_t m_nCombineVersion; // 0x062c, 0x4 bytes
-                std::uint8_t pad_0630[0x28]; // 0x0630, 0x28 bytes
+                std::int32_t m_nPurchasedPrice; // 0x062c, 0x4 bytes
+                std::int32_t m_nCombineVersion; // 0x0630, 0x4 bytes
+                std::uint8_t pad_0634[0x2c]; // 0x0634, 0x2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item) == 0x658, "CDOTA_Item size mismatch");
+            static_assert(sizeof(CDOTA_Item) == 0x660, "CDOTA_Item size mismatch");
         }
     }
 }

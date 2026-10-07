@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xf70
+             * Size: 0xfb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_PositionWarp : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecWarpMin; // 0x01e0, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecWarpMax; // 0x0898, 0x6b8 bytes
-                std::int32_t m_nScaleControlPointNumber; // 0x0f50, 0x4 bytes
-                std::int32_t m_nControlPointNumber; // 0x0f54, 0x4 bytes
-                std::int32_t m_nRadiusComponent; // 0x0f58, 0x4 bytes
-                float m_flWarpTime; // 0x0f5c, 0x4 bytes
-                float m_flWarpStartTime; // 0x0f60, 0x4 bytes
-                float m_flPrevPosScale; // 0x0f64, 0x4 bytes
-                bool m_bInvertWarp; // 0x0f68, 0x1 bytes
-                bool m_bUseCount; // 0x0f69, 0x1 bytes
-                std::uint8_t pad_0f6a[0x6]; // 0x0f6a, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecWarpMin; // 0x01e8, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecWarpMax; // 0x08c0, 0x6d8 bytes
+                std::int32_t m_nScaleControlPointNumber; // 0x0f98, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x0f9c, 0x4 bytes
+                std::int32_t m_nRadiusComponent; // 0x0fa0, 0x4 bytes
+                float m_flWarpTime; // 0x0fa4, 0x4 bytes
+                float m_flWarpStartTime; // 0x0fa8, 0x4 bytes
+                float m_flPrevPosScale; // 0x0fac, 0x4 bytes
+                bool m_bInvertWarp; // 0x0fb0, 0x1 bytes
+                bool m_bUseCount; // 0x0fb1, 0x1 bytes
+                std::uint8_t pad_0fb2[0x6]; // 0x0fb2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_PositionWarp) == 0xF70, "C_INIT_PositionWarp size mismatch");
+            static_assert(sizeof(C_INIT_PositionWarp) == 0xFB8, "C_INIT_PositionWarp size mismatch");
         }
     }
 }

@@ -26,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x448
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -53,14 +53,14 @@ namespace shade {
                 float m_flCachedSequenceCycleRate; // 0x00cc, 0x4 bytes
                 float m_flCachedGroundSpeed; // 0x00d0, 0x4 bytes
                 shade::sdk::client::SequenceFinishNotifyState_t m_nNotifyState; // 0x00d4, 0x1 bytes
-                std::uint8_t pad_00d5[0x29b]; // 0x00d5, 0x29b bytes
-                shade::sdk::server::CSequenceTransitioner2 m_SequenceTransitioner; // 0x0370, 0x158 bytes
+                std::uint8_t pad_00d5[0x21b]; // 0x00d5, 0x21b bytes
+                shade::sdk::server::CSequenceTransitioner2 m_SequenceTransitioner; // 0x02f0, 0x158 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimatingController) == 0x4C8, "CBaseAnimatingController size mismatch");
+            static_assert(sizeof(CBaseAnimatingController) == 0x448, "CBaseAnimatingController size mismatch");
         }
     }
 }

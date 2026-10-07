@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +29,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Earthshaker_EnchantTotem_Leap : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1a78[0x8]; // 0x1a78, 0x8 bytes
+                std::uint8_t pad_1aa8[0x8]; // 0x1aa8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Earthshaker_EnchantTotem_Leap) == 0x1A80, "CDOTA_Modifier_Earthshaker_EnchantTotem_Leap size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Earthshaker_EnchantTotem_Leap) == 0x1AB0, "CDOTA_Modifier_Earthshaker_EnchantTotem_Leap size mismatch");
         }
     }
 }

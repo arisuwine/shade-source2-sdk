@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x60
+             * Size: 0x68
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -55,13 +55,13 @@ namespace shade {
                 bool m_bSuppressFlinch; // 0x0051, 0x1 bytes
                 std::uint8_t pad_0052[0x2]; // 0x0052, 0x2 bytes
                 shade::sdk::client::HitGroup_t m_nOverrideFlinchHitGroup; // 0x0054, 0x4 bytes
-                std::uint8_t pad_0058[0x8]; // 0x0058, 0x8 bytes
+                std::uint8_t pad_0058[0x10]; // 0x0058, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTakeDamageResult) == 0x60, "CTakeDamageResult size mismatch");
+            static_assert(sizeof(CTakeDamageResult) == 0x68, "CTakeDamageResult size mismatch");
         }
     }
 }

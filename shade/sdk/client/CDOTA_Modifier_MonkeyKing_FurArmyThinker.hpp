@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,23 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_MonkeyKing_FurArmyThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fDuration; // 0x1a78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fTimeThinkerCreated; // 0x1a7c, 0x4 bytes
-                CUtlVector<VectorWS> m_vTargetPositions; // 0x1a80, 0x18 bytes
-                VectorWS m_vInitialPos; // 0x1a98, 0xc bytes
-                float first_radius; // 0x1aa4, 0x4 bytes
-                std::int32_t num_first_soldiers; // 0x1aa8, 0x4 bytes
-                float second_radius; // 0x1aac, 0x4 bytes
-                std::int32_t num_second_soldiers; // 0x1ab0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nRingFXIndex; // 0x1ab4, 0x4 bytes
-                float final_radius; // 0x1ab8, 0x4 bytes
-                float leadership_time_buffer; // 0x1abc, 0x4 bytes
+                float m_fDuration; // 0x1aa8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fTimeThinkerCreated; // 0x1aac, 0x4 bytes
+                CUtlVector<VectorWS> m_vTargetPositions; // 0x1ab0, 0x18 bytes
+                VectorWS m_vInitialPos; // 0x1ac8, 0xc bytes
+                float first_radius; // 0x1ad4, 0x4 bytes
+                std::int32_t num_first_soldiers; // 0x1ad8, 0x4 bytes
+                float second_radius; // 0x1adc, 0x4 bytes
+                std::int32_t num_second_soldiers; // 0x1ae0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nRingFXIndex; // 0x1ae4, 0x4 bytes
+                float final_radius; // 0x1ae8, 0x4 bytes
+                float leadership_time_buffer; // 0x1aec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_FurArmyThinker) == 0x1AC0, "CDOTA_Modifier_MonkeyKing_FurArmyThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_FurArmyThinker) == 0x1AF0, "CDOTA_Modifier_MonkeyKing_FurArmyThinker size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b50
+             * Size: 0x1b80
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,30 +30,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Wisp_Spirits : public shade::sdk::client::CDOTA_Buff {
             public:
-                float creep_damage; // 0x1a78, 0x4 bytes
-                float hero_damage; // 0x1a7c, 0x4 bytes
-                float hit_radius; // 0x1a80, 0x4 bytes
-                float hero_hit_radius; // 0x1a84, 0x4 bytes
-                float explode_radius; // 0x1a88, 0x4 bytes
-                float min_range; // 0x1a8c, 0x4 bytes
-                float max_range; // 0x1a90, 0x4 bytes
-                float default_radius; // 0x1a94, 0x4 bytes
-                std::int32_t spirit_amount; // 0x1a98, 0x4 bytes
-                float m_flRotation; // 0x1a9c, 0x4 bytes
-                float m_flSpiritRadius; // 0x1aa0, 0x4 bytes
-                float spirit_movement_rate; // 0x1aa4, 0x4 bytes
-                float spirit_spawn_time; // 0x1aa8, 0x4 bytes
-                float scepter_slow_duration; // 0x1aac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextSpawn; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlString m_strSpiritsOutSwapAbility; // 0x1ab8, 0x8 bytes
-                std::uint8_t pad_1ac0[0x90]; // 0x1ac0, 0x90 bytes
+                float creep_damage; // 0x1aa8, 0x4 bytes
+                float hero_damage; // 0x1aac, 0x4 bytes
+                float hit_radius; // 0x1ab0, 0x4 bytes
+                float hero_hit_radius; // 0x1ab4, 0x4 bytes
+                float explode_radius; // 0x1ab8, 0x4 bytes
+                float min_range; // 0x1abc, 0x4 bytes
+                float max_range; // 0x1ac0, 0x4 bytes
+                float default_radius; // 0x1ac4, 0x4 bytes
+                std::int32_t spirit_amount; // 0x1ac8, 0x4 bytes
+                float m_flRotation; // 0x1acc, 0x4 bytes
+                float m_flSpiritRadius; // 0x1ad0, 0x4 bytes
+                float spirit_movement_rate; // 0x1ad4, 0x4 bytes
+                float spirit_spawn_time; // 0x1ad8, 0x4 bytes
+                float scepter_slow_duration; // 0x1adc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextSpawn; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                CUtlString m_strSpiritsOutSwapAbility; // 0x1ae8, 0x8 bytes
+                std::uint8_t pad_1af0[0x90]; // 0x1af0, 0x90 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Wisp_Spirits) == 0x1B50, "CDOTA_Modifier_Wisp_Spirits size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Wisp_Spirits) == 0x1B80, "CDOTA_Modifier_Wisp_Spirits size mismatch");
         }
     }
 }

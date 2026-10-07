@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1ac8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Creature : public shade::sdk::client::C_DOTA_BaseNPC_Creep {
             public:
-                bool m_bIsCurrentlyChanneling; // 0x19c0, 0x1 bytes
-                std::uint8_t pad_19c1[0x3]; // 0x19c1, 0x3 bytes
-                float m_flChannelCycle; // 0x19c4, 0x4 bytes
+                bool m_bIsCurrentlyChanneling; // 0x1ac0, 0x1 bytes
+                std::uint8_t pad_1ac1[0x3]; // 0x1ac1, 0x3 bytes
+                float m_flChannelCycle; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Creature) == 0x19C8, "C_DOTA_BaseNPC_Creature size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Creature) == 0x1AC8, "C_DOTA_BaseNPC_Creature size mismatch");
         }
     }
 }

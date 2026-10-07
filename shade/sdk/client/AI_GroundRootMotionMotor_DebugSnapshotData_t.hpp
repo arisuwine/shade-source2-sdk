@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x88
+             * Size: 0x90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -53,15 +53,17 @@ namespace shade {
                 CGlobalSymbol move_type; // 0x0058, 0x8 bytes
                 float f_forward_strafing_angle_actual; // 0x0060, 0x4 bytes
                 float f_forward_strafing_angle_desired; // 0x0064, 0x4 bytes
-                float f_current_lean; // 0x0068, 0x4 bytes
-                float f_target_lean; // 0x006c, 0x4 bytes
-                CUtlVector<shade::sdk::client::AI_GroundRootMotionMotor_DebugSnapshotData_t__Event_t> vec_events; // 0x0070, 0x18 bytes
+                float f_forward_strafing_angle_committed; // 0x0068, 0x4 bytes
+                float f_current_lean; // 0x006c, 0x4 bytes
+                float f_target_lean; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                CUtlVector<shade::sdk::client::AI_GroundRootMotionMotor_DebugSnapshotData_t__Event_t> vec_events; // 0x0078, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_GroundRootMotionMotor_DebugSnapshotData_t) == 0x88, "AI_GroundRootMotionMotor_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_GroundRootMotionMotor_DebugSnapshotData_t) == 0x90, "AI_GroundRootMotionMotor_DebugSnapshotData_t size mismatch");
         }
     }
 }

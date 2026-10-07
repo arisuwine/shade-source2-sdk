@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,26 +29,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Morphling_EbbAndFlow_Intrinsic : public shade::sdk::client::CDOTA_Buff {
             public:
-                float attack_range_min; // 0x1a78, 0x4 bytes
-                float attack_range_max; // 0x1a7c, 0x4 bytes
-                float cast_range_min; // 0x1a80, 0x4 bytes
-                float cast_range_max; // 0x1a84, 0x4 bytes
-                float debuff_amp_min; // 0x1a88, 0x4 bytes
-                float debuff_amp_max; // 0x1a8c, 0x4 bytes
-                float model_scale_min; // 0x1a90, 0x4 bytes
-                float model_scale_max; // 0x1a94, 0x4 bytes
-                float magic_amp_min; // 0x1a98, 0x4 bytes
-                float magic_amp_max; // 0x1a9c, 0x4 bytes
-                float attack_range_per_agi; // 0x1aa0, 0x4 bytes
-                float move_speed_per_agi; // 0x1aa4, 0x4 bytes
-                float cast_range_per_str; // 0x1aa8, 0x4 bytes
-                float slow_resist_per_str; // 0x1aac, 0x4 bytes
+                float attack_range_min; // 0x1aa8, 0x4 bytes
+                float attack_range_max; // 0x1aac, 0x4 bytes
+                float cast_range_min; // 0x1ab0, 0x4 bytes
+                float cast_range_max; // 0x1ab4, 0x4 bytes
+                float debuff_amp_min; // 0x1ab8, 0x4 bytes
+                float debuff_amp_max; // 0x1abc, 0x4 bytes
+                float model_scale_min; // 0x1ac0, 0x4 bytes
+                float model_scale_max; // 0x1ac4, 0x4 bytes
+                float magic_amp_min; // 0x1ac8, 0x4 bytes
+                float magic_amp_max; // 0x1acc, 0x4 bytes
+                float attack_range_per_agi; // 0x1ad0, 0x4 bytes
+                float move_speed_per_agi; // 0x1ad4, 0x4 bytes
+                float cast_range_per_str; // 0x1ad8, 0x4 bytes
+                float slow_resist_per_str; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Morphling_EbbAndFlow_Intrinsic) == 0x1AB0, "CDOTA_Modifier_Morphling_EbbAndFlow_Intrinsic size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Morphling_EbbAndFlow_Intrinsic) == 0x1AE0, "CDOTA_Modifier_Morphling_EbbAndFlow_Intrinsic size mismatch");
         }
     }
 }

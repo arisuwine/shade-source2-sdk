@@ -47,9 +47,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CIngameEvent_MuertaReleaseSpring2023) == 0x1A00, "CIngameEvent_MuertaReleaseSpring2023 size mismatch");
         }

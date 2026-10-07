@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_VoidSpirit_AetherRemnant_Pull : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a78, 0x4 bytes
-                shade::sdk::client::PlayerID_t m_nPlayerID; // 0x1a7c, 0x4 bytes
-                float m_fMovementSpeed; // 0x1a80, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hPullTarget; // 0x1a84, 0x4 bytes
-                float think_interval; // 0x1a88, 0x4 bytes
-                float artifice_pct_effectiveness; // 0x1a8c, 0x4 bytes
-                bool bIsArtifice; // 0x1a90, 0x1 bytes
-                std::uint8_t pad_1a91[0x7]; // 0x1a91, 0x7 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1aa8, 0x4 bytes
+                shade::sdk::client::PlayerID_t m_nPlayerID; // 0x1aac, 0x4 bytes
+                float m_fMovementSpeed; // 0x1ab0, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hPullTarget; // 0x1ab4, 0x4 bytes
+                float think_interval; // 0x1ab8, 0x4 bytes
+                float artifice_pct_effectiveness; // 0x1abc, 0x4 bytes
+                bool bIsArtifice; // 0x1ac0, 0x1 bytes
+                std::uint8_t pad_1ac1[0x7]; // 0x1ac1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnant_Pull) == 0x1A98, "CDOTA_Modifier_VoidSpirit_AetherRemnant_Pull size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnant_Pull) == 0x1AC8, "CDOTA_Modifier_VoidSpirit_AetherRemnant_Pull size mismatch");
         }
     }
 }

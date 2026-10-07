@@ -39,7 +39,8 @@ namespace shade {
             class CInfoOffscreenPanoramaTexture : public shade::sdk::client::C_PointEntity {
             public:
                 bool m_bDisabled; // 0x05f0, 0x1 bytes
-                std::uint8_t pad_05f1[0x3]; // 0x05f1, 0x3 bytes
+                bool m_bEnableMipGen; // 0x05f1, 0x1 bytes
+                std::uint8_t pad_05f2[0x2]; // 0x05f2, 0x2 bytes
                 std::int32_t m_nResolutionX; // 0x05f4, 0x4 bytes
                 std::int32_t m_nResolutionY; // 0x05f8, 0x4 bytes
                 std::uint8_t pad_05fc[0x4]; // 0x05fc, 0x4 bytes
@@ -58,12 +59,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CInfoOffscreenPanoramaTexture) == 0x7F8, "CInfoOffscreenPanoramaTexture size mismatch");
         }

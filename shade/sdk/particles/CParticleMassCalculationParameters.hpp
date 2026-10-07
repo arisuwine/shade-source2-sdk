@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x458
+             * Size: 0x470
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -31,15 +31,15 @@ namespace shade {
             public:
                 shade::sdk::particles::ParticleMassMode_t m_nMassMode; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x0008, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flNominalRadius; // 0x0178, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flScale; // 0x02e8, 0x170 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x0008, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flNominalRadius; // 0x0180, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flScale; // 0x02f8, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleMassCalculationParameters) == 0x458, "CParticleMassCalculationParameters size mismatch");
+            static_assert(sizeof(CParticleMassCalculationParameters) == 0x470, "CParticleMassCalculationParameters size mismatch");
         }
     }
 }

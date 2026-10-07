@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,16 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Pet_CarriedItem : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                CHandle<shade::sdk::server::CDOTA_BaseNPC_Hero> m_hHeroHandle; // 0x0798, 0x4 bytes
-                std::uint8_t pad_079c[0x4]; // 0x079c, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC_Hero> m_hHeroHandle; // 0x0878, 0x4 bytes
+                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Pet_CarriedItem) == 0x7A0, "CDOTA_Pet_CarriedItem size mismatch");
+            static_assert(sizeof(CDOTA_Pet_CarriedItem) == 0x880, "CDOTA_Pet_CarriedItem size mismatch");
         }
     }
 }

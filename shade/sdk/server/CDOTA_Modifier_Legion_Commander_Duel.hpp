@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,29 +38,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Legion_Commander_Duel : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t reward_damage; // 0x1a78, 0x4 bytes
-                std::int32_t assist_reward_damage; // 0x1a7c, 0x4 bytes
-                std::int32_t damage_reduction_pct; // 0x1a80, 0x4 bytes
-                std::int32_t debuff_immunity; // 0x1a84, 0x4 bytes
-                std::int32_t team_duel; // 0x1a88, 0x4 bytes
-                std::int32_t trigger_pta_on_victory; // 0x1a8c, 0x4 bytes
-                float duel_refresh_on_victory; // 0x1a90, 0x4 bytes
-                bool m_bAttacked; // 0x1a94, 0x1 bytes
-                bool m_bHadAVictor; // 0x1a95, 0x1 bytes
-                std::uint8_t pad_1a96[0x2]; // 0x1a96, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeDuelStart; // 0x1a98, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPartner; // 0x1a9c, 0x4 bytes
-                float m_flNextTime; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> hAlreadyHitList; // 0x1aa8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAllyAssisters; // 0x1ac0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hEnemyAssisters; // 0x1ad8, 0x18 bytes
+                std::int32_t reward_damage; // 0x1aa8, 0x4 bytes
+                std::int32_t assist_reward_damage; // 0x1aac, 0x4 bytes
+                std::int32_t damage_reduction_pct; // 0x1ab0, 0x4 bytes
+                std::int32_t debuff_immunity; // 0x1ab4, 0x4 bytes
+                std::int32_t team_duel; // 0x1ab8, 0x4 bytes
+                std::int32_t trigger_pta_on_victory; // 0x1abc, 0x4 bytes
+                float duel_refresh_on_victory; // 0x1ac0, 0x4 bytes
+                bool m_bAttacked; // 0x1ac4, 0x1 bytes
+                bool m_bHadAVictor; // 0x1ac5, 0x1 bytes
+                std::uint8_t pad_1ac6[0x2]; // 0x1ac6, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeDuelStart; // 0x1ac8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPartner; // 0x1acc, 0x4 bytes
+                float m_flNextTime; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> hAlreadyHitList; // 0x1ad8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAllyAssisters; // 0x1af0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hEnemyAssisters; // 0x1b08, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Legion_Commander_Duel) == 0x1AF0, "CDOTA_Modifier_Legion_Commander_Duel size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Legion_Commander_Duel) == 0x1B20, "CDOTA_Modifier_Legion_Commander_Duel size mismatch");
         }
     }
 }

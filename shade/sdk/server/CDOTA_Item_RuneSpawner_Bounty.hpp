@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_RuneSpawner_Bounty : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                CUtlSymbolLarge m_szPosition; // 0x0798, 0x8 bytes
-                std::int32_t m_nDotaTeam; // 0x07a0, 0x4 bytes
-                float m_flLastSpawnTime; // 0x07a4, 0x4 bytes
-                float m_flNextSpawnTime; // 0x07a8, 0x4 bytes
-                std::uint8_t pad_07ac[0x4]; // 0x07ac, 0x4 bytes
+                CUtlSymbolLarge m_szPosition; // 0x0878, 0x8 bytes
+                std::int32_t m_nDotaTeam; // 0x0880, 0x4 bytes
+                float m_flLastSpawnTime; // 0x0884, 0x4 bytes
+                float m_flNextSpawnTime; // 0x0888, 0x4 bytes
+                std::uint8_t pad_088c[0x4]; // 0x088c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_RuneSpawner_Bounty) == 0x7B0, "CDOTA_Item_RuneSpawner_Bounty size mismatch");
+            static_assert(sizeof(CDOTA_Item_RuneSpawner_Bounty) == 0x890, "CDOTA_Item_RuneSpawner_Bounty size mismatch");
         }
     }
 }

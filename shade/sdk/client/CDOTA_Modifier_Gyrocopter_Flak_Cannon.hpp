@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Gyrocopter_Flak_Cannon : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t max_attacks; // 0x1a78, 0x4 bytes
-                std::int32_t bonus_damage; // 0x1a7c, 0x4 bytes
-                std::int32_t m_iNumAttacks; // 0x1a80, 0x4 bytes
-                std::int32_t projectile_speed; // 0x1a84, 0x4 bytes
-                std::int32_t bonus_night_vision; // 0x1a88, 0x4 bytes
-                float radius; // 0x1a8c, 0x4 bytes
+                std::int32_t max_attacks; // 0x1aa8, 0x4 bytes
+                std::int32_t bonus_damage; // 0x1aac, 0x4 bytes
+                std::int32_t m_iNumAttacks; // 0x1ab0, 0x4 bytes
+                std::int32_t projectile_speed; // 0x1ab4, 0x4 bytes
+                std::int32_t bonus_night_vision; // 0x1ab8, 0x4 bytes
+                std::int32_t additional_targets; // 0x1abc, 0x4 bytes
+                std::int32_t proc_attack_modifiers; // 0x1ac0, 0x4 bytes
+                float radius; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Flak_Cannon) == 0x1A90, "CDOTA_Modifier_Gyrocopter_Flak_Cannon size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Flak_Cannon) == 0x1AC8, "CDOTA_Modifier_Gyrocopter_Flak_Cannon size mismatch");
         }
     }
 }

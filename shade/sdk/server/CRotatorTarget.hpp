@@ -15,15 +15,13 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/entity2/CEntityIOOutput.hpp"
 #include "shade/sdk/server/CPointEntity.hpp"
-#include "shade/sdk/server/RotatorTargetSpace_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x498
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +30,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CRotatorTarget : public shade::sdk::server::CPointEntity {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnArrivedAt; // 0x0498, 0x18 bytes
-                shade::sdk::server::RotatorTargetSpace_t m_eSpace; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRotatorTarget) == 0x4B8, "CRotatorTarget size mismatch");
+            static_assert(sizeof(CRotatorTarget) == 0x498, "CRotatorTarget size mismatch");
         }
     }
 }

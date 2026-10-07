@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Helm_Of_The_Undying_Active : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1a78, 0x4 bytes
-                bool m_bPassive; // 0x1a7c, 0x1 bytes
-                std::uint8_t pad_1a7d[0x3]; // 0x1a7d, 0x3 bytes
-                float bonus_kill_duration; // 0x1a80, 0x4 bytes
-                float kill_radius; // 0x1a84, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1aa8, 0x4 bytes
+                bool m_bPassive; // 0x1aac, 0x1 bytes
+                std::uint8_t pad_1aad[0x3]; // 0x1aad, 0x3 bytes
+                float bonus_kill_duration; // 0x1ab0, 0x4 bytes
+                float kill_radius; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Helm_Of_The_Undying_Active) == 0x1A88, "CDOTA_Modifier_Item_Helm_Of_The_Undying_Active size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Helm_Of_The_Undying_Active) == 0x1AB8, "CDOTA_Modifier_Item_Helm_Of_The_Undying_Active size mismatch");
         }
     }
 }

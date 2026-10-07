@@ -38,7 +38,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xc08
+             * Size: 0xc40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,21 +46,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderMaterialProxy : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                std::int32_t m_nMaterialControlPoint; // 0x0228, 0x4 bytes
-                shade::sdk::particles::MaterialProxyType_t m_nProxyType; // 0x022c, 0x4 bytes
-                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x0230, 0x18 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hOverrideMaterial; // 0x0248, 0x8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaterialOverrideEnabled; // 0x0250, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x03c0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flAlpha; // 0x0a78, 0x170 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0be8, 0x4 bytes
-                std::uint8_t pad_0bec[0x1c]; // 0x0bec, 0x1c bytes
+                std::int32_t m_nMaterialControlPoint; // 0x0230, 0x4 bytes
+                shade::sdk::particles::MaterialProxyType_t m_nProxyType; // 0x0234, 0x4 bytes
+                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x0238, 0x18 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hOverrideMaterial; // 0x0250, 0x8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaterialOverrideEnabled; // 0x0258, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x03d0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flAlpha; // 0x0aa8, 0x178 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0c20, 0x4 bytes
+                std::uint8_t pad_0c24[0x1c]; // 0x0c24, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderMaterialProxy) == 0xC08, "C_OP_RenderMaterialProxy size mismatch");
+            static_assert(sizeof(C_OP_RenderMaterialProxy) == 0xC40, "C_OP_RenderMaterialProxy size mismatch");
         }
     }
 }

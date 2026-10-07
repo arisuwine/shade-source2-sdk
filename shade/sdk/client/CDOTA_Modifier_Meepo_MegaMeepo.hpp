@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Meepo_MegaMeepo : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a78, 0x4 bytes
-                float m_flOffset; // 0x1a7c, 0x4 bytes
-                QAngle m_vStartAngles; // 0x1a80, 0xc bytes
-                VectorWS m_vStartLocation; // 0x1a8c, 0xc bytes
-                bool m_bInterrupted; // 0x1a98, 0x1 bytes
-                bool m_bHasBeenDestroyed; // 0x1a99, 0x1 bytes
-                bool m_bIsHighestMeepo; // 0x1a9a, 0x1 bytes
-                std::uint8_t pad_1a9b[0x5]; // 0x1a9b, 0x5 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1aa8, 0x4 bytes
+                float m_flOffset; // 0x1aac, 0x4 bytes
+                QAngle m_vStartAngles; // 0x1ab0, 0xc bytes
+                VectorWS m_vStartLocation; // 0x1abc, 0xc bytes
+                bool m_bInterrupted; // 0x1ac8, 0x1 bytes
+                bool m_bHasBeenDestroyed; // 0x1ac9, 0x1 bytes
+                bool m_bIsHighestMeepo; // 0x1aca, 0x1 bytes
+                std::uint8_t pad_1acb[0x5]; // 0x1acb, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Meepo_MegaMeepo) == 0x1AA0, "CDOTA_Modifier_Meepo_MegaMeepo size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Meepo_MegaMeepo) == 0x1AD0, "CDOTA_Modifier_Meepo_MegaMeepo size mismatch");
         }
     }
 }

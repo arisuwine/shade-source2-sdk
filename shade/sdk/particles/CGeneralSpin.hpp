@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x1f8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CGeneralSpin : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nSpinRateDegrees; // 0x01d8, 0x4 bytes
-                std::int32_t m_nSpinRateMinDegrees; // 0x01dc, 0x4 bytes
-                std::uint8_t pad_01e0[0x4]; // 0x01e0, 0x4 bytes
-                float m_fSpinRateStopTime; // 0x01e4, 0x4 bytes
-                std::uint8_t pad_01e8[0x8]; // 0x01e8, 0x8 bytes
+                std::int32_t m_nSpinRateDegrees; // 0x01e0, 0x4 bytes
+                std::int32_t m_nSpinRateMinDegrees; // 0x01e4, 0x4 bytes
+                std::uint8_t pad_01e8[0x4]; // 0x01e8, 0x4 bytes
+                float m_fSpinRateStopTime; // 0x01ec, 0x4 bytes
+                std::uint8_t pad_01f0[0x8]; // 0x01f0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGeneralSpin) == 0x1F0, "CGeneralSpin size mismatch");
+            static_assert(sizeof(CGeneralSpin) == 0x1F8, "CGeneralSpin size mismatch");
         }
     }
 }

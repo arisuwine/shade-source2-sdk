@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x230
+             * Size: 0x240
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateSequentialPath : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                float m_fMaxDistance; // 0x01e0, 0x4 bytes
-                float m_flNumToAssign; // 0x01e4, 0x4 bytes
-                bool m_bLoop; // 0x01e8, 0x1 bytes
-                bool m_bCPPairs; // 0x01e9, 0x1 bytes
-                bool m_bSaveOffset; // 0x01ea, 0x1 bytes
-                std::uint8_t pad_01eb[0x5]; // 0x01eb, 0x5 bytes
-                shade::sdk::particles::CPathParameters m_PathParams; // 0x01f0, 0x40 bytes
+                float m_fMaxDistance; // 0x01e8, 0x4 bytes
+                float m_flNumToAssign; // 0x01ec, 0x4 bytes
+                bool m_bLoop; // 0x01f0, 0x1 bytes
+                bool m_bCPPairs; // 0x01f1, 0x1 bytes
+                bool m_bSaveOffset; // 0x01f2, 0x1 bytes
+                std::uint8_t pad_01f3[0xd]; // 0x01f3, 0xd bytes
+                shade::sdk::particles::CPathParameters m_PathParams; // 0x0200, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateSequentialPath) == 0x230, "C_INIT_CreateSequentialPath size mismatch");
+            static_assert(sizeof(C_INIT_CreateSequentialPath) == 0x240, "C_INIT_CreateSequentialPath size mismatch");
         }
     }
 }

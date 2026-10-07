@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x928
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,25 +38,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerPush : public shade::sdk::server::CBaseTrigger {
             public:
-                QAngle m_angPushEntitySpace; // 0x08f0, 0xc bytes
-                Vector m_vecPushDirEntitySpace; // 0x08fc, 0xc bytes
-                bool m_bTriggerOnStartTouch; // 0x0908, 0x1 bytes
-                bool m_bUsePathSimple; // 0x0909, 0x1 bytes
-                std::uint8_t pad_090a[0x6]; // 0x090a, 0x6 bytes
-                CUtlSymbolLarge m_iszPathSimpleName; // 0x0910, 0x8 bytes
-                CHandle<shade::sdk::server::CPathSimple> m_PathSimple; // 0x0918, 0x4 bytes
-                std::uint32_t m_splinePushType; // 0x091c, 0x4 bytes
-                float m_flSpeed; // 0x0920, 0x4 bytes
-                std::uint8_t pad_0924[0x4]; // 0x0924, 0x4 bytes
+                QAngle m_angPushEntitySpace; // 0x09d0, 0xc bytes
+                Vector m_vecPushDirEntitySpace; // 0x09dc, 0xc bytes
+                bool m_bTriggerOnStartTouch; // 0x09e8, 0x1 bytes
+                bool m_bUsePathSimple; // 0x09e9, 0x1 bytes
+                std::uint8_t pad_09ea[0x6]; // 0x09ea, 0x6 bytes
+                CUtlSymbolLarge m_iszPathSimpleName; // 0x09f0, 0x8 bytes
+                CHandle<shade::sdk::server::CPathSimple> m_PathSimple; // 0x09f8, 0x4 bytes
+                std::uint32_t m_splinePushType; // 0x09fc, 0x4 bytes
+                float m_flSpeed; // 0x0a00, 0x4 bytes
+                std::uint8_t pad_0a04[0x4]; // 0x0a04, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * Vector InputSetPushDirection; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPushSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTriggerPush) == 0x928, "CTriggerPush size mismatch");
+            static_assert(sizeof(CTriggerPush) == 0xA08, "CTriggerPush size mismatch");
         }
     }
 }

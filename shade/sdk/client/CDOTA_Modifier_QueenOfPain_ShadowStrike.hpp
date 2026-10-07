@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_QueenOfPain_ShadowStrike : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t duration_damage; // 0x1a78, 0x4 bytes
-                std::int32_t duration_heal; // 0x1a7c, 0x4 bytes
-                std::int32_t movement_slow; // 0x1a80, 0x4 bytes
-                std::uint8_t pad_1a84[0x4]; // 0x1a84, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_SlowInterval; // 0x1a88, 0x18 bytes
-                float m_flSlowStep; // 0x1aa0, 0x4 bytes
-                float m_flSlowStepStep; // 0x1aa4, 0x4 bytes
-                float attack_buff_duration; // 0x1aa8, 0x4 bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                std::int32_t duration_damage; // 0x1aa8, 0x4 bytes
+                std::int32_t duration_heal; // 0x1aac, 0x4 bytes
+                std::int32_t movement_slow; // 0x1ab0, 0x4 bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_SlowInterval; // 0x1ab8, 0x18 bytes
+                float m_flSlowStep; // 0x1ad0, 0x4 bytes
+                float m_flSlowStepStep; // 0x1ad4, 0x4 bytes
+                float attack_buff_duration; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_QueenOfPain_ShadowStrike) == 0x1AB0, "CDOTA_Modifier_QueenOfPain_ShadowStrike size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_QueenOfPain_ShadowStrike) == 0x1AE0, "CDOTA_Modifier_QueenOfPain_ShadowStrike size mismatch");
         }
     }
 }

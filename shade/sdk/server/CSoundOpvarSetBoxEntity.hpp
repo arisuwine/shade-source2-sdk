@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x698
+             * Size: 0x6a0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -31,22 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetBoxEntity : public shade::sdk::server::CSoundOpvarSetPointEntity {
             public:
-                Vector m_vDistanceInnerMins; // 0x0630, 0xc bytes
-                Vector m_vDistanceInnerMaxs; // 0x063c, 0xc bytes
-                Vector m_vDistanceOuterMins; // 0x0648, 0xc bytes
-                Vector m_vDistanceOuterMaxs; // 0x0654, 0xc bytes
-                std::int32_t m_nBoxDirection; // 0x0660, 0x4 bytes
-                Vector m_vInnerMins; // 0x0664, 0xc bytes
-                Vector m_vInnerMaxs; // 0x0670, 0xc bytes
-                Vector m_vOuterMins; // 0x067c, 0xc bytes
-                Vector m_vOuterMaxs; // 0x0688, 0xc bytes
-                std::uint8_t pad_0694[0x4]; // 0x0694, 0x4 bytes
+                Vector m_vDistanceInnerMins; // 0x0638, 0xc bytes
+                Vector m_vDistanceInnerMaxs; // 0x0644, 0xc bytes
+                Vector m_vDistanceOuterMins; // 0x0650, 0xc bytes
+                Vector m_vDistanceOuterMaxs; // 0x065c, 0xc bytes
+                std::int32_t m_nBoxDirection; // 0x0668, 0x4 bytes
+                Vector m_vInnerMins; // 0x066c, 0xc bytes
+                Vector m_vInnerMaxs; // 0x0678, 0xc bytes
+                Vector m_vOuterMins; // 0x0684, 0xc bytes
+                Vector m_vOuterMaxs; // 0x0690, 0xc bytes
+                std::uint8_t pad_069c[0x4]; // 0x069c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetBoxEntity) == 0x698, "CSoundOpvarSetBoxEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetBoxEntity) == 0x6A0, "CSoundOpvarSetBoxEntity size mismatch");
         }
     }
 }

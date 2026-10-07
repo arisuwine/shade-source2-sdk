@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15e0
+             * Size: 0x670
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,47 +38,45 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvCombinedLightProbeVolume : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_0498[0x1078]; // 0x0498, 0x1078 bytes
-                Color m_Entity_Color; // 0x1510, 0x4 bytes
-                float m_Entity_flBrightness; // 0x1514, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hCubemapTexture; // 0x1518, 0x8 bytes
-                bool m_Entity_bCustomCubemapTexture; // 0x1520, 0x1 bytes
-                std::uint8_t pad_1521[0x7]; // 0x1521, 0x7 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_AmbientCube; // 0x1528, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SDF; // 0x1530, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SH2_DC; // 0x1538, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SH2_R; // 0x1540, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SH2_G; // 0x1548, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SH2_B; // 0x1550, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeDirectLightIndicesTexture; // 0x1558, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeDirectLightScalarsTexture; // 0x1560, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeDirectLightShadowsTexture; // 0x1568, 0x8 bytes
-                Vector m_Entity_vBoxMins; // 0x1570, 0xc bytes
-                Vector m_Entity_vBoxMaxs; // 0x157c, 0xc bytes
-                bool m_Entity_bMoveable; // 0x1588, 0x1 bytes
-                std::uint8_t pad_1589[0x3]; // 0x1589, 0x3 bytes
-                std::int32_t m_Entity_nHandshake; // 0x158c, 0x4 bytes
-                std::int32_t m_Entity_nEnvCubeMapArrayIndex; // 0x1590, 0x4 bytes
-                std::int32_t m_Entity_nPriority; // 0x1594, 0x4 bytes
-                bool m_Entity_bStartDisabled; // 0x1598, 0x1 bytes
-                std::uint8_t pad_1599[0x3]; // 0x1599, 0x3 bytes
-                float m_Entity_flEdgeFadeDist; // 0x159c, 0x4 bytes
-                Vector m_Entity_vEdgeFadeDists; // 0x15a0, 0xc bytes
-                std::int32_t m_Entity_nLightProbeSizeX; // 0x15ac, 0x4 bytes
-                std::int32_t m_Entity_nLightProbeSizeY; // 0x15b0, 0x4 bytes
-                std::int32_t m_Entity_nLightProbeSizeZ; // 0x15b4, 0x4 bytes
-                std::int32_t m_Entity_nLightProbeAtlasX; // 0x15b8, 0x4 bytes
-                std::int32_t m_Entity_nLightProbeAtlasY; // 0x15bc, 0x4 bytes
-                std::int32_t m_Entity_nLightProbeAtlasZ; // 0x15c0, 0x4 bytes
-                std::uint8_t pad_15c4[0x15]; // 0x15c4, 0x15 bytes
-                bool m_Entity_bEnabled; // 0x15d9, 0x1 bytes
-                std::uint8_t pad_15da[0x6]; // 0x15da, 0x6 bytes
+                std::uint8_t pad_0498[0x118]; // 0x0498, 0x118 bytes
+                Color m_Entity_Color; // 0x05b0, 0x4 bytes
+                float m_Entity_flBrightness; // 0x05b4, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hCubemapTexture; // 0x05b8, 0x8 bytes
+                bool m_Entity_bCustomCubemapTexture; // 0x05c0, 0x1 bytes
+                std::uint8_t pad_05c1[0x7]; // 0x05c1, 0x7 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_AmbientCube; // 0x05c8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SDF; // 0x05d0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SH2_DC; // 0x05d8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeTexture_SH2_L1; // 0x05e0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeDirectLightIndicesTexture; // 0x05e8, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeDirectLightScalarsTexture; // 0x05f0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hLightProbeDirectLightShadowsTexture; // 0x05f8, 0x8 bytes
+                Vector m_Entity_vBoxMins; // 0x0600, 0xc bytes
+                Vector m_Entity_vBoxMaxs; // 0x060c, 0xc bytes
+                bool m_Entity_bMoveable; // 0x0618, 0x1 bytes
+                std::uint8_t pad_0619[0x3]; // 0x0619, 0x3 bytes
+                std::int32_t m_Entity_nHandshake; // 0x061c, 0x4 bytes
+                std::int32_t m_Entity_nEnvCubeMapArrayIndex; // 0x0620, 0x4 bytes
+                std::int32_t m_Entity_nPriority; // 0x0624, 0x4 bytes
+                bool m_Entity_bStartDisabled; // 0x0628, 0x1 bytes
+                std::uint8_t pad_0629[0x3]; // 0x0629, 0x3 bytes
+                float m_Entity_flEdgeFadeDist; // 0x062c, 0x4 bytes
+                Vector m_Entity_vEdgeFadeDists; // 0x0630, 0xc bytes
+                std::int32_t m_Entity_nLightProbeSizeX; // 0x063c, 0x4 bytes
+                std::int32_t m_Entity_nLightProbeSizeY; // 0x0640, 0x4 bytes
+                std::int32_t m_Entity_nLightProbeSizeZ; // 0x0644, 0x4 bytes
+                std::int32_t m_Entity_nLightProbeAtlasX; // 0x0648, 0x4 bytes
+                std::int32_t m_Entity_nLightProbeAtlasY; // 0x064c, 0x4 bytes
+                std::int32_t m_Entity_nLightProbeAtlasZ; // 0x0650, 0x4 bytes
+                std::uint8_t pad_0654[0x15]; // 0x0654, 0x15 bytes
+                bool m_Entity_bEnabled; // 0x0669, 0x1 bytes
+                std::uint8_t pad_066a[0x6]; // 0x066a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvCombinedLightProbeVolume) == 0x15E0, "CEnvCombinedLightProbeVolume size mismatch");
+            static_assert(sizeof(CEnvCombinedLightProbeVolume) == 0x670, "CEnvCombinedLightProbeVolume size mismatch");
         }
     }
 }

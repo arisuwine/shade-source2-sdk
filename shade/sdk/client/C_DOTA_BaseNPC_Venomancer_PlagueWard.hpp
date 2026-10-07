@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19d0
+             * Size: 0x1ad0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Venomancer_PlagueWard : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                bool m_bIsMovable; // 0x19b8, 0x1 bytes
-                std::uint8_t pad_19b9[0x3]; // 0x19b9, 0x3 bytes
-                QAngle m_angle; // 0x19bc, 0xc bytes
-                std::int32_t m_iPoseParameterAim; // 0x19c8, 0x4 bytes
-                std::uint8_t pad_19cc[0x4]; // 0x19cc, 0x4 bytes
+                bool m_bIsMovable; // 0x1ab8, 0x1 bytes
+                std::uint8_t pad_1ab9[0x3]; // 0x1ab9, 0x3 bytes
+                QAngle m_angle; // 0x1abc, 0xc bytes
+                std::int32_t m_iPoseParameterAim; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Venomancer_PlagueWard) == 0x19D0, "C_DOTA_BaseNPC_Venomancer_PlagueWard size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Venomancer_PlagueWard) == 0x1AD0, "C_DOTA_BaseNPC_Venomancer_PlagueWard size mismatch");
         }
     }
 }

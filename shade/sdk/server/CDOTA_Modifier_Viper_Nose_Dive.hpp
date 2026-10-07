@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Viper_Nose_Dive : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_flPredictedTotalTime; // 0x1a78, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1a7c, 0x4 bytes
-                VectorWS m_vTargetPos; // 0x1a80, 0xc bytes
-                VectorWS m_vStart; // 0x1a8c, 0xc bytes
-                float m_flZDelta; // 0x1a98, 0x4 bytes
-                float radius; // 0x1a9c, 0x4 bytes
-                float corrosive_radius; // 0x1aa0, 0x4 bytes
-                float effect_duration; // 0x1aa4, 0x4 bytes
-                float dive_speed; // 0x1aa8, 0x4 bytes
-                float start_height; // 0x1aac, 0x4 bytes
+                float m_flPredictedTotalTime; // 0x1aa8, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1aac, 0x4 bytes
+                VectorWS m_vTargetPos; // 0x1ab0, 0xc bytes
+                VectorWS m_vStart; // 0x1abc, 0xc bytes
+                float m_flZDelta; // 0x1ac8, 0x4 bytes
+                float radius; // 0x1acc, 0x4 bytes
+                float corrosive_radius; // 0x1ad0, 0x4 bytes
+                float effect_duration; // 0x1ad4, 0x4 bytes
+                float dive_speed; // 0x1ad8, 0x4 bytes
+                float start_height; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Viper_Nose_Dive) == 0x1AB0, "CDOTA_Modifier_Viper_Nose_Dive size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Viper_Nose_Dive) == 0x1AE0, "CDOTA_Modifier_Viper_Nose_Dive size mismatch");
         }
     }
 }

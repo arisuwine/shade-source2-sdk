@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Viper_PoisonAttack_Slow : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage; // 0x1a78, 0x4 bytes
-                std::int32_t shard_armor_reduction; // 0x1a7c, 0x4 bytes
-                std::int32_t shard_building_dmg_pct; // 0x1a80, 0x4 bytes
-                float movement_speed; // 0x1a84, 0x4 bytes
-                std::int32_t magic_resistance; // 0x1a88, 0x4 bytes
-                float m_flAccumDamage; // 0x1a8c, 0x4 bytes
-                float expiration_damage_radius; // 0x1a90, 0x4 bytes
-                std::int32_t accumulated_damage_explosion_pct; // 0x1a94, 0x4 bytes
+                float damage; // 0x1aa8, 0x4 bytes
+                std::int32_t shard_armor_reduction; // 0x1aac, 0x4 bytes
+                std::int32_t shard_building_dmg_pct; // 0x1ab0, 0x4 bytes
+                float movement_speed; // 0x1ab4, 0x4 bytes
+                std::int32_t magic_resistance; // 0x1ab8, 0x4 bytes
+                float m_flAccumDamage; // 0x1abc, 0x4 bytes
+                float expiration_damage_radius; // 0x1ac0, 0x4 bytes
+                std::int32_t accumulated_damage_explosion_pct; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Viper_PoisonAttack_Slow) == 0x1A98, "CDOTA_Modifier_Viper_PoisonAttack_Slow size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Viper_PoisonAttack_Slow) == 0x1AC8, "CDOTA_Modifier_Viper_PoisonAttack_Slow size mismatch");
         }
     }
 }

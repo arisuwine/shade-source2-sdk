@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Techies_LandMine : public shade::sdk::client::CDOTA_Modifier_Invisible {
             public:
-                float radius; // 0x1a88, 0x4 bytes
-                float proximity_threshold; // 0x1a8c, 0x4 bytes
-                float damage; // 0x1a90, 0x4 bytes
-                float activation_delay; // 0x1a94, 0x4 bytes
-                float outer_damage; // 0x1a98, 0x4 bytes
-                std::int32_t min_distance; // 0x1a9c, 0x4 bytes
-                bool bActivated; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x7]; // 0x1aa1, 0x7 bytes
-                shade::sdk::client::CountdownTimer m_Timer; // 0x1aa8, 0x18 bytes
+                float radius; // 0x1ab8, 0x4 bytes
+                float proximity_threshold; // 0x1abc, 0x4 bytes
+                float damage; // 0x1ac0, 0x4 bytes
+                float activation_delay; // 0x1ac4, 0x4 bytes
+                float outer_damage; // 0x1ac8, 0x4 bytes
+                std::int32_t min_distance; // 0x1acc, 0x4 bytes
+                bool bActivated; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x7]; // 0x1ad1, 0x7 bytes
+                shade::sdk::client::CountdownTimer m_Timer; // 0x1ad8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Techies_LandMine) == 0x1AC0, "CDOTA_Modifier_Techies_LandMine size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Techies_LandMine) == 0x1AF0, "CDOTA_Modifier_Techies_LandMine size mismatch");
         }
     }
 }

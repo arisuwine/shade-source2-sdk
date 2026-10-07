@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,27 +30,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Rattletrap_Cog : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bEnabled; // 0x1a78, 0x1 bytes
-                bool m_bPassThrough; // 0x1a79, 0x1 bytes
-                std::uint8_t pad_1a7a[0x2]; // 0x1a7a, 0x2 bytes
-                std::int32_t push_length; // 0x1a7c, 0x4 bytes
-                float push_duration; // 0x1a80, 0x4 bytes
-                std::int32_t radius; // 0x1a84, 0x4 bytes
-                std::int32_t cogs_pullin; // 0x1a88, 0x4 bytes
-                std::int32_t attacks_to_destroy; // 0x1a8c, 0x4 bytes
-                float m_flTriggerDistance; // 0x1a90, 0x4 bytes
-                bool m_bCogsPullin; // 0x1a94, 0x1 bytes
-                std::uint8_t pad_1a95[0x3]; // 0x1a95, 0x3 bytes
-                std::int32_t m_iCogIndex; // 0x1a98, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a9c, 0x4 bytes
-                VectorWS vCenter; // 0x1aa0, 0xc bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                bool m_bEnabled; // 0x1aa8, 0x1 bytes
+                bool m_bPassThrough; // 0x1aa9, 0x1 bytes
+                std::uint8_t pad_1aaa[0x2]; // 0x1aaa, 0x2 bytes
+                std::int32_t push_length; // 0x1aac, 0x4 bytes
+                float push_duration; // 0x1ab0, 0x4 bytes
+                std::int32_t radius; // 0x1ab4, 0x4 bytes
+                std::int32_t cogs_pullin; // 0x1ab8, 0x4 bytes
+                std::int32_t attacks_to_destroy; // 0x1abc, 0x4 bytes
+                float m_flTriggerDistance; // 0x1ac0, 0x4 bytes
+                bool m_bCogsPullin; // 0x1ac4, 0x1 bytes
+                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
+                std::int32_t m_iCogIndex; // 0x1ac8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1acc, 0x4 bytes
+                VectorWS vCenter; // 0x1ad0, 0xc bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Rattletrap_Cog) == 0x1AB0, "CDOTA_Modifier_Rattletrap_Cog size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Rattletrap_Cog) == 0x1AE0, "CDOTA_Modifier_Rattletrap_Cog size mismatch");
         }
     }
 }

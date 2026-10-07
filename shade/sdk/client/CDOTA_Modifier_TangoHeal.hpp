@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_TangoHeal : public shade::sdk::client::CDOTA_Buff {
             public:
-                float health_regen; // 0x1a78, 0x4 bytes
-                bool superheal; // 0x1a7c, 0x1 bytes
-                std::uint8_t pad_1a7d[0x3]; // 0x1a7d, 0x3 bytes
-                float m_fHealingDone; // 0x1a80, 0x4 bytes
-                float m_fUseSpeed; // 0x1a84, 0x4 bytes
+                float health_regen; // 0x1aa8, 0x4 bytes
+                bool superheal; // 0x1aac, 0x1 bytes
+                std::uint8_t pad_1aad[0x3]; // 0x1aad, 0x3 bytes
+                float m_fHealingDone; // 0x1ab0, 0x4 bytes
+                float m_fUseSpeed; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_TangoHeal) == 0x1A88, "CDOTA_Modifier_TangoHeal size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_TangoHeal) == 0x1AB8, "CDOTA_Modifier_TangoHeal size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xac0
+             * Size: 0xbb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,10 +34,10 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * float InputSetPlaybackRateOnAllLayers; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_BaseAnimatingOverlay) == 0xAC0, "C_BaseAnimatingOverlay size mismatch");
+            static_assert(sizeof(C_BaseAnimatingOverlay) == 0xBB0, "C_BaseAnimatingOverlay size mismatch");
         }
     }
 }

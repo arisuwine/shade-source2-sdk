@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x670
+             * Size: 0x678
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +38,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Demonicon : public shade::sdk::server::CDOTA_Item {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hDemonSummons; // 0x0658, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hDemonSummons; // 0x0660, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Demonicon) == 0x670, "CDOTA_Item_Demonicon size mismatch");
+            static_assert(sizeof(CDOTA_Item_Demonicon) == 0x678, "CDOTA_Item_Demonicon size mismatch");
         }
     }
 }

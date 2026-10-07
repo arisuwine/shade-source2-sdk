@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19f0
+             * Size: 0x1af0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,23 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Roshan : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                std::int32_t m_iKillerTeam; // 0x19b8, 0x4 bytes
-                std::int32_t m_iLastHealthPercent; // 0x19bc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x19c0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hRadiantRoshanPit; // 0x19c4, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDireRoshanPit; // 0x19c8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hRiverMidpoint; // 0x19cc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAttackingHeroes; // 0x19d0, 0x18 bytes
-                bool m_bGoldenRoshan; // 0x19e8, 0x1 bytes
-                std::uint8_t pad_19e9[0x7]; // 0x19e9, 0x7 bytes
+                std::int32_t m_iKillerTeam; // 0x1ab8, 0x4 bytes
+                std::int32_t m_iLastHealthPercent; // 0x1abc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ac0, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hRadiantRoshanPit; // 0x1ac4, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hDireRoshanPit; // 0x1ac8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hRiverMidpoint; // 0x1acc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAttackingHeroes; // 0x1ad0, 0x18 bytes
+                bool m_bGoldenRoshan; // 0x1ae8, 0x1 bytes
+                std::uint8_t pad_1ae9[0x7]; // 0x1ae9, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Roshan) == 0x19F0, "C_DOTA_Unit_Roshan size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Roshan) == 0x1AF0, "C_DOTA_Unit_Roshan size mismatch");
         }
     }
 }

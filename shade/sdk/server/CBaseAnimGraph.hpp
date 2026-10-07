@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x970
+             * Size: 0xa50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -46,32 +46,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseAnimGraph : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::client::CAnimGraphControllerManager m_graphControllerManager; // 0x0778, 0x98 bytes
-                shade::sdk::client::CAnimGraphControllerPtr m_pMainGraphController; // 0x0810, 0x8 bytes
-                bool m_bInitiallyPopulateInterpHistory; // 0x0818, 0x1 bytes
-                std::uint8_t pad_0819[0x7]; // 0x0819, 0x7 bytes
-                CEntityOutputTemplate<float> m_OnLayerCycleUpdated; // 0x0820, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnExternalChoreoGraphChanged; // 0x0840, 0x18 bytes
-                shade::sdk::client::IChoreoServices *m_pChoreoServices; // 0x0858, 0x8 bytes
-                bool m_bAnimGraphUpdateEnabled; // 0x0860, 0x1 bytes
-                bool m_bAnimationUpdateScheduled; // 0x0861, 0x1 bytes
-                std::uint8_t pad_0862[0x2]; // 0x0862, 0x2 bytes
-                Vector m_vecForce; // 0x0864, 0xc bytes
-                std::int32_t m_nForceBone; // 0x0870, 0x4 bytes
-                std::uint8_t pad_0874[0xc]; // 0x0874, 0xc bytes
-                shade::sdk::vphysics2::IPhysicsRagdollControl *m_pRagdollControl; // 0x0880, 0x8 bytes
-                shade::sdk::server::PhysicsRagdollPose_t m_RagdollPose; // 0x0888, 0x28 bytes
-                bool m_bRagdollEnabled; // 0x08b0, 0x1 bytes
-                bool m_bRagdollClientSide; // 0x08b1, 0x1 bytes
-                std::uint8_t pad_08b2[0xe]; // 0x08b2, 0xe bytes
-                CTransform m_xParentedRagdollRootInEntitySpace; // 0x08c0, 0x20 bytes
-                std::uint8_t pad_08e0[0x90]; // 0x08e0, 0x90 bytes
+                shade::sdk::client::CAnimGraphControllerManager m_graphControllerManager; // 0x0858, 0x98 bytes
+                shade::sdk::client::CAnimGraphControllerPtr m_pMainGraphController; // 0x08f0, 0x8 bytes
+                bool m_bInitiallyPopulateInterpHistory; // 0x08f8, 0x1 bytes
+                std::uint8_t pad_08f9[0x7]; // 0x08f9, 0x7 bytes
+                CEntityOutputTemplate<float> m_OnLayerCycleUpdated; // 0x0900, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnExternalChoreoGraphChanged; // 0x0920, 0x18 bytes
+                shade::sdk::client::IChoreoServices *m_pChoreoServices; // 0x0938, 0x8 bytes
+                bool m_bAnimGraphUpdateEnabled; // 0x0940, 0x1 bytes
+                bool m_bAnimationUpdateScheduled; // 0x0941, 0x1 bytes
+                std::uint8_t pad_0942[0x2]; // 0x0942, 0x2 bytes
+                Vector m_vecForce; // 0x0944, 0xc bytes
+                std::int32_t m_nForceBone; // 0x0950, 0x4 bytes
+                std::uint8_t pad_0954[0xc]; // 0x0954, 0xc bytes
+                shade::sdk::vphysics2::IPhysicsRagdollControl *m_pRagdollControl; // 0x0960, 0x8 bytes
+                shade::sdk::server::PhysicsRagdollPose_t m_RagdollPose; // 0x0968, 0x28 bytes
+                bool m_bRagdollEnabled; // 0x0990, 0x1 bytes
+                bool m_bRagdollClientSide; // 0x0991, 0x1 bytes
+                bool m_bShouldUpdateTransformations; // 0x0992, 0x1 bytes
+                std::uint8_t pad_0993[0xd]; // 0x0993, 0xd bytes
+                CTransform m_xParentedRagdollRootInEntitySpace; // 0x09a0, 0x20 bytes
+                std::uint8_t pad_09c0[0x90]; // 0x09c0, 0x90 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimGraph) == 0x970, "CBaseAnimGraph size mismatch");
+            static_assert(sizeof(CBaseAnimGraph) == 0xA50, "CBaseAnimGraph size mismatch");
         }
     }
 }

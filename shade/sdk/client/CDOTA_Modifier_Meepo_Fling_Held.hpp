@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Meepo_Fling_Held : public shade::sdk::client::CDOTA_Buff {
             public:
-                QAngle m_qOriginalAngle; // 0x1a78, 0xc bytes
-                std::uint8_t pad_1a84[0x4]; // 0x1a84, 0x4 bytes
+                QAngle m_qOriginalAngle; // 0x1aa8, 0xc bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Meepo_Fling_Held) == 0x1A88, "CDOTA_Modifier_Meepo_Fling_Held size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Meepo_Fling_Held) == 0x1AB8, "CDOTA_Modifier_Meepo_Fling_Held size mismatch");
         }
     }
 }

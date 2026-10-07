@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Kunkka_Ghost_Ship_Fleet : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS vCasterOrigin; // 0x1a78, 0xc bytes
-                VectorWS vEnd; // 0x1a84, 0xc bytes
-                std::int32_t hitcount; // 0x1a90, 0x4 bytes
-                std::int32_t fleet_count; // 0x1a94, 0x4 bytes
+                VectorWS vCasterOrigin; // 0x1aa8, 0xc bytes
+                VectorWS vEnd; // 0x1ab4, 0xc bytes
+                std::int32_t hitcount; // 0x1ac0, 0x4 bytes
+                std::int32_t fleet_count; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Kunkka_Ghost_Ship_Fleet) == 0x1A98, "CDOTA_Modifier_Kunkka_Ghost_Ship_Fleet size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Kunkka_Ghost_Ship_Fleet) == 0x1AC8, "CDOTA_Modifier_Kunkka_Ghost_Ship_Fleet size mismatch");
         }
     }
 }

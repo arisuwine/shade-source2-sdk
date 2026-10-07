@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x230
+             * Size: 0x238
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,17 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RemapParticleCountToNamedModelElementScalar : public shade::sdk::particles::C_INIT_RemapParticleCountToScalar {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x0210, 0x8 bytes
-                CUtlString m_outputMinName; // 0x0218, 0x8 bytes
-                CUtlString m_outputMaxName; // 0x0220, 0x8 bytes
-                bool m_bModelFromRenderer; // 0x0228, 0x1 bytes
-                std::uint8_t pad_0229[0x7]; // 0x0229, 0x7 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x0218, 0x8 bytes
+                CUtlString m_outputMinName; // 0x0220, 0x8 bytes
+                CUtlString m_outputMaxName; // 0x0228, 0x8 bytes
+                bool m_bModelFromRenderer; // 0x0230, 0x1 bytes
+                std::uint8_t pad_0231[0x7]; // 0x0231, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RemapParticleCountToNamedModelElementScalar) == 0x230, "C_INIT_RemapParticleCountToNamedModelElementScalar size mismatch");
+            static_assert(sizeof(C_INIT_RemapParticleCountToNamedModelElementScalar) == 0x238, "C_INIT_RemapParticleCountToNamedModelElementScalar size mismatch");
         }
     }
 }

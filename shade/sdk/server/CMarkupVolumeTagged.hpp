@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b8
+             * Size: 0x898
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CMarkupVolumeTagged : public shade::sdk::server::CMarkupVolume {
             public:
-                CUtlVector<CGlobalSymbol> m_GroupNames; // 0x0780, 0x18 bytes
-                CUtlVector<CGlobalSymbol> m_Tags; // 0x0798, 0x18 bytes
-                bool m_bIsGroup; // 0x07b0, 0x1 bytes
-                bool m_bGroupByPrefab; // 0x07b1, 0x1 bytes
-                bool m_bGroupByVolume; // 0x07b2, 0x1 bytes
-                bool m_bGroupOtherGroups; // 0x07b3, 0x1 bytes
-                bool m_bIsInGroup; // 0x07b4, 0x1 bytes
-                std::uint8_t pad_07b5[0x3]; // 0x07b5, 0x3 bytes
+                CUtlVector<CGlobalSymbol> m_GroupNames; // 0x0860, 0x18 bytes
+                CUtlVector<CGlobalSymbol> m_Tags; // 0x0878, 0x18 bytes
+                bool m_bIsGroup; // 0x0890, 0x1 bytes
+                bool m_bGroupByPrefab; // 0x0891, 0x1 bytes
+                bool m_bGroupByVolume; // 0x0892, 0x1 bytes
+                bool m_bGroupOtherGroups; // 0x0893, 0x1 bytes
+                bool m_bIsInGroup; // 0x0894, 0x1 bytes
+                std::uint8_t pad_0895[0x3]; // 0x0895, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CMarkupVolumeTagged) == 0x7B8, "CMarkupVolumeTagged size mismatch");
+            static_assert(sizeof(CMarkupVolumeTagged) == 0x898, "CMarkupVolumeTagged size mismatch");
         }
     }
 }

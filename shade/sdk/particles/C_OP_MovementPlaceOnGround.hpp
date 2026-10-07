@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xac0
+             * Size: 0xaf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,34 +33,34 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MovementPlaceOnGround : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x01d8, 0x170 bytes
-                float m_flMaxTraceLength; // 0x0348, 0x4 bytes
-                float m_flTolerance; // 0x034c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecTraceDir; // 0x0350, 0x6b8 bytes
-                float m_flTraceOffset; // 0x0a08, 0x4 bytes
-                float m_flLerpRate; // 0x0a0c, 0x4 bytes
-                char m_CollisionGroupName[0x80]; // 0x0a10, 0x80 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0a90, 0x4 bytes
-                std::int32_t m_nRefCP1; // 0x0a94, 0x4 bytes
-                std::int32_t m_nRefCP2; // 0x0a98, 0x4 bytes
-                std::int32_t m_nLerpCP; // 0x0a9c, 0x4 bytes
-                std::uint8_t pad_0aa0[0x8]; // 0x0aa0, 0x8 bytes
-                shade::sdk::particles::ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x0aa8, 0x4 bytes
-                bool m_bIncludeShotHull; // 0x0aac, 0x1 bytes
-                bool m_bIncludeWater; // 0x0aad, 0x1 bytes
-                std::uint8_t pad_0aae[0x2]; // 0x0aae, 0x2 bytes
-                bool m_bSetNormal; // 0x0ab0, 0x1 bytes
-                bool m_bScaleOffset; // 0x0ab1, 0x1 bytes
-                std::uint8_t pad_0ab2[0x2]; // 0x0ab2, 0x2 bytes
-                std::int32_t m_nPreserveOffsetCP; // 0x0ab4, 0x4 bytes
-                std::int32_t m_nIgnoreCP; // 0x0ab8, 0x4 bytes
-                std::uint8_t pad_0abc[0x4]; // 0x0abc, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x01e0, 0x178 bytes
+                float m_flMaxTraceLength; // 0x0358, 0x4 bytes
+                float m_flTolerance; // 0x035c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecTraceDir; // 0x0360, 0x6d8 bytes
+                float m_flTraceOffset; // 0x0a38, 0x4 bytes
+                float m_flLerpRate; // 0x0a3c, 0x4 bytes
+                char m_CollisionGroupName[0x80]; // 0x0a40, 0x80 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0ac0, 0x4 bytes
+                std::int32_t m_nRefCP1; // 0x0ac4, 0x4 bytes
+                std::int32_t m_nRefCP2; // 0x0ac8, 0x4 bytes
+                std::int32_t m_nLerpCP; // 0x0acc, 0x4 bytes
+                std::uint8_t pad_0ad0[0x8]; // 0x0ad0, 0x8 bytes
+                shade::sdk::particles::ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x0ad8, 0x4 bytes
+                bool m_bIncludeShotHull; // 0x0adc, 0x1 bytes
+                bool m_bIncludeWater; // 0x0add, 0x1 bytes
+                std::uint8_t pad_0ade[0x2]; // 0x0ade, 0x2 bytes
+                bool m_bSetNormal; // 0x0ae0, 0x1 bytes
+                bool m_bScaleOffset; // 0x0ae1, 0x1 bytes
+                std::uint8_t pad_0ae2[0x2]; // 0x0ae2, 0x2 bytes
+                std::int32_t m_nPreserveOffsetCP; // 0x0ae4, 0x4 bytes
+                std::int32_t m_nIgnoreCP; // 0x0ae8, 0x4 bytes
+                std::uint8_t pad_0aec[0x4]; // 0x0aec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MovementPlaceOnGround) == 0xAC0, "C_OP_MovementPlaceOnGround size mismatch");
+            static_assert(sizeof(C_OP_MovementPlaceOnGround) == 0xAF0, "C_OP_MovementPlaceOnGround size mismatch");
         }
     }
 }

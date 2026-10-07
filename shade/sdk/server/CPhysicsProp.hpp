@@ -26,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa70
+             * Size: 0xb60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,81 +35,63 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysicsProp : public shade::sdk::server::CBreakableProp {
             public:
-                std::uint8_t pad_0930[0x10]; // 0x0930, 0x10 bytes
-                shade::sdk::entity2::CEntityIOOutput m_MotionEnabled; // 0x0940, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x0958, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAwake; // 0x0970, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAsleep; // 0x0988, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x09a0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOutOfWorld; // 0x09b8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerPickup; // 0x09d0, 0x18 bytes
-                bool m_bForceNavIgnore; // 0x09e8, 0x1 bytes
-                bool m_bNoNavmeshBlocker; // 0x09e9, 0x1 bytes
-                bool m_bForceNpcExclude; // 0x09ea, 0x1 bytes
-                std::uint8_t pad_09eb[0x1]; // 0x09eb, 0x1 bytes
-                float m_massScale; // 0x09ec, 0x4 bytes
-                float m_buoyancyScale; // 0x09f0, 0x4 bytes
-                std::int32_t m_damageType; // 0x09f4, 0x4 bytes
-                std::int32_t m_damageToEnableMotion; // 0x09f8, 0x4 bytes
-                float m_flForceToEnableMotion; // 0x09fc, 0x4 bytes
-                bool m_bThrownByPlayer; // 0x0a00, 0x1 bytes
-                bool m_bDroppedByPlayer; // 0x0a01, 0x1 bytes
-                bool m_bTouchedByPlayer; // 0x0a02, 0x1 bytes
-                bool m_bFirstCollisionAfterLaunch; // 0x0a03, 0x1 bytes
-                bool m_bHasBeenAwakened; // 0x0a04, 0x1 bytes
-                bool m_bIsOverrideProp; // 0x0a05, 0x1 bytes
-                std::uint8_t pad_0a06[0x2]; // 0x0a06, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flLastBurn; // 0x0a08, 0x4 bytes
-                shade::sdk::physicslib::DynamicContinuousContactBehavior_t m_nDynamicContinuousContactBehavior; // 0x0a0c, 0x1 bytes
-                std::uint8_t pad_0a0d[0x3]; // 0x0a0d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_fNextCheckDisableMotionContactsTime; // 0x0a10, 0x4 bytes
-                std::int32_t m_iInitialGlowState; // 0x0a14, 0x4 bytes
-                std::int32_t m_nGlowRange; // 0x0a18, 0x4 bytes
-                std::int32_t m_nGlowRangeMin; // 0x0a1c, 0x4 bytes
-                Color m_glowColor; // 0x0a20, 0x4 bytes
-                bool m_bShouldAutoConvertBackFromDebris; // 0x0a24, 0x1 bytes
-                bool m_bMuteImpactEffects; // 0x0a25, 0x1 bytes
-                std::uint8_t pad_0a26[0x2]; // 0x0a26, 0x2 bytes
-                shade::sdk::server::INavObstacle__NavObstacleType_t m_nNavObstacleType; // 0x0a28, 0x4 bytes
-                bool m_bUpdateNavWhenMoving; // 0x0a2c, 0x1 bytes
-                bool m_bForceNavObstacleCut; // 0x0a2d, 0x1 bytes
-                bool m_bAllowObstacleConvexHullMerging; // 0x0a2e, 0x1 bytes
-                bool m_bAcceptDamageFromHeldObjects; // 0x0a2f, 0x1 bytes
-                bool m_bEnableUseOutput; // 0x0a30, 0x1 bytes
-                std::uint8_t pad_0a31[0x3]; // 0x0a31, 0x3 bytes
-                shade::sdk::server::CPhysicsProp__CrateType_t m_CrateType; // 0x0a34, 0x4 bytes
-                CUtlSymbolLarge m_strItemClass[0x4]; // 0x0a38, 0x20 bytes
-                std::int32_t m_nItemCount[0x4]; // 0x0a58, 0x10 bytes
-                bool m_bRemovableForAmmoBalancing; // 0x0a68, 0x1 bytes
-                bool m_bAwake; // 0x0a69, 0x1 bytes
-                bool m_bAttachedToReferenceFrame; // 0x0a6a, 0x1 bytes
-                std::uint8_t pad_0a6b[0x5]; // 0x0a6b, 0x5 bytes
+                std::uint8_t pad_0a20[0x10]; // 0x0a20, 0x10 bytes
+                shade::sdk::entity2::CEntityIOOutput m_MotionEnabled; // 0x0a30, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x0a48, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAwake; // 0x0a60, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAsleep; // 0x0a78, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x0a90, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOutOfWorld; // 0x0aa8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerPickup; // 0x0ac0, 0x18 bytes
+                bool m_bForceNavIgnore; // 0x0ad8, 0x1 bytes
+                bool m_bNoNavmeshBlocker; // 0x0ad9, 0x1 bytes
+                bool m_bForceNpcExclude; // 0x0ada, 0x1 bytes
+                std::uint8_t pad_0adb[0x1]; // 0x0adb, 0x1 bytes
+                float m_massScale; // 0x0adc, 0x4 bytes
+                float m_buoyancyScale; // 0x0ae0, 0x4 bytes
+                std::int32_t m_damageType; // 0x0ae4, 0x4 bytes
+                std::int32_t m_damageToEnableMotion; // 0x0ae8, 0x4 bytes
+                float m_flForceToEnableMotion; // 0x0aec, 0x4 bytes
+                bool m_bDroppedByPlayer; // 0x0af0, 0x1 bytes
+                bool m_bTouchedByPlayer; // 0x0af1, 0x1 bytes
+                bool m_bFirstCollisionAfterLaunch; // 0x0af2, 0x1 bytes
+                bool m_bHasBeenAwakened; // 0x0af3, 0x1 bytes
+                bool m_bIsOverrideProp; // 0x0af4, 0x1 bytes
+                std::uint8_t pad_0af5[0x3]; // 0x0af5, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBurn; // 0x0af8, 0x4 bytes
+                shade::sdk::physicslib::DynamicContinuousContactBehavior_t m_nDynamicContinuousContactBehavior; // 0x0afc, 0x1 bytes
+                std::uint8_t pad_0afd[0x3]; // 0x0afd, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fNextCheckDisableMotionContactsTime; // 0x0b00, 0x4 bytes
+                std::int32_t m_iInitialGlowState; // 0x0b04, 0x4 bytes
+                std::int32_t m_nGlowRange; // 0x0b08, 0x4 bytes
+                std::int32_t m_nGlowRangeMin; // 0x0b0c, 0x4 bytes
+                Color m_glowColor; // 0x0b10, 0x4 bytes
+                bool m_bShouldAutoConvertBackFromDebris; // 0x0b14, 0x1 bytes
+                bool m_bMuteImpactEffects; // 0x0b15, 0x1 bytes
+                std::uint8_t pad_0b16[0x2]; // 0x0b16, 0x2 bytes
+                shade::sdk::server::INavObstacle__NavObstacleType_t m_nNavObstacleType; // 0x0b18, 0x4 bytes
+                bool m_bUpdateNavWhenMoving; // 0x0b1c, 0x1 bytes
+                bool m_bForceNavObstacleCut; // 0x0b1d, 0x1 bytes
+                bool m_bAcceptDamageFromHeldObjects; // 0x0b1e, 0x1 bytes
+                bool m_bEnableUseOutput; // 0x0b1f, 0x1 bytes
+                shade::sdk::server::CPhysicsProp__CrateType_t m_CrateType; // 0x0b20, 0x4 bytes
+                std::uint8_t pad_0b24[0x4]; // 0x0b24, 0x4 bytes
+                CUtlSymbolLarge m_strItemClass[0x4]; // 0x0b28, 0x20 bytes
+                std::int32_t m_nItemCount[0x4]; // 0x0b48, 0x10 bytes
+                bool m_bRemovableForAmmoBalancing; // 0x0b58, 0x1 bytes
+                bool m_bAwake; // 0x0b59, 0x1 bytes
+                bool m_bAttachedToReferenceFrame; // 0x0b5a, 0x1 bytes
+                std::uint8_t pad_0b5b[0x5]; // 0x0b5b, 0x5 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * void InputEnableMotion; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableMotion; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputWake; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * bool InputSetAutoConvertBackFromDebris; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputSleep; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartGlowing; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopGlowing; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Vector InputSetGlowOverride; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetGlowRange; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetMass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableGravity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableGravity; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableDrag; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableDrag; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableCollisions; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * bool forcemotiondisabled; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool phys_start_asleep; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t health; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPhysicsProp) == 0xA70, "CPhysicsProp size mismatch");
+            static_assert(sizeof(CPhysicsProp) == 0xB60, "CPhysicsProp size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0x140
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -39,15 +39,15 @@ namespace shade {
                 std::int32_t nSummarisedCount; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 shade::sdk::client::CTakeDamageInfo info; // 0x0008, 0xc8 bytes
-                shade::sdk::client::CTakeDamageResult result; // 0x00d0, 0x60 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> hTarget; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
+                shade::sdk::client::CTakeDamageResult result; // 0x00d0, 0x68 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> hTarget; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(SummaryTakeDamageInfo_t) == 0x138, "SummaryTakeDamageInfo_t size mismatch");
+            static_assert(sizeof(SummaryTakeDamageInfo_t) == 0x140, "SummaryTakeDamageInfo_t size mismatch");
         }
     }
 }

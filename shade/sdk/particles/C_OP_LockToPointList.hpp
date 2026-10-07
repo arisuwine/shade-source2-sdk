@@ -16,7 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,19 +38,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_LockToPointList : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                CUtlVector<shade::sdk::particles::PointDefinition_t> m_pointList; // 0x01e0, 0x18 bytes
-                bool m_bPlaceAlongPath; // 0x01f8, 0x1 bytes
-                bool m_bClosedLoop; // 0x01f9, 0x1 bytes
-                std::uint8_t pad_01fa[0x2]; // 0x01fa, 0x2 bytes
-                std::int32_t m_nNumPointsAlongPath; // 0x01fc, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                CUtlVector<shade::sdk::particles::PointDefinition_t> m_pointList; // 0x01e8, 0x18 bytes
+                bool m_bPlaceAlongPath; // 0x0200, 0x1 bytes
+                bool m_bClosedLoop; // 0x0201, 0x1 bytes
+                std::uint8_t pad_0202[0x2]; // 0x0202, 0x2 bytes
+                std::int32_t m_nNumPointsAlongPath; // 0x0204, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_LockToPointList) == 0x200, "C_OP_LockToPointList size mismatch");
+            static_assert(sizeof(C_OP_LockToPointList) == 0x208, "C_OP_LockToPointList size mismatch");
         }
     }
 }

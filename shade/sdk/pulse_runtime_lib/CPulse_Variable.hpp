@@ -31,7 +31,7 @@ namespace shade {
             public:
                 PulseSymbol_t m_Name; // 0x0000, 0x10 bytes
                 CUtlString m_Description; // 0x0010, 0x8 bytes
-                CPulseValueFullType m_Type; // 0x0018, 0x18 bytes
+                CPulseType m_Type; // 0x0018, 0x18 bytes
                 KeyValues3 m_DefaultValue; // 0x0030, 0x10 bytes
                 std::uint8_t pad_0040[0x4]; // 0x0040, 0x4 bytes
                 shade::sdk::pulse_runtime_lib::PulseVariableKeysSource_t m_nKeysSource; // 0x0044, 0x4 bytes

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x848
+             * Size: 0x928
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,26 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncTrain : public shade::sdk::server::CBasePlatTrain {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentTarget; // 0x0820, 0x4 bytes
-                bool m_activated; // 0x0824, 0x1 bytes
-                std::uint8_t pad_0825[0x3]; // 0x0825, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0828, 0x4 bytes
-                float m_flBlockDamage; // 0x082c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextBlockTime; // 0x0830, 0x4 bytes
-                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
-                CUtlSymbolLarge m_iszLastTarget; // 0x0838, 0x8 bytes
-                float m_flSpeed; // 0x0840, 0x4 bytes
-                std::uint8_t pad_0844[0x4]; // 0x0844, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentTarget; // 0x0900, 0x4 bytes
+                bool m_activated; // 0x0904, 0x1 bytes
+                std::uint8_t pad_0905[0x3]; // 0x0905, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0908, 0x4 bytes
+                float m_flBlockDamage; // 0x090c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextBlockTime; // 0x0910, 0x4 bytes
+                std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes
+                CUtlSymbolLarge m_iszLastTarget; // 0x0918, 0x8 bytes
+                float m_flSpeed; // 0x0920, 0x4 bytes
+                std::uint8_t pad_0924[0x4]; // 0x0924, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CFuncTrain) == 0x848, "CFuncTrain size mismatch");
+            static_assert(sizeof(CFuncTrain) == 0x928, "CFuncTrain size mismatch");
         }
     }
 }

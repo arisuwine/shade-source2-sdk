@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x358
+             * Size: 0x368
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_StopAfterCPDuration : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDuration; // 0x01e0, 0x170 bytes
-                bool m_bDestroyImmediately; // 0x0350, 0x1 bytes
-                bool m_bPlayEndCap; // 0x0351, 0x1 bytes
-                std::uint8_t pad_0352[0x6]; // 0x0352, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDuration; // 0x01e8, 0x178 bytes
+                bool m_bDestroyImmediately; // 0x0360, 0x1 bytes
+                bool m_bPlayEndCap; // 0x0361, 0x1 bytes
+                std::uint8_t pad_0362[0x6]; // 0x0362, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_StopAfterCPDuration) == 0x358, "C_OP_StopAfterCPDuration size mismatch");
+            static_assert(sizeof(C_OP_StopAfterCPDuration) == 0x368, "C_OP_StopAfterCPDuration size mismatch");
         }
     }
 }

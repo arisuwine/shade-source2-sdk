@@ -29,15 +29,13 @@ namespace shade {
             public:
                 std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
                 bool m_bCompactBuffListPending; // 0x0028, 0x1 bytes
-                std::uint8_t pad_0029[0x351]; // 0x0029, 0x351 bytes
-                std::uint16_t m_nHasTruesightForTeam; // 0x037a, 0x2 bytes
-                std::uint16_t m_nHasTruesightForTeamValid; // 0x037c, 0x2 bytes
-                std::uint16_t m_nProvidesFOWPositionForTeam; // 0x037e, 0x2 bytes
-                std::uint16_t m_nProvidesFOWPositionForTeamValid; // 0x0380, 0x2 bytes
-                std::uint8_t pad_0382[0x2]; // 0x0382, 0x2 bytes
-                std::int32_t m_iBuffIndex; // 0x0384, 0x4 bytes
-                std::int32_t m_iLockRefCount; // 0x0388, 0x4 bytes
-                std::uint8_t pad_038c[0x4]; // 0x038c, 0x4 bytes
+                std::uint8_t pad_0029[0x357]; // 0x0029, 0x357 bytes
+                std::uint16_t m_nHasTruesightForTeam; // 0x0380, 0x2 bytes
+                std::uint16_t m_nHasTruesightForTeamValid; // 0x0382, 0x2 bytes
+                std::uint16_t m_nProvidesFOWPositionForTeam; // 0x0384, 0x2 bytes
+                std::uint16_t m_nProvidesFOWPositionForTeamValid; // 0x0386, 0x2 bytes
+                std::int32_t m_iBuffIndex; // 0x0388, 0x4 bytes
+                std::int32_t m_iLockRefCount; // 0x038c, 0x4 bytes
             };
             #pragma pack(pop)
 

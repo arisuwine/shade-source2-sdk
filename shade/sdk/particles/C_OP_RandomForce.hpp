@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RandomForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                Vector m_MinForce; // 0x01e8, 0xc bytes
-                Vector m_MaxForce; // 0x01f4, 0xc bytes
+                Vector m_MinForce; // 0x01f0, 0xc bytes
+                Vector m_MaxForce; // 0x01fc, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RandomForce) == 0x200, "C_OP_RandomForce size mismatch");
+            static_assert(sizeof(C_OP_RandomForce) == 0x208, "C_OP_RandomForce size mismatch");
         }
     }
 }

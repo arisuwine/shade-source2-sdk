@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleTransformInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x270
+             * Size: 0x278
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapTransformVisibilityToVector : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e0, 0x68 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x0248, 0x4 bytes
-                float m_flInputMin; // 0x024c, 0x4 bytes
-                float m_flInputMax; // 0x0250, 0x4 bytes
-                Vector m_vecOutputMin; // 0x0254, 0xc bytes
-                Vector m_vecOutputMax; // 0x0260, 0xc bytes
-                float m_flRadius; // 0x026c, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e8, 0x68 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x0250, 0x4 bytes
+                float m_flInputMin; // 0x0254, 0x4 bytes
+                float m_flInputMax; // 0x0258, 0x4 bytes
+                Vector m_vecOutputMin; // 0x025c, 0xc bytes
+                Vector m_vecOutputMax; // 0x0268, 0xc bytes
+                float m_flRadius; // 0x0274, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapTransformVisibilityToVector) == 0x270, "C_OP_RemapTransformVisibilityToVector size mismatch");
+            static_assert(sizeof(C_OP_RemapTransformVisibilityToVector) == 0x278, "C_OP_RemapTransformVisibilityToVector size mismatch");
         }
     }
 }

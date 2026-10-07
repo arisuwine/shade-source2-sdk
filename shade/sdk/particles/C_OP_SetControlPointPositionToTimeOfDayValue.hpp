@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x278
+             * Size: 0x280
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointPositionToTimeOfDayValue : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                char m_pszTimeOfDayParameter[0x80]; // 0x01e4, 0x80 bytes
-                Vector m_vecDefaultValue; // 0x0264, 0xc bytes
-                std::uint8_t pad_0270[0x8]; // 0x0270, 0x8 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                char m_pszTimeOfDayParameter[0x80]; // 0x01ec, 0x80 bytes
+                Vector m_vecDefaultValue; // 0x026c, 0xc bytes
+                std::uint8_t pad_0278[0x8]; // 0x0278, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointPositionToTimeOfDayValue) == 0x278, "C_OP_SetControlPointPositionToTimeOfDayValue size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointPositionToTimeOfDayValue) == 0x280, "C_OP_SetControlPointPositionToTimeOfDayValue size mismatch");
         }
     }
 }

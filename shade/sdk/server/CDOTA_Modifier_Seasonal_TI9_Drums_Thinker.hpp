@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +29,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Seasonal_TI9_Drums_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1a78[0x28]; // 0x1a78, 0x28 bytes
-                std::int32_t m_nNextSoundIndex; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
+                std::uint8_t pad_1aa8[0x28]; // 0x1aa8, 0x28 bytes
+                std::int32_t m_nNextSoundIndex; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI9_Drums_Thinker) == 0x1AA8, "CDOTA_Modifier_Seasonal_TI9_Drums_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI9_Drums_Thinker) == 0x1AD8, "CDOTA_Modifier_Seasonal_TI9_Drums_Thinker size mismatch");
         }
     }
 }

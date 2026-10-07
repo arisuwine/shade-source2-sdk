@@ -16,12 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixDataOffset.hpp"
+#include "shade/sdk/soundsystem_lowlevel/CVMixParameterFloat.hpp"
 
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,12 +31,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CVMixSteamAudioDirectProcessorDesc : public shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc {
             public:
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramPositionX; // 0x0028, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramPositionY; // 0x002c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramPositionZ; // 0x0030, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramRightX; // 0x0034, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramRightY; // 0x0038, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramRightZ; // 0x003c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramUpX; // 0x0040, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramUpY; // 0x0044, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramUpZ; // 0x0048, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramAheadX; // 0x004c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramAheadY; // 0x0050, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramAheadZ; // 0x0054, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramApplyDistanceAttenuation; // 0x0058, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramApplyAirAbsorption; // 0x005c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramApplyDirectivity; // 0x0060, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramApplyOcclusion; // 0x0064, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramApplyTransmission; // 0x0068, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramDipoleWeight; // 0x006c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramDipolePower; // 0x0070, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramOcclusion; // 0x0074, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramTransmissionLow; // 0x0078, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramTransmissionMid; // 0x007c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramTransmissionHigh; // 0x0080, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixParameterFloat m_paramBand; // 0x0084, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::CVMixDataOffset m_paramTransmission; // 0x0088, 0x4 bytes
+                std::uint8_t pad_008c[0x4]; // 0x008c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixSteamAudioDirectProcessorDesc) == 0x20, "CVMixSteamAudioDirectProcessorDesc size mismatch");
+            static_assert(sizeof(CVMixSteamAudioDirectProcessorDesc) == 0x90, "CVMixSteamAudioDirectProcessorDesc size mismatch");
         }
     }
 }

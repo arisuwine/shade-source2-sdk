@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x638
+             * Size: 0x658
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SelectivelyEnableChildren : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nChildGroupID; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nFirstChild; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x04c0, 0x170 bytes
-                bool m_bPlayEndcapOnStop; // 0x0630, 0x1 bytes
-                bool m_bDestroyImmediately; // 0x0631, 0x1 bytes
-                std::uint8_t pad_0632[0x6]; // 0x0632, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nChildGroupID; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nFirstChild; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x04d8, 0x178 bytes
+                bool m_bPlayEndcapOnStop; // 0x0650, 0x1 bytes
+                bool m_bDestroyImmediately; // 0x0651, 0x1 bytes
+                std::uint8_t pad_0652[0x6]; // 0x0652, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SelectivelyEnableChildren) == 0x638, "C_OP_SelectivelyEnableChildren size mismatch");
+            static_assert(sizeof(C_OP_SelectivelyEnableChildren) == 0x658, "C_OP_SelectivelyEnableChildren size mismatch");
         }
     }
 }

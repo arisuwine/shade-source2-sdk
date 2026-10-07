@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xf68
+             * Size: 0xfb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateWithinBox : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vecMin; // 0x01e0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecMax; // 0x0898, 0x6b8 bytes
-                std::int32_t m_nControlPointNumber; // 0x0f50, 0x4 bytes
-                bool m_bLocalSpace; // 0x0f54, 0x1 bytes
-                std::uint8_t pad_0f55[0x3]; // 0x0f55, 0x3 bytes
-                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x0f58, 0x8 bytes
-                bool m_bUseNewCode; // 0x0f60, 0x1 bytes
-                std::uint8_t pad_0f61[0x7]; // 0x0f61, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecMin; // 0x01e8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecMax; // 0x08c0, 0x6d8 bytes
+                std::int32_t m_nControlPointNumber; // 0x0f98, 0x4 bytes
+                bool m_bLocalSpace; // 0x0f9c, 0x1 bytes
+                std::uint8_t pad_0f9d[0x3]; // 0x0f9d, 0x3 bytes
+                shade::sdk::particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x0fa0, 0x8 bytes
+                bool m_bUseNewCode; // 0x0fa8, 0x1 bytes
+                std::uint8_t pad_0fa9[0x7]; // 0x0fa9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateWithinBox) == 0xF68, "C_INIT_CreateWithinBox size mismatch");
+            static_assert(sizeof(C_INIT_CreateWithinBox) == 0xFB0, "C_INIT_CreateWithinBox size mismatch");
         }
     }
 }

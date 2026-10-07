@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Mirana_MoonlightShadow : public shade::sdk::client::CDOTA_Modifier_PersistentInvisibility {
             public:
-                float duration; // 0x1a88, 0x4 bytes
-                std::int32_t bonus_movement_speed; // 0x1a8c, 0x4 bytes
-                std::int32_t evasion; // 0x1a90, 0x4 bytes
-                float bonus_outgoing_damage_pct; // 0x1a94, 0x4 bytes
+                float duration; // 0x1ab8, 0x4 bytes
+                std::int32_t bonus_movement_speed; // 0x1abc, 0x4 bytes
+                std::int32_t evasion; // 0x1ac0, 0x4 bytes
+                float bonus_outgoing_damage_pct; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Mirana_MoonlightShadow) == 0x1A98, "CDOTA_Modifier_Mirana_MoonlightShadow size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Mirana_MoonlightShadow) == 0x1AC8, "CDOTA_Modifier_Mirana_MoonlightShadow size mismatch");
         }
     }
 }

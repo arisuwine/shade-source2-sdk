@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18b0
+             * Size: 0x19a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_NPC_TechiesMines : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                bool m_bShowPlacementRadius; // 0x18a8, 0x1 bytes
-                std::uint8_t pad_18a9[0x7]; // 0x18a9, 0x7 bytes
+                bool m_bShowPlacementRadius; // 0x1998, 0x1 bytes
+                std::uint8_t pad_1999[0x7]; // 0x1999, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NPC_TechiesMines) == 0x18B0, "CDOTA_NPC_TechiesMines size mismatch");
+            static_assert(sizeof(CDOTA_NPC_TechiesMines) == 0x19A0, "CDOTA_NPC_TechiesMines size mismatch");
         }
     }
 }

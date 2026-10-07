@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,21 +29,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_WitchDoctor_Maledict : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_iStartHealth; // 0x1a78, 0x4 bytes
-                float bonus_damage; // 0x1a7c, 0x4 bytes
-                float bonus_damage_threshold; // 0x1a80, 0x4 bytes
-                std::int32_t ticks; // 0x1a84, 0x4 bytes
-                std::int32_t iCurrentTick; // 0x1a88, 0x4 bytes
-                std::int32_t health_restoration_reduction; // 0x1a8c, 0x4 bytes
-                float spread_radius; // 0x1a90, 0x4 bytes
-                float spread_pct; // 0x1a94, 0x4 bytes
-                std::uint8_t pad_1a98[0x18]; // 0x1a98, 0x18 bytes
+                std::int32_t m_iStartHealth; // 0x1aa8, 0x4 bytes
+                float bonus_damage; // 0x1aac, 0x4 bytes
+                float bonus_damage_threshold; // 0x1ab0, 0x4 bytes
+                std::int32_t ticks; // 0x1ab4, 0x4 bytes
+                std::int32_t iCurrentTick; // 0x1ab8, 0x4 bytes
+                std::int32_t health_restoration_reduction; // 0x1abc, 0x4 bytes
+                float spread_radius; // 0x1ac0, 0x4 bytes
+                float spread_pct; // 0x1ac4, 0x4 bytes
+                std::uint8_t pad_1ac8[0x18]; // 0x1ac8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_WitchDoctor_Maledict) == 0x1AB0, "CDOTA_Modifier_WitchDoctor_Maledict size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_WitchDoctor_Maledict) == 0x1AE0, "CDOTA_Modifier_WitchDoctor_Maledict size mismatch");
         }
     }
 }

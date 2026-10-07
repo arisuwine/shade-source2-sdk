@@ -26,7 +26,6 @@ namespace shade {
         namespace client {
             class CBaseAnimatingActivity;
             class C_BaseEntity;
-            struct C_EconEntity__AttachedModelData_t;
             struct C_EconEntity__AttachedParticleInfo_t;
         }
     }
@@ -36,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc60
+             * Size: 0xd38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,30 +44,27 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EconEntity : public shade::sdk::client::C_BaseAnimatingOverlay, public shade::sdk::client::IHasAttributes {
             public:
-                std::uint8_t pad_0ac8[0x8]; // 0x0ac8, 0x8 bytes
-                shade::sdk::client::CAttributeContainer m_AttributeManager; // 0x0ad0, 0x140 bytes
-                bool m_bClientside; // 0x0c10, 0x1 bytes
-                std::uint8_t pad_0c11[0x3]; // 0x0c11, 0x3 bytes
-                shade::sdk::client::EconEntityParticleDisableMode_t m_nDisableMode; // 0x0c14, 0x4 bytes
-                bool m_bParticleSystemsCreated; // 0x0c18, 0x1 bytes
-                bool m_bForceDestroyAttachedParticlesImmediately; // 0x0c19, 0x1 bytes
-                std::uint8_t pad_0c1a[0x6]; // 0x0c1a, 0x6 bytes
-                CUtlVector<shade::sdk::client::C_EconEntity__AttachedParticleInfo_t> m_vecAttachedParticles; // 0x0c20, 0x18 bytes
-                CHandle<shade::sdk::client::CBaseAnimatingActivity> m_hViewmodelAttachment; // 0x0c38, 0x4 bytes
-                std::int32_t m_iOldTeam; // 0x0c3c, 0x4 bytes
-                bool m_bAttachmentDirty; // 0x0c40, 0x1 bytes
-                shade::sdk::client::style_index_t m_iOldStyle; // 0x0c41, 0x1 bytes
-                std::uint8_t pad_0c42[0x2]; // 0x0c42, 0x2 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hOldProvidee; // 0x0c44, 0x4 bytes
-                CUtlVector<shade::sdk::client::C_EconEntity__AttachedModelData_t> m_vecAttachedModels; // 0x0c48, 0x18 bytes
+                std::uint8_t pad_0bb8[0x8]; // 0x0bb8, 0x8 bytes
+                shade::sdk::client::CAttributeContainer m_AttributeManager; // 0x0bc0, 0x140 bytes
+                bool m_bClientside; // 0x0d00, 0x1 bytes
+                std::uint8_t pad_0d01[0x3]; // 0x0d01, 0x3 bytes
+                shade::sdk::client::EconEntityParticleDisableMode_t m_nDisableMode; // 0x0d04, 0x4 bytes
+                bool m_bParticleSystemsCreated; // 0x0d08, 0x1 bytes
+                bool m_bForceDestroyAttachedParticlesImmediately; // 0x0d09, 0x1 bytes
+                std::uint8_t pad_0d0a[0x6]; // 0x0d0a, 0x6 bytes
+                CUtlVector<shade::sdk::client::C_EconEntity__AttachedParticleInfo_t> m_vecAttachedParticles; // 0x0d10, 0x18 bytes
+                CHandle<shade::sdk::client::CBaseAnimatingActivity> m_hViewmodelAttachment; // 0x0d28, 0x4 bytes
+                std::int32_t m_iOldTeam; // 0x0d2c, 0x4 bytes
+                bool m_bAttachmentDirty; // 0x0d30, 0x1 bytes
+                shade::sdk::client::style_index_t m_iOldStyle; // 0x0d31, 0x1 bytes
+                std::uint8_t pad_0d32[0x2]; // 0x0d32, 0x2 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hOldProvidee; // 0x0d34, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_EconEntity) == 0xC60, "C_EconEntity size mismatch");
+            static_assert(sizeof(C_EconEntity) == 0xD38, "C_EconEntity size mismatch");
         }
     }
 }

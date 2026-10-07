@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x228
+             * Size: 0x230
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,19 +37,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RandomSequence : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nSequenceMin; // 0x01e0, 0x4 bytes
-                std::int32_t m_nSequenceMax; // 0x01e4, 0x4 bytes
-                bool m_bShuffle; // 0x01e8, 0x1 bytes
-                bool m_bLinear; // 0x01e9, 0x1 bytes
-                std::uint8_t pad_01ea[0x6]; // 0x01ea, 0x6 bytes
-                CUtlVector<shade::sdk::particles::SequenceWeightedList_t> m_WeightedList; // 0x01f0, 0x18 bytes
-                std::uint8_t pad_0208[0x20]; // 0x0208, 0x20 bytes
+                std::int32_t m_nSequenceMin; // 0x01e8, 0x4 bytes
+                std::int32_t m_nSequenceMax; // 0x01ec, 0x4 bytes
+                bool m_bShuffle; // 0x01f0, 0x1 bytes
+                bool m_bLinear; // 0x01f1, 0x1 bytes
+                std::uint8_t pad_01f2[0x6]; // 0x01f2, 0x6 bytes
+                CUtlVector<shade::sdk::particles::SequenceWeightedList_t> m_WeightedList; // 0x01f8, 0x18 bytes
+                std::uint8_t pad_0210[0x20]; // 0x0210, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RandomSequence) == 0x228, "C_INIT_RandomSequence size mismatch");
+            static_assert(sizeof(C_INIT_RandomSequence) == 0x230, "C_INIT_RandomSequence size mismatch");
         }
     }
 }

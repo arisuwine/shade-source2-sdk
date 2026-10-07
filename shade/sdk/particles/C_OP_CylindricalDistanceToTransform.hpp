@@ -16,16 +16,16 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleTransformInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,25 +33,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_CylindricalDistanceToTransform : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMin; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMax; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMin; // 0x04c0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMax; // 0x0630, 0x170 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformStart; // 0x07a0, 0x68 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformEnd; // 0x0808, 0x68 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0870, 0x4 bytes
-                bool m_bActiveRange; // 0x0874, 0x1 bytes
-                bool m_bAdditive; // 0x0875, 0x1 bytes
-                bool m_bCapsule; // 0x0876, 0x1 bytes
-                std::uint8_t pad_0877[0x1]; // 0x0877, 0x1 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMin; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInputMax; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMin; // 0x04d8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOutputMax; // 0x0650, 0x178 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformStart; // 0x07c8, 0x68 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformEnd; // 0x0830, 0x68 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0898, 0x4 bytes
+                bool m_bActiveRange; // 0x089c, 0x1 bytes
+                bool m_bAdditive; // 0x089d, 0x1 bytes
+                bool m_bCapsule; // 0x089e, 0x1 bytes
+                std::uint8_t pad_089f[0x1]; // 0x089f, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_CylindricalDistanceToTransform) == 0x878, "C_OP_CylindricalDistanceToTransform size mismatch");
+            static_assert(sizeof(C_OP_CylindricalDistanceToTransform) == 0x8A0, "C_OP_CylindricalDistanceToTransform size mismatch");
         }
     }
 }

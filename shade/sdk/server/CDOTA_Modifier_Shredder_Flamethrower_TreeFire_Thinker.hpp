@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -41,15 +41,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Shredder_Flamethrower_TreeFire_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<std::pair<CHandle<shade::sdk::server::CBaseEntity>, shade::sdk::entity2::GameTime_t>> m_vecTreeFires; // 0x1a78, 0x18 bytes
-                bool m_bCleanupWhenEmpty; // 0x1a90, 0x1 bytes
-                std::uint8_t pad_1a91[0x7]; // 0x1a91, 0x7 bytes
+                CUtlVector<std::pair<CHandle<shade::sdk::server::CBaseEntity>, shade::sdk::entity2::GameTime_t>> m_vecTreeFires; // 0x1aa8, 0x18 bytes
+                bool m_bCleanupWhenEmpty; // 0x1ac0, 0x1 bytes
+                std::uint8_t pad_1ac1[0x7]; // 0x1ac1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Shredder_Flamethrower_TreeFire_Thinker) == 0x1A98, "CDOTA_Modifier_Shredder_Flamethrower_TreeFire_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Shredder_Flamethrower_TreeFire_Thinker) == 0x1AC8, "CDOTA_Modifier_Shredder_Flamethrower_TreeFire_Thinker size mismatch");
         }
     }
 }

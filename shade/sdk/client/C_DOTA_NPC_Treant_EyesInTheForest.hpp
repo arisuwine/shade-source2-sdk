@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19b8
+             * Size: 0x1ab8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_NPC_Treant_EyesInTheForest) == 0x19B8, "C_DOTA_NPC_Treant_EyesInTheForest size mismatch");
+            static_assert(sizeof(C_DOTA_NPC_Treant_EyesInTheForest) == 0x1AB8, "C_DOTA_NPC_Treant_EyesInTheForest size mismatch");
         }
     }
 }

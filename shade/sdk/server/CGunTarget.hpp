@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x820
+             * Size: 0x900
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CGunTarget : public shade::sdk::server::CBaseToggle {
             public:
-                float m_flSpeed; // 0x07f8, 0x4 bytes
-                bool m_on; // 0x07fc, 0x1 bytes
-                std::uint8_t pad_07fd[0x3]; // 0x07fd, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEnt; // 0x0800, 0x4 bytes
-                std::uint8_t pad_0804[0x4]; // 0x0804, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x0808, 0x18 bytes
+                float m_flSpeed; // 0x08d8, 0x4 bytes
+                bool m_on; // 0x08dc, 0x1 bytes
+                std::uint8_t pad_08dd[0x3]; // 0x08dd, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEnt; // 0x08e0, 0x4 bytes
+                std::uint8_t pad_08e4[0x4]; // 0x08e4, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDeath; // 0x08e8, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputToggle; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CGunTarget) == 0x820, "CGunTarget size mismatch");
+            static_assert(sizeof(CGunTarget) == 0x900, "CGunTarget size mismatch");
         }
     }
 }

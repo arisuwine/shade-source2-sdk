@@ -33,9 +33,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_IngameEvent_FM2016) == 0x19B8, "C_IngameEvent_FM2016 size mismatch");
         }

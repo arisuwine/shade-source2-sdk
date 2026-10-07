@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Invoker_IceWall_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage_per_second; // 0x1a78, 0x4 bytes
-                Vector m_vWallDirection; // 0x1a7c, 0xc bytes
-                VectorWS m_vWallStart; // 0x1a88, 0xc bytes
-                float wall_total_length; // 0x1a94, 0x4 bytes
-                float wall_width; // 0x1a98, 0x4 bytes
-                float slow_duration; // 0x1a9c, 0x4 bytes
-                std::int32_t slow; // 0x1aa0, 0x4 bytes
-                float root_damage; // 0x1aa4, 0x4 bytes
-                float root_duration; // 0x1aa8, 0x4 bytes
-                float tick_interval; // 0x1aac, 0x4 bytes
+                float damage_per_second; // 0x1aa8, 0x4 bytes
+                Vector m_vWallDirection; // 0x1aac, 0xc bytes
+                VectorWS m_vWallStart; // 0x1ab8, 0xc bytes
+                float wall_total_length; // 0x1ac4, 0x4 bytes
+                float wall_width; // 0x1ac8, 0x4 bytes
+                float slow_duration; // 0x1acc, 0x4 bytes
+                std::int32_t slow; // 0x1ad0, 0x4 bytes
+                float root_damage; // 0x1ad4, 0x4 bytes
+                float root_duration; // 0x1ad8, 0x4 bytes
+                float tick_interval; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Invoker_IceWall_Thinker) == 0x1AB0, "CDOTA_Modifier_Invoker_IceWall_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Invoker_IceWall_Thinker) == 0x1AE0, "CDOTA_Modifier_Invoker_IceWall_Thinker size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c0
+             * Size: 0x1ac0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_NPC_BaseBlocker : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                std::int32_t m_nPreviewViewer; // 0x19b8, 0x4 bytes
-                std::uint8_t pad_19bc[0x4]; // 0x19bc, 0x4 bytes
+                std::int32_t m_nPreviewViewer; // 0x1ab8, 0x4 bytes
+                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_NPC_BaseBlocker) == 0x19C0, "C_DOTA_NPC_BaseBlocker size mismatch");
+            static_assert(sizeof(C_DOTA_NPC_BaseBlocker) == 0x1AC0, "C_DOTA_NPC_BaseBlocker size mismatch");
         }
     }
 }

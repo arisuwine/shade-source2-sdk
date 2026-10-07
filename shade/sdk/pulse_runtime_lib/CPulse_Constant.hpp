@@ -26,7 +26,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulse_Constant {
             public:
-                CPulseValueFullType m_Type; // 0x0000, 0x18 bytes
+                CPulseType m_Type; // 0x0000, 0x18 bytes
                 KeyValues3 m_Value; // 0x0018, 0x10 bytes
                 std::uint8_t pad_0028[0x8]; // 0x0028, 0x8 bytes
             };

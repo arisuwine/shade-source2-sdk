@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x1f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,19 +29,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_GlobalScale : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                float m_flScale; // 0x01e0, 0x4 bytes
-                std::int32_t m_nScaleControlPointNumber; // 0x01e4, 0x4 bytes
-                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
-                bool m_bScaleRadius; // 0x01ec, 0x1 bytes
-                bool m_bScalePosition; // 0x01ed, 0x1 bytes
-                bool m_bScaleVelocity; // 0x01ee, 0x1 bytes
-                std::uint8_t pad_01ef[0x1]; // 0x01ef, 0x1 bytes
+                float m_flScale; // 0x01e8, 0x4 bytes
+                std::int32_t m_nScaleControlPointNumber; // 0x01ec, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01f0, 0x4 bytes
+                bool m_bScaleRadius; // 0x01f4, 0x1 bytes
+                bool m_bScalePosition; // 0x01f5, 0x1 bytes
+                bool m_bScaleVelocity; // 0x01f6, 0x1 bytes
+                std::uint8_t pad_01f7[0x1]; // 0x01f7, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_GlobalScale) == 0x1F0, "C_INIT_GlobalScale size mismatch");
+            static_assert(sizeof(C_INIT_GlobalScale) == 0x1F8, "C_INIT_GlobalScale size mismatch");
         }
     }
 }

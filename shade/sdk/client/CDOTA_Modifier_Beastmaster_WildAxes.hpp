@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b20
+             * Size: 0x1b50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,30 +39,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Beastmaster_WildAxes : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vLeftControl; // 0x1a78, 0xc bytes
-                VectorWS m_vRightControl; // 0x1a84, 0xc bytes
-                VectorWS m_vTargetLoc; // 0x1a90, 0xc bytes
-                VectorWS m_vSourceLoc; // 0x1a9c, 0xc bytes
-                float m_flAxeDuration; // 0x1aa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAxeDieTime; // 0x1aac, 0x4 bytes
-                bool m_bReturning; // 0x1ab0, 0x1 bytes
-                bool m_bCatchingAxes; // 0x1ab1, 0x1 bytes
-                std::uint8_t pad_1ab2[0x6]; // 0x1ab2, 0x6 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAxes; // 0x1ab8, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nAxeFXIndex[0x2]; // 0x1ad0, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitList[0x2]; // 0x1ad8, 0x30 bytes
-                float radius; // 0x1b08, 0x4 bytes
-                float spread; // 0x1b0c, 0x4 bytes
-                float axe_damage; // 0x1b10, 0x4 bytes
-                float duration; // 0x1b14, 0x4 bytes
-                float min_throw_duration; // 0x1b18, 0x4 bytes
-                float max_throw_duration; // 0x1b1c, 0x4 bytes
+                VectorWS m_vLeftControl; // 0x1aa8, 0xc bytes
+                VectorWS m_vRightControl; // 0x1ab4, 0xc bytes
+                VectorWS m_vTargetLoc; // 0x1ac0, 0xc bytes
+                VectorWS m_vSourceLoc; // 0x1acc, 0xc bytes
+                float m_flAxeDuration; // 0x1ad8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAxeDieTime; // 0x1adc, 0x4 bytes
+                bool m_bReturning; // 0x1ae0, 0x1 bytes
+                bool m_bCatchingAxes; // 0x1ae1, 0x1 bytes
+                std::uint8_t pad_1ae2[0x6]; // 0x1ae2, 0x6 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAxes; // 0x1ae8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nAxeFXIndex[0x2]; // 0x1b00, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitList[0x2]; // 0x1b08, 0x30 bytes
+                float radius; // 0x1b38, 0x4 bytes
+                float spread; // 0x1b3c, 0x4 bytes
+                float axe_damage; // 0x1b40, 0x4 bytes
+                float duration; // 0x1b44, 0x4 bytes
+                float min_throw_duration; // 0x1b48, 0x4 bytes
+                float max_throw_duration; // 0x1b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Beastmaster_WildAxes) == 0x1B20, "CDOTA_Modifier_Beastmaster_WildAxes size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Beastmaster_WildAxes) == 0x1B50, "CDOTA_Modifier_Beastmaster_WildAxes size mismatch");
         }
     }
 }

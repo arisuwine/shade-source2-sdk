@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x218
+             * Size: 0x220
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_ColorLitPerParticle : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::uint8_t pad_01e0[0x18]; // 0x01e0, 0x18 bytes
-                Color m_ColorMin; // 0x01f8, 0x4 bytes
-                Color m_ColorMax; // 0x01fc, 0x4 bytes
-                Color m_TintMin; // 0x0200, 0x4 bytes
-                Color m_TintMax; // 0x0204, 0x4 bytes
-                float m_flTintPerc; // 0x0208, 0x4 bytes
-                shade::sdk::particleslib::ParticleColorBlendMode_t m_nTintBlendMode; // 0x020c, 0x4 bytes
-                float m_flLightAmplification; // 0x0210, 0x4 bytes
-                std::uint8_t pad_0214[0x4]; // 0x0214, 0x4 bytes
+                std::uint8_t pad_01e8[0x18]; // 0x01e8, 0x18 bytes
+                Color m_ColorMin; // 0x0200, 0x4 bytes
+                Color m_ColorMax; // 0x0204, 0x4 bytes
+                Color m_TintMin; // 0x0208, 0x4 bytes
+                Color m_TintMax; // 0x020c, 0x4 bytes
+                float m_flTintPerc; // 0x0210, 0x4 bytes
+                shade::sdk::particleslib::ParticleColorBlendMode_t m_nTintBlendMode; // 0x0214, 0x4 bytes
+                float m_flLightAmplification; // 0x0218, 0x4 bytes
+                std::uint8_t pad_021c[0x4]; // 0x021c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_ColorLitPerParticle) == 0x218, "C_INIT_ColorLitPerParticle size mismatch");
+            static_assert(sizeof(C_INIT_ColorLitPerParticle) == 0x220, "C_INIT_ColorLitPerParticle size mismatch");
         }
     }
 }

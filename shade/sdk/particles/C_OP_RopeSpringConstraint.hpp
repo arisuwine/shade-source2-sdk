@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x7c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RopeSpringConstraint : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRestLength; // 0x01d8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMinDistance; // 0x0348, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaxDistance; // 0x04b8, 0x170 bytes
-                float m_flAdjustmentScale; // 0x0628, 0x4 bytes
-                std::uint8_t pad_062c[0x4]; // 0x062c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInitialRestingLength; // 0x0630, 0x170 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRestLength; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMinDistance; // 0x0358, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flMaxDistance; // 0x04d0, 0x178 bytes
+                float m_flAdjustmentScale; // 0x0648, 0x4 bytes
+                std::uint8_t pad_064c[0x4]; // 0x064c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInitialRestingLength; // 0x0650, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RopeSpringConstraint) == 0x7A0, "C_OP_RopeSpringConstraint size mismatch");
+            static_assert(sizeof(C_OP_RopeSpringConstraint) == 0x7C8, "C_OP_RopeSpringConstraint size mismatch");
         }
     }
 }

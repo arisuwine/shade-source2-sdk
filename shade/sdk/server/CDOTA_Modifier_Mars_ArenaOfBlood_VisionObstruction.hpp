@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Mars_ArenaOfBlood_VisionObstruction : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1a78, 0x4 bytes
-                float width; // 0x1a7c, 0x4 bytes
-                std::int32_t obscure_vision; // 0x1a80, 0x4 bytes
-                VectorWS m_vOriginLoc; // 0x1a84, 0xc bytes
+                float radius; // 0x1aa8, 0x4 bytes
+                float width; // 0x1aac, 0x4 bytes
+                std::int32_t obscure_vision; // 0x1ab0, 0x4 bytes
+                VectorWS m_vOriginLoc; // 0x1ab4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Mars_ArenaOfBlood_VisionObstruction) == 0x1A90, "CDOTA_Modifier_Mars_ArenaOfBlood_VisionObstruction size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Mars_ArenaOfBlood_VisionObstruction) == 0x1AC0, "CDOTA_Modifier_Mars_ArenaOfBlood_VisionObstruction size mismatch");
         }
     }
 }

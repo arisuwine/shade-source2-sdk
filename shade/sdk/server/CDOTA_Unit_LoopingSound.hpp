@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19b0
+             * Size: 0x1aa0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_LoopingSound : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                char m_pszNetworkedSoundLoop[0x100]; // 0x18a8, 0x100 bytes
-                std::int32_t m_nLoopingSoundParity; // 0x19a8, 0x4 bytes
-                std::uint8_t pad_19ac[0x4]; // 0x19ac, 0x4 bytes
+                char m_pszNetworkedSoundLoop[0x100]; // 0x1998, 0x100 bytes
+                std::int32_t m_nLoopingSoundParity; // 0x1a98, 0x4 bytes
+                std::uint8_t pad_1a9c[0x4]; // 0x1a9c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_LoopingSound) == 0x19B0, "CDOTA_Unit_LoopingSound size mismatch");
+            static_assert(sizeof(CDOTA_Unit_LoopingSound) == 0x1AA0, "CDOTA_Unit_LoopingSound size mismatch");
         }
     }
 }

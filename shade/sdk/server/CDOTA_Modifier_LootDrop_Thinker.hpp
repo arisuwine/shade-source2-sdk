@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,31 +30,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_LootDrop_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bAutoPickup; // 0x1a78, 0x1 bytes
-                bool m_bOnlyPlayerHeroPickup; // 0x1a79, 0x1 bytes
-                bool m_bCreepHeroPickup; // 0x1a7a, 0x1 bytes
-                bool m_bAutoUse; // 0x1a7b, 0x1 bytes
-                bool m_bFlying; // 0x1a7c, 0x1 bytes
-                bool m_bUseSpawnAnim; // 0x1a7d, 0x1 bytes
-                bool m_bAutoTeleport; // 0x1a7e, 0x1 bytes
-                std::uint8_t pad_1a7f[0x1]; // 0x1a7f, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flKnockbackStartTime; // 0x1a80, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flKnockbackEndTime; // 0x1a84, 0x4 bytes
-                float m_flKnockbackHeight; // 0x1a88, 0x4 bytes
-                float m_flInitialHeight; // 0x1a8c, 0x4 bytes
-                float m_flKnockbackDuration; // 0x1a90, 0x4 bytes
-                float m_flEndHeight; // 0x1a94, 0x4 bytes
-                VectorWS m_vStartPos; // 0x1a98, 0xc bytes
-                VectorWS m_vEndPos; // 0x1aa4, 0xc bytes
-                float m_fPickupRadius; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlString m_strTransitionEffect; // 0x1ab8, 0x8 bytes
+                bool m_bAutoPickup; // 0x1aa8, 0x1 bytes
+                bool m_bOnlyPlayerHeroPickup; // 0x1aa9, 0x1 bytes
+                bool m_bCreepHeroPickup; // 0x1aaa, 0x1 bytes
+                bool m_bAutoUse; // 0x1aab, 0x1 bytes
+                bool m_bFlying; // 0x1aac, 0x1 bytes
+                bool m_bUseSpawnAnim; // 0x1aad, 0x1 bytes
+                bool m_bAutoTeleport; // 0x1aae, 0x1 bytes
+                std::uint8_t pad_1aaf[0x1]; // 0x1aaf, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flKnockbackStartTime; // 0x1ab0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flKnockbackEndTime; // 0x1ab4, 0x4 bytes
+                float m_flKnockbackHeight; // 0x1ab8, 0x4 bytes
+                float m_flInitialHeight; // 0x1abc, 0x4 bytes
+                float m_flKnockbackDuration; // 0x1ac0, 0x4 bytes
+                float m_flEndHeight; // 0x1ac4, 0x4 bytes
+                VectorWS m_vStartPos; // 0x1ac8, 0xc bytes
+                VectorWS m_vEndPos; // 0x1ad4, 0xc bytes
+                float m_fPickupRadius; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                CUtlString m_strTransitionEffect; // 0x1ae8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_LootDrop_Thinker) == 0x1AC0, "CDOTA_Modifier_LootDrop_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_LootDrop_Thinker) == 0x1AF0, "CDOTA_Modifier_LootDrop_Thinker size mismatch");
         }
     }
 }

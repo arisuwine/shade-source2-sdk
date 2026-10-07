@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x680
+             * Size: 0x688
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_TeleportScroll : public shade::sdk::server::CDOTA_Item {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTeleportTarget; // 0x0658, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXCaster; // 0x065c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXOrigin; // 0x0660, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXDestination; // 0x0664, 0x4 bytes
-                VectorWS m_vDestination; // 0x0668, 0xc bytes
-                std::int32_t m_iMinDistance; // 0x0674, 0x4 bytes
-                float m_flBaseTeleportTime; // 0x0678, 0x4 bytes
-                float m_flExtraTeleportTime; // 0x067c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTeleportTarget; // 0x0660, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXCaster; // 0x0664, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXOrigin; // 0x0668, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXDestination; // 0x066c, 0x4 bytes
+                VectorWS m_vDestination; // 0x0670, 0xc bytes
+                std::int32_t m_iMinDistance; // 0x067c, 0x4 bytes
+                float m_flBaseTeleportTime; // 0x0680, 0x4 bytes
+                float m_flExtraTeleportTime; // 0x0684, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_TeleportScroll) == 0x680, "CDOTA_Item_TeleportScroll size mismatch");
+            static_assert(sizeof(CDOTA_Item_TeleportScroll) == 0x688, "CDOTA_Item_TeleportScroll size mismatch");
         }
     }
 }

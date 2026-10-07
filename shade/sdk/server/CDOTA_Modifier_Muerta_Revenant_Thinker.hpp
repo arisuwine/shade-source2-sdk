@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -42,35 +42,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Muerta_Revenant_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bSpiritsExplode; // 0x1a78, 0x1 bytes
-                std::uint8_t pad_1a79[0x3]; // 0x1a79, 0x3 bytes
-                float m_fDeadZoneDistance; // 0x1a7c, 0x4 bytes
-                float m_fDesiredDeadZoneDistance; // 0x1a80, 0x4 bytes
-                float damage; // 0x1a84, 0x4 bytes
-                float hit_radius; // 0x1a88, 0x4 bytes
-                float speed_initial; // 0x1a8c, 0x4 bytes
-                float speed_max; // 0x1a90, 0x4 bytes
-                float acceleration; // 0x1a94, 0x4 bytes
-                float kill_check_radius; // 0x1a98, 0x4 bytes
-                float kill_radius_expansion; // 0x1a9c, 0x4 bytes
-                float kill_radius_expansion_speed; // 0x1aa0, 0x4 bytes
-                float hp_regen_pct; // 0x1aa4, 0x4 bytes
-                std::int32_t num_revenants; // 0x1aa8, 0x4 bytes
-                std::int32_t rotation_direction; // 0x1aac, 0x4 bytes
-                float radius; // 0x1ab0, 0x4 bytes
-                float rotation_initial; // 0x1ab4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nWarningFX; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
-                CUtlVector<shade::sdk::client::sRevenantDef> m_SpiritDefs; // 0x1ac0, 0x18 bytes
-                std::uint8_t pad_1ad8[0x18]; // 0x1ad8, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hHealingThinker; // 0x1af0, 0x4 bytes
-                std::int32_t m_nRevenantImpacts; // 0x1af4, 0x4 bytes
+                bool m_bSpiritsExplode; // 0x1aa8, 0x1 bytes
+                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
+                float m_fDeadZoneDistance; // 0x1aac, 0x4 bytes
+                float m_fDesiredDeadZoneDistance; // 0x1ab0, 0x4 bytes
+                float damage; // 0x1ab4, 0x4 bytes
+                float hit_radius; // 0x1ab8, 0x4 bytes
+                float speed_initial; // 0x1abc, 0x4 bytes
+                float speed_max; // 0x1ac0, 0x4 bytes
+                float acceleration; // 0x1ac4, 0x4 bytes
+                float kill_check_radius; // 0x1ac8, 0x4 bytes
+                float kill_radius_expansion; // 0x1acc, 0x4 bytes
+                float kill_radius_expansion_speed; // 0x1ad0, 0x4 bytes
+                float hp_regen_pct; // 0x1ad4, 0x4 bytes
+                std::int32_t num_revenants; // 0x1ad8, 0x4 bytes
+                std::int32_t rotation_direction; // 0x1adc, 0x4 bytes
+                float radius; // 0x1ae0, 0x4 bytes
+                float rotation_initial; // 0x1ae4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nWarningFX; // 0x1ae8, 0x4 bytes
+                std::uint8_t pad_1aec[0x4]; // 0x1aec, 0x4 bytes
+                CUtlVector<shade::sdk::client::sRevenantDef> m_SpiritDefs; // 0x1af0, 0x18 bytes
+                std::uint8_t pad_1b08[0x18]; // 0x1b08, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hHealingThinker; // 0x1b20, 0x4 bytes
+                std::int32_t m_nRevenantImpacts; // 0x1b24, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Muerta_Revenant_Thinker) == 0x1AF8, "CDOTA_Modifier_Muerta_Revenant_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Muerta_Revenant_Thinker) == 0x1B28, "CDOTA_Modifier_Muerta_Revenant_Thinker size mismatch");
         }
     }
 }

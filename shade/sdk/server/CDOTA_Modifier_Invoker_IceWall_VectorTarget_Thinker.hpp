@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,33 +39,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Invoker_IceWall_VectorTarget_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t slow; // 0x1a78, 0x4 bytes
-                float slow_duration; // 0x1a7c, 0x4 bytes
-                float root_duration; // 0x1a80, 0x4 bytes
-                float damage_per_second; // 0x1a84, 0x4 bytes
-                float root_damage; // 0x1a88, 0x4 bytes
-                float tick_interval; // 0x1a8c, 0x4 bytes
-                float wall_total_length; // 0x1a90, 0x4 bytes
-                float wall_width; // 0x1a94, 0x4 bytes
-                VectorWS m_vWallCenter; // 0x1a98, 0xc bytes
-                Vector m_vWallDirection; // 0x1aa4, 0xc bytes
-                VectorWS m_vWallRight; // 0x1ab0, 0xc bytes
-                VectorWS m_vWallLeft; // 0x1abc, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndexA; // 0x1ac8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndexB; // 0x1acc, 0x4 bytes
-                bool m_bStartedExpanding; // 0x1ad0, 0x1 bytes
-                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
-                float glacier_formation_speed; // 0x1ad4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFormationStartTime; // 0x1ad8, 0x4 bytes
-                bool m_bGrantedGem; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEnemiesInWall; // 0x1ae0, 0x18 bytes
+                std::int32_t slow; // 0x1aa8, 0x4 bytes
+                float slow_duration; // 0x1aac, 0x4 bytes
+                float root_duration; // 0x1ab0, 0x4 bytes
+                float damage_per_second; // 0x1ab4, 0x4 bytes
+                float root_damage; // 0x1ab8, 0x4 bytes
+                float tick_interval; // 0x1abc, 0x4 bytes
+                float wall_total_length; // 0x1ac0, 0x4 bytes
+                float wall_width; // 0x1ac4, 0x4 bytes
+                VectorWS m_vWallCenter; // 0x1ac8, 0xc bytes
+                Vector m_vWallDirection; // 0x1ad4, 0xc bytes
+                VectorWS m_vWallRight; // 0x1ae0, 0xc bytes
+                VectorWS m_vWallLeft; // 0x1aec, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndexA; // 0x1af8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndexB; // 0x1afc, 0x4 bytes
+                bool m_bStartedExpanding; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x3]; // 0x1b01, 0x3 bytes
+                float glacier_formation_speed; // 0x1b04, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFormationStartTime; // 0x1b08, 0x4 bytes
+                bool m_bGrantedGem; // 0x1b0c, 0x1 bytes
+                std::uint8_t pad_1b0d[0x3]; // 0x1b0d, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEnemiesInWall; // 0x1b10, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Invoker_IceWall_VectorTarget_Thinker) == 0x1AF8, "CDOTA_Modifier_Invoker_IceWall_VectorTarget_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Invoker_IceWall_VectorTarget_Thinker) == 0x1B28, "CDOTA_Modifier_Invoker_IceWall_VectorTarget_Thinker size mismatch");
         }
     }
 }

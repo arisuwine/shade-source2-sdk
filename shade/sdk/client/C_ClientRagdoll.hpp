@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xde0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,28 +32,28 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ClientRagdoll : public shade::sdk::client::CBaseAnimGraph {
             public:
-                bool m_bFadeOut; // 0x0c58, 0x1 bytes
-                bool m_bImportant; // 0x0c59, 0x1 bytes
-                std::uint8_t pad_0c5a[0x2]; // 0x0c5a, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flEffectTime; // 0x0c5c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_gibDespawnTime; // 0x0c60, 0x4 bytes
-                std::int32_t m_iCurrentFriction; // 0x0c64, 0x4 bytes
-                std::int32_t m_iMinFriction; // 0x0c68, 0x4 bytes
-                std::int32_t m_iMaxFriction; // 0x0c6c, 0x4 bytes
-                std::int32_t m_iFrictionAnimState; // 0x0c70, 0x4 bytes
-                bool m_bReleaseRagdoll; // 0x0c74, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_iEyeAttachment; // 0x0c75, 0x1 bytes
-                bool m_bFadingOut; // 0x0c76, 0x1 bytes
-                std::uint8_t pad_0c77[0x1]; // 0x0c77, 0x1 bytes
-                float m_flScaleEnd[0xa]; // 0x0c78, 0x28 bytes
-                shade::sdk::entity2::GameTime_t m_flScaleTimeStart[0xa]; // 0x0ca0, 0x28 bytes
-                shade::sdk::entity2::GameTime_t m_flScaleTimeEnd[0xa]; // 0x0cc8, 0x28 bytes
+                bool m_bFadeOut; // 0x0d48, 0x1 bytes
+                bool m_bImportant; // 0x0d49, 0x1 bytes
+                std::uint8_t pad_0d4a[0x2]; // 0x0d4a, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flEffectTime; // 0x0d4c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_gibDespawnTime; // 0x0d50, 0x4 bytes
+                std::int32_t m_iCurrentFriction; // 0x0d54, 0x4 bytes
+                std::int32_t m_iMinFriction; // 0x0d58, 0x4 bytes
+                std::int32_t m_iMaxFriction; // 0x0d5c, 0x4 bytes
+                std::int32_t m_iFrictionAnimState; // 0x0d60, 0x4 bytes
+                bool m_bReleaseRagdoll; // 0x0d64, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_iEyeAttachment; // 0x0d65, 0x1 bytes
+                bool m_bFadingOut; // 0x0d66, 0x1 bytes
+                std::uint8_t pad_0d67[0x1]; // 0x0d67, 0x1 bytes
+                float m_flScaleEnd[0xa]; // 0x0d68, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_flScaleTimeStart[0xa]; // 0x0d90, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_flScaleTimeEnd[0xa]; // 0x0db8, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_ClientRagdoll) == 0xCF0, "C_ClientRagdoll size mismatch");
+            static_assert(sizeof(C_ClientRagdoll) == 0xDE0, "C_ClientRagdoll size mismatch");
         }
     }
 }

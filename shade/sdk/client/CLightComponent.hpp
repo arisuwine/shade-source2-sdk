@@ -43,10 +43,9 @@ namespace shade {
             public:
                 std::uint8_t pad_0008[0x30]; // 0x0008, 0x30 bytes
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0038, 0x28 bytes
-                std::uint8_t pad_0060[0x15]; // 0x0060, 0x15 bytes
-                Color m_Color; // 0x0075, 0x4 bytes
-                Color m_SecondaryColor; // 0x0079, 0x4 bytes
-                std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
+                std::uint8_t pad_0060[0x18]; // 0x0060, 0x18 bytes
+                Color m_Color; // 0x0078, 0x4 bytes
+                Color m_SecondaryColor; // 0x007c, 0x4 bytes
                 float m_flBrightness; // 0x0080, 0x4 bytes
                 float m_flBrightnessScale; // 0x0084, 0x4 bytes
                 float m_flBrightnessMult; // 0x0088, 0x4 bytes

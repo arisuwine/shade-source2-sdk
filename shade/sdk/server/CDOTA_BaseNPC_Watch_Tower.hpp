@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19d0
+             * Size: 0x1ac0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Watch_Tower : public shade::sdk::server::CDOTA_BaseNPC_Building {
             public:
-                CUtlSymbolLarge m_szOutpostName; // 0x19c0, 0x8 bytes
-                CUtlSymbolLarge m_szInteractAbilityName; // 0x19c8, 0x8 bytes
+                CUtlSymbolLarge m_szOutpostName; // 0x1ab0, 0x8 bytes
+                CUtlSymbolLarge m_szInteractAbilityName; // 0x1ab8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Watch_Tower) == 0x19D0, "CDOTA_BaseNPC_Watch_Tower size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Watch_Tower) == 0x1AC0, "CDOTA_BaseNPC_Watch_Tower size mismatch");
         }
     }
 }

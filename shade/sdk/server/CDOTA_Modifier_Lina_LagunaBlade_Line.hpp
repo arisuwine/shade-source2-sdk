@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Lina_LagunaBlade_Line : public shade::sdk::client::CDOTA_Buff {
             public:
-                Vector vStart; // 0x1a78, 0xc bytes
-                Vector vEnd; // 0x1a84, 0xc bytes
+                Vector vStart; // 0x1aa8, 0xc bytes
+                Vector vEnd; // 0x1ab4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Lina_LagunaBlade_Line) == 0x1A90, "CDOTA_Modifier_Lina_LagunaBlade_Line size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Lina_LagunaBlade_Line) == 0x1AC0, "CDOTA_Modifier_Lina_LagunaBlade_Line size mismatch");
         }
     }
 }

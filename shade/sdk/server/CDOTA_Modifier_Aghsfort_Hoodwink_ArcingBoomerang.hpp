@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,32 +39,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Aghsfort_Hoodwink_ArcingBoomerang : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vLeftControl; // 0x1a78, 0xc bytes
-                VectorWS m_vRightControl; // 0x1a84, 0xc bytes
-                VectorWS m_vTargetLoc; // 0x1a90, 0xc bytes
-                VectorWS m_vOriginalTargetLoc; // 0x1a9c, 0xc bytes
-                VectorWS m_vSourceLoc; // 0x1aa8, 0xc bytes
-                float m_flBuffDuration; // 0x1ab4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBuffDieTime; // 0x1ab8, 0x4 bytes
-                bool m_bReturning; // 0x1abc, 0x1 bytes
-                std::uint8_t pad_1abd[0x3]; // 0x1abd, 0x3 bytes
-                std::int32_t m_nFramesToWait; // 0x1ac0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBoomerang; // 0x1ac4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nBoomerangFXIndex; // 0x1ac8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nOldBoomerangFXindex; // 0x1acc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecUniqueHitList; // 0x1ad0, 0x18 bytes
-                std::int32_t radius; // 0x1ae8, 0x4 bytes
-                std::int32_t spread; // 0x1aec, 0x4 bytes
-                std::int32_t damage; // 0x1af0, 0x4 bytes
-                float min_throw_duration; // 0x1af4, 0x4 bytes
-                float max_throw_duration; // 0x1af8, 0x4 bytes
-                std::uint8_t pad_1afc[0x14]; // 0x1afc, 0x14 bytes
+                VectorWS m_vLeftControl; // 0x1aa8, 0xc bytes
+                VectorWS m_vRightControl; // 0x1ab4, 0xc bytes
+                VectorWS m_vTargetLoc; // 0x1ac0, 0xc bytes
+                VectorWS m_vOriginalTargetLoc; // 0x1acc, 0xc bytes
+                VectorWS m_vSourceLoc; // 0x1ad8, 0xc bytes
+                float m_flBuffDuration; // 0x1ae4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBuffDieTime; // 0x1ae8, 0x4 bytes
+                bool m_bReturning; // 0x1aec, 0x1 bytes
+                std::uint8_t pad_1aed[0x3]; // 0x1aed, 0x3 bytes
+                std::int32_t m_nFramesToWait; // 0x1af0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBoomerang; // 0x1af4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nBoomerangFXIndex; // 0x1af8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nOldBoomerangFXindex; // 0x1afc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecUniqueHitList; // 0x1b00, 0x18 bytes
+                std::int32_t radius; // 0x1b18, 0x4 bytes
+                std::int32_t spread; // 0x1b1c, 0x4 bytes
+                std::int32_t damage; // 0x1b20, 0x4 bytes
+                float min_throw_duration; // 0x1b24, 0x4 bytes
+                float max_throw_duration; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x14]; // 0x1b2c, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Aghsfort_Hoodwink_ArcingBoomerang) == 0x1B10, "CDOTA_Modifier_Aghsfort_Hoodwink_ArcingBoomerang size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Aghsfort_Hoodwink_ArcingBoomerang) == 0x1B40, "CDOTA_Modifier_Aghsfort_Hoodwink_ArcingBoomerang size mismatch");
         }
     }
 }

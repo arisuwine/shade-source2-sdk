@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -45,23 +45,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Seasonal_PartyHat : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t controlled_unit_search_radius; // 0x1a78, 0x4 bytes
-                bool child_modifier; // 0x1a7c, 0x1 bytes
-                std::uint8_t pad_1a7d[0x3]; // 0x1a7d, 0x3 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecParticles; // 0x1a80, 0x18 bytes
-                CUtlVector<std::int32_t> m_vecHatColors; // 0x1a98, 0x18 bytes
-                std::uint32_t m_unVersion; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecNearbyUnits; // 0x1ab8, 0x18 bytes
-                CUtlVector<shade::sdk::entity2::GameTime_t> m_vecUnitIdleStartTimes; // 0x1ad0, 0x18 bytes
-                bool m_bPlayEndcapOnNext; // 0x1ae8, 0x1 bytes
-                std::uint8_t pad_1ae9[0x7]; // 0x1ae9, 0x7 bytes
+                std::int32_t controlled_unit_search_radius; // 0x1aa8, 0x4 bytes
+                bool child_modifier; // 0x1aac, 0x1 bytes
+                std::uint8_t pad_1aad[0x3]; // 0x1aad, 0x3 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecParticles; // 0x1ab0, 0x18 bytes
+                CUtlVector<std::int32_t> m_vecHatColors; // 0x1ac8, 0x18 bytes
+                std::uint32_t m_unVersion; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecNearbyUnits; // 0x1ae8, 0x18 bytes
+                CUtlVector<shade::sdk::entity2::GameTime_t> m_vecUnitIdleStartTimes; // 0x1b00, 0x18 bytes
+                bool m_bPlayEndcapOnNext; // 0x1b18, 0x1 bytes
+                std::uint8_t pad_1b19[0x7]; // 0x1b19, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Seasonal_PartyHat) == 0x1AF0, "CDOTA_Modifier_Seasonal_PartyHat size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Seasonal_PartyHat) == 0x1B20, "CDOTA_Modifier_Seasonal_PartyHat size mismatch");
         }
     }
 }

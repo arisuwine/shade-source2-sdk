@@ -53,9 +53,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_DOTA_Ability_Techies_MutuallyAssuredDestruction) == 0x6E8, "C_DOTA_Ability_Techies_MutuallyAssuredDestruction size mismatch");
         }

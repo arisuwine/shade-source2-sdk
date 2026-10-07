@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3358
+             * Size: 0x3360
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,37 +31,37 @@ namespace shade {
             public:
                 std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0030, 0x28 bytes
-                std::uint8_t pad_0058[0x15d8]; // 0x0058, 0x15d8 bytes
-                bool m_bCustomGame; // 0x1630, 0x1 bytes
-                bool m_bEventGame; // 0x1631, 0x1 bytes
-                bool m_bGameModeWantsDefaultNeutralItemSchema; // 0x1632, 0x1 bytes
-                bool m_bGameModeFilteredAbilities; // 0x1633, 0x1 bytes
-                char m_szAddOnGame[0x80]; // 0x1634, 0x80 bytes
-                char m_szAddOnMap[0x80]; // 0x16b4, 0x80 bytes
-                std::uint8_t pad_1734[0x15ac]; // 0x1734, 0x15ac bytes
-                KeyValues *m_pTutorialLessonKeyValues; // 0x2ce0, 0x8 bytes
-                KeyValues *m_pDivisionKeyValues; // 0x2ce8, 0x8 bytes
-                KeyValues *m_pMatchGroupsKeyValues; // 0x2cf0, 0x8 bytes
-                KeyValues *m_pAnimationStatues; // 0x2cf8, 0x8 bytes
-                KeyValues *m_pBotScriptsDedicatedServer; // 0x2d00, 0x8 bytes
-                KeyValues *m_pkvWardPlacementLocations; // 0x2d08, 0x8 bytes
-                KeyValues *m_pRegionKeyValues; // 0x2d10, 0x8 bytes
-                KeyValues *m_pSurveyQuestionData; // 0x2d18, 0x8 bytes
-                KeyValues3 m_AddonInfoKeyValues; // 0x2d20, 0x10 bytes
-                std::uint8_t pad_2d30[0x28]; // 0x2d30, 0x28 bytes
-                KeyValues *m_pCountryKeyValues; // 0x2d58, 0x8 bytes
-                std::uint8_t pad_2d60[0x4d8]; // 0x2d60, 0x4d8 bytes
-                bool m_bLoadedPortraits[0x9]; // 0x3238, 0x9 bytes
-                std::uint8_t pad_3241[0x7]; // 0x3241, 0x7 bytes
-                KeyValues *m_pControlGroupsKeyValues; // 0x3248, 0x8 bytes
-                KeyValues3 *m_pItemSuggestPreferenceKeyValues; // 0x3250, 0x8 bytes
-                bool m_CurrentHeroAvailable[0x100]; // 0x3258, 0x100 bytes
+                std::uint8_t pad_0058[0x15e0]; // 0x0058, 0x15e0 bytes
+                bool m_bCustomGame; // 0x1638, 0x1 bytes
+                bool m_bEventGame; // 0x1639, 0x1 bytes
+                bool m_bGameModeWantsDefaultNeutralItemSchema; // 0x163a, 0x1 bytes
+                bool m_bGameModeFilteredAbilities; // 0x163b, 0x1 bytes
+                char m_szAddOnGame[0x80]; // 0x163c, 0x80 bytes
+                char m_szAddOnMap[0x80]; // 0x16bc, 0x80 bytes
+                std::uint8_t pad_173c[0x15ac]; // 0x173c, 0x15ac bytes
+                KeyValues *m_pTutorialLessonKeyValues; // 0x2ce8, 0x8 bytes
+                KeyValues *m_pDivisionKeyValues; // 0x2cf0, 0x8 bytes
+                KeyValues *m_pMatchGroupsKeyValues; // 0x2cf8, 0x8 bytes
+                KeyValues *m_pAnimationStatues; // 0x2d00, 0x8 bytes
+                KeyValues *m_pBotScriptsDedicatedServer; // 0x2d08, 0x8 bytes
+                KeyValues *m_pkvWardPlacementLocations; // 0x2d10, 0x8 bytes
+                KeyValues *m_pRegionKeyValues; // 0x2d18, 0x8 bytes
+                KeyValues *m_pSurveyQuestionData; // 0x2d20, 0x8 bytes
+                KeyValues3 m_AddonInfoKeyValues; // 0x2d28, 0x10 bytes
+                std::uint8_t pad_2d38[0x28]; // 0x2d38, 0x28 bytes
+                KeyValues *m_pCountryKeyValues; // 0x2d60, 0x8 bytes
+                std::uint8_t pad_2d68[0x4d8]; // 0x2d68, 0x4d8 bytes
+                bool m_bLoadedPortraits[0x9]; // 0x3240, 0x9 bytes
+                std::uint8_t pad_3249[0x7]; // 0x3249, 0x7 bytes
+                KeyValues *m_pControlGroupsKeyValues; // 0x3250, 0x8 bytes
+                KeyValues3 *m_pItemSuggestPreferenceKeyValues; // 0x3258, 0x8 bytes
+                bool m_CurrentHeroAvailable[0x100]; // 0x3260, 0x100 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTAGameManager) == 0x3358, "C_DOTAGameManager size mismatch");
+            static_assert(sizeof(C_DOTAGameManager) == 0x3360, "C_DOTAGameManager size mismatch");
         }
     }
 }

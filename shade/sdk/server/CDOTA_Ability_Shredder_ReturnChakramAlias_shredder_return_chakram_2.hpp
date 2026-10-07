@@ -33,9 +33,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2) == 0x580, "CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2 size mismatch");
         }

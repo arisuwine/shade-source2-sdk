@@ -32,9 +32,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CPlayer_UseServices) == 0x48, "CPlayer_UseServices size mismatch");
         }

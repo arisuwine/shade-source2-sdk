@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapExternalWindToCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCP; // 0x01e0, 0x4 bytes
-                std::int32_t m_nCPOutput; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecScale; // 0x01e8, 0x6b8 bytes
-                bool m_bSetMagnitude; // 0x08a0, 0x1 bytes
-                std::uint8_t pad_08a1[0x3]; // 0x08a1, 0x3 bytes
-                std::int32_t m_nOutVectorField; // 0x08a4, 0x4 bytes
+                std::int32_t m_nCP; // 0x01e8, 0x4 bytes
+                std::int32_t m_nCPOutput; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecScale; // 0x01f0, 0x6d8 bytes
+                bool m_bSetMagnitude; // 0x08c8, 0x1 bytes
+                std::uint8_t pad_08c9[0x3]; // 0x08c9, 0x3 bytes
+                std::int32_t m_nOutVectorField; // 0x08cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapExternalWindToCP) == 0x8A8, "C_OP_RemapExternalWindToCP size mismatch");
+            static_assert(sizeof(C_OP_RemapExternalWindToCP) == 0x8D0, "C_OP_RemapExternalWindToCP size mismatch");
         }
     }
 }

@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18d8
+             * Size: 0x19c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,16 +41,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Scout : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                bool m_bUnitRespawned; // 0x18a8, 0x1 bytes
-                std::uint8_t pad_18a9[0x3]; // 0x18a9, 0x3 bytes
-                shade::sdk::client::PlayerID_t m_nSoleControllingPlayer; // 0x18ac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x18b0, 0x4 bytes
-                shade::sdk::client::ScoutState_t m_nScoutState; // 0x18b4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hScoutStateEntity; // 0x18b8, 0x4 bytes
-                std::uint8_t pad_18bc[0x4]; // 0x18bc, 0x4 bytes
-                CUtlString m_strScoutModel; // 0x18c0, 0x8 bytes
-                VectorWS m_vSpawnLocation; // 0x18c8, 0xc bytes
-                std::uint8_t pad_18d4[0x4]; // 0x18d4, 0x4 bytes
+                bool m_bUnitRespawned; // 0x1998, 0x1 bytes
+                std::uint8_t pad_1999[0x3]; // 0x1999, 0x3 bytes
+                shade::sdk::client::PlayerID_t m_nSoleControllingPlayer; // 0x199c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x19a0, 0x4 bytes
+                shade::sdk::client::ScoutState_t m_nScoutState; // 0x19a4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hScoutStateEntity; // 0x19a8, 0x4 bytes
+                std::uint8_t pad_19ac[0x4]; // 0x19ac, 0x4 bytes
+                CUtlString m_strScoutModel; // 0x19b0, 0x8 bytes
+                VectorWS m_vSpawnLocation; // 0x19b8, 0xc bytes
+                std::uint8_t pad_19c4[0x4]; // 0x19c4, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -58,7 +58,7 @@ namespace shade {
              * std::int32_t solecontrollingplayerid; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDOTA_Unit_Scout) == 0x18D8, "CDOTA_Unit_Scout size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Scout) == 0x19C8, "CDOTA_Unit_Scout size mismatch");
         }
     }
 }

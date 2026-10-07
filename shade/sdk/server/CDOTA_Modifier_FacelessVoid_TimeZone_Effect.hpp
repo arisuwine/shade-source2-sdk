@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b48
+             * Size: 0x1b78
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,19 +37,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_FacelessVoid_TimeZone_Effect : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVectorFixedGrowable<CHandle<shade::sdk::server::CDOTABaseAbility>, 40> m_vecAbilities; // 0x1a78, 0xb8 bytes
-                std::int32_t bonus_move_speed; // 0x1b30, 0x4 bytes
-                std::int32_t bonus_attack_speed; // 0x1b34, 0x4 bytes
-                std::int32_t bonus_cast_speed; // 0x1b38, 0x4 bytes
-                std::int32_t bonus_turn_speed; // 0x1b3c, 0x4 bytes
-                std::int32_t cooldown_acceleration; // 0x1b40, 0x4 bytes
-                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
+                CUtlVectorFixedGrowable<CHandle<shade::sdk::server::CDOTABaseAbility>, 40> m_vecAbilities; // 0x1aa8, 0xb8 bytes
+                std::int32_t bonus_move_speed; // 0x1b60, 0x4 bytes
+                std::int32_t bonus_attack_speed; // 0x1b64, 0x4 bytes
+                std::int32_t bonus_cast_speed; // 0x1b68, 0x4 bytes
+                std::int32_t bonus_turn_speed; // 0x1b6c, 0x4 bytes
+                std::int32_t cooldown_acceleration; // 0x1b70, 0x4 bytes
+                std::uint8_t pad_1b74[0x4]; // 0x1b74, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_FacelessVoid_TimeZone_Effect) == 0x1B48, "CDOTA_Modifier_FacelessVoid_TimeZone_Effect size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_FacelessVoid_TimeZone_Effect) == 0x1B78, "CDOTA_Modifier_FacelessVoid_TimeZone_Effect size mismatch");
         }
     }
 }

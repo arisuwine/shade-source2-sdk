@@ -40,9 +40,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_DOTA_Ability_BountyHunter_Big_Game_Hunter) == 0x6D8, "C_DOTA_Ability_BountyHunter_Big_Game_Hunter size mismatch");
         }

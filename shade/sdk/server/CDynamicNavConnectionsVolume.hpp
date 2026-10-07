@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x940
+             * Size: 0xa20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,20 +38,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDynamicNavConnectionsVolume : public shade::sdk::server::CTriggerMultiple {
             public:
-                CUtlSymbolLarge m_iszConnectionTarget; // 0x0908, 0x8 bytes
-                CUtlVector<shade::sdk::server::DynamicVolumeDef_t> m_vecConnections; // 0x0910, 0x18 bytes
-                CGlobalSymbol m_sTransitionType; // 0x0928, 0x8 bytes
-                bool m_bConnectionsEnabled; // 0x0930, 0x1 bytes
-                std::uint8_t pad_0931[0x3]; // 0x0931, 0x3 bytes
-                float m_flTargetAreaSearchRadius; // 0x0934, 0x4 bytes
-                float m_flUpdateDistance; // 0x0938, 0x4 bytes
-                float m_flMaxConnectionDistance; // 0x093c, 0x4 bytes
+                CUtlSymbolLarge m_iszConnectionTarget; // 0x09e8, 0x8 bytes
+                CUtlVector<shade::sdk::server::DynamicVolumeDef_t> m_vecConnections; // 0x09f0, 0x18 bytes
+                CGlobalSymbol m_sTransitionType; // 0x0a08, 0x8 bytes
+                bool m_bConnectionsEnabled; // 0x0a10, 0x1 bytes
+                std::uint8_t pad_0a11[0x3]; // 0x0a11, 0x3 bytes
+                float m_flTargetAreaSearchRadius; // 0x0a14, 0x4 bytes
+                float m_flUpdateDistance; // 0x0a18, 0x4 bytes
+                float m_flMaxConnectionDistance; // 0x0a1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDynamicNavConnectionsVolume) == 0x940, "CDynamicNavConnectionsVolume size mismatch");
+            static_assert(sizeof(CDynamicNavConnectionsVolume) == 0xA20, "CDynamicNavConnectionsVolume size mismatch");
         }
     }
 }

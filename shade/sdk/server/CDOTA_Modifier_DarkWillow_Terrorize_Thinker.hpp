@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,29 +37,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DarkWillow_Terrorize_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hWisp; // 0x1a78, 0x4 bytes
-                float destination_travel_speed; // 0x1a7c, 0x4 bytes
-                float return_travel_speed; // 0x1a80, 0x4 bytes
-                float destination_radius; // 0x1a84, 0x4 bytes
-                float impact_damage; // 0x1a88, 0x4 bytes
-                float destination_status_duration; // 0x1a8c, 0x4 bytes
-                float initial_delay; // 0x1a90, 0x4 bytes
-                float starting_height; // 0x1a94, 0x4 bytes
-                VectorWS m_vAttackLocation; // 0x1a98, 0xc bytes
-                bool m_bAttacking; // 0x1aa4, 0x1 bytes
-                bool m_bReturning; // 0x1aa5, 0x1 bytes
-                std::uint8_t pad_1aa6[0x2]; // 0x1aa6, 0x2 bytes
-                float m_fCurHeight; // 0x1aa8, 0x4 bytes
-                float m_fEstimatedTravelTime; // 0x1aac, 0x4 bytes
-                float think_interval; // 0x1ab0, 0x4 bytes
-                bool m_bInFlight; // 0x1ab4, 0x1 bytes
-                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hWisp; // 0x1aa8, 0x4 bytes
+                float destination_travel_speed; // 0x1aac, 0x4 bytes
+                float return_travel_speed; // 0x1ab0, 0x4 bytes
+                float destination_radius; // 0x1ab4, 0x4 bytes
+                float impact_damage; // 0x1ab8, 0x4 bytes
+                float destination_status_duration; // 0x1abc, 0x4 bytes
+                float initial_delay; // 0x1ac0, 0x4 bytes
+                float starting_height; // 0x1ac4, 0x4 bytes
+                VectorWS m_vAttackLocation; // 0x1ac8, 0xc bytes
+                bool m_bAttacking; // 0x1ad4, 0x1 bytes
+                bool m_bReturning; // 0x1ad5, 0x1 bytes
+                std::uint8_t pad_1ad6[0x2]; // 0x1ad6, 0x2 bytes
+                float m_fCurHeight; // 0x1ad8, 0x4 bytes
+                float m_fEstimatedTravelTime; // 0x1adc, 0x4 bytes
+                float think_interval; // 0x1ae0, 0x4 bytes
+                bool m_bInFlight; // 0x1ae4, 0x1 bytes
+                std::uint8_t pad_1ae5[0x3]; // 0x1ae5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DarkWillow_Terrorize_Thinker) == 0x1AB8, "CDOTA_Modifier_DarkWillow_Terrorize_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DarkWillow_Terrorize_Thinker) == 0x1AE8, "CDOTA_Modifier_DarkWillow_Terrorize_Thinker size mismatch");
         }
     }
 }

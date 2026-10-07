@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_NightStalker_Void_ZoneThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float cast_radius; // 0x1a78, 0x4 bytes
-                float scepter_linger; // 0x1a7c, 0x4 bytes
+                float cast_radius; // 0x1aa8, 0x4 bytes
+                float scepter_linger; // 0x1aac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_NightStalker_Void_ZoneThinker) == 0x1A80, "CDOTA_Modifier_NightStalker_Void_ZoneThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_NightStalker_Void_ZoneThinker) == 0x1AB0, "CDOTA_Modifier_NightStalker_Void_ZoneThinker size mismatch");
         }
     }
 }

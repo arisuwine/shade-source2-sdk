@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,29 +38,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Juggernaut_Omnislash : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1a78, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLastTarget; // 0x1a7c, 0x4 bytes
-                std::int32_t m_nJumps; // 0x1a80, 0x4 bytes
-                std::int32_t bonus_damage; // 0x1a84, 0x4 bytes
-                std::int32_t bonus_attack_speed; // 0x1a88, 0x4 bytes
-                float omni_slash_radius; // 0x1a8c, 0x4 bytes
-                float attack_rate_multiplier; // 0x1a90, 0x4 bytes
-                bool m_bFirstHit; // 0x1a94, 0x1 bytes
-                std::uint8_t pad_1a95[0x3]; // 0x1a95, 0x3 bytes
-                std::int32_t m_iTotalDamage; // 0x1a98, 0x4 bytes
-                std::int32_t m_iHeroDamage; // 0x1a9c, 0x4 bytes
-                std::int32_t m_iKilledHeroes; // 0x1aa0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fNextAttackTime; // 0x1aa4, 0x4 bytes
-                bool m_bScepterCast; // 0x1aa8, 0x1 bytes
-                bool m_bReflection; // 0x1aa9, 0x1 bytes
-                bool m_bEndNext; // 0x1aaa, 0x1 bytes
-                std::uint8_t pad_1aab[0x5]; // 0x1aab, 0x5 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1aa8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLastTarget; // 0x1aac, 0x4 bytes
+                std::int32_t m_nJumps; // 0x1ab0, 0x4 bytes
+                std::int32_t bonus_damage; // 0x1ab4, 0x4 bytes
+                std::int32_t bonus_attack_speed; // 0x1ab8, 0x4 bytes
+                float omni_slash_radius; // 0x1abc, 0x4 bytes
+                float attack_rate_multiplier; // 0x1ac0, 0x4 bytes
+                bool m_bFirstHit; // 0x1ac4, 0x1 bytes
+                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
+                std::int32_t m_iTotalDamage; // 0x1ac8, 0x4 bytes
+                std::int32_t m_iHeroDamage; // 0x1acc, 0x4 bytes
+                std::int32_t m_iKilledHeroes; // 0x1ad0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fNextAttackTime; // 0x1ad4, 0x4 bytes
+                bool m_bScepterCast; // 0x1ad8, 0x1 bytes
+                bool m_bReflection; // 0x1ad9, 0x1 bytes
+                bool m_bEndNext; // 0x1ada, 0x1 bytes
+                std::uint8_t pad_1adb[0x5]; // 0x1adb, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Juggernaut_Omnislash) == 0x1AB0, "CDOTA_Modifier_Juggernaut_Omnislash size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Juggernaut_Omnislash) == 0x1AE0, "CDOTA_Modifier_Juggernaut_Omnislash size mismatch");
         }
     }
 }

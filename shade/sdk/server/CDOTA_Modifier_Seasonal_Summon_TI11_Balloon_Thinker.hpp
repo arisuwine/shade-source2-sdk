@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,32 +37,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Seasonal_Summon_TI11_Balloon_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float speed; // 0x1a78, 0x4 bytes
-                std::int32_t min_distance_before_bounce; // 0x1a7c, 0x4 bytes
-                float drag; // 0x1a80, 0x4 bytes
-                float max_height; // 0x1a84, 0x4 bytes
-                float max_vertical_move_time; // 0x1a88, 0x4 bytes
-                float bounce_turn_angle; // 0x1a8c, 0x4 bytes
-                float bounce_turn_angle_tree; // 0x1a90, 0x4 bytes
-                float bounce_delay; // 0x1a94, 0x4 bytes
-                std::int32_t max_bounces; // 0x1a98, 0x4 bytes
-                float max_model_scale; // 0x1a9c, 0x4 bytes
-                float power_growth_exponent; // 0x1aa0, 0x4 bytes
-                VectorWS m_vLastPos; // 0x1aa4, 0xc bytes
-                Vector m_vDir; // 0x1ab0, 0xc bytes
-                float m_flSpeed; // 0x1abc, 0x4 bytes
-                float m_flDistRemaining; // 0x1ac0, 0x4 bytes
-                float m_flTreeTimeRemaining; // 0x1ac4, 0x4 bytes
-                std::int32_t m_nTimesBounced; // 0x1ac8, 0x4 bytes
-                float m_flModelScale; // 0x1acc, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLastHit; // 0x1ad0, 0x4 bytes
-                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                float speed; // 0x1aa8, 0x4 bytes
+                std::int32_t min_distance_before_bounce; // 0x1aac, 0x4 bytes
+                float drag; // 0x1ab0, 0x4 bytes
+                float max_height; // 0x1ab4, 0x4 bytes
+                float max_vertical_move_time; // 0x1ab8, 0x4 bytes
+                float bounce_turn_angle; // 0x1abc, 0x4 bytes
+                float bounce_turn_angle_tree; // 0x1ac0, 0x4 bytes
+                float bounce_delay; // 0x1ac4, 0x4 bytes
+                std::int32_t max_bounces; // 0x1ac8, 0x4 bytes
+                float max_model_scale; // 0x1acc, 0x4 bytes
+                float power_growth_exponent; // 0x1ad0, 0x4 bytes
+                VectorWS m_vLastPos; // 0x1ad4, 0xc bytes
+                Vector m_vDir; // 0x1ae0, 0xc bytes
+                float m_flSpeed; // 0x1aec, 0x4 bytes
+                float m_flDistRemaining; // 0x1af0, 0x4 bytes
+                float m_flTreeTimeRemaining; // 0x1af4, 0x4 bytes
+                std::int32_t m_nTimesBounced; // 0x1af8, 0x4 bytes
+                float m_flModelScale; // 0x1afc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLastHit; // 0x1b00, 0x4 bytes
+                std::uint8_t pad_1b04[0x4]; // 0x1b04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Seasonal_Summon_TI11_Balloon_Thinker) == 0x1AD8, "CDOTA_Modifier_Seasonal_Summon_TI11_Balloon_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Seasonal_Summon_TI11_Balloon_Thinker) == 0x1B08, "CDOTA_Modifier_Seasonal_Summon_TI11_Balloon_Thinker size mismatch");
         }
     }
 }

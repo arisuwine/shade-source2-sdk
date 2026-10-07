@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b20
+             * Size: 0x1b50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,35 +37,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_VoidSpirit_Dissimilate_Phase : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vFirstPortalPos; // 0x1a78, 0xc bytes
-                std::uint8_t pad_1a84[0x4]; // 0x1a84, 0x4 bytes
-                CUtlVector<VectorWS> m_vecDestinations; // 0x1a88, 0x18 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecDestinationParticles; // 0x1aa0, 0x18 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecDestinationParticles_EnemyTeam; // 0x1ab8, 0x18 bytes
-                std::int32_t m_nCurrentDestinationIndex; // 0x1ad0, 0x4 bytes
-                std::int32_t m_nClosestIndexPosToClick; // 0x1ad4, 0x4 bytes
-                std::int32_t m_flPortalHeightOffset; // 0x1ad8, 0x4 bytes
-                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
-                char *m_szAlliesPortalFX; // 0x1ae0, 0x8 bytes
-                char *m_szEnemiesPortalFX; // 0x1ae8, 0x8 bytes
-                float m_flPortalRadius; // 0x1af0, 0x4 bytes
-                float m_flPortalPadding; // 0x1af4, 0x4 bytes
-                float m_flFinalImpactDamageRadius; // 0x1af8, 0x4 bytes
-                float m_flFinalImpactFXRadius; // 0x1afc, 0x4 bytes
-                float destination_fx_radius; // 0x1b00, 0x4 bytes
-                float damage_radius; // 0x1b04, 0x4 bytes
-                std::int32_t portals_per_ring; // 0x1b08, 0x4 bytes
-                std::int32_t angle_per_ring_portal; // 0x1b0c, 0x4 bytes
-                float first_ring_distance_offset; // 0x1b10, 0x4 bytes
-                float debuff_duration; // 0x1b14, 0x4 bytes
-                std::int32_t aether_remnant_count; // 0x1b18, 0x4 bytes
-                float artifice_extra_offset; // 0x1b1c, 0x4 bytes
+                VectorWS m_vFirstPortalPos; // 0x1aa8, 0xc bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                CUtlVector<VectorWS> m_vecDestinations; // 0x1ab8, 0x18 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecDestinationParticles; // 0x1ad0, 0x18 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecDestinationParticles_EnemyTeam; // 0x1ae8, 0x18 bytes
+                std::int32_t m_nCurrentDestinationIndex; // 0x1b00, 0x4 bytes
+                std::int32_t m_nClosestIndexPosToClick; // 0x1b04, 0x4 bytes
+                std::int32_t m_flPortalHeightOffset; // 0x1b08, 0x4 bytes
+                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                char *m_szAlliesPortalFX; // 0x1b10, 0x8 bytes
+                char *m_szEnemiesPortalFX; // 0x1b18, 0x8 bytes
+                float m_flPortalRadius; // 0x1b20, 0x4 bytes
+                float m_flPortalPadding; // 0x1b24, 0x4 bytes
+                float m_flFinalImpactDamageRadius; // 0x1b28, 0x4 bytes
+                float m_flFinalImpactFXRadius; // 0x1b2c, 0x4 bytes
+                float destination_fx_radius; // 0x1b30, 0x4 bytes
+                float damage_radius; // 0x1b34, 0x4 bytes
+                std::int32_t portals_per_ring; // 0x1b38, 0x4 bytes
+                std::int32_t angle_per_ring_portal; // 0x1b3c, 0x4 bytes
+                float first_ring_distance_offset; // 0x1b40, 0x4 bytes
+                float debuff_duration; // 0x1b44, 0x4 bytes
+                std::int32_t aether_remnant_count; // 0x1b48, 0x4 bytes
+                float artifice_extra_offset; // 0x1b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_Dissimilate_Phase) == 0x1B20, "CDOTA_Modifier_VoidSpirit_Dissimilate_Phase size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_Dissimilate_Phase) == 0x1B50, "CDOTA_Modifier_VoidSpirit_Dissimilate_Phase size mismatch");
         }
     }
 }

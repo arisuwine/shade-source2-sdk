@@ -36,7 +36,7 @@ namespace shade {
                 std::uint32_t m_nTriangleOffset; // 0x0010, 0x4 bytes
                 std::uint8_t m_nVertexCount; // 0x0014, 0x1 bytes
                 std::uint8_t m_nTriangleCount; // 0x0015, 0x1 bytes
-                std::uint8_t pad_0016[0x2]; // 0x0016, 0x2 bytes
+                std::uint16_t m_nBoneIndex; // 0x0016, 0x2 bytes
             };
             #pragma pack(pop)
 

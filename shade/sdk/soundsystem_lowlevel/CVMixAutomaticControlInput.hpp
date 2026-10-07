@@ -15,11 +15,13 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/soundsystem_lowlevel/VMixAutoControlType_t.hpp"
+
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x10
+             * Size: 0x18
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -27,16 +29,16 @@ namespace shade {
             class CVMixAutomaticControlInput {
             public:
                 CUtlString m_name; // 0x0000, 0x8 bytes
-                std::int32_t m_nControlInputIndex; // 0x0008, 0x4 bytes
-                bool m_bIsTrackSend; // 0x000c, 0x1 bytes
-                bool m_bIsStackVar; // 0x000d, 0x1 bytes
-                std::uint8_t pad_000e[0x2]; // 0x000e, 0x2 bytes
+                std::uint8_t pad_0008[0x4]; // 0x0008, 0x4 bytes
+                std::int32_t m_nGraphInputIndex; // 0x000c, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::VMixAutoControlType_t m_nControlType; // 0x0010, 0x1 bytes
+                std::uint8_t pad_0011[0x7]; // 0x0011, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixAutomaticControlInput) == 0x10, "CVMixAutomaticControlInput size mismatch");
+            static_assert(sizeof(CVMixAutomaticControlInput) == 0x18, "CVMixAutomaticControlInput size mismatch");
         }
     }
 }

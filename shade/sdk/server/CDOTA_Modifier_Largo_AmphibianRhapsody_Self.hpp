@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b98
+             * Size: 0x1bc8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,47 +40,47 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Largo_AmphibianRhapsody_Self : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1a78, 0x4 bytes
-                float duration; // 0x1a7c, 0x4 bytes
-                float rhythm_interval; // 0x1a80, 0x4 bytes
-                float rhythm_grace_period; // 0x1a84, 0x4 bytes
-                float armor_per_stack; // 0x1a88, 0x4 bytes
-                std::int32_t max_stacks; // 0x1a8c, 0x4 bytes
-                float stack_duration; // 0x1a90, 0x4 bytes
-                std::int32_t double_song; // 0x1a94, 0x4 bytes
-                std::int32_t stack_decrement_on_exit; // 0x1a98, 0x4 bytes
-                std::uint8_t pad_1a9c[0x30]; // 0x1a9c, 0x30 bytes
-                shade::sdk::client::AmphibianRhapsodySong_t m_nCurrentSong; // 0x1acc, 0x4 bytes
-                shade::sdk::client::AmphibianRhapsodySong_t m_nCurrentSecondSong; // 0x1ad0, 0x4 bytes
-                std::int32_t m_nCurrentSongMusicTrack; // 0x1ad4, 0x4 bytes
-                float m_flAnticipatePoseTime; // 0x1ad8, 0x4 bytes
-                bool m_bPlayFinishSongSound; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
-                char *arrOriginalQWEAbilityNames[0x3]; // 0x1ae0, 0x18 bytes
-                char *arrCurrentQWEAbilityNames[0x3]; // 0x1af8, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b10, 0x4 bytes
-                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_rhythmTimer; // 0x1b18, 0x18 bytes
-                std::int32_t m_nCurrentRhythmWindow; // 0x1b30, 0x4 bytes
-                std::uint8_t pad_1b34[0x4]; // 0x1b34, 0x4 bytes
-                CUtlVector<std::int32_t> m_vecSuccessfulBursts; // 0x1b38, 0x18 bytes
-                CUtlVector<std::int32_t> m_vecMissedBursts; // 0x1b50, 0x18 bytes
-                float m_flLatencyAllowance; // 0x1b68, 0x4 bytes
-                bool m_bPlayedStopSound; // 0x1b6c, 0x1 bytes
-                bool m_bCanceledByEnemy; // 0x1b6d, 0x1 bytes
-                std::uint8_t pad_1b6e[0x2]; // 0x1b6e, 0x2 bytes
-                shade::sdk::server::CountdownTimer m_doubleSongTimer; // 0x1b70, 0x18 bytes
-                std::int32_t m_nConsecutiveBursts; // 0x1b88, 0x4 bytes
-                bool m_bSpokeConcept; // 0x1b8c, 0x1 bytes
-                std::uint8_t pad_1b8d[0x3]; // 0x1b8d, 0x3 bytes
-                CHandle<shade::sdk::server::CDOTA_Ability_Largo_AmphibianRhapsody_Song> m_pFirstStrumSong; // 0x1b90, 0x4 bytes
-                std::uint8_t pad_1b94[0x4]; // 0x1b94, 0x4 bytes
+                float radius; // 0x1aa8, 0x4 bytes
+                float duration; // 0x1aac, 0x4 bytes
+                float rhythm_interval; // 0x1ab0, 0x4 bytes
+                float rhythm_grace_period; // 0x1ab4, 0x4 bytes
+                float armor_per_stack; // 0x1ab8, 0x4 bytes
+                std::int32_t max_stacks; // 0x1abc, 0x4 bytes
+                float stack_duration; // 0x1ac0, 0x4 bytes
+                std::int32_t double_song; // 0x1ac4, 0x4 bytes
+                std::int32_t stack_decrement_on_exit; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x30]; // 0x1acc, 0x30 bytes
+                shade::sdk::client::AmphibianRhapsodySong_t m_nCurrentSong; // 0x1afc, 0x4 bytes
+                shade::sdk::client::AmphibianRhapsodySong_t m_nCurrentSecondSong; // 0x1b00, 0x4 bytes
+                std::int32_t m_nCurrentSongMusicTrack; // 0x1b04, 0x4 bytes
+                float m_flAnticipatePoseTime; // 0x1b08, 0x4 bytes
+                bool m_bPlayFinishSongSound; // 0x1b0c, 0x1 bytes
+                std::uint8_t pad_1b0d[0x3]; // 0x1b0d, 0x3 bytes
+                char *arrOriginalQWEAbilityNames[0x3]; // 0x1b10, 0x18 bytes
+                char *arrCurrentQWEAbilityNames[0x3]; // 0x1b28, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_rhythmTimer; // 0x1b48, 0x18 bytes
+                std::int32_t m_nCurrentRhythmWindow; // 0x1b60, 0x4 bytes
+                std::uint8_t pad_1b64[0x4]; // 0x1b64, 0x4 bytes
+                CUtlVector<std::int32_t> m_vecSuccessfulBursts; // 0x1b68, 0x18 bytes
+                CUtlVector<std::int32_t> m_vecMissedBursts; // 0x1b80, 0x18 bytes
+                float m_flLatencyAllowance; // 0x1b98, 0x4 bytes
+                bool m_bPlayedStopSound; // 0x1b9c, 0x1 bytes
+                bool m_bCanceledByEnemy; // 0x1b9d, 0x1 bytes
+                std::uint8_t pad_1b9e[0x2]; // 0x1b9e, 0x2 bytes
+                shade::sdk::server::CountdownTimer m_doubleSongTimer; // 0x1ba0, 0x18 bytes
+                std::int32_t m_nConsecutiveBursts; // 0x1bb8, 0x4 bytes
+                bool m_bSpokeConcept; // 0x1bbc, 0x1 bytes
+                std::uint8_t pad_1bbd[0x3]; // 0x1bbd, 0x3 bytes
+                CHandle<shade::sdk::server::CDOTA_Ability_Largo_AmphibianRhapsody_Song> m_pFirstStrumSong; // 0x1bc0, 0x4 bytes
+                std::uint8_t pad_1bc4[0x4]; // 0x1bc4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Largo_AmphibianRhapsody_Self) == 0x1B98, "CDOTA_Modifier_Largo_AmphibianRhapsody_Self size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Largo_AmphibianRhapsody_Self) == 0x1BC8, "CDOTA_Modifier_Largo_AmphibianRhapsody_Self size mismatch");
         }
     }
 }

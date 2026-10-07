@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Shadow_Demon_Shadow_Poison : public shade::sdk::client::CDOTA_Buff {
             public:
-                float stack_damage; // 0x1a78, 0x4 bytes
-                float bonus_stack_damage; // 0x1a7c, 0x4 bytes
-                std::int32_t max_multiply_stacks; // 0x1a80, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1a84, 0x4 bytes
+                float stack_damage; // 0x1aa8, 0x4 bytes
+                float bonus_stack_damage; // 0x1aac, 0x4 bytes
+                std::int32_t max_multiply_stacks; // 0x1ab0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Shadow_Demon_Shadow_Poison) == 0x1A88, "CDOTA_Modifier_Shadow_Demon_Shadow_Poison size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Shadow_Demon_Shadow_Poison) == 0x1AB8, "CDOTA_Modifier_Shadow_Demon_Shadow_Poison size mismatch");
         }
     }
 }

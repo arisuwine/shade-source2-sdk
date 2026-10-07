@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x210
+             * Size: 0x218
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,27 +29,27 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreatePhyllotaxis : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                std::int32_t m_nScaleCP; // 0x01e4, 0x4 bytes
-                std::int32_t m_nComponent; // 0x01e8, 0x4 bytes
-                float m_fRadCentCore; // 0x01ec, 0x4 bytes
-                float m_fRadPerPoint; // 0x01f0, 0x4 bytes
-                float m_fRadPerPointTo; // 0x01f4, 0x4 bytes
-                float m_fpointAngle; // 0x01f8, 0x4 bytes
-                float m_fsizeOverall; // 0x01fc, 0x4 bytes
-                float m_fRadBias; // 0x0200, 0x4 bytes
-                float m_fMinRad; // 0x0204, 0x4 bytes
-                float m_fDistBias; // 0x0208, 0x4 bytes
-                bool m_bUseLocalCoords; // 0x020c, 0x1 bytes
-                bool m_bUseWithContEmit; // 0x020d, 0x1 bytes
-                bool m_bUseOrigRadius; // 0x020e, 0x1 bytes
-                std::uint8_t pad_020f[0x1]; // 0x020f, 0x1 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                std::int32_t m_nScaleCP; // 0x01ec, 0x4 bytes
+                std::int32_t m_nComponent; // 0x01f0, 0x4 bytes
+                float m_fRadCentCore; // 0x01f4, 0x4 bytes
+                float m_fRadPerPoint; // 0x01f8, 0x4 bytes
+                float m_fRadPerPointTo; // 0x01fc, 0x4 bytes
+                float m_fpointAngle; // 0x0200, 0x4 bytes
+                float m_fsizeOverall; // 0x0204, 0x4 bytes
+                float m_fRadBias; // 0x0208, 0x4 bytes
+                float m_fMinRad; // 0x020c, 0x4 bytes
+                float m_fDistBias; // 0x0210, 0x4 bytes
+                bool m_bUseLocalCoords; // 0x0214, 0x1 bytes
+                bool m_bUseWithContEmit; // 0x0215, 0x1 bytes
+                bool m_bUseOrigRadius; // 0x0216, 0x1 bytes
+                std::uint8_t pad_0217[0x1]; // 0x0217, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreatePhyllotaxis) == 0x210, "C_INIT_CreatePhyllotaxis size mismatch");
+            static_assert(sizeof(C_INIT_CreatePhyllotaxis) == 0x218, "C_INIT_CreatePhyllotaxis size mismatch");
         }
     }
 }

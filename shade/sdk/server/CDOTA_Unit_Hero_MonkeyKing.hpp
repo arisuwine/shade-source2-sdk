@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f30
+             * Size: 0x2048
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_MonkeyKing : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                std::uint32_t m_nTreeDisguise; // 0x1f08, 0x4 bytes
-                std::uint32_t m_nPerchedTree; // 0x1f0c, 0x4 bytes
-                VectorWS m_vLastPos; // 0x1f10, 0xc bytes
-                bool m_bIsOnCloud; // 0x1f1c, 0x1 bytes
-                std::uint8_t pad_1f1d[0x3]; // 0x1f1d, 0x3 bytes
-                float m_fTotalDistOnCloud; // 0x1f20, 0x4 bytes
-                float m_fTotalDistoffCloud; // 0x1f24, 0x4 bytes
-                float m_fBackOnCloudThresh; // 0x1f28, 0x4 bytes
-                std::uint8_t pad_1f2c[0x4]; // 0x1f2c, 0x4 bytes
+                std::uint32_t m_nTreeDisguise; // 0x2020, 0x4 bytes
+                std::uint32_t m_nPerchedTree; // 0x2024, 0x4 bytes
+                VectorWS m_vLastPos; // 0x2028, 0xc bytes
+                bool m_bIsOnCloud; // 0x2034, 0x1 bytes
+                std::uint8_t pad_2035[0x3]; // 0x2035, 0x3 bytes
+                float m_fTotalDistOnCloud; // 0x2038, 0x4 bytes
+                float m_fTotalDistoffCloud; // 0x203c, 0x4 bytes
+                float m_fBackOnCloudThresh; // 0x2040, 0x4 bytes
+                std::uint8_t pad_2044[0x4]; // 0x2044, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_MonkeyKing) == 0x1F30, "CDOTA_Unit_Hero_MonkeyKing size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_MonkeyKing) == 0x2048, "CDOTA_Unit_Hero_MonkeyKing size mismatch");
         }
     }
 }

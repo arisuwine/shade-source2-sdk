@@ -16,17 +16,17 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/VectorExpressionType_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1140
+             * Size: 0x1190
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,21 +34,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_SetVectorAttributeToVectorExpression : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particles::VectorExpressionType_t m_nExpression; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vInput1; // 0x01e8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vInput2; // 0x08a0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLerp; // 0x0f58, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x10c8, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x10cc, 0x4 bytes
-                bool m_bNormalizedOutput; // 0x10d0, 0x1 bytes
-                std::uint8_t pad_10d1[0x6f]; // 0x10d1, 0x6f bytes
+                shade::sdk::particles::VectorExpressionType_t m_nExpression; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vInput1; // 0x01f0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vInput2; // 0x08c8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLerp; // 0x0fa0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x1118, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x111c, 0x4 bytes
+                bool m_bNormalizedOutput; // 0x1120, 0x1 bytes
+                std::uint8_t pad_1121[0x6f]; // 0x1121, 0x6f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_SetVectorAttributeToVectorExpression) == 0x1140, "C_INIT_SetVectorAttributeToVectorExpression size mismatch");
+            static_assert(sizeof(C_INIT_SetVectorAttributeToVectorExpression) == 0x1190, "C_INIT_SetVectorAttributeToVectorExpression size mismatch");
         }
     }
 }

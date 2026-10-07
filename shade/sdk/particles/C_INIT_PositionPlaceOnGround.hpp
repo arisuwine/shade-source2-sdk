@@ -16,17 +16,17 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/ParticleTraceMissBehavior_t.hpp"
 #include "shade/sdk/particles/ParticleTraceSet_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xc30
+             * Size: 0xc68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,32 +34,32 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_PositionPlaceOnGround : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxTraceLength; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecTraceDir; // 0x04c0, 0x6b8 bytes
-                char m_CollisionGroupName[0x80]; // 0x0b78, 0x80 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0bf8, 0x4 bytes
-                std::uint8_t pad_0bfc[0xc]; // 0x0bfc, 0xc bytes
-                shade::sdk::particles::ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x0c08, 0x4 bytes
-                bool m_bIncludeWater; // 0x0c0c, 0x1 bytes
-                std::uint8_t pad_0c0d[0x3]; // 0x0c0d, 0x3 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAttribute; // 0x0c10, 0x4 bytes
-                bool m_bSetPXYZOnly; // 0x0c14, 0x1 bytes
-                bool m_bSetNormal; // 0x0c15, 0x1 bytes
-                std::uint8_t pad_0c16[0x2]; // 0x0c16, 0x2 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nGroundNormalAttribute; // 0x0c18, 0x4 bytes
-                bool m_bOffsetonColOnly; // 0x0c1c, 0x1 bytes
-                std::uint8_t pad_0c1d[0x3]; // 0x0c1d, 0x3 bytes
-                float m_flOffsetByRadiusFactor; // 0x0c20, 0x4 bytes
-                std::int32_t m_nPreserveOffsetCP; // 0x0c24, 0x4 bytes
-                std::int32_t m_nIgnoreCP; // 0x0c28, 0x4 bytes
-                std::uint8_t pad_0c2c[0x4]; // 0x0c2c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxTraceLength; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecTraceDir; // 0x04d8, 0x6d8 bytes
+                char m_CollisionGroupName[0x80]; // 0x0bb0, 0x80 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0c30, 0x4 bytes
+                std::uint8_t pad_0c34[0xc]; // 0x0c34, 0xc bytes
+                shade::sdk::particles::ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x0c40, 0x4 bytes
+                bool m_bIncludeWater; // 0x0c44, 0x1 bytes
+                std::uint8_t pad_0c45[0x3]; // 0x0c45, 0x3 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAttribute; // 0x0c48, 0x4 bytes
+                bool m_bSetPXYZOnly; // 0x0c4c, 0x1 bytes
+                bool m_bSetNormal; // 0x0c4d, 0x1 bytes
+                std::uint8_t pad_0c4e[0x2]; // 0x0c4e, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nGroundNormalAttribute; // 0x0c50, 0x4 bytes
+                bool m_bOffsetonColOnly; // 0x0c54, 0x1 bytes
+                std::uint8_t pad_0c55[0x3]; // 0x0c55, 0x3 bytes
+                float m_flOffsetByRadiusFactor; // 0x0c58, 0x4 bytes
+                std::int32_t m_nPreserveOffsetCP; // 0x0c5c, 0x4 bytes
+                std::int32_t m_nIgnoreCP; // 0x0c60, 0x4 bytes
+                std::uint8_t pad_0c64[0x4]; // 0x0c64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_PositionPlaceOnGround) == 0xC30, "C_INIT_PositionPlaceOnGround size mismatch");
+            static_assert(sizeof(C_INIT_PositionPlaceOnGround) == 0xC68, "C_INIT_PositionPlaceOnGround size mismatch");
         }
     }
 }

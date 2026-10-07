@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,22 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Seasonal_TI11_RockPaperScissors : public shade::sdk::client::CDOTA_Buff {
             public:
-                float challenge_duration; // 0x1a78, 0x4 bytes
-                float reveal_duration; // 0x1a7c, 0x4 bytes
-                float reveal_delay; // 0x1a80, 0x4 bytes
-                float completed_cooldown; // 0x1a84, 0x4 bytes
-                float think_interval; // 0x1a88, 0x4 bytes
-                float acknowledge_range; // 0x1a8c, 0x4 bytes
-                std::uint8_t pad_1a90[0x4]; // 0x1a90, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRevealTime; // 0x1a94, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nOverheadFXIndex; // 0x1a98, 0x4 bytes
-                std::uint8_t pad_1a9c[0x4]; // 0x1a9c, 0x4 bytes
+                float challenge_duration; // 0x1aa8, 0x4 bytes
+                float reveal_duration; // 0x1aac, 0x4 bytes
+                float reveal_delay; // 0x1ab0, 0x4 bytes
+                float completed_cooldown; // 0x1ab4, 0x4 bytes
+                float think_interval; // 0x1ab8, 0x4 bytes
+                float acknowledge_range; // 0x1abc, 0x4 bytes
+                std::uint8_t pad_1ac0[0x4]; // 0x1ac0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRevealTime; // 0x1ac4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nOverheadFXIndex; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI11_RockPaperScissors) == 0x1AA0, "CDOTA_Modifier_Seasonal_TI11_RockPaperScissors size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI11_RockPaperScissors) == 0x1AD0, "CDOTA_Modifier_Seasonal_TI11_RockPaperScissors size mismatch");
         }
     }
 }

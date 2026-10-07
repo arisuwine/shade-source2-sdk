@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0xff
              * Has VTable
              * Construct Allowed
@@ -33,13 +33,13 @@ namespace shade {
             class CBodyComponentSkeletonInstance : public shade::sdk::server::CBodyComponent {
             public:
                 std::uint8_t pad_0078[0x8]; // 0x0078, 0x8 bytes
-                shade::sdk::server::CSkeletonInstance m_skeletonInstance; // 0x0080, 0x460 bytes
+                shade::sdk::server::CSkeletonInstance m_skeletonInstance; // 0x0080, 0x470 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBodyComponentSkeletonInstance) == 0x4E0, "CBodyComponentSkeletonInstance size mismatch");
+            static_assert(sizeof(CBodyComponentSkeletonInstance) == 0x4F0, "CBodyComponentSkeletonInstance size mismatch");
         }
     }
 }

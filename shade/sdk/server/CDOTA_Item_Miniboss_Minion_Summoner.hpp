@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x668
+             * Size: 0x670
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,19 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Miniboss_Minion_Summoner : public shade::sdk::server::CDOTA_Item {
             public:
-                shade::sdk::entity2::GameTime_t m_fEquipTime; // 0x0658, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flActivatedTime; // 0x065c, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0660, 0x4 bytes
-                bool m_bItemActivated; // 0x0664, 0x1 bytes
-                std::uint8_t pad_0665[0x3]; // 0x0665, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fEquipTime; // 0x0660, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flActivatedTime; // 0x0664, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0668, 0x4 bytes
+                bool m_bItemActivated; // 0x066c, 0x1 bytes
+                std::uint8_t pad_066d[0x3]; // 0x066d, 0x3 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Miniboss_Minion_Summoner) == 0x668, "CDOTA_Item_Miniboss_Minion_Summoner size mismatch");
+            static_assert(sizeof(CDOTA_Item_Miniboss_Minion_Summoner) == 0x670, "CDOTA_Item_Miniboss_Minion_Summoner size mismatch");
         }
     }
 }

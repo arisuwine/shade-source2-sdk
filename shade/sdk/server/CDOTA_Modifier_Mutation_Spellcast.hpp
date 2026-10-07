@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Mutation_Spellcast : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<shade::sdk::server::CDOTABaseAbility*> m_vecAbilities; // 0x1a78, 0x18 bytes
-                float m_fNextCastTime; // 0x1a90, 0x4 bytes
-                float m_fCastInterval; // 0x1a94, 0x4 bytes
-                float m_fWarningTime; // 0x1a98, 0x4 bytes
-                std::int32_t m_iNextAbility; // 0x1a9c, 0x4 bytes
+                CUtlVector<shade::sdk::server::CDOTABaseAbility*> m_vecAbilities; // 0x1aa8, 0x18 bytes
+                float m_fNextCastTime; // 0x1ac0, 0x4 bytes
+                float m_fCastInterval; // 0x1ac4, 0x4 bytes
+                float m_fWarningTime; // 0x1ac8, 0x4 bytes
+                std::int32_t m_iNextAbility; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Mutation_Spellcast) == 0x1AA0, "CDOTA_Modifier_Mutation_Spellcast size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Mutation_Spellcast) == 0x1AD0, "CDOTA_Modifier_Mutation_Spellcast size mismatch");
         }
     }
 }

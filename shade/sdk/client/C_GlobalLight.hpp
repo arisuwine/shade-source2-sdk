@@ -38,9 +38,6 @@ namespace shade {
 
             /* Data Map Fields
              * std::uint8_t CGlobalLightBase[0x520]; // Offset: 0x5f0, Size: 0x1, Size In Bytes: 0x520
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetLightScale; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(C_GlobalLight) == 0xB40, "C_GlobalLight size mismatch");

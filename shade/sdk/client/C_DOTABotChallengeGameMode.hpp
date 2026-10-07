@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7e0
+             * Size: 0x7e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTABotChallengeGameMode : public shade::sdk::client::C_DOTABaseGameMode {
             public:
-                bool m_bRuleAncientsDuel; // 0x07d8, 0x1 bytes
-                std::uint8_t pad_07d9[0x3]; // 0x07d9, 0x3 bytes
-                float m_flEndgameTime; // 0x07dc, 0x4 bytes
+                bool m_bRuleAncientsDuel; // 0x07e0, 0x1 bytes
+                std::uint8_t pad_07e1[0x3]; // 0x07e1, 0x3 bytes
+                float m_flEndgameTime; // 0x07e4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTABotChallengeGameMode) == 0x7E0, "C_DOTABotChallengeGameMode size mismatch");
+            static_assert(sizeof(C_DOTABotChallengeGameMode) == 0x7E8, "C_DOTABotChallengeGameMode size mismatch");
         }
     }
 }

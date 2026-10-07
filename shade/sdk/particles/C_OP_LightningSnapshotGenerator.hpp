@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1628
+             * Size: 0x16a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,36 +31,36 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_LightningSnapshotGenerator : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCPSnapshot; // 0x01e0, 0x4 bytes
-                std::int32_t m_nCPStartPnt; // 0x01e4, 0x4 bytes
-                std::int32_t m_nCPEndPnt; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSegments; // 0x01f0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOffset; // 0x0360, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOffsetDecay; // 0x04d0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRecalcRate; // 0x0640, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flUVScale; // 0x07b0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flUVOffset; // 0x0920, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSplitRate; // 0x0a90, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRecursionSplitScale; // 0x0c00, 0x170 bytes
-                bool m_bScaleBranchDistance; // 0x0d70, 0x1 bytes
-                std::uint8_t pad_0d71[0x7]; // 0x0d71, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBranchDistanceScale; // 0x0d78, 0x170 bytes
-                bool m_bScaleBranchOffset; // 0x0ee8, 0x1 bytes
-                std::uint8_t pad_0ee9[0x7]; // 0x0ee9, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBranchOffsetScale; // 0x0ef0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBranchTwist; // 0x1060, 0x170 bytes
-                shade::sdk::particles::ParticleLightnintBranchBehavior_t m_nBranchBehavior; // 0x11d0, 0x4 bytes
-                std::uint8_t pad_11d4[0x4]; // 0x11d4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusStart; // 0x11d8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusEnd; // 0x1348, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDedicatedPool; // 0x14b8, 0x170 bytes
+                std::int32_t m_nCPSnapshot; // 0x01e8, 0x4 bytes
+                std::int32_t m_nCPStartPnt; // 0x01ec, 0x4 bytes
+                std::int32_t m_nCPEndPnt; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSegments; // 0x01f8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOffset; // 0x0370, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flOffsetDecay; // 0x04e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRecalcRate; // 0x0660, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flUVScale; // 0x07d8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flUVOffset; // 0x0950, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flSplitRate; // 0x0ac8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRecursionSplitScale; // 0x0c40, 0x178 bytes
+                bool m_bScaleBranchDistance; // 0x0db8, 0x1 bytes
+                std::uint8_t pad_0db9[0x7]; // 0x0db9, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBranchDistanceScale; // 0x0dc0, 0x178 bytes
+                bool m_bScaleBranchOffset; // 0x0f38, 0x1 bytes
+                std::uint8_t pad_0f39[0x7]; // 0x0f39, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBranchOffsetScale; // 0x0f40, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flBranchTwist; // 0x10b8, 0x178 bytes
+                shade::sdk::particles::ParticleLightnintBranchBehavior_t m_nBranchBehavior; // 0x1230, 0x4 bytes
+                std::uint8_t pad_1234[0x4]; // 0x1234, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusStart; // 0x1238, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusEnd; // 0x13b0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDedicatedPool; // 0x1528, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_LightningSnapshotGenerator) == 0x1628, "C_OP_LightningSnapshotGenerator size mismatch");
+            static_assert(sizeof(C_OP_LightningSnapshotGenerator) == 0x16A0, "C_OP_LightningSnapshotGenerator size mismatch");
         }
     }
 }

@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1df0
+             * Size: 0x1ef0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,34 +34,34 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PortraitWorldUnit : public shade::sdk::client::C_DOTA_BaseNPC {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OutputAnimOver; // 0x19b8, 0x18 bytes
-                bool m_bSuppressIntroEffects; // 0x19d0, 0x1 bytes
-                bool m_bIsAlternateLoadout; // 0x19d1, 0x1 bytes
-                bool m_bSkipBackgroundEntities; // 0x19d2, 0x1 bytes
-                bool m_bSpawnBackgroundModels; // 0x19d3, 0x1 bytes
-                bool m_bDeferredPortrait; // 0x19d4, 0x1 bytes
-                bool m_bShowParticleAssetModifiers; // 0x19d5, 0x1 bytes
-                bool m_bIgnorePortraitInfo; // 0x19d6, 0x1 bytes
-                bool m_bFlyingCourier; // 0x19d7, 0x1 bytes
-                bool m_bDisableDefaultModifiers; // 0x19d8, 0x1 bytes
-                std::uint8_t pad_19d9[0x3]; // 0x19d9, 0x3 bytes
-                std::int32_t m_nEffigyStatusEffect; // 0x19dc, 0x4 bytes
-                CUtlSymbolLarge m_effigySequenceName; // 0x19e0, 0x8 bytes
-                float m_flStartingAnimationCycle; // 0x19e8, 0x4 bytes
-                float m_flAnimationPlaybackSpeed; // 0x19ec, 0x4 bytes
-                float m_flRareLoadoutAnimChance; // 0x19f0, 0x4 bytes
-                bool m_bSetDefaultActivityOnSequenceFinished; // 0x19f4, 0x1 bytes
-                std::uint8_t pad_19f5[0x3]; // 0x19f5, 0x3 bytes
-                CUtlVector<CUtlSymbolLarge> m_vecActivityModifiers; // 0x19f8, 0x18 bytes
-                shade::sdk::client::DOTAPortraitEnvironmentType_t m_environment; // 0x1a10, 0x4 bytes
-                std::uint8_t pad_1a14[0x4]; // 0x1a14, 0x4 bytes
-                shade::sdk::client::StartupBehavior_t m_nStartupBehavior; // 0x1a18, 0x4 bytes
-                std::uint8_t pad_1a1c[0x1e4]; // 0x1a1c, 0x1e4 bytes
-                CUtlSymbolLarge m_cameraName; // 0x1c00, 0x8 bytes
-                std::uint8_t pad_1c08[0x50]; // 0x1c08, 0x50 bytes
-                shade::sdk::client::ParticleIndex_t m_nPortraitParticle; // 0x1c58, 0x4 bytes
-                std::int32_t m_nCourierType; // 0x1c5c, 0x4 bytes
-                std::uint8_t pad_1c60[0x190]; // 0x1c60, 0x190 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OutputAnimOver; // 0x1ab8, 0x18 bytes
+                bool m_bSuppressIntroEffects; // 0x1ad0, 0x1 bytes
+                bool m_bIsAlternateLoadout; // 0x1ad1, 0x1 bytes
+                bool m_bSkipBackgroundEntities; // 0x1ad2, 0x1 bytes
+                bool m_bSpawnBackgroundModels; // 0x1ad3, 0x1 bytes
+                bool m_bDeferredPortrait; // 0x1ad4, 0x1 bytes
+                bool m_bShowParticleAssetModifiers; // 0x1ad5, 0x1 bytes
+                bool m_bIgnorePortraitInfo; // 0x1ad6, 0x1 bytes
+                bool m_bFlyingCourier; // 0x1ad7, 0x1 bytes
+                bool m_bDisableDefaultModifiers; // 0x1ad8, 0x1 bytes
+                std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
+                std::int32_t m_nEffigyStatusEffect; // 0x1adc, 0x4 bytes
+                CUtlSymbolLarge m_effigySequenceName; // 0x1ae0, 0x8 bytes
+                float m_flStartingAnimationCycle; // 0x1ae8, 0x4 bytes
+                float m_flAnimationPlaybackSpeed; // 0x1aec, 0x4 bytes
+                float m_flRareLoadoutAnimChance; // 0x1af0, 0x4 bytes
+                bool m_bSetDefaultActivityOnSequenceFinished; // 0x1af4, 0x1 bytes
+                std::uint8_t pad_1af5[0x3]; // 0x1af5, 0x3 bytes
+                CUtlVector<CUtlSymbolLarge> m_vecActivityModifiers; // 0x1af8, 0x18 bytes
+                shade::sdk::client::DOTAPortraitEnvironmentType_t m_environment; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
+                shade::sdk::client::StartupBehavior_t m_nStartupBehavior; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x1e4]; // 0x1b1c, 0x1e4 bytes
+                CUtlSymbolLarge m_cameraName; // 0x1d00, 0x8 bytes
+                std::uint8_t pad_1d08[0x50]; // 0x1d08, 0x50 bytes
+                shade::sdk::client::ParticleIndex_t m_nPortraitParticle; // 0x1d58, 0x4 bytes
+                std::int32_t m_nCourierType; // 0x1d5c, 0x4 bytes
+                std::uint8_t pad_1d60[0x190]; // 0x1d60, 0x190 bytes
             };
             #pragma pack(pop)
 
@@ -90,7 +90,7 @@ namespace shade {
              * std::int32_t style_index7; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_PortraitWorldUnit) == 0x1DF0, "C_PortraitWorldUnit size mismatch");
+            static_assert(sizeof(C_PortraitWorldUnit) == 0x1EF0, "C_PortraitWorldUnit size mismatch");
         }
     }
 }

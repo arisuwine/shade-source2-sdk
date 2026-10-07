@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x640
+             * Size: 0x660
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RepeatedTriggerChildGroup : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nChildGroupID; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flClusterRefireTime; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flClusterSize; // 0x0358, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flClusterCooldown; // 0x04c8, 0x170 bytes
-                bool m_bLimitChildCount; // 0x0638, 0x1 bytes
-                std::uint8_t pad_0639[0x7]; // 0x0639, 0x7 bytes
+                std::int32_t m_nChildGroupID; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flClusterRefireTime; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flClusterSize; // 0x0368, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flClusterCooldown; // 0x04e0, 0x178 bytes
+                bool m_bLimitChildCount; // 0x0658, 0x1 bytes
+                std::uint8_t pad_0659[0x7]; // 0x0659, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RepeatedTriggerChildGroup) == 0x640, "C_OP_RepeatedTriggerChildGroup size mismatch");
+            static_assert(sizeof(C_OP_RepeatedTriggerChildGroup) == 0x660, "C_OP_RepeatedTriggerChildGroup size mismatch");
         }
     }
 }

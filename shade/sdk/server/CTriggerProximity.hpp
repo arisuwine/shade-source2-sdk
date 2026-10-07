@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x928
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,18 +38,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerProximity : public shade::sdk::server::CBaseTrigger {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hMeasureTarget; // 0x08f0, 0x4 bytes
-                std::uint8_t pad_08f4[0x4]; // 0x08f4, 0x4 bytes
-                CUtlSymbolLarge m_iszMeasureTarget; // 0x08f8, 0x8 bytes
-                float m_fRadius; // 0x0900, 0x4 bytes
-                std::int32_t m_nTouchers; // 0x0904, 0x4 bytes
-                CEntityOutputTemplate<float> m_NearestEntityDistance; // 0x0908, 0x20 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hMeasureTarget; // 0x09d0, 0x4 bytes
+                std::uint8_t pad_09d4[0x4]; // 0x09d4, 0x4 bytes
+                CUtlSymbolLarge m_iszMeasureTarget; // 0x09d8, 0x8 bytes
+                float m_fRadius; // 0x09e0, 0x4 bytes
+                std::int32_t m_nTouchers; // 0x09e4, 0x4 bytes
+                CEntityOutputTemplate<float> m_NearestEntityDistance; // 0x09e8, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerProximity) == 0x928, "CTriggerProximity size mismatch");
+            static_assert(sizeof(CTriggerProximity) == 0xA08, "CTriggerProximity size mismatch");
         }
     }
 }

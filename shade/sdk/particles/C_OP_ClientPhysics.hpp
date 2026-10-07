@@ -17,15 +17,15 @@
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
 #include "shade/sdk/particles/ParticleAttrBoxFlags_t.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleColorBlendType_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x540
+             * Size: 0x558
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,31 +33,31 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ClientPhysics : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                CUtlString m_strPhysicsType; // 0x0228, 0x8 bytes
-                bool m_bStartAsleep; // 0x0230, 0x1 bytes
-                std::uint8_t pad_0231[0x7]; // 0x0231, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flPlayerWakeRadius; // 0x0238, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flVehicleWakeRadius; // 0x03a8, 0x170 bytes
-                bool m_bUseHighQualitySimulation; // 0x0518, 0x1 bytes
-                std::uint8_t pad_0519[0x3]; // 0x0519, 0x3 bytes
-                std::int32_t m_nMaxParticleCount; // 0x051c, 0x4 bytes
-                bool m_bRespectExclusionVolumes; // 0x0520, 0x1 bytes
-                bool m_bKillParticles; // 0x0521, 0x1 bytes
-                bool m_bDeleteSim; // 0x0522, 0x1 bytes
-                std::uint8_t pad_0523[0x1]; // 0x0523, 0x1 bytes
-                std::int32_t m_nControlPoint; // 0x0524, 0x4 bytes
-                std::int32_t m_nForcedSimId; // 0x0528, 0x4 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x052c, 0x4 bytes
-                shade::sdk::particles::ParticleAttrBoxFlags_t m_nForcedStatusEffects; // 0x0530, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nNoCollisionAttribute; // 0x0534, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nZeroGravityAttribute; // 0x0538, 0x4 bytes
-                std::uint8_t pad_053c[0x4]; // 0x053c, 0x4 bytes
+                CUtlString m_strPhysicsType; // 0x0230, 0x8 bytes
+                bool m_bStartAsleep; // 0x0238, 0x1 bytes
+                std::uint8_t pad_0239[0x7]; // 0x0239, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flPlayerWakeRadius; // 0x0240, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flVehicleWakeRadius; // 0x03b8, 0x178 bytes
+                bool m_bUseHighQualitySimulation; // 0x0530, 0x1 bytes
+                std::uint8_t pad_0531[0x3]; // 0x0531, 0x3 bytes
+                std::int32_t m_nMaxParticleCount; // 0x0534, 0x4 bytes
+                bool m_bRespectExclusionVolumes; // 0x0538, 0x1 bytes
+                bool m_bKillParticles; // 0x0539, 0x1 bytes
+                bool m_bDeleteSim; // 0x053a, 0x1 bytes
+                std::uint8_t pad_053b[0x1]; // 0x053b, 0x1 bytes
+                std::int32_t m_nControlPoint; // 0x053c, 0x4 bytes
+                std::int32_t m_nForcedSimId; // 0x0540, 0x4 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0544, 0x4 bytes
+                shade::sdk::particles::ParticleAttrBoxFlags_t m_nForcedStatusEffects; // 0x0548, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nNoCollisionAttribute; // 0x054c, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nZeroGravityAttribute; // 0x0550, 0x4 bytes
+                std::uint8_t pad_0554[0x4]; // 0x0554, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ClientPhysics) == 0x540, "C_OP_ClientPhysics size mismatch");
+            static_assert(sizeof(C_OP_ClientPhysics) == 0x558, "C_OP_ClientPhysics size mismatch");
         }
     }
 }

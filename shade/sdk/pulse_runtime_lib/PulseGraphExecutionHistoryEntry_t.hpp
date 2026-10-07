@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x38
              * Alignment: 0x8
              * Has Trivial Destructor
              * Construct Allowed
@@ -31,15 +31,18 @@ namespace shade {
             struct PulseGraphExecutionHistoryEntry_t {
                 shade::sdk::pulse_runtime_lib::PulseCursorID_t nCursorID; // 0x0000, 0x4 bytes
                 shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nEditorID; // 0x0004, 0x4 bytes
-                float flExecTime; // 0x0008, 0x4 bytes
-                std::uint32_t unFlags; // 0x000c, 0x4 bytes
-                PulseSymbol_t tagName; // 0x0010, 0x10 bytes
+                PulseSymbol_t seqPoint; // 0x0008, 0x10 bytes
+                float flExecTime; // 0x0018, 0x4 bytes
+                std::uint32_t unFlags; // 0x001c, 0x4 bytes
+                PulseSymbol_t tagName; // 0x0020, 0x10 bytes
+                shade::sdk::pulse_runtime_lib::PulseCursorID_t childID; // 0x0030, 0x4 bytes
+                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PulseGraphExecutionHistoryEntry_t) == 0x20, "PulseGraphExecutionHistoryEntry_t size mismatch");
+            static_assert(sizeof(PulseGraphExecutionHistoryEntry_t) == 0x38, "PulseGraphExecutionHistoryEntry_t size mismatch");
         }
     }
 }

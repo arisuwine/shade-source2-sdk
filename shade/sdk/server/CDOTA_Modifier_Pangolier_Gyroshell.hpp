@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b28
+             * Size: 0x1b58
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,38 +39,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Pangolier_Gyroshell : public shade::sdk::server::CDOTA_Modifier_DebuffImmune {
             public:
-                std::int32_t mp_cost_per_second; // 0x1a78, 0x4 bytes
-                float tick_interval; // 0x1a7c, 0x4 bytes
-                float forward_move_speed; // 0x1a80, 0x4 bytes
-                float move_speed_ramp_up_time; // 0x1a84, 0x4 bytes
-                float turn_rate_boosted; // 0x1a88, 0x4 bytes
-                float turn_rate; // 0x1a8c, 0x4 bytes
-                float hit_radius; // 0x1a90, 0x4 bytes
-                float knockback_radius; // 0x1a94, 0x4 bytes
-                std::int32_t damage_pct; // 0x1a98, 0x4 bytes
-                float magic_resistance; // 0x1a9c, 0x4 bytes
-                bool m_bHitFirstUpdate; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x3]; // 0x1aa1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flHitEndTime; // 0x1aa4, 0x4 bytes
-                float hit_recover_time; // 0x1aa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flJumpEndTime; // 0x1aac, 0x4 bytes
-                float jump_recover_time; // 0x1ab0, 0x4 bytes
-                float m_flTurnBoostProgress; // 0x1ab4, 0x4 bytes
-                float m_flFacingTarget; // 0x1ab8, 0x4 bytes
-                std::int32_t m_nInitialMovespeed; // 0x1abc, 0x4 bytes
-                bool m_bIsJumping; // 0x1ac0, 0x1 bytes
-                std::uint8_t pad_1ac1[0x3]; // 0x1ac1, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ac4, 0x4 bytes
-                CUtlVector<float> m_flTurnHistory; // 0x1ac8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHeroesHitLastRicochet; // 0x1ae0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHeroesCredited; // 0x1af8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHeroesHitCurrentRicochet; // 0x1b10, 0x18 bytes
+                std::int32_t mp_cost_per_second; // 0x1aa8, 0x4 bytes
+                float tick_interval; // 0x1aac, 0x4 bytes
+                float forward_move_speed; // 0x1ab0, 0x4 bytes
+                float move_speed_ramp_up_time; // 0x1ab4, 0x4 bytes
+                float turn_rate_boosted; // 0x1ab8, 0x4 bytes
+                float turn_rate; // 0x1abc, 0x4 bytes
+                float hit_radius; // 0x1ac0, 0x4 bytes
+                float knockback_radius; // 0x1ac4, 0x4 bytes
+                std::int32_t damage_pct; // 0x1ac8, 0x4 bytes
+                float magic_resistance; // 0x1acc, 0x4 bytes
+                bool m_bHitFirstUpdate; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flHitEndTime; // 0x1ad4, 0x4 bytes
+                float hit_recover_time; // 0x1ad8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flJumpEndTime; // 0x1adc, 0x4 bytes
+                float jump_recover_time; // 0x1ae0, 0x4 bytes
+                float m_flTurnBoostProgress; // 0x1ae4, 0x4 bytes
+                float m_flFacingTarget; // 0x1ae8, 0x4 bytes
+                std::int32_t m_nInitialMovespeed; // 0x1aec, 0x4 bytes
+                bool m_bIsJumping; // 0x1af0, 0x1 bytes
+                std::uint8_t pad_1af1[0x3]; // 0x1af1, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1af4, 0x4 bytes
+                CUtlVector<float> m_flTurnHistory; // 0x1af8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHeroesHitLastRicochet; // 0x1b10, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHeroesCredited; // 0x1b28, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHeroesHitCurrentRicochet; // 0x1b40, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Pangolier_Gyroshell) == 0x1B28, "CDOTA_Modifier_Pangolier_Gyroshell size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Pangolier_Gyroshell) == 0x1B58, "CDOTA_Modifier_Pangolier_Gyroshell size mismatch");
         }
     }
 }

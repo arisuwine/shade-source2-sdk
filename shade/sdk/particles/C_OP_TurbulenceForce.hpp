@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x228
+             * Size: 0x230
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_TurbulenceForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                float m_flNoiseCoordScale0; // 0x01e8, 0x4 bytes
-                float m_flNoiseCoordScale1; // 0x01ec, 0x4 bytes
-                float m_flNoiseCoordScale2; // 0x01f0, 0x4 bytes
-                float m_flNoiseCoordScale3; // 0x01f4, 0x4 bytes
-                Vector m_vecNoiseAmount0; // 0x01f8, 0xc bytes
-                Vector m_vecNoiseAmount1; // 0x0204, 0xc bytes
-                Vector m_vecNoiseAmount2; // 0x0210, 0xc bytes
-                Vector m_vecNoiseAmount3; // 0x021c, 0xc bytes
+                float m_flNoiseCoordScale0; // 0x01f0, 0x4 bytes
+                float m_flNoiseCoordScale1; // 0x01f4, 0x4 bytes
+                float m_flNoiseCoordScale2; // 0x01f8, 0x4 bytes
+                float m_flNoiseCoordScale3; // 0x01fc, 0x4 bytes
+                Vector m_vecNoiseAmount0; // 0x0200, 0xc bytes
+                Vector m_vecNoiseAmount1; // 0x020c, 0xc bytes
+                Vector m_vecNoiseAmount2; // 0x0218, 0xc bytes
+                Vector m_vecNoiseAmount3; // 0x0224, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_TurbulenceForce) == 0x228, "C_OP_TurbulenceForce size mismatch");
+            static_assert(sizeof(C_OP_TurbulenceForce) == 0x230, "C_OP_TurbulenceForce size mismatch");
         }
     }
 }

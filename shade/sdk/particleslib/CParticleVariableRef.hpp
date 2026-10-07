@@ -27,7 +27,7 @@ namespace shade {
             class CParticleVariableRef {
             public:
                 CKV3MemberNameWithStorage m_variableName; // 0x0000, 0x38 bytes
-                CPulseValueFullType m_variableType; // 0x0038, 0x18 bytes
+                CPulseType m_variableType; // 0x0038, 0x18 bytes
             };
             #pragma pack(pop)
 

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f8
+             * Size: 0x9d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerDotaPath : public shade::sdk::server::CBaseTrigger {
             public:
-                CHandle<shade::sdk::server::CDotaMoveSpeedModifierPath> m_path; // 0x08f0, 0x4 bytes
-                std::uint8_t pad_08f4[0x4]; // 0x08f4, 0x4 bytes
+                CHandle<shade::sdk::server::CDotaMoveSpeedModifierPath> m_path; // 0x09d0, 0x4 bytes
+                std::uint8_t pad_09d4[0x4]; // 0x09d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerDotaPath) == 0x8F8, "CTriggerDotaPath size mismatch");
+            static_assert(sizeof(CTriggerDotaPath) == 0x9D8, "CTriggerDotaPath size mismatch");
         }
     }
 }

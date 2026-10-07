@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x3a8
+             * Size: 0x3b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderVRHapticEvent : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particles::ParticleVRHandChoiceList_t m_nHand; // 0x0228, 0x4 bytes
-                std::int32_t m_nOutputHandCP; // 0x022c, 0x4 bytes
-                std::int32_t m_nOutputField; // 0x0230, 0x4 bytes
-                std::uint8_t pad_0234[0x4]; // 0x0234, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flAmplitude; // 0x0238, 0x170 bytes
+                shade::sdk::particles::ParticleVRHandChoiceList_t m_nHand; // 0x0230, 0x4 bytes
+                std::int32_t m_nOutputHandCP; // 0x0234, 0x4 bytes
+                std::int32_t m_nOutputField; // 0x0238, 0x4 bytes
+                std::uint8_t pad_023c[0x4]; // 0x023c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flAmplitude; // 0x0240, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderVRHapticEvent) == 0x3A8, "C_OP_RenderVRHapticEvent size mismatch");
+            static_assert(sizeof(C_OP_RenderVRHapticEvent) == 0x3B8, "C_OP_RenderVRHapticEvent size mismatch");
         }
     }
 }

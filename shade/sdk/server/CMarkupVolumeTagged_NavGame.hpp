@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7e8
+             * Size: 0x8c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,10 +31,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CMarkupVolumeTagged_NavGame : public shade::sdk::server::CMarkupVolumeWithRef {
             public:
-                shade::sdk::server::NavScopeFlags_t m_nScopes; // 0x07e0, 0x1 bytes
-                bool m_bFloodFillAttribute; // 0x07e1, 0x1 bytes
-                bool m_bSplitNavSpace; // 0x07e2, 0x1 bytes
-                std::uint8_t pad_07e3[0x5]; // 0x07e3, 0x5 bytes
+                shade::sdk::server::NavScopeFlags_t m_nScopes; // 0x08c0, 0x1 bytes
+                bool m_bFloodFillAttribute; // 0x08c1, 0x1 bytes
+                bool m_bSplitNavSpace; // 0x08c2, 0x1 bytes
+                std::uint8_t pad_08c3[0x5]; // 0x08c3, 0x5 bytes
             };
             #pragma pack(pop)
 
@@ -43,7 +43,7 @@ namespace shade {
              * CUtlSymbolLarge navProperty_NavAttributesGame; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CMarkupVolumeTagged_NavGame) == 0x7E8, "CMarkupVolumeTagged_NavGame size mismatch");
+            static_assert(sizeof(CMarkupVolumeTagged_NavGame) == 0x8C8, "CMarkupVolumeTagged_NavGame size mismatch");
         }
     }
 }

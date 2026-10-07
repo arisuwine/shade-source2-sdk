@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,22 +37,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DarkSeer_WallOfReplica : public shade::sdk::client::CDOTA_Buff {
             public:
-                Vector m_vWallDirection; // 0x1a78, 0xc bytes
-                Vector m_vWallRight; // 0x1a84, 0xc bytes
-                std::uint8_t pad_1a90[0x18]; // 0x1a90, 0x18 bytes
-                CUtlOrderedMap<std::int32_t, shade::sdk::entity2::GameTime_t> m_PreventReplicateTime; // 0x1aa8, 0x28 bytes
-                float width; // 0x1ad0, 0x4 bytes
-                std::int32_t wall_damage; // 0x1ad4, 0x4 bytes
-                float slow_duration; // 0x1ad8, 0x4 bytes
-                std::int32_t replica_damage_incoming; // 0x1adc, 0x4 bytes
-                std::int32_t replica_damage_outgoing; // 0x1ae0, 0x4 bytes
-                std::uint8_t pad_1ae4[0x14]; // 0x1ae4, 0x14 bytes
+                Vector m_vWallDirection; // 0x1aa8, 0xc bytes
+                Vector m_vWallRight; // 0x1ab4, 0xc bytes
+                std::uint8_t pad_1ac0[0x18]; // 0x1ac0, 0x18 bytes
+                CUtlOrderedMap<std::int32_t, shade::sdk::entity2::GameTime_t> m_PreventReplicateTime; // 0x1ad8, 0x28 bytes
+                float width; // 0x1b00, 0x4 bytes
+                std::int32_t wall_damage; // 0x1b04, 0x4 bytes
+                float slow_duration; // 0x1b08, 0x4 bytes
+                std::int32_t replica_damage_incoming; // 0x1b0c, 0x4 bytes
+                std::int32_t replica_damage_outgoing; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x14]; // 0x1b14, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DarkSeer_WallOfReplica) == 0x1AF8, "CDOTA_Modifier_DarkSeer_WallOfReplica size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DarkSeer_WallOfReplica) == 0x1B28, "CDOTA_Modifier_DarkSeer_WallOfReplica size mismatch");
         }
     }
 }

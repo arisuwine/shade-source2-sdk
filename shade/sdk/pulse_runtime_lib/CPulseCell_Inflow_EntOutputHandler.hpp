@@ -32,7 +32,7 @@ namespace shade {
             public:
                 PulseSymbol_t m_SourceEntity; // 0x0080, 0x10 bytes
                 PulseSymbol_t m_SourceOutput; // 0x0090, 0x10 bytes
-                CPulseValueFullType m_ExpectedParamType; // 0x00a0, 0x18 bytes
+                CPulseType m_ExpectedParamType; // 0x00a0, 0x18 bytes
             };
             #pragma pack(pop)
 

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AbyssalUnderlord_Underling_Autoattack : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hBestTarget; // 0x1a78, 0x4 bytes
-                float underling_search_radius; // 0x1a7c, 0x4 bytes
-                bool m_bRunningToFountain; // 0x1a80, 0x1 bytes
-                std::uint8_t pad_1a81[0x3]; // 0x1a81, 0x3 bytes
-                std::int32_t underling_building_damage_reduction; // 0x1a84, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBestTarget; // 0x1aa8, 0x4 bytes
+                float underling_search_radius; // 0x1aac, 0x4 bytes
+                bool m_bRunningToFountain; // 0x1ab0, 0x1 bytes
+                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
+                std::int32_t underling_building_damage_reduction; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AbyssalUnderlord_Underling_Autoattack) == 0x1A88, "CDOTA_Modifier_AbyssalUnderlord_Underling_Autoattack size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AbyssalUnderlord_Underling_Autoattack) == 0x1AB8, "CDOTA_Modifier_AbyssalUnderlord_Underling_Autoattack size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x668
+             * Size: 0x670
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Armlet : public shade::sdk::server::CDOTA_Item {
             public:
-                float toggle_cooldown; // 0x0658, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x065c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDeactivateTime; // 0x0660, 0x4 bytes
-                std::uint8_t pad_0664[0x4]; // 0x0664, 0x4 bytes
+                float toggle_cooldown; // 0x0660, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x0664, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDeactivateTime; // 0x0668, 0x4 bytes
+                std::uint8_t pad_066c[0x4]; // 0x066c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Armlet) == 0x668, "CDOTA_Item_Armlet size mismatch");
+            static_assert(sizeof(CDOTA_Item_Armlet) == 0x670, "CDOTA_Item_Armlet size mismatch");
         }
     }
 }

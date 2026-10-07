@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18b8
+             * Size: 0x19a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_NPC_Observer_Ward : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                std::int32_t m_iDuration; // 0x18a8, 0x4 bytes
-                bool m_bPlacedInSpawnBox; // 0x18ac, 0x1 bytes
-                std::uint8_t pad_18ad[0x3]; // 0x18ad, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x18b0, 0x4 bytes
-                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x18b4, 0x4 bytes
+                std::int32_t m_iDuration; // 0x1998, 0x4 bytes
+                bool m_bPlacedInSpawnBox; // 0x199c, 0x1 bytes
+                std::uint8_t pad_199d[0x3]; // 0x199d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x19a0, 0x4 bytes
+                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x19a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NPC_Observer_Ward) == 0x18B8, "CDOTA_NPC_Observer_Ward size mismatch");
+            static_assert(sizeof(CDOTA_NPC_Observer_Ward) == 0x19A8, "CDOTA_NPC_Observer_Ward size mismatch");
         }
     }
 }

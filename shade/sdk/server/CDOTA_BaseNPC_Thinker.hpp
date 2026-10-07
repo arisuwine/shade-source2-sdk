@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18b0
+             * Size: 0x19a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Thinker : public shade::sdk::server::CDOTA_BaseNPC {
             public:
-                bool m_bSendToAllPlayers; // 0x18a8, 0x1 bytes
-                bool m_bSendToClients; // 0x18a9, 0x1 bytes
-                std::uint8_t pad_18aa[0x6]; // 0x18aa, 0x6 bytes
+                bool m_bSendToAllPlayers; // 0x1998, 0x1 bytes
+                bool m_bSendToClients; // 0x1999, 0x1 bytes
+                std::uint8_t pad_199a[0x6]; // 0x199a, 0x6 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Thinker) == 0x18B0, "CDOTA_BaseNPC_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Thinker) == 0x19A0, "CDOTA_BaseNPC_Thinker size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DoomBringer_Doom : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t damage; // 0x1a78, 0x4 bytes
-                float duration; // 0x1a7c, 0x4 bytes
-                std::int32_t deniable_pct; // 0x1a80, 0x4 bytes
-                float flElapsedTime; // 0x1a84, 0x4 bytes
-                std::int32_t damage_amp; // 0x1a88, 0x4 bytes
-                bool m_bDoesBreak; // 0x1a8c, 0x1 bytes
-                bool m_bDoesMute; // 0x1a8d, 0x1 bytes
-                std::uint8_t pad_1a8e[0x2]; // 0x1a8e, 0x2 bytes
+                std::int32_t damage; // 0x1aa8, 0x4 bytes
+                float duration; // 0x1aac, 0x4 bytes
+                std::int32_t deniable_pct; // 0x1ab0, 0x4 bytes
+                float flElapsedTime; // 0x1ab4, 0x4 bytes
+                std::int32_t damage_amp; // 0x1ab8, 0x4 bytes
+                bool m_bDoesBreak; // 0x1abc, 0x1 bytes
+                bool m_bDoesMute; // 0x1abd, 0x1 bytes
+                std::uint8_t pad_1abe[0x2]; // 0x1abe, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DoomBringer_Doom) == 0x1A90, "CDOTA_Modifier_DoomBringer_Doom size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DoomBringer_Doom) == 0x1AC0, "CDOTA_Modifier_DoomBringer_Doom size mismatch");
         }
     }
 }

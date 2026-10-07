@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Primal_Beast_Trample_Haste : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t bonus_movespeed_pct_self; // 0x1a78, 0x4 bytes
-                std::int32_t bonus_movespeed_pct_allies; // 0x1a7c, 0x4 bytes
-                std::int32_t bonus_movespeed_pct_extra; // 0x1a80, 0x4 bytes
-                std::uint8_t pad_1a84[0x4]; // 0x1a84, 0x4 bytes
+                std::int32_t bonus_movespeed_pct_self; // 0x1aa8, 0x4 bytes
+                std::int32_t bonus_movespeed_pct_allies; // 0x1aac, 0x4 bytes
+                std::int32_t bonus_movespeed_pct_extra; // 0x1ab0, 0x4 bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Primal_Beast_Trample_Haste) == 0x1A88, "CDOTA_Modifier_Primal_Beast_Trample_Haste size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Primal_Beast_Trample_Haste) == 0x1AB8, "CDOTA_Modifier_Primal_Beast_Trample_Haste size mismatch");
         }
     }
 }

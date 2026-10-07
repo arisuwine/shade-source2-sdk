@@ -28,7 +28,7 @@ namespace shade {
             public:
                 CKV3MemberNameWithStorage m_Name; // 0x0000, 0x38 bytes
                 CUtlString m_Description; // 0x0038, 0x8 bytes
-                CPulseValueFullType m_Type; // 0x0040, 0x18 bytes
+                CPulseType m_Type; // 0x0040, 0x18 bytes
                 std::uint8_t pad_0058[0x28]; // 0x0058, 0x28 bytes
             };
             #pragma pack(pop)

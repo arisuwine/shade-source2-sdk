@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b70
+             * Size: 0x1ba8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AntiMage_Counterspell : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::CModifierParams m_LastParams; // 0x1a78, 0xf0 bytes
-                std::int32_t magic_resistance; // 0x1b68, 0x4 bytes
-                std::int32_t reflected_spell_amp; // 0x1b6c, 0x4 bytes
+                shade::sdk::client::CModifierParams m_LastParams; // 0x1aa8, 0xf8 bytes
+                std::int32_t magic_resistance; // 0x1ba0, 0x4 bytes
+                std::int32_t reflected_spell_amp; // 0x1ba4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AntiMage_Counterspell) == 0x1B70, "CDOTA_Modifier_AntiMage_Counterspell size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AntiMage_Counterspell) == 0x1BA8, "CDOTA_Modifier_AntiMage_Counterspell size mismatch");
         }
     }
 }

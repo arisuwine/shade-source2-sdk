@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,14 +37,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_HallOfFame_Glow : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<shade::sdk::client::PlayerID_t> m_vecGlowingPlayerIDs; // 0x1a78, 0x18 bytes
-                CUtlVector<shade::sdk::client::PlayerID_t> m_vecGlowingPlayerIDs2; // 0x1a90, 0x18 bytes
+                CUtlVector<shade::sdk::client::PlayerID_t> m_vecGlowingPlayerIDs; // 0x1aa8, 0x18 bytes
+                CUtlVector<shade::sdk::client::PlayerID_t> m_vecGlowingPlayerIDs2; // 0x1ac0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_HallOfFame_Glow) == 0x1AA8, "CDOTA_Modifier_HallOfFame_Glow size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_HallOfFame_Glow) == 0x1AD8, "CDOTA_Modifier_HallOfFame_Glow size mismatch");
         }
     }
 }

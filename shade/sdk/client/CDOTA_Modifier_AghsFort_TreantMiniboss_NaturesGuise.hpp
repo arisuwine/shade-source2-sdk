@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::CountdownTimer m_RevealTimer; // 0x1a78, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_InvisAttackTimer; // 0x1a90, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_CooldownTimer; // 0x1aa8, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_RevealTimer; // 0x1aa8, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_InvisAttackTimer; // 0x1ac0, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_CooldownTimer; // 0x1ad8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise) == 0x1AC0, "CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise) == 0x1AF0, "CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise size mismatch");
         }
     }
 }

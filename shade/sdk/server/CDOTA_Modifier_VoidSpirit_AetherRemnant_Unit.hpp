@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b38
+             * Size: 0x1b68
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,40 +38,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_VoidSpirit_AetherRemnant_Unit : public shade::sdk::client::CDOTA_Buff {
             public:
-                Vector m_vFacingDir; // 0x1a78, 0xc bytes
-                std::uint8_t pad_1a84[0x4]; // 0x1a84, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hWatchPathThinkers; // 0x1a88, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hShardWatchPathThinkers; // 0x1aa0, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1ab8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nShardBeamFXIndex; // 0x1abc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nHeroFXIndex; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
-                CUtlVector<std::int32_t> m_nViewerIDs; // 0x1ac8, 0x18 bytes
-                std::int32_t m_nViewerTeam; // 0x1ae0, 0x4 bytes
-                float remnant_watch_distance; // 0x1ae4, 0x4 bytes
-                float remnant_watch_radius; // 0x1ae8, 0x4 bytes
-                float duration; // 0x1aec, 0x4 bytes
-                float watch_path_vision_radius; // 0x1af0, 0x4 bytes
-                float impact_damage; // 0x1af4, 0x4 bytes
-                float pull_duration; // 0x1af8, 0x4 bytes
-                float activation_delay; // 0x1afc, 0x4 bytes
-                bool m_bPiercesCreeps; // 0x1b00, 0x1 bytes
-                std::uint8_t pad_1b01[0x7]; // 0x1b01, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAlreadyHit; // 0x1b08, 0x18 bytes
-                bool bIsArtifice; // 0x1b20, 0x1 bytes
-                std::uint8_t pad_1b21[0x3]; // 0x1b21, 0x3 bytes
-                float artifice_duration_override; // 0x1b24, 0x4 bytes
-                float artifice_pct_effectiveness; // 0x1b28, 0x4 bytes
-                bool m_bActivated; // 0x1b2c, 0x1 bytes
-                std::uint8_t pad_1b2d[0x3]; // 0x1b2d, 0x3 bytes
-                float m_flRotation; // 0x1b30, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPartnerRemnant; // 0x1b34, 0x4 bytes
+                Vector m_vFacingDir; // 0x1aa8, 0xc bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hWatchPathThinkers; // 0x1ab8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hShardWatchPathThinkers; // 0x1ad0, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1ae8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nShardBeamFXIndex; // 0x1aec, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nHeroFXIndex; // 0x1af0, 0x4 bytes
+                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
+                CUtlVector<std::int32_t> m_nViewerIDs; // 0x1af8, 0x18 bytes
+                std::int32_t m_nViewerTeam; // 0x1b10, 0x4 bytes
+                float remnant_watch_distance; // 0x1b14, 0x4 bytes
+                float remnant_watch_radius; // 0x1b18, 0x4 bytes
+                float duration; // 0x1b1c, 0x4 bytes
+                float watch_path_vision_radius; // 0x1b20, 0x4 bytes
+                float impact_damage; // 0x1b24, 0x4 bytes
+                float pull_duration; // 0x1b28, 0x4 bytes
+                float activation_delay; // 0x1b2c, 0x4 bytes
+                bool m_bPiercesCreeps; // 0x1b30, 0x1 bytes
+                std::uint8_t pad_1b31[0x7]; // 0x1b31, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAlreadyHit; // 0x1b38, 0x18 bytes
+                bool bIsArtifice; // 0x1b50, 0x1 bytes
+                std::uint8_t pad_1b51[0x3]; // 0x1b51, 0x3 bytes
+                float artifice_duration_override; // 0x1b54, 0x4 bytes
+                float artifice_pct_effectiveness; // 0x1b58, 0x4 bytes
+                bool m_bActivated; // 0x1b5c, 0x1 bytes
+                std::uint8_t pad_1b5d[0x3]; // 0x1b5d, 0x3 bytes
+                float m_flRotation; // 0x1b60, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPartnerRemnant; // 0x1b64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnant_Unit) == 0x1B38, "CDOTA_Modifier_VoidSpirit_AetherRemnant_Unit size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnant_Unit) == 0x1B68, "CDOTA_Modifier_VoidSpirit_AetherRemnant_Unit size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,23 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Miniboss_UnyieldingShield : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage_absorb; // 0x1a78, 0x4 bytes
-                float regen_per_second; // 0x1a7c, 0x4 bytes
-                float regen_bonus_per_interval; // 0x1a80, 0x4 bytes
-                std::int32_t status_resistance; // 0x1a84, 0x4 bytes
-                bool smaller_shield; // 0x1a88, 0x1 bytes
-                std::uint8_t pad_1a89[0x3]; // 0x1a89, 0x3 bytes
-                float m_flDamageAbsorbed; // 0x1a8c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_timeLastTick; // 0x1a90, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t nFXIndex; // 0x1a94, 0x4 bytes
-                std::int32_t m_nVisualTeam; // 0x1a98, 0x4 bytes
-                std::uint8_t pad_1a9c[0x4]; // 0x1a9c, 0x4 bytes
+                float damage_absorb; // 0x1aa8, 0x4 bytes
+                float regen_per_second; // 0x1aac, 0x4 bytes
+                float regen_bonus_per_interval; // 0x1ab0, 0x4 bytes
+                std::int32_t status_resistance; // 0x1ab4, 0x4 bytes
+                bool smaller_shield; // 0x1ab8, 0x1 bytes
+                std::uint8_t pad_1ab9[0x3]; // 0x1ab9, 0x3 bytes
+                float m_flDamageAbsorbed; // 0x1abc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_timeLastTick; // 0x1ac0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t nFXIndex; // 0x1ac4, 0x4 bytes
+                std::int32_t m_nVisualTeam; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Miniboss_UnyieldingShield) == 0x1AA0, "CDOTA_Modifier_Miniboss_UnyieldingShield size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Miniboss_UnyieldingShield) == 0x1AD0, "CDOTA_Modifier_Miniboss_UnyieldingShield size mismatch");
         }
     }
 }

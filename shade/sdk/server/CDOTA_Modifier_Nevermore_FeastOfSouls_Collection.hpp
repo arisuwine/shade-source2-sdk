@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,23 +37,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Nevermore_FeastOfSouls_Collection : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t max_collection_count; // 0x1a78, 0x4 bytes
-                std::int32_t soul_collection_per_interval; // 0x1a7c, 0x4 bytes
-                float soul_collection_radius; // 0x1a80, 0x4 bytes
-                float soul_collection_interval; // 0x1a84, 0x4 bytes
-                std::int32_t soul_collection_per_hero; // 0x1a88, 0x4 bytes
-                std::int32_t soul_collection_per_creep; // 0x1a8c, 0x4 bytes
-                std::int32_t bonus_attack_speed; // 0x1a90, 0x4 bytes
-                std::int32_t cast_speed_pct; // 0x1a94, 0x4 bytes
-                std::int32_t m_nSoulsCollected; // 0x1a98, 0x4 bytes
-                std::uint8_t pad_1a9c[0x4]; // 0x1a9c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hSoulCollectionList; // 0x1aa0, 0x18 bytes
+                std::int32_t max_collection_count; // 0x1aa8, 0x4 bytes
+                std::int32_t soul_collection_per_interval; // 0x1aac, 0x4 bytes
+                float soul_collection_radius; // 0x1ab0, 0x4 bytes
+                float soul_collection_interval; // 0x1ab4, 0x4 bytes
+                std::int32_t soul_collection_per_hero; // 0x1ab8, 0x4 bytes
+                std::int32_t soul_collection_per_creep; // 0x1abc, 0x4 bytes
+                std::int32_t bonus_attack_speed; // 0x1ac0, 0x4 bytes
+                std::int32_t cast_speed_pct; // 0x1ac4, 0x4 bytes
+                std::int32_t m_nSoulsCollected; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hSoulCollectionList; // 0x1ad0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Nevermore_FeastOfSouls_Collection) == 0x1AB8, "CDOTA_Modifier_Nevermore_FeastOfSouls_Collection size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Nevermore_FeastOfSouls_Collection) == 0x1AE8, "CDOTA_Modifier_Nevermore_FeastOfSouls_Collection size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7d8
+             * Size: 0x7e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTAMutationGameMode) == 0x7D8, "CDOTAMutationGameMode size mismatch");
+            static_assert(sizeof(CDOTAMutationGameMode) == 0x7E0, "CDOTAMutationGameMode size mismatch");
         }
     }
 }

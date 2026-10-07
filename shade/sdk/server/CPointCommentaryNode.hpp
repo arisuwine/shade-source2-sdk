@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,52 +40,47 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointCommentaryNode : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                CUtlSymbolLarge m_iszPreCommands; // 0x0798, 0x8 bytes
-                CUtlSymbolLarge m_iszPostCommands; // 0x07a0, 0x8 bytes
-                CUtlSymbolLarge m_iszCommentaryFile; // 0x07a8, 0x8 bytes
-                CUtlSymbolLarge m_iszViewTarget; // 0x07b0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hViewTarget; // 0x07b8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hViewTargetAngles; // 0x07bc, 0x4 bytes
-                CUtlSymbolLarge m_iszViewPosition; // 0x07c0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hViewPosition; // 0x07c8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hViewPositionMover; // 0x07cc, 0x4 bytes
-                bool m_bPreventMovement; // 0x07d0, 0x1 bytes
-                bool m_bUnderCrosshair; // 0x07d1, 0x1 bytes
-                bool m_bUnstoppable; // 0x07d2, 0x1 bytes
-                std::uint8_t pad_07d3[0x1]; // 0x07d3, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flFinishedTime; // 0x07d4, 0x4 bytes
-                VectorWS m_vecFinishOrigin; // 0x07d8, 0xc bytes
-                QAngle m_vecOriginalAngles; // 0x07e4, 0xc bytes
-                QAngle m_vecFinishAngles; // 0x07f0, 0xc bytes
-                bool m_bPreventChangesWhileMoving; // 0x07fc, 0x1 bytes
-                bool m_bDisabled; // 0x07fd, 0x1 bytes
-                std::uint8_t pad_07fe[0x2]; // 0x07fe, 0x2 bytes
-                VectorWS m_vecTeleportOrigin; // 0x0800, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flAbortedPlaybackAt; // 0x080c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOnCommentaryStarted; // 0x0810, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOnCommentaryStopped; // 0x0828, 0x18 bytes
-                bool m_bActive; // 0x0840, 0x1 bytes
-                std::uint8_t pad_0841[0x3]; // 0x0841, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0844, 0x4 bytes
-                float m_flStartTimeInCommentary; // 0x0848, 0x4 bytes
-                std::uint8_t pad_084c[0x4]; // 0x084c, 0x4 bytes
-                CUtlSymbolLarge m_iszTitle; // 0x0850, 0x8 bytes
-                CUtlSymbolLarge m_iszSpeakers; // 0x0858, 0x8 bytes
-                std::int32_t m_iNodeNumber; // 0x0860, 0x4 bytes
-                std::int32_t m_iNodeNumberMax; // 0x0864, 0x4 bytes
-                bool m_bListenedTo; // 0x0868, 0x1 bytes
-                std::uint8_t pad_0869[0x7]; // 0x0869, 0x7 bytes
+                CUtlSymbolLarge m_iszPreCommands; // 0x0878, 0x8 bytes
+                CUtlSymbolLarge m_iszPostCommands; // 0x0880, 0x8 bytes
+                CUtlSymbolLarge m_iszCommentaryFile; // 0x0888, 0x8 bytes
+                CUtlSymbolLarge m_iszViewTarget; // 0x0890, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hViewTarget; // 0x0898, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hViewTargetAngles; // 0x089c, 0x4 bytes
+                CUtlSymbolLarge m_iszViewPosition; // 0x08a0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hViewPosition; // 0x08a8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hViewPositionMover; // 0x08ac, 0x4 bytes
+                bool m_bPreventMovement; // 0x08b0, 0x1 bytes
+                bool m_bUnderCrosshair; // 0x08b1, 0x1 bytes
+                bool m_bUnstoppable; // 0x08b2, 0x1 bytes
+                std::uint8_t pad_08b3[0x1]; // 0x08b3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flFinishedTime; // 0x08b4, 0x4 bytes
+                VectorWS m_vecFinishOrigin; // 0x08b8, 0xc bytes
+                QAngle m_vecOriginalAngles; // 0x08c4, 0xc bytes
+                QAngle m_vecFinishAngles; // 0x08d0, 0xc bytes
+                bool m_bPreventChangesWhileMoving; // 0x08dc, 0x1 bytes
+                bool m_bDisabled; // 0x08dd, 0x1 bytes
+                std::uint8_t pad_08de[0x2]; // 0x08de, 0x2 bytes
+                VectorWS m_vecTeleportOrigin; // 0x08e0, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flAbortedPlaybackAt; // 0x08ec, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOnCommentaryStarted; // 0x08f0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOnCommentaryStopped; // 0x0908, 0x18 bytes
+                bool m_bActive; // 0x0920, 0x1 bytes
+                std::uint8_t pad_0921[0x3]; // 0x0921, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0924, 0x4 bytes
+                float m_flStartTimeInCommentary; // 0x0928, 0x4 bytes
+                std::uint8_t pad_092c[0x4]; // 0x092c, 0x4 bytes
+                CUtlSymbolLarge m_iszTitle; // 0x0930, 0x8 bytes
+                CUtlSymbolLarge m_iszSpeakers; // 0x0938, 0x8 bytes
+                std::int32_t m_iNodeNumber; // 0x0940, 0x4 bytes
+                std::int32_t m_iNodeNumberMax; // 0x0944, 0x4 bytes
+                bool m_bListenedTo; // 0x0948, 0x1 bytes
+                std::uint8_t pad_0949[0x7]; // 0x0949, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStartCommentary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartUnstoppableCommentary; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CPointCommentaryNode) == 0x870, "CPointCommentaryNode size mismatch");
+            static_assert(sizeof(CPointCommentaryNode) == 0x950, "CPointCommentaryNode size mismatch");
         }
     }
 }

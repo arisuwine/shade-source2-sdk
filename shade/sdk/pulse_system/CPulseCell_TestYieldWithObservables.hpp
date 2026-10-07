@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_system {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x250
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,16 +33,16 @@ namespace shade {
             public:
                 float m_flWatchForFloatValue; // 0x00d8, 0x4 bytes
                 std::uint8_t pad_00dc[0x4]; // 0x00dc, 0x4 bytes
-                CPulseObservableExpression<float> m_LiveFloatValue; // 0x00e0, 0x78 bytes
-                CUtlString m_WatchForStringValue; // 0x0158, 0x8 bytes
-                CPulseObservableExpression<CUtlString> m_LiveStringValue; // 0x0160, 0x78 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WakeResume; // 0x01d8, 0x48 bytes
+                CPulseObservableExpression<float> m_LiveFloatValue; // 0x00e0, 0x90 bytes
+                CUtlString m_WatchForStringValue; // 0x0170, 0x8 bytes
+                CPulseObservableExpression<CUtlString> m_LiveStringValue; // 0x0178, 0x90 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_WakeResume; // 0x0208, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_TestYieldWithObservables) == 0x220, "CPulseCell_TestYieldWithObservables size mismatch");
+            static_assert(sizeof(CPulseCell_TestYieldWithObservables) == 0x250, "CPulseCell_TestYieldWithObservables size mismatch");
         }
     }
 }

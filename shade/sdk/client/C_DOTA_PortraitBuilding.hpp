@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xad8
+             * Size: 0xbc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,19 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_PortraitBuilding : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x0ac0, 0x4 bytes
-                std::uint8_t pad_0ac4[0x4]; // 0x0ac4, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndex; // 0x0ac8, 0x8 bytes
-                Color m_ParticleTintColor; // 0x0ad0, 0x4 bytes
-                std::uint8_t pad_0ad4[0x4]; // 0x0ad4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x0bb0, 0x4 bytes
+                std::uint8_t pad_0bb4[0x4]; // 0x0bb4, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndex; // 0x0bb8, 0x8 bytes
+                Color m_ParticleTintColor; // 0x0bc0, 0x4 bytes
+                std::uint8_t pad_0bc4[0x4]; // 0x0bc4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_PortraitBuilding) == 0xAD8, "C_DOTA_PortraitBuilding size mismatch");
+            static_assert(sizeof(C_DOTA_PortraitBuilding) == 0xBC8, "C_DOTA_PortraitBuilding size mismatch");
         }
     }
 }

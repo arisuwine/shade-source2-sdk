@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleRemapFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_ScreenSpacePositionOfTarget : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x01e0, 0x6b8 bytes
-                bool m_bOututBehindness; // 0x0898, 0x1 bytes
-                std::uint8_t pad_0899[0x3]; // 0x0899, 0x3 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nBehindFieldOutput; // 0x089c, 0x4 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flBehindOutputRemap; // 0x08a0, 0x170 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x01e8, 0x6d8 bytes
+                bool m_bOututBehindness; // 0x08c0, 0x1 bytes
+                std::uint8_t pad_08c1[0x3]; // 0x08c1, 0x3 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nBehindFieldOutput; // 0x08c4, 0x4 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flBehindOutputRemap; // 0x08c8, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_ScreenSpacePositionOfTarget) == 0xA10, "C_INIT_ScreenSpacePositionOfTarget size mismatch");
+            static_assert(sizeof(C_INIT_ScreenSpacePositionOfTarget) == 0xA40, "C_INIT_ScreenSpacePositionOfTarget size mismatch");
         }
     }
 }

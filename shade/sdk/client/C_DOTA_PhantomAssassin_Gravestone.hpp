@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a60
+             * Size: 0x1b60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_PhantomAssassin_Gravestone : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                shade::sdk::client::PlayerID_t m_nVictimPlayerID; // 0x19b8, 0x4 bytes
-                std::uint8_t pad_19bc[0xa4]; // 0x19bc, 0xa4 bytes
+                shade::sdk::client::PlayerID_t m_nVictimPlayerID; // 0x1ab8, 0x4 bytes
+                std::uint8_t pad_1abc[0xa4]; // 0x1abc, 0xa4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_PhantomAssassin_Gravestone) == 0x1A60, "C_DOTA_PhantomAssassin_Gravestone size mismatch");
+            static_assert(sizeof(C_DOTA_PhantomAssassin_Gravestone) == 0x1B60, "C_DOTA_PhantomAssassin_Gravestone size mismatch");
         }
     }
 }

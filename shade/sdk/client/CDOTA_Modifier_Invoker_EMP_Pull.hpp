@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Invoker_EMP_Pull : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t drag_speed; // 0x1a78, 0x4 bytes
-                float aura_origin_x; // 0x1a7c, 0x4 bytes
-                float aura_origin_y; // 0x1a80, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a84, 0x4 bytes
-                VectorWS m_vCenter; // 0x1a88, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x1a94, 0x4 bytes
+                std::int32_t drag_speed; // 0x1aa8, 0x4 bytes
+                float aura_origin_x; // 0x1aac, 0x4 bytes
+                float aura_origin_y; // 0x1ab0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ab4, 0x4 bytes
+                VectorWS m_vCenter; // 0x1ab8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Invoker_EMP_Pull) == 0x1A98, "CDOTA_Modifier_Invoker_EMP_Pull size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Invoker_EMP_Pull) == 0x1AC8, "CDOTA_Modifier_Invoker_EMP_Pull size mismatch");
         }
     }
 }

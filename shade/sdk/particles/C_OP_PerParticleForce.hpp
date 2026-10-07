@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa18
+             * Size: 0xa48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_PerParticleForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flForceScale; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vForce; // 0x0358, 0x6b8 bytes
-                std::int32_t m_nCP; // 0x0a10, 0x4 bytes
-                std::uint8_t pad_0a14[0x4]; // 0x0a14, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flForceScale; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vForce; // 0x0368, 0x6d8 bytes
+                std::int32_t m_nCP; // 0x0a40, 0x4 bytes
+                std::uint8_t pad_0a44[0x4]; // 0x0a44, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_PerParticleForce) == 0xA18, "C_OP_PerParticleForce size mismatch");
+            static_assert(sizeof(C_OP_PerParticleForce) == 0xA48, "C_OP_PerParticleForce size mismatch");
         }
     }
 }

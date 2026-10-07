@@ -27,9 +27,8 @@ namespace shade {
             class CResponseCriteriaSet {
             public:
                 std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
-                std::int32_t m_nNumPrefixedContexts; // 0x0030, 0x4 bytes
-                bool m_bOverrideOnAppend; // 0x0034, 0x1 bytes
-                std::uint8_t pad_0035[0x3]; // 0x0035, 0x3 bytes
+                bool m_bOverrideOnAppend; // 0x0030, 0x1 bytes
+                std::uint8_t pad_0031[0x7]; // 0x0031, 0x7 bytes
             };
             #pragma pack(pop)
 

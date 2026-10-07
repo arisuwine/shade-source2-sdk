@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,23 +37,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Nian_Frenzy : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t damage; // 0x1a78, 0x4 bytes
-                std::int32_t damage_radius; // 0x1a7c, 0x4 bytes
-                std::int32_t stun_radius; // 0x1a80, 0x4 bytes
-                float dive_distance; // 0x1a84, 0x4 bytes
-                float initial_rise_time; // 0x1a88, 0x4 bytes
-                float right_swipe_time; // 0x1a8c, 0x4 bytes
-                float left_swipe_time; // 0x1a90, 0x4 bytes
-                float knockdown_duration; // 0x1a94, 0x4 bytes
-                float stun_duration; // 0x1a98, 0x4 bytes
-                std::int32_t m_nTickCounter; // 0x1a9c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hEnemies; // 0x1aa0, 0x18 bytes
+                std::int32_t damage; // 0x1aa8, 0x4 bytes
+                std::int32_t damage_radius; // 0x1aac, 0x4 bytes
+                std::int32_t stun_radius; // 0x1ab0, 0x4 bytes
+                float dive_distance; // 0x1ab4, 0x4 bytes
+                float initial_rise_time; // 0x1ab8, 0x4 bytes
+                float right_swipe_time; // 0x1abc, 0x4 bytes
+                float left_swipe_time; // 0x1ac0, 0x4 bytes
+                float knockdown_duration; // 0x1ac4, 0x4 bytes
+                float stun_duration; // 0x1ac8, 0x4 bytes
+                std::int32_t m_nTickCounter; // 0x1acc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hEnemies; // 0x1ad0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Nian_Frenzy) == 0x1AB8, "CDOTA_Modifier_Nian_Frenzy size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Nian_Frenzy) == 0x1AE8, "CDOTA_Modifier_Nian_Frenzy size mismatch");
         }
     }
 }

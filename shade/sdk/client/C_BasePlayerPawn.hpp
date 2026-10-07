@@ -40,7 +40,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcd0
+             * Size: 0xdc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -49,43 +49,44 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BasePlayerPawn : public shade::sdk::client::C_BaseCombatCharacter {
             public:
-                shade::sdk::client::CPlayer_WeaponServices *m_pWeaponServices; // 0x0b60, 0x8 bytes
-                shade::sdk::client::CPlayer_ItemServices *m_pItemServices; // 0x0b68, 0x8 bytes
-                shade::sdk::client::CPlayer_AutoaimServices *m_pAutoaimServices; // 0x0b70, 0x8 bytes
-                shade::sdk::client::CPlayer_ObserverServices *m_pObserverServices; // 0x0b78, 0x8 bytes
-                shade::sdk::client::CPlayer_WaterServices *m_pWaterServices; // 0x0b80, 0x8 bytes
-                shade::sdk::client::CPlayer_UseServices *m_pUseServices; // 0x0b88, 0x8 bytes
-                shade::sdk::client::CPlayer_FlashlightServices *m_pFlashlightServices; // 0x0b90, 0x8 bytes
-                shade::sdk::client::CPlayer_CameraServices *m_pCameraServices; // 0x0b98, 0x8 bytes
-                shade::sdk::client::CPlayer_MovementServices *m_pMovementServices; // 0x0ba0, 0x8 bytes
-                std::uint8_t pad_0ba8[0x8]; // 0x0ba8, 0x8 bytes
-                QAngle v_angle; // 0x0bb0, 0xc bytes
-                QAngle v_anglePrevious; // 0x0bbc, 0xc bytes
-                std::uint32_t m_iHideHUD; // 0x0bc8, 0x4 bytes
-                std::uint8_t pad_0bcc[0x4]; // 0x0bcc, 0x4 bytes
-                shade::sdk::client::sky3dparams_t m_skybox3d; // 0x0bd0, 0x90 bytes
-                shade::sdk::entity2::GameTime_t m_flDeathTime; // 0x0c60, 0x4 bytes
-                Vector m_vecPredictionError; // 0x0c64, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flPredictionErrorTime; // 0x0c70, 0x4 bytes
-                std::uint8_t pad_0c74[0x1c]; // 0x0c74, 0x1c bytes
-                Vector m_vecLastCameraSetupLocalOrigin; // 0x0c90, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastCameraSetupTime; // 0x0c9c, 0x4 bytes
-                float m_flFOVSensitivityAdjust; // 0x0ca0, 0x4 bytes
-                float m_flMouseSensitivity; // 0x0ca4, 0x4 bytes
-                Vector m_vOldOrigin; // 0x0ca8, 0xc bytes
-                float m_flOldSimulationTime; // 0x0cb4, 0x4 bytes
-                std::int32_t m_nLastExecutedCommandNumber; // 0x0cb8, 0x4 bytes
-                std::int32_t m_nLastExecutedCommandTick; // 0x0cbc, 0x4 bytes
-                CHandle<shade::sdk::client::CBasePlayerController> m_hController; // 0x0cc0, 0x4 bytes
-                CHandle<shade::sdk::client::CBasePlayerController> m_hDefaultController; // 0x0cc4, 0x4 bytes
-                bool m_bIsSwappingToPredictableController; // 0x0cc8, 0x1 bytes
-                std::uint8_t pad_0cc9[0x7]; // 0x0cc9, 0x7 bytes
+                shade::sdk::client::CPlayer_WeaponServices *m_pWeaponServices; // 0x0c50, 0x8 bytes
+                shade::sdk::client::CPlayer_ItemServices *m_pItemServices; // 0x0c58, 0x8 bytes
+                shade::sdk::client::CPlayer_AutoaimServices *m_pAutoaimServices; // 0x0c60, 0x8 bytes
+                shade::sdk::client::CPlayer_ObserverServices *m_pObserverServices; // 0x0c68, 0x8 bytes
+                shade::sdk::client::CPlayer_WaterServices *m_pWaterServices; // 0x0c70, 0x8 bytes
+                shade::sdk::client::CPlayer_UseServices *m_pUseServices; // 0x0c78, 0x8 bytes
+                shade::sdk::client::CPlayer_FlashlightServices *m_pFlashlightServices; // 0x0c80, 0x8 bytes
+                shade::sdk::client::CPlayer_CameraServices *m_pCameraServices; // 0x0c88, 0x8 bytes
+                shade::sdk::client::CPlayer_MovementServices *m_pMovementServices; // 0x0c90, 0x8 bytes
+                std::uint8_t pad_0c98[0x8]; // 0x0c98, 0x8 bytes
+                QAngle v_angle; // 0x0ca0, 0xc bytes
+                QAngle v_anglePrevious; // 0x0cac, 0xc bytes
+                std::uint32_t m_iHideHUD; // 0x0cb8, 0x4 bytes
+                std::uint8_t pad_0cbc[0x4]; // 0x0cbc, 0x4 bytes
+                shade::sdk::client::sky3dparams_t m_skybox3d; // 0x0cc0, 0x90 bytes
+                shade::sdk::entity2::GameTime_t m_flDeathTime; // 0x0d50, 0x4 bytes
+                std::uint8_t pad_0d54[0x4]; // 0x0d54, 0x4 bytes
+                Vector m_vecPredictionError; // 0x0d58, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flPredictionErrorTime; // 0x0d64, 0x4 bytes
+                std::uint8_t pad_0d68[0x20]; // 0x0d68, 0x20 bytes
+                Vector m_vecLastCameraSetupLocalOrigin; // 0x0d88, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastCameraSetupTime; // 0x0d94, 0x4 bytes
+                float m_flFOVSensitivityAdjust; // 0x0d98, 0x4 bytes
+                float m_flMouseSensitivity; // 0x0d9c, 0x4 bytes
+                Vector m_vOldOrigin; // 0x0da0, 0xc bytes
+                float m_flOldSimulationTime; // 0x0dac, 0x4 bytes
+                std::int32_t m_nLastExecutedCommandNumber; // 0x0db0, 0x4 bytes
+                std::int32_t m_nLastExecutedCommandTick; // 0x0db4, 0x4 bytes
+                CHandle<shade::sdk::client::CBasePlayerController> m_hController; // 0x0db8, 0x4 bytes
+                CHandle<shade::sdk::client::CBasePlayerController> m_hDefaultController; // 0x0dbc, 0x4 bytes
+                bool m_bIsSwappingToPredictableController; // 0x0dc0, 0x1 bytes
+                std::uint8_t pad_0dc1[0x7]; // 0x0dc1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BasePlayerPawn) == 0xCD0, "C_BasePlayerPawn size mismatch");
+            static_assert(sizeof(C_BasePlayerPawn) == 0xDC8, "C_BasePlayerPawn size mismatch");
         }
     }
 }

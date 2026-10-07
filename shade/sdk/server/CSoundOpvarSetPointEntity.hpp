@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x630
+             * Size: 0x638
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,44 +31,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundOpvarSetPointEntity : public shade::sdk::server::CSoundOpvarSetPointBase {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnEnter; // 0x0540, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnExit; // 0x0558, 0x18 bytes
-                bool m_bAutoDisable; // 0x0570, 0x1 bytes
-                std::uint8_t pad_0571[0x43]; // 0x0571, 0x43 bytes
-                float m_flDistanceMin; // 0x05b4, 0x4 bytes
-                float m_flDistanceMax; // 0x05b8, 0x4 bytes
-                float m_flDistanceMapMin; // 0x05bc, 0x4 bytes
-                float m_flDistanceMapMax; // 0x05c0, 0x4 bytes
-                float m_flOcclusionRadius; // 0x05c4, 0x4 bytes
-                float m_flOcclusionMin; // 0x05c8, 0x4 bytes
-                float m_flOcclusionMax; // 0x05cc, 0x4 bytes
-                float m_flValSetOnDisable; // 0x05d0, 0x4 bytes
-                bool m_bSetValueOnDisable; // 0x05d4, 0x1 bytes
-                bool m_bReloading; // 0x05d5, 0x1 bytes
-                std::uint8_t pad_05d6[0x2]; // 0x05d6, 0x2 bytes
-                std::int32_t m_nSimulationMode; // 0x05d8, 0x4 bytes
-                std::int32_t m_nVisibilitySamples; // 0x05dc, 0x4 bytes
-                Vector m_vDynamicProxyPoint; // 0x05e0, 0xc bytes
-                float m_flDynamicMaximumOcclusion; // 0x05ec, 0x4 bytes
-                CEntityHandle m_hDynamicEntity; // 0x05f0, 0x4 bytes
-                std::uint8_t pad_05f4[0x4]; // 0x05f4, 0x4 bytes
-                CUtlSymbolLarge m_iszDynamicEntityName; // 0x05f8, 0x8 bytes
-                float m_flPathingDistanceNormFactor; // 0x0600, 0x4 bytes
-                VectorWS m_vPathingSourcePos; // 0x0604, 0xc bytes
-                VectorWS m_vPathingListenerPos; // 0x0610, 0xc bytes
-                Vector m_vPathingDirection; // 0x061c, 0xc bytes
-                std::int32_t m_nPathingSourceIndex; // 0x0628, 0x4 bytes
-                std::uint8_t pad_062c[0x4]; // 0x062c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEnter; // 0x0548, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnExit; // 0x0560, 0x18 bytes
+                bool m_bAutoDisable; // 0x0578, 0x1 bytes
+                std::uint8_t pad_0579[0x43]; // 0x0579, 0x43 bytes
+                float m_flDistanceMin; // 0x05bc, 0x4 bytes
+                float m_flDistanceMax; // 0x05c0, 0x4 bytes
+                float m_flDistanceMapMin; // 0x05c4, 0x4 bytes
+                float m_flDistanceMapMax; // 0x05c8, 0x4 bytes
+                float m_flOcclusionRadius; // 0x05cc, 0x4 bytes
+                float m_flOcclusionMin; // 0x05d0, 0x4 bytes
+                float m_flOcclusionMax; // 0x05d4, 0x4 bytes
+                float m_flValSetOnDisable; // 0x05d8, 0x4 bytes
+                bool m_bSetValueOnDisable; // 0x05dc, 0x1 bytes
+                bool m_bReloading; // 0x05dd, 0x1 bytes
+                std::uint8_t pad_05de[0x2]; // 0x05de, 0x2 bytes
+                std::int32_t m_nSimulationMode; // 0x05e0, 0x4 bytes
+                std::int32_t m_nVisibilitySamples; // 0x05e4, 0x4 bytes
+                Vector m_vDynamicProxyPoint; // 0x05e8, 0xc bytes
+                float m_flDynamicMaximumOcclusion; // 0x05f4, 0x4 bytes
+                CEntityHandle m_hDynamicEntity; // 0x05f8, 0x4 bytes
+                std::uint8_t pad_05fc[0x4]; // 0x05fc, 0x4 bytes
+                CUtlSymbolLarge m_iszDynamicEntityName; // 0x0600, 0x8 bytes
+                float m_flPathingDistanceNormFactor; // 0x0608, 0x4 bytes
+                VectorWS m_vPathingSourcePos; // 0x060c, 0xc bytes
+                VectorWS m_vPathingListenerPos; // 0x0618, 0xc bytes
+                Vector m_vPathingDirection; // 0x0624, 0xc bytes
+                std::int32_t m_nPathingSourceIndex; // 0x0630, 0x4 bytes
+                std::uint8_t pad_0634[0x4]; // 0x0634, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputSetDisabledValue; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDistanceMapMin; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetDistanceMapMax; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetPointEntity) == 0x630, "CSoundOpvarSetPointEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetPointEntity) == 0x638, "CSoundOpvarSetPointEntity size mismatch");
         }
     }
 }

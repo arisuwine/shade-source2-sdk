@@ -23,6 +23,7 @@
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeDomainValueIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeInvokeIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeRegisterIndex_t.hpp"
+#include "shade/sdk/pulse_runtime_lib/PulseRuntimeTempVarIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeVarIndex_t.hpp"
 
 namespace shade {
@@ -50,7 +51,8 @@ namespace shade {
                 shade::sdk::pulse_runtime_lib::PulseRuntimeConstantIndex_t m_nConstIdx; // 0x0020, 0x2 bytes
                 shade::sdk::pulse_runtime_lib::PulseRuntimeDomainValueIndex_t m_nDomainValueIdx; // 0x0022, 0x2 bytes
                 shade::sdk::pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t m_nBlackboardReferenceIdx; // 0x0024, 0x2 bytes
-                std::uint8_t pad_0026[0x12]; // 0x0026, 0x12 bytes
+                shade::sdk::pulse_runtime_lib::PulseRuntimeTempVarIndex_t m_nTempVarIdx; // 0x0026, 0x2 bytes
+                std::uint8_t pad_0028[0x10]; // 0x0028, 0x10 bytes
             };
             #pragma pack(pop)
 

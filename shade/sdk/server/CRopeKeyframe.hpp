@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7d0
+             * Size: 0x8b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,41 +43,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CRopeKeyframe : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t pad_0778[0x8]; // 0x0778, 0x8 bytes
-                std::uint16_t m_RopeFlags; // 0x0780, 0x2 bytes
-                std::uint8_t pad_0782[0x6]; // 0x0782, 0x6 bytes
-                CUtlSymbolLarge m_iNextLinkName; // 0x0788, 0x8 bytes
-                std::int16_t m_Slack; // 0x0790, 0x2 bytes
-                std::uint8_t pad_0792[0x2]; // 0x0792, 0x2 bytes
-                float m_Width; // 0x0794, 0x4 bytes
-                float m_TextureScale; // 0x0798, 0x4 bytes
-                std::uint8_t m_nSegments; // 0x079c, 0x1 bytes
-                bool m_bConstrainBetweenEndpoints; // 0x079d, 0x1 bytes
-                std::uint8_t pad_079e[0x2]; // 0x079e, 0x2 bytes
-                CUtlSymbolLarge m_strRopeMaterialModel; // 0x07a0, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_iRopeMaterialModelIndex; // 0x07a8, 0x8 bytes
-                std::uint8_t m_Subdiv; // 0x07b0, 0x1 bytes
-                std::uint8_t m_nChangeCount; // 0x07b1, 0x1 bytes
-                std::int16_t m_RopeLength; // 0x07b2, 0x2 bytes
-                std::uint8_t m_fLockedPoints; // 0x07b4, 0x1 bytes
-                bool m_bCreatedFromMapFile; // 0x07b5, 0x1 bytes
-                std::uint8_t pad_07b6[0x2]; // 0x07b6, 0x2 bytes
-                float m_flScrollSpeed; // 0x07b8, 0x4 bytes
-                bool m_bStartPointValid; // 0x07bc, 0x1 bytes
-                bool m_bEndPointValid; // 0x07bd, 0x1 bytes
-                std::uint8_t pad_07be[0x2]; // 0x07be, 0x2 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hStartPoint; // 0x07c0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEndPoint; // 0x07c4, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_iStartAttachment; // 0x07c8, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_iEndAttachment; // 0x07c9, 0x1 bytes
-                std::uint8_t pad_07ca[0x6]; // 0x07ca, 0x6 bytes
+                std::uint8_t pad_0858[0x8]; // 0x0858, 0x8 bytes
+                std::uint16_t m_RopeFlags; // 0x0860, 0x2 bytes
+                std::uint8_t pad_0862[0x6]; // 0x0862, 0x6 bytes
+                CUtlSymbolLarge m_iNextLinkName; // 0x0868, 0x8 bytes
+                std::int16_t m_Slack; // 0x0870, 0x2 bytes
+                std::uint8_t pad_0872[0x2]; // 0x0872, 0x2 bytes
+                float m_Width; // 0x0874, 0x4 bytes
+                float m_TextureScale; // 0x0878, 0x4 bytes
+                std::uint8_t m_nSegments; // 0x087c, 0x1 bytes
+                bool m_bConstrainBetweenEndpoints; // 0x087d, 0x1 bytes
+                std::uint8_t pad_087e[0x2]; // 0x087e, 0x2 bytes
+                CUtlSymbolLarge m_strRopeMaterialModel; // 0x0880, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_iRopeMaterialModelIndex; // 0x0888, 0x8 bytes
+                std::uint8_t m_Subdiv; // 0x0890, 0x1 bytes
+                std::uint8_t m_nChangeCount; // 0x0891, 0x1 bytes
+                std::int16_t m_RopeLength; // 0x0892, 0x2 bytes
+                std::uint8_t m_fLockedPoints; // 0x0894, 0x1 bytes
+                bool m_bCreatedFromMapFile; // 0x0895, 0x1 bytes
+                std::uint8_t pad_0896[0x2]; // 0x0896, 0x2 bytes
+                float m_flScrollSpeed; // 0x0898, 0x4 bytes
+                bool m_bStartPointValid; // 0x089c, 0x1 bytes
+                bool m_bEndPointValid; // 0x089d, 0x1 bytes
+                std::uint8_t pad_089e[0x2]; // 0x089e, 0x2 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hStartPoint; // 0x08a0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEndPoint; // 0x08a4, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_iStartAttachment; // 0x08a8, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_iEndAttachment; // 0x08a9, 0x1 bytes
+                std::uint8_t pad_08aa[0x6]; // 0x08aa, 0x6 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * float InputSetScrollSpeed; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Vector InputSetForce; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputBreak; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t Breakable; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t Collide; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t Barbed; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
@@ -88,7 +85,7 @@ namespace shade {
              * CUtlString RopeMaterial; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CRopeKeyframe) == 0x7D0, "CRopeKeyframe size mismatch");
+            static_assert(sizeof(CRopeKeyframe) == 0x8B0, "CRopeKeyframe size mismatch");
         }
     }
 }

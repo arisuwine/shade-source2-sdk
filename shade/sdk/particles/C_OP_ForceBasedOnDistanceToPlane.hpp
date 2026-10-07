@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x228
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ForceBasedOnDistanceToPlane : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                float m_flMinDist; // 0x01e8, 0x4 bytes
-                Vector m_vecForceAtMinDist; // 0x01ec, 0xc bytes
-                float m_flMaxDist; // 0x01f8, 0x4 bytes
-                Vector m_vecForceAtMaxDist; // 0x01fc, 0xc bytes
-                Vector m_vecPlaneNormal; // 0x0208, 0xc bytes
-                std::int32_t m_nControlPointNumber; // 0x0214, 0x4 bytes
-                float m_flExponent; // 0x0218, 0x4 bytes
-                std::uint8_t pad_021c[0x4]; // 0x021c, 0x4 bytes
+                float m_flMinDist; // 0x01f0, 0x4 bytes
+                Vector m_vecForceAtMinDist; // 0x01f4, 0xc bytes
+                float m_flMaxDist; // 0x0200, 0x4 bytes
+                Vector m_vecForceAtMaxDist; // 0x0204, 0xc bytes
+                Vector m_vecPlaneNormal; // 0x0210, 0xc bytes
+                std::int32_t m_nControlPointNumber; // 0x021c, 0x4 bytes
+                float m_flExponent; // 0x0220, 0x4 bytes
+                std::uint8_t pad_0224[0x4]; // 0x0224, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ForceBasedOnDistanceToPlane) == 0x220, "C_OP_ForceBasedOnDistanceToPlane size mismatch");
+            static_assert(sizeof(C_OP_ForceBasedOnDistanceToPlane) == 0x228, "C_OP_ForceBasedOnDistanceToPlane size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x3258
+             * Size: 0x3358
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseTrailRenderer : public shade::sdk::particles::CBaseRendererSource2 {
             public:
-                shade::sdk::particles::ParticleOrientationChoiceList_t m_nOrientationType; // 0x2df0, 0x4 bytes
-                std::int32_t m_nOrientationControlPoint; // 0x2df4, 0x4 bytes
-                float m_flMinSize; // 0x2df8, 0x4 bytes
-                float m_flMaxSize; // 0x2dfc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x2e00, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2f70, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSubPixelAAScale; // 0x30e0, 0x170 bytes
-                bool m_bClampV; // 0x3250, 0x1 bytes
-                std::uint8_t pad_3251[0x7]; // 0x3251, 0x7 bytes
+                shade::sdk::particles::ParticleOrientationChoiceList_t m_nOrientationType; // 0x2ed8, 0x4 bytes
+                std::int32_t m_nOrientationControlPoint; // 0x2edc, 0x4 bytes
+                float m_flMinSize; // 0x2ee0, 0x4 bytes
+                float m_flMaxSize; // 0x2ee4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x2ee8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x3060, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSubPixelAAScale; // 0x31d8, 0x178 bytes
+                bool m_bClampV; // 0x3350, 0x1 bytes
+                std::uint8_t pad_3351[0x7]; // 0x3351, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseTrailRenderer) == 0x3258, "CBaseTrailRenderer size mismatch");
+            static_assert(sizeof(CBaseTrailRenderer) == 0x3358, "CBaseTrailRenderer size mismatch");
         }
     }
 }

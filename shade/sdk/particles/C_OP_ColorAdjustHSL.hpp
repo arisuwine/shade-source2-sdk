@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x628
+             * Size: 0x648
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ColorAdjustHSL : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flHueAdjust; // 0x01d8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flSaturationAdjust; // 0x0348, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLightnessAdjust; // 0x04b8, 0x170 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flHueAdjust; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flSaturationAdjust; // 0x0358, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLightnessAdjust; // 0x04d0, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ColorAdjustHSL) == 0x628, "C_OP_ColorAdjustHSL size mismatch");
+            static_assert(sizeof(C_OP_ColorAdjustHSL) == 0x648, "C_OP_ColorAdjustHSL size mismatch");
         }
     }
 }

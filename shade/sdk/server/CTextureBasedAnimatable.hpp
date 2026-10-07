@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,26 +38,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CTextureBasedAnimatable : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bLoop; // 0x0778, 0x1 bytes
-                std::uint8_t pad_0779[0x3]; // 0x0779, 0x3 bytes
-                float m_flFPS; // 0x077c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hPositionKeys; // 0x0780, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hRotationKeys; // 0x0788, 0x8 bytes
-                Vector m_vAnimationBoundsMin; // 0x0790, 0xc bytes
-                Vector m_vAnimationBoundsMax; // 0x079c, 0xc bytes
-                float m_flStartTime; // 0x07a8, 0x4 bytes
-                float m_flStartFrame; // 0x07ac, 0x4 bytes
+                bool m_bLoop; // 0x0858, 0x1 bytes
+                std::uint8_t pad_0859[0x3]; // 0x0859, 0x3 bytes
+                float m_flFPS; // 0x085c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hPositionKeys; // 0x0860, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hRotationKeys; // 0x0868, 0x8 bytes
+                Vector m_vAnimationBoundsMin; // 0x0870, 0xc bytes
+                Vector m_vAnimationBoundsMax; // 0x087c, 0xc bytes
+                float m_flStartTime; // 0x0888, 0x4 bytes
+                float m_flStartFrame; // 0x088c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void InputStart; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStop; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CTextureBasedAnimatable) == 0x7B0, "CTextureBasedAnimatable size mismatch");
+            static_assert(sizeof(CTextureBasedAnimatable) == 0x890, "CTextureBasedAnimatable size mismatch");
         }
     }
 }

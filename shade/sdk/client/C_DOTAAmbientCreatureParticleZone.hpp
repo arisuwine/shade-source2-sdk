@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbc8
+             * Size: 0xcb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTAAmbientCreatureParticleZone : public shade::sdk::client::C_FuncBrush {
             public:
-                char m_szModelName[0x40]; // 0x0a88, 0x40 bytes
-                char m_szAreaName[0x100]; // 0x0ac8, 0x100 bytes
+                char m_szModelName[0x40]; // 0x0b78, 0x40 bytes
+                char m_szAreaName[0x100]; // 0x0bb8, 0x100 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTAAmbientCreatureParticleZone) == 0xBC8, "C_DOTAAmbientCreatureParticleZone size mismatch");
+            static_assert(sizeof(C_DOTAAmbientCreatureParticleZone) == 0xCB8, "C_DOTAAmbientCreatureParticleZone size mismatch");
         }
     }
 }

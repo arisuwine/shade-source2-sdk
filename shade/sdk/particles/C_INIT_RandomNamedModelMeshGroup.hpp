@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RandomNamedModelMeshGroup) == 0x208, "C_INIT_RandomNamedModelMeshGroup size mismatch");
+            static_assert(sizeof(C_INIT_RandomNamedModelMeshGroup) == 0x210, "C_INIT_RandomNamedModelMeshGroup size mismatch");
         }
     }
 }

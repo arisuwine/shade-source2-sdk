@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,30 +39,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Gyrocopter_Homing_Missile : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a78, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex2; // 0x1a7c, 0x4 bytes
-                std::int32_t hero_damage; // 0x1a80, 0x4 bytes
-                std::int32_t acceleration; // 0x1a84, 0x4 bytes
-                float hit_damage; // 0x1a88, 0x4 bytes
-                std::int32_t max_distance; // 0x1a8c, 0x4 bytes
-                float shard_radius; // 0x1a90, 0x4 bytes
-                float shard_delay; // 0x1a94, 0x4 bytes
-                float pre_flight_time; // 0x1a98, 0x4 bytes
-                float stun_duration; // 0x1a9c, 0x4 bytes
-                std::int32_t m_nTeamNumber; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x14]; // 0x1aa4, 0x14 bytes
-                float speed; // 0x1ab8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAttachTarget; // 0x1abc, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1ac0, 0xc bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_EnemyVision; // 0x1ad0, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_MoveTime; // 0x1ae8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1aa8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex2; // 0x1aac, 0x4 bytes
+                std::int32_t hero_damage; // 0x1ab0, 0x4 bytes
+                std::int32_t acceleration; // 0x1ab4, 0x4 bytes
+                float hit_damage; // 0x1ab8, 0x4 bytes
+                std::int32_t max_distance; // 0x1abc, 0x4 bytes
+                float shard_radius; // 0x1ac0, 0x4 bytes
+                float shard_delay; // 0x1ac4, 0x4 bytes
+                float pre_flight_time; // 0x1ac8, 0x4 bytes
+                float stun_duration; // 0x1acc, 0x4 bytes
+                std::int32_t m_nTeamNumber; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x14]; // 0x1ad4, 0x14 bytes
+                float speed; // 0x1ae8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAttachTarget; // 0x1aec, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1af0, 0xc bytes
+                std::uint8_t pad_1afc[0x4]; // 0x1afc, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_EnemyVision; // 0x1b00, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_MoveTime; // 0x1b18, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Homing_Missile) == 0x1B00, "CDOTA_Modifier_Gyrocopter_Homing_Missile size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Homing_Missile) == 0x1B30, "CDOTA_Modifier_Gyrocopter_Homing_Missile size mismatch");
         }
     }
 }

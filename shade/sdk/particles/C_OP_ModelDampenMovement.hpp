@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x920
+             * Size: 0x948
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ModelDampenMovement : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01d8, 0x4 bytes
-                bool m_bBoundBox; // 0x01dc, 0x1 bytes
-                bool m_bOutside; // 0x01dd, 0x1 bytes
-                bool m_bUseBones; // 0x01de, 0x1 bytes
-                char m_HitboxSetName[0x80]; // 0x01df, 0x80 bytes
-                std::uint8_t pad_025f[0x1]; // 0x025f, 0x1 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecPosOffset; // 0x0260, 0x6b8 bytes
-                float m_fDrag; // 0x0918, 0x4 bytes
-                std::uint8_t pad_091c[0x4]; // 0x091c, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
+                bool m_bBoundBox; // 0x01e4, 0x1 bytes
+                bool m_bOutside; // 0x01e5, 0x1 bytes
+                bool m_bUseBones; // 0x01e6, 0x1 bytes
+                char m_HitboxSetName[0x80]; // 0x01e7, 0x80 bytes
+                std::uint8_t pad_0267[0x1]; // 0x0267, 0x1 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecPosOffset; // 0x0268, 0x6d8 bytes
+                float m_fDrag; // 0x0940, 0x4 bytes
+                std::uint8_t pad_0944[0x4]; // 0x0944, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ModelDampenMovement) == 0x920, "C_OP_ModelDampenMovement size mismatch");
+            static_assert(sizeof(C_OP_ModelDampenMovement) == 0x948, "C_OP_ModelDampenMovement size mismatch");
         }
     }
 }

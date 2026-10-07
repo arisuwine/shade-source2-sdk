@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18f8
+             * Size: 0x19e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Creep_Lane : public shade::sdk::server::CDOTA_BaseNPC_Creep {
             public:
-                std::uint8_t pad_18d8[0x1c]; // 0x18d8, 0x1c bytes
-                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x18f4, 0x4 bytes
+                std::uint8_t pad_19c8[0x1c]; // 0x19c8, 0x1c bytes
+                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x19e4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Creep_Lane) == 0x18F8, "CDOTA_BaseNPC_Creep_Lane size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Creep_Lane) == 0x19E8, "CDOTA_BaseNPC_Creep_Lane size mismatch");
         }
     }
 }

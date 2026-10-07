@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Jakiro_Macropyre_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                Vector m_vPathDir; // 0x1a78, 0xc bytes
-                float burn_interval; // 0x1a84, 0x4 bytes
-                float path_radius; // 0x1a88, 0x4 bytes
-                float cast_range; // 0x1a8c, 0x4 bytes
-                float linger_duration; // 0x1a90, 0x4 bytes
-                std::uint8_t pad_1a94[0x4]; // 0x1a94, 0x4 bytes
+                Vector m_vPathDir; // 0x1aa8, 0xc bytes
+                float burn_interval; // 0x1ab4, 0x4 bytes
+                float path_radius; // 0x1ab8, 0x4 bytes
+                float cast_range; // 0x1abc, 0x4 bytes
+                float linger_duration; // 0x1ac0, 0x4 bytes
+                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Jakiro_Macropyre_Thinker) == 0x1A98, "CDOTA_Modifier_Jakiro_Macropyre_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Jakiro_Macropyre_Thinker) == 0x1AC8, "CDOTA_Modifier_Jakiro_Macropyre_Thinker size mismatch");
         }
     }
 }

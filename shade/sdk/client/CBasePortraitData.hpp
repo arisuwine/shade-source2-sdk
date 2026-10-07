@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdd0
+             * Size: 0xdf0
              * Alignment: 0xff
              * Has VTable
              */
@@ -37,17 +37,17 @@ namespace shade {
                 std::uint8_t pad_0000[0x410]; // 0x0000, 0x410 bytes
                 CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_iModelIndex; // 0x0410, 0x8 bytes
                 CUtlStringToken m_skin; // 0x0418, 0x4 bytes
-                std::uint8_t pad_041c[0x98c]; // 0x041c, 0x98c bytes
-                bool m_bHasSetupView; // 0x0da8, 0x1 bytes
-                std::uint8_t pad_0da9[0x1f]; // 0x0da9, 0x1f bytes
-                float m_flRotation; // 0x0dc8, 0x4 bytes
-                std::uint8_t pad_0dcc[0x4]; // 0x0dcc, 0x4 bytes
+                std::uint8_t pad_041c[0x9ac]; // 0x041c, 0x9ac bytes
+                bool m_bHasSetupView; // 0x0dc8, 0x1 bytes
+                std::uint8_t pad_0dc9[0x1f]; // 0x0dc9, 0x1f bytes
+                float m_flRotation; // 0x0de8, 0x4 bytes
+                std::uint8_t pad_0dec[0x4]; // 0x0dec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBasePortraitData) == 0xDD0, "CBasePortraitData size mismatch");
+            static_assert(sizeof(CBasePortraitData) == 0xDF0, "CBasePortraitData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_CrystalMaiden_IceRink_Movement : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bHitFirstUpdate; // 0x1a78, 0x1 bytes
-                std::uint8_t pad_1a79[0x3]; // 0x1a79, 0x3 bytes
-                float flMovementSpeed; // 0x1a7c, 0x4 bytes
-                float m_flTurnBoostProgress; // 0x1a80, 0x4 bytes
-                float m_flFacingTarget; // 0x1a84, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a88, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flHitEndTime; // 0x1a8c, 0x4 bytes
-                float hit_recover_time; // 0x1a90, 0x4 bytes
-                Vector m_vDirection; // 0x1a94, 0xc bytes
+                bool m_bHitFirstUpdate; // 0x1aa8, 0x1 bytes
+                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
+                float flMovementSpeed; // 0x1aac, 0x4 bytes
+                float m_flTurnBoostProgress; // 0x1ab0, 0x4 bytes
+                float m_flFacingTarget; // 0x1ab4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ab8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flHitEndTime; // 0x1abc, 0x4 bytes
+                float hit_recover_time; // 0x1ac0, 0x4 bytes
+                Vector m_vDirection; // 0x1ac4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_CrystalMaiden_IceRink_Movement) == 0x1AA0, "CDOTA_Modifier_CrystalMaiden_IceRink_Movement size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_CrystalMaiden_IceRink_Movement) == 0x1AD0, "CDOTA_Modifier_CrystalMaiden_IceRink_Movement size mismatch");
         }
     }
 }

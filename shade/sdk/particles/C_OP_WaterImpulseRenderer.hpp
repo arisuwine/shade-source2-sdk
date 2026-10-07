@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1018
+             * Size: 0x1068
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_WaterImpulseRenderer : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vecPos; // 0x0228, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x08e0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMagnitude; // 0x0a50, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flShape; // 0x0bc0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flWindSpeed; // 0x0d30, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flWobble; // 0x0ea0, 0x170 bytes
-                bool m_bIsRadialWind; // 0x1010, 0x1 bytes
-                std::uint8_t pad_1011[0x3]; // 0x1011, 0x3 bytes
-                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x1014, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecPos; // 0x0230, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius; // 0x0908, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMagnitude; // 0x0a80, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flShape; // 0x0bf8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flWindSpeed; // 0x0d70, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flWobble; // 0x0ee8, 0x178 bytes
+                bool m_bIsRadialWind; // 0x1060, 0x1 bytes
+                std::uint8_t pad_1061[0x3]; // 0x1061, 0x3 bytes
+                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x1064, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_WaterImpulseRenderer) == 0x1018, "C_OP_WaterImpulseRenderer size mismatch");
+            static_assert(sizeof(C_OP_WaterImpulseRenderer) == 0x1068, "C_OP_WaterImpulseRenderer size mismatch");
         }
     }
 }

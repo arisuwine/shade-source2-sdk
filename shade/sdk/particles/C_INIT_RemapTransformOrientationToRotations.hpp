@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x258
+             * Size: 0x260
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RemapTransformOrientationToRotations : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e0, 0x68 bytes
-                Vector m_vecRotation; // 0x0248, 0xc bytes
-                bool m_bUseQuat; // 0x0254, 0x1 bytes
-                bool m_bWriteNormal; // 0x0255, 0x1 bytes
-                std::uint8_t pad_0256[0x2]; // 0x0256, 0x2 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e8, 0x68 bytes
+                Vector m_vecRotation; // 0x0250, 0xc bytes
+                bool m_bUseQuat; // 0x025c, 0x1 bytes
+                bool m_bWriteNormal; // 0x025d, 0x1 bytes
+                std::uint8_t pad_025e[0x2]; // 0x025e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RemapTransformOrientationToRotations) == 0x258, "C_INIT_RemapTransformOrientationToRotations size mismatch");
+            static_assert(sizeof(C_INIT_RemapTransformOrientationToRotations) == 0x260, "C_INIT_RemapTransformOrientationToRotations size mismatch");
         }
     }
 }

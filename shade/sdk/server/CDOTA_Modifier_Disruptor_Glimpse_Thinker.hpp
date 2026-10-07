@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,16 +37,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Disruptor_Glimpse_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vStartLoc; // 0x1a78, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x1a84, 0x4 bytes
-                float m_flDistance; // 0x1a88, 0x4 bytes
-                std::uint8_t pad_1a8c[0x14]; // 0x1a8c, 0x14 bytes
+                VectorWS m_vStartLoc; // 0x1aa8, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEntity; // 0x1ab4, 0x4 bytes
+                float m_flDistance; // 0x1ab8, 0x4 bytes
+                std::uint8_t pad_1abc[0x14]; // 0x1abc, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Disruptor_Glimpse_Thinker) == 0x1AA0, "CDOTA_Modifier_Disruptor_Glimpse_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Disruptor_Glimpse_Thinker) == 0x1AD0, "CDOTA_Modifier_Disruptor_Glimpse_Thinker size mismatch");
         }
     }
 }

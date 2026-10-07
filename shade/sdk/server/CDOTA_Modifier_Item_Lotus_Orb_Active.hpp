@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b68
+             * Size: 0x1ba0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Lotus_Orb_Active : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::CModifierParams m_LastParams; // 0x1a78, 0xf0 bytes
+                shade::sdk::client::CModifierParams m_LastParams; // 0x1aa8, 0xf8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Lotus_Orb_Active) == 0x1B68, "CDOTA_Modifier_Item_Lotus_Orb_Active size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Lotus_Orb_Active) == 0x1BA0, "CDOTA_Modifier_Item_Lotus_Orb_Active size mismatch");
         }
     }
 }

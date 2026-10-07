@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,29 +30,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Passive_Lotus_Pool : public shade::sdk::client::CDOTA_Buff {
             public:
-                float first_lotus_pickup_time; // 0x1a78, 0x4 bytes
-                float pickup_time_reduction_pct; // 0x1a7c, 0x4 bytes
-                float min_lotus_pickup_time; // 0x1a80, 0x4 bytes
-                float think_interval; // 0x1a84, 0x4 bytes
-                float radius; // 0x1a88, 0x4 bytes
-                float m_flRemainingPickupTime; // 0x1a8c, 0x4 bytes
-                float m_flCurrentMaxPickupTime; // 0x1a90, 0x4 bytes
-                std::int32_t m_nLotusSeconds; // 0x1a94, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_LotusTimer; // 0x1a98, 0x18 bytes
-                std::int32_t m_nRespawnSeconds; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_RespawnTimer; // 0x1ab8, 0x18 bytes
-                std::int32_t m_nLotusesAvailable; // 0x1ad0, 0x4 bytes
-                std::uint8_t pad_1ad4[0x1c]; // 0x1ad4, 0x1c bytes
-                shade::sdk::client::CountdownTimer m_LotusUpgradeTimer; // 0x1af0, 0x18 bytes
-                std::int32_t m_nLotusIndex; // 0x1b08, 0x4 bytes
-                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                float first_lotus_pickup_time; // 0x1aa8, 0x4 bytes
+                float pickup_time_reduction_pct; // 0x1aac, 0x4 bytes
+                float min_lotus_pickup_time; // 0x1ab0, 0x4 bytes
+                float think_interval; // 0x1ab4, 0x4 bytes
+                float radius; // 0x1ab8, 0x4 bytes
+                float m_flRemainingPickupTime; // 0x1abc, 0x4 bytes
+                float m_flCurrentMaxPickupTime; // 0x1ac0, 0x4 bytes
+                std::int32_t m_nLotusSeconds; // 0x1ac4, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_LotusTimer; // 0x1ac8, 0x18 bytes
+                std::int32_t m_nRespawnSeconds; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_RespawnTimer; // 0x1ae8, 0x18 bytes
+                std::int32_t m_nLotusesAvailable; // 0x1b00, 0x4 bytes
+                std::uint8_t pad_1b04[0x1c]; // 0x1b04, 0x1c bytes
+                shade::sdk::client::CountdownTimer m_LotusUpgradeTimer; // 0x1b20, 0x18 bytes
+                std::int32_t m_nLotusIndex; // 0x1b38, 0x4 bytes
+                std::uint8_t pad_1b3c[0x4]; // 0x1b3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Passive_Lotus_Pool) == 0x1B10, "CDOTA_Modifier_Passive_Lotus_Pool size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Passive_Lotus_Pool) == 0x1B40, "CDOTA_Modifier_Passive_Lotus_Pool size mismatch");
         }
     }
 }

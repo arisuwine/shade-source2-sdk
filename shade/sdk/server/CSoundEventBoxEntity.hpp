@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x610
+             * Size: 0x688
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CSoundEventBoxEntity : public shade::sdk::server::CSoundEventMultiPointEntity {
             public:
-                CUtlSymbolLarge m_iszBoxEntityName; // 0x0590, 0x8 bytes
-                std::uint8_t pad_0598[0x18]; // 0x0598, 0x18 bytes
-                CNetworkUtlVectorBase<shade::sdk::client::SoundeventBoxHelperNetworked_t> m_vecBoxHelpersNetworked; // 0x05b0, 0x60 bytes
+                CUtlSymbolLarge m_iszBoxEntities[0x10]; // 0x0590, 0x80 bytes
+                std::uint8_t pad_0610[0x18]; // 0x0610, 0x18 bytes
+                CNetworkUtlVectorBase<shade::sdk::client::SoundeventBoxHelperNetworked_t> m_vecBoxHelpersNetworked; // 0x0628, 0x60 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSoundEventBoxEntity) == 0x610, "CSoundEventBoxEntity size mismatch");
+            static_assert(sizeof(CSoundEventBoxEntity) == 0x688, "CSoundEventBoxEntity size mismatch");
         }
     }
 }

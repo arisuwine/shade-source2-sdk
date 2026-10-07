@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8f0
+             * Size: 0x9d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CServerRagdollTrigger) == 0x8F0, "CServerRagdollTrigger size mismatch");
+            static_assert(sizeof(CServerRagdollTrigger) == 0x9D0, "CServerRagdollTrigger size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_KeeperOfTheLight_ManaLeak : public shade::sdk::client::CDOTA_Buff {
             public:
-                float mana_leak_pct; // 0x1a78, 0x4 bytes
-                VectorWS vLastPos; // 0x1a7c, 0xc bytes
-                bool bResetPosition; // 0x1a88, 0x1 bytes
-                std::uint8_t pad_1a89[0x3]; // 0x1a89, 0x3 bytes
-                float m_fAccumulatedManaLeak; // 0x1a8c, 0x4 bytes
+                float mana_leak_pct; // 0x1aa8, 0x4 bytes
+                VectorWS vLastPos; // 0x1aac, 0xc bytes
+                bool bResetPosition; // 0x1ab8, 0x1 bytes
+                std::uint8_t pad_1ab9[0x3]; // 0x1ab9, 0x3 bytes
+                float m_fAccumulatedManaLeak; // 0x1abc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_KeeperOfTheLight_ManaLeak) == 0x1A90, "CDOTA_Modifier_KeeperOfTheLight_ManaLeak size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_KeeperOfTheLight_ManaLeak) == 0x1AC0, "CDOTA_Modifier_KeeperOfTheLight_ManaLeak size mismatch");
         }
     }
 }

@@ -20,8 +20,16 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            class C_BaseEntity;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace client {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +37,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Earthshaker_Fissure_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float free_pathing_linger_duration; // 0x1a78, 0x4 bytes
-                std::uint8_t pad_1a7c[0x4]; // 0x1a7c, 0x4 bytes
+                float free_pathing_linger_duration; // 0x1aa8, 0x4 bytes
+                bool free_pathing_all_allies; // 0x1aac, 0x1 bytes
+                std::uint8_t pad_1aad[0x3]; // 0x1aad, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecAllies; // 0x1ab0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Earthshaker_Fissure_Thinker) == 0x1A80, "CDOTA_Modifier_Earthshaker_Fissure_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Earthshaker_Fissure_Thinker) == 0x1AC8, "CDOTA_Modifier_Earthshaker_Fissure_Thinker size mismatch");
         }
     }
 }

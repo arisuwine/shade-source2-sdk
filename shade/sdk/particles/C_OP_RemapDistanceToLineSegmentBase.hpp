@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x1f8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapDistanceToLineSegmentBase : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nCP0; // 0x01d8, 0x4 bytes
-                std::int32_t m_nCP1; // 0x01dc, 0x4 bytes
-                float m_flMinInputValue; // 0x01e0, 0x4 bytes
-                float m_flMaxInputValue; // 0x01e4, 0x4 bytes
-                bool m_bInfiniteLine; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x7]; // 0x01e9, 0x7 bytes
+                std::int32_t m_nCP0; // 0x01e0, 0x4 bytes
+                std::int32_t m_nCP1; // 0x01e4, 0x4 bytes
+                float m_flMinInputValue; // 0x01e8, 0x4 bytes
+                float m_flMaxInputValue; // 0x01ec, 0x4 bytes
+                bool m_bInfiniteLine; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x7]; // 0x01f1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapDistanceToLineSegmentBase) == 0x1F0, "C_OP_RemapDistanceToLineSegmentBase size mismatch");
+            static_assert(sizeof(C_OP_RemapDistanceToLineSegmentBase) == 0x1F8, "C_OP_RemapDistanceToLineSegmentBase size mismatch");
         }
     }
 }

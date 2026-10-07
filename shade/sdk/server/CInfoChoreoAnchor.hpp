@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,12 +40,13 @@ namespace shade {
             public:
                 CUtlVector<shade::sdk::server::CInfoChoreoAnchorPosition> m_vecTargetEntries; // 0x0498, 0x18 bytes
                 CUtlVector<shade::sdk::server::CInfoChoreoAnchorPosition> m_vecTargetWarps; // 0x04b0, 0x18 bytes
+                CUtlVector<shade::sdk::server::CInfoChoreoAnchorPosition> m_vecTargetExits; // 0x04c8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoChoreoAnchor) == 0x4C8, "CInfoChoreoAnchor size mismatch");
+            static_assert(sizeof(CInfoChoreoAnchor) == 0x4E0, "CInfoChoreoAnchor size mismatch");
         }
     }
 }

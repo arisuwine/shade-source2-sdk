@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x928
+             * Size: 0xa08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerDota : public shade::sdk::server::CTriggerMultiple {
             public:
-                shade::sdk::server::CDotaEntityFilterFlags m_FilterFlags; // 0x0908, 0x20 bytes
+                shade::sdk::server::CDotaEntityFilterFlags m_FilterFlags; // 0x09e8, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerDota) == 0x928, "CTriggerDota size mismatch");
+            static_assert(sizeof(CTriggerDota) == 0xA08, "CTriggerDota size mismatch");
         }
     }
 }

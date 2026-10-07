@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xad0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,23 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_SetHitboxToClosest : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                std::int32_t m_nDesiredHitbox; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x01e8, 0x6b8 bytes
-                char m_HitboxSetName[0x80]; // 0x08a0, 0x80 bytes
-                bool m_bUseBones; // 0x0920, 0x1 bytes
-                bool m_bUseClosestPointOnHitbox; // 0x0921, 0x1 bytes
-                std::uint8_t pad_0922[0x2]; // 0x0922, 0x2 bytes
-                shade::sdk::particles::ClosestPointTestType_t m_nTestType; // 0x0924, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flHybridRatio; // 0x0928, 0x170 bytes
-                bool m_bUpdatePosition; // 0x0a98, 0x1 bytes
-                std::uint8_t pad_0a99[0x7]; // 0x0a99, 0x7 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                std::int32_t m_nDesiredHitbox; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x01f0, 0x6d8 bytes
+                char m_HitboxSetName[0x80]; // 0x08c8, 0x80 bytes
+                bool m_bUseBones; // 0x0948, 0x1 bytes
+                bool m_bUseClosestPointOnHitbox; // 0x0949, 0x1 bytes
+                std::uint8_t pad_094a[0x2]; // 0x094a, 0x2 bytes
+                shade::sdk::particles::ClosestPointTestType_t m_nTestType; // 0x094c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flHybridRatio; // 0x0950, 0x178 bytes
+                bool m_bUpdatePosition; // 0x0ac8, 0x1 bytes
+                std::uint8_t pad_0ac9[0x7]; // 0x0ac9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_SetHitboxToClosest) == 0xAA0, "C_INIT_SetHitboxToClosest size mismatch");
+            static_assert(sizeof(C_INIT_SetHitboxToClosest) == 0xAD0, "C_INIT_SetHitboxToClosest size mismatch");
         }
     }
 }

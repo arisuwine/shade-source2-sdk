@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x920
+             * Size: 0x950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,26 +32,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MovementSkinnedPositionFromCPSnapshot : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nSnapshotControlPointNumber; // 0x01d8, 0x4 bytes
-                std::int32_t m_nControlPointNumber; // 0x01dc, 0x4 bytes
-                bool m_bRandom; // 0x01e0, 0x1 bytes
-                std::uint8_t pad_01e1[0x3]; // 0x01e1, 0x3 bytes
-                std::int32_t m_nRandomSeed; // 0x01e4, 0x4 bytes
-                bool m_bSetNormal; // 0x01e8, 0x1 bytes
-                bool m_bSetRadius; // 0x01e9, 0x1 bytes
-                std::uint8_t pad_01ea[0x2]; // 0x01ea, 0x2 bytes
-                shade::sdk::particles::SnapshotIndexType_t m_nIndexType; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flReadIndex; // 0x01f0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flIncrement; // 0x0360, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nFullLoopIncrement; // 0x04d0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_nSnapShotStartPoint; // 0x0640, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x07b0, 0x170 bytes
+                std::int32_t m_nSnapshotControlPointNumber; // 0x01e0, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e4, 0x4 bytes
+                bool m_bRandom; // 0x01e8, 0x1 bytes
+                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
+                std::int32_t m_nRandomSeed; // 0x01ec, 0x4 bytes
+                bool m_bSetNormal; // 0x01f0, 0x1 bytes
+                bool m_bSetRadius; // 0x01f1, 0x1 bytes
+                std::uint8_t pad_01f2[0x2]; // 0x01f2, 0x2 bytes
+                shade::sdk::particles::SnapshotIndexType_t m_nIndexType; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flReadIndex; // 0x01f8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flIncrement; // 0x0370, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nFullLoopIncrement; // 0x04e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_nSnapShotStartPoint; // 0x0660, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x07d8, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MovementSkinnedPositionFromCPSnapshot) == 0x920, "C_OP_MovementSkinnedPositionFromCPSnapshot size mismatch");
+            static_assert(sizeof(C_OP_MovementSkinnedPositionFromCPSnapshot) == 0x950, "C_OP_MovementSkinnedPositionFromCPSnapshot size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Oracle_DivinersDeck_Intrinsic : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1a78[0x38]; // 0x1a78, 0x38 bytes
-                bool enabled; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
-                float duration; // 0x1ab4, 0x4 bytes
-                float spell_amplification; // 0x1ab8, 0x4 bytes
-                float gold_bonus_pct; // 0x1abc, 0x4 bytes
-                float int_bonus_pct; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                std::uint8_t pad_1aa8[0x38]; // 0x1aa8, 0x38 bytes
+                bool enabled; // 0x1ae0, 0x1 bytes
+                std::uint8_t pad_1ae1[0x3]; // 0x1ae1, 0x3 bytes
+                float duration; // 0x1ae4, 0x4 bytes
+                float spell_amplification; // 0x1ae8, 0x4 bytes
+                float gold_bonus_pct; // 0x1aec, 0x4 bytes
+                float int_bonus_pct; // 0x1af0, 0x4 bytes
+                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Oracle_DivinersDeck_Intrinsic) == 0x1AC8, "CDOTA_Modifier_Oracle_DivinersDeck_Intrinsic size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Oracle_DivinersDeck_Intrinsic) == 0x1AF8, "CDOTA_Modifier_Oracle_DivinersDeck_Intrinsic size mismatch");
         }
     }
 }

@@ -31,8 +31,8 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3c
-             * Alignment: 0x4
+             * Size: 0x48
+             * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
@@ -48,13 +48,13 @@ namespace shade {
                 CHandle<shade::sdk::client::C_BaseEntity> m_hAttacker; // 0x001c, 0x4 bytes
                 VectorWS m_vWsBreakDamageOrigin; // 0x0020, 0xc bytes
                 Vector m_vWsBreakDamageForce; // 0x002c, 0xc bytes
-                std::uint8_t pad_0038[0x4]; // 0x0038, 0x4 bytes
+                std::uint8_t pad_0038[0x10]; // 0x0038, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(DestructiblePartDamageRequest_t) == 0x3C, "DestructiblePartDamageRequest_t size mismatch");
+            static_assert(sizeof(DestructiblePartDamageRequest_t) == 0x48, "DestructiblePartDamageRequest_t size mismatch");
         }
     }
 }

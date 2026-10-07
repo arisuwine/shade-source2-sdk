@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4b0
+             * Size: 0x4d0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             class CSkeletonInstance : public shade::sdk::client::CGameSceneNode {
             public:
                 std::uint8_t pad_0150[0x10]; // 0x0150, 0x10 bytes
-                shade::sdk::client::CModelState m_modelState; // 0x0160, 0x2b0 bytes
-                bool m_bUseParentRenderBounds; // 0x0410, 0x1 bytes
-                bool m_bDisableSolidCollisionsForHierarchy; // 0x0411, 0x1 bytes
-                bool m_bDirtyMotionType; // 0x0412, 0x1 bytes
-                bool m_bIsGeneratingLatchedParentSpaceState; // 0x0413, 0x1 bytes
-                std::uint8_t pad_0414[0x4]; // 0x0414, 0x4 bytes
-                CUtlStringToken m_materialGroup; // 0x0418, 0x4 bytes
-                std::uint8_t m_nHitboxSet; // 0x041c, 0x1 bytes
-                std::uint8_t pad_041d[0x93]; // 0x041d, 0x93 bytes
+                shade::sdk::client::CModelState m_modelState; // 0x0160, 0x2c0 bytes
+                bool m_bUseParentRenderBounds; // 0x0420, 0x1 bytes
+                bool m_bDisableSolidCollisionsForHierarchy; // 0x0421, 0x1 bytes
+                bool m_bDirtyMotionType; // 0x0422, 0x1 bytes
+                bool m_bIsGeneratingLatchedParentSpaceState; // 0x0423, 0x1 bytes
+                std::uint8_t pad_0424[0x4]; // 0x0424, 0x4 bytes
+                CUtlStringToken m_materialGroup; // 0x0428, 0x4 bytes
+                std::uint8_t m_nHitboxSet; // 0x042c, 0x1 bytes
+                std::uint8_t pad_042d[0xa3]; // 0x042d, 0xa3 bytes
             };
             #pragma pack(pop)
 
@@ -50,7 +50,7 @@ namespace shade {
              * float rotationSpeed; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CSkeletonInstance) == 0x4B0, "CSkeletonInstance size mismatch");
+            static_assert(sizeof(CSkeletonInstance) == 0x4D0, "CSkeletonInstance size mismatch");
         }
     }
 }

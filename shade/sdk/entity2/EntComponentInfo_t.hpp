@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace entity2 {
             /* Class Parameters
-             * Size: 0x68
+             * Size: 0x60
              * Alignment: 0xff
              * Has Trivial Destructor
              */
@@ -39,14 +39,14 @@ namespace shade {
                 char *m_pNetworkDataReferencedPtrPropDescription; // 0x0018, 0x8 bytes
                 std::int32_t m_nRuntimeIndex; // 0x0020, 0x4 bytes
                 std::uint32_t m_nFlags; // 0x0024, 0x4 bytes
-                std::uint8_t pad_0028[0x38]; // 0x0028, 0x38 bytes
-                shade::sdk::entity2::CEntityComponentHelper *m_pBaseClassComponentHelper; // 0x0060, 0x8 bytes
+                std::uint8_t pad_0028[0x30]; // 0x0028, 0x30 bytes
+                shade::sdk::entity2::CEntityComponentHelper *m_pBaseClassComponentHelper; // 0x0058, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(EntComponentInfo_t) == 0x68, "EntComponentInfo_t size mismatch");
+            static_assert(sizeof(EntComponentInfo_t) == 0x60, "EntComponentInfo_t size mismatch");
         }
     }
 }

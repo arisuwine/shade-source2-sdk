@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x1f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_Spin) == 0x1F0, "C_OP_Spin size mismatch");
+            static_assert(sizeof(C_OP_Spin) == 0x1F8, "C_OP_Spin size mismatch");
         }
     }
 }

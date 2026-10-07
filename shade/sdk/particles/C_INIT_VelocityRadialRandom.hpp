@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1248
+             * Size: 0x12a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_VelocityRadialRandom : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                bool m_bPerParticleCenter; // 0x01e0, 0x1 bytes
-                std::uint8_t pad_01e1[0x3]; // 0x01e1, 0x3 bytes
-                std::int32_t m_nControlPointNumber; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecPosition; // 0x01e8, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecFwd; // 0x08a0, 0x6b8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMin; // 0x0f58, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMax; // 0x10c8, 0x170 bytes
-                Vector m_vecLocalCoordinateSystemSpeedScale; // 0x1238, 0xc bytes
-                std::uint8_t pad_1244[0x1]; // 0x1244, 0x1 bytes
-                bool m_bIgnoreDelta; // 0x1245, 0x1 bytes
-                std::uint8_t pad_1246[0x2]; // 0x1246, 0x2 bytes
+                bool m_bPerParticleCenter; // 0x01e8, 0x1 bytes
+                std::uint8_t pad_01e9[0x3]; // 0x01e9, 0x3 bytes
+                std::int32_t m_nControlPointNumber; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecPosition; // 0x01f0, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecFwd; // 0x08c8, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMin; // 0x0fa0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fSpeedMax; // 0x1118, 0x178 bytes
+                Vector m_vecLocalCoordinateSystemSpeedScale; // 0x1290, 0xc bytes
+                std::uint8_t pad_129c[0x1]; // 0x129c, 0x1 bytes
+                bool m_bIgnoreDelta; // 0x129d, 0x1 bytes
+                std::uint8_t pad_129e[0x2]; // 0x129e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_VelocityRadialRandom) == 0x1248, "C_INIT_VelocityRadialRandom size mismatch");
+            static_assert(sizeof(C_INIT_VelocityRadialRandom) == 0x12A0, "C_INIT_VelocityRadialRandom size mismatch");
         }
     }
 }

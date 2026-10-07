@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Tusk_WalrusPunch : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t crit_multiplier; // 0x1a78, 0x4 bytes
-                std::int32_t bonus_damage; // 0x1a7c, 0x4 bytes
-                float air_time; // 0x1a80, 0x4 bytes
-                float slow_duration; // 0x1a84, 0x4 bytes
-                CUtlSymbolLarge m_iszRangedAttackEffect; // 0x1a88, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1a90, 0x4 bytes
-                bool m_bWalrusPunch; // 0x1a94, 0x1 bytes
-                bool m_bTalentProc; // 0x1a95, 0x1 bytes
-                std::uint8_t pad_1a96[0x2]; // 0x1a96, 0x2 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1a98, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                std::int32_t crit_multiplier; // 0x1aa8, 0x4 bytes
+                std::int32_t bonus_damage; // 0x1aac, 0x4 bytes
+                float air_time; // 0x1ab0, 0x4 bytes
+                float slow_duration; // 0x1ab4, 0x4 bytes
+                CUtlSymbolLarge m_iszRangedAttackEffect; // 0x1ab8, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1ac0, 0x4 bytes
+                bool m_bWalrusPunch; // 0x1ac4, 0x1 bytes
+                bool m_bTalentProc; // 0x1ac5, 0x1 bytes
+                std::uint8_t pad_1ac6[0x2]; // 0x1ac6, 0x2 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1ac8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Tusk_WalrusPunch) == 0x1AB8, "CDOTA_Modifier_Tusk_WalrusPunch size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Tusk_WalrusPunch) == 0x1AE8, "CDOTA_Modifier_Tusk_WalrusPunch size mismatch");
         }
     }
 }

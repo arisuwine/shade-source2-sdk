@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x678
+             * Size: 0x680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Orb_Of_Revelations : public shade::sdk::server::CDOTA_Item {
             public:
-                shade::sdk::server::CountdownTimer m_ViewerTimer; // 0x0658, 0x18 bytes
-                std::int32_t m_iProjectile; // 0x0670, 0x4 bytes
-                std::uint8_t pad_0674[0x4]; // 0x0674, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_ViewerTimer; // 0x0660, 0x18 bytes
+                std::int32_t m_iProjectile; // 0x0678, 0x4 bytes
+                std::uint8_t pad_067c[0x4]; // 0x067c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Orb_Of_Revelations) == 0x678, "CDOTA_Item_Orb_Of_Revelations size mismatch");
+            static_assert(sizeof(CDOTA_Item_Orb_Of_Revelations) == 0x680, "CDOTA_Item_Orb_Of_Revelations size mismatch");
         }
     }
 }

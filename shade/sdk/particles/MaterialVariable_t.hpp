@@ -15,7 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -28,7 +28,7 @@ namespace shade {
             #pragma pack(push, 1)
             struct MaterialVariable_t {
                 CUtlString m_strVariable; // 0x0000, 0x8 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nVariableField; // 0x0008, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nVariableField; // 0x0008, 0x4 bytes
                 float m_flScale; // 0x000c, 0x4 bytes
             };
             #pragma pack(pop)

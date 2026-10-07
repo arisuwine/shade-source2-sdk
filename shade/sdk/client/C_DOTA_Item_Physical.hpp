@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb80
+             * Size: 0xc70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,24 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Item_Physical : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                CHandle<shade::sdk::client::C_DOTA_Item> m_hItem; // 0x0ac0, 0x4 bytes
-                bool m_bIsLowPriorityHoverItem; // 0x0ac4, 0x1 bytes
-                std::uint8_t pad_0ac5[0x3]; // 0x0ac5, 0x3 bytes
-                CHandle<shade::sdk::client::C_DOTA_Item> m_hOldItem; // 0x0ac8, 0x4 bytes
-                std::uint8_t pad_0acc[0x4]; // 0x0acc, 0x4 bytes
-                char *m_pszParticleName; // 0x0ad0, 0x8 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0ad8, 0x4 bytes
-                bool m_bShowingTooltip; // 0x0adc, 0x1 bytes
-                bool m_bShowingSimpleTooltip; // 0x0add, 0x1 bytes
-                std::uint8_t pad_0ade[0xa2]; // 0x0ade, 0xa2 bytes
+                CHandle<shade::sdk::client::C_DOTA_Item> m_hItem; // 0x0bb0, 0x4 bytes
+                bool m_bIsLowPriorityHoverItem; // 0x0bb4, 0x1 bytes
+                std::uint8_t pad_0bb5[0x3]; // 0x0bb5, 0x3 bytes
+                CHandle<shade::sdk::client::C_DOTA_Item> m_hOldItem; // 0x0bb8, 0x4 bytes
+                std::uint8_t pad_0bbc[0x4]; // 0x0bbc, 0x4 bytes
+                char *m_pszParticleName; // 0x0bc0, 0x8 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0bc8, 0x4 bytes
+                bool m_bShowingTooltip; // 0x0bcc, 0x1 bytes
+                bool m_bShowingSimpleTooltip; // 0x0bcd, 0x1 bytes
+                std::uint8_t pad_0bce[0xa2]; // 0x0bce, 0xa2 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item_Physical) == 0xB80, "C_DOTA_Item_Physical size mismatch");
+            static_assert(sizeof(C_DOTA_Item_Physical) == 0xC70, "C_DOTA_Item_Physical size mismatch");
         }
     }
 }

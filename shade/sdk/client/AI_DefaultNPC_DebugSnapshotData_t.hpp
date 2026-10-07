@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0x80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             struct AI_DefaultNPC_DebugSnapshotData_t : public shade::sdk::client::DebugSnapshotBaseStructuredData_t {
                 CGlobalSymbol s_npc_current_ability; // 0x0008, 0x8 bytes
-                CGlobalSymbol s_npc_tactic_current; // 0x0010, 0x8 bytes
-                CGlobalSymbol s_npc_tactic_phase; // 0x0018, 0x8 bytes
-                CUtlVector<CGlobalSymbol> tactic_interrupt_conditions; // 0x0020, 0x18 bytes
-                shade::sdk::client::AI_DefaultNPC_DebugSnapshotData_t__PathQuery_t path_query; // 0x0038, 0x28 bytes
-                CUtlVector<shade::sdk::client::AI_DefaultNPC_DebugSnapshotData_t__PathQuery_t> path_queries_speculative; // 0x0060, 0x18 bytes
+                CGlobalSymbol s_npc_current_held_ability; // 0x0010, 0x8 bytes
+                CGlobalSymbol s_npc_tactic_current; // 0x0018, 0x8 bytes
+                CGlobalSymbol s_npc_tactic_phase; // 0x0020, 0x8 bytes
+                CUtlVector<CGlobalSymbol> tactic_interrupt_conditions; // 0x0028, 0x18 bytes
+                shade::sdk::client::AI_DefaultNPC_DebugSnapshotData_t__PathQuery_t path_query; // 0x0040, 0x28 bytes
+                CUtlVector<shade::sdk::client::AI_DefaultNPC_DebugSnapshotData_t__PathQuery_t> path_queries_speculative; // 0x0068, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_DefaultNPC_DebugSnapshotData_t) == 0x78, "AI_DefaultNPC_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_DefaultNPC_DebugSnapshotData_t) == 0x80, "AI_DefaultNPC_DebugSnapshotData_t size mismatch");
         }
     }
 }

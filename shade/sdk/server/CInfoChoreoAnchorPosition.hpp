@@ -43,11 +43,12 @@ namespace shade {
                 Vector m_vExtentsMin; // 0x0020, 0xc bytes
                 Vector m_vExtentsMax; // 0x002c, 0xc bytes
                 float m_flRadius; // 0x0038, 0x4 bytes
-                bool m_bOnlyWarpPosition; // 0x003c, 0x1 bytes
-                std::uint8_t pad_003d[0x3]; // 0x003d, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hParent; // 0x0040, 0x4 bytes
-                shade::sdk::server::CInfoChoreoLocatorShapeType_t m_nShapeType; // 0x0044, 0x4 bytes
-                std::uint8_t pad_0048[0x8]; // 0x0048, 0x8 bytes
+                float m_flToleranceAngle; // 0x003c, 0x4 bytes
+                bool m_bOnlyWarpPosition; // 0x0040, 0x1 bytes
+                std::uint8_t pad_0041[0x3]; // 0x0041, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hParent; // 0x0044, 0x4 bytes
+                shade::sdk::server::CInfoChoreoLocatorShapeType_t m_nShapeType; // 0x0048, 0x4 bytes
+                std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
             };
             #pragma pack(pop)
 

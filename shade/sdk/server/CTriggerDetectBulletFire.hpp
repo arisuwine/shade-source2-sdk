@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0x9f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerDetectBulletFire : public shade::sdk::server::CBaseTrigger {
             public:
-                bool m_bPlayerFireOnly; // 0x08f0, 0x1 bytes
-                std::uint8_t pad_08f1[0x7]; // 0x08f1, 0x7 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDetectedBulletFire; // 0x08f8, 0x18 bytes
+                bool m_bPlayerFireOnly; // 0x09d0, 0x1 bytes
+                std::uint8_t pad_09d1[0x7]; // 0x09d1, 0x7 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDetectedBulletFire; // 0x09d8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerDetectBulletFire) == 0x910, "CTriggerDetectBulletFire size mismatch");
+            static_assert(sizeof(CTriggerDetectBulletFire) == 0x9F0, "CTriggerDetectBulletFire size mismatch");
         }
     }
 }

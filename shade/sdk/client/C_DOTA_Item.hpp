@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x760
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -84,38 +84,38 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flPurchaseTime; // 0x06f0, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flAssembledTime; // 0x06f4, 0x4 bytes
                 bool m_bPurchasedWhileDead; // 0x06f8, 0x1 bytes
-                bool m_bCanBeUsedOutOfInventory; // 0x06f9, 0x1 bytes
-                bool m_bItemEnabled; // 0x06fa, 0x1 bytes
-                std::uint8_t pad_06fb[0x1]; // 0x06fb, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flEnableTime; // 0x06fc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flReclaimTime; // 0x0700, 0x4 bytes
-                bool m_bDisplayOwnership; // 0x0704, 0x1 bytes
-                bool m_bShowOnMinimap; // 0x0705, 0x1 bytes
-                std::uint8_t pad_0706[0x2]; // 0x0706, 0x2 bytes
-                float m_flMinimapIconSize; // 0x0708, 0x4 bytes
-                bool m_bIsUpgradeable; // 0x070c, 0x1 bytes
-                std::uint8_t pad_070d[0x3]; // 0x070d, 0x3 bytes
-                std::int32_t m_nUpgradeProgress; // 0x0710, 0x4 bytes
-                std::int32_t m_nUpgradeGoal; // 0x0714, 0x4 bytes
-                bool m_bShowDroppedItemTooltip; // 0x0718, 0x1 bytes
-                std::uint8_t pad_0719[0x3]; // 0x0719, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hOldOwnerEntity; // 0x071c, 0x4 bytes
-                std::int32_t m_iOldCharges; // 0x0720, 0x4 bytes
-                shade::sdk::client::PlayerID_t m_iPlayerOwnerID; // 0x0724, 0x4 bytes
-                shade::sdk::client::AbilityID_t m_nImbuedAbility; // 0x0728, 0x4 bytes
-                std::uint8_t pad_072c[0x4]; // 0x072c, 0x4 bytes
-                C_NetworkUtlVectorBase<std::uint8_t> m_vecPreGameTransferPlayerIDs; // 0x0730, 0x18 bytes
-                std::uint8_t pad_0748[0x8]; // 0x0748, 0x8 bytes
-                bool m_bShowActivateToUseAnimation; // 0x0750, 0x1 bytes
-                std::uint8_t pad_0751[0x7]; // 0x0751, 0x7 bytes
+                std::uint8_t pad_06f9[0x3]; // 0x06f9, 0x3 bytes
+                std::int32_t m_nPurchasedPrice; // 0x06fc, 0x4 bytes
+                bool m_bCanBeUsedOutOfInventory; // 0x0700, 0x1 bytes
+                bool m_bItemEnabled; // 0x0701, 0x1 bytes
+                std::uint8_t pad_0702[0x2]; // 0x0702, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flEnableTime; // 0x0704, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flReclaimTime; // 0x0708, 0x4 bytes
+                bool m_bDisplayOwnership; // 0x070c, 0x1 bytes
+                bool m_bShowOnMinimap; // 0x070d, 0x1 bytes
+                std::uint8_t pad_070e[0x2]; // 0x070e, 0x2 bytes
+                float m_flMinimapIconSize; // 0x0710, 0x4 bytes
+                bool m_bIsUpgradeable; // 0x0714, 0x1 bytes
+                std::uint8_t pad_0715[0x3]; // 0x0715, 0x3 bytes
+                std::int32_t m_nUpgradeProgress; // 0x0718, 0x4 bytes
+                std::int32_t m_nUpgradeGoal; // 0x071c, 0x4 bytes
+                bool m_bShowDroppedItemTooltip; // 0x0720, 0x1 bytes
+                std::uint8_t pad_0721[0x3]; // 0x0721, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hOldOwnerEntity; // 0x0724, 0x4 bytes
+                std::int32_t m_iOldCharges; // 0x0728, 0x4 bytes
+                shade::sdk::client::PlayerID_t m_iPlayerOwnerID; // 0x072c, 0x4 bytes
+                shade::sdk::client::AbilityID_t m_nImbuedAbility; // 0x0730, 0x4 bytes
+                std::uint8_t pad_0734[0x4]; // 0x0734, 0x4 bytes
+                C_NetworkUtlVectorBase<std::uint8_t> m_vecPreGameTransferPlayerIDs; // 0x0738, 0x18 bytes
+                std::uint8_t pad_0750[0x8]; // 0x0750, 0x8 bytes
+                bool m_bShowActivateToUseAnimation; // 0x0758, 0x1 bytes
+                std::uint8_t pad_0759[0x7]; // 0x0759, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item) == 0x758, "C_DOTA_Item size mismatch");
+            static_assert(sizeof(C_DOTA_Item) == 0x760, "C_DOTA_Item size mismatch");
         }
     }
 }

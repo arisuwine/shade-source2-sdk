@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Morphling_Become_Strength : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t agi_per_one_spell_amp; // 0x1a78, 0x4 bytes
-                std::int32_t m_nSpellAmp; // 0x1a7c, 0x4 bytes
+                std::int32_t agi_per_one_spell_amp; // 0x1aa8, 0x4 bytes
+                std::int32_t m_nSpellAmp; // 0x1aac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Morphling_Become_Strength) == 0x1A80, "CDOTA_Modifier_Morphling_Become_Strength size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Morphling_Become_Strength) == 0x1AB0, "CDOTA_Modifier_Morphling_Become_Strength size mismatch");
         }
     }
 }

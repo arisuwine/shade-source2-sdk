@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,25 +39,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_PlayerTransform : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::itemid_t m_nCourierItemId; // 0x1a78, 0x8 bytes
-                CUtlString m_ModelNameOfDisguise; // 0x1a80, 0x8 bytes
-                std::uint8_t pad_1a88[0x8]; // 0x1a88, 0x8 bytes
-                std::int32_t m_nMoveSpeed; // 0x1a90, 0x4 bytes
-                std::int32_t m_nDisguisedSpeed; // 0x1a94, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nDisguiseEffectIndex; // 0x1a98, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCourier; // 0x1a9c, 0x4 bytes
-                bool m_bIsFlyingCourier; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x7]; // 0x1aa1, 0x7 bytes
-                char *s_pszDonkeyDisguise; // 0x1aa8, 0x8 bytes
-                float invul_duration; // 0x1ab0, 0x4 bytes
-                bool m_bParticlesSpawned; // 0x1ab4, 0x1 bytes
-                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
+                shade::sdk::client::itemid_t m_nCourierItemId; // 0x1aa8, 0x8 bytes
+                CUtlString m_ModelNameOfDisguise; // 0x1ab0, 0x8 bytes
+                std::uint8_t pad_1ab8[0x8]; // 0x1ab8, 0x8 bytes
+                std::int32_t m_nMoveSpeed; // 0x1ac0, 0x4 bytes
+                std::int32_t m_nDisguisedSpeed; // 0x1ac4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nDisguiseEffectIndex; // 0x1ac8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCourier; // 0x1acc, 0x4 bytes
+                bool m_bIsFlyingCourier; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x7]; // 0x1ad1, 0x7 bytes
+                char *s_pszDonkeyDisguise; // 0x1ad8, 0x8 bytes
+                float invul_duration; // 0x1ae0, 0x4 bytes
+                bool m_bParticlesSpawned; // 0x1ae4, 0x1 bytes
+                std::uint8_t pad_1ae5[0x3]; // 0x1ae5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_PlayerTransform) == 0x1AB8, "CDOTA_Modifier_AghsFort_PlayerTransform size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_PlayerTransform) == 0x1AE8, "CDOTA_Modifier_AghsFort_PlayerTransform size mismatch");
         }
     }
 }

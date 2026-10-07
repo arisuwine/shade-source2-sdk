@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Morphling_Adaptive_Strike : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vStartPos; // 0x1a78, 0xc bytes
-                Vector m_vDirection; // 0x1a84, 0xc bytes
-                float m_flTotalDistance; // 0x1a90, 0x4 bytes
-                float m_flCurTime; // 0x1a94, 0x4 bytes
+                VectorWS m_vStartPos; // 0x1aa8, 0xc bytes
+                Vector m_vDirection; // 0x1ab4, 0xc bytes
+                float m_flTotalDistance; // 0x1ac0, 0x4 bytes
+                float m_flCurTime; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Morphling_Adaptive_Strike) == 0x1A98, "CDOTA_Modifier_Morphling_Adaptive_Strike size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Morphling_Adaptive_Strike) == 0x1AC8, "CDOTA_Modifier_Morphling_Adaptive_Strike size mismatch");
         }
     }
 }

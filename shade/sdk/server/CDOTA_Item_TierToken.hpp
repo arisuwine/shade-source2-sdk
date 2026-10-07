@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x680
+             * Size: 0x688
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -31,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_TierToken : public shade::sdk::server::CDOTA_Item {
             public:
-                shade::sdk::client::AbilityID_t m_vecChoices[0x9]; // 0x0658, 0x24 bytes
-                std::uint8_t pad_067c[0x4]; // 0x067c, 0x4 bytes
+                shade::sdk::client::AbilityID_t m_vecChoices[0x9]; // 0x0660, 0x24 bytes
+                std::uint8_t pad_0684[0x4]; // 0x0684, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_TierToken) == 0x680, "CDOTA_Item_TierToken size mismatch");
+            static_assert(sizeof(CDOTA_Item_TierToken) == 0x688, "CDOTA_Item_TierToken size mismatch");
         }
     }
 }

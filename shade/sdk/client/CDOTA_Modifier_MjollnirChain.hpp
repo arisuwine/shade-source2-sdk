@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,21 +37,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_MjollnirChain : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t chain_radius; // 0x1a78, 0x4 bytes
-                std::int32_t chain_strikes; // 0x1a7c, 0x4 bytes
-                float chain_damage; // 0x1a80, 0x4 bytes
-                float chain_delay; // 0x1a84, 0x4 bytes
-                float chain_damage_per_charge; // 0x1a88, 0x4 bytes
-                float illusion_multiplier_pct; // 0x1a8c, 0x4 bytes
-                std::int32_t m_iCurJumpCount; // 0x1a90, 0x4 bytes
-                VectorWS m_vCurTargetLoc; // 0x1a94, 0xc bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitEntities; // 0x1aa0, 0x18 bytes
+                std::int32_t chain_radius; // 0x1aa8, 0x4 bytes
+                std::int32_t chain_strikes; // 0x1aac, 0x4 bytes
+                float chain_damage; // 0x1ab0, 0x4 bytes
+                float chain_delay; // 0x1ab4, 0x4 bytes
+                float chain_damage_per_charge; // 0x1ab8, 0x4 bytes
+                float illusion_multiplier_pct; // 0x1abc, 0x4 bytes
+                std::int32_t m_iCurJumpCount; // 0x1ac0, 0x4 bytes
+                VectorWS m_vCurTargetLoc; // 0x1ac4, 0xc bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitEntities; // 0x1ad0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_MjollnirChain) == 0x1AB8, "CDOTA_Modifier_MjollnirChain size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_MjollnirChain) == 0x1AE8, "CDOTA_Modifier_MjollnirChain size mismatch");
         }
     }
 }

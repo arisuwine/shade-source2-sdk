@@ -15,24 +15,13 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/soundsystem_lowlevel/CVMixBaseGraphDescription.hpp"
+
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
-            class CVMixAdditionalOutput;
-            class CVMixAudioMeter;
-            class CVMixAutomaticControlInput;
-            class CVMixBaseProcessorDesc;
-            class CVMixCommand;
-            class CVMixControlInput;
-            class CVMixControlInputArray;
-            class CVMixControlMeter;
-            class CVMixControlOutput;
-            class CVMixCurveHeader;
-            class CVMixImpulseResponseInput;
-            class CVMixNameInput;
-            class CVMixNameInputMeter;
             class CVMixSubmix;
-            class CVMixVsndInput;
+            struct VMixPointerFixupEntry_t;
         }
     }
 }
@@ -41,44 +30,24 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x128
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
-            class CVMixRuntimeGraph {
+            class CVMixRuntimeGraph : public shade::sdk::soundsystem_lowlevel::CVMixBaseGraphDescription {
             public:
-                CUtlString m_name; // 0x0000, 0x8 bytes
-                std::int32_t m_nGraphOutputChannels; // 0x0008, 0x4 bytes
-                bool m_bIsMainGraph; // 0x000c, 0x1 bytes
-                std::uint8_t pad_000d[0x3]; // 0x000d, 0x3 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixSubmix> m_submixes; // 0x0010, 0x18 bytes
-                CUtlVector<std::unique_ptr<shade::sdk::soundsystem_lowlevel::CVMixBaseProcessorDesc>> m_processorNodes; // 0x0028, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixControlInput> m_controlInputs; // 0x0040, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixControlInput> m_controlTransientInputs; // 0x0058, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixControlInputArray> m_controlInputArrays; // 0x0070, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixControlOutput> m_controlOutputs; // 0x0088, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixNameInput> m_nameInputs; // 0x00a0, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixVsndInput> m_vsndInputs; // 0x00b8, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixImpulseResponseInput> m_impulseResponseInputs; // 0x00d0, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixCommand> m_mixCommands; // 0x00e8, 0x18 bytes
-                CUtlVector<float> m_values; // 0x0100, 0x18 bytes
-                CUtlVector<CUtlVector<float>> m_valueArrays; // 0x0118, 0x18 bytes
-                CUtlVector<std::uint64_t> m_impulseResponseValues; // 0x0130, 0x18 bytes
-                CUtlVector<float> m_controlPoints; // 0x0148, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixCurveHeader> m_curves; // 0x0160, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixAudioMeter> m_audioMeters; // 0x0178, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixControlMeter> m_controlMeters; // 0x0190, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixNameInputMeter> m_nameInputMeters; // 0x01a8, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixAdditionalOutput> m_additionalOutputs; // 0x01c0, 0x18 bytes
-                CUtlVector<shade::sdk::soundsystem_lowlevel::CVMixAutomaticControlInput> m_automaticControlInputs; // 0x01d8, 0x18 bytes
-                KeyValues3 m_sources; // 0x01f0, 0x10 bytes
+                CUtlLeanVector<shade::sdk::soundsystem_lowlevel::CVMixSubmix> m_submixes; // 0x00d0, 0x10 bytes
+                CUtlLeanVector<std::uint64_t> m_impulseResponseValues; // 0x00e0, 0x10 bytes
+                KeyValues3 m_inputDefaultValues; // 0x00f0, 0x10 bytes
+                KeyValues3 m_sources; // 0x0100, 0x10 bytes
+                CUtlVector<shade::sdk::soundsystem_lowlevel::VMixPointerFixupEntry_t> m_fixups; // 0x0110, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixRuntimeGraph) == 0x200, "CVMixRuntimeGraph size mismatch");
+            static_assert(sizeof(CVMixRuntimeGraph) == 0x128, "CVMixRuntimeGraph size mismatch");
         }
     }
 }

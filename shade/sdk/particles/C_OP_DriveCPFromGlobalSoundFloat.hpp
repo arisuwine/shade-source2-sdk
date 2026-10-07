@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x218
+             * Size: 0x220
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_DriveCPFromGlobalSoundFloat : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nOutputControlPoint; // 0x01e0, 0x4 bytes
-                std::int32_t m_nOutputField; // 0x01e4, 0x4 bytes
-                float m_flInputMin; // 0x01e8, 0x4 bytes
-                float m_flInputMax; // 0x01ec, 0x4 bytes
-                float m_flOutputMin; // 0x01f0, 0x4 bytes
-                float m_flOutputMax; // 0x01f4, 0x4 bytes
-                CUtlString m_StackName; // 0x01f8, 0x8 bytes
-                CUtlString m_OperatorName; // 0x0200, 0x8 bytes
-                CUtlString m_FieldName; // 0x0208, 0x8 bytes
-                std::uint8_t pad_0210[0x8]; // 0x0210, 0x8 bytes
+                std::int32_t m_nOutputControlPoint; // 0x01e8, 0x4 bytes
+                std::int32_t m_nOutputField; // 0x01ec, 0x4 bytes
+                float m_flInputMin; // 0x01f0, 0x4 bytes
+                float m_flInputMax; // 0x01f4, 0x4 bytes
+                float m_flOutputMin; // 0x01f8, 0x4 bytes
+                float m_flOutputMax; // 0x01fc, 0x4 bytes
+                CUtlString m_StackName; // 0x0200, 0x8 bytes
+                CUtlString m_OperatorName; // 0x0208, 0x8 bytes
+                CUtlString m_FieldName; // 0x0210, 0x8 bytes
+                std::uint8_t pad_0218[0x8]; // 0x0218, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_DriveCPFromGlobalSoundFloat) == 0x218, "C_OP_DriveCPFromGlobalSoundFloat size mismatch");
+            static_assert(sizeof(C_OP_DriveCPFromGlobalSoundFloat) == 0x220, "C_OP_DriveCPFromGlobalSoundFloat size mismatch");
         }
     }
 }

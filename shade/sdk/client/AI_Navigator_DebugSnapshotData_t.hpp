@@ -15,6 +15,8 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/DebugSnapshotSourceLocation_t.hpp"
+
 namespace shade {
     namespace sdk {
         namespace client {
@@ -27,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x80
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -36,17 +38,17 @@ namespace shade {
                 CGlobalSymbol s_movement_id; // 0x0000, 0x8 bytes
                 std::uint32_t s_movement_serial_number; // 0x0008, 0x4 bytes
                 std::uint8_t pad_000c[0x4]; // 0x000c, 0x4 bytes
-                CUtlString s_goal_source_location; // 0x0010, 0x8 bytes
-                VectorWS last_waypoint_pos; // 0x0018, 0xc bytes
-                VectorWS goal_location; // 0x0024, 0xc bytes
-                CUtlVector<shade::sdk::client::AI_Navigator_DebugSnapshotData_t__Waypoint_t> waypoints; // 0x0030, 0x18 bytes
-                CGlobalSymbol s_arrival_movement_gait_set; // 0x0048, 0x8 bytes
+                shade::sdk::client::DebugSnapshotSourceLocation_t s_goal_source_location; // 0x0010, 0x38 bytes
+                VectorWS last_waypoint_pos; // 0x0048, 0xc bytes
+                VectorWS goal_location; // 0x0054, 0xc bytes
+                CUtlVector<shade::sdk::client::AI_Navigator_DebugSnapshotData_t__Waypoint_t> waypoints; // 0x0060, 0x18 bytes
+                CGlobalSymbol s_arrival_movement_gait_set; // 0x0078, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_Navigator_DebugSnapshotData_t) == 0x50, "AI_Navigator_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_Navigator_DebugSnapshotData_t) == 0x80, "AI_Navigator_DebugSnapshotData_t size mismatch");
         }
     }
 }

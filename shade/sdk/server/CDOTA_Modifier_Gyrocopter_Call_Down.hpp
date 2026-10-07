@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,26 +38,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Gyrocopter_Call_Down : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t slow_duration; // 0x1a78, 0x4 bytes
-                std::int32_t damage; // 0x1a7c, 0x4 bytes
-                float radius; // 0x1a80, 0x4 bytes
-                std::int32_t slow; // 0x1a84, 0x4 bytes
-                bool m_bDelayed; // 0x1a88, 0x1 bytes
-                bool m_bAttachToRocket1; // 0x1a89, 0x1 bytes
-                std::uint8_t pad_1a8a[0x6]; // 0x1a8a, 0x6 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitHeroes; // 0x1a90, 0x18 bytes
-                bool m_bHitInvisibleHeroes; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nMarkerIndex; // 0x1aac, 0x4 bytes
-                bool m_bIsTrackingMissile; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTrackingTarget; // 0x1ab4, 0x4 bytes
+                std::int32_t slow_duration; // 0x1aa8, 0x4 bytes
+                std::int32_t damage; // 0x1aac, 0x4 bytes
+                float radius; // 0x1ab0, 0x4 bytes
+                std::int32_t slow; // 0x1ab4, 0x4 bytes
+                bool m_bDelayed; // 0x1ab8, 0x1 bytes
+                bool m_bAttachToRocket1; // 0x1ab9, 0x1 bytes
+                std::uint8_t pad_1aba[0x6]; // 0x1aba, 0x6 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitHeroes; // 0x1ac0, 0x18 bytes
+                bool m_bHitInvisibleHeroes; // 0x1ad8, 0x1 bytes
+                std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nMarkerIndex; // 0x1adc, 0x4 bytes
+                bool m_bIsTrackingMissile; // 0x1ae0, 0x1 bytes
+                std::uint8_t pad_1ae1[0x3]; // 0x1ae1, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTrackingTarget; // 0x1ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Call_Down) == 0x1AB8, "CDOTA_Modifier_Gyrocopter_Call_Down size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Gyrocopter_Call_Down) == 0x1AE8, "CDOTA_Modifier_Gyrocopter_Call_Down size mismatch");
         }
     }
 }

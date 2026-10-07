@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,22 +37,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_VoidSpirit_AetherRemnantThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1a78, 0x4 bytes
-                Vector m_vFacingDir; // 0x1a7c, 0xc bytes
-                std::int32_t pierces_creeps; // 0x1a88, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hRemnant; // 0x1a8c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hPartnerRemnant; // 0x1a90, 0x4 bytes
-                bool m_bTriggered; // 0x1a94, 0x1 bytes
-                std::uint8_t pad_1a95[0x3]; // 0x1a95, 0x3 bytes
-                float m_flCurThink; // 0x1a98, 0x4 bytes
-                bool bIsArtifice; // 0x1a9c, 0x1 bytes
-                std::uint8_t pad_1a9d[0x3]; // 0x1a9d, 0x3 bytes
+                float radius; // 0x1aa8, 0x4 bytes
+                Vector m_vFacingDir; // 0x1aac, 0xc bytes
+                std::int32_t pierces_creeps; // 0x1ab8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hRemnant; // 0x1abc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hPartnerRemnant; // 0x1ac0, 0x4 bytes
+                bool m_bTriggered; // 0x1ac4, 0x1 bytes
+                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
+                float m_flCurThink; // 0x1ac8, 0x4 bytes
+                bool bIsArtifice; // 0x1acc, 0x1 bytes
+                std::uint8_t pad_1acd[0x3]; // 0x1acd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnantThinker) == 0x1AA0, "CDOTA_Modifier_VoidSpirit_AetherRemnantThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnantThinker) == 0x1AD0, "CDOTA_Modifier_VoidSpirit_AetherRemnantThinker size mismatch");
         }
     }
 }

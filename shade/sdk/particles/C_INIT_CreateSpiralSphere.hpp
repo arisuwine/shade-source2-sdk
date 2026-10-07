@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x810
+             * Size: 0x838
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateSpiralSphere : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e0, 0x68 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flDensity; // 0x0248, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialRadius; // 0x03b8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMin; // 0x0528, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMax; // 0x0698, 0x170 bytes
-                bool m_bUseParticleCount; // 0x0808, 0x1 bytes
-                std::uint8_t pad_0809[0x7]; // 0x0809, 0x7 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e8, 0x68 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flDensity; // 0x0250, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialRadius; // 0x03c8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMin; // 0x0540, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInitialSpeedMax; // 0x06b8, 0x178 bytes
+                bool m_bUseParticleCount; // 0x0830, 0x1 bytes
+                std::uint8_t pad_0831[0x7]; // 0x0831, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateSpiralSphere) == 0x810, "C_INIT_CreateSpiralSphere size mismatch");
+            static_assert(sizeof(C_INIT_CreateSpiralSphere) == 0x838, "C_INIT_CreateSpiralSphere size mismatch");
         }
     }
 }

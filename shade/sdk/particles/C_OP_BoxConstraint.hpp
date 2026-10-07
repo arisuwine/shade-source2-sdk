@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xf50
+             * Size: 0xf98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_BoxConstraint : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecMin; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecMax; // 0x0890, 0x6b8 bytes
-                std::int32_t m_nCP; // 0x0f48, 0x4 bytes
-                bool m_bLocalSpace; // 0x0f4c, 0x1 bytes
-                bool m_bAccountForRadius; // 0x0f4d, 0x1 bytes
-                std::uint8_t pad_0f4e[0x2]; // 0x0f4e, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecMin; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecMax; // 0x08b8, 0x6d8 bytes
+                std::int32_t m_nCP; // 0x0f90, 0x4 bytes
+                bool m_bLocalSpace; // 0x0f94, 0x1 bytes
+                bool m_bAccountForRadius; // 0x0f95, 0x1 bytes
+                std::uint8_t pad_0f96[0x2]; // 0x0f96, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_BoxConstraint) == 0xF50, "C_OP_BoxConstraint size mismatch");
+            static_assert(sizeof(C_OP_BoxConstraint) == 0xF98, "C_OP_BoxConstraint size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbb0
+             * Size: 0xca0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,26 +38,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PostProcessingVolume : public shade::sdk::client::C_BaseTrigger {
             public:
-                std::uint8_t pad_0b70[0x10]; // 0x0b70, 0x10 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCPostProcessingResource> m_hPostSettings; // 0x0b80, 0x8 bytes
-                float m_flFadeDuration; // 0x0b88, 0x4 bytes
-                float m_flMinLogExposure; // 0x0b8c, 0x4 bytes
-                float m_flMaxLogExposure; // 0x0b90, 0x4 bytes
-                float m_flMinExposure; // 0x0b94, 0x4 bytes
-                float m_flMaxExposure; // 0x0b98, 0x4 bytes
-                float m_flExposureCompensation; // 0x0b9c, 0x4 bytes
-                float m_flExposureFadeSpeedUp; // 0x0ba0, 0x4 bytes
-                float m_flExposureFadeSpeedDown; // 0x0ba4, 0x4 bytes
-                float m_flTonemapEVSmoothingRange; // 0x0ba8, 0x4 bytes
-                bool m_bMaster; // 0x0bac, 0x1 bytes
-                bool m_bExposureControl; // 0x0bad, 0x1 bytes
-                std::uint8_t pad_0bae[0x2]; // 0x0bae, 0x2 bytes
+                std::uint8_t pad_0c60[0x10]; // 0x0c60, 0x10 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCPostProcessingResource> m_hPostSettings; // 0x0c70, 0x8 bytes
+                float m_flFadeDuration; // 0x0c78, 0x4 bytes
+                float m_flMinLogExposure; // 0x0c7c, 0x4 bytes
+                float m_flMaxLogExposure; // 0x0c80, 0x4 bytes
+                float m_flMinExposure; // 0x0c84, 0x4 bytes
+                float m_flMaxExposure; // 0x0c88, 0x4 bytes
+                float m_flExposureCompensation; // 0x0c8c, 0x4 bytes
+                float m_flExposureFadeSpeedUp; // 0x0c90, 0x4 bytes
+                float m_flExposureFadeSpeedDown; // 0x0c94, 0x4 bytes
+                float m_flTonemapEVSmoothingRange; // 0x0c98, 0x4 bytes
+                bool m_bMaster; // 0x0c9c, 0x1 bytes
+                bool m_bExposureControl; // 0x0c9d, 0x1 bytes
+                std::uint8_t pad_0c9e[0x2]; // 0x0c9e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PostProcessingVolume) == 0xBB0, "C_PostProcessingVolume size mismatch");
+            static_assert(sizeof(C_PostProcessingVolume) == 0xCA0, "C_PostProcessingVolume size mismatch");
         }
     }
 }

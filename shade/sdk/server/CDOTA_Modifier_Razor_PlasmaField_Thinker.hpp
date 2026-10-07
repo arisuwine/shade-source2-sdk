@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,32 +40,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Razor_PlasmaField_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fLastRadius; // 0x1a78, 0x4 bytes
-                float m_fCurRadius; // 0x1a7c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1a80, 0x4 bytes
-                bool m_bContracting; // 0x1a84, 0x1 bytes
-                std::uint8_t pad_1a85[0x3]; // 0x1a85, 0x3 bytes
-                shade::sdk::server::CountdownTimer m_ViewerTimer; // 0x1a88, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_EntitiesHit; // 0x1aa8, 0x18 bytes
-                std::int32_t speed; // 0x1ac0, 0x4 bytes
-                float radius; // 0x1ac4, 0x4 bytes
-                float damage_min; // 0x1ac8, 0x4 bytes
-                float damage_max; // 0x1acc, 0x4 bytes
-                std::int32_t slow_min; // 0x1ad0, 0x4 bytes
-                std::int32_t slow_max; // 0x1ad4, 0x4 bytes
-                float slow_duration; // 0x1ad8, 0x4 bytes
-                bool m_bHasCreatedFx; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
-                float total_ability_time; // 0x1ae0, 0x4 bytes
-                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                float m_fLastRadius; // 0x1aa8, 0x4 bytes
+                float m_fCurRadius; // 0x1aac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1ab0, 0x4 bytes
+                bool m_bContracting; // 0x1ab4, 0x1 bytes
+                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
+                shade::sdk::server::CountdownTimer m_ViewerTimer; // 0x1ab8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_EntitiesHit; // 0x1ad8, 0x18 bytes
+                std::int32_t speed; // 0x1af0, 0x4 bytes
+                float radius; // 0x1af4, 0x4 bytes
+                float damage_min; // 0x1af8, 0x4 bytes
+                float damage_max; // 0x1afc, 0x4 bytes
+                std::int32_t slow_min; // 0x1b00, 0x4 bytes
+                std::int32_t slow_max; // 0x1b04, 0x4 bytes
+                float slow_duration; // 0x1b08, 0x4 bytes
+                bool m_bHasCreatedFx; // 0x1b0c, 0x1 bytes
+                std::uint8_t pad_1b0d[0x3]; // 0x1b0d, 0x3 bytes
+                float total_ability_time; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Razor_PlasmaField_Thinker) == 0x1AE8, "CDOTA_Modifier_Razor_PlasmaField_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Razor_PlasmaField_Thinker) == 0x1B18, "CDOTA_Modifier_Razor_PlasmaField_Thinker size mismatch");
         }
     }
 }

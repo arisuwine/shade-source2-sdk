@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x170
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,13 +44,16 @@ namespace shade {
                 bool m_bShouldWraparound; // 0x0090, 0x1 bytes
                 std::uint8_t pad_0091[0x7]; // 0x0091, 0x7 bytes
                 CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVoiceContainerBase> m_sourceAudio; // 0x0098, 0x8 bytes
-                std::uint8_t pad_00a0[0xb8]; // 0x00a0, 0xb8 bytes
+                bool m_bDoubleBufferSourceAudio; // 0x00a0, 0x1 bytes
+                std::uint8_t pad_00a1[0x3]; // 0x00a1, 0x3 bytes
+                float m_flMaxSourceLength; // 0x00a4, 0x4 bytes
+                std::uint8_t pad_00a8[0xc8]; // 0x00a8, 0xc8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerGranulator) == 0x158, "CVoiceContainerGranulator size mismatch");
+            static_assert(sizeof(CVoiceContainerGranulator) == 0x170, "CVoiceContainerGranulator size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xad8
+             * Size: 0xbc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_PortraitTree : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                std::uint8_t pad_0ac0[0x18]; // 0x0ac0, 0x18 bytes
+                std::uint8_t pad_0bb0[0x18]; // 0x0bb0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_PortraitTree) == 0xAD8, "C_DOTA_PortraitTree size mismatch");
+            static_assert(sizeof(C_DOTA_PortraitTree) == 0xBC8, "C_DOTA_PortraitTree size mismatch");
         }
     }
 }

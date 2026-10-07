@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd70
+             * Size: 0xe60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,26 +38,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PortraitWorldLight : public shade::sdk::client::C_EnvDeferredLight {
             public:
-                float m_flLatitude; // 0x0d30, 0x4 bytes
-                float m_flLongitude; // 0x0d34, 0x4 bytes
-                float m_flAdditionalRadius; // 0x0d38, 0x4 bytes
-                float m_flBoundsRadiusMultiplier; // 0x0d3c, 0x4 bytes
-                CHandle<shade::sdk::client::C_PortraitWorldUnit> m_hTarget; // 0x0d40, 0x4 bytes
-                bool m_bShowGizmos; // 0x0d44, 0x1 bytes
-                std::uint8_t pad_0d45[0x3]; // 0x0d45, 0x3 bytes
-                CUtlStringToken m_hitboxSetName; // 0x0d48, 0x4 bytes
-                VectorWS m_vPreviousCenter; // 0x0d4c, 0xc bytes
-                Vector m_vCenterVelocity; // 0x0d58, 0xc bytes
-                float m_flPreviousBoundingSphereRadius; // 0x0d64, 0x4 bytes
-                float m_flBoundingSphereRadiusChangeSpeed; // 0x0d68, 0x4 bytes
-                bool m_bPreviousValuesInitialized; // 0x0d6c, 0x1 bytes
-                std::uint8_t pad_0d6d[0x3]; // 0x0d6d, 0x3 bytes
+                float m_flLatitude; // 0x0e20, 0x4 bytes
+                float m_flLongitude; // 0x0e24, 0x4 bytes
+                float m_flAdditionalRadius; // 0x0e28, 0x4 bytes
+                float m_flBoundsRadiusMultiplier; // 0x0e2c, 0x4 bytes
+                CHandle<shade::sdk::client::C_PortraitWorldUnit> m_hTarget; // 0x0e30, 0x4 bytes
+                bool m_bShowGizmos; // 0x0e34, 0x1 bytes
+                std::uint8_t pad_0e35[0x3]; // 0x0e35, 0x3 bytes
+                CUtlStringToken m_hitboxSetName; // 0x0e38, 0x4 bytes
+                VectorWS m_vPreviousCenter; // 0x0e3c, 0xc bytes
+                Vector m_vCenterVelocity; // 0x0e48, 0xc bytes
+                float m_flPreviousBoundingSphereRadius; // 0x0e54, 0x4 bytes
+                float m_flBoundingSphereRadiusChangeSpeed; // 0x0e58, 0x4 bytes
+                bool m_bPreviousValuesInitialized; // 0x0e5c, 0x1 bytes
+                std::uint8_t pad_0e5d[0x3]; // 0x0e5d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PortraitWorldLight) == 0xD70, "C_PortraitWorldLight size mismatch");
+            static_assert(sizeof(C_PortraitWorldLight) == 0xE60, "C_PortraitWorldLight size mismatch");
         }
     }
 }

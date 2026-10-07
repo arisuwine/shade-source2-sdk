@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x760
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Book) == 0x758, "CDOTA_Item_Book size mismatch");
+            static_assert(sizeof(CDOTA_Item_Book) == 0x760, "CDOTA_Item_Book size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Visage_GravekeepersCloak_Stack : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bIsRecovering; // 0x1a78, 0x1 bytes
-                std::uint8_t pad_1a79[0x3]; // 0x1a79, 0x3 bytes
-                std::int32_t m_nFXIndex[0x4]; // 0x1a7c, 0x10 bytes
-                std::uint8_t pad_1a8c[0x4]; // 0x1a8c, 0x4 bytes
+                bool m_bIsRecovering; // 0x1aa8, 0x1 bytes
+                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
+                std::int32_t m_nFXIndex[0x4]; // 0x1aac, 0x10 bytes
+                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Visage_GravekeepersCloak_Stack) == 0x1A90, "CDOTA_Modifier_Visage_GravekeepersCloak_Stack size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Visage_GravekeepersCloak_Stack) == 0x1AC0, "CDOTA_Modifier_Visage_GravekeepersCloak_Stack size mismatch");
         }
     }
 }

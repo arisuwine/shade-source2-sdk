@@ -16,16 +16,16 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleRemapFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x500
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ScreenSpaceDistanceToEdge : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxDistFromEdge; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x04c0, 0x4 bytes
-                std::uint8_t pad_04c4[0x2c]; // 0x04c4, 0x2c bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
+                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flMaxDistFromEdge; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x04d8, 0x4 bytes
+                std::uint8_t pad_04dc[0x24]; // 0x04dc, 0x24 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ScreenSpaceDistanceToEdge) == 0x4F0, "C_OP_ScreenSpaceDistanceToEdge size mismatch");
+            static_assert(sizeof(C_OP_ScreenSpaceDistanceToEdge) == 0x500, "C_OP_ScreenSpaceDistanceToEdge size mismatch");
         }
     }
 }

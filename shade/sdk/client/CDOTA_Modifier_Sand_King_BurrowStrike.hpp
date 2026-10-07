@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Sand_King_BurrowStrike : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vPopupLocation; // 0x1a78, 0xc bytes
-                bool m_bTeleported; // 0x1a84, 0x1 bytes
-                bool m_bPreviouslyBurrowed; // 0x1a85, 0x1 bytes
-                std::uint8_t pad_1a86[0x2]; // 0x1a86, 0x2 bytes
+                VectorWS m_vPopupLocation; // 0x1aa8, 0xc bytes
+                bool m_bTeleported; // 0x1ab4, 0x1 bytes
+                bool m_bPreviouslyBurrowed; // 0x1ab5, 0x1 bytes
+                std::uint8_t pad_1ab6[0x2]; // 0x1ab6, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Sand_King_BurrowStrike) == 0x1A88, "CDOTA_Modifier_Sand_King_BurrowStrike size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Sand_King_BurrowStrike) == 0x1AB8, "CDOTA_Modifier_Sand_King_BurrowStrike size mismatch");
         }
     }
 }

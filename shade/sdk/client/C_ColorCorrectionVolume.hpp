@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd98
+             * Size: 0xe88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ColorCorrectionVolume : public shade::sdk::client::C_BaseTrigger {
             public:
-                float m_LastEnterWeight; // 0x0b70, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_LastEnterTime; // 0x0b74, 0x4 bytes
-                float m_LastExitWeight; // 0x0b78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_LastExitTime; // 0x0b7c, 0x4 bytes
-                bool m_bEnabled; // 0x0b80, 0x1 bytes
-                std::uint8_t pad_0b81[0x3]; // 0x0b81, 0x3 bytes
-                float m_MaxWeight; // 0x0b84, 0x4 bytes
-                float m_FadeDuration; // 0x0b88, 0x4 bytes
-                float m_Weight; // 0x0b8c, 0x4 bytes
-                char m_lookupFilename[0x200]; // 0x0b90, 0x200 bytes
-                std::uint8_t pad_0d90[0x8]; // 0x0d90, 0x8 bytes
+                float m_LastEnterWeight; // 0x0c60, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastEnterTime; // 0x0c64, 0x4 bytes
+                float m_LastExitWeight; // 0x0c68, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastExitTime; // 0x0c6c, 0x4 bytes
+                bool m_bEnabled; // 0x0c70, 0x1 bytes
+                std::uint8_t pad_0c71[0x3]; // 0x0c71, 0x3 bytes
+                float m_MaxWeight; // 0x0c74, 0x4 bytes
+                float m_FadeDuration; // 0x0c78, 0x4 bytes
+                float m_Weight; // 0x0c7c, 0x4 bytes
+                char m_lookupFilename[0x200]; // 0x0c80, 0x200 bytes
+                std::uint8_t pad_0e80[0x8]; // 0x0e80, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_ColorCorrectionVolume) == 0xD98, "C_ColorCorrectionVolume size mismatch");
+            static_assert(sizeof(C_ColorCorrectionVolume) == 0xE88, "C_ColorCorrectionVolume size mismatch");
         }
     }
 }

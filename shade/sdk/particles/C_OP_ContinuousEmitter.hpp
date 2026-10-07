@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x660
+             * Size: 0x680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,27 +31,27 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ContinuousEmitter : public shade::sdk::particles::CParticleFunctionEmitter {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flEmissionDuration; // 0x01e0, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flStartTime; // 0x0350, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flEmitRate; // 0x04c0, 0x170 bytes
-                float m_flEmissionScale; // 0x0630, 0x4 bytes
-                float m_flScalePerParentParticle; // 0x0634, 0x4 bytes
-                bool m_bInitFromKilledParentParticles; // 0x0638, 0x1 bytes
-                std::uint8_t pad_0639[0x3]; // 0x0639, 0x3 bytes
-                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x063c, 0x4 bytes
-                std::int32_t m_nSnapshotControlPoint; // 0x0640, 0x4 bytes
-                std::uint8_t pad_0644[0x4]; // 0x0644, 0x4 bytes
-                CUtlString m_strSnapshotSubset; // 0x0648, 0x8 bytes
-                std::int32_t m_nLimitPerUpdate; // 0x0650, 0x4 bytes
-                bool m_bForceEmitOnFirstUpdate; // 0x0654, 0x1 bytes
-                bool m_bForceEmitOnLastUpdate; // 0x0655, 0x1 bytes
-                std::uint8_t pad_0656[0xa]; // 0x0656, 0xa bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flEmissionDuration; // 0x01e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flStartTime; // 0x0360, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flEmitRate; // 0x04d8, 0x178 bytes
+                float m_flEmissionScale; // 0x0650, 0x4 bytes
+                float m_flScalePerParentParticle; // 0x0654, 0x4 bytes
+                bool m_bInitFromKilledParentParticles; // 0x0658, 0x1 bytes
+                std::uint8_t pad_0659[0x3]; // 0x0659, 0x3 bytes
+                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x065c, 0x4 bytes
+                std::int32_t m_nSnapshotControlPoint; // 0x0660, 0x4 bytes
+                std::uint8_t pad_0664[0x4]; // 0x0664, 0x4 bytes
+                CUtlString m_strSnapshotSubset; // 0x0668, 0x8 bytes
+                std::int32_t m_nLimitPerUpdate; // 0x0670, 0x4 bytes
+                bool m_bForceEmitOnFirstUpdate; // 0x0674, 0x1 bytes
+                bool m_bForceEmitOnLastUpdate; // 0x0675, 0x1 bytes
+                std::uint8_t pad_0676[0xa]; // 0x0676, 0xa bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ContinuousEmitter) == 0x660, "C_OP_ContinuousEmitter size mismatch");
+            static_assert(sizeof(C_OP_ContinuousEmitter) == 0x680, "C_OP_ContinuousEmitter size mismatch");
         }
     }
 }

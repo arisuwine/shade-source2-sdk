@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Necrolyte_ReapersScythe : public shade::sdk::client::CDOTA_Modifier_Stunned {
             public:
-                float stun_duration; // 0x1a78, 0x4 bytes
-                bool m_bIllusion; // 0x1a7c, 0x1 bytes
-                bool m_bArcWardenClone; // 0x1a7d, 0x1 bytes
-                bool m_bSpiritBear; // 0x1a7e, 0x1 bytes
-                std::uint8_t pad_1a7f[0x1]; // 0x1a7f, 0x1 bytes
+                float stun_duration; // 0x1aa8, 0x4 bytes
+                bool m_bIllusion; // 0x1aac, 0x1 bytes
+                bool m_bArcWardenClone; // 0x1aad, 0x1 bytes
+                bool m_bSpiritBear; // 0x1aae, 0x1 bytes
+                std::uint8_t pad_1aaf[0x1]; // 0x1aaf, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Necrolyte_ReapersScythe) == 0x1A80, "CDOTA_Modifier_Necrolyte_ReapersScythe size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Necrolyte_ReapersScythe) == 0x1AB0, "CDOTA_Modifier_Necrolyte_ReapersScythe size mismatch");
         }
     }
 }

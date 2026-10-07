@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_HSVShiftToCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nColorCP; // 0x01e0, 0x4 bytes
-                std::int32_t m_nColorGemEnableCP; // 0x01e4, 0x4 bytes
-                std::int32_t m_nOutputCP; // 0x01e8, 0x4 bytes
-                Color m_DefaultHSVColor; // 0x01ec, 0x4 bytes
-                std::uint8_t pad_01f0[0x10]; // 0x01f0, 0x10 bytes
+                std::int32_t m_nColorCP; // 0x01e8, 0x4 bytes
+                std::int32_t m_nColorGemEnableCP; // 0x01ec, 0x4 bytes
+                std::int32_t m_nOutputCP; // 0x01f0, 0x4 bytes
+                Color m_DefaultHSVColor; // 0x01f4, 0x4 bytes
+                std::uint8_t pad_01f8[0x10]; // 0x01f8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_HSVShiftToCP) == 0x200, "C_OP_HSVShiftToCP size mismatch");
+            static_assert(sizeof(C_OP_HSVShiftToCP) == 0x208, "C_OP_HSVShiftToCP size mismatch");
         }
     }
 }

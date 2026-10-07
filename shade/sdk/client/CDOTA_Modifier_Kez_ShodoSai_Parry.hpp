@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,33 +39,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Kez_ShodoSai_Parry : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_nPoseParameterWE; // 0x1a78, 0x4 bytes
-                std::int32_t m_nPoseParameterNS; // 0x1a7c, 0x4 bytes
-                float m_flLastPoseX; // 0x1a80, 0x4 bytes
-                float m_flLastPoseY; // 0x1a84, 0x4 bytes
-                std::int32_t m_nLastMaxDirection; // 0x1a88, 0x4 bytes
-                VectorWS m_vLastOrigin; // 0x1a8c, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x1a98, 0x4 bytes
-                std::int32_t speed_penalty; // 0x1a9c, 0x4 bytes
-                std::int32_t forward_angle; // 0x1aa0, 0x4 bytes
-                float vuln_duration; // 0x1aa4, 0x4 bytes
-                float parry_window_duration; // 0x1aa8, 0x4 bytes
-                float parry_stun_duration; // 0x1aac, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecParriedEnemies; // 0x1ab0, 0x18 bytes
-                Vector m_vFacing; // 0x1ac8, 0xc bytes
-                float m_flFacingTarget; // 0x1ad4, 0x4 bytes
-                float m_flLastOverheadTime; // 0x1ad8, 0x4 bytes
-                float m_flOldPitch; // 0x1adc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ae0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hVulnAttackTarget; // 0x1ae4, 0x4 bytes
-                bool m_bAttackingVuln; // 0x1ae8, 0x1 bytes
-                std::uint8_t pad_1ae9[0x7]; // 0x1ae9, 0x7 bytes
+                std::int32_t m_nPoseParameterWE; // 0x1aa8, 0x4 bytes
+                std::int32_t m_nPoseParameterNS; // 0x1aac, 0x4 bytes
+                float m_flLastPoseX; // 0x1ab0, 0x4 bytes
+                float m_flLastPoseY; // 0x1ab4, 0x4 bytes
+                std::int32_t m_nLastMaxDirection; // 0x1ab8, 0x4 bytes
+                VectorWS m_vLastOrigin; // 0x1abc, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x1ac8, 0x4 bytes
+                std::int32_t speed_penalty; // 0x1acc, 0x4 bytes
+                std::int32_t forward_angle; // 0x1ad0, 0x4 bytes
+                float vuln_duration; // 0x1ad4, 0x4 bytes
+                float parry_window_duration; // 0x1ad8, 0x4 bytes
+                float parry_stun_duration; // 0x1adc, 0x4 bytes
+                bool parry_only_heroes; // 0x1ae0, 0x1 bytes
+                std::uint8_t pad_1ae1[0x7]; // 0x1ae1, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecParriedEnemies; // 0x1ae8, 0x18 bytes
+                Vector m_vFacing; // 0x1b00, 0xc bytes
+                float m_flFacingTarget; // 0x1b0c, 0x4 bytes
+                float m_flLastOverheadTime; // 0x1b10, 0x4 bytes
+                float m_flOldPitch; // 0x1b14, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b18, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hVulnAttackTarget; // 0x1b1c, 0x4 bytes
+                bool m_bAttackingVuln; // 0x1b20, 0x1 bytes
+                std::uint8_t pad_1b21[0x7]; // 0x1b21, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Kez_ShodoSai_Parry) == 0x1AF0, "CDOTA_Modifier_Kez_ShodoSai_Parry size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Kez_ShodoSai_Parry) == 0x1B28, "CDOTA_Modifier_Kez_ShodoSai_Parry size mismatch");
         }
     }
 }

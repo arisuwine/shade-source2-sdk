@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,24 +37,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_EarthSpirit_GeomagneticGrip : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1a78, 0x4 bytes
-                float rock_damage; // 0x1a7c, 0x4 bytes
-                float pull_units_per_second; // 0x1a80, 0x4 bytes
-                float pull_units_per_second_heroes; // 0x1a84, 0x4 bytes
-                float total_pull_distance; // 0x1a88, 0x4 bytes
-                float duration; // 0x1a8c, 0x4 bytes
-                bool m_bUsedStone; // 0x1a90, 0x1 bytes
-                std::uint8_t pad_1a91[0x3]; // 0x1a91, 0x3 bytes
-                VectorWS m_vDestination; // 0x1a94, 0xc bytes
-                VectorWS m_vLocation; // 0x1aa0, 0xc bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1ab0, 0x18 bytes
+                float radius; // 0x1aa8, 0x4 bytes
+                float rock_damage; // 0x1aac, 0x4 bytes
+                float pull_units_per_second; // 0x1ab0, 0x4 bytes
+                float pull_units_per_second_heroes; // 0x1ab4, 0x4 bytes
+                float total_pull_distance; // 0x1ab8, 0x4 bytes
+                float duration; // 0x1abc, 0x4 bytes
+                bool m_bUsedStone; // 0x1ac0, 0x1 bytes
+                std::uint8_t pad_1ac1[0x3]; // 0x1ac1, 0x3 bytes
+                VectorWS m_vDestination; // 0x1ac4, 0xc bytes
+                VectorWS m_vLocation; // 0x1ad0, 0xc bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1ae0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_EarthSpirit_GeomagneticGrip) == 0x1AC8, "CDOTA_Modifier_EarthSpirit_GeomagneticGrip size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_EarthSpirit_GeomagneticGrip) == 0x1AF8, "CDOTA_Modifier_EarthSpirit_GeomagneticGrip size mismatch");
         }
     }
 }

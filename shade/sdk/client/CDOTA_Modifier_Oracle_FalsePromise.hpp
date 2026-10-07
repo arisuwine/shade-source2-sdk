@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,25 +30,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Oracle_FalsePromise : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1a78[0x30]; // 0x1a78, 0x30 bytes
-                bool m_bWaitingForInvulnerability; // 0x1aa8, 0x1 bytes
-                bool m_bDisableHealing; // 0x1aa9, 0x1 bytes
-                std::uint8_t pad_1aaa[0x2]; // 0x1aaa, 0x2 bytes
-                float m_flHealthOnCreated; // 0x1aac, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ab0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1ab4, 0x4 bytes
-                float m_flRunningDmg; // 0x1ab8, 0x4 bytes
-                float m_flRunningHealth; // 0x1abc, 0x4 bytes
-                float m_flExpectedFinalHeal; // 0x1ac0, 0x4 bytes
-                std::int32_t bonus_armor; // 0x1ac4, 0x4 bytes
-                float heal_amp_pct; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                std::uint8_t pad_1aa8[0x30]; // 0x1aa8, 0x30 bytes
+                bool m_bWaitingForInvulnerability; // 0x1ad8, 0x1 bytes
+                bool m_bDisableHealing; // 0x1ad9, 0x1 bytes
+                std::uint8_t pad_1ada[0x2]; // 0x1ada, 0x2 bytes
+                float m_flHealthOnCreated; // 0x1adc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ae0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1ae4, 0x4 bytes
+                float m_flRunningDmg; // 0x1ae8, 0x4 bytes
+                float m_flRunningHealth; // 0x1aec, 0x4 bytes
+                float m_flExpectedFinalHeal; // 0x1af0, 0x4 bytes
+                std::int32_t bonus_armor; // 0x1af4, 0x4 bytes
+                float heal_amp_pct; // 0x1af8, 0x4 bytes
+                std::uint8_t pad_1afc[0x4]; // 0x1afc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Oracle_FalsePromise) == 0x1AD0, "CDOTA_Modifier_Oracle_FalsePromise size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Oracle_FalsePromise) == 0x1B00, "CDOTA_Modifier_Oracle_FalsePromise size mismatch");
         }
     }
 }

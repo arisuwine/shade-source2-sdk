@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,26 +37,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Elder_Titan_EarthSplitter_Caster : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitUnits; // 0x1a78, 0x18 bytes
-                float vision_width; // 0x1a90, 0x4 bytes
-                float vision_interval; // 0x1a94, 0x4 bytes
-                float vision_duration; // 0x1a98, 0x4 bytes
-                std::int32_t vision_step; // 0x1a9c, 0x4 bytes
-                std::int32_t total_steps; // 0x1aa0, 0x4 bytes
-                std::int32_t m_nCompletedSteps; // 0x1aa4, 0x4 bytes
-                VectorWS m_vStart; // 0x1aa8, 0xc bytes
-                VectorWS m_vEnd; // 0x1ab4, 0xc bytes
-                VectorWS m_vNextVisionLocation; // 0x1ac0, 0xc bytes
-                Vector m_vCastDirection; // 0x1acc, 0xc bytes
-                std::int32_t m_nHumHeroesHit; // 0x1ad8, 0x4 bytes
-                bool m_bHitInvisibleHero; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitUnits; // 0x1aa8, 0x18 bytes
+                float vision_width; // 0x1ac0, 0x4 bytes
+                float vision_interval; // 0x1ac4, 0x4 bytes
+                float vision_duration; // 0x1ac8, 0x4 bytes
+                std::int32_t vision_step; // 0x1acc, 0x4 bytes
+                std::int32_t total_steps; // 0x1ad0, 0x4 bytes
+                std::int32_t m_nCompletedSteps; // 0x1ad4, 0x4 bytes
+                VectorWS m_vStart; // 0x1ad8, 0xc bytes
+                VectorWS m_vEnd; // 0x1ae4, 0xc bytes
+                VectorWS m_vNextVisionLocation; // 0x1af0, 0xc bytes
+                Vector m_vCastDirection; // 0x1afc, 0xc bytes
+                std::int32_t m_nHumHeroesHit; // 0x1b08, 0x4 bytes
+                bool m_bHitInvisibleHero; // 0x1b0c, 0x1 bytes
+                std::uint8_t pad_1b0d[0x3]; // 0x1b0d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Elder_Titan_EarthSplitter_Caster) == 0x1AE0, "CDOTA_Modifier_Elder_Titan_EarthSplitter_Caster size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Elder_Titan_EarthSplitter_Caster) == 0x1B10, "CDOTA_Modifier_Elder_Titan_EarthSplitter_Caster size mismatch");
         }
     }
 }

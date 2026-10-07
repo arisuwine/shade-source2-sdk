@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_CollideWithParentParticles : public shade::sdk::particles::CParticleFunctionConstraint {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_flParentRadiusScale; // 0x01d8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x0348, 0x170 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flParentRadiusScale; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x0358, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_CollideWithParentParticles) == 0x4B8, "C_OP_CollideWithParentParticles size mismatch");
+            static_assert(sizeof(C_OP_CollideWithParentParticles) == 0x4D0, "C_OP_CollideWithParentParticles size mismatch");
         }
     }
 }

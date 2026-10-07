@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particleslib {
             /* Class Parameters
-             * Size: 0x170
+             * Size: 0x178
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleRemapFloatInput) == 0x170, "CParticleRemapFloatInput size mismatch");
+            static_assert(sizeof(CParticleRemapFloatInput) == 0x178, "CParticleRemapFloatInput size mismatch");
         }
     }
 }

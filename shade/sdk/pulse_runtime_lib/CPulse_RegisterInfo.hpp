@@ -30,7 +30,7 @@ namespace shade {
             public:
                 shade::sdk::pulse_runtime_lib::PulseRuntimeRegisterIndex_t m_nReg; // 0x0000, 0x2 bytes
                 std::uint8_t pad_0002[0x6]; // 0x0002, 0x6 bytes
-                CPulseValueFullType m_Type; // 0x0008, 0x18 bytes
+                CPulseType m_Type; // 0x0008, 0x18 bytes
                 CKV3MemberNameWithStorage m_OriginName; // 0x0020, 0x38 bytes
                 std::int32_t m_nWrittenByInstruction; // 0x0058, 0x4 bytes
                 std::int32_t m_nLastReadByInstruction; // 0x005c, 0x4 bytes

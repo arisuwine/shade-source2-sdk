@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x360
+             * Size: 0x370
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_DistanceCull : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nControlPoint; // 0x01d8, 0x4 bytes
-                Vector m_vecPointOffset; // 0x01dc, 0xc bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDistance; // 0x01e8, 0x170 bytes
-                bool m_bCullInside; // 0x0358, 0x1 bytes
-                std::uint8_t pad_0359[0x3]; // 0x0359, 0x3 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAttribute; // 0x035c, 0x4 bytes
+                std::int32_t m_nControlPoint; // 0x01e0, 0x4 bytes
+                Vector m_vecPointOffset; // 0x01e4, 0xc bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDistance; // 0x01f0, 0x178 bytes
+                bool m_bCullInside; // 0x0368, 0x1 bytes
+                std::uint8_t pad_0369[0x3]; // 0x0369, 0x3 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAttribute; // 0x036c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_DistanceCull) == 0x360, "C_OP_DistanceCull size mismatch");
+            static_assert(sizeof(C_OP_DistanceCull) == 0x370, "C_OP_DistanceCull size mismatch");
         }
     }
 }

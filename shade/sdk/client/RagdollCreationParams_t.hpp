@@ -29,8 +29,7 @@ namespace shade {
                 Vector m_vForce; // 0x0000, 0xc bytes
                 std::int32_t m_nForceBone; // 0x000c, 0x4 bytes
                 bool m_bForceCurrentWorldTransform; // 0x0010, 0x1 bytes
-                bool m_bUseLRURetirement; // 0x0011, 0x1 bytes
-                std::uint8_t pad_0012[0x2]; // 0x0012, 0x2 bytes
+                std::uint8_t pad_0011[0x3]; // 0x0011, 0x3 bytes
                 std::int32_t m_nHealthToGrant; // 0x0014, 0x4 bytes
             };
             #pragma pack(pop)

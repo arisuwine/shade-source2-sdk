@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,25 +38,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Nevermore_Necromastery : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t souls_per_kill; // 0x1a78, 0x4 bytes
-                std::int32_t souls_per_hero_kill; // 0x1a7c, 0x4 bytes
-                float necromastery_damage_per_soul; // 0x1a80, 0x4 bytes
-                std::int32_t necromastery_max_souls; // 0x1a84, 0x4 bytes
-                std::int32_t max_soul_increase_on_hero_kill; // 0x1a88, 0x4 bytes
-                std::int32_t shard_crit_pct; // 0x1a8c, 0x4 bytes
-                std::int32_t shard_souls_per_kill; // 0x1a90, 0x4 bytes
-                float shard_fear_duration; // 0x1a94, 0x4 bytes
-                std::int32_t m_nPermanentMaxSouls; // 0x1a98, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_iParticleSoulsIndex; // 0x1a9c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_FXIndex; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1aa8, 0x18 bytes
+                std::int32_t souls_per_kill; // 0x1aa8, 0x4 bytes
+                std::int32_t souls_per_hero_kill; // 0x1aac, 0x4 bytes
+                float necromastery_damage_per_soul; // 0x1ab0, 0x4 bytes
+                std::int32_t necromastery_max_souls; // 0x1ab4, 0x4 bytes
+                std::int32_t max_soul_increase_on_hero_kill; // 0x1ab8, 0x4 bytes
+                std::int32_t shard_crit_pct; // 0x1abc, 0x4 bytes
+                std::int32_t shard_souls_per_kill; // 0x1ac0, 0x4 bytes
+                float shard_fear_duration; // 0x1ac4, 0x4 bytes
+                std::int32_t m_nPermanentMaxSouls; // 0x1ac8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_iParticleSoulsIndex; // 0x1acc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_FXIndex; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1ad8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Nevermore_Necromastery) == 0x1AC0, "CDOTA_Modifier_Nevermore_Necromastery size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Nevermore_Necromastery) == 0x1AF0, "CDOTA_Modifier_Nevermore_Necromastery size mismatch");
         }
     }
 }

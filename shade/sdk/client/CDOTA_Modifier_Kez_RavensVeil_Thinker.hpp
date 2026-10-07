@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,22 +39,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Kez_RavensVeil_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fCurRadius; // 0x1a78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1a7c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_entitiesHit; // 0x1a80, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_ViewerTimer; // 0x1a98, 0x18 bytes
-                float blast_radius; // 0x1ab0, 0x4 bytes
-                float blast_speed; // 0x1ab4, 0x4 bytes
-                std::int32_t apply_parry_bonus; // 0x1ab8, 0x4 bytes
-                float blind_duration; // 0x1abc, 0x4 bytes
-                float vuln_duration; // 0x1ac0, 0x4 bytes
-                VectorWS m_vStartLoc; // 0x1ac4, 0xc bytes
+                float m_fCurRadius; // 0x1aa8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1aac, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_entitiesHit; // 0x1ab0, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_ViewerTimer; // 0x1ac8, 0x18 bytes
+                float blast_radius; // 0x1ae0, 0x4 bytes
+                float blast_speed; // 0x1ae4, 0x4 bytes
+                std::int32_t apply_parry_bonus; // 0x1ae8, 0x4 bytes
+                float blind_duration; // 0x1aec, 0x4 bytes
+                float vuln_duration; // 0x1af0, 0x4 bytes
+                bool mark_only_heroes; // 0x1af4, 0x1 bytes
+                std::uint8_t pad_1af5[0x3]; // 0x1af5, 0x3 bytes
+                VectorWS m_vStartLoc; // 0x1af8, 0xc bytes
+                std::uint8_t pad_1b04[0x4]; // 0x1b04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Kez_RavensVeil_Thinker) == 0x1AD0, "CDOTA_Modifier_Kez_RavensVeil_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Kez_RavensVeil_Thinker) == 0x1B08, "CDOTA_Modifier_Kez_RavensVeil_Thinker size mismatch");
         }
     }
 }

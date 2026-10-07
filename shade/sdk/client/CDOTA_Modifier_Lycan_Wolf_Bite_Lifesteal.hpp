@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,18 +37,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Lycan_Wolf_Bite_Lifesteal : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bHidden; // 0x1a78, 0x1 bytes
-                std::uint8_t pad_1a79[0x3]; // 0x1a79, 0x3 bytes
-                float creep_penalty; // 0x1a7c, 0x4 bytes
-                float lifesteal_percent; // 0x1a80, 0x4 bytes
-                float lifesteal_range; // 0x1a84, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecTargets; // 0x1a88, 0x18 bytes
+                bool m_bHidden; // 0x1aa8, 0x1 bytes
+                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
+                float creep_penalty; // 0x1aac, 0x4 bytes
+                float lifesteal_percent; // 0x1ab0, 0x4 bytes
+                float lifesteal_range; // 0x1ab4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecTargets; // 0x1ab8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Lycan_Wolf_Bite_Lifesteal) == 0x1AA0, "CDOTA_Modifier_Lycan_Wolf_Bite_Lifesteal size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Lycan_Wolf_Bite_Lifesteal) == 0x1AD0, "CDOTA_Modifier_Lycan_Wolf_Bite_Lifesteal size mismatch");
         }
     }
 }

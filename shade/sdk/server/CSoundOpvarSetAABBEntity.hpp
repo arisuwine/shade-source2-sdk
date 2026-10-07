@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x698
+             * Size: 0x6a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CSoundOpvarSetAABBEntity) == 0x698, "CSoundOpvarSetAABBEntity size mismatch");
+            static_assert(sizeof(CSoundOpvarSetAABBEntity) == 0x6A0, "CSoundOpvarSetAABBEntity size mismatch");
         }
     }
 }

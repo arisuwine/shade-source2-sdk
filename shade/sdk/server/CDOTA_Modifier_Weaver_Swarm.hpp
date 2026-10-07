@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,18 +37,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Weaver_Swarm : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_iMaxDist; // 0x1a78, 0x4 bytes
-                std::int32_t destroy_attacks; // 0x1a7c, 0x4 bytes
-                Vector m_vDirection; // 0x1a80, 0xc bytes
-                VectorWS m_vStartLoc; // 0x1a8c, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAttachTarget; // 0x1a98, 0x4 bytes
-                std::uint8_t pad_1a9c[0x4]; // 0x1a9c, 0x4 bytes
+                std::int32_t m_iMaxDist; // 0x1aa8, 0x4 bytes
+                std::int32_t destroy_attacks; // 0x1aac, 0x4 bytes
+                Vector m_vDirection; // 0x1ab0, 0xc bytes
+                VectorWS m_vStartLoc; // 0x1abc, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAttachTarget; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Weaver_Swarm) == 0x1AA0, "CDOTA_Modifier_Weaver_Swarm size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Weaver_Swarm) == 0x1AD0, "CDOTA_Modifier_Weaver_Swarm size mismatch");
         }
     }
 }

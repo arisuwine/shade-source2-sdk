@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,32 +39,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Pugna_LifeDrain : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t health_drain; // 0x1a78, 0x4 bytes
-                std::int32_t ally_healing; // 0x1a7c, 0x4 bytes
-                float health_drain_death_boost; // 0x1a80, 0x4 bytes
-                float tick_rate; // 0x1a84, 0x4 bytes
-                bool m_bDoRangeCheck; // 0x1a88, 0x1 bytes
-                std::uint8_t pad_1a89[0x3]; // 0x1a89, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a8c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flElapsedTime; // 0x1a90, 0x4 bytes
-                bool m_bPrimary; // 0x1a94, 0x1 bytes
-                bool m_bShard; // 0x1a95, 0x1 bytes
-                bool m_bFromWard; // 0x1a96, 0x1 bytes
-                std::uint8_t pad_1a97[0x1]; // 0x1a97, 0x1 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hWard; // 0x1a98, 0x4 bytes
-                float spell_amp_drain_duration; // 0x1a9c, 0x4 bytes
-                std::int32_t max_spell_amp_drain_pct; // 0x1aa0, 0x4 bytes
-                std::int32_t spell_amp_drain_rate; // 0x1aa4, 0x4 bytes
-                std::int32_t spell_amp_drain_rate_ward; // 0x1aa8, 0x4 bytes
-                std::int32_t spell_amp_drain_max; // 0x1aac, 0x4 bytes
-                std::int32_t health_to_mana_rate; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                std::int32_t health_drain; // 0x1aa8, 0x4 bytes
+                std::int32_t ally_healing; // 0x1aac, 0x4 bytes
+                float health_drain_death_boost; // 0x1ab0, 0x4 bytes
+                float tick_rate; // 0x1ab4, 0x4 bytes
+                bool m_bDoRangeCheck; // 0x1ab8, 0x1 bytes
+                std::uint8_t pad_1ab9[0x3]; // 0x1ab9, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1abc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flElapsedTime; // 0x1ac0, 0x4 bytes
+                bool m_bPrimary; // 0x1ac4, 0x1 bytes
+                bool m_bShard; // 0x1ac5, 0x1 bytes
+                bool m_bFromWard; // 0x1ac6, 0x1 bytes
+                std::uint8_t pad_1ac7[0x1]; // 0x1ac7, 0x1 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hWard; // 0x1ac8, 0x4 bytes
+                float spell_amp_drain_duration; // 0x1acc, 0x4 bytes
+                std::int32_t max_spell_amp_drain_pct; // 0x1ad0, 0x4 bytes
+                std::int32_t spell_amp_drain_rate; // 0x1ad4, 0x4 bytes
+                std::int32_t spell_amp_drain_rate_ward; // 0x1ad8, 0x4 bytes
+                std::int32_t spell_amp_drain_max; // 0x1adc, 0x4 bytes
+                std::int32_t health_to_mana_rate; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Pugna_LifeDrain) == 0x1AB8, "CDOTA_Modifier_Pugna_LifeDrain size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Pugna_LifeDrain) == 0x1AE8, "CDOTA_Modifier_Pugna_LifeDrain size mismatch");
         }
     }
 }

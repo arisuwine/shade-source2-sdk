@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Roshan_Moving : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t move_pits_bonus_speed_per_interrupt; // 0x1a78, 0x4 bytes
-                std::int32_t move_pits_max_bonus_speed; // 0x1a7c, 0x4 bytes
-                std::int32_t move_pits_slow_resistance; // 0x1a80, 0x4 bytes
-                bool m_bReachedMidpoint; // 0x1a84, 0x1 bytes
-                std::uint8_t pad_1a85[0x3]; // 0x1a85, 0x3 bytes
-                std::int32_t m_nInterruptCount; // 0x1a88, 0x4 bytes
-                float m_flGrabAttemptTime; // 0x1a8c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastInterrupted; // 0x1a90, 0x4 bytes
-                std::uint8_t pad_1a94[0x4]; // 0x1a94, 0x4 bytes
+                std::int32_t move_pits_bonus_speed_per_interrupt; // 0x1aa8, 0x4 bytes
+                std::int32_t move_pits_max_bonus_speed; // 0x1aac, 0x4 bytes
+                std::int32_t move_pits_slow_resistance; // 0x1ab0, 0x4 bytes
+                bool m_bReachedMidpoint; // 0x1ab4, 0x1 bytes
+                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
+                std::int32_t m_nInterruptCount; // 0x1ab8, 0x4 bytes
+                float m_flGrabAttemptTime; // 0x1abc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastInterrupted; // 0x1ac0, 0x4 bytes
+                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Roshan_Moving) == 0x1A98, "CDOTA_Modifier_Roshan_Moving size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Roshan_Moving) == 0x1AC8, "CDOTA_Modifier_Roshan_Moving size mismatch");
         }
     }
 }

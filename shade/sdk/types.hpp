@@ -28,6 +28,7 @@ namespace shade {
         class Quaternion;
         template <typename T0>
         class CUtlLeanVector;
+        class CPulseVariant;
         class CEntityHandle;
         class CColorGradient;
         template <typename T0>
@@ -37,7 +38,6 @@ namespace shade {
         class Vector;
         template <typename T0>
         class CResourceNameTyped;
-        class CModelMaterialGroupName;
         class CGlobalSymbol;
         class ParticleParamID_t;
         template <typename T0>
@@ -45,7 +45,6 @@ namespace shade {
         template <int N0>
         class CTypedBitVec;
         class CMotionTransform;
-        class CSmartPropAttributeMaterialName;
         template <typename T0>
         class CStrongHandle;
         class matrix3x4a_t;
@@ -62,22 +61,20 @@ namespace shade {
         class CUtlStringTokenNoRegistration;
         template <typename T0>
         class CStrongHandleCopyable;
-        class CSmartPropAttributeMaterialGroup;
         class HPulseCellBase;
-        class CPulseValueFullType;
-        class CSmartPropAttributeColor;
         class CPanoramaImageName;
         class QuaternionStorage;
         class RnSphere_t;
         class BASEPTR;
         class CPiecewiseCurve;
-        class CSmartPropAttributeStateName;
+        class CPulseArgumentPack;
         class HSCRIPT;
         class RadianEuler;
         class CKV3MemberNameWithStorage;
         template <typename T0, int N0 = 0>
         class CUtlVectorFixedGrowable;
         class fltx4;
+        class CPulseObservableSwitchCases;
         class CUtlVectorSIMDPaddedVector;
         class CBufferString;
         template <typename T0, typename T1>
@@ -85,22 +82,21 @@ namespace shade {
         class DegreeEuler;
         template <typename T0, int N0 = 0>
         class CUtlLeanVectorFixedGrowable;
+        class CPulseType;
         template <typename T0>
         class CNetworkUtlVectorBase;
         template <typename T0>
         class C_NetworkUtlVectorBase;
+        class CPulseInputParamMap;
         template <typename T0>
         class CResourceArray;
-        class CSmartPropAttributeVector2D;
         class Vector4D;
         template <typename T0>
         class CAnimValue;
         class QAngle;
         class CPlayerSlot;
         class CGlobalSymbolCaseSensitive;
-        class CSmartPropAttributeBool;
         class CEntityIndex;
-        class CSmartPropAttributeSurfaceProperty;
         class RotationVector;
         class CAttachmentNameSymbolWithStorage;
         class CStrongHandleVoid;
@@ -124,7 +120,6 @@ namespace shade {
         class CUtlVector;
         class CResourceString;
         class CNetworkedQuantizedFloat;
-        class CSmartPropAttributeAngles;
         template <typename T0>
         class HPulseCell;
         class WorldGroupId_t;
@@ -136,13 +131,8 @@ namespace shade {
         class HYieldedCursor;
         class CTransform;
         class VectorWS;
-        class CSmartPropAttributeInt;
         template <int N0>
         class CBitVec;
-        class CSmartPropAttributeVector;
-        class CSmartPropVariableComparison;
-        class CSmartPropAttributeFloat;
-        class CSmartPropAttributeModelName;
         template <typename T0>
         class CSmartPtr;
         class panorama__CPanelPtr;
@@ -154,7 +144,6 @@ namespace shade {
         class CVDataLocalizedToken;
         class KeyValues;
         class CGameSoundEventName;
-        class CSmartPropAttributeVariableValue;
         class CUtlBinaryBlock;
 
     }
@@ -406,6 +395,7 @@ namespace shade {
             class CUnitOrders;
             class C_BaseEntity;
             class C_BaseModelEntity;
+            struct C_BaseModelEntity__BodyGroupRequest_t;
             class C_BasePlayerPawn;
             class C_BasePlayerWeapon;
             class C_BasePropDoor;
@@ -419,10 +409,10 @@ namespace shade {
             class C_DOTA_CombatLogQueryProgress;
             class C_DOTA_Item;
             class C_DOTA_NeutralSpawner;
+            class C_DOTA_TempTree;
             class C_DOTA_Unit_Courier;
             class C_DotaSubquestBase;
             class C_DynamicPropClientside;
-            struct C_EconEntity__AttachedModelData_t;
             struct C_EconEntity__AttachedParticleInfo_t;
             class C_EconItemAttribute;
             class C_EconItemView;
@@ -452,11 +442,16 @@ namespace shade {
             struct DOTATeleportInfo_t;
             struct DOTAThreatLevelInfo_t;
             struct DataTeamPlayer_t;
+            struct DebugSnapshotSourceLocation_t;
             struct DecalGroupOption_t;
             struct DestructiblePartDamageRequest_t;
             struct DotaAbilityRelationship_t;
             struct DotaModifierPathNode_t;
             struct EntityRenderAttribute_t;
+            struct EventActionPrerequisite_t;
+            struct EventActionScoreDefinition_t;
+            struct EventActionScoreDefinition_t__RelatedAction_t;
+            struct EventGrantDefinition_t;
             struct FantasyCraftOperationBucket_t;
             struct FantasyCraftOperation_t;
             struct FantasyCraftSetupData_t;
@@ -517,7 +512,6 @@ namespace shade {
             struct item_definition_index_t;
             struct ragdollelement_t;
             struct ragdollhierarchyjoint_t;
-            class sAbilityHistory;
             class sBounceInfo;
             class sControlGroupElem;
             class sGlaiveInfo;
@@ -551,6 +545,7 @@ namespace shade {
             struct ConstantInfo_t;
             struct FunctionInfo_t;
             struct FuseVariableIndex_t;
+            struct NoiseOscillatorDef_t;
             struct VariableInfo_t;
         }
 
@@ -659,12 +654,14 @@ namespace shade {
             struct FeNodeReverseOffset_t;
             struct FeNodeStrayBox_t;
             struct FeNodeWindBase_t;
+            struct FePrism_t;
             struct FeQuad_t;
             struct FeRigidColliderIndices_t;
             struct FeRodConstraint_t;
             struct FeSDFRigid_t;
             struct FeSimdAnimStrayRadius_t;
             struct FeSimdNodeBase_t;
+            struct FeSimdPrism_t;
             struct FeSimdQuad_t;
             struct FeSimdRodConstraintAnim_t;
             struct FeSimdRodConstraint_t;
@@ -682,6 +679,8 @@ namespace shade {
             struct FeWorldCollisionParams_t;
             struct RnCapsuleDesc_t;
             struct RnCapsule_t;
+            struct RnCompoundDesc_t;
+            struct RnCompoundTreeNode_t;
             struct RnFace_t;
             struct RnHalfEdge_t;
             struct RnHullDesc_t;
@@ -714,6 +713,8 @@ namespace shade {
             class CPulse_OutputConnection;
             class CPulse_PublicOutput;
             class CPulse_RegisterInfo;
+            class CPulse_TempVarBankDefinition;
+            class CPulse_TempVarInfo;
             class CPulse_Variable;
             struct OutflowWithRequirements_t;
             struct PGDInstruction_t;
@@ -745,9 +746,7 @@ namespace shade {
             class InfoForResourceTypeCPostProcessingResource;
             class InfoForResourceTypeCRenderMesh;
             class InfoForResourceTypeCSequenceGroupData;
-            class InfoForResourceTypeCSmartProp;
             class InfoForResourceTypeCTextureBase;
-            class InfoForResourceTypeCVMixListResource;
             class InfoForResourceTypeCVoiceContainerBase;
             class InfoForResourceTypeIMaterial2;
             class InfoForResourceTypeIParticleSnapshot;
@@ -757,11 +756,28 @@ namespace shade {
         }
 
         namespace scenesystem {
+            struct AggregateInstanceStreamOnDiskData_t;
+            struct AggregateLODSetup_t;
+            struct AggregateMeshInfo_t;
+            struct AggregateRTProxySceneObject_t;
+            struct AggregateSceneObject_t;
+            struct AggregateVertexAlbedoStreamOnDiskData_t;
+            struct AggregateVertexEmissiveStreamOnDiskData_t;
+            struct BakedLightingInfo_t__BakedShadowAssignment_t;
             class CSSDSEndFrameViewInfo;
             class CSSDSMsg_ViewTarget;
+            struct ClutterSceneObject_t;
+            struct ClutterTile_t;
+            struct ExtraVertexStreamOverride_t;
+            struct MaterialOverride_t;
+            struct RTProxyBLAS_t;
+            struct RTProxyInstanceInfo_t;
+            struct SceneObject_t;
+            struct WorldNodeOnDiskBufferData_t;
         }
 
         namespace server {
+            struct ActorClipEntry_t;
             struct ActorMapping_t;
             struct AnimGraph2SerializedPoseRecipeSlot_t;
             struct AutoRoomDoorwayPairs_t;
@@ -773,6 +789,7 @@ namespace shade {
             class CBaseEntity;
             class CBaseFilter;
             class CBaseModelEntity;
+            struct CBaseModelEntity__BodyGroupRequest_t;
             struct CBaseModelEntity__OnDamageLevelChangedArgs_t;
             class CBasePlayerController;
             class CBasePlayerPawn;
@@ -865,6 +882,7 @@ namespace shade {
             struct DynamicVolumeDef_t;
             struct EntityRenderAttribute_t;
             struct FowBlocker_t;
+            struct FuncMoverTransitionRecord_t;
             struct GameChatLogEntry_t;
             class INavObstacle;
             struct InGamePredictionData_t;
@@ -881,6 +899,7 @@ namespace shade {
             struct QuickBuySlot_t;
             struct RelationshipOverride_t;
             struct ResponseContext_t;
+            struct SceneLocatorSettings_t;
             struct SoundOpvarTraceResult_t;
             struct TempViewerInfo_t;
             struct TierNeutralInfo_t;
@@ -897,24 +916,13 @@ namespace shade {
             class sPendingTreeRemoval;
         }
 
-        namespace smartprops {
-            class CSmartPropChoice;
-            class CSmartPropChoiceOption;
-            class CSmartPropElement;
-            class CSmartPropMaterialReplacement;
-            class CSmartPropModifier;
-            class CSmartPropSelectionCriteria;
-            class CSmartPropVariable;
-            struct ColorChoice_t;
-            struct MaterialGroupChoice_t;
-        }
-
         namespace soundsystem {
             class CDSPMixgroupModifier;
             class CDspPresetModifierList;
             class CSndBeatPattern;
             class CSndBeatTrack;
             class CSosGroupActionSchema;
+            class CSubmix;
             struct SndBeatEventKeyedFloats_t;
             struct SndBeatEventKeyedMidiNotes_t;
             struct SndBeatEventKeyedSndEvts_t;
@@ -929,15 +937,13 @@ namespace shade {
             class CVMixBaseProcessorDesc;
             class CVMixCommand;
             class CVMixControlInput;
-            class CVMixControlInputArray;
             class CVMixControlMeter;
             class CVMixControlOutput;
-            class CVMixCurveHeader;
+            class CVMixGraphInput;
             class CVMixImpulseResponseInput;
-            class CVMixNameInput;
             class CVMixNameInputMeter;
             class CVMixSubmix;
-            class CVMixVsndInput;
+            struct VMixPointerFixupEntry_t;
         }
 
         namespace soundsystem_voicecontainers {
@@ -958,26 +964,10 @@ namespace shade {
         }
 
         namespace worldrenderer {
-            struct AggregateInstanceStreamOnDiskData_t;
-            struct AggregateLODSetup_t;
-            struct AggregateMeshInfo_t;
-            struct AggregateRTProxySceneObject_t;
-            struct AggregateSceneObject_t;
-            struct AggregateVertexAlbedoStreamOnDiskData_t;
-            struct AggregateVertexEmissiveStreamOnDiskData_t;
-            struct BakedLightingInfo_t__BakedShadowAssignment_t;
-            struct ClutterSceneObject_t;
-            struct ClutterTile_t;
             struct EntityIOConnectionData_t;
             struct EntityKeyValueData_t;
-            struct ExtraVertexStreamOverride_t;
             struct InfoForResourceTypeVMapResourceData_t;
-            struct MaterialOverride_t;
             struct NodeData_t;
-            struct RTProxyBLAS_t;
-            struct RTProxyInstanceInfo_t;
-            struct SceneObject_t;
-            struct WorldNodeOnDiskBufferData_t;
         }
     }
 }
@@ -1037,6 +1027,11 @@ namespace shade {
             std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
         };
 
+        class CPulseVariant {
+        public:
+            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
+        };
+
         class CEntityHandle {
         public:
             std::uint8_t pad_0000[0x4]; // 0x0000, 0x4 bytes
@@ -1074,11 +1069,6 @@ namespace shade {
             std::uint8_t pad_0000[0xe0]; // 0x0000, 0xe0 bytes
         };
 
-        class CModelMaterialGroupName {
-        public:
-            std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-        };
-
         class CGlobalSymbol {
         public:
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
@@ -1104,11 +1094,6 @@ namespace shade {
         class CMotionTransform {
         public:
             std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
-        };
-
-        class CSmartPropAttributeMaterialName {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
         };
 
         template <typename T0>
@@ -1187,24 +1172,9 @@ namespace shade {
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
         };
 
-        class CSmartPropAttributeMaterialGroup {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
-        };
-
         class HPulseCellBase {
         public:
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-        };
-
-        class CPulseValueFullType {
-        public:
-            std::uint8_t pad_0000[0x18]; // 0x0000, 0x18 bytes
-        };
-
-        class CSmartPropAttributeColor {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
         };
 
         class CPanoramaImageName {
@@ -1232,9 +1202,9 @@ namespace shade {
             std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
         };
 
-        class CSmartPropAttributeStateName {
+        class CPulseArgumentPack {
         public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
+            std::uint8_t pad_0000[0x38]; // 0x0000, 0x38 bytes
         };
 
         class HSCRIPT {
@@ -1271,12 +1241,6 @@ namespace shade {
         };
 
         template<>
-        class CUtlVectorFixedGrowable<CTransform, 128> {
-        public:
-            std::uint8_t pad_0000[0x1020]; // 0x0000, 0x1020 bytes
-        };
-
-        template<>
         class CUtlVectorFixedGrowable<CGlobalSymbol, 5> {
         public:
             std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
@@ -1295,6 +1259,12 @@ namespace shade {
         };
 
         template<>
+        class CUtlVectorFixedGrowable<shade::sdk::client::C_BaseModelEntity__BodyGroupRequest_t, 8> {
+        public:
+            std::uint8_t pad_0000[0xd8]; // 0x0000, 0xd8 bytes
+        };
+
+        template<>
         class CUtlVectorFixedGrowable<CHandle<shade::sdk::server::CBaseEntity>, 10> {
         public:
             std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
@@ -1306,9 +1276,20 @@ namespace shade {
             std::uint8_t pad_0000[0xb8]; // 0x0000, 0xb8 bytes
         };
 
+        template<>
+        class CUtlVectorFixedGrowable<shade::sdk::server::CBaseModelEntity__BodyGroupRequest_t, 8> {
+        public:
+            std::uint8_t pad_0000[0xd8]; // 0x0000, 0xd8 bytes
+        };
+
         class fltx4 {
         public:
             std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
+        };
+
+        class CPulseObservableSwitchCases {
+        public:
+            std::uint8_t pad_0000[0x78]; // 0x0000, 0x78 bytes
         };
 
         class CUtlVectorSIMDPaddedVector {
@@ -1345,6 +1326,12 @@ namespace shade {
         };
 
         template<>
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmParameterizedBlendNode__BlendRange_t, 5> {
+        public:
+            std::uint8_t pad_0000[0x48]; // 0x0000, 0x48 bytes
+        };
+
+        template<>
         class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__TransitionDefinition_t, 5> {
         public:
             std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
@@ -1354,12 +1341,6 @@ namespace shade {
         class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmLayerBlendNode__LayerDefinition_t, 3> {
         public:
             std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
-        };
-
-        template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmParameterizedBlendNode__BlendRange_t, 5> {
-        public:
-            std::uint8_t pad_0000[0x48]; // 0x0000, 0x48 bytes
         };
 
         template<>
@@ -1411,6 +1392,12 @@ namespace shade {
         };
 
         template<>
+        class CUtlLeanVectorFixedGrowable<shade::sdk::physicslib::RnMesh_t, 1> {
+        public:
+            std::uint8_t pad_0000[0xc8]; // 0x0000, 0xc8 bytes
+        };
+
+        template<>
         class CUtlLeanVectorFixedGrowable<std::uint8_t, 8> {
         public:
             std::uint8_t pad_0000[0x10]; // 0x0000, 0x10 bytes
@@ -1434,16 +1421,15 @@ namespace shade {
             std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
         };
 
-        template <typename T0>
-        class CNetworkUtlVectorBase {
+        class CPulseType {
         public:
             std::uint8_t pad_0000[0x18]; // 0x0000, 0x18 bytes
         };
 
-        template<>
-        class CNetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> {
+        template <typename T0>
+        class CNetworkUtlVectorBase {
         public:
-            std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
+            std::uint8_t pad_0000[0x18]; // 0x0000, 0x18 bytes
         };
 
         template<>
@@ -1453,7 +1439,7 @@ namespace shade {
         };
 
         template<>
-        class CNetworkUtlVectorBase<shade::sdk::client::SoundeventBoxHelperNetworked_t> {
+        class CNetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> {
         public:
             std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
         };
@@ -1464,8 +1450,19 @@ namespace shade {
             std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
         };
 
+        template<>
+        class CNetworkUtlVectorBase<shade::sdk::client::SoundeventBoxHelperNetworked_t> {
+        public:
+            std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
+        };
+
         template <typename T0>
         class C_NetworkUtlVectorBase {
+        public:
+            std::uint8_t pad_0000[0x18]; // 0x0000, 0x18 bytes
+        };
+
+        class CPulseInputParamMap {
         public:
             std::uint8_t pad_0000[0x18]; // 0x0000, 0x18 bytes
         };
@@ -1474,11 +1471,6 @@ namespace shade {
         class CResourceArray {
         public:
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-        };
-
-        class CSmartPropAttributeVector2D {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
         };
 
         class Vector4D {
@@ -1507,19 +1499,9 @@ namespace shade {
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
         };
 
-        class CSmartPropAttributeBool {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
-        };
-
         class CEntityIndex {
         public:
             std::uint8_t pad_0000[0x4]; // 0x0000, 0x4 bytes
-        };
-
-        class CSmartPropAttributeSurfaceProperty {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
         };
 
         class RotationVector {
@@ -1651,15 +1633,15 @@ namespace shade {
         };
 
         template<>
-        class C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::C_SpeechBubbleInfo> {
-        public:
-            std::uint8_t pad_0000[0x578]; // 0x0000, 0x578 bytes
-        };
-
-        template<>
         class C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_PlayerChallengeInfo> {
         public:
             std::uint8_t pad_0000[0xad8]; // 0x0000, 0xad8 bytes
+        };
+
+        template<>
+        class C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::C_SpeechBubbleInfo> {
+        public:
+            std::uint8_t pad_0000[0x578]; // 0x0000, 0x578 bytes
         };
 
         class CUtlSymbolLarge {
@@ -1715,11 +1697,6 @@ namespace shade {
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
         };
 
-        class CSmartPropAttributeAngles {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
-        };
-
         template <typename T0>
         class HPulseCell {
         public:
@@ -1734,7 +1711,7 @@ namespace shade {
         template <typename T0>
         class CPulseObservableExpression {
         public:
-            std::uint8_t pad_0000[0x78]; // 0x0000, 0x78 bytes
+            std::uint8_t pad_0000[0x90]; // 0x0000, 0x90 bytes
         };
 
         class CUtlStringToken {
@@ -1767,35 +1744,10 @@ namespace shade {
             std::uint8_t pad_0000[0xc]; // 0x0000, 0xc bytes
         };
 
-        class CSmartPropAttributeInt {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
-        };
-
         template <int N0>
         class CBitVec {
         public:
             std::uint8_t pad_0000[0x4]; // 0x0000, 0x4 bytes
-        };
-
-        class CSmartPropAttributeVector {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
-        };
-
-        class CSmartPropVariableComparison {
-        public:
-            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
-        };
-
-        class CSmartPropAttributeFloat {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
-        };
-
-        class CSmartPropAttributeModelName {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
         };
 
         template <typename T0>
@@ -1843,11 +1795,6 @@ namespace shade {
         class CGameSoundEventName {
         public:
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-        };
-
-        class CSmartPropAttributeVariableValue {
-        public:
-            std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
         };
 
         class CUtlBinaryBlock {

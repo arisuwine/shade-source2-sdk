@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_IntraParticleForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                float m_flAttractionMinDistance; // 0x01e8, 0x4 bytes
-                float m_flAttractionMaxDistance; // 0x01ec, 0x4 bytes
-                float m_flAttractionMaxStrength; // 0x01f0, 0x4 bytes
-                float m_flRepulsionMinDistance; // 0x01f4, 0x4 bytes
-                float m_flRepulsionMaxDistance; // 0x01f8, 0x4 bytes
-                float m_flRepulsionMaxStrength; // 0x01fc, 0x4 bytes
-                bool m_bUseAABB; // 0x0200, 0x1 bytes
-                std::uint8_t pad_0201[0x7]; // 0x0201, 0x7 bytes
+                float m_flAttractionMinDistance; // 0x01f0, 0x4 bytes
+                float m_flAttractionMaxDistance; // 0x01f4, 0x4 bytes
+                float m_flAttractionMaxStrength; // 0x01f8, 0x4 bytes
+                float m_flRepulsionMinDistance; // 0x01fc, 0x4 bytes
+                float m_flRepulsionMaxDistance; // 0x0200, 0x4 bytes
+                float m_flRepulsionMaxStrength; // 0x0204, 0x4 bytes
+                bool m_bUseAABB; // 0x0208, 0x1 bytes
+                std::uint8_t pad_0209[0x7]; // 0x0209, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_IntraParticleForce) == 0x208, "C_OP_IntraParticleForce size mismatch");
+            static_assert(sizeof(C_OP_IntraParticleForce) == 0x210, "C_OP_IntraParticleForce size mismatch");
         }
     }
 }

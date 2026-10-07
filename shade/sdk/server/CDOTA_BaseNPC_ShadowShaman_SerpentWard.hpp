@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18b8
+             * Size: 0x19a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_ShadowShaman_SerpentWard : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                QAngle m_angle; // 0x18a8, 0xc bytes
-                std::int32_t m_iPoseParameterAim; // 0x18b4, 0x4 bytes
+                QAngle m_angle; // 0x1998, 0xc bytes
+                std::int32_t m_iPoseParameterAim; // 0x19a4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_ShadowShaman_SerpentWard) == 0x18B8, "CDOTA_BaseNPC_ShadowShaman_SerpentWard size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_ShadowShaman_SerpentWard) == 0x19A8, "CDOTA_BaseNPC_ShadowShaman_SerpentWard size mismatch");
         }
     }
 }

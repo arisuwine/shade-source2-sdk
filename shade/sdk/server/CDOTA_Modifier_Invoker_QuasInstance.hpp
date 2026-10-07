@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +29,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Invoker_QuasInstance : public shade::sdk::server::CDOTA_Modifier_Invoker_Instance {
             public:
-                float hp_regen_per_instance; // 0x1a78, 0x4 bytes
-                std::uint8_t pad_1a7c[0x4]; // 0x1a7c, 0x4 bytes
-                char *m_pSlotName; // 0x1a80, 0x8 bytes
+                float hp_regen_per_instance; // 0x1aa8, 0x4 bytes
+                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                char *m_pSlotName; // 0x1ab0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Invoker_QuasInstance) == 0x1A88, "CDOTA_Modifier_Invoker_QuasInstance size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Invoker_QuasInstance) == 0x1AB8, "CDOTA_Modifier_Invoker_QuasInstance size mismatch");
         }
     }
 }

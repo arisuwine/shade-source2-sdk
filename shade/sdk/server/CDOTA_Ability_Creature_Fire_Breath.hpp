@@ -15,6 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/ParticleIndex_t.hpp"
 #include "shade/sdk/server/CDOTABaseAbility.hpp"
 #include "shade/sdk/server/CountdownTimer.hpp"
 
@@ -22,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5c8
+             * Size: 0x5d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,21 +34,21 @@ namespace shade {
             public:
                 std::int32_t speed; // 0x0580, 0x4 bytes
                 std::int32_t projectile_count; // 0x0584, 0x4 bytes
-                float rotation_angle; // 0x0588, 0x4 bytes
-                float damage; // 0x058c, 0x4 bytes
-                float radius; // 0x0590, 0x4 bytes
-                std::uint8_t pad_0594[0x4]; // 0x0594, 0x4 bytes
+                std::int32_t randomize; // 0x0588, 0x4 bytes
+                float rotation_angle; // 0x058c, 0x4 bytes
+                float damage; // 0x0590, 0x4 bytes
+                float radius; // 0x0594, 0x4 bytes
                 shade::sdk::server::CountdownTimer ctTimer; // 0x0598, 0x18 bytes
                 Vector m_vecStartRot; // 0x05b0, 0xc bytes
                 Vector m_vecEndRot; // 0x05bc, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleFXIndex; // 0x05c8, 0x4 bytes
+                std::uint8_t pad_05cc[0x4]; // 0x05cc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Creature_Fire_Breath) == 0x5C8, "CDOTA_Ability_Creature_Fire_Breath size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Creature_Fire_Breath) == 0x5D0, "CDOTA_Ability_Creature_Fire_Breath size mismatch");
         }
     }
 }

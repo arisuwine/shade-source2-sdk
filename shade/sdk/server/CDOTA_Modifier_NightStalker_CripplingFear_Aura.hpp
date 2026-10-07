@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_NightStalker_CripplingFear_Aura : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1a78, 0x4 bytes
-                std::int32_t death_refresh; // 0x1a7c, 0x4 bytes
-                float mana_pct_cost; // 0x1a80, 0x4 bytes
-                float mana_interval; // 0x1a84, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a88, 0x4 bytes
-                float base_duration; // 0x1a8c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1a90, 0x4 bytes
-                std::uint8_t pad_1a94[0x14]; // 0x1a94, 0x14 bytes
+                float radius; // 0x1aa8, 0x4 bytes
+                std::int32_t death_refresh; // 0x1aac, 0x4 bytes
+                float mana_pct_cost; // 0x1ab0, 0x4 bytes
+                float mana_interval; // 0x1ab4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ab8, 0x4 bytes
+                float base_duration; // 0x1abc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1ac0, 0x4 bytes
+                std::uint8_t pad_1ac4[0x14]; // 0x1ac4, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_NightStalker_CripplingFear_Aura) == 0x1AA8, "CDOTA_Modifier_NightStalker_CripplingFear_Aura size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_NightStalker_CripplingFear_Aura) == 0x1AD8, "CDOTA_Modifier_NightStalker_CripplingFear_Aura size mismatch");
         }
     }
 }

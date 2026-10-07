@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x360
+             * Size: 0x370
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointPositionToRandomActiveCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCP1; // 0x01e0, 0x4 bytes
-                std::int32_t m_nHeadLocationMin; // 0x01e4, 0x4 bytes
-                std::int32_t m_nHeadLocationMax; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flResetRate; // 0x01f0, 0x170 bytes
+                std::int32_t m_nCP1; // 0x01e8, 0x4 bytes
+                std::int32_t m_nHeadLocationMin; // 0x01ec, 0x4 bytes
+                std::int32_t m_nHeadLocationMax; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flResetRate; // 0x01f8, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointPositionToRandomActiveCP) == 0x360, "C_OP_SetControlPointPositionToRandomActiveCP size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointPositionToRandomActiveCP) == 0x370, "C_OP_SetControlPointPositionToRandomActiveCP size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_TimeVaryingForce : public shade::sdk::particles::CParticleFunctionForce {
             public:
-                float m_flStartLerpTime; // 0x01e8, 0x4 bytes
-                Vector m_StartingForce; // 0x01ec, 0xc bytes
-                float m_flEndLerpTime; // 0x01f8, 0x4 bytes
-                Vector m_EndingForce; // 0x01fc, 0xc bytes
+                float m_flStartLerpTime; // 0x01f0, 0x4 bytes
+                Vector m_StartingForce; // 0x01f4, 0xc bytes
+                float m_flEndLerpTime; // 0x0200, 0x4 bytes
+                Vector m_EndingForce; // 0x0204, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_TimeVaryingForce) == 0x208, "C_OP_TimeVaryingForce size mismatch");
+            static_assert(sizeof(C_OP_TimeVaryingForce) == 0x210, "C_OP_TimeVaryingForce size mismatch");
         }
     }
 }

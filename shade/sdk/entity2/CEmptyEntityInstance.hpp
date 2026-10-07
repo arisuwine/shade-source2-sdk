@@ -32,7 +32,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            // No unique data map fields
+            /* Data Map Fields
+             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
+             */
 
             static_assert(sizeof(CEmptyEntityInstance) == 0x1, "CEmptyEntityInstance size mismatch");
         }

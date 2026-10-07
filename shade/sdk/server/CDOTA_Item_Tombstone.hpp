@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x678
+             * Size: 0x680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Tombstone : public shade::sdk::server::CDOTA_Item {
             public:
-                float m_flTimer; // 0x0658, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_Item_Tombstone> m_hParent; // 0x065c, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_Item_Tombstone> m_hNextChild; // 0x0660, 0x4 bytes
-                VectorWS m_vContainerPosition; // 0x0664, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0670, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex2; // 0x0674, 0x4 bytes
+                float m_flTimer; // 0x0660, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_Item_Tombstone> m_hParent; // 0x0664, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_Item_Tombstone> m_hNextChild; // 0x0668, 0x4 bytes
+                VectorWS m_vContainerPosition; // 0x066c, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0678, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex2; // 0x067c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Tombstone) == 0x678, "CDOTA_Item_Tombstone size mismatch");
+            static_assert(sizeof(CDOTA_Item_Tombstone) == 0x680, "CDOTA_Item_Tombstone size mismatch");
         }
     }
 }

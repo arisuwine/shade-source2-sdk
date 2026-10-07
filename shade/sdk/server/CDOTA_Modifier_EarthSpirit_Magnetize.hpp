@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,27 +37,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_EarthSpirit_Magnetize : public shade::sdk::client::CDOTA_Buff {
             public:
-                float rock_search_radius; // 0x1a78, 0x4 bytes
-                float damage_per_second; // 0x1a7c, 0x4 bytes
-                float damage_interval; // 0x1a80, 0x4 bytes
-                float rock_explosion_delay; // 0x1a84, 0x4 bytes
-                float damage_duration; // 0x1a88, 0x4 bytes
-                float cast_radius; // 0x1a8c, 0x4 bytes
-                float rock_explosion_radius; // 0x1a90, 0x4 bytes
-                bool magnetized_rocks_buff_self; // 0x1a94, 0x1 bytes
-                std::uint8_t pad_1a95[0x3]; // 0x1a95, 0x3 bytes
-                std::int32_t magnetized_rocks_buff_self_duration; // 0x1a98, 0x4 bytes
-                std::int32_t magnetize_self; // 0x1a9c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hExplodedRocks; // 0x1aa0, 0x18 bytes
-                float duration; // 0x1ab8, 0x4 bytes
-                bool m_bShowOverhead; // 0x1abc, 0x1 bytes
-                std::uint8_t pad_1abd[0x3]; // 0x1abd, 0x3 bytes
+                float rock_search_radius; // 0x1aa8, 0x4 bytes
+                float damage_per_second; // 0x1aac, 0x4 bytes
+                float damage_interval; // 0x1ab0, 0x4 bytes
+                float rock_explosion_delay; // 0x1ab4, 0x4 bytes
+                float damage_duration; // 0x1ab8, 0x4 bytes
+                float cast_radius; // 0x1abc, 0x4 bytes
+                float rock_explosion_radius; // 0x1ac0, 0x4 bytes
+                bool magnetized_rocks_buff_self; // 0x1ac4, 0x1 bytes
+                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
+                std::int32_t magnetized_rocks_buff_self_duration; // 0x1ac8, 0x4 bytes
+                std::int32_t magnetize_self; // 0x1acc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hExplodedRocks; // 0x1ad0, 0x18 bytes
+                float duration; // 0x1ae8, 0x4 bytes
+                bool m_bShowOverhead; // 0x1aec, 0x1 bytes
+                std::uint8_t pad_1aed[0x3]; // 0x1aed, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_EarthSpirit_Magnetize) == 0x1AC0, "CDOTA_Modifier_EarthSpirit_Magnetize size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_EarthSpirit_Magnetize) == 0x1AF0, "CDOTA_Modifier_EarthSpirit_Magnetize size mismatch");
         }
     }
 }

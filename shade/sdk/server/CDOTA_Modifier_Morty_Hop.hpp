@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,25 +29,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Morty_Hop : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vStartPosition; // 0x1a78, 0xc bytes
-                VectorWS m_vTargetPosition; // 0x1a84, 0xc bytes
-                float m_flCurrentTimeHoriz; // 0x1a90, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1a94, 0x4 bytes
-                float m_flZCoefficientA; // 0x1a98, 0x4 bytes
-                float m_flZCoefficientB; // 0x1a9c, 0x4 bytes
-                bool m_bInterrupted; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x3]; // 0x1aa1, 0x3 bytes
-                float duration; // 0x1aa4, 0x4 bytes
-                std::int32_t height; // 0x1aa8, 0x4 bytes
-                std::int32_t damage; // 0x1aac, 0x4 bytes
-                std::int32_t damage_radius; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1aa8, 0xc bytes
+                VectorWS m_vTargetPosition; // 0x1ab4, 0xc bytes
+                float m_flCurrentTimeHoriz; // 0x1ac0, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1ac4, 0x4 bytes
+                float m_flZCoefficientA; // 0x1ac8, 0x4 bytes
+                float m_flZCoefficientB; // 0x1acc, 0x4 bytes
+                bool m_bInterrupted; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
+                float duration; // 0x1ad4, 0x4 bytes
+                std::int32_t height; // 0x1ad8, 0x4 bytes
+                std::int32_t damage; // 0x1adc, 0x4 bytes
+                std::int32_t damage_radius; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Morty_Hop) == 0x1AB8, "CDOTA_Modifier_Morty_Hop size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Morty_Hop) == 0x1AE8, "CDOTA_Modifier_Morty_Hop size mismatch");
         }
     }
 }

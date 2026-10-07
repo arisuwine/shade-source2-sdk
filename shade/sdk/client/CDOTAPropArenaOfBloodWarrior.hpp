@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd20
+             * Size: 0xe90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,8 +30,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTAPropArenaOfBloodWarrior : public shade::sdk::client::C_DynamicProp {
             public:
-                bool m_bDying; // 0x0d10, 0x1 bytes
-                std::uint8_t pad_0d11[0xf]; // 0x0d11, 0xf bytes
+                bool m_bDying; // 0x0e80, 0x1 bytes
+                std::uint8_t pad_0e81[0xf]; // 0x0e81, 0xf bytes
             };
             #pragma pack(pop)
 
@@ -39,7 +39,7 @@ namespace shade {
              * std::uint8_t m_iTeamNum; // Offset: 0x3e7, Size: 0x1, Size In Bytes: 0x1
              */
 
-            static_assert(sizeof(CDOTAPropArenaOfBloodWarrior) == 0xD20, "CDOTAPropArenaOfBloodWarrior size mismatch");
+            static_assert(sizeof(CDOTAPropArenaOfBloodWarrior) == 0xE90, "CDOTAPropArenaOfBloodWarrior size mismatch");
         }
     }
 }

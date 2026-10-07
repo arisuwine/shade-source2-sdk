@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9f0
+             * Size: 0xb60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,70 +33,50 @@ namespace shade {
             #pragma pack(push, 1)
             class CDynamicProp : public shade::sdk::server::CBreakableProp {
             public:
-                bool m_bRandomAnimator; // 0x0930, 0x1 bytes
-                std::uint8_t pad_0931[0x3]; // 0x0931, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flNextRandAnim; // 0x0934, 0x4 bytes
-                float m_flMinRandAnimDuration; // 0x0938, 0x4 bytes
-                float m_flMaxRandAnimDuration; // 0x093c, 0x4 bytes
-                std::uint8_t pad_0940[0x8]; // 0x0940, 0x8 bytes
-                bool m_bCreateNavObstacle; // 0x0948, 0x1 bytes
-                bool m_bNavObstacleUpdatesOverridden; // 0x0949, 0x1 bytes
-                bool m_bUseHitboxesForRenderBox; // 0x094a, 0x1 bytes
-                bool m_bUseAnimGraph; // 0x094b, 0x1 bytes
-                std::uint8_t pad_094c[0x4]; // 0x094c, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimBegun; // 0x0950, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimOver; // 0x0968, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimLoopCycleOver; // 0x0980, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedStart; // 0x0998, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedEnd; // 0x09b0, 0x18 bytes
-                CUtlSymbolLarge m_iszIdleAnim; // 0x09c8, 0x8 bytes
-                shade::sdk::client::AnimLoopMode_t m_nIdleAnimLoopMode; // 0x09d0, 0x4 bytes
-                bool m_bRandomizeCycle; // 0x09d4, 0x1 bytes
-                bool m_bStartDisabled; // 0x09d5, 0x1 bytes
-                bool m_bFiredStartEndOutput; // 0x09d6, 0x1 bytes
-                bool m_bForceNpcExclude; // 0x09d7, 0x1 bytes
-                bool m_bCreateMovableSurfaceGraph; // 0x09d8, 0x1 bytes
-                bool m_bCreateNonSolid; // 0x09d9, 0x1 bytes
-                bool m_bIsOverrideProp; // 0x09da, 0x1 bytes
-                std::uint8_t pad_09db[0x1]; // 0x09db, 0x1 bytes
-                std::int32_t m_iInitialGlowState; // 0x09dc, 0x4 bytes
-                std::int32_t m_nGlowRange; // 0x09e0, 0x4 bytes
-                std::int32_t m_nGlowRangeMin; // 0x09e4, 0x4 bytes
-                Color m_glowColor; // 0x09e8, 0x4 bytes
-                std::int32_t m_nGlowTeam; // 0x09ec, 0x4 bytes
+                bool m_bRandomAnimator; // 0x0a20, 0x1 bytes
+                std::uint8_t pad_0a21[0x3]; // 0x0a21, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRandAnim; // 0x0a24, 0x4 bytes
+                float m_flMinRandAnimDuration; // 0x0a28, 0x4 bytes
+                float m_flMaxRandAnimDuration; // 0x0a2c, 0x4 bytes
+                std::uint8_t pad_0a30[0x8]; // 0x0a30, 0x8 bytes
+                bool m_bCreateNavObstacle; // 0x0a38, 0x1 bytes
+                bool m_bNavObstacleUpdatesOverridden; // 0x0a39, 0x1 bytes
+                bool m_bUseHitboxesForRenderBox; // 0x0a3a, 0x1 bytes
+                bool m_bUseAnimGraph; // 0x0a3b, 0x1 bytes
+                std::uint8_t pad_0a3c[0x4]; // 0x0a3c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimBegun; // 0x0a40, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimOver; // 0x0a58, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimLoopCycleOver; // 0x0a70, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedStart; // 0x0a88, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedEnd; // 0x0aa0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnScriptFireEvent[0x5]; // 0x0ab8, 0x78 bytes
+                CUtlSymbolLarge m_iszIdleAnim; // 0x0b30, 0x8 bytes
+                shade::sdk::client::AnimLoopMode_t m_nIdleAnimLoopMode; // 0x0b38, 0x4 bytes
+                bool m_bRandomizeCycle; // 0x0b3c, 0x1 bytes
+                bool m_bStartDisabled; // 0x0b3d, 0x1 bytes
+                bool m_bFiredStartEndOutput; // 0x0b3e, 0x1 bytes
+                bool m_bForceNpcExclude; // 0x0b3f, 0x1 bytes
+                bool m_bCreateMovableSurfaceGraph; // 0x0b40, 0x1 bytes
+                bool m_bCreateNonSolid; // 0x0b41, 0x1 bytes
+                bool m_bIsOverrideProp; // 0x0b42, 0x1 bytes
+                std::uint8_t pad_0b43[0x1]; // 0x0b43, 0x1 bytes
+                std::int32_t m_iInitialGlowState; // 0x0b44, 0x4 bytes
+                std::int32_t m_nGlowRange; // 0x0b48, 0x4 bytes
+                std::int32_t m_nGlowRangeMin; // 0x0b4c, 0x4 bytes
+                Color m_glowColor; // 0x0b50, 0x4 bytes
+                std::int32_t m_nGlowTeam; // 0x0b54, 0x4 bytes
+                std::uint8_t pad_0b58[0x8]; // 0x0b58, 0x8 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * CUtlSymbolLarge StartingAnim; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CUtlSymbolLarge StartingAnimationLoopMode; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAnimationLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAnimationNoResetLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetIdleAnimationLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAnimationNotLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAnimationNoResetNotLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetIdleAnimationNotLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAnimation; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetAnimationNoReset; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetIdleAnimation; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetDefaultAnimationLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputSetDefaultAnimationNotLooping; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOn; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputTurnOff; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisable; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputEnableCollision; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputDisableCollision; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * float InputSetPlaybackRate; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStartGlowing; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputStopGlowing; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * Vector InputSetGlowOverride; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t InputSetGlowRange; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t health; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool HoldAnimation; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDynamicProp) == 0x9F0, "CDynamicProp size mismatch");
+            static_assert(sizeof(CDynamicProp) == 0xB60, "CDynamicProp size mismatch");
         }
     }
 }

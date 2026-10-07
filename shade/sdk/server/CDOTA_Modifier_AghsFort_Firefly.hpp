@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,28 +31,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_Firefly : public shade::sdk::client::CDOTA_Buff {
             public:
-                float pool_duration; // 0x1a78, 0x4 bytes
-                std::int32_t radius; // 0x1a7c, 0x4 bytes
-                std::int32_t m_ifirefly_Active; // 0x1a80, 0x4 bytes
-                std::int32_t tree_radius; // 0x1a84, 0x4 bytes
-                std::int32_t damage_pct_per_second; // 0x1a88, 0x4 bytes
-                std::int32_t movement_speed; // 0x1a8c, 0x4 bytes
-                float trail_placement_duration; // 0x1a90, 0x4 bytes
-                float burn_linger_duration; // 0x1a94, 0x4 bytes
-                bool m_bActive; // 0x1a98, 0x1 bytes
-                std::uint8_t pad_1a99[0x3]; // 0x1a99, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a9c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1aa0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1aa4, 0x4 bytes
-                VectorWS m_vLastFirePoolLoc; // 0x1aa8, 0xc bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlVector<VectorWS> m_vFirePoolLocations; // 0x1ab8, 0x18 bytes
+                float pool_duration; // 0x1aa8, 0x4 bytes
+                std::int32_t radius; // 0x1aac, 0x4 bytes
+                std::int32_t m_ifirefly_Active; // 0x1ab0, 0x4 bytes
+                std::int32_t tree_radius; // 0x1ab4, 0x4 bytes
+                std::int32_t damage_pct_per_second; // 0x1ab8, 0x4 bytes
+                std::int32_t movement_speed; // 0x1abc, 0x4 bytes
+                float trail_placement_duration; // 0x1ac0, 0x4 bytes
+                float burn_linger_duration; // 0x1ac4, 0x4 bytes
+                bool m_bActive; // 0x1ac8, 0x1 bytes
+                std::uint8_t pad_1ac9[0x3]; // 0x1ac9, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1acc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1ad0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1ad4, 0x4 bytes
+                VectorWS m_vLastFirePoolLoc; // 0x1ad8, 0xc bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                CUtlVector<VectorWS> m_vFirePoolLocations; // 0x1ae8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_Firefly) == 0x1AD0, "CDOTA_Modifier_AghsFort_Firefly size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_Firefly) == 0x1B00, "CDOTA_Modifier_AghsFort_Firefly size mismatch");
         }
     }
 }

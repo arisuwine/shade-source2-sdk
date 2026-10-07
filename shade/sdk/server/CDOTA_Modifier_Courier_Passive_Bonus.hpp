@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,13 +37,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Courier_Passive_Bonus : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTriggers; // 0x1a78, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTriggers; // 0x1aa8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Courier_Passive_Bonus) == 0x1A90, "CDOTA_Modifier_Courier_Passive_Bonus size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Courier_Passive_Bonus) == 0x1AC0, "CDOTA_Modifier_Courier_Passive_Bonus size mismatch");
         }
     }
 }

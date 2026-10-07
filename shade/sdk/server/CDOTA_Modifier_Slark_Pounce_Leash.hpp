@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Slark_Pounce_Leash : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t leash_radius; // 0x1a78, 0x4 bytes
-                VectorWS vLeashLocation; // 0x1a7c, 0xc bytes
-                bool m_bEscaped; // 0x1a88, 0x1 bytes
-                bool m_bFishBait; // 0x1a89, 0x1 bytes
-                std::uint8_t pad_1a8a[0x1e]; // 0x1a8a, 0x1e bytes
+                std::int32_t leash_radius; // 0x1aa8, 0x4 bytes
+                VectorWS vLeashLocation; // 0x1aac, 0xc bytes
+                bool m_bEscaped; // 0x1ab8, 0x1 bytes
+                bool m_bFishBait; // 0x1ab9, 0x1 bytes
+                std::uint8_t pad_1aba[0x1e]; // 0x1aba, 0x1e bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Slark_Pounce_Leash) == 0x1AA8, "CDOTA_Modifier_Slark_Pounce_Leash size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Slark_Pounce_Leash) == 0x1AD8, "CDOTA_Modifier_Slark_Pounce_Leash size mismatch");
         }
     }
 }

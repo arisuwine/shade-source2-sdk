@@ -108,27 +108,27 @@ namespace shade {
                 bool m_bIsDestructible; // 0x024a, 0x1 bytes
                 bool m_bHasGlowOutline; // 0x024b, 0x1 bytes
                 bool m_bOverrideGlowColor; // 0x024c, 0x1 bytes
-                Color m_cOverriddenGlowColor; // 0x024d, 0x4 bytes
-                bool m_bShowHealthBar; // 0x0251, 0x1 bytes
-                bool m_bCenterRooted; // 0x0252, 0x1 bytes
-                bool m_bRotates; // 0x0253, 0x1 bytes
-                bool m_bRandomizeSinTurnTimerOnSpawn; // 0x0254, 0x1 bytes
-                bool m_bInvulnerable; // 0x0255, 0x1 bytes
-                bool m_bPlayerFriendly; // 0x0256, 0x1 bytes
-                std::uint8_t pad_0257[0x1]; // 0x0257, 0x1 bytes
-                std::int32_t m_nSplitOnDeathNumUnits; // 0x0258, 0x4 bytes
-                shade::sdk::client::SurvivorsEnemyID_t m_unSplitOnDeathEnemyID; // 0x025c, 0x4 bytes
-                float m_flSplitOnDeathKnockbackDistance; // 0x0260, 0x4 bytes
-                shade::sdk::client::ESurvivorsEnemyMovementBehavior m_eMovementBehavior; // 0x0264, 0x4 bytes
-                shade::sdk::client::ESurvivorsEnemyMovementCapability m_eMovementCapability; // 0x0268, 0x4 bytes
-                shade::sdk::client::GameActivity_t m_activityIdle; // 0x026c, 0x4 bytes
-                shade::sdk::client::GameActivity_t m_activityMove; // 0x0270, 0x4 bytes
-                shade::sdk::client::GameActivity_t m_activityDie; // 0x0274, 0x4 bytes
-                shade::sdk::client::GameActivity_t m_activityDisabled; // 0x0278, 0x4 bytes
-                bool m_bPlayDeathSound; // 0x027c, 0x1 bytes
-                std::uint8_t pad_027d[0x3]; // 0x027d, 0x3 bytes
-                shade::sdk::client::ESurvivorsEnemySeparationLayer m_eSeparationLayer; // 0x0280, 0x4 bytes
-                std::uint8_t pad_0284[0x4]; // 0x0284, 0x4 bytes
+                std::uint8_t pad_024d[0x3]; // 0x024d, 0x3 bytes
+                Color m_cOverriddenGlowColor; // 0x0250, 0x4 bytes
+                bool m_bShowHealthBar; // 0x0254, 0x1 bytes
+                bool m_bCenterRooted; // 0x0255, 0x1 bytes
+                bool m_bRotates; // 0x0256, 0x1 bytes
+                bool m_bRandomizeSinTurnTimerOnSpawn; // 0x0257, 0x1 bytes
+                bool m_bInvulnerable; // 0x0258, 0x1 bytes
+                bool m_bPlayerFriendly; // 0x0259, 0x1 bytes
+                std::uint8_t pad_025a[0x2]; // 0x025a, 0x2 bytes
+                std::int32_t m_nSplitOnDeathNumUnits; // 0x025c, 0x4 bytes
+                shade::sdk::client::SurvivorsEnemyID_t m_unSplitOnDeathEnemyID; // 0x0260, 0x4 bytes
+                float m_flSplitOnDeathKnockbackDistance; // 0x0264, 0x4 bytes
+                shade::sdk::client::ESurvivorsEnemyMovementBehavior m_eMovementBehavior; // 0x0268, 0x4 bytes
+                shade::sdk::client::ESurvivorsEnemyMovementCapability m_eMovementCapability; // 0x026c, 0x4 bytes
+                shade::sdk::client::GameActivity_t m_activityIdle; // 0x0270, 0x4 bytes
+                shade::sdk::client::GameActivity_t m_activityMove; // 0x0274, 0x4 bytes
+                shade::sdk::client::GameActivity_t m_activityDie; // 0x0278, 0x4 bytes
+                shade::sdk::client::GameActivity_t m_activityDisabled; // 0x027c, 0x4 bytes
+                bool m_bPlayDeathSound; // 0x0280, 0x1 bytes
+                std::uint8_t pad_0281[0x3]; // 0x0281, 0x3 bytes
+                shade::sdk::client::ESurvivorsEnemySeparationLayer m_eSeparationLayer; // 0x0284, 0x4 bytes
             };
             #pragma pack(pop)
 

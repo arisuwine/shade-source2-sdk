@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Pudge_Dismember_Pull : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vDestination; // 0x1a78, 0xc bytes
-                std::int32_t pull_units_per_second; // 0x1a84, 0x4 bytes
-                float pull_distance_limit; // 0x1a88, 0x4 bytes
-                std::uint8_t pad_1a8c[0x14]; // 0x1a8c, 0x14 bytes
-                float animation_rate; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
+                VectorWS m_vDestination; // 0x1aa8, 0xc bytes
+                std::int32_t pull_units_per_second; // 0x1ab4, 0x4 bytes
+                float pull_distance_limit; // 0x1ab8, 0x4 bytes
+                std::uint8_t pad_1abc[0x14]; // 0x1abc, 0x14 bytes
+                float animation_rate; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Pudge_Dismember_Pull) == 0x1AA8, "CDOTA_Modifier_Pudge_Dismember_Pull size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Pudge_Dismember_Pull) == 0x1AD8, "CDOTA_Modifier_Pudge_Dismember_Pull size mismatch");
         }
     }
 }

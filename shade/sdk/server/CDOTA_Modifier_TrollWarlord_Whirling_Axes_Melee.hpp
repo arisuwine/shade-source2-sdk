@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,30 +39,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_TrollWarlord_Whirling_Axes_Melee : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage; // 0x1a78, 0x4 bytes
-                float hit_radius; // 0x1a7c, 0x4 bytes
-                float axe_movement_speed; // 0x1a80, 0x4 bytes
-                float whirl_duration; // 0x1a84, 0x4 bytes
-                float max_range; // 0x1a88, 0x4 bytes
-                float blind_duration; // 0x1a8c, 0x4 bytes
-                float m_flRotation; // 0x1a90, 0x4 bytes
-                float m_flAxeRadius; // 0x1a94, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flWhirlDieTime; // 0x1a98, 0x4 bytes
-                float m_bPiercesMagicImmunity; // 0x1a9c, 0x4 bytes
-                std::int32_t m_nSwapIndex; // 0x1aa0, 0x4 bytes
-                bool m_bReturning; // 0x1aa4, 0x1 bytes
-                std::uint8_t pad_1aa5[0x3]; // 0x1aa5, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nAxeFXIndex[0x2]; // 0x1aa8, 0x8 bytes
-                std::int32_t m_nHeroesHitForRelic; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> hitEntities; // 0x1ab8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAxes; // 0x1ad0, 0x18 bytes
+                float damage; // 0x1aa8, 0x4 bytes
+                float hit_radius; // 0x1aac, 0x4 bytes
+                float axe_movement_speed; // 0x1ab0, 0x4 bytes
+                float whirl_duration; // 0x1ab4, 0x4 bytes
+                float max_range; // 0x1ab8, 0x4 bytes
+                float blind_duration; // 0x1abc, 0x4 bytes
+                float m_flRotation; // 0x1ac0, 0x4 bytes
+                float m_flAxeRadius; // 0x1ac4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flWhirlDieTime; // 0x1ac8, 0x4 bytes
+                float m_bPiercesMagicImmunity; // 0x1acc, 0x4 bytes
+                std::int32_t m_nSwapIndex; // 0x1ad0, 0x4 bytes
+                bool m_bReturning; // 0x1ad4, 0x1 bytes
+                std::uint8_t pad_1ad5[0x3]; // 0x1ad5, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nAxeFXIndex[0x2]; // 0x1ad8, 0x8 bytes
+                std::int32_t m_nHeroesHitForRelic; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> hitEntities; // 0x1ae8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAxes; // 0x1b00, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_TrollWarlord_Whirling_Axes_Melee) == 0x1AE8, "CDOTA_Modifier_TrollWarlord_Whirling_Axes_Melee size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_TrollWarlord_Whirling_Axes_Melee) == 0x1B18, "CDOTA_Modifier_TrollWarlord_Whirling_Axes_Melee size mismatch");
         }
     }
 }

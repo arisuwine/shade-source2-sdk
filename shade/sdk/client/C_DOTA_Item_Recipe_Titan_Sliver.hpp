@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x760
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item_Recipe_Titan_Sliver) == 0x758, "C_DOTA_Item_Recipe_Titan_Sliver size mismatch");
+            static_assert(sizeof(C_DOTA_Item_Recipe_Titan_Sliver) == 0x760, "C_DOTA_Item_Recipe_Titan_Sliver size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -42,22 +42,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_FacelessVoid_TimeLock : public shade::sdk::client::CDOTA_Buff {
             public:
-                float duration; // 0x1a78, 0x4 bytes
-                float duration_creep; // 0x1a7c, 0x4 bytes
-                float delay; // 0x1a80, 0x4 bytes
-                std::int32_t chance_pct; // 0x1a84, 0x4 bytes
-                std::int32_t bonus_damage; // 0x1a88, 0x4 bytes
-                shade::sdk::entity2::GameTime_t last_attack_time; // 0x1a8c, 0x4 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_ProcAttackRecords; // 0x1a90, 0x18 bytes
-                shade::sdk::entity2::GameTime_t apply_activity_modifier_until; // 0x1aa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t disable_activity_modifier_until; // 0x1aac, 0x4 bytes
-                CUtlOrderedMap<CHandle<shade::sdk::server::CDOTA_BaseNPC>, std::int32_t> m_mapTargets; // 0x1ab0, 0x28 bytes
+                float duration; // 0x1aa8, 0x4 bytes
+                float duration_creep; // 0x1aac, 0x4 bytes
+                float delay; // 0x1ab0, 0x4 bytes
+                std::int32_t chance_pct; // 0x1ab4, 0x4 bytes
+                std::int32_t bonus_damage; // 0x1ab8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t last_attack_time; // 0x1abc, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_ProcAttackRecords; // 0x1ac0, 0x18 bytes
+                shade::sdk::entity2::GameTime_t apply_activity_modifier_until; // 0x1ad8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t disable_activity_modifier_until; // 0x1adc, 0x4 bytes
+                CUtlOrderedMap<CHandle<shade::sdk::server::CDOTA_BaseNPC>, std::int32_t> m_mapTargets; // 0x1ae0, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_FacelessVoid_TimeLock) == 0x1AD8, "CDOTA_Modifier_FacelessVoid_TimeLock size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_FacelessVoid_TimeLock) == 0x1B08, "CDOTA_Modifier_FacelessVoid_TimeLock size mismatch");
         }
     }
 }

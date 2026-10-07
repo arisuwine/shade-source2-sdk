@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_RuneSpawner_Powerup : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                CUtlSymbolLarge m_szPosition; // 0x0798, 0x8 bytes
-                float m_flLastSpawnTime; // 0x07a0, 0x4 bytes
-                float m_flNextSpawnTime; // 0x07a4, 0x4 bytes
-                bool m_bNextRuneIsWater; // 0x07a8, 0x1 bytes
-                std::uint8_t pad_07a9[0x7]; // 0x07a9, 0x7 bytes
+                CUtlSymbolLarge m_szPosition; // 0x0878, 0x8 bytes
+                float m_flLastSpawnTime; // 0x0880, 0x4 bytes
+                float m_flNextSpawnTime; // 0x0884, 0x4 bytes
+                bool m_bNextRuneIsWater; // 0x0888, 0x1 bytes
+                std::uint8_t pad_0889[0x7]; // 0x0889, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_RuneSpawner_Powerup) == 0x7B0, "CDOTA_Item_RuneSpawner_Powerup size mismatch");
+            static_assert(sizeof(CDOTA_Item_RuneSpawner_Powerup) == 0x890, "CDOTA_Item_RuneSpawner_Powerup size mismatch");
         }
     }
 }

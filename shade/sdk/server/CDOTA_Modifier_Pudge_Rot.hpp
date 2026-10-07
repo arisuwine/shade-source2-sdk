@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Pudge_Rot : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t rot_damage; // 0x1a78, 0x4 bytes
-                std::int32_t rot_slow; // 0x1a7c, 0x4 bytes
-                std::int32_t scepter_rot_regen_reduction_pct; // 0x1a80, 0x4 bytes
-                std::uint8_t pad_1a84[0x14]; // 0x1a84, 0x14 bytes
-                shade::sdk::entity2::GameTime_t m_flLastRotTime; // 0x1a98, 0x4 bytes
-                bool m_bQualifiesAsPotentionalDeny; // 0x1a9c, 0x1 bytes
-                std::uint8_t pad_1a9d[0x3]; // 0x1a9d, 0x3 bytes
-                std::int32_t max_total_stacks; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
+                std::int32_t rot_damage; // 0x1aa8, 0x4 bytes
+                std::int32_t rot_slow; // 0x1aac, 0x4 bytes
+                std::int32_t scepter_rot_regen_reduction_pct; // 0x1ab0, 0x4 bytes
+                std::uint8_t pad_1ab4[0x14]; // 0x1ab4, 0x14 bytes
+                shade::sdk::entity2::GameTime_t m_flLastRotTime; // 0x1ac8, 0x4 bytes
+                bool m_bQualifiesAsPotentionalDeny; // 0x1acc, 0x1 bytes
+                std::uint8_t pad_1acd[0x3]; // 0x1acd, 0x3 bytes
+                std::int32_t max_total_stacks; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Pudge_Rot) == 0x1AA8, "CDOTA_Modifier_Pudge_Rot size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Pudge_Rot) == 0x1AD8, "CDOTA_Modifier_Pudge_Rot size mismatch");
         }
     }
 }

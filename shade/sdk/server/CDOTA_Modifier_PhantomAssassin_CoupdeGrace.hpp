@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_PhantomAssassin_CoupdeGrace : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t crit_bonus; // 0x1a78, 0x4 bytes
-                std::int32_t crit_chance; // 0x1a7c, 0x4 bytes
-                std::int32_t attacks_to_proc; // 0x1a80, 0x4 bytes
-                std::int32_t attacks_to_proc_creeps; // 0x1a84, 0x4 bytes
-                std::int32_t dagger_crit_chance; // 0x1a88, 0x4 bytes
-                shade::sdk::client::AttackRecord_t m_iCritRecord; // 0x1a8c, 0x2 bytes
-                std::uint8_t pad_1a8e[0x2]; // 0x1a8e, 0x2 bytes
-                float duration; // 0x1a90, 0x4 bytes
-                std::uint8_t pad_1a94[0x4]; // 0x1a94, 0x4 bytes
+                std::int32_t crit_bonus; // 0x1aa8, 0x4 bytes
+                std::int32_t crit_chance; // 0x1aac, 0x4 bytes
+                std::int32_t attacks_to_proc; // 0x1ab0, 0x4 bytes
+                std::int32_t attacks_to_proc_creeps; // 0x1ab4, 0x4 bytes
+                std::int32_t dagger_crit_chance; // 0x1ab8, 0x4 bytes
+                shade::sdk::client::AttackRecord_t m_iCritRecord; // 0x1abc, 0x2 bytes
+                std::uint8_t pad_1abe[0x2]; // 0x1abe, 0x2 bytes
+                float duration; // 0x1ac0, 0x4 bytes
+                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_PhantomAssassin_CoupdeGrace) == 0x1A98, "CDOTA_Modifier_PhantomAssassin_CoupdeGrace size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_PhantomAssassin_CoupdeGrace) == 0x1AC8, "CDOTA_Modifier_PhantomAssassin_CoupdeGrace size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1ae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,27 +37,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Visage_SummonFamiliars_In_Formation : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hOwner; // 0x1a78, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentTarget; // 0x1a7c, 0x4 bytes
-                std::int32_t familiar_index; // 0x1a80, 0x4 bytes
-                std::int32_t back_distance; // 0x1a84, 0x4 bytes
-                std::int32_t side_distance; // 0x1a88, 0x4 bytes
-                VectorWS m_vecDesiredPosition; // 0x1a8c, 0xc bytes
-                float max_distance; // 0x1a98, 0x4 bytes
-                float return_distance; // 0x1a9c, 0x4 bytes
-                float attack_range_buffer; // 0x1aa0, 0x4 bytes
-                float recall_duration; // 0x1aa4, 0x4 bytes
-                bool m_bTeleporting; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                std::int32_t familiar_attack_range; // 0x1aac, 0x4 bytes
-                float additional_target_search_radius; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hOwner; // 0x1aa8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentTarget; // 0x1aac, 0x4 bytes
+                std::int32_t familiar_index; // 0x1ab0, 0x4 bytes
+                std::int32_t back_distance; // 0x1ab4, 0x4 bytes
+                std::int32_t side_distance; // 0x1ab8, 0x4 bytes
+                VectorWS m_vecDesiredPosition; // 0x1abc, 0xc bytes
+                float max_distance; // 0x1ac8, 0x4 bytes
+                float return_distance; // 0x1acc, 0x4 bytes
+                float attack_range_buffer; // 0x1ad0, 0x4 bytes
+                float recall_duration; // 0x1ad4, 0x4 bytes
+                bool m_bTeleporting; // 0x1ad8, 0x1 bytes
+                std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
+                std::int32_t familiar_attack_range; // 0x1adc, 0x4 bytes
+                float additional_target_search_radius; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Visage_SummonFamiliars_In_Formation) == 0x1AB8, "CDOTA_Modifier_Visage_SummonFamiliars_In_Formation size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Visage_SummonFamiliars_In_Formation) == 0x1AE8, "CDOTA_Modifier_Visage_SummonFamiliars_In_Formation size mismatch");
         }
     }
 }

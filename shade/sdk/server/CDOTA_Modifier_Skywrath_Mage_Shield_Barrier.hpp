@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +37,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Skywrath_Mage_Shield_Barrier : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_nDamageAbsorbed; // 0x1a78, 0x4 bytes
-                float damage_barrier; // 0x1a7c, 0x4 bytes
-                CUtlVector<shade::sdk::entity2::GameTime_t> m_flExpirationTimes; // 0x1a80, 0x18 bytes
+                std::int32_t m_nDamageAbsorbed; // 0x1aa8, 0x4 bytes
+                float damage_barrier; // 0x1aac, 0x4 bytes
+                CUtlVector<shade::sdk::entity2::GameTime_t> m_flExpirationTimes; // 0x1ab0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Skywrath_Mage_Shield_Barrier) == 0x1A98, "CDOTA_Modifier_Skywrath_Mage_Shield_Barrier size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Skywrath_Mage_Shield_Barrier) == 0x1AC8, "CDOTA_Modifier_Skywrath_Mage_Shield_Barrier size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Treant_LivingArmorPermanent) == 0x1AC0, "CDOTA_Modifier_Treant_LivingArmorPermanent size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Treant_LivingArmorPermanent) == 0x1AF0, "CDOTA_Modifier_Treant_LivingArmorPermanent size mismatch");
         }
     }
 }

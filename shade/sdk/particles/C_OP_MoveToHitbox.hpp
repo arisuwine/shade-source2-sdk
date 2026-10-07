@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4a8
+             * Size: 0x4b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,23 +33,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MoveToHitbox : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01d8, 0x60 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0238, 0x68 bytes
-                std::uint8_t pad_02a0[0x4]; // 0x02a0, 0x4 bytes
-                float m_flLifeTimeLerpStart; // 0x02a4, 0x4 bytes
-                float m_flLifeTimeLerpEnd; // 0x02a8, 0x4 bytes
-                float m_flPrevPosScale; // 0x02ac, 0x4 bytes
-                char m_HitboxSetName[0x80]; // 0x02b0, 0x80 bytes
-                bool m_bUseBones; // 0x0330, 0x1 bytes
-                std::uint8_t pad_0331[0x3]; // 0x0331, 0x3 bytes
-                shade::sdk::particles::HitboxLerpType_t m_nLerpType; // 0x0334, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x0338, 0x170 bytes
+                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x01e0, 0x60 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0240, 0x68 bytes
+                std::uint8_t pad_02a8[0x4]; // 0x02a8, 0x4 bytes
+                float m_flLifeTimeLerpStart; // 0x02ac, 0x4 bytes
+                float m_flLifeTimeLerpEnd; // 0x02b0, 0x4 bytes
+                float m_flPrevPosScale; // 0x02b4, 0x4 bytes
+                char m_HitboxSetName[0x80]; // 0x02b8, 0x80 bytes
+                bool m_bUseBones; // 0x0338, 0x1 bytes
+                std::uint8_t pad_0339[0x3]; // 0x0339, 0x3 bytes
+                shade::sdk::particles::HitboxLerpType_t m_nLerpType; // 0x033c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x0340, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MoveToHitbox) == 0x4A8, "C_OP_MoveToHitbox size mismatch");
+            static_assert(sizeof(C_OP_MoveToHitbox) == 0x4B8, "C_OP_MoveToHitbox size mismatch");
         }
     }
 }

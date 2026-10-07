@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,20 +37,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_RockGolem_Avalanche : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<shade::sdk::server::CDOTA_BaseNPC*> m_pHeroesHit; // 0x1a78, 0x18 bytes
-                std::int32_t radius; // 0x1a90, 0x4 bytes
-                float total_duration; // 0x1a94, 0x4 bytes
-                float stun_duration; // 0x1a98, 0x4 bytes
-                std::int32_t tick_count; // 0x1a9c, 0x4 bytes
-                std::int32_t m_damage; // 0x1aa0, 0x4 bytes
-                std::int32_t m_nTicks; // 0x1aa4, 0x4 bytes
-                std::uint8_t pad_1aa8[0x18]; // 0x1aa8, 0x18 bytes
+                CUtlVector<shade::sdk::server::CDOTA_BaseNPC*> m_pHeroesHit; // 0x1aa8, 0x18 bytes
+                std::int32_t radius; // 0x1ac0, 0x4 bytes
+                float total_duration; // 0x1ac4, 0x4 bytes
+                float stun_duration; // 0x1ac8, 0x4 bytes
+                std::int32_t tick_count; // 0x1acc, 0x4 bytes
+                std::int32_t m_damage; // 0x1ad0, 0x4 bytes
+                std::int32_t m_nTicks; // 0x1ad4, 0x4 bytes
+                std::uint8_t pad_1ad8[0x18]; // 0x1ad8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_RockGolem_Avalanche) == 0x1AC0, "CDOTA_Modifier_AghsFort_RockGolem_Avalanche size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_RockGolem_Avalanche) == 0x1AF0, "CDOTA_Modifier_AghsFort_RockGolem_Avalanche size mismatch");
         }
     }
 }

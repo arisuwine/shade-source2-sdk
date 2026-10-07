@@ -16,14 +16,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_InitialSequenceFromModel : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nControlPointNumber; // 0x01e0, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e4, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutputAnim; // 0x01e8, 0x4 bytes
-                float m_flInputMin; // 0x01ec, 0x4 bytes
-                float m_flInputMax; // 0x01f0, 0x4 bytes
-                float m_flOutputMin; // 0x01f4, 0x4 bytes
-                float m_flOutputMax; // 0x01f8, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x01fc, 0x4 bytes
+                std::int32_t m_nControlPointNumber; // 0x01e8, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutputAnim; // 0x01f0, 0x4 bytes
+                float m_flInputMin; // 0x01f4, 0x4 bytes
+                float m_flInputMax; // 0x01f8, 0x4 bytes
+                float m_flOutputMin; // 0x01fc, 0x4 bytes
+                float m_flOutputMax; // 0x0200, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x0204, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_InitialSequenceFromModel) == 0x200, "C_INIT_InitialSequenceFromModel size mismatch");
+            static_assert(sizeof(C_INIT_InitialSequenceFromModel) == 0x208, "C_INIT_InitialSequenceFromModel size mismatch");
         }
     }
 }

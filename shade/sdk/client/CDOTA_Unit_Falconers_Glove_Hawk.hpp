@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c0
+             * Size: 0x1ac0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Falconers_Glove_Hawk) == 0x19C0, "CDOTA_Unit_Falconers_Glove_Hawk size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Falconers_Glove_Hawk) == 0x1AC0, "CDOTA_Unit_Falconers_Glove_Hawk size mismatch");
         }
     }
 }

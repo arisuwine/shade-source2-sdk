@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,26 +38,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DeathProphet_Scepter : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1a78, 0x4 bytes
-                float spirit_speed; // 0x1a7c, 0x4 bytes
-                float max_distance; // 0x1a80, 0x4 bytes
-                float give_up_distance; // 0x1a84, 0x4 bytes
-                float min_damage; // 0x1a88, 0x4 bytes
-                float max_damage; // 0x1a8c, 0x4 bytes
-                std::int32_t heal_percent; // 0x1a90, 0x4 bytes
-                std::int32_t spirit_duration; // 0x1a94, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1a98, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThinkTime; // 0x1a9c, 0x4 bytes
-                bool m_bExpired; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x7]; // 0x1aa1, 0x7 bytes
-                shade::sdk::client::sSpiritInfo *m_SpiritInfo; // 0x1aa8, 0x8 bytes
-                std::uint8_t pad_1ab0[0x18]; // 0x1ab0, 0x18 bytes
+                float radius; // 0x1aa8, 0x4 bytes
+                float spirit_speed; // 0x1aac, 0x4 bytes
+                float max_distance; // 0x1ab0, 0x4 bytes
+                float give_up_distance; // 0x1ab4, 0x4 bytes
+                float min_damage; // 0x1ab8, 0x4 bytes
+                float max_damage; // 0x1abc, 0x4 bytes
+                std::int32_t heal_percent; // 0x1ac0, 0x4 bytes
+                std::int32_t spirit_duration; // 0x1ac4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1ac8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThinkTime; // 0x1acc, 0x4 bytes
+                bool m_bExpired; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x7]; // 0x1ad1, 0x7 bytes
+                shade::sdk::client::sSpiritInfo *m_SpiritInfo; // 0x1ad8, 0x8 bytes
+                std::uint8_t pad_1ae0[0x18]; // 0x1ae0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DeathProphet_Scepter) == 0x1AC8, "CDOTA_Modifier_DeathProphet_Scepter size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DeathProphet_Scepter) == 0x1AF8, "CDOTA_Modifier_DeathProphet_Scepter size mismatch");
         }
     }
 }

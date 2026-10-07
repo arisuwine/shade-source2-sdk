@@ -16,7 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -30,11 +30,11 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RampScalarLinearSimple : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_Rate; // 0x01d8, 0x4 bytes
-                float m_flStartTime; // 0x01dc, 0x4 bytes
-                float m_flEndTime; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x2c]; // 0x01e4, 0x2c bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nField; // 0x0210, 0x4 bytes
+                float m_Rate; // 0x01e0, 0x4 bytes
+                float m_flStartTime; // 0x01e4, 0x4 bytes
+                float m_flEndTime; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x24]; // 0x01ec, 0x24 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nField; // 0x0210, 0x4 bytes
                 std::uint8_t pad_0214[0xc]; // 0x0214, 0xc bytes
             };
             #pragma pack(pop)

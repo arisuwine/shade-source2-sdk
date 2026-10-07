@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Winter_Wyvern_Cold_Embrace : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1a78[0x14]; // 0x1a78, 0x14 bytes
-                float heal_additive; // 0x1a8c, 0x4 bytes
-                float heal_percentage; // 0x1a90, 0x4 bytes
-                float tick_interval; // 0x1a94, 0x4 bytes
-                float damage_buff_pct; // 0x1a98, 0x4 bytes
-                float damage_buff_duration; // 0x1a9c, 0x4 bytes
+                std::uint8_t pad_1aa8[0x14]; // 0x1aa8, 0x14 bytes
+                float heal_additive; // 0x1abc, 0x4 bytes
+                float heal_percentage; // 0x1ac0, 0x4 bytes
+                float tick_interval; // 0x1ac4, 0x4 bytes
+                float damage_buff_pct; // 0x1ac8, 0x4 bytes
+                float damage_buff_duration; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Winter_Wyvern_Cold_Embrace) == 0x1AA0, "CDOTA_Modifier_Winter_Wyvern_Cold_Embrace size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Winter_Wyvern_Cold_Embrace) == 0x1AD0, "CDOTA_Modifier_Winter_Wyvern_Cold_Embrace size mismatch");
         }
     }
 }

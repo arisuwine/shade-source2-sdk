@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1ab8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Launchpad : public shade::sdk::server::CDOTA_BaseNPC_Building {
             public:
-                std::int32_t m_iStrength; // 0x19c0, 0x4 bytes
-                std::uint8_t pad_19c4[0x4]; // 0x19c4, 0x4 bytes
+                std::int32_t m_iStrength; // 0x1ab0, 0x4 bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Launchpad) == 0x19C8, "CDOTA_BaseNPC_Launchpad size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Launchpad) == 0x1AB8, "CDOTA_BaseNPC_Launchpad size mismatch");
         }
     }
 }

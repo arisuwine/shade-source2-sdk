@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x238
+             * Size: 0x240
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderFlattenGrass : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                float m_flFlattenStrength; // 0x0228, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nStrengthFieldOverride; // 0x022c, 0x4 bytes
-                float m_flRadiusScale; // 0x0230, 0x4 bytes
-                std::uint8_t pad_0234[0x4]; // 0x0234, 0x4 bytes
+                float m_flFlattenStrength; // 0x0230, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nStrengthFieldOverride; // 0x0234, 0x4 bytes
+                float m_flRadiusScale; // 0x0238, 0x4 bytes
+                std::uint8_t pad_023c[0x4]; // 0x023c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderFlattenGrass) == 0x238, "C_OP_RenderFlattenGrass size mismatch");
+            static_assert(sizeof(C_OP_RenderFlattenGrass) == 0x240, "C_OP_RenderFlattenGrass size mismatch");
         }
     }
 }

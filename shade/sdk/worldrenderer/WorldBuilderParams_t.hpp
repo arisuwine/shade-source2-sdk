@@ -15,7 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/worldrenderer/BakedLightingInfo_t.hpp"
+#include "shade/sdk/scenesystem/BakedLightingInfo_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -31,7 +31,7 @@ namespace shade {
                 bool m_bBuildBakedLighting; // 0x0004, 0x1 bytes
                 bool m_bAggregateInstanceStreams; // 0x0005, 0x1 bytes
                 std::uint8_t pad_0006[0x2]; // 0x0006, 0x2 bytes
-                shade::sdk::worldrenderer::BakedLightingInfo_t m_bakedLightingInfo; // 0x0008, 0x48 bytes
+                shade::sdk::scenesystem::BakedLightingInfo_t m_bakedLightingInfo; // 0x0008, 0x48 bytes
                 std::uint64_t m_nCompileTimestamp; // 0x0050, 0x8 bytes
                 std::uint64_t m_nCompileFingerprint; // 0x0058, 0x8 bytes
             };

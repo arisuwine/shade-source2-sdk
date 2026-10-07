@@ -19,27 +19,29 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x40
+             * Size: 0x48
              * Alignment: 0x8
              * Has Trivial Destructor
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct AI_BaseNPCAnimGraph_DebugSnapshotData_t {
-                CGlobalSymbol e_action_desired; // 0x0000, 0x8 bytes
-                CGlobalSymbol e_action_handshake_restart; // 0x0008, 0x8 bytes
-                CGlobalSymbol e_action_handshake_body_authority_current; // 0x0010, 0x8 bytes
-                CGlobalSymbol e_action_handshake_body_authority_desired; // 0x0018, 0x8 bytes
-                CGlobalSymbol e_movement_type_desired; // 0x0020, 0x8 bytes
-                CGlobalSymbol e_movement_handshake_restart; // 0x0028, 0x8 bytes
-                CGlobalSymbol e_movement_handshake_body_authority_current; // 0x0030, 0x8 bytes
-                CGlobalSymbol e_movement_handshake_body_authority_desired; // 0x0038, 0x8 bytes
+                std::int32_t ag2_update_id; // 0x0000, 0x4 bytes
+                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
+                CGlobalSymbol e_action_desired; // 0x0008, 0x8 bytes
+                CGlobalSymbol e_action_handshake_restart; // 0x0010, 0x8 bytes
+                CGlobalSymbol e_action_handshake_body_authority_current; // 0x0018, 0x8 bytes
+                CGlobalSymbol e_action_handshake_body_authority_desired; // 0x0020, 0x8 bytes
+                CGlobalSymbol e_movement_type_desired; // 0x0028, 0x8 bytes
+                CGlobalSymbol e_movement_handshake_restart; // 0x0030, 0x8 bytes
+                CGlobalSymbol e_movement_handshake_body_authority_current; // 0x0038, 0x8 bytes
+                CGlobalSymbol e_movement_handshake_body_authority_desired; // 0x0040, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_BaseNPCAnimGraph_DebugSnapshotData_t) == 0x40, "AI_BaseNPCAnimGraph_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_BaseNPCAnimGraph_DebugSnapshotData_t) == 0x48, "AI_BaseNPCAnimGraph_DebugSnapshotData_t size mismatch");
         }
     }
 }

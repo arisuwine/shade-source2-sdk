@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1ac8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Tinker_Turret : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                QAngle m_angle; // 0x19b8, 0xc bytes
-                std::int32_t m_iPoseParameterAim; // 0x19c4, 0x4 bytes
+                QAngle m_angle; // 0x1ab8, 0xc bytes
+                std::int32_t m_iPoseParameterAim; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Tinker_Turret) == 0x19C8, "CDOTA_BaseNPC_Tinker_Turret size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Tinker_Turret) == 0x1AC8, "CDOTA_BaseNPC_Tinker_Turret size mismatch");
         }
     }
 }

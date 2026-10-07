@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace animlib {
             /* Class Parameters
-             * Size: 0x38
+             * Size: 0x40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,12 +36,13 @@ namespace shade {
                 bool m_bIgnoreInvalidOptions; // 0x0032, 0x1 bytes
                 bool m_bIsWorldSpaceTarget; // 0x0033, 0x1 bytes
                 std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
+                CGlobalSymbol m_alignmentBoneID; // 0x0038, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmTargetSelectorNode__CDefinition) == 0x38, "CNmTargetSelectorNode__CDefinition size mismatch");
+            static_assert(sizeof(CNmTargetSelectorNode__CDefinition) == 0x40, "CNmTargetSelectorNode__CDefinition size mismatch");
         }
     }
 }

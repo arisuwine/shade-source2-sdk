@@ -16,7 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x260
+             * Size: 0x268
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderAsModels : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                CUtlVector<shade::sdk::particles::ModelReference_t> m_ModelList; // 0x0228, 0x18 bytes
-                std::uint8_t pad_0240[0x4]; // 0x0240, 0x4 bytes
-                float m_flModelScale; // 0x0244, 0x4 bytes
-                bool m_bFitToModelSize; // 0x0248, 0x1 bytes
-                bool m_bNonUniformScaling; // 0x0249, 0x1 bytes
-                std::uint8_t pad_024a[0x2]; // 0x024a, 0x2 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nXAxisScalingAttribute; // 0x024c, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nYAxisScalingAttribute; // 0x0250, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nZAxisScalingAttribute; // 0x0254, 0x4 bytes
-                std::int32_t m_nSizeCullBloat; // 0x0258, 0x4 bytes
-                std::uint8_t pad_025c[0x4]; // 0x025c, 0x4 bytes
+                CUtlVector<shade::sdk::particles::ModelReference_t> m_ModelList; // 0x0230, 0x18 bytes
+                std::uint8_t pad_0248[0x4]; // 0x0248, 0x4 bytes
+                float m_flModelScale; // 0x024c, 0x4 bytes
+                bool m_bFitToModelSize; // 0x0250, 0x1 bytes
+                bool m_bNonUniformScaling; // 0x0251, 0x1 bytes
+                std::uint8_t pad_0252[0x2]; // 0x0252, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nXAxisScalingAttribute; // 0x0254, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nYAxisScalingAttribute; // 0x0258, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nZAxisScalingAttribute; // 0x025c, 0x4 bytes
+                std::int32_t m_nSizeCullBloat; // 0x0260, 0x4 bytes
+                std::uint8_t pad_0264[0x4]; // 0x0264, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderAsModels) == 0x260, "C_OP_RenderAsModels size mismatch");
+            static_assert(sizeof(C_OP_RenderAsModels) == 0x268, "C_OP_RenderAsModels size mismatch");
         }
     }
 }

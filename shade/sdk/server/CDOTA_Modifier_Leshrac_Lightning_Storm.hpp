@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,27 +37,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Leshrac_Lightning_Storm : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t damage; // 0x1a78, 0x4 bytes
-                float radius; // 0x1a7c, 0x4 bytes
-                std::int32_t jump_count; // 0x1a80, 0x4 bytes
-                float slow_duration; // 0x1a84, 0x4 bytes
-                float jump_delay; // 0x1a88, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> hInitialTarget; // 0x1a8c, 0x4 bytes
-                float m_flDamage; // 0x1a90, 0x4 bytes
-                std::int32_t m_iCurJumpCount; // 0x1a94, 0x4 bytes
-                VectorWS m_vCurTargetLoc; // 0x1a98, 0xc bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1aa8, 0x18 bytes
-                bool m_bGrantedGem; // 0x1ac0, 0x1 bytes
-                bool m_bBounceTwice; // 0x1ac1, 0x1 bytes
-                std::uint8_t pad_1ac2[0x2]; // 0x1ac2, 0x2 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_eLastTarget; // 0x1ac4, 0x4 bytes
+                std::int32_t damage; // 0x1aa8, 0x4 bytes
+                float radius; // 0x1aac, 0x4 bytes
+                std::int32_t jump_count; // 0x1ab0, 0x4 bytes
+                float slow_duration; // 0x1ab4, 0x4 bytes
+                float jump_delay; // 0x1ab8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> hInitialTarget; // 0x1abc, 0x4 bytes
+                float m_flDamage; // 0x1ac0, 0x4 bytes
+                std::int32_t m_iCurJumpCount; // 0x1ac4, 0x4 bytes
+                VectorWS m_vCurTargetLoc; // 0x1ac8, 0xc bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1ad8, 0x18 bytes
+                bool m_bGrantedGem; // 0x1af0, 0x1 bytes
+                bool m_bBounceTwice; // 0x1af1, 0x1 bytes
+                std::uint8_t pad_1af2[0x2]; // 0x1af2, 0x2 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_eLastTarget; // 0x1af4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Leshrac_Lightning_Storm) == 0x1AC8, "CDOTA_Modifier_Leshrac_Lightning_Storm size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Leshrac_Lightning_Storm) == 0x1AF8, "CDOTA_Modifier_Leshrac_Lightning_Storm size mismatch");
         }
     }
 }

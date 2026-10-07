@@ -16,10 +16,10 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionRenderer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
 #include "shade/sdk/particleslib/CParticleModelInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x598
+             * Size: 0x5b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,24 +41,24 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderSimpleModelCollection : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                bool m_bCenterOffset; // 0x0228, 0x1 bytes
-                std::uint8_t pad_0229[0x7]; // 0x0229, 0x7 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x0230, 0x8 bytes
-                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x0238, 0x60 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_fSizeCullScale; // 0x0298, 0x170 bytes
-                bool m_bDisableShadows; // 0x0408, 0x1 bytes
-                bool m_bDisableMotionBlur; // 0x0409, 0x1 bytes
-                bool m_bAcceptsDecals; // 0x040a, 0x1 bytes
-                std::uint8_t pad_040b[0x5]; // 0x040b, 0x5 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_fDrawFilter; // 0x0410, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nAngularVelocityField; // 0x0580, 0x4 bytes
-                std::uint8_t pad_0584[0x14]; // 0x0584, 0x14 bytes
+                bool m_bCenterOffset; // 0x0230, 0x1 bytes
+                std::uint8_t pad_0231[0x7]; // 0x0231, 0x7 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x0238, 0x8 bytes
+                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x0240, 0x60 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_fSizeCullScale; // 0x02a0, 0x178 bytes
+                bool m_bDisableShadows; // 0x0418, 0x1 bytes
+                bool m_bDisableMotionBlur; // 0x0419, 0x1 bytes
+                bool m_bAcceptsDecals; // 0x041a, 0x1 bytes
+                std::uint8_t pad_041b[0x5]; // 0x041b, 0x5 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_fDrawFilter; // 0x0420, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAngularVelocityField; // 0x0598, 0x4 bytes
+                std::uint8_t pad_059c[0x14]; // 0x059c, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderSimpleModelCollection) == 0x598, "C_OP_RenderSimpleModelCollection size mismatch");
+            static_assert(sizeof(C_OP_RenderSimpleModelCollection) == 0x5B0, "C_OP_RenderSimpleModelCollection size mismatch");
         }
     }
 }

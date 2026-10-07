@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19d0
+             * Size: 0x1ac0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,9 +39,9 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Effigy_Statue : public shade::sdk::server::CDOTA_BaseNPC_Building {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hEffigyParticleDef; // 0x19c0, 0x8 bytes
-                shade::sdk::client::EEvent m_eEffigyEvent; // 0x19c8, 0x4 bytes
-                std::int32_t m_nEffigyLevel; // 0x19cc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hEffigyParticleDef; // 0x1ab0, 0x8 bytes
+                shade::sdk::client::EEvent m_eEffigyEvent; // 0x1ab8, 0x4 bytes
+                std::int32_t m_nEffigyLevel; // 0x1abc, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -52,7 +52,7 @@ namespace shade {
              * std::int32_t effigy_level; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDOTA_BaseNPC_Effigy_Statue) == 0x19D0, "CDOTA_BaseNPC_Effigy_Statue size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Effigy_Statue) == 0x1AC0, "CDOTA_BaseNPC_Effigy_Statue size mismatch");
         }
     }
 }

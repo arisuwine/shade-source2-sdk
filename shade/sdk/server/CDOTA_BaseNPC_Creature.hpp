@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a28
+             * Size: 0x1b18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,63 +44,63 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Creature : public shade::sdk::server::CDOTA_BaseNPC_Creep {
             public:
-                bool m_bInitialized; // 0x18d8, 0x1 bytes
-                bool m_bCreatureCanRespawn; // 0x18d9, 0x1 bytes
-                bool m_bUsesGestureBasedAttackAnimation; // 0x18da, 0x1 bytes
-                bool m_bIsHybridFlyer; // 0x18db, 0x1 bytes
-                bool m_bRequiresReachingEndPath; // 0x18dc, 0x1 bytes
-                bool m_bAggroOwnerOnDamage; // 0x18dd, 0x1 bytes
-                bool m_bReceivedAggroOnDamageOrder; // 0x18de, 0x1 bytes
-                std::uint8_t pad_18df[0x1]; // 0x18df, 0x1 bytes
-                CUtlVector<shade::sdk::server::CreatureStateData_t> m_vCreatureStates; // 0x18e0, 0x18 bytes
-                char *m_pszDefaultState; // 0x18f8, 0x8 bytes
-                char *m_pszCurrentState; // 0x1900, 0x8 bytes
-                std::int32_t m_nHPGain; // 0x1908, 0x4 bytes
-                std::int32_t m_nManaGain; // 0x190c, 0x4 bytes
-                float m_flHPRegenGain; // 0x1910, 0x4 bytes
-                float m_flManaRegenGain; // 0x1914, 0x4 bytes
-                std::int32_t m_nDamageGain; // 0x1918, 0x4 bytes
-                float m_flArmorGain; // 0x191c, 0x4 bytes
-                float m_flMagicResistGain; // 0x1920, 0x4 bytes
-                float m_flDisableResistGain; // 0x1924, 0x4 bytes
-                float m_flAttackTimeGain; // 0x1928, 0x4 bytes
-                std::int32_t m_nMoveSpeedGain; // 0x192c, 0x4 bytes
-                std::int32_t m_nBountyGain; // 0x1930, 0x4 bytes
-                std::int32_t m_nXPGain; // 0x1934, 0x4 bytes
-                std::int32_t m_nPermanentDesire; // 0x1938, 0x4 bytes
-                std::int32_t m_nCreatureDesire; // 0x193c, 0x4 bytes
-                std::int32_t m_nCurrentCastBehavior; // 0x1940, 0x4 bytes
-                std::int32_t m_nEconItemGroup; // 0x1944, 0x4 bytes
-                bool m_bIsBuildingAggressive; // 0x1948, 0x1 bytes
-                bool m_bIsHeroAggressive; // 0x1949, 0x1 bytes
-                bool m_bDisableClumpingBehavior; // 0x194a, 0x1 bytes
-                std::uint8_t pad_194b[0x1]; // 0x194b, 0x1 bytes
-                float m_flDisableResistance; // 0x194c, 0x4 bytes
-                float m_flUltimateDisableResistance; // 0x1950, 0x4 bytes
-                bool m_bHasOffensiveAbility; // 0x1954, 0x1 bytes
-                std::uint8_t pad_1955[0x3]; // 0x1955, 0x3 bytes
-                CUtlVector<shade::sdk::server::CreatureAbilityData_t> m_vOffensiveAbilities; // 0x1958, 0x18 bytes
-                bool m_bHasDefensiveAbility; // 0x1970, 0x1 bytes
-                std::uint8_t pad_1971[0x7]; // 0x1971, 0x7 bytes
-                CUtlVector<shade::sdk::server::CreatureAbilityData_t> m_vDefensiveAbilities; // 0x1978, 0x18 bytes
-                bool m_bHasEscapeAbility; // 0x1990, 0x1 bytes
-                std::uint8_t pad_1991[0x7]; // 0x1991, 0x7 bytes
-                CUtlVector<shade::sdk::server::CreatureAbilityData_t> m_vEscapeAbilities; // 0x1998, 0x18 bytes
-                shade::sdk::server::CDOTABaseAbility *m_pLastUsedAbility; // 0x19b0, 0x8 bytes
-                VectorWS m_vDesiredCastLocation; // 0x19b8, 0xc bytes
-                std::uint8_t pad_19c4[0x4]; // 0x19c4, 0x4 bytes
-                shade::sdk::server::CDOTA_BaseNPC *m_pDesiredNPCTarget; // 0x19c8, 0x8 bytes
-                shade::sdk::server::CDOTA_BaseNPC *m_pEscortTarget; // 0x19d0, 0x8 bytes
-                VectorWS m_vLastDamageSource; // 0x19d8, 0xc bytes
-                bool m_bIsChampion; // 0x19e4, 0x1 bytes
-                std::uint8_t pad_19e5[0x3]; // 0x19e5, 0x3 bytes
-                CUtlVector<shade::sdk::server::ItemDropData_t*> m_vItemDropData; // 0x19e8, 0x18 bytes
-                CUtlVector<shade::sdk::server::WearableData_t> m_vecAttachWearableItemDefs; // 0x1a00, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x1a18, 0x4 bytes
-                bool m_bIsCurrentlyChanneling; // 0x1a1c, 0x1 bytes
-                std::uint8_t pad_1a1d[0x3]; // 0x1a1d, 0x3 bytes
-                float m_flChannelCycle; // 0x1a20, 0x4 bytes
-                std::uint8_t pad_1a24[0x4]; // 0x1a24, 0x4 bytes
+                bool m_bInitialized; // 0x19c8, 0x1 bytes
+                bool m_bCreatureCanRespawn; // 0x19c9, 0x1 bytes
+                bool m_bUsesGestureBasedAttackAnimation; // 0x19ca, 0x1 bytes
+                bool m_bIsHybridFlyer; // 0x19cb, 0x1 bytes
+                bool m_bRequiresReachingEndPath; // 0x19cc, 0x1 bytes
+                bool m_bAggroOwnerOnDamage; // 0x19cd, 0x1 bytes
+                bool m_bReceivedAggroOnDamageOrder; // 0x19ce, 0x1 bytes
+                std::uint8_t pad_19cf[0x1]; // 0x19cf, 0x1 bytes
+                CUtlVector<shade::sdk::server::CreatureStateData_t> m_vCreatureStates; // 0x19d0, 0x18 bytes
+                char *m_pszDefaultState; // 0x19e8, 0x8 bytes
+                char *m_pszCurrentState; // 0x19f0, 0x8 bytes
+                std::int32_t m_nHPGain; // 0x19f8, 0x4 bytes
+                std::int32_t m_nManaGain; // 0x19fc, 0x4 bytes
+                float m_flHPRegenGain; // 0x1a00, 0x4 bytes
+                float m_flManaRegenGain; // 0x1a04, 0x4 bytes
+                std::int32_t m_nDamageGain; // 0x1a08, 0x4 bytes
+                float m_flArmorGain; // 0x1a0c, 0x4 bytes
+                float m_flMagicResistGain; // 0x1a10, 0x4 bytes
+                float m_flDisableResistGain; // 0x1a14, 0x4 bytes
+                float m_flAttackTimeGain; // 0x1a18, 0x4 bytes
+                std::int32_t m_nMoveSpeedGain; // 0x1a1c, 0x4 bytes
+                std::int32_t m_nBountyGain; // 0x1a20, 0x4 bytes
+                std::int32_t m_nXPGain; // 0x1a24, 0x4 bytes
+                std::int32_t m_nPermanentDesire; // 0x1a28, 0x4 bytes
+                std::int32_t m_nCreatureDesire; // 0x1a2c, 0x4 bytes
+                std::int32_t m_nCurrentCastBehavior; // 0x1a30, 0x4 bytes
+                std::int32_t m_nEconItemGroup; // 0x1a34, 0x4 bytes
+                bool m_bIsBuildingAggressive; // 0x1a38, 0x1 bytes
+                bool m_bIsHeroAggressive; // 0x1a39, 0x1 bytes
+                bool m_bDisableClumpingBehavior; // 0x1a3a, 0x1 bytes
+                std::uint8_t pad_1a3b[0x1]; // 0x1a3b, 0x1 bytes
+                float m_flDisableResistance; // 0x1a3c, 0x4 bytes
+                float m_flUltimateDisableResistance; // 0x1a40, 0x4 bytes
+                bool m_bHasOffensiveAbility; // 0x1a44, 0x1 bytes
+                std::uint8_t pad_1a45[0x3]; // 0x1a45, 0x3 bytes
+                CUtlVector<shade::sdk::server::CreatureAbilityData_t> m_vOffensiveAbilities; // 0x1a48, 0x18 bytes
+                bool m_bHasDefensiveAbility; // 0x1a60, 0x1 bytes
+                std::uint8_t pad_1a61[0x7]; // 0x1a61, 0x7 bytes
+                CUtlVector<shade::sdk::server::CreatureAbilityData_t> m_vDefensiveAbilities; // 0x1a68, 0x18 bytes
+                bool m_bHasEscapeAbility; // 0x1a80, 0x1 bytes
+                std::uint8_t pad_1a81[0x7]; // 0x1a81, 0x7 bytes
+                CUtlVector<shade::sdk::server::CreatureAbilityData_t> m_vEscapeAbilities; // 0x1a88, 0x18 bytes
+                shade::sdk::server::CDOTABaseAbility *m_pLastUsedAbility; // 0x1aa0, 0x8 bytes
+                VectorWS m_vDesiredCastLocation; // 0x1aa8, 0xc bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
+                shade::sdk::server::CDOTA_BaseNPC *m_pDesiredNPCTarget; // 0x1ab8, 0x8 bytes
+                shade::sdk::server::CDOTA_BaseNPC *m_pEscortTarget; // 0x1ac0, 0x8 bytes
+                VectorWS m_vLastDamageSource; // 0x1ac8, 0xc bytes
+                bool m_bIsChampion; // 0x1ad4, 0x1 bytes
+                std::uint8_t pad_1ad5[0x3]; // 0x1ad5, 0x3 bytes
+                CUtlVector<shade::sdk::server::ItemDropData_t*> m_vItemDropData; // 0x1ad8, 0x18 bytes
+                CUtlVector<shade::sdk::server::WearableData_t> m_vecAttachWearableItemDefs; // 0x1af0, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x1b08, 0x4 bytes
+                bool m_bIsCurrentlyChanneling; // 0x1b0c, 0x1 bytes
+                std::uint8_t pad_1b0d[0x3]; // 0x1b0d, 0x3 bytes
+                float m_flChannelCycle; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -108,7 +108,7 @@ namespace shade {
              * CUtlString AbilityNoAutoLevelOnSpawn; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDOTA_BaseNPC_Creature) == 0x1A28, "CDOTA_BaseNPC_Creature size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Creature) == 0x1B18, "CDOTA_BaseNPC_Creature size mismatch");
         }
     }
 }

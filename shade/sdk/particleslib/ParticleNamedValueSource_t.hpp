@@ -30,7 +30,7 @@ namespace shade {
                 CUtlString m_Name; // 0x0000, 0x8 bytes
                 bool m_IsPublic; // 0x0008, 0x1 bytes
                 std::uint8_t pad_0009[0x7]; // 0x0009, 0x7 bytes
-                CPulseValueFullType m_ValueType; // 0x0010, 0x18 bytes
+                CPulseType m_ValueType; // 0x0010, 0x18 bytes
                 shade::sdk::particleslib::ParticleNamedValueConfiguration_t m_DefaultConfig; // 0x0028, 0x38 bytes
             };
             #pragma pack(pop)

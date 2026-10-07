@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4f0
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CBodyComponentBaseModelEntity) == 0x4E0, "CBodyComponentBaseModelEntity size mismatch");
+            static_assert(sizeof(CBodyComponentBaseModelEntity) == 0x4F0, "CBodyComponentBaseModelEntity size mismatch");
         }
     }
 }

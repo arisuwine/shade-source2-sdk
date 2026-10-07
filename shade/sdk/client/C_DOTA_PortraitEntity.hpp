@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a00
+             * Size: 0x1b00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,23 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_PortraitEntity : public shade::sdk::client::C_DOTA_BaseNPC {
             public:
-                shade::sdk::client::CountdownTimer m_PetIdleTimer; // 0x19b8, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nMouthFX; // 0x19d0, 0x4 bytes
-                std::int32_t m_nMouthControlPoint; // 0x19d4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_iPortraitParticle; // 0x19d8, 0x4 bytes
-                std::int32_t m_PortraitActivity; // 0x19dc, 0x4 bytes
-                CUtlVector<CUtlSymbol> m_CustomActivityModifiers; // 0x19e0, 0x18 bytes
-                bool m_bIsSimulationActive; // 0x19f8, 0x1 bytes
-                std::uint8_t pad_19f9[0x3]; // 0x19f9, 0x3 bytes
-                CEntityHandle m_hAppearanceFromNPC; // 0x19fc, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_PetIdleTimer; // 0x1ab8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nMouthFX; // 0x1ad0, 0x4 bytes
+                std::int32_t m_nMouthControlPoint; // 0x1ad4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_iPortraitParticle; // 0x1ad8, 0x4 bytes
+                std::int32_t m_PortraitActivity; // 0x1adc, 0x4 bytes
+                CUtlVector<CUtlSymbol> m_CustomActivityModifiers; // 0x1ae0, 0x18 bytes
+                bool m_bIsSimulationActive; // 0x1af8, 0x1 bytes
+                std::uint8_t pad_1af9[0x3]; // 0x1af9, 0x3 bytes
+                CEntityHandle m_hAppearanceFromNPC; // 0x1afc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_PortraitEntity) == 0x1A00, "C_DOTA_PortraitEntity size mismatch");
+            static_assert(sizeof(C_DOTA_PortraitEntity) == 0x1B00, "C_DOTA_PortraitEntity size mismatch");
         }
     }
 }

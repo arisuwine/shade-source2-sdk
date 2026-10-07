@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Treant_NaturesGrasp_Damage_Bonus) == 0x1A88, "CDOTA_Modifier_Treant_NaturesGrasp_Damage_Bonus size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Treant_NaturesGrasp_Damage_Bonus) == 0x1AB8, "CDOTA_Modifier_Treant_NaturesGrasp_Damage_Bonus size mismatch");
         }
     }
 }

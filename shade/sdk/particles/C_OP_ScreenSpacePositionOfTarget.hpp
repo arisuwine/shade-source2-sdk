@@ -16,16 +16,16 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CParticleRemapFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleVecInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xa40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,19 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ScreenSpacePositionOfTarget : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x01d8, 0x6b8 bytes
-                bool m_bOututBehindness; // 0x0890, 0x1 bytes
-                std::uint8_t pad_0891[0x3]; // 0x0891, 0x3 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nBehindFieldOutput; // 0x0894, 0x4 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flBehindOutputRemap; // 0x0898, 0x170 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nBehindSetMethod; // 0x0a08, 0x4 bytes
-                std::uint8_t pad_0a0c[0x4]; // 0x0a0c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x01e0, 0x6d8 bytes
+                bool m_bOututBehindness; // 0x08b8, 0x1 bytes
+                std::uint8_t pad_08b9[0x3]; // 0x08b9, 0x3 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nBehindFieldOutput; // 0x08bc, 0x4 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flBehindOutputRemap; // 0x08c0, 0x178 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nBehindSetMethod; // 0x0a38, 0x4 bytes
+                std::uint8_t pad_0a3c[0x4]; // 0x0a3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ScreenSpacePositionOfTarget) == 0xA10, "C_OP_ScreenSpacePositionOfTarget size mismatch");
+            static_assert(sizeof(C_OP_ScreenSpacePositionOfTarget) == 0xA40, "C_OP_ScreenSpacePositionOfTarget size mismatch");
         }
     }
 }

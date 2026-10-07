@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,32 +39,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Seasonal_TI9_Monkey_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float attack_range; // 0x1a78, 0x4 bytes
-                float attack_time; // 0x1a7c, 0x4 bytes
-                float attack_projectile_time; // 0x1a80, 0x4 bytes
-                std::int32_t projectile_speed; // 0x1a84, 0x4 bytes
-                float turn_time; // 0x1a88, 0x4 bytes
-                float turn_angle; // 0x1a8c, 0x4 bytes
-                float shoot_angle; // 0x1a90, 0x4 bytes
-                float m_flTurnRate; // 0x1a94, 0x4 bytes
-                float m_flTargetYaw; // 0x1a98, 0x4 bytes
-                float m_flLastTurnTime; // 0x1a9c, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nLastTickCount; // 0x1aa0, 0x4 bytes
-                std::uint8_t pad_1aa4[0x4]; // 0x1aa4, 0x4 bytes
-                bool m_bHappyMonkeyCondition; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hAngryTarget; // 0x1aac, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hAttackTarget; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_AttackTimer; // 0x1ab8, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_AttackProjectileTimer; // 0x1ad0, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_HappyTimer; // 0x1ae8, 0x18 bytes
+                float attack_range; // 0x1aa8, 0x4 bytes
+                float attack_time; // 0x1aac, 0x4 bytes
+                float attack_projectile_time; // 0x1ab0, 0x4 bytes
+                std::int32_t projectile_speed; // 0x1ab4, 0x4 bytes
+                float turn_time; // 0x1ab8, 0x4 bytes
+                float turn_angle; // 0x1abc, 0x4 bytes
+                float shoot_angle; // 0x1ac0, 0x4 bytes
+                float m_flTurnRate; // 0x1ac4, 0x4 bytes
+                float m_flTargetYaw; // 0x1ac8, 0x4 bytes
+                float m_flLastTurnTime; // 0x1acc, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nLastTickCount; // 0x1ad0, 0x4 bytes
+                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                bool m_bHappyMonkeyCondition; // 0x1ad8, 0x1 bytes
+                std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hAngryTarget; // 0x1adc, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hAttackTarget; // 0x1ae0, 0x4 bytes
+                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_AttackTimer; // 0x1ae8, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_AttackProjectileTimer; // 0x1b00, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_HappyTimer; // 0x1b18, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI9_Monkey_Thinker) == 0x1B00, "CDOTA_Modifier_Seasonal_TI9_Monkey_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Seasonal_TI9_Monkey_Thinker) == 0x1B30, "CDOTA_Modifier_Seasonal_TI9_Monkey_Thinker size mismatch");
         }
     }
 }

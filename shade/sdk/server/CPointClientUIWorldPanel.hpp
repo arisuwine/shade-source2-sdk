@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x938
+             * Size: 0xa18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,50 +30,44 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointClientUIWorldPanel : public shade::sdk::server::CBaseClientUIEntity {
             public:
-                bool m_bIgnoreInput; // 0x08d8, 0x1 bytes
-                bool m_bLit; // 0x08d9, 0x1 bytes
-                bool m_bFollowPlayerAcrossTeleport; // 0x08da, 0x1 bytes
-                std::uint8_t pad_08db[0x1]; // 0x08db, 0x1 bytes
-                float m_flWidth; // 0x08dc, 0x4 bytes
-                float m_flHeight; // 0x08e0, 0x4 bytes
-                float m_flDPI; // 0x08e4, 0x4 bytes
-                float m_flWindowUIScale; // 0x08e8, 0x4 bytes
-                float m_flInteractDistance; // 0x08ec, 0x4 bytes
-                float m_flDepthOffset; // 0x08f0, 0x4 bytes
-                std::uint32_t m_unOwnerContext; // 0x08f4, 0x4 bytes
-                std::uint32_t m_unHorizontalAlign; // 0x08f8, 0x4 bytes
-                std::uint32_t m_unVerticalAlign; // 0x08fc, 0x4 bytes
-                std::uint32_t m_unOrientation; // 0x0900, 0x4 bytes
-                bool m_bAllowInteractionFromAllSceneWorlds; // 0x0904, 0x1 bytes
-                std::uint8_t pad_0905[0x3]; // 0x0905, 0x3 bytes
-                CNetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x0908, 0x18 bytes
-                bool m_bOpaque; // 0x0920, 0x1 bytes
-                bool m_bNoDepth; // 0x0921, 0x1 bytes
-                bool m_bVisibleWhenParentNoDraw; // 0x0922, 0x1 bytes
-                bool m_bRenderBackface; // 0x0923, 0x1 bytes
-                bool m_bUseOffScreenIndicator; // 0x0924, 0x1 bytes
-                bool m_bExcludeFromSaveGames; // 0x0925, 0x1 bytes
-                bool m_bGrabbable; // 0x0926, 0x1 bytes
-                bool m_bOnlyRenderToTexture; // 0x0927, 0x1 bytes
-                bool m_bDisableMipGen; // 0x0928, 0x1 bytes
-                std::uint8_t pad_0929[0x3]; // 0x0929, 0x3 bytes
-                std::int32_t m_nExplicitImageLayout; // 0x092c, 0x4 bytes
-                bool m_bIgnoreParentOrientation; // 0x0930, 0x1 bytes
-                std::uint8_t pad_0931[0x7]; // 0x0931, 0x7 bytes
+                bool m_bIgnoreInput; // 0x09b8, 0x1 bytes
+                bool m_bLit; // 0x09b9, 0x1 bytes
+                bool m_bFollowPlayerAcrossTeleport; // 0x09ba, 0x1 bytes
+                std::uint8_t pad_09bb[0x1]; // 0x09bb, 0x1 bytes
+                float m_flWidth; // 0x09bc, 0x4 bytes
+                float m_flHeight; // 0x09c0, 0x4 bytes
+                float m_flDPI; // 0x09c4, 0x4 bytes
+                float m_flWindowUIScale; // 0x09c8, 0x4 bytes
+                float m_flInteractDistance; // 0x09cc, 0x4 bytes
+                float m_flDepthOffset; // 0x09d0, 0x4 bytes
+                std::uint32_t m_unOwnerContext; // 0x09d4, 0x4 bytes
+                std::uint32_t m_unHorizontalAlign; // 0x09d8, 0x4 bytes
+                std::uint32_t m_unVerticalAlign; // 0x09dc, 0x4 bytes
+                std::uint32_t m_unOrientation; // 0x09e0, 0x4 bytes
+                bool m_bAllowInteractionFromAllSceneWorlds; // 0x09e4, 0x1 bytes
+                std::uint8_t pad_09e5[0x3]; // 0x09e5, 0x3 bytes
+                CNetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x09e8, 0x18 bytes
+                bool m_bOpaque; // 0x0a00, 0x1 bytes
+                bool m_bNoDepth; // 0x0a01, 0x1 bytes
+                bool m_bVisibleWhenParentNoDraw; // 0x0a02, 0x1 bytes
+                bool m_bRenderBackface; // 0x0a03, 0x1 bytes
+                bool m_bUseOffScreenIndicator; // 0x0a04, 0x1 bytes
+                bool m_bExcludeFromSaveGames; // 0x0a05, 0x1 bytes
+                bool m_bGrabbable; // 0x0a06, 0x1 bytes
+                bool m_bOnlyRenderToTexture; // 0x0a07, 0x1 bytes
+                bool m_bDisableMipGen; // 0x0a08, 0x1 bytes
+                std::uint8_t pad_0a09[0x3]; // 0x0a09, 0x3 bytes
+                std::int32_t m_nExplicitImageLayout; // 0x0a0c, 0x4 bytes
+                bool m_bIgnoreParentOrientation; // 0x0a10, 0x1 bytes
+                std::uint8_t pad_0a11[0x7]; // 0x0a11, 0x7 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
              * CUtlSymbolLarge css_class; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * void InputIgnoreUserInput; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * void InputAcceptUserInput; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputAddCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputRemoveCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputLocalPlayerAddCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge InputLocalPlayerRemoveCSSClass; // Offset: 0x0, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPointClientUIWorldPanel) == 0x938, "CPointClientUIWorldPanel size mismatch");
+            static_assert(sizeof(CPointClientUIWorldPanel) == 0xA18, "CPointClientUIWorldPanel size mismatch");
         }
     }
 }

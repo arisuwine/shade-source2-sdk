@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d98
+             * Size: 0x1e98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Hero_Spectre : public shade::sdk::client::C_DOTA_BaseNPC_Hero {
             public:
-                std::uint8_t m_unCurrentArcanaKillStreak; // 0x1d88, 0x1 bytes
-                std::uint8_t m_unBestArcanaKillStreak; // 0x1d89, 0x1 bytes
-                std::uint8_t pad_1d8a[0x2]; // 0x1d8a, 0x2 bytes
-                shade::sdk::client::PlayerID_t m_nVictimPlayerID; // 0x1d8c, 0x4 bytes
-                bool m_bArcanaKillstreakRecordBroken; // 0x1d90, 0x1 bytes
-                std::uint8_t pad_1d91[0x7]; // 0x1d91, 0x7 bytes
+                std::uint8_t m_unCurrentArcanaKillStreak; // 0x1e88, 0x1 bytes
+                std::uint8_t m_unBestArcanaKillStreak; // 0x1e89, 0x1 bytes
+                std::uint8_t pad_1e8a[0x2]; // 0x1e8a, 0x2 bytes
+                shade::sdk::client::PlayerID_t m_nVictimPlayerID; // 0x1e8c, 0x4 bytes
+                bool m_bArcanaKillstreakRecordBroken; // 0x1e90, 0x1 bytes
+                std::uint8_t pad_1e91[0x7]; // 0x1e91, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Hero_Spectre) == 0x1D98, "C_DOTA_Unit_Hero_Spectre size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Hero_Spectre) == 0x1E98, "C_DOTA_Unit_Hero_Spectre size mismatch");
         }
     }
 }

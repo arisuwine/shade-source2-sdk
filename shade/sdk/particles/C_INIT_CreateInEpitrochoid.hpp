@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x818
+             * Size: 0x840
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +31,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_CreateInEpitrochoid : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                std::int32_t m_nComponent1; // 0x01e0, 0x4 bytes
-                std::int32_t m_nComponent2; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01e8, 0x68 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flParticleDensity; // 0x0250, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x03c0, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius1; // 0x0530, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius2; // 0x06a0, 0x170 bytes
-                bool m_bUseCount; // 0x0810, 0x1 bytes
-                bool m_bUseLocalCoords; // 0x0811, 0x1 bytes
-                bool m_bOffsetExistingPos; // 0x0812, 0x1 bytes
-                std::uint8_t pad_0813[0x5]; // 0x0813, 0x5 bytes
+                std::int32_t m_nComponent1; // 0x01e8, 0x4 bytes
+                std::int32_t m_nComponent2; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x01f0, 0x68 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flParticleDensity; // 0x0258, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flOffset; // 0x03d0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius1; // 0x0548, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRadius2; // 0x06c0, 0x178 bytes
+                bool m_bUseCount; // 0x0838, 0x1 bytes
+                bool m_bUseLocalCoords; // 0x0839, 0x1 bytes
+                bool m_bOffsetExistingPos; // 0x083a, 0x1 bytes
+                std::uint8_t pad_083b[0x5]; // 0x083b, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateInEpitrochoid) == 0x818, "C_INIT_CreateInEpitrochoid size mismatch");
+            static_assert(sizeof(C_INIT_CreateInEpitrochoid) == 0x840, "C_INIT_CreateInEpitrochoid size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e40
+             * Size: 0x1f40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,7 +30,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Survivors_UnitEntity : public shade::sdk::client::C_PortraitWorldUnit {
             public:
-                std::uint8_t pad_1df0[0x50]; // 0x1df0, 0x50 bytes
+                std::uint8_t pad_1ef0[0x50]; // 0x1ef0, 0x50 bytes
             };
             #pragma pack(pop)
 
@@ -38,7 +38,7 @@ namespace shade {
              * bool okifnomodel; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDOTA_Survivors_UnitEntity) == 0x1E40, "CDOTA_Survivors_UnitEntity size mismatch");
+            static_assert(sizeof(CDOTA_Survivors_UnitEntity) == 0x1F40, "CDOTA_Survivors_UnitEntity size mismatch");
         }
     }
 }

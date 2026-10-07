@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1b98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,36 +40,34 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Tower : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                shade::sdk::client::ParticleIndex_t m_nAltHeldRangeFX; // 0x1a28, 0x4 bytes
-                bool m_bWasInRange; // 0x1a2c, 0x1 bytes
-                std::uint8_t pad_1a2d[0x3]; // 0x1a2d, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_iRangeFX; // 0x1a30, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_iPulseFX; // 0x1a34, 0x4 bytes
-                std::uint8_t m_unTowerTier; // 0x1a38, 0x1 bytes
-                std::uint8_t pad_1a39[0x3]; // 0x1a39, 0x3 bytes
-                float m_fTowerAggroDangerAmount; // 0x1a3c, 0x4 bytes
-                float m_flControlledUnitInRangeAmount; // 0x1a40, 0x4 bytes
-                float m_flControlledUnitTargettedAmount; // 0x1a44, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_iAnticipationFX; // 0x1a48, 0x4 bytes
-                std::uint8_t pad_1a4c[0x4]; // 0x1a4c, 0x4 bytes
-                CUtlSymbolLarge m_szAnticipationFXName; // 0x1a50, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hPrevTowerAttackTarget; // 0x1a58, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTowerAttackTarget; // 0x1a5c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTowerHighFiveTarget; // 0x1a60, 0x4 bytes
-                std::int32_t m_iPoseParameterAim; // 0x1a64, 0x4 bytes
-                QAngle m_angDefaultCustomTowerAngle; // 0x1a68, 0xc bytes
-                float m_flLastAimYaw; // 0x1a74, 0x4 bytes
-                bool m_bClientSideCustomTower; // 0x1a78, 0x1 bytes
-                std::uint8_t pad_1a79[0x7]; // 0x1a79, 0x7 bytes
-                shade::sdk::client::CountdownTimer m_IdleRareAnimationTime; // 0x1a80, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nAltHeldRangeFX; // 0x1b28, 0x4 bytes
+                bool m_bWasInRange; // 0x1b2c, 0x1 bytes
+                std::uint8_t pad_1b2d[0x3]; // 0x1b2d, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_iRangeFX; // 0x1b30, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_iPulseFX; // 0x1b34, 0x4 bytes
+                std::uint8_t m_unTowerTier; // 0x1b38, 0x1 bytes
+                std::uint8_t pad_1b39[0x3]; // 0x1b39, 0x3 bytes
+                float m_fTowerAggroDangerAmount; // 0x1b3c, 0x4 bytes
+                float m_flControlledUnitInRangeAmount; // 0x1b40, 0x4 bytes
+                float m_flControlledUnitTargettedAmount; // 0x1b44, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_iAnticipationFX; // 0x1b48, 0x4 bytes
+                std::uint8_t pad_1b4c[0x4]; // 0x1b4c, 0x4 bytes
+                CUtlSymbolLarge m_szAnticipationFXName; // 0x1b50, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hPrevTowerAttackTarget; // 0x1b58, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTowerAttackTarget; // 0x1b5c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTowerHighFiveTarget; // 0x1b60, 0x4 bytes
+                std::int32_t m_iPoseParameterAim; // 0x1b64, 0x4 bytes
+                QAngle m_angDefaultCustomTowerAngle; // 0x1b68, 0xc bytes
+                float m_flLastAimYaw; // 0x1b74, 0x4 bytes
+                bool m_bClientSideCustomTower; // 0x1b78, 0x1 bytes
+                std::uint8_t pad_1b79[0x7]; // 0x1b79, 0x7 bytes
+                shade::sdk::client::CountdownTimer m_IdleRareAnimationTime; // 0x1b80, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Tower) == 0x1A98, "C_DOTA_BaseNPC_Tower size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Tower) == 0x1B98, "C_DOTA_BaseNPC_Tower size mismatch");
         }
     }
 }

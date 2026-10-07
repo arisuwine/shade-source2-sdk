@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x6a0
+             * Size: 0x6a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Lua : public shade::sdk::server::CDOTA_Item {
             public:
-                std::uint8_t pad_0658[0x48]; // 0x0658, 0x48 bytes
+                std::uint8_t pad_0660[0x48]; // 0x0660, 0x48 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Lua) == 0x6A0, "CDOTA_Item_Lua size mismatch");
+            static_assert(sizeof(CDOTA_Item_Lua) == 0x6A8, "CDOTA_Item_Lua size mismatch");
         }
     }
 }

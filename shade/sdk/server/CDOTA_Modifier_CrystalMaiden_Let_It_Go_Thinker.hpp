@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1ac0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_CrystalMaiden_Let_It_Go_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vPathStart; // 0x1a78, 0xc bytes
-                VectorWS m_vPathEnd; // 0x1a84, 0xc bytes
+                VectorWS m_vPathStart; // 0x1aa8, 0xc bytes
+                VectorWS m_vPathEnd; // 0x1ab4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_CrystalMaiden_Let_It_Go_Thinker) == 0x1A90, "CDOTA_Modifier_CrystalMaiden_Let_It_Go_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_CrystalMaiden_Let_It_Go_Thinker) == 0x1AC0, "CDOTA_Modifier_CrystalMaiden_Let_It_Go_Thinker size mismatch");
         }
     }
 }

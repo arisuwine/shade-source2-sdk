@@ -16,12 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
+#include "shade/sdk/particleslib/CParticleCollectionFloatInput.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e0
+             * Size: 0x358
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,14 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_EndCapTimedDecay : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flDecayTime; // 0x01d8, 0x4 bytes
-                std::uint8_t pad_01dc[0x4]; // 0x01dc, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flDecayTime; // 0x01e0, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_EndCapTimedDecay) == 0x1E0, "C_OP_EndCapTimedDecay size mismatch");
+            static_assert(sizeof(C_OP_EndCapTimedDecay) == 0x358, "C_OP_EndCapTimedDecay size mismatch");
         }
     }
 }

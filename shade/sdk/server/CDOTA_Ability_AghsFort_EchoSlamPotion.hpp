@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x670
+             * Size: 0x678
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,20 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_AghsFort_EchoSlamPotion : public shade::sdk::server::CDOTA_Item {
             public:
-                std::int32_t echo_slam_damage_range; // 0x0658, 0x4 bytes
-                std::int32_t echo_slam_echo_search_range; // 0x065c, 0x4 bytes
-                std::int32_t echo_slam_echo_range; // 0x0660, 0x4 bytes
-                std::int32_t echo_slam_echo_damage; // 0x0664, 0x4 bytes
-                std::int32_t echo_slam_initial_damage; // 0x0668, 0x4 bytes
-                float spend_charge_delay; // 0x066c, 0x4 bytes
+                std::int32_t echo_slam_damage_range; // 0x0660, 0x4 bytes
+                std::int32_t echo_slam_echo_search_range; // 0x0664, 0x4 bytes
+                std::int32_t echo_slam_echo_range; // 0x0668, 0x4 bytes
+                std::int32_t echo_slam_echo_damage; // 0x066c, 0x4 bytes
+                std::int32_t echo_slam_initial_damage; // 0x0670, 0x4 bytes
+                float spend_charge_delay; // 0x0674, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_AghsFort_EchoSlamPotion) == 0x670, "CDOTA_Ability_AghsFort_EchoSlamPotion size mismatch");
+            static_assert(sizeof(CDOTA_Ability_AghsFort_EchoSlamPotion) == 0x678, "CDOTA_Ability_AghsFort_EchoSlamPotion size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Silencer_BrainDrain : public shade::sdk::client::CDOTA_Buff {
             public:
-                float permanent_int_steal_range; // 0x1a78, 0x4 bytes
-                std::int32_t permanent_int_steal_amount; // 0x1a7c, 0x4 bytes
-                std::int32_t silenced_bonus_int_steal_amount; // 0x1a80, 0x4 bytes
-                float damage_pct; // 0x1a84, 0x4 bytes
+                float permanent_int_steal_range; // 0x1aa8, 0x4 bytes
+                std::int32_t permanent_int_steal_amount; // 0x1aac, 0x4 bytes
+                std::int32_t silenced_bonus_int_steal_amount; // 0x1ab0, 0x4 bytes
+                float damage_pct; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Silencer_BrainDrain) == 0x1A88, "CDOTA_Modifier_Silencer_BrainDrain size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Silencer_BrainDrain) == 0x1AB8, "CDOTA_Modifier_Silencer_BrainDrain size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Shredder_Flamethrower : public shade::sdk::client::CDOTA_Buff {
             public:
-                float length; // 0x1a78, 0x4 bytes
-                float width; // 0x1a7c, 0x4 bytes
-                float damage_per_second; // 0x1a80, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1a84, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBeamEnd; // 0x1a88, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastHit; // 0x1a8c, 0x4 bytes
-                CUtlVector<shade::sdk::server::CBaseEntity*> m_vecBurningTrees; // 0x1a90, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTreeFireThinker; // 0x1aa8, 0x4 bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                float length; // 0x1aa8, 0x4 bytes
+                float width; // 0x1aac, 0x4 bytes
+                float damage_per_second; // 0x1ab0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1ab4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBeamEnd; // 0x1ab8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastHit; // 0x1abc, 0x4 bytes
+                CUtlVector<shade::sdk::server::CBaseEntity*> m_vecBurningTrees; // 0x1ac0, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTreeFireThinker; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Shredder_Flamethrower) == 0x1AB0, "CDOTA_Modifier_Shredder_Flamethrower size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Shredder_Flamethrower) == 0x1AE0, "CDOTA_Modifier_Shredder_Flamethrower size mismatch");
         }
     }
 }

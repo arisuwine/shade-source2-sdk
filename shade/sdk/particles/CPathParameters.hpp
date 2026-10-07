@@ -28,14 +28,15 @@ namespace shade {
             class CPathParameters {
             public:
                 std::int32_t m_nStartControlPointNumber; // 0x0000, 0x4 bytes
-                std::int32_t m_nEndControlPointNumber; // 0x0004, 0x4 bytes
-                std::int32_t m_nBulgeControl; // 0x0008, 0x4 bytes
-                float m_flBulge; // 0x000c, 0x4 bytes
-                float m_flMidPoint; // 0x0010, 0x4 bytes
-                Vector m_vStartPointOffset; // 0x0014, 0xc bytes
-                Vector m_vMidPointOffset; // 0x0020, 0xc bytes
-                Vector m_vEndOffset; // 0x002c, 0xc bytes
-                std::uint8_t pad_0038[0x8]; // 0x0038, 0x8 bytes
+                std::int32_t m_nMidControlPointNumber; // 0x0004, 0x4 bytes
+                std::int32_t m_nEndControlPointNumber; // 0x0008, 0x4 bytes
+                std::int32_t m_nBulgeControl; // 0x000c, 0x4 bytes
+                float m_flBulge; // 0x0010, 0x4 bytes
+                float m_flMidPoint; // 0x0014, 0x4 bytes
+                Vector m_vStartPointOffset; // 0x0018, 0xc bytes
+                Vector m_vMidPointOffset; // 0x0024, 0xc bytes
+                Vector m_vEndOffset; // 0x0030, 0xc bytes
+                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
             };
             #pragma pack(pop)
 

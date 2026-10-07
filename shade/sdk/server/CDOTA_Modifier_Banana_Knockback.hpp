@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,25 +29,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Banana_Knockback : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vCenter; // 0x1a78, 0xc bytes
-                std::int32_t knockback_distance; // 0x1a84, 0x4 bytes
-                std::int32_t knockback_height; // 0x1a88, 0x4 bytes
-                float knockback_duration; // 0x1a8c, 0x4 bytes
-                Vector m_vHorizOffset; // 0x1a90, 0xc bytes
-                VectorWS m_vStartPosition; // 0x1a9c, 0xc bytes
-                Vector m_vDir; // 0x1aa8, 0xc bytes
-                float m_fCurrentTimeHoriz; // 0x1ab4, 0x4 bytes
-                float m_fCurrentTimeVert; // 0x1ab8, 0x4 bytes
-                bool m_bShouldStun; // 0x1abc, 0x1 bytes
-                std::uint8_t pad_1abd[0x3]; // 0x1abd, 0x3 bytes
-                float flTimeSinceChange; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                VectorWS m_vCenter; // 0x1aa8, 0xc bytes
+                std::int32_t knockback_distance; // 0x1ab4, 0x4 bytes
+                std::int32_t knockback_height; // 0x1ab8, 0x4 bytes
+                float knockback_duration; // 0x1abc, 0x4 bytes
+                Vector m_vHorizOffset; // 0x1ac0, 0xc bytes
+                VectorWS m_vStartPosition; // 0x1acc, 0xc bytes
+                Vector m_vDir; // 0x1ad8, 0xc bytes
+                float m_fCurrentTimeHoriz; // 0x1ae4, 0x4 bytes
+                float m_fCurrentTimeVert; // 0x1ae8, 0x4 bytes
+                bool m_bShouldStun; // 0x1aec, 0x1 bytes
+                std::uint8_t pad_1aed[0x3]; // 0x1aed, 0x3 bytes
+                float flTimeSinceChange; // 0x1af0, 0x4 bytes
+                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Banana_Knockback) == 0x1AC8, "CDOTA_Modifier_Banana_Knockback size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Banana_Knockback) == 0x1AF8, "CDOTA_Modifier_Banana_Knockback size mismatch");
         }
     }
 }

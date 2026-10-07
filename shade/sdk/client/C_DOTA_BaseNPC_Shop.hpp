@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a68
+             * Size: 0x1b68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Shop : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                shade::sdk::client::DOTA_SHOP_TYPE m_ShopType; // 0x1a28, 0x4 bytes
-                std::uint8_t pad_1a2c[0x24]; // 0x1a2c, 0x24 bytes
-                shade::sdk::client::ParticleIndex_t m_nShopFX; // 0x1a50, 0x4 bytes
-                VectorWS m_vShopFXOrigin; // 0x1a54, 0xc bytes
-                float m_flLastSpeech; // 0x1a60, 0x4 bytes
-                std::uint8_t pad_1a64[0x4]; // 0x1a64, 0x4 bytes
+                shade::sdk::client::DOTA_SHOP_TYPE m_ShopType; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x24]; // 0x1b2c, 0x24 bytes
+                shade::sdk::client::ParticleIndex_t m_nShopFX; // 0x1b50, 0x4 bytes
+                VectorWS m_vShopFXOrigin; // 0x1b54, 0xc bytes
+                float m_flLastSpeech; // 0x1b60, 0x4 bytes
+                std::uint8_t pad_1b64[0x4]; // 0x1b64, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Shop) == 0x1A68, "C_DOTA_BaseNPC_Shop size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Shop) == 0x1B68, "C_DOTA_BaseNPC_Shop size mismatch");
         }
     }
 }

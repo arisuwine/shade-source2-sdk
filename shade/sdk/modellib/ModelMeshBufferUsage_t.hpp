@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace modellib {
-            enum class ModelMeshBufferUsage_t : std::uint8_t {
+            enum class ModelMeshBufferUsage_t : std::uint16_t {
                 MESH_BUFFER_USAGE_NONE = 0x0,
                 MESH_BUFFER_USAGE_VB = 0x1,
                 MESH_BUFFER_USAGE_IB = 0x2,
@@ -24,7 +24,9 @@ namespace shade {
                 MESH_BUFFER_USAGE_MESHLET_TRIS = 0x8,
                 MESH_BUFFER_USAGE_RT_PROXY = 0x10,
                 MESH_BUFFER_USAGE_VERTEX_ALBEDO = 0x20,
-                MESH_BUFFER_USAGE_VERTEX_EMISSIVE = 0x40
+                MESH_BUFFER_USAGE_VERTEX_EMISSIVE = 0x40,
+                MESH_BUFFER_USAGE_MESHLETS = 0x80,
+                MESH_BUFFER_USAGE_ALIAS_TABLE = 0x100
             };
         }
     }

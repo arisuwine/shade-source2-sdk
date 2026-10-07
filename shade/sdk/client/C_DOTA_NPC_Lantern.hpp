@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a50
+             * Size: 0x1b50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_NPC_Lantern : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                CUtlSymbolLarge m_szInteractAbilityName; // 0x1a28, 0x8 bytes
-                shade::sdk::particleslib::CNewParticleEffect *m_pVisionRangeFX; // 0x1a30, 0x8 bytes
-                std::int32_t m_nPreviewViewer; // 0x1a38, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_iFxIndex; // 0x1a3c, 0x4 bytes
-                std::int32_t m_nCurrentOwningTeam; // 0x1a40, 0x4 bytes
-                std::int32_t m_nCurrentActivity; // 0x1a44, 0x4 bytes
-                bool m_bCanBeCaptured; // 0x1a48, 0x1 bytes
-                std::uint8_t pad_1a49[0x7]; // 0x1a49, 0x7 bytes
+                CUtlSymbolLarge m_szInteractAbilityName; // 0x1b28, 0x8 bytes
+                shade::sdk::particleslib::CNewParticleEffect *m_pVisionRangeFX; // 0x1b30, 0x8 bytes
+                std::int32_t m_nPreviewViewer; // 0x1b38, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_iFxIndex; // 0x1b3c, 0x4 bytes
+                std::int32_t m_nCurrentOwningTeam; // 0x1b40, 0x4 bytes
+                std::int32_t m_nCurrentActivity; // 0x1b44, 0x4 bytes
+                bool m_bCanBeCaptured; // 0x1b48, 0x1 bytes
+                std::uint8_t pad_1b49[0x7]; // 0x1b49, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_NPC_Lantern) == 0x1A50, "C_DOTA_NPC_Lantern size mismatch");
+            static_assert(sizeof(C_DOTA_NPC_Lantern) == 0x1B50, "C_DOTA_NPC_Lantern size mismatch");
         }
     }
 }

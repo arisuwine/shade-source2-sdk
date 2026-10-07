@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x838
+             * Size: 0x918
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CScriptItem : public shade::sdk::server::CItem {
             public:
-                shade::sdk::client::MoveType_t m_MoveTypeOverride; // 0x0830, 0x1 bytes
-                std::uint8_t pad_0831[0x7]; // 0x0831, 0x7 bytes
+                shade::sdk::client::MoveType_t m_MoveTypeOverride; // 0x0910, 0x1 bytes
+                std::uint8_t pad_0911[0x7]; // 0x0911, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CScriptItem) == 0x838, "CScriptItem size mismatch");
+            static_assert(sizeof(CScriptItem) == 0x918, "CScriptItem size mismatch");
         }
     }
 }

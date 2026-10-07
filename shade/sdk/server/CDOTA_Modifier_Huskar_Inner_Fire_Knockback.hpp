@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Huskar_Inner_Fire_Knockback : public shade::sdk::client::CDOTA_Buff {
             public:
-                Vector m_vDirection; // 0x1a78, 0xc bytes
-                float m_flEndTime; // 0x1a84, 0x4 bytes
-                float m_flCurTime; // 0x1a88, 0x4 bytes
-                float knockback_distance; // 0x1a8c, 0x4 bytes
-                float knockback_duration; // 0x1a90, 0x4 bytes
-                float min_knockback_distance; // 0x1a94, 0x4 bytes
-                float min_knockback_duration; // 0x1a98, 0x4 bytes
-                float effective_distance; // 0x1a9c, 0x4 bytes
+                Vector m_vDirection; // 0x1aa8, 0xc bytes
+                float m_flEndTime; // 0x1ab4, 0x4 bytes
+                float m_flCurTime; // 0x1ab8, 0x4 bytes
+                float knockback_distance; // 0x1abc, 0x4 bytes
+                float knockback_duration; // 0x1ac0, 0x4 bytes
+                float min_knockback_distance; // 0x1ac4, 0x4 bytes
+                float min_knockback_duration; // 0x1ac8, 0x4 bytes
+                float effective_distance; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Huskar_Inner_Fire_Knockback) == 0x1AA0, "CDOTA_Modifier_Huskar_Inner_Fire_Knockback size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Huskar_Inner_Fire_Knockback) == 0x1AD0, "CDOTA_Modifier_Huskar_Inner_Fire_Knockback size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,19 +37,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Bloodthorn_Debuff : public shade::sdk::client::CDOTA_Buff {
             public:
-                float target_crit_multiplier; // 0x1a78, 0x4 bytes
-                float silence_damage_percent; // 0x1a7c, 0x4 bytes
-                std::int32_t proc_damage_heroes; // 0x1a80, 0x4 bytes
-                std::int32_t proc_damage_creeps; // 0x1a84, 0x4 bytes
-                float m_flDamageTaken; // 0x1a88, 0x4 bytes
-                std::uint8_t pad_1a8c[0x4]; // 0x1a8c, 0x4 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_vRecords; // 0x1a90, 0x18 bytes
+                float target_crit_multiplier; // 0x1aa8, 0x4 bytes
+                float silence_damage_percent; // 0x1aac, 0x4 bytes
+                std::int32_t proc_damage_heroes; // 0x1ab0, 0x4 bytes
+                std::int32_t proc_damage_creeps; // 0x1ab4, 0x4 bytes
+                float m_flDamageTaken; // 0x1ab8, 0x4 bytes
+                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_vRecords; // 0x1ac0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Bloodthorn_Debuff) == 0x1AA8, "CDOTA_Modifier_Bloodthorn_Debuff size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Bloodthorn_Debuff) == 0x1AD8, "CDOTA_Modifier_Bloodthorn_Debuff size mismatch");
         }
     }
 }

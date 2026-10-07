@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa88
+             * Size: 0xb78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseToggle) == 0xA88, "C_BaseToggle size mismatch");
+            static_assert(sizeof(C_BaseToggle) == 0xB78, "C_BaseToggle size mismatch");
         }
     }
 }

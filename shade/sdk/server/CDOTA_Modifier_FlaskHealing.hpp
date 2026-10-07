@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_FlaskHealing : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t health_regen; // 0x1a78, 0x4 bytes
-                std::int32_t break_on_hero_damage; // 0x1a7c, 0x4 bytes
-                bool half_heal; // 0x1a80, 0x1 bytes
-                std::uint8_t pad_1a81[0x3]; // 0x1a81, 0x3 bytes
-                float m_fHealingDone; // 0x1a84, 0x4 bytes
-                float m_fUseSpeed; // 0x1a88, 0x4 bytes
-                std::uint8_t pad_1a8c[0x4]; // 0x1a8c, 0x4 bytes
-                CUtlString m_sAbilityClassname; // 0x1a90, 0x8 bytes
+                std::int32_t health_regen; // 0x1aa8, 0x4 bytes
+                std::int32_t break_on_hero_damage; // 0x1aac, 0x4 bytes
+                bool half_heal; // 0x1ab0, 0x1 bytes
+                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
+                float m_fHealingDone; // 0x1ab4, 0x4 bytes
+                float m_fUseSpeed; // 0x1ab8, 0x4 bytes
+                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
+                CUtlString m_sAbilityClassname; // 0x1ac0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_FlaskHealing) == 0x1A98, "CDOTA_Modifier_FlaskHealing size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_FlaskHealing) == 0x1AC8, "CDOTA_Modifier_FlaskHealing size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x288
+             * Size: 0x290
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetCPOrientationToGroundNormal : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_flInterpRate; // 0x01d8, 0x4 bytes
-                float m_flMaxTraceLength; // 0x01dc, 0x4 bytes
-                float m_flTolerance; // 0x01e0, 0x4 bytes
-                float m_flTraceOffset; // 0x01e4, 0x4 bytes
-                char m_CollisionGroupName[0x80]; // 0x01e8, 0x80 bytes
-                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0268, 0x4 bytes
-                std::int32_t m_nInputCP; // 0x026c, 0x4 bytes
-                std::int32_t m_nOutputCP; // 0x0270, 0x4 bytes
-                std::uint8_t pad_0274[0xc]; // 0x0274, 0xc bytes
-                bool m_bIncludeWater; // 0x0280, 0x1 bytes
-                std::uint8_t pad_0281[0x7]; // 0x0281, 0x7 bytes
+                float m_flInterpRate; // 0x01e0, 0x4 bytes
+                float m_flMaxTraceLength; // 0x01e4, 0x4 bytes
+                float m_flTolerance; // 0x01e8, 0x4 bytes
+                float m_flTraceOffset; // 0x01ec, 0x4 bytes
+                char m_CollisionGroupName[0x80]; // 0x01f0, 0x80 bytes
+                shade::sdk::particles::ParticleTraceSet_t m_nTraceSet; // 0x0270, 0x4 bytes
+                std::int32_t m_nInputCP; // 0x0274, 0x4 bytes
+                std::int32_t m_nOutputCP; // 0x0278, 0x4 bytes
+                std::uint8_t pad_027c[0xc]; // 0x027c, 0xc bytes
+                bool m_bIncludeWater; // 0x0288, 0x1 bytes
+                std::uint8_t pad_0289[0x7]; // 0x0289, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetCPOrientationToGroundNormal) == 0x288, "C_OP_SetCPOrientationToGroundNormal size mismatch");
+            static_assert(sizeof(C_OP_SetCPOrientationToGroundNormal) == 0x290, "C_OP_SetCPOrientationToGroundNormal size mismatch");
         }
     }
 }

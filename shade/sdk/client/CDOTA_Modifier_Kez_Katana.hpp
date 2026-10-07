@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,28 +30,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Kez_Katana : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t katana_attack_range; // 0x1a78, 0x4 bytes
-                float katana_base_attack_time; // 0x1a7c, 0x4 bytes
-                std::int32_t katana_agility_bonus_base_damage; // 0x1a80, 0x4 bytes
-                float katana_bleed_attack_damage_pct; // 0x1a84, 0x4 bytes
-                std::int32_t katana_base_ms; // 0x1a88, 0x4 bytes
-                float katana_bleed_duration; // 0x1a8c, 0x4 bytes
-                std::int32_t katana_swap_bonus_damage; // 0x1a90, 0x4 bytes
-                float impale_duration; // 0x1a94, 0x4 bytes
-                std::int32_t bleed_as_rupture_pct; // 0x1a98, 0x4 bytes
-                std::int32_t max_stacks; // 0x1a9c, 0x4 bytes
-                std::int32_t m_nBonusPreAttackDamage; // 0x1aa0, 0x4 bytes
-                bool m_bBackstab; // 0x1aa4, 0x1 bytes
-                std::uint8_t pad_1aa5[0x3]; // 0x1aa5, 0x3 bytes
-                float m_flStacksForLifesteal; // 0x1aa8, 0x4 bytes
-                shade::sdk::client::AttackRecord_t m_nImpaleStartAttackRecord; // 0x1aac, 0x2 bytes
-                shade::sdk::client::AttackRecord_t m_nImpaleEndAttackRecord; // 0x1aae, 0x2 bytes
+                std::int32_t katana_attack_range; // 0x1aa8, 0x4 bytes
+                float katana_base_attack_time; // 0x1aac, 0x4 bytes
+                std::int32_t katana_agility_bonus_base_damage; // 0x1ab0, 0x4 bytes
+                float katana_bleed_attack_damage_pct; // 0x1ab4, 0x4 bytes
+                std::int32_t katana_base_ms; // 0x1ab8, 0x4 bytes
+                float katana_bleed_duration; // 0x1abc, 0x4 bytes
+                std::int32_t katana_swap_bonus_damage; // 0x1ac0, 0x4 bytes
+                float impale_duration; // 0x1ac4, 0x4 bytes
+                std::int32_t bleed_as_rupture_pct; // 0x1ac8, 0x4 bytes
+                std::int32_t max_stacks; // 0x1acc, 0x4 bytes
+                std::int32_t m_nBonusPreAttackDamage; // 0x1ad0, 0x4 bytes
+                bool m_bBackstab; // 0x1ad4, 0x1 bytes
+                std::uint8_t pad_1ad5[0x3]; // 0x1ad5, 0x3 bytes
+                float m_flStacksForLifesteal; // 0x1ad8, 0x4 bytes
+                shade::sdk::client::AttackRecord_t m_nImpaleStartAttackRecord; // 0x1adc, 0x2 bytes
+                shade::sdk::client::AttackRecord_t m_nImpaleEndAttackRecord; // 0x1ade, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Kez_Katana) == 0x1AB0, "CDOTA_Modifier_Kez_Katana size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Kez_Katana) == 0x1AE0, "CDOTA_Modifier_Kez_Katana size mismatch");
         }
     }
 }

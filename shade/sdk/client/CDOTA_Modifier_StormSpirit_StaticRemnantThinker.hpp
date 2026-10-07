@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,26 +31,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_StormSpirit_StaticRemnantThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float static_remnant_radius; // 0x1a78, 0x4 bytes
-                float static_remnant_damage_radius; // 0x1a7c, 0x4 bytes
-                float static_remnant_damage; // 0x1a80, 0x4 bytes
-                float static_remnant_delay; // 0x1a84, 0x4 bytes
-                float static_remnant_travel_speed; // 0x1a88, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a8c, 0x4 bytes
-                std::int32_t m_iSearchRadius; // 0x1a90, 0x4 bytes
-                std::int32_t m_iDamageRadius; // 0x1a94, 0x4 bytes
-                bool m_bDoesMove; // 0x1a98, 0x1 bytes
-                bool m_bReachedTargetLocation; // 0x1a99, 0x1 bytes
-                std::uint8_t pad_1a9a[0x2]; // 0x1a9a, 0x2 bytes
-                VectorWS m_vTargetLocation; // 0x1a9c, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flCreateTime; // 0x1aa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastMoveTime; // 0x1aac, 0x4 bytes
+                float static_remnant_radius; // 0x1aa8, 0x4 bytes
+                float static_remnant_damage_radius; // 0x1aac, 0x4 bytes
+                float static_remnant_damage; // 0x1ab0, 0x4 bytes
+                float static_remnant_delay; // 0x1ab4, 0x4 bytes
+                float static_remnant_travel_speed; // 0x1ab8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1abc, 0x4 bytes
+                std::int32_t m_iSearchRadius; // 0x1ac0, 0x4 bytes
+                std::int32_t m_iDamageRadius; // 0x1ac4, 0x4 bytes
+                bool m_bDoesMove; // 0x1ac8, 0x1 bytes
+                bool m_bReachedTargetLocation; // 0x1ac9, 0x1 bytes
+                std::uint8_t pad_1aca[0x2]; // 0x1aca, 0x2 bytes
+                VectorWS m_vTargetLocation; // 0x1acc, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flCreateTime; // 0x1ad8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastMoveTime; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_StormSpirit_StaticRemnantThinker) == 0x1AB0, "CDOTA_Modifier_StormSpirit_StaticRemnantThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_StormSpirit_StaticRemnantThinker) == 0x1AE0, "CDOTA_Modifier_StormSpirit_StaticRemnantThinker size mismatch");
         }
     }
 }

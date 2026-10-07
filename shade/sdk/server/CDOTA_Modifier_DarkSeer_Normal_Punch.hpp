@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1bf0
+             * Size: 0x1c20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DarkSeer_Normal_Punch : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_PositionIndex[0x1e]; // 0x1a78, 0x168 bytes
-                shade::sdk::client::ParticleIndex_t m_nNormalPunchBuffIndex; // 0x1be0, 0x4 bytes
-                float m_flDistanceTraveled; // 0x1be4, 0x4 bytes
-                bool m_bIsValidTarget; // 0x1be8, 0x1 bytes
-                std::uint8_t pad_1be9[0x7]; // 0x1be9, 0x7 bytes
+                VectorWS m_PositionIndex[0x1e]; // 0x1aa8, 0x168 bytes
+                shade::sdk::client::ParticleIndex_t m_nNormalPunchBuffIndex; // 0x1c10, 0x4 bytes
+                float m_flDistanceTraveled; // 0x1c14, 0x4 bytes
+                bool m_bIsValidTarget; // 0x1c18, 0x1 bytes
+                std::uint8_t pad_1c19[0x7]; // 0x1c19, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DarkSeer_Normal_Punch) == 0x1BF0, "CDOTA_Modifier_DarkSeer_Normal_Punch size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DarkSeer_Normal_Punch) == 0x1C20, "CDOTA_Modifier_DarkSeer_Normal_Punch size mismatch");
         }
     }
 }

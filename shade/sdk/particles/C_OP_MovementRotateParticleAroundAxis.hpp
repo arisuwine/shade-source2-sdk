@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xa70
+             * Size: 0xaa0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_MovementRotateParticleAroundAxis : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecRotAxis; // 0x01d8, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRotRate; // 0x0890, 0x170 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x0a00, 0x68 bytes
-                bool m_bLocalSpace; // 0x0a68, 0x1 bytes
-                std::uint8_t pad_0a69[0x7]; // 0x0a69, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecRotAxis; // 0x01e0, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRotRate; // 0x08b8, 0x178 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_TransformInput; // 0x0a30, 0x68 bytes
+                bool m_bLocalSpace; // 0x0a98, 0x1 bytes
+                std::uint8_t pad_0a99[0x7]; // 0x0a99, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_MovementRotateParticleAroundAxis) == 0xA70, "C_OP_MovementRotateParticleAroundAxis size mismatch");
+            static_assert(sizeof(C_OP_MovementRotateParticleAroundAxis) == 0xAA0, "C_OP_MovementRotateParticleAroundAxis size mismatch");
         }
     }
 }

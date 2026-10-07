@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa20
+             * Size: 0x9b0
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CBodyComponentBaseAnimatingOverlay : public shade::sdk::server::CBodyComponentSkeletonInstance {
             public:
-                shade::sdk::server::CBaseAnimatingOverlayController m_animationController; // 0x04e0, 0x538 bytes
-                std::uint8_t pad_0a18[0x8]; // 0x0a18, 0x8 bytes
+                shade::sdk::server::CBaseAnimatingOverlayController m_animationController; // 0x04f0, 0x4b8 bytes
+                std::uint8_t pad_09a8[0x8]; // 0x09a8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBodyComponentBaseAnimatingOverlay) == 0xA20, "CBodyComponentBaseAnimatingOverlay size mismatch");
+            static_assert(sizeof(CBodyComponentBaseAnimatingOverlay) == 0x9B0, "CBodyComponentBaseAnimatingOverlay size mismatch");
         }
     }
 }

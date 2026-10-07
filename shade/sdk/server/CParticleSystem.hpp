@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd00
+             * Size: 0xde0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,34 +43,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CParticleSystem : public shade::sdk::server::CBaseModelEntity {
             public:
-                char m_szSnapshotFileName[0x200]; // 0x0778, 0x200 bytes
-                bool m_bActive; // 0x0978, 0x1 bytes
-                bool m_bFrozen; // 0x0979, 0x1 bytes
-                std::uint8_t pad_097a[0x2]; // 0x097a, 0x2 bytes
-                float m_flFreezeTransitionDuration; // 0x097c, 0x4 bytes
-                std::int32_t m_nStopType; // 0x0980, 0x4 bytes
-                bool m_bAnimateDuringGameplayPause; // 0x0984, 0x1 bytes
-                std::uint8_t pad_0985[0x3]; // 0x0985, 0x3 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x0988, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0990, 0x4 bytes
-                float m_flPreSimTime; // 0x0994, 0x4 bytes
-                Vector m_vServerControlPoints[0x4]; // 0x0998, 0x30 bytes
-                std::uint8_t m_iServerControlPointAssignments[0x4]; // 0x09c8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hControlPointEnts[0x40]; // 0x09cc, 0x100 bytes
-                bool m_bDataStringLocalized; // 0x0acc, 0x1 bytes
-                std::uint8_t pad_0acd[0x3]; // 0x0acd, 0x3 bytes
-                CUtlString m_strDataString; // 0x0ad0, 0x8 bytes
-                bool m_bNoSave; // 0x0ad8, 0x1 bytes
-                bool m_bNoFreeze; // 0x0ad9, 0x1 bytes
-                bool m_bNoRamp; // 0x0ada, 0x1 bytes
-                bool m_bStartActive; // 0x0adb, 0x1 bytes
-                std::uint8_t pad_0adc[0x4]; // 0x0adc, 0x4 bytes
-                CUtlSymbolLarge m_iszEffectName; // 0x0ae0, 0x8 bytes
-                CUtlSymbolLarge m_iszControlPointNames[0x40]; // 0x0ae8, 0x200 bytes
-                std::int32_t m_nDataCP; // 0x0ce8, 0x4 bytes
-                Vector m_vecDataCPValue; // 0x0cec, 0xc bytes
-                std::int32_t m_nTintCP; // 0x0cf8, 0x4 bytes
-                Color m_clrTint; // 0x0cfc, 0x4 bytes
+                char m_szSnapshotFileName[0x200]; // 0x0858, 0x200 bytes
+                bool m_bActive; // 0x0a58, 0x1 bytes
+                bool m_bFrozen; // 0x0a59, 0x1 bytes
+                std::uint8_t pad_0a5a[0x2]; // 0x0a5a, 0x2 bytes
+                float m_flFreezeTransitionDuration; // 0x0a5c, 0x4 bytes
+                std::int32_t m_nStopType; // 0x0a60, 0x4 bytes
+                bool m_bAnimateDuringGameplayPause; // 0x0a64, 0x1 bytes
+                std::uint8_t pad_0a65[0x3]; // 0x0a65, 0x3 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex; // 0x0a68, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0a70, 0x4 bytes
+                float m_flPreSimTime; // 0x0a74, 0x4 bytes
+                Vector m_vServerControlPoints[0x4]; // 0x0a78, 0x30 bytes
+                std::uint8_t m_iServerControlPointAssignments[0x4]; // 0x0aa8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hControlPointEnts[0x40]; // 0x0aac, 0x100 bytes
+                bool m_bDataStringLocalized; // 0x0bac, 0x1 bytes
+                std::uint8_t pad_0bad[0x3]; // 0x0bad, 0x3 bytes
+                CUtlString m_strDataString; // 0x0bb0, 0x8 bytes
+                bool m_bNoSave; // 0x0bb8, 0x1 bytes
+                bool m_bNoFreeze; // 0x0bb9, 0x1 bytes
+                bool m_bNoRamp; // 0x0bba, 0x1 bytes
+                bool m_bStartActive; // 0x0bbb, 0x1 bytes
+                std::uint8_t pad_0bbc[0x4]; // 0x0bbc, 0x4 bytes
+                CUtlSymbolLarge m_iszEffectName; // 0x0bc0, 0x8 bytes
+                CUtlSymbolLarge m_iszControlPointNames[0x40]; // 0x0bc8, 0x200 bytes
+                std::int32_t m_nDataCP; // 0x0dc8, 0x4 bytes
+                Vector m_vecDataCPValue; // 0x0dcc, 0xc bytes
+                std::int32_t m_nTintCP; // 0x0dd8, 0x4 bytes
+                Color m_clrTint; // 0x0ddc, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -78,7 +78,7 @@ namespace shade {
              * CUtlString cpoint%d_value; // Offset: 0x7fffffff, Size: 0x40, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CParticleSystem) == 0xD00, "CParticleSystem size mismatch");
+            static_assert(sizeof(CParticleSystem) == 0xDE0, "CParticleSystem size mismatch");
         }
     }
 }

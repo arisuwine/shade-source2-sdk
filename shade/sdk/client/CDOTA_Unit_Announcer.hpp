@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19e8
+             * Size: 0x1ae8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Announcer : public shade::sdk::client::C_DOTA_BaseNPC {
             public:
-                shade::sdk::client::CAnnouncerDescriptor m_currentAnnouncer; // 0x19b8, 0x28 bytes
-                std::uint8_t pad_19e0[0x8]; // 0x19e0, 0x8 bytes
+                shade::sdk::client::CAnnouncerDescriptor m_currentAnnouncer; // 0x1ab8, 0x28 bytes
+                std::uint8_t pad_1ae0[0x8]; // 0x1ae0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Announcer) == 0x19E8, "CDOTA_Unit_Announcer size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Announcer) == 0x1AE8, "CDOTA_Unit_Announcer size mismatch");
         }
     }
 }

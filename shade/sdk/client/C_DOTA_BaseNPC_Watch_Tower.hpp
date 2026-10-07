@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a40
+             * Size: 0x1b40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Watch_Tower : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                shade::sdk::client::ParticleIndex_t m_iRangeFX; // 0x1a28, 0x4 bytes
-                std::uint8_t pad_1a2c[0x4]; // 0x1a2c, 0x4 bytes
-                CUtlSymbolLarge m_szOutpostName; // 0x1a30, 0x8 bytes
-                CUtlSymbolLarge m_szInteractAbilityName; // 0x1a38, 0x8 bytes
+                shade::sdk::client::ParticleIndex_t m_iRangeFX; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
+                CUtlSymbolLarge m_szOutpostName; // 0x1b30, 0x8 bytes
+                CUtlSymbolLarge m_szInteractAbilityName; // 0x1b38, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Watch_Tower) == 0x1A40, "C_DOTA_BaseNPC_Watch_Tower size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Watch_Tower) == 0x1B40, "C_DOTA_BaseNPC_Watch_Tower size mismatch");
         }
     }
 }

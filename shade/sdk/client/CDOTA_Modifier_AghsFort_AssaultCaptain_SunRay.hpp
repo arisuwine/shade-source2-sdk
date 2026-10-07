@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,38 +39,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_AssaultCaptain_SunRay : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t hp_cost_perc_per_second; // 0x1a78, 0x4 bytes
-                std::int32_t beam_range; // 0x1a7c, 0x4 bytes
-                std::int32_t base_damage; // 0x1a80, 0x4 bytes
-                std::int32_t base_heal; // 0x1a84, 0x4 bytes
-                float tick_interval; // 0x1a88, 0x4 bytes
-                float forward_move_speed; // 0x1a8c, 0x4 bytes
-                float turn_rate_initial; // 0x1a90, 0x4 bytes
-                float turn_rate; // 0x1a94, 0x4 bytes
-                std::int32_t radius; // 0x1a98, 0x4 bytes
-                std::int32_t self_turn_rate_percent; // 0x1a9c, 0x4 bytes
-                float m_flCurrentTime; // 0x1aa0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1aa4, 0x4 bytes
-                float m_flAccumulatedSelfDamage; // 0x1aa8, 0x4 bytes
-                bool m_bMovingForward; // 0x1aac, 0x1 bytes
-                bool m_bTurningFast; // 0x1aad, 0x1 bytes
-                std::uint8_t pad_1aae[0x2]; // 0x1aae, 0x2 bytes
-                float m_flFacingTarget; // 0x1ab0, 0x4 bytes
-                float hp_perc_damage; // 0x1ab4, 0x4 bytes
-                float hp_perc_heal; // 0x1ab8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1abc, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hVisionThinkers[0x8]; // 0x1ac0, 0x20 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEnd; // 0x1ae0, 0x4 bytes
-                bool m_bCreatedVisionThinkers; // 0x1ae4, 0x1 bytes
-                std::uint8_t pad_1ae5[0x3]; // 0x1ae5, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEndSound; // 0x1ae8, 0x4 bytes
-                std::uint8_t pad_1aec[0x4]; // 0x1aec, 0x4 bytes
+                std::int32_t hp_cost_perc_per_second; // 0x1aa8, 0x4 bytes
+                std::int32_t beam_range; // 0x1aac, 0x4 bytes
+                std::int32_t base_damage; // 0x1ab0, 0x4 bytes
+                std::int32_t base_heal; // 0x1ab4, 0x4 bytes
+                float tick_interval; // 0x1ab8, 0x4 bytes
+                float forward_move_speed; // 0x1abc, 0x4 bytes
+                float turn_rate_initial; // 0x1ac0, 0x4 bytes
+                float turn_rate; // 0x1ac4, 0x4 bytes
+                std::int32_t radius; // 0x1ac8, 0x4 bytes
+                std::int32_t self_turn_rate_percent; // 0x1acc, 0x4 bytes
+                float m_flCurrentTime; // 0x1ad0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1ad4, 0x4 bytes
+                float m_flAccumulatedSelfDamage; // 0x1ad8, 0x4 bytes
+                bool m_bMovingForward; // 0x1adc, 0x1 bytes
+                bool m_bTurningFast; // 0x1add, 0x1 bytes
+                std::uint8_t pad_1ade[0x2]; // 0x1ade, 0x2 bytes
+                float m_flFacingTarget; // 0x1ae0, 0x4 bytes
+                float hp_perc_damage; // 0x1ae4, 0x4 bytes
+                float hp_perc_heal; // 0x1ae8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1aec, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hVisionThinkers[0x8]; // 0x1af0, 0x20 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEnd; // 0x1b10, 0x4 bytes
+                bool m_bCreatedVisionThinkers; // 0x1b14, 0x1 bytes
+                std::uint8_t pad_1b15[0x3]; // 0x1b15, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEndSound; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_AssaultCaptain_SunRay) == 0x1AF0, "CDOTA_Modifier_AghsFort_AssaultCaptain_SunRay size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_AssaultCaptain_SunRay) == 0x1B20, "CDOTA_Modifier_AghsFort_AssaultCaptain_SunRay size mismatch");
         }
     }
 }

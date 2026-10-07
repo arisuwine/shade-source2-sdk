@@ -40,12 +40,13 @@ namespace shade {
                 std::uint8_t pad_0001[0x7]; // 0x0001, 0x7 bytes
                 CUtlString m_strLocName; // 0x0008, 0x8 bytes
                 CUtlString m_strEntityParentName; // 0x0010, 0x8 bytes
-                Vector2D m_vPosition; // 0x0018, 0x8 bytes
-                Vector2D m_vSize; // 0x0020, 0x8 bytes
-                CUtlVector<shade::sdk::client::OverworldRoomID_t> m_vecRooms; // 0x0028, 0x18 bytes
-                float m_flTrainCarViewDistance; // 0x0040, 0x4 bytes
-                Vector2D m_flTrainCarViewOffset; // 0x0044, 0x8 bytes
-                std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
+                Vector2D m_vSize; // 0x0018, 0x8 bytes
+                CUtlVector<shade::sdk::client::OverworldRoomID_t> m_vecRooms; // 0x0020, 0x18 bytes
+                float m_flTrainCarViewDistance; // 0x0038, 0x4 bytes
+                float m_flTrainCarZoomedInViewDistance; // 0x003c, 0x4 bytes
+                Vector2D m_flTrainCarViewOffset; // 0x0040, 0x8 bytes
+                std::int32_t m_nNavPosX; // 0x0048, 0x4 bytes
+                std::int32_t m_nNavPosY; // 0x004c, 0x4 bytes
             };
             #pragma pack(pop)
 

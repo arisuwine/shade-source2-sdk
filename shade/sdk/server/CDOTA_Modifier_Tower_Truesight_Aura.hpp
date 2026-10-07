@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Tower_Truesight_Aura) == 0x1A80, "CDOTA_Modifier_Tower_Truesight_Aura size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Tower_Truesight_Aura) == 0x1AB0, "CDOTA_Modifier_Tower_Truesight_Aura size mismatch");
         }
     }
 }

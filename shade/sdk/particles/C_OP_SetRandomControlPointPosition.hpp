@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetRandomControlPointPosition : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                bool m_bUseWorldLocation; // 0x01e0, 0x1 bytes
-                bool m_bOrient; // 0x01e1, 0x1 bytes
-                std::uint8_t pad_01e2[0x2]; // 0x01e2, 0x2 bytes
-                std::int32_t m_nCP1; // 0x01e4, 0x4 bytes
-                std::int32_t m_nHeadLocation; // 0x01e8, 0x4 bytes
-                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flReRandomRate; // 0x01f0, 0x170 bytes
-                Vector m_vecCPMinPos; // 0x0360, 0xc bytes
-                Vector m_vecCPMaxPos; // 0x036c, 0xc bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInterpolation; // 0x0378, 0x170 bytes
+                bool m_bUseWorldLocation; // 0x01e8, 0x1 bytes
+                bool m_bOrient; // 0x01e9, 0x1 bytes
+                std::uint8_t pad_01ea[0x2]; // 0x01ea, 0x2 bytes
+                std::int32_t m_nCP1; // 0x01ec, 0x4 bytes
+                std::int32_t m_nHeadLocation; // 0x01f0, 0x4 bytes
+                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flReRandomRate; // 0x01f8, 0x178 bytes
+                Vector m_vecCPMinPos; // 0x0370, 0xc bytes
+                Vector m_vecCPMaxPos; // 0x037c, 0xc bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInterpolation; // 0x0388, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetRandomControlPointPosition) == 0x4E8, "C_OP_SetRandomControlPointPosition size mismatch");
+            static_assert(sizeof(C_OP_SetRandomControlPointPosition) == 0x500, "C_OP_SetRandomControlPointPosition size mismatch");
         }
     }
 }

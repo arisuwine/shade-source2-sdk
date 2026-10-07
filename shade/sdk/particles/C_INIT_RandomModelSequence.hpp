@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x3e8
+             * Size: 0x3f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,15 +37,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_RandomModelSequence : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                char m_ActivityName[0x100]; // 0x01e0, 0x100 bytes
-                char m_SequenceName[0x100]; // 0x02e0, 0x100 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x03e0, 0x8 bytes
+                char m_ActivityName[0x100]; // 0x01e8, 0x100 bytes
+                char m_SequenceName[0x100]; // 0x02e8, 0x100 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel; // 0x03e8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_RandomModelSequence) == 0x3E8, "C_INIT_RandomModelSequence size mismatch");
+            static_assert(sizeof(C_INIT_RandomModelSequence) == 0x3F0, "C_INIT_RandomModelSequence size mismatch");
         }
     }
 }

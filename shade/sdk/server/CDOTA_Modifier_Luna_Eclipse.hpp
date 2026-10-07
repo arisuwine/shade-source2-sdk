@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,28 +38,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Luna_Eclipse : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1a78, 0x4 bytes
-                float radius; // 0x1a7c, 0x4 bytes
-                std::int32_t beams; // 0x1a80, 0x4 bytes
-                std::int32_t hit_count; // 0x1a84, 0x4 bytes
-                std::int32_t m_iBeamDamage; // 0x1a88, 0x4 bytes
-                float beam_interval; // 0x1a8c, 0x4 bytes
-                float stun_duration; // 0x1a90, 0x4 bytes
-                VectorWS vPosition; // 0x1a94, 0xc bytes
-                bool bAreaTarget; // 0x1aa0, 0x1 bytes
-                std::uint8_t pad_1aa1[0x3]; // 0x1aa1, 0x3 bytes
-                std::int32_t m_iTickCount; // 0x1aa4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nMoonlightFXIndex; // 0x1aa8, 0x4 bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_HitTargets; // 0x1ab0, 0x18 bytes
-                float m_flBeamStun; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1aa8, 0x4 bytes
+                float radius; // 0x1aac, 0x4 bytes
+                std::int32_t beams; // 0x1ab0, 0x4 bytes
+                std::int32_t hit_count; // 0x1ab4, 0x4 bytes
+                std::int32_t m_iBeamDamage; // 0x1ab8, 0x4 bytes
+                float beam_interval; // 0x1abc, 0x4 bytes
+                float stun_duration; // 0x1ac0, 0x4 bytes
+                VectorWS vPosition; // 0x1ac4, 0xc bytes
+                bool bAreaTarget; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
+                std::int32_t m_iTickCount; // 0x1ad4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nMoonlightFXIndex; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_HitTargets; // 0x1ae0, 0x18 bytes
+                float m_flBeamStun; // 0x1af8, 0x4 bytes
+                std::uint8_t pad_1afc[0x4]; // 0x1afc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Luna_Eclipse) == 0x1AD0, "CDOTA_Modifier_Luna_Eclipse size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Luna_Eclipse) == 0x1B00, "CDOTA_Modifier_Luna_Eclipse size mismatch");
         }
     }
 }

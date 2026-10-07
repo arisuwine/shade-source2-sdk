@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a30
+             * Size: 0x1b30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_HallofFame : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                std::int32_t m_HallofFame; // 0x1a28, 0x4 bytes
-                std::uint8_t pad_1a2c[0x4]; // 0x1a2c, 0x4 bytes
+                std::int32_t m_HallofFame; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_HallofFame) == 0x1A30, "C_DOTA_BaseNPC_HallofFame size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_HallofFame) == 0x1B30, "C_DOTA_BaseNPC_HallofFame size mismatch");
         }
     }
 }

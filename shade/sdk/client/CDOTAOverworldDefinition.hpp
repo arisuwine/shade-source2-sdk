@@ -81,7 +81,7 @@ namespace shade {
                 float m_flInnerCameraDistanceThreshold; // 0x0070, 0x4 bytes
                 Vector2D m_vMinCameraBounds; // 0x0074, 0x8 bytes
                 Vector2D m_vMaxCameraBounds; // 0x007c, 0x8 bytes
-                std::uint8_t pad_0084[0x4]; // 0x0084, 0x4 bytes
+                float m_flRoomUIScale; // 0x0084, 0x4 bytes
                 CUtlString m_sMapVisualsXmlPath; // 0x0088, 0x8 bytes
                 CUtlVector<shade::sdk::client::DOTAOverworldReleaseScheduledUnlock_t> m_vecReleaseSchedule; // 0x0090, 0x18 bytes
                 CUtlVector<shade::sdk::client::OverworldNodeID_t> m_vecStartNodeIds; // 0x00a8, 0x18 bytes

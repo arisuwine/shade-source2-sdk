@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysicsEntitySolver : public shade::sdk::server::CLogicalEntity {
             public:
-                std::uint8_t pad_0498[0x18]; // 0x0498, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hMovingEntity; // 0x04b0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPhysicsBlocker; // 0x04b4, 0x4 bytes
-                float m_separationDuration; // 0x04b8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_cancelTime; // 0x04bc, 0x4 bytes
+                std::uint8_t pad_0498[0x10]; // 0x0498, 0x10 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hMovingEntity; // 0x04a8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPhysicsBlocker; // 0x04ac, 0x4 bytes
+                float m_separationDuration; // 0x04b0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_cancelTime; // 0x04b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysicsEntitySolver) == 0x4C0, "CPhysicsEntitySolver size mismatch");
+            static_assert(sizeof(CPhysicsEntitySolver) == 0x4B8, "CPhysicsEntitySolver size mismatch");
         }
     }
 }

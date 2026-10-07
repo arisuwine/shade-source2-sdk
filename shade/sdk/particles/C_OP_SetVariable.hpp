@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xad8
+             * Size: 0xb08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetVariable : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particleslib::CParticleVariableRef m_variableReference; // 0x01e0, 0x50 bytes
-                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0230, 0x68 bytes
-                Vector m_positionOffset; // 0x0298, 0xc bytes
-                QAngle m_rotationOffset; // 0x02a4, 0xc bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput; // 0x02b0, 0x6b8 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_floatInput; // 0x0968, 0x170 bytes
+                shade::sdk::particleslib::CParticleVariableRef m_variableReference; // 0x01e8, 0x50 bytes
+                shade::sdk::particleslib::CParticleTransformInput m_transformInput; // 0x0238, 0x68 bytes
+                Vector m_positionOffset; // 0x02a0, 0xc bytes
+                QAngle m_rotationOffset; // 0x02ac, 0xc bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecInput; // 0x02b8, 0x6d8 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_floatInput; // 0x0990, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetVariable) == 0xAD8, "C_OP_SetVariable size mismatch");
+            static_assert(sizeof(C_OP_SetVariable) == 0xB08, "C_OP_SetVariable size mismatch");
         }
     }
 }

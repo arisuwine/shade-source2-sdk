@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Terrorblade_Metamorphosis : public shade::sdk::client::CDOTA_Buff {
             public:
-                float base_attack_time; // 0x1a78, 0x4 bytes
-                std::int32_t bonus_range; // 0x1a7c, 0x4 bytes
-                std::int32_t m_iOriginalAttackCapabilities; // 0x1a80, 0x4 bytes
-                std::int32_t bonus_damage; // 0x1a84, 0x4 bytes
-                std::int32_t speed_loss; // 0x1a88, 0x4 bytes
-                std::int32_t attack_projectile_speed_bonus; // 0x1a8c, 0x4 bytes
-                CUtlSymbolLarge m_iszRangedAttackEffect; // 0x1a90, 0x8 bytes
-                CUtlSymbolLarge m_iszOriginalRangedAttackEffect; // 0x1a98, 0x8 bytes
+                float base_attack_time; // 0x1aa8, 0x4 bytes
+                std::int32_t bonus_range; // 0x1aac, 0x4 bytes
+                std::int32_t m_iOriginalAttackCapabilities; // 0x1ab0, 0x4 bytes
+                std::int32_t bonus_damage; // 0x1ab4, 0x4 bytes
+                std::int32_t speed_loss; // 0x1ab8, 0x4 bytes
+                std::int32_t attack_projectile_speed_bonus; // 0x1abc, 0x4 bytes
+                CUtlSymbolLarge m_iszRangedAttackEffect; // 0x1ac0, 0x8 bytes
+                CUtlSymbolLarge m_iszOriginalRangedAttackEffect; // 0x1ac8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Terrorblade_Metamorphosis) == 0x1AA0, "CDOTA_Modifier_Terrorblade_Metamorphosis size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Terrorblade_Metamorphosis) == 0x1AD0, "CDOTA_Modifier_Terrorblade_Metamorphosis size mismatch");
         }
     }
 }

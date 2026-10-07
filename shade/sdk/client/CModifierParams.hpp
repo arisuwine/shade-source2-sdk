@@ -24,6 +24,7 @@ namespace shade {
             class CDOTA_Buff;
             class C_BaseEntity;
             class C_DOTABaseAbility;
+            class C_DOTA_TempTree;
         }
     }
 }
@@ -32,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf0
+             * Size: 0xf8
              * Alignment: 0xff
              * Has Trivial Destructor
              */
@@ -98,36 +99,38 @@ namespace shade {
                 bool bPhylacteryApplied; // 0x0090, 0x1 bytes
                 bool bAllowZeroDamageFromPostReductionBlock; // 0x0091, 0x1 bytes
                 bool bForceMagicStickProc; // 0x0092, 0x1 bytes
-                bool bIgnoreNegativeValuesIfDebuffImmune; // 0x0093, 0x1 bytes
-                bool bIgnorePositiveValuesIfDebuffImmune; // 0x0094, 0x1 bytes
-                bool bIgnoreAllIfDebuffImmune; // 0x0095, 0x1 bytes
-                bool bAlsoIgnoreBuffsIfDebuffImmune; // 0x0096, 0x1 bytes
-                bool bIgnoreLowerIfDebuffImmune; // 0x0097, 0x1 bytes
-                float flIgnoreLowerIfDebuffImmune; // 0x0098, 0x4 bytes
-                bool bIgnoreHigherIfDebuffImmune; // 0x009c, 0x1 bytes
-                std::uint8_t pad_009d[0x3]; // 0x009d, 0x3 bytes
-                float flIgnoreHigherIfDebuffImmune; // 0x00a0, 0x4 bytes
-                bool bIgnoreTemporaryAttackSpeedModifiers; // 0x00a4, 0x1 bytes
-                std::uint8_t pad_00a5[0x3]; // 0x00a5, 0x3 bytes
-                char *pszAbilitySpecialName; // 0x00a8, 0x8 bytes
-                std::int32_t nAbilitySpecialLevel; // 0x00b0, 0x4 bytes
-                bool bAllowCopy; // 0x00b4, 0x1 bytes
-                std::uint8_t pad_00b5[0xb]; // 0x00b5, 0xb bytes
-                CHandle<shade::sdk::client::C_BaseEntity> hattacker; // 0x00c0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> htarget; // 0x00c4, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> hunit; // 0x00c8, 0x4 bytes
-                CHandle<shade::sdk::client::C_DOTABaseAbility> inflictor; // 0x00cc, 0x4 bytes
-                CHandle<shade::sdk::client::C_DOTABaseAbility> inflictor2; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x4]; // 0x00d4, 0x4 bytes
-                shade::sdk::client::CDOTA_Buff *pAddedBuff; // 0x00d8, 0x8 bytes
-                Vector vAttemptedKnockbackDirection; // 0x00e0, 0xc bytes
-                float flAttemptedKnockbackMagnitude; // 0x00ec, 0x4 bytes
+                bool bChannelledManaCost; // 0x0093, 0x1 bytes
+                bool bIgnoreNegativeValuesIfDebuffImmune; // 0x0094, 0x1 bytes
+                bool bIgnorePositiveValuesIfDebuffImmune; // 0x0095, 0x1 bytes
+                bool bIgnoreAllIfDebuffImmune; // 0x0096, 0x1 bytes
+                bool bAlsoIgnoreBuffsIfDebuffImmune; // 0x0097, 0x1 bytes
+                bool bIgnoreLowerIfDebuffImmune; // 0x0098, 0x1 bytes
+                std::uint8_t pad_0099[0x3]; // 0x0099, 0x3 bytes
+                float flIgnoreLowerIfDebuffImmune; // 0x009c, 0x4 bytes
+                bool bIgnoreHigherIfDebuffImmune; // 0x00a0, 0x1 bytes
+                std::uint8_t pad_00a1[0x3]; // 0x00a1, 0x3 bytes
+                float flIgnoreHigherIfDebuffImmune; // 0x00a4, 0x4 bytes
+                bool bIgnoreTemporaryAttackSpeedModifiers; // 0x00a8, 0x1 bytes
+                std::uint8_t pad_00a9[0x7]; // 0x00a9, 0x7 bytes
+                char *pszAbilitySpecialName; // 0x00b0, 0x8 bytes
+                std::int32_t nAbilitySpecialLevel; // 0x00b8, 0x4 bytes
+                bool bAllowCopy; // 0x00bc, 0x1 bytes
+                std::uint8_t pad_00bd[0xb]; // 0x00bd, 0xb bytes
+                CHandle<shade::sdk::client::C_DOTA_TempTree> hTree; // 0x00c8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> hattacker; // 0x00cc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> htarget; // 0x00d0, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> hunit; // 0x00d4, 0x4 bytes
+                CHandle<shade::sdk::client::C_DOTABaseAbility> inflictor; // 0x00d8, 0x4 bytes
+                CHandle<shade::sdk::client::C_DOTABaseAbility> inflictor2; // 0x00dc, 0x4 bytes
+                shade::sdk::client::CDOTA_Buff *pAddedBuff; // 0x00e0, 0x8 bytes
+                Vector vAttemptedKnockbackDirection; // 0x00e8, 0xc bytes
+                float flAttemptedKnockbackMagnitude; // 0x00f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierParams) == 0xF0, "CModifierParams size mismatch");
+            static_assert(sizeof(CModifierParams) == 0xF8, "CModifierParams size mismatch");
         }
     }
 }

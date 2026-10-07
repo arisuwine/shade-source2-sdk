@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a80
+             * Size: 0x1ab0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Razor_Arcana_EmpoweredState : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nEmpoweredBodyFX; // 0x1a78, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nEmpoweredWeaponFX; // 0x1a7c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nEmpoweredBodyFX; // 0x1aa8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nEmpoweredWeaponFX; // 0x1aac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Razor_Arcana_EmpoweredState) == 0x1A80, "CDOTA_Modifier_Razor_Arcana_EmpoweredState size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Razor_Arcana_EmpoweredState) == 0x1AB0, "CDOTA_Modifier_Razor_Arcana_EmpoweredState size mismatch");
         }
     }
 }

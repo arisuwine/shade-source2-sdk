@@ -22,19 +22,19 @@ namespace shade {
     namespace sdk {
         namespace physicslib {
             /* Class Parameters
-             * Size: 0xa8
+             * Size: 0x178
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct RnCompoundDesc_t : public shade::sdk::physicslib::RnShapeDesc_t {
-                shade::sdk::physicslib::RnCompound_t m_Compound; // 0x0018, 0x90 bytes
+                shade::sdk::physicslib::RnCompound_t m_Compound; // 0x0018, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(RnCompoundDesc_t) == 0xA8, "RnCompoundDesc_t size mismatch");
+            static_assert(sizeof(RnCompoundDesc_t) == 0x178, "RnCompoundDesc_t size mismatch");
         }
     }
 }

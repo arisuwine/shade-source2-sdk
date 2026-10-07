@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_HelmOfTheDominator_BonusHealth : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t health_min; // 0x1a78, 0x4 bytes
-                std::int32_t new_max; // 0x1a7c, 0x4 bytes
-                std::int32_t health_bonus; // 0x1a80, 0x4 bytes
-                std::int32_t model_scale; // 0x1a84, 0x4 bytes
-                std::int32_t creep_bonus_damage; // 0x1a88, 0x4 bytes
-                std::int32_t creep_bonus_hp_regen; // 0x1a8c, 0x4 bytes
-                std::int32_t creep_bonus_mp_regen; // 0x1a90, 0x4 bytes
-                std::int32_t creep_bonus_armor; // 0x1a94, 0x4 bytes
-                float creep_damage_taken_cooldown; // 0x1a98, 0x4 bytes
-                std::uint8_t pad_1a9c[0x4]; // 0x1a9c, 0x4 bytes
+                std::int32_t health_min; // 0x1aa8, 0x4 bytes
+                std::int32_t new_max; // 0x1aac, 0x4 bytes
+                std::int32_t health_bonus; // 0x1ab0, 0x4 bytes
+                std::int32_t model_scale; // 0x1ab4, 0x4 bytes
+                std::int32_t creep_bonus_damage; // 0x1ab8, 0x4 bytes
+                std::int32_t creep_bonus_hp_regen; // 0x1abc, 0x4 bytes
+                std::int32_t creep_bonus_mp_regen; // 0x1ac0, 0x4 bytes
+                std::int32_t creep_bonus_armor; // 0x1ac4, 0x4 bytes
+                float creep_damage_taken_cooldown; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_HelmOfTheDominator_BonusHealth) == 0x1AA0, "CDOTA_Modifier_Item_HelmOfTheDominator_BonusHealth size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_HelmOfTheDominator_BonusHealth) == 0x1AD0, "CDOTA_Modifier_Item_HelmOfTheDominator_BonusHealth size mismatch");
         }
     }
 }

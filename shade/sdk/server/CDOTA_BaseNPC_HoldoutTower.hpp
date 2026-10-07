@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19f0
+             * Size: 0x1ae0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_HoldoutTower : public shade::sdk::server::CDOTA_BaseNPC_Tower {
             public:
-                shade::sdk::client::DOTA_HOLDOUT_TOWER_TYPE m_iTowerType; // 0x19e8, 0x4 bytes
-                std::uint8_t pad_19ec[0x4]; // 0x19ec, 0x4 bytes
+                shade::sdk::client::DOTA_HOLDOUT_TOWER_TYPE m_iTowerType; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_HoldoutTower) == 0x19F0, "CDOTA_BaseNPC_HoldoutTower size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_HoldoutTower) == 0x1AE0, "CDOTA_BaseNPC_HoldoutTower size mismatch");
         }
     }
 }

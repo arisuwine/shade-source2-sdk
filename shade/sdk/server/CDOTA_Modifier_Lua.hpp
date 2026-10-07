@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b48
+             * Size: 0x1b78
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +29,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Lua : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1a78[0xc8]; // 0x1a78, 0xc8 bytes
-                bool m_bHasCustomTransmitterData; // 0x1b40, 0x1 bytes
-                std::uint8_t pad_1b41[0x7]; // 0x1b41, 0x7 bytes
+                std::uint8_t pad_1aa8[0xc8]; // 0x1aa8, 0xc8 bytes
+                bool m_bHasCustomTransmitterData; // 0x1b70, 0x1 bytes
+                std::uint8_t pad_1b71[0x7]; // 0x1b71, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Lua) == 0x1B48, "CDOTA_Modifier_Lua size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Lua) == 0x1B78, "CDOTA_Modifier_Lua size mismatch");
         }
     }
 }

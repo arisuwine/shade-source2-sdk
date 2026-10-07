@@ -29,22 +29,22 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe00
+             * Size: 0xe20
              * Alignment: 0xff
              * Has VTable
              */
             #pragma pack(push, 1)
             class CPortraitData : public shade::sdk::client::CBasePortraitData {
             public:
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_RenderList; // 0x0dd0, 0x18 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hHero; // 0x0de8, 0x4 bytes
-                std::uint8_t pad_0dec[0x14]; // 0x0dec, 0x14 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_RenderList; // 0x0df0, 0x18 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hHero; // 0x0e08, 0x4 bytes
+                std::uint8_t pad_0e0c[0x14]; // 0x0e0c, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPortraitData) == 0xE00, "CPortraitData size mismatch");
+            static_assert(sizeof(CPortraitData) == 0xE20, "CPortraitData size mismatch");
         }
     }
 }

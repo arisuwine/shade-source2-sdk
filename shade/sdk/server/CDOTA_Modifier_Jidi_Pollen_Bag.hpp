@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Jidi_Pollen_Bag : public shade::sdk::client::CDOTA_Buff {
             public:
-                float hp_damage; // 0x1a78, 0x4 bytes
-                float damage_interval; // 0x1a7c, 0x4 bytes
-                float debuff_duration; // 0x1a80, 0x4 bytes
-                float health_regen_loss; // 0x1a84, 0x4 bytes
+                float hp_damage; // 0x1aa8, 0x4 bytes
+                float damage_interval; // 0x1aac, 0x4 bytes
+                float debuff_duration; // 0x1ab0, 0x4 bytes
+                float health_regen_loss; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Jidi_Pollen_Bag) == 0x1A88, "CDOTA_Modifier_Jidi_Pollen_Bag size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Jidi_Pollen_Bag) == 0x1AB8, "CDOTA_Modifier_Jidi_Pollen_Bag size mismatch");
         }
     }
 }

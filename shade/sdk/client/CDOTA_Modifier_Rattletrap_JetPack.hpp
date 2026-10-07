@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Rattletrap_JetPack : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_nMovementSpeed; // 0x1a78, 0x4 bytes
-                std::int32_t bonus_speed; // 0x1a7c, 0x4 bytes
-                float turn_rate; // 0x1a80, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1a84, 0x4 bytes
-                float tick_interval; // 0x1a88, 0x4 bytes
-                float m_flFacingTarget; // 0x1a8c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a90, 0x4 bytes
-                std::uint8_t pad_1a94[0x4]; // 0x1a94, 0x4 bytes
-                CUtlVector<float> m_flTurnHistory; // 0x1a98, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHeroesHitLastRicochet; // 0x1ab0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHeroesCredited; // 0x1ac8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHeroesHitCurrentRicochet; // 0x1ae0, 0x18 bytes
+                std::int32_t m_nMovementSpeed; // 0x1aa8, 0x4 bytes
+                std::int32_t bonus_speed; // 0x1aac, 0x4 bytes
+                float turn_rate; // 0x1ab0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1ab4, 0x4 bytes
+                float tick_interval; // 0x1ab8, 0x4 bytes
+                float m_flFacingTarget; // 0x1abc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ac0, 0x4 bytes
+                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                CUtlVector<float> m_flTurnHistory; // 0x1ac8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHeroesHitLastRicochet; // 0x1ae0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHeroesCredited; // 0x1af8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHeroesHitCurrentRicochet; // 0x1b10, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Rattletrap_JetPack) == 0x1AF8, "CDOTA_Modifier_Rattletrap_JetPack size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Rattletrap_JetPack) == 0x1B28, "CDOTA_Modifier_Rattletrap_JetPack size mismatch");
         }
     }
 }

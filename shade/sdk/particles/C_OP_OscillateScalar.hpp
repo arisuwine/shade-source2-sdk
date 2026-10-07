@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,26 +30,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_OscillateScalar : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                float m_RateMin; // 0x01d8, 0x4 bytes
-                float m_RateMax; // 0x01dc, 0x4 bytes
-                float m_FrequencyMin; // 0x01e0, 0x4 bytes
-                float m_FrequencyMax; // 0x01e4, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nField; // 0x01e8, 0x4 bytes
-                bool m_bProportional; // 0x01ec, 0x1 bytes
-                bool m_bProportionalOp; // 0x01ed, 0x1 bytes
-                std::uint8_t pad_01ee[0x2]; // 0x01ee, 0x2 bytes
-                float m_flStartTime_min; // 0x01f0, 0x4 bytes
-                float m_flStartTime_max; // 0x01f4, 0x4 bytes
-                float m_flEndTime_min; // 0x01f8, 0x4 bytes
-                float m_flEndTime_max; // 0x01fc, 0x4 bytes
-                float m_flOscMult; // 0x0200, 0x4 bytes
-                float m_flOscAdd; // 0x0204, 0x4 bytes
+                float m_RateMin; // 0x01e0, 0x4 bytes
+                float m_RateMax; // 0x01e4, 0x4 bytes
+                float m_FrequencyMin; // 0x01e8, 0x4 bytes
+                float m_FrequencyMax; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nField; // 0x01f0, 0x4 bytes
+                bool m_bProportional; // 0x01f4, 0x1 bytes
+                bool m_bProportionalOp; // 0x01f5, 0x1 bytes
+                std::uint8_t pad_01f6[0x2]; // 0x01f6, 0x2 bytes
+                float m_flStartTime_min; // 0x01f8, 0x4 bytes
+                float m_flStartTime_max; // 0x01fc, 0x4 bytes
+                float m_flEndTime_min; // 0x0200, 0x4 bytes
+                float m_flEndTime_max; // 0x0204, 0x4 bytes
+                float m_flOscMult; // 0x0208, 0x4 bytes
+                float m_flOscAdd; // 0x020c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_OscillateScalar) == 0x208, "C_OP_OscillateScalar size mismatch");
+            static_assert(sizeof(C_OP_OscillateScalar) == 0x210, "C_OP_OscillateScalar size mismatch");
         }
     }
 }

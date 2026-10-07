@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4c8
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_ConnectParentParticleToNearest : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                std::int32_t m_nFirstControlPoint; // 0x01d8, 0x4 bytes
-                std::int32_t m_nSecondControlPoint; // 0x01dc, 0x4 bytes
-                bool m_bUseRadius; // 0x01e0, 0x1 bytes
-                std::uint8_t pad_01e1[0x7]; // 0x01e1, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flParentRadiusScale; // 0x0358, 0x170 bytes
+                std::int32_t m_nFirstControlPoint; // 0x01e0, 0x4 bytes
+                std::int32_t m_nSecondControlPoint; // 0x01e4, 0x4 bytes
+                bool m_bUseRadius; // 0x01e8, 0x1 bytes
+                std::uint8_t pad_01e9[0x7]; // 0x01e9, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flParentRadiusScale; // 0x0368, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_ConnectParentParticleToNearest) == 0x4C8, "C_OP_ConnectParentParticleToNearest size mismatch");
+            static_assert(sizeof(C_OP_ConnectParentParticleToNearest) == 0x4E0, "C_OP_ConnectParentParticleToNearest size mismatch");
         }
     }
 }

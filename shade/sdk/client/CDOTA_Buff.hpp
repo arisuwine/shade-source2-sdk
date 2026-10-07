@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a78
+             * Size: 0x1aa8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -83,14 +83,14 @@ namespace shade {
                 std::uint8_t pad_00ac[0x4]; // 0x00ac, 0x4 bytes
                 CUtlVector<shade::sdk::client::CDOTA_BuffParticle> m_iParticles; // 0x00b0, 0x18 bytes
                 CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAuraUnits; // 0x00c8, 0x18 bytes
-                std::uint8_t pad_00e0[0x1990]; // 0x00e0, 0x1990 bytes
-                HSCRIPT m_hScriptScope; // 0x1a70, 0x8 bytes
+                std::uint8_t pad_00e0[0x19c0]; // 0x00e0, 0x19c0 bytes
+                HSCRIPT m_hScriptScope; // 0x1aa0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Buff) == 0x1A78, "CDOTA_Buff size mismatch");
+            static_assert(sizeof(CDOTA_Buff) == 0x1AA8, "CDOTA_Buff size mismatch");
         }
     }
 }

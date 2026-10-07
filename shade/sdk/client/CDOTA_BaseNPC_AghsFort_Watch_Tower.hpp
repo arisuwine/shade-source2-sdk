@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ba0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,35 +42,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_AghsFort_Watch_Tower : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                std::int32_t m_nOptionNumber; // 0x1a28, 0x4 bytes
-                float m_flMovePlayersRadius; // 0x1a2c, 0x4 bytes
-                shade::sdk::client::CDOTA_BaseNPC_AghsFort_Watch_Tower__ExitDirection_t m_nExitDirection; // 0x1a30, 0x4 bytes
-                Vector m_vExitLocation; // 0x1a34, 0xc bytes
-                std::int32_t m_nPathSelectedID; // 0x1a40, 0x4 bytes
-                std::int32_t m_nEncounterType; // 0x1a44, 0x4 bytes
-                bool m_bIsEliteEncounter; // 0x1a48, 0x1 bytes
-                bool m_bIsAscensionLevelPicker; // 0x1a49, 0x1 bytes
-                std::uint8_t pad_1a4a[0x6]; // 0x1a4a, 0x6 bytes
-                CUtlSymbolLarge m_strEncounterName; // 0x1a50, 0x8 bytes
-                CUtlSymbolLarge m_strAscensionAbilities; // 0x1a58, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hEffigy; // 0x1a60, 0x4 bytes
-                float m_flYaw; // 0x1a64, 0x4 bytes
-                float m_flStartTime; // 0x1a68, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCursorEnterTime; // 0x1a6c, 0x4 bytes
-                bool m_bShowingTooltip; // 0x1a70, 0x1 bytes
-                std::uint8_t pad_1a71[0x1b]; // 0x1a71, 0x1b bytes
-                float m_flLastUpdateTime; // 0x1a8c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nChannellingParticle; // 0x1a90, 0x4 bytes
-                CHandle<shade::sdk::client::CBaseAnimatingActivity> m_hRoomGate; // 0x1a94, 0x4 bytes
-                bool m_bIsBeingChanneled; // 0x1a98, 0x1 bytes
-                std::uint8_t pad_1a99[0x3]; // 0x1a99, 0x3 bytes
-                float m_flGoalCaptureProgress; // 0x1a9c, 0x4 bytes
+                std::int32_t m_nOptionNumber; // 0x1b28, 0x4 bytes
+                float m_flMovePlayersRadius; // 0x1b2c, 0x4 bytes
+                shade::sdk::client::CDOTA_BaseNPC_AghsFort_Watch_Tower__ExitDirection_t m_nExitDirection; // 0x1b30, 0x4 bytes
+                Vector m_vExitLocation; // 0x1b34, 0xc bytes
+                std::int32_t m_nPathSelectedID; // 0x1b40, 0x4 bytes
+                std::int32_t m_nEncounterType; // 0x1b44, 0x4 bytes
+                bool m_bIsEliteEncounter; // 0x1b48, 0x1 bytes
+                bool m_bIsAscensionLevelPicker; // 0x1b49, 0x1 bytes
+                std::uint8_t pad_1b4a[0x6]; // 0x1b4a, 0x6 bytes
+                CUtlSymbolLarge m_strEncounterName; // 0x1b50, 0x8 bytes
+                CUtlSymbolLarge m_strAscensionAbilities; // 0x1b58, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hEffigy; // 0x1b60, 0x4 bytes
+                float m_flYaw; // 0x1b64, 0x4 bytes
+                float m_flStartTime; // 0x1b68, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCursorEnterTime; // 0x1b6c, 0x4 bytes
+                bool m_bShowingTooltip; // 0x1b70, 0x1 bytes
+                std::uint8_t pad_1b71[0x1b]; // 0x1b71, 0x1b bytes
+                float m_flLastUpdateTime; // 0x1b8c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nChannellingParticle; // 0x1b90, 0x4 bytes
+                CHandle<shade::sdk::client::CBaseAnimatingActivity> m_hRoomGate; // 0x1b94, 0x4 bytes
+                bool m_bIsBeingChanneled; // 0x1b98, 0x1 bytes
+                std::uint8_t pad_1b99[0x3]; // 0x1b99, 0x3 bytes
+                float m_flGoalCaptureProgress; // 0x1b9c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_AghsFort_Watch_Tower) == 0x1AA0, "CDOTA_BaseNPC_AghsFort_Watch_Tower size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_AghsFort_Watch_Tower) == 0x1BA0, "CDOTA_BaseNPC_AghsFort_Watch_Tower size mismatch");
         }
     }
 }

@@ -36,9 +36,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CDOTA_Ability_AghsFort_Tower_BlastWave) == 0x6B0, "CDOTA_Ability_AghsFort_Tower_BlastWave size mismatch");
         }

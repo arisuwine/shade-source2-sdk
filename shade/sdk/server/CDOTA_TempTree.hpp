@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x818
+             * Size: 0x8f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,24 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_TempTree : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                std::uint8_t pad_0798[0x28]; // 0x0798, 0x28 bytes
-                shade::sdk::entity2::GameTime_t m_fExpireTime; // 0x07c0, 0x4 bytes
-                VectorWS m_vecTreeCircleCenter; // 0x07c4, 0xc bytes
-                bool m_bCanApplyTreeCostume; // 0x07d0, 0x1 bytes
-                bool m_bIsMangoTree; // 0x07d1, 0x1 bytes
-                std::uint8_t pad_07d2[0x6]; // 0x07d2, 0x6 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_ParticleList; // 0x07d8, 0x18 bytes
-                bool m_bIsPartOfFowSystem; // 0x07f0, 0x1 bytes
-                bool m_bForceVisible[0xf]; // 0x07f1, 0xf bytes
-                std::uint8_t pad_0800[0x18]; // 0x0800, 0x18 bytes
+                std::uint8_t pad_0878[0x28]; // 0x0878, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_fExpireTime; // 0x08a0, 0x4 bytes
+                VectorWS m_vecTreeCircleCenter; // 0x08a4, 0xc bytes
+                bool m_bCanApplyTreeCostume; // 0x08b0, 0x1 bytes
+                bool m_bIsMangoTree; // 0x08b1, 0x1 bytes
+                std::uint8_t pad_08b2[0x6]; // 0x08b2, 0x6 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_ParticleList; // 0x08b8, 0x18 bytes
+                bool m_bIsPartOfFowSystem; // 0x08d0, 0x1 bytes
+                bool m_bForceVisible[0xf]; // 0x08d1, 0xf bytes
+                std::uint8_t pad_08e0[0x18]; // 0x08e0, 0x18 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_TempTree) == 0x818, "CDOTA_TempTree size mismatch");
+            static_assert(sizeof(CDOTA_TempTree) == 0x8F8, "CDOTA_TempTree size mismatch");
         }
     }
 }

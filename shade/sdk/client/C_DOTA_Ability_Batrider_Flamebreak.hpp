@@ -34,9 +34,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(C_DOTA_Ability_Batrider_Flamebreak) == 0x6C0, "C_DOTA_Ability_Batrider_Flamebreak size mismatch");
         }

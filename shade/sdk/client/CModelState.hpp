@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2b0
+             * Size: 0x2c0
              * Alignment: 0xff
              * Has VTable
              * Construct Allowed
@@ -50,9 +50,9 @@ namespace shade {
                 float m_flRootBoneOffset_y; // 0x00ec, 0x4 bytes
                 float m_flRootBoneOffset_z; // 0x00f0, 0x4 bytes
                 std::uint8_t m_nRootBoneOffsetResetSerialNumber; // 0x00f4, 0x1 bytes
-                std::uint8_t pad_00f5[0x1b]; // 0x00f5, 0x1b bytes
-                bool m_bClientClothCreationSuppressed; // 0x0110, 0x1 bytes
-                std::uint8_t pad_0111[0xef]; // 0x0111, 0xef bytes
+                std::uint8_t pad_00f5[0x23]; // 0x00f5, 0x23 bytes
+                bool m_bClientClothCreationSuppressed; // 0x0118, 0x1 bytes
+                std::uint8_t pad_0119[0xe7]; // 0x0119, 0xe7 bytes
                 std::uint8_t m_nAnimStateNoInterpSerialNumber; // 0x0200, 0x1 bytes
                 std::uint8_t pad_0201[0x7]; // 0x0201, 0x7 bytes
                 std::uint64_t m_MeshGroupMask; // 0x0208, 0x8 bytes
@@ -62,13 +62,13 @@ namespace shade {
                 std::int8_t m_nIdealMotionType; // 0x02a2, 0x1 bytes
                 std::int8_t m_nForceLOD; // 0x02a3, 0x1 bytes
                 std::int8_t m_nClothUpdateFlags; // 0x02a4, 0x1 bytes
-                std::uint8_t pad_02a5[0xb]; // 0x02a5, 0xb bytes
+                std::uint8_t pad_02a5[0x1b]; // 0x02a5, 0x1b bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModelState) == 0x2B0, "CModelState size mismatch");
+            static_assert(sizeof(CModelState) == 0x2C0, "CModelState size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Treant_LeechSeed : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage_interval; // 0x1a78, 0x4 bytes
-                float leech_damage; // 0x1a7c, 0x4 bytes
-                float movement_slow; // 0x1a80, 0x4 bytes
-                float radius; // 0x1a84, 0x4 bytes
-                float leech_heal; // 0x1a88, 0x4 bytes
-                std::int32_t max_heal_units; // 0x1a8c, 0x4 bytes
-                std::int32_t projectile_speed; // 0x1a90, 0x4 bytes
-                float m_flAccumulatedDamage; // 0x1a94, 0x4 bytes
+                float damage_interval; // 0x1aa8, 0x4 bytes
+                float leech_damage; // 0x1aac, 0x4 bytes
+                float movement_slow; // 0x1ab0, 0x4 bytes
+                float radius; // 0x1ab4, 0x4 bytes
+                float leech_heal; // 0x1ab8, 0x4 bytes
+                std::int32_t max_heal_units; // 0x1abc, 0x4 bytes
+                std::int32_t projectile_speed; // 0x1ac0, 0x4 bytes
+                float m_flAccumulatedDamage; // 0x1ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Treant_LeechSeed) == 0x1A98, "CDOTA_Modifier_Treant_LeechSeed size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Treant_LeechSeed) == 0x1AC8, "CDOTA_Modifier_Treant_LeechSeed size mismatch");
         }
     }
 }

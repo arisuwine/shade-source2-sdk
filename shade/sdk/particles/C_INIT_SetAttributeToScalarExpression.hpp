@@ -16,17 +16,17 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionInitializer.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particles/ScalarExpressionType_t.hpp"
 #include "shade/sdk/particleslib/CParticleRemapFloatInput.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x660
+             * Size: 0x680
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -34,20 +34,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_INIT_SetAttributeToScalarExpression : public shade::sdk::particles::CParticleFunctionInitializer {
             public:
-                shade::sdk::particles::ScalarExpressionType_t m_nExpression; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInput1; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flInput2; // 0x0358, 0x170 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x04c8, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x0638, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x063c, 0x4 bytes
-                std::uint8_t pad_0640[0x20]; // 0x0640, 0x20 bytes
+                shade::sdk::particles::ScalarExpressionType_t m_nExpression; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInput1; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flInput2; // 0x0368, 0x178 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x04e0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x0658, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x065c, 0x4 bytes
+                std::uint8_t pad_0660[0x20]; // 0x0660, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_SetAttributeToScalarExpression) == 0x660, "C_INIT_SetAttributeToScalarExpression size mismatch");
+            static_assert(sizeof(C_INIT_SetAttributeToScalarExpression) == 0x680, "C_INIT_SetAttributeToScalarExpression size mismatch");
         }
     }
 }

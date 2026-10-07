@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Dezun_Bloodrite : public shade::sdk::server::CDOTA_Buff_Item {
             public:
-                float health_pct; // 0x1a78, 0x4 bytes
-                float aoe_pct; // 0x1a7c, 0x4 bytes
-                bool m_bAoERecursionBlock; // 0x1a80, 0x1 bytes
-                bool m_bHealthCostRecursionBlock; // 0x1a81, 0x1 bytes
-                std::uint8_t pad_1a82[0x6]; // 0x1a82, 0x6 bytes
+                float health_pct; // 0x1aa8, 0x4 bytes
+                float aoe_pct; // 0x1aac, 0x4 bytes
+                bool m_bAoERecursionBlock; // 0x1ab0, 0x1 bytes
+                bool m_bHealthCostRecursionBlock; // 0x1ab1, 0x1 bytes
+                std::uint8_t pad_1ab2[0x6]; // 0x1ab2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Dezun_Bloodrite) == 0x1A88, "CDOTA_Modifier_Dezun_Bloodrite size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Dezun_Bloodrite) == 0x1AB8, "CDOTA_Modifier_Dezun_Bloodrite size mismatch");
         }
     }
 }

@@ -44,7 +44,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6a0
+             * Size: 0x620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -77,30 +77,30 @@ namespace shade {
                 bool m_bSequenceFinished; // 0x00d0, 0x1 bytes
                 std::uint8_t pad_00d1[0x3]; // 0x00d1, 0x3 bytes
                 shade::sdk::entity2::GameTick_t m_nPrevAnimUpdateTick; // 0x00d4, 0x4 bytes
-                std::uint8_t pad_00d8[0x298]; // 0x00d8, 0x298 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition> m_hGraphDefinitionAG2; // 0x0370, 0x8 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::AnimGraph2SerializedPoseRecipeSlot_t> m_SerializePoseRecipeAG2Slots; // 0x0378, 0x68 bytes
-                C_NetworkUtlVectorBase<std::uint8_t> m_SerializePoseRecipeAG2Dynamic; // 0x03e0, 0x18 bytes
-                std::uint32_t m_nSerializePoseRecipeAG2ActiveSlot; // 0x03f8, 0x4 bytes
-                std::int32_t m_nSerializePoseRecipeVersionAG2; // 0x03fc, 0x4 bytes
-                std::int32_t m_nServerGraphInstanceIteration; // 0x0400, 0x4 bytes
-                std::int32_t m_nServerSerializationContextIteration; // 0x0404, 0x4 bytes
-                shade::sdk::resourcefile::ResourceId_t m_primaryGraphId; // 0x0408, 0x8 bytes
-                C_NetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalGraphIds; // 0x0410, 0x18 bytes
-                C_NetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalClipIds; // 0x0428, 0x18 bytes
-                CGlobalSymbol m_sAnimGraph2Identifier; // 0x0440, 0x8 bytes
-                shade::sdk::client::CAnimGraph2InstancePtr m_pGraphInstanceAG2; // 0x0448, 0x10 bytes
-                std::uint8_t pad_0458[0x210]; // 0x0458, 0x210 bytes
-                shade::sdk::client::CExternalAnimGraphList m_vecExternalGraphs; // 0x0668, 0x20 bytes
-                std::uint8_t pad_0688[0x11]; // 0x0688, 0x11 bytes
-                shade::sdk::client::AnimationAlgorithm_t m_nPrevAnimationAlgorithm; // 0x0699, 0x1 bytes
-                std::uint8_t pad_069a[0x6]; // 0x069a, 0x6 bytes
+                std::uint8_t pad_00d8[0x218]; // 0x00d8, 0x218 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition> m_hGraphDefinitionAG2; // 0x02f0, 0x8 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::AnimGraph2SerializedPoseRecipeSlot_t> m_SerializePoseRecipeAG2Slots; // 0x02f8, 0x68 bytes
+                C_NetworkUtlVectorBase<std::uint8_t> m_SerializePoseRecipeAG2Dynamic; // 0x0360, 0x18 bytes
+                std::uint32_t m_nSerializePoseRecipeAG2ActiveSlot; // 0x0378, 0x4 bytes
+                std::int32_t m_nSerializePoseRecipeVersionAG2; // 0x037c, 0x4 bytes
+                std::int32_t m_nServerGraphInstanceIteration; // 0x0380, 0x4 bytes
+                std::int32_t m_nServerSerializationContextIteration; // 0x0384, 0x4 bytes
+                shade::sdk::resourcefile::ResourceId_t m_primaryGraphId; // 0x0388, 0x8 bytes
+                C_NetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalGraphIds; // 0x0390, 0x18 bytes
+                C_NetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalClipIds; // 0x03a8, 0x18 bytes
+                CGlobalSymbol m_sAnimGraph2Identifier; // 0x03c0, 0x8 bytes
+                shade::sdk::client::CAnimGraph2InstancePtr m_pGraphInstanceAG2; // 0x03c8, 0x10 bytes
+                std::uint8_t pad_03d8[0x210]; // 0x03d8, 0x210 bytes
+                shade::sdk::client::CExternalAnimGraphList m_vecExternalGraphs; // 0x05e8, 0x20 bytes
+                std::uint8_t pad_0608[0x11]; // 0x0608, 0x11 bytes
+                shade::sdk::client::AnimationAlgorithm_t m_nPrevAnimationAlgorithm; // 0x0619, 0x1 bytes
+                std::uint8_t pad_061a[0x6]; // 0x061a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimGraphController) == 0x6A0, "CBaseAnimGraphController size mismatch");
+            static_assert(sizeof(CBaseAnimGraphController) == 0x620, "CBaseAnimGraphController size mismatch");
         }
     }
 }

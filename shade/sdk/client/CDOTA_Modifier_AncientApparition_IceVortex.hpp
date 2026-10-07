@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AncientApparition_IceVortex : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t spell_resist_pct; // 0x1a78, 0x4 bytes
-                std::int32_t drag_speed; // 0x1a7c, 0x4 bytes
-                float aura_origin_x; // 0x1a80, 0x4 bytes
-                float aura_origin_y; // 0x1a84, 0x4 bytes
-                std::int32_t movement_speed_pct; // 0x1a88, 0x4 bytes
-                std::int32_t shard_attack_speed_reduction; // 0x1a8c, 0x4 bytes
-                std::int32_t damage_per_second; // 0x1a90, 0x4 bytes
-                VectorWS m_vCenter; // 0x1a94, 0xc bytes
+                std::int32_t spell_resist_pct; // 0x1aa8, 0x4 bytes
+                std::int32_t drag_speed; // 0x1aac, 0x4 bytes
+                float aura_origin_x; // 0x1ab0, 0x4 bytes
+                float aura_origin_y; // 0x1ab4, 0x4 bytes
+                std::int32_t movement_speed_pct; // 0x1ab8, 0x4 bytes
+                std::int32_t shard_attack_speed_reduction; // 0x1abc, 0x4 bytes
+                std::int32_t damage_per_second; // 0x1ac0, 0x4 bytes
+                VectorWS m_vCenter; // 0x1ac4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AncientApparition_IceVortex) == 0x1AA0, "CDOTA_Modifier_AncientApparition_IceVortex size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AncientApparition_IceVortex) == 0x1AD0, "CDOTA_Modifier_AncientApparition_IceVortex size mismatch");
         }
     }
 }

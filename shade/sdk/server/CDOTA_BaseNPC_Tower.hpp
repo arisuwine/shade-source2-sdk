@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19e8
+             * Size: 0x1ad8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,10 +39,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Tower : public shade::sdk::server::CDOTA_BaseNPC_Building {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnTowerKilled; // 0x19c0, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTowerAttackTarget; // 0x19d8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTowerHighFiveTarget; // 0x19dc, 0x4 bytes
-                std::uint8_t pad_19e0[0x8]; // 0x19e0, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTowerKilled; // 0x1ab0, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTowerAttackTarget; // 0x1ac8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTowerHighFiveTarget; // 0x1acc, 0x4 bytes
+                std::uint8_t pad_1ad0[0x8]; // 0x1ad0, 0x8 bytes
             };
             #pragma pack(pop)
 
@@ -50,7 +50,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDOTA_BaseNPC_Tower) == 0x19E8, "CDOTA_BaseNPC_Tower size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Tower) == 0x1AD8, "CDOTA_BaseNPC_Tower size mismatch");
         }
     }
 }

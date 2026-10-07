@@ -16,13 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RemapScalarOnceTimed : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                bool m_bProportional; // 0x01d8, 0x1 bytes
-                std::uint8_t pad_01d9[0x3]; // 0x01d9, 0x3 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldInput; // 0x01dc, 0x4 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e0, 0x4 bytes
-                float m_flInputMin; // 0x01e4, 0x4 bytes
-                float m_flInputMax; // 0x01e8, 0x4 bytes
-                float m_flOutputMin; // 0x01ec, 0x4 bytes
-                float m_flOutputMax; // 0x01f0, 0x4 bytes
-                float m_flRemapTime; // 0x01f4, 0x4 bytes
+                bool m_bProportional; // 0x01e0, 0x1 bytes
+                std::uint8_t pad_01e1[0x3]; // 0x01e1, 0x3 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldInput; // 0x01e4, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nFieldOutput; // 0x01e8, 0x4 bytes
+                float m_flInputMin; // 0x01ec, 0x4 bytes
+                float m_flInputMax; // 0x01f0, 0x4 bytes
+                float m_flOutputMin; // 0x01f4, 0x4 bytes
+                float m_flOutputMax; // 0x01f8, 0x4 bytes
+                float m_flRemapTime; // 0x01fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RemapScalarOnceTimed) == 0x1F8, "C_OP_RemapScalarOnceTimed size mismatch");
+            static_assert(sizeof(C_OP_RemapScalarOnceTimed) == 0x200, "C_OP_RemapScalarOnceTimed size mismatch");
         }
     }
 }

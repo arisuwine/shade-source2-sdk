@@ -53,7 +53,8 @@ namespace shade {
                 CGlobalSymbol m_sAnimClipSlot; // 0x0028, 0x8 bytes
                 CGlobalSymbol m_sAnimClipSlotWeight; // 0x0030, 0x8 bytes
                 bool m_bHasArrived; // 0x0038, 0x1 bytes
-                std::uint8_t pad_0039[0x3]; // 0x0039, 0x3 bytes
+                bool m_bExternalGraphFinished; // 0x0039, 0x1 bytes
+                std::uint8_t pad_003a[0x2]; // 0x003a, 0x2 bytes
                 std::int32_t m_nType; // 0x003c, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flNext; // 0x0040, 0x4 bytes
                 bool m_bIsGesture; // 0x0044, 0x1 bytes

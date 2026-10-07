@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Enchantress_NaturesAttendants_DamageTracker : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_iDamageTaken; // 0x1a78, 0x4 bytes
-                std::int32_t overprotective_damage_threshold; // 0x1a7c, 0x4 bytes
-                float overprotective_damage_reset_interval; // 0x1a80, 0x4 bytes
-                float overprotective_wisp_duration; // 0x1a84, 0x4 bytes
-                std::int32_t overprotective_wisp_count; // 0x1a88, 0x4 bytes
-                float heal_interval; // 0x1a8c, 0x4 bytes
-                std::int32_t overprotective_max_wisps; // 0x1a90, 0x4 bytes
-                std::int32_t heal; // 0x1a94, 0x4 bytes
-                float heal_duration; // 0x1a98, 0x4 bytes
-                std::int32_t wisp_count; // 0x1a9c, 0x4 bytes
+                std::int32_t m_iDamageTaken; // 0x1aa8, 0x4 bytes
+                std::int32_t overprotective_damage_threshold; // 0x1aac, 0x4 bytes
+                float overprotective_damage_reset_interval; // 0x1ab0, 0x4 bytes
+                float overprotective_wisp_duration; // 0x1ab4, 0x4 bytes
+                std::int32_t overprotective_wisp_count; // 0x1ab8, 0x4 bytes
+                float heal_interval; // 0x1abc, 0x4 bytes
+                std::int32_t overprotective_max_wisps; // 0x1ac0, 0x4 bytes
+                std::int32_t heal; // 0x1ac4, 0x4 bytes
+                float heal_duration; // 0x1ac8, 0x4 bytes
+                std::int32_t wisp_count; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Enchantress_NaturesAttendants_DamageTracker) == 0x1AA0, "CDOTA_Modifier_Enchantress_NaturesAttendants_DamageTracker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Enchantress_NaturesAttendants_DamageTracker) == 0x1AD0, "CDOTA_Modifier_Enchantress_NaturesAttendants_DamageTracker size mismatch");
         }
     }
 }

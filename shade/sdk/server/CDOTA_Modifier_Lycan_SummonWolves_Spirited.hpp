@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1af0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,27 +37,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Lycan_SummonWolves_Spirited : public shade::sdk::server::CDOTA_Modifier_Invisible {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x1a88, 0x4 bytes
-                std::int32_t wolf_index; // 0x1a8c, 0x4 bytes
-                std::int32_t back_distance; // 0x1a90, 0x4 bytes
-                std::int32_t side_distance; // 0x1a94, 0x4 bytes
-                VectorWS m_vecDesiredPosition; // 0x1a98, 0xc bytes
-                std::int32_t m_iBackOffsetFactor; // 0x1aa4, 0x4 bytes
-                bool m_bRightWolf; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                float invis_level; // 0x1aac, 0x4 bytes
-                std::int32_t model_scale; // 0x1ab0, 0x4 bytes
-                bool m_bInitialized; // 0x1ab4, 0x1 bytes
-                bool m_bDeathFxTriggered; // 0x1ab5, 0x1 bytes
-                std::uint8_t pad_1ab6[0x2]; // 0x1ab6, 0x2 bytes
-                float death_fx_time; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x1ab8, 0x4 bytes
+                std::int32_t wolf_index; // 0x1abc, 0x4 bytes
+                std::int32_t back_distance; // 0x1ac0, 0x4 bytes
+                std::int32_t side_distance; // 0x1ac4, 0x4 bytes
+                VectorWS m_vecDesiredPosition; // 0x1ac8, 0xc bytes
+                std::int32_t m_iBackOffsetFactor; // 0x1ad4, 0x4 bytes
+                bool m_bRightWolf; // 0x1ad8, 0x1 bytes
+                std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
+                float invis_level; // 0x1adc, 0x4 bytes
+                std::int32_t model_scale; // 0x1ae0, 0x4 bytes
+                bool m_bInitialized; // 0x1ae4, 0x1 bytes
+                bool m_bDeathFxTriggered; // 0x1ae5, 0x1 bytes
+                std::uint8_t pad_1ae6[0x2]; // 0x1ae6, 0x2 bytes
+                float death_fx_time; // 0x1ae8, 0x4 bytes
+                std::uint8_t pad_1aec[0x4]; // 0x1aec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Lycan_SummonWolves_Spirited) == 0x1AC0, "CDOTA_Modifier_Lycan_SummonWolves_Spirited size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Lycan_SummonWolves_Spirited) == 0x1AF0, "CDOTA_Modifier_Lycan_SummonWolves_Spirited size mismatch");
         }
     }
 }

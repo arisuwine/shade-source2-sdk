@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18d8
+             * Size: 0x19c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,27 +41,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Pet : public shade::sdk::server::CDOTA_BaseNPC {
             public:
-                CHandle<shade::sdk::server::CDOTA_BaseNPC_Hero> m_hHeroHandle; // 0x18a8, 0x4 bytes
-                float m_flPetThreatLevel; // 0x18ac, 0x4 bytes
-                bool m_bReadyToPerformCoopTeleport; // 0x18b0, 0x1 bytes
-                bool m_bSupportsCoopTeleport; // 0x18b1, 0x1 bytes
-                std::uint8_t pad_18b2[0x2]; // 0x18b2, 0x2 bytes
-                shade::sdk::server::PetCoopStates_t m_nCoopState; // 0x18b4, 0x4 bytes
-                CUtlString m_strPickupItemModel; // 0x18b8, 0x8 bytes
-                CHandle<shade::sdk::server::CDOTA_Pet_CarriedItem> m_hCarriedItem; // 0x18c0, 0x4 bytes
-                std::int32_t m_nPetLevel; // 0x18c4, 0x4 bytes
-                shade::sdk::client::PetLevelup_Rule_t m_nLevelupRule; // 0x18c8, 0x4 bytes
-                std::uint8_t pad_18cc[0x4]; // 0x18cc, 0x4 bytes
-                std::int32_t m_nXPCompendiumEventID; // 0x18d0, 0x4 bytes
-                std::uint8_t pad_18d4[0x4]; // 0x18d4, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC_Hero> m_hHeroHandle; // 0x1998, 0x4 bytes
+                float m_flPetThreatLevel; // 0x199c, 0x4 bytes
+                bool m_bReadyToPerformCoopTeleport; // 0x19a0, 0x1 bytes
+                bool m_bSupportsCoopTeleport; // 0x19a1, 0x1 bytes
+                std::uint8_t pad_19a2[0x2]; // 0x19a2, 0x2 bytes
+                shade::sdk::server::PetCoopStates_t m_nCoopState; // 0x19a4, 0x4 bytes
+                CUtlString m_strPickupItemModel; // 0x19a8, 0x8 bytes
+                CHandle<shade::sdk::server::CDOTA_Pet_CarriedItem> m_hCarriedItem; // 0x19b0, 0x4 bytes
+                std::int32_t m_nPetLevel; // 0x19b4, 0x4 bytes
+                shade::sdk::client::PetLevelup_Rule_t m_nLevelupRule; // 0x19b8, 0x4 bytes
+                std::uint8_t pad_19bc[0x4]; // 0x19bc, 0x4 bytes
+                std::int32_t m_nXPCompendiumEventID; // 0x19c0, 0x4 bytes
+                std::uint8_t pad_19c4[0x4]; // 0x19c4, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Pet) == 0x18D8, "CDOTA_BaseNPC_Pet size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Pet) == 0x19C8, "CDOTA_BaseNPC_Pet size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1ad8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,21 +29,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Earthshaker_EnchantTotem : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t bonus_attack_range; // 0x1a78, 0x4 bytes
-                std::int32_t totem_damage_percentage; // 0x1a7c, 0x4 bytes
-                std::int32_t scepter_cleave_pct; // 0x1a80, 0x4 bytes
-                float scepter_cleave_starting_width; // 0x1a84, 0x4 bytes
-                float scepter_cleave_ending_width; // 0x1a88, 0x4 bytes
-                float scepter_cleave_distance; // 0x1a8c, 0x4 bytes
-                std::uint8_t pad_1a90[0x14]; // 0x1a90, 0x14 bytes
-                bool bActive; // 0x1aa4, 0x1 bytes
-                std::uint8_t pad_1aa5[0x3]; // 0x1aa5, 0x3 bytes
+                std::int32_t bonus_attack_range; // 0x1aa8, 0x4 bytes
+                std::int32_t totem_damage_percentage; // 0x1aac, 0x4 bytes
+                std::int32_t scepter_cleave_pct; // 0x1ab0, 0x4 bytes
+                float scepter_cleave_starting_width; // 0x1ab4, 0x4 bytes
+                float scepter_cleave_ending_width; // 0x1ab8, 0x4 bytes
+                float scepter_cleave_distance; // 0x1abc, 0x4 bytes
+                std::uint8_t pad_1ac0[0x14]; // 0x1ac0, 0x14 bytes
+                bool bActive; // 0x1ad4, 0x1 bytes
+                std::uint8_t pad_1ad5[0x3]; // 0x1ad5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Earthshaker_EnchantTotem) == 0x1AA8, "CDOTA_Modifier_Earthshaker_EnchantTotem size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Earthshaker_EnchantTotem) == 0x1AD8, "CDOTA_Modifier_Earthshaker_EnchantTotem size mismatch");
         }
     }
 }

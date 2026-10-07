@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,26 +31,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Earthshaker_Fissure_Line_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t fissure_radius; // 0x1a78, 0x4 bytes
-                float fissure_movement_speed; // 0x1a7c, 0x4 bytes
-                float stun_duration; // 0x1a80, 0x4 bytes
-                float fissure_damage; // 0x1a84, 0x4 bytes
-                float free_pathing_linger_duration; // 0x1a88, 0x4 bytes
-                float fissure_max_distance_moved; // 0x1a8c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x1a90, 0x4 bytes
-                VectorWS m_vFissureStart; // 0x1a94, 0xc bytes
-                Vector m_vFissureStep; // 0x1aa0, 0xc bytes
-                Vector m_vMoveDir; // 0x1aac, 0xc bytes
-                std::int32_t m_nSegments; // 0x1ab8, 0x4 bytes
-                float m_flDurationOriginal; // 0x1abc, 0x4 bytes
-                float m_flTotalDistanceMoved; // 0x1ac0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFissureEffectIndex; // 0x1ac4, 0x4 bytes
+                std::int32_t fissure_radius; // 0x1aa8, 0x4 bytes
+                float fissure_movement_speed; // 0x1aac, 0x4 bytes
+                float stun_duration; // 0x1ab0, 0x4 bytes
+                float fissure_damage; // 0x1ab4, 0x4 bytes
+                float free_pathing_linger_duration; // 0x1ab8, 0x4 bytes
+                bool free_pathing_all_allies; // 0x1abc, 0x1 bytes
+                std::uint8_t pad_1abd[0x3]; // 0x1abd, 0x3 bytes
+                float fissure_max_distance_moved; // 0x1ac0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x1ac4, 0x4 bytes
+                VectorWS m_vFissureStart; // 0x1ac8, 0xc bytes
+                Vector m_vFissureStep; // 0x1ad4, 0xc bytes
+                Vector m_vMoveDir; // 0x1ae0, 0xc bytes
+                std::int32_t m_nSegments; // 0x1aec, 0x4 bytes
+                float m_flDurationOriginal; // 0x1af0, 0x4 bytes
+                float m_flTotalDistanceMoved; // 0x1af4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFissureEffectIndex; // 0x1af8, 0x4 bytes
+                std::uint8_t pad_1afc[0x4]; // 0x1afc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Earthshaker_Fissure_Line_Thinker) == 0x1AC8, "CDOTA_Modifier_Earthshaker_Fissure_Line_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Earthshaker_Fissure_Line_Thinker) == 0x1B00, "CDOTA_Modifier_Earthshaker_Fissure_Line_Thinker size mismatch");
         }
     }
 }

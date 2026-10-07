@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a88
+             * Size: 0x1ab8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_VoidSpirit_AstralStep_Debuff : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1a78, 0x4 bytes
-                std::int32_t movement_slow_pct; // 0x1a7c, 0x4 bytes
-                std::int32_t pop_damage; // 0x1a80, 0x4 bytes
-                std::uint8_t pad_1a84[0x4]; // 0x1a84, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1aa8, 0x4 bytes
+                std::int32_t movement_slow_pct; // 0x1aac, 0x4 bytes
+                std::int32_t pop_damage; // 0x1ab0, 0x4 bytes
+                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AstralStep_Debuff) == 0x1A88, "CDOTA_Modifier_VoidSpirit_AstralStep_Debuff size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AstralStep_Debuff) == 0x1AB8, "CDOTA_Modifier_VoidSpirit_AstralStep_Debuff size mismatch");
         }
     }
 }

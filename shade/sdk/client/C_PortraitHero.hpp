@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a00
+             * Size: 0x1b00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PortraitHero : public shade::sdk::client::C_DOTA_BaseNPC {
             public:
-                shade::sdk::client::HeroID_t m_nHeroID; // 0x19b8, 0x4 bytes
-                std::int32_t m_actQueuedActivity; // 0x19bc, 0x4 bytes
-                char m_szQueuedActivityModifier[0x40]; // 0x19c0, 0x40 bytes
+                shade::sdk::client::HeroID_t m_nHeroID; // 0x1ab8, 0x4 bytes
+                std::int32_t m_actQueuedActivity; // 0x1abc, 0x4 bytes
+                char m_szQueuedActivityModifier[0x40]; // 0x1ac0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PortraitHero) == 0x1A00, "C_PortraitHero size mismatch");
+            static_assert(sizeof(C_PortraitHero) == 0x1B00, "C_PortraitHero size mismatch");
         }
     }
 }

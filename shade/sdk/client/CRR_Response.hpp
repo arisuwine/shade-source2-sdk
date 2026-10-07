@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d0
+             * Size: 0x1b8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -39,16 +39,15 @@ namespace shade {
                 std::uint8_t pad_0185[0x3]; // 0x0185, 0x3 bytes
                 char *m_szSpeakerContext; // 0x0188, 0x8 bytes
                 char *m_szWorldContext; // 0x0190, 0x8 bytes
-                shade::sdk::client::ResponseFollowup m_Followup; // 0x0198, 0x31 bytes
-                std::uint8_t pad_01c9[0x1]; // 0x01c9, 0x1 bytes
-                CUtlSymbol m_recipientFilter; // 0x01ca, 0x2 bytes
-                std::uint8_t pad_01cc[0x4]; // 0x01cc, 0x4 bytes
+                shade::sdk::client::ResponseFollowup m_Followup; // 0x0198, 0x1c bytes
+                CUtlSymbol m_recipientFilter; // 0x01b4, 0x2 bytes
+                std::uint8_t pad_01b6[0x2]; // 0x01b6, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRR_Response) == 0x1D0, "CRR_Response size mismatch");
+            static_assert(sizeof(CRR_Response) == 0x1B8, "CRR_Response size mismatch");
         }
     }
 }

@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x278
+             * Size: 0x280
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -56,20 +56,22 @@ namespace shade {
                 shade::sdk::client::fogparams_t m_CurrentFog; // 0x0130, 0x68 bytes
                 CHandle<shade::sdk::client::C_FogController> m_hOldFogController; // 0x0198, 0x4 bytes
                 bool m_bOverrideFogColor[0x5]; // 0x019c, 0x5 bytes
-                Color m_OverrideFogColor[0x5]; // 0x01a1, 0x14 bytes
-                bool m_bOverrideFogStartEnd[0x5]; // 0x01b5, 0x5 bytes
-                std::uint8_t pad_01ba[0x2]; // 0x01ba, 0x2 bytes
-                float m_fOverrideFogStart[0x5]; // 0x01bc, 0x14 bytes
-                float m_fOverrideFogEnd[0x5]; // 0x01d0, 0x14 bytes
-                CHandle<shade::sdk::client::C_PostProcessingVolume> m_hActivePostProcessingVolume; // 0x01e4, 0x4 bytes
-                QAngle m_angDemoViewAngles; // 0x01e8, 0xc bytes
-                std::uint8_t pad_01f4[0x84]; // 0x01f4, 0x84 bytes
+                std::uint8_t pad_01a1[0x3]; // 0x01a1, 0x3 bytes
+                Color m_OverrideFogColor[0x5]; // 0x01a4, 0x14 bytes
+                bool m_bOverrideFogStartEnd[0x5]; // 0x01b8, 0x5 bytes
+                std::uint8_t pad_01bd[0x3]; // 0x01bd, 0x3 bytes
+                float m_fOverrideFogStart[0x5]; // 0x01c0, 0x14 bytes
+                float m_fOverrideFogEnd[0x5]; // 0x01d4, 0x14 bytes
+                CHandle<shade::sdk::client::C_PostProcessingVolume> m_hActivePostProcessingVolume; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                QAngle m_angDemoViewAngles; // 0x01f0, 0xc bytes
+                std::uint8_t pad_01fc[0x84]; // 0x01fc, 0x84 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPlayer_CameraServices) == 0x278, "CPlayer_CameraServices size mismatch");
+            static_assert(sizeof(CPlayer_CameraServices) == 0x280, "CPlayer_CameraServices size mismatch");
         }
     }
 }

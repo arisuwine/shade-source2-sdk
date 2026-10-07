@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0xb0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +29,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseGraphInstance_PanoramaPanel : public shade::sdk::pulse_runtime_lib::CBasePulseGraphInstance {
             public:
-                std::uint8_t pad_0110[0x20]; // 0x0110, 0x20 bytes
+                std::uint8_t pad_0090[0x20]; // 0x0090, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphInstance_PanoramaPanel) == 0x130, "CPulseGraphInstance_PanoramaPanel size mismatch");
+            static_assert(sizeof(CPulseGraphInstance_PanoramaPanel) == 0xB0, "CPulseGraphInstance_PanoramaPanel size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_WitchDoctor_DeathWard : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t bonus_damage; // 0x1a78, 0x4 bytes
-                std::int32_t bonus_accuracy; // 0x1a7c, 0x4 bytes
-                std::int32_t bonus_attack_range; // 0x1a80, 0x4 bytes
-                bool m_bFirstAttack; // 0x1a84, 0x1 bytes
-                std::uint8_t pad_1a85[0x3]; // 0x1a85, 0x3 bytes
-                std::int32_t initial_target_count; // 0x1a88, 0x4 bytes
-                std::int32_t secondary_attack_damage_pct; // 0x1a8c, 0x4 bytes
-                std::uint8_t pad_1a90[0x38]; // 0x1a90, 0x38 bytes
+                std::int32_t bonus_damage; // 0x1aa8, 0x4 bytes
+                std::int32_t bonus_accuracy; // 0x1aac, 0x4 bytes
+                std::int32_t bonus_attack_range; // 0x1ab0, 0x4 bytes
+                bool m_bFirstAttack; // 0x1ab4, 0x1 bytes
+                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
+                std::int32_t initial_target_count; // 0x1ab8, 0x4 bytes
+                std::int32_t secondary_attack_damage_pct; // 0x1abc, 0x4 bytes
+                std::uint8_t pad_1ac0[0x38]; // 0x1ac0, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_WitchDoctor_DeathWard) == 0x1AC8, "CDOTA_Modifier_WitchDoctor_DeathWard size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_WitchDoctor_DeathWard) == 0x1AF8, "CDOTA_Modifier_WitchDoctor_DeathWard size mismatch");
         }
     }
 }

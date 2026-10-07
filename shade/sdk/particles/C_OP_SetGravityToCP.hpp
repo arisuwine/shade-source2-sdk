@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x360
+             * Size: 0x370
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetGravityToCP : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                std::int32_t m_nCPInput; // 0x01e0, 0x4 bytes
-                std::int32_t m_nCPOutput; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScale; // 0x01e8, 0x170 bytes
-                bool m_bSetPosition; // 0x0358, 0x1 bytes
-                bool m_bSetOrientation; // 0x0359, 0x1 bytes
-                bool m_bSetZDown; // 0x035a, 0x1 bytes
-                std::uint8_t pad_035b[0x5]; // 0x035b, 0x5 bytes
+                std::int32_t m_nCPInput; // 0x01e8, 0x4 bytes
+                std::int32_t m_nCPOutput; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flScale; // 0x01f0, 0x178 bytes
+                bool m_bSetPosition; // 0x0368, 0x1 bytes
+                bool m_bSetOrientation; // 0x0369, 0x1 bytes
+                bool m_bSetZDown; // 0x036a, 0x1 bytes
+                std::uint8_t pad_036b[0x5]; // 0x036b, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetGravityToCP) == 0x360, "C_OP_SetGravityToCP size mismatch");
+            static_assert(sizeof(C_OP_SetGravityToCP) == 0x370, "C_OP_SetGravityToCP size mismatch");
         }
     }
 }

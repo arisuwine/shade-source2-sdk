@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x1ab8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_NPC_Lantern : public shade::sdk::server::CDOTA_BaseNPC_Building {
             public:
-                CUtlSymbolLarge m_szInteractAbilityName; // 0x19c0, 0x8 bytes
+                CUtlSymbolLarge m_szInteractAbilityName; // 0x1ab0, 0x8 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NPC_Lantern) == 0x19C8, "CDOTA_NPC_Lantern size mismatch");
+            static_assert(sizeof(CDOTA_NPC_Lantern) == 0x1AB8, "CDOTA_NPC_Lantern size mismatch");
         }
     }
 }

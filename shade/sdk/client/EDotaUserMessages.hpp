@@ -185,7 +185,9 @@ namespace shade {
                 DOTA_UM_MonsterHunter_HuntAlert = 0x279,
                 DOTA_UM_TormentorTimer = 0x27a,
                 DOTA_UM_KillEffect = 0x27b,
-                DOTA_UM_GiveItem = 0x27c
+                DOTA_UM_GiveItem = 0x27c,
+                DOTA_UM_TidehunterArcanaProgress_Ravages = 0x27d,
+                DOTA_UM_TidehunterArcanaProgress_Fish = 0x27e
             };
         }
     }

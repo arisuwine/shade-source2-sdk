@@ -16,15 +16,15 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/particles/CParticleFunctionOperator.hpp"
-#include "shade/sdk/particles/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/CPerParticleFloatInput.hpp"
+#include "shade/sdk/particleslib/ParticleAttributeIndex_t.hpp"
 #include "shade/sdk/particleslib/ParticleSetMethod_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x510
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetFloat : public shade::sdk::particles::CParticleFunctionOperator {
             public:
-                shade::sdk::particleslib::CPerParticleFloatInput m_InputValue; // 0x01d8, 0x170 bytes
-                shade::sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x0348, 0x4 bytes
-                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x034c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_Lerp; // 0x0350, 0x170 bytes
-                std::uint8_t pad_04c0[0x30]; // 0x04c0, 0x30 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_InputValue; // 0x01e0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nOutputField; // 0x0358, 0x4 bytes
+                shade::sdk::particleslib::ParticleSetMethod_t m_nSetMethod; // 0x035c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_Lerp; // 0x0360, 0x178 bytes
+                std::uint8_t pad_04d8[0x38]; // 0x04d8, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetFloat) == 0x4F0, "C_OP_SetFloat size mismatch");
+            static_assert(sizeof(C_OP_SetFloat) == 0x510, "C_OP_SetFloat size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Physical : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                std::int32_t m_nFlags; // 0x0798, 0x4 bytes
-                std::int32_t m_nRevealedInFoWForTeam; // 0x079c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fCreationTime; // 0x07a0, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_Item> m_hItem; // 0x07a4, 0x4 bytes
-                bool m_bIsLowPriorityHoverItem; // 0x07a8, 0x1 bytes
-                std::uint8_t pad_07a9[0x7]; // 0x07a9, 0x7 bytes
+                std::int32_t m_nFlags; // 0x0878, 0x4 bytes
+                std::int32_t m_nRevealedInFoWForTeam; // 0x087c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fCreationTime; // 0x0880, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_Item> m_hItem; // 0x0884, 0x4 bytes
+                bool m_bIsLowPriorityHoverItem; // 0x0888, 0x1 bytes
+                std::uint8_t pad_0889[0x7]; // 0x0889, 0x7 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Physical) == 0x7B0, "CDOTA_Item_Physical size mismatch");
+            static_assert(sizeof(CDOTA_Item_Physical) == 0x890, "CDOTA_Item_Physical size mismatch");
         }
     }
 }

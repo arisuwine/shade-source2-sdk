@@ -31,7 +31,7 @@ namespace shade {
                 shade::sdk::pulse_runtime_lib::PulseDomainValueType_t m_nType; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 CGlobalSymbolCaseSensitive m_Value; // 0x0008, 0x8 bytes
-                CPulseValueFullType m_RequiredRuntimeType; // 0x0010, 0x18 bytes
+                CPulseType m_RequiredRuntimeType; // 0x0010, 0x18 bytes
                 std::uint8_t pad_0028[0x8]; // 0x0028, 0x8 bytes
             };
             #pragma pack(pop)

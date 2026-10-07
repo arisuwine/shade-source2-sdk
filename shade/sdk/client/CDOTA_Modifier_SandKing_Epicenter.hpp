@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b28
+             * Size: 0x1b58
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_SandKing_Epicenter : public shade::sdk::client::CDOTA_Buff {
             public:
-                float epicenter_radius_base; // 0x1a78, 0x4 bytes
-                float epicenter_radius_increment; // 0x1a7c, 0x4 bytes
-                std::int32_t epicenter_pulses; // 0x1a80, 0x4 bytes
-                float epicenter_radius[0x1e]; // 0x1a84, 0x78 bytes
-                std::int32_t m_iMaxPulses; // 0x1afc, 0x4 bytes
-                std::int32_t m_iPulseCount; // 0x1b00, 0x4 bytes
-                float m_flPulseTickRate; // 0x1b04, 0x4 bytes
-                float spine_tick_rate; // 0x1b08, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1b0c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSpineTime; // 0x1b10, 0x4 bytes
-                std::uint8_t pad_1b14[0x14]; // 0x1b14, 0x14 bytes
+                float epicenter_radius_base; // 0x1aa8, 0x4 bytes
+                float epicenter_radius_increment; // 0x1aac, 0x4 bytes
+                std::int32_t epicenter_pulses; // 0x1ab0, 0x4 bytes
+                float epicenter_radius[0x1e]; // 0x1ab4, 0x78 bytes
+                std::int32_t m_iMaxPulses; // 0x1b2c, 0x4 bytes
+                std::int32_t m_iPulseCount; // 0x1b30, 0x4 bytes
+                float m_flPulseTickRate; // 0x1b34, 0x4 bytes
+                float spine_tick_rate; // 0x1b38, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1b3c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSpineTime; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x14]; // 0x1b44, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_SandKing_Epicenter) == 0x1B28, "CDOTA_Modifier_SandKing_Epicenter size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_SandKing_Epicenter) == 0x1B58, "CDOTA_Modifier_SandKing_Epicenter size mismatch");
         }
     }
 }

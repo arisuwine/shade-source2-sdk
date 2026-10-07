@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19d0
+             * Size: 0x1ad0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_AghsFort_Creature_DungeonBat : public shade::sdk::client::C_DOTA_BaseNPC_Creature {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXAmbient; // 0x19c8, 0x4 bytes
-                std::uint8_t pad_19cc[0x4]; // 0x19cc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXAmbient; // 0x1ac8, 0x4 bytes
+                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_AghsFort_Creature_DungeonBat) == 0x19D0, "C_DOTA_Unit_AghsFort_Creature_DungeonBat size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_AghsFort_Creature_DungeonBat) == 0x1AD0, "C_DOTA_Unit_AghsFort_Creature_DungeonBat size mismatch");
         }
     }
 }

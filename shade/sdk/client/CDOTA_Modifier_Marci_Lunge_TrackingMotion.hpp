@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,24 +38,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Marci_Lunge_TrackingMotion : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_nProjectileID; // 0x1a78, 0x4 bytes
-                std::int32_t m_nMaxJumpDistance; // 0x1a7c, 0x4 bytes
-                float landing_radius; // 0x1a80, 0x4 bytes
-                std::int32_t max_jump_distance; // 0x1a84, 0x4 bytes
-                std::int32_t min_jump_distance; // 0x1a88, 0x4 bytes
-                std::int32_t target_abort_distance; // 0x1a8c, 0x4 bytes
-                std::int32_t impact_position_offset; // 0x1a90, 0x4 bytes
-                float m_flCastDistance; // 0x1a94, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nAoEFXIndex; // 0x1a98, 0x4 bytes
-                VectorWS m_vDestination; // 0x1a9c, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBounceEntity; // 0x1aa8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBounceEntityClient; // 0x1aac, 0x4 bytes
+                std::int32_t m_nProjectileID; // 0x1aa8, 0x4 bytes
+                std::int32_t m_nMaxJumpDistance; // 0x1aac, 0x4 bytes
+                float landing_radius; // 0x1ab0, 0x4 bytes
+                std::int32_t max_jump_distance; // 0x1ab4, 0x4 bytes
+                std::int32_t min_jump_distance; // 0x1ab8, 0x4 bytes
+                std::int32_t target_abort_distance; // 0x1abc, 0x4 bytes
+                std::int32_t impact_position_offset; // 0x1ac0, 0x4 bytes
+                float m_flCastDistance; // 0x1ac4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nAoEFXIndex; // 0x1ac8, 0x4 bytes
+                VectorWS m_vDestination; // 0x1acc, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBounceEntity; // 0x1ad8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBounceEntityClient; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Marci_Lunge_TrackingMotion) == 0x1AB0, "CDOTA_Modifier_Marci_Lunge_TrackingMotion size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Marci_Lunge_TrackingMotion) == 0x1AE0, "CDOTA_Modifier_Marci_Lunge_TrackingMotion size mismatch");
         }
     }
 }

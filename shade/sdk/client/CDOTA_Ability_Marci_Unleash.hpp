@@ -39,9 +39,7 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
             static_assert(sizeof(CDOTA_Ability_Marci_Unleash) == 0x6C0, "CDOTA_Ability_Marci_Unleash size mismatch");
         }

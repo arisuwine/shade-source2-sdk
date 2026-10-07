@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Mjollnir_Static : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1a78[0x14]; // 0x1a78, 0x14 bytes
-                std::int32_t static_chance; // 0x1a8c, 0x4 bytes
-                std::int32_t static_strikes; // 0x1a90, 0x4 bytes
-                std::int32_t static_damage; // 0x1a94, 0x4 bytes
-                std::int32_t static_primary_radius; // 0x1a98, 0x4 bytes
-                std::int32_t static_seconary_radius; // 0x1a9c, 0x4 bytes
-                std::int32_t static_radius; // 0x1aa0, 0x4 bytes
-                float static_cooldown; // 0x1aa4, 0x4 bytes
-                std::int32_t chain_damage_per_charge; // 0x1aa8, 0x4 bytes
-                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                std::uint8_t pad_1aa8[0x14]; // 0x1aa8, 0x14 bytes
+                std::int32_t static_chance; // 0x1abc, 0x4 bytes
+                std::int32_t static_strikes; // 0x1ac0, 0x4 bytes
+                std::int32_t static_damage; // 0x1ac4, 0x4 bytes
+                std::int32_t static_primary_radius; // 0x1ac8, 0x4 bytes
+                std::int32_t static_seconary_radius; // 0x1acc, 0x4 bytes
+                std::int32_t static_radius; // 0x1ad0, 0x4 bytes
+                float static_cooldown; // 0x1ad4, 0x4 bytes
+                std::int32_t chain_damage_per_charge; // 0x1ad8, 0x4 bytes
+                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Mjollnir_Static) == 0x1AB0, "CDOTA_Modifier_Item_Mjollnir_Static size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Mjollnir_Static) == 0x1AE0, "CDOTA_Modifier_Item_Mjollnir_Static size mismatch");
         }
     }
 }

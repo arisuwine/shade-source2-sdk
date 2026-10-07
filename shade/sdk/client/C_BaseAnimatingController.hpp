@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x5e8
+             * Size: 0x568
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -56,16 +56,16 @@ namespace shade {
                 float m_flCachedSequenceCycleRate; // 0x00cc, 0x4 bytes
                 float m_flCachedGroundSpeed; // 0x00d0, 0x4 bytes
                 shade::sdk::client::SequenceFinishNotifyState_t m_nNotifyState; // 0x00d4, 0x1 bytes
-                std::uint8_t pad_00d5[0x29b]; // 0x00d5, 0x29b bytes
-                shade::sdk::client::C_CSequenceTransitioner2 m_SequenceTransitioner; // 0x0370, 0x1b8 bytes
-                shade::sdk::animationsystem::HSequence m_hLastAnimEventSequence; // 0x0528, 0x4 bytes
-                std::uint8_t pad_052c[0xbc]; // 0x052c, 0xbc bytes
+                std::uint8_t pad_00d5[0x21b]; // 0x00d5, 0x21b bytes
+                shade::sdk::client::C_CSequenceTransitioner2 m_SequenceTransitioner; // 0x02f0, 0x1b8 bytes
+                shade::sdk::animationsystem::HSequence m_hLastAnimEventSequence; // 0x04a8, 0x4 bytes
+                std::uint8_t pad_04ac[0xbc]; // 0x04ac, 0xbc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BaseAnimatingController) == 0x5E8, "C_BaseAnimatingController size mismatch");
+            static_assert(sizeof(C_BaseAnimatingController) == 0x568, "C_BaseAnimatingController size mismatch");
         }
     }
 }

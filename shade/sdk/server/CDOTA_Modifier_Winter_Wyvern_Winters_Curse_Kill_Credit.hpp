@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a98
+             * Size: 0x1ac8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +37,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Winter_Wyvern_Winters_Curse_Kill_Credit : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1a78, 0x18 bytes
-                bool transfer_on_death; // 0x1a90, 0x1 bytes
-                std::uint8_t pad_1a91[0x7]; // 0x1a91, 0x7 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1aa8, 0x18 bytes
+                bool transfer_on_death; // 0x1ac0, 0x1 bytes
+                std::uint8_t pad_1ac1[0x7]; // 0x1ac1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Winter_Wyvern_Winters_Curse_Kill_Credit) == 0x1A98, "CDOTA_Modifier_Winter_Wyvern_Winters_Curse_Kill_Credit size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Winter_Wyvern_Winters_Curse_Kill_Credit) == 0x1AC8, "CDOTA_Modifier_Winter_Wyvern_Winters_Curse_Kill_Credit size mismatch");
         }
     }
 }

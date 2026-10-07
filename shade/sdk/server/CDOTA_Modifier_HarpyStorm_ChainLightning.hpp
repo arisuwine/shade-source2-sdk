@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1ae0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,19 +37,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_HarpyStorm_ChainLightning : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t jump_range; // 0x1a78, 0x4 bytes
-                std::int32_t max_targets; // 0x1a7c, 0x4 bytes
-                float damage_percent_loss; // 0x1a80, 0x4 bytes
-                float m_flCurDamage; // 0x1a84, 0x4 bytes
-                VectorWS m_vJumpPosition; // 0x1a88, 0xc bytes
-                std::uint8_t pad_1a94[0x4]; // 0x1a94, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1a98, 0x18 bytes
+                std::int32_t jump_range; // 0x1aa8, 0x4 bytes
+                std::int32_t max_targets; // 0x1aac, 0x4 bytes
+                float damage_percent_loss; // 0x1ab0, 0x4 bytes
+                float m_flCurDamage; // 0x1ab4, 0x4 bytes
+                VectorWS m_vJumpPosition; // 0x1ab8, 0xc bytes
+                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1ac8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_HarpyStorm_ChainLightning) == 0x1AB0, "CDOTA_Modifier_HarpyStorm_ChainLightning size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_HarpyStorm_ChainLightning) == 0x1AE0, "CDOTA_Modifier_HarpyStorm_ChainLightning size mismatch");
         }
     }
 }

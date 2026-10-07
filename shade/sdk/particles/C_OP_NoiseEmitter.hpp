@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x228
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,28 +29,28 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_NoiseEmitter : public shade::sdk::particles::CParticleFunctionEmitter {
             public:
-                float m_flEmissionDuration; // 0x01e0, 0x4 bytes
-                float m_flStartTime; // 0x01e4, 0x4 bytes
-                float m_flEmissionScale; // 0x01e8, 0x4 bytes
-                std::int32_t m_nScaleControlPoint; // 0x01ec, 0x4 bytes
-                std::int32_t m_nScaleControlPointField; // 0x01f0, 0x4 bytes
-                std::int32_t m_nWorldNoisePoint; // 0x01f4, 0x4 bytes
-                bool m_bAbsVal; // 0x01f8, 0x1 bytes
-                bool m_bAbsValInv; // 0x01f9, 0x1 bytes
-                std::uint8_t pad_01fa[0x2]; // 0x01fa, 0x2 bytes
-                float m_flOffset; // 0x01fc, 0x4 bytes
-                float m_flOutputMin; // 0x0200, 0x4 bytes
-                float m_flOutputMax; // 0x0204, 0x4 bytes
-                float m_flNoiseScale; // 0x0208, 0x4 bytes
-                float m_flWorldNoiseScale; // 0x020c, 0x4 bytes
-                Vector m_vecOffsetLoc; // 0x0210, 0xc bytes
-                float m_flWorldTimeScale; // 0x021c, 0x4 bytes
+                float m_flEmissionDuration; // 0x01e8, 0x4 bytes
+                float m_flStartTime; // 0x01ec, 0x4 bytes
+                float m_flEmissionScale; // 0x01f0, 0x4 bytes
+                std::int32_t m_nScaleControlPoint; // 0x01f4, 0x4 bytes
+                std::int32_t m_nScaleControlPointField; // 0x01f8, 0x4 bytes
+                std::int32_t m_nWorldNoisePoint; // 0x01fc, 0x4 bytes
+                bool m_bAbsVal; // 0x0200, 0x1 bytes
+                bool m_bAbsValInv; // 0x0201, 0x1 bytes
+                std::uint8_t pad_0202[0x2]; // 0x0202, 0x2 bytes
+                float m_flOffset; // 0x0204, 0x4 bytes
+                float m_flOutputMin; // 0x0208, 0x4 bytes
+                float m_flOutputMax; // 0x020c, 0x4 bytes
+                float m_flNoiseScale; // 0x0210, 0x4 bytes
+                float m_flWorldNoiseScale; // 0x0214, 0x4 bytes
+                Vector m_vecOffsetLoc; // 0x0218, 0xc bytes
+                float m_flWorldTimeScale; // 0x0224, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_NoiseEmitter) == 0x220, "C_OP_NoiseEmitter size mismatch");
+            static_assert(sizeof(C_OP_NoiseEmitter) == 0x228, "C_OP_NoiseEmitter size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_PhantomAssassin_Fan_Of_Knives_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fCurRadius; // 0x1a78, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1a7c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_entitiesHit; // 0x1a80, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_ViewerTimer; // 0x1a98, 0x18 bytes
-                float projectile_speed; // 0x1ab0, 0x4 bytes
-                float radius; // 0x1ab4, 0x4 bytes
-                float duration; // 0x1ab8, 0x4 bytes
-                float pct_health_damage_initial; // 0x1abc, 0x4 bytes
-                float max_damage_initial; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                float m_fCurRadius; // 0x1aa8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1aac, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_entitiesHit; // 0x1ab0, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_ViewerTimer; // 0x1ac8, 0x18 bytes
+                float projectile_speed; // 0x1ae0, 0x4 bytes
+                float radius; // 0x1ae4, 0x4 bytes
+                float duration; // 0x1ae8, 0x4 bytes
+                float pct_health_damage_initial; // 0x1aec, 0x4 bytes
+                float max_damage_initial; // 0x1af0, 0x4 bytes
+                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_PhantomAssassin_Fan_Of_Knives_Thinker) == 0x1AC8, "CDOTA_Modifier_PhantomAssassin_Fan_Of_Knives_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_PhantomAssassin_Fan_Of_Knives_Thinker) == 0x1AF8, "CDOTA_Modifier_PhantomAssassin_Fan_Of_Knives_Thinker size mismatch");
         }
     }
 }

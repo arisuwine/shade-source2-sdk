@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb30
+             * Size: 0xac0
              * Alignment: 0xff
              * Has VTable
              * Construct Allowed
@@ -32,13 +32,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CBodyComponentBaseAnimGraph : public shade::sdk::server::CBodyComponentSkeletonInstance {
             public:
-                shade::sdk::server::CBaseAnimGraphController m_animationController; // 0x04e0, 0x650 bytes
+                shade::sdk::server::CBaseAnimGraphController m_animationController; // 0x04f0, 0x5d0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0xB30, "CBodyComponentBaseAnimGraph size mismatch");
+            static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0xAC0, "CBodyComponentBaseAnimGraph size mismatch");
         }
     }
 }

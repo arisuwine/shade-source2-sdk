@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,15 +29,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_PlayEndCapWhenFinished : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                bool m_bFireOnEmissionEnd; // 0x01e0, 0x1 bytes
-                bool m_bIncludeChildren; // 0x01e1, 0x1 bytes
-                std::uint8_t pad_01e2[0x6]; // 0x01e2, 0x6 bytes
+                bool m_bFireOnEmissionEnd; // 0x01e8, 0x1 bytes
+                bool m_bIncludeChildren; // 0x01e9, 0x1 bytes
+                std::uint8_t pad_01ea[0x6]; // 0x01ea, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_PlayEndCapWhenFinished) == 0x1E8, "C_OP_PlayEndCapWhenFinished size mismatch");
+            static_assert(sizeof(C_OP_PlayEndCapWhenFinished) == 0x1F0, "C_OP_PlayEndCapWhenFinished size mismatch");
         }
     }
 }

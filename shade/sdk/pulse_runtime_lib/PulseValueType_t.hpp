@@ -37,21 +37,18 @@ namespace shade {
                 PVAL_SNDEVT_GUID = 0x10,
                 PVAL_SNDEVT_NAME = 0x11,
                 PVAL_ENTITY_NAME = 0x12,
-                PVAL_OPAQUE_HANDLE = 0x13,
-                PVAL_TYPESAFE_INT = 0x14,
-                PVAL_MODEL_MATERIAL_GROUP = 0x15,
-                PVAL_CURSOR_FLOW = 0x16,
-                PVAL_VARIANT = 0x17,
-                PVAL_UNKNOWN = 0x18,
-                PVAL_SCHEMA_ENUM = 0x19,
-                PVAL_PANORAMA_PANEL_HANDLE = 0x1a,
-                PVAL_TEST_HANDLE = 0x1b,
-                PVAL_ARRAY = 0x1c,
-                PVAL_TYPESAFE_INT64 = 0x1d,
-                PVAL_PARTICLE_EHANDLE = 0x1e,
-                PVAL_ANIM_SEQUENCE = 0x1f,
-                PVAL_VDATA_CHOICE = 0x20,
-                PVAL_COUNT = 0x21
+                PVAL_LEAF = 0x13,
+                PVAL_MODEL_MATERIAL_GROUP = 0x14,
+                PVAL_CURSOR_FLOW = 0x15,
+                PVAL_VARIANT = 0x16,
+                PVAL_UNKNOWN = 0x17,
+                PVAL_ENUM = 0x18,
+                PVAL_PANORAMA_PANEL_HANDLE = 0x19,
+                PVAL_ARRAY = 0x1a,
+                PVAL_PARTICLE_EHANDLE = 0x1b,
+                PVAL_ANIM_SEQUENCE = 0x1c,
+                PVAL_VDATA_CHOICE = 0x1d,
+                PVAL_COUNT = 0x1e
             };
         }
     }

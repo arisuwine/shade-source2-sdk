@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1da0
+             * Size: 0x1ea0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,23 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Hero_Wisp : public shade::sdk::client::C_DOTA_BaseNPC_Hero {
             public:
-                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x1d88, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nStunnedFXIndex; // 0x1d8c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTalkFXIndex; // 0x1d90, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nIllusionFXIndex; // 0x1d94, 0x4 bytes
-                bool m_bParticleHexed; // 0x1d98, 0x1 bytes
-                bool m_bParticleStunned; // 0x1d99, 0x1 bytes
-                bool m_bDetermineAmbientEffect; // 0x1d9a, 0x1 bytes
-                std::uint8_t pad_1d9b[0x1]; // 0x1d9b, 0x1 bytes
-                float m_flPrevHealth; // 0x1d9c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x1e88, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nStunnedFXIndex; // 0x1e8c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTalkFXIndex; // 0x1e90, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nIllusionFXIndex; // 0x1e94, 0x4 bytes
+                bool m_bParticleHexed; // 0x1e98, 0x1 bytes
+                bool m_bParticleStunned; // 0x1e99, 0x1 bytes
+                bool m_bDetermineAmbientEffect; // 0x1e9a, 0x1 bytes
+                std::uint8_t pad_1e9b[0x1]; // 0x1e9b, 0x1 bytes
+                float m_flPrevHealth; // 0x1e9c, 0x4 bytes
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Hero_Wisp) == 0x1DA0, "C_DOTA_Unit_Hero_Wisp size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Hero_Wisp) == 0x1EA0, "C_DOTA_Unit_Hero_Wisp size mismatch");
         }
     }
 }

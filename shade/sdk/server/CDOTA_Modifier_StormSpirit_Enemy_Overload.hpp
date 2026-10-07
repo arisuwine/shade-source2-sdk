@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_StormSpirit_Enemy_Overload : public shade::sdk::client::CDOTA_Buff {
             public:
-                float overload_aoe; // 0x1a78, 0x4 bytes
-                std::uint8_t pad_1a7c[0x4]; // 0x1a7c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x1a80, 0x18 bytes
-                shade::sdk::client::AttackRecord_t m_nAttackRecordIndex; // 0x1a98, 0x2 bytes
-                std::uint8_t pad_1a9a[0x6]; // 0x1a9a, 0x6 bytes
+                float overload_aoe; // 0x1aa8, 0x4 bytes
+                std::uint8_t pad_1aac[0x4]; // 0x1aac, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x1ab0, 0x18 bytes
+                shade::sdk::client::AttackRecord_t m_nAttackRecordIndex; // 0x1ac8, 0x2 bytes
+                std::uint8_t pad_1aca[0x6]; // 0x1aca, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_StormSpirit_Enemy_Overload) == 0x1AA0, "CDOTA_Modifier_StormSpirit_Enemy_Overload size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_StormSpirit_Enemy_Overload) == 0x1AD0, "CDOTA_Modifier_StormSpirit_Enemy_Overload size mismatch");
         }
     }
 }

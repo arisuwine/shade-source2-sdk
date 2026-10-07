@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x7d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_SetControlPointFieldToScalarExpression : public shade::sdk::particles::CParticleFunctionPreEmission {
             public:
-                shade::sdk::particles::ScalarExpressionType_t m_nExpression; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInput1; // 0x01e8, 0x170 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInput2; // 0x0358, 0x170 bytes
-                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x04c8, 0x170 bytes
-                std::int32_t m_nOutputCP; // 0x0638, 0x4 bytes
-                std::int32_t m_nOutVectorField; // 0x063c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInterpolation; // 0x0640, 0x170 bytes
+                shade::sdk::particles::ScalarExpressionType_t m_nExpression; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInput1; // 0x01f0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInput2; // 0x0368, 0x178 bytes
+                shade::sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x04e0, 0x178 bytes
+                std::int32_t m_nOutputCP; // 0x0658, 0x4 bytes
+                std::int32_t m_nOutVectorField; // 0x065c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flInterpolation; // 0x0660, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_SetControlPointFieldToScalarExpression) == 0x7B0, "C_OP_SetControlPointFieldToScalarExpression size mismatch");
+            static_assert(sizeof(C_OP_SetControlPointFieldToScalarExpression) == 0x7D8, "C_OP_SetControlPointFieldToScalarExpression size mismatch");
         }
     }
 }

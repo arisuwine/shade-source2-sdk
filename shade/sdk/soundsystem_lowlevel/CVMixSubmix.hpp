@@ -15,29 +15,34 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/soundsystem_lowlevel/VMixMixDownRule_t.hpp"
+#include "shade/sdk/soundsystem_lowlevel/VMixSendOperator_t.hpp"
+
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
             /* Class Parameters
-             * Size: 0x40
-             * Alignment: 0xff
+             * Size: 0x38
+             * Alignment: 0x8
+             * Construct Allowed
              */
             #pragma pack(push, 1)
             class CVMixSubmix {
             public:
                 CUtlString m_name; // 0x0000, 0x8 bytes
-                CUtlString m_sendOperator; // 0x0008, 0x8 bytes
-                CUtlString m_SendNames[0x4]; // 0x0010, 0x20 bytes
-                std::uint32_t m_nSoloNameHash; // 0x0030, 0x4 bytes
-                std::int32_t m_nChannels; // 0x0034, 0x4 bytes
-                std::int32_t m_nMixDownRule; // 0x0038, 0x4 bytes
-                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
+                CUtlString m_SendNames[0x4]; // 0x0008, 0x20 bytes
+                std::uint8_t pad_0028[0x4]; // 0x0028, 0x4 bytes
+                std::uint32_t m_nSoloNameHash; // 0x002c, 0x4 bytes
+                std::int32_t m_nChannels; // 0x0030, 0x4 bytes
+                shade::sdk::soundsystem_lowlevel::VMixSendOperator_t m_nSendOperator; // 0x0034, 0x2 bytes
+                shade::sdk::soundsystem_lowlevel::VMixMixDownRule_t m_nMixDownRule; // 0x0036, 0x1 bytes
+                std::uint8_t pad_0037[0x1]; // 0x0037, 0x1 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVMixSubmix) == 0x40, "CVMixSubmix size mismatch");
+            static_assert(sizeof(CVMixSubmix) == 0x38, "CVMixSubmix size mismatch");
         }
     }
 }

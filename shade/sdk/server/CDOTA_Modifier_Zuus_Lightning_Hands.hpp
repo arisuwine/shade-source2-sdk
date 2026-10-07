@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1aa0
+             * Size: 0x1ad0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Zuus_Lightning_Hands : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1a78, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a90, 0x4 bytes
-                std::int32_t arc_lightning_damage_pct; // 0x1a94, 0x4 bytes
-                std::int32_t arc_lightning_damage_illusion_pct; // 0x1a98, 0x4 bytes
-                std::int32_t attack_speed_bonus; // 0x1a9c, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1aa8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ac0, 0x4 bytes
+                std::int32_t arc_lightning_damage_pct; // 0x1ac4, 0x4 bytes
+                std::int32_t arc_lightning_damage_illusion_pct; // 0x1ac8, 0x4 bytes
+                std::int32_t attack_speed_bonus; // 0x1acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Zuus_Lightning_Hands) == 0x1AA0, "CDOTA_Modifier_Zuus_Lightning_Hands size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Zuus_Lightning_Hands) == 0x1AD0, "CDOTA_Modifier_Zuus_Lightning_Hands size mismatch");
         }
     }
 }

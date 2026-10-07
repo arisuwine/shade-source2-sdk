@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18a8
+             * Size: 0x1998
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,11 +33,9 @@ namespace shade {
             };
             #pragma pack(pop)
 
-            /* Data Map Fields
-             * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
-             */
+            // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NPC_Techies_Minefield_Sign) == 0x18A8, "CDOTA_NPC_Techies_Minefield_Sign size mismatch");
+            static_assert(sizeof(CDOTA_NPC_Techies_Minefield_Sign) == 0x1998, "CDOTA_NPC_Techies_Minefield_Sign size mismatch");
         }
     }
 }
