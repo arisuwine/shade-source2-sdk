@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x400
+             * Size: 0x408
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StaticCharge : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_hRingEffect; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x2c4]; // 0x0134, 0x2c4 bytes
-                float m_flRadius; // 0x03f8, 0x4 bytes
-                std::uint8_t pad_03fc[0x4]; // 0x03fc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_hRingEffect; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x2c4]; // 0x013c, 0x2c4 bytes
+                float m_flRadius; // 0x0400, 0x4 bytes
+                std::uint8_t pad_0404[0x4]; // 0x0404, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StaticCharge) == 0x400, "CCitadel_Modifier_StaticCharge size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StaticCharge) == 0x408, "CCitadel_Modifier_StaticCharge size mismatch");
         }
     }
 }

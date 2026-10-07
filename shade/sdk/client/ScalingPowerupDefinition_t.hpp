@@ -31,7 +31,8 @@ namespace shade {
             #pragma pack(push, 1)
             struct ScalingPowerupDefinition_t {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                shade::sdk::client::EModifierValue m_eModifierValue; // 0x0008, 0x4 bytes
+                shade::sdk::client::EModifierValue m_eModifierValue; // 0x0008, 0x2 bytes
+                std::uint8_t pad_000a[0x2]; // 0x000a, 0x2 bytes
                 float m_valueMin; // 0x000c, 0x4 bytes
                 float m_valueMax; // 0x0010, 0x4 bytes
                 std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes

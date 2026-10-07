@@ -21,7 +21,8 @@ namespace shade {
                 EResourceType_None = 0x0,
                 EResourceType_Rage = 0x1,
                 EResourceType_Heat = 0x2,
-                EResourceType_Ink = 0x3
+                EResourceType_Ink = 0x3,
+                EResourceType_Blood = 0x4
             };
         }
     }

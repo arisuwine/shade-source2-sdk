@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdc0
+             * Size: 0xe18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_Nano_Predatory_Statue : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0da8[0x10]; // 0x0da8, 0x10 bytes
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0db8, 0x4 bytes
-                float m_flLifetime; // 0x0dbc, 0x4 bytes
+                std::uint8_t pad_0e00[0x10]; // 0x0e00, 0x10 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0e10, 0x4 bytes
+                float m_flLifetime; // 0x0e14, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Nano_Predatory_Statue) == 0xDC0, "C_Citadel_Nano_Predatory_Statue size mismatch");
+            static_assert(sizeof(C_Citadel_Nano_Predatory_Statue) == 0xE18, "C_Citadel_Nano_Predatory_Statue size mismatch");
         }
     }
 }

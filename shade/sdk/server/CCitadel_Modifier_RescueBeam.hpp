@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x408
+             * Size: 0x410
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_RescueBeam : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x2c0]; // 0x0140, 0x2c0 bytes
-                float m_flHealthPerSecond; // 0x0400, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nBeamIndex; // 0x0404, 0x4 bytes
+                std::uint8_t pad_0148[0x2c0]; // 0x0148, 0x2c0 bytes
+                float m_flHealthPerSecond; // 0x0408, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nBeamIndex; // 0x040c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_RescueBeam) == 0x408, "CCitadel_Modifier_RescueBeam size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_RescueBeam) == 0x410, "CCitadel_Modifier_RescueBeam size mismatch");
         }
     }
 }

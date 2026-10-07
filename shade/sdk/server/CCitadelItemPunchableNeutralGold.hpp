@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5510
+             * Size: 0x5560
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPunchableNeutralGold : public shade::sdk::server::CCitadelItemPickup {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hVictimPlayer; // 0x5500, 0x4 bytes
-                std::uint8_t pad_5504[0xc]; // 0x5504, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hVictimPlayer; // 0x5550, 0x4 bytes
+                std::uint8_t pad_5554[0xc]; // 0x5554, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPunchableNeutralGold) == 0x5510, "CCitadelItemPunchableNeutralGold size mismatch");
+            static_assert(sizeof(CCitadelItemPunchableNeutralGold) == 0x5560, "CCitadelItemPunchableNeutralGold size mismatch");
         }
     }
 }

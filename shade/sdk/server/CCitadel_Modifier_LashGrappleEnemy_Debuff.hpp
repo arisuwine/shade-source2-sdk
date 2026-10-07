@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x798
+             * Size: 0x7a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LashGrappleEnemy_Debuff : public shade::sdk::server::CCitadel_Modifier_Stunned {
             public:
-                Vector m_vCrashDir; // 0x0148, 0xc bytes
-                VectorWS m_vLiftTarget; // 0x0154, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0160, 0x4 bytes
-                bool m_bCrashingDown; // 0x0164, 0x1 bytes
-                std::uint8_t pad_0165[0x633]; // 0x0165, 0x633 bytes
+                Vector m_vCrashDir; // 0x0150, 0xc bytes
+                VectorWS m_vLiftTarget; // 0x015c, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0168, 0x4 bytes
+                bool m_bCrashingDown; // 0x016c, 0x1 bytes
+                std::uint8_t pad_016d[0x633]; // 0x016d, 0x633 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LashGrappleEnemy_Debuff) == 0x798, "CCitadel_Modifier_LashGrappleEnemy_Debuff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LashGrappleEnemy_Debuff) == 0x7A0, "CCitadel_Modifier_LashGrappleEnemy_Debuff size mismatch");
         }
     }
 }

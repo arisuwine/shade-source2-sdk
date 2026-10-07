@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x838
+             * Size: 0x840
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Chrono_KineticCarbine : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bShotAnimPlayed; // 0x0140, 0x1 bytes
-                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
-                std::int32_t m_nBulletCount; // 0x0144, 0x4 bytes
-                float m_flElapsedPct; // 0x0148, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelBulletTimeWarp> m_hTimeWarp; // 0x014c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFullyChargedParticle; // 0x0150, 0x4 bytes
-                std::uint8_t pad_0154[0x6e4]; // 0x0154, 0x6e4 bytes
+                bool m_bShotAnimPlayed; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x3]; // 0x0149, 0x3 bytes
+                std::int32_t m_nBulletCount; // 0x014c, 0x4 bytes
+                float m_flElapsedPct; // 0x0150, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelBulletTimeWarp> m_hTimeWarp; // 0x0154, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFullyChargedParticle; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x6e4]; // 0x015c, 0x6e4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Chrono_KineticCarbine) == 0x838, "CCitadel_Modifier_Chrono_KineticCarbine size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Chrono_KineticCarbine) == 0x840, "CCitadel_Modifier_Chrono_KineticCarbine size mismatch");
         }
     }
 }

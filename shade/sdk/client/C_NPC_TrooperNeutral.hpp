@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b48
+             * Size: 0x1ba0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_TrooperNeutral : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                bool m_bShieldActive; // 0x1b08, 0x1 bytes
-                std::uint8_t pad_1b09[0x3f]; // 0x1b09, 0x3f bytes
+                bool m_bShieldActive; // 0x1b60, 0x1 bytes
+                std::uint8_t pad_1b61[0x3f]; // 0x1b61, 0x3f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_TrooperNeutral) == 0x1B48, "C_NPC_TrooperNeutral size mismatch");
+            static_assert(sizeof(C_NPC_TrooperNeutral) == 0x1BA0, "C_NPC_TrooperNeutral size mismatch");
         }
     }
 }

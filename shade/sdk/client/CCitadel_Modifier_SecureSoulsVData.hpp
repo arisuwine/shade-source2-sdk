@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x798
+             * Size: 0x7c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SecureSoulsVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flTickRate; // 0x0760, 0x4 bytes
-                float m_flMinConversionDuration; // 0x0764, 0x4 bytes
-                float m_flMaxConversionDuration; // 0x0768, 0x4 bytes
-                float m_flSoulsForMinConversionDuration; // 0x076c, 0x4 bytes
-                float m_flSoulsForMaxConversionDuration; // 0x0770, 0x4 bytes
-                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
-                CSoundEventName m_strGoldTickSound; // 0x0778, 0x10 bytes
-                CSoundEventName m_strGoldFinishSound; // 0x0788, 0x10 bytes
+                float m_flTickRate; // 0x0790, 0x4 bytes
+                float m_flMinConversionDuration; // 0x0794, 0x4 bytes
+                float m_flMaxConversionDuration; // 0x0798, 0x4 bytes
+                float m_flSoulsForMinConversionDuration; // 0x079c, 0x4 bytes
+                float m_flSoulsForMaxConversionDuration; // 0x07a0, 0x4 bytes
+                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
+                CSoundEventName m_strGoldTickSound; // 0x07a8, 0x10 bytes
+                CSoundEventName m_strGoldFinishSound; // 0x07b8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SecureSoulsVData) == 0x798, "CCitadel_Modifier_SecureSoulsVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SecureSoulsVData) == 0x7C8, "CCitadel_Modifier_SecureSoulsVData size mismatch");
         }
     }
 }

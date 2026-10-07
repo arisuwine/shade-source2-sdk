@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1778
+             * Size: 0x17c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bebop_LaserBeamVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RestrictionModifier; // 0x13a0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x13b0, 0xe0 bytes
-                float m_flCancelCooldown; // 0x1490, 0x4 bytes
-                std::uint8_t pad_1494[0x4]; // 0x1494, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x1498, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticleLocal; // 0x1578, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamHitParticle; // 0x1658, 0xe0 bytes
-                CSoundEventName m_strLaserStartSound; // 0x1738, 0x10 bytes
-                CSoundEventName m_strLaserEndSound; // 0x1748, 0x10 bytes
-                CSoundEventName m_strLaserLoopSound; // 0x1758, 0x10 bytes
-                CSoundEventName m_strLaserHitSound; // 0x1768, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RestrictionModifier; // 0x13e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x13f8, 0xe0 bytes
+                float m_flCancelCooldown; // 0x14d8, 0x4 bytes
+                std::uint8_t pad_14dc[0x4]; // 0x14dc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x14e0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticleLocal; // 0x15c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamHitParticle; // 0x16a0, 0xe0 bytes
+                CSoundEventName m_strLaserStartSound; // 0x1780, 0x10 bytes
+                CSoundEventName m_strLaserEndSound; // 0x1790, 0x10 bytes
+                CSoundEventName m_strLaserLoopSound; // 0x17a0, 0x10 bytes
+                CSoundEventName m_strLaserHitSound; // 0x17b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeamVData) == 0x1778, "CCitadel_Ability_Bebop_LaserBeamVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeamVData) == 0x17C0, "CCitadel_Ability_Bebop_LaserBeamVData size mismatch");
         }
     }
 }

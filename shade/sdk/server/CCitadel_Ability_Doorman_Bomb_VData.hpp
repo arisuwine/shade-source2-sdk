@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16e0
+             * Size: 0x1728
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,25 +44,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Bomb_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MiniExplodeParticle; // 0x1480, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1560, 0xe0 bytes
-                CSoundEventName m_ExplosionSound; // 0x1640, 0x10 bytes
-                CSoundEventName m_ImpactSound; // 0x1650, 0x10 bytes
-                CSoundEventName m_HitConfirmSound; // 0x1660, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InaccuracyModifier; // 0x1670, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_AuraModifier; // 0x1680, 0x10 bytes
-                CPiecewiseCurve m_ProjectileDragCurve; // 0x1690, 0x40 bytes
-                float m_flShakeAmp; // 0x16d0, 0x4 bytes
-                float m_flShakeFreq; // 0x16d4, 0x4 bytes
-                float m_flShakeDuration; // 0x16d8, 0x4 bytes
-                std::uint8_t pad_16dc[0x4]; // 0x16dc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MiniExplodeParticle; // 0x14c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x15a8, 0xe0 bytes
+                CSoundEventName m_ExplosionSound; // 0x1688, 0x10 bytes
+                CSoundEventName m_ImpactSound; // 0x1698, 0x10 bytes
+                CSoundEventName m_HitConfirmSound; // 0x16a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InaccuracyModifier; // 0x16b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_AuraModifier; // 0x16c8, 0x10 bytes
+                CPiecewiseCurve m_ProjectileDragCurve; // 0x16d8, 0x40 bytes
+                float m_flShakeAmp; // 0x1718, 0x4 bytes
+                float m_flShakeFreq; // 0x171c, 0x4 bytes
+                float m_flShakeDuration; // 0x1720, 0x4 bytes
+                std::uint8_t pad_1724[0x4]; // 0x1724, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Bomb_VData) == 0x16E0, "CCitadel_Ability_Doorman_Bomb_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Bomb_VData) == 0x1728, "CCitadel_Ability_Doorman_Bomb_VData size mismatch");
         }
     }
 }

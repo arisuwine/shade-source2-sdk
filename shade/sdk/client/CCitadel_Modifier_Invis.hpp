@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x620
+             * Size: 0x628
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,23 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Invis : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x4d0]; // 0x0130, 0x4d0 bytes
-                bool m_bInvis; // 0x0600, 0x1 bytes
-                std::uint8_t pad_0601[0x3]; // 0x0601, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStartInvisTime; // 0x0604, 0x4 bytes
-                bool m_bFullyInvis; // 0x0608, 0x1 bytes
+                std::uint8_t pad_0138[0x4d0]; // 0x0138, 0x4d0 bytes
+                bool m_bInvis; // 0x0608, 0x1 bytes
                 std::uint8_t pad_0609[0x3]; // 0x0609, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTaken; // 0x060c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSpotted; // 0x0610, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nDetectionRangeRing; // 0x0614, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFullInvisEffect; // 0x0618, 0x4 bytes
-                std::uint8_t pad_061c[0x4]; // 0x061c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartInvisTime; // 0x060c, 0x4 bytes
+                bool m_bFullyInvis; // 0x0610, 0x1 bytes
+                std::uint8_t pad_0611[0x3]; // 0x0611, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTaken; // 0x0614, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSpotted; // 0x0618, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nDetectionRangeRing; // 0x061c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFullInvisEffect; // 0x0620, 0x4 bytes
+                std::uint8_t pad_0624[0x4]; // 0x0624, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Invis) == 0x620, "CCitadel_Modifier_Invis size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Invis) == 0x628, "CCitadel_Modifier_Invis size mismatch");
         }
     }
 }

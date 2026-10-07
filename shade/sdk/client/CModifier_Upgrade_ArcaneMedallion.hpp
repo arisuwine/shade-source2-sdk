@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x378
+             * Size: 0x380
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Upgrade_ArcaneMedallion : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_02c8[0xb0]; // 0x02c8, 0xb0 bytes
+                std::uint8_t pad_02d0[0xb0]; // 0x02d0, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Upgrade_ArcaneMedallion) == 0x378, "CModifier_Upgrade_ArcaneMedallion size mismatch");
+            static_assert(sizeof(CModifier_Upgrade_ArcaneMedallion) == 0x380, "CModifier_Upgrade_ArcaneMedallion size mismatch");
         }
     }
 }

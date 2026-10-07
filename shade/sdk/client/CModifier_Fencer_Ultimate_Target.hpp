@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x628
+             * Size: 0x630
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Fencer_Ultimate_Target : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x4d0]; // 0x0130, 0x4d0 bytes
-                Vector m_vDashDirection; // 0x0600, 0xc bytes
-                std::uint8_t pad_060c[0x1c]; // 0x060c, 0x1c bytes
+                std::uint8_t pad_0138[0x4d0]; // 0x0138, 0x4d0 bytes
+                Vector m_vDashDirection; // 0x0608, 0xc bytes
+                std::uint8_t pad_0614[0x1c]; // 0x0614, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Fencer_Ultimate_Target) == 0x628, "CModifier_Fencer_Ultimate_Target size mismatch");
+            static_assert(sizeof(CModifier_Fencer_Ultimate_Target) == 0x630, "CModifier_Fencer_Ultimate_Target size mismatch");
         }
     }
 }

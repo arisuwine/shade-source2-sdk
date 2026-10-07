@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x858
+             * Size: 0x888
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierTier2BossLaserChargeVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CUtlVector<CUtlString> m_strAttachmentPoints; // 0x0760, 0x18 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamChargingEffect; // 0x0778, 0xe0 bytes
+                CUtlVector<CUtlString> m_strAttachmentPoints; // 0x0790, 0x18 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamChargingEffect; // 0x07a8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierTier2BossLaserChargeVData) == 0x858, "CCitadelModifierTier2BossLaserChargeVData size mismatch");
+            static_assert(sizeof(CCitadelModifierTier2BossLaserChargeVData) == 0x888, "CCitadelModifierTier2BossLaserChargeVData size mismatch");
         }
     }
 }

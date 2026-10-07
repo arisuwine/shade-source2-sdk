@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1438
+             * Size: 0x1480
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCadenceSilenceContraptionsVData : public shade::sdk::client::CBaseDashCastAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceContraptionsModifier; // 0x1428, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceContraptionsModifier; // 0x1470, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCadenceSilenceContraptionsVData) == 0x1438, "CAbilityCadenceSilenceContraptionsVData size mismatch");
+            static_assert(sizeof(CAbilityCadenceSilenceContraptionsVData) == 0x1480, "CAbilityCadenceSilenceContraptionsVData size mismatch");
         }
     }
 }

@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b8
+             * Size: 0x7c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,28 +32,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StormCloud : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x8]; // 0x0140, 0x8 bytes
-                float m_flDamageInterval; // 0x0148, 0x4 bytes
-                bool m_bGrowing; // 0x014c, 0x1 bytes
-                std::uint8_t pad_014d[0x3]; // 0x014d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageWaveTime; // 0x0150, 0x4 bytes
-                std::int32_t m_nNumPlayersKilled; // 0x0154, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextRandomLightningStrike; // 0x0158, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x015c, 0x4 bytes
-                float m_flRadiusIncrementPerSecond; // 0x0160, 0x4 bytes
-                VectorWS m_vCastPosition; // 0x0164, 0xc bytes
-                bool m_bFiredEndingSoonSound; // 0x0170, 0x1 bytes
-                std::uint8_t pad_0171[0x3]; // 0x0171, 0x3 bytes
-                std::int32_t m_nLastTickForLightningCenterCalc; // 0x0174, 0x4 bytes
-                VectorWS m_vecLightningCenter; // 0x0178, 0xc bytes
-                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x0184, 0x4 bytes
-                std::uint8_t pad_0188[0x630]; // 0x0188, 0x630 bytes
+                std::uint8_t pad_0148[0x8]; // 0x0148, 0x8 bytes
+                float m_flDamageInterval; // 0x0150, 0x4 bytes
+                bool m_bGrowing; // 0x0154, 0x1 bytes
+                std::uint8_t pad_0155[0x3]; // 0x0155, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageWaveTime; // 0x0158, 0x4 bytes
+                std::int32_t m_nNumPlayersKilled; // 0x015c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRandomLightningStrike; // 0x0160, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0164, 0x4 bytes
+                float m_flRadiusIncrementPerSecond; // 0x0168, 0x4 bytes
+                VectorWS m_vCastPosition; // 0x016c, 0xc bytes
+                bool m_bFiredEndingSoonSound; // 0x0178, 0x1 bytes
+                std::uint8_t pad_0179[0x3]; // 0x0179, 0x3 bytes
+                std::int32_t m_nLastTickForLightningCenterCalc; // 0x017c, 0x4 bytes
+                VectorWS m_vecLightningCenter; // 0x0180, 0xc bytes
+                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x018c, 0x4 bytes
+                std::uint8_t pad_0190[0x630]; // 0x0190, 0x630 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StormCloud) == 0x7B8, "CCitadel_Modifier_StormCloud size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StormCloud) == 0x7C0, "CCitadel_Modifier_StormCloud size mismatch");
         }
     }
 }

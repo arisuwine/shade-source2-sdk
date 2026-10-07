@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf70
+             * Size: 0xf90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CUnitStatusOverlayV2 : public shade::sdk::client::CUnitStatusOverlay {
             public:
-                std::uint8_t pad_0e20[0x150]; // 0x0e20, 0x150 bytes
+                std::uint8_t pad_0e20[0x170]; // 0x0e20, 0x170 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CUnitStatusOverlayV2) == 0xF70, "CUnitStatusOverlayV2 size mismatch");
+            static_assert(sizeof(CUnitStatusOverlayV2) == 0xF90, "CUnitStatusOverlayV2 size mismatch");
         }
     }
 }

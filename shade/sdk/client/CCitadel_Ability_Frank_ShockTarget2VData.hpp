@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1760
+             * Size: 0x17a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_ShockTarget2VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CSoundEventName m_ShockShootSound; // 0x13a0, 0x10 bytes
-                CSoundEventName m_ShockImpactSound; // 0x13b0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShockImpactParticle; // 0x13c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x14a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShockReadyParticle; // 0x1580, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1660, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1740, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FullyChargedFXModifier; // 0x1750, 0x10 bytes
+                CSoundEventName m_ShockShootSound; // 0x13e8, 0x10 bytes
+                CSoundEventName m_ShockImpactSound; // 0x13f8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShockImpactParticle; // 0x1408, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x14e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShockReadyParticle; // 0x15c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x16a8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1788, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FullyChargedFXModifier; // 0x1798, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_ShockTarget2VData) == 0x1760, "CCitadel_Ability_Frank_ShockTarget2VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_ShockTarget2VData) == 0x17A8, "CCitadel_Ability_Frank_ShockTarget2VData size mismatch");
         }
     }
 }

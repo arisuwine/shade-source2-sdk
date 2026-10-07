@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_UppercutClipSize : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0xb0]; // 0x0130, 0xb0 bytes
-                std::int32_t m_nPreClipSize; // 0x01e0, 0x4 bytes
-                std::uint8_t pad_01e4[0x4]; // 0x01e4, 0x4 bytes
+                std::uint8_t pad_0138[0xb0]; // 0x0138, 0xb0 bytes
+                std::int32_t m_nPreClipSize; // 0x01e8, 0x4 bytes
+                std::uint8_t pad_01ec[0x4]; // 0x01ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UppercutClipSize) == 0x1E8, "CCitadel_Modifier_UppercutClipSize size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UppercutClipSize) == 0x1F0, "CCitadel_Modifier_UppercutClipSize size mismatch");
         }
     }
 }

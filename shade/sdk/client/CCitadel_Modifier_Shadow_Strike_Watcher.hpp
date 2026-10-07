@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x340
+             * Size: 0x348
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Shadow_Strike_Watcher : public shade::sdk::client::CCitadel_Modifier_StatStealBase {
             public:
-                std::uint8_t pad_0290[0xb0]; // 0x0290, 0xb0 bytes
+                std::uint8_t pad_0298[0xb0]; // 0x0298, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Shadow_Strike_Watcher) == 0x340, "CCitadel_Modifier_Shadow_Strike_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Shadow_Strike_Watcher) == 0x348, "CCitadel_Modifier_Shadow_Strike_Watcher size mismatch");
         }
     }
 }

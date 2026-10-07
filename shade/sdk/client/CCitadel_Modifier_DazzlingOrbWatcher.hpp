@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x968
+             * Size: 0x970
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -41,24 +41,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DazzlingOrbWatcher : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::ShotID_t m_nAssociatedShotID; // 0x0130, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAssociatedProjectile; // 0x0134, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastHitTime; // 0x0138, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLastHitTarget; // 0x013c, 0x4 bytes
-                VectorWS m_vLastHitLocation; // 0x0140, 0xc bytes
-                std::int32_t m_nBouncesRemaining; // 0x014c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLingerEndTime; // 0x0150, 0x4 bytes
-                float m_flDamageAtCast; // 0x0154, 0x4 bytes
-                float m_flSlowDurationAtCast; // 0x0158, 0x4 bytes
-                float m_flBounceRadiusAtCast; // 0x015c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nGraceParticleIndex; // 0x0160, 0x4 bytes
-                std::uint8_t pad_0164[0x804]; // 0x0164, 0x804 bytes
+                shade::sdk::client::ShotID_t m_nAssociatedShotID; // 0x0138, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAssociatedProjectile; // 0x013c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastHitTime; // 0x0140, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLastHitTarget; // 0x0144, 0x4 bytes
+                VectorWS m_vLastHitLocation; // 0x0148, 0xc bytes
+                std::int32_t m_nBouncesRemaining; // 0x0154, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLingerEndTime; // 0x0158, 0x4 bytes
+                float m_flDamageAtCast; // 0x015c, 0x4 bytes
+                float m_flSlowDurationAtCast; // 0x0160, 0x4 bytes
+                float m_flBounceRadiusAtCast; // 0x0164, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nGraceParticleIndex; // 0x0168, 0x4 bytes
+                std::uint8_t pad_016c[0x804]; // 0x016c, 0x804 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DazzlingOrbWatcher) == 0x968, "CCitadel_Modifier_DazzlingOrbWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DazzlingOrbWatcher) == 0x970, "CCitadel_Modifier_DazzlingOrbWatcher size mismatch");
         }
     }
 }

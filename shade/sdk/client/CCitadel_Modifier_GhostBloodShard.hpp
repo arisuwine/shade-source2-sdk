@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GhostBloodShard : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_flMinSlowAmount; // 0x0130, 0x4 bytes
-                float m_flMoveSpeedPenaltyPerStack; // 0x0134, 0x4 bytes
-                float m_flSlowDuration; // 0x0138, 0x4 bytes
-                std::uint8_t pad_013c[0xbc]; // 0x013c, 0xbc bytes
+                float m_flMinSlowAmount; // 0x0138, 0x4 bytes
+                float m_flMoveSpeedPenaltyPerStack; // 0x013c, 0x4 bytes
+                float m_flSlowDuration; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0xbc]; // 0x0144, 0xbc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GhostBloodShard) == 0x1F8, "CCitadel_Modifier_GhostBloodShard size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GhostBloodShard) == 0x200, "CCitadel_Modifier_GhostBloodShard size mismatch");
         }
     }
 }

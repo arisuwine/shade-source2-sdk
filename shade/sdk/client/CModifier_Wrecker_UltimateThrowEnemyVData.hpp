@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa00
+             * Size: 0xa30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Wrecker_UltimateThrowEnemyVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyHeroStasisEffect; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyHeroGrabEffect; // 0x0920, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyHeroStasisEffect; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyHeroGrabEffect; // 0x0950, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Wrecker_UltimateThrowEnemyVData) == 0xA00, "CModifier_Wrecker_UltimateThrowEnemyVData size mismatch");
+            static_assert(sizeof(CModifier_Wrecker_UltimateThrowEnemyVData) == 0xA30, "CModifier_Wrecker_UltimateThrowEnemyVData size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xde8
+             * Size: 0xe40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,23 +40,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_Bounce_Pad : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                float m_flUpFactor; // 0x0da8, 0x4 bytes
-                float m_flBounceVelocity; // 0x0dac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tDeactivationTime; // 0x0db0, 0x4 bytes
-                bool m_bDeactivated; // 0x0db4, 0x1 bytes
-                std::uint8_t pad_0db5[0x3]; // 0x0db5, 0x3 bytes
-                float m_flBarrelBounceVelocity; // 0x0db8, 0x4 bytes
-                float m_flBarrelUpFactor; // 0x0dbc, 0x4 bytes
-                bool m_bSpeedOnLand; // 0x0dc0, 0x1 bytes
-                std::uint8_t pad_0dc1[0x7]; // 0x0dc1, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vBouncedPlayerBefore; // 0x0dc8, 0x18 bytes
-                std::uint8_t pad_0de0[0x8]; // 0x0de0, 0x8 bytes
+                float m_flUpFactor; // 0x0e00, 0x4 bytes
+                float m_flBounceVelocity; // 0x0e04, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tDeactivationTime; // 0x0e08, 0x4 bytes
+                bool m_bDeactivated; // 0x0e0c, 0x1 bytes
+                std::uint8_t pad_0e0d[0x3]; // 0x0e0d, 0x3 bytes
+                float m_flBarrelBounceVelocity; // 0x0e10, 0x4 bytes
+                float m_flBarrelUpFactor; // 0x0e14, 0x4 bytes
+                bool m_bSpeedOnLand; // 0x0e18, 0x1 bytes
+                std::uint8_t pad_0e19[0x7]; // 0x0e19, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vBouncedPlayerBefore; // 0x0e20, 0x18 bytes
+                std::uint8_t pad_0e38[0x8]; // 0x0e38, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Bounce_Pad) == 0xDE8, "C_Citadel_Bounce_Pad size mismatch");
+            static_assert(sizeof(C_Citadel_Bounce_Pad) == 0xE40, "C_Citadel_Bounce_Pad size mismatch");
         }
     }
 }

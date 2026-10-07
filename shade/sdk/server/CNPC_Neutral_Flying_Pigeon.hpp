@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xc60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Neutral_Flying_Pigeon : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0x20]; // 0x0bf0, 0x20 bytes
+                std::uint8_t pad_0c40[0x20]; // 0x0c40, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Neutral_Flying_Pigeon) == 0xC10, "CNPC_Neutral_Flying_Pigeon size mismatch");
+            static_assert(sizeof(CNPC_Neutral_Flying_Pigeon) == 0xC60, "CNPC_Neutral_Flying_Pigeon size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x7d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,17 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierApplyModifierOnDamageTakenVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CUtlVector<shade::sdk::client::ECitadelDamageType> m_vecDamageTypes; // 0x0760, 0x18 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_TargetModifier; // 0x0778, 0x10 bytes
-                CUtlString m_TargetModifierDurationAbilityProp; // 0x0788, 0x8 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SelfModifier; // 0x0790, 0x10 bytes
-                CUtlString m_SelfModifierDurationAbilityProp; // 0x07a0, 0x8 bytes
+                CUtlVector<shade::sdk::client::ECitadelDamageType> m_vecDamageTypes; // 0x0790, 0x18 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_TargetModifier; // 0x07a8, 0x10 bytes
+                CUtlString m_TargetModifierDurationAbilityProp; // 0x07b8, 0x8 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SelfModifier; // 0x07c0, 0x10 bytes
+                CUtlString m_SelfModifierDurationAbilityProp; // 0x07d0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierApplyModifierOnDamageTakenVData) == 0x7A8, "CModifierApplyModifierOnDamageTakenVData size mismatch");
+            static_assert(sizeof(CModifierApplyModifierOnDamageTakenVData) == 0x7D8, "CModifierApplyModifierOnDamageTakenVData size mismatch");
         }
     }
 }

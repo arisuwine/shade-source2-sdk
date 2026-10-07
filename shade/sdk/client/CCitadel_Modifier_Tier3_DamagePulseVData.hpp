@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x948
+             * Size: 0x978
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Tier3_DamagePulseVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberZapParticle; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphZapParticle; // 0x0840, 0xe0 bytes
-                CSoundEventName m_strPulseTickSound; // 0x0920, 0x10 bytes
-                std::int32_t m_iMaxTargets; // 0x0930, 0x4 bytes
-                float m_flRadius; // 0x0934, 0x4 bytes
-                float m_flDamagePerPulse; // 0x0938, 0x4 bytes
-                float m_flStartTickRate; // 0x093c, 0x4 bytes
-                float m_flEndTickRate; // 0x0940, 0x4 bytes
-                std::uint8_t pad_0944[0x4]; // 0x0944, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberZapParticle; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphZapParticle; // 0x0870, 0xe0 bytes
+                CSoundEventName m_strPulseTickSound; // 0x0950, 0x10 bytes
+                std::int32_t m_iMaxTargets; // 0x0960, 0x4 bytes
+                float m_flRadius; // 0x0964, 0x4 bytes
+                float m_flDamagePerPulse; // 0x0968, 0x4 bytes
+                float m_flStartTickRate; // 0x096c, 0x4 bytes
+                float m_flEndTickRate; // 0x0970, 0x4 bytes
+                std::uint8_t pad_0974[0x4]; // 0x0974, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Tier3_DamagePulseVData) == 0x948, "CCitadel_Modifier_Tier3_DamagePulseVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Tier3_DamagePulseVData) == 0x978, "CCitadel_Modifier_Tier3_DamagePulseVData size mismatch");
         }
     }
 }

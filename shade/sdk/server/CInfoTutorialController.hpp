@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe00
+             * Size: 0xe50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CInfoTutorialController : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint8_t pad_0d50[0xb0]; // 0x0d50, 0xb0 bytes
+                std::uint8_t pad_0da0[0xb0]; // 0x0da0, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoTutorialController) == 0xE00, "CInfoTutorialController size mismatch");
+            static_assert(sizeof(CInfoTutorialController) == 0xE50, "CInfoTutorialController size mismatch");
         }
     }
 }

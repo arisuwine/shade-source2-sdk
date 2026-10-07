@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifire_Priest_FlashBangBurnAuraVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BurnModifier; // 0x07b8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x07c8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BurnModifier; // 0x07e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x07f8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifire_Priest_FlashBangBurnAuraVData) == 0x8A8, "CCitadel_Modifire_Priest_FlashBangBurnAuraVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifire_Priest_FlashBangBurnAuraVData) == 0x8D8, "CCitadel_Modifire_Priest_FlashBangBurnAuraVData size mismatch");
         }
     }
 }

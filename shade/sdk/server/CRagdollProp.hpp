@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc50
+             * Size: 0xca0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -45,56 +45,56 @@ namespace shade {
             #pragma pack(push, 1)
             class CRagdollProp : public shade::sdk::server::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0a90[0x10]; // 0x0a90, 0x10 bytes
-                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x0aa0, 0x40 bytes
-                shade::sdk::client::ragdoll_t m_ragdoll; // 0x0ae0, 0x50 bytes
-                bool m_bStartDisabled; // 0x0b30, 0x1 bytes
-                std::uint8_t pad_0b31[0x3]; // 0x0b31, 0x3 bytes
-                float m_massScale; // 0x0b34, 0x4 bytes
-                float m_buoyancyScale; // 0x0b38, 0x4 bytes
-                std::uint8_t pad_0b3c[0x4]; // 0x0b3c, 0x4 bytes
-                CNetworkUtlVectorBase<bool> m_ragEnabled; // 0x0b40, 0x18 bytes
-                CNetworkUtlVectorBase<Vector> m_ragPos; // 0x0b58, 0x18 bytes
-                CNetworkUtlVectorBase<QAngle> m_ragAngles; // 0x0b70, 0x18 bytes
-                std::uint32_t m_lastUpdateTickCount; // 0x0b88, 0x4 bytes
-                bool m_allAsleep; // 0x0b8c, 0x1 bytes
-                bool m_bFirstCollisionAfterLaunch; // 0x0b8d, 0x1 bytes
-                std::uint8_t pad_0b8e[0x2]; // 0x0b8e, 0x2 bytes
-                shade::sdk::server::INavObstacle__NavObstacleType_t m_nNavObstacleType; // 0x0b90, 0x4 bytes
-                bool m_bUpdateNavWhenMoving; // 0x0b94, 0x1 bytes
-                bool m_bForceNavObstacleCut; // 0x0b95, 0x1 bytes
-                bool m_bAttachedToReferenceFrame; // 0x0b96, 0x1 bytes
-                std::uint8_t pad_0b97[0x1]; // 0x0b97, 0x1 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hDamageEntity; // 0x0b98, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hKiller; // 0x0b9c, 0x4 bytes
-                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x0ba0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0ba4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutStartTime; // 0x0ba8, 0x4 bytes
-                float m_flFadeTime; // 0x0bac, 0x4 bytes
-                VectorWS m_vecLastOrigin; // 0x0bb0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flAwakeTime; // 0x0bbc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastOriginChangeTime; // 0x0bc0, 0x4 bytes
-                std::uint8_t pad_0bc4[0x4]; // 0x0bc4, 0x4 bytes
-                CUtlSymbolLarge m_strOriginClassName; // 0x0bc8, 0x8 bytes
-                CUtlSymbolLarge m_strSourceClassName; // 0x0bd0, 0x8 bytes
-                bool m_bHasBeenPhysgunned; // 0x0bd8, 0x1 bytes
-                bool m_bAllowStretch; // 0x0bd9, 0x1 bytes
-                std::uint8_t pad_0bda[0x2]; // 0x0bda, 0x2 bytes
-                float m_flBlendWeight; // 0x0bdc, 0x4 bytes
-                float m_flDefaultFadeScale; // 0x0be0, 0x4 bytes
-                std::uint8_t pad_0be4[0x4]; // 0x0be4, 0x4 bytes
-                CUtlVector<Vector> m_ragdollMins; // 0x0be8, 0x18 bytes
-                CUtlVector<Vector> m_ragdollMaxs; // 0x0c00, 0x18 bytes
-                bool m_bShouldDeleteActivationRecord; // 0x0c18, 0x1 bytes
-                std::uint8_t pad_0c19[0x17]; // 0x0c19, 0x17 bytes
-                CUtlVector<shade::sdk::server::INavObstacle*> m_vecNavObstacles; // 0x0c30, 0x18 bytes
-                std::uint8_t pad_0c48[0x8]; // 0x0c48, 0x8 bytes
+                std::uint8_t pad_0ae0[0x10]; // 0x0ae0, 0x10 bytes
+                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x0af0, 0x40 bytes
+                shade::sdk::client::ragdoll_t m_ragdoll; // 0x0b30, 0x50 bytes
+                bool m_bStartDisabled; // 0x0b80, 0x1 bytes
+                std::uint8_t pad_0b81[0x3]; // 0x0b81, 0x3 bytes
+                float m_massScale; // 0x0b84, 0x4 bytes
+                float m_buoyancyScale; // 0x0b88, 0x4 bytes
+                std::uint8_t pad_0b8c[0x4]; // 0x0b8c, 0x4 bytes
+                CNetworkUtlVectorBase<bool> m_ragEnabled; // 0x0b90, 0x18 bytes
+                CNetworkUtlVectorBase<Vector> m_ragPos; // 0x0ba8, 0x18 bytes
+                CNetworkUtlVectorBase<QAngle> m_ragAngles; // 0x0bc0, 0x18 bytes
+                std::uint32_t m_lastUpdateTickCount; // 0x0bd8, 0x4 bytes
+                bool m_allAsleep; // 0x0bdc, 0x1 bytes
+                bool m_bFirstCollisionAfterLaunch; // 0x0bdd, 0x1 bytes
+                std::uint8_t pad_0bde[0x2]; // 0x0bde, 0x2 bytes
+                shade::sdk::server::INavObstacle__NavObstacleType_t m_nNavObstacleType; // 0x0be0, 0x4 bytes
+                bool m_bUpdateNavWhenMoving; // 0x0be4, 0x1 bytes
+                bool m_bForceNavObstacleCut; // 0x0be5, 0x1 bytes
+                bool m_bAttachedToReferenceFrame; // 0x0be6, 0x1 bytes
+                std::uint8_t pad_0be7[0x1]; // 0x0be7, 0x1 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hDamageEntity; // 0x0be8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hKiller; // 0x0bec, 0x4 bytes
+                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x0bf0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0bf4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutStartTime; // 0x0bf8, 0x4 bytes
+                float m_flFadeTime; // 0x0bfc, 0x4 bytes
+                VectorWS m_vecLastOrigin; // 0x0c00, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flAwakeTime; // 0x0c0c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastOriginChangeTime; // 0x0c10, 0x4 bytes
+                std::uint8_t pad_0c14[0x4]; // 0x0c14, 0x4 bytes
+                CUtlSymbolLarge m_strOriginClassName; // 0x0c18, 0x8 bytes
+                CUtlSymbolLarge m_strSourceClassName; // 0x0c20, 0x8 bytes
+                bool m_bHasBeenPhysgunned; // 0x0c28, 0x1 bytes
+                bool m_bAllowStretch; // 0x0c29, 0x1 bytes
+                std::uint8_t pad_0c2a[0x2]; // 0x0c2a, 0x2 bytes
+                float m_flBlendWeight; // 0x0c2c, 0x4 bytes
+                float m_flDefaultFadeScale; // 0x0c30, 0x4 bytes
+                std::uint8_t pad_0c34[0x4]; // 0x0c34, 0x4 bytes
+                CUtlVector<Vector> m_ragdollMins; // 0x0c38, 0x18 bytes
+                CUtlVector<Vector> m_ragdollMaxs; // 0x0c50, 0x18 bytes
+                bool m_bShouldDeleteActivationRecord; // 0x0c68, 0x1 bytes
+                std::uint8_t pad_0c69[0x17]; // 0x0c69, 0x17 bytes
+                CUtlVector<shade::sdk::server::INavObstacle*> m_vecNavObstacles; // 0x0c80, 0x18 bytes
+                std::uint8_t pad_0c98[0x8]; // 0x0c98, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRagdollProp) == 0xC50, "CRagdollProp size mismatch");
+            static_assert(sizeof(CRagdollProp) == 0xCA0, "CRagdollProp size mismatch");
         }
     }
 }

@@ -31,10 +31,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticShot : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                shade::sdk::client::ShotID_t m_shotID; // 0x02f8, 0x4 bytes
-                std::uint8_t pad_02fc[0x164]; // 0x02fc, 0x164 bytes
-                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0460, 0x4 bytes
-                std::uint8_t pad_0464[0x4]; // 0x0464, 0x4 bytes
+                shade::sdk::client::ShotID_t m_shotID; // 0x0300, 0x4 bytes
+                std::uint8_t pad_0304[0x164]; // 0x0304, 0x164 bytes
             };
             #pragma pack(pop)
 

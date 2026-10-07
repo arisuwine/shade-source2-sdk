@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14a0
+             * Size: 0x14e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TestHero_WallClingVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelParticle; // 0x13a0, 0xe0 bytes
-                float m_flWallClingBackupDistance; // 0x1480, 0x4 bytes
-                float m_flWallClingWallOffsetDistance; // 0x1484, 0x4 bytes
-                float m_flWallClingTraceDistance; // 0x1488, 0x4 bytes
-                float m_flWallClingTraceRadius; // 0x148c, 0x4 bytes
-                float m_flWallClingSearchRadius; // 0x1490, 0x4 bytes
-                bool m_bWallClingDebug; // 0x1494, 0x1 bytes
-                std::uint8_t pad_1495[0x3]; // 0x1495, 0x3 bytes
-                float m_flAcceleration; // 0x1498, 0x4 bytes
-                float m_flWallClingStickyForce; // 0x149c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelParticle; // 0x13e8, 0xe0 bytes
+                float m_flWallClingBackupDistance; // 0x14c8, 0x4 bytes
+                float m_flWallClingWallOffsetDistance; // 0x14cc, 0x4 bytes
+                float m_flWallClingTraceDistance; // 0x14d0, 0x4 bytes
+                float m_flWallClingTraceRadius; // 0x14d4, 0x4 bytes
+                float m_flWallClingSearchRadius; // 0x14d8, 0x4 bytes
+                bool m_bWallClingDebug; // 0x14dc, 0x1 bytes
+                std::uint8_t pad_14dd[0x3]; // 0x14dd, 0x3 bytes
+                float m_flAcceleration; // 0x14e0, 0x4 bytes
+                float m_flWallClingStickyForce; // 0x14e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TestHero_WallClingVData) == 0x14A0, "CCitadel_Ability_TestHero_WallClingVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TestHero_WallClingVData) == 0x14E8, "CCitadel_Ability_TestHero_WallClingVData size mismatch");
         }
     }
 }

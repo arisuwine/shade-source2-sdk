@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Bull_Heal_Target : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x370]; // 0x0140, 0x370 bytes
-                float m_flTetherRangeSquared; // 0x04b0, 0x4 bytes
-                std::uint8_t pad_04b4[0x4]; // 0x04b4, 0x4 bytes
+                std::uint8_t pad_0148[0x370]; // 0x0148, 0x370 bytes
+                float m_flTetherRangeSquared; // 0x04b8, 0x4 bytes
+                std::uint8_t pad_04bc[0x4]; // 0x04bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Bull_Heal_Target) == 0x4B8, "CCitadel_Modifier_Bull_Heal_Target size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Bull_Heal_Target) == 0x4C0, "CCitadel_Modifier_Bull_Heal_Target size mismatch");
         }
     }
 }

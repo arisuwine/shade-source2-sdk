@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x7b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Succor_MoveVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CSoundEventName m_PullSound; // 0x0760, 0x10 bytes
-                float m_flPullSpeedMin; // 0x0770, 0x4 bytes
-                float m_flPullSpeedMax; // 0x0774, 0x4 bytes
-                float m_flPullDistanceMin; // 0x0778, 0x4 bytes
-                float m_flPullDistanceMax; // 0x077c, 0x4 bytes
+                CSoundEventName m_PullSound; // 0x0790, 0x10 bytes
+                float m_flPullSpeedMin; // 0x07a0, 0x4 bytes
+                float m_flPullSpeedMax; // 0x07a4, 0x4 bytes
+                float m_flPullDistanceMin; // 0x07a8, 0x4 bytes
+                float m_flPullDistanceMax; // 0x07ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Succor_MoveVData) == 0x780, "CCitadel_Modifier_Succor_MoveVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Succor_MoveVData) == 0x7B0, "CCitadel_Modifier_Succor_MoveVData size mismatch");
         }
     }
 }

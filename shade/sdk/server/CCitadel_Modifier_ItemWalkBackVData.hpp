@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb20
+             * Size: 0xb50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,26 +39,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ItemWalkBackVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IdleParticle; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RunningParticle; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BiasEffectPositive; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BiasEffectNegative; // 0x0a00, 0xe0 bytes
-                CSoundEventName m_WalkingLoopSound; // 0x0ae0, 0x10 bytes
-                CSoundEventName m_IdlingLoopSound; // 0x0af0, 0x10 bytes
-                float m_flStopDistance; // 0x0b00, 0x4 bytes
-                float m_flMoveSpeed; // 0x0b04, 0x4 bytes
-                float m_flVerticalOffset; // 0x0b08, 0x4 bytes
-                float m_flTolerance; // 0x0b0c, 0x4 bytes
-                float m_flRepathTime; // 0x0b10, 0x4 bytes
-                float m_flWaitTimeLimit; // 0x0b14, 0x4 bytes
-                float m_flWaitTimeLimitOverheld; // 0x0b18, 0x4 bytes
-                float m_flCheckPlayerRate; // 0x0b1c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IdleParticle; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RunningParticle; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BiasEffectPositive; // 0x0950, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BiasEffectNegative; // 0x0a30, 0xe0 bytes
+                CSoundEventName m_WalkingLoopSound; // 0x0b10, 0x10 bytes
+                CSoundEventName m_IdlingLoopSound; // 0x0b20, 0x10 bytes
+                float m_flStopDistance; // 0x0b30, 0x4 bytes
+                float m_flMoveSpeed; // 0x0b34, 0x4 bytes
+                float m_flVerticalOffset; // 0x0b38, 0x4 bytes
+                float m_flTolerance; // 0x0b3c, 0x4 bytes
+                float m_flRepathTime; // 0x0b40, 0x4 bytes
+                float m_flWaitTimeLimit; // 0x0b44, 0x4 bytes
+                float m_flWaitTimeLimitOverheld; // 0x0b48, 0x4 bytes
+                float m_flCheckPlayerRate; // 0x0b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ItemWalkBackVData) == 0xB20, "CCitadel_Modifier_ItemWalkBackVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ItemWalkBackVData) == 0xB50, "CCitadel_Modifier_ItemWalkBackVData size mismatch");
         }
     }
 }

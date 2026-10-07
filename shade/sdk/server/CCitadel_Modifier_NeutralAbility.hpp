@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f0
+             * Size: 0x1f8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -33,21 +33,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NeutralAbility : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ENeutralAbilityState m_eState; // 0x0140, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tExecuteTime; // 0x0144, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tStateChangeTime; // 0x0148, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tNextCastTime; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0x68]; // 0x0150, 0x68 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pCastDelayAutoModifier; // 0x01b8, 0x18 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pChannelAutoModifier; // 0x01d0, 0x18 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hShootAttach; // 0x01e8, 0x1 bytes
-                std::uint8_t pad_01e9[0x7]; // 0x01e9, 0x7 bytes
+                shade::sdk::client::ENeutralAbilityState m_eState; // 0x0148, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tExecuteTime; // 0x014c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tStateChangeTime; // 0x0150, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tNextCastTime; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0x68]; // 0x0158, 0x68 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pCastDelayAutoModifier; // 0x01c0, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pChannelAutoModifier; // 0x01d8, 0x18 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hShootAttach; // 0x01f0, 0x1 bytes
+                std::uint8_t pad_01f1[0x7]; // 0x01f1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NeutralAbility) == 0x1F0, "CCitadel_Modifier_NeutralAbility size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NeutralAbility) == 0x1F8, "CCitadel_Modifier_NeutralAbility size mismatch");
         }
     }
 }

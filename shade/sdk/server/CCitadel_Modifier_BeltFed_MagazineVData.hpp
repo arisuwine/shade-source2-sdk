@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x7c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BeltFed_MagazineVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CSoundEventName m_SpinUpSound; // 0x0760, 0x10 bytes
-                CSoundEventName m_SpinDownSound; // 0x0770, 0x10 bytes
-                CSoundEventName m_SpinLoopSound; // 0x0780, 0x10 bytes
+                CSoundEventName m_SpinUpSound; // 0x0790, 0x10 bytes
+                CSoundEventName m_SpinDownSound; // 0x07a0, 0x10 bytes
+                CSoundEventName m_SpinLoopSound; // 0x07b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BeltFed_MagazineVData) == 0x790, "CCitadel_Modifier_BeltFed_MagazineVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BeltFed_MagazineVData) == 0x7C0, "CCitadel_Modifier_BeltFed_MagazineVData size mismatch");
         }
     }
 }

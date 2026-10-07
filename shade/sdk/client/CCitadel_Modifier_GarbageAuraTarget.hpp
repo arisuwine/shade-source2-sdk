@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2b8
+             * Size: 0x2c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GarbageAuraTarget : public shade::sdk::client::CCitadel_Modifier_Stunned {
             public:
-                std::uint8_t pad_0138[0x160]; // 0x0138, 0x160 bytes
-                float m_flMaxDist; // 0x0298, 0x4 bytes
-                Vector m_vecOffsetDir; // 0x029c, 0xc bytes
-                VectorWS m_vecStartPosition; // 0x02a8, 0xc bytes
-                float m_flAOERadius; // 0x02b4, 0x4 bytes
+                std::uint8_t pad_0140[0x160]; // 0x0140, 0x160 bytes
+                float m_flMaxDist; // 0x02a0, 0x4 bytes
+                Vector m_vecOffsetDir; // 0x02a4, 0xc bytes
+                VectorWS m_vecStartPosition; // 0x02b0, 0xc bytes
+                float m_flAOERadius; // 0x02bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GarbageAuraTarget) == 0x2B8, "CCitadel_Modifier_GarbageAuraTarget size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GarbageAuraTarget) == 0x2C0, "CCitadel_Modifier_GarbageAuraTarget size mismatch");
         }
     }
 }

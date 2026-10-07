@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x7f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ApplyDebuff_ProcVData : public shade::sdk::client::CCitadel_Modifier_BaseEventProcVData {
             public:
-                bool m_bUseNonEmbedded; // 0x0790, 0x1 bytes
-                std::uint8_t pad_0791[0x7]; // 0x0791, 0x7 bytes
-                CUtlString m_DurationAbilityPropOverride; // 0x0798, 0x8 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DebuffModifier; // 0x07a0, 0x10 bytes
-                CSubclassName<2> m_NonEmbeddedModifier; // 0x07b0, 0x10 bytes
+                bool m_bUseNonEmbedded; // 0x07c8, 0x1 bytes
+                std::uint8_t pad_07c9[0x7]; // 0x07c9, 0x7 bytes
+                CUtlString m_DurationAbilityPropOverride; // 0x07d0, 0x8 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DebuffModifier; // 0x07d8, 0x10 bytes
+                CSubclassName<2> m_NonEmbeddedModifier; // 0x07e8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ApplyDebuff_ProcVData) == 0x7C0, "CCitadel_Modifier_ApplyDebuff_ProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ApplyDebuff_ProcVData) == 0x7F8, "CCitadel_Modifier_ApplyDebuff_ProcVData size mismatch");
         }
     }
 }

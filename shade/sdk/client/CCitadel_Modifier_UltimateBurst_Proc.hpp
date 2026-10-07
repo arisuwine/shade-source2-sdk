@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6a0
+             * Size: 0x6a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_UltimateBurst_Proc : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitTargets; // 0x02c8, 0x18 bytes
-                std::uint8_t pad_02e0[0x3c0]; // 0x02e0, 0x3c0 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitTargets; // 0x02d0, 0x18 bytes
+                std::uint8_t pad_02e8[0x3c0]; // 0x02e8, 0x3c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UltimateBurst_Proc) == 0x6A0, "CCitadel_Modifier_UltimateBurst_Proc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UltimateBurst_Proc) == 0x6A8, "CCitadel_Modifier_UltimateBurst_Proc size mismatch");
         }
     }
 }

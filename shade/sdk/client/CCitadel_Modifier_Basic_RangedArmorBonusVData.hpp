@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x7b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Basic_RangedArmorBonusVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flBulletResistancePctMin; // 0x0760, 0x4 bytes
-                float m_flBulletResistancePctMax; // 0x0764, 0x4 bytes
-                float m_flTechResistancePctMin; // 0x0768, 0x4 bytes
-                float m_flTechResistancePctMax; // 0x076c, 0x4 bytes
-                float m_flRangeMin; // 0x0770, 0x4 bytes
-                float m_flRangeMax; // 0x0774, 0x4 bytes
-                float m_flInvulnRange; // 0x0778, 0x4 bytes
-                bool m_bPlayersOnly; // 0x077c, 0x1 bytes
-                std::uint8_t pad_077d[0x3]; // 0x077d, 0x3 bytes
+                float m_flBulletResistancePctMin; // 0x0790, 0x4 bytes
+                float m_flBulletResistancePctMax; // 0x0794, 0x4 bytes
+                float m_flTechResistancePctMin; // 0x0798, 0x4 bytes
+                float m_flTechResistancePctMax; // 0x079c, 0x4 bytes
+                float m_flRangeMin; // 0x07a0, 0x4 bytes
+                float m_flRangeMax; // 0x07a4, 0x4 bytes
+                float m_flInvulnRange; // 0x07a8, 0x4 bytes
+                bool m_bPlayersOnly; // 0x07ac, 0x1 bytes
+                std::uint8_t pad_07ad[0x3]; // 0x07ad, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Basic_RangedArmorBonusVData) == 0x780, "CCitadel_Modifier_Basic_RangedArmorBonusVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Basic_RangedArmorBonusVData) == 0x7B0, "CCitadel_Modifier_Basic_RangedArmorBonusVData size mismatch");
         }
     }
 }

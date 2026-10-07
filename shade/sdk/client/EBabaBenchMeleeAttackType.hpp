@@ -16,13 +16,11 @@
 
 namespace shade {
     namespace sdk {
-        namespace animlib {
-            enum class CNmSoundEvent__Position_t : std::uint32_t {
-                None = 0x0,
-                World = 0x1,
-                EntityPos = 0x2,
-                EntityEyePos = 0x3,
-                EntityAttachment = 0x4
+        namespace client {
+            enum class EBabaBenchMeleeAttackType : std::uint8_t {
+                EBabaBenchMeleeAttack_None = 0x0,
+                EBabaBenchMeleeAttack_Light = 0x1,
+                EBabaBenchMeleeAttack_Heavy = 0x2
             };
         }
     }

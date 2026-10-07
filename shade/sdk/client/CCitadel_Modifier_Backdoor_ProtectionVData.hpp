@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x950
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,25 +39,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Backdoor_ProtectionVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flActivationTime; // 0x0760, 0x4 bytes
-                float m_flBackdoorProtectionDamageMitigationFromPlayers; // 0x0764, 0x4 bytes
-                float m_flBackdoorProtectionDamageMitigationFromPlayers_Streetbrawl; // 0x0768, 0x4 bytes
-                float m_flHealthPerSecondRegen; // 0x076c, 0x4 bytes
-                float m_flOutOfCombatHealthRegen; // 0x0770, 0x4 bytes
-                float m_flOutOfCombatRegenDelay; // 0x0774, 0x4 bytes
-                float m_flEffectsLingerTime; // 0x0778, 0x4 bytes
-                std::uint8_t pad_077c[0x4]; // 0x077c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldImpactParticle; // 0x0780, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldActiveParticle; // 0x0860, 0xe0 bytes
-                CUtlString m_strActiveEffectConfigName; // 0x0940, 0x8 bytes
-                float flShieldImpactDirectionOffset; // 0x0948, 0x4 bytes
-                std::uint8_t pad_094c[0x4]; // 0x094c, 0x4 bytes
+                float m_flActivationTime; // 0x0790, 0x4 bytes
+                float m_flBackdoorProtectionDamageMitigationFromPlayers; // 0x0794, 0x4 bytes
+                float m_flBackdoorProtectionDamageMitigationFromPlayers_Streetbrawl; // 0x0798, 0x4 bytes
+                float m_flHealthPerSecondRegen; // 0x079c, 0x4 bytes
+                float m_flOutOfCombatHealthRegen; // 0x07a0, 0x4 bytes
+                float m_flOutOfCombatRegenDelay; // 0x07a4, 0x4 bytes
+                float m_flEffectsLingerTime; // 0x07a8, 0x4 bytes
+                std::uint8_t pad_07ac[0x4]; // 0x07ac, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldImpactParticle; // 0x07b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldActiveParticle; // 0x0890, 0xe0 bytes
+                CUtlString m_strActiveEffectConfigName; // 0x0970, 0x8 bytes
+                float flShieldImpactDirectionOffset; // 0x0978, 0x4 bytes
+                std::uint8_t pad_097c[0x4]; // 0x097c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Backdoor_ProtectionVData) == 0x950, "CCitadel_Modifier_Backdoor_ProtectionVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Backdoor_ProtectionVData) == 0x980, "CCitadel_Modifier_Backdoor_ProtectionVData size mismatch");
         }
     }
 }

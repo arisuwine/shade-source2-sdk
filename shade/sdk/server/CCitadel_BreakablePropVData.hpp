@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -60,51 +60,55 @@ namespace shade {
                 std::int32_t m_nMeleeHitsToBreak; // 0x0050, 0x4 bytes
                 std::int32_t m_nHeavyMeleeHitCount; // 0x0054, 0x4 bytes
                 bool m_bNoMeleeCleave; // 0x0058, 0x1 bytes
-                bool m_bIsMantleable; // 0x0059, 0x1 bytes
-                bool m_bRequireFullCostToBreak; // 0x005a, 0x1 bytes
-                std::uint8_t pad_005b[0x1]; // 0x005b, 0x1 bytes
-                float m_flOutlineRadius; // 0x005c, 0x4 bytes
-                bool m_bRequireVisibleOnMinimapForOutline; // 0x0060, 0x1 bytes
-                std::uint8_t pad_0061[0x3]; // 0x0061, 0x3 bytes
-                Color m_colorOutline; // 0x0064, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hModel; // 0x0068, 0xe0 bytes
-                float m_flModelScale; // 0x0148, 0x4 bytes
-                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
-                CModelMaterialGroupName m_sMaterialGroupName; // 0x0150, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ambientParticle; // 0x0158, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_breakParticle; // 0x0238, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_breakRollFailParticle; // 0x0318, 0xe0 bytes
-                CSoundEventName m_sBreakSound; // 0x03f8, 0x10 bytes
-                CSoundEventName m_sSpawnSound; // 0x0408, 0x10 bytes
-                CSoundEventName m_sBreakRollFailSound; // 0x0418, 0x10 bytes
-                CSoundEventName m_sMeleeDamageSound; // 0x0428, 0x10 bytes
-                CSoundEventName m_sOtherDamageSound; // 0x0438, 0x10 bytes
-                CSoundEventName m_sMeleeRejectSound; // 0x0448, 0x10 bytes
-                CSoundEventName m_OtherRejectSound; // 0x0458, 0x10 bytes
-                CSoundEventName m_sAmbientSound; // 0x0468, 0x10 bytes
-                float m_flInitialSpawnTime; // 0x0478, 0x4 bytes
-                float m_flInitialSpawnTimeTest; // 0x047c, 0x4 bytes
-                float m_flRespawnTime; // 0x0480, 0x4 bytes
-                float m_flRespawnTimeTest; // 0x0484, 0x4 bytes
-                CUtlString m_strMinimapCSSClassAlive; // 0x0488, 0x8 bytes
-                CUtlString m_strMinimapCSSClassDead; // 0x0490, 0x8 bytes
-                float m_flMinDistanceToRevealOnMinimap; // 0x0498, 0x4 bytes
-                std::uint8_t pad_049c[0x4]; // 0x049c, 0x4 bytes
-                CUtlString m_strLayoutFile; // 0x04a0, 0x8 bytes
-                float m_flPanelHeightOffset; // 0x04a8, 0x4 bytes
-                float m_flPanelDrawDistance; // 0x04ac, 0x4 bytes
-                CUtlString m_strInWorldCSSClasses; // 0x04b0, 0x8 bytes
-                float m_flPanelWidth; // 0x04b8, 0x4 bytes
-                float m_flPanelHeight; // 0x04bc, 0x4 bytes
-                float m_flPowerupDropChance; // 0x04c0, 0x4 bytes
-                shade::sdk::client::ECitadelRandomRollTypes m_eRollType; // 0x04c4, 0x4 bytes
-                CUtlOrderedMap<CSubclassName<0>, float> m_mapPickupChances; // 0x04c8, 0x28 bytes
+                std::uint8_t pad_0059[0x3]; // 0x0059, 0x3 bytes
+                float m_flBreakDebrisSpeed; // 0x005c, 0x4 bytes
+                float m_flInheritBreakerVelocityFrac; // 0x0060, 0x4 bytes
+                bool m_bIsMantleable; // 0x0064, 0x1 bytes
+                bool m_bRequireFullCostToBreak; // 0x0065, 0x1 bytes
+                std::uint8_t pad_0066[0x2]; // 0x0066, 0x2 bytes
+                float m_flOutlineRadius; // 0x0068, 0x4 bytes
+                bool m_bRequireVisibleOnMinimapForOutline; // 0x006c, 0x1 bytes
+                std::uint8_t pad_006d[0x3]; // 0x006d, 0x3 bytes
+                Color m_colorOutline; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hModel; // 0x0078, 0xe0 bytes
+                float m_flModelScale; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x4]; // 0x015c, 0x4 bytes
+                CModelMaterialGroupName m_sMaterialGroupName; // 0x0160, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ambientParticle; // 0x0168, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_breakParticle; // 0x0248, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_breakRollFailParticle; // 0x0328, 0xe0 bytes
+                CSoundEventName m_sBreakSound; // 0x0408, 0x10 bytes
+                CSoundEventName m_sSpawnSound; // 0x0418, 0x10 bytes
+                CSoundEventName m_sBreakRollFailSound; // 0x0428, 0x10 bytes
+                CSoundEventName m_sMeleeDamageSound; // 0x0438, 0x10 bytes
+                CSoundEventName m_sOtherDamageSound; // 0x0448, 0x10 bytes
+                CSoundEventName m_sMeleeRejectSound; // 0x0458, 0x10 bytes
+                CSoundEventName m_OtherRejectSound; // 0x0468, 0x10 bytes
+                CSoundEventName m_sAmbientSound; // 0x0478, 0x10 bytes
+                float m_flInitialSpawnTime; // 0x0488, 0x4 bytes
+                float m_flInitialSpawnTimeTest; // 0x048c, 0x4 bytes
+                float m_flRespawnTime; // 0x0490, 0x4 bytes
+                float m_flRespawnTimeTest; // 0x0494, 0x4 bytes
+                CUtlString m_strMinimapCSSClassAlive; // 0x0498, 0x8 bytes
+                CUtlString m_strMinimapCSSClassDead; // 0x04a0, 0x8 bytes
+                float m_flMinDistanceToRevealOnMinimap; // 0x04a8, 0x4 bytes
+                std::uint8_t pad_04ac[0x4]; // 0x04ac, 0x4 bytes
+                CUtlString m_strLayoutFile; // 0x04b0, 0x8 bytes
+                float m_flPanelHeightOffset; // 0x04b8, 0x4 bytes
+                float m_flPanelDrawDistance; // 0x04bc, 0x4 bytes
+                CUtlString m_strInWorldCSSClasses; // 0x04c0, 0x8 bytes
+                float m_flPanelWidth; // 0x04c8, 0x4 bytes
+                float m_flPanelHeight; // 0x04cc, 0x4 bytes
+                float m_flPowerupDropChance; // 0x04d0, 0x4 bytes
+                shade::sdk::client::ECitadelRandomRollTypes m_eRollType; // 0x04d4, 0x4 bytes
+                CUtlOrderedMap<CSubclassName<0>, float> m_mapPickupChances; // 0x04d8, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_BreakablePropVData) == 0x4F0, "CCitadel_BreakablePropVData size mismatch");
+            static_assert(sizeof(CCitadel_BreakablePropVData) == 0x500, "CCitadel_BreakablePropVData size mismatch");
         }
     }
 }

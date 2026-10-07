@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd60
+             * Size: 0xdb0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelRankedBadgeProp : public shade::sdk::server::CDynamicProp {
             public:
-                shade::sdk::client::PackedRank_t m_unPackedRank; // 0x0d50, 0x1 bytes
-                std::uint8_t pad_0d51[0xf]; // 0x0d51, 0xf bytes
+                shade::sdk::client::PackedRank_t m_unPackedRank; // 0x0da0, 0x1 bytes
+                std::uint8_t pad_0da1[0xf]; // 0x0da1, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelRankedBadgeProp) == 0xD60, "CCitadelRankedBadgeProp size mismatch");
+            static_assert(sizeof(CCitadelRankedBadgeProp) == 0xDB0, "CCitadelRankedBadgeProp size mismatch");
         }
     }
 }

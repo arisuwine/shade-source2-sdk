@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Backdoor_Protection : public shade::sdk::server::CCitadelModifier {
             public:
-                std::int32_t m_MaxHealth; // 0x0140, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastAttackedTime; // 0x0144, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nActiveShieldEffect; // 0x0148, 0x4 bytes
-                bool m_bIsActive; // 0x014c, 0x1 bytes
-                std::uint8_t pad_014d[0x3]; // 0x014d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tActivationTime; // 0x0150, 0x4 bytes
-                std::uint8_t pad_0154[0x4]; // 0x0154, 0x4 bytes
+                std::int32_t m_MaxHealth; // 0x0148, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastAttackedTime; // 0x014c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nActiveShieldEffect; // 0x0150, 0x4 bytes
+                bool m_bIsActive; // 0x0154, 0x1 bytes
+                std::uint8_t pad_0155[0x3]; // 0x0155, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tActivationTime; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x4]; // 0x015c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Backdoor_Protection) == 0x158, "CCitadel_Modifier_Backdoor_Protection size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Backdoor_Protection) == 0x160, "CCitadel_Modifier_Backdoor_Protection size mismatch");
         }
     }
 }

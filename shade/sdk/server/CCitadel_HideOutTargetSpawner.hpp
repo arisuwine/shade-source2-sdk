@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb10
+             * Size: 0xb60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_HideOutTargetSpawner : public shade::sdk::server::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0a90[0x80]; // 0x0a90, 0x80 bytes
+                std::uint8_t pad_0ae0[0x80]; // 0x0ae0, 0x80 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_HideOutTargetSpawner) == 0xB10, "CCitadel_HideOutTargetSpawner size mismatch");
+            static_assert(sizeof(CCitadel_HideOutTargetSpawner) == 0xB60, "CCitadel_HideOutTargetSpawner size mismatch");
         }
     }
 }

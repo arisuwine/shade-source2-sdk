@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xaf0
+             * Size: 0xb40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,10 +33,10 @@ namespace shade {
             #pragma pack(push, 1)
             class CPropAnimatingBreakable : public shade::sdk::server::CBaseAnimGraph {
             public:
-                shade::sdk::client::CBreakableStageHelper m_stages; // 0x0a90, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x0aa8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnFinalBreak; // 0x0ac0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStageAdvanced; // 0x0ad8, 0x18 bytes
+                shade::sdk::client::CBreakableStageHelper m_stages; // 0x0ae0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x0af8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnFinalBreak; // 0x0b10, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStageAdvanced; // 0x0b28, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -44,7 +44,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPropAnimatingBreakable) == 0xAF0, "CPropAnimatingBreakable size mismatch");
+            static_assert(sizeof(CPropAnimatingBreakable) == 0xB40, "CPropAnimatingBreakable size mismatch");
         }
     }
 }

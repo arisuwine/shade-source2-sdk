@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b8
+             * Size: 0x7e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SwingLine_SwingingVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CPiecewiseCurve m_PullSpeedScaleCurve; // 0x0760, 0x40 bytes
-                float m_flMass; // 0x07a0, 0x4 bytes
-                float m_flBodyForwardForce; // 0x07a4, 0x4 bytes
-                float m_flCameraForwardForce; // 0x07a8, 0x4 bytes
-                float m_flPullForce; // 0x07ac, 0x4 bytes
-                float m_flGravityForce; // 0x07b0, 0x4 bytes
-                float m_flDampingForce; // 0x07b4, 0x4 bytes
+                CPiecewiseCurve m_PullSpeedScaleCurve; // 0x0790, 0x40 bytes
+                float m_flMass; // 0x07d0, 0x4 bytes
+                float m_flBodyForwardForce; // 0x07d4, 0x4 bytes
+                float m_flCameraForwardForce; // 0x07d8, 0x4 bytes
+                float m_flPullForce; // 0x07dc, 0x4 bytes
+                float m_flGravityForce; // 0x07e0, 0x4 bytes
+                float m_flDampingForce; // 0x07e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SwingLine_SwingingVData) == 0x7B8, "CCitadel_Modifier_SwingLine_SwingingVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SwingLine_SwingingVData) == 0x7E8, "CCitadel_Modifier_SwingLine_SwingingVData size mismatch");
         }
     }
 }

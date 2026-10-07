@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x990
+             * Size: 0x9c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,24 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_HauntingSkull_AreaVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0770, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewRingParticle; // 0x0780, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaEffect; // 0x0860, 0xe0 bytes
-                CSoundEventName m_strArmingSound; // 0x0940, 0x10 bytes
-                CSoundEventName m_strArmedSound; // 0x0950, 0x10 bytes
-                CSoundEventName m_strLoopingSound; // 0x0960, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x0970, 0x10 bytes
-                float m_flInitialNormalInfluence; // 0x0980, 0x4 bytes
-                float m_flInitialRandomVariance; // 0x0984, 0x4 bytes
-                float m_flSpawnPositionNavMeshSearchRange; // 0x0988, 0x4 bytes
-                std::uint8_t pad_098c[0x4]; // 0x098c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x07a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewRingParticle; // 0x07b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaEffect; // 0x0890, 0xe0 bytes
+                CSoundEventName m_strArmingSound; // 0x0970, 0x10 bytes
+                CSoundEventName m_strArmedSound; // 0x0980, 0x10 bytes
+                CSoundEventName m_strLoopingSound; // 0x0990, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x09a0, 0x10 bytes
+                float m_flInitialNormalInfluence; // 0x09b0, 0x4 bytes
+                float m_flInitialRandomVariance; // 0x09b4, 0x4 bytes
+                float m_flSpawnPositionNavMeshSearchRange; // 0x09b8, 0x4 bytes
+                std::uint8_t pad_09bc[0x4]; // 0x09bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_HauntingSkull_AreaVData) == 0x990, "CCitadel_Modifier_Necro_HauntingSkull_AreaVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_HauntingSkull_AreaVData) == 0x9C0, "CCitadel_Modifier_Necro_HauntingSkull_AreaVData size mismatch");
         }
     }
 }

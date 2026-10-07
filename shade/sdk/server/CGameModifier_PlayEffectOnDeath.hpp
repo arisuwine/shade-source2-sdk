@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_PlayEffectOnDeath : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlString m_sEffect; // 0x0140, 0x8 bytes
+                CUtlString m_sEffect; // 0x0148, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_PlayEffectOnDeath) == 0x148, "CGameModifier_PlayEffectOnDeath size mismatch");
+            static_assert(sizeof(CGameModifier_PlayEffectOnDeath) == 0x150, "CGameModifier_PlayEffectOnDeath size mismatch");
         }
     }
 }

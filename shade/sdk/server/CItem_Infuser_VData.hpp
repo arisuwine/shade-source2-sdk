@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15a0
+             * Size: 0x15e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_Infuser_VData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x14b0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x14c0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x14f8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1508, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_Infuser_VData) == 0x15A0, "CItem_Infuser_VData size mismatch");
+            static_assert(sizeof(CItem_Infuser_VData) == 0x15E8, "CItem_Infuser_VData size mismatch");
         }
     }
 }

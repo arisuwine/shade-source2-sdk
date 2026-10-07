@@ -26,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x7c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,23 +35,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BaseEventProcVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                bool m_bProcChanceAffectedByEffectiveness; // 0x0760, 0x1 bytes
-                bool m_bShouldApplyAbilityCooldown; // 0x0761, 0x1 bytes
-                bool m_bCanProcMultipleTimesOnOneTarget; // 0x0762, 0x1 bytes
-                bool m_bCanProcByOtherObjects; // 0x0763, 0x1 bytes
-                bool m_bCanProcFromItems; // 0x0764, 0x1 bytes
-                bool m_bProcOnFriendlyBulletHits; // 0x0765, 0x1 bytes
-                std::uint8_t pad_0766[0x2]; // 0x0766, 0x2 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x0768, 0x4 bytes
-                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x076c, 0x4 bytes
-                CUtlVector<shade::sdk::client::ECitadelDamageType> m_vecProcDamageTypes; // 0x0770, 0x18 bytes
-                shade::sdk::client::TakeDamageFlags_t m_nRequiredDamageFlags; // 0x0788, 0x8 bytes
+                bool m_bProcChanceAffectedByEffectiveness; // 0x0790, 0x1 bytes
+                bool m_bShouldApplyAbilityCooldown; // 0x0791, 0x1 bytes
+                bool m_bCanProcMultipleTimesOnOneTarget; // 0x0792, 0x1 bytes
+                bool m_bCanProcByOtherObjects; // 0x0793, 0x1 bytes
+                bool m_bCanProcFromItems; // 0x0794, 0x1 bytes
+                bool m_bProcOnFriendlyBulletHits; // 0x0795, 0x1 bytes
+                std::uint8_t pad_0796[0x2]; // 0x0796, 0x2 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x0798, 0x4 bytes
+                shade::sdk::client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x079c, 0x4 bytes
+                CUtlVector<shade::sdk::client::ECitadelDamageType> m_vecProcDamageTypes; // 0x07a0, 0x18 bytes
+                shade::sdk::client::TakeDamageFlags_t m_nRequiredDamageFlags; // 0x07b8, 0x8 bytes
+                shade::sdk::client::TakeDamageFlags_t m_nInvalidatingDamageFlags; // 0x07c0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BaseEventProcVData) == 0x790, "CCitadel_Modifier_BaseEventProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BaseEventProcVData) == 0x7C8, "CCitadel_Modifier_BaseEventProcVData size mismatch");
         }
     }
 }

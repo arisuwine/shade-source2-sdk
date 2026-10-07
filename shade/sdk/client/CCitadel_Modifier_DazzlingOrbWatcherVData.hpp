@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb58
+             * Size: 0xb88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,27 +44,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DazzlingOrbWatcherVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NextTargetModifier; // 0x0770, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_OrbFriendlyBounceWatcherModifier; // 0x0780, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x0790, 0x10 bytes
-                CSoundEventName m_strFinalExplodeSound; // 0x07a0, 0x10 bytes
-                CSoundEventName m_strWorldHitSound; // 0x07b0, 0x10 bytes
-                CSoundEventName m_strGraceLoopSound; // 0x07c0, 0x10 bytes
-                CSoundEventName m_strExpireSound; // 0x07d0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x07e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x08c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GraceParticle; // 0x09a0, 0xe0 bytes
-                CPiecewiseCurve m_BouncePositionCurve; // 0x0a80, 0x40 bytes
-                float m_flMinProjectileTravelTime; // 0x0ac0, 0x4 bytes
-                std::uint8_t pad_0ac4[0x4]; // 0x0ac4, 0x4 bytes
-                shade::sdk::client::CCitadelProjectileTrackingParams m_TrackingParams; // 0x0ac8, 0x90 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NextTargetModifier; // 0x07a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_OrbFriendlyBounceWatcherModifier; // 0x07b0, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x07c0, 0x10 bytes
+                CSoundEventName m_strFinalExplodeSound; // 0x07d0, 0x10 bytes
+                CSoundEventName m_strWorldHitSound; // 0x07e0, 0x10 bytes
+                CSoundEventName m_strGraceLoopSound; // 0x07f0, 0x10 bytes
+                CSoundEventName m_strExpireSound; // 0x0800, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0810, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x08f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GraceParticle; // 0x09d0, 0xe0 bytes
+                CPiecewiseCurve m_BouncePositionCurve; // 0x0ab0, 0x40 bytes
+                float m_flMinProjectileTravelTime; // 0x0af0, 0x4 bytes
+                std::uint8_t pad_0af4[0x4]; // 0x0af4, 0x4 bytes
+                shade::sdk::client::CCitadelProjectileTrackingParams m_TrackingParams; // 0x0af8, 0x90 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DazzlingOrbWatcherVData) == 0xB58, "CCitadel_Modifier_DazzlingOrbWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DazzlingOrbWatcherVData) == 0xB88, "CCitadel_Modifier_DazzlingOrbWatcherVData size mismatch");
         }
     }
 }

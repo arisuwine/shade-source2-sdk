@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xc40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierShadowStepVData : public shade::sdk::client::CCitadel_Modifier_InvisVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x0a28, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ArmorDebuff; // 0x0a38, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisChangedEffect; // 0x0a48, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShadowRevealedEffect; // 0x0b28, 0xe0 bytes
-                float m_flMinInvisDuration; // 0x0c08, 0x4 bytes
-                std::uint8_t pad_0c0c[0x4]; // 0x0c0c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x0a58, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ArmorDebuff; // 0x0a68, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisChangedEffect; // 0x0a78, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShadowRevealedEffect; // 0x0b58, 0xe0 bytes
+                float m_flMinInvisDuration; // 0x0c38, 0x4 bytes
+                std::uint8_t pad_0c3c[0x4]; // 0x0c3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierShadowStepVData) == 0xC10, "CCitadelModifierShadowStepVData size mismatch");
+            static_assert(sizeof(CCitadelModifierShadowStepVData) == 0xC40, "CCitadelModifierShadowStepVData size mismatch");
         }
     }
 }

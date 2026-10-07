@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x388
+             * Size: 0x390
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ProjectMind : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_particleStart; // 0x0140, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_particleEnd; // 0x0144, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_particleTrail; // 0x0148, 0x4 bytes
-                VectorWS m_vecEndLocation; // 0x014c, 0xc bytes
-                VectorWS m_vecStartPosition; // 0x0158, 0xc bytes
-                float m_flStartDelay; // 0x0164, 0x4 bytes
-                Vector m_vecApplyOffset; // 0x0168, 0xc bytes
-                std::uint8_t pad_0174[0x214]; // 0x0174, 0x214 bytes
+                shade::sdk::client::ParticleIndex_t m_particleStart; // 0x0148, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particleEnd; // 0x014c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particleTrail; // 0x0150, 0x4 bytes
+                VectorWS m_vecEndLocation; // 0x0154, 0xc bytes
+                VectorWS m_vecStartPosition; // 0x0160, 0xc bytes
+                float m_flStartDelay; // 0x016c, 0x4 bytes
+                Vector m_vecApplyOffset; // 0x0170, 0xc bytes
+                std::uint8_t pad_017c[0x214]; // 0x017c, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ProjectMind) == 0x388, "CCitadel_Modifier_ProjectMind size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ProjectMind) == 0x390, "CCitadel_Modifier_ProjectMind size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1490
+             * Size: 0x14d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityBloodShardsVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13a0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13b0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13f8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityBloodShardsVData) == 0x1490, "CAbilityBloodShardsVData size mismatch");
+            static_assert(sizeof(CAbilityBloodShardsVData) == 0x14D8, "CAbilityBloodShardsVData size mismatch");
         }
     }
 }

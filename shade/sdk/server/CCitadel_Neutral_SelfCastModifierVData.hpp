@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x10d0
+             * Size: 0x1100
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_SelfCastModifierVData : public shade::sdk::server::CModifierNeutralAbilityVData {
             public:
-                float m_flModifierDuration; // 0x10b8, 0x4 bytes
-                std::uint8_t pad_10bc[0x4]; // 0x10bc, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SelfCastModifier; // 0x10c0, 0x10 bytes
+                float m_flModifierDuration; // 0x10e8, 0x4 bytes
+                std::uint8_t pad_10ec[0x4]; // 0x10ec, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SelfCastModifier; // 0x10f0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_SelfCastModifierVData) == 0x10D0, "CCitadel_Neutral_SelfCastModifierVData size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_SelfCastModifierVData) == 0x1100, "CCitadel_Neutral_SelfCastModifierVData size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0x948
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CatapultStunVData : public shade::sdk::server::CModifierKnockdownVData {
             public:
-                float m_flStunDurationOnLand; // 0x08e8, 0x4 bytes
-                std::uint8_t pad_08ec[0x4]; // 0x08ec, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x08f0, 0x10 bytes
+                float m_flStunDurationOnLand; // 0x0930, 0x4 bytes
+                std::uint8_t pad_0934[0x4]; // 0x0934, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0938, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CatapultStunVData) == 0x900, "CCitadel_Modifier_CatapultStunVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CatapultStunVData) == 0x948, "CCitadel_Modifier_CatapultStunVData size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1588
+             * Size: 0x15d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Werewolf_UnloadGunVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShootingModifier; // 0x13a0, 0x10 bytes
-                CSoundEventName m_strShootSound; // 0x13b0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GunReloadParticle; // 0x13c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MuzzleFlashParticle; // 0x14a0, 0xe0 bytes
-                bool m_bGrantAmmoOnCast; // 0x1580, 0x1 bytes
-                std::uint8_t pad_1581[0x7]; // 0x1581, 0x7 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShootingModifier; // 0x13e8, 0x10 bytes
+                CSoundEventName m_strShootSound; // 0x13f8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GunReloadParticle; // 0x1408, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MuzzleFlashParticle; // 0x14e8, 0xe0 bytes
+                bool m_bGrantAmmoOnCast; // 0x15c8, 0x1 bytes
+                std::uint8_t pad_15c9[0x7]; // 0x15c9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Werewolf_UnloadGunVData) == 0x1588, "CCitadel_Werewolf_UnloadGunVData size mismatch");
+            static_assert(sizeof(CCitadel_Werewolf_UnloadGunVData) == 0x15D0, "CCitadel_Werewolf_UnloadGunVData size mismatch");
         }
     }
 }

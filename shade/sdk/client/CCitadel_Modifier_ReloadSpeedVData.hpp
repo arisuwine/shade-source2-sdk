@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ReloadSpeedVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flReloadSpeedPercent; // 0x0760, 0x4 bytes
-                bool m_bDestroyAfterReload; // 0x0764, 0x1 bytes
-                std::uint8_t pad_0765[0x3]; // 0x0765, 0x3 bytes
+                float m_flReloadSpeedPercent; // 0x0790, 0x4 bytes
+                bool m_bDestroyAfterReload; // 0x0794, 0x1 bytes
+                std::uint8_t pad_0795[0x3]; // 0x0795, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ReloadSpeedVData) == 0x768, "CCitadel_Modifier_ReloadSpeedVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ReloadSpeedVData) == 0x798, "CCitadel_Modifier_ReloadSpeedVData size mismatch");
         }
     }
 }

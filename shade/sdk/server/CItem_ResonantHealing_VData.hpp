@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16c8
+             * Size: 0x1710
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,17 +45,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_ResonantHealing_VData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_StackNotificationModifier; // 0x14b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnCastModifier; // 0x14c0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RegenParticle; // 0x14d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle; // 0x15b0, 0xe0 bytes
-                shade::sdk::client::HealingOverTimeLoopSoundOverride_t m_HealingLoopSoundOverride; // 0x1690, 0x38 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_StackNotificationModifier; // 0x14f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnCastModifier; // 0x1508, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RegenParticle; // 0x1518, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle; // 0x15f8, 0xe0 bytes
+                shade::sdk::client::HealingOverTimeLoopSoundOverride_t m_HealingLoopSoundOverride; // 0x16d8, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_ResonantHealing_VData) == 0x16C8, "CItem_ResonantHealing_VData size mismatch");
+            static_assert(sizeof(CItem_ResonantHealing_VData) == 0x1710, "CItem_ResonantHealing_VData size mismatch");
         }
     }
 }

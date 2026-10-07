@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PristineEmblem_VData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x0760, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParticleModifier; // 0x0840, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x0790, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ParticleModifier; // 0x0870, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PristineEmblem_VData) == 0x850, "CCitadel_Modifier_PristineEmblem_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PristineEmblem_VData) == 0x880, "CCitadel_Modifier_PristineEmblem_VData size mismatch");
         }
     }
 }

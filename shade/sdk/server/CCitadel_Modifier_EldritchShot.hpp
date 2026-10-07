@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x518
+             * Size: 0x520
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_EldritchShot : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                shade::sdk::client::ShotID_t m_shotID; // 0x02f8, 0x4 bytes
-                std::uint8_t pad_02fc[0x214]; // 0x02fc, 0x214 bytes
-                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0510, 0x4 bytes
-                std::uint8_t pad_0514[0x4]; // 0x0514, 0x4 bytes
+                shade::sdk::client::ShotID_t m_shotID; // 0x0300, 0x4 bytes
+                std::uint8_t pad_0304[0x214]; // 0x0304, 0x214 bytes
+                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0518, 0x4 bytes
+                std::uint8_t pad_051c[0x4]; // 0x051c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_EldritchShot) == 0x518, "CCitadel_Modifier_EldritchShot size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_EldritchShot) == 0x520, "CCitadel_Modifier_EldritchShot size mismatch");
         }
     }
 }

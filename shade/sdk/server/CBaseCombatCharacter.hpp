@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb60
+             * Size: 0xbb0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -42,24 +42,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseCombatCharacter : public shade::sdk::server::CBaseAnimGraph {
             public:
-                bool m_bForceServerRagdoll; // 0x0a90, 0x1 bytes
-                std::uint8_t pad_0a91[0x7]; // 0x0a91, 0x7 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CEconWearable>> m_hMyWearables; // 0x0a98, 0x18 bytes
-                float m_impactEnergyScale; // 0x0ab0, 0x4 bytes
-                bool m_bApplyStressDamage; // 0x0ab4, 0x1 bytes
-                bool m_bDeathEventsDispatched; // 0x0ab5, 0x1 bytes
-                std::uint8_t pad_0ab6[0x42]; // 0x0ab6, 0x42 bytes
-                CUtlVector<shade::sdk::server::RelationshipOverride_t> m_vecRelationships; // 0x0af8, 0x18 bytes
-                CUtlSymbolLarge m_strRelationships; // 0x0b10, 0x8 bytes
-                shade::sdk::client::Hull_t m_eHull; // 0x0b18, 0x4 bytes
-                std::uint32_t m_nNavHullIdx; // 0x0b1c, 0x4 bytes
-                shade::sdk::server::CMovementStatsProperty m_movementStats; // 0x0b20, 0x40 bytes
+                bool m_bForceServerRagdoll; // 0x0ae0, 0x1 bytes
+                std::uint8_t pad_0ae1[0x7]; // 0x0ae1, 0x7 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CEconWearable>> m_hMyWearables; // 0x0ae8, 0x18 bytes
+                float m_impactEnergyScale; // 0x0b00, 0x4 bytes
+                bool m_bApplyStressDamage; // 0x0b04, 0x1 bytes
+                bool m_bDeathEventsDispatched; // 0x0b05, 0x1 bytes
+                std::uint8_t pad_0b06[0x42]; // 0x0b06, 0x42 bytes
+                CUtlVector<shade::sdk::server::RelationshipOverride_t> m_vecRelationships; // 0x0b48, 0x18 bytes
+                CUtlSymbolLarge m_strRelationships; // 0x0b60, 0x8 bytes
+                shade::sdk::client::Hull_t m_eHull; // 0x0b68, 0x4 bytes
+                std::uint32_t m_nNavHullIdx; // 0x0b6c, 0x4 bytes
+                shade::sdk::server::CMovementStatsProperty m_movementStats; // 0x0b70, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseCombatCharacter) == 0xB60, "CBaseCombatCharacter size mismatch");
+            static_assert(sizeof(CBaseCombatCharacter) == 0xBB0, "CBaseCombatCharacter size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x68
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -47,12 +47,13 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flLatchedTime; // 0x0044, 0x4 bytes
                 shade::sdk::client::ELockonState m_eLockonState; // 0x0048, 0x4 bytes
                 CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x004c, 0x4 bytes
+                std::uint8_t pad_0050[0x18]; // 0x0050, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(LockonTarget_t) == 0x50, "LockonTarget_t size mismatch");
+            static_assert(sizeof(LockonTarget_t) == 0x68, "LockonTarget_t size mismatch");
         }
     }
 }

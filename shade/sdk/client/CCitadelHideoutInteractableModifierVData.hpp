@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x788
+             * Size: 0x7b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHideoutInteractableModifierVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CUtlString m_strInteractLocString; // 0x0760, 0x8 bytes
-                shade::sdk::client::EHideoutButtonInteractStyle m_nInteractStyle; // 0x0768, 0x4 bytes
-                float m_flInteractDistance; // 0x076c, 0x4 bytes
-                float m_flInteractLookRadius; // 0x0770, 0x4 bytes
-                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InteractModifier; // 0x0778, 0x10 bytes
+                CUtlString m_strInteractLocString; // 0x0790, 0x8 bytes
+                shade::sdk::client::EHideoutButtonInteractStyle m_nInteractStyle; // 0x0798, 0x4 bytes
+                float m_flInteractDistance; // 0x079c, 0x4 bytes
+                float m_flInteractLookRadius; // 0x07a0, 0x4 bytes
+                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InteractModifier; // 0x07a8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHideoutInteractableModifierVData) == 0x788, "CCitadelHideoutInteractableModifierVData size mismatch");
+            static_assert(sizeof(CCitadelHideoutInteractableModifierVData) == 0x7B8, "CCitadelHideoutInteractableModifierVData size mismatch");
         }
     }
 }

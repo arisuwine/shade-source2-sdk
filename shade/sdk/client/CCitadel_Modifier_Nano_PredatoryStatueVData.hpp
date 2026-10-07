@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xaa0
+             * Size: 0xad0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,28 +43,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Nano_PredatoryStatueVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEParticle; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnabledParticle; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrainParticle; // 0x0920, 0xe0 bytes
-                CSoundEventName m_strEnabledSound; // 0x0a00, 0x10 bytes
-                CSoundEventName m_strEnabledLoopSound; // 0x0a10, 0x10 bytes
-                CSoundEventName m_strDisabledSound; // 0x0a20, 0x10 bytes
-                CSoundEventName m_strLaserHitSound; // 0x0a30, 0x10 bytes
-                CSoundEventName m_strLaserStartSound; // 0x0a40, 0x10 bytes
-                CSoundEventName m_strLaserLoopSound; // 0x0a50, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x0a60, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RevealModifier; // 0x0a70, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StatueInvis; // 0x0a80, 0x10 bytes
-                float m_flNewTargetAttackTime; // 0x0a90, 0x4 bytes
-                float m_flMinRevealTime; // 0x0a94, 0x4 bytes
-                float m_flMinDebuffTime; // 0x0a98, 0x4 bytes
-                std::uint8_t pad_0a9c[0x4]; // 0x0a9c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEParticle; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnabledParticle; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrainParticle; // 0x0950, 0xe0 bytes
+                CSoundEventName m_strEnabledSound; // 0x0a30, 0x10 bytes
+                CSoundEventName m_strEnabledLoopSound; // 0x0a40, 0x10 bytes
+                CSoundEventName m_strDisabledSound; // 0x0a50, 0x10 bytes
+                CSoundEventName m_strLaserHitSound; // 0x0a60, 0x10 bytes
+                CSoundEventName m_strLaserStartSound; // 0x0a70, 0x10 bytes
+                CSoundEventName m_strLaserLoopSound; // 0x0a80, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x0a90, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RevealModifier; // 0x0aa0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StatueInvis; // 0x0ab0, 0x10 bytes
+                float m_flNewTargetAttackTime; // 0x0ac0, 0x4 bytes
+                float m_flMinRevealTime; // 0x0ac4, 0x4 bytes
+                float m_flMinDebuffTime; // 0x0ac8, 0x4 bytes
+                std::uint8_t pad_0acc[0x4]; // 0x0acc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Nano_PredatoryStatueVData) == 0xAA0, "CCitadel_Modifier_Nano_PredatoryStatueVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Nano_PredatoryStatueVData) == 0xAD0, "CCitadel_Modifier_Nano_PredatoryStatueVData size mismatch");
         }
     }
 }

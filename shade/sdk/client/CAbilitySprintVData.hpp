@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1498
+             * Size: 0x14e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilitySprintVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprintParticle; // 0x13a0, 0xe0 bytes
-                CSoundEventName m_strSprintSound; // 0x1480, 0x10 bytes
-                float m_flSprintAccMS; // 0x1490, 0x4 bytes
-                std::uint8_t pad_1494[0x4]; // 0x1494, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprintParticle; // 0x13e8, 0xe0 bytes
+                CSoundEventName m_strSprintSound; // 0x14c8, 0x10 bytes
+                float m_flSprintAccMS; // 0x14d8, 0x4 bytes
+                std::uint8_t pad_14dc[0x4]; // 0x14dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilitySprintVData) == 0x1498, "CAbilitySprintVData size mismatch");
+            static_assert(sizeof(CAbilitySprintVData) == 0x14E0, "CAbilitySprintVData size mismatch");
         }
     }
 }

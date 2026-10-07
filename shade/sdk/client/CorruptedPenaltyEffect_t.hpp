@@ -29,8 +29,8 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct CorruptedPenaltyEffect_t {
-                shade::sdk::client::EModifierValue m_eModifierValue; // 0x0000, 0x4 bytes
-                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
+                shade::sdk::client::EModifierValue m_eModifierValue; // 0x0000, 0x2 bytes
+                std::uint8_t pad_0002[0x6]; // 0x0002, 0x6 bytes
                 CUtlString m_strBonusPerTier[0x6]; // 0x0008, 0x30 bytes
                 shade::sdk::client::EStatsType m_eDisplayType; // 0x0038, 0x4 bytes
                 std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes

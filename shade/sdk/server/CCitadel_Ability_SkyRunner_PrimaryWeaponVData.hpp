@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1660
+             * Size: 0x16d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SkyRunner_PrimaryWeaponVData) == 0x1660, "CCitadel_Ability_SkyRunner_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SkyRunner_PrimaryWeaponVData) == 0x16D8, "CCitadel_Ability_SkyRunner_PrimaryWeaponVData size mismatch");
         }
     }
 }

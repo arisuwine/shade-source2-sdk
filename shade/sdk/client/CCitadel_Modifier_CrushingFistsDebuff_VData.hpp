@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CrushingFistsDebuff_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProcNotificationModifier; // 0x0760, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcNotificationEffect; // 0x0770, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProcNotificationModifier; // 0x0790, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcNotificationEffect; // 0x07a0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CrushingFistsDebuff_VData) == 0x850, "CCitadel_Modifier_CrushingFistsDebuff_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CrushingFistsDebuff_VData) == 0x880, "CCitadel_Modifier_CrushingFistsDebuff_VData size mismatch");
         }
     }
 }

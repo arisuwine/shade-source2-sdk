@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Burrow_VData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowPlayerParticle; // 0x0760, 0xe0 bytes
-                float m_flDesatAmount; // 0x0840, 0x4 bytes
-                Color m_DesatTint; // 0x0844, 0x4 bytes
-                Color m_SatTint; // 0x0848, 0x4 bytes
-                Color m_Outline; // 0x084c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowPlayerParticle; // 0x0790, 0xe0 bytes
+                float m_flDesatAmount; // 0x0870, 0x4 bytes
+                Color m_DesatTint; // 0x0874, 0x4 bytes
+                Color m_SatTint; // 0x0878, 0x4 bytes
+                Color m_Outline; // 0x087c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Burrow_VData) == 0x850, "CCitadel_Modifier_Burrow_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Burrow_VData) == 0x880, "CCitadel_Modifier_Burrow_VData size mismatch");
         }
     }
 }

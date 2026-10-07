@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x190
+             * Size: 0x198
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Rutger_Pulse_Aura : public shade::sdk::client::CCitadelModifierAura {
             public:
-                float m_flStartRadius; // 0x0180, 0x4 bytes
-                float m_flEndRadius; // 0x0184, 0x4 bytes
-                float m_flSpreadDuration; // 0x0188, 0x4 bytes
-                std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
+                float m_flStartRadius; // 0x0188, 0x4 bytes
+                float m_flEndRadius; // 0x018c, 0x4 bytes
+                float m_flSpreadDuration; // 0x0190, 0x4 bytes
+                std::uint8_t pad_0194[0x4]; // 0x0194, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Rutger_Pulse_Aura) == 0x190, "CCitadel_Modifier_Rutger_Pulse_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Rutger_Pulse_Aura) == 0x198, "CCitadel_Modifier_Rutger_Pulse_Aura size mismatch");
         }
     }
 }

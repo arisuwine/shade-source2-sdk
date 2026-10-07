@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x290
+             * Size: 0x298
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Citadel_Bull_Leap_LandingBonuses : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x160]; // 0x0130, 0x160 bytes
+                std::uint8_t pad_0138[0x160]; // 0x0138, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Citadel_Bull_Leap_LandingBonuses) == 0x290, "CModifier_Citadel_Bull_Leap_LandingBonuses size mismatch");
+            static_assert(sizeof(CModifier_Citadel_Bull_Leap_LandingBonuses) == 0x298, "CModifier_Citadel_Bull_Leap_LandingBonuses size mismatch");
         }
     }
 }

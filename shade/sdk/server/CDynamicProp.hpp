@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd50
+             * Size: 0xda0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,34 +33,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CDynamicProp : public shade::sdk::server::CBreakableProp {
             public:
-                bool m_bGraphControllerEnabled; // 0x0c20, 0x1 bytes
-                std::uint8_t pad_0c21[0xf]; // 0x0c21, 0xf bytes
-                bool m_bCreateNavObstacle; // 0x0c30, 0x1 bytes
-                bool m_bNavObstacleUpdatesOverridden; // 0x0c31, 0x1 bytes
-                bool m_bUseHitboxesForRenderBox; // 0x0c32, 0x1 bytes
-                bool m_bUseAnimGraph; // 0x0c33, 0x1 bytes
-                std::uint8_t pad_0c34[0x4]; // 0x0c34, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimBegun; // 0x0c38, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimOver; // 0x0c50, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimLoopCycleOver; // 0x0c68, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedStart; // 0x0c80, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedEnd; // 0x0c98, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnScriptFireEvent[0x5]; // 0x0cb0, 0x78 bytes
-                CUtlSymbolLarge m_iszIdleAnim; // 0x0d28, 0x8 bytes
-                shade::sdk::client::AnimLoopMode_t m_nIdleAnimLoopMode; // 0x0d30, 0x4 bytes
-                bool m_bRandomizeCycle; // 0x0d34, 0x1 bytes
-                bool m_bStartDisabled; // 0x0d35, 0x1 bytes
-                bool m_bFiredStartEndOutput; // 0x0d36, 0x1 bytes
-                bool m_bForceNpcExclude; // 0x0d37, 0x1 bytes
-                bool m_bCreateMovableSurfaceGraph; // 0x0d38, 0x1 bytes
-                bool m_bCreateNonSolid; // 0x0d39, 0x1 bytes
-                bool m_bIsOverrideProp; // 0x0d3a, 0x1 bytes
-                std::uint8_t pad_0d3b[0x1]; // 0x0d3b, 0x1 bytes
-                std::int32_t m_iInitialGlowState; // 0x0d3c, 0x4 bytes
-                std::int32_t m_nGlowRange; // 0x0d40, 0x4 bytes
-                std::int32_t m_nGlowRangeMin; // 0x0d44, 0x4 bytes
-                Color m_glowColor; // 0x0d48, 0x4 bytes
-                std::int32_t m_nGlowTeam; // 0x0d4c, 0x4 bytes
+                bool m_bGraphControllerEnabled; // 0x0c70, 0x1 bytes
+                std::uint8_t pad_0c71[0xf]; // 0x0c71, 0xf bytes
+                bool m_bCreateNavObstacle; // 0x0c80, 0x1 bytes
+                bool m_bNavObstacleUpdatesOverridden; // 0x0c81, 0x1 bytes
+                bool m_bUseHitboxesForRenderBox; // 0x0c82, 0x1 bytes
+                bool m_bUseAnimGraph; // 0x0c83, 0x1 bytes
+                std::uint8_t pad_0c84[0x4]; // 0x0c84, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimBegun; // 0x0c88, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimOver; // 0x0ca0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_pOutputAnimLoopCycleOver; // 0x0cb8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedStart; // 0x0cd0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAnimReachedEnd; // 0x0ce8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnScriptFireEvent[0x5]; // 0x0d00, 0x78 bytes
+                CUtlSymbolLarge m_iszIdleAnim; // 0x0d78, 0x8 bytes
+                shade::sdk::client::AnimLoopMode_t m_nIdleAnimLoopMode; // 0x0d80, 0x4 bytes
+                bool m_bRandomizeCycle; // 0x0d84, 0x1 bytes
+                bool m_bStartDisabled; // 0x0d85, 0x1 bytes
+                bool m_bFiredStartEndOutput; // 0x0d86, 0x1 bytes
+                bool m_bForceNpcExclude; // 0x0d87, 0x1 bytes
+                bool m_bCreateMovableSurfaceGraph; // 0x0d88, 0x1 bytes
+                bool m_bCreateNonSolid; // 0x0d89, 0x1 bytes
+                bool m_bIsOverrideProp; // 0x0d8a, 0x1 bytes
+                std::uint8_t pad_0d8b[0x1]; // 0x0d8b, 0x1 bytes
+                std::int32_t m_iInitialGlowState; // 0x0d8c, 0x4 bytes
+                std::int32_t m_nGlowRange; // 0x0d90, 0x4 bytes
+                std::int32_t m_nGlowRangeMin; // 0x0d94, 0x4 bytes
+                Color m_glowColor; // 0x0d98, 0x4 bytes
+                std::int32_t m_nGlowTeam; // 0x0d9c, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -71,7 +71,7 @@ namespace shade {
              * bool HoldAnimation; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDynamicProp) == 0xD50, "CDynamicProp size mismatch");
+            static_assert(sizeof(CDynamicProp) == 0xDA0, "CDynamicProp size mismatch");
         }
     }
 }

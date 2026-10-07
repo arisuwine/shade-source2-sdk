@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x458
+             * Size: 0x460
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Fathom_ScaldingSpray_Aura : public shade::sdk::client::CCitadelModifierAura_Cone {
             public:
-                QAngle m_playerAngles; // 0x0180, 0xc bytes
-                bool m_bHasAnyTargets; // 0x018c, 0x1 bytes
-                std::uint8_t pad_018d[0x3]; // 0x018d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastStackTime; // 0x0190, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x0194, 0x4 bytes
-                std::uint8_t pad_0198[0x2c0]; // 0x0198, 0x2c0 bytes
+                QAngle m_playerAngles; // 0x0188, 0xc bytes
+                bool m_bHasAnyTargets; // 0x0194, 0x1 bytes
+                std::uint8_t pad_0195[0x3]; // 0x0195, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastStackTime; // 0x0198, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_ConeParticle; // 0x019c, 0x4 bytes
+                std::uint8_t pad_01a0[0x2c0]; // 0x01a0, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Fathom_ScaldingSpray_Aura) == 0x458, "CCitadel_Modifier_Fathom_ScaldingSpray_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Fathom_ScaldingSpray_Aura) == 0x460, "CCitadel_Modifier_Fathom_ScaldingSpray_Aura size mismatch");
         }
     }
 }

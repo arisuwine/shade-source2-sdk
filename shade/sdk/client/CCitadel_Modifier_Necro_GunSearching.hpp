@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_GunSearching : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_pSearchingParticle; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_pSearchingParticle; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_GunSearching) == 0x138, "CCitadel_Modifier_Necro_GunSearching size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_GunSearching) == 0x140, "CCitadel_Modifier_Necro_GunSearching size mismatch");
         }
     }
 }

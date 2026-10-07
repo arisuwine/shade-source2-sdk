@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0x960
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Galvanic_Storm_EffectVData : public shade::sdk::server::CCitadel_Modifier_ChainLightningEffectVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffChainParticle; // 0x0850, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffChainParticle; // 0x0880, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Galvanic_Storm_EffectVData) == 0x930, "CCitadel_Modifier_Galvanic_Storm_EffectVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Galvanic_Storm_EffectVData) == 0x960, "CCitadel_Modifier_Galvanic_Storm_EffectVData size mismatch");
         }
     }
 }

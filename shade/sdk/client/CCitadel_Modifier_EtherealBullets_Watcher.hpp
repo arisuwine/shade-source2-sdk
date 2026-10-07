@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_EtherealBullets_Watcher : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_02c8[0x214]; // 0x02c8, 0x214 bytes
-                bool m_bProcNextHit; // 0x04dc, 0x1 bytes
-                std::uint8_t pad_04dd[0xb]; // 0x04dd, 0xb bytes
+                std::uint8_t pad_02d0[0x214]; // 0x02d0, 0x214 bytes
+                bool m_bProcNextHit; // 0x04e4, 0x1 bytes
+                std::uint8_t pad_04e5[0xb]; // 0x04e5, 0xb bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_EtherealBullets_Watcher) == 0x4E8, "CCitadel_Modifier_EtherealBullets_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_EtherealBullets_Watcher) == 0x4F0, "CCitadel_Modifier_EtherealBullets_Watcher size mismatch");
         }
     }
 }

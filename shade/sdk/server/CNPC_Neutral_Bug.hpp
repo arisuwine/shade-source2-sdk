@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xab0
+             * Size: 0xb20
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Neutral_Bug : public shade::sdk::server::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0a90[0x20]; // 0x0a90, 0x20 bytes
+                std::uint8_t pad_0ae0[0x40]; // 0x0ae0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Neutral_Bug) == 0xAB0, "CNPC_Neutral_Bug size mismatch");
+            static_assert(sizeof(CNPC_Neutral_Bug) == 0xB20, "CNPC_Neutral_Bug size mismatch");
         }
     }
 }

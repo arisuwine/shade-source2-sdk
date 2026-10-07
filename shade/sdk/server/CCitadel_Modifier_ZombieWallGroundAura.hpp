@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x3a8
+             * Size: 0x3b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ZombieWallGroundAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                shade::sdk::client::ParticleIndex_t m_WallWarningParticle; // 0x0178, 0x4 bytes
-                std::uint8_t pad_017c[0x22c]; // 0x017c, 0x22c bytes
+                shade::sdk::client::ParticleIndex_t m_WallWarningParticle; // 0x0180, 0x4 bytes
+                std::uint8_t pad_0184[0x22c]; // 0x0184, 0x22c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ZombieWallGroundAura) == 0x3A8, "CCitadel_Modifier_ZombieWallGroundAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ZombieWallGroundAura) == 0x3B0, "CCitadel_Modifier_ZombieWallGroundAura size mismatch");
         }
     }
 }

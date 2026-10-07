@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x178
+             * Size: 0x180
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -37,7 +37,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierAura) == 0x178, "CCitadelModifierAura size mismatch");
+            static_assert(sizeof(CCitadelModifierAura) == 0x180, "CCitadelModifierAura size mismatch");
         }
     }
 }

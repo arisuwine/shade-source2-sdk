@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x188
+             * Size: 0x190
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,16 +38,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Drag : public shade::sdk::client::CCitadel_Modifier_Link {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDragSource; // 0x0168, 0x4 bytes
-                QAngle m_qCapturedBearing; // 0x016c, 0xc bytes
-                Vector m_vCapturedOffset; // 0x0178, 0xc bytes
-                std::uint8_t pad_0184[0x4]; // 0x0184, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hDragSource; // 0x0170, 0x4 bytes
+                QAngle m_qCapturedBearing; // 0x0174, 0xc bytes
+                Vector m_vCapturedOffset; // 0x0180, 0xc bytes
+                std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Drag) == 0x188, "CCitadel_Modifier_Drag size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Drag) == 0x190, "CCitadel_Modifier_Drag size mismatch");
         }
     }
 }

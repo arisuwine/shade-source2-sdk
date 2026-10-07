@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18b0
+             * Size: 0x1928
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,38 +45,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityGuidedArrowVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraCancelledTransitionBacktoArcher; // 0x13a0, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraExplodedTransitionBackToArcher; // 0x1428, 0x88 bytes
-                float m_flCameraHoldAtExplosion; // 0x14b0, 0x4 bytes
-                float m_flFadeIn; // 0x14b4, 0x4 bytes
-                float m_flFadeHoldTime; // 0x14b8, 0x4 bytes
-                float m_flFadeOut; // 0x14bc, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpectatingProjectileParticle; // 0x14c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x15a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GuidedArrowChannelParticle; // 0x1680, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_ProjectileModel; // 0x1760, 0xe0 bytes
-                float m_ArrowOffsetX; // 0x1840, 0x4 bytes
-                float m_ArrowCameraDistance; // 0x1844, 0x4 bytes
-                float m_ArrowCameraHeightOffset; // 0x1848, 0x4 bytes
-                float m_ArrowInitialPitch; // 0x184c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GuidingModifier; // 0x1850, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1860, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x1870, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1880, 0x10 bytes
-                float m_flTrackAmount; // 0x1890, 0x4 bytes
-                float m_flSpeedAccel; // 0x1894, 0x4 bytes
-                float m_flSpeedDeccel; // 0x1898, 0x4 bytes
-                float m_flBaseProjectileSpeed; // 0x189c, 0x4 bytes
-                float m_flMaxProjectileSpeed; // 0x18a0, 0x4 bytes
-                float m_flArrowModelTurnSpringStrength; // 0x18a4, 0x4 bytes
-                float m_flKillCheckWindow; // 0x18a8, 0x4 bytes
-                float m_flWorldCollideGraceWindow; // 0x18ac, 0x4 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraCancelledTransitionBacktoArcher; // 0x13e8, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraExplodedTransitionBackToArcher; // 0x1488, 0xa0 bytes
+                float m_flCameraHoldAtExplosion; // 0x1528, 0x4 bytes
+                float m_flFadeIn; // 0x152c, 0x4 bytes
+                float m_flFadeHoldTime; // 0x1530, 0x4 bytes
+                float m_flFadeOut; // 0x1534, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpectatingProjectileParticle; // 0x1538, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1618, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GuidedArrowChannelParticle; // 0x16f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_ProjectileModel; // 0x17d8, 0xe0 bytes
+                float m_ArrowOffsetX; // 0x18b8, 0x4 bytes
+                float m_ArrowCameraDistance; // 0x18bc, 0x4 bytes
+                float m_ArrowCameraHeightOffset; // 0x18c0, 0x4 bytes
+                float m_ArrowInitialPitch; // 0x18c4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GuidingModifier; // 0x18c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x18d8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x18e8, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x18f8, 0x10 bytes
+                float m_flTrackAmount; // 0x1908, 0x4 bytes
+                float m_flSpeedAccel; // 0x190c, 0x4 bytes
+                float m_flSpeedDeccel; // 0x1910, 0x4 bytes
+                float m_flBaseProjectileSpeed; // 0x1914, 0x4 bytes
+                float m_flMaxProjectileSpeed; // 0x1918, 0x4 bytes
+                float m_flArrowModelTurnSpringStrength; // 0x191c, 0x4 bytes
+                float m_flKillCheckWindow; // 0x1920, 0x4 bytes
+                float m_flWorldCollideGraceWindow; // 0x1924, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityGuidedArrowVData) == 0x18B0, "CAbilityGuidedArrowVData size mismatch");
+            static_assert(sizeof(CAbilityGuidedArrowVData) == 0x1928, "CAbilityGuidedArrowVData size mismatch");
         }
     }
 }

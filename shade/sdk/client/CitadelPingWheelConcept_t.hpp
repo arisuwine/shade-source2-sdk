@@ -133,7 +133,8 @@ namespace shade {
                 CITADEL_PING_ENEMY_TAKING_MIDBOSS = 0x6f,
                 CITADEL_PING_PATRON_UNDER_ATTACK = 0x70,
                 CITADEL_PING_LOOSE_SOULS = 0x71,
-                CITADEL_PING_CONCEPT_COUNT = 0x72
+                CITADEL_PING_SOMEONE_WAS_HERE = 0x72,
+                CITADEL_PING_CONCEPT_COUNT = 0x73
             };
         }
     }

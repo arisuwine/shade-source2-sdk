@@ -17,12 +17,17 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CEntitySubclassVDataBase.hpp"
+#include "shade/sdk/client/HeroID_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace resourcesystem {
             class InfoForResourceTypeCModel;
             class InfoForResourceTypeIParticleSystemDefinition;
+        }
+
+        namespace server {
+            class CCitadelModifier;
         }
     }
 }
@@ -31,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x220
+             * Size: 0x2c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -54,14 +59,34 @@ namespace shade {
                 float m_flMoveSpeedMax; // 0x0054, 0x4 bytes
                 float m_flValidDirectionDist; // 0x0058, 0x4 bytes
                 float m_flValidMinDist; // 0x005c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sModelName; // 0x0060, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathParticle; // 0x0140, 0xe0 bytes
+                CSubclassName<3> m_sReplacementSubclass; // 0x0060, 0x10 bytes
+                float m_flReplacementChance; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
+                CSubclassName<3> m_sDeathSwarmSubclass; // 0x0078, 0x10 bytes
+                std::int32_t m_nDeathSwarmCount; // 0x0088, 0x4 bytes
+                shade::sdk::client::HeroID_t m_DeathSwarmImmuneHeroID; // 0x008c, 0x4 bytes
+                float m_flDeathSwarmSpawnDistMin; // 0x0090, 0x4 bytes
+                float m_flDeathSwarmSpawnDistMax; // 0x0094, 0x4 bytes
+                float m_flStepHeight; // 0x0098, 0x4 bytes
+                float m_flChaseLifetime; // 0x009c, 0x4 bytes
+                float m_flAttachRadius; // 0x00a0, 0x4 bytes
+                float m_flAttachHeight; // 0x00a4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SwarmModifier; // 0x00a8, 0x10 bytes
+                bool m_bIsRat; // 0x00b8, 0x1 bytes
+                std::uint8_t pad_00b9[0x7]; // 0x00b9, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sModelName; // 0x00c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathParticle; // 0x01a0, 0xe0 bytes
+                float m_flModelScale; // 0x0280, 0x4 bytes
+                std::uint8_t pad_0284[0x4]; // 0x0284, 0x4 bytes
+                CUtlVector<CUtlString> m_vecRunSequences; // 0x0288, 0x18 bytes
+                CSoundEventName m_strLastHitSound; // 0x02a0, 0x10 bytes
+                CSoundEventName m_strRatAttachSound; // 0x02b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_NeutralBugVData) == 0x220, "CNPC_NeutralBugVData size mismatch");
+            static_assert(sizeof(CNPC_NeutralBugVData) == 0x2C0, "CNPC_NeutralBugVData size mismatch");
         }
     }
 }

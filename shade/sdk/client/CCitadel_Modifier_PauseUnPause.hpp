@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x140
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PauseUnPause : public shade::sdk::client::CCitadelModifier {
             public:
-                QAngle m_qPauseStartAngle; // 0x0130, 0xc bytes
-                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
+                QAngle m_qPauseStartAngle; // 0x0138, 0xc bytes
+                std::uint8_t pad_0144[0x4]; // 0x0144, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PauseUnPause) == 0x140, "CCitadel_Modifier_PauseUnPause size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PauseUnPause) == 0x148, "CCitadel_Modifier_PauseUnPause size mismatch");
         }
     }
 }

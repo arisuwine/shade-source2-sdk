@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdb8
+             * Size: 0xe10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_GraveStone_Blocker : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0da8, 0x4 bytes
-                std::int32_t m_iGravestoneState; // 0x0dac, 0x4 bytes
-                float m_flLifetime; // 0x0db0, 0x4 bytes
-                std::uint8_t pad_0db4[0x4]; // 0x0db4, 0x4 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0e00, 0x4 bytes
+                std::int32_t m_iGravestoneState; // 0x0e04, 0x4 bytes
+                float m_flLifetime; // 0x0e08, 0x4 bytes
+                std::uint8_t pad_0e0c[0x4]; // 0x0e0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_GraveStone_Blocker) == 0xDB8, "C_Citadel_GraveStone_Blocker size mismatch");
+            static_assert(sizeof(C_Citadel_GraveStone_Blocker) == 0xE10, "C_Citadel_GraveStone_Blocker size mismatch");
         }
     }
 }

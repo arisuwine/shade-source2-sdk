@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x518
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PowerSurge_ChainLightning) == 0x510, "CCitadel_Modifier_PowerSurge_ChainLightning size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PowerSurge_ChainLightning) == 0x518, "CCitadel_Modifier_PowerSurge_ChainLightning size mismatch");
         }
     }
 }

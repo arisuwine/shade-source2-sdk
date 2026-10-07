@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb60
+             * Size: 0xbb0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -38,7 +38,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_PointTalker_Base) == 0xB60, "CCitadel_PointTalker_Base size mismatch");
+            static_assert(sizeof(CCitadel_PointTalker_Base) == 0xBB0, "CCitadel_PointTalker_Base size mismatch");
         }
     }
 }

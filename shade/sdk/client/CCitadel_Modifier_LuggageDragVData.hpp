@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x888
+             * Size: 0x8b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LuggageDragVData : public shade::sdk::client::CCitadel_Modifier_DragVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StompIgnoreLingerModifier; // 0x0870, 0x10 bytes
-                float m_flStompIgnoreLingerDuration; // 0x0880, 0x4 bytes
-                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StompIgnoreLingerModifier; // 0x08a0, 0x10 bytes
+                float m_flStompIgnoreLingerDuration; // 0x08b0, 0x4 bytes
+                std::uint8_t pad_08b4[0x4]; // 0x08b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LuggageDragVData) == 0x888, "CCitadel_Modifier_LuggageDragVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LuggageDragVData) == 0x8B8, "CCitadel_Modifier_LuggageDragVData size mismatch");
         }
     }
 }

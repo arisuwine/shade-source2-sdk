@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b50
+             * Size: 0x1ba8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,22 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_NecroSkele : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                std::uint8_t pad_1b08[0x14]; // 0x1b08, 0x14 bytes
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hCastingAbility; // 0x1b1c, 0x4 bytes
-                std::uint8_t pad_1b20[0x10]; // 0x1b20, 0x10 bytes
-                shade::sdk::entity2::GameTime_t m_tSpawnTime; // 0x1b30, 0x4 bytes
-                VectorWS m_vecCastLocation; // 0x1b34, 0xc bytes
-                bool m_bDontMove; // 0x1b40, 0x1 bytes
-                std::uint8_t pad_1b41[0x3]; // 0x1b41, 0x3 bytes
-                float m_flAttackRange; // 0x1b44, 0x4 bytes
-                float m_flSpawnDuration; // 0x1b48, 0x4 bytes
-                std::uint8_t pad_1b4c[0x4]; // 0x1b4c, 0x4 bytes
+                std::uint8_t pad_1b60[0x14]; // 0x1b60, 0x14 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hCastingAbility; // 0x1b74, 0x4 bytes
+                std::uint8_t pad_1b78[0x10]; // 0x1b78, 0x10 bytes
+                shade::sdk::entity2::GameTime_t m_tSpawnTime; // 0x1b88, 0x4 bytes
+                VectorWS m_vecCastLocation; // 0x1b8c, 0xc bytes
+                bool m_bDontMove; // 0x1b98, 0x1 bytes
+                std::uint8_t pad_1b99[0x3]; // 0x1b99, 0x3 bytes
+                float m_flAttackRange; // 0x1b9c, 0x4 bytes
+                float m_flSpawnDuration; // 0x1ba0, 0x4 bytes
+                std::uint8_t pad_1ba4[0x4]; // 0x1ba4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_NecroSkele) == 0x1B50, "CNPC_NecroSkele size mismatch");
+            static_assert(sizeof(CNPC_NecroSkele) == 0x1BA8, "CNPC_NecroSkele size mismatch");
         }
     }
 }

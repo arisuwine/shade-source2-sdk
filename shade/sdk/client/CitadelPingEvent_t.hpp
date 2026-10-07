@@ -28,7 +28,8 @@ namespace shade {
                 CITADEL_PING_OBJECTIVE_KILLED = 0x7,
                 CITADEL_PING_NEUTRAL_SPAWN = 0x8,
                 CITADEL_PING_ESCORT_SPAWN = 0x9,
-                CITADEL_PING_CORRUPTED_ITEM_SHOP_SPAWN = 0xa
+                CITADEL_PING_CORRUPTED_ITEM_SHOP_SPAWN = 0xa,
+                CITADEL_PING_MINIMAP_ALARM = 0xb
             };
         }
     }

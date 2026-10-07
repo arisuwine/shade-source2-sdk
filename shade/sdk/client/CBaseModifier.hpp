@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x90
+             * Size: 0x98
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -68,16 +68,18 @@ namespace shade {
                 bool m_bReadyOnClient; // 0x0073, 0x1 bytes
                 float m_flThinkInterval; // 0x0074, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flThinkIntervalStartTime; // 0x0078, 0x4 bytes
-                float m_flTimeScale; // 0x007c, 0x4 bytes
-                CUtlVector<shade::sdk::client::IModifierTrackedObject*> *m_pVecTrackedObjects; // 0x0080, 0x8 bytes
-                shade::sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x0088, 0x4 bytes
-                std::uint8_t pad_008c[0x4]; // 0x008c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x007c, 0x4 bytes
+                float m_flTimeScale; // 0x0080, 0x4 bytes
+                std::uint8_t pad_0084[0x4]; // 0x0084, 0x4 bytes
+                CUtlVector<shade::sdk::client::IModifierTrackedObject*> *m_pVecTrackedObjects; // 0x0088, 0x8 bytes
+                shade::sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x0090, 0x4 bytes
+                std::uint8_t pad_0094[0x4]; // 0x0094, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseModifier) == 0x90, "CBaseModifier size mismatch");
+            static_assert(sizeof(CBaseModifier) == 0x98, "CBaseModifier size mismatch");
         }
     }
 }

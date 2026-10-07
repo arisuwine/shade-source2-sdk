@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x280
+             * Size: 0x248
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,15 +42,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_FacingServices : public shade::sdk::client::CAI_Component {
             public:
-                shade::sdk::server::CAI_InterestTarget m_pEntityFacingRequests[0xa]; // 0x0048, 0x208 bytes
-                shade::sdk::server::AI_ScheduleFacingTargetPriority_t m_eScheduleFacingRequestPriority; // 0x0250, 0x1 bytes
-                shade::sdk::server::AI_Strafing_t m_strafingRequests[0x7]; // 0x0251, 0x7 bytes
-                bool m_pEnableForceFacing[0x2]; // 0x0258, 0x2 bytes
-                std::uint8_t m_nEntityFacingLockCount; // 0x025a, 0x1 bytes
-                std::uint8_t pad_025b[0x5]; // 0x025b, 0x5 bytes
-                CUtlVector<shade::sdk::server::ChoreoEntityFacing_t> m_vecChoreoEntityFacings; // 0x0260, 0x18 bytes
-                bool m_bFailedTargetValidation; // 0x0278, 0x1 bytes
-                std::uint8_t pad_0279[0x7]; // 0x0279, 0x7 bytes
+                shade::sdk::server::CAI_InterestTarget m_pEntityFacingRequests[0x9]; // 0x0048, 0x1d4 bytes
+                shade::sdk::server::AI_ScheduleFacingTargetPriority_t m_eScheduleFacingRequestPriority; // 0x021c, 0x1 bytes
+                shade::sdk::server::AI_Strafing_t m_strafingRequests[0x7]; // 0x021d, 0x7 bytes
+                bool m_pEnableForceFacing[0x2]; // 0x0224, 0x2 bytes
+                std::uint8_t m_nEntityFacingLockCount; // 0x0226, 0x1 bytes
+                std::uint8_t pad_0227[0x1]; // 0x0227, 0x1 bytes
+                CUtlVector<shade::sdk::server::ChoreoEntityFacing_t> m_vecChoreoEntityFacings; // 0x0228, 0x18 bytes
+                bool m_bFailedTargetValidation; // 0x0240, 0x1 bytes
+                std::uint8_t pad_0241[0x7]; // 0x0241, 0x7 bytes
             };
             #pragma pack(pop)
 
@@ -58,7 +58,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CAI_FacingServices) == 0x280, "CAI_FacingServices size mismatch");
+            static_assert(sizeof(CAI_FacingServices) == 0x248, "CAI_FacingServices size mismatch");
         }
     }
 }

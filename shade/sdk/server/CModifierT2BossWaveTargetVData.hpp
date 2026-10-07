@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x7f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierT2BossWaveTargetVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CSoundEventName m_strSilenceTargetSound; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x0770, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisarmModifier; // 0x0780, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0790, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BulletResistModifier; // 0x07a0, 0x10 bytes
-                float m_flTossUpStrength; // 0x07b0, 0x4 bytes
-                float m_flTossHorizontalMax; // 0x07b4, 0x4 bytes
-                float m_flTossHorizontalMin; // 0x07b8, 0x4 bytes
-                float m_flDebuffDuration; // 0x07bc, 0x4 bytes
+                CSoundEventName m_strSilenceTargetSound; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x07a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisarmModifier; // 0x07b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x07c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BulletResistModifier; // 0x07d0, 0x10 bytes
+                float m_flTossUpStrength; // 0x07e0, 0x4 bytes
+                float m_flTossHorizontalMax; // 0x07e4, 0x4 bytes
+                float m_flTossHorizontalMin; // 0x07e8, 0x4 bytes
+                float m_flDebuffDuration; // 0x07ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierT2BossWaveTargetVData) == 0x7C0, "CModifierT2BossWaveTargetVData size mismatch");
+            static_assert(sizeof(CModifierT2BossWaveTargetVData) == 0x7F0, "CModifierT2BossWaveTargetVData size mismatch");
         }
     }
 }

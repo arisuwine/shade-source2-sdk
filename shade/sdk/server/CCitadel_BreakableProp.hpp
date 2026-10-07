@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xdb0
+             * Size: 0xe00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -45,27 +45,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_BreakableProp : public shade::sdk::server::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0a90[0x10]; // 0x0a90, 0x10 bytes
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0aa0, 0x20 bytes
-                std::uint8_t pad_0ac0[0x4]; // 0x0ac0, 0x4 bytes
-                float m_flOverrideInitialSpawnTime; // 0x0ac4, 0x4 bytes
-                float m_flOverrideRespawnTime; // 0x0ac8, 0x4 bytes
-                std::int32_t m_nGoldCost; // 0x0acc, 0x4 bytes
-                CUtlOrderedMap<shade::sdk::client::ECurrencyType, shade::sdk::client::BreakablePropCurrencyReward_t> m_mapCurrencyRewards; // 0x0ad0, 0x28 bytes
-                CUtlVector<CSubclassName<0>> m_vecPickupRewards; // 0x0af8, 0x18 bytes
-                CUtlStringToken m_unAbilityIDToSpawn; // 0x0b10, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelPlayerPawn> m_hBreaker; // 0x0b14, 0x4 bytes
-                std::uint8_t pad_0b18[0x284]; // 0x0b18, 0x284 bytes
-                std::int32_t m_nMeleeHitsTaken; // 0x0d9c, 0x4 bytes
-                std::uint8_t pad_0da0[0x10]; // 0x0da0, 0x10 bytes
+                std::uint8_t pad_0ae0[0x10]; // 0x0ae0, 0x10 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0af0, 0x20 bytes
+                std::uint8_t pad_0b10[0x4]; // 0x0b10, 0x4 bytes
+                float m_flOverrideInitialSpawnTime; // 0x0b14, 0x4 bytes
+                float m_flOverrideRespawnTime; // 0x0b18, 0x4 bytes
+                std::int32_t m_nGoldCost; // 0x0b1c, 0x4 bytes
+                CUtlOrderedMap<shade::sdk::client::ECurrencyType, shade::sdk::client::BreakablePropCurrencyReward_t> m_mapCurrencyRewards; // 0x0b20, 0x28 bytes
+                CUtlVector<CSubclassName<0>> m_vecPickupRewards; // 0x0b48, 0x18 bytes
+                CUtlStringToken m_unAbilityIDToSpawn; // 0x0b60, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelPlayerPawn> m_hBreaker; // 0x0b64, 0x4 bytes
+                std::uint8_t pad_0b68[0x284]; // 0x0b68, 0x284 bytes
+                std::int32_t m_nMeleeHitsTaken; // 0x0dec, 0x4 bytes
+                std::uint8_t pad_0df0[0x10]; // 0x0df0, 0x10 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::int32_t m_nSpawnGroup; // Offset: 0xda0, Size: 0x1, Size In Bytes: 0x4
+             * std::int32_t m_nSpawnGroup; // Offset: 0xdf0, Size: 0x1, Size In Bytes: 0x4
              */
 
-            static_assert(sizeof(CCitadel_BreakableProp) == 0xDB0, "CCitadel_BreakableProp size mismatch");
+            static_assert(sizeof(CCitadel_BreakableProp) == 0xE00, "CCitadel_BreakableProp size mismatch");
         }
     }
 }

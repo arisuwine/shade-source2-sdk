@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdb0
+             * Size: 0xe08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_RestorativeGooCube : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0da8[0x8]; // 0x0da8, 0x8 bytes
+                std::uint8_t pad_0e00[0x8]; // 0x0e00, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_RestorativeGooCube) == 0xDB0, "C_Citadel_RestorativeGooCube size mismatch");
+            static_assert(sizeof(C_Citadel_RestorativeGooCube) == 0xE08, "C_Citadel_RestorativeGooCube size mismatch");
         }
     }
 }

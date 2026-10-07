@@ -46,7 +46,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa90
+             * Size: 0xae0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -58,32 +58,32 @@ namespace shade {
                 shade::sdk::client::CAnimGraphControllerManager m_graphControllerManager; // 0x0878, 0x98 bytes
                 shade::sdk::client::CAnimGraphControllerPtr m_pMainGraphController; // 0x0910, 0x8 bytes
                 bool m_bInitiallyPopulateInterpHistory; // 0x0918, 0x1 bytes
-                std::uint8_t pad_0919[0x7]; // 0x0919, 0x7 bytes
-                CEntityOutputTemplate<float> m_OnLayerCycleUpdated; // 0x0920, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnExternalChoreoGraphChanged; // 0x0940, 0x18 bytes
-                shade::sdk::client::IChoreoServices *m_pChoreoServices; // 0x0958, 0x8 bytes
-                bool m_bAnimGraphUpdateEnabled; // 0x0960, 0x1 bytes
-                bool m_bAnimationUpdateScheduled; // 0x0961, 0x1 bytes
-                std::uint8_t pad_0962[0x2]; // 0x0962, 0x2 bytes
-                Vector m_vecForce; // 0x0964, 0xc bytes
-                std::int32_t m_nForceBone; // 0x0970, 0x4 bytes
-                std::uint8_t pad_0974[0xc]; // 0x0974, 0xc bytes
-                shade::sdk::vphysics2::IPhysicsRagdollControl *m_pRagdollControl; // 0x0980, 0x8 bytes
-                shade::sdk::server::PhysicsRagdollPose_t m_RagdollPose; // 0x0988, 0x28 bytes
-                bool m_bRagdollEnabled; // 0x09b0, 0x1 bytes
-                bool m_bRagdollClientSide; // 0x09b1, 0x1 bytes
-                bool m_bShouldUpdateTransformations; // 0x09b2, 0x1 bytes
-                std::uint8_t pad_09b3[0xd]; // 0x09b3, 0xd bytes
-                CTransform m_xParentedRagdollRootInEntitySpace; // 0x09c0, 0x20 bytes
-                std::uint8_t pad_09e0[0x60]; // 0x09e0, 0x60 bytes
-                CUtlHashtable<shade::sdk::modellib::AnimTagID, shade::sdk::server::CBaseAnimGraph__ModifierHandleVector_t> m_bodyGroupModifiers; // 0x0a40, 0x20 bytes
-                std::uint8_t pad_0a60[0x30]; // 0x0a60, 0x30 bytes
+                std::uint8_t pad_0919[0x57]; // 0x0919, 0x57 bytes
+                CEntityOutputTemplate<float> m_OnLayerCycleUpdated; // 0x0970, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnExternalChoreoGraphChanged; // 0x0990, 0x18 bytes
+                shade::sdk::client::IChoreoServices *m_pChoreoServices; // 0x09a8, 0x8 bytes
+                bool m_bAnimGraphUpdateEnabled; // 0x09b0, 0x1 bytes
+                bool m_bAnimationUpdateScheduled; // 0x09b1, 0x1 bytes
+                std::uint8_t pad_09b2[0x2]; // 0x09b2, 0x2 bytes
+                Vector m_vecForce; // 0x09b4, 0xc bytes
+                std::int32_t m_nForceBone; // 0x09c0, 0x4 bytes
+                std::uint8_t pad_09c4[0xc]; // 0x09c4, 0xc bytes
+                shade::sdk::vphysics2::IPhysicsRagdollControl *m_pRagdollControl; // 0x09d0, 0x8 bytes
+                shade::sdk::server::PhysicsRagdollPose_t m_RagdollPose; // 0x09d8, 0x28 bytes
+                bool m_bRagdollEnabled; // 0x0a00, 0x1 bytes
+                bool m_bRagdollClientSide; // 0x0a01, 0x1 bytes
+                bool m_bShouldUpdateTransformations; // 0x0a02, 0x1 bytes
+                std::uint8_t pad_0a03[0xd]; // 0x0a03, 0xd bytes
+                CTransform m_xParentedRagdollRootInEntitySpace; // 0x0a10, 0x20 bytes
+                std::uint8_t pad_0a30[0x60]; // 0x0a30, 0x60 bytes
+                CUtlHashtable<shade::sdk::modellib::AnimTagID, shade::sdk::server::CBaseAnimGraph__ModifierHandleVector_t> m_bodyGroupModifiers; // 0x0a90, 0x20 bytes
+                std::uint8_t pad_0ab0[0x30]; // 0x0ab0, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimGraph) == 0xA90, "CBaseAnimGraph size mismatch");
+            static_assert(sizeof(CBaseAnimGraph) == 0xAE0, "CBaseAnimGraph size mismatch");
         }
     }
 }

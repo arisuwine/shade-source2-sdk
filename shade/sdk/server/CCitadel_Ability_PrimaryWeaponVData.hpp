@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1660
+             * Size: 0x16d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,31 +44,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PrimaryWeaponVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                std::uint8_t pad_13a0[0x8]; // 0x13a0, 0x8 bytes
-                shade::sdk::client::DOFDesc_t m_DOFWhileZoomed; // 0x13a8, 0x10 bytes
-                bool m_bDOFFarSettingsAreOffsetByGunRange; // 0x13b8, 0x1 bytes
-                std::uint8_t pad_13b9[0x7]; // 0x13b9, 0x7 bytes
-                CSoundEventName m_sDisarmedSound; // 0x13c0, 0x10 bytes
-                float m_flMinDisarmedSoundInterval; // 0x13d0, 0x4 bytes
-                std::uint8_t pad_13d4[0x4]; // 0x13d4, 0x4 bytes
-                CSoundEventName m_sObstructedShotSound; // 0x13d8, 0x10 bytes
-                CUtlOrderedMap<shade::sdk::client::ENextAttackDelayReason_t, CUtlOrderedMap<shade::sdk::client::ECitadelAudioLoopSounds, CSoundEventName>> m_mapDelayLoopsSounds; // 0x13e8, 0x28 bytes
-                float m_flActionReloadTimingStart; // 0x1410, 0x4 bytes
-                float m_flActionReloadTimingDuration; // 0x1414, 0x4 bytes
-                CUtlString m_strCrosshairCSSClass; // 0x1418, 0x8 bytes
-                bool m_bUseCustomCrosshairSettings; // 0x1420, 0x1 bytes
-                std::uint8_t pad_1421[0x3]; // 0x1421, 0x3 bytes
-                shade::sdk::client::CustomCrosshairSettings_t m_CustomCrosshairSettings; // 0x1424, 0x44 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PassiveWeaponParticle; // 0x1468, 0xe0 bytes
-                CUtlString m_strPassiveWeaponAttachmentSource; // 0x1548, 0x8 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceZoom; // 0x1550, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceUnZoom; // 0x15d8, 0x88 bytes
+                std::uint8_t pad_13e8[0x8]; // 0x13e8, 0x8 bytes
+                shade::sdk::client::DOFDesc_t m_DOFWhileZoomed; // 0x13f0, 0x10 bytes
+                bool m_bDOFFarSettingsAreOffsetByGunRange; // 0x1400, 0x1 bytes
+                std::uint8_t pad_1401[0x7]; // 0x1401, 0x7 bytes
+                CSoundEventName m_sDisarmedSound; // 0x1408, 0x10 bytes
+                float m_flMinDisarmedSoundInterval; // 0x1418, 0x4 bytes
+                std::uint8_t pad_141c[0x4]; // 0x141c, 0x4 bytes
+                CSoundEventName m_sObstructedShotSound; // 0x1420, 0x10 bytes
+                CUtlOrderedMap<shade::sdk::client::ENextAttackDelayReason_t, CUtlOrderedMap<shade::sdk::client::ECitadelAudioLoopSounds, CSoundEventName>> m_mapDelayLoopsSounds; // 0x1430, 0x28 bytes
+                float m_flActionReloadTimingStart; // 0x1458, 0x4 bytes
+                float m_flActionReloadTimingDuration; // 0x145c, 0x4 bytes
+                CUtlString m_strCrosshairCSSClass; // 0x1460, 0x8 bytes
+                bool m_bUseCustomCrosshairSettings; // 0x1468, 0x1 bytes
+                std::uint8_t pad_1469[0x3]; // 0x1469, 0x3 bytes
+                shade::sdk::client::CustomCrosshairSettings_t m_CustomCrosshairSettings; // 0x146c, 0x44 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PassiveWeaponParticle; // 0x14b0, 0xe0 bytes
+                CUtlString m_strPassiveWeaponAttachmentSource; // 0x1590, 0x8 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceZoom; // 0x1598, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceUnZoom; // 0x1638, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PrimaryWeaponVData) == 0x1660, "CCitadel_Ability_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PrimaryWeaponVData) == 0x16D8, "CCitadel_Ability_PrimaryWeaponVData size mismatch");
         }
     }
 }

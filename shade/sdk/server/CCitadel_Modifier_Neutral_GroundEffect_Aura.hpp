@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x178
+             * Size: 0x180
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Neutral_GroundEffect_Aura) == 0x178, "CCitadel_Modifier_Neutral_GroundEffect_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Neutral_GroundEffect_Aura) == 0x180, "CCitadel_Modifier_Neutral_GroundEffect_Aura size mismatch");
         }
     }
 }

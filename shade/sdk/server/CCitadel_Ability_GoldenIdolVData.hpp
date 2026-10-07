@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1878
+             * Size: 0x18c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,29 +43,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_GoldenIdolVData : public shade::sdk::server::CCitadel_Ability_BaseHeldItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnKnockedOffHolderParticle; // 0x1488, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnKnockedOffUrnParticle; // 0x1568, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnOverheldDamageParticle; // 0x1648, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnExpireParticle; // 0x1728, 0xe0 bytes
-                CSoundEventName m_strUrnMeleeDropSound; // 0x1808, 0x10 bytes
-                CSoundEventName m_strUrnOverheldDamageSound; // 0x1818, 0x10 bytes
-                CSoundEventName m_strUrnDroppedOffSound; // 0x1828, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DropoffTimerModifier; // 0x1838, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HoldingIdolModifier; // 0x1848, 0x10 bytes
-                float m_flRevealTime; // 0x1858, 0x4 bytes
-                std::int32_t m_iComebackBounty; // 0x185c, 0x4 bytes
-                float m_flDamageTickRate; // 0x1860, 0x4 bytes
-                float m_flMaxHealthDamage; // 0x1864, 0x4 bytes
-                float m_flTimeToDamage; // 0x1868, 0x4 bytes
-                float m_flTimeToRunBackInstantly; // 0x186c, 0x4 bytes
-                float m_flHeldTimeRadius; // 0x1870, 0x4 bytes
-                float m_flJuggleTimeAdd; // 0x1874, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnKnockedOffHolderParticle; // 0x14d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnKnockedOffUrnParticle; // 0x15b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnOverheldDamageParticle; // 0x1690, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnExpireParticle; // 0x1770, 0xe0 bytes
+                CSoundEventName m_strUrnMeleeDropSound; // 0x1850, 0x10 bytes
+                CSoundEventName m_strUrnOverheldDamageSound; // 0x1860, 0x10 bytes
+                CSoundEventName m_strUrnDroppedOffSound; // 0x1870, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DropoffTimerModifier; // 0x1880, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HoldingIdolModifier; // 0x1890, 0x10 bytes
+                float m_flRevealTime; // 0x18a0, 0x4 bytes
+                std::int32_t m_iComebackBounty; // 0x18a4, 0x4 bytes
+                float m_flDamageTickRate; // 0x18a8, 0x4 bytes
+                float m_flMaxHealthDamage; // 0x18ac, 0x4 bytes
+                float m_flTimeToDamage; // 0x18b0, 0x4 bytes
+                float m_flTimeToRunBackInstantly; // 0x18b4, 0x4 bytes
+                float m_flHeldTimeRadius; // 0x18b8, 0x4 bytes
+                float m_flJuggleTimeAdd; // 0x18bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_GoldenIdolVData) == 0x1878, "CCitadel_Ability_GoldenIdolVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_GoldenIdolVData) == 0x18C0, "CCitadel_Ability_GoldenIdolVData size mismatch");
         }
     }
 }

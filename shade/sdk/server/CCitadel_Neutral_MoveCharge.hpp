@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x218
+             * Size: 0x220
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_MoveCharge : public shade::sdk::server::CCitadel_Modifier_NeutralAbility {
             public:
-                Vector m_vMoveDirection; // 0x01f0, 0xc bytes
-                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEntities; // 0x0200, 0x18 bytes
+                Vector m_vMoveDirection; // 0x01f8, 0xc bytes
+                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEntities; // 0x0208, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_MoveCharge) == 0x218, "CCitadel_Neutral_MoveCharge size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_MoveCharge) == 0x220, "CCitadel_Neutral_MoveCharge size mismatch");
         }
     }
 }

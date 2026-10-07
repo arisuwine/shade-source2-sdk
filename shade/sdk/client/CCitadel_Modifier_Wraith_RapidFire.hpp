@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4a0
+             * Size: 0x4a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Wraith_RapidFire : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x370]; // 0x0130, 0x370 bytes
+                std::uint8_t pad_0138[0x370]; // 0x0138, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Wraith_RapidFire) == 0x4A0, "CCitadel_Modifier_Wraith_RapidFire size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Wraith_RapidFire) == 0x4A8, "CCitadel_Modifier_Wraith_RapidFire size mismatch");
         }
     }
 }

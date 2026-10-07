@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15d8
+             * Size: 0x1620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,15 +44,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_Mystic_RegenerationVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RegenParticle; // 0x14b0, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_StackNotificationModifier; // 0x1590, 0x10 bytes
-                shade::sdk::client::HealingOverTimeLoopSoundOverride_t m_HealingLoopSoundOverride; // 0x15a0, 0x38 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RegenParticle; // 0x14f8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_StackNotificationModifier; // 0x15d8, 0x10 bytes
+                shade::sdk::client::HealingOverTimeLoopSoundOverride_t m_HealingLoopSoundOverride; // 0x15e8, 0x38 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_Mystic_RegenerationVData) == 0x15D8, "CCitadel_Item_Mystic_RegenerationVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_Mystic_RegenerationVData) == 0x1620, "CCitadel_Item_Mystic_RegenerationVData size mismatch");
         }
     }
 }

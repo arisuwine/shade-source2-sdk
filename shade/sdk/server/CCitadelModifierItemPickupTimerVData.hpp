@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x860
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierItemPickupTimerVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnExpireParticle; // 0x0760, 0xe0 bytes
-                float m_TimerToSilence; // 0x0840, 0x4 bytes
-                float m_SilenceDuration; // 0x0844, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x0848, 0x10 bytes
-                bool m_bIsIdolPickup; // 0x0858, 0x1 bytes
-                std::uint8_t pad_0859[0x7]; // 0x0859, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnExpireParticle; // 0x0790, 0xe0 bytes
+                float m_TimerToSilence; // 0x0870, 0x4 bytes
+                float m_SilenceDuration; // 0x0874, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x0878, 0x10 bytes
+                bool m_bIsIdolPickup; // 0x0888, 0x1 bytes
+                std::uint8_t pad_0889[0x7]; // 0x0889, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierItemPickupTimerVData) == 0x860, "CCitadelModifierItemPickupTimerVData size mismatch");
+            static_assert(sizeof(CCitadelModifierItemPickupTimerVData) == 0x890, "CCitadelModifierItemPickupTimerVData size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7e0
+             * Size: 0x810
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Wrecker_UltimateVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyGrabModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyThrowModifier; // 0x0770, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDamageModifier; // 0x0780, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvincibleModifier; // 0x0790, 0x10 bytes
-                CSoundEventName m_StartSound; // 0x07a0, 0x10 bytes
-                CSoundEventName m_AmbientLoopingSound; // 0x07b0, 0x10 bytes
-                CSoundEventName m_GrabSound; // 0x07c0, 0x10 bytes
-                CSoundEventName m_ThrowSound; // 0x07d0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyGrabModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyThrowModifier; // 0x07a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDamageModifier; // 0x07b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvincibleModifier; // 0x07c0, 0x10 bytes
+                CSoundEventName m_StartSound; // 0x07d0, 0x10 bytes
+                CSoundEventName m_AmbientLoopingSound; // 0x07e0, 0x10 bytes
+                CSoundEventName m_GrabSound; // 0x07f0, 0x10 bytes
+                CSoundEventName m_ThrowSound; // 0x0800, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Wrecker_UltimateVData) == 0x7E0, "CModifier_Wrecker_UltimateVData size mismatch");
+            static_assert(sizeof(CModifier_Wrecker_UltimateVData) == 0x810, "CModifier_Wrecker_UltimateVData size mismatch");
         }
     }
 }

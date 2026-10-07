@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6b8
+             * Size: 0x6c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ArcticBlastAOE : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x580]; // 0x0130, 0x580 bytes
-                shade::sdk::client::ParticleIndex_t m_hAOEEffect; // 0x06b0, 0x4 bytes
-                std::uint8_t pad_06b4[0x4]; // 0x06b4, 0x4 bytes
+                std::uint8_t pad_0138[0x580]; // 0x0138, 0x580 bytes
+                shade::sdk::client::ParticleIndex_t m_hAOEEffect; // 0x06b8, 0x4 bytes
+                std::uint8_t pad_06bc[0x4]; // 0x06bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ArcticBlastAOE) == 0x6B8, "CCitadel_Modifier_ArcticBlastAOE size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ArcticBlastAOE) == 0x6C0, "CCitadel_Modifier_ArcticBlastAOE size mismatch");
         }
     }
 }

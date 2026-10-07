@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x7f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierAura_ConeVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                float m_flAuraTargetingConeHalfWidth; // 0x07b8, 0x4 bytes
-                float m_flAuraTargetingConeAngle; // 0x07bc, 0x4 bytes
+                float m_flAuraTargetingConeHalfWidth; // 0x07e8, 0x4 bytes
+                float m_flAuraTargetingConeAngle; // 0x07ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierAura_ConeVData) == 0x7C0, "CCitadelModifierAura_ConeVData size mismatch");
+            static_assert(sizeof(CCitadelModifierAura_ConeVData) == 0x7F0, "CCitadelModifierAura_ConeVData size mismatch");
         }
     }
 }

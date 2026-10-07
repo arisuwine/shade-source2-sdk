@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x7f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,15 +40,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HauntWatcherVData : public shade::sdk::server::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HauntDamageModifier; // 0x0790, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x07a0, 0x10 bytes
-                CSoundEventName m_ExplodeSound; // 0x07b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HauntDamageModifier; // 0x07c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier; // 0x07d8, 0x10 bytes
+                CSoundEventName m_ExplodeSound; // 0x07e8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HauntWatcherVData) == 0x7C0, "CCitadel_Modifier_HauntWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HauntWatcherVData) == 0x7F8, "CCitadel_Modifier_HauntWatcherVData size mismatch");
         }
     }
 }

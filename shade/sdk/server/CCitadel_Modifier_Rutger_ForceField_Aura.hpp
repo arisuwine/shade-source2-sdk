@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2d8
+             * Size: 0x2e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Rutger_ForceField_Aura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0178[0x160]; // 0x0178, 0x160 bytes
+                std::uint8_t pad_0180[0x160]; // 0x0180, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Rutger_ForceField_Aura) == 0x2D8, "CCitadel_Modifier_Rutger_ForceField_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Rutger_ForceField_Aura) == 0x2E0, "CCitadel_Modifier_Rutger_ForceField_Aura size mismatch");
         }
     }
 }

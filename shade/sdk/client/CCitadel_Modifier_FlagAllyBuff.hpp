@@ -16,24 +16,26 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/CCitadelModifier.hpp"
+
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18
-             * Alignment: 0x8
-             * Construct Allowed
+             * Size: 0x138
+             * Alignment: 0xff
+             * Has VTable
+             * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            struct CCitadelTaggedSound_t {
-                CSoundEventName m_soundEvent; // 0x0000, 0x10 bytes
-                CUtlString m_tags; // 0x0010, 0x8 bytes
+            class CCitadel_Modifier_FlagAllyBuff : public shade::sdk::client::CCitadelModifier {
+            public:
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelTaggedSound_t) == 0x18, "CCitadelTaggedSound_t size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_FlagAllyBuff) == 0x138, "CCitadel_Modifier_FlagAllyBuff size mismatch");
         }
     }
 }

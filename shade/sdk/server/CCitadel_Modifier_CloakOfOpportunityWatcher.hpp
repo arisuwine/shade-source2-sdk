@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2b0
+             * Size: 0x2b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CloakOfOpportunityWatcher : public shade::sdk::server::CCitadel_Modifier_Intrinsic_Base {
             public:
-                std::uint8_t pad_0140[0x160]; // 0x0140, 0x160 bytes
-                CUtlStringToken m_nAbilityBlocking; // 0x02a0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_nAbilityBlockTime; // 0x02a4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hModifierCaster; // 0x02a8, 0x4 bytes
-                std::uint8_t pad_02ac[0x4]; // 0x02ac, 0x4 bytes
+                std::uint8_t pad_0148[0x160]; // 0x0148, 0x160 bytes
+                CUtlStringToken m_nAbilityBlocking; // 0x02a8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_nAbilityBlockTime; // 0x02ac, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hModifierCaster; // 0x02b0, 0x4 bytes
+                std::uint8_t pad_02b4[0x4]; // 0x02b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CloakOfOpportunityWatcher) == 0x2B0, "CCitadel_Modifier_CloakOfOpportunityWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CloakOfOpportunityWatcher) == 0x2B8, "CCitadel_Modifier_CloakOfOpportunityWatcher size mismatch");
         }
     }
 }

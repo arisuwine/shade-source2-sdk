@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x448
+             * Size: 0x450
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticalPianoAura : public shade::sdk::client::CCitadelModifierAura {
             public:
-                shade::sdk::client::ParticleIndex_t m_hRingEffect; // 0x0180, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_hGroundEffect; // 0x0184, 0x4 bytes
-                std::uint8_t pad_0188[0x2c0]; // 0x0188, 0x2c0 bytes
+                shade::sdk::client::ParticleIndex_t m_hRingEffect; // 0x0188, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_hGroundEffect; // 0x018c, 0x4 bytes
+                std::uint8_t pad_0190[0x2c0]; // 0x0190, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticalPianoAura) == 0x448, "CCitadel_Modifier_MysticalPianoAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticalPianoAura) == 0x450, "CCitadel_Modifier_MysticalPianoAura size mismatch");
         }
     }
 }

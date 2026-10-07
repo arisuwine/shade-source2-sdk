@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1720
+             * Size: 0x1768
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,29 +43,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_KickFlipVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CPiecewiseCurve m_LeapingSpeedCurve; // 0x13a0, 0x40 bytes
-                float m_flVelocityCarryoverOnMiss; // 0x13e0, 0x4 bytes
-                float m_flFracToAllowUp; // 0x13e4, 0x4 bytes
-                float m_flGroundBreakOffAngle; // 0x13e8, 0x4 bytes
-                std::uint8_t pad_13ec[0x4]; // 0x13ec, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KickHitImpact; // 0x13f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PushOffImpact; // 0x14d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BootKickCast; // 0x15b0, 0xe0 bytes
-                CSoundEventName m_KickHitSound; // 0x1690, 0x10 bytes
-                CSoundEventName m_strPushOffSound; // 0x16a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SuccessSelfModifier; // 0x16b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SuccessEnemyModifier; // 0x16c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LeapingModifier; // 0x16d0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisarmModifier; // 0x16e0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x16f0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1700, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MarkModifier; // 0x1710, 0x10 bytes
+                CPiecewiseCurve m_LeapingSpeedCurve; // 0x13e8, 0x40 bytes
+                float m_flVelocityCarryoverOnMiss; // 0x1428, 0x4 bytes
+                float m_flFracToAllowUp; // 0x142c, 0x4 bytes
+                float m_flGroundBreakOffAngle; // 0x1430, 0x4 bytes
+                std::uint8_t pad_1434[0x4]; // 0x1434, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KickHitImpact; // 0x1438, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PushOffImpact; // 0x1518, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BootKickCast; // 0x15f8, 0xe0 bytes
+                CSoundEventName m_KickHitSound; // 0x16d8, 0x10 bytes
+                CSoundEventName m_strPushOffSound; // 0x16e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SuccessSelfModifier; // 0x16f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SuccessEnemyModifier; // 0x1708, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LeapingModifier; // 0x1718, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisarmModifier; // 0x1728, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1738, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1748, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MarkModifier; // 0x1758, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_KickFlipVData) == 0x1720, "CCitadel_Ability_Werewolf_KickFlipVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_KickFlipVData) == 0x1768, "CCitadel_Ability_Werewolf_KickFlipVData size mismatch");
         }
     }
 }

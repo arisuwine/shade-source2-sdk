@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x778
+             * Size: 0x7a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PullDownToGroundVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                float m_flMaxHeight; // 0x0760, 0x4 bytes
-                float m_flPullDownSpeedMin; // 0x0764, 0x4 bytes
-                float m_flPullDownSpeedScale; // 0x0768, 0x4 bytes
-                float m_flFullPullDistance; // 0x076c, 0x4 bytes
-                float m_flDampenVelocityRate; // 0x0770, 0x4 bytes
-                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
+                float m_flMaxHeight; // 0x0790, 0x4 bytes
+                float m_flPullDownSpeedMin; // 0x0794, 0x4 bytes
+                float m_flPullDownSpeedScale; // 0x0798, 0x4 bytes
+                float m_flFullPullDistance; // 0x079c, 0x4 bytes
+                float m_flDampenVelocityRate; // 0x07a0, 0x4 bytes
+                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PullDownToGroundVData) == 0x778, "CCitadel_Modifier_PullDownToGroundVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PullDownToGroundVData) == 0x7A8, "CCitadel_Modifier_PullDownToGroundVData size mismatch");
         }
     }
 }

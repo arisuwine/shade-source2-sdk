@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xac0
+             * Size: 0xb10
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_FissureWall : public shade::sdk::server::CBaseAnimGraph {
             public:
-                VectorWS m_vStartPos; // 0x0a90, 0xc bytes
-                VectorWS m_vEndPos; // 0x0a9c, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0aa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0aac, 0x4 bytes
-                bool m_bSolid; // 0x0ab0, 0x1 bytes
-                std::uint8_t pad_0ab1[0x3]; // 0x0ab1, 0x3 bytes
-                std::int32_t m_nTouchCount; // 0x0ab4, 0x4 bytes
-                std::uint8_t pad_0ab8[0x8]; // 0x0ab8, 0x8 bytes
+                VectorWS m_vStartPos; // 0x0ae0, 0xc bytes
+                VectorWS m_vEndPos; // 0x0aec, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0af8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0afc, 0x4 bytes
+                bool m_bSolid; // 0x0b00, 0x1 bytes
+                std::uint8_t pad_0b01[0x3]; // 0x0b01, 0x3 bytes
+                std::int32_t m_nTouchCount; // 0x0b04, 0x4 bytes
+                std::uint8_t pad_0b08[0x8]; // 0x0b08, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_FissureWall) == 0xAC0, "CCitadel_FissureWall size mismatch");
+            static_assert(sizeof(CCitadel_FissureWall) == 0xB10, "CCitadel_FissureWall size mismatch");
         }
     }
 }

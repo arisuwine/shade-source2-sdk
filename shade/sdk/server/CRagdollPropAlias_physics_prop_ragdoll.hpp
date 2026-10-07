@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc50
+             * Size: 0xca0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CRagdollPropAlias_physics_prop_ragdoll) == 0xC50, "CRagdollPropAlias_physics_prop_ragdoll size mismatch");
+            static_assert(sizeof(CRagdollPropAlias_physics_prop_ragdoll) == 0xCA0, "CRagdollPropAlias_physics_prop_ragdoll size mismatch");
         }
     }
 }

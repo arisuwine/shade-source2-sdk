@@ -52,7 +52,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1078
+             * Size: 0x1088
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -107,72 +107,73 @@ namespace shade {
                 CSoundEventName m_strRosterRemovedSound; // 0x0aa0, 0x10 bytes
                 CSoundEventName m_strRosterAvoidedSound; // 0x0ab0, 0x10 bytes
                 CSoundEventName m_strHeroVotedSound; // 0x0ac0, 0x10 bytes
-                CSoundEventName m_strCharacterRevealDialog; // 0x0ad0, 0x10 bytes
-                CSoundEventName m_strCharacterRevealSfxStart; // 0x0ae0, 0x10 bytes
-                CSoundEventName m_strCharacterRevealSfxStop; // 0x0af0, 0x10 bytes
-                CSoundEventName m_strLowHealthSound; // 0x0b00, 0x10 bytes
-                CSoundEventName m_strHeroSpecificLowHealthSound; // 0x0b10, 0x10 bytes
-                CSoundEventName m_strMovementLoop; // 0x0b20, 0x10 bytes
-                CSoundEventName m_strMovementLoopStart; // 0x0b30, 0x10 bytes
-                CSoundEventName m_strMovementLoopStop; // 0x0b40, 0x10 bytes
-                CSoundEventName m_strSlideLoop; // 0x0b50, 0x10 bytes
-                CSoundEventName m_strPostGameVictorySound; // 0x0b60, 0x10 bytes
-                CSoundEventName m_strPostGameDefeatSound; // 0x0b70, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGameSoundEventScript; // 0x0b80, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGeneratedVOEventScript; // 0x0c60, 0xe0 bytes
-                float m_flStealthSpeedMetersPerSecond; // 0x0d40, 0x4 bytes
-                shade::sdk::client::EHeroDevelopmentState m_eHeroDevelopmentState; // 0x0d44, 0x1 bytes
-                bool m_bInDevelopment; // 0x0d45, 0x1 bytes
-                bool m_bNewPlayerRecommended; // 0x0d46, 0x1 bytes
-                bool m_bLaneTestingRecommended; // 0x0d47, 0x1 bytes
-                bool m_bNeedsTesting; // 0x0d48, 0x1 bytes
-                bool m_bLimitedTesting; // 0x0d49, 0x1 bytes
-                bool m_bDisabled; // 0x0d4a, 0x1 bytes
-                std::uint8_t pad_0d4b[0x1]; // 0x0d4b, 0x1 bytes
-                std::int32_t m_nComplexity; // 0x0d4c, 0x4 bytes
-                std::int32_t m_nAllyBotDifficulty; // 0x0d50, 0x4 bytes
-                std::int32_t m_nEnemyBotDifficulty; // 0x0d54, 0x4 bytes
-                float m_flMinLowHealthPercentage; // 0x0d58, 0x4 bytes
-                float m_flMaxLowHealthPercentage; // 0x0d5c, 0x4 bytes
-                float m_flMinMidHealthPercentage; // 0x0d60, 0x4 bytes
-                float m_flMaxMidHealthPercentage; // 0x0d64, 0x4 bytes
-                float m_flMinHealthForThreshold; // 0x0d68, 0x4 bytes
-                float m_flMaxHealthForThreshold; // 0x0d6c, 0x4 bytes
-                float m_flInCombatWithHeroDuration; // 0x0d70, 0x4 bytes
-                float m_flInCombatWithNonHeroDuration; // 0x0d74, 0x4 bytes
-                float m_flInCombatWithNeutralDuration; // 0x0d78, 0x4 bytes
-                bool m_bNAGunFalloffRange; // 0x0d7c, 0x1 bytes
-                bool m_bAllowedInTunnels; // 0x0d7d, 0x1 bytes
-                std::uint8_t pad_0d7e[0x2]; // 0x0d7e, 0x2 bytes
-                CUtlOrderedMap<shade::sdk::client::EStatsType, float> m_mapStartingStats; // 0x0d80, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EStatsType, shade::sdk::client::HeroScalingStat_t> m_mapScalingStats; // 0x0da8, 0x28 bytes
-                CPiecewiseCurve m_groundDashPositionCurve; // 0x0dd0, 0x40 bytes
-                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, CUtlVector<shade::sdk::client::ModCostBonuses_t>> m_mapModCostBonuses; // 0x0e10, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, shade::sdk::client::ItemSlotInfo_t> m_mapItemSlotInfo; // 0x0e38, 0x28 bytes
-                std::uint8_t pad_0e60[0x50]; // 0x0e60, 0x50 bytes
-                shade::sdk::client::EAbilityResourceType m_eAbilityResourceType; // 0x0eb0, 0x4 bytes
-                std::uint8_t pad_0eb4[0x4]; // 0x0eb4, 0x4 bytes
-                CUtlString m_strGunTag; // 0x0eb8, 0x8 bytes
-                CUtlVector<CUtlString> m_vecHeroTags; // 0x0ec0, 0x18 bytes
-                shade::sdk::client::EHeroType m_eHeroType; // 0x0ed8, 0x4 bytes
-                std::uint8_t pad_0edc[0x4]; // 0x0edc, 0x4 bytes
-                CUtlString m_strRosterBackgroundLayout; // 0x0ee0, 0x8 bytes
-                CUtlString m_strHideoutRichPresence; // 0x0ee8, 0x8 bytes
-                CUtlDict<float> m_mapItemDraftCounterWeights; // 0x0ef0, 0x28 bytes
-                std::uint8_t pad_0f18[0x18]; // 0x0f18, 0x18 bytes
-                CUtlOrderedMap<shade::sdk::client::EModifierValue, float> m_mapStandardLevelUpUpgrades; // 0x0f30, 0x28 bytes
-                shade::sdk::client::ItemPopularity_t m_PopularItems; // 0x0f58, 0x58 bytes
-                CUtlOrderedMap<std::int32_t, shade::sdk::client::HeroLevel_t> m_mapLevelInfo; // 0x0fb0, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapBoundAbilities; // 0x0fd8, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapWIPAbilities; // 0x1000, 0x28 bytes
-                CUtlOrderedMap<CUtlString, shade::sdk::client::ItemDraftWeight_t> m_mapItemDraftBucketing; // 0x1028, 0x28 bytes
-                std::uint8_t pad_1050[0x28]; // 0x1050, 0x28 bytes
+                CSoundEventName m_strHeroDebutSound; // 0x0ad0, 0x10 bytes
+                CSoundEventName m_strCharacterRevealDialog; // 0x0ae0, 0x10 bytes
+                CSoundEventName m_strCharacterRevealSfxStart; // 0x0af0, 0x10 bytes
+                CSoundEventName m_strCharacterRevealSfxStop; // 0x0b00, 0x10 bytes
+                CSoundEventName m_strLowHealthSound; // 0x0b10, 0x10 bytes
+                CSoundEventName m_strHeroSpecificLowHealthSound; // 0x0b20, 0x10 bytes
+                CSoundEventName m_strMovementLoop; // 0x0b30, 0x10 bytes
+                CSoundEventName m_strMovementLoopStart; // 0x0b40, 0x10 bytes
+                CSoundEventName m_strMovementLoopStop; // 0x0b50, 0x10 bytes
+                CSoundEventName m_strSlideLoop; // 0x0b60, 0x10 bytes
+                CSoundEventName m_strPostGameVictorySound; // 0x0b70, 0x10 bytes
+                CSoundEventName m_strPostGameDefeatSound; // 0x0b80, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGameSoundEventScript; // 0x0b90, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGeneratedVOEventScript; // 0x0c70, 0xe0 bytes
+                float m_flStealthSpeedMetersPerSecond; // 0x0d50, 0x4 bytes
+                shade::sdk::client::EHeroDevelopmentState m_eHeroDevelopmentState; // 0x0d54, 0x1 bytes
+                bool m_bInDevelopment; // 0x0d55, 0x1 bytes
+                bool m_bNewPlayerRecommended; // 0x0d56, 0x1 bytes
+                bool m_bLaneTestingRecommended; // 0x0d57, 0x1 bytes
+                bool m_bNeedsTesting; // 0x0d58, 0x1 bytes
+                bool m_bLimitedTesting; // 0x0d59, 0x1 bytes
+                bool m_bDisabled; // 0x0d5a, 0x1 bytes
+                std::uint8_t pad_0d5b[0x1]; // 0x0d5b, 0x1 bytes
+                std::int32_t m_nComplexity; // 0x0d5c, 0x4 bytes
+                std::int32_t m_nAllyBotDifficulty; // 0x0d60, 0x4 bytes
+                std::int32_t m_nEnemyBotDifficulty; // 0x0d64, 0x4 bytes
+                float m_flMinLowHealthPercentage; // 0x0d68, 0x4 bytes
+                float m_flMaxLowHealthPercentage; // 0x0d6c, 0x4 bytes
+                float m_flMinMidHealthPercentage; // 0x0d70, 0x4 bytes
+                float m_flMaxMidHealthPercentage; // 0x0d74, 0x4 bytes
+                float m_flMinHealthForThreshold; // 0x0d78, 0x4 bytes
+                float m_flMaxHealthForThreshold; // 0x0d7c, 0x4 bytes
+                float m_flInCombatWithHeroDuration; // 0x0d80, 0x4 bytes
+                float m_flInCombatWithNonHeroDuration; // 0x0d84, 0x4 bytes
+                float m_flInCombatWithNeutralDuration; // 0x0d88, 0x4 bytes
+                bool m_bNAGunFalloffRange; // 0x0d8c, 0x1 bytes
+                bool m_bAllowedInTunnels; // 0x0d8d, 0x1 bytes
+                std::uint8_t pad_0d8e[0x2]; // 0x0d8e, 0x2 bytes
+                CUtlOrderedMap<shade::sdk::client::EStatsType, float> m_mapStartingStats; // 0x0d90, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EStatsType, shade::sdk::client::HeroScalingStat_t> m_mapScalingStats; // 0x0db8, 0x28 bytes
+                CPiecewiseCurve m_groundDashPositionCurve; // 0x0de0, 0x40 bytes
+                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, CUtlVector<shade::sdk::client::ModCostBonuses_t>> m_mapModCostBonuses; // 0x0e20, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EItemSlotTypes_t, shade::sdk::client::ItemSlotInfo_t> m_mapItemSlotInfo; // 0x0e48, 0x28 bytes
+                std::uint8_t pad_0e70[0x50]; // 0x0e70, 0x50 bytes
+                shade::sdk::client::EAbilityResourceType m_eAbilityResourceType; // 0x0ec0, 0x4 bytes
+                std::uint8_t pad_0ec4[0x4]; // 0x0ec4, 0x4 bytes
+                CUtlString m_strGunTag; // 0x0ec8, 0x8 bytes
+                CUtlVector<CUtlString> m_vecHeroTags; // 0x0ed0, 0x18 bytes
+                shade::sdk::client::EHeroType m_eHeroType; // 0x0ee8, 0x4 bytes
+                std::uint8_t pad_0eec[0x4]; // 0x0eec, 0x4 bytes
+                CUtlString m_strRosterBackgroundLayout; // 0x0ef0, 0x8 bytes
+                CUtlString m_strHideoutRichPresence; // 0x0ef8, 0x8 bytes
+                CUtlDict<float> m_mapItemDraftCounterWeights; // 0x0f00, 0x28 bytes
+                std::uint8_t pad_0f28[0x18]; // 0x0f28, 0x18 bytes
+                CUtlOrderedMap<shade::sdk::client::EModifierValue, float> m_mapStandardLevelUpUpgrades; // 0x0f40, 0x28 bytes
+                shade::sdk::client::ItemPopularity_t m_PopularItems; // 0x0f68, 0x58 bytes
+                CUtlOrderedMap<std::int32_t, shade::sdk::client::HeroLevel_t> m_mapLevelInfo; // 0x0fc0, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapBoundAbilities; // 0x0fe8, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapWIPAbilities; // 0x1010, 0x28 bytes
+                CUtlOrderedMap<CUtlString, shade::sdk::client::ItemDraftWeight_t> m_mapItemDraftBucketing; // 0x1038, 0x28 bytes
+                std::uint8_t pad_1060[0x28]; // 0x1060, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelHeroData_t) == 0x1078, "CitadelHeroData_t size mismatch");
+            static_assert(sizeof(CitadelHeroData_t) == 0x1088, "CitadelHeroData_t size mismatch");
         }
     }
 }

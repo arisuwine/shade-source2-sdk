@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16e0
+             * Size: 0x1758
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,69 +41,69 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilitySlideVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flMinAngleToConsiderASlope; // 0x13a0, 0x4 bytes
-                float m_flSlideMaxSlopeMaxAccSpeed; // 0x13a4, 0x4 bytes
-                float m_flSlideMinSlopeMaxAccSpeed; // 0x13a8, 0x4 bytes
-                float m_flButtonPressWindow; // 0x13ac, 0x4 bytes
-                float m_flTurnSpeed; // 0x13b0, 0x4 bytes
-                float m_flSlideMinSlopeAcceleration; // 0x13b4, 0x4 bytes
-                float m_flSlideMaxSlopeAcceleration; // 0x13b8, 0x4 bytes
-                float m_flTurnMinAngDiff; // 0x13bc, 0x4 bytes
-                float m_flTurnMaxAngDiff; // 0x13c0, 0x4 bytes
-                float m_flLandedFlatGroundFrictionGraceTime; // 0x13c4, 0x4 bytes
-                float m_flFlatGroundFrictionGraceTime; // 0x13c8, 0x4 bytes
-                float m_flFrictionFlatGroundGrace; // 0x13cc, 0x4 bytes
-                float m_flFrictionFlatGround; // 0x13d0, 0x4 bytes
-                float m_flFrictionMinSlope; // 0x13d4, 0x4 bytes
-                float m_flFrictionMaxSlope; // 0x13d8, 0x4 bytes
-                float m_flFrictionUphillMinSlope; // 0x13dc, 0x4 bytes
-                float m_flFrictionUphillMaxSlope; // 0x13e0, 0x4 bytes
-                float m_flLandingSlopeScaleBias; // 0x13e4, 0x4 bytes
-                float m_flBoostMinTriggerSpeed; // 0x13e8, 0x4 bytes
-                float m_flBoostMaxTriggerSpeed; // 0x13ec, 0x4 bytes
-                float m_flBoostMinSpeed; // 0x13f0, 0x4 bytes
-                float m_flBoostMaxSpeed; // 0x13f4, 0x4 bytes
-                float m_flMinActivationSpeed; // 0x13f8, 0x4 bytes
-                float m_flMinSustainSpeed; // 0x13fc, 0x4 bytes
-                float m_flSprintBoostSpeed; // 0x1400, 0x4 bytes
-                float m_flDashSlideStartTime; // 0x1404, 0x4 bytes
-                float m_flDashSlideSpeed; // 0x1408, 0x4 bytes
-                float m_flDashSlideFailSpeed; // 0x140c, 0x4 bytes
-                CSoundEventName m_strDashSlideActivate; // 0x1410, 0x10 bytes
-                float m_flDashSlideFrictionTime; // 0x1420, 0x4 bytes
-                float m_flDashSlideFriction; // 0x1424, 0x4 bytes
-                float m_flDashMinActivationSpeed; // 0x1428, 0x4 bytes
-                float m_flAccMinSlopeDeg; // 0x142c, 0x4 bytes
-                float m_flAccMaxSlopeDeg; // 0x1430, 0x4 bytes
-                float m_flAccMinSlopeScale; // 0x1434, 0x4 bytes
-                float m_flSlideProbeForwardOffset; // 0x1438, 0x4 bytes
-                float m_flSlideActivationProbeForwardOffset; // 0x143c, 0x4 bytes
-                float m_flMaxDistanceBetweenProbeSamples; // 0x1440, 0x4 bytes
-                float m_flInitialSlideUseForwardProbeTime; // 0x1444, 0x4 bytes
-                float m_flCurrentSlopeSampleDistance; // 0x1448, 0x4 bytes
-                float m_flSampleVelDiffStdDevScaleCutoff; // 0x144c, 0x4 bytes
-                float m_flSlopeFacingAngleToActivate; // 0x1450, 0x4 bytes
-                float m_flAirDragAfterJump; // 0x1454, 0x4 bytes
-                float m_flAirDragAfterJumpTime; // 0x1458, 0x4 bytes
-                float m_flAirDragMaxAngle; // 0x145c, 0x4 bytes
-                float m_flAirDragResetTime; // 0x1460, 0x4 bytes
-                float m_flLateSlideJumpWindow; // 0x1464, 0x4 bytes
-                shade::sdk::client::CRemapFloat m_SlideEffectRemap; // 0x1468, 0x10 bytes
-                CPiecewiseCurve m_GetupSpeedCurve; // 0x1478, 0x40 bytes
-                float m_flGetupBusyDuration; // 0x14b8, 0x4 bytes
-                float m_flSlidingRecoilReduction; // 0x14bc, 0x4 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceStartSliding; // 0x14c0, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceEndSliding; // 0x1548, 0x88 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlideParticle; // 0x15d0, 0xe0 bytes
-                CSoundEventName m_strStartSound; // 0x16b0, 0x10 bytes
-                CSoundEventName m_strLoopingSound; // 0x16c0, 0x10 bytes
-                CSoundEventName m_strStopSound; // 0x16d0, 0x10 bytes
+                float m_flMinAngleToConsiderASlope; // 0x13e8, 0x4 bytes
+                float m_flSlideMaxSlopeMaxAccSpeed; // 0x13ec, 0x4 bytes
+                float m_flSlideMinSlopeMaxAccSpeed; // 0x13f0, 0x4 bytes
+                float m_flButtonPressWindow; // 0x13f4, 0x4 bytes
+                float m_flTurnSpeed; // 0x13f8, 0x4 bytes
+                float m_flSlideMinSlopeAcceleration; // 0x13fc, 0x4 bytes
+                float m_flSlideMaxSlopeAcceleration; // 0x1400, 0x4 bytes
+                float m_flTurnMinAngDiff; // 0x1404, 0x4 bytes
+                float m_flTurnMaxAngDiff; // 0x1408, 0x4 bytes
+                float m_flLandedFlatGroundFrictionGraceTime; // 0x140c, 0x4 bytes
+                float m_flFlatGroundFrictionGraceTime; // 0x1410, 0x4 bytes
+                float m_flFrictionFlatGroundGrace; // 0x1414, 0x4 bytes
+                float m_flFrictionFlatGround; // 0x1418, 0x4 bytes
+                float m_flFrictionMinSlope; // 0x141c, 0x4 bytes
+                float m_flFrictionMaxSlope; // 0x1420, 0x4 bytes
+                float m_flFrictionUphillMinSlope; // 0x1424, 0x4 bytes
+                float m_flFrictionUphillMaxSlope; // 0x1428, 0x4 bytes
+                float m_flLandingSlopeScaleBias; // 0x142c, 0x4 bytes
+                float m_flBoostMinTriggerSpeed; // 0x1430, 0x4 bytes
+                float m_flBoostMaxTriggerSpeed; // 0x1434, 0x4 bytes
+                float m_flBoostMinSpeed; // 0x1438, 0x4 bytes
+                float m_flBoostMaxSpeed; // 0x143c, 0x4 bytes
+                float m_flMinActivationSpeed; // 0x1440, 0x4 bytes
+                float m_flMinSustainSpeed; // 0x1444, 0x4 bytes
+                float m_flSprintBoostSpeed; // 0x1448, 0x4 bytes
+                float m_flDashSlideStartTime; // 0x144c, 0x4 bytes
+                float m_flDashSlideSpeed; // 0x1450, 0x4 bytes
+                float m_flDashSlideFailSpeed; // 0x1454, 0x4 bytes
+                CSoundEventName m_strDashSlideActivate; // 0x1458, 0x10 bytes
+                float m_flDashSlideFrictionTime; // 0x1468, 0x4 bytes
+                float m_flDashSlideFriction; // 0x146c, 0x4 bytes
+                float m_flDashMinActivationSpeed; // 0x1470, 0x4 bytes
+                float m_flAccMinSlopeDeg; // 0x1474, 0x4 bytes
+                float m_flAccMaxSlopeDeg; // 0x1478, 0x4 bytes
+                float m_flAccMinSlopeScale; // 0x147c, 0x4 bytes
+                float m_flSlideProbeForwardOffset; // 0x1480, 0x4 bytes
+                float m_flSlideActivationProbeForwardOffset; // 0x1484, 0x4 bytes
+                float m_flMaxDistanceBetweenProbeSamples; // 0x1488, 0x4 bytes
+                float m_flInitialSlideUseForwardProbeTime; // 0x148c, 0x4 bytes
+                float m_flCurrentSlopeSampleDistance; // 0x1490, 0x4 bytes
+                float m_flSampleVelDiffStdDevScaleCutoff; // 0x1494, 0x4 bytes
+                float m_flSlopeFacingAngleToActivate; // 0x1498, 0x4 bytes
+                float m_flAirDragAfterJump; // 0x149c, 0x4 bytes
+                float m_flAirDragAfterJumpTime; // 0x14a0, 0x4 bytes
+                float m_flAirDragMaxAngle; // 0x14a4, 0x4 bytes
+                float m_flAirDragResetTime; // 0x14a8, 0x4 bytes
+                float m_flLateSlideJumpWindow; // 0x14ac, 0x4 bytes
+                shade::sdk::client::CRemapFloat m_SlideEffectRemap; // 0x14b0, 0x10 bytes
+                CPiecewiseCurve m_GetupSpeedCurve; // 0x14c0, 0x40 bytes
+                float m_flGetupBusyDuration; // 0x1500, 0x4 bytes
+                float m_flSlidingRecoilReduction; // 0x1504, 0x4 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceStartSliding; // 0x1508, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceEndSliding; // 0x15a8, 0xa0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlideParticle; // 0x1648, 0xe0 bytes
+                CSoundEventName m_strStartSound; // 0x1728, 0x10 bytes
+                CSoundEventName m_strLoopingSound; // 0x1738, 0x10 bytes
+                CSoundEventName m_strStopSound; // 0x1748, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilitySlideVData) == 0x16E0, "CAbilitySlideVData size mismatch");
+            static_assert(sizeof(CAbilitySlideVData) == 0x1758, "CAbilitySlideVData size mismatch");
         }
     }
 }

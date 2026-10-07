@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x88
+             * Size: 0xa0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -40,20 +40,20 @@ namespace shade {
             struct CitadelCameraOperationsSequence_t {
                 CUtlStringToken m_strToken; // 0x0000, 0x4 bytes
                 bool m_bIsEmpty; // 0x0004, 0x1 bytes
-                std::uint8_t pad_0005[0x3]; // 0x0005, 0x3 bytes
-                std::int32_t m_nPriority; // 0x0008, 0x4 bytes
-                std::uint8_t pad_000c[0x4]; // 0x000c, 0x4 bytes
-                CUtlVector<shade::sdk::client::CitadelCameraDistanceOperationDef_t> m_vecDistanceOperations; // 0x0010, 0x18 bytes
-                CUtlVector<shade::sdk::client::CitadelCameraFOVOperationDef_t> m_vecFOVOperations; // 0x0028, 0x18 bytes
-                CUtlVector<shade::sdk::client::CitadelCameraTargetPosOperationDef_t> m_vecTargetPosOperations; // 0x0040, 0x18 bytes
-                CUtlVector<shade::sdk::client::CitadelCameraVertOffsetOperationDef_t> m_vecVertOffsetOperations; // 0x0058, 0x18 bytes
-                CUtlVector<shade::sdk::client::CitadelCameraHorizOffsetOperationDef_t> m_vecHorizOffsetOperations; // 0x0070, 0x18 bytes
+                std::uint8_t pad_0005[0x1b]; // 0x0005, 0x1b bytes
+                std::int32_t m_nPriority; // 0x0020, 0x4 bytes
+                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
+                CUtlVector<shade::sdk::client::CitadelCameraDistanceOperationDef_t> m_vecDistanceOperations; // 0x0028, 0x18 bytes
+                CUtlVector<shade::sdk::client::CitadelCameraFOVOperationDef_t> m_vecFOVOperations; // 0x0040, 0x18 bytes
+                CUtlVector<shade::sdk::client::CitadelCameraTargetPosOperationDef_t> m_vecTargetPosOperations; // 0x0058, 0x18 bytes
+                CUtlVector<shade::sdk::client::CitadelCameraVertOffsetOperationDef_t> m_vecVertOffsetOperations; // 0x0070, 0x18 bytes
+                CUtlVector<shade::sdk::client::CitadelCameraHorizOffsetOperationDef_t> m_vecHorizOffsetOperations; // 0x0088, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelCameraOperationsSequence_t) == 0x88, "CitadelCameraOperationsSequence_t size mismatch");
+            static_assert(sizeof(CitadelCameraOperationsSequence_t) == 0xA0, "CitadelCameraOperationsSequence_t size mismatch");
         }
     }
 }

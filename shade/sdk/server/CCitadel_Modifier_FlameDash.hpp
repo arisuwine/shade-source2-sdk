@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x360
+             * Size: 0x368
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_FlameDash : public shade::sdk::server::CCitadelModifier {
             public:
-                VectorWS m_vLastDropZonePos; // 0x0140, 0xc bytes
-                std::uint8_t pad_014c[0x214]; // 0x014c, 0x214 bytes
+                VectorWS m_vLastDropZonePos; // 0x0148, 0xc bytes
+                std::uint8_t pad_0154[0x214]; // 0x0154, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_FlameDash) == 0x360, "CCitadel_Modifier_FlameDash size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_FlameDash) == 0x368, "CCitadel_Modifier_FlameDash size mismatch");
         }
     }
 }

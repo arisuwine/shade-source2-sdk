@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x10c0
+             * Size: 0x10f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Neutral_DoT_DebuffVData : public shade::sdk::server::CModifierNeutralAbilityVData {
             public:
-                float m_flTickRate; // 0x10b8, 0x4 bytes
-                float m_flDPS; // 0x10bc, 0x4 bytes
+                float m_flTickRate; // 0x10e8, 0x4 bytes
+                float m_flDPS; // 0x10ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Neutral_DoT_DebuffVData) == 0x10C0, "CCitadel_Modifier_Neutral_DoT_DebuffVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Neutral_DoT_DebuffVData) == 0x10F0, "CCitadel_Modifier_Neutral_DoT_DebuffVData size mismatch");
         }
     }
 }

@@ -17,7 +17,6 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CCitadel_Modifier_BaseBulletPreRollProc.hpp"
-#include "shade/sdk/client/ShotID_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -31,9 +30,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticShot : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_02e8[0x160]; // 0x02e8, 0x160 bytes
-                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0448, 0x4 bytes
-                std::uint8_t pad_044c[0x4]; // 0x044c, 0x4 bytes
+                std::uint8_t pad_02f0[0x160]; // 0x02f0, 0x160 bytes
             };
             #pragma pack(pop)
 

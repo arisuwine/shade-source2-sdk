@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a8
+             * Size: 0x1b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -41,13 +41,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_OverrideTargetIdentifier : public shade::sdk::server::CCitadelModifier {
             public:
-                CGlobalSymbol m_sTargetIdentifier; // 0x0140, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0148, 0x4 bytes
-                shade::sdk::client::EntityAttachmentType_t m_nOriginType; // 0x014c, 0x4 bytes
-                CGlobalSymbol m_sAttachmentName; // 0x0150, 0x8 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x0158, 0x1 bytes
-                std::uint8_t pad_0159[0x7]; // 0x0159, 0x7 bytes
-                shade::sdk::server::CRelativeLocation m_relativeLocation; // 0x0160, 0x48 bytes
+                CGlobalSymbol m_sTargetIdentifier; // 0x0148, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0150, 0x4 bytes
+                shade::sdk::client::EntityAttachmentType_t m_nOriginType; // 0x0154, 0x4 bytes
+                CGlobalSymbol m_sAttachmentName; // 0x0158, 0x8 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x0160, 0x1 bytes
+                std::uint8_t pad_0161[0x7]; // 0x0161, 0x7 bytes
+                shade::sdk::server::CRelativeLocation m_relativeLocation; // 0x0168, 0x48 bytes
             };
             #pragma pack(pop)
 
@@ -55,7 +55,7 @@ namespace shade {
              * void local_offset; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CGameModifier_OverrideTargetIdentifier) == 0x1A8, "CGameModifier_OverrideTargetIdentifier size mismatch");
+            static_assert(sizeof(CGameModifier_OverrideTargetIdentifier) == 0x1B0, "CGameModifier_OverrideTargetIdentifier size mismatch");
         }
     }
 }

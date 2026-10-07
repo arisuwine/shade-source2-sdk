@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3c0
+             * Size: 0x3c8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Doorman_Hotel_TeleportFX : public shade::sdk::client::CCitadelModifier {
             public:
-                Vector m_vMinimapPositionOverride; // 0x0130, 0xc bytes
-                std::uint8_t pad_013c[0x284]; // 0x013c, 0x284 bytes
+                Vector m_vMinimapPositionOverride; // 0x0138, 0xc bytes
+                std::uint8_t pad_0144[0x284]; // 0x0144, 0x284 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Doorman_Hotel_TeleportFX) == 0x3C0, "CCitadel_Modifier_Doorman_Hotel_TeleportFX size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Doorman_Hotel_TeleportFX) == 0x3C8, "CCitadel_Modifier_Doorman_Hotel_TeleportFX size mismatch");
         }
     }
 }

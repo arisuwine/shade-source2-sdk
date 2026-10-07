@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15a8
+             * Size: 0x15f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityGooGrenadeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GooGrenadeImpactModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GooGrenadePuddleAuraModifier; // 0x13b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GooGrenadePuddleAuraFriendlyModifier; // 0x13c0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GooGrenadeSkipParticle; // 0x13d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GooGrenadeExplodeParticle; // 0x14b0, 0xe0 bytes
-                CSoundEventName m_GrenadeHitSound; // 0x1590, 0x10 bytes
-                float m_flMinRestitution; // 0x15a0, 0x4 bytes
-                float m_flMaxRestitution; // 0x15a4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GooGrenadeImpactModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GooGrenadePuddleAuraModifier; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GooGrenadePuddleAuraFriendlyModifier; // 0x1408, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GooGrenadeSkipParticle; // 0x1418, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GooGrenadeExplodeParticle; // 0x14f8, 0xe0 bytes
+                CSoundEventName m_GrenadeHitSound; // 0x15d8, 0x10 bytes
+                float m_flMinRestitution; // 0x15e8, 0x4 bytes
+                float m_flMaxRestitution; // 0x15ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityGooGrenadeVData) == 0x15A8, "CAbilityGooGrenadeVData size mismatch");
+            static_assert(sizeof(CAbilityGooGrenadeVData) == 0x15F0, "CAbilityGooGrenadeVData size mismatch");
         }
     }
 }

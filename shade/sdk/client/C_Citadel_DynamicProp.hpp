@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1090
+             * Size: 0x10f0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_DynamicProp : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_1050[0x10]; // 0x1050, 0x10 bytes
-                std::int32_t m_nPlayerTeamEvent; // 0x1060, 0x4 bytes
-                std::uint8_t pad_1064[0x4]; // 0x1064, 0x4 bytes
-                CUtlString m_strDefaultSkin; // 0x1068, 0x8 bytes
-                CUtlString m_strFriendlySkin; // 0x1070, 0x8 bytes
-                CUtlString m_strEnemySkin; // 0x1078, 0x8 bytes
-                bool m_bIsWorld; // 0x1080, 0x1 bytes
-                std::uint8_t pad_1081[0xf]; // 0x1081, 0xf bytes
+                std::uint8_t pad_10b0[0x10]; // 0x10b0, 0x10 bytes
+                std::int32_t m_nPlayerTeamEvent; // 0x10c0, 0x4 bytes
+                std::uint8_t pad_10c4[0x4]; // 0x10c4, 0x4 bytes
+                CUtlString m_strDefaultSkin; // 0x10c8, 0x8 bytes
+                CUtlString m_strFriendlySkin; // 0x10d0, 0x8 bytes
+                CUtlString m_strEnemySkin; // 0x10d8, 0x8 bytes
+                bool m_bIsWorld; // 0x10e0, 0x1 bytes
+                std::uint8_t pad_10e1[0xf]; // 0x10e1, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_DynamicProp) == 0x1090, "C_Citadel_DynamicProp size mismatch");
+            static_assert(sizeof(C_Citadel_DynamicProp) == 0x10F0, "C_Citadel_DynamicProp size mismatch");
         }
     }
 }

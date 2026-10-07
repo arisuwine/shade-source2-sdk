@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1660
+             * Size: 0x16a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,33 +43,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_ZombieWallVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallWarningEffect; // 0x1480, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1560, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GroundAuraModifier; // 0x1570, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TetherModifier; // 0x1580, 0x10 bytes
-                float m_flMiddleStitchDistance; // 0x1590, 0x4 bytes
-                float m_flTraceRadius; // 0x1594, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x1598, 0x4 bytes
-                float m_flFloatDownRate; // 0x159c, 0x4 bytes
-                float m_flClimbHeight; // 0x15a0, 0x4 bytes
-                float m_flStepDownHeight; // 0x15a4, 0x4 bytes
-                float m_flCurlNoiseFrequency; // 0x15a8, 0x4 bytes
-                std::uint8_t pad_15ac[0x4]; // 0x15ac, 0x4 bytes
-                CPiecewiseCurve m_CurlNoiseStrengthCurve; // 0x15b0, 0x40 bytes
-                CSoundEventName m_strWallHitSound; // 0x15f0, 0x10 bytes
-                CSoundEventName m_strWallPopSound; // 0x1600, 0x10 bytes
-                CSoundEventName m_strWallBeamStartSound; // 0x1610, 0x10 bytes
-                CSoundEventName m_strWallBeamStopSound; // 0x1620, 0x10 bytes
-                CSoundEventName m_strWallBeamPointStartLoopSound; // 0x1630, 0x10 bytes
-                CSoundEventName m_strWallBeamPointEndLoopSound; // 0x1640, 0x10 bytes
-                CSoundEventName m_strWallBeamPointClosestLoopSound; // 0x1650, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallWarningEffect; // 0x14c8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x15a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GroundAuraModifier; // 0x15b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TetherModifier; // 0x15c8, 0x10 bytes
+                float m_flMiddleStitchDistance; // 0x15d8, 0x4 bytes
+                float m_flTraceRadius; // 0x15dc, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x15e0, 0x4 bytes
+                float m_flFloatDownRate; // 0x15e4, 0x4 bytes
+                float m_flClimbHeight; // 0x15e8, 0x4 bytes
+                float m_flStepDownHeight; // 0x15ec, 0x4 bytes
+                float m_flCurlNoiseFrequency; // 0x15f0, 0x4 bytes
+                std::uint8_t pad_15f4[0x4]; // 0x15f4, 0x4 bytes
+                CPiecewiseCurve m_CurlNoiseStrengthCurve; // 0x15f8, 0x40 bytes
+                CSoundEventName m_strWallHitSound; // 0x1638, 0x10 bytes
+                CSoundEventName m_strWallPopSound; // 0x1648, 0x10 bytes
+                CSoundEventName m_strWallBeamStartSound; // 0x1658, 0x10 bytes
+                CSoundEventName m_strWallBeamStopSound; // 0x1668, 0x10 bytes
+                CSoundEventName m_strWallBeamPointStartLoopSound; // 0x1678, 0x10 bytes
+                CSoundEventName m_strWallBeamPointEndLoopSound; // 0x1688, 0x10 bytes
+                CSoundEventName m_strWallBeamPointClosestLoopSound; // 0x1698, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_ZombieWallVData) == 0x1660, "CCitadel_Ability_Necro_ZombieWallVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_ZombieWallVData) == 0x16A8, "CCitadel_Ability_Necro_ZombieWallVData size mismatch");
         }
     }
 }

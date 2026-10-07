@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8e8
+             * Size: 0x930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierKnockdownVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                float m_flSatVolumeRadius; // 0x0840, 0x4 bytes
-                float m_flSatVolumeFadeOut; // 0x0844, 0x4 bytes
-                float m_flGravityScale; // 0x0848, 0x4 bytes
-                float m_flDesatAmount; // 0x084c, 0x4 bytes
-                Color m_satColorDesat; // 0x0850, 0x4 bytes
-                Color m_satColorSat; // 0x0854, 0x4 bytes
-                Color m_satColorOutline; // 0x0858, 0x4 bytes
-                float m_flGetUpSeqDuration; // 0x085c, 0x4 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGetUp; // 0x0860, 0x88 bytes
+                float m_flSatVolumeRadius; // 0x0870, 0x4 bytes
+                float m_flSatVolumeFadeOut; // 0x0874, 0x4 bytes
+                float m_flGravityScale; // 0x0878, 0x4 bytes
+                float m_flDesatAmount; // 0x087c, 0x4 bytes
+                Color m_satColorDesat; // 0x0880, 0x4 bytes
+                Color m_satColorSat; // 0x0884, 0x4 bytes
+                Color m_satColorOutline; // 0x0888, 0x4 bytes
+                float m_flGetUpSeqDuration; // 0x088c, 0x4 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGetUp; // 0x0890, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierKnockdownVData) == 0x8E8, "CModifierKnockdownVData size mismatch");
+            static_assert(sizeof(CModifierKnockdownVData) == 0x930, "CModifierKnockdownVData size mismatch");
         }
     }
 }

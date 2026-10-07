@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x10e8
+             * Size: 0x1118
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_MoveChargeVData : public shade::sdk::client::CModifierNeutralAbilityVData {
             public:
-                float m_flChargeSpeedm; // 0x10b8, 0x4 bytes
-                float m_flLookAheadFrames; // 0x10bc, 0x4 bytes
-                float m_flStunTime; // 0x10c0, 0x4 bytes
-                float m_flDamage; // 0x10c4, 0x4 bytes
-                CSoundEventName m_strAttackEndSound; // 0x10c8, 0x10 bytes
-                CSoundEventName m_strAttackHitSound; // 0x10d8, 0x10 bytes
+                float m_flChargeSpeedm; // 0x10e8, 0x4 bytes
+                float m_flLookAheadFrames; // 0x10ec, 0x4 bytes
+                float m_flStunTime; // 0x10f0, 0x4 bytes
+                float m_flDamage; // 0x10f4, 0x4 bytes
+                CSoundEventName m_strAttackEndSound; // 0x10f8, 0x10 bytes
+                CSoundEventName m_strAttackHitSound; // 0x1108, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_MoveChargeVData) == 0x10E8, "CCitadel_Neutral_MoveChargeVData size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_MoveChargeVData) == 0x1118, "CCitadel_Neutral_MoveChargeVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4f48
+             * Size: 0x4f50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ItemWalkBack : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x4e08]; // 0x0140, 0x4e08 bytes
+                std::uint8_t pad_0148[0x4e08]; // 0x0148, 0x4e08 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ItemWalkBack) == 0x4F48, "CCitadel_Modifier_ItemWalkBack size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ItemWalkBack) == 0x4F50, "CCitadel_Modifier_ItemWalkBack size mismatch");
         }
     }
 }

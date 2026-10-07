@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1840
+             * Size: 0x18b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_ClawWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeParticle; // 0x1658, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeHitParticle; // 0x1738, 0xe0 bytes
-                CUtlVector<shade::sdk::client::ClawSwipeInfo_t> m_vecClawSwipeInfos; // 0x1818, 0x18 bytes
-                CSoundEventName m_strSwipeHitSound; // 0x1830, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeParticle; // 0x16d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeHitParticle; // 0x17b0, 0xe0 bytes
+                CUtlVector<shade::sdk::client::ClawSwipeInfo_t> m_vecClawSwipeInfos; // 0x1890, 0x18 bytes
+                CSoundEventName m_strSwipeHitSound; // 0x18a8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_ClawWeaponVData) == 0x1840, "CCitadel_Ability_Werewolf_ClawWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_ClawWeaponVData) == 0x18B8, "CCitadel_Ability_Werewolf_ClawWeaponVData size mismatch");
         }
     }
 }

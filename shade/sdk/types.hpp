@@ -175,6 +175,7 @@ namespace shade {
 #include "shade/sdk/client/EAbilityBehavior_t.hpp"
 #include "shade/sdk/client/EAbilityResourceType.hpp"
 #include "shade/sdk/client/EAbilitySlots_t.hpp"
+#include "shade/sdk/client/EBabaBenchMeleeAttackType.hpp"
 #include "shade/sdk/client/ECitadelAudioLoopSounds.hpp"
 #include "shade/sdk/client/ECitadelDamageType.hpp"
 #include "shade/sdk/client/ECitadelGameMode.hpp"
@@ -326,6 +327,7 @@ namespace shade {
             struct AmbientParticleSettings_t;
             struct AnimGraph2SerializedPoseRecipeSlot_t;
             struct AttackData_t;
+            struct BabaBenchMeleeAttack_t;
             struct BonusUpgrade_t;
             struct BreakablePropCurrencyReward_t;
             struct BreakableSpawnTimeDesc_t;
@@ -423,6 +425,7 @@ namespace shade {
             struct CitadelVotingPosterHeroData_t;
             struct ClawSwipeInfo_t;
             struct ConsumedComponentState_t;
+            struct CopyUltCompanionAbility_t;
             struct CorruptedPenaltyDef_t;
             struct CorruptedPenaltyEffect_t;
             struct CurrencySound_t;
@@ -475,6 +478,7 @@ namespace shade {
             struct PlayOfTheGameTrigger_t;
             struct PostProcessEffectDef_t;
             struct PropertyUpgrade_t;
+            struct RatArmorPiece_t;
             class STeamFOWEntity;
             class STrooperFOWEntity;
             struct ScalingPowerupDefinition_t;

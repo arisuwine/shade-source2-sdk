@@ -22,6 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             class CCitadelModifier;
+            class C_BaseEntity;
             class C_CitadelBaseAbility;
         }
     }
@@ -31,22 +32,25 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x28
+             * Size: 0x48
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
             struct LingeringCopiedAbility_t {
                 CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0000, 0x4 bytes
-                std::int32_t m_nBulletsStillLive; // 0x0004, 0x4 bytes
-                CUtlVector<CModifierHandleTyped<shade::sdk::client::CCitadelModifier>> m_vecModifiers; // 0x0008, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTimeShouldKeepTrained; // 0x0020, 0x4 bytes
-                std::uint8_t pad_0024[0x4]; // 0x0024, 0x4 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hCompanionOf; // 0x0004, 0x4 bytes
+                std::int32_t m_nBulletsStillLive; // 0x0008, 0x4 bytes
+                std::uint8_t pad_000c[0x4]; // 0x000c, 0x4 bytes
+                CUtlVector<CModifierHandleTyped<shade::sdk::client::CCitadelModifier>> m_vecModifiers; // 0x0010, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecSpawnedEntities; // 0x0028, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTimeShouldKeepTrained; // 0x0040, 0x4 bytes
+                std::uint8_t pad_0044[0x4]; // 0x0044, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(LingeringCopiedAbility_t) == 0x28, "LingeringCopiedAbility_t size mismatch");
+            static_assert(sizeof(LingeringCopiedAbility_t) == 0x48, "LingeringCopiedAbility_t size mismatch");
         }
     }
 }

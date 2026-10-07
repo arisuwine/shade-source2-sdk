@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x7d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VeilWalkerWatcherVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvisModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_VeilWalkerTriggeredModifier; // 0x0770, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_VeilWalkerMovespeed; // 0x0780, 0x10 bytes
-                CSoundEventName m_strOwnerExpiredSound; // 0x0790, 0x10 bytes
-                float m_flTraceLengthMin; // 0x07a0, 0x4 bytes
-                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_InvisModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_VeilWalkerTriggeredModifier; // 0x07a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_VeilWalkerMovespeed; // 0x07b0, 0x10 bytes
+                CSoundEventName m_strOwnerExpiredSound; // 0x07c0, 0x10 bytes
+                float m_flTraceLengthMin; // 0x07d0, 0x4 bytes
+                std::uint8_t pad_07d4[0x4]; // 0x07d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VeilWalkerWatcherVData) == 0x7A8, "CCitadel_Modifier_VeilWalkerWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VeilWalkerWatcherVData) == 0x7D8, "CCitadel_Modifier_VeilWalkerWatcherVData size mismatch");
         }
     }
 }

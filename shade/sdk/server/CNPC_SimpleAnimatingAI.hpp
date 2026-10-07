@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xc60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,17 +41,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_SimpleAnimatingAI : public shade::sdk::server::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0a90[0x10]; // 0x0a90, 0x10 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0aa0, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbilityOwner; // 0x0aa4, 0x4 bytes
-                shade::sdk::server::CCitadelRegenComponent m_CCitadelRegenComponent; // 0x0aa8, 0x160 bytes
-                std::uint8_t pad_0c08[0x8]; // 0x0c08, 0x8 bytes
+                std::uint8_t pad_0ae0[0x10]; // 0x0ae0, 0x10 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0af0, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbilityOwner; // 0x0af4, 0x4 bytes
+                shade::sdk::server::CCitadelRegenComponent m_CCitadelRegenComponent; // 0x0af8, 0x160 bytes
+                std::uint8_t pad_0c58[0x8]; // 0x0c58, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_SimpleAnimatingAI) == 0xC10, "CNPC_SimpleAnimatingAI size mismatch");
+            static_assert(sizeof(CNPC_SimpleAnimatingAI) == 0xC60, "CNPC_SimpleAnimatingAI size mismatch");
         }
     }
 }

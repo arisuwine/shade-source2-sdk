@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe40
+             * Size: 0xe98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_AI_BaseNPC : public shade::sdk::client::C_BaseCombatCharacter {
             public:
-                std::uint8_t pad_0e28[0x8]; // 0x0e28, 0x8 bytes
-                shade::sdk::client::NPC_STATE m_NPCState; // 0x0e30, 0x4 bytes
-                std::uint8_t pad_0e34[0x4]; // 0x0e34, 0x4 bytes
-                shade::sdk::client::C_AI_MotorServices *m_pMotorServices; // 0x0e38, 0x8 bytes
+                std::uint8_t pad_0e80[0x8]; // 0x0e80, 0x8 bytes
+                shade::sdk::client::NPC_STATE m_NPCState; // 0x0e88, 0x4 bytes
+                std::uint8_t pad_0e8c[0x4]; // 0x0e8c, 0x4 bytes
+                shade::sdk::client::C_AI_MotorServices *m_pMotorServices; // 0x0e90, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_AI_BaseNPC) == 0xE40, "C_AI_BaseNPC size mismatch");
+            static_assert(sizeof(C_AI_BaseNPC) == 0xE98, "C_AI_BaseNPC size mismatch");
         }
     }
 }

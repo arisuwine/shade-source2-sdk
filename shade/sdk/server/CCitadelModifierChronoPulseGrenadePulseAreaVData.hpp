@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x970
+             * Size: 0x9a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierChronoPulseGrenadePulseAreaVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0770, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewRingParticle; // 0x0780, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaEffect; // 0x0860, 0xe0 bytes
-                CSoundEventName m_strArmingSound; // 0x0940, 0x10 bytes
-                CSoundEventName m_strArmedSound; // 0x0950, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x0960, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x07a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewRingParticle; // 0x07b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaEffect; // 0x0890, 0xe0 bytes
+                CSoundEventName m_strArmingSound; // 0x0970, 0x10 bytes
+                CSoundEventName m_strArmedSound; // 0x0980, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x0990, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierChronoPulseGrenadePulseAreaVData) == 0x970, "CCitadelModifierChronoPulseGrenadePulseAreaVData size mismatch");
+            static_assert(sizeof(CCitadelModifierChronoPulseGrenadePulseAreaVData) == 0x9A0, "CCitadelModifierChronoPulseGrenadePulseAreaVData size mismatch");
         }
     }
 }

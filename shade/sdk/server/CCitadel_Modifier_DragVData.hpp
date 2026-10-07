@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,30 +33,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DragVData : public shade::sdk::server::CCitadel_Modifier_LinkVData {
             public:
-                shade::sdk::client::EDragOffsetBasis m_eOffsetBasis; // 0x0840, 0x1 bytes
-                std::uint8_t pad_0841[0x3]; // 0x0841, 0x3 bytes
-                float m_flDragDistance; // 0x0844, 0x4 bytes
-                float m_flForwardOffset; // 0x0848, 0x4 bytes
-                float m_flVerticalOffset; // 0x084c, 0x4 bytes
-                float m_flHorizontalOffset; // 0x0850, 0x4 bytes
-                shade::sdk::client::EDragPullModel m_ePullModel; // 0x0854, 0x1 bytes
-                std::uint8_t pad_0855[0x3]; // 0x0855, 0x3 bytes
-                float m_flForceDistScale; // 0x0858, 0x4 bytes
-                float m_flDampingFactor; // 0x085c, 0x4 bytes
-                float m_flStuckDistance; // 0x0860, 0x4 bytes
-                bool m_bChaseAtLeastSourceSpeed; // 0x0864, 0x1 bytes
-                bool m_bBreakOnParentStunned; // 0x0865, 0x1 bytes
-                bool m_bZDownOnly; // 0x0866, 0x1 bytes
-                bool m_bLeaveGroundOnlyWhenPullingUp; // 0x0867, 0x1 bytes
-                bool m_bApplyDragStateFlagsToEnemies; // 0x0868, 0x1 bytes
-                bool m_bZeroVelocityOnEnd; // 0x0869, 0x1 bytes
-                std::uint8_t pad_086a[0x6]; // 0x086a, 0x6 bytes
+                shade::sdk::client::EDragOffsetBasis m_eOffsetBasis; // 0x0870, 0x1 bytes
+                std::uint8_t pad_0871[0x3]; // 0x0871, 0x3 bytes
+                float m_flDragDistance; // 0x0874, 0x4 bytes
+                float m_flForwardOffset; // 0x0878, 0x4 bytes
+                float m_flVerticalOffset; // 0x087c, 0x4 bytes
+                float m_flHorizontalOffset; // 0x0880, 0x4 bytes
+                shade::sdk::client::EDragPullModel m_ePullModel; // 0x0884, 0x1 bytes
+                std::uint8_t pad_0885[0x3]; // 0x0885, 0x3 bytes
+                float m_flForceDistScale; // 0x0888, 0x4 bytes
+                float m_flDampingFactor; // 0x088c, 0x4 bytes
+                float m_flStuckDistance; // 0x0890, 0x4 bytes
+                bool m_bChaseAtLeastSourceSpeed; // 0x0894, 0x1 bytes
+                bool m_bBreakOnParentStunned; // 0x0895, 0x1 bytes
+                bool m_bZDownOnly; // 0x0896, 0x1 bytes
+                bool m_bLeaveGroundOnlyWhenPullingUp; // 0x0897, 0x1 bytes
+                bool m_bApplyDragStateFlagsToEnemies; // 0x0898, 0x1 bytes
+                bool m_bZeroVelocityOnEnd; // 0x0899, 0x1 bytes
+                std::uint8_t pad_089a[0x6]; // 0x089a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DragVData) == 0x870, "CCitadel_Modifier_DragVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DragVData) == 0x8A0, "CCitadel_Modifier_DragVData size mismatch");
         }
     }
 }

@@ -16,7 +16,6 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CCitadelModifier.hpp"
 
 namespace shade {
@@ -31,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x160
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,16 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Feared : public shade::sdk::server::CCitadelModifier {
             public:
-                VectorWS m_vecFearLocation; // 0x0140, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hFearEntity; // 0x014c, 0x4 bytes
-                Vector m_vecFleeDirection; // 0x0150, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastFleeDirectionChange; // 0x015c, 0x4 bytes
+                VectorWS m_vecFearLocation; // 0x0148, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFearEntity; // 0x0154, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Feared) == 0x160, "CCitadel_Modifier_Feared size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Feared) == 0x158, "CCitadel_Modifier_Feared size mismatch");
         }
     }
 }

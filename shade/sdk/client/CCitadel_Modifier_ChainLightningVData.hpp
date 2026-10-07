@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x980
+             * Size: 0x9b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChainLightningVData : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x0890, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChainModifier; // 0x0970, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x08c8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChainModifier; // 0x09a8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChainLightningVData) == 0x980, "CCitadel_Modifier_ChainLightningVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChainLightningVData) == 0x9B8, "CCitadel_Modifier_ChainLightningVData size mismatch");
         }
     }
 }

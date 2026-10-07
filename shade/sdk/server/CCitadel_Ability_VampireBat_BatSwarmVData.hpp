@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1740
+             * Size: 0x1788
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,40 +43,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_BatSwarmVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13a0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GainedBatParticle; // 0x13b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1490, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatSwarmChannelParticle; // 0x1570, 0xe0 bytes
-                CSoundEventName m_strFireBatSound; // 0x1650, 0x10 bytes
-                CSoundEventName m_strGainedBatSound; // 0x1660, 0x10 bytes
-                CSoundEventName m_strChannelEndSound; // 0x1670, 0x10 bytes
-                bool m_bAllowLockOn; // 0x1680, 0x1 bytes
-                bool m_bAllowSatVolume; // 0x1681, 0x1 bytes
-                bool m_bAllowRetarget; // 0x1682, 0x1 bytes
-                std::uint8_t pad_1683[0x1]; // 0x1683, 0x1 bytes
-                float m_flBatTickRate; // 0x1684, 0x4 bytes
-                float m_flBatLifetime; // 0x1688, 0x4 bytes
-                float m_flTrackingAngularStrengthMin; // 0x168c, 0x4 bytes
-                float m_flTrackingAngularStrengthMax; // 0x1690, 0x4 bytes
-                float m_flBatRetargetRadius; // 0x1694, 0x4 bytes
-                float m_flCurlNoiseStrength; // 0x1698, 0x4 bytes
-                float m_flCurlNoiseMinFrequency; // 0x169c, 0x4 bytes
-                float m_flCurlNoiseMaxFrequency; // 0x16a0, 0x4 bytes
-                std::uint8_t pad_16a4[0x4]; // 0x16a4, 0x4 bytes
-                CPiecewiseCurve m_DistanceToAccuracyCurve; // 0x16a8, 0x40 bytes
-                CPiecewiseCurve m_SatVolumeCastDelayRadiusCurve; // 0x16e8, 0x40 bytes
-                Color aimColorDesat; // 0x1728, 0x4 bytes
-                Color aimColorSat; // 0x172c, 0x4 bytes
-                Color aimColorOutline; // 0x1730, 0x4 bytes
-                float m_flSatVolumePulsePerBat; // 0x1734, 0x4 bytes
-                float m_flSatVolumeInnerConeSize; // 0x1738, 0x4 bytes
-                float m_flLowTickRateDistCheck; // 0x173c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GainedBatParticle; // 0x13f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x14d8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatSwarmChannelParticle; // 0x15b8, 0xe0 bytes
+                CSoundEventName m_strFireBatSound; // 0x1698, 0x10 bytes
+                CSoundEventName m_strGainedBatSound; // 0x16a8, 0x10 bytes
+                CSoundEventName m_strChannelEndSound; // 0x16b8, 0x10 bytes
+                bool m_bAllowLockOn; // 0x16c8, 0x1 bytes
+                bool m_bAllowSatVolume; // 0x16c9, 0x1 bytes
+                bool m_bAllowRetarget; // 0x16ca, 0x1 bytes
+                std::uint8_t pad_16cb[0x1]; // 0x16cb, 0x1 bytes
+                float m_flBatTickRate; // 0x16cc, 0x4 bytes
+                float m_flBatLifetime; // 0x16d0, 0x4 bytes
+                float m_flTrackingAngularStrengthMin; // 0x16d4, 0x4 bytes
+                float m_flTrackingAngularStrengthMax; // 0x16d8, 0x4 bytes
+                float m_flBatRetargetRadius; // 0x16dc, 0x4 bytes
+                float m_flCurlNoiseStrength; // 0x16e0, 0x4 bytes
+                float m_flCurlNoiseMinFrequency; // 0x16e4, 0x4 bytes
+                float m_flCurlNoiseMaxFrequency; // 0x16e8, 0x4 bytes
+                std::uint8_t pad_16ec[0x4]; // 0x16ec, 0x4 bytes
+                CPiecewiseCurve m_DistanceToAccuracyCurve; // 0x16f0, 0x40 bytes
+                CPiecewiseCurve m_SatVolumeCastDelayRadiusCurve; // 0x1730, 0x40 bytes
+                Color aimColorDesat; // 0x1770, 0x4 bytes
+                Color aimColorSat; // 0x1774, 0x4 bytes
+                Color aimColorOutline; // 0x1778, 0x4 bytes
+                float m_flSatVolumePulsePerBat; // 0x177c, 0x4 bytes
+                float m_flSatVolumeInnerConeSize; // 0x1780, 0x4 bytes
+                float m_flLowTickRateDistCheck; // 0x1784, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_BatSwarmVData) == 0x1740, "CCitadel_Ability_VampireBat_BatSwarmVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_BatSwarmVData) == 0x1788, "CCitadel_Ability_VampireBat_BatSwarmVData size mismatch");
         }
     }
 }

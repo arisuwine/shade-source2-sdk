@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x170
+             * Size: 0x178
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Sleep : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<CModifierHandleTyped<shade::sdk::server::CCitadelModifier>> m_vecSleepModifiers; // 0x0140, 0x18 bytes
-                bool m_bIsWakingUp; // 0x0158, 0x1 bytes
-                std::uint8_t pad_0159[0x3]; // 0x0159, 0x3 bytes
-                float m_flMinSleepDamageToWake; // 0x015c, 0x4 bytes
-                float m_flMinSleepTime; // 0x0160, 0x4 bytes
-                float m_flWakeUpDelay; // 0x0164, 0x4 bytes
-                float m_flTotalDamageTakenWhileAsleep; // 0x0168, 0x4 bytes
-                std::uint8_t pad_016c[0x4]; // 0x016c, 0x4 bytes
+                CUtlVector<CModifierHandleTyped<shade::sdk::server::CCitadelModifier>> m_vecSleepModifiers; // 0x0148, 0x18 bytes
+                bool m_bIsWakingUp; // 0x0160, 0x1 bytes
+                std::uint8_t pad_0161[0x3]; // 0x0161, 0x3 bytes
+                float m_flMinSleepDamageToWake; // 0x0164, 0x4 bytes
+                float m_flMinSleepTime; // 0x0168, 0x4 bytes
+                float m_flWakeUpDelay; // 0x016c, 0x4 bytes
+                float m_flTotalDamageTakenWhileAsleep; // 0x0170, 0x4 bytes
+                std::uint8_t pad_0174[0x4]; // 0x0174, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Sleep) == 0x170, "CCitadel_Modifier_Sleep size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Sleep) == 0x178, "CCitadel_Modifier_Sleep size mismatch");
         }
     }
 }

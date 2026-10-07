@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2e8
+             * Size: 0x2f0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -41,15 +41,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BaseBulletPreRollProc : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                shade::sdk::client::ShotID_t m_nSuppressProcShotID; // 0x02c8, 0x4 bytes
-                std::uint8_t pad_02cc[0x4]; // 0x02cc, 0x4 bytes
-                CUtlVector<shade::sdk::client::BulletID_t> m_vecProcdBulletIDs; // 0x02d0, 0x18 bytes
+                shade::sdk::client::ShotID_t m_nSuppressProcShotID; // 0x02d0, 0x4 bytes
+                std::uint8_t pad_02d4[0x4]; // 0x02d4, 0x4 bytes
+                CUtlVector<shade::sdk::client::BulletID_t> m_vecProcdBulletIDs; // 0x02d8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProc) == 0x2E8, "CCitadel_Modifier_BaseBulletPreRollProc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProc) == 0x2F0, "CCitadel_Modifier_BaseBulletPreRollProc size mismatch");
         }
     }
 }

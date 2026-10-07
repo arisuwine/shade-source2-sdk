@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1480
+             * Size: 0x14b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,25 +39,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NeutralSelfCastBombVData : public shade::sdk::client::CModifierNeutralAbilityVData {
             public:
-                float m_flRadius; // 0x10b8, 0x4 bytes
-                float m_flExplodeTime; // 0x10bc, 0x4 bytes
-                float m_flDamage; // 0x10c0, 0x4 bytes
-                std::uint8_t pad_10c4[0x4]; // 0x10c4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedParticle; // 0x10c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedStatusEffectParticle; // 0x11a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x1288, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1368, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x1448, 0x10 bytes
-                CSoundEventName m_strTickTockSound; // 0x1458, 0x10 bytes
-                CSoundEventName m_strTickTockFastSound; // 0x1468, 0x10 bytes
-                float m_DetonateWarningTime; // 0x1478, 0x4 bytes
-                std::uint8_t pad_147c[0x4]; // 0x147c, 0x4 bytes
+                float m_flRadius; // 0x10e8, 0x4 bytes
+                float m_flExplodeTime; // 0x10ec, 0x4 bytes
+                float m_flDamage; // 0x10f0, 0x4 bytes
+                std::uint8_t pad_10f4[0x4]; // 0x10f4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedParticle; // 0x10f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedStatusEffectParticle; // 0x11d8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x12b8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1398, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1478, 0x10 bytes
+                CSoundEventName m_strTickTockSound; // 0x1488, 0x10 bytes
+                CSoundEventName m_strTickTockFastSound; // 0x1498, 0x10 bytes
+                float m_DetonateWarningTime; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x4]; // 0x14ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NeutralSelfCastBombVData) == 0x1480, "CCitadel_Modifier_NeutralSelfCastBombVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NeutralSelfCastBombVData) == 0x14B0, "CCitadel_Modifier_NeutralSelfCastBombVData size mismatch");
         }
     }
 }

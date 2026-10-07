@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8a0
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CritShotVData : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CSoundEventName m_strHitProcSound; // 0x0890, 0x10 bytes
+                CSoundEventName m_strHitProcSound; // 0x08c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CritShotVData) == 0x8A0, "CCitadel_Modifier_CritShotVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CritShotVData) == 0x8D8, "CCitadel_Modifier_CritShotVData size mismatch");
         }
     }
 }

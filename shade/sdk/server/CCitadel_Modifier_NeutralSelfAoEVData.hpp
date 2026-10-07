@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x11b8
+             * Size: 0x11e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NeutralSelfAoEVData : public shade::sdk::server::CModifierNeutralAbilityVData {
             public:
-                float m_flRadius; // 0x10b8, 0x4 bytes
-                float m_flHeight; // 0x10bc, 0x4 bytes
-                float m_flDPS; // 0x10c0, 0x4 bytes
-                float m_flTickRate; // 0x10c4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x10c8, 0xe0 bytes
-                CSoundEventName m_strAttackHitSound; // 0x11a8, 0x10 bytes
+                float m_flRadius; // 0x10e8, 0x4 bytes
+                float m_flHeight; // 0x10ec, 0x4 bytes
+                float m_flDPS; // 0x10f0, 0x4 bytes
+                float m_flTickRate; // 0x10f4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x10f8, 0xe0 bytes
+                CSoundEventName m_strAttackHitSound; // 0x11d8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NeutralSelfAoEVData) == 0x11B8, "CCitadel_Modifier_NeutralSelfAoEVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NeutralSelfAoEVData) == 0x11E8, "CCitadel_Modifier_NeutralSelfAoEVData size mismatch");
         }
     }
 }

@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16a0
+             * Size: 0x16e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,31 +44,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_AttachVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AttachedModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MovingToAttachModifier; // 0x13b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CameraDummyModifier; // 0x13c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SpeedModifier; // 0x13d0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DeathBarrierModifier; // 0x13e0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HopOutLockoutModifier; // 0x13f0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LaunchTossModifier; // 0x1400, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LaunchedSelfModifier; // 0x1410, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AllyLockoutModifier; // 0x1420, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HopOffBuffModifier; // 0x1430, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AttachHealModifier; // 0x1440, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sCamDummyModelName; // 0x1450, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FakeFamiliarParticle; // 0x1530, 0xe0 bytes
-                float m_flDetachForce; // 0x1610, 0x4 bytes
-                float m_flDetachForceUp; // 0x1614, 0x4 bytes
-                float m_flTriggeredDetachForce; // 0x1618, 0x4 bytes
-                float m_flTriggeredDetachForceUp; // 0x161c, 0x4 bytes
-                CPiecewiseCurve m_MovingToAttachProjectileSpeedCurve; // 0x1620, 0x40 bytes
-                CPiecewiseCurve m_LaunchAngleRemap; // 0x1660, 0x40 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AttachedModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MovingToAttachModifier; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CameraDummyModifier; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SpeedModifier; // 0x1418, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DeathBarrierModifier; // 0x1428, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HopOutLockoutModifier; // 0x1438, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LaunchTossModifier; // 0x1448, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LaunchedSelfModifier; // 0x1458, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AllyLockoutModifier; // 0x1468, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HopOffBuffModifier; // 0x1478, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AttachHealModifier; // 0x1488, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sCamDummyModelName; // 0x1498, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FakeFamiliarParticle; // 0x1578, 0xe0 bytes
+                float m_flDetachForce; // 0x1658, 0x4 bytes
+                float m_flDetachForceUp; // 0x165c, 0x4 bytes
+                float m_flTriggeredDetachForce; // 0x1660, 0x4 bytes
+                float m_flTriggeredDetachForceUp; // 0x1664, 0x4 bytes
+                CPiecewiseCurve m_MovingToAttachProjectileSpeedCurve; // 0x1668, 0x40 bytes
+                CPiecewiseCurve m_LaunchAngleRemap; // 0x16a8, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_AttachVData) == 0x16A0, "CCitadel_Ability_Familiar_AttachVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_AttachVData) == 0x16E8, "CCitadel_Ability_Familiar_AttachVData size mismatch");
         }
     }
 }

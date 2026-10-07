@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x860
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierUnstickVData : public shade::sdk::server::CCitadel_Modifier_StunnedVData {
             public:
-                CSoundEventName m_sSuccessSound; // 0x0840, 0x10 bytes
-                CSoundEventName m_sFailureSound; // 0x0850, 0x10 bytes
+                CSoundEventName m_sSuccessSound; // 0x0870, 0x10 bytes
+                CSoundEventName m_sFailureSound; // 0x0880, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierUnstickVData) == 0x860, "CModifierUnstickVData size mismatch");
+            static_assert(sizeof(CModifierUnstickVData) == 0x890, "CModifierUnstickVData size mismatch");
         }
     }
 }

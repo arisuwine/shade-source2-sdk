@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb00
+             * Size: 0xb30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SettingSunThinker_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LingerParticle; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LayerParticle; // 0x0a00, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x0ae0, 0x10 bytes
-                CSoundEventName m_strTargetingCompletedSound; // 0x0af0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LingerParticle; // 0x0950, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LayerParticle; // 0x0a30, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x0b10, 0x10 bytes
+                CSoundEventName m_strTargetingCompletedSound; // 0x0b20, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SettingSunThinker_VData) == 0xB00, "CCitadel_Modifier_SettingSunThinker_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SettingSunThinker_VData) == 0xB30, "CCitadel_Modifier_SettingSunThinker_VData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PowerUp_Movement : public shade::sdk::server::CCitadel_Modifier_ScalingPowerUp {
             public:
-                bool m_bFilled; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
+                bool m_bFilled; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x7]; // 0x0151, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PowerUp_Movement) == 0x150, "CCitadel_Modifier_PowerUp_Movement size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PowerUp_Movement) == 0x158, "CCitadel_Modifier_PowerUp_Movement size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa68
+             * Size: 0xa98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierGarbageAuraVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FinishParticle; // 0x07b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AlliedParticle; // 0x0898, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyParticle; // 0x0978, 0xe0 bytes
-                CSoundEventName m_strAmbientLoopingLocalPlayerSound; // 0x0a58, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FinishParticle; // 0x07e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AlliedParticle; // 0x08c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyParticle; // 0x09a8, 0xe0 bytes
+                CSoundEventName m_strAmbientLoopingLocalPlayerSound; // 0x0a88, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierGarbageAuraVData) == 0xA68, "CModifierGarbageAuraVData size mismatch");
+            static_assert(sizeof(CModifierGarbageAuraVData) == 0xA98, "CModifierGarbageAuraVData size mismatch");
         }
     }
 }

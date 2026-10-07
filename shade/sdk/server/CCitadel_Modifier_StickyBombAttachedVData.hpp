@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb28
+             * Size: 0xb58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,22 +43,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StickyBombAttachedVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedParticle; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StunAttachedParticle; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedVictimTeamParticle; // 0x0a00, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x0ae0, 0x10 bytes
-                CSoundEventName m_strTickTockSound; // 0x0af0, 0x10 bytes
-                CSoundEventName m_strTickTockFastSound; // 0x0b00, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnGroundModifier; // 0x0b10, 0x10 bytes
-                float m_DetonateWarningTime; // 0x0b20, 0x4 bytes
-                std::uint8_t pad_0b24[0x4]; // 0x0b24, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedParticle; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StunAttachedParticle; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0950, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedVictimTeamParticle; // 0x0a30, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x0b10, 0x10 bytes
+                CSoundEventName m_strTickTockSound; // 0x0b20, 0x10 bytes
+                CSoundEventName m_strTickTockFastSound; // 0x0b30, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnGroundModifier; // 0x0b40, 0x10 bytes
+                float m_DetonateWarningTime; // 0x0b50, 0x4 bytes
+                std::uint8_t pad_0b54[0x4]; // 0x0b54, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StickyBombAttachedVData) == 0xB28, "CCitadel_Modifier_StickyBombAttachedVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StickyBombAttachedVData) == 0xB58, "CCitadel_Modifier_StickyBombAttachedVData size mismatch");
         }
     }
 }

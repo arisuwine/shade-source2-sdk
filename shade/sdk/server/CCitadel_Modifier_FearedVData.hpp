@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x7a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_FearedVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                float m_flWallSlideProbeDistanceMeters; // 0x0760, 0x4 bytes
-                float m_flWallSlideDirectionChangeCooldown; // 0x0764, 0x4 bytes
+                float m_flWallSlideProbeDistanceMeters; // 0x0790, 0x4 bytes
+                float m_flWallSlideDirectionChangeCooldown; // 0x0794, 0x4 bytes
+                float m_flJumpHeightPct; // 0x0798, 0x4 bytes
+                float m_flMovementConeAngle; // 0x079c, 0x4 bytes
+                float m_flSteerTurnRate; // 0x07a0, 0x4 bytes
+                float m_flReturnTurnRate; // 0x07a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_FearedVData) == 0x768, "CCitadel_Modifier_FearedVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_FearedVData) == 0x7A8, "CCitadel_Modifier_FearedVData size mismatch");
         }
     }
 }

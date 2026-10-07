@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1460
+             * Size: 0x14c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chrono_KineticCarbineVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flShotTimeScaleLingerDuration; // 0x13a0, 0x4 bytes
-                std::uint8_t pad_13a4[0x4]; // 0x13a4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargingModifier; // 0x13a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13b8, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraKineticCarbineShotFired; // 0x13c8, 0x88 bytes
-                CSoundEventName m_strSlowZoomSound; // 0x1450, 0x10 bytes
+                float m_flShotTimeScaleLingerDuration; // 0x13e8, 0x4 bytes
+                std::uint8_t pad_13ec[0x4]; // 0x13ec, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargingModifier; // 0x13f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1400, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraKineticCarbineShotFired; // 0x1410, 0xa0 bytes
+                CSoundEventName m_strSlowZoomSound; // 0x14b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chrono_KineticCarbineVData) == 0x1460, "CCitadel_Ability_Chrono_KineticCarbineVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chrono_KineticCarbineVData) == 0x14C0, "CCitadel_Ability_Chrono_KineticCarbineVData size mismatch");
         }
     }
 }

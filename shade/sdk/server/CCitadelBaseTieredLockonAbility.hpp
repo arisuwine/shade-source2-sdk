@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1930
+             * Size: 0x19e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,12 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelBaseTieredLockonAbility : public shade::sdk::server::CCitadelBaseLockonAbility {
             public:
+                std::uint8_t pad_1930[0xb0]; // 0x1930, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBaseTieredLockonAbility) == 0x1930, "CCitadelBaseTieredLockonAbility size mismatch");
+            static_assert(sizeof(CCitadelBaseTieredLockonAbility) == 0x19E0, "CCitadelBaseTieredLockonAbility size mismatch");
         }
     }
 }

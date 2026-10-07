@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ShivDash : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0xb0]; // 0x0140, 0xb0 bytes
-                bool m_bUseTrail; // 0x01f0, 0x1 bytes
-                bool m_bUseEchoEffect; // 0x01f1, 0x1 bytes
-                std::uint8_t pad_01f2[0x6]; // 0x01f2, 0x6 bytes
+                std::uint8_t pad_0148[0xb0]; // 0x0148, 0xb0 bytes
+                bool m_bUseTrail; // 0x01f8, 0x1 bytes
+                bool m_bUseEchoEffect; // 0x01f9, 0x1 bytes
+                std::uint8_t pad_01fa[0x6]; // 0x01fa, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ShivDash) == 0x1F8, "CCitadel_Modifier_ShivDash size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ShivDash) == 0x200, "CCitadel_Modifier_ShivDash size mismatch");
         }
     }
 }

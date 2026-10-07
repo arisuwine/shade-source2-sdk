@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x348
+             * Size: 0x350
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LightningBall : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x210]; // 0x0130, 0x210 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hProjectile; // 0x0340, 0x4 bytes
-                std::uint8_t pad_0344[0x4]; // 0x0344, 0x4 bytes
+                std::uint8_t pad_0138[0x210]; // 0x0138, 0x210 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hProjectile; // 0x0348, 0x4 bytes
+                std::uint8_t pad_034c[0x4]; // 0x034c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LightningBall) == 0x348, "CCitadel_Modifier_LightningBall size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LightningBall) == 0x350, "CCitadel_Modifier_LightningBall size mismatch");
         }
     }
 }

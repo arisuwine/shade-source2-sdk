@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NearbyAllyResist) == 0x130, "CCitadel_Modifier_NearbyAllyResist size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NearbyAllyResist) == 0x138, "CCitadel_Modifier_NearbyAllyResist size mismatch");
         }
     }
 }

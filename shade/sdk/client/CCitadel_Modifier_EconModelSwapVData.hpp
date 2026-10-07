@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,13 +32,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_EconModelSwapVData : public shade::sdk::client::CCitadel_Modifier_EconVData {
             public:
-                shade::sdk::client::ModelSwap_t m_ModelSwap; // 0x0760, 0xf0 bytes
+                shade::sdk::client::ModelSwap_t m_ModelSwap; // 0x0790, 0xf0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_EconModelSwapVData) == 0x850, "CCitadel_Modifier_EconModelSwapVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_EconModelSwapVData) == 0x880, "CCitadel_Modifier_EconModelSwapVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1090
+             * Size: 0x10f0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHeroReleaseVoteTerminal : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_1050[0x40]; // 0x1050, 0x40 bytes
+                std::uint8_t pad_10b0[0x40]; // 0x10b0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHeroReleaseVoteTerminal) == 0x1090, "CCitadelHeroReleaseVoteTerminal size mismatch");
+            static_assert(sizeof(CCitadelHeroReleaseVoteTerminal) == 0x10F0, "CCitadelHeroReleaseVoteTerminal size mismatch");
         }
     }
 }

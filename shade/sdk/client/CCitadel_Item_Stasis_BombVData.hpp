@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15c0
+             * Size: 0x1608
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_Stasis_BombVData : public shade::sdk::client::CCitadel_Item_BubbleVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AuraModifier; // 0x15b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AuraModifier; // 0x15f8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_Stasis_BombVData) == 0x15C0, "CCitadel_Item_Stasis_BombVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_Stasis_BombVData) == 0x1608, "CCitadel_Item_Stasis_BombVData size mismatch");
         }
     }
 }

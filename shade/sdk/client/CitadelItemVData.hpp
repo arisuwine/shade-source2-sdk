@@ -26,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14b0
+             * Size: 0x14f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,37 +35,37 @@ namespace shade {
             #pragma pack(push, 1)
             class CitadelItemVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                std::uint8_t pad_13a0[0x4]; // 0x13a0, 0x4 bytes
-                shade::sdk::client::EModTier_t m_iItemTier; // 0x13a4, 0x1 bytes
-                std::uint8_t pad_13a5[0x3]; // 0x13a5, 0x3 bytes
-                std::int32_t m_nShopPriceOverride; // 0x13a8, 0x4 bytes
-                bool m_bWarnIfNoAffectedAbilities; // 0x13ac, 0x1 bytes
-                bool m_bShowTextDescription; // 0x13ad, 0x1 bytes
-                std::uint8_t pad_13ae[0x2]; // 0x13ae, 0x2 bytes
-                shade::sdk::client::EShopFilters_t m_eDisableShopFilters; // 0x13b0, 0x8 bytes
-                shade::sdk::client::EShopFilters_t m_eAdditionalShopFilters; // 0x13b8, 0x8 bytes
-                shade::sdk::client::EShopFilters_t m_eGeneratedShopFilters; // 0x13c0, 0x8 bytes
-                shade::sdk::client::EAbilityRequirements_t m_eAbilityRequirements; // 0x13c8, 0x2 bytes
-                std::uint8_t pad_13ca[0x6]; // 0x13ca, 0x6 bytes
-                CPanoramaImageName m_strShopIconLarge; // 0x13d0, 0x10 bytes
-                CUtlString m_strLocSearchString; // 0x13e0, 0x8 bytes
-                std::int32_t m_nShopVersion; // 0x13e8, 0x4 bytes
-                std::uint8_t pad_13ec[0x4]; // 0x13ec, 0x4 bytes
-                CUtlString m_strDisableItemTarget; // 0x13f0, 0x8 bytes
-                CUtlString m_strOverrideDisplayNameLocToken; // 0x13f8, 0x8 bytes
-                bool m_bDisabledForBots; // 0x1400, 0x1 bytes
-                bool m_bAllowItemStacking; // 0x1401, 0x1 bytes
-                std::uint8_t pad_1402[0x6]; // 0x1402, 0x6 bytes
-                shade::sdk::client::CorruptedItemInfo_t m_CorruptedItemInfo; // 0x1408, 0x60 bytes
-                std::uint8_t pad_1468[0x18]; // 0x1468, 0x18 bytes
-                CUtlVector<CSubclassName<4>> m_vecComponentItems; // 0x1480, 0x18 bytes
-                CUtlVector<CUtlString> m_vecDisabledOnHeroes; // 0x1498, 0x18 bytes
+                std::uint8_t pad_13e8[0x4]; // 0x13e8, 0x4 bytes
+                shade::sdk::client::EModTier_t m_iItemTier; // 0x13ec, 0x1 bytes
+                std::uint8_t pad_13ed[0x3]; // 0x13ed, 0x3 bytes
+                std::int32_t m_nShopPriceOverride; // 0x13f0, 0x4 bytes
+                bool m_bWarnIfNoAffectedAbilities; // 0x13f4, 0x1 bytes
+                bool m_bShowTextDescription; // 0x13f5, 0x1 bytes
+                std::uint8_t pad_13f6[0x2]; // 0x13f6, 0x2 bytes
+                shade::sdk::client::EShopFilters_t m_eDisableShopFilters; // 0x13f8, 0x8 bytes
+                shade::sdk::client::EShopFilters_t m_eAdditionalShopFilters; // 0x1400, 0x8 bytes
+                shade::sdk::client::EShopFilters_t m_eGeneratedShopFilters; // 0x1408, 0x8 bytes
+                shade::sdk::client::EAbilityRequirements_t m_eAbilityRequirements; // 0x1410, 0x2 bytes
+                std::uint8_t pad_1412[0x6]; // 0x1412, 0x6 bytes
+                CPanoramaImageName m_strShopIconLarge; // 0x1418, 0x10 bytes
+                CUtlString m_strLocSearchString; // 0x1428, 0x8 bytes
+                std::int32_t m_nShopVersion; // 0x1430, 0x4 bytes
+                std::uint8_t pad_1434[0x4]; // 0x1434, 0x4 bytes
+                CUtlString m_strDisableItemTarget; // 0x1438, 0x8 bytes
+                CUtlString m_strOverrideDisplayNameLocToken; // 0x1440, 0x8 bytes
+                bool m_bDisabledForBots; // 0x1448, 0x1 bytes
+                bool m_bAllowItemStacking; // 0x1449, 0x1 bytes
+                std::uint8_t pad_144a[0x6]; // 0x144a, 0x6 bytes
+                shade::sdk::client::CorruptedItemInfo_t m_CorruptedItemInfo; // 0x1450, 0x60 bytes
+                std::uint8_t pad_14b0[0x18]; // 0x14b0, 0x18 bytes
+                CUtlVector<CSubclassName<4>> m_vecComponentItems; // 0x14c8, 0x18 bytes
+                CUtlVector<CUtlString> m_vecDisabledOnHeroes; // 0x14e0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelItemVData) == 0x14B0, "CitadelItemVData size mismatch");
+            static_assert(sizeof(CitadelItemVData) == 0x14F8, "CitadelItemVData size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x6e0
+             * Size: 0x6e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,16 +38,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Gravity_Lasso_Self : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bHasUsedBouncePad; // 0x0140, 0x1 bytes
-                std::uint8_t pad_0141[0x7]; // 0x0141, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vCastTargets; // 0x0148, 0x18 bytes
-                std::uint8_t pad_0160[0x580]; // 0x0160, 0x580 bytes
+                bool m_bHasUsedBouncePad; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vCastTargets; // 0x0150, 0x18 bytes
+                std::uint8_t pad_0168[0x580]; // 0x0168, 0x580 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Self) == 0x6E0, "CCitadel_Modifier_Gravity_Lasso_Self size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Self) == 0x6E8, "CCitadel_Modifier_Gravity_Lasso_Self size mismatch");
         }
     }
 }

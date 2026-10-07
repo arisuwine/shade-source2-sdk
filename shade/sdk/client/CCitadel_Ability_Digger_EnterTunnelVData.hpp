@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15a8
+             * Size: 0x15f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Digger_EnterTunnelVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                Vector m_vTeleportOffset; // 0x13a0, 0xc bytes
-                Vector m_vStartingOffset; // 0x13ac, 0xc bytes
-                float m_flMinPushIntoWallDot; // 0x13b8, 0x4 bytes
-                float m_flUninterruptableAfter; // 0x13bc, 0x4 bytes
-                float m_flMoveIntoPositionSpringStrength; // 0x13c0, 0x4 bytes
-                std::uint8_t pad_13c4[0x4]; // 0x13c4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnterParticle; // 0x13c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExitParticle; // 0x14a8, 0xe0 bytes
-                CSoundEventName m_StartTunnelSound; // 0x1588, 0x10 bytes
-                CSoundEventName m_ExitTunnelSound; // 0x1598, 0x10 bytes
+                Vector m_vTeleportOffset; // 0x13e8, 0xc bytes
+                Vector m_vStartingOffset; // 0x13f4, 0xc bytes
+                float m_flMinPushIntoWallDot; // 0x1400, 0x4 bytes
+                float m_flUninterruptableAfter; // 0x1404, 0x4 bytes
+                float m_flMoveIntoPositionSpringStrength; // 0x1408, 0x4 bytes
+                std::uint8_t pad_140c[0x4]; // 0x140c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnterParticle; // 0x1410, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExitParticle; // 0x14f0, 0xe0 bytes
+                CSoundEventName m_StartTunnelSound; // 0x15d0, 0x10 bytes
+                CSoundEventName m_ExitTunnelSound; // 0x15e0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Digger_EnterTunnelVData) == 0x15A8, "CCitadel_Ability_Digger_EnterTunnelVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Digger_EnterTunnelVData) == 0x15F0, "CCitadel_Ability_Digger_EnterTunnelVData size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x7e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticReverb_ProcVData : public shade::sdk::client::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ExplosionModifier; // 0x0790, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x07a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ExplosionModifier; // 0x07c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x07d8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticReverb_ProcVData) == 0x7B0, "CCitadel_Modifier_MysticReverb_ProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticReverb_ProcVData) == 0x7E8, "CCitadel_Modifier_MysticReverb_ProcVData size mismatch");
         }
     }
 }

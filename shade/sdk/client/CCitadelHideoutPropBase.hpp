@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xea0
+             * Size: 0xef8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,8 +32,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHideoutPropBase : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0da0[0x10]; // 0x0da0, 0x10 bytes
-                shade::sdk::client::C_EconItemView m_ItemView; // 0x0db0, 0xf0 bytes
+                std::uint8_t pad_0df8[0x10]; // 0x0df8, 0x10 bytes
+                shade::sdk::client::C_EconItemView m_ItemView; // 0x0e08, 0xf0 bytes
             };
             #pragma pack(pop)
 
@@ -41,7 +41,7 @@ namespace shade {
              * std::uint32_t spawn_index; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelHideoutPropBase) == 0xEA0, "CCitadelHideoutPropBase size mismatch");
+            static_assert(sizeof(CCitadelHideoutPropBase) == 0xEF8, "CCitadelHideoutPropBase size mismatch");
         }
     }
 }

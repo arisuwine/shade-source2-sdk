@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x408
+             * Size: 0x410
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf_Kickflip_SucessSelf : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x2c0]; // 0x0130, 0x2c0 bytes
-                Vector m_vecInitialVelocity; // 0x03f0, 0xc bytes
-                Vector m_vecKickOffVelocity; // 0x03fc, 0xc bytes
+                std::uint8_t pad_0138[0x2c0]; // 0x0138, 0x2c0 bytes
+                Vector m_vecInitialVelocity; // 0x03f8, 0xc bytes
+                Vector m_vecKickOffVelocity; // 0x0404, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf_Kickflip_SucessSelf) == 0x408, "CCitadel_Modifier_Werewolf_Kickflip_SucessSelf size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_Kickflip_SucessSelf) == 0x410, "CCitadel_Modifier_Werewolf_Kickflip_SucessSelf size mismatch");
         }
     }
 }

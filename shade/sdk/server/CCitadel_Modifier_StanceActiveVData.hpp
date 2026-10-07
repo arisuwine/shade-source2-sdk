@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,17 +34,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StanceActiveVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapNewAbilities; // 0x0760, 0x28 bytes
-                shade::sdk::client::ModelChange_t m_StanceModel; // 0x0788, 0xe8 bytes
-                float m_flModelScale; // 0x0870, 0x4 bytes
-                std::uint8_t pad_0874[0x4]; // 0x0874, 0x4 bytes
-                shade::sdk::client::HeroCardOverride_t m_HeroCardOverride; // 0x0878, 0x30 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapNewAbilities; // 0x0790, 0x28 bytes
+                shade::sdk::client::ModelChange_t m_StanceModel; // 0x07b8, 0xe8 bytes
+                float m_flModelScale; // 0x08a0, 0x4 bytes
+                std::uint8_t pad_08a4[0x4]; // 0x08a4, 0x4 bytes
+                shade::sdk::client::HeroCardOverride_t m_HeroCardOverride; // 0x08a8, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StanceActiveVData) == 0x8A8, "CCitadel_Modifier_StanceActiveVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StanceActiveVData) == 0x8D8, "CCitadel_Modifier_StanceActiveVData size mismatch");
         }
     }
 }

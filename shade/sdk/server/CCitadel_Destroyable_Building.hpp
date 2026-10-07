@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1060
+             * Size: 0x10b0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -43,40 +43,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Destroyable_Building : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0x10]; // 0x0bf0, 0x10 bytes
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0c00, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDestroyed; // 0x0c20, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnRevitilized; // 0x0c38, 0x18 bytes
-                CEntityOutputTemplate<float> m_OnDamageTaken; // 0x0c50, 0x20 bytes
-                CEntityOutputTemplate<float> m_OnLifeChanged; // 0x0c70, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBecomeActive; // 0x0c90, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBecomeInvulnerable; // 0x0ca8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBecomeVulnerable; // 0x0cc0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnUnderAttack; // 0x0cd8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAttackSubsided; // 0x0cf0, 0x18 bytes
-                std::int32_t m_nBuildingHealth; // 0x0d08, 0x4 bytes
-                std::uint8_t pad_0d0c[0x4]; // 0x0d0c, 0x4 bytes
-                std::int32_t m_iLane; // 0x0d10, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDestroyedTime; // 0x0d14, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamagedTime; // 0x0d18, 0x4 bytes
-                QAngle m_angOriginal; // 0x0d1c, 0xc bytes
-                std::uint8_t pad_0d28[0x20]; // 0x0d28, 0x20 bytes
-                CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x0d48, 0x8 bytes
-                std::uint8_t pad_0d50[0x8]; // 0x0d50, 0x8 bytes
-                CUtlSymbolLarge m_strTrooperApproach; // 0x0d58, 0x8 bytes
-                std::uint8_t pad_0d60[0x20]; // 0x0d60, 0x20 bytes
-                shade::sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0d80, 0x268 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::WeakPoint_t> m_vecWeakPoints; // 0x0fe8, 0x68 bytes
-                bool m_bDestroyed; // 0x1050, 0x1 bytes
-                bool m_bActive; // 0x1051, 0x1 bytes
-                bool m_bFinal; // 0x1052, 0x1 bytes
-                std::uint8_t pad_1053[0xd]; // 0x1053, 0xd bytes
+                std::uint8_t pad_0c40[0x10]; // 0x0c40, 0x10 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0c50, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDestroyed; // 0x0c70, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnRevitilized; // 0x0c88, 0x18 bytes
+                CEntityOutputTemplate<float> m_OnDamageTaken; // 0x0ca0, 0x20 bytes
+                CEntityOutputTemplate<float> m_OnLifeChanged; // 0x0cc0, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBecomeActive; // 0x0ce0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBecomeInvulnerable; // 0x0cf8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBecomeVulnerable; // 0x0d10, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnUnderAttack; // 0x0d28, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAttackSubsided; // 0x0d40, 0x18 bytes
+                std::int32_t m_nBuildingHealth; // 0x0d58, 0x4 bytes
+                std::uint8_t pad_0d5c[0x4]; // 0x0d5c, 0x4 bytes
+                std::int32_t m_iLane; // 0x0d60, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDestroyedTime; // 0x0d64, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamagedTime; // 0x0d68, 0x4 bytes
+                QAngle m_angOriginal; // 0x0d6c, 0xc bytes
+                std::uint8_t pad_0d78[0x20]; // 0x0d78, 0x20 bytes
+                CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x0d98, 0x8 bytes
+                std::uint8_t pad_0da0[0x8]; // 0x0da0, 0x8 bytes
+                CUtlSymbolLarge m_strTrooperApproach; // 0x0da8, 0x8 bytes
+                std::uint8_t pad_0db0[0x20]; // 0x0db0, 0x20 bytes
+                shade::sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0dd0, 0x268 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::WeakPoint_t> m_vecWeakPoints; // 0x1038, 0x68 bytes
+                bool m_bDestroyed; // 0x10a0, 0x1 bytes
+                bool m_bActive; // 0x10a1, 0x1 bytes
+                bool m_bFinal; // 0x10a2, 0x1 bytes
+                std::uint8_t pad_10a3[0xd]; // 0x10a3, 0xd bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Destroyable_Building) == 0x1060, "CCitadel_Destroyable_Building size mismatch");
+            static_assert(sizeof(CCitadel_Destroyable_Building) == 0x10B0, "CCitadel_Destroyable_Building size mismatch");
         }
     }
 }

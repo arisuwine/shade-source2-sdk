@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfb0
+             * Size: 0x1008
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,20 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_ShieldedSentry : public shade::sdk::client::C_NPC_SimpleAnimatingAI {
             public:
-                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0db8, 0x1e0 bytes
-                std::uint8_t pad_0f98[0x4]; // 0x0f98, 0x4 bytes
-                float m_flAttackRange; // 0x0f9c, 0x4 bytes
-                float m_flAimPitch; // 0x0fa0, 0x4 bytes
-                bool m_bHasRecentlyAttacked; // 0x0fa4, 0x1 bytes
-                std::uint8_t pad_0fa5[0x3]; // 0x0fa5, 0x3 bytes
-                float m_flLifeTime; // 0x0fa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x0fac, 0x4 bytes
+                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x0e10, 0x1e0 bytes
+                std::uint8_t pad_0ff0[0x4]; // 0x0ff0, 0x4 bytes
+                float m_flAttackRange; // 0x0ff4, 0x4 bytes
+                float m_flAimPitch; // 0x0ff8, 0x4 bytes
+                bool m_bHasRecentlyAttacked; // 0x0ffc, 0x1 bytes
+                std::uint8_t pad_0ffd[0x3]; // 0x0ffd, 0x3 bytes
+                float m_flLifeTime; // 0x1000, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x1004, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_ShieldedSentry) == 0xFB0, "C_NPC_ShieldedSentry size mismatch");
+            static_assert(sizeof(C_NPC_ShieldedSentry) == 0x1008, "C_NPC_ShieldedSentry size mismatch");
         }
     }
 }

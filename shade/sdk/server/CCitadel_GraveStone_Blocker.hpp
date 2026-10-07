@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc20
+             * Size: 0xc70
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -40,17 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_GraveStone_Blocker : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0bf0, 0x20 bytes
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c10, 0x4 bytes
-                std::int32_t m_iGravestoneState; // 0x0c14, 0x4 bytes
-                float m_flLifetime; // 0x0c18, 0x4 bytes
-                std::uint8_t pad_0c1c[0x4]; // 0x0c1c, 0x4 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0c40, 0x20 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c60, 0x4 bytes
+                std::int32_t m_iGravestoneState; // 0x0c64, 0x4 bytes
+                float m_flLifetime; // 0x0c68, 0x4 bytes
+                std::uint8_t pad_0c6c[0x4]; // 0x0c6c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_GraveStone_Blocker) == 0xC20, "CCitadel_GraveStone_Blocker size mismatch");
+            static_assert(sizeof(CCitadel_GraveStone_Blocker) == 0xC70, "CCitadel_GraveStone_Blocker size mismatch");
         }
     }
 }

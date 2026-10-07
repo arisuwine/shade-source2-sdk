@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa08
+             * Size: 0xa38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChronoSwap_BubbleMoveVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                float m_flMultiSwapDistFromOrigin; // 0x0760, 0x4 bytes
-                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x0768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealParticle; // 0x0848, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageParticle; // 0x0928, 0xe0 bytes
+                float m_flMultiSwapDistFromOrigin; // 0x0790, 0x4 bytes
+                std::uint8_t pad_0794[0x4]; // 0x0794, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x0798, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealParticle; // 0x0878, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageParticle; // 0x0958, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChronoSwap_BubbleMoveVData) == 0xA08, "CCitadel_Modifier_ChronoSwap_BubbleMoveVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChronoSwap_BubbleMoveVData) == 0xA38, "CCitadel_Modifier_ChronoSwap_BubbleMoveVData size mismatch");
         }
     }
 }

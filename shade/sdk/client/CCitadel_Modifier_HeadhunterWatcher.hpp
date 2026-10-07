@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x5a8
+             * Size: 0x5b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HeadhunterWatcher : public shade::sdk::client::CCitadel_Modifier_HeadshotBoosterWatcher {
             public:
-                std::uint8_t pad_0398[0x210]; // 0x0398, 0x210 bytes
+                std::uint8_t pad_03a0[0x210]; // 0x03a0, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HeadhunterWatcher) == 0x5A8, "CCitadel_Modifier_HeadhunterWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HeadhunterWatcher) == 0x5B0, "CCitadel_Modifier_HeadhunterWatcher size mismatch");
         }
     }
 }

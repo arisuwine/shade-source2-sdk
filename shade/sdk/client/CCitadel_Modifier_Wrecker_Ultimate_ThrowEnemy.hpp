@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Wrecker_Ultimate_ThrowEnemy : public shade::sdk::client::CCitadel_Modifier_Stunned {
             public:
-                Vector m_vThrowVelocity; // 0x0138, 0xc bytes
-                std::uint8_t pad_0144[0x4]; // 0x0144, 0x4 bytes
+                Vector m_vThrowVelocity; // 0x0140, 0xc bytes
+                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_ThrowEnemy) == 0x148, "CCitadel_Modifier_Wrecker_Ultimate_ThrowEnemy size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_ThrowEnemy) == 0x150, "CCitadel_Modifier_Wrecker_Ultimate_ThrowEnemy size mismatch");
         }
     }
 }

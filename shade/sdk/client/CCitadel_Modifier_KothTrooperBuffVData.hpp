@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7d8
+             * Size: 0x808
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_KothTrooperBuffVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CUtlVector<float> m_vecHealthPercents; // 0x0760, 0x18 bytes
-                CUtlVector<float> m_vecDamagePercents; // 0x0778, 0x18 bytes
-                CUtlVector<float> vecSpiritResistPercents; // 0x0790, 0x18 bytes
-                CUtlVector<float> vecMeleeResistPercents; // 0x07a8, 0x18 bytes
-                CUtlVector<float> m_vecModelScaleFractions; // 0x07c0, 0x18 bytes
+                CUtlVector<float> m_vecHealthPercents; // 0x0790, 0x18 bytes
+                CUtlVector<float> m_vecDamagePercents; // 0x07a8, 0x18 bytes
+                CUtlVector<float> vecSpiritResistPercents; // 0x07c0, 0x18 bytes
+                CUtlVector<float> vecMeleeResistPercents; // 0x07d8, 0x18 bytes
+                CUtlVector<float> m_vecModelScaleFractions; // 0x07f0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_KothTrooperBuffVData) == 0x7D8, "CCitadel_Modifier_KothTrooperBuffVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_KothTrooperBuffVData) == 0x808, "CCitadel_Modifier_KothTrooperBuffVData size mismatch");
         }
     }
 }

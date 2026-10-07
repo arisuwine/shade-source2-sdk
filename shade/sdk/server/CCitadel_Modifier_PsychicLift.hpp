@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x378
+             * Size: 0x380
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PsychicLift : public shade::sdk::server::CCitadel_Modifier_Stunned {
             public:
-                VectorWS m_vDropStartLocation; // 0x0148, 0xc bytes
-                float m_flLiftDuration; // 0x0154, 0x4 bytes
-                std::uint8_t pad_0158[0x210]; // 0x0158, 0x210 bytes
-                VectorWS m_vecSlamDest; // 0x0368, 0xc bytes
-                bool m_bImpacted; // 0x0374, 0x1 bytes
-                std::uint8_t pad_0375[0x3]; // 0x0375, 0x3 bytes
+                VectorWS m_vDropStartLocation; // 0x0150, 0xc bytes
+                float m_flLiftDuration; // 0x015c, 0x4 bytes
+                std::uint8_t pad_0160[0x210]; // 0x0160, 0x210 bytes
+                VectorWS m_vecSlamDest; // 0x0370, 0xc bytes
+                bool m_bImpacted; // 0x037c, 0x1 bytes
+                std::uint8_t pad_037d[0x3]; // 0x037d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PsychicLift) == 0x378, "CCitadel_Modifier_PsychicLift size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PsychicLift) == 0x380, "CCitadel_Modifier_PsychicLift size mismatch");
         }
     }
 }

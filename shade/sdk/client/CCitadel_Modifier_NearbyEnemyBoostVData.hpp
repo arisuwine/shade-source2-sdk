@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x7b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NearbyEnemyBoostVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CSoundEventName m_BerserkerSound; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x0770, 0x10 bytes
+                CSoundEventName m_BerserkerSound; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x07a0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NearbyEnemyBoostVData) == 0x780, "CCitadel_Modifier_NearbyEnemyBoostVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NearbyEnemyBoostVData) == 0x7B0, "CCitadel_Modifier_NearbyEnemyBoostVData size mismatch");
         }
     }
 }

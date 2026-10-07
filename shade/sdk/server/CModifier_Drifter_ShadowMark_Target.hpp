@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2a8
+             * Size: 0x2b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Drifter_ShadowMark_Target) == 0x2A8, "CModifier_Drifter_ShadowMark_Target size mismatch");
+            static_assert(sizeof(CModifier_Drifter_ShadowMark_Target) == 0x2B0, "CModifier_Drifter_ShadowMark_Target size mismatch");
         }
     }
 }

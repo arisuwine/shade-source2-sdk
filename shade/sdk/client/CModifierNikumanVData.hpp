@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierNikumanVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SelfParticle; // 0x07b8, 0xe0 bytes
-                CSoundEventName m_strAmbientLoopingLocalPlayerSound; // 0x0898, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SelfParticle; // 0x07e8, 0xe0 bytes
+                CSoundEventName m_strAmbientLoopingLocalPlayerSound; // 0x08c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierNikumanVData) == 0x8A8, "CModifierNikumanVData size mismatch");
+            static_assert(sizeof(CModifierNikumanVData) == 0x8D8, "CModifierNikumanVData size mismatch");
         }
     }
 }

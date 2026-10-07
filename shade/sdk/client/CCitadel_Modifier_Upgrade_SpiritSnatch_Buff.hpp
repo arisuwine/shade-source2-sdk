@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x290
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Upgrade_SpiritSnatch_Buff : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x160]; // 0x0130, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Upgrade_SpiritSnatch_Buff) == 0x290, "CCitadel_Modifier_Upgrade_SpiritSnatch_Buff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Upgrade_SpiritSnatch_Buff) == 0x138, "CCitadel_Modifier_Upgrade_SpiritSnatch_Buff size mismatch");
         }
     }
 }

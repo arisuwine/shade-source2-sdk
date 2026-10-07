@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3a0
+             * Size: 0x3a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_FullSpectrum : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_02c8[0xd8]; // 0x02c8, 0xd8 bytes
+                std::uint8_t pad_02d0[0xd8]; // 0x02d0, 0xd8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_FullSpectrum) == 0x3A0, "CCitadel_Modifier_FullSpectrum size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_FullSpectrum) == 0x3A8, "CCitadel_Modifier_FullSpectrum size mismatch");
         }
     }
 }

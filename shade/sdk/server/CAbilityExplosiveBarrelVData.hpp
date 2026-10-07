@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1780
+             * Size: 0x17c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,22 +43,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityExplosiveBarrelVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelExplodeParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MirvExplodeParticle; // 0x1480, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelArmedParticle; // 0x1560, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelReadyToExplodeParticle; // 0x1640, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x1720, 0x10 bytes
-                CSoundEventName m_strBarrelSoundLp; // 0x1730, 0x10 bytes
-                CSoundEventName m_strBarrelLaunchSound; // 0x1740, 0x10 bytes
-                CSoundEventName m_strBarrelMeleedSound; // 0x1750, 0x10 bytes
-                CSoundEventName m_strBarrelArmedSound; // 0x1760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BurnModifier; // 0x1770, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelExplodeParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MirvExplodeParticle; // 0x14c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelArmedParticle; // 0x15a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelReadyToExplodeParticle; // 0x1688, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1768, 0x10 bytes
+                CSoundEventName m_strBarrelSoundLp; // 0x1778, 0x10 bytes
+                CSoundEventName m_strBarrelLaunchSound; // 0x1788, 0x10 bytes
+                CSoundEventName m_strBarrelMeleedSound; // 0x1798, 0x10 bytes
+                CSoundEventName m_strBarrelArmedSound; // 0x17a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BurnModifier; // 0x17b8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityExplosiveBarrelVData) == 0x1780, "CAbilityExplosiveBarrelVData size mismatch");
+            static_assert(sizeof(CAbilityExplosiveBarrelVData) == 0x17C8, "CAbilityExplosiveBarrelVData size mismatch");
         }
     }
 }

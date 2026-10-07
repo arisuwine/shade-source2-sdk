@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb40
+             * Size: 0xb90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Pickup_Ability : public shade::sdk::server::CCitadel_Pickup {
             public:
-                shade::sdk::client::AbilityUpgradeBits_t m_nUpgradeBits; // 0x0b20, 0x2 bytes
-                std::uint8_t pad_0b22[0x2]; // 0x0b22, 0x2 bytes
-                std::int32_t m_nUpgradeLevel; // 0x0b24, 0x4 bytes
-                CUtlStringToken m_unAbilityID; // 0x0b28, 0x4 bytes
-                std::int32_t m_nGoldCost; // 0x0b2c, 0x4 bytes
-                bool m_bShowGoldCostInUI; // 0x0b30, 0x1 bytes
-                std::uint8_t pad_0b31[0xf]; // 0x0b31, 0xf bytes
+                shade::sdk::client::AbilityUpgradeBits_t m_nUpgradeBits; // 0x0b70, 0x2 bytes
+                std::uint8_t pad_0b72[0x2]; // 0x0b72, 0x2 bytes
+                std::int32_t m_nUpgradeLevel; // 0x0b74, 0x4 bytes
+                CUtlStringToken m_unAbilityID; // 0x0b78, 0x4 bytes
+                std::int32_t m_nGoldCost; // 0x0b7c, 0x4 bytes
+                bool m_bShowGoldCostInUI; // 0x0b80, 0x1 bytes
+                std::uint8_t pad_0b81[0xf]; // 0x0b81, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Pickup_Ability) == 0xB40, "CCitadel_Pickup_Ability size mismatch");
+            static_assert(sizeof(CCitadel_Pickup_Ability) == 0xB90, "CCitadel_Pickup_Ability size mismatch");
         }
     }
 }

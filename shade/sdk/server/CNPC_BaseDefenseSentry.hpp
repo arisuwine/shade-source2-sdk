@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc60
+             * Size: 0xcb0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_BaseDefenseSentry : public shade::sdk::server::CNPC_SimpleAnimatingAI {
             public:
-                std::uint8_t pad_0c10[0x28]; // 0x0c10, 0x28 bytes
-                float m_flAttackCone; // 0x0c38, 0x4 bytes
-                float m_flAttackDelay; // 0x0c3c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastAlertSound; // 0x0c40, 0x4 bytes
-                std::uint8_t pad_0c44[0x4]; // 0x0c44, 0x4 bytes
-                std::int16_t m_nSentryLevel; // 0x0c48, 0x2 bytes
-                std::uint8_t pad_0c4a[0x2]; // 0x0c4a, 0x2 bytes
-                Vector m_vecForward; // 0x0c4c, 0xc bytes
-                std::uint8_t pad_0c58[0x8]; // 0x0c58, 0x8 bytes
+                std::uint8_t pad_0c60[0x28]; // 0x0c60, 0x28 bytes
+                float m_flAttackCone; // 0x0c88, 0x4 bytes
+                float m_flAttackDelay; // 0x0c8c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastAlertSound; // 0x0c90, 0x4 bytes
+                std::uint8_t pad_0c94[0x4]; // 0x0c94, 0x4 bytes
+                std::int16_t m_nSentryLevel; // 0x0c98, 0x2 bytes
+                std::uint8_t pad_0c9a[0x2]; // 0x0c9a, 0x2 bytes
+                Vector m_vecForward; // 0x0c9c, 0xc bytes
+                std::uint8_t pad_0ca8[0x8]; // 0x0ca8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_BaseDefenseSentry) == 0xC60, "CNPC_BaseDefenseSentry size mismatch");
+            static_assert(sizeof(CNPC_BaseDefenseSentry) == 0xCB0, "CNPC_BaseDefenseSentry size mismatch");
         }
     }
 }

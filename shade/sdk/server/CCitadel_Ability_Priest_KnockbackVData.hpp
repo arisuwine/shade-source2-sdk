@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16c0
+             * Size: 0x1708
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,30 +43,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_KnockbackVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x13b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KnockbackToWallModifier; // 0x13d0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KnockbackModifier; // 0x13e0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootParticle; // 0x13f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialImpactParticle; // 0x14d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x15b0, 0xe0 bytes
-                CSoundEventName m_strShootSound; // 0x1690, 0x10 bytes
-                bool m_bDoWallSlamBehavior; // 0x16a0, 0x1 bytes
-                std::uint8_t pad_16a1[0x3]; // 0x16a1, 0x3 bytes
-                float m_flMinTravelTime; // 0x16a4, 0x4 bytes
-                float m_flTravelTimeFudge; // 0x16a8, 0x4 bytes
-                std::int32_t m_iFakeBulletCount; // 0x16ac, 0x4 bytes
-                float m_flFakeBulletSpread; // 0x16b0, 0x4 bytes
-                float m_flFakeBulletDistanceFudge; // 0x16b4, 0x4 bytes
-                float m_flDotProductToStun; // 0x16b8, 0x4 bytes
-                std::uint8_t pad_16bc[0x4]; // 0x16bc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KnockbackToWallModifier; // 0x1418, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_KnockbackModifier; // 0x1428, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootParticle; // 0x1438, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialImpactParticle; // 0x1518, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x15f8, 0xe0 bytes
+                CSoundEventName m_strShootSound; // 0x16d8, 0x10 bytes
+                bool m_bDoWallSlamBehavior; // 0x16e8, 0x1 bytes
+                std::uint8_t pad_16e9[0x3]; // 0x16e9, 0x3 bytes
+                float m_flMinTravelTime; // 0x16ec, 0x4 bytes
+                float m_flTravelTimeFudge; // 0x16f0, 0x4 bytes
+                std::int32_t m_iFakeBulletCount; // 0x16f4, 0x4 bytes
+                float m_flFakeBulletSpread; // 0x16f8, 0x4 bytes
+                float m_flFakeBulletDistanceFudge; // 0x16fc, 0x4 bytes
+                float m_flDotProductToStun; // 0x1700, 0x4 bytes
+                std::uint8_t pad_1704[0x4]; // 0x1704, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_KnockbackVData) == 0x16C0, "CCitadel_Ability_Priest_KnockbackVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_KnockbackVData) == 0x1708, "CCitadel_Ability_Priest_KnockbackVData size mismatch");
         }
     }
 }

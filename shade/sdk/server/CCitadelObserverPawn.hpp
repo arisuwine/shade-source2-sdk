@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd40
+             * Size: 0xd90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,10 +35,10 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xb98, Size: 0x1, Size In Bytes: 0x8
+             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xbe8, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(CCitadelObserverPawn) == 0xD40, "CCitadelObserverPawn size mismatch");
+            static_assert(sizeof(CCitadelObserverPawn) == 0xD90, "CCitadelObserverPawn size mismatch");
         }
     }
 }

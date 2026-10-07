@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,20 +44,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ScalingPowerUpVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CUtlVector<shade::sdk::client::ScalingPowerupDefinition_t> m_vecModifierValues; // 0x0760, 0x18 bytes
-                shade::sdk::client::EPowerupValueScaling m_eValueScaling; // 0x0778, 0x4 bytes
-                float m_flTimeMin; // 0x077c, 0x4 bytes
-                float m_flTimeMax; // 0x0780, 0x4 bytes
-                std::uint8_t pad_0784[0x4]; // 0x0784, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle; // 0x0788, 0xe0 bytes
-                Color m_Color; // 0x0868, 0x4 bytes
-                std::uint8_t pad_086c[0x4]; // 0x086c, 0x4 bytes
+                CUtlVector<shade::sdk::client::ScalingPowerupDefinition_t> m_vecModifierValues; // 0x0790, 0x18 bytes
+                shade::sdk::client::EPowerupValueScaling m_eValueScaling; // 0x07a8, 0x4 bytes
+                float m_flTimeMin; // 0x07ac, 0x4 bytes
+                float m_flTimeMax; // 0x07b0, 0x4 bytes
+                std::uint8_t pad_07b4[0x4]; // 0x07b4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle; // 0x07b8, 0xe0 bytes
+                Color m_Color; // 0x0898, 0x4 bytes
+                std::uint8_t pad_089c[0x4]; // 0x089c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ScalingPowerUpVData) == 0x870, "CCitadel_Modifier_ScalingPowerUpVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ScalingPowerUpVData) == 0x8A0, "CCitadel_Modifier_ScalingPowerUpVData size mismatch");
         }
     }
 }

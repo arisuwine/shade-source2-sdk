@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CinematicIntro_Player : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bFirstFrame; // 0x0130, 0x1 bytes
-                std::uint8_t pad_0131[0x7]; // 0x0131, 0x7 bytes
-                shade::sdk::client::CameraEntityOverride_t m_override; // 0x0138, 0x10 bytes
+                bool m_bFirstFrame; // 0x0138, 0x1 bytes
+                std::uint8_t pad_0139[0x7]; // 0x0139, 0x7 bytes
+                shade::sdk::client::CameraEntityOverride_t m_override; // 0x0140, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CinematicIntro_Player) == 0x148, "CCitadel_Modifier_CinematicIntro_Player size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CinematicIntro_Player) == 0x150, "CCitadel_Modifier_CinematicIntro_Player size mismatch");
         }
     }
 }

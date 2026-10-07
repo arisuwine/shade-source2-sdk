@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b80
+             * Size: 0x1bd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_Neutral_SinnersSacrifice : public shade::sdk::client::C_NPC_TrooperNeutral {
             public:
-                std::int32_t m_iVaultState; // 0x1b48, 0x4 bytes
-                std::int32_t m_nGoldToGiveOnDamage; // 0x1b4c, 0x4 bytes
-                float m_flRandomTimePhase; // 0x1b50, 0x4 bytes
-                float m_flMiniGameTimeScale; // 0x1b54, 0x4 bytes
-                std::uint8_t pad_1b58[0x28]; // 0x1b58, 0x28 bytes
+                std::int32_t m_iVaultState; // 0x1ba0, 0x4 bytes
+                std::int32_t m_nGoldToGiveOnDamage; // 0x1ba4, 0x4 bytes
+                float m_flRandomTimePhase; // 0x1ba8, 0x4 bytes
+                float m_flMiniGameTimeScale; // 0x1bac, 0x4 bytes
+                std::uint8_t pad_1bb0[0x28]; // 0x1bb0, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_Neutral_SinnersSacrifice) == 0x1B80, "C_NPC_Neutral_SinnersSacrifice size mismatch");
+            static_assert(sizeof(C_NPC_Neutral_SinnersSacrifice) == 0x1BD8, "C_NPC_Neutral_SinnersSacrifice size mismatch");
         }
     }
 }

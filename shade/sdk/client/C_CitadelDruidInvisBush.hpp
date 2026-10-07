@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdc8
+             * Size: 0xe20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelDruidInvisBush : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                VectorWS m_vStartPos; // 0x0da8, 0xc bytes
-                VectorWS m_vEndPos; // 0x0db4, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartGrowTime; // 0x0dc0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndGrowTime; // 0x0dc4, 0x4 bytes
+                VectorWS m_vStartPos; // 0x0e00, 0xc bytes
+                VectorWS m_vEndPos; // 0x0e0c, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartGrowTime; // 0x0e18, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndGrowTime; // 0x0e1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CitadelDruidInvisBush) == 0xDC8, "C_CitadelDruidInvisBush size mismatch");
+            static_assert(sizeof(C_CitadelDruidInvisBush) == 0xE20, "C_CitadelDruidInvisBush size mismatch");
         }
     }
 }

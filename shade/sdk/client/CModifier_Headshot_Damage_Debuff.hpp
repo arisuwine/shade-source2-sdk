@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4a8
+             * Size: 0x4b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Headshot_Damage_Debuff : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_nDebuffsTotal; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x374]; // 0x0134, 0x374 bytes
+                float m_nDebuffsTotal; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x374]; // 0x013c, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Headshot_Damage_Debuff) == 0x4A8, "CModifier_Headshot_Damage_Debuff size mismatch");
+            static_assert(sizeof(CModifier_Headshot_Damage_Debuff) == 0x4B0, "CModifier_Headshot_Damage_Debuff size mismatch");
         }
     }
 }

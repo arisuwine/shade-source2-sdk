@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x798
+             * Size: 0x7a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_RampUp : public shade::sdk::server::CCitadel_Modifier_Base_Buildup {
             public:
-                std::uint8_t pad_0150[0x4]; // 0x0150, 0x4 bytes
-                float m_flCurrBuildup; // 0x0154, 0x4 bytes
-                std::uint8_t pad_0158[0x638]; // 0x0158, 0x638 bytes
-                shade::sdk::entity2::GameTime_t m_tLastTetherTime; // 0x0790, 0x4 bytes
-                std::uint8_t pad_0794[0x4]; // 0x0794, 0x4 bytes
+                std::uint8_t pad_0158[0x4]; // 0x0158, 0x4 bytes
+                float m_flCurrBuildup; // 0x015c, 0x4 bytes
+                std::uint8_t pad_0160[0x638]; // 0x0160, 0x638 bytes
+                shade::sdk::entity2::GameTime_t m_tLastTetherTime; // 0x0798, 0x4 bytes
+                std::uint8_t pad_079c[0x4]; // 0x079c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_RampUp) == 0x798, "CCitadel_Modifier_Necro_RampUp size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_RampUp) == 0x7A0, "CCitadel_Modifier_Necro_RampUp size mismatch");
         }
     }
 }

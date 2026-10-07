@@ -139,7 +139,8 @@ namespace shade {
                 CLASS_RATKING_STANDARD = 0x76,
                 CLASS_RATKING_RAT = 0x77,
                 CLASS_RATKING_SEWER = 0x78,
-                NUM_CLASSIFY_CLASSES = 0x79
+                CLASS_PASSTHROUGH_FAKE_WALL = 0x79,
+                NUM_CLASSIFY_CLASSES = 0x7a
             };
         }
     }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e0
+             * Size: 0x1e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Mirage_Traveler_MovementSpeed : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0xb0]; // 0x0130, 0xb0 bytes
+                std::uint8_t pad_0138[0xb0]; // 0x0138, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Mirage_Traveler_MovementSpeed) == 0x1E0, "CModifier_Mirage_Traveler_MovementSpeed size mismatch");
+            static_assert(sizeof(CModifier_Mirage_Traveler_MovementSpeed) == 0x1E8, "CModifier_Mirage_Traveler_MovementSpeed size mismatch");
         }
     }
 }

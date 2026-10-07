@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3f8
+             * Size: 0x400
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Haze_StackingDamage : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x2c0]; // 0x0130, 0x2c0 bytes
-                std::int32_t m_nTotalProcs; // 0x03f0, 0x4 bytes
-                std::uint8_t pad_03f4[0x4]; // 0x03f4, 0x4 bytes
+                std::uint8_t pad_0138[0x2c0]; // 0x0138, 0x2c0 bytes
+                std::int32_t m_nTotalProcs; // 0x03f8, 0x4 bytes
+                std::uint8_t pad_03fc[0x4]; // 0x03fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Haze_StackingDamage) == 0x3F8, "CCitadel_Modifier_Haze_StackingDamage size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Haze_StackingDamage) == 0x400, "CCitadel_Modifier_Haze_StackingDamage size mismatch");
         }
     }
 }

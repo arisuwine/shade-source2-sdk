@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1638
+             * Size: 0x1680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,35 +44,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Hotel_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoDrawModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FreezeModifier; // 0x13b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HotelModifier; // 0x13c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamageModifier; // 0x13d0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TeleportFXModifier; // 0x13e0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PreTeleportModifier; // 0x13f0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_UnstoppableWhileChannelingModifier; // 0x1400, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Doorman_Hotel_Imposter> m_ImposterModifier; // 0x1410, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TrackEnemy; // 0x1420, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TimeslowModifier; // 0x1430, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1440, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelStartParticle; // 0x1520, 0xe0 bytes
-                CSoundEventName m_strLateHitConfirmSound; // 0x1600, 0x10 bytes
-                float m_flSequenceTriggerOffset; // 0x1610, 0x4 bytes
-                float m_flTeleportToHotelDelay; // 0x1614, 0x4 bytes
-                float m_flTeleportToSourceDelay; // 0x1618, 0x4 bytes
-                float m_flPostSourceTeleportHold; // 0x161c, 0x4 bytes
-                float m_flFadeToBlackDuration; // 0x1620, 0x4 bytes
-                float m_flDoormanGroundSpeedMax; // 0x1624, 0x4 bytes
-                float m_flDoormanAirSpeedMax; // 0x1628, 0x4 bytes
-                float m_flDoormanFallSpeedMax; // 0x162c, 0x4 bytes
-                float m_flDoormanAirDrag; // 0x1630, 0x4 bytes
-                std::uint8_t pad_1634[0x4]; // 0x1634, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoDrawModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FreezeModifier; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HotelModifier; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DamageModifier; // 0x1418, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TeleportFXModifier; // 0x1428, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PreTeleportModifier; // 0x1438, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_UnstoppableWhileChannelingModifier; // 0x1448, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_Doorman_Hotel_Imposter> m_ImposterModifier; // 0x1458, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TrackEnemy; // 0x1468, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TimeslowModifier; // 0x1478, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1488, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelStartParticle; // 0x1568, 0xe0 bytes
+                CSoundEventName m_strLateHitConfirmSound; // 0x1648, 0x10 bytes
+                float m_flSequenceTriggerOffset; // 0x1658, 0x4 bytes
+                float m_flTeleportToHotelDelay; // 0x165c, 0x4 bytes
+                float m_flTeleportToSourceDelay; // 0x1660, 0x4 bytes
+                float m_flPostSourceTeleportHold; // 0x1664, 0x4 bytes
+                float m_flFadeToBlackDuration; // 0x1668, 0x4 bytes
+                float m_flDoormanGroundSpeedMax; // 0x166c, 0x4 bytes
+                float m_flDoormanAirSpeedMax; // 0x1670, 0x4 bytes
+                float m_flDoormanFallSpeedMax; // 0x1674, 0x4 bytes
+                float m_flDoormanAirDrag; // 0x1678, 0x4 bytes
+                std::uint8_t pad_167c[0x4]; // 0x167c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Hotel_VData) == 0x1638, "CCitadel_Ability_Doorman_Hotel_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Hotel_VData) == 0x1680, "CCitadel_Ability_Doorman_Hotel_VData size mismatch");
         }
     }
 }

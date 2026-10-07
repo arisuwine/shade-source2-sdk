@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xee0
+             * Size: 0xf38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_Pickup_Gold : public shade::sdk::client::C_Citadel_Pickup {
             public:
-                std::int32_t m_iGoldReward; // 0x0ed8, 0x4 bytes
-                std::uint8_t pad_0edc[0x4]; // 0x0edc, 0x4 bytes
+                std::int32_t m_iGoldReward; // 0x0f30, 0x4 bytes
+                std::uint8_t pad_0f34[0x4]; // 0x0f34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_Pickup_Gold) == 0xEE0, "C_Citadel_Pickup_Gold size mismatch");
+            static_assert(sizeof(C_Citadel_Pickup_Gold) == 0xF38, "C_Citadel_Pickup_Gold size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x7d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Doorman_Bomb_DebuffVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CPiecewiseCurve m_InaccuracyCurveScale; // 0x0760, 0x40 bytes
+                CPiecewiseCurve m_InaccuracyCurveScale; // 0x0790, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Doorman_Bomb_DebuffVData) == 0x7A0, "CCitadel_Doorman_Bomb_DebuffVData size mismatch");
+            static_assert(sizeof(CCitadel_Doorman_Bomb_DebuffVData) == 0x7D0, "CCitadel_Doorman_Bomb_DebuffVData size mismatch");
         }
     }
 }

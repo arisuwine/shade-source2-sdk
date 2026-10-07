@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8a0
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierAirRaidVData : public shade::sdk::server::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x0790, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x07a0, 0xe0 bytes
-                CSoundEventName m_strWeaponShootSound; // 0x0880, 0x10 bytes
-                CSoundEventName m_strAttackerHitSound; // 0x0890, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x07c8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x07d8, 0xe0 bytes
+                CSoundEventName m_strWeaponShootSound; // 0x08b8, 0x10 bytes
+                CSoundEventName m_strAttackerHitSound; // 0x08c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierAirRaidVData) == 0x8A0, "CModifierAirRaidVData size mismatch");
+            static_assert(sizeof(CModifierAirRaidVData) == 0x8D8, "CModifierAirRaidVData size mismatch");
         }
     }
 }

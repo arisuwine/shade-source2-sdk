@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2e0
+             * Size: 0x2e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Operative_Revelation_Aura : public shade::sdk::client::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0180[0x160]; // 0x0180, 0x160 bytes
+                std::uint8_t pad_0188[0x160]; // 0x0188, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Operative_Revelation_Aura) == 0x2E0, "CModifier_Operative_Revelation_Aura size mismatch");
+            static_assert(sizeof(CModifier_Operative_Revelation_Aura) == 0x2E8, "CModifier_Operative_Revelation_Aura size mismatch");
         }
     }
 }

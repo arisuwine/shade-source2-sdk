@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2f0
+             * Size: 0x2f8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Cadence_AnthemAOE : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0178[0x178]; // 0x0178, 0x178 bytes
+                std::uint8_t pad_0180[0x178]; // 0x0180, 0x178 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Cadence_AnthemAOE) == 0x2F0, "CCitadel_Modifier_Cadence_AnthemAOE size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Cadence_AnthemAOE) == 0x2F8, "CCitadel_Modifier_Cadence_AnthemAOE size mismatch");
         }
     }
 }

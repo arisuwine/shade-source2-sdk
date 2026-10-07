@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x320
+             * Size: 0x328
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,30 +40,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Tier3Boss_LaserBeam : public shade::sdk::server::CCitadel_Modifier_Tier3Boss_Base {
             public:
-                std::uint8_t pad_0140[0x4]; // 0x0140, 0x4 bytes
-                VectorWS m_vStart; // 0x0144, 0xc bytes
-                VectorWS m_vEnd; // 0x0150, 0xc bytes
-                VectorWS m_vPrevEnd; // 0x015c, 0xc bytes
-                float m_flAngleBetweenTrace; // 0x0168, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x016c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAuraDropTick; // 0x0170, 0x4 bytes
-                std::uint8_t pad_0174[0x4]; // 0x0174, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEntitiesHit; // 0x0178, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x0190, 0x4 bytes
-                VectorWS m_vecBeamTarget; // 0x0194, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastBeamUpdateTime; // 0x01a0, 0x4 bytes
-                VectorWS m_vecEnemyPosition; // 0x01a4, 0xc bytes
-                bool m_bPreviewMode; // 0x01b0, 0x1 bytes
-                std::uint8_t pad_01b1[0x3]; // 0x01b1, 0x3 bytes
-                std::int32_t m_iAttachmentIndex; // 0x01b4, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x01b8, 0x1 bytes
-                std::uint8_t pad_01b9[0x167]; // 0x01b9, 0x167 bytes
+                std::uint8_t pad_0148[0x4]; // 0x0148, 0x4 bytes
+                VectorWS m_vStart; // 0x014c, 0xc bytes
+                VectorWS m_vEnd; // 0x0158, 0xc bytes
+                VectorWS m_vPrevEnd; // 0x0164, 0xc bytes
+                float m_flAngleBetweenTrace; // 0x0170, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x0174, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAuraDropTick; // 0x0178, 0x4 bytes
+                std::uint8_t pad_017c[0x4]; // 0x017c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEntitiesHit; // 0x0180, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x0198, 0x4 bytes
+                VectorWS m_vecBeamTarget; // 0x019c, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastBeamUpdateTime; // 0x01a8, 0x4 bytes
+                VectorWS m_vecEnemyPosition; // 0x01ac, 0xc bytes
+                bool m_bPreviewMode; // 0x01b8, 0x1 bytes
+                std::uint8_t pad_01b9[0x3]; // 0x01b9, 0x3 bytes
+                std::int32_t m_iAttachmentIndex; // 0x01bc, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x01c0, 0x1 bytes
+                std::uint8_t pad_01c1[0x167]; // 0x01c1, 0x167 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_LaserBeam) == 0x320, "CCitadel_Modifier_Tier3Boss_LaserBeam size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_LaserBeam) == 0x328, "CCitadel_Modifier_Tier3Boss_LaserBeam size mismatch");
         }
     }
 }

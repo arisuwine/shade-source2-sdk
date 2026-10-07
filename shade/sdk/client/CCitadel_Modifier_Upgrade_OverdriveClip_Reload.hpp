@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x348
+             * Size: 0x350
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Upgrade_OverdriveClip_Reload : public shade::sdk::client::CCitadelModifier {
             public:
-                std::int32_t m_nStartingClipSize; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x214]; // 0x0134, 0x214 bytes
+                std::int32_t m_nStartingClipSize; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x214]; // 0x013c, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Upgrade_OverdriveClip_Reload) == 0x348, "CCitadel_Modifier_Upgrade_OverdriveClip_Reload size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Upgrade_OverdriveClip_Reload) == 0x350, "CCitadel_Modifier_Upgrade_OverdriveClip_Reload size mismatch");
         }
     }
 }

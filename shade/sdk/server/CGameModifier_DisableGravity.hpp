@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x140
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_DisableGravity) == 0x140, "CGameModifier_DisableGravity size mismatch");
+            static_assert(sizeof(CGameModifier_DisableGravity) == 0x148, "CGameModifier_DisableGravity size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8d8
+             * Size: 0x908
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierNeutralSporeAuraVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                float m_flExplodeDamage; // 0x07b8, 0x4 bytes
-                float m_flArmTime; // 0x07bc, 0x4 bytes
-                float m_flDetonateTime; // 0x07c0, 0x4 bytes
-                std::uint8_t pad_07c4[0x4]; // 0x07c4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x07c8, 0xe0 bytes
-                CSoundEventName m_ExplodeSound; // 0x08a8, 0x10 bytes
-                CSoundEventName m_ArmSound; // 0x08b8, 0x10 bytes
-                CSoundEventName m_DetonateActivatedSound; // 0x08c8, 0x10 bytes
+                float m_flExplodeDamage; // 0x07e8, 0x4 bytes
+                float m_flArmTime; // 0x07ec, 0x4 bytes
+                float m_flDetonateTime; // 0x07f0, 0x4 bytes
+                std::uint8_t pad_07f4[0x4]; // 0x07f4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x07f8, 0xe0 bytes
+                CSoundEventName m_ExplodeSound; // 0x08d8, 0x10 bytes
+                CSoundEventName m_ArmSound; // 0x08e8, 0x10 bytes
+                CSoundEventName m_DetonateActivatedSound; // 0x08f8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierNeutralSporeAuraVData) == 0x8D8, "CModifierNeutralSporeAuraVData size mismatch");
+            static_assert(sizeof(CModifierNeutralSporeAuraVData) == 0x908, "CModifierNeutralSporeAuraVData size mismatch");
         }
     }
 }

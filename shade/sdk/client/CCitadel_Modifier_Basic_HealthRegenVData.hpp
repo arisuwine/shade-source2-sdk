@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x7e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Basic_HealthRegenVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                shade::sdk::client::HealingOverTimeLoopSoundOverride_t m_HealingLoopSoundOverride; // 0x0760, 0x38 bytes
-                bool m_bSnapshotRegen; // 0x0798, 0x1 bytes
-                std::uint8_t pad_0799[0x7]; // 0x0799, 0x7 bytes
-                CUtlString m_strRegenAbilityPropertyName; // 0x07a0, 0x8 bytes
-                CUtlString m_strExternalRegenAbilityPropertyName; // 0x07a8, 0x8 bytes
+                shade::sdk::client::HealingOverTimeLoopSoundOverride_t m_HealingLoopSoundOverride; // 0x0790, 0x38 bytes
+                bool m_bSnapshotRegen; // 0x07c8, 0x1 bytes
+                std::uint8_t pad_07c9[0x7]; // 0x07c9, 0x7 bytes
+                CUtlString m_strRegenAbilityPropertyName; // 0x07d0, 0x8 bytes
+                CUtlString m_strExternalRegenAbilityPropertyName; // 0x07d8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Basic_HealthRegenVData) == 0x7B0, "CCitadel_Modifier_Basic_HealthRegenVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Basic_HealthRegenVData) == 0x7E0, "CCitadel_Modifier_Basic_HealthRegenVData size mismatch");
         }
     }
 }

@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b08
+             * Size: 0x1b60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,25 +41,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_AI_CitadelNPC : public shade::sdk::client::C_AI_BaseNPC {
             public:
-                std::uint8_t pad_0e40[0x2d]; // 0x0e40, 0x2d bytes
-                bool m_bBeamActive; // 0x0e6d, 0x1 bytes
-                std::uint8_t pad_0e6e[0x2]; // 0x0e6e, 0x2 bytes
-                VectorWS m_vEyeBeamTarget; // 0x0e70, 0xc bytes
-                std::uint8_t pad_0e7c[0x9a4]; // 0x0e7c, 0x9a4 bytes
-                std::int32_t m_nPlayerTeamEvent; // 0x1820, 0x4 bytes
-                std::uint8_t pad_1824[0x8c]; // 0x1824, 0x8c bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::WeakPoint_t> m_vecWeakPoints; // 0x18b0, 0x68 bytes
-                bool m_bMinion; // 0x1918, 0x1 bytes
-                std::uint8_t pad_1919[0x3]; // 0x1919, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLookTarget; // 0x191c, 0x4 bytes
-                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1920, 0x1e0 bytes
-                std::uint8_t pad_1b00[0x8]; // 0x1b00, 0x8 bytes
+                std::uint8_t pad_0e98[0x2d]; // 0x0e98, 0x2d bytes
+                bool m_bBeamActive; // 0x0ec5, 0x1 bytes
+                std::uint8_t pad_0ec6[0x2]; // 0x0ec6, 0x2 bytes
+                VectorWS m_vEyeBeamTarget; // 0x0ec8, 0xc bytes
+                std::uint8_t pad_0ed4[0x9a4]; // 0x0ed4, 0x9a4 bytes
+                std::int32_t m_nPlayerTeamEvent; // 0x1878, 0x4 bytes
+                std::uint8_t pad_187c[0x8c]; // 0x187c, 0x8c bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::WeakPoint_t> m_vecWeakPoints; // 0x1908, 0x68 bytes
+                bool m_bMinion; // 0x1970, 0x1 bytes
+                std::uint8_t pad_1971[0x3]; // 0x1971, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLookTarget; // 0x1974, 0x4 bytes
+                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1978, 0x1e0 bytes
+                std::uint8_t pad_1b58[0x8]; // 0x1b58, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_AI_CitadelNPC) == 0x1B08, "C_AI_CitadelNPC size mismatch");
+            static_assert(sizeof(C_AI_CitadelNPC) == 0x1B60, "C_AI_CitadelNPC size mismatch");
         }
     }
 }

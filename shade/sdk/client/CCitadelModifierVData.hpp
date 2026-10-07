@@ -40,7 +40,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x760
+             * Size: 0x790
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -83,27 +83,27 @@ namespace shade {
                 bool m_bHideInStatModifierUI; // 0x04d8, 0x1 bytes
                 std::uint8_t pad_04d9[0x7]; // 0x04d9, 0x7 bytes
                 shade::sdk::client::CCitadelModifierResponseRules_t m_OnCreateResponse; // 0x04e0, 0x38 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCreated; // 0x0518, 0x88 bytes
-                bool m_bEndCreatedSequenceOnRemove; // 0x05a0, 0x1 bytes
-                std::uint8_t pad_05a1[0x7]; // 0x05a1, 0x7 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceRemoved; // 0x05a8, 0x88 bytes
-                shade::sdk::client::ModifierBarrierBehavior_t m_BarrierBehavior; // 0x0630, 0x4 bytes
-                std::uint8_t pad_0634[0x4]; // 0x0634, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierCreateParticle; // 0x0638, 0xe0 bytes
-                bool m_bSupressDefaultBarrierBreakParticle; // 0x0718, 0x1 bytes
-                bool m_bSuppressBarrierRefreshSound; // 0x0719, 0x1 bytes
-                std::uint8_t pad_071a[0x6]; // 0x071a, 0x6 bytes
-                CSoundEventName m_sExpiredSound; // 0x0720, 0x10 bytes
-                shade::sdk::client::FootstepSound_t m_FootstepOverride; // 0x0730, 0x18 bytes
-                CSoundEventName m_FootstepAdditional; // 0x0748, 0x10 bytes
-                bool m_bRemoveOnInterrupted; // 0x0758, 0x1 bytes
-                std::uint8_t pad_0759[0x7]; // 0x0759, 0x7 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCreated; // 0x0518, 0xa0 bytes
+                bool m_bEndCreatedSequenceOnRemove; // 0x05b8, 0x1 bytes
+                std::uint8_t pad_05b9[0x7]; // 0x05b9, 0x7 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceRemoved; // 0x05c0, 0xa0 bytes
+                shade::sdk::client::ModifierBarrierBehavior_t m_BarrierBehavior; // 0x0660, 0x4 bytes
+                std::uint8_t pad_0664[0x4]; // 0x0664, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierCreateParticle; // 0x0668, 0xe0 bytes
+                bool m_bSupressDefaultBarrierBreakParticle; // 0x0748, 0x1 bytes
+                bool m_bSuppressBarrierRefreshSound; // 0x0749, 0x1 bytes
+                std::uint8_t pad_074a[0x6]; // 0x074a, 0x6 bytes
+                CSoundEventName m_sExpiredSound; // 0x0750, 0x10 bytes
+                shade::sdk::client::FootstepSound_t m_FootstepOverride; // 0x0760, 0x18 bytes
+                CSoundEventName m_FootstepAdditional; // 0x0778, 0x10 bytes
+                bool m_bRemoveOnInterrupted; // 0x0788, 0x1 bytes
+                std::uint8_t pad_0789[0x7]; // 0x0789, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierVData) == 0x760, "CCitadelModifierVData size mismatch");
+            static_assert(sizeof(CCitadelModifierVData) == 0x790, "CCitadelModifierVData size mismatch");
         }
     }
 }

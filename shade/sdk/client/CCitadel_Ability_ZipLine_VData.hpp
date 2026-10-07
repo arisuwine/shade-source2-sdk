@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d70
+             * Size: 0x1e18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,44 +45,44 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ZipLine_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flZiplineAirDrag; // 0x13a0, 0x4 bytes
-                float m_flZiplineAirDragBoosted; // 0x13a4, 0x4 bytes
-                float m_flMinButtonHoldTimeToActivate; // 0x13a8, 0x4 bytes
-                float m_flRestrictedLookTolerance; // 0x13ac, 0x4 bytes
-                float m_flCrouchDropSpeedFraction; // 0x13b0, 0x4 bytes
-                float m_flCrouchDropAirDragSuppressDuration; // 0x13b4, 0x4 bytes
-                float m_flDetachDisallowedTime; // 0x13b8, 0x4 bytes
-                float m_flCameraWobbleIntensity; // 0x13bc, 0x4 bytes
-                float m_flDismountSpeedMax; // 0x13c0, 0x4 bytes
-                float m_flDismountSpeedMaxBrawl; // 0x13c4, 0x4 bytes
-                float m_flZiplineKnockdownUpImpulse; // 0x13c8, 0x4 bytes
-                float m_flZiplineIntroDuration; // 0x13cc, 0x4 bytes
-                shade::sdk::client::DOFDesc_t m_DOFWhileZiplining; // 0x13d0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLinePreviewParticle; // 0x13e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineSpeedParticle; // 0x14c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineTetherParticle; // 0x15a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineTetherAttachParticle; // 0x1680, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineTetherStartParticle; // 0x1760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineEnemyKnockdownProtectionParticle; // 0x1840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineSelfKnockdownProtectionParticle; // 0x1920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineKnockdownProtectionStatusParticle; // 0x1a00, 0xe0 bytes
-                CSoundEventName m_strZipLineSummonSound; // 0x1ae0, 0x10 bytes
-                CSoundEventName m_strZipLineStartSound; // 0x1af0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RidingZipLineModifier; // 0x1b00, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KnockedOffSlowModifier; // 0x1b10, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipLineIntroModifier; // 0x1b20, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipLineKnockdownImmuneModifier; // 0x1b30, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipLineSlowModifier; // 0x1b40, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAwaitingTether; // 0x1b50, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceLatched; // 0x1bd8, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttached; // 0x1c60, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceClear; // 0x1ce8, 0x88 bytes
+                float m_flZiplineAirDrag; // 0x13e8, 0x4 bytes
+                float m_flZiplineAirDragBoosted; // 0x13ec, 0x4 bytes
+                float m_flMinButtonHoldTimeToActivate; // 0x13f0, 0x4 bytes
+                float m_flRestrictedLookTolerance; // 0x13f4, 0x4 bytes
+                float m_flCrouchDropSpeedFraction; // 0x13f8, 0x4 bytes
+                float m_flCrouchDropAirDragSuppressDuration; // 0x13fc, 0x4 bytes
+                float m_flDetachDisallowedTime; // 0x1400, 0x4 bytes
+                float m_flCameraWobbleIntensity; // 0x1404, 0x4 bytes
+                float m_flDismountSpeedMax; // 0x1408, 0x4 bytes
+                float m_flDismountSpeedMaxBrawl; // 0x140c, 0x4 bytes
+                float m_flZiplineKnockdownUpImpulse; // 0x1410, 0x4 bytes
+                float m_flZiplineIntroDuration; // 0x1414, 0x4 bytes
+                shade::sdk::client::DOFDesc_t m_DOFWhileZiplining; // 0x1418, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLinePreviewParticle; // 0x1428, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineSpeedParticle; // 0x1508, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineTetherParticle; // 0x15e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineTetherAttachParticle; // 0x16c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineTetherStartParticle; // 0x17a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineEnemyKnockdownProtectionParticle; // 0x1888, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineSelfKnockdownProtectionParticle; // 0x1968, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineKnockdownProtectionStatusParticle; // 0x1a48, 0xe0 bytes
+                CSoundEventName m_strZipLineSummonSound; // 0x1b28, 0x10 bytes
+                CSoundEventName m_strZipLineStartSound; // 0x1b38, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RidingZipLineModifier; // 0x1b48, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KnockedOffSlowModifier; // 0x1b58, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipLineIntroModifier; // 0x1b68, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipLineKnockdownImmuneModifier; // 0x1b78, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipLineSlowModifier; // 0x1b88, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAwaitingTether; // 0x1b98, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceLatched; // 0x1c38, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttached; // 0x1cd8, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceClear; // 0x1d78, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ZipLine_VData) == 0x1D70, "CCitadel_Ability_ZipLine_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ZipLine_VData) == 0x1E18, "CCitadel_Ability_ZipLine_VData size mismatch");
         }
     }
 }

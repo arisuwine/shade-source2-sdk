@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x13c0
+             * Size: 0x13f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,31 +43,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_Attack_BulletToPointModifierVData : public shade::sdk::server::CModifierNeutralAbilityVData {
             public:
-                std::int32_t m_nBulletCount; // 0x10b8, 0x4 bytes
-                float m_flFireRate; // 0x10bc, 0x4 bytes
-                float m_flTargetPosRNG; // 0x10c0, 0x4 bytes
-                float m_flTargetOffsetPerShot; // 0x10c4, 0x4 bytes
-                float m_flBulletSpeed; // 0x10c8, 0x4 bytes
-                float m_flNoTargetDistance; // 0x10cc, 0x4 bytes
-                float m_flLobGravityScale; // 0x10d0, 0x4 bytes
-                float m_flHangTime; // 0x10d4, 0x4 bytes
-                float m_flModifierDuration; // 0x10d8, 0x4 bytes
-                std::uint8_t pad_10dc[0x4]; // 0x10dc, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GroundPointModifier; // 0x10e0, 0x10 bytes
-                float m_flImpactEffectRadius; // 0x10f0, 0x4 bytes
-                std::uint8_t pad_10f4[0x4]; // 0x10f4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x10f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x11d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MuzzleFlashParticle; // 0x12b8, 0xe0 bytes
-                CUtlString m_strMuzzleFlashParticleConfig; // 0x1398, 0x8 bytes
-                CSoundEventName m_ShootSound; // 0x13a0, 0x10 bytes
-                CSoundEventName m_HitSound; // 0x13b0, 0x10 bytes
+                std::int32_t m_nBulletCount; // 0x10e8, 0x4 bytes
+                float m_flFireRate; // 0x10ec, 0x4 bytes
+                float m_flTargetPosRNG; // 0x10f0, 0x4 bytes
+                float m_flTargetOffsetPerShot; // 0x10f4, 0x4 bytes
+                float m_flBulletSpeed; // 0x10f8, 0x4 bytes
+                float m_flNoTargetDistance; // 0x10fc, 0x4 bytes
+                float m_flLobGravityScale; // 0x1100, 0x4 bytes
+                float m_flHangTime; // 0x1104, 0x4 bytes
+                float m_flModifierDuration; // 0x1108, 0x4 bytes
+                std::uint8_t pad_110c[0x4]; // 0x110c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GroundPointModifier; // 0x1110, 0x10 bytes
+                float m_flImpactEffectRadius; // 0x1120, 0x4 bytes
+                std::uint8_t pad_1124[0x4]; // 0x1124, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1128, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x1208, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MuzzleFlashParticle; // 0x12e8, 0xe0 bytes
+                CUtlString m_strMuzzleFlashParticleConfig; // 0x13c8, 0x8 bytes
+                CSoundEventName m_ShootSound; // 0x13d0, 0x10 bytes
+                CSoundEventName m_HitSound; // 0x13e0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_Attack_BulletToPointModifierVData) == 0x13C0, "CCitadel_Neutral_Attack_BulletToPointModifierVData size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_Attack_BulletToPointModifierVData) == 0x13F0, "CCitadel_Neutral_Attack_BulletToPointModifierVData size mismatch");
         }
     }
 }

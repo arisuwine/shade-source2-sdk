@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14e8
+             * Size: 0x1530
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_CatFormPounceVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle; // 0x13a0, 0xe0 bytes
-                CSoundEventName m_strCatFormMeleeSwing; // 0x1480, 0x10 bytes
-                float m_flAttackTime; // 0x1490, 0x4 bytes
-                float m_flAttackRange; // 0x1494, 0x4 bytes
-                float m_flAttackHalfAngle; // 0x1498, 0x4 bytes
-                float m_flAttackConeHalfWidth; // 0x149c, 0x4 bytes
-                float m_flMinAttackTime; // 0x14a0, 0x4 bytes
-                float m_flStopTargetRange; // 0x14a4, 0x4 bytes
-                CPiecewiseCurve m_MovementSpeedCurve; // 0x14a8, 0x40 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle; // 0x13e8, 0xe0 bytes
+                CSoundEventName m_strCatFormMeleeSwing; // 0x14c8, 0x10 bytes
+                float m_flAttackTime; // 0x14d8, 0x4 bytes
+                float m_flAttackRange; // 0x14dc, 0x4 bytes
+                float m_flAttackHalfAngle; // 0x14e0, 0x4 bytes
+                float m_flAttackConeHalfWidth; // 0x14e4, 0x4 bytes
+                float m_flMinAttackTime; // 0x14e8, 0x4 bytes
+                float m_flStopTargetRange; // 0x14ec, 0x4 bytes
+                CPiecewiseCurve m_MovementSpeedCurve; // 0x14f0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_CatFormPounceVData) == 0x14E8, "CCitadel_Ability_Nano_CatFormPounceVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_CatFormPounceVData) == 0x1530, "CCitadel_Ability_Nano_CatFormPounceVData size mismatch");
         }
     }
 }

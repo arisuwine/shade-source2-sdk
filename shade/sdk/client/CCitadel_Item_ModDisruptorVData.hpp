@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15a8
+             * Size: 0x15f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_ModDisruptorVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateParticle; // 0x14b0, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisruptModifier; // 0x1590, 0x10 bytes
-                float m_flWaveSpeed; // 0x15a0, 0x4 bytes
-                std::uint8_t pad_15a4[0x4]; // 0x15a4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateParticle; // 0x14f8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisruptModifier; // 0x15d8, 0x10 bytes
+                float m_flWaveSpeed; // 0x15e8, 0x4 bytes
+                std::uint8_t pad_15ec[0x4]; // 0x15ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_ModDisruptorVData) == 0x15A8, "CCitadel_Item_ModDisruptorVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_ModDisruptorVData) == 0x15F0, "CCitadel_Item_ModDisruptorVData size mismatch");
         }
     }
 }

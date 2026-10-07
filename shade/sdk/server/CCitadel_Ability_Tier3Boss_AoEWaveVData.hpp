@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1798
+             * Size: 0x17e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,28 +43,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_AoEWaveVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberInitialExplodeParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberShrineChargeParticle; // 0x1480, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphInitialExplodeParticle; // 0x1560, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphShrineChargeParticle; // 0x1640, 0xe0 bytes
-                CSoundEventName m_AOEAmberImpactSound; // 0x1720, 0x10 bytes
-                CSoundEventName m_AOESapphImpactSound; // 0x1730, 0x10 bytes
-                CSoundEventName m_AOEAmberAnnounceSound; // 0x1740, 0x10 bytes
-                CSoundEventName m_AOESapphAnnounceSound; // 0x1750, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AoEModifier; // 0x1760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PreviewModifier; // 0x1770, 0x10 bytes
-                float m_flCastCompleteToAttackTime; // 0x1780, 0x4 bytes
-                float m_flShakeRadius; // 0x1784, 0x4 bytes
-                float m_flShakeAmplitue; // 0x1788, 0x4 bytes
-                float m_flShakeFreqency; // 0x178c, 0x4 bytes
-                float m_flShakeDuration; // 0x1790, 0x4 bytes
-                std::uint8_t pad_1794[0x4]; // 0x1794, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberInitialExplodeParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberShrineChargeParticle; // 0x14c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphInitialExplodeParticle; // 0x15a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphShrineChargeParticle; // 0x1688, 0xe0 bytes
+                CSoundEventName m_AOEAmberImpactSound; // 0x1768, 0x10 bytes
+                CSoundEventName m_AOESapphImpactSound; // 0x1778, 0x10 bytes
+                CSoundEventName m_AOEAmberAnnounceSound; // 0x1788, 0x10 bytes
+                CSoundEventName m_AOESapphAnnounceSound; // 0x1798, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AoEModifier; // 0x17a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PreviewModifier; // 0x17b8, 0x10 bytes
+                float m_flCastCompleteToAttackTime; // 0x17c8, 0x4 bytes
+                float m_flShakeRadius; // 0x17cc, 0x4 bytes
+                float m_flShakeAmplitue; // 0x17d0, 0x4 bytes
+                float m_flShakeFreqency; // 0x17d4, 0x4 bytes
+                float m_flShakeDuration; // 0x17d8, 0x4 bytes
+                std::uint8_t pad_17dc[0x4]; // 0x17dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_AoEWaveVData) == 0x1798, "CCitadel_Ability_Tier3Boss_AoEWaveVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_AoEWaveVData) == 0x17E0, "CCitadel_Ability_Tier3Boss_AoEWaveVData size mismatch");
         }
     }
 }

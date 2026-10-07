@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x790
+             * Size: 0x7c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VampireBat_LoveBitesProc_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0770, 0x10 bytes
-                CSoundEventName m_strProcHitSound; // 0x0780, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x07a0, 0x10 bytes
+                CSoundEventName m_strProcHitSound; // 0x07b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VampireBat_LoveBitesProc_VData) == 0x790, "CCitadel_Modifier_VampireBat_LoveBitesProc_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VampireBat_LoveBitesProc_VData) == 0x7C0, "CCitadel_Modifier_VampireBat_LoveBitesProc_VData size mismatch");
         }
     }
 }

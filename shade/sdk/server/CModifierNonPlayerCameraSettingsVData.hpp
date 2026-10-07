@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x770
+             * Size: 0x7a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierNonPlayerCameraSettingsVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                float m_flCameraSideOffset; // 0x0760, 0x4 bytes
-                float m_flCameraBackOffset; // 0x0764, 0x4 bytes
-                float m_flCameraHeightStanding; // 0x0768, 0x4 bytes
-                std::uint8_t pad_076c[0x4]; // 0x076c, 0x4 bytes
+                float m_flCameraSideOffset; // 0x0790, 0x4 bytes
+                float m_flCameraBackOffset; // 0x0794, 0x4 bytes
+                float m_flCameraHeightStanding; // 0x0798, 0x4 bytes
+                std::uint8_t pad_079c[0x4]; // 0x079c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierNonPlayerCameraSettingsVData) == 0x770, "CModifierNonPlayerCameraSettingsVData size mismatch");
+            static_assert(sizeof(CModifierNonPlayerCameraSettingsVData) == 0x7A0, "CModifierNonPlayerCameraSettingsVData size mismatch");
         }
     }
 }

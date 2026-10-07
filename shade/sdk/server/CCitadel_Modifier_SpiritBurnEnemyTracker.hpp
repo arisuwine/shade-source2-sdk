@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x630
+             * Size: 0x638
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SpiritBurnEnemyTracker : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x4f0]; // 0x0140, 0x4f0 bytes
+                std::uint8_t pad_0148[0x4f0]; // 0x0148, 0x4f0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SpiritBurnEnemyTracker) == 0x630, "CCitadel_Modifier_SpiritBurnEnemyTracker size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SpiritBurnEnemyTracker) == 0x638, "CCitadel_Modifier_SpiritBurnEnemyTracker size mismatch");
         }
     }
 }

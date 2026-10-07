@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdc8
+             * Size: 0xe20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_GrandFinaleStage : public shade::sdk::client::CBaseAnimGraph {
             public:
-                VectorWS m_vStartPos; // 0x0da0, 0xc bytes
-                VectorWS m_vEndPos; // 0x0dac, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0db8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0dbc, 0x4 bytes
-                std::int32_t m_nTouchCount; // 0x0dc0, 0x4 bytes
-                std::uint8_t pad_0dc4[0x4]; // 0x0dc4, 0x4 bytes
+                VectorWS m_vStartPos; // 0x0df8, 0xc bytes
+                VectorWS m_vEndPos; // 0x0e04, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartEmitTime; // 0x0e10, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndEmitTime; // 0x0e14, 0x4 bytes
+                std::int32_t m_nTouchCount; // 0x0e18, 0x4 bytes
+                std::uint8_t pad_0e1c[0x4]; // 0x0e1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_GrandFinaleStage) == 0xDC8, "CCitadel_GrandFinaleStage size mismatch");
+            static_assert(sizeof(CCitadel_GrandFinaleStage) == 0xE20, "CCitadel_GrandFinaleStage size mismatch");
         }
     }
 }

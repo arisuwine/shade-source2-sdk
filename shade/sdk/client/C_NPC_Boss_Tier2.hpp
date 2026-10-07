@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bd0
+             * Size: 0x1c28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,22 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_Boss_Tier2 : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                std::uint8_t pad_1b08[0x14]; // 0x1b08, 0x14 bytes
-                std::int32_t m_iLane; // 0x1b1c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1b20, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1b24, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastWeakpointHitTime; // 0x1b28, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetedEnemy; // 0x1b2c, 0x4 bytes
-                VectorWS m_vecElectricBeamLookTarget; // 0x1b30, 0xc bytes
-                std::uint8_t pad_1b3c[0x84]; // 0x1b3c, 0x84 bytes
-                std::int32_t m_nElectricBeamCasts; // 0x1bc0, 0x4 bytes
-                std::uint8_t pad_1bc4[0xc]; // 0x1bc4, 0xc bytes
+                std::uint8_t pad_1b60[0x14]; // 0x1b60, 0x14 bytes
+                std::int32_t m_iLane; // 0x1b74, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1b78, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1b7c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastWeakpointHitTime; // 0x1b80, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetedEnemy; // 0x1b84, 0x4 bytes
+                VectorWS m_vecElectricBeamLookTarget; // 0x1b88, 0xc bytes
+                std::uint8_t pad_1b94[0x84]; // 0x1b94, 0x84 bytes
+                std::int32_t m_nElectricBeamCasts; // 0x1c18, 0x4 bytes
+                std::uint8_t pad_1c1c[0xc]; // 0x1c1c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_Boss_Tier2) == 0x1BD0, "C_NPC_Boss_Tier2 size mismatch");
+            static_assert(sizeof(C_NPC_Boss_Tier2) == 0x1C28, "C_NPC_Boss_Tier2 size mismatch");
         }
     }
 }

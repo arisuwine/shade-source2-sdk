@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1648
+             * Size: 0x16a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,21 +44,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_ShadowMark_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x1480, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x1560, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetTeleportModifier; // 0x1570, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1580, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PostTeleportModifier; // 0x1590, 0x10 bytes
-                CSoundEventName m_strHitHeroSound; // 0x15a0, 0x10 bytes
-                CSoundEventName m_strHitNPCSound; // 0x15b0, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x15c0, 0x88 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x14c8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x15a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetTeleportModifier; // 0x15b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x15c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PostTeleportModifier; // 0x15d8, 0x10 bytes
+                CSoundEventName m_strHitHeroSound; // 0x15e8, 0x10 bytes
+                CSoundEventName m_strHitNPCSound; // 0x15f8, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1608, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_ShadowMark_VData) == 0x1648, "CAbility_Drifter_ShadowMark_VData size mismatch");
+            static_assert(sizeof(CAbility_Drifter_ShadowMark_VData) == 0x16A8, "CAbility_Drifter_ShadowMark_VData size mismatch");
         }
     }
 }

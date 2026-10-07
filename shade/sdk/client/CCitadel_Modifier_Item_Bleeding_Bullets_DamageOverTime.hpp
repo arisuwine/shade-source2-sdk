@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x348
+             * Size: 0x350
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime : public shade::sdk::client::CCitadelModifier_BleedBase {
             public:
-                std::uint8_t pad_0298[0xb0]; // 0x0298, 0xb0 bytes
+                std::uint8_t pad_02a0[0xb0]; // 0x02a0, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime) == 0x348, "CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime) == 0x350, "CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime size mismatch");
         }
     }
 }

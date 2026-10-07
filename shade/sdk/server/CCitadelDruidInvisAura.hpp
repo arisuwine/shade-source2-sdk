@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x180
+             * Size: 0x188
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelDruidInvisAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::int32_t nInvisID; // 0x0178, 0x4 bytes
-                std::uint8_t pad_017c[0x4]; // 0x017c, 0x4 bytes
+                std::int32_t nInvisID; // 0x0180, 0x4 bytes
+                std::uint8_t pad_0184[0x4]; // 0x0184, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelDruidInvisAura) == 0x180, "CCitadelDruidInvisAura size mismatch");
+            static_assert(sizeof(CCitadelDruidInvisAura) == 0x188, "CCitadelDruidInvisAura size mismatch");
         }
     }
 }

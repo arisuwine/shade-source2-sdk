@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_Attack_LobSpores : public shade::sdk::server::CCitadel_Neutral_Attack_BulletToPointModifier {
             public:
-                VectorWS m_vMainTarget; // 0x01f8, 0xc bytes
-                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
+                VectorWS m_vMainTarget; // 0x0200, 0xc bytes
+                std::uint8_t pad_020c[0x4]; // 0x020c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_Attack_LobSpores) == 0x208, "CCitadel_Neutral_Attack_LobSpores size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_Attack_LobSpores) == 0x210, "CCitadel_Neutral_Attack_LobSpores size mismatch");
         }
     }
 }

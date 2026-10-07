@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x788
+             * Size: 0x7b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_RampUpVData : public shade::sdk::server::CCitadel_Modifier_Base_BuildupVData {
             public:
-                CSoundEventName m_strProcSound; // 0x0778, 0x10 bytes
+                CSoundEventName m_strProcSound; // 0x07a8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_RampUpVData) == 0x788, "CCitadel_Modifier_Necro_RampUpVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_RampUpVData) == 0x7B8, "CCitadel_Modifier_Necro_RampUpVData size mismatch");
         }
     }
 }

@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1858
+             * Size: 0x18a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,34 +44,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Cart_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flTraceRadius; // 0x13a0, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x13a4, 0x4 bytes
-                float m_flFloatDownRate; // 0x13a8, 0x4 bytes
-                float m_flClimbHeight; // 0x13ac, 0x4 bytes
-                float m_flStepDownHeight; // 0x13b0, 0x4 bytes
-                float m_flMinPitch; // 0x13b4, 0x4 bytes
-                float m_flMaxPitch; // 0x13b8, 0x4 bytes
-                float m_flJumpHeight; // 0x13bc, 0x4 bytes
-                float m_flQAngleSmoothRate; // 0x13c0, 0x4 bytes
-                float m_flCartSpeedFast; // 0x13c4, 0x4 bytes
-                CPiecewiseCurve m_flGroundHitPitchCurve; // 0x13c8, 0x40 bytes
-                CPiecewiseCurve m_flGroundHitRollCurve; // 0x1408, 0x40 bytes
-                CPiecewiseCurve m_flGroundHitYawCurve; // 0x1448, 0x40 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ModifierDrag; // 0x1488, 0x10 bytes
-                CSoundEventName m_CartExpireSound; // 0x1498, 0x10 bytes
-                CSoundEventName m_CartHitSound; // 0x14a8, 0x10 bytes
-                CSoundEventName m_CartHitAllySound; // 0x14b8, 0x10 bytes
-                CSoundEventName m_strWallSlamSound; // 0x14c8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FriendlyCastProjectileTrailParticle; // 0x14d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_FriendlyCastProjectileModel; // 0x15b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CartCastParticle; // 0x1698, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x1778, 0xe0 bytes
+                float m_flTraceRadius; // 0x13e8, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x13ec, 0x4 bytes
+                float m_flFloatDownRate; // 0x13f0, 0x4 bytes
+                float m_flClimbHeight; // 0x13f4, 0x4 bytes
+                float m_flStepDownHeight; // 0x13f8, 0x4 bytes
+                float m_flMinPitch; // 0x13fc, 0x4 bytes
+                float m_flMaxPitch; // 0x1400, 0x4 bytes
+                float m_flJumpHeight; // 0x1404, 0x4 bytes
+                float m_flQAngleSmoothRate; // 0x1408, 0x4 bytes
+                float m_flCartSpeedFast; // 0x140c, 0x4 bytes
+                CPiecewiseCurve m_flGroundHitPitchCurve; // 0x1410, 0x40 bytes
+                CPiecewiseCurve m_flGroundHitRollCurve; // 0x1450, 0x40 bytes
+                CPiecewiseCurve m_flGroundHitYawCurve; // 0x1490, 0x40 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ModifierDrag; // 0x14d0, 0x10 bytes
+                CSoundEventName m_CartExpireSound; // 0x14e0, 0x10 bytes
+                CSoundEventName m_CartHitSound; // 0x14f0, 0x10 bytes
+                CSoundEventName m_CartHitAllySound; // 0x1500, 0x10 bytes
+                CSoundEventName m_strWallSlamSound; // 0x1510, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FriendlyCastProjectileTrailParticle; // 0x1520, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_FriendlyCastProjectileModel; // 0x1600, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CartCastParticle; // 0x16e0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x17c0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Cart_VData) == 0x1858, "CCitadel_Ability_Doorman_Cart_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Cart_VData) == 0x18A0, "CCitadel_Ability_Doorman_Cart_VData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfd0
+             * Size: 0xfd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PortraitWorldUnit : public shade::sdk::client::C_BaseCombatCharacter {
             public:
-                std::uint8_t pad_0e28[0x60]; // 0x0e28, 0x60 bytes
-                bool m_bAnimateCloth; // 0x0e88, 0x1 bytes
-                bool m_bClothGroundCollision; // 0x0e89, 0x1 bytes
-                std::uint8_t pad_0e8a[0x6]; // 0x0e8a, 0x6 bytes
-                CUtlSymbolLarge m_strGraphBaseState; // 0x0e90, 0x8 bytes
-                CUtlSymbolLarge m_sceneName; // 0x0e98, 0x8 bytes
-                std::uint8_t pad_0ea0[0x130]; // 0x0ea0, 0x130 bytes
+                std::uint8_t pad_0e80[0x10]; // 0x0e80, 0x10 bytes
+                bool m_bAnimateCloth; // 0x0e90, 0x1 bytes
+                bool m_bClothGroundCollision; // 0x0e91, 0x1 bytes
+                std::uint8_t pad_0e92[0x6]; // 0x0e92, 0x6 bytes
+                CUtlSymbolLarge m_strGraphBaseState; // 0x0e98, 0x8 bytes
+                CUtlSymbolLarge m_sceneName; // 0x0ea0, 0x8 bytes
+                std::uint8_t pad_0ea8[0x130]; // 0x0ea8, 0x130 bytes
             };
             #pragma pack(pop)
 
@@ -45,7 +45,7 @@ namespace shade {
              * bool StartDisabled; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_PortraitWorldUnit) == 0xFD0, "C_PortraitWorldUnit size mismatch");
+            static_assert(sizeof(C_PortraitWorldUnit) == 0xFD8, "C_PortraitWorldUnit size mismatch");
         }
     }
 }

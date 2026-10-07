@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x3a0
+             * Size: 0x3a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -41,20 +41,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SmokeGrenade : public shade::sdk::server::CCitadelModifier {
             public:
-                CHandle<shade::sdk::server::CCitadel_SmokeGrenade_Blocker> m_hBlocker; // 0x0140, 0x4 bytes
-                CHandle<shade::sdk::server::CPointModifierThinker> m_hFriendlyAura; // 0x0144, 0x4 bytes
-                CHandle<shade::sdk::server::CPointModifierThinker> m_hEnemyAura; // 0x0148, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x014c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0150, 0x4 bytes
-                std::uint8_t pad_0154[0x214]; // 0x0154, 0x214 bytes
-                VectorWS m_vOrigin; // 0x0368, 0xc bytes
-                std::uint8_t pad_0374[0x2c]; // 0x0374, 0x2c bytes
+                CHandle<shade::sdk::server::CCitadel_SmokeGrenade_Blocker> m_hBlocker; // 0x0148, 0x4 bytes
+                CHandle<shade::sdk::server::CPointModifierThinker> m_hFriendlyAura; // 0x014c, 0x4 bytes
+                CHandle<shade::sdk::server::CPointModifierThinker> m_hEnemyAura; // 0x0150, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x0154, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x214]; // 0x015c, 0x214 bytes
+                VectorWS m_vOrigin; // 0x0370, 0xc bytes
+                std::uint8_t pad_037c[0x2c]; // 0x037c, 0x2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SmokeGrenade) == 0x3A0, "CCitadel_Modifier_SmokeGrenade size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SmokeGrenade) == 0x3A8, "CCitadel_Modifier_SmokeGrenade size mismatch");
         }
     }
 }

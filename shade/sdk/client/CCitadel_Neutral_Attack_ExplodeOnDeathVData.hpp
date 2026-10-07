@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x11c0
+             * Size: 0x11f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,17 +43,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_Attack_ExplodeOnDeathVData : public shade::sdk::client::CModifierNeutralAbilityVData {
             public:
-                float m_flExplodeDamage; // 0x10b8, 0x4 bytes
-                float m_flExplodeRadius; // 0x10bc, 0x4 bytes
-                CSoundEventName m_ExplodeSound; // 0x10c0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x10d0, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExplodeDebuffModifier; // 0x11b0, 0x10 bytes
+                float m_flExplodeDamage; // 0x10e8, 0x4 bytes
+                float m_flExplodeRadius; // 0x10ec, 0x4 bytes
+                CSoundEventName m_ExplodeSound; // 0x10f0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1100, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExplodeDebuffModifier; // 0x11e0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_Attack_ExplodeOnDeathVData) == 0x11C0, "CCitadel_Neutral_Attack_ExplodeOnDeathVData size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_Attack_ExplodeOnDeathVData) == 0x11F0, "CCitadel_Neutral_Attack_ExplodeOnDeathVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa90
+             * Size: 0xae0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimGraphAlias_baseanimating) == 0xA90, "CBaseAnimGraphAlias_baseanimating size mismatch");
+            static_assert(sizeof(CBaseAnimGraphAlias_baseanimating) == 0xAE0, "CBaseAnimGraphAlias_baseanimating size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Drifter_Rend_BulletLifesteal) == 0x130, "CModifier_Drifter_Rend_BulletLifesteal size mismatch");
+            static_assert(sizeof(CModifier_Drifter_Rend_BulletLifesteal) == 0x138, "CModifier_Drifter_Rend_BulletLifesteal size mismatch");
         }
     }
 }

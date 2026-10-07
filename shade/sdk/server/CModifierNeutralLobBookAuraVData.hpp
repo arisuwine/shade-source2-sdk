@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb60
+             * Size: 0xb90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierNeutralLobBookAuraVData : public shade::sdk::server::CCitadelModifierAuraVData {
             public:
-                float m_flExplodeDamage; // 0x07b8, 0x4 bytes
-                std::uint8_t pad_07bc[0x4]; // 0x07bc, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x07c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x08a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FloorBurstParticle; // 0x0980, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwirlParticle; // 0x0a60, 0xe0 bytes
-                CSoundEventName m_ExplodeSound; // 0x0b40, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ExplodeDebuffModifier; // 0x0b50, 0x10 bytes
+                float m_flExplodeDamage; // 0x07e8, 0x4 bytes
+                std::uint8_t pad_07ec[0x4]; // 0x07ec, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle; // 0x07f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x08d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FloorBurstParticle; // 0x09b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwirlParticle; // 0x0a90, 0xe0 bytes
+                CSoundEventName m_ExplodeSound; // 0x0b70, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ExplodeDebuffModifier; // 0x0b80, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierNeutralLobBookAuraVData) == 0xB60, "CModifierNeutralLobBookAuraVData size mismatch");
+            static_assert(sizeof(CModifierNeutralLobBookAuraVData) == 0xB90, "CModifierNeutralLobBookAuraVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xa38
+             * Size: 0xa68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LurkersAmbush_InvisVData : public shade::sdk::client::CCitadel_Modifier_InvisVData {
             public:
-                float m_flMaxCameraAngleForSeeing; // 0x0a28, 0x4 bytes
-                float m_flMaxDistanceForSeeing; // 0x0a2c, 0x4 bytes
-                float m_flInvisBias; // 0x0a30, 0x4 bytes
-                float m_flSpottedMinTimeToStart; // 0x0a34, 0x4 bytes
+                float m_flMaxCameraAngleForSeeing; // 0x0a58, 0x4 bytes
+                float m_flMaxDistanceForSeeing; // 0x0a5c, 0x4 bytes
+                float m_flInvisBias; // 0x0a60, 0x4 bytes
+                float m_flSpottedMinTimeToStart; // 0x0a64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LurkersAmbush_InvisVData) == 0xA38, "CCitadel_Modifier_LurkersAmbush_InvisVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LurkersAmbush_InvisVData) == 0xA68, "CCitadel_Modifier_LurkersAmbush_InvisVData size mismatch");
         }
     }
 }

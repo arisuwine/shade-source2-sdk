@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6d8
+             * Size: 0x6e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SmokeBomb_Invis : public shade::sdk::client::CCitadel_Modifier_Invis {
             public:
-                shade::sdk::entity2::GameTime_t m_flGameTimeCanBreak; // 0x0620, 0x4 bytes
-                std::uint8_t pad_0624[0xb4]; // 0x0624, 0xb4 bytes
+                shade::sdk::entity2::GameTime_t m_flGameTimeCanBreak; // 0x0628, 0x4 bytes
+                std::uint8_t pad_062c[0xb4]; // 0x062c, 0xb4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SmokeBomb_Invis) == 0x6D8, "CCitadel_Modifier_SmokeBomb_Invis size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SmokeBomb_Invis) == 0x6E0, "CCitadel_Modifier_SmokeBomb_Invis size mismatch");
         }
     }
 }

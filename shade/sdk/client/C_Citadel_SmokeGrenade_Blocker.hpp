@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xda8
+             * Size: 0xe00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_SmokeGrenade_Blocker : public shade::sdk::client::CBaseAnimGraph {
             public:
-                shade::sdk::entity2::GameTime_t m_flTurnSolidTime; // 0x0da0, 0x4 bytes
-                std::uint8_t pad_0da4[0x4]; // 0x0da4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTurnSolidTime; // 0x0df8, 0x4 bytes
+                std::uint8_t pad_0dfc[0x4]; // 0x0dfc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_SmokeGrenade_Blocker) == 0xDA8, "C_Citadel_SmokeGrenade_Blocker size mismatch");
+            static_assert(sizeof(C_Citadel_SmokeGrenade_Blocker) == 0xE00, "C_Citadel_SmokeGrenade_Blocker size mismatch");
         }
     }
 }

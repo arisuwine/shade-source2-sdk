@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf30
+             * Size: 0xf90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_ItemCrate : public shade::sdk::client::C_PhysicsProp {
             public:
-                std::int32_t m_eLootType; // 0x0f20, 0x4 bytes
-                std::uint8_t pad_0f24[0xc]; // 0x0f24, 0xc bytes
+                std::int32_t m_eLootType; // 0x0f80, 0x4 bytes
+                std::uint8_t pad_0f84[0xc]; // 0x0f84, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_ItemCrate) == 0xF30, "C_ItemCrate size mismatch");
+            static_assert(sizeof(C_ItemCrate) == 0xF90, "C_ItemCrate size mismatch");
         }
     }
 }

@@ -62,7 +62,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13a0
+             * Size: 0x13e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -151,50 +151,50 @@ namespace shade {
                 CUtlString m_strSecondaryStatName; // 0x0988, 0x8 bytes
                 CUtlString m_strCastButtonLocToken; // 0x0990, 0x8 bytes
                 CUtlString m_strAltCastButtonLocToken; // 0x0998, 0x8 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastStart; // 0x09a0, 0x88 bytes
-                bool m_bEndCastStartSequenceOnCastComplete; // 0x0a28, 0x1 bytes
-                std::uint8_t pad_0a29[0x7]; // 0x0a29, 0x7 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastComplete; // 0x0a30, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceChannelStart; // 0x0ab8, 0x88 bytes
-                bool m_bEndChannelStartSequenceOnChannelComplete; // 0x0b40, 0x1 bytes
-                std::uint8_t pad_0b41[0x7]; // 0x0b41, 0x7 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_previewParticle; // 0x0b48, 0xe0 bytes
-                CUtlString m_strPreviewParticleEffectConfig; // 0x0c28, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewPathParticle; // 0x0c30, 0xe0 bytes
-                bool m_bUseSatShapesOnPreview; // 0x0d10, 0x1 bytes
-                std::uint8_t pad_0d11[0x7]; // 0x0d11, 0x7 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEPreviewParticleOverride; // 0x0d18, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConePreviewParticleOverride; // 0x0df8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LinePreviewParticleOverride; // 0x0ed8, 0xe0 bytes
-                CUtlOrderedMap<shade::sdk::client::AbilityCastEvent_t, CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>> m_mapCastEventParticles; // 0x0fb8, 0x28 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotHitParticle; // 0x0fe0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotMissParticle; // 0x10c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingPreviewParticle; // 0x11a0, 0xe0 bytes
-                CSoundEventName m_strSelectedSound; // 0x1280, 0x10 bytes
-                CSoundEventName m_strUnselectedSound; // 0x1290, 0x10 bytes
-                CSoundEventName m_strSelectedLoopSound; // 0x12a0, 0x10 bytes
-                CSoundEventName m_strCastSound; // 0x12b0, 0x10 bytes
-                CSoundEventName m_strChannelSound; // 0x12c0, 0x10 bytes
-                CSoundEventName m_strChannelLoopSound; // 0x12d0, 0x10 bytes
-                CSoundEventName m_strCastDelaySound; // 0x12e0, 0x10 bytes
-                CSoundEventName m_strCastDelayLoopSound; // 0x12f0, 0x10 bytes
-                CSoundEventName m_strHitConfirmationSound; // 0x1300, 0x10 bytes
-                CSoundEventName m_strDamageTakenSound; // 0x1310, 0x10 bytes
-                CSoundEventName m_strAbilityOffCooldownSound; // 0x1320, 0x10 bytes
-                CSoundEventName m_strAbilityChargeReadySound; // 0x1330, 0x10 bytes
-                bool m_bPlayMeepMop; // 0x1340, 0x1 bytes
-                std::uint8_t pad_1341[0x7]; // 0x1341, 0x7 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoChannelModifier; // 0x1348, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoCastDelayModifier; // 0x1358, 0x10 bytes
-                CUtlVector<CEmbeddedSubclass<shade::sdk::client::CBaseModifier>> m_AutoIntrinsicModifiers; // 0x1368, 0x18 bytes
-                shade::sdk::client::AbilityCosmeticInfo_t m_cosmeticInfo; // 0x1380, 0x8 bytes
-                CUtlVector<shade::sdk::client::ItemSectionInfo_t> m_vecTooltipSectionInfo; // 0x1388, 0x18 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastStart; // 0x09a0, 0xa0 bytes
+                bool m_bEndCastStartSequenceOnCastComplete; // 0x0a40, 0x1 bytes
+                std::uint8_t pad_0a41[0x7]; // 0x0a41, 0x7 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceCastComplete; // 0x0a48, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceChannelStart; // 0x0ae8, 0xa0 bytes
+                bool m_bEndChannelStartSequenceOnChannelComplete; // 0x0b88, 0x1 bytes
+                std::uint8_t pad_0b89[0x7]; // 0x0b89, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_previewParticle; // 0x0b90, 0xe0 bytes
+                CUtlString m_strPreviewParticleEffectConfig; // 0x0c70, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewPathParticle; // 0x0c78, 0xe0 bytes
+                bool m_bUseSatShapesOnPreview; // 0x0d58, 0x1 bytes
+                std::uint8_t pad_0d59[0x7]; // 0x0d59, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEPreviewParticleOverride; // 0x0d60, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConePreviewParticleOverride; // 0x0e40, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LinePreviewParticleOverride; // 0x0f20, 0xe0 bytes
+                CUtlOrderedMap<shade::sdk::client::AbilityCastEvent_t, CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>> m_mapCastEventParticles; // 0x1000, 0x28 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotHitParticle; // 0x1028, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_skillshotMissParticle; // 0x1108, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetingPreviewParticle; // 0x11e8, 0xe0 bytes
+                CSoundEventName m_strSelectedSound; // 0x12c8, 0x10 bytes
+                CSoundEventName m_strUnselectedSound; // 0x12d8, 0x10 bytes
+                CSoundEventName m_strSelectedLoopSound; // 0x12e8, 0x10 bytes
+                CSoundEventName m_strCastSound; // 0x12f8, 0x10 bytes
+                CSoundEventName m_strChannelSound; // 0x1308, 0x10 bytes
+                CSoundEventName m_strChannelLoopSound; // 0x1318, 0x10 bytes
+                CSoundEventName m_strCastDelaySound; // 0x1328, 0x10 bytes
+                CSoundEventName m_strCastDelayLoopSound; // 0x1338, 0x10 bytes
+                CSoundEventName m_strHitConfirmationSound; // 0x1348, 0x10 bytes
+                CSoundEventName m_strDamageTakenSound; // 0x1358, 0x10 bytes
+                CSoundEventName m_strAbilityOffCooldownSound; // 0x1368, 0x10 bytes
+                CSoundEventName m_strAbilityChargeReadySound; // 0x1378, 0x10 bytes
+                bool m_bPlayMeepMop; // 0x1388, 0x1 bytes
+                std::uint8_t pad_1389[0x7]; // 0x1389, 0x7 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoChannelModifier; // 0x1390, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AutoCastDelayModifier; // 0x13a0, 0x10 bytes
+                CUtlVector<CEmbeddedSubclass<shade::sdk::client::CBaseModifier>> m_AutoIntrinsicModifiers; // 0x13b0, 0x18 bytes
+                shade::sdk::client::AbilityCosmeticInfo_t m_cosmeticInfo; // 0x13c8, 0x8 bytes
+                CUtlVector<shade::sdk::client::ItemSectionInfo_t> m_vecTooltipSectionInfo; // 0x13d0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelAbilityVData) == 0x13A0, "CitadelAbilityVData size mismatch");
+            static_assert(sizeof(CitadelAbilityVData) == 0x13E8, "CitadelAbilityVData size mismatch");
         }
     }
 }

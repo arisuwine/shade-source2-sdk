@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x860
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NullificationAuraAOE_VData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x0760, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle; // 0x0770, 0xe0 bytes
-                CSoundEventName m_PurgeSound; // 0x0850, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x0790, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle; // 0x07a0, 0xe0 bytes
+                CSoundEventName m_PurgeSound; // 0x0880, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NullificationAuraAOE_VData) == 0x860, "CCitadel_Modifier_NullificationAuraAOE_VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NullificationAuraAOE_VData) == 0x890, "CCitadel_Modifier_NullificationAuraAOE_VData size mismatch");
         }
     }
 }

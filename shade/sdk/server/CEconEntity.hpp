@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc10
+             * Size: 0xc60
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,17 +41,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CEconEntity : public shade::sdk::server::CBaseAnimGraph, public shade::sdk::client::IHasAttributes {
             public:
-                std::uint8_t pad_0a98[0x10]; // 0x0a98, 0x10 bytes
-                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0aa8, 0x158 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOldProvidee; // 0x0c00, 0x4 bytes
-                std::int32_t m_iOldOwnerClass; // 0x0c04, 0x4 bytes
-                std::uint8_t pad_0c08[0x8]; // 0x0c08, 0x8 bytes
+                std::uint8_t pad_0ae8[0x10]; // 0x0ae8, 0x10 bytes
+                shade::sdk::server::CAttributeContainer m_AttributeManager; // 0x0af8, 0x158 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOldProvidee; // 0x0c50, 0x4 bytes
+                std::int32_t m_iOldOwnerClass; // 0x0c54, 0x4 bytes
+                std::uint8_t pad_0c58[0x8]; // 0x0c58, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEconEntity) == 0xC10, "CEconEntity size mismatch");
+            static_assert(sizeof(CEconEntity) == 0xC60, "CEconEntity size mismatch");
         }
     }
 }

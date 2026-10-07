@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1010
+             * Size: 0x1060
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,11 +31,11 @@ namespace shade {
             #pragma pack(push, 1)
             class CPropDoorRotatingBreakable : public shade::sdk::server::CPropDoorRotating {
             public:
-                bool m_bBreakable; // 0x0ff0, 0x1 bytes
-                bool m_isAbleToCloseAreaPortals; // 0x0ff1, 0x1 bytes
-                std::uint8_t pad_0ff2[0x2]; // 0x0ff2, 0x2 bytes
-                std::int32_t m_currentDamageState; // 0x0ff4, 0x4 bytes
-                CUtlVector<CUtlSymbolLarge> m_damageStates; // 0x0ff8, 0x18 bytes
+                bool m_bBreakable; // 0x1040, 0x1 bytes
+                bool m_isAbleToCloseAreaPortals; // 0x1041, 0x1 bytes
+                std::uint8_t pad_1042[0x2]; // 0x1042, 0x2 bytes
+                std::int32_t m_currentDamageState; // 0x1044, 0x4 bytes
+                CUtlVector<CUtlSymbolLarge> m_damageStates; // 0x1048, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -43,7 +43,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPropDoorRotatingBreakable) == 0x1010, "CPropDoorRotatingBreakable size mismatch");
+            static_assert(sizeof(CPropDoorRotatingBreakable) == 0x1060, "CPropDoorRotatingBreakable size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x990
+             * Size: 0x9c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf_UnloadGun2VData : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CSoundEventName m_strStackProcSound; // 0x0890, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strStackProcEffect; // 0x08a0, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StackingModifier; // 0x0980, 0x10 bytes
+                CSoundEventName m_strStackProcSound; // 0x08c8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strStackProcEffect; // 0x08d8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StackingModifier; // 0x09b8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf_UnloadGun2VData) == 0x990, "CCitadel_Modifier_Werewolf_UnloadGun2VData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_UnloadGun2VData) == 0x9C8, "CCitadel_Modifier_Werewolf_UnloadGun2VData size mismatch");
         }
     }
 }

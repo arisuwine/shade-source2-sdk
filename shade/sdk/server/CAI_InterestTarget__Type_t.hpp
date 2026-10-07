@@ -22,7 +22,8 @@ namespace shade {
                 eEntity = 0x1,
                 ePosition = 0x2,
                 eDirection = 0x3,
-                ePath = 0x4
+                ePath = 0x4,
+                eLastPathWaypoint = 0x5
             };
         }
     }

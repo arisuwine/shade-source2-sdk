@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Doorman_DimishingTimestop : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flSlowPercent; // 0x0140, 0x4 bytes
-                float m_flDelay; // 0x0144, 0x4 bytes
-                bool m_bEscaped; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0xb7]; // 0x0149, 0xb7 bytes
-                bool m_bStunApplied; // 0x0200, 0x1 bytes
-                std::uint8_t pad_0201[0x7]; // 0x0201, 0x7 bytes
+                float m_flSlowPercent; // 0x0148, 0x4 bytes
+                float m_flDelay; // 0x014c, 0x4 bytes
+                bool m_bEscaped; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0xb7]; // 0x0151, 0xb7 bytes
+                bool m_bStunApplied; // 0x0208, 0x1 bytes
+                std::uint8_t pad_0209[0x7]; // 0x0209, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Doorman_DimishingTimestop) == 0x208, "CCitadel_Modifier_Doorman_DimishingTimestop size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Doorman_DimishingTimestop) == 0x210, "CCitadel_Modifier_Doorman_DimishingTimestop size mismatch");
         }
     }
 }

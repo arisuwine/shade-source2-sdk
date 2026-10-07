@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x778
+             * Size: 0x7a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierInvisBushVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flHideDuration; // 0x0760, 0x4 bytes
-                float m_flRevealDuration; // 0x0764, 0x4 bytes
-                float m_flLingerDuration; // 0x0768, 0x4 bytes
-                float m_flFriendlyInBushVisibility; // 0x076c, 0x4 bytes
-                float m_flEnemyInSharedBushVisibility; // 0x0770, 0x4 bytes
-                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
+                float m_flHideDuration; // 0x0790, 0x4 bytes
+                float m_flRevealDuration; // 0x0794, 0x4 bytes
+                float m_flLingerDuration; // 0x0798, 0x4 bytes
+                float m_flFriendlyInBushVisibility; // 0x079c, 0x4 bytes
+                float m_flEnemyInSharedBushVisibility; // 0x07a0, 0x4 bytes
+                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierInvisBushVData) == 0x778, "CCitadelModifierInvisBushVData size mismatch");
+            static_assert(sizeof(CCitadelModifierInvisBushVData) == 0x7A8, "CCitadelModifierInvisBushVData size mismatch");
         }
     }
 }

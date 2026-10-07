@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1798
+             * Size: 0x17e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,25 +43,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityHookVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x13b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletAmpModifier; // 0x13c0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookOutParticle; // 0x13d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PrecastHookParticle; // 0x14b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookRetrieveParticle; // 0x1590, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookServerImpactParticle; // 0x1670, 0xe0 bytes
-                CSoundEventName m_strHookSuccessSound; // 0x1750, 0x10 bytes
-                CSoundEventName m_strHookNPCSound; // 0x1760, 0x10 bytes
-                CSoundEventName m_strHookAllySound; // 0x1770, 0x10 bytes
-                CSoundEventName m_strHookImpactGeoSound; // 0x1780, 0x10 bytes
-                float m_flTrooperHitRadius; // 0x1790, 0x4 bytes
-                float m_flFriendlyHookIgnoreRange; // 0x1794, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletAmpModifier; // 0x1408, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookOutParticle; // 0x1418, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PrecastHookParticle; // 0x14f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookRetrieveParticle; // 0x15d8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookServerImpactParticle; // 0x16b8, 0xe0 bytes
+                CSoundEventName m_strHookSuccessSound; // 0x1798, 0x10 bytes
+                CSoundEventName m_strHookNPCSound; // 0x17a8, 0x10 bytes
+                CSoundEventName m_strHookAllySound; // 0x17b8, 0x10 bytes
+                CSoundEventName m_strHookImpactGeoSound; // 0x17c8, 0x10 bytes
+                float m_flTrooperHitRadius; // 0x17d8, 0x4 bytes
+                float m_flFriendlyHookIgnoreRange; // 0x17dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityHookVData) == 0x1798, "CAbilityHookVData size mismatch");
+            static_assert(sizeof(CAbilityHookVData) == 0x17E0, "CAbilityHookVData size mismatch");
         }
     }
 }

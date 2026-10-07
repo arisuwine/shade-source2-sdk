@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Hero_Clone : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bMimicOwner; // 0x0130, 0x1 bytes
-                std::uint8_t pad_0131[0xb7]; // 0x0131, 0xb7 bytes
+                bool m_bMimicOwner; // 0x0138, 0x1 bytes
+                std::uint8_t pad_0139[0xb7]; // 0x0139, 0xb7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Hero_Clone) == 0x1E8, "CCitadel_Modifier_Hero_Clone size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Hero_Clone) == 0x1F0, "CCitadel_Modifier_Hero_Clone size mismatch");
         }
     }
 }

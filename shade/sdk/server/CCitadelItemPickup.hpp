@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5500
+             * Size: 0x5550
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -42,24 +42,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPickup : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0x10]; // 0x0bf0, 0x10 bytes
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0c00, 0x20 bytes
-                std::int32_t m_eLootType; // 0x0c20, 0x4 bytes
-                std::int32_t m_nCurrencyValue; // 0x0c24, 0x4 bytes
-                CUtlSymbolLarge m_iszModelName; // 0x0c28, 0x8 bytes
-                float m_flModelScale; // 0x0c30, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetPlayer; // 0x0c34, 0x4 bytes
-                float m_flFallRate; // 0x0c38, 0x4 bytes
-                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x0c3c, 0x4 bytes
-                bool m_bRequireGroundForPickup; // 0x0c40, 0x1 bytes
-                bool m_bOnGround; // 0x0c41, 0x1 bytes
-                std::uint8_t pad_0c42[0x2]; // 0x0c42, 0x2 bytes
-                std::int32_t m_nKillingTeamNumber; // 0x0c44, 0x4 bytes
-                VectorWS m_vHomePosition; // 0x0c48, 0xc bytes
-                VectorWS m_vDropPosition; // 0x0c54, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_tFirstPickupTime; // 0x0c60, 0x4 bytes
-                bool m_bPlaySpawnMusic; // 0x0c64, 0x1 bytes
-                std::uint8_t pad_0c65[0x489b]; // 0x0c65, 0x489b bytes
+                std::uint8_t pad_0c40[0x10]; // 0x0c40, 0x10 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0c50, 0x20 bytes
+                std::int32_t m_eLootType; // 0x0c70, 0x4 bytes
+                std::int32_t m_nCurrencyValue; // 0x0c74, 0x4 bytes
+                CUtlSymbolLarge m_iszModelName; // 0x0c78, 0x8 bytes
+                float m_flModelScale; // 0x0c80, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetPlayer; // 0x0c84, 0x4 bytes
+                float m_flFallRate; // 0x0c88, 0x4 bytes
+                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x0c8c, 0x4 bytes
+                bool m_bRequireGroundForPickup; // 0x0c90, 0x1 bytes
+                bool m_bOnGround; // 0x0c91, 0x1 bytes
+                std::uint8_t pad_0c92[0x2]; // 0x0c92, 0x2 bytes
+                std::int32_t m_nKillingTeamNumber; // 0x0c94, 0x4 bytes
+                VectorWS m_vHomePosition; // 0x0c98, 0xc bytes
+                VectorWS m_vDropPosition; // 0x0ca4, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_tFirstPickupTime; // 0x0cb0, 0x4 bytes
+                bool m_bPlaySpawnMusic; // 0x0cb4, 0x1 bytes
+                std::uint8_t pad_0cb5[0x489b]; // 0x0cb5, 0x489b bytes
             };
             #pragma pack(pop)
 
@@ -67,7 +67,7 @@ namespace shade {
              * bool from_crate; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelItemPickup) == 0x5500, "CCitadelItemPickup size mismatch");
+            static_assert(sizeof(CCitadelItemPickup) == 0x5550, "CCitadelItemPickup size mismatch");
         }
     }
 }

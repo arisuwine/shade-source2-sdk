@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xce0
+             * Size: 0xd10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierStormCloudVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapFriendly; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrawFriendly; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEFriendly; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapEnemy; // 0x0a00, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrawEnemy; // 0x0ae0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEEnemy; // 0x0bc0, 0xe0 bytes
-                CSoundEventName m_strChannelEndingSoonSound; // 0x0ca0, 0x10 bytes
-                CSoundEventName m_strChannelFinishedSound; // 0x0cb0, 0x10 bytes
-                CSoundEventName m_strDamageRecievedSound; // 0x0cc0, 0x10 bytes
-                CSoundEventName m_strAmbientZapSound; // 0x0cd0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapFriendly; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrawFriendly; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEFriendly; // 0x0950, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapEnemy; // 0x0a30, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrawEnemy; // 0x0b10, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEEnemy; // 0x0bf0, 0xe0 bytes
+                CSoundEventName m_strChannelEndingSoonSound; // 0x0cd0, 0x10 bytes
+                CSoundEventName m_strChannelFinishedSound; // 0x0ce0, 0x10 bytes
+                CSoundEventName m_strDamageRecievedSound; // 0x0cf0, 0x10 bytes
+                CSoundEventName m_strAmbientZapSound; // 0x0d00, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierStormCloudVData) == 0xCE0, "CModifierStormCloudVData size mismatch");
+            static_assert(sizeof(CModifierStormCloudVData) == 0xD10, "CModifierStormCloudVData size mismatch");
         }
     }
 }

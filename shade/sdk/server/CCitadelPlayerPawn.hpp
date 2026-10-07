@@ -58,7 +58,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelPlayerPawn : public shade::sdk::server::CCitadelPlayerPawnBase {
             public:
-                std::uint8_t pad_0d40[0x78]; // 0x0d40, 0x78 bytes
+                std::uint8_t pad_0d90[0x28]; // 0x0d90, 0x28 bytes
                 std::int32_t m_arrGoldSources[0x2b]; // 0x0db8, 0xac bytes
                 QAngle m_angClientCamera; // 0x0e64, 0xc bytes
                 QAngle m_angEyeAngles; // 0x0e70, 0xc bytes
@@ -201,7 +201,7 @@ namespace shade {
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xb98, Size: 0x1, Size In Bytes: 0x8
+             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xbe8, Size: 0x1, Size In Bytes: 0x8
              */
 
             static_assert(sizeof(CCitadelPlayerPawn) == 0x2220, "CCitadelPlayerPawn size mismatch");

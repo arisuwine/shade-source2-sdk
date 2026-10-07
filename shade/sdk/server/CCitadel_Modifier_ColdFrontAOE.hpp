@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x578
+             * Size: 0x580
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ColdFrontAOE : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<shade::sdk::server::CBaseEntity*> m_vecDamagedTargets; // 0x0140, 0x18 bytes
-                std::uint8_t pad_0158[0x420]; // 0x0158, 0x420 bytes
+                CUtlVector<shade::sdk::server::CBaseEntity*> m_vecDamagedTargets; // 0x0148, 0x18 bytes
+                std::uint8_t pad_0160[0x420]; // 0x0160, 0x420 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ColdFrontAOE) == 0x578, "CCitadel_Modifier_ColdFrontAOE size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ColdFrontAOE) == 0x580, "CCitadel_Modifier_ColdFrontAOE size mismatch");
         }
     }
 }

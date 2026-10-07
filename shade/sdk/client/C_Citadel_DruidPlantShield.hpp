@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdd0
+             * Size: 0xe28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_DruidPlantShield : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                bool m_bSolid; // 0x0da8, 0x1 bytes
-                std::uint8_t pad_0da9[0x3]; // 0x0da9, 0x3 bytes
-                VectorWS m_vStartPos; // 0x0dac, 0xc bytes
-                VectorWS m_vEndPos; // 0x0db8, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartGrowTime; // 0x0dc4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndGrowTime; // 0x0dc8, 0x4 bytes
-                std::uint8_t pad_0dcc[0x4]; // 0x0dcc, 0x4 bytes
+                bool m_bSolid; // 0x0e00, 0x1 bytes
+                std::uint8_t pad_0e01[0x3]; // 0x0e01, 0x3 bytes
+                VectorWS m_vStartPos; // 0x0e04, 0xc bytes
+                VectorWS m_vEndPos; // 0x0e10, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartGrowTime; // 0x0e1c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndGrowTime; // 0x0e20, 0x4 bytes
+                std::uint8_t pad_0e24[0x4]; // 0x0e24, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_DruidPlantShield) == 0xDD0, "C_Citadel_DruidPlantShield size mismatch");
+            static_assert(sizeof(C_Citadel_DruidPlantShield) == 0xE28, "C_Citadel_DruidPlantShield size mismatch");
         }
     }
 }

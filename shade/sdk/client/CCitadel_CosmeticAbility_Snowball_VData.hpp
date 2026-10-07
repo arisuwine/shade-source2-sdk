@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14d8
+             * Size: 0x1520
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_CosmeticAbility_Snowball_VData : public shade::sdk::client::CitadelCosmeticAbilityVData {
             public:
-                float m_flMaxLevelDebuffDuration; // 0x13a0, 0x4 bytes
-                std::uint8_t pad_13a4[0x4]; // 0x13a4, 0x4 bytes
-                shade::sdk::client::CLevelProgressionDefinition m_progressionDamage; // 0x13a8, 0x30 bytes
-                shade::sdk::client::CLevelProgressionDefinition m_progressionCooldown; // 0x13d8, 0x30 bytes
-                shade::sdk::client::CLevelProgressionDefinition m_progressionSpeed; // 0x1408, 0x30 bytes
-                shade::sdk::client::CLevelProgressionDefinition m_progressionCharges; // 0x1438, 0x30 bytes
-                shade::sdk::client::CLevelProgressionDefinition m_progressionSnowballCount; // 0x1468, 0x30 bytes
-                shade::sdk::client::CLevelProgressionDefinition m_progressionRadius; // 0x1498, 0x30 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SnowballModifier; // 0x14c8, 0x10 bytes
+                float m_flMaxLevelDebuffDuration; // 0x13e8, 0x4 bytes
+                std::uint8_t pad_13ec[0x4]; // 0x13ec, 0x4 bytes
+                shade::sdk::client::CLevelProgressionDefinition m_progressionDamage; // 0x13f0, 0x30 bytes
+                shade::sdk::client::CLevelProgressionDefinition m_progressionCooldown; // 0x1420, 0x30 bytes
+                shade::sdk::client::CLevelProgressionDefinition m_progressionSpeed; // 0x1450, 0x30 bytes
+                shade::sdk::client::CLevelProgressionDefinition m_progressionCharges; // 0x1480, 0x30 bytes
+                shade::sdk::client::CLevelProgressionDefinition m_progressionSnowballCount; // 0x14b0, 0x30 bytes
+                shade::sdk::client::CLevelProgressionDefinition m_progressionRadius; // 0x14e0, 0x30 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SnowballModifier; // 0x1510, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_CosmeticAbility_Snowball_VData) == 0x14D8, "CCitadel_CosmeticAbility_Snowball_VData size mismatch");
+            static_assert(sizeof(CCitadel_CosmeticAbility_Snowball_VData) == 0x1520, "CCitadel_CosmeticAbility_Snowball_VData size mismatch");
         }
     }
 }

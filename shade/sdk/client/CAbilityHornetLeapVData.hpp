@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1680
+             * Size: 0x16c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,25 +43,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityHornetLeapVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flChannelingAirDrag; // 0x13a0, 0x4 bytes
-                float m_flChannelingMaxFallSpeed; // 0x13a4, 0x4 bytes
-                float m_flVerticalMoveSpeedPercent; // 0x13a8, 0x4 bytes
-                float m_flAirDrag; // 0x13ac, 0x4 bytes
-                float m_flAirAcceleration; // 0x13b0, 0x4 bytes
-                float m_flLaunchAirDrag; // 0x13b4, 0x4 bytes
-                float m_flLaunchTime; // 0x13b8, 0x4 bytes
-                float m_flMoveSpeedAboveBaseScale; // 0x13bc, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapModifier; // 0x13c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x13d0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DustParticle; // 0x13e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TrailParticle; // 0x14c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x15a0, 0xe0 bytes
+                float m_flChannelingAirDrag; // 0x13e8, 0x4 bytes
+                float m_flChannelingMaxFallSpeed; // 0x13ec, 0x4 bytes
+                float m_flVerticalMoveSpeedPercent; // 0x13f0, 0x4 bytes
+                float m_flAirDrag; // 0x13f4, 0x4 bytes
+                float m_flAirAcceleration; // 0x13f8, 0x4 bytes
+                float m_flLaunchAirDrag; // 0x13fc, 0x4 bytes
+                float m_flLaunchTime; // 0x1400, 0x4 bytes
+                float m_flMoveSpeedAboveBaseScale; // 0x1404, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapModifier; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x1418, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DustParticle; // 0x1428, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TrailParticle; // 0x1508, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x15e8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityHornetLeapVData) == 0x1680, "CAbilityHornetLeapVData size mismatch");
+            static_assert(sizeof(CAbilityHornetLeapVData) == 0x16C8, "CAbilityHornetLeapVData size mismatch");
         }
     }
 }

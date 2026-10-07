@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1050
+             * Size: 0x10b0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DynamicPropAlias_prop_dynamic_override) == 0x1050, "C_DynamicPropAlias_prop_dynamic_override size mismatch");
+            static_assert(sizeof(C_DynamicPropAlias_prop_dynamic_override) == 0x10B0, "C_DynamicPropAlias_prop_dynamic_override size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7a0
+             * Size: 0x7d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SpiritBurnProcWatcherVData : public shade::sdk::server::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SpiritBurnDamageTracker; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SpiritBurnDamageTracker; // 0x07c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SpiritBurnProcWatcherVData) == 0x7A0, "CCitadel_Modifier_SpiritBurnProcWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SpiritBurnProcWatcherVData) == 0x7D8, "CCitadel_Modifier_SpiritBurnProcWatcherVData size mismatch");
         }
     }
 }

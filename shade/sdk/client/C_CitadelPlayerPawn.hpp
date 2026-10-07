@@ -41,7 +41,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1960
+             * Size: 0x1950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -50,114 +50,114 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelPlayerPawn : public shade::sdk::client::CCitadelPlayerPawnBase {
             public:
-                std::uint8_t pad_1020[0xbc]; // 0x1020, 0xbc bytes
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityRequiresDebounce; // 0x10dc, 0x4 bytes
-                std::uint8_t pad_10e0[0x20]; // 0x10e0, 0x20 bytes
-                QAngle m_angEyeAngles; // 0x1100, 0xc bytes
-                std::uint8_t pad_110c[0x84]; // 0x110c, 0x84 bytes
-                QAngle m_angClientCamera; // 0x1190, 0xc bytes
-                std::uint8_t pad_119c[0x84]; // 0x119c, 0x84 bytes
-                shade::sdk::client::CMsgLaneColor m_eZipLineLaneColor; // 0x1220, 0x4 bytes
-                std::int8_t m_nMapDistrictLocation; // 0x1224, 0x1 bytes
-                std::uint8_t pad_1225[0x3]; // 0x1225, 0x3 bytes
-                std::int32_t m_nLevel; // 0x1228, 0x4 bytes
-                std::int32_t m_nCurrencies[0x6]; // 0x122c, 0x18 bytes
-                std::int32_t m_nSpentCurrencies[0x6]; // 0x1244, 0x18 bytes
-                std::int32_t m_nNumHeroChangesUsed; // 0x125c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSpawnTime; // 0x1260, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x1264, 0x4 bytes
-                bool m_bInRegenerationZone; // 0x1268, 0x1 bytes
-                bool m_bInItemShopZone; // 0x1269, 0x1 bytes
-                bool m_bInHideoutZone; // 0x126a, 0x1 bytes
-                std::uint8_t pad_126b[0x1]; // 0x126b, 0x1 bytes
-                std::int32_t m_nLastEnteredTunnelID; // 0x126c, 0x4 bytes
-                C_NetworkUtlVectorBase<CUtlStringToken> m_vecFullSellPriceItems; // 0x1270, 0x18 bytes
-                C_NetworkUtlVectorBase<shade::sdk::client::FullSellPriceAbilityUpgrades_t> m_vecFullSellPriceAbilityUpgrades; // 0x1288, 0x18 bytes
-                C_NetworkUtlVectorBase<CUtlStringToken> m_vecQuickbuyQueue; // 0x12a0, 0x18 bytes
-                C_NetworkUtlVectorBase<CUtlStringToken> m_vecQuickbuySellQueue; // 0x12b8, 0x18 bytes
-                CUtlStringToken m_unQuickbuyAutoPurchaseRequest; // 0x12d0, 0x4 bytes
-                bool m_bQuickbuyAutoPurchase; // 0x12d4, 0x1 bytes
-                bool m_bQuickbuyAutoQueueBuild; // 0x12d5, 0x1 bytes
-                bool m_bHasQuickbuyBeenUsed; // 0x12d6, 0x1 bytes
-                std::uint8_t pad_12d7[0x1]; // 0x12d7, 0x1 bytes
-                C_NetworkUtlVectorBase<CUtlStringToken> m_vecRestrictedToItems; // 0x12d8, 0x18 bytes
-                shade::sdk::client::HeroBuildID_t m_unHeroBuildID; // 0x12f0, 0x4 bytes
-                std::uint8_t pad_12f4[0x4]; // 0x12f4, 0x4 bytes
-                CUtlString m_sHeroBuildSerialized; // 0x12f8, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hViewEntityForObserver; // 0x1300, 0x4 bytes
-                bool m_bNetworkDisconnected; // 0x1304, 0x1 bytes
-                bool m_bLearningAbility; // 0x1305, 0x1 bytes
-                std::uint8_t pad_1306[0x2]; // 0x1306, 0x2 bytes
-                std::int32_t m_nFlashStartTick; // 0x1308, 0x4 bytes
-                std::int32_t m_nFlashMaxStartTick; // 0x130c, 0x4 bytes
-                std::int32_t m_nFlashFadeStartTick; // 0x1310, 0x4 bytes
-                std::int32_t m_nFlashEndTick; // 0x1314, 0x4 bytes
-                std::int8_t m_nFlashMaxAlpha; // 0x1318, 0x1 bytes
-                std::uint8_t pad_1319[0x3]; // 0x1319, 0x3 bytes
-                std::int32_t m_nDeducedLane; // 0x131c, 0x4 bytes
-                CPlayerSlot m_hEnemyPlayerPrimaryAimTarget; // 0x1320, 0x4 bytes
-                std::uint8_t pad_1324[0x4]; // 0x1324, 0x4 bytes
-                std::uint64_t m_iEnemyPlayerAimTargetBitVec; // 0x1328, 0x8 bytes
-                bool m_arrPreventAbilityLearning[0x4]; // 0x1330, 0x4 bytes
-                std::uint8_t pad_1334[0x4]; // 0x1334, 0x4 bytes
-                shade::sdk::client::ItemDraftRoundState_t m_ItemDraftRoundState; // 0x1338, 0x88 bytes
-                std::int32_t m_nStreetBrawlCorruptionsAvailable; // 0x13c0, 0x4 bytes
-                std::uint8_t pad_13c4[0x4]; // 0x13c4, 0x4 bytes
-                shade::sdk::client::CCitadelRecentDamage m_sInCombat; // 0x13c8, 0x18 bytes
-                shade::sdk::client::CCitadelRecentDamage m_sPlayerDamageTaken; // 0x13e0, 0x18 bytes
-                shade::sdk::client::CCitadelRecentDamage m_sPlayerDamageDealt; // 0x13f8, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_tLastRevealTime; // 0x1410, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastPlayerRevealTime; // 0x1414, 0x4 bytes
-                std::int8_t m_nSuccessiveDucks; // 0x1418, 0x1 bytes
-                std::uint8_t pad_1419[0x3]; // 0x1419, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDuckTime; // 0x141c, 0x4 bytes
-                bool m_bDismissedReportCard; // 0x1420, 0x1 bytes
+                std::uint8_t pad_1078[0x6c]; // 0x1078, 0x6c bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityRequiresDebounce; // 0x10e4, 0x4 bytes
+                std::uint8_t pad_10e8[0x20]; // 0x10e8, 0x20 bytes
+                QAngle m_angEyeAngles; // 0x1108, 0xc bytes
+                std::uint8_t pad_1114[0x84]; // 0x1114, 0x84 bytes
+                QAngle m_angClientCamera; // 0x1198, 0xc bytes
+                std::uint8_t pad_11a4[0x84]; // 0x11a4, 0x84 bytes
+                shade::sdk::client::CMsgLaneColor m_eZipLineLaneColor; // 0x1228, 0x4 bytes
+                std::int8_t m_nMapDistrictLocation; // 0x122c, 0x1 bytes
+                std::uint8_t pad_122d[0x3]; // 0x122d, 0x3 bytes
+                std::int32_t m_nLevel; // 0x1230, 0x4 bytes
+                std::int32_t m_nCurrencies[0x6]; // 0x1234, 0x18 bytes
+                std::int32_t m_nSpentCurrencies[0x6]; // 0x124c, 0x18 bytes
+                std::int32_t m_nNumHeroChangesUsed; // 0x1264, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSpawnTime; // 0x1268, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x126c, 0x4 bytes
+                bool m_bInRegenerationZone; // 0x1270, 0x1 bytes
+                bool m_bInItemShopZone; // 0x1271, 0x1 bytes
+                bool m_bInHideoutZone; // 0x1272, 0x1 bytes
+                std::uint8_t pad_1273[0x1]; // 0x1273, 0x1 bytes
+                std::int32_t m_nLastEnteredTunnelID; // 0x1274, 0x4 bytes
+                C_NetworkUtlVectorBase<CUtlStringToken> m_vecFullSellPriceItems; // 0x1278, 0x18 bytes
+                C_NetworkUtlVectorBase<shade::sdk::client::FullSellPriceAbilityUpgrades_t> m_vecFullSellPriceAbilityUpgrades; // 0x1290, 0x18 bytes
+                C_NetworkUtlVectorBase<CUtlStringToken> m_vecQuickbuyQueue; // 0x12a8, 0x18 bytes
+                C_NetworkUtlVectorBase<CUtlStringToken> m_vecQuickbuySellQueue; // 0x12c0, 0x18 bytes
+                CUtlStringToken m_unQuickbuyAutoPurchaseRequest; // 0x12d8, 0x4 bytes
+                bool m_bQuickbuyAutoPurchase; // 0x12dc, 0x1 bytes
+                bool m_bQuickbuyAutoQueueBuild; // 0x12dd, 0x1 bytes
+                bool m_bHasQuickbuyBeenUsed; // 0x12de, 0x1 bytes
+                std::uint8_t pad_12df[0x1]; // 0x12df, 0x1 bytes
+                C_NetworkUtlVectorBase<CUtlStringToken> m_vecRestrictedToItems; // 0x12e0, 0x18 bytes
+                shade::sdk::client::HeroBuildID_t m_unHeroBuildID; // 0x12f8, 0x4 bytes
+                std::uint8_t pad_12fc[0x4]; // 0x12fc, 0x4 bytes
+                CUtlString m_sHeroBuildSerialized; // 0x1300, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hViewEntityForObserver; // 0x1308, 0x4 bytes
+                bool m_bNetworkDisconnected; // 0x130c, 0x1 bytes
+                bool m_bLearningAbility; // 0x130d, 0x1 bytes
+                std::uint8_t pad_130e[0x2]; // 0x130e, 0x2 bytes
+                std::int32_t m_nFlashStartTick; // 0x1310, 0x4 bytes
+                std::int32_t m_nFlashMaxStartTick; // 0x1314, 0x4 bytes
+                std::int32_t m_nFlashFadeStartTick; // 0x1318, 0x4 bytes
+                std::int32_t m_nFlashEndTick; // 0x131c, 0x4 bytes
+                std::int8_t m_nFlashMaxAlpha; // 0x1320, 0x1 bytes
+                std::uint8_t pad_1321[0x3]; // 0x1321, 0x3 bytes
+                std::int32_t m_nDeducedLane; // 0x1324, 0x4 bytes
+                CPlayerSlot m_hEnemyPlayerPrimaryAimTarget; // 0x1328, 0x4 bytes
+                std::uint8_t pad_132c[0x4]; // 0x132c, 0x4 bytes
+                std::uint64_t m_iEnemyPlayerAimTargetBitVec; // 0x1330, 0x8 bytes
+                bool m_arrPreventAbilityLearning[0x4]; // 0x1338, 0x4 bytes
+                std::uint8_t pad_133c[0x4]; // 0x133c, 0x4 bytes
+                shade::sdk::client::ItemDraftRoundState_t m_ItemDraftRoundState; // 0x1340, 0x88 bytes
+                std::int32_t m_nStreetBrawlCorruptionsAvailable; // 0x13c8, 0x4 bytes
+                std::uint8_t pad_13cc[0x4]; // 0x13cc, 0x4 bytes
+                shade::sdk::client::CCitadelRecentDamage m_sInCombat; // 0x13d0, 0x18 bytes
+                shade::sdk::client::CCitadelRecentDamage m_sPlayerDamageTaken; // 0x13e8, 0x18 bytes
+                shade::sdk::client::CCitadelRecentDamage m_sPlayerDamageDealt; // 0x1400, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_tLastRevealTime; // 0x1418, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastPlayerRevealTime; // 0x141c, 0x4 bytes
+                std::int8_t m_nSuccessiveDucks; // 0x1420, 0x1 bytes
                 std::uint8_t pad_1421[0x3]; // 0x1421, 0x3 bytes
-                float m_flCurrentHealingAmount; // 0x1424, 0x4 bytes
-                QAngle m_angLockedEyeAngles; // 0x1428, 0xc bytes
-                bool m_bIgnoringZoom; // 0x1434, 0x1 bytes
-                std::uint8_t pad_1435[0x3]; // 0x1435, 0x3 bytes
-                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1438, 0x1e0 bytes
-                shade::sdk::client::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x1618, 0x40 bytes
-                std::uint8_t pad_1658[0x58]; // 0x1658, 0x58 bytes
-                Vector m_vLastVelocity; // 0x16b0, 0xc bytes
-                std::uint8_t pad_16bc[0x34]; // 0x16bc, 0x34 bytes
-                float m_flRichPresenceUpdateInterval; // 0x16f0, 0x4 bytes
-                std::uint8_t pad_16f4[0xf4]; // 0x16f4, 0xf4 bytes
-                shade::sdk::client::InputBitMask_t m_nQueuedAbility; // 0x17e8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_QueuedAbilityEndTime; // 0x17f0, 0x4 bytes
-                std::uint8_t pad_17f4[0x4]; // 0x17f4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x17f8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x17fc, 0x4 bytes
-                float m_flPredSlowSpeed; // 0x1800, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeSlowedStart[0x4]; // 0x1804, 0x10 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeSlowedEnd[0x4]; // 0x1814, 0x10 bytes
-                float m_flSlowSpeed[0x4]; // 0x1824, 0x10 bytes
-                shade::sdk::entity2::GameTime_t m_flForceInCombatAnimsUntilTime; // 0x1834, 0x4 bytes
-                std::int32_t m_iCurSlowSlot; // 0x1838, 0x4 bytes
-                bool m_bLocoLeanTriggeredForDirection; // 0x183c, 0x1 bytes
-                bool m_bLocoRunToStopCanTrigger; // 0x183d, 0x1 bytes
-                std::uint8_t pad_183e[0x2]; // 0x183e, 0x2 bytes
-                float m_flCrouchFraction; // 0x1840, 0x4 bytes
-                float m_flCrouchSpeed; // 0x1844, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fidgetTime; // 0x1848, 0x4 bytes
-                Vector m_vShootTestOffsetStanding; // 0x184c, 0xc bytes
-                Vector m_vShootTestOffsetCrouching; // 0x1858, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_leanStartTime; // 0x1864, 0x4 bytes
-                std::uint8_t pad_1868[0xa4]; // 0x1868, 0xa4 bytes
-                float m_fAudioEnclosure; // 0x190c, 0x4 bytes
-                bool m_bAudioHasSkyExposure; // 0x1910, 0x1 bytes
-                std::uint8_t pad_1911[0x2f]; // 0x1911, 0x2f bytes
-                C_NetworkUtlVectorBase<shade::sdk::client::itemid_t> m_vecEquippedItemIDs; // 0x1940, 0x18 bytes
-                std::uint8_t pad_1958[0x8]; // 0x1958, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDuckTime; // 0x1424, 0x4 bytes
+                bool m_bDismissedReportCard; // 0x1428, 0x1 bytes
+                std::uint8_t pad_1429[0x3]; // 0x1429, 0x3 bytes
+                float m_flCurrentHealingAmount; // 0x142c, 0x4 bytes
+                QAngle m_angLockedEyeAngles; // 0x1430, 0xc bytes
+                bool m_bIgnoringZoom; // 0x143c, 0x1 bytes
+                std::uint8_t pad_143d[0x3]; // 0x143d, 0x3 bytes
+                shade::sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1440, 0x1e0 bytes
+                shade::sdk::client::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x1620, 0x40 bytes
+                std::uint8_t pad_1660[0x58]; // 0x1660, 0x58 bytes
+                Vector m_vLastVelocity; // 0x16b8, 0xc bytes
+                std::uint8_t pad_16c4[0x34]; // 0x16c4, 0x34 bytes
+                float m_flRichPresenceUpdateInterval; // 0x16f8, 0x4 bytes
+                std::uint8_t pad_16fc[0xdc]; // 0x16fc, 0xdc bytes
+                shade::sdk::client::InputBitMask_t m_nQueuedAbility; // 0x17d8, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_QueuedAbilityEndTime; // 0x17e0, 0x4 bytes
+                std::uint8_t pad_17e4[0x4]; // 0x17e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x17e8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x17ec, 0x4 bytes
+                float m_flPredSlowSpeed; // 0x17f0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeSlowedStart[0x4]; // 0x17f4, 0x10 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeSlowedEnd[0x4]; // 0x1804, 0x10 bytes
+                float m_flSlowSpeed[0x4]; // 0x1814, 0x10 bytes
+                shade::sdk::entity2::GameTime_t m_flForceInCombatAnimsUntilTime; // 0x1824, 0x4 bytes
+                std::int32_t m_iCurSlowSlot; // 0x1828, 0x4 bytes
+                bool m_bLocoLeanTriggeredForDirection; // 0x182c, 0x1 bytes
+                bool m_bLocoRunToStopCanTrigger; // 0x182d, 0x1 bytes
+                std::uint8_t pad_182e[0x2]; // 0x182e, 0x2 bytes
+                float m_flCrouchFraction; // 0x1830, 0x4 bytes
+                float m_flCrouchSpeed; // 0x1834, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fidgetTime; // 0x1838, 0x4 bytes
+                Vector m_vShootTestOffsetStanding; // 0x183c, 0xc bytes
+                Vector m_vShootTestOffsetCrouching; // 0x1848, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_leanStartTime; // 0x1854, 0x4 bytes
+                std::uint8_t pad_1858[0xa4]; // 0x1858, 0xa4 bytes
+                float m_fAudioEnclosure; // 0x18fc, 0x4 bytes
+                bool m_bAudioHasSkyExposure; // 0x1900, 0x1 bytes
+                std::uint8_t pad_1901[0x2f]; // 0x1901, 0x2f bytes
+                C_NetworkUtlVectorBase<shade::sdk::client::itemid_t> m_vecEquippedItemIDs; // 0x1930, 0x18 bytes
+                std::uint8_t pad_1948[0x8]; // 0x1948, 0x8 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xe60, Size: 0x1, Size In Bytes: 0x8
+             * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xeb8, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(C_CitadelPlayerPawn) == 0x1960, "C_CitadelPlayerPawn size mismatch");
+            static_assert(sizeof(C_CitadelPlayerPawn) == 0x1950, "C_CitadelPlayerPawn size mismatch");
         }
     }
 }

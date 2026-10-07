@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9a8
+             * Size: 0x9d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,26 +43,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HookTargetVData : public shade::sdk::server::CCitadel_Modifier_LinkVData {
             public:
-                float m_flApproachingWhooshAnticipationTime; // 0x0840, 0x4 bytes
-                float m_flCloseEnoughDistance; // 0x0844, 0x4 bytes
-                float m_flTossUpSpeed; // 0x0848, 0x4 bytes
-                std::uint8_t pad_084c[0x4]; // 0x084c, 0x4 bytes
-                CPiecewiseCurve m_PullSpeedScaleCurve; // 0x0850, 0x40 bytes
-                float m_flReturnSpeed; // 0x0890, 0x4 bytes
-                float m_flReturnPositionForwardOffset; // 0x0894, 0x4 bytes
-                float m_flReturnSpeedFail; // 0x0898, 0x4 bytes
-                float m_flReturnStuckTime; // 0x089c, 0x4 bytes
-                float m_flFailSafeMinTime; // 0x08a0, 0x4 bytes
-                float m_flFailSafeDurationMult; // 0x08a4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RestrictionModifier; // 0x08a8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookRetrieveParticle; // 0x08b8, 0xe0 bytes
-                CSoundEventName m_strApproachingWhooshSound; // 0x0998, 0x10 bytes
+                float m_flApproachingWhooshAnticipationTime; // 0x0870, 0x4 bytes
+                float m_flCloseEnoughDistance; // 0x0874, 0x4 bytes
+                float m_flTossUpSpeed; // 0x0878, 0x4 bytes
+                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
+                CPiecewiseCurve m_PullSpeedScaleCurve; // 0x0880, 0x40 bytes
+                float m_flReturnSpeed; // 0x08c0, 0x4 bytes
+                float m_flReturnPositionForwardOffset; // 0x08c4, 0x4 bytes
+                float m_flReturnSpeedFail; // 0x08c8, 0x4 bytes
+                float m_flReturnStuckTime; // 0x08cc, 0x4 bytes
+                float m_flFailSafeMinTime; // 0x08d0, 0x4 bytes
+                float m_flFailSafeDurationMult; // 0x08d4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RestrictionModifier; // 0x08d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookRetrieveParticle; // 0x08e8, 0xe0 bytes
+                CSoundEventName m_strApproachingWhooshSound; // 0x09c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HookTargetVData) == 0x9A8, "CCitadel_Modifier_HookTargetVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HookTargetVData) == 0x9D8, "CCitadel_Modifier_HookTargetVData size mismatch");
         }
     }
 }

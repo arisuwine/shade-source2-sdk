@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x850
+             * Size: 0x880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChargedBombVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x0760, 0xe0 bytes
-                CSoundEventName m_strBeepSound; // 0x0840, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x0790, 0xe0 bytes
+                CSoundEventName m_strBeepSound; // 0x0870, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChargedBombVData) == 0x850, "CCitadel_Modifier_ChargedBombVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChargedBombVData) == 0x880, "CCitadel_Modifier_ChargedBombVData size mismatch");
         }
     }
 }

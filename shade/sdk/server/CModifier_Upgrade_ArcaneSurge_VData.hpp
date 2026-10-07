@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x788
+             * Size: 0x7b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Upgrade_ArcaneSurge_VData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SurgeWindowModifier; // 0x0760, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AbilityWatcherModifier; // 0x0770, 0x10 bytes
-                float m_flMaxSurgeTime; // 0x0780, 0x4 bytes
-                std::uint8_t pad_0784[0x4]; // 0x0784, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SurgeWindowModifier; // 0x0790, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AbilityWatcherModifier; // 0x07a0, 0x10 bytes
+                float m_flMaxSurgeTime; // 0x07b0, 0x4 bytes
+                std::uint8_t pad_07b4[0x4]; // 0x07b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Upgrade_ArcaneSurge_VData) == 0x788, "CModifier_Upgrade_ArcaneSurge_VData size mismatch");
+            static_assert(sizeof(CModifier_Upgrade_ArcaneSurge_VData) == 0x7B8, "CModifier_Upgrade_ArcaneSurge_VData size mismatch");
         }
     }
 }

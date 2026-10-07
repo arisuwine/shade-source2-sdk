@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15a0
+             * Size: 0x15e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,24 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_RadiantBlastVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13a0, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x13b0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x13c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x14a0, 0xe0 bytes
-                float m_flJumpAirSpeedMax; // 0x1580, 0x4 bytes
-                float m_flJumpFallSpeedMax; // 0x1584, 0x4 bytes
-                float m_flJumpAirDrag; // 0x1588, 0x4 bytes
-                std::int32_t m_iConeBulletCount; // 0x158c, 0x4 bytes
-                float m_flConeBulletSpread; // 0x1590, 0x4 bytes
-                float m_flRangeScaleIncreaseMax; // 0x1594, 0x4 bytes
-                float m_flRangeScaleIncreaseMaxSpeed; // 0x1598, 0x4 bytes
-                float m_flHitConeAngleExtra; // 0x159c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13e8, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x13f8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1408, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x14e8, 0xe0 bytes
+                float m_flJumpAirSpeedMax; // 0x15c8, 0x4 bytes
+                float m_flJumpFallSpeedMax; // 0x15cc, 0x4 bytes
+                float m_flJumpAirDrag; // 0x15d0, 0x4 bytes
+                std::int32_t m_iConeBulletCount; // 0x15d4, 0x4 bytes
+                float m_flConeBulletSpread; // 0x15d8, 0x4 bytes
+                float m_flRangeScaleIncreaseMax; // 0x15dc, 0x4 bytes
+                float m_flRangeScaleIncreaseMaxSpeed; // 0x15e0, 0x4 bytes
+                float m_flHitConeAngleExtra; // 0x15e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_RadiantBlastVData) == 0x15A0, "CCitadel_Ability_Unicorn_RadiantBlastVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_RadiantBlastVData) == 0x15E8, "CCitadel_Ability_Unicorn_RadiantBlastVData size mismatch");
         }
     }
 }

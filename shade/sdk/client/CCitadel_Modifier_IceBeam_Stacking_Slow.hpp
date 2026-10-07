@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x618
+             * Size: 0x620
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_IceBeam_Stacking_Slow : public shade::sdk::client::CCitadel_Modifier_Base_Buildup {
             public:
-                std::uint8_t pad_0140[0x4d0]; // 0x0140, 0x4d0 bytes
-                float m_flCurrBuildup; // 0x0610, 0x4 bytes
-                std::uint8_t pad_0614[0x4]; // 0x0614, 0x4 bytes
+                std::uint8_t pad_0148[0x4d0]; // 0x0148, 0x4d0 bytes
+                float m_flCurrBuildup; // 0x0618, 0x4 bytes
+                std::uint8_t pad_061c[0x4]; // 0x061c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_IceBeam_Stacking_Slow) == 0x618, "CCitadel_Modifier_IceBeam_Stacking_Slow size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_IceBeam_Stacking_Slow) == 0x620, "CCitadel_Modifier_IceBeam_Stacking_Slow size mismatch");
         }
     }
 }

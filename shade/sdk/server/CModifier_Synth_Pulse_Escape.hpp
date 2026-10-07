@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2a0
+             * Size: 0x2a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Synth_Pulse_Escape : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x160]; // 0x0140, 0x160 bytes
+                std::uint8_t pad_0148[0x160]; // 0x0148, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Synth_Pulse_Escape) == 0x2A0, "CModifier_Synth_Pulse_Escape size mismatch");
+            static_assert(sizeof(CModifier_Synth_Pulse_Escape) == 0x2A8, "CModifier_Synth_Pulse_Escape size mismatch");
         }
     }
 }

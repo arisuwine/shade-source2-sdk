@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xde0
+             * Size: 0xe38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,9 +36,10 @@ namespace shade {
 
             /* Data Map Fields
              * float koth_early_warning_time; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * bool koth_silent_spawn; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelItemKothSpawner) == 0xDE0, "CCitadelItemKothSpawner size mismatch");
+            static_assert(sizeof(CCitadelItemKothSpawner) == 0xE38, "CCitadelItemKothSpawner size mismatch");
         }
     }
 }

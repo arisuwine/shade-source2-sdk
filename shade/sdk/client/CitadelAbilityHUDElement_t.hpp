@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x110
+             * Size: 0x128
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -46,12 +46,13 @@ namespace shade {
                 bool m_bReverseProgress; // 0x0108, 0x1 bytes
                 bool m_bShowStacksOnProgress; // 0x0109, 0x1 bytes
                 std::uint8_t pad_010a[0x6]; // 0x010a, 0x6 bytes
+                CUtlVector<Vector2D> m_vecLockOnSegmentArcs; // 0x0110, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelAbilityHUDElement_t) == 0x110, "CitadelAbilityHUDElement_t size mismatch");
+            static_assert(sizeof(CitadelAbilityHUDElement_t) == 0x128, "CitadelAbilityHUDElement_t size mismatch");
         }
     }
 }

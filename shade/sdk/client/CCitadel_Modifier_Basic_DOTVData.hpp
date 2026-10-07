@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,21 +41,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Basic_DOTVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strDamageParticle; // 0x0760, 0xe0 bytes
-                CSoundEventName m_strDamageSound; // 0x0840, 0x10 bytes
-                float m_flTickInterval; // 0x0850, 0x4 bytes
-                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
-                shade::sdk::client::TakeDamageFlags_t m_damageFlags; // 0x0858, 0x8 bytes
-                shade::sdk::client::DamageTypes_t m_damagetype; // 0x0860, 0x4 bytes
-                bool m_bSnapshotDPS; // 0x0864, 0x1 bytes
-                std::uint8_t pad_0865[0x3]; // 0x0865, 0x3 bytes
-                CUtlString m_strDPSAbilityPropertyName; // 0x0868, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strDamageParticle; // 0x0790, 0xe0 bytes
+                CSoundEventName m_strDamageSound; // 0x0870, 0x10 bytes
+                float m_flTickInterval; // 0x0880, 0x4 bytes
+                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
+                shade::sdk::client::TakeDamageFlags_t m_damageFlags; // 0x0888, 0x8 bytes
+                shade::sdk::client::DamageTypes_t m_damagetype; // 0x0890, 0x4 bytes
+                bool m_bSnapshotDPS; // 0x0894, 0x1 bytes
+                std::uint8_t pad_0895[0x3]; // 0x0895, 0x3 bytes
+                CUtlString m_strDPSAbilityPropertyName; // 0x0898, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Basic_DOTVData) == 0x870, "CCitadel_Modifier_Basic_DOTVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Basic_DOTVData) == 0x8A0, "CCitadel_Modifier_Basic_DOTVData size mismatch");
         }
     }
 }

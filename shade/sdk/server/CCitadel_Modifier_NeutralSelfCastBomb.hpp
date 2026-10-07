@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_NeutralSelfCastBomb : public shade::sdk::server::CCitadel_Modifier_NeutralAbility {
             public:
-                std::uint8_t pad_01f0[0x8]; // 0x01f0, 0x8 bytes
+                std::uint8_t pad_01f8[0x8]; // 0x01f8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_NeutralSelfCastBomb) == 0x1F8, "CCitadel_Modifier_NeutralSelfCastBomb size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_NeutralSelfCastBomb) == 0x200, "CCitadel_Modifier_NeutralSelfCastBomb size mismatch");
         }
     }
 }

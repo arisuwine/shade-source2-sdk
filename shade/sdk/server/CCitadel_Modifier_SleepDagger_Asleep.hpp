@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x640
+             * Size: 0x648
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SleepDagger_Asleep : public shade::sdk::server::CCitadel_Modifier_Sleep {
             public:
-                std::uint8_t pad_0170[0x4d0]; // 0x0170, 0x4d0 bytes
+                std::uint8_t pad_0178[0x4d0]; // 0x0178, 0x4d0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SleepDagger_Asleep) == 0x640, "CCitadel_Modifier_SleepDagger_Asleep size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SleepDagger_Asleep) == 0x648, "CCitadel_Modifier_SleepDagger_Asleep size mismatch");
         }
     }
 }

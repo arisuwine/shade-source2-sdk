@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x978
+             * Size: 0x9a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifire_MobileResupplyAuraVData : public shade::sdk::server::CCitadelModifierAuraVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DispenserAuraParticleFriendly; // 0x07b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DispenserAuraParticle; // 0x0898, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DispenserAuraParticleFriendly; // 0x07e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DispenserAuraParticle; // 0x08c8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifire_MobileResupplyAuraVData) == 0x978, "CCitadel_Modifire_MobileResupplyAuraVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifire_MobileResupplyAuraVData) == 0x9A8, "CCitadel_Modifire_MobileResupplyAuraVData size mismatch");
         }
     }
 }

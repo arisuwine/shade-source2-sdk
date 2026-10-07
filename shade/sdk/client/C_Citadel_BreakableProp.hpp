@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xed0
+             * Size: 0xf28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_BreakableProp : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0da0[0x10]; // 0x0da0, 0x10 bytes
-                std::int32_t m_nGoldCost; // 0x0db0, 0x4 bytes
-                std::uint8_t pad_0db4[0x8]; // 0x0db4, 0x8 bytes
-                std::int32_t m_nMeleeHitsTaken; // 0x0dbc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x0dc0, 0x4 bytes
-                std::uint8_t pad_0dc4[0x10c]; // 0x0dc4, 0x10c bytes
+                std::uint8_t pad_0df8[0x10]; // 0x0df8, 0x10 bytes
+                std::int32_t m_nGoldCost; // 0x0e08, 0x4 bytes
+                std::uint8_t pad_0e0c[0x8]; // 0x0e0c, 0x8 bytes
+                std::int32_t m_nMeleeHitsTaken; // 0x0e14, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x0e18, 0x4 bytes
+                std::uint8_t pad_0e1c[0x10c]; // 0x0e1c, 0x10c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_BreakableProp) == 0xED0, "C_Citadel_BreakableProp size mismatch");
+            static_assert(sizeof(C_Citadel_BreakableProp) == 0xF28, "C_Citadel_BreakableProp size mismatch");
         }
     }
 }

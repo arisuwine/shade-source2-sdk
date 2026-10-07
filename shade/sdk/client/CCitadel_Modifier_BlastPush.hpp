@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BlastPush : public shade::sdk::client::CCitadelModifier {
             public:
-                Vector m_vPush; // 0x0130, 0xc bytes
-                float m_flPushVelocity; // 0x013c, 0x4 bytes
-                float m_flMaxPushVelocity; // 0x0140, 0x4 bytes
-                float m_flMaxPushVelocitySqr; // 0x0144, 0x4 bytes
+                Vector m_vPush; // 0x0138, 0xc bytes
+                float m_flPushVelocity; // 0x0144, 0x4 bytes
+                float m_flMaxPushVelocity; // 0x0148, 0x4 bytes
+                float m_flMaxPushVelocitySqr; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BlastPush) == 0x148, "CCitadel_Modifier_BlastPush size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BlastPush) == 0x150, "CCitadel_Modifier_BlastPush size mismatch");
         }
     }
 }

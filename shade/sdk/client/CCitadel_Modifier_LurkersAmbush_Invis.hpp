@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x650
+             * Size: 0x658
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LurkersAmbush_Invis : public shade::sdk::client::CCitadel_Modifier_Invis {
             public:
-                CUtlOrderedMap<shade::sdk::client::C_CitadelPlayerPawn*, shade::sdk::entity2::GameTime_t> m_mapStartLookTime; // 0x0620, 0x28 bytes
-                shade::sdk::entity2::GameTime_t m_flStartSpotted; // 0x0648, 0x4 bytes
-                std::uint8_t pad_064c[0x4]; // 0x064c, 0x4 bytes
+                CUtlOrderedMap<shade::sdk::client::C_CitadelPlayerPawn*, shade::sdk::entity2::GameTime_t> m_mapStartLookTime; // 0x0628, 0x28 bytes
+                shade::sdk::entity2::GameTime_t m_flStartSpotted; // 0x0650, 0x4 bytes
+                std::uint8_t pad_0654[0x4]; // 0x0654, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LurkersAmbush_Invis) == 0x650, "CCitadel_Modifier_LurkersAmbush_Invis size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LurkersAmbush_Invis) == 0x658, "CCitadel_Modifier_LurkersAmbush_Invis size mismatch");
         }
     }
 }

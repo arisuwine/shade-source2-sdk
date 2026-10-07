@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,12 +40,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_OverrideTargetIdentifier : public shade::sdk::client::CCitadelModifier {
             public:
-                CGlobalSymbol m_sTargetIdentifier; // 0x0130, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x0138, 0x4 bytes
-                shade::sdk::client::EntityAttachmentType_t m_nOriginType; // 0x013c, 0x4 bytes
-                CGlobalSymbol m_sAttachmentName; // 0x0140, 0x8 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
+                CGlobalSymbol m_sTargetIdentifier; // 0x0138, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x0140, 0x4 bytes
+                shade::sdk::client::EntityAttachmentType_t m_nOriginType; // 0x0144, 0x4 bytes
+                CGlobalSymbol m_sAttachmentName; // 0x0148, 0x8 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hAttachment; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x7]; // 0x0151, 0x7 bytes
             };
             #pragma pack(pop)
 
@@ -53,7 +53,7 @@ namespace shade {
              * void local_offset; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CGameModifier_OverrideTargetIdentifier) == 0x150, "CGameModifier_OverrideTargetIdentifier size mismatch");
+            static_assert(sizeof(CGameModifier_OverrideTargetIdentifier) == 0x158, "CGameModifier_OverrideTargetIdentifier size mismatch");
         }
     }
 }

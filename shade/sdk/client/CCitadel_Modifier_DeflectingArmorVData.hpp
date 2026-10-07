@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x860
+             * Size: 0x890
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DeflectingArmorVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x0760, 0xe0 bytes
-                CSoundEventName m_strImpactSound; // 0x0840, 0x10 bytes
-                CSoundEventName m_strProcDeflectionImpactSound; // 0x0850, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x0790, 0xe0 bytes
+                CSoundEventName m_strImpactSound; // 0x0870, 0x10 bytes
+                CSoundEventName m_strProcDeflectionImpactSound; // 0x0880, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DeflectingArmorVData) == 0x860, "CCitadel_Modifier_DeflectingArmorVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DeflectingArmorVData) == 0x890, "CCitadel_Modifier_DeflectingArmorVData size mismatch");
         }
     }
 }

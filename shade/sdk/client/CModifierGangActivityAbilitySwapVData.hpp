@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7c0
+             * Size: 0x7f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierGangActivityAbilitySwapVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CSubclassName<4> m_SummonGangster; // 0x0760, 0x10 bytes
-                CSubclassName<4> m_TeleportToGangster; // 0x0770, 0x10 bytes
-                CSubclassName<4> m_Cancel; // 0x0780, 0x10 bytes
-                CSubclassName<4> m_ReplaceWithSummonGangster; // 0x0790, 0x10 bytes
-                CSubclassName<4> m_ReplaceWithTeleportToGangster; // 0x07a0, 0x10 bytes
-                CSubclassName<4> m_ReplaceWithCancel; // 0x07b0, 0x10 bytes
+                CSubclassName<4> m_SummonGangster; // 0x0790, 0x10 bytes
+                CSubclassName<4> m_TeleportToGangster; // 0x07a0, 0x10 bytes
+                CSubclassName<4> m_Cancel; // 0x07b0, 0x10 bytes
+                CSubclassName<4> m_ReplaceWithSummonGangster; // 0x07c0, 0x10 bytes
+                CSubclassName<4> m_ReplaceWithTeleportToGangster; // 0x07d0, 0x10 bytes
+                CSubclassName<4> m_ReplaceWithCancel; // 0x07e0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierGangActivityAbilitySwapVData) == 0x7C0, "CModifierGangActivityAbilitySwapVData size mismatch");
+            static_assert(sizeof(CModifierGangActivityAbilitySwapVData) == 0x7F0, "CModifierGangActivityAbilitySwapVData size mismatch");
         }
     }
 }

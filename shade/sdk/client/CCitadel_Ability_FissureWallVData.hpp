@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15c0
+             * Size: 0x1608
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FissureWallVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FriendlyWallParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyWallParticle; // 0x1480, 0xe0 bytes
-                CSoundEventName m_WallTravelSoundLoop; // 0x1560, 0x10 bytes
-                CSoundEventName m_strWallRemoveSound; // 0x1570, 0x10 bytes
-                CSoundEventName m_strApplySlowSound; // 0x1580, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WallModifier; // 0x1590, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x15a0, 0x10 bytes
-                float m_flWallPreviewDropdownRate; // 0x15b0, 0x4 bytes
-                float m_flWallStepHeight; // 0x15b4, 0x4 bytes
-                float m_flWallTraceRadius; // 0x15b8, 0x4 bytes
-                std::uint8_t pad_15bc[0x4]; // 0x15bc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FriendlyWallParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyWallParticle; // 0x14c8, 0xe0 bytes
+                CSoundEventName m_WallTravelSoundLoop; // 0x15a8, 0x10 bytes
+                CSoundEventName m_strWallRemoveSound; // 0x15b8, 0x10 bytes
+                CSoundEventName m_strApplySlowSound; // 0x15c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WallModifier; // 0x15d8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x15e8, 0x10 bytes
+                float m_flWallPreviewDropdownRate; // 0x15f8, 0x4 bytes
+                float m_flWallStepHeight; // 0x15fc, 0x4 bytes
+                float m_flWallTraceRadius; // 0x1600, 0x4 bytes
+                std::uint8_t pad_1604[0x4]; // 0x1604, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FissureWallVData) == 0x15C0, "CCitadel_Ability_FissureWallVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FissureWallVData) == 0x1608, "CCitadel_Ability_FissureWallVData size mismatch");
         }
     }
 }

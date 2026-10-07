@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1620
+             * Size: 0x1680
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,20 +44,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_WeaponSwapVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SelfModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13b0, 0x10 bytes
-                CSubclassName<4> m_NewWeaponAbility; // 0x13c0, 0x10 bytes
-                float m_flMinTimeBeforeSwappingBack; // 0x13d0, 0x4 bytes
-                std::uint8_t pad_13d4[0x4]; // 0x13d4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowEntImpactParticle; // 0x13d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowImpactParticle; // 0x14b8, 0xe0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSwapWeapons; // 0x1598, 0x88 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SelfModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13f8, 0x10 bytes
+                CSubclassName<4> m_NewWeaponAbility; // 0x1408, 0x10 bytes
+                float m_flMinTimeBeforeSwappingBack; // 0x1418, 0x4 bytes
+                std::uint8_t pad_141c[0x4]; // 0x141c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowEntImpactParticle; // 0x1420, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowImpactParticle; // 0x1500, 0xe0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSwapWeapons; // 0x15e0, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_WeaponSwapVData) == 0x1620, "CCitadel_Ability_Priest_WeaponSwapVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_WeaponSwapVData) == 0x1680, "CCitadel_Ability_Priest_WeaponSwapVData size mismatch");
         }
     }
 }

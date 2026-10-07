@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_CheatDeathImmunity : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x18]; // 0x0140, 0x18 bytes
+                std::uint8_t pad_0148[0x18]; // 0x0148, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_CheatDeathImmunity) == 0x158, "CModifier_CheatDeathImmunity size mismatch");
+            static_assert(sizeof(CModifier_CheatDeathImmunity) == 0x160, "CModifier_CheatDeathImmunity size mismatch");
         }
     }
 }

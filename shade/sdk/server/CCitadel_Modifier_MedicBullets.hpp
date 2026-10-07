@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x458
+             * Size: 0x460
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MedicBullets : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_02f8[0x160]; // 0x02f8, 0x160 bytes
+                std::uint8_t pad_0300[0x160]; // 0x0300, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MedicBullets) == 0x458, "CCitadel_Modifier_MedicBullets size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MedicBullets) == 0x460, "CCitadel_Modifier_MedicBullets size mismatch");
         }
     }
 }

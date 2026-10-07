@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x370
+             * Size: 0x378
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LuminousStrikeBuff : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_nPowerupParticle; // 0x0140, 0x4 bytes
-                std::uint8_t pad_0144[0x22c]; // 0x0144, 0x22c bytes
+                shade::sdk::client::ParticleIndex_t m_nPowerupParticle; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x22c]; // 0x014c, 0x22c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LuminousStrikeBuff) == 0x370, "CCitadel_Modifier_LuminousStrikeBuff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LuminousStrikeBuff) == 0x378, "CCitadel_Modifier_LuminousStrikeBuff size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1050
+             * Size: 0x10c0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,12 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ShopProp : public shade::sdk::client::C_DynamicProp {
             public:
+                bool m_bIsShopOpen; // 0x10b0, 0x1 bytes
+                std::uint8_t pad_10b1[0x3]; // 0x10b1, 0x3 bytes
+                std::int32_t m_iLane; // 0x10b4, 0x4 bytes
+                std::uint8_t pad_10b8[0x8]; // 0x10b8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ShopProp) == 0x1050, "CCitadel_ShopProp size mismatch");
+            static_assert(sizeof(CCitadel_ShopProp) == 0x10C0, "CCitadel_ShopProp size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x510
+             * Size: 0x518
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,18 +38,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChainLightningEffect : public shade::sdk::server::CCitadelModifier {
             public:
-                std::int32_t m_nChainCount; // 0x0140, 0x4 bytes
-                std::uint8_t pad_0144[0x4]; // 0x0144, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x0148, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hUnhitEnts; // 0x0160, 0x18 bytes
-                VectorWS m_vLastSource; // 0x0178, 0xc bytes
-                std::uint8_t pad_0184[0x38c]; // 0x0184, 0x38c bytes
+                std::int32_t m_nChainCount; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x0150, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hUnhitEnts; // 0x0168, 0x18 bytes
+                VectorWS m_vLastSource; // 0x0180, 0xc bytes
+                std::uint8_t pad_018c[0x38c]; // 0x018c, 0x38c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChainLightningEffect) == 0x510, "CCitadel_Modifier_ChainLightningEffect size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChainLightningEffect) == 0x518, "CCitadel_Modifier_ChainLightningEffect size mismatch");
         }
     }
 }

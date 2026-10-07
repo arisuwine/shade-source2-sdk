@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1458
+             * Size: 0x14b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FlameDashVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FlameDashModifier; // 0x13a0, 0x10 bytes
-                CSoundEventName m_DashBurstSound; // 0x13b0, 0x10 bytes
-                CSoundEventName m_ChargeHitSound; // 0x13c0, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSpeedBoost; // 0x13d0, 0x88 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FlameDashModifier; // 0x13e8, 0x10 bytes
+                CSoundEventName m_DashBurstSound; // 0x13f8, 0x10 bytes
+                CSoundEventName m_ChargeHitSound; // 0x1408, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSpeedBoost; // 0x1418, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FlameDashVData) == 0x1458, "CCitadel_Ability_FlameDashVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FlameDashVData) == 0x14B8, "CCitadel_Ability_FlameDashVData size mismatch");
         }
     }
 }

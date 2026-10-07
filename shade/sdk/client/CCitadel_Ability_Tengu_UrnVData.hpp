@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14a0
+             * Size: 0x14e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tengu_UrnVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13a0, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x1480, 0x10 bytes
-                CSoundEventName m_ExplodeSound; // 0x1490, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x14c8, 0x10 bytes
+                CSoundEventName m_ExplodeSound; // 0x14d8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tengu_UrnVData) == 0x14A0, "CCitadel_Ability_Tengu_UrnVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tengu_UrnVData) == 0x14E8, "CCitadel_Ability_Tengu_UrnVData size mismatch");
         }
     }
 }

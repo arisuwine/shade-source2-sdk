@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x168
+             * Size: 0x170
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_StanceActive : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapOriginalAbilities; // 0x0140, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapOriginalAbilities; // 0x0148, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_StanceActive) == 0x168, "CCitadel_Modifier_StanceActive size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_StanceActive) == 0x170, "CCitadel_Modifier_StanceActive size mismatch");
         }
     }
 }

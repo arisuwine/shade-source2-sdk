@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8a8
+             * Size: 0x8e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TechBurst_ProcVData : public shade::sdk::server::CCitadel_Modifier_BaseEventProcVData {
             public:
-                bool m_bIgnoreResists; // 0x0790, 0x1 bytes
-                std::uint8_t pad_0791[0x7]; // 0x0791, 0x7 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle; // 0x0798, 0xe0 bytes
-                CSoundEventName m_strUnchargedProc; // 0x0878, 0x10 bytes
-                CSoundEventName m_strFullChargedProc; // 0x0888, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ProcNotificationModifier; // 0x0898, 0x10 bytes
+                bool m_bIgnoreResists; // 0x07c8, 0x1 bytes
+                std::uint8_t pad_07c9[0x7]; // 0x07c9, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle; // 0x07d0, 0xe0 bytes
+                CSoundEventName m_strUnchargedProc; // 0x08b0, 0x10 bytes
+                CSoundEventName m_strFullChargedProc; // 0x08c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_ProcNotificationModifier; // 0x08d0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TechBurst_ProcVData) == 0x8A8, "CCitadel_Modifier_TechBurst_ProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TechBurst_ProcVData) == 0x8E0, "CCitadel_Modifier_TechBurst_ProcVData size mismatch");
         }
     }
 }

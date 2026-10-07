@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x358
+             * Size: 0x360
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Burrow : public shade::sdk::server::CCitadelModifier {
             public:
-                CHandle<shade::sdk::server::CTriggerBurrowUnderground> m_pUndergroundTrigger; // 0x0140, 0x4 bytes
-                std::uint8_t pad_0144[0x214]; // 0x0144, 0x214 bytes
+                CHandle<shade::sdk::server::CTriggerBurrowUnderground> m_pUndergroundTrigger; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x214]; // 0x014c, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Burrow) == 0x358, "CCitadel_Modifier_Burrow size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Burrow) == 0x360, "CCitadel_Modifier_Burrow size mismatch");
         }
     }
 }

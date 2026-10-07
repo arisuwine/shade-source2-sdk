@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3a0
+             * Size: 0x3a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChainLightning : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_02e8[0xb0]; // 0x02e8, 0xb0 bytes
-                shade::sdk::entity2::GameTime_t m_flNextProcTime; // 0x0398, 0x4 bytes
-                std::uint8_t pad_039c[0x4]; // 0x039c, 0x4 bytes
+                std::uint8_t pad_02f0[0xb0]; // 0x02f0, 0xb0 bytes
+                shade::sdk::entity2::GameTime_t m_flNextProcTime; // 0x03a0, 0x4 bytes
+                std::uint8_t pad_03a4[0x4]; // 0x03a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChainLightning) == 0x3A0, "CCitadel_Modifier_ChainLightning size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChainLightning) == 0x3A8, "CCitadel_Modifier_ChainLightning size mismatch");
         }
     }
 }

@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc30
+             * Size: 0xc80
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,24 +41,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Bounce_Pad : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0bf0, 0x4 bytes
-                float m_flUpFactor; // 0x0bf4, 0x4 bytes
-                float m_flBounceVelocity; // 0x0bf8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tDeactivationTime; // 0x0bfc, 0x4 bytes
-                bool m_bDeactivated; // 0x0c00, 0x1 bytes
-                std::uint8_t pad_0c01[0x3]; // 0x0c01, 0x3 bytes
-                float m_flBarrelBounceVelocity; // 0x0c04, 0x4 bytes
-                float m_flBarrelUpFactor; // 0x0c08, 0x4 bytes
-                bool m_bSpeedOnLand; // 0x0c0c, 0x1 bytes
-                std::uint8_t pad_0c0d[0x3]; // 0x0c0d, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vBouncedPlayerBefore; // 0x0c10, 0x18 bytes
-                std::uint8_t pad_0c28[0x8]; // 0x0c28, 0x8 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c40, 0x4 bytes
+                float m_flUpFactor; // 0x0c44, 0x4 bytes
+                float m_flBounceVelocity; // 0x0c48, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tDeactivationTime; // 0x0c4c, 0x4 bytes
+                bool m_bDeactivated; // 0x0c50, 0x1 bytes
+                std::uint8_t pad_0c51[0x3]; // 0x0c51, 0x3 bytes
+                float m_flBarrelBounceVelocity; // 0x0c54, 0x4 bytes
+                float m_flBarrelUpFactor; // 0x0c58, 0x4 bytes
+                bool m_bSpeedOnLand; // 0x0c5c, 0x1 bytes
+                std::uint8_t pad_0c5d[0x3]; // 0x0c5d, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vBouncedPlayerBefore; // 0x0c60, 0x18 bytes
+                std::uint8_t pad_0c78[0x8]; // 0x0c78, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Bounce_Pad) == 0xC30, "CCitadel_Bounce_Pad size mismatch");
+            static_assert(sizeof(CCitadel_Bounce_Pad) == 0xC80, "CCitadel_Bounce_Pad size mismatch");
         }
     }
 }

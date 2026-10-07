@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1658
+             * Size: 0x16a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,25 +43,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityPunkgoatUltVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DiminishingSlowModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FireRateModifier; // 0x13b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_VulnerableModifier; // 0x13c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x13d0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PullToGroundModifier; // 0x13e0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatChargingEffect; // 0x13f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x14d0, 0xe0 bytes
-                CSoundEventName m_strHangSound; // 0x15b0, 0x10 bytes
-                CSoundEventName m_strDiveSound; // 0x15c0, 0x10 bytes
-                CPiecewiseCurve m_TimeToReachGroundByHeight; // 0x15d0, 0x40 bytes
-                CPiecewiseCurve m_GoUpSpeedCurve; // 0x1610, 0x40 bytes
-                float m_flGoUpDuration; // 0x1650, 0x4 bytes
-                float m_flGoDownVelocityDampRate; // 0x1654, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DiminishingSlowModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FireRateModifier; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_VulnerableModifier; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x1418, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PullToGroundModifier; // 0x1428, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatChargingEffect; // 0x1438, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle; // 0x1518, 0xe0 bytes
+                CSoundEventName m_strHangSound; // 0x15f8, 0x10 bytes
+                CSoundEventName m_strDiveSound; // 0x1608, 0x10 bytes
+                CPiecewiseCurve m_TimeToReachGroundByHeight; // 0x1618, 0x40 bytes
+                CPiecewiseCurve m_GoUpSpeedCurve; // 0x1658, 0x40 bytes
+                float m_flGoUpDuration; // 0x1698, 0x4 bytes
+                float m_flGoDownVelocityDampRate; // 0x169c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityPunkgoatUltVData) == 0x1658, "CAbilityPunkgoatUltVData size mismatch");
+            static_assert(sizeof(CAbilityPunkgoatUltVData) == 0x16A0, "CAbilityPunkgoatUltVData size mismatch");
         }
     }
 }

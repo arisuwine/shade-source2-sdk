@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1060
+             * Size: 0x10c0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelTeamRevealHeroCard : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_1050[0x4]; // 0x1050, 0x4 bytes
-                shade::sdk::client::HeroID_t m_unHeroID; // 0x1054, 0x4 bytes
-                std::uint8_t pad_1058[0x8]; // 0x1058, 0x8 bytes
+                std::uint8_t pad_10b0[0x4]; // 0x10b0, 0x4 bytes
+                shade::sdk::client::HeroID_t m_unHeroID; // 0x10b4, 0x4 bytes
+                std::uint8_t pad_10b8[0x8]; // 0x10b8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelTeamRevealHeroCard) == 0x1060, "CCitadelTeamRevealHeroCard size mismatch");
+            static_assert(sizeof(CCitadelTeamRevealHeroCard) == 0x10C0, "CCitadelTeamRevealHeroCard size mismatch");
         }
     }
 }

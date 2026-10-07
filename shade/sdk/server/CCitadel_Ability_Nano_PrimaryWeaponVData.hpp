@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17e8
+             * Size: 0x1878
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,16 +44,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_PrimaryWeaponVData : public shade::sdk::server::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EscapeModifier; // 0x1660, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashEffectParticle; // 0x1670, 0xe0 bytes
-                CSoundEventName m_strExpireSound; // 0x1750, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceInShadow; // 0x1760, 0x88 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EscapeModifier; // 0x16d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashEffectParticle; // 0x16e8, 0xe0 bytes
+                CSoundEventName m_strExpireSound; // 0x17c8, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceInShadow; // 0x17d8, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_PrimaryWeaponVData) == 0x17E8, "CCitadel_Ability_Nano_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_PrimaryWeaponVData) == 0x1878, "CCitadel_Ability_Nano_PrimaryWeaponVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xda8
+             * Size: 0xe00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelAnimatingModelEntity : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0da0[0x8]; // 0x0da0, 0x8 bytes
+                std::uint8_t pad_0df8[0x8]; // 0x0df8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelAnimatingModelEntity) == 0xDA8, "CCitadelAnimatingModelEntity size mismatch");
+            static_assert(sizeof(CCitadelAnimatingModelEntity) == 0xE00, "CCitadelAnimatingModelEntity size mismatch");
         }
     }
 }

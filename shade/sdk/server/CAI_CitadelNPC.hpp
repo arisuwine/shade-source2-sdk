@@ -44,7 +44,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CAI_CitadelNPC : public shade::sdk::server::CAI_BaseNPC {
             public:
-                std::uint8_t pad_10e0[0x68]; // 0x10e0, 0x68 bytes
+                std::uint8_t pad_1130[0x18]; // 0x1130, 0x18 bytes
                 shade::sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1148, 0x268 bytes
                 shade::sdk::server::CCitadelRegenComponent m_CCitadelRegenComponent; // 0x13b0, 0x160 bytes
                 shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x1510, 0x20 bytes

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifier : public shade::sdk::client::CBaseModifier {
             public:
-                std::uint8_t pad_0090[0x80]; // 0x0090, 0x80 bytes
-                float m_flEffectiveness; // 0x0110, 0x4 bytes
-                std::uint8_t pad_0114[0x1c]; // 0x0114, 0x1c bytes
+                std::uint8_t pad_0098[0x80]; // 0x0098, 0x80 bytes
+                float m_flEffectiveness; // 0x0118, 0x4 bytes
+                std::uint8_t pad_011c[0x1c]; // 0x011c, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifier) == 0x130, "CCitadelModifier size mismatch");
+            static_assert(sizeof(CCitadelModifier) == 0x138, "CCitadelModifier size mismatch");
         }
     }
 }

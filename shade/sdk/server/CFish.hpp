@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xba0
+             * Size: 0xbf0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -40,38 +40,38 @@ namespace shade {
             #pragma pack(push, 1)
             class CFish : public shade::sdk::server::CBaseAnimGraph {
             public:
-                CHandle<shade::sdk::server::CFishPool> m_pool; // 0x0a90, 0x4 bytes
-                std::uint32_t m_id; // 0x0a94, 0x4 bytes
-                float m_x; // 0x0a98, 0x4 bytes
-                float m_y; // 0x0a9c, 0x4 bytes
-                float m_z; // 0x0aa0, 0x4 bytes
-                float m_angle; // 0x0aa4, 0x4 bytes
-                float m_angleChange; // 0x0aa8, 0x4 bytes
-                Vector m_forward; // 0x0aac, 0xc bytes
-                Vector m_perp; // 0x0ab8, 0xc bytes
-                VectorWS m_poolOrigin; // 0x0ac4, 0xc bytes
-                float m_waterLevel; // 0x0ad0, 0x4 bytes
-                float m_speed; // 0x0ad4, 0x4 bytes
-                float m_desiredSpeed; // 0x0ad8, 0x4 bytes
-                float m_calmSpeed; // 0x0adc, 0x4 bytes
-                float m_panicSpeed; // 0x0ae0, 0x4 bytes
-                float m_avoidRange; // 0x0ae4, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_turnTimer; // 0x0ae8, 0x18 bytes
-                bool m_turnClockwise; // 0x0b00, 0x1 bytes
-                std::uint8_t pad_0b01[0x7]; // 0x0b01, 0x7 bytes
-                shade::sdk::server::CountdownTimer m_goTimer; // 0x0b08, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_moveTimer; // 0x0b20, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_panicTimer; // 0x0b38, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_disperseTimer; // 0x0b50, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_proximityTimer; // 0x0b68, 0x18 bytes
-                CUtlVector<shade::sdk::server::CFish*> m_visible; // 0x0b80, 0x18 bytes
-                std::uint8_t pad_0b98[0x8]; // 0x0b98, 0x8 bytes
+                CHandle<shade::sdk::server::CFishPool> m_pool; // 0x0ae0, 0x4 bytes
+                std::uint32_t m_id; // 0x0ae4, 0x4 bytes
+                float m_x; // 0x0ae8, 0x4 bytes
+                float m_y; // 0x0aec, 0x4 bytes
+                float m_z; // 0x0af0, 0x4 bytes
+                float m_angle; // 0x0af4, 0x4 bytes
+                float m_angleChange; // 0x0af8, 0x4 bytes
+                Vector m_forward; // 0x0afc, 0xc bytes
+                Vector m_perp; // 0x0b08, 0xc bytes
+                VectorWS m_poolOrigin; // 0x0b14, 0xc bytes
+                float m_waterLevel; // 0x0b20, 0x4 bytes
+                float m_speed; // 0x0b24, 0x4 bytes
+                float m_desiredSpeed; // 0x0b28, 0x4 bytes
+                float m_calmSpeed; // 0x0b2c, 0x4 bytes
+                float m_panicSpeed; // 0x0b30, 0x4 bytes
+                float m_avoidRange; // 0x0b34, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_turnTimer; // 0x0b38, 0x18 bytes
+                bool m_turnClockwise; // 0x0b50, 0x1 bytes
+                std::uint8_t pad_0b51[0x7]; // 0x0b51, 0x7 bytes
+                shade::sdk::server::CountdownTimer m_goTimer; // 0x0b58, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_moveTimer; // 0x0b70, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_panicTimer; // 0x0b88, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_disperseTimer; // 0x0ba0, 0x18 bytes
+                shade::sdk::server::CountdownTimer m_proximityTimer; // 0x0bb8, 0x18 bytes
+                CUtlVector<shade::sdk::server::CFish*> m_visible; // 0x0bd0, 0x18 bytes
+                std::uint8_t pad_0be8[0x8]; // 0x0be8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFish) == 0xBA0, "CFish size mismatch");
+            static_assert(sizeof(CFish) == 0xBF0, "CFish size mismatch");
         }
     }
 }

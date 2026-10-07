@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x160
+             * Size: 0x168
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Obscured : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_flStartObscuredAmount; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
-                CUtlVectorFixedGrowable<shade::sdk::client::ParticleIndex_t, 3> m_AmbientParticles; // 0x0138, 0x28 bytes
+                float m_flStartObscuredAmount; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
+                CUtlVectorFixedGrowable<shade::sdk::client::ParticleIndex_t, 3> m_AmbientParticles; // 0x0140, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Obscured) == 0x160, "CCitadel_Modifier_Obscured size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Obscured) == 0x168, "CCitadel_Modifier_Obscured size mismatch");
         }
     }
 }

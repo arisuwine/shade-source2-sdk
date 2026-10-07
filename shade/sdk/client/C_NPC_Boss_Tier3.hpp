@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b30
+             * Size: 0x1b88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_Boss_Tier3 : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                std::int32_t m_iLane; // 0x1b08, 0x4 bytes
-                VectorWS m_vecElectricBeamTargetEnd; // 0x1b0c, 0xc bytes
-                shade::sdk::client::ETier3State_t m_eAliveState; // 0x1b18, 0x4 bytes
-                shade::sdk::client::ETier3Phase_t m_ePhase; // 0x1b1c, 0x4 bytes
-                VectorWS m_vShrineAttackTargetPos; // 0x1b20, 0xc bytes
-                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
+                std::int32_t m_iLane; // 0x1b60, 0x4 bytes
+                VectorWS m_vecElectricBeamTargetEnd; // 0x1b64, 0xc bytes
+                shade::sdk::client::ETier3State_t m_eAliveState; // 0x1b70, 0x4 bytes
+                shade::sdk::client::ETier3Phase_t m_ePhase; // 0x1b74, 0x4 bytes
+                VectorWS m_vShrineAttackTargetPos; // 0x1b78, 0xc bytes
+                std::uint8_t pad_1b84[0x4]; // 0x1b84, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_Boss_Tier3) == 0x1B30, "C_NPC_Boss_Tier3 size mismatch");
+            static_assert(sizeof(C_NPC_Boss_Tier3) == 0x1B88, "C_NPC_Boss_Tier3 size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4c0
+             * Size: 0x4c8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Trapper_SpiderShield : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x8]; // 0x0140, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flNextPulseTime; // 0x0148, 0x4 bytes
-                std::uint8_t pad_014c[0x374]; // 0x014c, 0x374 bytes
+                std::uint8_t pad_0148[0x8]; // 0x0148, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flNextPulseTime; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x374]; // 0x0154, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Trapper_SpiderShield) == 0x4C0, "CCitadel_Modifier_Trapper_SpiderShield size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Trapper_SpiderShield) == 0x4C8, "CCitadel_Modifier_Trapper_SpiderShield size mismatch");
         }
     }
 }

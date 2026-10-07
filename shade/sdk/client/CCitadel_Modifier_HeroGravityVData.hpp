@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HeroGravityVData : public shade::sdk::client::CCitadel_Modifier_Intrinsic_BaseVData {
             public:
-                float m_flGravityChange; // 0x0760, 0x4 bytes
-                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
+                float m_flGravityChange; // 0x0790, 0x4 bytes
+                std::uint8_t pad_0794[0x4]; // 0x0794, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HeroGravityVData) == 0x768, "CCitadel_Modifier_HeroGravityVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HeroGravityVData) == 0x798, "CCitadel_Modifier_HeroGravityVData size mismatch");
         }
     }
 }

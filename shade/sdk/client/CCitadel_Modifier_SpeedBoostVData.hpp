@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SpeedBoostVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flMoveSpeedBoost; // 0x0760, 0x4 bytes
-                float m_flAnimationTimeScale; // 0x0764, 0x4 bytes
+                float m_flMoveSpeedBoost; // 0x0790, 0x4 bytes
+                float m_flAnimationTimeScale; // 0x0794, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SpeedBoostVData) == 0x768, "CCitadel_Modifier_SpeedBoostVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SpeedBoostVData) == 0x798, "CCitadel_Modifier_SpeedBoostVData size mismatch");
         }
     }
 }

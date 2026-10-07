@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x880
+             * Size: 0x8b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TechDefenderShreddersProcVData : public shade::sdk::client::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TechDebuffModifier; // 0x0790, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x07a0, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TechDebuffModifier; // 0x07c8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x07d8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TechDefenderShreddersProcVData) == 0x880, "CCitadel_Modifier_TechDefenderShreddersProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TechDefenderShreddersProcVData) == 0x8B8, "CCitadel_Modifier_TechDefenderShreddersProcVData size mismatch");
         }
     }
 }

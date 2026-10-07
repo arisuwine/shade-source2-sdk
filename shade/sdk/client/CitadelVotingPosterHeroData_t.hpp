@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e8
+             * Size: 0x1e0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -40,14 +40,14 @@ namespace shade {
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase>> m_strPosterImage; // 0x0008, 0xe0 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase>> m_strPosterImageDamaged; // 0x00e8, 0xe0 bytes
-                CPanoramaImageName m_strPosterImageThumbnail; // 0x01c8, 0x10 bytes
-                CSoundEventName m_strDamagedSound; // 0x01d8, 0x10 bytes
+                CSoundEventName m_strDamagedSound; // 0x01c8, 0x10 bytes
+                std::uint8_t pad_01d8[0x8]; // 0x01d8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelVotingPosterHeroData_t) == 0x1E8, "CitadelVotingPosterHeroData_t size mismatch");
+            static_assert(sizeof(CitadelVotingPosterHeroData_t) == 0x1E0, "CitadelVotingPosterHeroData_t size mismatch");
         }
     }
 }

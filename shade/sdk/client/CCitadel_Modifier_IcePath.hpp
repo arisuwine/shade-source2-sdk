@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8d8
+             * Size: 0x8e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_IcePath : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x790]; // 0x0130, 0x790 bytes
-                std::int32_t m_iShardCount; // 0x08c0, 0x4 bytes
-                VectorWS m_vLastShardPosition; // 0x08c4, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseModelEntity> m_hSurfShard; // 0x08d0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseModelEntity> m_hLastSpawnedShard; // 0x08d4, 0x4 bytes
+                std::uint8_t pad_0138[0x790]; // 0x0138, 0x790 bytes
+                std::int32_t m_iShardCount; // 0x08c8, 0x4 bytes
+                VectorWS m_vLastShardPosition; // 0x08cc, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseModelEntity> m_hSurfShard; // 0x08d8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseModelEntity> m_hLastSpawnedShard; // 0x08dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_IcePath) == 0x8D8, "CCitadel_Modifier_IcePath size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_IcePath) == 0x8E0, "CCitadel_Modifier_IcePath size mismatch");
         }
     }
 }

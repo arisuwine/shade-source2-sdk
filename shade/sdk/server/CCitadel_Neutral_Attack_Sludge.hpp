@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_Attack_Sludge : public shade::sdk::server::CCitadel_Neutral_Attack_BulletToPointModifier {
             public:
-                std::int32_t m_nBulletsHit; // 0x01f8, 0x4 bytes
-                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
+                std::int32_t m_nBulletsHit; // 0x0200, 0x4 bytes
+                std::uint8_t pad_0204[0x4]; // 0x0204, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_Attack_Sludge) == 0x200, "CCitadel_Neutral_Attack_Sludge size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_Attack_Sludge) == 0x208, "CCitadel_Neutral_Attack_Sludge size mismatch");
         }
     }
 }

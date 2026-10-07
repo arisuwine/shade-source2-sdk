@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x780
+             * Size: 0x7b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_AbilityResourcePoolVData : public shade::sdk::server::CCitadel_Modifier_Intrinsic_BaseVData {
             public:
-                CUtlString m_strMaxResourceProperty; // 0x0760, 0x8 bytes
-                float m_flMaxResourceAdditive; // 0x0768, 0x4 bytes
-                std::uint8_t pad_076c[0x4]; // 0x076c, 0x4 bytes
-                CUtlString m_strRegenPerSecondProperty; // 0x0770, 0x8 bytes
-                bool m_bRegenPropertyIsDrain; // 0x0778, 0x1 bytes
-                std::uint8_t pad_0779[0x7]; // 0x0779, 0x7 bytes
+                CUtlString m_strMaxResourceProperty; // 0x0790, 0x8 bytes
+                float m_flMaxResourceAdditive; // 0x0798, 0x4 bytes
+                std::uint8_t pad_079c[0x4]; // 0x079c, 0x4 bytes
+                CUtlString m_strRegenPerSecondProperty; // 0x07a0, 0x8 bytes
+                bool m_bRegenPropertyIsDrain; // 0x07a8, 0x1 bytes
+                std::uint8_t pad_07a9[0x7]; // 0x07a9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_AbilityResourcePoolVData) == 0x780, "CCitadel_Modifier_AbilityResourcePoolVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_AbilityResourcePoolVData) == 0x7B0, "CCitadel_Modifier_AbilityResourcePoolVData size mismatch");
         }
     }
 }

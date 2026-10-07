@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13d0
+             * Size: 0x1418
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityMeleeVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flMeleeInputBufferTime; // 0x13a0, 0x4 bytes
-                float m_flCollisionDistance; // 0x13a4, 0x4 bytes
-                float m_flHeavyAttackRequiredHoldTime; // 0x13a8, 0x4 bytes
-                float m_flLightAttackMaxHoldTime; // 0x13ac, 0x4 bytes
-                float m_flSideDashDodgeDist; // 0x13b0, 0x4 bytes
-                float m_flBackDashDodgeDist; // 0x13b4, 0x4 bytes
-                shade::sdk::client::TakeDamageFlags_t m_MeleeDamageFlags; // 0x13b8, 0x8 bytes
-                CUtlString m_strEffectsAttachName; // 0x13c0, 0x8 bytes
-                float m_flChargeAnimDelayTime; // 0x13c8, 0x4 bytes
-                std::uint8_t pad_13cc[0x4]; // 0x13cc, 0x4 bytes
+                float m_flMeleeInputBufferTime; // 0x13e8, 0x4 bytes
+                float m_flCollisionDistance; // 0x13ec, 0x4 bytes
+                float m_flHeavyAttackRequiredHoldTime; // 0x13f0, 0x4 bytes
+                float m_flLightAttackMaxHoldTime; // 0x13f4, 0x4 bytes
+                float m_flSideDashDodgeDist; // 0x13f8, 0x4 bytes
+                float m_flBackDashDodgeDist; // 0x13fc, 0x4 bytes
+                shade::sdk::client::TakeDamageFlags_t m_MeleeDamageFlags; // 0x1400, 0x8 bytes
+                CUtlString m_strEffectsAttachName; // 0x1408, 0x8 bytes
+                float m_flChargeAnimDelayTime; // 0x1410, 0x4 bytes
+                std::uint8_t pad_1414[0x4]; // 0x1414, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityMeleeVData) == 0x13D0, "CAbilityMeleeVData size mismatch");
+            static_assert(sizeof(CAbilityMeleeVData) == 0x1418, "CAbilityMeleeVData size mismatch");
         }
     }
 }

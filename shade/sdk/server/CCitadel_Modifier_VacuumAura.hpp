@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x668
+             * Size: 0x670
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VacuumAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0178[0x4d0]; // 0x0178, 0x4d0 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hEnemyHeroInVacuum; // 0x0648, 0x18 bytes
-                std::int32_t m_nNumPlayersKilled; // 0x0660, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastDamageTime; // 0x0664, 0x4 bytes
+                std::uint8_t pad_0180[0x4d0]; // 0x0180, 0x4d0 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hEnemyHeroInVacuum; // 0x0650, 0x18 bytes
+                std::int32_t m_nNumPlayersKilled; // 0x0668, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastDamageTime; // 0x066c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VacuumAura) == 0x668, "CCitadel_Modifier_VacuumAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VacuumAura) == 0x670, "CCitadel_Modifier_VacuumAura size mismatch");
         }
     }
 }

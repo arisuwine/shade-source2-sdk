@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xca0
+             * Size: 0xcf0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -33,24 +33,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_ShieldedSentry : public shade::sdk::server::CNPC_SimpleAnimatingAI {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0c10, 0x20 bytes
-                float m_flAttackRange; // 0x0c30, 0x4 bytes
-                float m_flAimPitch; // 0x0c34, 0x4 bytes
-                bool m_bHasRecentlyAttacked; // 0x0c38, 0x1 bytes
-                std::uint8_t pad_0c39[0x3]; // 0x0c39, 0x3 bytes
-                float m_flLifeTime; // 0x0c3c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x0c40, 0x4 bytes
-                float m_flAttackCone; // 0x0c44, 0x4 bytes
-                float m_flTrackingSpeed; // 0x0c48, 0x4 bytes
-                float m_flDeployTime; // 0x0c4c, 0x4 bytes
-                float m_flAttackDelay; // 0x0c50, 0x4 bytes
-                std::uint8_t pad_0c54[0x4c]; // 0x0c54, 0x4c bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0c60, 0x20 bytes
+                float m_flAttackRange; // 0x0c80, 0x4 bytes
+                float m_flAimPitch; // 0x0c84, 0x4 bytes
+                bool m_bHasRecentlyAttacked; // 0x0c88, 0x1 bytes
+                std::uint8_t pad_0c89[0x3]; // 0x0c89, 0x3 bytes
+                float m_flLifeTime; // 0x0c8c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSpawnTime; // 0x0c90, 0x4 bytes
+                float m_flAttackCone; // 0x0c94, 0x4 bytes
+                float m_flTrackingSpeed; // 0x0c98, 0x4 bytes
+                float m_flDeployTime; // 0x0c9c, 0x4 bytes
+                float m_flAttackDelay; // 0x0ca0, 0x4 bytes
+                std::uint8_t pad_0ca4[0x4c]; // 0x0ca4, 0x4c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_ShieldedSentry) == 0xCA0, "CNPC_ShieldedSentry size mismatch");
+            static_assert(sizeof(CNPC_ShieldedSentry) == 0xCF0, "CNPC_ShieldedSentry size mismatch");
         }
     }
 }

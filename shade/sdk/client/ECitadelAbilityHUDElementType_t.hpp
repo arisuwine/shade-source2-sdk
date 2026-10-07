@@ -21,7 +21,8 @@ namespace shade {
                 CITADEL_ABILITY_HUD_ELEMENT_TYPE_GUN = 0x0,
                 CITADEL_ABILITY_HUD_ELEMENT_TYPE_UNIT_TARGET = 0x1,
                 CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS = 0x2,
-                CITADEL_ABILITY_HUD_ELEMENT_TYPE_HIDDEN = 0x3
+                CITADEL_ABILITY_HUD_ELEMENT_TYPE_HIDDEN = 0x3,
+                CITADEL_ABILITY_HUD_ELEMENT_TYPE_LOCK_ON = 0x4
             };
         }
     }

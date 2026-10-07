@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5520
+             * Size: 0x5570
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,9 +31,9 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPickupIdol : public shade::sdk::server::CCitadelItemPickup {
             public:
-                std::uint8_t pad_5500[0x10]; // 0x5500, 0x10 bytes
-                std::int32_t m_nTeamBias; // 0x5510, 0x4 bytes
-                std::uint8_t pad_5514[0xc]; // 0x5514, 0xc bytes
+                std::uint8_t pad_5550[0x10]; // 0x5550, 0x10 bytes
+                std::int32_t m_nTeamBias; // 0x5560, 0x4 bytes
+                std::uint8_t pad_5564[0xc]; // 0x5564, 0xc bytes
             };
             #pragma pack(pop)
 
@@ -41,7 +41,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelItemPickupIdol) == 0x5520, "CCitadelItemPickupIdol size mismatch");
+            static_assert(sizeof(CCitadelItemPickupIdol) == 0x5570, "CCitadelItemPickupIdol size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x8a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Nano_CatFormVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                shade::sdk::client::ModelChange_t m_ModelChange; // 0x0760, 0xe8 bytes
-                float m_flModelScale; // 0x0848, 0x4 bytes
-                std::uint8_t pad_084c[0x4]; // 0x084c, 0x4 bytes
-                CSoundEventName m_ExplodeSound; // 0x0850, 0x10 bytes
-                CSoundEventName m_ImpactSound; // 0x0860, 0x10 bytes
+                shade::sdk::client::ModelChange_t m_ModelChange; // 0x0790, 0xe8 bytes
+                float m_flModelScale; // 0x0878, 0x4 bytes
+                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
+                CSoundEventName m_ExplodeSound; // 0x0880, 0x10 bytes
+                CSoundEventName m_ImpactSound; // 0x0890, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Nano_CatFormVData) == 0x870, "CCitadel_Modifier_Nano_CatFormVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Nano_CatFormVData) == 0x8A0, "CCitadel_Modifier_Nano_CatFormVData size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1690
+             * Size: 0x16d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_PersonalRejuvenatorVData : public shade::sdk::server::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticle; // 0x14b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RespawnParticle; // 0x1590, 0xe0 bytes
-                CSoundEventName m_sDeploySound; // 0x1670, 0x10 bytes
-                CSoundEventName m_sRespawnSound; // 0x1680, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticle; // 0x14f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RespawnParticle; // 0x15d8, 0xe0 bytes
+                CSoundEventName m_sDeploySound; // 0x16b8, 0x10 bytes
+                CSoundEventName m_sRespawnSound; // 0x16c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_PersonalRejuvenatorVData) == 0x1690, "CCitadel_ArmorUpgrade_PersonalRejuvenatorVData size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_PersonalRejuvenatorVData) == 0x16D8, "CCitadel_ArmorUpgrade_PersonalRejuvenatorVData size mismatch");
         }
     }
 }

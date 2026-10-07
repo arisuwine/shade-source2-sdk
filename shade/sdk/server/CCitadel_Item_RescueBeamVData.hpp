@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14e8
+             * Size: 0x1530
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_RescueBeamVData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DispelAndHealModifier; // 0x14b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PullModifier; // 0x14c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AfterChannelModifier; // 0x14d0, 0x10 bytes
-                bool m_bHealCaster; // 0x14e0, 0x1 bytes
-                bool m_bAllowPull; // 0x14e1, 0x1 bytes
-                std::uint8_t pad_14e2[0x6]; // 0x14e2, 0x6 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DispelAndHealModifier; // 0x14f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PullModifier; // 0x1508, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AfterChannelModifier; // 0x1518, 0x10 bytes
+                bool m_bHealCaster; // 0x1528, 0x1 bytes
+                bool m_bAllowPull; // 0x1529, 0x1 bytes
+                std::uint8_t pad_152a[0x6]; // 0x152a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_RescueBeamVData) == 0x14E8, "CCitadel_Item_RescueBeamVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_RescueBeamVData) == 0x1530, "CCitadel_Item_RescueBeamVData size mismatch");
         }
     }
 }

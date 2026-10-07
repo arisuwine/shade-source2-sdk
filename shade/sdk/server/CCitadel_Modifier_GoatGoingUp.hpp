@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x368
+             * Size: 0x370
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GoatGoingUp : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bAtTargetElevation; // 0x0140, 0x1 bytes
-                std::uint8_t pad_0141[0x217]; // 0x0141, 0x217 bytes
-                Vector m_vKnockAwayVector; // 0x0358, 0xc bytes
-                float m_flTargetElevation; // 0x0364, 0x4 bytes
+                bool m_bAtTargetElevation; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x217]; // 0x0149, 0x217 bytes
+                Vector m_vKnockAwayVector; // 0x0360, 0xc bytes
+                float m_flTargetElevation; // 0x036c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GoatGoingUp) == 0x368, "CCitadel_Modifier_GoatGoingUp size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GoatGoingUp) == 0x370, "CCitadel_Modifier_GoatGoingUp size mismatch");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x578
+             * Size: 0x580
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -41,21 +41,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_IceDome : public shade::sdk::client::CCitadelModifier {
             public:
-                CHandle<shade::sdk::client::C_Citadel_Ice_Dome_Blocker> m_hBlocker; // 0x0130, 0x4 bytes
-                CHandle<shade::sdk::client::CPointModifierThinker> m_hFriendlyAura; // 0x0134, 0x4 bytes
-                CHandle<shade::sdk::client::CPointModifierThinker> m_hEnemyAura; // 0x0138, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x013c, 0x4 bytes
-                std::uint8_t pad_0140[0x420]; // 0x0140, 0x420 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0560, 0x4 bytes
-                VectorWS m_vOrigin; // 0x0564, 0xc bytes
-                float m_flPrevRadius; // 0x0570, 0x4 bytes
-                std::uint8_t pad_0574[0x4]; // 0x0574, 0x4 bytes
+                CHandle<shade::sdk::client::C_Citadel_Ice_Dome_Blocker> m_hBlocker; // 0x0138, 0x4 bytes
+                CHandle<shade::sdk::client::CPointModifierThinker> m_hFriendlyAura; // 0x013c, 0x4 bytes
+                CHandle<shade::sdk::client::CPointModifierThinker> m_hEnemyAura; // 0x0140, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x0144, 0x4 bytes
+                std::uint8_t pad_0148[0x420]; // 0x0148, 0x420 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0568, 0x4 bytes
+                VectorWS m_vOrigin; // 0x056c, 0xc bytes
+                float m_flPrevRadius; // 0x0578, 0x4 bytes
+                std::uint8_t pad_057c[0x4]; // 0x057c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_IceDome) == 0x578, "CCitadel_Modifier_IceDome size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_IceDome) == 0x580, "CCitadel_Modifier_IceDome size mismatch");
         }
     }
 }

@@ -38,7 +38,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x98
+             * Size: 0xa0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -73,18 +73,20 @@ namespace shade {
                 bool m_bReadyOnClient; // 0x0073, 0x1 bytes
                 float m_flThinkInterval; // 0x0074, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flThinkIntervalStartTime; // 0x0078, 0x4 bytes
-                float m_flAsyncThinkInterval; // 0x007c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAsyncThinkIntervalStartTime; // 0x0080, 0x4 bytes
-                float m_flTimeScale; // 0x0084, 0x4 bytes
-                CUtlVector<shade::sdk::client::IModifierTrackedObject*> *m_pVecTrackedObjects; // 0x0088, 0x8 bytes
-                shade::sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x0090, 0x4 bytes
-                std::int32_t m_iStringIndex; // 0x0094, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastThinkTime; // 0x007c, 0x4 bytes
+                float m_flAsyncThinkInterval; // 0x0080, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAsyncThinkIntervalStartTime; // 0x0084, 0x4 bytes
+                float m_flTimeScale; // 0x0088, 0x4 bytes
+                std::uint8_t pad_008c[0x4]; // 0x008c, 0x4 bytes
+                CUtlVector<shade::sdk::client::IModifierTrackedObject*> *m_pVecTrackedObjects; // 0x0090, 0x8 bytes
+                shade::sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x0098, 0x4 bytes
+                std::int32_t m_iStringIndex; // 0x009c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseModifier) == 0x98, "CBaseModifier size mismatch");
+            static_assert(sizeof(CBaseModifier) == 0xA0, "CBaseModifier size mismatch");
         }
     }
 }

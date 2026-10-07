@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x348
+             * Size: 0x350
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MagicShield_SpiritBuff : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bHasHealthForBonuses; // 0x0130, 0x1 bytes
-                std::uint8_t pad_0131[0x217]; // 0x0131, 0x217 bytes
+                bool m_bHasHealthForBonuses; // 0x0138, 0x1 bytes
+                std::uint8_t pad_0139[0x217]; // 0x0139, 0x217 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MagicShield_SpiritBuff) == 0x348, "CCitadel_Modifier_MagicShield_SpiritBuff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MagicShield_SpiritBuff) == 0x350, "CCitadel_Modifier_MagicShield_SpiritBuff size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2a8
+             * Size: 0x2b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Mirage_Tornado_Lift : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x160]; // 0x0130, 0x160 bytes
-                VectorWS m_vecFloatDest; // 0x0290, 0xc bytes
-                VectorWS m_vecStartingPos; // 0x029c, 0xc bytes
+                std::uint8_t pad_0138[0x160]; // 0x0138, 0x160 bytes
+                VectorWS m_vecFloatDest; // 0x0298, 0xc bytes
+                VectorWS m_vecStartingPos; // 0x02a4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Mirage_Tornado_Lift) == 0x2A8, "CModifier_Mirage_Tornado_Lift size mismatch");
+            static_assert(sizeof(CModifier_Mirage_Tornado_Lift) == 0x2B0, "CModifier_Mirage_Tornado_Lift size mismatch");
         }
     }
 }

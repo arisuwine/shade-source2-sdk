@@ -33,7 +33,8 @@ namespace shade {
                 CUtlStringToken m_SourceAbilityID; // 0x0030, 0x4 bytes
                 std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
                 C_NetworkUtlVectorBase<CUtlStringToken> m_vecImbuedAbilities; // 0x0038, 0x18 bytes
-                shade::sdk::client::EModifierValue m_eValType; // 0x0050, 0x4 bytes
+                shade::sdk::client::EModifierValue m_eValType; // 0x0050, 0x2 bytes
+                std::uint8_t pad_0052[0x2]; // 0x0052, 0x2 bytes
                 float m_flValue; // 0x0054, 0x4 bytes
             };
             #pragma pack(pop)

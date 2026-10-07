@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2a0
+             * Size: 0x2a8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Bubble : public shade::sdk::client::CCitadel_Modifier_Silenced {
             public:
-                float m_flDampingFactor; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x164]; // 0x0134, 0x164 bytes
-                shade::sdk::client::ParticleIndex_t m_ParticleIndex; // 0x0298, 0x4 bytes
-                std::uint8_t pad_029c[0x4]; // 0x029c, 0x4 bytes
+                float m_flDampingFactor; // 0x0138, 0x4 bytes
+                std::uint8_t pad_013c[0x164]; // 0x013c, 0x164 bytes
+                shade::sdk::client::ParticleIndex_t m_ParticleIndex; // 0x02a0, 0x4 bytes
+                std::uint8_t pad_02a4[0x4]; // 0x02a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Bubble) == 0x2A0, "CCitadel_Modifier_Bubble size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Bubble) == 0x2A8, "CCitadel_Modifier_Bubble size mismatch");
         }
     }
 }

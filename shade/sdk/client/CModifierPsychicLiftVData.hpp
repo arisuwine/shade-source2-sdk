@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb50
+             * Size: 0xb80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,31 +43,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierPsychicLiftVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x0840, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisarmModifier; // 0x0850, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0860, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LiftParticle; // 0x0870, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x0950, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x0a30, 0xe0 bytes
-                CSoundEventName m_strImpactSound; // 0x0b10, 0x10 bytes
-                float m_flOccilateMaxDistance; // 0x0b20, 0x4 bytes
-                float m_flOccilateDegreesPerSecond; // 0x0b24, 0x4 bytes
-                float m_flRiseTime; // 0x0b28, 0x4 bytes
-                float m_flSlamTime; // 0x0b2c, 0x4 bytes
-                float m_flRiseAcc; // 0x0b30, 0x4 bytes
-                float m_flRiseMaxSpeed; // 0x0b34, 0x4 bytes
-                float m_flRiseDecayFracStart; // 0x0b38, 0x4 bytes
-                float m_flRiseDecayFracEnd; // 0x0b3c, 0x4 bytes
-                float m_flSlamAcc; // 0x0b40, 0x4 bytes
-                float m_flSlamMaxSpeed; // 0x0b44, 0x4 bytes
-                float m_flSlamImpactRadius; // 0x0b48, 0x4 bytes
-                std::uint8_t pad_0b4c[0x4]; // 0x0b4c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x0870, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisarmModifier; // 0x0880, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x0890, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LiftParticle; // 0x08a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x0980, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x0a60, 0xe0 bytes
+                CSoundEventName m_strImpactSound; // 0x0b40, 0x10 bytes
+                float m_flOccilateMaxDistance; // 0x0b50, 0x4 bytes
+                float m_flOccilateDegreesPerSecond; // 0x0b54, 0x4 bytes
+                float m_flRiseTime; // 0x0b58, 0x4 bytes
+                float m_flSlamTime; // 0x0b5c, 0x4 bytes
+                float m_flRiseAcc; // 0x0b60, 0x4 bytes
+                float m_flRiseMaxSpeed; // 0x0b64, 0x4 bytes
+                float m_flRiseDecayFracStart; // 0x0b68, 0x4 bytes
+                float m_flRiseDecayFracEnd; // 0x0b6c, 0x4 bytes
+                float m_flSlamAcc; // 0x0b70, 0x4 bytes
+                float m_flSlamMaxSpeed; // 0x0b74, 0x4 bytes
+                float m_flSlamImpactRadius; // 0x0b78, 0x4 bytes
+                std::uint8_t pad_0b7c[0x4]; // 0x0b7c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierPsychicLiftVData) == 0xB50, "CModifierPsychicLiftVData size mismatch");
+            static_assert(sizeof(CModifierPsychicLiftVData) == 0xB80, "CModifierPsychicLiftVData size mismatch");
         }
     }
 }

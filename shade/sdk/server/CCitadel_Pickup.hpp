@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb20
+             * Size: 0xb70
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,28 +41,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Pickup : public shade::sdk::server::CBaseAnimGraph {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0a90, 0x20 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAssignedClaimer; // 0x0ab0, 0x4 bytes
-                bool m_bActive; // 0x0ab4, 0x1 bytes
-                bool m_bInteractive; // 0x0ab5, 0x1 bytes
-                std::uint8_t pad_0ab6[0x2]; // 0x0ab6, 0x2 bytes
-                VectorWS m_vVacuumStartPos; // 0x0ab8, 0xc bytes
-                Vector m_vInitialVacuumVel; // 0x0ac4, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hVacuumTarget; // 0x0ad0, 0x4 bytes
-                std::uint8_t pad_0ad4[0x18]; // 0x0ad4, 0x18 bytes
-                VectorWS m_vVacuumPos; // 0x0aec, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flVacuumStartTime; // 0x0af8, 0x4 bytes
-                std::uint8_t pad_0afc[0x4]; // 0x0afc, 0x4 bytes
-                Vector m_vImpactVel; // 0x0b00, 0xc bytes
-                VectorWS m_vImpactPos; // 0x0b0c, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flImpactTime; // 0x0b18, 0x4 bytes
-                std::uint8_t pad_0b1c[0x4]; // 0x0b1c, 0x4 bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0ae0, 0x20 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAssignedClaimer; // 0x0b00, 0x4 bytes
+                bool m_bActive; // 0x0b04, 0x1 bytes
+                bool m_bInteractive; // 0x0b05, 0x1 bytes
+                std::uint8_t pad_0b06[0x2]; // 0x0b06, 0x2 bytes
+                VectorWS m_vVacuumStartPos; // 0x0b08, 0xc bytes
+                Vector m_vInitialVacuumVel; // 0x0b14, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hVacuumTarget; // 0x0b20, 0x4 bytes
+                std::uint8_t pad_0b24[0x18]; // 0x0b24, 0x18 bytes
+                VectorWS m_vVacuumPos; // 0x0b3c, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flVacuumStartTime; // 0x0b48, 0x4 bytes
+                std::uint8_t pad_0b4c[0x4]; // 0x0b4c, 0x4 bytes
+                Vector m_vImpactVel; // 0x0b50, 0xc bytes
+                VectorWS m_vImpactPos; // 0x0b5c, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flImpactTime; // 0x0b68, 0x4 bytes
+                std::uint8_t pad_0b6c[0x4]; // 0x0b6c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Pickup) == 0xB20, "CCitadel_Pickup size mismatch");
+            static_assert(sizeof(CCitadel_Pickup) == 0xB70, "CCitadel_Pickup size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x888
+             * Size: 0x8b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierUppercuttedVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StunParticle; // 0x0760, 0xe0 bytes
-                CSoundEventName m_strStunSound; // 0x0840, 0x10 bytes
-                CSoundEventName m_strExplodeHitSound; // 0x0850, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoExplodeModifier; // 0x0860, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ExplodeDebuffModifier; // 0x0870, 0x10 bytes
-                float m_flEnemyNoAirDashDuration; // 0x0880, 0x4 bytes
-                std::uint8_t pad_0884[0x4]; // 0x0884, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StunParticle; // 0x0790, 0xe0 bytes
+                CSoundEventName m_strStunSound; // 0x0870, 0x10 bytes
+                CSoundEventName m_strExplodeHitSound; // 0x0880, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoExplodeModifier; // 0x0890, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ExplodeDebuffModifier; // 0x08a0, 0x10 bytes
+                float m_flEnemyNoAirDashDuration; // 0x08b0, 0x4 bytes
+                std::uint8_t pad_08b4[0x4]; // 0x08b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierUppercuttedVData) == 0x888, "CModifierUppercuttedVData size mismatch");
+            static_assert(sizeof(CModifierUppercuttedVData) == 0x8B8, "CModifierUppercuttedVData size mismatch");
         }
     }
 }

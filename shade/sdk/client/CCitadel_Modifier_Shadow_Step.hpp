@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x998
+             * Size: 0x9a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Shadow_Step : public shade::sdk::client::CCitadel_Modifier_Invis {
             public:
-                shade::sdk::client::ParticleIndex_t m_nRevealedEffect; // 0x0620, 0x4 bytes
-                std::uint8_t pad_0624[0x374]; // 0x0624, 0x374 bytes
+                shade::sdk::client::ParticleIndex_t m_nRevealedEffect; // 0x0628, 0x4 bytes
+                std::uint8_t pad_062c[0x374]; // 0x062c, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Shadow_Step) == 0x998, "CCitadel_Modifier_Shadow_Step size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Shadow_Step) == 0x9A0, "CCitadel_Modifier_Shadow_Step size mismatch");
         }
     }
 }

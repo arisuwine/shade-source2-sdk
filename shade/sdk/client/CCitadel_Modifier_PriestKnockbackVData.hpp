@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7a8
+             * Size: 0x7d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PriestKnockbackVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                float m_flMomentumMaintained; // 0x0760, 0x4 bytes
-                std::uint8_t pad_0764[0x4]; // 0x0764, 0x4 bytes
-                CPiecewiseCurve m_flVelocityStrengthCurve; // 0x0768, 0x40 bytes
+                float m_flMomentumMaintained; // 0x0790, 0x4 bytes
+                std::uint8_t pad_0794[0x4]; // 0x0794, 0x4 bytes
+                CPiecewiseCurve m_flVelocityStrengthCurve; // 0x0798, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PriestKnockbackVData) == 0x7A8, "CCitadel_Modifier_PriestKnockbackVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PriestKnockbackVData) == 0x7D8, "CCitadel_Modifier_PriestKnockbackVData size mismatch");
         }
     }
 }

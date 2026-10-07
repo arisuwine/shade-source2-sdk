@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0x140
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_UIAbilityHudNotificaiton : public shade::sdk::client::CCitadelModifier {
             public:
-                CUtlString m_strHudMessage; // 0x0130, 0x8 bytes
+                CUtlString m_strHudMessage; // 0x0138, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UIAbilityHudNotificaiton) == 0x138, "CCitadel_Modifier_UIAbilityHudNotificaiton size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UIAbilityHudNotificaiton) == 0x140, "CCitadel_Modifier_UIAbilityHudNotificaiton size mismatch");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x828
+             * Size: 0x830
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -41,18 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PunkgoatTethered : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_nParticleRope1; // 0x0130, 0x4 bytes
-                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x0134, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x0138, 0x4 bytes
-                std::uint8_t pad_013c[0x6e4]; // 0x013c, 0x6e4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTetheredTo; // 0x0820, 0x4 bytes
-                std::uint8_t pad_0824[0x4]; // 0x0824, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleRope1; // 0x0138, 0x4 bytes
+                shade::sdk::client::SatVolumeIndex_t m_nSatVolumeIndex; // 0x013c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x6e4]; // 0x0144, 0x6e4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTetheredTo; // 0x0828, 0x4 bytes
+                std::uint8_t pad_082c[0x4]; // 0x082c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PunkgoatTethered) == 0x828, "CCitadel_Modifier_PunkgoatTethered size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PunkgoatTethered) == 0x830, "CCitadel_Modifier_PunkgoatTethered size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1580
+             * Size: 0x15c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fathom_Breach_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LeapParticle; // 0x1480, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x1560, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InFlightModifier; // 0x1570, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LeapParticle; // 0x14c8, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x15a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InFlightModifier; // 0x15b8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fathom_Breach_VData) == 0x1580, "CCitadel_Ability_Fathom_Breach_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fathom_Breach_VData) == 0x15C8, "CCitadel_Ability_Fathom_Breach_VData size mismatch");
         }
     }
 }

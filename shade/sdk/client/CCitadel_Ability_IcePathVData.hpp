@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13d0
+             * Size: 0x1418
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_IcePathVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_IcePathModifier; // 0x13a0, 0x10 bytes
-                float m_flMomentumDecayRate; // 0x13b0, 0x4 bytes
-                float m_flMomentumWeight; // 0x13b4, 0x4 bytes
-                float m_flMaxPitchChange; // 0x13b8, 0x4 bytes
-                float m_flMaxPitchUp; // 0x13bc, 0x4 bytes
-                float m_flMaxPitchDown; // 0x13c0, 0x4 bytes
-                float m_flMaxHeight; // 0x13c4, 0x4 bytes
-                float m_flForwardAngleBias; // 0x13c8, 0x4 bytes
-                std::uint8_t pad_13cc[0x4]; // 0x13cc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_IcePathModifier; // 0x13e8, 0x10 bytes
+                float m_flMomentumDecayRate; // 0x13f8, 0x4 bytes
+                float m_flMomentumWeight; // 0x13fc, 0x4 bytes
+                float m_flMaxPitchChange; // 0x1400, 0x4 bytes
+                float m_flMaxPitchUp; // 0x1404, 0x4 bytes
+                float m_flMaxPitchDown; // 0x1408, 0x4 bytes
+                float m_flMaxHeight; // 0x140c, 0x4 bytes
+                float m_flForwardAngleBias; // 0x1410, 0x4 bytes
+                std::uint8_t pad_1414[0x4]; // 0x1414, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_IcePathVData) == 0x13D0, "CCitadel_Ability_IcePathVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_IcePathVData) == 0x1418, "CCitadel_Ability_IcePathVData size mismatch");
         }
     }
 }

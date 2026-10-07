@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2d8
+             * Size: 0x2e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ApplyDebuff_Proc) == 0x2D8, "CCitadel_Modifier_ApplyDebuff_Proc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ApplyDebuff_Proc) == 0x2E0, "CCitadel_Modifier_ApplyDebuff_Proc size mismatch");
         }
     }
 }

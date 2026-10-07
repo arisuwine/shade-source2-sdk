@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x370
+             * Size: 0x378
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ExplosiveShots : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<shade::sdk::server::CCitadel_Modifier_ExplosiveShots__BulletEntityPair_t> m_vecHitEnts; // 0x0140, 0x18 bytes
-                bool m_bExplosionCanHitMultipleTimes; // 0x0158, 0x1 bytes
-                std::uint8_t pad_0159[0x217]; // 0x0159, 0x217 bytes
+                CUtlVector<shade::sdk::server::CCitadel_Modifier_ExplosiveShots__BulletEntityPair_t> m_vecHitEnts; // 0x0148, 0x18 bytes
+                bool m_bExplosionCanHitMultipleTimes; // 0x0160, 0x1 bytes
+                std::uint8_t pad_0161[0x217]; // 0x0161, 0x217 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ExplosiveShots) == 0x370, "CCitadel_Modifier_ExplosiveShots size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ExplosiveShots) == 0x378, "CCitadel_Modifier_ExplosiveShots size mismatch");
         }
     }
 }

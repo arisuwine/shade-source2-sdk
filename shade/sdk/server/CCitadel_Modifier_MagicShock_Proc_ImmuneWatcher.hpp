@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint64_t m_iAbilityID; // 0x0140, 0x8 bytes
-                std::uint8_t pad_0148[0xb0]; // 0x0148, 0xb0 bytes
+                std::uint64_t m_iAbilityID; // 0x0148, 0x8 bytes
+                std::uint8_t pad_0150[0xb0]; // 0x0150, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher) == 0x1F8, "CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher) == 0x200, "CCitadel_Modifier_MagicShock_Proc_ImmuneWatcher size mismatch");
         }
     }
 }

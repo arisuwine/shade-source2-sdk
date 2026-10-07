@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4e0
+             * Size: 0x4e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TechDamageProcWatcher : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                shade::sdk::entity2::GameTime_t m_flNextProcTime; // 0x02c8, 0x4 bytes
-                shade::sdk::client::ShotID_t m_shotProced; // 0x02cc, 0x4 bytes
-                std::uint8_t pad_02d0[0x210]; // 0x02d0, 0x210 bytes
+                shade::sdk::entity2::GameTime_t m_flNextProcTime; // 0x02d0, 0x4 bytes
+                shade::sdk::client::ShotID_t m_shotProced; // 0x02d4, 0x4 bytes
+                std::uint8_t pad_02d8[0x210]; // 0x02d8, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TechDamageProcWatcher) == 0x4E0, "CCitadel_Modifier_TechDamageProcWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TechDamageProcWatcher) == 0x4E8, "CCitadel_Modifier_TechDamageProcWatcher size mismatch");
         }
     }
 }

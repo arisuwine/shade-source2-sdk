@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x12a8
+             * Size: 0x12d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_LightMeleeVData : public shade::sdk::server::CModifierNeutralAbilityVData {
             public:
-                float m_flForwardOffset; // 0x10b8, 0x4 bytes
-                float m_flMeleeRadius; // 0x10bc, 0x4 bytes
-                float m_flDamage; // 0x10c0, 0x4 bytes
-                std::uint8_t pad_10c4[0x4]; // 0x10c4, 0x4 bytes
-                CSoundEventName m_strAttackHitSound; // 0x10c8, 0x10 bytes
-                CSoundEventName m_strAttackMissSound; // 0x10d8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x10e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x11c8, 0xe0 bytes
+                float m_flForwardOffset; // 0x10e8, 0x4 bytes
+                float m_flMeleeRadius; // 0x10ec, 0x4 bytes
+                float m_flDamage; // 0x10f0, 0x4 bytes
+                std::uint8_t pad_10f4[0x4]; // 0x10f4, 0x4 bytes
+                CSoundEventName m_strAttackHitSound; // 0x10f8, 0x10 bytes
+                CSoundEventName m_strAttackMissSound; // 0x1108, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x1118, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x11f8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_LightMeleeVData) == 0x12A8, "CCitadel_Neutral_LightMeleeVData size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_LightMeleeVData) == 0x12D8, "CCitadel_Neutral_LightMeleeVData size mismatch");
         }
     }
 }

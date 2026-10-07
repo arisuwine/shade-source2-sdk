@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x520
+             * Size: 0x528
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ElectricSlippers : public shade::sdk::server::CCitadel_Modifier_Intrinsic_Base {
             public:
-                std::uint8_t pad_0140[0x3e0]; // 0x0140, 0x3e0 bytes
+                std::uint8_t pad_0148[0x3e0]; // 0x0148, 0x3e0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ElectricSlippers) == 0x520, "CCitadel_Modifier_ElectricSlippers size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ElectricSlippers) == 0x528, "CCitadel_Modifier_ElectricSlippers size mismatch");
         }
     }
 }

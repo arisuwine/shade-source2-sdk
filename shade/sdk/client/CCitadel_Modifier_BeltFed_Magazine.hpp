@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x568
+             * Size: 0x570
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BeltFed_Magazine : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bInitialized; // 0x0130, 0x1 bytes
-                std::uint8_t pad_0131[0x3]; // 0x0131, 0x3 bytes
-                float m_flSpinUpRateOverride; // 0x0134, 0x4 bytes
-                float m_flSpinUpDecayOverride; // 0x0138, 0x4 bytes
-                float m_flMaxCycleTimeOverride; // 0x013c, 0x4 bytes
-                float m_flMaxBurstFireCooldownOverride; // 0x0140, 0x4 bytes
-                std::uint8_t pad_0144[0x424]; // 0x0144, 0x424 bytes
+                bool m_bInitialized; // 0x0138, 0x1 bytes
+                std::uint8_t pad_0139[0x3]; // 0x0139, 0x3 bytes
+                float m_flSpinUpRateOverride; // 0x013c, 0x4 bytes
+                float m_flSpinUpDecayOverride; // 0x0140, 0x4 bytes
+                float m_flMaxCycleTimeOverride; // 0x0144, 0x4 bytes
+                float m_flMaxBurstFireCooldownOverride; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x424]; // 0x014c, 0x424 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BeltFed_Magazine) == 0x568, "CCitadel_Modifier_BeltFed_Magazine size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BeltFed_Magazine) == 0x570, "CCitadel_Modifier_BeltFed_Magazine size mismatch");
         }
     }
 }

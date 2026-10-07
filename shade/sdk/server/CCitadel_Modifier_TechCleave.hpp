@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TechCleave : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<shade::sdk::server::CCitadel_Modifier_TechCleave__DamageTaken_t> m_vDamageTakenEvents; // 0x0140, 0x18 bytes
-                std::uint8_t pad_0158[0xb0]; // 0x0158, 0xb0 bytes
+                CUtlVector<shade::sdk::server::CCitadel_Modifier_TechCleave__DamageTaken_t> m_vDamageTakenEvents; // 0x0148, 0x18 bytes
+                std::uint8_t pad_0160[0xb0]; // 0x0160, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TechCleave) == 0x208, "CCitadel_Modifier_TechCleave size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TechCleave) == 0x210, "CCitadel_Modifier_TechCleave size mismatch");
         }
     }
 }

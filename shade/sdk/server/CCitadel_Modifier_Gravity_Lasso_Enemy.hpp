@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x718
+             * Size: 0x720
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Gravity_Lasso_Enemy : public shade::sdk::server::CCitadel_Modifier_Drag {
             public:
-                shade::sdk::client::ELassoHoldPosition m_eHoldPosition; // 0x0190, 0x1 bytes
-                std::uint8_t pad_0191[0x587]; // 0x0191, 0x587 bytes
+                shade::sdk::client::ELassoHoldPosition m_eHoldPosition; // 0x0198, 0x1 bytes
+                std::uint8_t pad_0199[0x587]; // 0x0199, 0x587 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Enemy) == 0x718, "CCitadel_Modifier_Gravity_Lasso_Enemy size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Enemy) == 0x720, "CCitadel_Modifier_Gravity_Lasso_Enemy size mismatch");
         }
     }
 }

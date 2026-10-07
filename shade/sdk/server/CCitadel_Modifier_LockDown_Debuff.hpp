@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x570
+             * Size: 0x578
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LockDown_Debuff : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x420]; // 0x0140, 0x420 bytes
-                VectorWS m_vEscapeTarget; // 0x0560, 0xc bytes
-                std::uint8_t pad_056c[0x4]; // 0x056c, 0x4 bytes
+                std::uint8_t pad_0148[0x420]; // 0x0148, 0x420 bytes
+                VectorWS m_vEscapeTarget; // 0x0568, 0xc bytes
+                std::uint8_t pad_0574[0x4]; // 0x0574, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LockDown_Debuff) == 0x570, "CCitadel_Modifier_LockDown_Debuff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LockDown_Debuff) == 0x578, "CCitadel_Modifier_LockDown_Debuff size mismatch");
         }
     }
 }

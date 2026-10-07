@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x508
+             * Size: 0x510
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HollowPoint_Proc : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_02f8[0x210]; // 0x02f8, 0x210 bytes
+                std::uint8_t pad_0300[0x210]; // 0x0300, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HollowPoint_Proc) == 0x508, "CCitadel_Modifier_HollowPoint_Proc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HollowPoint_Proc) == 0x510, "CCitadel_Modifier_HollowPoint_Proc size mismatch");
         }
     }
 }

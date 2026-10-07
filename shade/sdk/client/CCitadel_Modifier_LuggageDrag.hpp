@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x190
+             * Size: 0x198
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LuggageDrag : public shade::sdk::client::CCitadel_Modifier_Drag {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDummyForCamera; // 0x0188, 0x4 bytes
-                std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hDummyForCamera; // 0x0190, 0x4 bytes
+                std::uint8_t pad_0194[0x4]; // 0x0194, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LuggageDrag) == 0x190, "CCitadel_Modifier_LuggageDrag size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LuggageDrag) == 0x198, "CCitadel_Modifier_LuggageDrag size mismatch");
         }
     }
 }

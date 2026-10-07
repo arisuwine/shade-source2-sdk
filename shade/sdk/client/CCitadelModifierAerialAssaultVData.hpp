@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x950
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierAerialAssaultVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FireRateModifier; // 0x0760, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0770, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x0850, 0xe0 bytes
-                CSoundEventName m_ExplodeSound; // 0x0930, 0x10 bytes
-                float m_flAirDrag; // 0x0940, 0x4 bytes
-                float m_flAirSpeed; // 0x0944, 0x4 bytes
-                float m_flFallSpeed; // 0x0948, 0x4 bytes
-                std::uint8_t pad_094c[0x4]; // 0x094c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FireRateModifier; // 0x0790, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x07a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle; // 0x0880, 0xe0 bytes
+                CSoundEventName m_ExplodeSound; // 0x0960, 0x10 bytes
+                float m_flAirDrag; // 0x0970, 0x4 bytes
+                float m_flAirSpeed; // 0x0974, 0x4 bytes
+                float m_flFallSpeed; // 0x0978, 0x4 bytes
+                std::uint8_t pad_097c[0x4]; // 0x097c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierAerialAssaultVData) == 0x950, "CCitadelModifierAerialAssaultVData size mismatch");
+            static_assert(sizeof(CCitadelModifierAerialAssaultVData) == 0x980, "CCitadelModifierAerialAssaultVData size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1830
+             * Size: 0x1878
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,36 +43,36 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Shiv_KillingBlowVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveBuff; // 0x13b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillableModifier; // 0x13c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RecastWindowModifier; // 0x13d0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RageDrainSuppressedModifier; // 0x13e0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle; // 0x13f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x14d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlashParticle; // 0x15b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KillingBlowCastParticle; // 0x1690, 0xe0 bytes
-                CSoundEventName m_OnKillSound; // 0x1770, 0x10 bytes
-                float m_flKillableGlowRange; // 0x1780, 0x4 bytes
-                float m_flGlowMinTime; // 0x1784, 0x4 bytes
-                float m_flFracToAllowUp; // 0x1788, 0x4 bytes
-                float m_flMinLeapTime; // 0x178c, 0x4 bytes
-                float m_flCheckRadius; // 0x1790, 0x4 bytes
-                float m_flSlashRadius; // 0x1794, 0x4 bytes
-                float m_flRefreshLockOutTime; // 0x1798, 0x4 bytes
-                float m_flMaxTurnRate; // 0x179c, 0x4 bytes
-                float m_flCameraTurnRate; // 0x17a0, 0x4 bytes
-                std::uint8_t pad_17a4[0x4]; // 0x17a4, 0x4 bytes
-                CPiecewiseCurve m_SpeedCurve; // 0x17a8, 0x40 bytes
-                CPiecewiseCurve m_SpeedUpCurve; // 0x17e8, 0x40 bytes
-                float m_flVelocityCarryoverOnMiss; // 0x1828, 0x4 bytes
-                std::uint8_t pad_182c[0x4]; // 0x182c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveBuff; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillableModifier; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RecastWindowModifier; // 0x1418, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RageDrainSuppressedModifier; // 0x1428, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle; // 0x1438, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1518, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlashParticle; // 0x15f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KillingBlowCastParticle; // 0x16d8, 0xe0 bytes
+                CSoundEventName m_OnKillSound; // 0x17b8, 0x10 bytes
+                float m_flKillableGlowRange; // 0x17c8, 0x4 bytes
+                float m_flGlowMinTime; // 0x17cc, 0x4 bytes
+                float m_flFracToAllowUp; // 0x17d0, 0x4 bytes
+                float m_flMinLeapTime; // 0x17d4, 0x4 bytes
+                float m_flCheckRadius; // 0x17d8, 0x4 bytes
+                float m_flSlashRadius; // 0x17dc, 0x4 bytes
+                float m_flRefreshLockOutTime; // 0x17e0, 0x4 bytes
+                float m_flMaxTurnRate; // 0x17e4, 0x4 bytes
+                float m_flCameraTurnRate; // 0x17e8, 0x4 bytes
+                std::uint8_t pad_17ec[0x4]; // 0x17ec, 0x4 bytes
+                CPiecewiseCurve m_SpeedCurve; // 0x17f0, 0x40 bytes
+                CPiecewiseCurve m_SpeedUpCurve; // 0x1830, 0x40 bytes
+                float m_flVelocityCarryoverOnMiss; // 0x1870, 0x4 bytes
+                std::uint8_t pad_1874[0x4]; // 0x1874, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlowVData) == 0x1830, "CCitadel_Ability_Shiv_KillingBlowVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlowVData) == 0x1878, "CCitadel_Ability_Shiv_KillingBlowVData size mismatch");
         }
     }
 }

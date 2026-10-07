@@ -31,7 +31,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_Neutral_Hideout_Cat : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                std::uint8_t pad_0bf0[0xa0]; // 0x0bf0, 0xa0 bytes
+                std::uint8_t pad_0c40[0x50]; // 0x0c40, 0x50 bytes
             };
             #pragma pack(pop)
 

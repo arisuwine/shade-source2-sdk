@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x168
+             * Size: 0x170
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BarrierTracker : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x4]; // 0x0140, 0x4 bytes
-                float m_flMaxHealth; // 0x0144, 0x4 bytes
-                float m_flCurrentHealth; // 0x0148, 0x4 bytes
-                std::uint8_t pad_014c[0x1c]; // 0x014c, 0x1c bytes
+                std::uint8_t pad_0148[0x4]; // 0x0148, 0x4 bytes
+                float m_flMaxHealth; // 0x014c, 0x4 bytes
+                float m_flCurrentHealth; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x1c]; // 0x0154, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BarrierTracker) == 0x168, "CCitadel_Modifier_BarrierTracker size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BarrierTracker) == 0x170, "CCitadel_Modifier_BarrierTracker size mismatch");
         }
     }
 }

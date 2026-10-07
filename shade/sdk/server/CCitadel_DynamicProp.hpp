@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd80
+             * Size: 0xdd0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_DynamicProp : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint8_t pad_0d50[0x10]; // 0x0d50, 0x10 bytes
-                CUtlString m_strDefaultSkin; // 0x0d60, 0x8 bytes
-                CUtlString m_strFriendlySkin; // 0x0d68, 0x8 bytes
-                CUtlString m_strEnemySkin; // 0x0d70, 0x8 bytes
-                bool m_bIsWorld; // 0x0d78, 0x1 bytes
-                std::uint8_t pad_0d79[0x7]; // 0x0d79, 0x7 bytes
+                std::uint8_t pad_0da0[0x10]; // 0x0da0, 0x10 bytes
+                CUtlString m_strDefaultSkin; // 0x0db0, 0x8 bytes
+                CUtlString m_strFriendlySkin; // 0x0db8, 0x8 bytes
+                CUtlString m_strEnemySkin; // 0x0dc0, 0x8 bytes
+                bool m_bIsWorld; // 0x0dc8, 0x1 bytes
+                std::uint8_t pad_0dc9[0x7]; // 0x0dc9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_DynamicProp) == 0xD80, "CCitadel_DynamicProp size mismatch");
+            static_assert(sizeof(CCitadel_DynamicProp) == 0xDD0, "CCitadel_DynamicProp size mismatch");
         }
     }
 }

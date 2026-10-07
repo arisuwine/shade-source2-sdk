@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0xc8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -50,22 +50,20 @@ namespace shade {
                 shade::sdk::client::ECitadelPingWheelSound_t m_ePingWheelSoundType; // 0x0068, 0x4 bytes
                 bool m_bIsSubnavMessage; // 0x006c, 0x1 bytes
                 std::uint8_t pad_006d[0x3]; // 0x006d, 0x3 bytes
-                float m_flPhraseTopMarginOffset; // 0x0070, 0x4 bytes
-                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
-                CUtlVector<CUtlString> m_vecSubnavMessageNames; // 0x0078, 0x18 bytes
-                bool m_bSubnavsReadLeftToRight; // 0x0090, 0x1 bytes
-                std::uint8_t pad_0091[0x7]; // 0x0091, 0x7 bytes
-                CUtlVector<shade::sdk::client::CitadelPingWheelConcept_t> m_vecRespondsToConcepts; // 0x0098, 0x18 bytes
-                bool m_bCommsWheelBindable; // 0x00b0, 0x1 bytes
-                bool m_bKeybindable; // 0x00b1, 0x1 bytes
-                std::uint8_t pad_00b2[0x6]; // 0x00b2, 0x6 bytes
-                CUtlVector<CUtlString> m_vecChatTextTriggers; // 0x00b8, 0x18 bytes
+                CUtlVector<CUtlString> m_vecSubnavMessageNames; // 0x0070, 0x18 bytes
+                bool m_bSubnavsReadLeftToRight; // 0x0088, 0x1 bytes
+                std::uint8_t pad_0089[0x7]; // 0x0089, 0x7 bytes
+                CUtlVector<shade::sdk::client::CitadelPingWheelConcept_t> m_vecRespondsToConcepts; // 0x0090, 0x18 bytes
+                bool m_bCommsWheelBindable; // 0x00a8, 0x1 bytes
+                bool m_bKeybindable; // 0x00a9, 0x1 bytes
+                std::uint8_t pad_00aa[0x6]; // 0x00aa, 0x6 bytes
+                CUtlVector<CUtlString> m_vecChatTextTriggers; // 0x00b0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PingWheelMessage_t) == 0xD0, "PingWheelMessage_t size mismatch");
+            static_assert(sizeof(PingWheelMessage_t) == 0xC8, "PingWheelMessage_t size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14c0
+             * Size: 0x1508
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemShrink_RayVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShrinkRayModifier; // 0x14b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ShrinkRayModifier; // 0x14f8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemShrink_RayVData) == 0x14C0, "CItemShrink_RayVData size mismatch");
+            static_assert(sizeof(CItemShrink_RayVData) == 0x1508, "CItemShrink_RayVData size mismatch");
         }
     }
 }

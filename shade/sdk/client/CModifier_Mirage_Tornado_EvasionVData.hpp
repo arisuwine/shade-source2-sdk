@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbe0
+             * Size: 0xc10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Mirage_Tornado_EvasionVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackerHitFx; // 0x0760, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x0840, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffSelf; // 0x0920, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffEnemy; // 0x0a00, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReflectedBulletTracerParticle; // 0x0ae0, 0xe0 bytes
-                CSoundEventName m_strAttackerHitSound; // 0x0bc0, 0x10 bytes
-                CSoundEventName m_strVictimHitSound; // 0x0bd0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackerHitFx; // 0x0790, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x0870, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffSelf; // 0x0950, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffEnemy; // 0x0a30, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReflectedBulletTracerParticle; // 0x0b10, 0xe0 bytes
+                CSoundEventName m_strAttackerHitSound; // 0x0bf0, 0x10 bytes
+                CSoundEventName m_strVictimHitSound; // 0x0c00, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Mirage_Tornado_EvasionVData) == 0xBE0, "CModifier_Mirage_Tornado_EvasionVData size mismatch");
+            static_assert(sizeof(CModifier_Mirage_Tornado_EvasionVData) == 0xC10, "CModifier_Mirage_Tornado_EvasionVData size mismatch");
         }
     }
 }

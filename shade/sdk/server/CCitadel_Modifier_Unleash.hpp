@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7b0
+             * Size: 0x7b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Unleash : public shade::sdk::server::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_02d8[0x4d0]; // 0x02d8, 0x4d0 bytes
-                shade::sdk::entity2::GameTime_t m_flNextStackTime; // 0x07a8, 0x4 bytes
-                std::uint8_t pad_07ac[0x4]; // 0x07ac, 0x4 bytes
+                std::uint8_t pad_02e0[0x4d0]; // 0x02e0, 0x4d0 bytes
+                shade::sdk::entity2::GameTime_t m_flNextStackTime; // 0x07b0, 0x4 bytes
+                std::uint8_t pad_07b4[0x4]; // 0x07b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Unleash) == 0x7B0, "CCitadel_Modifier_Unleash size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Unleash) == 0x7B8, "CCitadel_Modifier_Unleash size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x8a0
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierTier2BossAoeWaveAuraVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                float m_flWaveHeight; // 0x07b8, 0x4 bytes
-                std::uint8_t pad_07bc[0x4]; // 0x07bc, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_waveParticle; // 0x07c0, 0xe0 bytes
+                float m_flWaveHeight; // 0x07e8, 0x4 bytes
+                std::uint8_t pad_07ec[0x4]; // 0x07ec, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_waveParticle; // 0x07f0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierTier2BossAoeWaveAuraVData) == 0x8A0, "CCitadelModifierTier2BossAoeWaveAuraVData size mismatch");
+            static_assert(sizeof(CCitadelModifierTier2BossAoeWaveAuraVData) == 0x8D0, "CCitadelModifierTier2BossAoeWaveAuraVData size mismatch");
         }
     }
 }

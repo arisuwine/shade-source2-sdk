@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x4c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SpreadingFire_DOT : public shade::sdk::server::CCitadel_Modifier_Burning {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastBurnTime; // 0x0140, 0x4 bytes
-                std::uint8_t pad_0144[0x374]; // 0x0144, 0x374 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBurnTime; // 0x0148, 0x4 bytes
+                std::uint8_t pad_014c[0x374]; // 0x014c, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SpreadingFire_DOT) == 0x4B8, "CCitadel_Modifier_SpreadingFire_DOT size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SpreadingFire_DOT) == 0x4C0, "CCitadel_Modifier_SpreadingFire_DOT size mismatch");
         }
     }
 }

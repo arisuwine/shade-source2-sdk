@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x948
+             * Size: 0x978
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LuminousStrikeBuffVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CSoundEventName m_strBuffReceivedSound; // 0x0760, 0x10 bytes
-                CSoundEventName m_strMaxBuffReceivedSound; // 0x0770, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle; // 0x0780, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IncomingParticle; // 0x0860, 0xe0 bytes
-                std::int32_t m_nStackCountForMaxParticle; // 0x0940, 0x4 bytes
-                std::uint8_t pad_0944[0x4]; // 0x0944, 0x4 bytes
+                CSoundEventName m_strBuffReceivedSound; // 0x0790, 0x10 bytes
+                CSoundEventName m_strMaxBuffReceivedSound; // 0x07a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle; // 0x07b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IncomingParticle; // 0x0890, 0xe0 bytes
+                std::int32_t m_nStackCountForMaxParticle; // 0x0970, 0x4 bytes
+                std::uint8_t pad_0974[0x4]; // 0x0974, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LuminousStrikeBuffVData) == 0x948, "CCitadel_Modifier_LuminousStrikeBuffVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LuminousStrikeBuffVData) == 0x978, "CCitadel_Modifier_LuminousStrikeBuffVData size mismatch");
         }
     }
 }

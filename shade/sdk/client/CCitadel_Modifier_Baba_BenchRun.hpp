@@ -16,31 +16,27 @@
 
 #include "shade/sdk/types.hpp"
 
-namespace shade {
-    namespace sdk {
-        namespace resourcesystem {
-            class InfoForResourceTypeCVDataResource;
-        }
-    }
-}
+#include "shade/sdk/client/CCitadelModifier.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18
-             * Alignment: 0x8
-             * Construct Allowed
+             * Size: 0xa28
+             * Alignment: 0xff
+             * Has VTable
+             * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            struct CitadelTaggedSoundSettings_t {
-                CUtlVector<CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVDataResource>> m_taggedSounds; // 0x0000, 0x18 bytes
+            class CCitadel_Modifier_Baba_BenchRun : public shade::sdk::client::CCitadelModifier {
+            public:
+                std::uint8_t pad_0138[0x8f0]; // 0x0138, 0x8f0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelTaggedSoundSettings_t) == 0x18, "CitadelTaggedSoundSettings_t size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Baba_BenchRun) == 0xA28, "CCitadel_Modifier_Baba_BenchRun size mismatch");
         }
     }
 }

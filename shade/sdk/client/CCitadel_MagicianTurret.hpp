@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdb0
+             * Size: 0xe08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_MagicianTurret : public shade::sdk::client::CCitadelAnimatingModelEntity {
             public:
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0da8, 0x4 bytes
-                std::uint8_t pad_0dac[0x4]; // 0x0dac, 0x4 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbility; // 0x0e00, 0x4 bytes
+                std::uint8_t pad_0e04[0x4]; // 0x0e04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_MagicianTurret) == 0xDB0, "CCitadel_MagicianTurret size mismatch");
+            static_assert(sizeof(CCitadel_MagicianTurret) == 0xE08, "CCitadel_MagicianTurret size mismatch");
         }
     }
 }

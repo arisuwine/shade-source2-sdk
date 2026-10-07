@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x598
+             * Size: 0x5a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,22 +31,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MageWalk : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bIsFakeout; // 0x0140, 0x1 bytes
-                bool m_bTeleported; // 0x0141, 0x1 bytes
-                std::uint8_t pad_0142[0x2]; // 0x0142, 0x2 bytes
-                shade::sdk::client::ParticleIndex_t m_particleStart; // 0x0144, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_particleEnd; // 0x0148, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_particleTrail; // 0x014c, 0x4 bytes
-                VectorWS m_vecEndLocation; // 0x0150, 0xc bytes
-                VectorWS m_vecStartPosition; // 0x015c, 0xc bytes
-                VectorWS m_vecEndLocationCaster; // 0x0168, 0xc bytes
-                std::uint8_t pad_0174[0x424]; // 0x0174, 0x424 bytes
+                bool m_bIsFakeout; // 0x0148, 0x1 bytes
+                bool m_bTeleported; // 0x0149, 0x1 bytes
+                std::uint8_t pad_014a[0x2]; // 0x014a, 0x2 bytes
+                shade::sdk::client::ParticleIndex_t m_particleStart; // 0x014c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particleEnd; // 0x0150, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particleTrail; // 0x0154, 0x4 bytes
+                VectorWS m_vecEndLocation; // 0x0158, 0xc bytes
+                VectorWS m_vecStartPosition; // 0x0164, 0xc bytes
+                VectorWS m_vecEndLocationCaster; // 0x0170, 0xc bytes
+                std::uint8_t pad_017c[0x424]; // 0x017c, 0x424 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MageWalk) == 0x598, "CCitadel_Modifier_MageWalk size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MageWalk) == 0x5A0, "CCitadel_Modifier_MageWalk size mismatch");
         }
     }
 }

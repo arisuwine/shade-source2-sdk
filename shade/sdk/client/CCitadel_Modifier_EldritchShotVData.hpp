@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x988
+             * Size: 0x9c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_EldritchShotVData : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x0890, 0xe0 bytes
-                float m_flExplodeParticleSize; // 0x0970, 0x4 bytes
-                std::uint8_t pad_0974[0x4]; // 0x0974, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x0978, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x08c8, 0xe0 bytes
+                float m_flExplodeParticleSize; // 0x09a8, 0x4 bytes
+                std::uint8_t pad_09ac[0x4]; // 0x09ac, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x09b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_EldritchShotVData) == 0x988, "CCitadel_Modifier_EldritchShotVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_EldritchShotVData) == 0x9C0, "CCitadel_Modifier_EldritchShotVData size mismatch");
         }
     }
 }

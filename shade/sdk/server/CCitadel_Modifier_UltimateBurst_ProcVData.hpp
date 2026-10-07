@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8a0
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_UltimateBurst_ProcVData : public shade::sdk::server::CCitadel_Modifier_BaseEventProcVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LightningParticle; // 0x0790, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DelayedEffectModifier; // 0x0870, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x0880, 0x10 bytes
-                CSoundEventName m_strLightningSound; // 0x0890, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LightningParticle; // 0x07c8, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DelayedEffectModifier; // 0x08a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x08b8, 0x10 bytes
+                CSoundEventName m_strLightningSound; // 0x08c8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UltimateBurst_ProcVData) == 0x8A0, "CCitadel_Modifier_UltimateBurst_ProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UltimateBurst_ProcVData) == 0x8D8, "CCitadel_Modifier_UltimateBurst_ProcVData size mismatch");
         }
     }
 }

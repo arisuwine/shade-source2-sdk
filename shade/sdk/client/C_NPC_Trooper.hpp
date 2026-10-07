@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b30
+             * Size: 0x1b88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NPC_Trooper : public shade::sdk::client::C_AI_CitadelNPC {
             public:
-                std::int32_t m_iLane; // 0x1b08, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetedEnemy; // 0x1b0c, 0x4 bytes
-                bool m_bUsingBossWeapon; // 0x1b10, 0x1 bytes
-                std::uint8_t pad_1b11[0x1f]; // 0x1b11, 0x1f bytes
+                std::int32_t m_iLane; // 0x1b60, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTargetedEnemy; // 0x1b64, 0x4 bytes
+                bool m_bUsingBossWeapon; // 0x1b68, 0x1 bytes
+                std::uint8_t pad_1b69[0x1f]; // 0x1b69, 0x1f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NPC_Trooper) == 0x1B30, "C_NPC_Trooper size mismatch");
+            static_assert(sizeof(C_NPC_Trooper) == 0x1B88, "C_NPC_Trooper size mismatch");
         }
     }
 }

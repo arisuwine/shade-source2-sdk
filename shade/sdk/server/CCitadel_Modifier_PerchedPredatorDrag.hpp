@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2c0
+             * Size: 0x2c8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PerchedPredatorDrag : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0x160]; // 0x0140, 0x160 bytes
-                QAngle m_qRelativeOffset; // 0x02a0, 0xc bytes
-                float m_flRelativeDist; // 0x02ac, 0x4 bytes
-                Vector m_vecOffsetDir; // 0x02b0, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hFollowEnt; // 0x02bc, 0x4 bytes
+                std::uint8_t pad_0148[0x160]; // 0x0148, 0x160 bytes
+                QAngle m_qRelativeOffset; // 0x02a8, 0xc bytes
+                float m_flRelativeDist; // 0x02b4, 0x4 bytes
+                Vector m_vecOffsetDir; // 0x02b8, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFollowEnt; // 0x02c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PerchedPredatorDrag) == 0x2C0, "CCitadel_Modifier_PerchedPredatorDrag size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PerchedPredatorDrag) == 0x2C8, "CCitadel_Modifier_PerchedPredatorDrag size mismatch");
         }
     }
 }

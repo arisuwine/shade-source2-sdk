@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x890
+             * Size: 0x8c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_BaseBulletPreRollProcVData : public shade::sdk::client::CCitadel_Modifier_BaseEventProcVData {
             public:
-                bool m_bRollOnceForAllBulletsInAShot; // 0x0790, 0x1 bytes
-                std::uint8_t pad_0791[0x3]; // 0x0791, 0x3 bytes
-                float m_flMaxBulletsToProcInShot; // 0x0794, 0x4 bytes
-                bool m_bCanProcMultipleTimesFromSameShot; // 0x0798, 0x1 bytes
-                bool m_bRequiresTargetFilter; // 0x0799, 0x1 bytes
-                bool m_bCanBeEvaded; // 0x079a, 0x1 bytes
-                std::uint8_t pad_079b[0x5]; // 0x079b, 0x5 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x07a0, 0xe0 bytes
-                CSoundEventName m_OnBulletRolledProcSound; // 0x0880, 0x10 bytes
+                bool m_bRollOnceForAllBulletsInAShot; // 0x07c8, 0x1 bytes
+                std::uint8_t pad_07c9[0x3]; // 0x07c9, 0x3 bytes
+                float m_flMaxBulletsToProcInShot; // 0x07cc, 0x4 bytes
+                bool m_bCanProcMultipleTimesFromSameShot; // 0x07d0, 0x1 bytes
+                bool m_bRequiresTargetFilter; // 0x07d1, 0x1 bytes
+                bool m_bCanBeEvaded; // 0x07d2, 0x1 bytes
+                std::uint8_t pad_07d3[0x5]; // 0x07d3, 0x5 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle; // 0x07d8, 0xe0 bytes
+                CSoundEventName m_OnBulletRolledProcSound; // 0x08b8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProcVData) == 0x890, "CCitadel_Modifier_BaseBulletPreRollProcVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_BaseBulletPreRollProcVData) == 0x8C8, "CCitadel_Modifier_BaseBulletPreRollProcVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc20
+             * Size: 0xc70
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CEconWearable : public shade::sdk::server::CEconEntity {
             public:
-                std::uint8_t pad_0c10[0x10]; // 0x0c10, 0x10 bytes
+                std::uint8_t pad_0c60[0x10]; // 0x0c60, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEconWearable) == 0xC20, "CEconWearable size mismatch");
+            static_assert(sizeof(CEconWearable) == 0xC70, "CEconWearable size mismatch");
         }
     }
 }

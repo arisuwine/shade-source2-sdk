@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x418
+             * Size: 0x420
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MagicBeam : public shade::sdk::client::CCitadelModifier {
             public:
-                CHandle<shade::sdk::client::C_Citadel_Magic_Beam_Blocker> m_hBlocker; // 0x0130, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x0134, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0138, 0x4 bytes
-                std::uint8_t pad_013c[0x2c4]; // 0x013c, 0x2c4 bytes
-                QAngle m_qAngle; // 0x0400, 0xc bytes
-                VectorWS m_vOrigin; // 0x040c, 0xc bytes
+                CHandle<shade::sdk::client::C_Citadel_Magic_Beam_Blocker> m_hBlocker; // 0x0138, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParticleIndex; // 0x013c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x2c4]; // 0x0144, 0x2c4 bytes
+                QAngle m_qAngle; // 0x0408, 0xc bytes
+                VectorWS m_vOrigin; // 0x0414, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MagicBeam) == 0x418, "CCitadel_Modifier_MagicBeam size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MagicBeam) == 0x420, "CCitadel_Modifier_MagicBeam size mismatch");
         }
     }
 }

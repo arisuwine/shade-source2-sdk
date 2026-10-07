@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x858
+             * Size: 0x888
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GarbageAuraTargetModifierVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                float m_flOuterSpeedScale; // 0x0840, 0x4 bytes
-                float m_flSpeedScaleBias; // 0x0844, 0x4 bytes
-                CSoundEventName m_TargetLoopingSound; // 0x0848, 0x10 bytes
+                float m_flOuterSpeedScale; // 0x0870, 0x4 bytes
+                float m_flSpeedScaleBias; // 0x0874, 0x4 bytes
+                CSoundEventName m_TargetLoopingSound; // 0x0878, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GarbageAuraTargetModifierVData) == 0x858, "CCitadel_Modifier_GarbageAuraTargetModifierVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GarbageAuraTargetModifierVData) == 0x888, "CCitadel_Modifier_GarbageAuraTargetModifierVData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifierInvisBush : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flCurrentObscureLevel; // 0x0140, 0x4 bytes
-                float m_flCurrentInvisLevel; // 0x0144, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_FadeStartTime; // 0x0148, 0x4 bytes
-                bool m_bRevealing; // 0x014c, 0x1 bytes
-                std::uint8_t pad_014d[0x3]; // 0x014d, 0x3 bytes
-                float m_flRevealStartLevel; // 0x0150, 0x4 bytes
-                float m_flRevealFadeDuration; // 0x0154, 0x4 bytes
+                float m_flCurrentObscureLevel; // 0x0148, 0x4 bytes
+                float m_flCurrentInvisLevel; // 0x014c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_FadeStartTime; // 0x0150, 0x4 bytes
+                bool m_bRevealing; // 0x0154, 0x1 bytes
+                std::uint8_t pad_0155[0x3]; // 0x0155, 0x3 bytes
+                float m_flRevealStartLevel; // 0x0158, 0x4 bytes
+                float m_flRevealFadeDuration; // 0x015c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifierInvisBush) == 0x158, "CCitadelModifierInvisBush size mismatch");
+            static_assert(sizeof(CCitadelModifierInvisBush) == 0x160, "CCitadelModifierInvisBush size mismatch");
         }
     }
 }

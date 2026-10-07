@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x190
+             * Size: 0x198
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Cadence_Crescendo_AOE : public shade::sdk::client::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0180[0x8]; // 0x0180, 0x8 bytes
-                std::int32_t m_nTicks; // 0x0188, 0x4 bytes
-                std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
+                std::uint8_t pad_0188[0x8]; // 0x0188, 0x8 bytes
+                std::int32_t m_nTicks; // 0x0190, 0x4 bytes
+                std::uint8_t pad_0194[0x4]; // 0x0194, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Cadence_Crescendo_AOE) == 0x190, "CCitadel_Modifier_Cadence_Crescendo_AOE size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Cadence_Crescendo_AOE) == 0x198, "CCitadel_Modifier_Cadence_Crescendo_AOE size mismatch");
         }
     }
 }

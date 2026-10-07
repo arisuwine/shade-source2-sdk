@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0x960
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierVandalSurgeVData : public shade::sdk::client::CCitadel_Modifier_StunnedVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LiftParticle; // 0x0840, 0xe0 bytes
-                CSoundEventName m_strStartSound; // 0x0920, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LiftParticle; // 0x0870, 0xe0 bytes
+                CSoundEventName m_strStartSound; // 0x0950, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierVandalSurgeVData) == 0x930, "CModifierVandalSurgeVData size mismatch");
+            static_assert(sizeof(CModifierVandalSurgeVData) == 0x960, "CModifierVandalSurgeVData size mismatch");
         }
     }
 }

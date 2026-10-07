@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Passive_Camouflage : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flRate; // 0x0140, 0x4 bytes
-                VectorWS m_vLastPosition; // 0x0144, 0xc bytes
+                float m_flRate; // 0x0148, 0x4 bytes
+                VectorWS m_vLastPosition; // 0x014c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Passive_Camouflage) == 0x150, "CCitadel_Modifier_Passive_Camouflage size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Passive_Camouflage) == 0x158, "CCitadel_Modifier_Passive_Camouflage size mismatch");
         }
     }
 }

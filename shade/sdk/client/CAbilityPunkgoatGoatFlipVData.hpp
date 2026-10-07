@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1490
+             * Size: 0x14d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityPunkgoatGoatFlipVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CPiecewiseCurve m_ChargingSpeedCurve; // 0x13a0, 0x40 bytes
-                CPiecewiseCurve m_GoingUpSpeedCurve; // 0x13e0, 0x40 bytes
-                float m_flGroundBreakOffAngle; // 0x1420, 0x4 bytes
-                std::uint8_t pad_1424[0x4]; // 0x1424, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_Charging; // 0x1428, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GoatGoingUp; // 0x1438, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DamageBuff; // 0x1448, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MaxHealthBuff; // 0x1458, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EmpowerMelee; // 0x1468, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LingeringAirControl; // 0x1478, 0x10 bytes
-                float m_flDelayBeforeCasterRegainsControlAfterFlip; // 0x1488, 0x4 bytes
-                std::uint8_t pad_148c[0x4]; // 0x148c, 0x4 bytes
+                CPiecewiseCurve m_ChargingSpeedCurve; // 0x13e8, 0x40 bytes
+                CPiecewiseCurve m_GoingUpSpeedCurve; // 0x1428, 0x40 bytes
+                float m_flGroundBreakOffAngle; // 0x1468, 0x4 bytes
+                std::uint8_t pad_146c[0x4]; // 0x146c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_Charging; // 0x1470, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GoatGoingUp; // 0x1480, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DamageBuff; // 0x1490, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MaxHealthBuff; // 0x14a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EmpowerMelee; // 0x14b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LingeringAirControl; // 0x14c0, 0x10 bytes
+                float m_flDelayBeforeCasterRegainsControlAfterFlip; // 0x14d0, 0x4 bytes
+                std::uint8_t pad_14d4[0x4]; // 0x14d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityPunkgoatGoatFlipVData) == 0x1490, "CAbilityPunkgoatGoatFlipVData size mismatch");
+            static_assert(sizeof(CAbilityPunkgoatGoatFlipVData) == 0x14D8, "CAbilityPunkgoatGoatFlipVData size mismatch");
         }
     }
 }

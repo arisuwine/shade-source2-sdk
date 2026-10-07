@@ -16,27 +16,27 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/C_BaseModelEntity.hpp"
+#include "shade/sdk/client/CCitadelModifier.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbb0
-             * Alignment: 0x8
+             * Size: 0x1e8
+             * Alignment: 0xff
              * Has VTable
-             * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Minimap_EffectsEntity : public shade::sdk::client::C_BaseModelEntity {
+            class CCitadel_Modifier_RatNibbleArmorTotal : public shade::sdk::client::CCitadelModifier {
             public:
+                std::uint8_t pad_0138[0xb0]; // 0x0138, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Minimap_EffectsEntity) == 0xBB0, "CCitadel_Minimap_EffectsEntity size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_RatNibbleArmorTotal) == 0x1E8, "CCitadel_Modifier_RatNibbleArmorTotal size mismatch");
         }
     }
 }

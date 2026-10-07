@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13a8
+             * Size: 0x13f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_NPCAbility_Shield_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flShieldOffset; // 0x13a0, 0x4 bytes
-                float m_flShieldScale; // 0x13a4, 0x4 bytes
+                float m_flShieldOffset; // 0x13e8, 0x4 bytes
+                float m_flShieldScale; // 0x13ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_NPCAbility_Shield_VData) == 0x13A8, "CCitadel_NPCAbility_Shield_VData size mismatch");
+            static_assert(sizeof(CCitadel_NPCAbility_Shield_VData) == 0x13F0, "CCitadel_NPCAbility_Shield_VData size mismatch");
         }
     }
 }

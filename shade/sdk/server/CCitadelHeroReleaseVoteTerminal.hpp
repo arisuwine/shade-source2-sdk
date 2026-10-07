@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd70
+             * Size: 0xdc0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelHeroReleaseVoteTerminal : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint8_t pad_0d50[0x18]; // 0x0d50, 0x18 bytes
-                std::int32_t m_nGameStateChangedEventID; // 0x0d68, 0x4 bytes
-                std::int32_t m_nStreetBrawlStateChangedEventID; // 0x0d6c, 0x4 bytes
+                std::uint8_t pad_0da0[0x18]; // 0x0da0, 0x18 bytes
+                std::int32_t m_nGameStateChangedEventID; // 0x0db8, 0x4 bytes
+                std::int32_t m_nStreetBrawlStateChangedEventID; // 0x0dbc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHeroReleaseVoteTerminal) == 0xD70, "CCitadelHeroReleaseVoteTerminal size mismatch");
+            static_assert(sizeof(CCitadelHeroReleaseVoteTerminal) == 0xDC0, "CCitadelHeroReleaseVoteTerminal size mismatch");
         }
     }
 }

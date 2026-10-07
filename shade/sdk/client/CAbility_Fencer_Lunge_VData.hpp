@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c80
+             * Size: 0x1cf8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,45 +44,45 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Fencer_Lunge_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect; // 0x1480, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashTrailEffect; // 0x1560, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwordChargeEffect; // 0x1640, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashSwingEffect; // 0x1720, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackProcParticle; // 0x1800, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GlintParticle; // 0x18e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PerfectImpactParticle; // 0x19c0, 0xe0 bytes
-                Vector m_vecLongEffectOffset; // 0x1aa0, 0xc bytes
-                float m_vecPlayerLeftOffset; // 0x1aac, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DashBuffModifier; // 0x1ab0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UIRecastModifier; // 0x1ac0, 0x10 bytes
-                float m_flAirSpeedMax; // 0x1ad0, 0x4 bytes
-                float m_flAirDrag; // 0x1ad4, 0x4 bytes
-                float m_flFallSpeedMax; // 0x1ad8, 0x4 bytes
-                float m_flDashTurnRateMax; // 0x1adc, 0x4 bytes
-                float m_flMaxPowerPadding; // 0x1ae0, 0x4 bytes
-                float m_flEffectGroundTrace; // 0x1ae4, 0x4 bytes
-                float m_flWhizbyMaxRange; // 0x1ae8, 0x4 bytes
-                float m_flStartPosTestCapsuleLength; // 0x1aec, 0x4 bytes
-                float m_flCoverLOSBackDist; // 0x1af0, 0x4 bytes
-                float m_flAttackDuration; // 0x1af4, 0x4 bytes
-                float m_flPostAttackDuration; // 0x1af8, 0x4 bytes
-                float m_flMinGlintTime; // 0x1afc, 0x4 bytes
-                CSoundEventName m_strDashStart; // 0x1b00, 0x10 bytes
-                CSoundEventName m_strSlashStart; // 0x1b10, 0x10 bytes
-                CSoundEventName m_strSlashImpactSound; // 0x1b20, 0x10 bytes
-                CSoundEventName m_strChargeSound; // 0x1b30, 0x10 bytes
-                CSoundEventName m_strChargeGlintSound; // 0x1b40, 0x10 bytes
-                CSoundEventName m_strMaxHoldSweetener; // 0x1b50, 0x10 bytes
-                CSoundEventName m_strPerfectDamageHitSound; // 0x1b60, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequencePreRelease; // 0x1b70, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSlash; // 0x1bf8, 0x88 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect; // 0x14c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashTrailEffect; // 0x15a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwordChargeEffect; // 0x1688, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashSwingEffect; // 0x1768, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackProcParticle; // 0x1848, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GlintParticle; // 0x1928, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PerfectImpactParticle; // 0x1a08, 0xe0 bytes
+                Vector m_vecLongEffectOffset; // 0x1ae8, 0xc bytes
+                float m_vecPlayerLeftOffset; // 0x1af4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DashBuffModifier; // 0x1af8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UIRecastModifier; // 0x1b08, 0x10 bytes
+                float m_flAirSpeedMax; // 0x1b18, 0x4 bytes
+                float m_flAirDrag; // 0x1b1c, 0x4 bytes
+                float m_flFallSpeedMax; // 0x1b20, 0x4 bytes
+                float m_flDashTurnRateMax; // 0x1b24, 0x4 bytes
+                float m_flMaxPowerPadding; // 0x1b28, 0x4 bytes
+                float m_flEffectGroundTrace; // 0x1b2c, 0x4 bytes
+                float m_flWhizbyMaxRange; // 0x1b30, 0x4 bytes
+                float m_flStartPosTestCapsuleLength; // 0x1b34, 0x4 bytes
+                float m_flCoverLOSBackDist; // 0x1b38, 0x4 bytes
+                float m_flAttackDuration; // 0x1b3c, 0x4 bytes
+                float m_flPostAttackDuration; // 0x1b40, 0x4 bytes
+                float m_flMinGlintTime; // 0x1b44, 0x4 bytes
+                CSoundEventName m_strDashStart; // 0x1b48, 0x10 bytes
+                CSoundEventName m_strSlashStart; // 0x1b58, 0x10 bytes
+                CSoundEventName m_strSlashImpactSound; // 0x1b68, 0x10 bytes
+                CSoundEventName m_strChargeSound; // 0x1b78, 0x10 bytes
+                CSoundEventName m_strChargeGlintSound; // 0x1b88, 0x10 bytes
+                CSoundEventName m_strMaxHoldSweetener; // 0x1b98, 0x10 bytes
+                CSoundEventName m_strPerfectDamageHitSound; // 0x1ba8, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequencePreRelease; // 0x1bb8, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSlash; // 0x1c58, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Fencer_Lunge_VData) == 0x1C80, "CAbility_Fencer_Lunge_VData size mismatch");
+            static_assert(sizeof(CAbility_Fencer_Lunge_VData) == 0x1CF8, "CAbility_Fencer_Lunge_VData size mismatch");
         }
     }
 }

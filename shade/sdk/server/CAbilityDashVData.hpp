@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17e0
+             * Size: 0x1858
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,41 +40,41 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityDashVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DownDashParticle; // 0x1480, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallJumpParticle; // 0x1560, 0xe0 bytes
-                CSoundEventName m_strArriveSound; // 0x1640, 0x10 bytes
-                CSoundEventName m_strStaminaDrainedSound; // 0x1650, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGroundDashActivate; // 0x1660, 0x88 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAirDashActivate; // 0x16e8, 0x88 bytes
-                float m_flMaxAngDiff; // 0x1770, 0x4 bytes
-                float m_flSlideCancelBlockerWindow; // 0x1774, 0x4 bytes
-                float m_flSlideLockoutTime; // 0x1778, 0x4 bytes
-                float m_flGroundDashAirbornDrag; // 0x177c, 0x4 bytes
-                float m_flGroundDashAirbornSpeedClamp; // 0x1780, 0x4 bytes
-                std::uint8_t pad_1784[0x4]; // 0x1784, 0x4 bytes
-                CSoundEventName m_strGroundDashSound; // 0x1788, 0x10 bytes
-                float m_flAirDashEndVelocityScale; // 0x1798, 0x4 bytes
-                float m_flAirDashAccPct; // 0x179c, 0x4 bytes
-                float m_flDuringDrag; // 0x17a0, 0x4 bytes
-                float m_flAirSpeedForMaxDrag; // 0x17a4, 0x4 bytes
-                float m_flAirSpeedForMinDrag; // 0x17a8, 0x4 bytes
-                float m_flPostMaxDrag; // 0x17ac, 0x4 bytes
-                float m_flPostDragDuration; // 0x17b0, 0x4 bytes
-                float m_flDownwardAirDashSpeed; // 0x17b4, 0x4 bytes
-                float m_flParryCancelSpeedScale; // 0x17b8, 0x4 bytes
-                float m_flParryCancelSlideDuration; // 0x17bc, 0x4 bytes
-                float m_flParryCancelSlideFrictionPercent; // 0x17c0, 0x4 bytes
-                float m_flParryCancelAirGlideDuration; // 0x17c4, 0x4 bytes
-                float m_flParryCancelAirGravityScale; // 0x17c8, 0x4 bytes
-                std::uint8_t pad_17cc[0x4]; // 0x17cc, 0x4 bytes
-                CSoundEventName m_strAirDashSound; // 0x17d0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DownDashParticle; // 0x14c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallJumpParticle; // 0x15a8, 0xe0 bytes
+                CSoundEventName m_strArriveSound; // 0x1688, 0x10 bytes
+                CSoundEventName m_strStaminaDrainedSound; // 0x1698, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGroundDashActivate; // 0x16a8, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAirDashActivate; // 0x1748, 0xa0 bytes
+                float m_flMaxAngDiff; // 0x17e8, 0x4 bytes
+                float m_flSlideCancelBlockerWindow; // 0x17ec, 0x4 bytes
+                float m_flSlideLockoutTime; // 0x17f0, 0x4 bytes
+                float m_flGroundDashAirbornDrag; // 0x17f4, 0x4 bytes
+                float m_flGroundDashAirbornSpeedClamp; // 0x17f8, 0x4 bytes
+                std::uint8_t pad_17fc[0x4]; // 0x17fc, 0x4 bytes
+                CSoundEventName m_strGroundDashSound; // 0x1800, 0x10 bytes
+                float m_flAirDashEndVelocityScale; // 0x1810, 0x4 bytes
+                float m_flAirDashAccPct; // 0x1814, 0x4 bytes
+                float m_flDuringDrag; // 0x1818, 0x4 bytes
+                float m_flAirSpeedForMaxDrag; // 0x181c, 0x4 bytes
+                float m_flAirSpeedForMinDrag; // 0x1820, 0x4 bytes
+                float m_flPostMaxDrag; // 0x1824, 0x4 bytes
+                float m_flPostDragDuration; // 0x1828, 0x4 bytes
+                float m_flDownwardAirDashSpeed; // 0x182c, 0x4 bytes
+                float m_flParryCancelSpeedScale; // 0x1830, 0x4 bytes
+                float m_flParryCancelSlideDuration; // 0x1834, 0x4 bytes
+                float m_flParryCancelSlideFrictionPercent; // 0x1838, 0x4 bytes
+                float m_flParryCancelAirGlideDuration; // 0x183c, 0x4 bytes
+                float m_flParryCancelAirGravityScale; // 0x1840, 0x4 bytes
+                std::uint8_t pad_1844[0x4]; // 0x1844, 0x4 bytes
+                CSoundEventName m_strAirDashSound; // 0x1848, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityDashVData) == 0x17E0, "CAbilityDashVData size mismatch");
+            static_assert(sizeof(CAbilityDashVData) == 0x1858, "CAbilityDashVData size mismatch");
         }
     }
 }

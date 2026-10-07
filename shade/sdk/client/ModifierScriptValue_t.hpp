@@ -39,7 +39,8 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct ModifierScriptValue_t {
-                shade::sdk::client::EModifierValue m_eModifierValue; // 0x0000, 0x4 bytes
+                shade::sdk::client::EModifierValue m_eModifierValue; // 0x0000, 0x2 bytes
+                std::uint8_t pad_0002[0x2]; // 0x0002, 0x2 bytes
                 shade::sdk::client::ModifierScriptVariantType_t m_eType; // 0x0004, 0x4 bytes
                 shade::sdk::client::CModifierLevelFloat m_value; // 0x0008, 0x10 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_sModelValue; // 0x0018, 0xe0 bytes

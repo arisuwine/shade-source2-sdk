@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x768
+             * Size: 0x798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_BodyGroupChoiceVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CUtlStringToken m_sBodyGroupName; // 0x0760, 0x4 bytes
-                std::int32_t m_nBodyGroupChoice; // 0x0764, 0x4 bytes
+                CUtlStringToken m_sBodyGroupName; // 0x0790, 0x4 bytes
+                std::int32_t m_nBodyGroupChoice; // 0x0794, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_BodyGroupChoiceVData) == 0x768, "CGameModifier_BodyGroupChoiceVData size mismatch");
+            static_assert(sizeof(CGameModifier_BodyGroupChoiceVData) == 0x798, "CGameModifier_BodyGroupChoiceVData size mismatch");
         }
     }
 }

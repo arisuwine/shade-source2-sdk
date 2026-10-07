@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CGameModifier_SetMoveType : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::MoveType_t m_nMoveType; // 0x0140, 0x1 bytes
-                std::uint8_t pad_0141[0x7]; // 0x0141, 0x7 bytes
+                shade::sdk::client::MoveType_t m_nMoveType; // 0x0148, 0x1 bytes
+                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameModifier_SetMoveType) == 0x148, "CGameModifier_SetMoveType size mismatch");
+            static_assert(sizeof(CGameModifier_SetMoveType) == 0x150, "CGameModifier_SetMoveType size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5b0
+             * Size: 0x5b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Familiar_SpotlightAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0178[0x8]; // 0x0178, 0x8 bytes
-                Vector m_vRightVectorWS; // 0x0180, 0xc bytes
-                std::uint8_t pad_018c[0x424]; // 0x018c, 0x424 bytes
+                std::uint8_t pad_0180[0x8]; // 0x0180, 0x8 bytes
+                Vector m_vRightVectorWS; // 0x0188, 0xc bytes
+                std::uint8_t pad_0194[0x424]; // 0x0194, 0x424 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Familiar_SpotlightAura) == 0x5B0, "CCitadel_Modifier_Familiar_SpotlightAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Familiar_SpotlightAura) == 0x5B8, "CCitadel_Modifier_Familiar_SpotlightAura size mismatch");
         }
     }
 }

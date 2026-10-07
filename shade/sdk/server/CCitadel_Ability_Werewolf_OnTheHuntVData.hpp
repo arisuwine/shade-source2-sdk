@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14a0
+             * Size: 0x14e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_OnTheHuntVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x13a0, 0xe0 bytes
-                CSoundEventName m_TargetBuffSound; // 0x1480, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RapidFireModifier; // 0x1490, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x13e8, 0xe0 bytes
+                CSoundEventName m_TargetBuffSound; // 0x14c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RapidFireModifier; // 0x14d8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_OnTheHuntVData) == 0x14A0, "CCitadel_Ability_Werewolf_OnTheHuntVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_OnTheHuntVData) == 0x14E8, "CCitadel_Ability_Werewolf_OnTheHuntVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_LearningHeroAbility : public shade::sdk::server::CCitadelModifier {
             public:
-                CBufferString m_sDescription; // 0x0140, 0x10 bytes
+                CBufferString m_sDescription; // 0x0148, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_LearningHeroAbility) == 0x150, "CCitadel_Modifier_LearningHeroAbility size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_LearningHeroAbility) == 0x158, "CCitadel_Modifier_LearningHeroAbility size mismatch");
         }
     }
 }

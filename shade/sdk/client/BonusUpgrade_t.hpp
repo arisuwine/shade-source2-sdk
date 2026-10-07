@@ -30,7 +30,8 @@ namespace shade {
             #pragma pack(push, 1)
             struct BonusUpgrade_t {
                 float m_flValue; // 0x0000, 0x4 bytes
-                shade::sdk::client::EModifierValue m_eValueType; // 0x0004, 0x4 bytes
+                shade::sdk::client::EModifierValue m_eValueType; // 0x0004, 0x2 bytes
+                std::uint8_t pad_0006[0x2]; // 0x0006, 0x2 bytes
             };
             #pragma pack(pop)
 

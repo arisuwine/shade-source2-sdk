@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x358
+             * Size: 0x360
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CounterspellWatcher : public shade::sdk::server::CCitadel_Modifier_Intrinsic_Base {
             public:
-                bool m_bSpellBlockActivated; // 0x0140, 0x1 bytes
-                bool m_bSpellBlocked; // 0x0141, 0x1 bytes
-                std::uint8_t pad_0142[0x216]; // 0x0142, 0x216 bytes
+                bool m_bSpellBlockActivated; // 0x0148, 0x1 bytes
+                bool m_bSpellBlocked; // 0x0149, 0x1 bytes
+                std::uint8_t pad_014a[0x216]; // 0x014a, 0x216 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CounterspellWatcher) == 0x358, "CCitadel_Modifier_CounterspellWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CounterspellWatcher) == 0x360, "CCitadel_Modifier_CounterspellWatcher size mismatch");
         }
     }
 }

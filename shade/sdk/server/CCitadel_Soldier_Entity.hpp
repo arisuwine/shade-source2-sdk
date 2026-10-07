@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xc00
+             * Size: 0xc50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Soldier_Entity : public shade::sdk::server::CCitadelAnimatingModelEntity {
             public:
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0bf0, 0x4 bytes
-                std::int32_t m_iSoldierState; // 0x0bf4, 0x4 bytes
-                float m_flLifetime; // 0x0bf8, 0x4 bytes
-                std::uint8_t pad_0bfc[0x4]; // 0x0bfc, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hAbility; // 0x0c40, 0x4 bytes
+                std::int32_t m_iSoldierState; // 0x0c44, 0x4 bytes
+                float m_flLifetime; // 0x0c48, 0x4 bytes
+                std::uint8_t pad_0c4c[0x4]; // 0x0c4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Soldier_Entity) == 0xC00, "CCitadel_Soldier_Entity size mismatch");
+            static_assert(sizeof(CCitadel_Soldier_Entity) == 0xC50, "CCitadel_Soldier_Entity size mismatch");
         }
     }
 }

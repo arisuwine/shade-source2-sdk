@@ -18,7 +18,6 @@ namespace shade {
     namespace sdk {
         namespace server {
             enum class AI_NavGoalFlags_t : std::uint32_t {
-                eYawToDest = 0x1,
                 eDisableUpdateGoalPos = 0x2,
                 eLocalSucceedOnWithinTolerance = 0x4,
                 eDontLimitGoalOffset = 0x40,

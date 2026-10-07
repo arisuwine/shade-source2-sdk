@@ -62,7 +62,8 @@ namespace shade {
                 IN_MOVE_DOWN = 0x400000000000000,
                 IN_DUCK_TOGGLE = 0x800000000000000,
                 IN_CANCEL_ABILITY = 0x1000000000000000,
-                IN_COSMETIC_1 = 0x2000000000000000
+                IN_COSMETIC_1 = 0x2000000000000000,
+                IN_DOWN_DASH = 0x4000000000000000
             };
         }
     }

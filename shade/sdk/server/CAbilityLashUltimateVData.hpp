@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1878
+             * Size: 0x18d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,27 +43,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityLashUltimateVData : public shade::sdk::server::CBaseLockonAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x13c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchParticle; // 0x14a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastParticle; // 0x1580, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastEnemyParticle; // 0x1660, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AllyIndicatorParticle; // 0x1740, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_LashGrappleEnemy_Debuff> m_GrappleEnemyModifier; // 0x1820, 0x10 bytes
-                CSoundEventName m_GrabSound; // 0x1830, 0x10 bytes
-                CSoundEventName m_MissSound; // 0x1840, 0x10 bytes
-                CSoundEventName m_ThrowSound; // 0x1850, 0x10 bytes
-                float m_flAirSpeedMax; // 0x1860, 0x4 bytes
-                float m_flFallSpeedMax; // 0x1864, 0x4 bytes
-                float m_flAirDrag; // 0x1868, 0x4 bytes
-                float m_flMaxPitchRangeScale; // 0x186c, 0x4 bytes
-                float m_flThrowAnimTossPoint; // 0x1870, 0x4 bytes
-                std::uint8_t pad_1874[0x4]; // 0x1874, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x1418, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchParticle; // 0x14f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastParticle; // 0x15d8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltimateCastEnemyParticle; // 0x16b8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AllyIndicatorParticle; // 0x1798, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_LashGrappleEnemy_Debuff> m_GrappleEnemyModifier; // 0x1878, 0x10 bytes
+                CSoundEventName m_GrabSound; // 0x1888, 0x10 bytes
+                CSoundEventName m_MissSound; // 0x1898, 0x10 bytes
+                CSoundEventName m_ThrowSound; // 0x18a8, 0x10 bytes
+                float m_flAirSpeedMax; // 0x18b8, 0x4 bytes
+                float m_flFallSpeedMax; // 0x18bc, 0x4 bytes
+                float m_flAirDrag; // 0x18c0, 0x4 bytes
+                float m_flMaxPitchRangeScale; // 0x18c4, 0x4 bytes
+                float m_flThrowAnimTossPoint; // 0x18c8, 0x4 bytes
+                std::uint8_t pad_18cc[0x4]; // 0x18cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityLashUltimateVData) == 0x1878, "CAbilityLashUltimateVData size mismatch");
+            static_assert(sizeof(CAbilityLashUltimateVData) == 0x18D0, "CAbilityLashUltimateVData size mismatch");
         }
     }
 }

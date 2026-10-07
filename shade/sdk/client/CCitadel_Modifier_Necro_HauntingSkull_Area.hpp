@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x570
+             * Size: 0x578
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_HauntingSkull_Area : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0130[0x8]; // 0x0130, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedSkulls; // 0x0138, 0x18 bytes
-                std::uint8_t pad_0150[0x420]; // 0x0150, 0x420 bytes
+                std::uint8_t pad_0138[0x8]; // 0x0138, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedSkulls; // 0x0140, 0x18 bytes
+                std::uint8_t pad_0158[0x420]; // 0x0158, 0x420 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_HauntingSkull_Area) == 0x570, "CCitadel_Modifier_Necro_HauntingSkull_Area size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_HauntingSkull_Area) == 0x578, "CCitadel_Modifier_Necro_HauntingSkull_Area size mismatch");
         }
     }
 }

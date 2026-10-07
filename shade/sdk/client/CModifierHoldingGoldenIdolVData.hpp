@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x840
+             * Size: 0x870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifierHoldingGoldenIdolVData : public shade::sdk::client::CCitadelModifierVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IdolParticle; // 0x0760, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IdolParticle; // 0x0790, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierHoldingGoldenIdolVData) == 0x840, "CModifierHoldingGoldenIdolVData size mismatch");
+            static_assert(sizeof(CModifierHoldingGoldenIdolVData) == 0x870, "CModifierHoldingGoldenIdolVData size mismatch");
         }
     }
 }

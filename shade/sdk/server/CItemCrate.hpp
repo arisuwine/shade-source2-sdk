@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xda0
+             * Size: 0xdf0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,19 +41,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemCrate : public shade::sdk::server::CPhysicsProp {
             public:
-                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0d60, 0x20 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hSpawner; // 0x0d80, 0x4 bytes
-                std::uint8_t pad_0d84[0x4]; // 0x0d84, 0x4 bytes
-                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x0d88, 0x4 bytes
-                std::uint8_t pad_0d8c[0x4]; // 0x0d8c, 0x4 bytes
-                std::int32_t m_eLootType; // 0x0d90, 0x4 bytes
-                std::uint8_t pad_0d94[0xc]; // 0x0d94, 0xc bytes
+                shade::sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x0db0, 0x20 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hSpawner; // 0x0dd0, 0x4 bytes
+                std::uint8_t pad_0dd4[0x4]; // 0x0dd4, 0x4 bytes
+                shade::sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0x0dd8, 0x4 bytes
+                std::uint8_t pad_0ddc[0x4]; // 0x0ddc, 0x4 bytes
+                std::int32_t m_eLootType; // 0x0de0, 0x4 bytes
+                std::uint8_t pad_0de4[0xc]; // 0x0de4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemCrate) == 0xDA0, "CItemCrate size mismatch");
+            static_assert(sizeof(CItemCrate) == 0xDF0, "CItemCrate size mismatch");
         }
     }
 }

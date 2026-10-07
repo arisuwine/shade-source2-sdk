@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1678
+             * Size: 0x16c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,40 +43,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bookworm_KnightChargeVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KnightChargeChannelParticle; // 0x13a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KnightChargeCastParticle; // 0x1480, 0xe0 bytes
-                CSoundEventName m_strKnightChargeExplosionSound; // 0x1560, 0x10 bytes
-                CSoundEventName m_strCastDelayLocalPlayerSound; // 0x1570, 0x10 bytes
-                CSoundEventName m_strExpireSound; // 0x1580, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1590, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x15a0, 0x10 bytes
-                float m_flNavMeshSearchRange; // 0x15b0, 0x4 bytes
-                float m_flNavMeshSearchForwardOffset; // 0x15b4, 0x4 bytes
-                float m_flObstacleAvoidanceAmount; // 0x15b8, 0x4 bytes
-                float m_flGravity; // 0x15bc, 0x4 bytes
-                float m_flGroundCheckDistance; // 0x15c0, 0x4 bytes
-                float m_flGroundSnapDistance; // 0x15c4, 0x4 bytes
-                float m_flJumpSpeed; // 0x15c8, 0x4 bytes
-                float m_flTimescale; // 0x15cc, 0x4 bytes
-                float m_flHintRecoveryStrength; // 0x15d0, 0x4 bytes
-                std::uint8_t pad_15d4[0x4]; // 0x15d4, 0x4 bytes
-                CPiecewiseCurve m_worldPositionHeightCurveX; // 0x15d8, 0x40 bytes
-                CPiecewiseCurve m_worldPositionHeightCurveY; // 0x1618, 0x40 bytes
-                float m_flDestroyLeashDistance; // 0x1658, 0x4 bytes
-                float m_flDestroyMapDistance; // 0x165c, 0x4 bytes
-                float m_flQAngleSpringConstant; // 0x1660, 0x4 bytes
-                float m_flMiniHopSpeedMin; // 0x1664, 0x4 bytes
-                float m_flMiniHopSpeedMax; // 0x1668, 0x4 bytes
-                float m_flMinPitch; // 0x166c, 0x4 bytes
-                float m_flMaxPitch; // 0x1670, 0x4 bytes
-                bool m_bDebug; // 0x1674, 0x1 bytes
-                std::uint8_t pad_1675[0x3]; // 0x1675, 0x3 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KnightChargeChannelParticle; // 0x13e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KnightChargeCastParticle; // 0x14c8, 0xe0 bytes
+                CSoundEventName m_strKnightChargeExplosionSound; // 0x15a8, 0x10 bytes
+                CSoundEventName m_strCastDelayLocalPlayerSound; // 0x15b8, 0x10 bytes
+                CSoundEventName m_strExpireSound; // 0x15c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x15d8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x15e8, 0x10 bytes
+                float m_flNavMeshSearchRange; // 0x15f8, 0x4 bytes
+                float m_flNavMeshSearchForwardOffset; // 0x15fc, 0x4 bytes
+                float m_flObstacleAvoidanceAmount; // 0x1600, 0x4 bytes
+                float m_flGravity; // 0x1604, 0x4 bytes
+                float m_flGroundCheckDistance; // 0x1608, 0x4 bytes
+                float m_flGroundSnapDistance; // 0x160c, 0x4 bytes
+                float m_flJumpSpeed; // 0x1610, 0x4 bytes
+                float m_flTimescale; // 0x1614, 0x4 bytes
+                float m_flHintRecoveryStrength; // 0x1618, 0x4 bytes
+                std::uint8_t pad_161c[0x4]; // 0x161c, 0x4 bytes
+                CPiecewiseCurve m_worldPositionHeightCurveX; // 0x1620, 0x40 bytes
+                CPiecewiseCurve m_worldPositionHeightCurveY; // 0x1660, 0x40 bytes
+                float m_flDestroyLeashDistance; // 0x16a0, 0x4 bytes
+                float m_flDestroyMapDistance; // 0x16a4, 0x4 bytes
+                float m_flQAngleSpringConstant; // 0x16a8, 0x4 bytes
+                float m_flMiniHopSpeedMin; // 0x16ac, 0x4 bytes
+                float m_flMiniHopSpeedMax; // 0x16b0, 0x4 bytes
+                float m_flMinPitch; // 0x16b4, 0x4 bytes
+                float m_flMaxPitch; // 0x16b8, 0x4 bytes
+                bool m_bDebug; // 0x16bc, 0x1 bytes
+                std::uint8_t pad_16bd[0x3]; // 0x16bd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bookworm_KnightChargeVData) == 0x1678, "CCitadel_Ability_Bookworm_KnightChargeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bookworm_KnightChargeVData) == 0x16C0, "CCitadel_Ability_Bookworm_KnightChargeVData size mismatch");
         }
     }
 }

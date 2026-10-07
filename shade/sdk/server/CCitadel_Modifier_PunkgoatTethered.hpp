@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x838
+             * Size: 0x840
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,19 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PunkgoatTethered : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorCaster; // 0x0140, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorParent; // 0x0144, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastLOSTime; // 0x0148, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0x6e0]; // 0x0150, 0x6e0 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTetheredTo; // 0x0830, 0x4 bytes
-                std::uint8_t pad_0834[0x4]; // 0x0834, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorCaster; // 0x0148, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nRangeIndicatorParent; // 0x014c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastLOSTime; // 0x0150, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0x6e0]; // 0x0158, 0x6e0 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTetheredTo; // 0x0838, 0x4 bytes
+                std::uint8_t pad_083c[0x4]; // 0x083c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PunkgoatTethered) == 0x838, "CCitadel_Modifier_PunkgoatTethered size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PunkgoatTethered) == 0x840, "CCitadel_Modifier_PunkgoatTethered size mismatch");
         }
     }
 }

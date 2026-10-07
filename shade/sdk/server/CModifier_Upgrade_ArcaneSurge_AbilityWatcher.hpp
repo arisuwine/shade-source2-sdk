@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x408
+             * Size: 0x410
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Upgrade_ArcaneSurge_AbilityWatcher : public shade::sdk::server::CCitadelModifier {
             public:
-                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hBuffedAbility; // 0x0140, 0x4 bytes
-                bool m_bEnabled; // 0x0144, 0x1 bytes
-                std::uint8_t pad_0145[0x2c3]; // 0x0145, 0x2c3 bytes
+                CHandle<shade::sdk::server::CCitadelBaseAbility> m_hBuffedAbility; // 0x0148, 0x4 bytes
+                bool m_bEnabled; // 0x014c, 0x1 bytes
+                std::uint8_t pad_014d[0x2c3]; // 0x014d, 0x2c3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Upgrade_ArcaneSurge_AbilityWatcher) == 0x408, "CModifier_Upgrade_ArcaneSurge_AbilityWatcher size mismatch");
+            static_assert(sizeof(CModifier_Upgrade_ArcaneSurge_AbilityWatcher) == 0x410, "CModifier_Upgrade_ArcaneSurge_AbilityWatcher size mismatch");
         }
     }
 }

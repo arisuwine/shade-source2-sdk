@@ -21,8 +21,16 @@
 namespace shade {
     namespace sdk {
         namespace server {
+            class CCitadelModifier;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace server {
             /* Class Parameters
-             * Size: 0x4f0
+             * Size: 0x670
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +38,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SpiritSnatch : public shade::sdk::server::CCitadel_Modifier_BaseEventProc {
             public:
-                float m_flCooldownDuration; // 0x02d8, 0x4 bytes
-                std::uint8_t pad_02dc[0x214]; // 0x02dc, 0x214 bytes
+                float m_flCooldownDuration; // 0x02e0, 0x4 bytes
+                std::uint8_t pad_02e4[0x4]; // 0x02e4, 0x4 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hBuffHandle; // 0x02e8, 0x18 bytes
+                std::uint8_t pad_0300[0x370]; // 0x0300, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SpiritSnatch) == 0x4F0, "CCitadel_Modifier_SpiritSnatch size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SpiritSnatch) == 0x670, "CCitadel_Modifier_SpiritSnatch size mismatch");
         }
     }
 }

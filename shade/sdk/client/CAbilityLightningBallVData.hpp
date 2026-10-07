@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15b8
+             * Size: 0x1600
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityLightningBallVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZapModifier; // 0x13a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x13b0, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x13c0, 0x10 bytes
-                CSoundEventName m_strProjectileLoopingSound; // 0x13d0, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x13e0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapParticle; // 0x13f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x14d0, 0xe0 bytes
-                float m_flHitSpeed; // 0x15b0, 0x4 bytes
-                float m_flNonHeroHitSpeed; // 0x15b4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZapModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x13f8, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x1408, 0x10 bytes
+                CSoundEventName m_strProjectileLoopingSound; // 0x1418, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1428, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapParticle; // 0x1438, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1518, 0xe0 bytes
+                float m_flHitSpeed; // 0x15f8, 0x4 bytes
+                float m_flNonHeroHitSpeed; // 0x15fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityLightningBallVData) == 0x15B8, "CAbilityLightningBallVData size mismatch");
+            static_assert(sizeof(CAbilityLightningBallVData) == 0x1600, "CAbilityLightningBallVData size mismatch");
         }
     }
 }

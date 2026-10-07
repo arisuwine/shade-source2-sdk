@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2b0
+             * Size: 0x2b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VandalOverflow : public shade::sdk::client::CCitadel_Modifier_Stunned {
             public:
-                std::uint8_t pad_0138[0x160]; // 0x0138, 0x160 bytes
-                VectorWS m_vecFloatDest; // 0x0298, 0xc bytes
-                VectorWS m_vecStartingPos; // 0x02a4, 0xc bytes
+                std::uint8_t pad_0140[0x160]; // 0x0140, 0x160 bytes
+                VectorWS m_vecFloatDest; // 0x02a0, 0xc bytes
+                VectorWS m_vecStartingPos; // 0x02ac, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VandalOverflow) == 0x2B0, "CCitadel_Modifier_VandalOverflow size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VandalOverflow) == 0x2B8, "CCitadel_Modifier_VandalOverflow size mismatch");
         }
     }
 }

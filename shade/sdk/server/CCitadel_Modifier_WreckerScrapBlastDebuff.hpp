@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_WreckerScrapBlastDebuff : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0140[0xb0]; // 0x0140, 0xb0 bytes
-                float m_flEnemyMoveSlow; // 0x01f0, 0x4 bytes
-                std::uint8_t pad_01f4[0x4]; // 0x01f4, 0x4 bytes
+                std::uint8_t pad_0148[0xb0]; // 0x0148, 0xb0 bytes
+                float m_flEnemyMoveSlow; // 0x01f8, 0x4 bytes
+                std::uint8_t pad_01fc[0x4]; // 0x01fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_WreckerScrapBlastDebuff) == 0x1F8, "CCitadel_Modifier_WreckerScrapBlastDebuff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_WreckerScrapBlastDebuff) == 0x200, "CCitadel_Modifier_WreckerScrapBlastDebuff size mismatch");
         }
     }
 }

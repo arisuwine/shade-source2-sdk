@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xda8
+             * Size: 0xe00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,7 +31,7 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_DeployablePreview : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0da0[0x8]; // 0x0da0, 0x8 bytes
+                std::uint8_t pad_0df8[0x8]; // 0x0df8, 0x8 bytes
             };
             #pragma pack(pop)
 
@@ -39,7 +39,7 @@ namespace shade {
              * CHandle<CBaseEntity> src_ability; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_Citadel_DeployablePreview) == 0xDA8, "C_Citadel_DeployablePreview size mismatch");
+            static_assert(sizeof(C_Citadel_DeployablePreview) == 0xE00, "C_Citadel_DeployablePreview size mismatch");
         }
     }
 }

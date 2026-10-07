@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7c8
+             * Size: 0x7f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TimeWall_AuraVData : public shade::sdk::client::CCitadelModifierAuraVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x07b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x07e8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TimeWall_AuraVData) == 0x7C8, "CCitadel_Modifier_TimeWall_AuraVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TimeWall_AuraVData) == 0x7F8, "CCitadel_Modifier_TimeWall_AuraVData size mismatch");
         }
     }
 }

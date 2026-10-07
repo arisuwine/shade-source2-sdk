@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x11e0
+             * Size: 0x11e8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -33,22 +33,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_LaserBeam : public shade::sdk::server::CCitadel_Modifier_NeutralAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nChargeEffect; // 0x01f0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nPreviewEffect; // 0x01f4, 0x4 bytes
-                VectorWS m_vInitialTargetPos; // 0x01f8, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flNextAuraDropTick; // 0x0204, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastToggleTime; // 0x0208, 0x4 bytes
-                std::uint8_t pad_020c[0x4]; // 0x020c, 0x4 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam; // 0x0210, 0xfc8 bytes
-                bool m_bBeamInit; // 0x11d8, 0x1 bytes
-                std::uint8_t pad_11d9[0x3]; // 0x11d9, 0x3 bytes
-                float m_flYaw; // 0x11dc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nChargeEffect; // 0x01f8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nPreviewEffect; // 0x01fc, 0x4 bytes
+                VectorWS m_vInitialTargetPos; // 0x0200, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flNextAuraDropTick; // 0x020c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastToggleTime; // 0x0210, 0x4 bytes
+                std::uint8_t pad_0214[0x4]; // 0x0214, 0x4 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam; // 0x0218, 0xfc8 bytes
+                bool m_bBeamInit; // 0x11e0, 0x1 bytes
+                std::uint8_t pad_11e1[0x3]; // 0x11e1, 0x3 bytes
+                float m_flYaw; // 0x11e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_LaserBeam) == 0x11E0, "CCitadel_Neutral_LaserBeam size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_LaserBeam) == 0x11E8, "CCitadel_Neutral_LaserBeam size mismatch");
         }
     }
 }

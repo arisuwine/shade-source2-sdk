@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x938
+             * Size: 0x968
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_T3BossWaveBeamPreviewVData : public shade::sdk::server::CCitadelModifierVData {
             public:
-                CUtlString m_strBeamStartAttachmentPoint_L; // 0x0760, 0x8 bytes
-                CUtlString m_strBeamStartAttachmentPoint_R; // 0x0768, 0x8 bytes
-                float m_flShrineChargeOffset; // 0x0770, 0x4 bytes
-                std::uint8_t pad_0774[0x4]; // 0x0774, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberBeamPreviewEffect; // 0x0778, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphBeamPreviewEffect; // 0x0858, 0xe0 bytes
+                CUtlString m_strBeamStartAttachmentPoint_L; // 0x0790, 0x8 bytes
+                CUtlString m_strBeamStartAttachmentPoint_R; // 0x0798, 0x8 bytes
+                float m_flShrineChargeOffset; // 0x07a0, 0x4 bytes
+                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberBeamPreviewEffect; // 0x07a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphBeamPreviewEffect; // 0x0888, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_T3BossWaveBeamPreviewVData) == 0x938, "CCitadel_Modifier_T3BossWaveBeamPreviewVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_T3BossWaveBeamPreviewVData) == 0x968, "CCitadel_Modifier_T3BossWaveBeamPreviewVData size mismatch");
         }
     }
 }

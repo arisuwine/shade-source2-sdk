@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdb0
+             * Size: 0xe08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_Citadel_PickupItemSpawner : public shade::sdk::client::CBaseAnimGraph {
             public:
-                std::uint8_t pad_0da0[0x8]; // 0x0da0, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_tNextDropTime; // 0x0da8, 0x4 bytes
-                bool m_bPowerupActive; // 0x0dac, 0x1 bytes
-                std::uint8_t pad_0dad[0x3]; // 0x0dad, 0x3 bytes
+                std::uint8_t pad_0df8[0x8]; // 0x0df8, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_tNextDropTime; // 0x0e00, 0x4 bytes
+                bool m_bPowerupActive; // 0x0e04, 0x1 bytes
+                std::uint8_t pad_0e05[0x3]; // 0x0e05, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Citadel_PickupItemSpawner) == 0xDB0, "C_Citadel_PickupItemSpawner size mismatch");
+            static_assert(sizeof(C_Citadel_PickupItemSpawner) == 0xE08, "C_Citadel_PickupItemSpawner size mismatch");
         }
     }
 }

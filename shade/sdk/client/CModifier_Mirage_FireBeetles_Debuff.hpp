@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0x138
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Mirage_FireBeetles_Debuff) == 0x130, "CModifier_Mirage_FireBeetles_Debuff size mismatch");
+            static_assert(sizeof(CModifier_Mirage_FireBeetles_Debuff) == 0x138, "CModifier_Mirage_FireBeetles_Debuff size mismatch");
         }
     }
 }

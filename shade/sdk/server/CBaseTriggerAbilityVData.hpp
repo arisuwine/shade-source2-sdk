@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x13c0
+             * Size: 0x1408
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseTriggerAbilityVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CSubclassName<4> m_AbilityToTrigger; // 0x13a0, 0x10 bytes
-                float m_flMinCancelTime; // 0x13b0, 0x4 bytes
-                shade::sdk::client::ECitadelHintFeature m_eHintFeatureToMarkUsedOnTrigger; // 0x13b4, 0x4 bytes
-                bool bTriggerOnDeselect; // 0x13b8, 0x1 bytes
-                std::uint8_t pad_13b9[0x7]; // 0x13b9, 0x7 bytes
+                CSubclassName<4> m_AbilityToTrigger; // 0x13e8, 0x10 bytes
+                float m_flMinCancelTime; // 0x13f8, 0x4 bytes
+                shade::sdk::client::ECitadelHintFeature m_eHintFeatureToMarkUsedOnTrigger; // 0x13fc, 0x4 bytes
+                bool bTriggerOnDeselect; // 0x1400, 0x1 bytes
+                std::uint8_t pad_1401[0x7]; // 0x1401, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseTriggerAbilityVData) == 0x13C0, "CBaseTriggerAbilityVData size mismatch");
+            static_assert(sizeof(CBaseTriggerAbilityVData) == 0x1408, "CBaseTriggerAbilityVData size mismatch");
         }
     }
 }

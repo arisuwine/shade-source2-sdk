@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xeb8
+             * Size: 0xf10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,8 +31,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_DoorwayPortal : public shade::sdk::client::CBaseAnimGraph {
             public:
-                CHandle<shade::sdk::client::CCitadel_DoorwayPortal> m_hLinkedDoorway; // 0x0da0, 0x4 bytes
-                std::uint8_t pad_0da4[0x114]; // 0x0da4, 0x114 bytes
+                CHandle<shade::sdk::client::CCitadel_DoorwayPortal> m_hLinkedDoorway; // 0x0df8, 0x4 bytes
+                std::uint8_t pad_0dfc[0x114]; // 0x0dfc, 0x114 bytes
             };
             #pragma pack(pop)
 
@@ -42,7 +42,7 @@ namespace shade {
              * CUtlSymbolLarge looping_sound; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadel_DoorwayPortal) == 0xEB8, "CCitadel_DoorwayPortal size mismatch");
+            static_assert(sizeof(CCitadel_DoorwayPortal) == 0xF10, "CCitadel_DoorwayPortal size mismatch");
         }
     }
 }

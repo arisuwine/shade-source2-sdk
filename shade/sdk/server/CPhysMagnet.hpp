@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb00
+             * Size: 0xb50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -41,27 +41,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysMagnet : public shade::sdk::server::CBaseAnimGraph {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnMagnetAttach; // 0x0a90, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMagnetDetach; // 0x0aa8, 0x18 bytes
-                float m_massScale; // 0x0ac0, 0x4 bytes
-                float m_forceLimit; // 0x0ac4, 0x4 bytes
-                float m_torqueLimit; // 0x0ac8, 0x4 bytes
-                std::uint8_t pad_0acc[0x4]; // 0x0acc, 0x4 bytes
-                CUtlVector<shade::sdk::server::magnetted_objects_t> m_MagnettedEntities; // 0x0ad0, 0x18 bytes
-                bool m_bActive; // 0x0ae8, 0x1 bytes
-                bool m_bHasHitSomething; // 0x0ae9, 0x1 bytes
-                std::uint8_t pad_0aea[0x2]; // 0x0aea, 0x2 bytes
-                float m_flTotalMass; // 0x0aec, 0x4 bytes
-                float m_flRadius; // 0x0af0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextSuckTime; // 0x0af4, 0x4 bytes
-                std::int32_t m_iMaxObjectsAttached; // 0x0af8, 0x4 bytes
-                std::uint8_t pad_0afc[0x4]; // 0x0afc, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMagnetAttach; // 0x0ae0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMagnetDetach; // 0x0af8, 0x18 bytes
+                float m_massScale; // 0x0b10, 0x4 bytes
+                float m_forceLimit; // 0x0b14, 0x4 bytes
+                float m_torqueLimit; // 0x0b18, 0x4 bytes
+                std::uint8_t pad_0b1c[0x4]; // 0x0b1c, 0x4 bytes
+                CUtlVector<shade::sdk::server::magnetted_objects_t> m_MagnettedEntities; // 0x0b20, 0x18 bytes
+                bool m_bActive; // 0x0b38, 0x1 bytes
+                bool m_bHasHitSomething; // 0x0b39, 0x1 bytes
+                std::uint8_t pad_0b3a[0x2]; // 0x0b3a, 0x2 bytes
+                float m_flTotalMass; // 0x0b3c, 0x4 bytes
+                float m_flRadius; // 0x0b40, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextSuckTime; // 0x0b44, 0x4 bytes
+                std::int32_t m_iMaxObjectsAttached; // 0x0b48, 0x4 bytes
+                std::uint8_t pad_0b4c[0x4]; // 0x0b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPhysMagnet) == 0xB00, "CPhysMagnet size mismatch");
+            static_assert(sizeof(CPhysMagnet) == 0xB50, "CPhysMagnet size mismatch");
         }
     }
 }
