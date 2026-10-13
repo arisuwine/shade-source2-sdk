@@ -45,7 +45,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3710
+             * Size: 0x3720
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -173,21 +173,22 @@ namespace shade {
                 bool m_bGunGameImmunity; // 0x3508, 0x1 bytes
                 std::uint8_t pad_3509[0x3]; // 0x3509, 0x3 bytes
                 shade::sdk::entity2::GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x350c, 0x4 bytes
-                float m_fMolotovDamageTime; // 0x3510, 0x4 bytes
-                std::uint8_t pad_3514[0x68]; // 0x3514, 0x68 bytes
-                shade::sdk::client::ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x357c, 0x4 bytes
-                std::uint8_t pad_3580[0x70]; // 0x3580, 0x70 bytes
-                QAngle m_angEyeAngles; // 0x35f0, 0xc bytes
-                std::uint8_t pad_35fc[0x84]; // 0x35fc, 0x84 bytes
-                shade::sdk::entity2::GameTime_t m_arrOldEyeAnglesTimes[0x4]; // 0x3680, 0x10 bytes
-                QAngle m_arrOldEyeAngles[0x4]; // 0x3690, 0x30 bytes
-                QAngle m_angEyeAnglesVelocity; // 0x36c0, 0xc bytes
-                CEntityIndex m_iIDEntIndex; // 0x36cc, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_delayTargetIDTimer; // 0x36d0, 0x18 bytes
-                CEntityIndex m_iTargetItemEntIdx; // 0x36e8, 0x4 bytes
-                CEntityIndex m_iOldIDEntIndex; // 0x36ec, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_holdTargetIDTimer; // 0x36f0, 0x18 bytes
-                std::uint8_t pad_3708[0x8]; // 0x3708, 0x8 bytes
+                float m_flModifier0; // 0x3510, 0x4 bytes
+                float m_fMolotovDamageTime; // 0x3514, 0x4 bytes
+                std::uint8_t pad_3518[0x68]; // 0x3518, 0x68 bytes
+                shade::sdk::client::ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x3580, 0x4 bytes
+                std::uint8_t pad_3584[0x7c]; // 0x3584, 0x7c bytes
+                QAngle m_angEyeAngles; // 0x3600, 0xc bytes
+                std::uint8_t pad_360c[0x84]; // 0x360c, 0x84 bytes
+                shade::sdk::entity2::GameTime_t m_arrOldEyeAnglesTimes[0x4]; // 0x3690, 0x10 bytes
+                QAngle m_arrOldEyeAngles[0x4]; // 0x36a0, 0x30 bytes
+                QAngle m_angEyeAnglesVelocity; // 0x36d0, 0xc bytes
+                CEntityIndex m_iIDEntIndex; // 0x36dc, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_delayTargetIDTimer; // 0x36e0, 0x18 bytes
+                CEntityIndex m_iTargetItemEntIdx; // 0x36f8, 0x4 bytes
+                CEntityIndex m_iOldIDEntIndex; // 0x36fc, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_holdTargetIDTimer; // 0x3700, 0x18 bytes
+                std::uint8_t pad_3718[0x8]; // 0x3718, 0x8 bytes
             };
             #pragma pack(pop)
 
@@ -195,7 +196,7 @@ namespace shade {
              * std::uint8_t m_pCameraServices[0x8]; // Offset: 0x1328, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(C_CSPlayerPawn) == 0x3710, "C_CSPlayerPawn size mismatch");
+            static_assert(sizeof(C_CSPlayerPawn) == 0x3720, "C_CSPlayerPawn size mismatch");
         }
     }
 }

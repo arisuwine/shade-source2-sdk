@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x37c0
+             * Size: 0x37d0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CSGO_TeamPreviewModel) == 0x37C0, "C_CSGO_TeamPreviewModel size mismatch");
+            static_assert(sizeof(C_CSGO_TeamPreviewModel) == 0x37D0, "C_CSGO_TeamPreviewModel size mismatch");
         }
     }
 }

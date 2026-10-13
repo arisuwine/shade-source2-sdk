@@ -1088,6 +1088,12 @@ namespace shade {
         };
 
         template<>
+        class CUtlLeanVectorFixedGrowable<Vector, 8> {
+        public:
+            std::uint8_t pad_0000[0x68]; // 0x0000, 0x68 bytes
+        };
+
+        template<>
         class CUtlLeanVectorFixedGrowable<CGlobalSymbol, 3> {
         public:
             std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
@@ -1115,12 +1121,6 @@ namespace shade {
         class CUtlLeanVectorFixedGrowable<Vector2D, 10> {
         public:
             std::uint8_t pad_0000[0x58]; // 0x0000, 0x58 bytes
-        };
-
-        template<>
-        class CUtlLeanVectorFixedGrowable<Vector, 8> {
-        public:
-            std::uint8_t pad_0000[0x68]; // 0x0000, 0x68 bytes
         };
 
         template<>
@@ -1324,15 +1324,15 @@ namespace shade {
         };
 
         template<>
-        class CEntityOutputTemplate<Vector> {
-        public:
-            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
-        };
-
-        template<>
         class CEntityOutputTemplate<CUtlVector<CEntityHandle>> {
         public:
             std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
+        };
+
+        template<>
+        class CEntityOutputTemplate<Vector> {
+        public:
+            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
         };
 
         template<>
