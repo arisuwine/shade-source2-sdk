@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x3da0
+             * Size: 0x3df0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -51,28 +51,28 @@ namespace shade {
                 CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0038, 0x4 bytes
                 std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
                 CUtlVector<shade::sdk::server::CBaseModifier*> m_vecModifiers; // 0x0040, 0x18 bytes
-                std::uint8_t pad_0058[0x3c91]; // 0x0058, 0x3c91 bytes
-                bool m_bPredictedOwner; // 0x3ce9, 0x1 bytes
-                bool m_bAllowModifiersOnDeadEntities; // 0x3cea, 0x1 bytes
-                std::int8_t m_iLockRefCount; // 0x3ceb, 0x1 bytes
-                shade::sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x3cec, 0x2 bytes
-                std::uint8_t pad_3cee[0x2]; // 0x3cee, 0x2 bytes
-                std::uint32_t m_nBroadcastEventListenerMask; // 0x3cf0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nCachedHighestParticleIndex; // 0x3cf4, 0x4 bytes
-                CUtlVector<shade::sdk::client::OwnerModifierEventListener_t> *m_pNotifyOwnerEvents; // 0x3cf8, 0x8 bytes
-                std::uint32_t m_nDisabledGroups; // 0x3d00, 0x4 bytes
-                std::uint32_t m_bvEnabledStateMask[0xb]; // 0x3d04, 0x2c bytes
-                std::uint32_t m_bvDisabledStateMask[0xb]; // 0x3d30, 0x2c bytes
-                std::uint32_t m_bvEnabledPredictedStateMask[0xb]; // 0x3d5c, 0x2c bytes
-                std::uint8_t pad_3d88[0x8]; // 0x3d88, 0x8 bytes
-                bool m_bParentWantsModifierStateChangeCallback; // 0x3d90, 0x1 bytes
-                std::uint8_t pad_3d91[0xf]; // 0x3d91, 0xf bytes
+                std::uint8_t pad_0058[0x3ce9]; // 0x0058, 0x3ce9 bytes
+                bool m_bPredictedOwner; // 0x3d41, 0x1 bytes
+                bool m_bAllowModifiersOnDeadEntities; // 0x3d42, 0x1 bytes
+                std::int8_t m_iLockRefCount; // 0x3d43, 0x1 bytes
+                shade::sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x3d44, 0x2 bytes
+                std::uint8_t pad_3d46[0x2]; // 0x3d46, 0x2 bytes
+                std::uint32_t m_nBroadcastEventListenerMask; // 0x3d48, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nCachedHighestParticleIndex; // 0x3d4c, 0x4 bytes
+                CUtlVector<shade::sdk::client::OwnerModifierEventListener_t> *m_pNotifyOwnerEvents; // 0x3d50, 0x8 bytes
+                std::uint32_t m_nDisabledGroups; // 0x3d58, 0x4 bytes
+                std::uint32_t m_bvEnabledStateMask[0xb]; // 0x3d5c, 0x2c bytes
+                std::uint32_t m_bvDisabledStateMask[0xb]; // 0x3d88, 0x2c bytes
+                std::uint32_t m_bvEnabledPredictedStateMask[0xb]; // 0x3db4, 0x2c bytes
+                std::uint8_t pad_3de0[0x8]; // 0x3de0, 0x8 bytes
+                bool m_bParentWantsModifierStateChangeCallback; // 0x3de8, 0x1 bytes
+                std::uint8_t pad_3de9[0x7]; // 0x3de9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierProperty) == 0x3DA0, "CModifierProperty size mismatch");
+            static_assert(sizeof(CModifierProperty) == 0x3DF0, "CModifierProperty size mismatch");
         }
     }
 }

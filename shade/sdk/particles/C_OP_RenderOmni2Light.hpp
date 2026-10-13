@@ -48,7 +48,8 @@ namespace shade {
             public:
                 shade::sdk::particles::ParticleOmni2LightTypeChoiceList_t m_nLightType; // 0x0230, 0x4 bytes
                 std::uint16_t m_nMaxAllowed; // 0x0234, 0x2 bytes
-                std::uint8_t pad_0236[0x2]; // 0x0236, 0x2 bytes
+                bool m_bIgnoreParticleLightsDisabled; // 0x0236, 0x1 bytes
+                std::uint8_t pad_0237[0x1]; // 0x0237, 0x1 bytes
                 shade::sdk::particleslib::CParticleCollectionVecInput m_vColorBlend; // 0x0238, 0x6d8 bytes
                 shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0910, 0x4 bytes
                 std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes

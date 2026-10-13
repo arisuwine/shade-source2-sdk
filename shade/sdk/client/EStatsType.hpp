@@ -125,8 +125,9 @@ namespace shade {
                 EGameplayTimeScale = 0x68,
                 EAnimationTimeScale = 0x69,
                 EParticleTimeScale = 0x6a,
-                EStatsCount = 0x6b,
-                EStatsInvalid = 0x6b
+                ETechPowerStolen = 0x6b,
+                EStatsCount = 0x6c,
+                EStatsInvalid = 0x6c
             };
         }
     }

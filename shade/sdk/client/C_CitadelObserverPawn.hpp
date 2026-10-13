@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1090
+             * Size: 0x10a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,7 +31,7 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CitadelObserverPawn : public shade::sdk::client::CCitadelPlayerPawnBase {
             public:
-                std::uint8_t pad_1078[0x18]; // 0x1078, 0x18 bytes
+                std::uint8_t pad_1088[0x18]; // 0x1088, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -39,7 +39,7 @@ namespace shade {
              * std::uint8_t m_pCameraServices[0x8]; // Offset: 0xeb8, Size: 0x1, Size In Bytes: 0x8
              */
 
-            static_assert(sizeof(C_CitadelObserverPawn) == 0x1090, "C_CitadelObserverPawn size mismatch");
+            static_assert(sizeof(C_CitadelObserverPawn) == 0x10A0, "C_CitadelObserverPawn size mismatch");
         }
     }
 }

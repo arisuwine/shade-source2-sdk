@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x948
+             * Size: 0x950
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -59,12 +59,14 @@ namespace shade {
                 float m_flDistanceFalloff; // 0x093c, 0x4 bytes
                 float m_flSpotFoV; // 0x0940, 0x4 bytes
                 std::int32_t m_nHSVShiftControlPoint; // 0x0944, 0x4 bytes
+                bool m_bIgnoreParticleLightsDisabled; // 0x0948, 0x1 bytes
+                std::uint8_t pad_0949[0x7]; // 0x0949, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderDeferredLight) == 0x948, "C_OP_RenderDeferredLight size mismatch");
+            static_assert(sizeof(C_OP_RenderDeferredLight) == 0x950, "C_OP_RenderDeferredLight size mismatch");
         }
     }
 }

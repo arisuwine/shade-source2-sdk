@@ -40,8 +40,7 @@ namespace shade {
             class CInWorldItemPanel : public shade::sdk::client::C_PointClientUIWorldPanel {
             public:
                 CHandle<shade::sdk::client::C_BaseEntity> m_hTrackedEntity; // 0x0e10, 0x4 bytes
-                std::int32_t m_nTrackedEntity; // 0x0e14, 0x4 bytes
-                std::uint8_t pad_0e18[0x8]; // 0x0e18, 0x8 bytes
+                std::uint8_t pad_0e14[0xc]; // 0x0e14, 0xc bytes
             };
             #pragma pack(pop)
 

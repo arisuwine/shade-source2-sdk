@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1828
+             * Size: 0x1830
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -66,28 +66,31 @@ namespace shade {
                 std::uint8_t pad_166a[0x6]; // 0x166a, 0x6 bytes
                 CUtlString m_lightCookie; // 0x1670, 0x8 bytes
                 std::int32_t m_nPriority; // 0x1678, 0x4 bytes
-                shade::sdk::particles::ParticleLightFogLightingMode_t m_nFogLightingMode; // 0x167c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFogContribution; // 0x1680, 0x178 bytes
-                shade::sdk::particles::ParticleLightBehaviorChoiceList_t m_nCapsuleLightBehavior; // 0x17f8, 0x4 bytes
-                float m_flCapsuleLength; // 0x17fc, 0x4 bytes
-                bool m_bReverseOrder; // 0x1800, 0x1 bytes
-                bool m_bClosedLoop; // 0x1801, 0x1 bytes
-                std::uint8_t pad_1802[0x2]; // 0x1802, 0x2 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nPrevPntSource; // 0x1804, 0x4 bytes
-                float m_flMaxLength; // 0x1808, 0x4 bytes
-                float m_flMinLength; // 0x180c, 0x4 bytes
-                bool m_bIgnoreDT; // 0x1810, 0x1 bytes
-                std::uint8_t pad_1811[0x3]; // 0x1811, 0x3 bytes
-                float m_flConstrainRadiusToLengthRatio; // 0x1814, 0x4 bytes
-                float m_flLengthScale; // 0x1818, 0x4 bytes
-                float m_flLengthFadeInTime; // 0x181c, 0x4 bytes
-                std::uint8_t pad_1820[0x8]; // 0x1820, 0x8 bytes
+                bool m_bIgnoreParticleLightsDisabled; // 0x167c, 0x1 bytes
+                std::uint8_t pad_167d[0x3]; // 0x167d, 0x3 bytes
+                shade::sdk::particles::ParticleLightFogLightingMode_t m_nFogLightingMode; // 0x1680, 0x4 bytes
+                std::uint8_t pad_1684[0x4]; // 0x1684, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFogContribution; // 0x1688, 0x178 bytes
+                shade::sdk::particles::ParticleLightBehaviorChoiceList_t m_nCapsuleLightBehavior; // 0x1800, 0x4 bytes
+                float m_flCapsuleLength; // 0x1804, 0x4 bytes
+                bool m_bReverseOrder; // 0x1808, 0x1 bytes
+                bool m_bClosedLoop; // 0x1809, 0x1 bytes
+                std::uint8_t pad_180a[0x2]; // 0x180a, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nPrevPntSource; // 0x180c, 0x4 bytes
+                float m_flMaxLength; // 0x1810, 0x4 bytes
+                float m_flMinLength; // 0x1814, 0x4 bytes
+                bool m_bIgnoreDT; // 0x1818, 0x1 bytes
+                std::uint8_t pad_1819[0x3]; // 0x1819, 0x3 bytes
+                float m_flConstrainRadiusToLengthRatio; // 0x181c, 0x4 bytes
+                float m_flLengthScale; // 0x1820, 0x4 bytes
+                float m_flLengthFadeInTime; // 0x1824, 0x4 bytes
+                std::uint8_t pad_1828[0x8]; // 0x1828, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderStandardLight) == 0x1828, "C_OP_RenderStandardLight size mismatch");
+            static_assert(sizeof(C_OP_RenderStandardLight) == 0x1830, "C_OP_RenderStandardLight size mismatch");
         }
     }
 }

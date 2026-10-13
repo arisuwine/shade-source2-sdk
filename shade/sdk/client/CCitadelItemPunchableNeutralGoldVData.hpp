@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x140
+             * Size: 0x148
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemPunchableNeutralGoldVData : public shade::sdk::client::CCitadelItemPickupVData {
             public:
-                float m_flGroundOffset; // 0x0118, 0x4 bytes
-                float m_flSpinRate; // 0x011c, 0x4 bytes
-                float m_flBobHeight; // 0x0120, 0x4 bytes
-                float m_flBobFrequency; // 0x0124, 0x4 bytes
-                float m_flSpinSpeed; // 0x0128, 0x4 bytes
-                std::uint8_t pad_012c[0x4]; // 0x012c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PunchPickupModifier; // 0x0130, 0x10 bytes
+                float m_flGroundOffset; // 0x0120, 0x4 bytes
+                float m_flSpinRate; // 0x0124, 0x4 bytes
+                float m_flBobHeight; // 0x0128, 0x4 bytes
+                float m_flBobFrequency; // 0x012c, 0x4 bytes
+                float m_flSpinSpeed; // 0x0130, 0x4 bytes
+                std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PunchPickupModifier; // 0x0138, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPunchableNeutralGoldVData) == 0x140, "CCitadelItemPunchableNeutralGoldVData size mismatch");
+            static_assert(sizeof(CCitadelItemPunchableNeutralGoldVData) == 0x148, "CCitadelItemPunchableNeutralGoldVData size mismatch");
         }
     }
 }

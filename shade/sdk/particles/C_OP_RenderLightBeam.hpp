@@ -60,7 +60,8 @@ namespace shade {
                 shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFogContribution; // 0x1d40, 0x178 bytes
                 shade::sdk::particleslib::CPerParticleFloatInput m_flRenderFilter; // 0x1eb8, 0x178 bytes
                 bool m_bDebugOrientation; // 0x2030, 0x1 bytes
-                std::uint8_t pad_2031[0x7]; // 0x2031, 0x7 bytes
+                bool m_bIgnoreParticleLightsDisabled; // 0x2031, 0x1 bytes
+                std::uint8_t pad_2032[0x6]; // 0x2032, 0x6 bytes
             };
             #pragma pack(pop)
 

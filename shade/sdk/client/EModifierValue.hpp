@@ -264,7 +264,8 @@ namespace shade {
                 MODIFIER_VALUE_RATKING_ARMOR_HEALTH = 0xf3,
                 MODIFIER_VALUE_RATKING_ARMOR_HEALTH_MAX = 0xf4,
                 MODIFIER_VALUE_RATKING_NIBBLE_STACKS = 0xf5,
-                MODIFIER_VALUE_COUNT = 0xf6,
+                MODIFIER_VALUE_WEAPON_OBSTRUCTION_ORIGIN_OVERRIDE = 0xf6,
+                MODIFIER_VALUE_COUNT = 0xf7,
                 MODIFIER_VALUE_INVALID = 0xffff
             };
         }

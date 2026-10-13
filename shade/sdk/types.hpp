@@ -176,6 +176,7 @@ namespace shade {
 #include "shade/sdk/client/EAbilityResourceType.hpp"
 #include "shade/sdk/client/EAbilitySlots_t.hpp"
 #include "shade/sdk/client/EBabaBenchMeleeAttackType.hpp"
+#include "shade/sdk/client/EChessPieceType.hpp"
 #include "shade/sdk/client/ECitadelAudioLoopSounds.hpp"
 #include "shade/sdk/client/ECitadelDamageType.hpp"
 #include "shade/sdk/client/ECitadelGameMode.hpp"
@@ -350,6 +351,7 @@ namespace shade {
             class CCitadelTunnelNode;
             class CCitadelWeaponInfo;
             class CCitadelZipLineNode;
+            class CCitadel_Ability_Chessmaster_MoveChessPiece;
             class CCitadel_Ability_Jump;
             class CCitadel_Ability_Yakuza_Shakedown;
             class CCitadel_DoorwayPortal;

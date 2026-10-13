@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17e8
+             * Size: 0x17f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -52,13 +52,13 @@ namespace shade {
                 shade::sdk::client::HeroID_t m_nCopiedHeroID; // 0x16bc, 0x4 bytes
                 CUtlVector<shade::sdk::client::LingeringCopiedAbility_t> m_vecLingeringCopiedAbilities; // 0x16c0, 0x18 bytes
                 shade::sdk::client::ModelChange_t m_ModelChange; // 0x16d8, 0xe8 bytes
-                std::uint8_t pad_17c0[0x28]; // 0x17c0, 0x28 bytes
+                std::uint8_t pad_17c0[0x30]; // 0x17c0, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_CopyUlt) == 0x17E8, "CCitadel_Ability_Magician_CopyUlt size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_CopyUlt) == 0x17F0, "CCitadel_Ability_Magician_CopyUlt size mismatch");
         }
     }
 }

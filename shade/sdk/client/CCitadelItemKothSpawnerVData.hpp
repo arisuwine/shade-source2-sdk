@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelItemKothSpawnerVData : public shade::sdk::client::CCitadelItemPickupVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnGroundTouchParticle; // 0x0118, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_OnGroundTouchParticle; // 0x0120, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemKothSpawnerVData) == 0x1F8, "CCitadelItemKothSpawnerVData size mismatch");
+            static_assert(sizeof(CCitadelItemKothSpawnerVData) == 0x200, "CCitadelItemKothSpawnerVData size mismatch");
         }
     }
 }

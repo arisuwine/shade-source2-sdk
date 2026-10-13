@@ -44,7 +44,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x29c0
+             * Size: 0x29d0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -171,13 +171,13 @@ namespace shade {
                 std::uint8_t pad_287c[0x4]; // 0x287c, 0x4 bytes
                 shade::sdk::server::CCitadelPlayOfTheGame *m_pPlayOfTheGame; // 0x2880, 0x8 bytes
                 shade::sdk::server::CStreetBrawlController m_tStreetBrawl; // 0x2888, 0x130 bytes
-                std::uint8_t pad_29b8[0x8]; // 0x29b8, 0x8 bytes
+                std::uint8_t pad_29b8[0x18]; // 0x29b8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelGameRules) == 0x29C0, "CCitadelGameRules size mismatch");
+            static_assert(sizeof(CCitadelGameRules) == 0x29D0, "CCitadelGameRules size mismatch");
         }
     }
 }

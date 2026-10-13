@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x118
+             * Size: 0x120
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,17 @@ namespace shade {
                 float m_flPhysicsRadius; // 0x0028, 0x4 bytes
                 std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbientParticle; // 0x0030, 0xe0 bytes
-                shade::sdk::client::CitadelMusicMsgType m_nSpawnMusicState; // 0x0110, 0x4 bytes
-                std::uint8_t pad_0114[0x4]; // 0x0114, 0x4 bytes
+                Color m_OutlineColor; // 0x0110, 0x4 bytes
+                bool m_bPanelShowThruWalls; // 0x0114, 0x1 bytes
+                std::uint8_t pad_0115[0x3]; // 0x0115, 0x3 bytes
+                shade::sdk::client::CitadelMusicMsgType m_nSpawnMusicState; // 0x0118, 0x4 bytes
+                std::uint8_t pad_011c[0x4]; // 0x011c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelItemPickupVData) == 0x118, "CCitadelItemPickupVData size mismatch");
+            static_assert(sizeof(CCitadelItemPickupVData) == 0x120, "CCitadelItemPickupVData size mismatch");
         }
     }
 }
