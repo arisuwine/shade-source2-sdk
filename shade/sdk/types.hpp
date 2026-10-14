@@ -277,7 +277,6 @@ namespace shade {
             class CBaseFilter;
             class CBasePlayerController;
             class CCSCustomHudLayoutState;
-            class CCSMinimapVolume;
             class CCSPlayerController;
             struct CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t;
             class CDamageRecord;
@@ -606,7 +605,6 @@ namespace shade {
             class CBasePropDoor;
             class CBeam;
             class CCSCustomHudLayoutState;
-            class CCSMinimapVolume;
             class CCSObserverPawn;
             class CCSPlayerController;
             class CCSPlayerPawn;

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf0
+             * Size: 0x100
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSObserver_ObserverServices : public shade::sdk::client::CPlayer_ObserverServices {
             public:
-                std::uint8_t pad_0060[0x8]; // 0x0060, 0x8 bytes
-                shade::sdk::client::ObserverInterpState_t m_obsInterpState; // 0x0068, 0x4 bytes
-                std::uint8_t pad_006c[0x84]; // 0x006c, 0x84 bytes
+                std::uint8_t pad_0060[0x10]; // 0x0060, 0x10 bytes
+                shade::sdk::client::ObserverInterpState_t m_obsInterpState; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x8c]; // 0x0074, 0x8c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCSObserver_ObserverServices) == 0xF0, "CCSObserver_ObserverServices size mismatch");
+            static_assert(sizeof(CCSObserver_ObserverServices) == 0x100, "CCSObserver_ObserverServices size mismatch");
         }
     }
 }
