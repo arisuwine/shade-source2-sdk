@@ -1320,15 +1320,9 @@ namespace shade {
         };
 
         template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__StateDefinition_t, 5> {
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmLayerBlendNode__LayerDefinition_t, 3> {
         public:
-            std::uint8_t pad_0000[0x120]; // 0x0000, 0x120 bytes
-        };
-
-        template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmParameterizedBlendNode__BlendRange_t, 5> {
-        public:
-            std::uint8_t pad_0000[0x48]; // 0x0000, 0x48 bytes
+            std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
         };
 
         template<>
@@ -1338,9 +1332,15 @@ namespace shade {
         };
 
         template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmLayerBlendNode__LayerDefinition_t, 3> {
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__StateDefinition_t, 5> {
         public:
-            std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
+            std::uint8_t pad_0000[0x120]; // 0x0000, 0x120 bytes
+        };
+
+        template<>
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmParameterizedBlendNode__BlendRange_t, 5> {
+        public:
+            std::uint8_t pad_0000[0x48]; // 0x0000, 0x48 bytes
         };
 
         template<>
@@ -1433,13 +1433,13 @@ namespace shade {
         };
 
         template<>
-        class CNetworkUtlVectorBase<shade::sdk::client::NeutralSpawnBoxes_t> {
+        class CNetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> {
         public:
             std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
         };
 
         template<>
-        class CNetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> {
+        class CNetworkUtlVectorBase<shade::sdk::client::NeutralSpawnBoxes_t> {
         public:
             std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
         };
