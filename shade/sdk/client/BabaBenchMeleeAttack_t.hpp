@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x458
+             * Size: 0x460
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -60,21 +60,23 @@ namespace shade {
                 CPiecewiseCurve m_SpeedBonusCurve; // 0x0080, 0x40 bytes
                 float m_flMovementAcc; // 0x00c0, 0x4 bytes
                 float m_flAttackImpulse; // 0x00c4, 0x4 bytes
-                CSoundEventName m_strMeleeDashSound; // 0x00c8, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x00d8, 0x10 bytes
-                CSoundEventName m_strHitHeroSound; // 0x00e8, 0x10 bytes
-                CSoundEventName m_strHitDebrisSound; // 0x00f8, 0x10 bytes
-                CSoundEventName m_strMissSound; // 0x0108, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x0118, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeAttackParticle; // 0x01f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x02d8, 0xe0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttackStart; // 0x03b8, 0xa0 bytes
+                float m_flAttackImpulseMaxUpward; // 0x00c8, 0x4 bytes
+                std::uint8_t pad_00cc[0x4]; // 0x00cc, 0x4 bytes
+                CSoundEventName m_strMeleeDashSound; // 0x00d0, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x00e0, 0x10 bytes
+                CSoundEventName m_strHitHeroSound; // 0x00f0, 0x10 bytes
+                CSoundEventName m_strHitDebrisSound; // 0x0100, 0x10 bytes
+                CSoundEventName m_strMissSound; // 0x0110, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x0120, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeAttackParticle; // 0x0200, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x02e0, 0xe0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttackStart; // 0x03c0, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(BabaBenchMeleeAttack_t) == 0x458, "BabaBenchMeleeAttack_t size mismatch");
+            static_assert(sizeof(BabaBenchMeleeAttack_t) == 0x460, "BabaBenchMeleeAttack_t size mismatch");
         }
     }
 }

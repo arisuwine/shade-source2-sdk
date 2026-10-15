@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1688
+             * Size: 0x1690
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -49,14 +49,15 @@ namespace shade {
                 Vector m_vDashStartVelocity; // 0x14e0, 0xc bytes
                 bool m_bAttackImpulseApplied; // 0x14ec, 0x1 bytes
                 std::uint8_t pad_14ed[0x3]; // 0x14ed, 0x3 bytes
-                QAngle m_angForced; // 0x14f0, 0xc bytes
-                std::uint8_t pad_14fc[0x18c]; // 0x14fc, 0x18c bytes
+                std::int32_t m_nAirborneAttackImpulses; // 0x14f0, 0x4 bytes
+                QAngle m_angForced; // 0x14f4, 0xc bytes
+                std::uint8_t pad_1500[0x190]; // 0x1500, 0x190 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_BenchMelee) == 0x1688, "CCitadel_Ability_Baba_BenchMelee size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_BenchMelee) == 0x1690, "CCitadel_Ability_Baba_BenchMelee size mismatch");
         }
     }
 }

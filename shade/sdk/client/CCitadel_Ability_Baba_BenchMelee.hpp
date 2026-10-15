@@ -48,8 +48,9 @@ namespace shade {
                 Vector m_vDashStartVelocity; // 0x1700, 0xc bytes
                 bool m_bAttackImpulseApplied; // 0x170c, 0x1 bytes
                 std::uint8_t pad_170d[0x3]; // 0x170d, 0x3 bytes
-                QAngle m_angForced; // 0x1710, 0xc bytes
-                std::uint8_t pad_171c[0x194]; // 0x171c, 0x194 bytes
+                std::int32_t m_nAirborneAttackImpulses; // 0x1710, 0x4 bytes
+                QAngle m_angForced; // 0x1714, 0xc bytes
+                std::uint8_t pad_1720[0x190]; // 0x1720, 0x190 bytes
             };
             #pragma pack(pop)
 

@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x27c8
+             * Size: 0x2718
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,32 +33,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Deadpack_Rocketeer : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x1078]; // 0x16d8, 0x1078 bytes
-                Vector m_vIntentSpaceVelocities; // 0x2750, 0xc bytes
-                Vector m_vIntentSpaceCurrent; // 0x275c, 0xc bytes
-                Vector m_vIntentSpaceTarget; // 0x2768, 0xc bytes
-                Vector m_vVelocity; // 0x2774, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_tStateEnterTime; // 0x2780, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tGravityReductionStartTime; // 0x2784, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tGravityReductionEndTime; // 0x2788, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tJetpackInputHeldBeginTime; // 0x278c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastDashJumpTime; // 0x2790, 0x4 bytes
-                Vector m_vSputterIntents; // 0x2794, 0xc bytes
-                Vector m_vVTOLVel; // 0x27a0, 0xc bytes
-                float m_flStartHeight; // 0x27ac, 0x4 bytes
-                float m_flInitialYaw; // 0x27b0, 0x4 bytes
-                bool m_bDiveStraightDown; // 0x27b4, 0x1 bytes
-                std::uint8_t pad_27b5[0x3]; // 0x27b5, 0x3 bytes
-                float m_flCastDelayFrac; // 0x27b8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tHeatDecayStartTime; // 0x27bc, 0x4 bytes
-                shade::sdk::client::ERocketeerState m_eState; // 0x27c0, 0x1 bytes
-                std::uint8_t pad_27c1[0x7]; // 0x27c1, 0x7 bytes
+                std::uint8_t pad_16d8[0xfc8]; // 0x16d8, 0xfc8 bytes
+                Vector m_vIntentSpaceVelocities; // 0x26a0, 0xc bytes
+                Vector m_vIntentSpaceCurrent; // 0x26ac, 0xc bytes
+                Vector m_vIntentSpaceTarget; // 0x26b8, 0xc bytes
+                Vector m_vVelocity; // 0x26c4, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_tStateEnterTime; // 0x26d0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tGravityReductionStartTime; // 0x26d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tGravityReductionEndTime; // 0x26d8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tJetpackInputHeldBeginTime; // 0x26dc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastDashJumpTime; // 0x26e0, 0x4 bytes
+                Vector m_vSputterIntents; // 0x26e4, 0xc bytes
+                Vector m_vVTOLVel; // 0x26f0, 0xc bytes
+                float m_flStartHeight; // 0x26fc, 0x4 bytes
+                float m_flInitialYaw; // 0x2700, 0x4 bytes
+                bool m_bDiveStraightDown; // 0x2704, 0x1 bytes
+                std::uint8_t pad_2705[0x3]; // 0x2705, 0x3 bytes
+                float m_flCastDelayFrac; // 0x2708, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tHeatDecayStartTime; // 0x270c, 0x4 bytes
+                shade::sdk::client::ERocketeerState m_eState; // 0x2710, 0x1 bytes
+                std::uint8_t pad_2711[0x7]; // 0x2711, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Deadpack_Rocketeer) == 0x27C8, "CCitadel_Ability_Deadpack_Rocketeer size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Deadpack_Rocketeer) == 0x2718, "CCitadel_Ability_Deadpack_Rocketeer size mismatch");
         }
     }
 }
