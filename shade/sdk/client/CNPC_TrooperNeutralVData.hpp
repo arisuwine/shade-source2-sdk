@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xef0
+             * Size: 0xf00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -77,15 +77,16 @@ namespace shade {
                 CUtlVector<CUtlString> m_vecRandomBodyGroup; // 0x0e70, 0x18 bytes
                 CUtlVector<CUtlString> m_vecRandomSkin; // 0x0e88, 0x18 bytes
                 CSoundEventName m_SpawnSound; // 0x0ea0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NeutralDamageGrowth; // 0x0eb0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SleepModifier; // 0x0ec0, 0x10 bytes
-                CUtlHashtable<std::int32_t, CUtlString> m_mapViewerSoulsClass; // 0x0ed0, 0x20 bytes
+                CSoundEventName m_AggroSound; // 0x0eb0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_NeutralDamageGrowth; // 0x0ec0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SleepModifier; // 0x0ed0, 0x10 bytes
+                CUtlHashtable<std::int32_t, CUtlString> m_mapViewerSoulsClass; // 0x0ee0, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_TrooperNeutralVData) == 0xEF0, "CNPC_TrooperNeutralVData size mismatch");
+            static_assert(sizeof(CNPC_TrooperNeutralVData) == 0xF00, "CNPC_TrooperNeutralVData size mismatch");
         }
     }
 }

@@ -16,27 +16,27 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CCitadel_Modifier_Intrinsic_Base.hpp"
+#include "shade/sdk/server/CCitadel_Modifier_BaseBulletPreRollProc.hpp"
 
 namespace shade {
     namespace sdk {
-        namespace client {
+        namespace server {
             /* Class Parameters
-             * Size: 0x4a8
+             * Size: 0x5c8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_ChessMaster_CheckWatcher : public shade::sdk::client::CCitadel_Modifier_Intrinsic_Base {
+            class CCitadel_Modifier_Artist_FlowState_Watcher : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_0138[0x370]; // 0x0138, 0x370 bytes
+                std::uint8_t pad_0300[0x2c8]; // 0x0300, 0x2c8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChessMaster_CheckWatcher) == 0x4A8, "CCitadel_Modifier_ChessMaster_CheckWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_FlowState_Watcher) == 0x5C8, "CCitadel_Modifier_Artist_FlowState_Watcher size mismatch");
         }
     }
 }

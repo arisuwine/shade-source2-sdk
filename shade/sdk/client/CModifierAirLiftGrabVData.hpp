@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x988
+             * Size: 0x998
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,14 +40,15 @@ namespace shade {
             class CModifierAirLiftGrabVData : public shade::sdk::client::CCitadel_Modifier_DragVData {
             public:
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GrabEffect; // 0x08a0, 0xe0 bytes
-                float m_flAllyGrabCancelTime; // 0x0980, 0x4 bytes
-                std::uint8_t pad_0984[0x4]; // 0x0984, 0x4 bytes
+                CSoundEventName m_strBombLaunchSound; // 0x0980, 0x10 bytes
+                float m_flAllyGrabCancelTime; // 0x0990, 0x4 bytes
+                std::uint8_t pad_0994[0x4]; // 0x0994, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifierAirLiftGrabVData) == 0x988, "CModifierAirLiftGrabVData size mismatch");
+            static_assert(sizeof(CModifierAirLiftGrabVData) == 0x998, "CModifierAirLiftGrabVData size mismatch");
         }
     }
 }

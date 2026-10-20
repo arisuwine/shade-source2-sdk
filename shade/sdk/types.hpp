@@ -327,6 +327,7 @@ namespace shade {
             struct AbilityUpgrade_t;
             struct AmbientParticleSettings_t;
             struct AnimGraph2SerializedPoseRecipeSlot_t;
+            struct ArtistWeaponBulletInfo_t;
             struct AttackData_t;
             struct BabaBenchMeleeAttack_t;
             struct BonusUpgrade_t;
@@ -392,6 +393,9 @@ namespace shade {
             class C_CitadelPlayerPawn;
             class C_CitadelProjectile;
             class C_CitadelViscousBall;
+            class C_Citadel_Artist_SolidBlocker;
+            class C_Citadel_Artist_StrokeBlocker;
+            class C_Citadel_Artist_VisionBlocker;
             class C_Citadel_Ice_Dome_Blocker;
             class C_Citadel_Magic_Beam_Blocker;
             class C_Citadel_RestorativeGooCube;
@@ -816,6 +820,9 @@ namespace shade {
             class CCitadel_Ability_Thumper_4;
             class CCitadel_Ability_WreckingBall;
             class CCitadel_Ability_Yakuza_Shakedown;
+            class CCitadel_Artist_SolidBlocker;
+            class CCitadel_Artist_StrokeBlocker;
+            class CCitadel_Artist_VisionBlocker;
             class CCitadel_DoorwayPortal;
             class CCitadel_GuidedArrow_OwlModel;
             class CCitadel_Ice_Dome_Blocker;

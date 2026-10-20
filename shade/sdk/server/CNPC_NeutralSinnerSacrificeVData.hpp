@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1190
+             * Size: 0x11a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,50 +39,50 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_NeutralSinnerSacrificeVData : public shade::sdk::server::CNPC_TrooperNeutralVData {
             public:
-                float m_flRetaliateDamage; // 0x0f10, 0x4 bytes
-                float m_flVaultMiniGameTime; // 0x0f14, 0x4 bytes
-                float m_flVaultMiniGameHitWindow; // 0x0f18, 0x4 bytes
-                float m_flVaultMiniGameWheelScrollTime; // 0x0f1c, 0x4 bytes
-                std::int32_t m_iVaultSuccessLightBuffDropCount; // 0x0f20, 0x4 bytes
-                std::int32_t m_iVaultSuccessHeavyBuffDropCount; // 0x0f24, 0x4 bytes
-                float m_flMiniGameFastSpeed; // 0x0f28, 0x4 bytes
-                float m_flMiniGameFastChance; // 0x0f2c, 0x4 bytes
-                CModelMaterialGroupName m_strFastMaterialGroup; // 0x0f30, 0x8 bytes
-                float m_flVaultLightScrollTime; // 0x0f38, 0x4 bytes
-                float m_flVaultWheelScrollTime; // 0x0f3c, 0x4 bytes
-                float m_flVaultLightFastFlashTime; // 0x0f40, 0x4 bytes
-                float m_flVaultSuccessLightsScroll; // 0x0f44, 0x4 bytes
-                float m_flVaultSuccessWheelScroll; // 0x0f48, 0x4 bytes
-                float m_flVaultSuccessDestroyTime; // 0x0f4c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VaultSuccessParticle; // 0x0f50, 0xe0 bytes
-                CSoundEventName m_VaultIdleLoopSound; // 0x1030, 0x10 bytes
-                CSoundEventName m_VaultStartActiveSound; // 0x1040, 0x10 bytes
-                CSoundEventName m_VaultActiveLoopSound; // 0x1050, 0x10 bytes
-                CSoundEventName m_VaultStartCriticalSound; // 0x1060, 0x10 bytes
-                CSoundEventName m_VaultStartFastCriticalSound; // 0x1070, 0x10 bytes
-                CSoundEventName m_VaultCriticalLoopSound; // 0x1080, 0x10 bytes
-                CSoundEventName m_VaultHitSuccessSoundLight; // 0x1090, 0x10 bytes
-                CSoundEventName m_VaultHitSuccessSoundHeavy; // 0x10a0, 0x10 bytes
-                CSoundEventName m_VaultHitFailSound; // 0x10b0, 0x10 bytes
-                CSoundEventName m_VaultLightPowerupGainedSound; // 0x10c0, 0x10 bytes
-                CSoundEventName m_VaultHeavyPowerupGainedSound; // 0x10d0, 0x10 bytes
-                CSoundEventName m_VaultHit01; // 0x10e0, 0x10 bytes
-                CSoundEventName m_VaultHit02; // 0x10f0, 0x10 bytes
-                CSoundEventName m_VaultHit03; // 0x1100, 0x10 bytes
-                CSoundEventName m_VaultHit04; // 0x1110, 0x10 bytes
-                CSoundEventName m_VaultHit05; // 0x1120, 0x10 bytes
-                CSoundEventName m_VaultHit06; // 0x1130, 0x10 bytes
-                CSoundEventName m_VaultHit07; // 0x1140, 0x10 bytes
-                CSoundEventName m_VaultLight; // 0x1150, 0x10 bytes
-                CSoundEventName m_VaultFastLightFlash; // 0x1160, 0x10 bytes
-                CSoundEventName m_VaultLightHitWindow; // 0x1170, 0x10 bytes
-                CSoundEventName m_VaultWheelSuccessDing; // 0x1180, 0x10 bytes
+                float m_flRetaliateDamage; // 0x0f20, 0x4 bytes
+                float m_flVaultMiniGameTime; // 0x0f24, 0x4 bytes
+                float m_flVaultMiniGameHitWindow; // 0x0f28, 0x4 bytes
+                float m_flVaultMiniGameWheelScrollTime; // 0x0f2c, 0x4 bytes
+                std::int32_t m_iVaultSuccessLightBuffDropCount; // 0x0f30, 0x4 bytes
+                std::int32_t m_iVaultSuccessHeavyBuffDropCount; // 0x0f34, 0x4 bytes
+                float m_flMiniGameFastSpeed; // 0x0f38, 0x4 bytes
+                float m_flMiniGameFastChance; // 0x0f3c, 0x4 bytes
+                CModelMaterialGroupName m_strFastMaterialGroup; // 0x0f40, 0x8 bytes
+                float m_flVaultLightScrollTime; // 0x0f48, 0x4 bytes
+                float m_flVaultWheelScrollTime; // 0x0f4c, 0x4 bytes
+                float m_flVaultLightFastFlashTime; // 0x0f50, 0x4 bytes
+                float m_flVaultSuccessLightsScroll; // 0x0f54, 0x4 bytes
+                float m_flVaultSuccessWheelScroll; // 0x0f58, 0x4 bytes
+                float m_flVaultSuccessDestroyTime; // 0x0f5c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VaultSuccessParticle; // 0x0f60, 0xe0 bytes
+                CSoundEventName m_VaultIdleLoopSound; // 0x1040, 0x10 bytes
+                CSoundEventName m_VaultStartActiveSound; // 0x1050, 0x10 bytes
+                CSoundEventName m_VaultActiveLoopSound; // 0x1060, 0x10 bytes
+                CSoundEventName m_VaultStartCriticalSound; // 0x1070, 0x10 bytes
+                CSoundEventName m_VaultStartFastCriticalSound; // 0x1080, 0x10 bytes
+                CSoundEventName m_VaultCriticalLoopSound; // 0x1090, 0x10 bytes
+                CSoundEventName m_VaultHitSuccessSoundLight; // 0x10a0, 0x10 bytes
+                CSoundEventName m_VaultHitSuccessSoundHeavy; // 0x10b0, 0x10 bytes
+                CSoundEventName m_VaultHitFailSound; // 0x10c0, 0x10 bytes
+                CSoundEventName m_VaultLightPowerupGainedSound; // 0x10d0, 0x10 bytes
+                CSoundEventName m_VaultHeavyPowerupGainedSound; // 0x10e0, 0x10 bytes
+                CSoundEventName m_VaultHit01; // 0x10f0, 0x10 bytes
+                CSoundEventName m_VaultHit02; // 0x1100, 0x10 bytes
+                CSoundEventName m_VaultHit03; // 0x1110, 0x10 bytes
+                CSoundEventName m_VaultHit04; // 0x1120, 0x10 bytes
+                CSoundEventName m_VaultHit05; // 0x1130, 0x10 bytes
+                CSoundEventName m_VaultHit06; // 0x1140, 0x10 bytes
+                CSoundEventName m_VaultHit07; // 0x1150, 0x10 bytes
+                CSoundEventName m_VaultLight; // 0x1160, 0x10 bytes
+                CSoundEventName m_VaultFastLightFlash; // 0x1170, 0x10 bytes
+                CSoundEventName m_VaultLightHitWindow; // 0x1180, 0x10 bytes
+                CSoundEventName m_VaultWheelSuccessDing; // 0x1190, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_NeutralSinnerSacrificeVData) == 0x1190, "CNPC_NeutralSinnerSacrificeVData size mismatch");
+            static_assert(sizeof(CNPC_NeutralSinnerSacrificeVData) == 0x11A0, "CNPC_NeutralSinnerSacrificeVData size mismatch");
         }
     }
 }

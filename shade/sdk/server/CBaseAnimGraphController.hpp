@@ -45,7 +45,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5d0
+             * Size: 0x6e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -82,23 +82,23 @@ namespace shade {
                 CNetworkUtlVectorBase<std::uint8_t> m_SerializePoseRecipeAG2Dynamic; // 0x0310, 0x18 bytes
                 std::uint32_t m_nSerializePoseRecipeAG2ActiveSlot; // 0x0328, 0x4 bytes
                 std::int32_t m_nSerializePoseRecipeVersionAG2; // 0x032c, 0x4 bytes
-                std::uint8_t pad_0330[0x10]; // 0x0330, 0x10 bytes
-                std::int32_t m_nServerGraphInstanceIteration; // 0x0340, 0x4 bytes
-                std::int32_t m_nServerSerializationContextIteration; // 0x0344, 0x4 bytes
-                shade::sdk::resourcefile::ResourceId_t m_primaryGraphId; // 0x0348, 0x8 bytes
-                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalGraphIds; // 0x0350, 0x18 bytes
-                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalClipIds; // 0x0368, 0x18 bytes
-                CGlobalSymbol m_sAnimGraph2Identifier; // 0x0380, 0x8 bytes
-                shade::sdk::client::CAnimGraph2InstancePtr m_pGraphInstanceAG2; // 0x0388, 0x10 bytes
-                std::uint8_t pad_0398[0x210]; // 0x0398, 0x210 bytes
-                shade::sdk::client::CExternalAnimGraphList m_vecExternalGraphs; // 0x05a8, 0x20 bytes
-                std::uint8_t pad_05c8[0x8]; // 0x05c8, 0x8 bytes
+                std::uint8_t pad_0330[0x120]; // 0x0330, 0x120 bytes
+                std::int32_t m_nServerGraphInstanceIteration; // 0x0450, 0x4 bytes
+                std::int32_t m_nServerSerializationContextIteration; // 0x0454, 0x4 bytes
+                shade::sdk::resourcefile::ResourceId_t m_primaryGraphId; // 0x0458, 0x8 bytes
+                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalGraphIds; // 0x0460, 0x18 bytes
+                CNetworkUtlVectorBase<shade::sdk::resourcefile::ResourceId_t> m_vecExternalClipIds; // 0x0478, 0x18 bytes
+                CGlobalSymbol m_sAnimGraph2Identifier; // 0x0490, 0x8 bytes
+                shade::sdk::client::CAnimGraph2InstancePtr m_pGraphInstanceAG2; // 0x0498, 0x10 bytes
+                std::uint8_t pad_04a8[0x210]; // 0x04a8, 0x210 bytes
+                shade::sdk::client::CExternalAnimGraphList m_vecExternalGraphs; // 0x06b8, 0x20 bytes
+                std::uint8_t pad_06d8[0x8]; // 0x06d8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimGraphController) == 0x5D0, "CBaseAnimGraphController size mismatch");
+            static_assert(sizeof(CBaseAnimGraphController) == 0x6E0, "CBaseAnimGraphController size mismatch");
         }
     }
 }

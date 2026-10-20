@@ -16,11 +16,11 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/client/CCitadel_Modifier_Intrinsic_BaseVData.hpp"
+#include "shade/sdk/server/CCitadel_Modifier_BaseBulletPreRollProcVData.hpp"
 
 namespace shade {
     namespace sdk {
-        namespace client {
+        namespace server {
             class CCitadelModifier;
         }
     }
@@ -28,27 +28,25 @@ namespace shade {
 
 namespace shade {
     namespace sdk {
-        namespace client {
+        namespace server {
             /* Class Parameters
-             * Size: 0x7d0
+             * Size: 0x8e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_ChessMaster_CheckWatcherVData : public shade::sdk::client::CCitadel_Modifier_Intrinsic_BaseVData {
+            class CCitadel_Modifier_Artist_FlowState_Watcher_VData : public shade::sdk::server::CCitadel_Modifier_BaseBulletPreRollProcVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StackModifier; // 0x0790, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ImmobilizeModifier; // 0x07a0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CooldownModifier; // 0x07b0, 0x10 bytes
-                CSoundEventName m_strSuccessProcSound; // 0x07c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x08c8, 0x10 bytes
+                CSoundEventName m_strRefreshStackSound; // 0x08d8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChessMaster_CheckWatcherVData) == 0x7D0, "CCitadel_Modifier_ChessMaster_CheckWatcherVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_FlowState_Watcher_VData) == 0x8E8, "CCitadel_Modifier_Artist_FlowState_Watcher_VData size mismatch");
         }
     }
 }

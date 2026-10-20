@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf18
+             * Size: 0xf28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_TrooperNeutralNodeMoverVData : public shade::sdk::client::CNPC_TrooperNeutralVData {
             public:
-                bool m_bEnableMovementToNodes; // 0x0ef0, 0x1 bytes
-                std::uint8_t pad_0ef1[0x3]; // 0x0ef1, 0x3 bytes
-                shade::sdk::tier2::CRangeFloat m_flExposedDuration; // 0x0ef4, 0x8 bytes
-                shade::sdk::tier2::CRangeFloat m_flHideDuration; // 0x0efc, 0x8 bytes
-                std::uint8_t pad_0f04[0x4]; // 0x0f04, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HidingModifier; // 0x0f08, 0x10 bytes
+                bool m_bEnableMovementToNodes; // 0x0f00, 0x1 bytes
+                std::uint8_t pad_0f01[0x3]; // 0x0f01, 0x3 bytes
+                shade::sdk::tier2::CRangeFloat m_flExposedDuration; // 0x0f04, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flHideDuration; // 0x0f0c, 0x8 bytes
+                std::uint8_t pad_0f14[0x4]; // 0x0f14, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HidingModifier; // 0x0f18, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_TrooperNeutralNodeMoverVData) == 0xF18, "CNPC_TrooperNeutralNodeMoverVData size mismatch");
+            static_assert(sizeof(CNPC_TrooperNeutralNodeMoverVData) == 0xF28, "CNPC_TrooperNeutralNodeMoverVData size mismatch");
         }
     }
 }

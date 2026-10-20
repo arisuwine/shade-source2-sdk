@@ -133,13 +133,13 @@ namespace shade {
                 CLASS_ARTIST_TRANSFORMINGPROJECTILE = 0x70,
                 CLASS_ARTIST_TIGER = 0x71,
                 CLASS_ARTIST_STROKEBLOCKER = 0x72,
-                CLASS_NURSE_REVIVAL_TARGET = 0x73,
-                CLASS_RANKED_BADGE_PROP = 0x74,
-                CLASS_LOCAL_PLAYER_RANKED_BADGE_PROP = 0x75,
-                CLASS_RATKING_STANDARD = 0x76,
-                CLASS_RATKING_RAT = 0x77,
-                CLASS_RATKING_SEWER = 0x78,
-                CLASS_PASSTHROUGH_FAKE_WALL = 0x79,
+                CLASS_RANKED_BADGE_PROP = 0x73,
+                CLASS_LOCAL_PLAYER_RANKED_BADGE_PROP = 0x74,
+                CLASS_RATKING_STANDARD = 0x75,
+                CLASS_RATKING_RAT = 0x76,
+                CLASS_RATKING_SEWER = 0x77,
+                CLASS_PASSTHROUGH_FAKE_WALL = 0x78,
+                CLASS_NURSE_LEECH = 0x79,
                 NUM_CLASSIFY_CLASSES = 0x7a
             };
         }

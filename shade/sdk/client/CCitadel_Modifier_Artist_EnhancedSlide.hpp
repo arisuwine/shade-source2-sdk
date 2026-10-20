@@ -16,27 +16,27 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CCitadel_Modifier_Intrinsic_Base.hpp"
+#include "shade/sdk/client/CCitadelModifier.hpp"
 
 namespace shade {
     namespace sdk {
-        namespace server {
+        namespace client {
             /* Class Parameters
-             * Size: 0x4b8
+             * Size: 0x7e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            class CCitadel_Modifier_ChessMaster_CheckWatcher : public shade::sdk::server::CCitadel_Modifier_Intrinsic_Base {
+            class CCitadel_Modifier_Artist_EnhancedSlide : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x370]; // 0x0148, 0x370 bytes
+                std::uint8_t pad_0138[0x6a8]; // 0x0138, 0x6a8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChessMaster_CheckWatcher) == 0x4B8, "CCitadel_Modifier_ChessMaster_CheckWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_EnhancedSlide) == 0x7E0, "CCitadel_Modifier_Artist_EnhancedSlide size mismatch");
         }
     }
 }

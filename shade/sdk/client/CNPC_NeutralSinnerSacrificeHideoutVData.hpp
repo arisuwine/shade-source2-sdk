@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1188
+             * Size: 0x1198
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CNPC_NeutralSinnerSacrificeHideoutVData : public shade::sdk::client::CNPC_NeutralSinnerSacrificeVData {
             public:
-                CUtlString m_sLocHint01; // 0x1170, 0x8 bytes
-                CUtlString m_sLocHint02; // 0x1178, 0x8 bytes
-                float m_flRespawnTime; // 0x1180, 0x4 bytes
-                std::uint8_t pad_1184[0x4]; // 0x1184, 0x4 bytes
+                CUtlString m_sLocHint01; // 0x1180, 0x8 bytes
+                CUtlString m_sLocHint02; // 0x1188, 0x8 bytes
+                float m_flRespawnTime; // 0x1190, 0x4 bytes
+                std::uint8_t pad_1194[0x4]; // 0x1194, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_NeutralSinnerSacrificeHideoutVData) == 0x1188, "CNPC_NeutralSinnerSacrificeHideoutVData size mismatch");
+            static_assert(sizeof(CNPC_NeutralSinnerSacrificeHideoutVData) == 0x1198, "CNPC_NeutralSinnerSacrificeHideoutVData size mismatch");
         }
     }
 }

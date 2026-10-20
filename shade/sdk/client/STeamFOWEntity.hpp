@@ -43,10 +43,11 @@ namespace shade {
                 std::uint8_t pad_0043[0x1]; // 0x0043, 0x1 bytes
                 shade::sdk::entity2::GameTick_t m_nTickHidden; // 0x0044, 0x4 bytes
                 CUtlString m_strCSSClass; // 0x0048, 0x8 bytes
-                std::uint8_t m_nHealthPercent; // 0x0050, 0x1 bytes
-                std::uint8_t m_nPositionX; // 0x0051, 0x1 bytes
-                std::uint8_t m_nPositionY; // 0x0052, 0x1 bytes
-                std::uint8_t pad_0053[0xd]; // 0x0053, 0xd bytes
+                CEntityIndex m_nOwnerOnlyEntIndex; // 0x0050, 0x4 bytes
+                std::uint8_t m_nHealthPercent; // 0x0054, 0x1 bytes
+                std::uint8_t m_nPositionX; // 0x0055, 0x1 bytes
+                std::uint8_t m_nPositionY; // 0x0056, 0x1 bytes
+                std::uint8_t pad_0057[0x9]; // 0x0057, 0x9 bytes
             };
             #pragma pack(pop)
 

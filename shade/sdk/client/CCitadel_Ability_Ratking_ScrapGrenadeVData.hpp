@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1818
+             * Size: 0x1830
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -62,17 +62,23 @@ namespace shade {
                 float m_flBounceUpMagnitude; // 0x1488, 0x4 bytes
                 float m_flMinTimeBetweenExplosions; // 0x148c, 0x4 bytes
                 float m_flBounceTargetDistanceCheck; // 0x1490, 0x4 bytes
-                std::uint8_t pad_1494[0x4]; // 0x1494, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShrapnelTracer; // 0x1498, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1578, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1658, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConeParticle; // 0x1738, 0xe0 bytes
+                float m_flFirstBounceDetonateTimer; // 0x1494, 0x4 bytes
+                float m_flAdditionalBounceDetonateTimer; // 0x1498, 0x4 bytes
+                float m_flFinalBounceDetonateTimer; // 0x149c, 0x4 bytes
+                float m_flBounceGrenadeSpeed; // 0x14a0, 0x4 bytes
+                float m_flMeleeImpulseLight; // 0x14a4, 0x4 bytes
+                float m_flMeleeImpulseHeavy; // 0x14a8, 0x4 bytes
+                float m_flMeleeImpulseUpScale; // 0x14ac, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShrapnelTracer; // 0x14b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1590, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1670, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConeParticle; // 0x1750, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Ratking_ScrapGrenadeVData) == 0x1818, "CCitadel_Ability_Ratking_ScrapGrenadeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Ratking_ScrapGrenadeVData) == 0x1830, "CCitadel_Ability_Ratking_ScrapGrenadeVData size mismatch");
         }
     }
 }

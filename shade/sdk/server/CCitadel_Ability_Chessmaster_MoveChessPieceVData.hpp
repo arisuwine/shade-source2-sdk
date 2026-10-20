@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1970
+             * Size: 0x1960
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,7 +46,7 @@ namespace shade {
             class CCitadel_Ability_Chessmaster_MoveChessPieceVData : public shade::sdk::server::CitadelAbilityVData {
             public:
                 CUtlOrderedMap<shade::sdk::client::EChessPieceType, CSubclassName<4>> m_mapChessAbilities; // 0x13e8, 0x28 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveModifier; // 0x1410, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveBishopModifier; // 0x1410, 0x10 bytes
                 CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveAllyModifier; // 0x1420, 0x10 bytes
                 CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveKingModifier; // 0x1430, 0x10 bytes
                 CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveQueenModifier; // 0x1440, 0x10 bytes
@@ -59,30 +59,32 @@ namespace shade {
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewAllyParticle; // 0x1638, 0xe0 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewQueenParticle; // 0x1718, 0xe0 bytes
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewKingParticle; // 0x17f8, 0xe0 bytes
-                CSoundEventName m_strHitConfirmSound; // 0x18d8, 0x10 bytes
-                CSoundEventName m_strMoveBishopSound; // 0x18e8, 0x10 bytes
-                CSoundEventName m_strMoveKnightSound; // 0x18f8, 0x10 bytes
-                CSoundEventName m_strMoveQueenSound; // 0x1908, 0x10 bytes
-                CSoundEventName m_strMoveKingSound; // 0x1918, 0x10 bytes
-                CSoundEventName m_strSelectPieceSound; // 0x1928, 0x10 bytes
-                float m_flHoverTime; // 0x1938, 0x4 bytes
-                float m_flPassiveTargetingConeAngle; // 0x193c, 0x4 bytes
-                float m_flPassiveTargetingHalfWidth; // 0x1940, 0x4 bytes
-                float m_flPassiveTargetingNearbyCasterRadius; // 0x1944, 0x4 bytes
-                float m_flPassiveTargetingNearbyCrosshairRadius; // 0x1948, 0x4 bytes
-                float m_flSpawnPositionNavMeshSearchRange; // 0x194c, 0x4 bytes
-                bool m_bCreateSatVolume; // 0x1950, 0x1 bytes
-                bool m_bMoveAllFixedDistance; // 0x1951, 0x1 bytes
-                bool m_bSweepToDestination; // 0x1952, 0x1 bytes
-                bool m_bDebug; // 0x1953, 0x1 bytes
-                std::uint8_t pad_1954[0x4]; // 0x1954, 0x4 bytes
-                CUtlVector<shade::sdk::client::Class_T> m_vecPossibleClasses; // 0x1958, 0x18 bytes
+                CSoundEventName m_strMoveBishopSound; // 0x18d8, 0x10 bytes
+                CSoundEventName m_strMoveKnightSound; // 0x18e8, 0x10 bytes
+                CSoundEventName m_strMoveQueenSound; // 0x18f8, 0x10 bytes
+                CSoundEventName m_strMoveKingSound; // 0x1908, 0x10 bytes
+                CSoundEventName m_strSelectPieceSound; // 0x1918, 0x10 bytes
+                float m_flHoverTime; // 0x1928, 0x4 bytes
+                float m_flPassiveTargetingConeAngle; // 0x192c, 0x4 bytes
+                float m_flPassiveTargetingHalfWidth; // 0x1930, 0x4 bytes
+                float m_flPassiveTargetingNearbyCasterRadius; // 0x1934, 0x4 bytes
+                float m_flPassiveTargetingNearbyCrosshairRadius; // 0x1938, 0x4 bytes
+                float m_flSpawnPositionNavMeshSearchRange; // 0x193c, 0x4 bytes
+                bool m_bSweepToDestination; // 0x1940, 0x1 bytes
+                bool m_bCreateSatVolume; // 0x1941, 0x1 bytes
+                bool m_bAllowSelfTarget; // 0x1942, 0x1 bytes
+                bool m_bAllowNonSelfTarget; // 0x1943, 0x1 bytes
+                bool m_bDrawUIElements; // 0x1944, 0x1 bytes
+                bool m_bDebug; // 0x1945, 0x1 bytes
+                bool m_bApplyMoveCooldown; // 0x1946, 0x1 bytes
+                std::uint8_t pad_1947[0x1]; // 0x1947, 0x1 bytes
+                CUtlVector<shade::sdk::client::Class_T> m_vecPossibleClasses; // 0x1948, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_MoveChessPieceVData) == 0x1970, "CCitadel_Ability_Chessmaster_MoveChessPieceVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_MoveChessPieceVData) == 0x1960, "CCitadel_Ability_Chessmaster_MoveChessPieceVData size mismatch");
         }
     }
 }

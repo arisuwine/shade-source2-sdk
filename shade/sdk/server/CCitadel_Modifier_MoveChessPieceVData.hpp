@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xbe8
+             * Size: 0xba8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,20 +45,19 @@ namespace shade {
                 CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AdditionalPathParticle; // 0x0a30, 0xe0 bytes
                 CPiecewiseCurve m_MovementCurve; // 0x0b10, 0x40 bytes
                 CPiecewiseCurve m_VerticalOffsetCurve; // 0x0b50, 0x40 bytes
-                CPiecewiseCurve m_LeanCurve; // 0x0b90, 0x40 bytes
-                bool m_bDebug; // 0x0bd0, 0x1 bytes
-                bool m_bMoveOnRightTriangle; // 0x0bd1, 0x1 bytes
-                bool m_bMoveOnDiagonal; // 0x0bd2, 0x1 bytes
-                bool m_bImmuneDuringMove; // 0x0bd3, 0x1 bytes
-                bool m_bTryToGroundDuring; // 0x0bd4, 0x1 bytes
-                std::uint8_t pad_0bd5[0x3]; // 0x0bd5, 0x3 bytes
-                CSoundEventName m_strLandingSound; // 0x0bd8, 0x10 bytes
+                bool m_bDebug; // 0x0b90, 0x1 bytes
+                bool m_bMoveOnRightTriangle; // 0x0b91, 0x1 bytes
+                bool m_bMoveOnDiagonal; // 0x0b92, 0x1 bytes
+                bool m_bImmuneDuringMove; // 0x0b93, 0x1 bytes
+                bool m_bTryToGroundDuring; // 0x0b94, 0x1 bytes
+                std::uint8_t pad_0b95[0x3]; // 0x0b95, 0x3 bytes
+                CSoundEventName m_strLandingSound; // 0x0b98, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MoveChessPieceVData) == 0xBE8, "CCitadel_Modifier_MoveChessPieceVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MoveChessPieceVData) == 0xBA8, "CCitadel_Modifier_MoveChessPieceVData size mismatch");
         }
     }
 }
