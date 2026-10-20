@@ -1225,7 +1225,7 @@ namespace shade {
         template <typename T0, int N0>
         class CUtlVectorFixedGrowable {
         public:
-            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
+            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
         };
 
         template<>
@@ -1235,21 +1235,21 @@ namespace shade {
         };
 
         template<>
-        class CUtlVectorFixedGrowable<shade::sdk::animlib::CNmFloatChannelData*, 2> {
+        class CUtlVectorFixedGrowable<shade::sdk::animlib::CNmClip*, 1> {
         public:
-            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
-        };
-
-        template<>
-        class CUtlVectorFixedGrowable<CGlobalSymbol, 2> {
-        public:
-            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
+            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
         };
 
         template<>
         class CUtlVectorFixedGrowable<CGlobalSymbol, 5> {
         public:
             std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
+        };
+
+        template<>
+        class CUtlVectorFixedGrowable<std::uint8_t, 8> {
+        public:
+            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
         };
 
         template<>
@@ -1320,18 +1320,6 @@ namespace shade {
         };
 
         template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmSyncTrack__Event_t, 10> {
-        public:
-            std::uint8_t pad_0000[0xa8]; // 0x0000, 0xa8 bytes
-        };
-
-        template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__StateDefinition_t, 5> {
-        public:
-            std::uint8_t pad_0000[0x120]; // 0x0000, 0x120 bytes
-        };
-
-        template<>
         class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__TransitionDefinition_t, 5> {
         public:
             std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
@@ -1341,6 +1329,18 @@ namespace shade {
         class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmLayerBlendNode__LayerDefinition_t, 3> {
         public:
             std::uint8_t pad_0000[0x30]; // 0x0000, 0x30 bytes
+        };
+
+        template<>
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__StateDefinition_t, 5> {
+        public:
+            std::uint8_t pad_0000[0x120]; // 0x0000, 0x120 bytes
+        };
+
+        template<>
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmSyncTrack__Event_t, 10> {
+        public:
+            std::uint8_t pad_0000[0xa8]; // 0x0000, 0xa8 bytes
         };
 
         template<>
@@ -1633,15 +1633,15 @@ namespace shade {
         };
 
         template<>
-        class C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::C_SpeechBubbleInfo> {
-        public:
-            std::uint8_t pad_0000[0x578]; // 0x0000, 0x578 bytes
-        };
-
-        template<>
         class C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_PlayerChallengeInfo> {
         public:
             std::uint8_t pad_0000[0xad8]; // 0x0000, 0xad8 bytes
+        };
+
+        template<>
+        class C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::C_SpeechBubbleInfo> {
+        public:
+            std::uint8_t pad_0000[0x578]; // 0x0000, 0x578 bytes
         };
 
         class CUtlSymbolLarge {
