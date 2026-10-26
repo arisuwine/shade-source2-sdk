@@ -17,6 +17,7 @@
 
 #include "shade/sdk/soundsystem_lowlevel/VMixMixDownRule_t.hpp"
 #include "shade/sdk/soundsystem_lowlevel/VMixSendOperator_t.hpp"
+#include "shade/sdk/soundsystem_lowlevel/VMixUpMixRule_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -36,7 +37,7 @@ namespace shade {
                 std::int32_t m_nChannels; // 0x0030, 0x4 bytes
                 shade::sdk::soundsystem_lowlevel::VMixSendOperator_t m_nSendOperator; // 0x0034, 0x2 bytes
                 shade::sdk::soundsystem_lowlevel::VMixMixDownRule_t m_nMixDownRule; // 0x0036, 0x1 bytes
-                std::uint8_t pad_0037[0x1]; // 0x0037, 0x1 bytes
+                shade::sdk::soundsystem_lowlevel::VMixUpMixRule_t m_nUpMixRule; // 0x0037, 0x1 bytes
             };
             #pragma pack(pop)
 

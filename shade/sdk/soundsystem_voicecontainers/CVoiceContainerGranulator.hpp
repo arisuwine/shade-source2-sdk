@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x170
+             * Size: 0x178
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,23 +37,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerGranulator : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator {
             public:
-                float m_flGrainLength; // 0x0080, 0x4 bytes
-                float m_flGrainCrossfadeAmount; // 0x0084, 0x4 bytes
-                float m_flStartJitter; // 0x0088, 0x4 bytes
-                float m_flPlaybackJitter; // 0x008c, 0x4 bytes
-                bool m_bShouldWraparound; // 0x0090, 0x1 bytes
-                std::uint8_t pad_0091[0x7]; // 0x0091, 0x7 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVoiceContainerBase> m_sourceAudio; // 0x0098, 0x8 bytes
-                bool m_bDoubleBufferSourceAudio; // 0x00a0, 0x1 bytes
-                std::uint8_t pad_00a1[0x3]; // 0x00a1, 0x3 bytes
-                float m_flMaxSourceLength; // 0x00a4, 0x4 bytes
-                std::uint8_t pad_00a8[0xc8]; // 0x00a8, 0xc8 bytes
+                float m_flGrainLength; // 0x0088, 0x4 bytes
+                float m_flGrainCrossfadeAmount; // 0x008c, 0x4 bytes
+                float m_flStartJitter; // 0x0090, 0x4 bytes
+                float m_flPlaybackJitter; // 0x0094, 0x4 bytes
+                bool m_bShouldWraparound; // 0x0098, 0x1 bytes
+                std::uint8_t pad_0099[0x7]; // 0x0099, 0x7 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVoiceContainerBase> m_sourceAudio; // 0x00a0, 0x8 bytes
+                bool m_bDoubleBufferSourceAudio; // 0x00a8, 0x1 bytes
+                std::uint8_t pad_00a9[0x3]; // 0x00a9, 0x3 bytes
+                float m_flMaxSourceLength; // 0x00ac, 0x4 bytes
+                std::uint8_t pad_00b0[0xc8]; // 0x00b0, 0xc8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerGranulator) == 0x170, "CVoiceContainerGranulator size mismatch");
+            static_assert(sizeof(CVoiceContainerGranulator) == 0x178, "CVoiceContainerGranulator size mismatch");
         }
     }
 }

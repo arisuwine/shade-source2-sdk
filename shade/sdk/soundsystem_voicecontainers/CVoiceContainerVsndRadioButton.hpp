@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x8f8
+             * Size: 0x900
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,29 +30,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerVsndRadioButton : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                CUtlString m_namespace; // 0x0070, 0x8 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot1; // 0x0078, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot2; // 0x0100, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot3; // 0x0188, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot4; // 0x0210, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot5; // 0x0298, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot6; // 0x0320, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot7; // 0x03a8, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot8; // 0x0430, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot9; // 0x04b8, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot10; // 0x0540, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot11; // 0x05c8, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot12; // 0x0650, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot13; // 0x06d8, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot14; // 0x0760, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot15; // 0x07e8, 0x88 bytes
-                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot16; // 0x0870, 0x88 bytes
+                CUtlString m_namespace; // 0x0078, 0x8 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot1; // 0x0080, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot2; // 0x0108, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot3; // 0x0190, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot4; // 0x0218, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot5; // 0x02a0, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot6; // 0x0328, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot7; // 0x03b0, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot8; // 0x0438, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot9; // 0x04c0, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot10; // 0x0548, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot11; // 0x05d0, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot12; // 0x0658, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot13; // 0x06e0, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot14; // 0x0768, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot15; // 0x07f0, 0x88 bytes
+                shade::sdk::soundsystem_voicecontainers::CVsndRadioButtonSlot m_slot16; // 0x0878, 0x88 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerVsndRadioButton) == 0x8F8, "CVoiceContainerVsndRadioButton size mismatch");
+            static_assert(sizeof(CVoiceContainerVsndRadioButton) == 0x900, "CVoiceContainerVsndRadioButton size mismatch");
         }
     }
 }

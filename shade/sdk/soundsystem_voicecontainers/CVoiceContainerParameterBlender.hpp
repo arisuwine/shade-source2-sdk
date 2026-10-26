@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x1c0
+             * Size: 0x1c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerParameterBlender : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0x0070, 0x20 bytes
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0x0090, 0x20 bytes
-                bool m_bEnableOcclusionBlend; // 0x00b0, 0x1 bytes
-                std::uint8_t pad_00b1[0x7]; // 0x00b1, 0x7 bytes
-                CPiecewiseCurve m_curve1; // 0x00b8, 0x40 bytes
-                CPiecewiseCurve m_curve2; // 0x00f8, 0x40 bytes
-                bool m_bEnableDistanceBlend; // 0x0138, 0x1 bytes
-                std::uint8_t pad_0139[0x7]; // 0x0139, 0x7 bytes
-                CPiecewiseCurve m_curve3; // 0x0140, 0x40 bytes
-                CPiecewiseCurve m_curve4; // 0x0180, 0x40 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0x0078, 0x20 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0x0098, 0x20 bytes
+                bool m_bEnableOcclusionBlend; // 0x00b8, 0x1 bytes
+                std::uint8_t pad_00b9[0x7]; // 0x00b9, 0x7 bytes
+                CPiecewiseCurve m_curve1; // 0x00c0, 0x40 bytes
+                CPiecewiseCurve m_curve2; // 0x0100, 0x40 bytes
+                bool m_bEnableDistanceBlend; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x7]; // 0x0141, 0x7 bytes
+                CPiecewiseCurve m_curve3; // 0x0148, 0x40 bytes
+                CPiecewiseCurve m_curve4; // 0x0188, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerParameterBlender) == 0x1C0, "CVoiceContainerParameterBlender size mismatch");
+            static_assert(sizeof(CVoiceContainerParameterBlender) == 0x1C8, "CVoiceContainerParameterBlender size mismatch");
         }
     }
 }

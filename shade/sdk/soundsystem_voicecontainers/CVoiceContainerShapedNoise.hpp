@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -29,24 +29,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerShapedNoise : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerGenerator {
             public:
-                bool m_bUseCurveForFrequency; // 0x0070, 0x1 bytes
-                std::uint8_t pad_0071[0x3]; // 0x0071, 0x3 bytes
-                float m_flFrequency; // 0x0074, 0x4 bytes
-                CPiecewiseCurve m_frequencySweep; // 0x0078, 0x40 bytes
-                bool m_bUseCurveForResonance; // 0x00b8, 0x1 bytes
-                std::uint8_t pad_00b9[0x3]; // 0x00b9, 0x3 bytes
-                float m_flResonance; // 0x00bc, 0x4 bytes
-                CPiecewiseCurve m_resonanceSweep; // 0x00c0, 0x40 bytes
-                bool m_bUseCurveForAmplitude; // 0x0100, 0x1 bytes
-                std::uint8_t pad_0101[0x3]; // 0x0101, 0x3 bytes
-                float m_flGainInDecibels; // 0x0104, 0x4 bytes
-                CPiecewiseCurve m_gainSweep; // 0x0108, 0x40 bytes
+                bool m_bUseCurveForFrequency; // 0x0078, 0x1 bytes
+                std::uint8_t pad_0079[0x3]; // 0x0079, 0x3 bytes
+                float m_flFrequency; // 0x007c, 0x4 bytes
+                CPiecewiseCurve m_frequencySweep; // 0x0080, 0x40 bytes
+                bool m_bUseCurveForResonance; // 0x00c0, 0x1 bytes
+                std::uint8_t pad_00c1[0x3]; // 0x00c1, 0x3 bytes
+                float m_flResonance; // 0x00c4, 0x4 bytes
+                CPiecewiseCurve m_resonanceSweep; // 0x00c8, 0x40 bytes
+                bool m_bUseCurveForAmplitude; // 0x0108, 0x1 bytes
+                std::uint8_t pad_0109[0x3]; // 0x0109, 0x3 bytes
+                float m_flGainInDecibels; // 0x010c, 0x4 bytes
+                CPiecewiseCurve m_gainSweep; // 0x0110, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerShapedNoise) == 0x148, "CVoiceContainerShapedNoise size mismatch");
+            static_assert(sizeof(CVoiceContainerShapedNoise) == 0x150, "CVoiceContainerShapedNoise size mismatch");
         }
     }
 }

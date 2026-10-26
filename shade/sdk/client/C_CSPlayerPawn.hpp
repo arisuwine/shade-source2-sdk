@@ -108,64 +108,64 @@ namespace shade {
                 VectorWS m_vRagdollServerOrigin; // 0x1d78, 0xc bytes
                 shade::sdk::entity2::GameTime_t m_lastLandTime; // 0x1d84, 0x4 bytes
                 bool m_bOnGroundLastTick; // 0x1d88, 0x1 bytes
-                std::uint8_t pad_1d89[0x1b]; // 0x1d89, 0x1b bytes
-                CHandle<shade::sdk::client::C_CS2HudModelArms> m_hHudModelArms; // 0x1da4, 0x4 bytes
-                QAngle m_qDeathEyeAngles; // 0x1da8, 0xc bytes
-                bool m_bLeftHanded; // 0x1db4, 0x1 bytes
-                std::uint8_t pad_1db5[0x3]; // 0x1db5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_fSwitchedHandednessTime; // 0x1db8, 0x4 bytes
-                float m_flViewmodelOffsetX; // 0x1dbc, 0x4 bytes
-                float m_flViewmodelOffsetY; // 0x1dc0, 0x4 bytes
-                float m_flViewmodelOffsetZ; // 0x1dc4, 0x4 bytes
-                float m_flViewmodelFOV; // 0x1dc8, 0x4 bytes
-                std::uint32_t m_vecPlayerPatchEconIndices[0x5]; // 0x1dcc, 0x14 bytes
-                std::uint8_t pad_1de0[0x30]; // 0x1de0, 0x30 bytes
-                Color m_GunGameImmunityColor; // 0x1e10, 0x4 bytes
-                std::uint8_t pad_1e14[0x4c]; // 0x1e14, 0x4c bytes
-                CUtlVector<shade::sdk::client::C_BulletHitModel*> m_vecBulletHitModels; // 0x1e60, 0x18 bytes
-                bool m_bIsWalking; // 0x1e78, 0x1 bytes
-                std::uint8_t pad_1e79[0x7]; // 0x1e79, 0x7 bytes
-                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x1e80, 0x18 bytes
-                bool m_bIsScoped; // 0x1e98, 0x1 bytes
-                bool m_bResumeZoom; // 0x1e99, 0x1 bytes
-                bool m_bIsDefusing; // 0x1e9a, 0x1 bytes
-                bool m_bIsGrabbingHostage; // 0x1e9b, 0x1 bytes
-                shade::sdk::client::CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress; // 0x1e9c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEmitSoundTime; // 0x1ea0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEmitSoundTime_Client; // 0x1ea4, 0x4 bytes
-                bool m_bInNoDefuseArea; // 0x1ea8, 0x1 bytes
-                std::uint8_t pad_1ea9[0x3]; // 0x1ea9, 0x3 bytes
-                std::int32_t m_nWhichBombZone; // 0x1eac, 0x4 bytes
-                std::int32_t m_iShotsFired; // 0x1eb0, 0x4 bytes
-                float m_flFlinchStack; // 0x1eb4, 0x4 bytes
-                float m_flVelocityModifier; // 0x1eb8, 0x4 bytes
-                bool m_bWaitForNoAttack; // 0x1ebc, 0x1 bytes
-                std::uint8_t pad_1ebd[0x3]; // 0x1ebd, 0x3 bytes
-                float m_ignoreLadderJumpTime; // 0x1ec0, 0x4 bytes
-                std::uint8_t pad_1ec4[0x1]; // 0x1ec4, 0x1 bytes
-                bool m_bKilledByHeadshot; // 0x1ec5, 0x1 bytes
-                std::uint8_t pad_1ec6[0x2]; // 0x1ec6, 0x2 bytes
-                std::int32_t m_ArmorValue; // 0x1ec8, 0x4 bytes
-                std::uint16_t m_unCurrentEquipmentValue; // 0x1ecc, 0x2 bytes
-                std::uint16_t m_unRoundStartEquipmentValue; // 0x1ece, 0x2 bytes
-                std::uint16_t m_unFreezetimeEndEquipmentValue; // 0x1ed0, 0x2 bytes
-                std::uint8_t pad_1ed2[0x2]; // 0x1ed2, 0x2 bytes
-                CEntityIndex m_nLastKillerIndex; // 0x1ed4, 0x4 bytes
-                bool m_bOldIsScoped; // 0x1ed8, 0x1 bytes
-                bool m_bHasDeathInfo; // 0x1ed9, 0x1 bytes
+                std::uint8_t pad_1d89[0x1f]; // 0x1d89, 0x1f bytes
+                CHandle<shade::sdk::client::C_CS2HudModelArms> m_hHudModelArms; // 0x1da8, 0x4 bytes
+                QAngle m_qDeathEyeAngles; // 0x1dac, 0xc bytes
+                bool m_bLeftHanded; // 0x1db8, 0x1 bytes
+                std::uint8_t pad_1db9[0x3]; // 0x1db9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fSwitchedHandednessTime; // 0x1dbc, 0x4 bytes
+                float m_flViewmodelOffsetX; // 0x1dc0, 0x4 bytes
+                float m_flViewmodelOffsetY; // 0x1dc4, 0x4 bytes
+                float m_flViewmodelOffsetZ; // 0x1dc8, 0x4 bytes
+                float m_flViewmodelFOV; // 0x1dcc, 0x4 bytes
+                std::uint32_t m_vecPlayerPatchEconIndices[0x5]; // 0x1dd0, 0x14 bytes
+                std::uint8_t pad_1de4[0x34]; // 0x1de4, 0x34 bytes
+                Color m_GunGameImmunityColor; // 0x1e18, 0x4 bytes
+                std::uint8_t pad_1e1c[0x4c]; // 0x1e1c, 0x4c bytes
+                CUtlVector<shade::sdk::client::C_BulletHitModel*> m_vecBulletHitModels; // 0x1e68, 0x18 bytes
+                bool m_bIsWalking; // 0x1e80, 0x1 bytes
+                std::uint8_t pad_1e81[0x7]; // 0x1e81, 0x7 bytes
+                shade::sdk::client::EntitySpottedState_t m_entitySpottedState; // 0x1e88, 0x18 bytes
+                bool m_bIsScoped; // 0x1ea0, 0x1 bytes
+                bool m_bResumeZoom; // 0x1ea1, 0x1 bytes
+                bool m_bIsDefusing; // 0x1ea2, 0x1 bytes
+                bool m_bIsGrabbingHostage; // 0x1ea3, 0x1 bytes
+                shade::sdk::client::CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress; // 0x1ea4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEmitSoundTime; // 0x1ea8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEmitSoundTime_Client; // 0x1eac, 0x4 bytes
+                bool m_bInNoDefuseArea; // 0x1eb0, 0x1 bytes
+                std::uint8_t pad_1eb1[0x3]; // 0x1eb1, 0x3 bytes
+                std::int32_t m_nWhichBombZone; // 0x1eb4, 0x4 bytes
+                std::int32_t m_iShotsFired; // 0x1eb8, 0x4 bytes
+                float m_flFlinchStack; // 0x1ebc, 0x4 bytes
+                float m_flVelocityModifier; // 0x1ec0, 0x4 bytes
+                bool m_bWaitForNoAttack; // 0x1ec4, 0x1 bytes
+                std::uint8_t pad_1ec5[0x3]; // 0x1ec5, 0x3 bytes
+                float m_ignoreLadderJumpTime; // 0x1ec8, 0x4 bytes
+                std::uint8_t pad_1ecc[0x1]; // 0x1ecc, 0x1 bytes
+                bool m_bKilledByHeadshot; // 0x1ecd, 0x1 bytes
+                std::uint8_t pad_1ece[0x2]; // 0x1ece, 0x2 bytes
+                std::int32_t m_ArmorValue; // 0x1ed0, 0x4 bytes
+                std::uint16_t m_unCurrentEquipmentValue; // 0x1ed4, 0x2 bytes
+                std::uint16_t m_unRoundStartEquipmentValue; // 0x1ed6, 0x2 bytes
+                std::uint16_t m_unFreezetimeEndEquipmentValue; // 0x1ed8, 0x2 bytes
                 std::uint8_t pad_1eda[0x2]; // 0x1eda, 0x2 bytes
-                float m_flDeathInfoTime; // 0x1edc, 0x4 bytes
-                VectorWS m_vecDeathInfoOrigin; // 0x1ee0, 0xc bytes
-                std::uint8_t pad_1eec[0x2c]; // 0x1eec, 0x2c bytes
-                shade::sdk::entity2::GameTime_t m_grenadeParameterStashTime; // 0x1f18, 0x4 bytes
-                bool m_bGrenadeParametersStashed; // 0x1f1c, 0x1 bytes
-                std::uint8_t pad_1f1d[0x3]; // 0x1f1d, 0x3 bytes
-                QAngle m_angStashedShootAngles; // 0x1f20, 0xc bytes
-                VectorWS m_vecStashedGrenadeThrowPosition; // 0x1f2c, 0xc bytes
-                VectorWS m_vecStashedGrenadeThrowPawnCenter; // 0x1f38, 0xc bytes
-                Vector m_vecStashedVelocity; // 0x1f44, 0xc bytes
-                float m_flInterpolatedInaccuracy; // 0x1f50, 0x4 bytes
-                std::uint8_t pad_1f54[0x15ac]; // 0x1f54, 0x15ac bytes
+                CEntityIndex m_nLastKillerIndex; // 0x1edc, 0x4 bytes
+                bool m_bOldIsScoped; // 0x1ee0, 0x1 bytes
+                bool m_bHasDeathInfo; // 0x1ee1, 0x1 bytes
+                std::uint8_t pad_1ee2[0x2]; // 0x1ee2, 0x2 bytes
+                float m_flDeathInfoTime; // 0x1ee4, 0x4 bytes
+                VectorWS m_vecDeathInfoOrigin; // 0x1ee8, 0xc bytes
+                std::uint8_t pad_1ef4[0x2c]; // 0x1ef4, 0x2c bytes
+                shade::sdk::entity2::GameTime_t m_grenadeParameterStashTime; // 0x1f20, 0x4 bytes
+                bool m_bGrenadeParametersStashed; // 0x1f24, 0x1 bytes
+                std::uint8_t pad_1f25[0x3]; // 0x1f25, 0x3 bytes
+                QAngle m_angStashedShootAngles; // 0x1f28, 0xc bytes
+                VectorWS m_vecStashedGrenadeThrowPosition; // 0x1f34, 0xc bytes
+                VectorWS m_vecStashedGrenadeThrowPawnCenter; // 0x1f40, 0xc bytes
+                Vector m_vecStashedVelocity; // 0x1f4c, 0xc bytes
+                float m_flInterpolatedInaccuracy; // 0x1f58, 0x4 bytes
+                std::uint8_t pad_1f5c[0x15a4]; // 0x1f5c, 0x15a4 bytes
                 bool m_bShouldAutobuyDMWeapons; // 0x3500, 0x1 bytes
                 std::uint8_t pad_3501[0x3]; // 0x3501, 0x3 bytes
                 shade::sdk::entity2::GameTime_t m_fImmuneToGunGameDamageTime; // 0x3504, 0x4 bytes
@@ -174,9 +174,9 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x350c, 0x4 bytes
                 float m_flModifier0; // 0x3510, 0x4 bytes
                 float m_fMolotovDamageTime; // 0x3514, 0x4 bytes
-                std::uint8_t pad_3518[0x68]; // 0x3518, 0x68 bytes
-                shade::sdk::client::ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x3580, 0x4 bytes
-                std::uint8_t pad_3584[0x7c]; // 0x3584, 0x7c bytes
+                std::uint8_t pad_3518[0x70]; // 0x3518, 0x70 bytes
+                shade::sdk::client::ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x3588, 0x4 bytes
+                std::uint8_t pad_358c[0x74]; // 0x358c, 0x74 bytes
                 QAngle m_angEyeAngles; // 0x3600, 0xc bytes
                 std::uint8_t pad_360c[0x84]; // 0x360c, 0x84 bytes
                 shade::sdk::entity2::GameTime_t m_arrOldEyeAnglesTimes[0x4]; // 0x3690, 0x10 bytes

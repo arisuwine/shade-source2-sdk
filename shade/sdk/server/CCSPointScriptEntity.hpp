@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x628
+             * Size: 0x668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,7 +30,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CCSPointScriptEntity : public shade::sdk::server::CBaseEntity {
             public:
-                std::uint8_t pad_04a8[0x180]; // 0x04a8, 0x180 bytes
+                std::uint8_t pad_04a8[0x1c0]; // 0x04a8, 0x1c0 bytes
             };
             #pragma pack(pop)
 
@@ -38,7 +38,7 @@ namespace shade {
              * CUtlSymbolLarge cs_script; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCSPointScriptEntity) == 0x628, "CCSPointScriptEntity size mismatch");
+            static_assert(sizeof(CCSPointScriptEntity) == 0x668, "CCSPointScriptEntity size mismatch");
         }
     }
 }

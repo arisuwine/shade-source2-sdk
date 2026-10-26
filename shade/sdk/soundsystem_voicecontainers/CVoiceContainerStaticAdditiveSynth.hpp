@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xb0
+             * Size: 0xb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,14 +37,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerStaticAdditiveSynth : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator {
             public:
-                CUtlVector<shade::sdk::soundsystem_voicecontainers::CVoiceContainerStaticAdditiveSynth__CTone> m_tones; // 0x0080, 0x18 bytes
-                std::uint8_t pad_0098[0x18]; // 0x0098, 0x18 bytes
+                CUtlVector<shade::sdk::soundsystem_voicecontainers::CVoiceContainerStaticAdditiveSynth__CTone> m_tones; // 0x0088, 0x18 bytes
+                std::uint8_t pad_00a0[0x18]; // 0x00a0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerStaticAdditiveSynth) == 0xB0, "CVoiceContainerStaticAdditiveSynth size mismatch");
+            static_assert(sizeof(CVoiceContainerStaticAdditiveSynth) == 0xB8, "CVoiceContainerStaticAdditiveSynth size mismatch");
         }
     }
 }

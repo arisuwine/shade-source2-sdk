@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xb0
+             * Size: 0xb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerEnum : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReferenceArray m_soundsToPlay; // 0x0070, 0x38 bytes
-                std::int32_t m_iSelection; // 0x00a8, 0x4 bytes
-                float m_flCrossfadeTime; // 0x00ac, 0x4 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReferenceArray m_soundsToPlay; // 0x0078, 0x38 bytes
+                std::int32_t m_iSelection; // 0x00b0, 0x4 bytes
+                float m_flCrossfadeTime; // 0x00b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerEnum) == 0xB0, "CVoiceContainerEnum size mismatch");
+            static_assert(sizeof(CVoiceContainerEnum) == 0xB8, "CVoiceContainerEnum size mismatch");
         }
     }
 }

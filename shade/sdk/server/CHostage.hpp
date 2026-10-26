@@ -85,17 +85,18 @@ namespace shade {
                 std::uint8_t pad_2d1e[0x2]; // 0x2d1e, 0x2 bytes
                 CHandle<shade::sdk::server::CCSPlayerPawn> m_hHostageGrabber; // 0x2d20, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_fLastGrabTime; // 0x2d24, 0x4 bytes
-                VectorWS m_vecPositionWhenStartedDroppingToGround; // 0x2d28, 0xc bytes
-                VectorWS m_vecGrabbedPos; // 0x2d34, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flRescueStartTime; // 0x2d40, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGrabSuccessTime; // 0x2d44, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDropStartTime; // 0x2d48, 0x4 bytes
-                std::int32_t m_nApproachRewardPayouts; // 0x2d4c, 0x4 bytes
-                std::int32_t m_nPickupEventCount; // 0x2d50, 0x4 bytes
-                VectorWS m_vecSpawnGroundPos; // 0x2d54, 0xc bytes
-                std::uint8_t pad_2d60[0x2c]; // 0x2d60, 0x2c bytes
-                VectorWS m_vecHostageResetPosition; // 0x2d8c, 0xc bytes
-                std::uint8_t pad_2d98[0x8]; // 0x2d98, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flGrabStartTime; // 0x2d28, 0x4 bytes
+                VectorWS m_vecPositionWhenStartedDroppingToGround; // 0x2d2c, 0xc bytes
+                VectorWS m_vecGrabbedPos; // 0x2d38, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flRescueStartTime; // 0x2d44, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGrabSuccessTime; // 0x2d48, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDropStartTime; // 0x2d4c, 0x4 bytes
+                std::int32_t m_nApproachRewardPayouts; // 0x2d50, 0x4 bytes
+                std::int32_t m_nPickupEventCount; // 0x2d54, 0x4 bytes
+                VectorWS m_vecSpawnGroundPos; // 0x2d58, 0xc bytes
+                std::uint8_t pad_2d64[0x2c]; // 0x2d64, 0x2c bytes
+                VectorWS m_vecHostageResetPosition; // 0x2d90, 0xc bytes
+                std::uint8_t pad_2d9c[0x4]; // 0x2d9c, 0x4 bytes
             };
             #pragma pack(pop)
 

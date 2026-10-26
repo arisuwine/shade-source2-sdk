@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0xc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerBlender : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0x0070, 0x20 bytes
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0x0090, 0x20 bytes
-                float m_flBlendFactor; // 0x00b0, 0x4 bytes
-                std::uint8_t pad_00b4[0x4]; // 0x00b4, 0x4 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0x0078, 0x20 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0x0098, 0x20 bytes
+                float m_flBlendFactor; // 0x00b8, 0x4 bytes
+                std::uint8_t pad_00bc[0x4]; // 0x00bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerBlender) == 0xB8, "CVoiceContainerBlender size mismatch");
+            static_assert(sizeof(CVoiceContainerBlender) == 0xC0, "CVoiceContainerBlender size mismatch");
         }
     }
 }
