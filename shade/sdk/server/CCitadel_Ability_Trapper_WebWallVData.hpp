@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16c8
+             * Size: 0x1350
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Trapper_WebWallVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x13f8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallParticle; // 0x1408, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallDestroyedParticle; // 0x14e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallHitParticle; // 0x15c8, 0xe0 bytes
-                CSoundEventName m_strWebWallCreated; // 0x16a8, 0x10 bytes
-                CSoundEventName m_strWebWallDestroyed; // 0x16b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x1080, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallParticle; // 0x1090, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallDestroyedParticle; // 0x1170, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallHitParticle; // 0x1250, 0xe0 bytes
+                CSoundEventName m_strWebWallCreated; // 0x1330, 0x10 bytes
+                CSoundEventName m_strWebWallDestroyed; // 0x1340, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Trapper_WebWallVData) == 0x16C8, "CCitadel_Ability_Trapper_WebWallVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Trapper_WebWallVData) == 0x1350, "CCitadel_Ability_Trapper_WebWallVData size mismatch");
         }
     }
 }

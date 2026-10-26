@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x230
+             * Size: 0x238
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_SpawnZombies_Area : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x20]; // 0x0148, 0x20 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecSpawnedZombies; // 0x0168, 0x18 bytes
-                std::uint8_t pad_0180[0xb0]; // 0x0180, 0xb0 bytes
+                std::uint8_t pad_0150[0x20]; // 0x0150, 0x20 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecSpawnedZombies; // 0x0170, 0x18 bytes
+                std::uint8_t pad_0188[0xb0]; // 0x0188, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_SpawnZombies_Area) == 0x230, "CCitadel_Modifier_Necro_SpawnZombies_Area size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_SpawnZombies_Area) == 0x238, "CCitadel_Modifier_Necro_SpawnZombies_Area size mismatch");
         }
     }
 }

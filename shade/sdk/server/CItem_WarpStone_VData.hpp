@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1700
+             * Size: 0x1388
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_WarpStone_VData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x14f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterDebuffModifier; // 0x1508, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1518, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x1528, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x1608, 0xe0 bytes
-                float m_flGroundProbeSpeed; // 0x16e8, 0x4 bytes
-                float m_flGroundStepDown; // 0x16ec, 0x4 bytes
-                float m_flGroundStepUp; // 0x16f0, 0x4 bytes
-                std::int32_t m_iMaxGroundIterations; // 0x16f4, 0x4 bytes
-                float m_flVelocityScale; // 0x16f8, 0x4 bytes
-                std::uint8_t pad_16fc[0x4]; // 0x16fc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x1180, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterDebuffModifier; // 0x1190, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x11a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x11b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle; // 0x1290, 0xe0 bytes
+                float m_flGroundProbeSpeed; // 0x1370, 0x4 bytes
+                float m_flGroundStepDown; // 0x1374, 0x4 bytes
+                float m_flGroundStepUp; // 0x1378, 0x4 bytes
+                std::int32_t m_iMaxGroundIterations; // 0x137c, 0x4 bytes
+                float m_flVelocityScale; // 0x1380, 0x4 bytes
+                std::uint8_t pad_1384[0x4]; // 0x1384, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_WarpStone_VData) == 0x1700, "CItem_WarpStone_VData size mismatch");
+            static_assert(sizeof(CItem_WarpStone_VData) == 0x1388, "CItem_WarpStone_VData size mismatch");
         }
     }
 }

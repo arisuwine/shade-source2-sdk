@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2628
+             * Size: 0x2630
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_BatSwarm : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::int32_t m_iBonusBats; // 0x16d8, 0x4 bytes
-                std::int32_t m_iBatCountOnCast; // 0x16dc, 0x4 bytes
-                float m_flChannelTime; // 0x16e0, 0x4 bytes
-                bool m_bPauseChannel; // 0x16e4, 0x1 bytes
-                std::uint8_t pad_16e5[0x3]; // 0x16e5, 0x3 bytes
-                float m_flLastRemainingChannelTime; // 0x16e8, 0x4 bytes
-                std::uint8_t pad_16ec[0xc]; // 0x16ec, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flNextBatTime; // 0x16f8, 0x4 bytes
-                std::uint8_t pad_16fc[0xf2c]; // 0x16fc, 0xf2c bytes
+                std::int32_t m_iBonusBats; // 0x16e0, 0x4 bytes
+                std::int32_t m_iBatCountOnCast; // 0x16e4, 0x4 bytes
+                float m_flChannelTime; // 0x16e8, 0x4 bytes
+                bool m_bPauseChannel; // 0x16ec, 0x1 bytes
+                std::uint8_t pad_16ed[0x3]; // 0x16ed, 0x3 bytes
+                float m_flLastRemainingChannelTime; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0xc]; // 0x16f4, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flNextBatTime; // 0x1700, 0x4 bytes
+                std::uint8_t pad_1704[0xf2c]; // 0x1704, 0xf2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_BatSwarm) == 0x2628, "CCitadel_Ability_VampireBat_BatSwarm size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_BatSwarm) == 0x2630, "CCitadel_Ability_VampireBat_BatSwarm size mismatch");
         }
     }
 }

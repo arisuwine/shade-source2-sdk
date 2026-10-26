@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x410
+             * Size: 0x418
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Haunt_Damage : public shade::sdk::server::CCitadel_Modifier_Base {
             public:
-                bool m_bCheckForExplosion; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x3]; // 0x0149, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastBurnTime; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0x2c0]; // 0x0150, 0x2c0 bytes
+                bool m_bCheckForExplosion; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x3]; // 0x0151, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBurnTime; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0x2c0]; // 0x0158, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Haunt_Damage) == 0x410, "CCitadel_Modifier_Haunt_Damage size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Haunt_Damage) == 0x418, "CCitadel_Modifier_Haunt_Damage size mismatch");
         }
     }
 }

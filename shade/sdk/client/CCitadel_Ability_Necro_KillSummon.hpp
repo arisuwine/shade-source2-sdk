@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1790
+             * Size: 0x1798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_KillSummon : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0xb2]; // 0x16d8, 0xb2 bytes
-                bool m_bIsInRecast; // 0x178a, 0x1 bytes
-                std::uint8_t pad_178b[0x1]; // 0x178b, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x178c, 0x4 bytes
+                std::uint8_t pad_16e0[0xb2]; // 0x16e0, 0xb2 bytes
+                bool m_bIsInRecast; // 0x1792, 0x1 bytes
+                std::uint8_t pad_1793[0x1]; // 0x1793, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x1794, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_KillSummon) == 0x1790, "CCitadel_Ability_Necro_KillSummon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_KillSummon) == 0x1798, "CCitadel_Ability_Necro_KillSummon size mismatch");
         }
     }
 }

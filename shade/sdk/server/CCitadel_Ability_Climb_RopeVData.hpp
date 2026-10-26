@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1470
+             * Size: 0x10f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,40 +39,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Climb_RopeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flMinButtonHoldTimeToActivate; // 0x13e8, 0x4 bytes
-                float m_flClimbSpeedUp; // 0x13ec, 0x4 bytes
-                float m_flClimbSpeedDown; // 0x13f0, 0x4 bytes
-                float m_flClimbSpeedDownMax; // 0x13f4, 0x4 bytes
-                float m_flClimbDownAccelTime; // 0x13f8, 0x4 bytes
-                float m_flLatchSpeed; // 0x13fc, 0x4 bytes
-                float m_flAttachOffset; // 0x1400, 0x4 bytes
-                float m_flMinReconnectTime; // 0x1404, 0x4 bytes
-                float m_flSideMoveReduction; // 0x1408, 0x4 bytes
-                float m_flTopOffset; // 0x140c, 0x4 bytes
-                float m_flBottomOffset; // 0x1410, 0x4 bytes
-                float m_flTraceRadiusSize; // 0x1414, 0x4 bytes
-                float m_flStopTimeToShoot; // 0x1418, 0x4 bytes
-                float m_flJumpOffVertical; // 0x141c, 0x4 bytes
-                float m_flJumpOffHorizontal; // 0x1420, 0x4 bytes
-                float m_flDuckOffVertical; // 0x1424, 0x4 bytes
-                float m_flDuckOffHorizontal; // 0x1428, 0x4 bytes
-                float m_flActivateRange; // 0x142c, 0x4 bytes
-                float m_flJumpToRoofRayCheckDist; // 0x1430, 0x4 bytes
-                float m_flMinTimeToRoofCheck; // 0x1434, 0x4 bytes
-                float m_flTimeToHintRefresh; // 0x1438, 0x4 bytes
-                float m_iMaxHintCount; // 0x143c, 0x4 bytes
-                float m_flClimbRopeSlowDurationOnHit; // 0x1440, 0x4 bytes
-                float m_flCameraRotateSpeed; // 0x1444, 0x4 bytes
-                float m_flCameraRotateMaxTime; // 0x1448, 0x4 bytes
-                std::uint8_t pad_144c[0x4]; // 0x144c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ClimbRopeSlowOnHitModifier; // 0x1450, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ClimbRopeSlowFromRecentDamageModifier; // 0x1460, 0x10 bytes
+                float m_flMinButtonHoldTimeToActivate; // 0x1070, 0x4 bytes
+                float m_flClimbSpeedUp; // 0x1074, 0x4 bytes
+                float m_flClimbSpeedDown; // 0x1078, 0x4 bytes
+                float m_flClimbSpeedDownMax; // 0x107c, 0x4 bytes
+                float m_flClimbDownAccelTime; // 0x1080, 0x4 bytes
+                float m_flLatchSpeed; // 0x1084, 0x4 bytes
+                float m_flAttachOffset; // 0x1088, 0x4 bytes
+                float m_flMinReconnectTime; // 0x108c, 0x4 bytes
+                float m_flSideMoveReduction; // 0x1090, 0x4 bytes
+                float m_flTopOffset; // 0x1094, 0x4 bytes
+                float m_flBottomOffset; // 0x1098, 0x4 bytes
+                float m_flTraceRadiusSize; // 0x109c, 0x4 bytes
+                float m_flStopTimeToShoot; // 0x10a0, 0x4 bytes
+                float m_flJumpOffVertical; // 0x10a4, 0x4 bytes
+                float m_flJumpOffHorizontal; // 0x10a8, 0x4 bytes
+                float m_flDuckOffVertical; // 0x10ac, 0x4 bytes
+                float m_flDuckOffHorizontal; // 0x10b0, 0x4 bytes
+                float m_flActivateRange; // 0x10b4, 0x4 bytes
+                float m_flJumpToRoofRayCheckDist; // 0x10b8, 0x4 bytes
+                float m_flMinTimeToRoofCheck; // 0x10bc, 0x4 bytes
+                float m_flTimeToHintRefresh; // 0x10c0, 0x4 bytes
+                float m_iMaxHintCount; // 0x10c4, 0x4 bytes
+                float m_flClimbRopeSlowDurationOnHit; // 0x10c8, 0x4 bytes
+                float m_flCameraRotateSpeed; // 0x10cc, 0x4 bytes
+                float m_flCameraRotateMaxTime; // 0x10d0, 0x4 bytes
+                std::uint8_t pad_10d4[0x4]; // 0x10d4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ClimbRopeSlowOnHitModifier; // 0x10d8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ClimbRopeSlowFromRecentDamageModifier; // 0x10e8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Climb_RopeVData) == 0x1470, "CCitadel_Ability_Climb_RopeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Climb_RopeVData) == 0x10F8, "CCitadel_Ability_Climb_RopeVData size mismatch");
         }
     }
 }

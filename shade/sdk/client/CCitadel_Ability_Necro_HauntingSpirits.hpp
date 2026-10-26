@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18f0
+             * Size: 0x18f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_HauntingSpirits : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x210]; // 0x16d8, 0x210 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x18e8, 0x4 bytes
-                std::uint8_t pad_18ec[0x4]; // 0x18ec, 0x4 bytes
+                std::uint8_t pad_16e0[0x210]; // 0x16e0, 0x210 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x18f0, 0x4 bytes
+                std::uint8_t pad_18f4[0x4]; // 0x18f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSpirits) == 0x18F0, "CCitadel_Ability_Necro_HauntingSpirits size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSpirits) == 0x18F8, "CCitadel_Ability_Necro_HauntingSpirits size mismatch");
         }
     }
 }

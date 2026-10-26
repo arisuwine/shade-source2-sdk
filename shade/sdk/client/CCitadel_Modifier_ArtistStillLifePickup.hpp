@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x140
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ArtistStillLifePickup : public shade::sdk::client::CCitadel_Modifier_PermanentPickup {
             public:
-                std::int32_t m_heroid; // 0x0138, 0x4 bytes
-                std::uint8_t pad_013c[0x4]; // 0x013c, 0x4 bytes
+                std::int32_t m_heroid; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x4]; // 0x0144, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ArtistStillLifePickup) == 0x140, "CCitadel_Modifier_ArtistStillLifePickup size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ArtistStillLifePickup) == 0x148, "CCitadel_Modifier_ArtistStillLifePickup size mismatch");
         }
     }
 }

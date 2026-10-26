@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x970
+             * Size: 0x978
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CProjectile_Synth_PlasmaFlux : public shade::sdk::server::CCitadelProjectile {
             public:
-                bool m_bSpawnedInNoTeleportArea; // 0x0968, 0x1 bytes
-                std::uint8_t pad_0969[0x7]; // 0x0969, 0x7 bytes
+                bool m_bSpawnedInNoTeleportArea; // 0x0970, 0x1 bytes
+                std::uint8_t pad_0971[0x7]; // 0x0971, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CProjectile_Synth_PlasmaFlux) == 0x970, "CProjectile_Synth_PlasmaFlux size mismatch");
+            static_assert(sizeof(CProjectile_Synth_PlasmaFlux) == 0x978, "CProjectile_Synth_PlasmaFlux size mismatch");
         }
     }
 }

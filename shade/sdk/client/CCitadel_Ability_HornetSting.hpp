@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bc8
+             * Size: 0x1bd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HornetSting : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::int32_t m_BounceCount; // 0x16d8, 0x4 bytes
-                bool m_bHitHero; // 0x16dc, 0x1 bytes
-                std::uint8_t pad_16dd[0x3]; // 0x16dd, 0x3 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecValidBounceTargets; // 0x16e0, 0x18 bytes
-                std::uint8_t pad_16f8[0x4d0]; // 0x16f8, 0x4d0 bytes
+                std::int32_t m_BounceCount; // 0x16e0, 0x4 bytes
+                bool m_bHitHero; // 0x16e4, 0x1 bytes
+                std::uint8_t pad_16e5[0x3]; // 0x16e5, 0x3 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecValidBounceTargets; // 0x16e8, 0x18 bytes
+                std::uint8_t pad_1700[0x4d0]; // 0x1700, 0x4d0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HornetSting) == 0x1BC8, "CCitadel_Ability_HornetSting size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HornetSting) == 0x1BD0, "CCitadel_Ability_HornetSting size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1848
+             * Size: 0x1850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bounce_Pad : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                Vector m_vForward; // 0x14a0, 0xc bytes
-                bool m_bShouldDeploy; // 0x14ac, 0x1 bytes
-                bool m_bAnglesSet; // 0x14ad, 0x1 bytes
-                bool m_bCanCancel; // 0x14ae, 0x1 bytes
-                std::uint8_t pad_14af[0x371]; // 0x14af, 0x371 bytes
-                QAngle m_angFacing; // 0x1820, 0xc bytes
-                std::uint8_t pad_182c[0x1c]; // 0x182c, 0x1c bytes
+                Vector m_vForward; // 0x14a8, 0xc bytes
+                bool m_bShouldDeploy; // 0x14b4, 0x1 bytes
+                bool m_bAnglesSet; // 0x14b5, 0x1 bytes
+                bool m_bCanCancel; // 0x14b6, 0x1 bytes
+                std::uint8_t pad_14b7[0x371]; // 0x14b7, 0x371 bytes
+                QAngle m_angFacing; // 0x1828, 0xc bytes
+                std::uint8_t pad_1834[0x1c]; // 0x1834, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bounce_Pad) == 0x1848, "CCitadel_Ability_Bounce_Pad size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bounce_Pad) == 0x1850, "CCitadel_Ability_Bounce_Pad size mismatch");
         }
     }
 }

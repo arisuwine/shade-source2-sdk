@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1560
+             * Size: 0x1568
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_SpellShield : public shade::sdk::server::CCitadel_Item {
             public:
-                shade::sdk::entity2::GameTime_t fl_mSpellShieldBreakTime; // 0x14a8, 0x4 bytes
-                std::uint8_t pad_14ac[0xb4]; // 0x14ac, 0xb4 bytes
+                shade::sdk::entity2::GameTime_t fl_mSpellShieldBreakTime; // 0x14b0, 0x4 bytes
+                std::uint8_t pad_14b4[0xb4]; // 0x14b4, 0xb4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_SpellShield) == 0x1560, "CCitadel_ArmorUpgrade_SpellShield size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_SpellShield) == 0x1568, "CCitadel_ArmorUpgrade_SpellShield size mismatch");
         }
     }
 }

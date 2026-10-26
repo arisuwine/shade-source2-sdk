@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1518
+             * Size: 0x11a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,24 +43,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityStickyBombVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BombAttachedModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfBuffModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastBombParticle; // 0x1418, 0xe0 bytes
-                float m_flPostRangeGravityScale; // 0x14f8, 0x4 bytes
-                float m_flAllyCollideRadius; // 0x14fc, 0x4 bytes
-                float m_flBombDragStartRange; // 0x1500, 0x4 bytes
-                float m_flBombDragStartValue; // 0x1504, 0x4 bytes
-                float m_flBombDragEndValue; // 0x1508, 0x4 bytes
-                float m_flAllyTargetRangeMult; // 0x150c, 0x4 bytes
-                float m_flHookTargetOnlyWindow; // 0x1510, 0x4 bytes
-                std::uint8_t pad_1514[0x4]; // 0x1514, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BombAttachedModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfBuffModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastBombParticle; // 0x10a0, 0xe0 bytes
+                float m_flPostRangeGravityScale; // 0x1180, 0x4 bytes
+                float m_flAllyCollideRadius; // 0x1184, 0x4 bytes
+                float m_flBombDragStartRange; // 0x1188, 0x4 bytes
+                float m_flBombDragStartValue; // 0x118c, 0x4 bytes
+                float m_flBombDragEndValue; // 0x1190, 0x4 bytes
+                float m_flAllyTargetRangeMult; // 0x1194, 0x4 bytes
+                float m_flHookTargetOnlyWindow; // 0x1198, 0x4 bytes
+                std::uint8_t pad_119c[0x4]; // 0x119c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityStickyBombVData) == 0x1518, "CAbilityStickyBombVData size mismatch");
+            static_assert(sizeof(CAbilityStickyBombVData) == 0x11A0, "CAbilityStickyBombVData size mismatch");
         }
     }
 }

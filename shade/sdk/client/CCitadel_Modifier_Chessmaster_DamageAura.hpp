@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x840
+             * Size: 0x848
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Chessmaster_DamageAura : public shade::sdk::client::CCitadelModifierAura {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x0188, 0x4 bytes
-                std::uint8_t pad_018c[0x6b4]; // 0x018c, 0x6b4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x0190, 0x4 bytes
+                std::uint8_t pad_0194[0x6b4]; // 0x0194, 0x6b4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Chessmaster_DamageAura) == 0x840, "CCitadel_Modifier_Chessmaster_DamageAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Chessmaster_DamageAura) == 0x848, "CCitadel_Modifier_Chessmaster_DamageAura size mismatch");
         }
     }
 }

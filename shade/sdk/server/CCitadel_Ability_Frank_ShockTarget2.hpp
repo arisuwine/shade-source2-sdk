@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1e88
+             * Size: 0x1e90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_ShockTarget2 : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x9a8]; // 0x14a0, 0x9a8 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x1e48, 0x18 bytes
-                std::uint8_t pad_1e60[0x8]; // 0x1e60, 0x8 bytes
-                bool m_bIsFullyCharged; // 0x1e68, 0x1 bytes
-                std::uint8_t pad_1e69[0x7]; // 0x1e69, 0x7 bytes
-                shade::sdk::server::CModifierHandleBase m_hFullyChargedFXModifier; // 0x1e70, 0x18 bytes
+                std::uint8_t pad_14a8[0x9a8]; // 0x14a8, 0x9a8 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x1e50, 0x18 bytes
+                std::uint8_t pad_1e68[0x8]; // 0x1e68, 0x8 bytes
+                bool m_bIsFullyCharged; // 0x1e70, 0x1 bytes
+                std::uint8_t pad_1e71[0x7]; // 0x1e71, 0x7 bytes
+                shade::sdk::server::CModifierHandleBase m_hFullyChargedFXModifier; // 0x1e78, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_ShockTarget2) == 0x1E88, "CCitadel_Ability_Frank_ShockTarget2 size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_ShockTarget2) == 0x1E90, "CCitadel_Ability_Frank_ShockTarget2 size mismatch");
         }
     }
 }

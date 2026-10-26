@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f90
+             * Size: 0x1f98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,19 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_Queen : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CHandle<shade::sdk::client::CCitadel_Ability_Chessmaster_MoveChessPiece> m_hMoveAbility; // 0x16d8, 0x4 bytes
-                std::int32_t m_iRemainingMoves; // 0x16dc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitUnits; // 0x16e0, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecStunnedUnits; // 0x16f8, 0x18 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_pDeployedQueen; // 0x1710, 0x4 bytes
-                bool m_bActive; // 0x1714, 0x1 bytes
-                std::uint8_t pad_1715[0x87b]; // 0x1715, 0x87b bytes
+                CHandle<shade::sdk::client::CCitadel_Ability_Chessmaster_MoveChessPiece> m_hMoveAbility; // 0x16e0, 0x4 bytes
+                std::int32_t m_iRemainingMoves; // 0x16e4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitUnits; // 0x16e8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecStunnedUnits; // 0x1700, 0x18 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_pDeployedQueen; // 0x1718, 0x4 bytes
+                bool m_bActive; // 0x171c, 0x1 bytes
+                std::uint8_t pad_171d[0x87b]; // 0x171d, 0x87b bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_Queen) == 0x1F90, "CCitadel_Ability_Chessmaster_Queen size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_Queen) == 0x1F98, "CCitadel_Ability_Chessmaster_Queen size mismatch");
         }
     }
 }

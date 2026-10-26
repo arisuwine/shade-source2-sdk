@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x648
+             * Size: 0x650
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Fencer_Ultimate_Target : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bDamageDone; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x3]; // 0x0149, 0x3 bytes
-                float m_flDamageTime; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0x4d0]; // 0x0150, 0x4d0 bytes
-                Vector m_vDashDirection; // 0x0620, 0xc bytes
-                std::uint8_t pad_062c[0x1c]; // 0x062c, 0x1c bytes
+                bool m_bDamageDone; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x3]; // 0x0151, 0x3 bytes
+                float m_flDamageTime; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0x4d0]; // 0x0158, 0x4d0 bytes
+                Vector m_vDashDirection; // 0x0628, 0xc bytes
+                std::uint8_t pad_0634[0x1c]; // 0x0634, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Fencer_Ultimate_Target) == 0x648, "CModifier_Fencer_Ultimate_Target size mismatch");
+            static_assert(sizeof(CModifier_Fencer_Ultimate_Target) == 0x650, "CModifier_Fencer_Ultimate_Target size mismatch");
         }
     }
 }

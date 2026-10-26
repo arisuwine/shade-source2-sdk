@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16a8
+             * Size: 0x1330
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_HexingBrew_ThrowVData : public shade::sdk::client::CBaseTriggerAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FireTrailParticle; // 0x1408, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierTrailParticle; // 0x14e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SilenceTrailParticle; // 0x15c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FireTrailParticle; // 0x1090, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierTrailParticle; // 0x1170, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SilenceTrailParticle; // 0x1250, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_HexingBrew_ThrowVData) == 0x16A8, "CCitadel_Ability_Baba_HexingBrew_ThrowVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_HexingBrew_ThrowVData) == 0x1330, "CCitadel_Ability_Baba_HexingBrew_ThrowVData size mismatch");
         }
     }
 }

@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17b0
+             * Size: 0x1438
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,53 +44,53 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityJumpVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flShootingLockoutAfterJump; // 0x13e8, 0x4 bytes
-                float m_flShootingInaccuracyPercentageAfterJump; // 0x13ec, 0x4 bytes
-                float m_flShootingInaccuracyDurationAfterJump; // 0x13f0, 0x4 bytes
-                std::uint8_t pad_13f4[0x4]; // 0x13f4, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashJumpParticle; // 0x13f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AirJumpParticle; // 0x14d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallJumpParticle; // 0x15b8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1698, 0x10 bytes
-                CSoundEventName m_GroundJumpExecutedSound; // 0x16a8, 0x10 bytes
-                CSoundEventName m_AirJumpSound; // 0x16b8, 0x10 bytes
-                float m_flMantleRefundWindow; // 0x16c8, 0x4 bytes
-                float m_flZiplineRefundWindow; // 0x16cc, 0x4 bytes
-                float m_flLateJumpGraceWindow; // 0x16d0, 0x4 bytes
-                float m_flMaxSpeedDelta; // 0x16d4, 0x4 bytes
-                CSoundEventName m_strDashJumpSound; // 0x16d8, 0x10 bytes
-                float m_flDashJumpStartTime; // 0x16e8, 0x4 bytes
-                float m_flDashJumpEndTime; // 0x16ec, 0x4 bytes
-                float m_flDashJumpDistanceInMeters; // 0x16f0, 0x4 bytes
-                std::uint8_t pad_16f4[0x4]; // 0x16f4, 0x4 bytes
-                float m_flDashJumpVerticalSpeed; // 0x16f8, 0x4 bytes
-                float m_flDashJumpMissMaxSpeed; // 0x16fc, 0x4 bytes
-                float m_flDashJumpMantleDisableTime; // 0x1700, 0x4 bytes
-                float m_flDashJumpExtraAirControlTime; // 0x1704, 0x4 bytes
-                float m_flDashJumpExtraAirControlPercent; // 0x1708, 0x4 bytes
-                std::uint8_t pad_170c[0x4]; // 0x170c, 0x4 bytes
-                CSoundEventName m_WallJumpExecutedSound; // 0x1710, 0x10 bytes
-                CSoundEventName m_CornerBoostExecutedSound; // 0x1720, 0x10 bytes
-                float m_flCollidedWallMaxDist; // 0x1730, 0x4 bytes
-                shade::sdk::client::CRemapFloat m_flRemapSpeedToWallJumpVelocityDist; // 0x1734, 0x10 bytes
-                float m_flWallJumpFullPowerRechargeTime; // 0x1744, 0x4 bytes
-                float m_flWallJumpPowerMin; // 0x1748, 0x4 bytes
-                float m_flWallJumpPowerBias; // 0x174c, 0x4 bytes
-                float m_flWallJumpUpSpeed; // 0x1750, 0x4 bytes
-                float m_flWallJumpMaxLateralSpeed; // 0x1754, 0x4 bytes
-                CPiecewiseCurve m_WallJumpLateralSpeedFalloffVsAlongSpeed; // 0x1758, 0x40 bytes
-                float m_flWallJumpMinOutSpeed; // 0x1798, 0x4 bytes
-                float m_flWallJumpMaxOutSpeed; // 0x179c, 0x4 bytes
-                float m_flWallJumpLateralInputSuppressTime; // 0x17a0, 0x4 bytes
-                float m_flWallJumpReturnToWallBonusAccel; // 0x17a4, 0x4 bytes
-                float m_flSlowedSlideJumpFactor; // 0x17a8, 0x4 bytes
-                std::uint8_t pad_17ac[0x4]; // 0x17ac, 0x4 bytes
+                float m_flShootingLockoutAfterJump; // 0x1070, 0x4 bytes
+                float m_flShootingInaccuracyPercentageAfterJump; // 0x1074, 0x4 bytes
+                float m_flShootingInaccuracyDurationAfterJump; // 0x1078, 0x4 bytes
+                std::uint8_t pad_107c[0x4]; // 0x107c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashJumpParticle; // 0x1080, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AirJumpParticle; // 0x1160, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallJumpParticle; // 0x1240, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1320, 0x10 bytes
+                CSoundEventName m_GroundJumpExecutedSound; // 0x1330, 0x10 bytes
+                CSoundEventName m_AirJumpSound; // 0x1340, 0x10 bytes
+                float m_flMantleRefundWindow; // 0x1350, 0x4 bytes
+                float m_flZiplineRefundWindow; // 0x1354, 0x4 bytes
+                float m_flLateJumpGraceWindow; // 0x1358, 0x4 bytes
+                float m_flMaxSpeedDelta; // 0x135c, 0x4 bytes
+                CSoundEventName m_strDashJumpSound; // 0x1360, 0x10 bytes
+                float m_flDashJumpStartTime; // 0x1370, 0x4 bytes
+                float m_flDashJumpEndTime; // 0x1374, 0x4 bytes
+                float m_flDashJumpDistanceInMeters; // 0x1378, 0x4 bytes
+                std::uint8_t pad_137c[0x4]; // 0x137c, 0x4 bytes
+                float m_flDashJumpVerticalSpeed; // 0x1380, 0x4 bytes
+                float m_flDashJumpMissMaxSpeed; // 0x1384, 0x4 bytes
+                float m_flDashJumpMantleDisableTime; // 0x1388, 0x4 bytes
+                float m_flDashJumpExtraAirControlTime; // 0x138c, 0x4 bytes
+                float m_flDashJumpExtraAirControlPercent; // 0x1390, 0x4 bytes
+                std::uint8_t pad_1394[0x4]; // 0x1394, 0x4 bytes
+                CSoundEventName m_WallJumpExecutedSound; // 0x1398, 0x10 bytes
+                CSoundEventName m_CornerBoostExecutedSound; // 0x13a8, 0x10 bytes
+                float m_flCollidedWallMaxDist; // 0x13b8, 0x4 bytes
+                shade::sdk::client::CRemapFloat m_flRemapSpeedToWallJumpVelocityDist; // 0x13bc, 0x10 bytes
+                float m_flWallJumpFullPowerRechargeTime; // 0x13cc, 0x4 bytes
+                float m_flWallJumpPowerMin; // 0x13d0, 0x4 bytes
+                float m_flWallJumpPowerBias; // 0x13d4, 0x4 bytes
+                float m_flWallJumpUpSpeed; // 0x13d8, 0x4 bytes
+                float m_flWallJumpMaxLateralSpeed; // 0x13dc, 0x4 bytes
+                CPiecewiseCurve m_WallJumpLateralSpeedFalloffVsAlongSpeed; // 0x13e0, 0x40 bytes
+                float m_flWallJumpMinOutSpeed; // 0x1420, 0x4 bytes
+                float m_flWallJumpMaxOutSpeed; // 0x1424, 0x4 bytes
+                float m_flWallJumpLateralInputSuppressTime; // 0x1428, 0x4 bytes
+                float m_flWallJumpReturnToWallBonusAccel; // 0x142c, 0x4 bytes
+                float m_flSlowedSlideJumpFactor; // 0x1430, 0x4 bytes
+                std::uint8_t pad_1434[0x4]; // 0x1434, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityJumpVData) == 0x17B0, "CAbilityJumpVData size mismatch");
+            static_assert(sizeof(CAbilityJumpVData) == 0x1438, "CAbilityJumpVData size mismatch");
         }
     }
 }

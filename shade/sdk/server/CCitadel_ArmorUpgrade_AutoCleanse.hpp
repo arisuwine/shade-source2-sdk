@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1618
+             * Size: 0x1620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_AutoCleanse : public shade::sdk::server::CCitadel_Item {
             public:
-                CUtlStringToken m_nAbilityBlocking; // 0x14a8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_nAbilityBlockTime; // 0x14ac, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hModifierCaster; // 0x14b0, 0x4 bytes
-                std::uint8_t pad_14b4[0x164]; // 0x14b4, 0x164 bytes
+                CUtlStringToken m_nAbilityBlocking; // 0x14b0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_nAbilityBlockTime; // 0x14b4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hModifierCaster; // 0x14b8, 0x4 bytes
+                std::uint8_t pad_14bc[0x164]; // 0x14bc, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_AutoCleanse) == 0x1618, "CCitadel_ArmorUpgrade_AutoCleanse size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_AutoCleanse) == 0x1620, "CCitadel_ArmorUpgrade_AutoCleanse size mismatch");
         }
     }
 }

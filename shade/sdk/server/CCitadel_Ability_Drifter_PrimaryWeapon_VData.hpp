@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18b8
+             * Size: 0x1540
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Drifter_PrimaryWeapon_VData : public shade::sdk::server::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRight; // 0x16d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleLeft; // 0x17b8, 0xe0 bytes
-                CUtlVector<Vector2D> m_vecOriginOffsetsLeft; // 0x1898, 0x18 bytes
-                float m_flCenterBulletRadiusOverride; // 0x18b0, 0x4 bytes
-                std::uint8_t pad_18b4[0x4]; // 0x18b4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRight; // 0x1360, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleLeft; // 0x1440, 0xe0 bytes
+                CUtlVector<Vector2D> m_vecOriginOffsetsLeft; // 0x1520, 0x18 bytes
+                float m_flCenterBulletRadiusOverride; // 0x1538, 0x4 bytes
+                std::uint8_t pad_153c[0x4]; // 0x153c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Drifter_PrimaryWeapon_VData) == 0x18B8, "CCitadel_Ability_Drifter_PrimaryWeapon_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Drifter_PrimaryWeapon_VData) == 0x1540, "CCitadel_Ability_Drifter_PrimaryWeapon_VData size mismatch");
         }
     }
 }

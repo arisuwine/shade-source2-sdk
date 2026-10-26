@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c00
+             * Size: 0x1888
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,39 +43,39 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_DeadpackPrimaryWeaponChargeVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                float m_flExplosionRadiusInnerFraction; // 0x16d0, 0x4 bytes
-                float m_flExplosionDamageScaleAtMaxRadius; // 0x16d4, 0x4 bytes
-                float m_flRocketJumpExtraRadiusMeters; // 0x16d8, 0x4 bytes
-                float m_flRocketJumpForceMin; // 0x16dc, 0x4 bytes
-                float m_flRocketJumpForceMax; // 0x16e0, 0x4 bytes
-                float m_flRocketJumpForceUpBias; // 0x16e4, 0x4 bytes
-                float m_flRocketJumpForceCrouchMultiplier; // 0x16e8, 0x4 bytes
-                float m_flRocketJumpForceWallMultiplier; // 0x16ec, 0x4 bytes
-                float m_flRocketJumpWallJumpWindow; // 0x16f0, 0x4 bytes
-                float m_flRocketJumpAlreadyFasterMultiplier; // 0x16f4, 0x4 bytes
-                float m_flRocketJumpSelfDamageMaxHealthPercent; // 0x16f8, 0x4 bytes
-                std::uint8_t pad_16fc[0x4]; // 0x16fc, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RocketJumpModifier; // 0x1700, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargingAmbientParticle; // 0x1710, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeBeginParticle; // 0x17f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeLevel2Particle; // 0x18d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeLevel2AmbientParticle; // 0x19b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactExplosionChargeLevel2; // 0x1a90, 0xe0 bytes
-                CSoundEventName m_strChargeLevel2Sound; // 0x1b70, 0x10 bytes
-                CSoundEventName m_strChargingSound; // 0x1b80, 0x10 bytes
-                CSoundEventName m_strChargeLevel2LoopSound; // 0x1b90, 0x10 bytes
-                CSoundEventName m_strShootDefaultSound; // 0x1ba0, 0x10 bytes
-                CSoundEventName m_strShootLevel2Sound; // 0x1bb0, 0x10 bytes
-                CSoundEventName m_strImpactDefaultSound; // 0x1bc0, 0x10 bytes
-                CSoundEventName m_strImpactLevel2Sound; // 0x1bd0, 0x10 bytes
-                CSoundEventName m_strLevel2HitConfirmSound; // 0x1be0, 0x10 bytes
-                CSoundEventName m_strLevel2HitConfirmNPCSound; // 0x1bf0, 0x10 bytes
+                float m_flExplosionRadiusInnerFraction; // 0x1358, 0x4 bytes
+                float m_flExplosionDamageScaleAtMaxRadius; // 0x135c, 0x4 bytes
+                float m_flRocketJumpExtraRadiusMeters; // 0x1360, 0x4 bytes
+                float m_flRocketJumpForceMin; // 0x1364, 0x4 bytes
+                float m_flRocketJumpForceMax; // 0x1368, 0x4 bytes
+                float m_flRocketJumpForceUpBias; // 0x136c, 0x4 bytes
+                float m_flRocketJumpForceCrouchMultiplier; // 0x1370, 0x4 bytes
+                float m_flRocketJumpForceWallMultiplier; // 0x1374, 0x4 bytes
+                float m_flRocketJumpWallJumpWindow; // 0x1378, 0x4 bytes
+                float m_flRocketJumpAlreadyFasterMultiplier; // 0x137c, 0x4 bytes
+                float m_flRocketJumpSelfDamageMaxHealthPercent; // 0x1380, 0x4 bytes
+                std::uint8_t pad_1384[0x4]; // 0x1384, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RocketJumpModifier; // 0x1388, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargingAmbientParticle; // 0x1398, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeBeginParticle; // 0x1478, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeLevel2Particle; // 0x1558, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeLevel2AmbientParticle; // 0x1638, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactExplosionChargeLevel2; // 0x1718, 0xe0 bytes
+                CSoundEventName m_strChargeLevel2Sound; // 0x17f8, 0x10 bytes
+                CSoundEventName m_strChargingSound; // 0x1808, 0x10 bytes
+                CSoundEventName m_strChargeLevel2LoopSound; // 0x1818, 0x10 bytes
+                CSoundEventName m_strShootDefaultSound; // 0x1828, 0x10 bytes
+                CSoundEventName m_strShootLevel2Sound; // 0x1838, 0x10 bytes
+                CSoundEventName m_strImpactDefaultSound; // 0x1848, 0x10 bytes
+                CSoundEventName m_strImpactLevel2Sound; // 0x1858, 0x10 bytes
+                CSoundEventName m_strLevel2HitConfirmSound; // 0x1868, 0x10 bytes
+                CSoundEventName m_strLevel2HitConfirmNPCSound; // 0x1878, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_DeadpackPrimaryWeaponChargeVData) == 0x1C00, "CCitadel_Ability_DeadpackPrimaryWeaponChargeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_DeadpackPrimaryWeaponChargeVData) == 0x1888, "CCitadel_Ability_DeadpackPrimaryWeaponChargeVData size mismatch");
         }
     }
 }

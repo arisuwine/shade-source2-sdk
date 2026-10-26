@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1de0
+             * Size: 0x1de8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,25 +40,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bull_Charge : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x14a0, 0x18 bytes
-                bool m_bGainedWeaponPowerBuff; // 0x14b8, 0x1 bytes
-                std::uint8_t pad_14b9[0x8f7]; // 0x14b9, 0x8f7 bytes
-                QAngle m_anglesCharging; // 0x1db0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flChargeStartTime; // 0x1dbc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFastChargeStartTime; // 0x1dc0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFastChargeEndTime; // 0x1dc4, 0x4 bytes
-                bool m_bHitSomethingStunnable; // 0x1dc8, 0x1 bytes
-                std::uint8_t pad_1dc9[0x3]; // 0x1dc9, 0x3 bytes
-                bool m_bFirstTick; // 0x1dcc, 0x1 bytes
-                std::uint8_t pad_1dcd[0x3]; // 0x1dcd, 0x3 bytes
-                Vector m_vGoalDir; // 0x1dd0, 0xc bytes
-                std::uint8_t pad_1ddc[0x4]; // 0x1ddc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEntities; // 0x14a8, 0x18 bytes
+                bool m_bGainedWeaponPowerBuff; // 0x14c0, 0x1 bytes
+                std::uint8_t pad_14c1[0x8f7]; // 0x14c1, 0x8f7 bytes
+                QAngle m_anglesCharging; // 0x1db8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flChargeStartTime; // 0x1dc4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFastChargeStartTime; // 0x1dc8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFastChargeEndTime; // 0x1dcc, 0x4 bytes
+                bool m_bHitSomethingStunnable; // 0x1dd0, 0x1 bytes
+                std::uint8_t pad_1dd1[0x3]; // 0x1dd1, 0x3 bytes
+                bool m_bFirstTick; // 0x1dd4, 0x1 bytes
+                std::uint8_t pad_1dd5[0x3]; // 0x1dd5, 0x3 bytes
+                Vector m_vGoalDir; // 0x1dd8, 0xc bytes
+                std::uint8_t pad_1de4[0x4]; // 0x1de4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bull_Charge) == 0x1DE0, "CCitadel_Ability_Bull_Charge size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bull_Charge) == 0x1DE8, "CCitadel_Ability_Bull_Charge size mismatch");
         }
     }
 }

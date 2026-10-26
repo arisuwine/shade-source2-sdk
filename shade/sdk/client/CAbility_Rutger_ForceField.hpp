@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ba8
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Rutger_ForceField : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4d0]; // 0x16d8, 0x4d0 bytes
+                std::uint8_t pad_16e0[0x4d0]; // 0x16e0, 0x4d0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Rutger_ForceField) == 0x1BA8, "CAbility_Rutger_ForceField size mismatch");
+            static_assert(sizeof(CAbility_Rutger_ForceField) == 0x1BB0, "CAbility_Rutger_ForceField size mismatch");
         }
     }
 }

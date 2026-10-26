@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d00
+             * Size: 0x1d08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Trapper_SpiderJar : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                VectorWS m_vLaunchPosition; // 0x14a0, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x14ac, 0xc bytes
-                bool m_bHasMadeSpiders; // 0x14b8, 0x1 bytes
-                std::uint8_t pad_14b9[0x847]; // 0x14b9, 0x847 bytes
+                VectorWS m_vLaunchPosition; // 0x14a8, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x14b4, 0xc bytes
+                bool m_bHasMadeSpiders; // 0x14c0, 0x1 bytes
+                std::uint8_t pad_14c1[0x847]; // 0x14c1, 0x847 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Trapper_SpiderJar) == 0x1D00, "CCitadel_Ability_Trapper_SpiderJar size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Trapper_SpiderJar) == 0x1D08, "CCitadel_Ability_Trapper_SpiderJar size mismatch");
         }
     }
 }

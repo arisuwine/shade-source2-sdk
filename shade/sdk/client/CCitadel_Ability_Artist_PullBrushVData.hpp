@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17b8
+             * Size: 0x1448
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,30 +45,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_PullBrushVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                shade::sdk::client::EAbilitySlots_t m_eLeaderAbilitySlot; // 0x13e8, 0x2 bytes
-                bool m_bLockInitialCastPosition; // 0x13ea, 0x1 bytes
-                std::uint8_t pad_13eb[0x1]; // 0x13eb, 0x1 bytes
-                float m_flSpacingBetweenBlockers; // 0x13ec, 0x4 bytes
-                float m_flAdditionalTraceDistance; // 0x13f0, 0x4 bytes
-                float m_flTraceSurfaceOffset; // 0x13f4, 0x4 bytes
-                float m_flDragSpringStrength; // 0x13f8, 0x4 bytes
-                float m_flDragDamp; // 0x13fc, 0x4 bytes
-                float m_flDrawingLingerTime; // 0x1400, 0x4 bytes
-                bool m_bShowDesatVolume; // 0x1404, 0x1 bytes
-                std::uint8_t pad_1405[0x3]; // 0x1405, 0x3 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CollisionModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpawnParticle; // 0x1418, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DragParticle; // 0x14f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrokeParticle; // 0x15d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BlockerModel; // 0x16b8, 0xe0 bytes
-                CSoundEventName m_strStrokeSound; // 0x1798, 0x10 bytes
-                CSoundEventName m_strPaintingLoopSound; // 0x17a8, 0x10 bytes
+                shade::sdk::client::EAbilitySlots_t m_eLeaderAbilitySlot; // 0x1070, 0x2 bytes
+                bool m_bLockInitialCastPosition; // 0x1072, 0x1 bytes
+                std::uint8_t pad_1073[0x1]; // 0x1073, 0x1 bytes
+                float m_flSpacingBetweenBlockers; // 0x1074, 0x4 bytes
+                float m_flAdditionalTraceDistance; // 0x1078, 0x4 bytes
+                float m_flTraceSurfaceOffset; // 0x107c, 0x4 bytes
+                float m_flDragSpringStrength; // 0x1080, 0x4 bytes
+                float m_flDragDamp; // 0x1084, 0x4 bytes
+                float m_flDrawingLingerTime; // 0x1088, 0x4 bytes
+                bool m_bShowDesatVolume; // 0x108c, 0x1 bytes
+                std::uint8_t pad_108d[0x3]; // 0x108d, 0x3 bytes
+                float m_flBlockerExtent; // 0x1090, 0x4 bytes
+                float m_flMinStrokeDistance; // 0x1094, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CollisionModifier; // 0x1098, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpawnParticle; // 0x10a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DragParticle; // 0x1188, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrokeParticle; // 0x1268, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BlockerModel; // 0x1348, 0xe0 bytes
+                CSoundEventName m_strStrokeSound; // 0x1428, 0x10 bytes
+                CSoundEventName m_strPaintingLoopSound; // 0x1438, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_PullBrushVData) == 0x17B8, "CCitadel_Ability_Artist_PullBrushVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_PullBrushVData) == 0x1448, "CCitadel_Ability_Artist_PullBrushVData size mismatch");
         }
     }
 }

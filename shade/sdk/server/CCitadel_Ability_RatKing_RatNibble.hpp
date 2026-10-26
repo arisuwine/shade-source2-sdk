@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1ad8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_RatKing_RatNibble : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x630]; // 0x14a0, 0x630 bytes
+                std::uint8_t pad_14a8[0x630]; // 0x14a8, 0x630 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_RatKing_RatNibble) == 0x1AD0, "CCitadel_Ability_RatKing_RatNibble size mismatch");
+            static_assert(sizeof(CCitadel_Ability_RatKing_RatNibble) == 0x1AD8, "CCitadel_Ability_RatKing_RatNibble size mismatch");
         }
     }
 }

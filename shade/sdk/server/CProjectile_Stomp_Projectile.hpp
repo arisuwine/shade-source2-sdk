@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xcf0
+             * Size: 0xcf8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CProjectile_Stomp_Projectile : public shade::sdk::server::CCitadelProjectile {
             public:
-                VectorWS m_vLastStompPos; // 0x0968, 0xc bytes
-                bool m_bFinished; // 0x0974, 0x1 bytes
-                std::uint8_t pad_0975[0x3]; // 0x0975, 0x3 bytes
-                float m_flWidth; // 0x0978, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tDieTime; // 0x097c, 0x4 bytes
-                std::uint8_t pad_0980[0x370]; // 0x0980, 0x370 bytes
+                VectorWS m_vLastStompPos; // 0x0970, 0xc bytes
+                bool m_bFinished; // 0x097c, 0x1 bytes
+                std::uint8_t pad_097d[0x3]; // 0x097d, 0x3 bytes
+                float m_flWidth; // 0x0980, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tDieTime; // 0x0984, 0x4 bytes
+                std::uint8_t pad_0988[0x370]; // 0x0988, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CProjectile_Stomp_Projectile) == 0xCF0, "CProjectile_Stomp_Projectile size mismatch");
+            static_assert(sizeof(CProjectile_Stomp_Projectile) == 0xCF8, "CProjectile_Stomp_Projectile size mismatch");
         }
     }
 }

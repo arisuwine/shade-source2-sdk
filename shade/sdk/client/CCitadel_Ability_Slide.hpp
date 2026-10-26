@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1798
+             * Size: 0x17a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,34 +36,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Slide : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x58]; // 0x16d8, 0x58 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flGroundDashSlideTime; // 0x1730, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flSlowGetupStartTime; // 0x1748, 0x4 bytes
-                bool m_bShouldTriggerSlowGetup; // 0x174c, 0x1 bytes
-                bool m_bWantsSlide; // 0x174d, 0x1 bytes
-                bool m_bAirborneWhenDuckPressed; // 0x174e, 0x1 bytes
-                bool m_bIsSliding; // 0x174f, 0x1 bytes
-                bool m_bSlideIsSticky; // 0x1750, 0x1 bytes
-                std::uint8_t pad_1751[0x3]; // 0x1751, 0x3 bytes
-                float m_flSpeedAdjust; // 0x1754, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDuckPressedTime; // 0x1758, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSlideChangeTime; // 0x175c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSlidingOnFlatStartTime; // 0x1760, 0x4 bytes
-                std::int32_t m_nJumpsThisSlideSession; // 0x1764, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flOnGroundStartTime; // 0x1768, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDashSlideStartTime; // 0x176c, 0x4 bytes
-                bool m_bStartedSlideViaProbeSlope; // 0x1770, 0x1 bytes
-                std::uint8_t pad_1771[0x3]; // 0x1771, 0x3 bytes
-                shade::sdk::entity2::GameTick_t m_nForcedAllowRestartSlideTick; // 0x1774, 0x4 bytes
-                shade::sdk::client::HeroID_t m_unHeroID; // 0x1778, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nSlideEffectIndex; // 0x177c, 0x4 bytes
-                std::uint8_t pad_1780[0x18]; // 0x1780, 0x18 bytes
+                std::uint8_t pad_16e0[0x58]; // 0x16e0, 0x58 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flGroundDashSlideTime; // 0x1738, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flSlowGetupStartTime; // 0x1750, 0x4 bytes
+                bool m_bShouldTriggerSlowGetup; // 0x1754, 0x1 bytes
+                bool m_bWantsSlide; // 0x1755, 0x1 bytes
+                bool m_bAirborneWhenDuckPressed; // 0x1756, 0x1 bytes
+                bool m_bIsSliding; // 0x1757, 0x1 bytes
+                bool m_bSlideIsSticky; // 0x1758, 0x1 bytes
+                std::uint8_t pad_1759[0x3]; // 0x1759, 0x3 bytes
+                float m_flSpeedAdjust; // 0x175c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDuckPressedTime; // 0x1760, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSlideChangeTime; // 0x1764, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSlidingOnFlatStartTime; // 0x1768, 0x4 bytes
+                std::int32_t m_nJumpsThisSlideSession; // 0x176c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flOnGroundStartTime; // 0x1770, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDashSlideStartTime; // 0x1774, 0x4 bytes
+                bool m_bStartedSlideViaProbeSlope; // 0x1778, 0x1 bytes
+                std::uint8_t pad_1779[0x3]; // 0x1779, 0x3 bytes
+                shade::sdk::entity2::GameTick_t m_nForcedAllowRestartSlideTick; // 0x177c, 0x4 bytes
+                shade::sdk::client::HeroID_t m_unHeroID; // 0x1780, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nSlideEffectIndex; // 0x1784, 0x4 bytes
+                std::uint8_t pad_1788[0x18]; // 0x1788, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Slide) == 0x1798, "CCitadel_Ability_Slide size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Slide) == 0x17A0, "CCitadel_Ability_Slide size mismatch");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b90
+             * Size: 0x1b98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,42 +42,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FlyingStrike : public shade::sdk::client::CCitadelBaseYamatoAbility {
             public:
-                std::uint8_t pad_16e0[0x28]; // 0x16e0, 0x28 bytes
-                shade::sdk::client::SatVolumeIndex_t m_desatVolIdx; // 0x1708, 0x4 bytes
-                bool m_bShadowFormCast; // 0x170c, 0x1 bytes
-                std::uint8_t pad_170d[0x3]; // 0x170d, 0x3 bytes
-                VectorWS m_vYamatoCastPos; // 0x1710, 0xc bytes
-                VectorWS m_vTargetCastPos; // 0x171c, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flFlyingToTargetStartTime; // 0x1728, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndAttackTime; // 0x172c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGrappleStartTime; // 0x1730, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0x1734, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAttackLatchTime; // 0x1738, 0x4 bytes
-                VectorWS m_vAttackLatchPos; // 0x173c, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1748, 0x4 bytes
-                bool m_bIsTargetAlly; // 0x174c, 0x1 bytes
-                std::uint8_t pad_174d[0x3]; // 0x174d, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0x1750, 0x4 bytes
-                std::uint8_t pad_1754[0x4]; // 0x1754, 0x4 bytes
-                VectorWS m_rgPath[0x14]; // 0x1758, 0xf0 bytes
-                std::int32_t m_nPathIdx; // 0x1848, 0x4 bytes
-                std::int32_t m_nPathSize; // 0x184c, 0x4 bytes
-                float m_flPathLength; // 0x1850, 0x4 bytes
-                Vector m_vFlyingInitialOffsetToPath; // 0x1854, 0xc bytes
-                float flDistFlown; // 0x1860, 0x4 bytes
-                VectorWS m_vLastSafePos; // 0x1864, 0xc bytes
-                std::uint8_t pad_1870[0x2c0]; // 0x1870, 0x2c0 bytes
-                shade::sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0x1b30, 0x4 bytes
-                std::uint8_t pad_1b34[0x54]; // 0x1b34, 0x54 bytes
-                bool m_bPathDirty; // 0x1b88, 0x1 bytes
-                bool m_bJumpSoundPlayed; // 0x1b89, 0x1 bytes
-                std::uint8_t pad_1b8a[0x6]; // 0x1b8a, 0x6 bytes
+                std::uint8_t pad_16e8[0x28]; // 0x16e8, 0x28 bytes
+                shade::sdk::client::SatVolumeIndex_t m_desatVolIdx; // 0x1710, 0x4 bytes
+                bool m_bShadowFormCast; // 0x1714, 0x1 bytes
+                std::uint8_t pad_1715[0x3]; // 0x1715, 0x3 bytes
+                VectorWS m_vYamatoCastPos; // 0x1718, 0xc bytes
+                VectorWS m_vTargetCastPos; // 0x1724, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flFlyingToTargetStartTime; // 0x1730, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndAttackTime; // 0x1734, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGrappleStartTime; // 0x1738, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0x173c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAttackLatchTime; // 0x1740, 0x4 bytes
+                VectorWS m_vAttackLatchPos; // 0x1744, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1750, 0x4 bytes
+                bool m_bIsTargetAlly; // 0x1754, 0x1 bytes
+                std::uint8_t pad_1755[0x3]; // 0x1755, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0x1758, 0x4 bytes
+                std::uint8_t pad_175c[0x4]; // 0x175c, 0x4 bytes
+                VectorWS m_rgPath[0x14]; // 0x1760, 0xf0 bytes
+                std::int32_t m_nPathIdx; // 0x1850, 0x4 bytes
+                std::int32_t m_nPathSize; // 0x1854, 0x4 bytes
+                float m_flPathLength; // 0x1858, 0x4 bytes
+                Vector m_vFlyingInitialOffsetToPath; // 0x185c, 0xc bytes
+                float flDistFlown; // 0x1868, 0x4 bytes
+                VectorWS m_vLastSafePos; // 0x186c, 0xc bytes
+                std::uint8_t pad_1878[0x2c0]; // 0x1878, 0x2c0 bytes
+                shade::sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0x1b38, 0x4 bytes
+                std::uint8_t pad_1b3c[0x54]; // 0x1b3c, 0x54 bytes
+                bool m_bPathDirty; // 0x1b90, 0x1 bytes
+                bool m_bJumpSoundPlayed; // 0x1b91, 0x1 bytes
+                std::uint8_t pad_1b92[0x6]; // 0x1b92, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FlyingStrike) == 0x1B90, "CCitadel_Ability_FlyingStrike size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FlyingStrike) == 0x1B98, "CCitadel_Ability_FlyingStrike size mismatch");
         }
     }
 }

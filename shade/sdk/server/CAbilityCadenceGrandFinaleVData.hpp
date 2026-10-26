@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14e8
+             * Size: 0x1170
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCadenceGrandFinaleVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_StageModel; // 0x13e8, 0xe0 bytes
-                float m_flStageModelHeight; // 0x14c8, 0x4 bytes
-                float m_flStageModelWidth; // 0x14cc, 0x4 bytes
-                float m_flStageModelLength; // 0x14d0, 0x4 bytes
-                float m_flStageModelScale; // 0x14d4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GrandFinaleAOEModifier; // 0x14d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_StageModel; // 0x1070, 0xe0 bytes
+                float m_flStageModelHeight; // 0x1150, 0x4 bytes
+                float m_flStageModelWidth; // 0x1154, 0x4 bytes
+                float m_flStageModelLength; // 0x1158, 0x4 bytes
+                float m_flStageModelScale; // 0x115c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GrandFinaleAOEModifier; // 0x1160, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCadenceGrandFinaleVData) == 0x14E8, "CAbilityCadenceGrandFinaleVData size mismatch");
+            static_assert(sizeof(CAbilityCadenceGrandFinaleVData) == 0x1170, "CAbilityCadenceGrandFinaleVData size mismatch");
         }
     }
 }

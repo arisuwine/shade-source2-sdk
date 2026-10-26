@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x14f8
+             * Size: 0x1180
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityHornetChainVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChainModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisarmModifier; // 0x14e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1070, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChainModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DisarmModifier; // 0x1170, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityHornetChainVData) == 0x14F8, "CAbilityHornetChainVData size mismatch");
+            static_assert(sizeof(CAbilityHornetChainVData) == 0x1180, "CAbilityHornetChainVData size mismatch");
         }
     }
 }

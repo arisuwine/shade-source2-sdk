@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17f8
+             * Size: 0x1480
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,25 +43,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Deadpack_FlamethrowerVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ScorchParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BackblastParticle; // 0x1688, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1768, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ResistModifier; // 0x1778, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1788, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BackblastModifier; // 0x1798, 0x10 bytes
-                CSoundEventName m_BeamStartSound; // 0x17a8, 0x10 bytes
-                CSoundEventName m_BeamStopSound; // 0x17b8, 0x10 bytes
-                CSoundEventName m_BackblastSound; // 0x17c8, 0x10 bytes
-                CSoundEventName m_BeamPointStartLoopSound; // 0x17d8, 0x10 bytes
-                CSoundEventName m_BeamPointClosestLoopSound; // 0x17e8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ScorchParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BackblastParticle; // 0x1310, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ResistModifier; // 0x1400, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1410, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BackblastModifier; // 0x1420, 0x10 bytes
+                CSoundEventName m_BeamStartSound; // 0x1430, 0x10 bytes
+                CSoundEventName m_BeamStopSound; // 0x1440, 0x10 bytes
+                CSoundEventName m_BackblastSound; // 0x1450, 0x10 bytes
+                CSoundEventName m_BeamPointStartLoopSound; // 0x1460, 0x10 bytes
+                CSoundEventName m_BeamPointClosestLoopSound; // 0x1470, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Deadpack_FlamethrowerVData) == 0x17F8, "CCitadel_Ability_Deadpack_FlamethrowerVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Deadpack_FlamethrowerVData) == 0x1480, "CCitadel_Ability_Deadpack_FlamethrowerVData size mismatch");
         }
     }
 }

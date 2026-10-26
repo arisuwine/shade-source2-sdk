@@ -16,13 +16,14 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/ParticleIndex_t.hpp"
 #include "shade/sdk/server/CCitadelModifier.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Unstoppable : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bInCheckState; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
+                shade::sdk::client::ParticleIndex_t m_nPlayerShieldFXIndex; // 0x0150, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nShieldFXIndex; // 0x0154, 0x4 bytes
+                bool m_bInCheckState; // 0x0158, 0x1 bytes
+                std::uint8_t pad_0159[0x7]; // 0x0159, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Unstoppable) == 0x150, "CCitadel_Modifier_Unstoppable size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Unstoppable) == 0x160, "CCitadel_Modifier_Unstoppable size mismatch");
         }
     }
 }

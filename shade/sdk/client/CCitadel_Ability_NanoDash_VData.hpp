@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1890
+             * Size: 0x1518
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,24 +44,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_NanoDash_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashLineEffect; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashSwingEffect; // 0x1688, 0xe0 bytes
-                CSoundEventName m_strDashStart; // 0x1768, 0x10 bytes
-                CSoundEventName m_strSlashStart; // 0x1778, 0x10 bytes
-                CSoundEventName m_strSlashImpactSound; // 0x1788, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BountyModifier; // 0x1798, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSlash; // 0x17a8, 0xa0 bytes
-                float m_flGroundBreakOffAngle; // 0x1848, 0x4 bytes
-                std::uint8_t pad_184c[0x4]; // 0x184c, 0x4 bytes
-                CPiecewiseCurve m_SpeedCurve; // 0x1850, 0x40 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashLineEffect; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashSwingEffect; // 0x1310, 0xe0 bytes
+                CSoundEventName m_strDashStart; // 0x13f0, 0x10 bytes
+                CSoundEventName m_strSlashStart; // 0x1400, 0x10 bytes
+                CSoundEventName m_strSlashImpactSound; // 0x1410, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BountyModifier; // 0x1420, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSlash; // 0x1430, 0xa0 bytes
+                float m_flGroundBreakOffAngle; // 0x14d0, 0x4 bytes
+                std::uint8_t pad_14d4[0x4]; // 0x14d4, 0x4 bytes
+                CPiecewiseCurve m_SpeedCurve; // 0x14d8, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_NanoDash_VData) == 0x1890, "CCitadel_Ability_NanoDash_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_NanoDash_VData) == 0x1518, "CCitadel_Ability_NanoDash_VData size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15f8
+             * Size: 0x1280
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Werewolf_TransformationVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ReadyModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WerewolfModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCreditModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TransformEndParticle; // 0x1418, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TransformKillParticle; // 0x14f8, 0xe0 bytes
-                bool m_bAutoTransformOnReadyComplete; // 0x15d8, 0x1 bytes
-                std::uint8_t pad_15d9[0x7]; // 0x15d9, 0x7 bytes
-                CSoundEventName m_strEndingWarningSound; // 0x15e0, 0x10 bytes
-                CGlobalSymbol m_strAG2PostCastAction; // 0x15f0, 0x8 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ReadyModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WerewolfModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCreditModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TransformEndParticle; // 0x10a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TransformKillParticle; // 0x1180, 0xe0 bytes
+                bool m_bAutoTransformOnReadyComplete; // 0x1260, 0x1 bytes
+                std::uint8_t pad_1261[0x7]; // 0x1261, 0x7 bytes
+                CSoundEventName m_strEndingWarningSound; // 0x1268, 0x10 bytes
+                CGlobalSymbol m_strAG2PostCastAction; // 0x1278, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Werewolf_TransformationVData) == 0x15F8, "CCitadel_Werewolf_TransformationVData size mismatch");
+            static_assert(sizeof(CCitadel_Werewolf_TransformationVData) == 0x1280, "CCitadel_Werewolf_TransformationVData size mismatch");
         }
     }
 }

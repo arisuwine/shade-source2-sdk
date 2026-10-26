@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13f8
+             * Size: 0x1080
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Rutger_Pulse_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AuraModifier; // 0x13e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_AuraModifier; // 0x1070, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Rutger_Pulse_VData) == 0x13F8, "CCitadel_Ability_Rutger_Pulse_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Rutger_Pulse_VData) == 0x1080, "CCitadel_Ability_Rutger_Pulse_VData size mismatch");
         }
     }
 }

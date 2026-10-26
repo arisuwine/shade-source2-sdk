@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1518
+             * Size: 0x11a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,18 +44,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_KnightBuffVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x13e8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_AuraModifier; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveBuffModifier; // 0x14e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x14f8, 0x10 bytes
-                CSoundEventName m_strExplosionSound; // 0x1508, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1070, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifierAura> m_AuraModifier; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveBuffModifier; // 0x1170, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1180, 0x10 bytes
+                CSoundEventName m_strExplosionSound; // 0x1190, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_KnightBuffVData) == 0x1518, "CCitadel_Ability_Chessmaster_KnightBuffVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_KnightBuffVData) == 0x11A0, "CCitadel_Ability_Chessmaster_KnightBuffVData size mismatch");
         }
     }
 }

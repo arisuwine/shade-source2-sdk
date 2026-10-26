@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1918
+             * Size: 0x15a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,30 +43,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_BubblingBrew_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PullModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1418, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StringParticle; // 0x14f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BoltParticle; // 0x15d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CasterBuffParticle; // 0x16b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_nStringParticle; // 0x1798, 0xe0 bytes
-                float m_flPulseFrequency; // 0x1878, 0x4 bytes
-                float m_flPulseWidth; // 0x187c, 0x4 bytes
-                CSoundEventName m_strExplodeSound; // 0x1880, 0x10 bytes
-                CSoundEventName m_strFirstExplosionSound; // 0x1890, 0x10 bytes
-                CSoundEventName m_strPullSound; // 0x18a0, 0x10 bytes
-                CSoundEventName m_strVictimPulledSound; // 0x18b0, 0x10 bytes
-                CSoundEventName m_strBeamPointClosestLoopSound; // 0x18c0, 0x10 bytes
-                CPiecewiseCurve m_ProjectileTurnAngleSpeedCurve; // 0x18d0, 0x40 bytes
-                float m_flAllowedSlideAngleCos; // 0x1910, 0x4 bytes
-                float m_flStackExpiryWarningDuration; // 0x1914, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PullModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x10a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StringParticle; // 0x1180, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BoltParticle; // 0x1260, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CasterBuffParticle; // 0x1340, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_nStringParticle; // 0x1420, 0xe0 bytes
+                float m_flPulseFrequency; // 0x1500, 0x4 bytes
+                float m_flPulseWidth; // 0x1504, 0x4 bytes
+                CSoundEventName m_strExplodeSound; // 0x1508, 0x10 bytes
+                CSoundEventName m_strFirstExplosionSound; // 0x1518, 0x10 bytes
+                CSoundEventName m_strPullSound; // 0x1528, 0x10 bytes
+                CSoundEventName m_strVictimPulledSound; // 0x1538, 0x10 bytes
+                CSoundEventName m_strBeamPointClosestLoopSound; // 0x1548, 0x10 bytes
+                CPiecewiseCurve m_ProjectileTurnAngleSpeedCurve; // 0x1558, 0x40 bytes
+                float m_flAllowedSlideAngleCos; // 0x1598, 0x4 bytes
+                float m_flStackExpiryWarningDuration; // 0x159c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_BubblingBrew_VData) == 0x1918, "CCitadel_Ability_Baba_BubblingBrew_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_BubblingBrew_VData) == 0x15A0, "CCitadel_Ability_Baba_BubblingBrew_VData size mismatch");
         }
     }
 }

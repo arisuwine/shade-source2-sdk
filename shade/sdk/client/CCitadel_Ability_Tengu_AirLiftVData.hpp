@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17b8
+             * Size: 0x1440
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,55 +43,55 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tengu_AirLiftVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FlyingModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GrabModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HoldBombModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DroppedBuffModifier; // 0x1418, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExplodingAllyModifier; // 0x1428, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x1438, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1448, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletResistModifier; // 0x1458, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialExplodeParticle; // 0x1468, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoldBombEffect; // 0x1548, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1628, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x1708, 0x10 bytes
-                CSoundEventName m_strHoldBombLoopSound; // 0x1718, 0x10 bytes
-                CSoundEventName m_strBombLaunchSound; // 0x1728, 0x10 bytes
-                CSoundEventName m_strBarrierSound; // 0x1738, 0x10 bytes
-                float m_flAirDrag; // 0x1748, 0x4 bytes
-                float m_flMaxFallSpeed; // 0x174c, 0x4 bytes
-                float m_flTargetAirSpeedFast; // 0x1750, 0x4 bytes
-                float m_flTargetAirSpeedBase; // 0x1754, 0x4 bytes
-                float m_flSprintMult; // 0x1758, 0x4 bytes
-                float m_flAcceleration; // 0x175c, 0x4 bytes
-                float m_flDecceleration; // 0x1760, 0x4 bytes
-                float m_flAirSideSpeedPercent; // 0x1764, 0x4 bytes
-                float m_flBoostEndVerticalSpeed; // 0x1768, 0x4 bytes
-                float m_flBoostSpeedUp; // 0x176c, 0x4 bytes
-                float m_flCrouchLaunchReduction; // 0x1770, 0x4 bytes
-                float m_flMinFlyHeight; // 0x1774, 0x4 bytes
-                float m_flMaxFlyHeight; // 0x1778, 0x4 bytes
-                float m_flMaxPitchUp; // 0x177c, 0x4 bytes
-                float m_flMaxPitchDown; // 0x1780, 0x4 bytes
-                float m_flAllyDelayedBoostTime; // 0x1784, 0x4 bytes
-                float m_flChannelingAirDrag; // 0x1788, 0x4 bytes
-                float m_flChannelingMaxFallSpeed; // 0x178c, 0x4 bytes
-                float m_flBombReleaseSpeed; // 0x1790, 0x4 bytes
-                float m_flBombReleasePitch; // 0x1794, 0x4 bytes
-                float m_flBombDropReleaseOffset; // 0x1798, 0x4 bytes
-                float m_flHoldBombOffsetX; // 0x179c, 0x4 bytes
-                float m_flHoldBombOffsetY; // 0x17a0, 0x4 bytes
-                float m_flHoldBombOffsetZ; // 0x17a4, 0x4 bytes
-                float m_flAnglePitchBias; // 0x17a8, 0x4 bytes
-                float m_flTrackAmount; // 0x17ac, 0x4 bytes
-                float m_flMoveCollideSpeed; // 0x17b0, 0x4 bytes
-                std::uint8_t pad_17b4[0x4]; // 0x17b4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FlyingModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GrabModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HoldBombModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DroppedBuffModifier; // 0x10a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExplodingAllyModifier; // 0x10b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x10c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x10d0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BulletResistModifier; // 0x10e0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialExplodeParticle; // 0x10f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoldBombEffect; // 0x11d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x12b0, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1390, 0x10 bytes
+                CSoundEventName m_strHoldBombLoopSound; // 0x13a0, 0x10 bytes
+                CSoundEventName m_strBombLaunchSound; // 0x13b0, 0x10 bytes
+                CSoundEventName m_strBarrierSound; // 0x13c0, 0x10 bytes
+                float m_flAirDrag; // 0x13d0, 0x4 bytes
+                float m_flMaxFallSpeed; // 0x13d4, 0x4 bytes
+                float m_flTargetAirSpeedFast; // 0x13d8, 0x4 bytes
+                float m_flTargetAirSpeedBase; // 0x13dc, 0x4 bytes
+                float m_flSprintMult; // 0x13e0, 0x4 bytes
+                float m_flAcceleration; // 0x13e4, 0x4 bytes
+                float m_flDecceleration; // 0x13e8, 0x4 bytes
+                float m_flAirSideSpeedPercent; // 0x13ec, 0x4 bytes
+                float m_flBoostEndVerticalSpeed; // 0x13f0, 0x4 bytes
+                float m_flBoostSpeedUp; // 0x13f4, 0x4 bytes
+                float m_flCrouchLaunchReduction; // 0x13f8, 0x4 bytes
+                float m_flMinFlyHeight; // 0x13fc, 0x4 bytes
+                float m_flMaxFlyHeight; // 0x1400, 0x4 bytes
+                float m_flMaxPitchUp; // 0x1404, 0x4 bytes
+                float m_flMaxPitchDown; // 0x1408, 0x4 bytes
+                float m_flAllyDelayedBoostTime; // 0x140c, 0x4 bytes
+                float m_flChannelingAirDrag; // 0x1410, 0x4 bytes
+                float m_flChannelingMaxFallSpeed; // 0x1414, 0x4 bytes
+                float m_flBombReleaseSpeed; // 0x1418, 0x4 bytes
+                float m_flBombReleasePitch; // 0x141c, 0x4 bytes
+                float m_flBombDropReleaseOffset; // 0x1420, 0x4 bytes
+                float m_flHoldBombOffsetX; // 0x1424, 0x4 bytes
+                float m_flHoldBombOffsetY; // 0x1428, 0x4 bytes
+                float m_flHoldBombOffsetZ; // 0x142c, 0x4 bytes
+                float m_flAnglePitchBias; // 0x1430, 0x4 bytes
+                float m_flTrackAmount; // 0x1434, 0x4 bytes
+                float m_flMoveCollideSpeed; // 0x1438, 0x4 bytes
+                std::uint8_t pad_143c[0x4]; // 0x143c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tengu_AirLiftVData) == 0x17B8, "CCitadel_Ability_Tengu_AirLiftVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tengu_AirLiftVData) == 0x1440, "CCitadel_Ability_Tengu_AirLiftVData size mismatch");
         }
     }
 }

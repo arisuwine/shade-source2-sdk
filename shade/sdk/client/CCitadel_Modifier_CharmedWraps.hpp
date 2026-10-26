@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x438
+             * Size: 0x440
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_CharmedWraps : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                shade::sdk::entity2::GameTime_t m_fLastPrimingLightAttackTime; // 0x02d0, 0x4 bytes
-                std::uint8_t pad_02d4[0x164]; // 0x02d4, 0x164 bytes
+                shade::sdk::entity2::GameTime_t m_fLastPrimingLightAttackTime; // 0x02d8, 0x4 bytes
+                std::uint8_t pad_02dc[0x164]; // 0x02dc, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_CharmedWraps) == 0x438, "CCitadel_Modifier_CharmedWraps size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_CharmedWraps) == 0x440, "CCitadel_Modifier_CharmedWraps size mismatch");
         }
     }
 }

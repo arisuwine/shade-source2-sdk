@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x26b8
+             * Size: 0x26c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_GoatFlip : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0xfd0]; // 0x16d8, 0xfd0 bytes
-                shade::sdk::client::PG_RisingRamState m_eState; // 0x26a8, 0x1 bytes
-                std::uint8_t pad_26a9[0x3]; // 0x26a9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tStateStartTime; // 0x26ac, 0x4 bytes
-                float m_flGoingUpTargetElevation; // 0x26b0, 0x4 bytes
-                float m_flGoingUpStartElevation; // 0x26b4, 0x4 bytes
+                std::uint8_t pad_16e0[0xfd0]; // 0x16e0, 0xfd0 bytes
+                shade::sdk::client::PG_RisingRamState m_eState; // 0x26b0, 0x1 bytes
+                std::uint8_t pad_26b1[0x3]; // 0x26b1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tStateStartTime; // 0x26b4, 0x4 bytes
+                float m_flGoingUpTargetElevation; // 0x26b8, 0x4 bytes
+                float m_flGoingUpStartElevation; // 0x26bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_GoatFlip) == 0x26B8, "CCitadel_Ability_PunkGoat_GoatFlip size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_GoatFlip) == 0x26C0, "CCitadel_Ability_PunkGoat_GoatFlip size mismatch");
         }
     }
 }

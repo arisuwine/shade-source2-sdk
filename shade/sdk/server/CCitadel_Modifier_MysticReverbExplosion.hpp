@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2b0
+             * Size: 0x2b8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MysticReverbExplosion : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bNoDeath; // 0x0148, 0x1 bytes
-                bool m_bDamageInProgress; // 0x0149, 0x1 bytes
-                std::uint8_t pad_014a[0x2]; // 0x014a, 0x2 bytes
-                float m_flDamage; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0x160]; // 0x0150, 0x160 bytes
+                bool m_bNoDeath; // 0x0150, 0x1 bytes
+                bool m_bDamageInProgress; // 0x0151, 0x1 bytes
+                std::uint8_t pad_0152[0x2]; // 0x0152, 0x2 bytes
+                float m_flDamage; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0x160]; // 0x0158, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MysticReverbExplosion) == 0x2B0, "CCitadel_Modifier_MysticReverbExplosion size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MysticReverbExplosion) == 0x2B8, "CCitadel_Modifier_MysticReverbExplosion size mismatch");
         }
     }
 }

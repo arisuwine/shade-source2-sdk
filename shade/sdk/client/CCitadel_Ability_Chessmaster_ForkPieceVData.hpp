@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1638
+             * Size: 0x12c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,36 +43,36 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_ForkPieceVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ForkParticle; // 0x14c8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x15a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HexModifier; // 0x15b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ImmunityModifier; // 0x15c8, 0x10 bytes
-                CSoundEventName m_strForkSound; // 0x15d8, 0x10 bytes
-                CSoundEventName m_strReflectSound; // 0x15e8, 0x10 bytes
-                CSoundEventName m_strExpireSound; // 0x15f8, 0x10 bytes
-                bool m_bGrowImmobilizeDurationFromDistance; // 0x1608, 0x1 bytes
-                bool m_bOnlyDebuffOnFork; // 0x1609, 0x1 bytes
-                bool m_bShouldDropEnemyAura; // 0x160a, 0x1 bytes
-                bool m_bShouldDropAllyAura; // 0x160b, 0x1 bytes
-                bool m_bAllowMultihitOnReverse; // 0x160c, 0x1 bytes
-                std::uint8_t pad_160d[0x3]; // 0x160d, 0x3 bytes
-                float m_flDeployGap; // 0x1610, 0x4 bytes
-                float m_flTraceRadius; // 0x1614, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x1618, 0x4 bytes
-                float m_flFloatDownRate; // 0x161c, 0x4 bytes
-                float m_flClimbHeight; // 0x1620, 0x4 bytes
-                float m_flStepDownHeight; // 0x1624, 0x4 bytes
-                float m_flMinPitch; // 0x1628, 0x4 bytes
-                float m_flMaxPitch; // 0x162c, 0x4 bytes
-                float m_flReverseTraceDistance; // 0x1630, 0x4 bytes
-                float m_flImmunityDuration; // 0x1634, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ForkParticle; // 0x1150, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1230, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_HexModifier; // 0x1240, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ImmunityModifier; // 0x1250, 0x10 bytes
+                CSoundEventName m_strForkSound; // 0x1260, 0x10 bytes
+                CSoundEventName m_strReflectSound; // 0x1270, 0x10 bytes
+                CSoundEventName m_strExpireSound; // 0x1280, 0x10 bytes
+                bool m_bGrowImmobilizeDurationFromDistance; // 0x1290, 0x1 bytes
+                bool m_bOnlyDebuffOnFork; // 0x1291, 0x1 bytes
+                bool m_bShouldDropEnemyAura; // 0x1292, 0x1 bytes
+                bool m_bShouldDropAllyAura; // 0x1293, 0x1 bytes
+                bool m_bAllowMultihitOnReverse; // 0x1294, 0x1 bytes
+                std::uint8_t pad_1295[0x3]; // 0x1295, 0x3 bytes
+                float m_flDeployGap; // 0x1298, 0x4 bytes
+                float m_flTraceRadius; // 0x129c, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x12a0, 0x4 bytes
+                float m_flFloatDownRate; // 0x12a4, 0x4 bytes
+                float m_flClimbHeight; // 0x12a8, 0x4 bytes
+                float m_flStepDownHeight; // 0x12ac, 0x4 bytes
+                float m_flMinPitch; // 0x12b0, 0x4 bytes
+                float m_flMaxPitch; // 0x12b4, 0x4 bytes
+                float m_flReverseTraceDistance; // 0x12b8, 0x4 bytes
+                float m_flImmunityDuration; // 0x12bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_ForkPieceVData) == 0x1638, "CCitadel_Ability_Chessmaster_ForkPieceVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_ForkPieceVData) == 0x12C0, "CCitadel_Ability_Chessmaster_ForkPieceVData size mismatch");
         }
     }
 }

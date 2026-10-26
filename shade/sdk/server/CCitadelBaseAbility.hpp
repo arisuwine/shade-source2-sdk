@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14a0
+             * Size: 0x14a8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -66,29 +66,31 @@ namespace shade {
                 std::uint8_t pad_0625[0x3]; // 0x0625, 0x3 bytes
                 shade::sdk::entity2::GameTime_t m_flCooldownStart; // 0x0628, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flCooldownEnd; // 0x062c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x0630, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChannelStartTime; // 0x0634, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x0638, 0x4 bytes
-                shade::sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x063c, 0x2 bytes
-                std::uint8_t pad_063e[0x2]; // 0x063e, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x0640, 0x4 bytes
-                std::int32_t m_iRemainingCharges; // 0x0644, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x0648, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x064c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x0650, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x0654, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x0658, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x065c, 0x4 bytes
-                bool m_bCanBeImbued; // 0x0660, 0x1 bytes
-                std::uint8_t pad_0661[0x7]; // 0x0661, 0x7 bytes
-                CNetworkUtlVectorBase<CUtlStringToken> m_vecImbuedAbilities; // 0x0668, 0x18 bytes
-                bool m_bSelectionModeIsAltMode; // 0x0680, 0x1 bytes
-                std::uint8_t pad_0681[0x3]; // 0x0681, 0x3 bytes
-                float m_flPreviousEffectiveCooldown; // 0x0684, 0x4 bytes
-                std::uint8_t pad_0688[0xc9c]; // 0x0688, 0xc9c bytes
-                shade::sdk::client::EAbilityActiveReasonBits m_enActiveReasonBits; // 0x1324, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flActiveWindowDeadlines[0x8]; // 0x1328, 0x20 bytes
-                std::uint8_t pad_1348[0x158]; // 0x1348, 0x158 bytes
+                float m_flStoppedCooldownRemaining; // 0x0630, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x0634, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChannelStartTime; // 0x0638, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x063c, 0x4 bytes
+                float m_flCastDelaySpeedScale; // 0x0640, 0x4 bytes
+                shade::sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x0644, 0x2 bytes
+                std::uint8_t pad_0646[0x2]; // 0x0646, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x0648, 0x4 bytes
+                std::int32_t m_iRemainingCharges; // 0x064c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x0650, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x0654, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x0658, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x065c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x0660, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x0664, 0x4 bytes
+                bool m_bCanBeImbued; // 0x0668, 0x1 bytes
+                std::uint8_t pad_0669[0x7]; // 0x0669, 0x7 bytes
+                CNetworkUtlVectorBase<CUtlStringToken> m_vecImbuedAbilities; // 0x0670, 0x18 bytes
+                bool m_bSelectionModeIsAltMode; // 0x0688, 0x1 bytes
+                std::uint8_t pad_0689[0x3]; // 0x0689, 0x3 bytes
+                float m_flPreviousEffectiveCooldown; // 0x068c, 0x4 bytes
+                std::uint8_t pad_0690[0xc9c]; // 0x0690, 0xc9c bytes
+                shade::sdk::client::EAbilityActiveReasonBits m_enActiveReasonBits; // 0x132c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flActiveWindowDeadlines[0x8]; // 0x1330, 0x20 bytes
+                std::uint8_t pad_1350[0x158]; // 0x1350, 0x158 bytes
             };
             #pragma pack(pop)
 
@@ -97,7 +99,7 @@ namespace shade {
              * float time_scale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CCitadelBaseAbility) == 0x14A0, "CCitadelBaseAbility size mismatch");
+            static_assert(sizeof(CCitadelBaseAbility) == 0x14A8, "CCitadelBaseAbility size mismatch");
         }
     }
 }

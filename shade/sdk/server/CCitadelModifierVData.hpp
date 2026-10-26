@@ -59,8 +59,8 @@ namespace shade {
                 float m_flLingeringAssistWindow; // 0x0434, 0x4 bytes
                 bool m_bDurationCanBeTimeScaled; // 0x0438, 0x1 bytes
                 bool m_bDurationReducible; // 0x0439, 0x1 bytes
-                bool m_bDurationReducibleByCrowdControlDiminish; // 0x043a, 0x1 bytes
-                std::uint8_t pad_043b[0x1]; // 0x043b, 0x1 bytes
+                bool m_bDurationExtendible; // 0x043a, 0x1 bytes
+                bool m_bDurationReducibleByCrowdControlDiminish; // 0x043b, 0x1 bytes
                 shade::sdk::client::ModifierTimeScaleSource_t m_eTimeScaleSource; // 0x043c, 0x4 bytes
                 bool m_bDurationAffectedByEffectiveness; // 0x0440, 0x1 bytes
                 std::uint8_t pad_0441[0x7]; // 0x0441, 0x7 bytes

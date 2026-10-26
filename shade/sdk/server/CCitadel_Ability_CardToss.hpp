@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2390
+             * Size: 0x2398
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,20 +40,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_CardToss : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::int32_t m_nPreviousMaxCharges; // 0x14a0, 0x4 bytes
-                std::uint8_t pad_14a4[0x4]; // 0x14a4, 0x4 bytes
-                CUtlVector<shade::sdk::server::CCitadel_Ability_CardToss__Card_t> m_vecCards; // 0x14a8, 0x18 bytes
-                CUtlVector<shade::sdk::server::CCitadel_Ability_CardToss__Card_t> m_vecFlyingCards; // 0x14c0, 0x18 bytes
-                CUtlVector<shade::sdk::client::EWraithCardType> m_vCardList; // 0x14d8, 0x18 bytes
-                std::uint8_t pad_14f0[0xe88]; // 0x14f0, 0xe88 bytes
-                bool m_bCardIsFlying; // 0x2378, 0x1 bytes
-                std::uint8_t pad_2379[0x17]; // 0x2379, 0x17 bytes
+                std::int32_t m_nPreviousMaxCharges; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x4]; // 0x14ac, 0x4 bytes
+                CUtlVector<shade::sdk::server::CCitadel_Ability_CardToss__Card_t> m_vecCards; // 0x14b0, 0x18 bytes
+                CUtlVector<shade::sdk::server::CCitadel_Ability_CardToss__Card_t> m_vecFlyingCards; // 0x14c8, 0x18 bytes
+                CUtlVector<shade::sdk::client::EWraithCardType> m_vCardList; // 0x14e0, 0x18 bytes
+                std::uint8_t pad_14f8[0xe88]; // 0x14f8, 0xe88 bytes
+                bool m_bCardIsFlying; // 0x2380, 0x1 bytes
+                std::uint8_t pad_2381[0x17]; // 0x2381, 0x17 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_CardToss) == 0x2390, "CCitadel_Ability_CardToss size mismatch");
+            static_assert(sizeof(CCitadel_Ability_CardToss) == 0x2398, "CCitadel_Ability_CardToss size mismatch");
         }
     }
 }

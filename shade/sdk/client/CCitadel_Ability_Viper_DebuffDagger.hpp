@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d20
+             * Size: 0x1d28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Viper_DebuffDagger : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x648]; // 0x16d8, 0x648 bytes
+                std::uint8_t pad_16e0[0x648]; // 0x16e0, 0x648 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Viper_DebuffDagger) == 0x1D20, "CCitadel_Ability_Viper_DebuffDagger size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Viper_DebuffDagger) == 0x1D28, "CCitadel_Ability_Viper_DebuffDagger size mismatch");
         }
     }
 }

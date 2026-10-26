@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xec0
+             * Size: 0xf20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -120,17 +120,23 @@ namespace shade {
                 Vector m_vPrecomputedOBBOrigin5; // 0x0e30, 0xc bytes
                 QAngle m_vPrecomputedOBBAngles5; // 0x0e3c, 0xc bytes
                 Vector m_vPrecomputedOBBExtent5; // 0x0e48, 0xc bytes
-                std::uint8_t pad_0e54[0x44]; // 0x0e54, 0x44 bytes
-                bool m_bInitialBoneSetup; // 0x0e98, 0x1 bytes
-                std::uint8_t pad_0e99[0x7]; // 0x0e99, 0x7 bytes
-                C_NetworkUtlVectorBase<std::uint16_t> m_VisClusters; // 0x0ea0, 0x18 bytes
-                std::uint8_t pad_0eb8[0x8]; // 0x0eb8, 0x8 bytes
+                Vector4D m_vPrecomputedShadowmapAtlasRect0; // 0x0e54, 0x10 bytes
+                Vector4D m_vPrecomputedShadowmapAtlasRect1; // 0x0e64, 0x10 bytes
+                Vector4D m_vPrecomputedShadowmapAtlasRect2; // 0x0e74, 0x10 bytes
+                Vector4D m_vPrecomputedShadowmapAtlasRect3; // 0x0e84, 0x10 bytes
+                Vector4D m_vPrecomputedShadowmapAtlasRect4; // 0x0e94, 0x10 bytes
+                Vector4D m_vPrecomputedShadowmapAtlasRect5; // 0x0ea4, 0x10 bytes
+                std::uint8_t pad_0eb4[0x44]; // 0x0eb4, 0x44 bytes
+                bool m_bInitialBoneSetup; // 0x0ef8, 0x1 bytes
+                std::uint8_t pad_0ef9[0x7]; // 0x0ef9, 0x7 bytes
+                C_NetworkUtlVectorBase<std::uint16_t> m_VisClusters; // 0x0f00, 0x18 bytes
+                std::uint8_t pad_0f18[0x8]; // 0x0f18, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BarnLight) == 0xEC0, "C_BarnLight size mismatch");
+            static_assert(sizeof(C_BarnLight) == 0xF20, "C_BarnLight size mismatch");
         }
     }
 }

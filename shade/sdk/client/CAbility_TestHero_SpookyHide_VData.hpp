@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1408
+             * Size: 0x1090
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,14 +40,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_TestHero_SpookyHide_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_SpookyHide_Invis> m_InvisModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RegenModifier; // 0x13f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_SpookyHide_Invis> m_InvisModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_RegenModifier; // 0x1080, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_TestHero_SpookyHide_VData) == 0x1408, "CAbility_TestHero_SpookyHide_VData size mismatch");
+            static_assert(sizeof(CAbility_TestHero_SpookyHide_VData) == 0x1090, "CAbility_TestHero_SpookyHide_VData size mismatch");
         }
     }
 }

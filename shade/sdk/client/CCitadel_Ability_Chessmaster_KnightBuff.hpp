@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e90
+             * Size: 0x1e98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_KnightBuff : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CHandle<shade::sdk::client::CCitadel_Ability_Chessmaster_MoveChessPiece> m_hMoveAbility; // 0x16d8, 0x4 bytes
-                std::uint8_t pad_16dc[0x4]; // 0x16dc, 0x4 bytes
-                CUtlVector<CModifierHandleTyped<shade::sdk::client::CCitadelModifier>> m_vBuffs; // 0x16e0, 0x18 bytes
-                std::uint8_t pad_16f8[0x798]; // 0x16f8, 0x798 bytes
+                CHandle<shade::sdk::client::CCitadel_Ability_Chessmaster_MoveChessPiece> m_hMoveAbility; // 0x16e0, 0x4 bytes
+                std::uint8_t pad_16e4[0x4]; // 0x16e4, 0x4 bytes
+                CUtlVector<CModifierHandleTyped<shade::sdk::client::CCitadelModifier>> m_vBuffs; // 0x16e8, 0x18 bytes
+                std::uint8_t pad_1700[0x798]; // 0x1700, 0x798 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_KnightBuff) == 0x1E90, "CCitadel_Ability_Chessmaster_KnightBuff size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_KnightBuff) == 0x1E98, "CCitadel_Ability_Chessmaster_KnightBuff size mismatch");
         }
     }
 }

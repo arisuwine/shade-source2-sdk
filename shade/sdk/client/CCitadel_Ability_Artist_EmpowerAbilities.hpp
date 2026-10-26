@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1878
+             * Size: 0x1880
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_EmpowerAbilities : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x28]; // 0x16d8, 0x28 bytes
-                bool m_bActive; // 0x1700, 0x1 bytes
-                std::uint8_t pad_1701[0x177]; // 0x1701, 0x177 bytes
+                std::uint8_t pad_16e0[0x28]; // 0x16e0, 0x28 bytes
+                bool m_bActive; // 0x1708, 0x1 bytes
+                std::uint8_t pad_1709[0x177]; // 0x1709, 0x177 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_EmpowerAbilities) == 0x1878, "CCitadel_Ability_Artist_EmpowerAbilities size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_EmpowerAbilities) == 0x1880, "CCitadel_Ability_Artist_EmpowerAbilities size mismatch");
         }
     }
 }

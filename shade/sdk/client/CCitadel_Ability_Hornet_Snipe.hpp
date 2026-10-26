@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x27a8
+             * Size: 0x27b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Hornet_Snipe : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x90c]; // 0x16d8, 0x90c bytes
-                shade::sdk::entity2::GameTime_t m_flScopeStartTime; // 0x1fe4, 0x4 bytes
-                std::uint8_t pad_1fe8[0x7c0]; // 0x1fe8, 0x7c0 bytes
+                std::uint8_t pad_16e0[0x90c]; // 0x16e0, 0x90c bytes
+                shade::sdk::entity2::GameTime_t m_flScopeStartTime; // 0x1fec, 0x4 bytes
+                std::uint8_t pad_1ff0[0x7c0]; // 0x1ff0, 0x7c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Hornet_Snipe) == 0x27A8, "CCitadel_Ability_Hornet_Snipe size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Hornet_Snipe) == 0x27B0, "CCitadel_Ability_Hornet_Snipe size mismatch");
         }
     }
 }

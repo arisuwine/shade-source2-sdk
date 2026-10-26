@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16e0
+             * Size: 0x16e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,20 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SkyRunner_SwingLine : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ESwingState_t m_eSwingState; // 0x14a0, 0x1 bytes
-                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_SwingStartTime; // 0x14a4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_SwingEndTime; // 0x14a8, 0x4 bytes
-                VectorWS m_vecSwingPoint; // 0x14ac, 0xc bytes
-                VectorWS m_vecCurrentPosition; // 0x14b8, 0xc bytes
-                float m_flIdealSpringLength; // 0x14c4, 0x4 bytes
-                std::uint8_t pad_14c8[0x218]; // 0x14c8, 0x218 bytes
+                shade::sdk::client::ESwingState_t m_eSwingState; // 0x14a8, 0x1 bytes
+                std::uint8_t pad_14a9[0x3]; // 0x14a9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_SwingStartTime; // 0x14ac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_SwingEndTime; // 0x14b0, 0x4 bytes
+                VectorWS m_vecSwingPoint; // 0x14b4, 0xc bytes
+                VectorWS m_vecCurrentPosition; // 0x14c0, 0xc bytes
+                float m_flIdealSpringLength; // 0x14cc, 0x4 bytes
+                std::uint8_t pad_14d0[0x218]; // 0x14d0, 0x218 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SkyRunner_SwingLine) == 0x16E0, "CCitadel_Ability_SkyRunner_SwingLine size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SkyRunner_SwingLine) == 0x16E8, "CCitadel_Ability_SkyRunner_SwingLine size mismatch");
         }
     }
 }

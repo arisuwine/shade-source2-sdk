@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15d8
+             * Size: 0x1260
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemRefresherVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RefreshParticle; // 0x14f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RefreshParticle; // 0x1180, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemRefresherVData) == 0x15D8, "CItemRefresherVData size mismatch");
+            static_assert(sizeof(CItemRefresherVData) == 0x1260, "CItemRefresherVData size mismatch");
         }
     }
 }

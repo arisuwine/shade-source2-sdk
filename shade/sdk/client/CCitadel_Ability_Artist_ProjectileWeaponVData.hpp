@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1700
+             * Size: 0x1388
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_ProjectileWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CSoundEventName m_strHitSound; // 0x16d0, 0x10 bytes
-                CUtlVector<float> m_vecRolls; // 0x16e0, 0x18 bytes
-                float m_flProjectileDrag; // 0x16f8, 0x4 bytes
-                float m_flProjectileVelocityLossOnHit; // 0x16fc, 0x4 bytes
+                CSoundEventName m_strHitSound; // 0x1358, 0x10 bytes
+                CUtlVector<float> m_vecRolls; // 0x1368, 0x18 bytes
+                float m_flProjectileDrag; // 0x1380, 0x4 bytes
+                float m_flProjectileVelocityLossOnHit; // 0x1384, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_ProjectileWeaponVData) == 0x1700, "CCitadel_Ability_Artist_ProjectileWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_ProjectileWeaponVData) == 0x1388, "CCitadel_Ability_Artist_ProjectileWeaponVData size mismatch");
         }
     }
 }

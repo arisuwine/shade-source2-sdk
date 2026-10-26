@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2d0
+             * Size: 0x2d8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Baba_BubblingBrew_GunDamage : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x160]; // 0x0148, 0x160 bytes
-                shade::sdk::client::ShotID_t m_shotIdToIgnore; // 0x02a8, 0x4 bytes
-                std::uint8_t pad_02ac[0x24]; // 0x02ac, 0x24 bytes
+                std::uint8_t pad_0150[0x160]; // 0x0150, 0x160 bytes
+                shade::sdk::client::ShotID_t m_shotIdToIgnore; // 0x02b0, 0x4 bytes
+                std::uint8_t pad_02b4[0x24]; // 0x02b4, 0x24 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Baba_BubblingBrew_GunDamage) == 0x2D0, "CModifier_Baba_BubblingBrew_GunDamage size mismatch");
+            static_assert(sizeof(CModifier_Baba_BubblingBrew_GunDamage) == 0x2D8, "CModifier_Baba_BubblingBrew_GunDamage size mismatch");
         }
     }
 }

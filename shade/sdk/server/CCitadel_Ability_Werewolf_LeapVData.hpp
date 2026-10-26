@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1558
+             * Size: 0x11e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,22 +43,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_LeapVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CSoundEventName m_strCrashSound; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LeapingModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LandingBonusesModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1418, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrashParticle; // 0x1428, 0xe0 bytes
-                float m_flBufferTimeBeforeLanding; // 0x1508, 0x4 bytes
-                float m_flMaxPitch; // 0x150c, 0x4 bytes
-                float m_flMinPitch; // 0x1510, 0x4 bytes
-                std::uint8_t pad_1514[0x4]; // 0x1514, 0x4 bytes
-                CPiecewiseCurve m_LeapSpeedCurve; // 0x1518, 0x40 bytes
+                CSoundEventName m_strCrashSound; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LeapingModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LandingBonusesModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x10a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrashParticle; // 0x10b0, 0xe0 bytes
+                float m_flBufferTimeBeforeLanding; // 0x1190, 0x4 bytes
+                float m_flMaxPitch; // 0x1194, 0x4 bytes
+                float m_flMinPitch; // 0x1198, 0x4 bytes
+                std::uint8_t pad_119c[0x4]; // 0x119c, 0x4 bytes
+                CPiecewiseCurve m_LeapSpeedCurve; // 0x11a0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_LeapVData) == 0x1558, "CCitadel_Ability_Werewolf_LeapVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_LeapVData) == 0x11E0, "CCitadel_Ability_Werewolf_LeapVData size mismatch");
         }
     }
 }

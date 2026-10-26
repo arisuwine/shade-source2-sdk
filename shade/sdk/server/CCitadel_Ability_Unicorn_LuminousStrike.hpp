@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x19d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_LuminousStrike : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastStackChangeTime; // 0x14a0, 0x4 bytes
-                std::int32_t m_nLastStackCount; // 0x14a4, 0x4 bytes
-                std::uint8_t pad_14a8[0x18]; // 0x14a8, 0x18 bytes
-                CNetworkUtlVectorBase<shade::sdk::entity2::GameTime_t> m_vecNextExplosionTime; // 0x14c0, 0x18 bytes
-                CNetworkUtlVectorBase<VectorWS> m_vecNextExplosionLocation; // 0x14d8, 0x18 bytes
-                std::int32_t m_nStackCount; // 0x14f0, 0x4 bytes
-                bool m_bPendingStackUpdate; // 0x14f4, 0x1 bytes
-                std::uint8_t pad_14f5[0x4d3]; // 0x14f5, 0x4d3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastStackChangeTime; // 0x14a8, 0x4 bytes
+                std::int32_t m_nLastStackCount; // 0x14ac, 0x4 bytes
+                std::uint8_t pad_14b0[0x18]; // 0x14b0, 0x18 bytes
+                CNetworkUtlVectorBase<shade::sdk::entity2::GameTime_t> m_vecNextExplosionTime; // 0x14c8, 0x18 bytes
+                CNetworkUtlVectorBase<VectorWS> m_vecNextExplosionLocation; // 0x14e0, 0x18 bytes
+                std::int32_t m_nStackCount; // 0x14f8, 0x4 bytes
+                bool m_bPendingStackUpdate; // 0x14fc, 0x1 bytes
+                std::uint8_t pad_14fd[0x4d3]; // 0x14fd, 0x4d3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_LuminousStrike) == 0x19C8, "CCitadel_Ability_Unicorn_LuminousStrike size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_LuminousStrike) == 0x19D0, "CCitadel_Ability_Unicorn_LuminousStrike size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x188
+             * Size: 0x190
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Neutral_LobBook_Aura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                shade::sdk::client::ParticleIndex_t m_nRadiusParticle; // 0x0180, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nSwirlParticle; // 0x0184, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nRadiusParticle; // 0x0188, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nSwirlParticle; // 0x018c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Neutral_LobBook_Aura) == 0x188, "CCitadel_Modifier_Neutral_LobBook_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Neutral_LobBook_Aura) == 0x190, "CCitadel_Modifier_Neutral_LobBook_Aura size mismatch");
         }
     }
 }

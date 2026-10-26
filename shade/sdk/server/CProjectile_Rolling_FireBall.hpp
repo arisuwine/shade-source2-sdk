@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x978
+             * Size: 0x980
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CProjectile_Rolling_FireBall : public shade::sdk::server::CCitadelProjectile {
             public:
-                bool m_bHitWorld; // 0x0968, 0x1 bytes
-                std::uint8_t pad_0969[0x3]; // 0x0969, 0x3 bytes
-                Vector m_vInitialDirection; // 0x096c, 0xc bytes
+                bool m_bHitWorld; // 0x0970, 0x1 bytes
+                std::uint8_t pad_0971[0x3]; // 0x0971, 0x3 bytes
+                Vector m_vInitialDirection; // 0x0974, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CProjectile_Rolling_FireBall) == 0x978, "CProjectile_Rolling_FireBall size mismatch");
+            static_assert(sizeof(CProjectile_Rolling_FireBall) == 0x980, "CProjectile_Rolling_FireBall size mismatch");
         }
     }
 }

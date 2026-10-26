@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1518
+             * Size: 0x11a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_ProjectileTest06VData : public shade::sdk::server::CCitadel_Item_ProjectileTestVData {
             public:
-                float m_flMaxDrag; // 0x1508, 0x4 bytes
-                float m_flMinDrag; // 0x150c, 0x4 bytes
-                float m_flMinGravity; // 0x1510, 0x4 bytes
-                float m_flMaxGravity; // 0x1514, 0x4 bytes
+                float m_flMaxDrag; // 0x1190, 0x4 bytes
+                float m_flMinDrag; // 0x1194, 0x4 bytes
+                float m_flMinGravity; // 0x1198, 0x4 bytes
+                float m_flMaxGravity; // 0x119c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_ProjectileTest06VData) == 0x1518, "CCitadel_Item_ProjectileTest06VData size mismatch");
+            static_assert(sizeof(CCitadel_Item_ProjectileTest06VData) == 0x11A0, "CCitadel_Item_ProjectileTest06VData size mismatch");
         }
     }
 }

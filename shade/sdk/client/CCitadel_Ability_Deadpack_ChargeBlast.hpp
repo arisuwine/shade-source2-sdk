@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2018
+             * Size: 0x2020
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Deadpack_ChargeBlast : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x20]; // 0x16d8, 0x20 bytes
-                VectorWS m_vStartPoint; // 0x16f8, 0xc bytes
-                VectorWS m_vEndPoint; // 0x1704, 0xc bytes
-                Vector m_vAimOffset; // 0x1710, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_tLaunchHeldBeginTime; // 0x171c, 0x4 bytes
-                bool m_bTargetingActive; // 0x1720, 0x1 bytes
-                std::uint8_t pad_1721[0x8f7]; // 0x1721, 0x8f7 bytes
+                std::uint8_t pad_16e0[0x20]; // 0x16e0, 0x20 bytes
+                VectorWS m_vStartPoint; // 0x1700, 0xc bytes
+                VectorWS m_vEndPoint; // 0x170c, 0xc bytes
+                Vector m_vAimOffset; // 0x1718, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_tLaunchHeldBeginTime; // 0x1724, 0x4 bytes
+                bool m_bTargetingActive; // 0x1728, 0x1 bytes
+                std::uint8_t pad_1729[0x8f7]; // 0x1729, 0x8f7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Deadpack_ChargeBlast) == 0x2018, "CCitadel_Ability_Deadpack_ChargeBlast size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Deadpack_ChargeBlast) == 0x2020, "CCitadel_Ability_Deadpack_ChargeBlast size mismatch");
         }
     }
 }

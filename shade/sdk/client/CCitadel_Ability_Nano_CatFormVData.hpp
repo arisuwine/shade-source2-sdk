@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15e8
+             * Size: 0x1270
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_CatFormVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PoofInParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PoofOutParticle; // 0x14c8, 0xe0 bytes
-                CSoundEventName m_strMeow; // 0x15a8, 0x10 bytes
-                CSoundEventName m_strCatFormMeleeSwing; // 0x15b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x15c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DamageAmpModifier; // 0x15d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PoofInParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PoofOutParticle; // 0x1150, 0xe0 bytes
+                CSoundEventName m_strMeow; // 0x1230, 0x10 bytes
+                CSoundEventName m_strCatFormMeleeSwing; // 0x1240, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1250, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DamageAmpModifier; // 0x1260, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_CatFormVData) == 0x15E8, "CCitadel_Ability_Nano_CatFormVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_CatFormVData) == 0x1270, "CCitadel_Ability_Nano_CatFormVData size mismatch");
         }
     }
 }

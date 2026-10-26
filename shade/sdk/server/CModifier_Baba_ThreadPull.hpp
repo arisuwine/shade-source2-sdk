@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x168
+             * Size: 0x170
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Baba_ThreadPull : public shade::sdk::server::CCitadelModifier {
             public:
-                Vector m_vPullDisplacement; // 0x0148, 0xc bytes
-                float m_flLaunchUpSpeed; // 0x0154, 0x4 bytes
-                Vector m_vExitVelocity; // 0x0158, 0xc bytes
-                std::uint8_t pad_0164[0x4]; // 0x0164, 0x4 bytes
+                Vector m_vPullDisplacement; // 0x0150, 0xc bytes
+                float m_flLaunchUpSpeed; // 0x015c, 0x4 bytes
+                Vector m_vExitVelocity; // 0x0160, 0xc bytes
+                std::uint8_t pad_016c[0x4]; // 0x016c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Baba_ThreadPull) == 0x168, "CModifier_Baba_ThreadPull size mismatch");
+            static_assert(sizeof(CModifier_Baba_ThreadPull) == 0x170, "CModifier_Baba_ThreadPull size mismatch");
         }
     }
 }

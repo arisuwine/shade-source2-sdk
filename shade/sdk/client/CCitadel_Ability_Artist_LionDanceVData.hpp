@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1610
+             * Size: 0x1298
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_LionDanceVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle; // 0x14c8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x15a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AllyBuffModifier; // 0x15b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x15c8, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x15d8, 0x10 bytes
-                CSoundEventName m_strPulseSound; // 0x15e8, 0x10 bytes
-                bool m_bDebug; // 0x15f8, 0x1 bytes
-                std::uint8_t pad_15f9[0x3]; // 0x15f9, 0x3 bytes
-                float m_flRecastTravelTime; // 0x15fc, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x1600, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle; // 0x1150, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x1230, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AllyBuffModifier; // 0x1240, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1250, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1260, 0x10 bytes
+                CSoundEventName m_strPulseSound; // 0x1270, 0x10 bytes
+                bool m_bDebug; // 0x1280, 0x1 bytes
+                std::uint8_t pad_1281[0x3]; // 0x1281, 0x3 bytes
+                float m_flRecastTravelTime; // 0x1284, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x1288, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_LionDanceVData) == 0x1610, "CCitadel_Ability_Artist_LionDanceVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_LionDanceVData) == 0x1298, "CCitadel_Ability_Artist_LionDanceVData size mismatch");
         }
     }
 }

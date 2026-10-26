@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b58
+             * Size: 0x1b60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_BatBlink : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x428]; // 0x16d8, 0x428 bytes
-                std::int32_t m_iRemainingCasts; // 0x1b00, 0x4 bytes
-                bool m_bIsBlinking; // 0x1b04, 0x1 bytes
-                std::uint8_t pad_1b05[0x3]; // 0x1b05, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x1b08, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_BlinkEndTime; // 0x1b0c, 0x4 bytes
-                std::uint8_t pad_1b10[0x48]; // 0x1b10, 0x48 bytes
+                std::uint8_t pad_16e0[0x428]; // 0x16e0, 0x428 bytes
+                std::int32_t m_iRemainingCasts; // 0x1b08, 0x4 bytes
+                bool m_bIsBlinking; // 0x1b0c, 0x1 bytes
+                std::uint8_t pad_1b0d[0x3]; // 0x1b0d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_RecastEndTime; // 0x1b10, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_BlinkEndTime; // 0x1b14, 0x4 bytes
+                std::uint8_t pad_1b18[0x48]; // 0x1b18, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_BatBlink) == 0x1B58, "CCitadel_Ability_VampireBat_BatBlink size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_BatBlink) == 0x1B60, "CCitadel_Ability_VampireBat_BatBlink size mismatch");
         }
     }
 }

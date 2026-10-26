@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x188
+             * Size: 0x190
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ControlPointCapturerAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                shade::sdk::client::ParticleIndex_t m_particle; // 0x0180, 0x4 bytes
-                CHandle<shade::sdk::server::CCitadelControlPointTrigger> m_hCP; // 0x0184, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_particle; // 0x0188, 0x4 bytes
+                CHandle<shade::sdk::server::CCitadelControlPointTrigger> m_hCP; // 0x018c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ControlPointCapturerAura) == 0x188, "CCitadel_Modifier_ControlPointCapturerAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ControlPointCapturerAura) == 0x190, "CCitadel_Modifier_ControlPointCapturerAura size mismatch");
         }
     }
 }

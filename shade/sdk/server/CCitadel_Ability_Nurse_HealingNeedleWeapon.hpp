@@ -16,25 +16,28 @@
 
 #include "shade/sdk/types.hpp"
 
-#include "shade/sdk/server/CitadelAbilityProjectileCreateInfo_t.hpp"
+#include "shade/sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x138
-             * Alignment: 0xff
+             * Size: 0x1718
+             * Alignment: 0x8
+             * Has VTable
+             * Construct Allowed
+             * Module Local Type Scope
              */
             #pragma pack(push, 1)
-            struct CitadelCurvedAbilityProjectileCreateInfo_t : public shade::sdk::server::CitadelAbilityProjectileCreateInfo_t {
-                float m_flTimeToReturn; // 0x0130, 0x4 bytes
-                std::uint8_t pad_0134[0x4]; // 0x0134, 0x4 bytes
+            class CCitadel_Ability_Nurse_HealingNeedleWeapon : public shade::sdk::server::CCitadel_Ability_PrimaryWeapon {
+            public:
+                std::uint8_t pad_1710[0x8]; // 0x1710, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelCurvedAbilityProjectileCreateInfo_t) == 0x138, "CitadelCurvedAbilityProjectileCreateInfo_t size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nurse_HealingNeedleWeapon) == 0x1718, "CCitadel_Ability_Nurse_HealingNeedleWeapon size mismatch");
         }
     }
 }

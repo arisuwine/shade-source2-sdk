@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x428
+             * Size: 0x430
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PunkgoatPull : public shade::sdk::server::CCitadelModifier {
             public:
-                float m_flDamageToDealAtEnd; // 0x0148, 0x4 bytes
-                float m_flDamageLeftToDealOverPull; // 0x014c, 0x4 bytes
-                float m_flDamageOverPullAccumulator; // 0x0150, 0x4 bytes
-                VectorWS m_vPullToLocation; // 0x0154, 0xc bytes
-                bool m_bAllowTrackTarget; // 0x0160, 0x1 bytes
-                std::uint8_t pad_0161[0x3]; // 0x0161, 0x3 bytes
-                float m_flCurrentVerticalSpeed; // 0x0164, 0x4 bytes
-                std::uint8_t pad_0168[0x2c0]; // 0x0168, 0x2c0 bytes
+                float m_flDamageToDealAtEnd; // 0x0150, 0x4 bytes
+                float m_flDamageLeftToDealOverPull; // 0x0154, 0x4 bytes
+                float m_flDamageOverPullAccumulator; // 0x0158, 0x4 bytes
+                VectorWS m_vPullToLocation; // 0x015c, 0xc bytes
+                bool m_bAllowTrackTarget; // 0x0168, 0x1 bytes
+                std::uint8_t pad_0169[0x3]; // 0x0169, 0x3 bytes
+                float m_flCurrentVerticalSpeed; // 0x016c, 0x4 bytes
+                std::uint8_t pad_0170[0x2c0]; // 0x0170, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PunkgoatPull) == 0x428, "CCitadel_Modifier_PunkgoatPull size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PunkgoatPull) == 0x430, "CCitadel_Modifier_PunkgoatPull size mismatch");
         }
     }
 }

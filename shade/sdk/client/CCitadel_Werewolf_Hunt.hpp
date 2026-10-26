@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1840
+             * Size: 0x1848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Werewolf_Hunt : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x168]; // 0x16d8, 0x168 bytes
+                std::uint8_t pad_16e0[0x168]; // 0x16e0, 0x168 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Werewolf_Hunt) == 0x1840, "CCitadel_Werewolf_Hunt size mismatch");
+            static_assert(sizeof(CCitadel_Werewolf_Hunt) == 0x1848, "CCitadel_Werewolf_Hunt size mismatch");
         }
     }
 }

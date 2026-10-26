@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15f8
+             * Size: 0x1280
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_Darkness_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetRevealModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_OutOfCombatSprintCamera; // 0x1418, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1428, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x1508, 0xe0 bytes
-                CSoundEventName m_HitConfirmSound; // 0x15e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetRevealModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_OutOfCombatSprintCamera; // 0x10a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x10b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x1190, 0xe0 bytes
+                CSoundEventName m_HitConfirmSound; // 0x1270, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_Darkness_VData) == 0x15F8, "CAbility_Drifter_Darkness_VData size mismatch");
+            static_assert(sizeof(CAbility_Drifter_Darkness_VData) == 0x1280, "CAbility_Drifter_Darkness_VData size mismatch");
         }
     }
 }

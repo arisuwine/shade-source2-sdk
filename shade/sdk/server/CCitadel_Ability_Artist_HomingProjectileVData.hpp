@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1550
+             * Size: 0x11d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,31 +43,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_HomingProjectileVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StackModifier; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x14e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StackingBuffModifier; // 0x14f8, 0x10 bytes
-                CSoundEventName m_ExplodeSound; // 0x1508, 0x10 bytes
-                CSoundEventName m_strInkShootSound; // 0x1518, 0x10 bytes
-                CGlobalSymbol m_strAG2ProjectileFlightHeroState; // 0x1528, 0x8 bytes
-                bool m_bDebug; // 0x1530, 0x1 bytes
-                bool m_bGrantAmmoOnCast; // 0x1531, 0x1 bytes
-                bool m_bDealDamageOnStrokeDestroy; // 0x1532, 0x1 bytes
-                std::uint8_t pad_1533[0x1]; // 0x1533, 0x1 bytes
-                float m_flHomingRange; // 0x1534, 0x4 bytes
-                float m_flHomingStrength; // 0x1538, 0x4 bytes
-                float m_flRandomUpVelocity; // 0x153c, 0x4 bytes
-                float m_flRandomLeftVelocity; // 0x1540, 0x4 bytes
-                float m_flSpringStrength; // 0x1544, 0x4 bytes
-                float m_flDampingStrength; // 0x1548, 0x4 bytes
-                std::uint8_t pad_154c[0x4]; // 0x154c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1070, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StackModifier; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1170, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StackingBuffModifier; // 0x1180, 0x10 bytes
+                CSoundEventName m_ExplodeSound; // 0x1190, 0x10 bytes
+                CSoundEventName m_strInkShootSound; // 0x11a0, 0x10 bytes
+                CGlobalSymbol m_strAG2ProjectileFlightHeroState; // 0x11b0, 0x8 bytes
+                bool m_bDebug; // 0x11b8, 0x1 bytes
+                bool m_bGrantAmmoOnCast; // 0x11b9, 0x1 bytes
+                bool m_bDealDamageOnStrokeDestroy; // 0x11ba, 0x1 bytes
+                std::uint8_t pad_11bb[0x1]; // 0x11bb, 0x1 bytes
+                float m_flHomingRange; // 0x11bc, 0x4 bytes
+                float m_flHomingStrength; // 0x11c0, 0x4 bytes
+                float m_flRandomUpVelocity; // 0x11c4, 0x4 bytes
+                float m_flRandomLeftVelocity; // 0x11c8, 0x4 bytes
+                float m_flSpringStrength; // 0x11cc, 0x4 bytes
+                float m_flDampingStrength; // 0x11d0, 0x4 bytes
+                std::uint8_t pad_11d4[0x4]; // 0x11d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_HomingProjectileVData) == 0x1550, "CCitadel_Ability_Artist_HomingProjectileVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_HomingProjectileVData) == 0x11D8, "CCitadel_Ability_Artist_HomingProjectileVData size mismatch");
         }
     }
 }

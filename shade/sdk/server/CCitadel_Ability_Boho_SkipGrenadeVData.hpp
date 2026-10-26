@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1608
+             * Size: 0x1290
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,26 +43,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Boho_SkipGrenadeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13f8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1408, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x14e8, 0xe0 bytes
-                CSoundEventName m_ExplosionSound; // 0x15c8, 0x10 bytes
-                CSoundEventName m_BounceSound; // 0x15d8, 0x10 bytes
-                float m_flClimbHeight; // 0x15e8, 0x4 bytes
-                float m_flStepDownHeight; // 0x15ec, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x15f0, 0x4 bytes
-                float m_flFloatDownRate; // 0x15f4, 0x4 bytes
-                float m_flTraceRadius; // 0x15f8, 0x4 bytes
-                float m_flBounceUpSpeed; // 0x15fc, 0x4 bytes
-                float m_flBounceForwardSpeed; // 0x1600, 0x4 bytes
-                float m_flBounceForwardRatio; // 0x1604, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1080, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1090, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1170, 0xe0 bytes
+                CSoundEventName m_ExplosionSound; // 0x1250, 0x10 bytes
+                CSoundEventName m_BounceSound; // 0x1260, 0x10 bytes
+                float m_flClimbHeight; // 0x1270, 0x4 bytes
+                float m_flStepDownHeight; // 0x1274, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x1278, 0x4 bytes
+                float m_flFloatDownRate; // 0x127c, 0x4 bytes
+                float m_flTraceRadius; // 0x1280, 0x4 bytes
+                float m_flBounceUpSpeed; // 0x1284, 0x4 bytes
+                float m_flBounceForwardSpeed; // 0x1288, 0x4 bytes
+                float m_flBounceForwardRatio; // 0x128c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Boho_SkipGrenadeVData) == 0x1608, "CCitadel_Ability_Boho_SkipGrenadeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Boho_SkipGrenadeVData) == 0x1290, "CCitadel_Ability_Boho_SkipGrenadeVData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x160
+             * Size: 0x168
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MinimapZoom : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::MinimapZoom_t m_MinimapZoom; // 0x0138, 0x14 bytes
-                VectorWS m_vZoomOrigin; // 0x014c, 0xc bytes
-                float m_flZoomRadius; // 0x0158, 0x4 bytes
-                float m_flTransitionTime; // 0x015c, 0x4 bytes
+                shade::sdk::client::MinimapZoom_t m_MinimapZoom; // 0x0140, 0x14 bytes
+                VectorWS m_vZoomOrigin; // 0x0154, 0xc bytes
+                float m_flZoomRadius; // 0x0160, 0x4 bytes
+                float m_flTransitionTime; // 0x0164, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MinimapZoom) == 0x160, "CCitadel_Modifier_MinimapZoom size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MinimapZoom) == 0x168, "CCitadel_Modifier_MinimapZoom size mismatch");
         }
     }
 }

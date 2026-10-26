@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16d0
+             * Size: 0x1358
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_StoneTurtleVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialImpactParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SplashParticle; // 0x15a8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x1688, 0x10 bytes
-                CSoundEventName m_strInitialImpactSound; // 0x1698, 0x10 bytes
-                CSoundEventName m_strSplashSound; // 0x16a8, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x16b8, 0x10 bytes
-                float m_flInitialVerticalOffset; // 0x16c8, 0x4 bytes
-                std::uint8_t pad_16cc[0x4]; // 0x16cc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialImpactParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SplashParticle; // 0x1230, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x1310, 0x10 bytes
+                CSoundEventName m_strInitialImpactSound; // 0x1320, 0x10 bytes
+                CSoundEventName m_strSplashSound; // 0x1330, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1340, 0x10 bytes
+                float m_flInitialVerticalOffset; // 0x1350, 0x4 bytes
+                std::uint8_t pad_1354[0x4]; // 0x1354, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_StoneTurtleVData) == 0x16D0, "CCitadel_Ability_Artist_StoneTurtleVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_StoneTurtleVData) == 0x1358, "CCitadel_Ability_Artist_StoneTurtleVData size mismatch");
         }
     }
 }

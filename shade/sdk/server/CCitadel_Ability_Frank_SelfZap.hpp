@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1988
+             * Size: 0x1990
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_SelfZap : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x10]; // 0x14a0, 0x10 bytes
-                float m_flTotalPendingHeal; // 0x14b0, 0x4 bytes
-                std::uint8_t pad_14b4[0x4d4]; // 0x14b4, 0x4d4 bytes
+                std::uint8_t pad_14a8[0x10]; // 0x14a8, 0x10 bytes
+                float m_flTotalPendingHeal; // 0x14b8, 0x4 bytes
+                std::uint8_t pad_14bc[0x4d4]; // 0x14bc, 0x4d4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_SelfZap) == 0x1988, "CCitadel_Ability_Frank_SelfZap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_SelfZap) == 0x1990, "CCitadel_Ability_Frank_SelfZap size mismatch");
         }
     }
 }

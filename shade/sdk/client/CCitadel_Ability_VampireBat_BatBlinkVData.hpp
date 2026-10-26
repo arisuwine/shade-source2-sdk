@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1788
+             * Size: 0x1410
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,22 +44,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_BatBlinkVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkStartParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkEndParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkTravelParticle; // 0x15a8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfBuffModifier; // 0x1688, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1698, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x16a8, 0xa0 bytes
-                CSoundEventName m_BlinkStartSound; // 0x1748, 0x10 bytes
-                CSoundEventName m_BlinkEndSound; // 0x1758, 0x10 bytes
-                CSoundEventName m_BlinkEndFinalSound; // 0x1768, 0x10 bytes
-                CSoundEventName m_strWhizbySound; // 0x1778, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkStartParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkEndParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkTravelParticle; // 0x1230, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfBuffModifier; // 0x1310, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1320, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1330, 0xa0 bytes
+                CSoundEventName m_BlinkStartSound; // 0x13d0, 0x10 bytes
+                CSoundEventName m_BlinkEndSound; // 0x13e0, 0x10 bytes
+                CSoundEventName m_BlinkEndFinalSound; // 0x13f0, 0x10 bytes
+                CSoundEventName m_strWhizbySound; // 0x1400, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_BatBlinkVData) == 0x1788, "CCitadel_Ability_VampireBat_BatBlinkVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_BatBlinkVData) == 0x1410, "CCitadel_Ability_VampireBat_BatBlinkVData size mismatch");
         }
     }
 }

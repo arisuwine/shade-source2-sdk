@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x170
+             * Size: 0x178
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Teleport : public shade::sdk::server::CCitadelModifier {
             public:
-                VectorWS m_vDest; // 0x0148, 0xc bytes
-                QAngle m_angDestAngles; // 0x0154, 0xc bytes
-                Vector m_vDestVelocity; // 0x0160, 0xc bytes
-                std::uint8_t pad_016c[0x4]; // 0x016c, 0x4 bytes
+                VectorWS m_vDest; // 0x0150, 0xc bytes
+                QAngle m_angDestAngles; // 0x015c, 0xc bytes
+                Vector m_vDestVelocity; // 0x0168, 0xc bytes
+                std::uint8_t pad_0174[0x4]; // 0x0174, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Teleport) == 0x170, "CCitadel_Modifier_Teleport size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Teleport) == 0x178, "CCitadel_Modifier_Teleport size mismatch");
         }
     }
 }

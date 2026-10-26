@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0x100
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -78,16 +78,20 @@ namespace shade {
                 float m_timeDamage; // 0x00b4, 0x4 bytes
                 float m_flCritDamage; // 0x00b8, 0x4 bytes
                 bool m_bSpeakDamageEvent; // 0x00bc, 0x1 bytes
-                std::uint8_t pad_00bd[0x23]; // 0x00bd, 0x23 bytes
-                CUtlLeanVector<shade::sdk::client::DestructiblePartDamageRequest_t> m_DestructibleHitGroupRequests; // 0x00e0, 0x10 bytes
-                bool m_bInTakeDamageFlow; // 0x00f0, 0x1 bytes
-                std::uint8_t pad_00f1[0x7]; // 0x00f1, 0x7 bytes
+                std::uint8_t pad_00bd[0x3]; // 0x00bd, 0x3 bytes
+                float m_flDeferredHealthLossFraction; // 0x00c0, 0x4 bytes
+                bool m_bCannotBeDeferred; // 0x00c4, 0x1 bytes
+                bool m_bIgnoresSelfBubble; // 0x00c5, 0x1 bytes
+                std::uint8_t pad_00c6[0x22]; // 0x00c6, 0x22 bytes
+                CUtlLeanVector<shade::sdk::client::DestructiblePartDamageRequest_t> m_DestructibleHitGroupRequests; // 0x00e8, 0x10 bytes
+                bool m_bInTakeDamageFlow; // 0x00f8, 0x1 bytes
+                std::uint8_t pad_00f9[0x7]; // 0x00f9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTakeDamageInfo) == 0xF8, "CTakeDamageInfo size mismatch");
+            static_assert(sizeof(CTakeDamageInfo) == 0x100, "CTakeDamageInfo size mismatch");
         }
     }
 }

@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x20a8
+             * Size: 0x20b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,19 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Viscous_Telepunch : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x9a0]; // 0x16d8, 0x9a0 bytes
-                VectorWS m_vecTeleportPosition; // 0x2078, 0xc bytes
-                Vector m_vecTeleportPositionNormal; // 0x2084, 0xc bytes
-                shade::sdk::client::ETelepunchState_t m_eTelepunchState; // 0x2090, 0x1 bytes
-                std::uint8_t pad_2091[0x3]; // 0x2091, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x2094, 0x4 bytes
-                std::uint8_t pad_2098[0x10]; // 0x2098, 0x10 bytes
+                std::uint8_t pad_16e0[0x9a0]; // 0x16e0, 0x9a0 bytes
+                VectorWS m_vecTeleportPosition; // 0x2080, 0xc bytes
+                Vector m_vecTeleportPositionNormal; // 0x208c, 0xc bytes
+                shade::sdk::client::ETelepunchState_t m_eTelepunchState; // 0x2098, 0x1 bytes
+                std::uint8_t pad_2099[0x3]; // 0x2099, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x209c, 0x4 bytes
+                std::uint8_t pad_20a0[0x10]; // 0x20a0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Viscous_Telepunch) == 0x20A8, "CCitadel_Ability_Viscous_Telepunch size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Viscous_Telepunch) == 0x20B0, "CCitadel_Ability_Viscous_Telepunch size mismatch");
         }
     }
 }

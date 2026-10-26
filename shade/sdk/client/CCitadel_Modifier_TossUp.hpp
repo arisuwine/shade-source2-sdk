@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TossUp : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bForceApplied; // 0x0138, 0x1 bytes
-                bool m_bRestrictMovement; // 0x0139, 0x1 bytes
-                std::uint8_t pad_013a[0x2]; // 0x013a, 0x2 bytes
-                Vector m_vTossUpForce; // 0x013c, 0xc bytes
-                float m_flCurrentVelocityScale; // 0x0148, 0x4 bytes
-                std::uint8_t pad_014c[0x4]; // 0x014c, 0x4 bytes
+                bool m_bForceApplied; // 0x0140, 0x1 bytes
+                bool m_bRestrictMovement; // 0x0141, 0x1 bytes
+                std::uint8_t pad_0142[0x2]; // 0x0142, 0x2 bytes
+                Vector m_vTossUpForce; // 0x0144, 0xc bytes
+                float m_flCurrentVelocityScale; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x4]; // 0x0154, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TossUp) == 0x150, "CCitadel_Modifier_TossUp size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TossUp) == 0x158, "CCitadel_Modifier_TossUp size mismatch");
         }
     }
 }

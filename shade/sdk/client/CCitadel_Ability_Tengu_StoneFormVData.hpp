@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1798
+             * Size: 0x1420
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,22 +44,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tengu_StoneFormVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StoneFormParticle; // 0x15a8, 0xe0 bytes
-                CSoundEventName m_strImpactSound; // 0x1688, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DragModifier; // 0x1698, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strTrueFormModel; // 0x16a8, 0xe0 bytes
-                float m_flLandHoldTime; // 0x1788, 0x4 bytes
-                float m_flRisingTime; // 0x178c, 0x4 bytes
-                float m_flCollideRadius; // 0x1790, 0x4 bytes
-                float m_flGroundDetectionFailsafeDelay; // 0x1794, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StoneFormParticle; // 0x1230, 0xe0 bytes
+                CSoundEventName m_strImpactSound; // 0x1310, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DragModifier; // 0x1320, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_strTrueFormModel; // 0x1330, 0xe0 bytes
+                float m_flLandHoldTime; // 0x1410, 0x4 bytes
+                float m_flRisingTime; // 0x1414, 0x4 bytes
+                float m_flCollideRadius; // 0x1418, 0x4 bytes
+                float m_flGroundDetectionFailsafeDelay; // 0x141c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tengu_StoneFormVData) == 0x1798, "CCitadel_Ability_Tengu_StoneFormVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tengu_StoneFormVData) == 0x1420, "CCitadel_Ability_Tengu_StoneFormVData size mismatch");
         }
     }
 }

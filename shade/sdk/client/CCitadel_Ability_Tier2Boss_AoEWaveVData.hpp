@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15e0
+             * Size: 0x1268
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier2Boss_AoEWaveVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialExplodeParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x14c8, 0xe0 bytes
-                CSoundEventName m_strAOEImpactSound; // 0x15a8, 0x10 bytes
-                CSoundEventName m_strAOEAnnounceSound; // 0x15b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AoEModifier; // 0x15c8, 0x10 bytes
-                float m_flCastCompleteToAttackTime; // 0x15d8, 0x4 bytes
-                std::uint8_t pad_15dc[0x4]; // 0x15dc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialExplodeParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x1150, 0xe0 bytes
+                CSoundEventName m_strAOEImpactSound; // 0x1230, 0x10 bytes
+                CSoundEventName m_strAOEAnnounceSound; // 0x1240, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AoEModifier; // 0x1250, 0x10 bytes
+                float m_flCastCompleteToAttackTime; // 0x1260, 0x4 bytes
+                std::uint8_t pad_1264[0x4]; // 0x1264, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier2Boss_AoEWaveVData) == 0x15E0, "CCitadel_Ability_Tier2Boss_AoEWaveVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier2Boss_AoEWaveVData) == 0x1268, "CCitadel_Ability_Tier2Boss_AoEWaveVData size mismatch");
         }
     }
 }

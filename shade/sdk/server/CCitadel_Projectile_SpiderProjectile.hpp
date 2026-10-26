@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe50
+             * Size: 0xe58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_SpiderProjectile : public shade::sdk::server::CCitadelProjectile {
             public:
-                shade::sdk::entity2::GameTime_t m_flNextRandomPositionTime; // 0x0968, 0x4 bytes
-                std::uint8_t pad_096c[0x4e4]; // 0x096c, 0x4e4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRandomPositionTime; // 0x0970, 0x4 bytes
+                std::uint8_t pad_0974[0x4e4]; // 0x0974, 0x4e4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_SpiderProjectile) == 0xE50, "CCitadel_Projectile_SpiderProjectile size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_SpiderProjectile) == 0xE58, "CCitadel_Projectile_SpiderProjectile size mismatch");
         }
     }
 }

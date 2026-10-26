@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1990
+             * Size: 0x1618
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,29 +43,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Fencer_Ultimate_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_flHoldingDuration; // 0x13e8, 0x4 bytes
-                float m_flSweepingDuration; // 0x13ec, 0x4 bytes
-                float m_flDamageTimeOffsetFromCamera; // 0x13f0, 0x4 bytes
-                float m_flNonHeroDamageDelay; // 0x13f4, 0x4 bytes
-                float m_flMaxVeerDistanceAllowed; // 0x13f8, 0x4 bytes
-                float m_flMinCameraSweepSpeed; // 0x13fc, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterModifier; // 0x1400, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterArrivalModifier; // 0x1410, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x1420, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetNonHeroModifier; // 0x1430, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x1440, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x1520, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect; // 0x1600, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashLineEffect; // 0x16e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltHoldEffect; // 0x17c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DirPreviewEffect; // 0x18a0, 0xe0 bytes
-                CSoundEventName m_strDashHitEnemy; // 0x1980, 0x10 bytes
+                float m_flHoldingDuration; // 0x1070, 0x4 bytes
+                float m_flSweepingDuration; // 0x1074, 0x4 bytes
+                float m_flDamageTimeOffsetFromCamera; // 0x1078, 0x4 bytes
+                float m_flNonHeroDamageDelay; // 0x107c, 0x4 bytes
+                float m_flMaxVeerDistanceAllowed; // 0x1080, 0x4 bytes
+                float m_flMinCameraSweepSpeed; // 0x1084, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterModifier; // 0x1088, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterArrivalModifier; // 0x1098, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x10a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetNonHeroModifier; // 0x10b8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x10c8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect; // 0x11a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect; // 0x1288, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashLineEffect; // 0x1368, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UltHoldEffect; // 0x1448, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DirPreviewEffect; // 0x1528, 0xe0 bytes
+                CSoundEventName m_strDashHitEnemy; // 0x1608, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Fencer_Ultimate_VData) == 0x1990, "CAbility_Fencer_Ultimate_VData size mismatch");
+            static_assert(sizeof(CAbility_Fencer_Ultimate_VData) == 0x1618, "CAbility_Fencer_Ultimate_VData size mismatch");
         }
     }
 }

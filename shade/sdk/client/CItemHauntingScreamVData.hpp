@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1518
+             * Size: 0x11a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemHauntingScreamVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x14f8, 0x10 bytes
-                CSoundEventName m_strHitConfirmSound; // 0x1508, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1180, 0x10 bytes
+                CSoundEventName m_strHitConfirmSound; // 0x1190, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemHauntingScreamVData) == 0x1518, "CItemHauntingScreamVData size mismatch");
+            static_assert(sizeof(CItemHauntingScreamVData) == 0x11A0, "CItemHauntingScreamVData size mismatch");
         }
     }
 }

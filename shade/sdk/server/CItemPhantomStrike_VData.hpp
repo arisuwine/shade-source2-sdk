@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17e0
+             * Size: 0x1468
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CItemPhantomStrike_VData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x14f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PullDownModifier; // 0x1508, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x1518, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1528, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1538, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1618, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle; // 0x16f8, 0xe0 bytes
-                float m_flTeleportDistance; // 0x17d8, 0x4 bytes
-                float m_flVelocityScale; // 0x17dc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1180, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PullDownModifier; // 0x1190, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x11a0, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x11b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x11c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x12a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle; // 0x1380, 0xe0 bytes
+                float m_flTeleportDistance; // 0x1460, 0x4 bytes
+                float m_flVelocityScale; // 0x1464, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItemPhantomStrike_VData) == 0x17E0, "CItemPhantomStrike_VData size mismatch");
+            static_assert(sizeof(CItemPhantomStrike_VData) == 0x1468, "CItemPhantomStrike_VData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1dc0
+             * Size: 0x1dc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier2Boss_RocketBarrage : public shade::sdk::client::CCitadelBaseAbilityServerOnly {
             public:
-                std::int32_t m_nGrenadeIndex; // 0x16d8, 0x4 bytes
-                std::int32_t m_nTotalGrenades; // 0x16dc, 0x4 bytes
-                std::uint8_t pad_16e0[0x6e0]; // 0x16e0, 0x6e0 bytes
+                std::int32_t m_nGrenadeIndex; // 0x16e0, 0x4 bytes
+                std::int32_t m_nTotalGrenades; // 0x16e4, 0x4 bytes
+                std::uint8_t pad_16e8[0x6e0]; // 0x16e8, 0x6e0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier2Boss_RocketBarrage) == 0x1DC0, "CCitadel_Ability_Tier2Boss_RocketBarrage size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier2Boss_RocketBarrage) == 0x1DC8, "CCitadel_Ability_Tier2Boss_RocketBarrage size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,23 +39,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChronoSwap_BubbleMove : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bOtherIsInFrontAtStart; // 0x0138, 0x1 bytes
-                std::uint8_t pad_0139[0x3]; // 0x0139, 0x3 bytes
-                Vector m_vOtherToDest; // 0x013c, 0xc bytes
-                VectorWS m_vStart; // 0x0148, 0xc bytes
-                VectorWS m_vDest; // 0x0154, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hOther; // 0x0160, 0x4 bytes
-                VectorWS m_vLastSafePos; // 0x0164, 0xc bytes
-                bool m_bDoFinalTeleport; // 0x0170, 0x1 bytes
-                std::uint8_t pad_0171[0x3]; // 0x0171, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nBeamIndex; // 0x0174, 0x4 bytes
-                std::uint8_t pad_0178[0x370]; // 0x0178, 0x370 bytes
+                bool m_bOtherIsInFrontAtStart; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
+                Vector m_vOtherToDest; // 0x0144, 0xc bytes
+                VectorWS m_vStart; // 0x0150, 0xc bytes
+                VectorWS m_vDest; // 0x015c, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hOther; // 0x0168, 0x4 bytes
+                VectorWS m_vLastSafePos; // 0x016c, 0xc bytes
+                bool m_bDoFinalTeleport; // 0x0178, 0x1 bytes
+                std::uint8_t pad_0179[0x3]; // 0x0179, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nBeamIndex; // 0x017c, 0x4 bytes
+                std::uint8_t pad_0180[0x370]; // 0x0180, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChronoSwap_BubbleMove) == 0x4E8, "CCitadel_Modifier_ChronoSwap_BubbleMove size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChronoSwap_BubbleMove) == 0x4F0, "CCitadel_Modifier_ChronoSwap_BubbleMove size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16e8
+             * Size: 0x16f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelBaseTriggerAbility : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityToTrigger; // 0x16d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_SwappedToTime; // 0x16dc, 0x4 bytes
-                std::uint8_t pad_16e0[0x8]; // 0x16e0, 0x8 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityToTrigger; // 0x16e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_SwappedToTime; // 0x16e4, 0x4 bytes
+                std::uint8_t pad_16e8[0x8]; // 0x16e8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBaseTriggerAbility) == 0x16E8, "CCitadelBaseTriggerAbility size mismatch");
+            static_assert(sizeof(CCitadelBaseTriggerAbility) == 0x16F0, "CCitadelBaseTriggerAbility size mismatch");
         }
     }
 }

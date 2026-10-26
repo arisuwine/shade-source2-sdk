@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15e0
+             * Size: 0x1268
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,19 +44,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_UltComboVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x14c8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x15a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_UltCombo_Target> m_TargetModifier; // 0x15b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x15c8, 0x10 bytes
-                float m_flKillCheckWindow; // 0x15d8, 0x4 bytes
-                float m_flDamageInterval; // 0x15dc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle; // 0x1150, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x1230, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_UltCombo_Target> m_TargetModifier; // 0x1240, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_KillCheckModifier; // 0x1250, 0x10 bytes
+                float m_flKillCheckWindow; // 0x1260, 0x4 bytes
+                float m_flDamageInterval; // 0x1264, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_UltComboVData) == 0x15E0, "CCitadel_Ability_UltComboVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_UltComboVData) == 0x1268, "CCitadel_Ability_UltComboVData size mismatch");
         }
     }
 }

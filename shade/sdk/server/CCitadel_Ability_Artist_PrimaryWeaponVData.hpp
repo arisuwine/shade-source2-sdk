@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19b8
+             * Size: 0x1640
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_PrimaryWeaponVData : public shade::sdk::server::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRight; // 0x16d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRightMove; // 0x17b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleLeft; // 0x1898, 0xe0 bytes
-                float m_flMoveSlashThreshold; // 0x1978, 0x4 bytes
-                std::uint8_t pad_197c[0x4]; // 0x197c, 0x4 bytes
-                CUtlVector<shade::sdk::client::ArtistWeaponBulletInfo_t> m_vecArtistWeaponBulletInfo; // 0x1980, 0x18 bytes
-                CUtlVector<shade::sdk::client::ArtistWeaponBulletInfo_t> m_vecArtistEmpoweredWeaponBulletInfo; // 0x1998, 0x18 bytes
-                std::int32_t m_iBaseBulletCount; // 0x19b0, 0x4 bytes
-                std::int32_t m_iEmpoweredBulletCount; // 0x19b4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRight; // 0x1360, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleRightMove; // 0x1440, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strSwipeTracerParticleLeft; // 0x1520, 0xe0 bytes
+                float m_flMoveSlashThreshold; // 0x1600, 0x4 bytes
+                std::uint8_t pad_1604[0x4]; // 0x1604, 0x4 bytes
+                CUtlVector<shade::sdk::client::ArtistWeaponBulletInfo_t> m_vecArtistWeaponBulletInfo; // 0x1608, 0x18 bytes
+                CUtlVector<shade::sdk::client::ArtistWeaponBulletInfo_t> m_vecArtistEmpoweredWeaponBulletInfo; // 0x1620, 0x18 bytes
+                std::int32_t m_iBaseBulletCount; // 0x1638, 0x4 bytes
+                std::int32_t m_iEmpoweredBulletCount; // 0x163c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_PrimaryWeaponVData) == 0x19B8, "CCitadel_Ability_Artist_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_PrimaryWeaponVData) == 0x1640, "CCitadel_Ability_Artist_PrimaryWeaponVData size mismatch");
         }
     }
 }

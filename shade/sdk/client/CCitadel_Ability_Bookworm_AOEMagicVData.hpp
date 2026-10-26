@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1408
+             * Size: 0x1090
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bookworm_AOEMagicVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AreaModifier; // 0x13e8, 0x10 bytes
-                float m_flGroundHeightOffset; // 0x13f8, 0x4 bytes
-                float m_flGroundDistance; // 0x13fc, 0x4 bytes
-                float m_flSearchUpDistance; // 0x1400, 0x4 bytes
-                float m_flSearchDownDistance; // 0x1404, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AreaModifier; // 0x1070, 0x10 bytes
+                float m_flGroundHeightOffset; // 0x1080, 0x4 bytes
+                float m_flGroundDistance; // 0x1084, 0x4 bytes
+                float m_flSearchUpDistance; // 0x1088, 0x4 bytes
+                float m_flSearchDownDistance; // 0x108c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bookworm_AOEMagicVData) == 0x1408, "CCitadel_Ability_Bookworm_AOEMagicVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bookworm_AOEMagicVData) == 0x1090, "CCitadel_Ability_Bookworm_AOEMagicVData size mismatch");
         }
     }
 }

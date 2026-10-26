@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1ae0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_ProjectileWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::int32_t m_iCurrentShotCount; // 0x1970, 0x4 bytes
-                std::uint8_t pad_1974[0x164]; // 0x1974, 0x164 bytes
+                std::int32_t m_iCurrentShotCount; // 0x1978, 0x4 bytes
+                std::uint8_t pad_197c[0x164]; // 0x197c, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_ProjectileWeapon) == 0x1AD8, "CCitadel_Ability_Artist_ProjectileWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_ProjectileWeapon) == 0x1AE0, "CCitadel_Ability_Artist_ProjectileWeapon size mismatch");
         }
     }
 }

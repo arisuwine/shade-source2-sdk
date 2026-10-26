@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1688
+             * Size: 0x1310
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,19 +44,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Mirage_Tornado_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TornadoCastParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle; // 0x14c8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_WhirlwindEvasionModifier; // 0x15a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TornadoAura; // 0x15b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AdditionalTornadoMover; // 0x15c8, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTravelingInTornado; // 0x15d8, 0xa0 bytes
-                CSoundEventName m_PurgeSound; // 0x1678, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TornadoCastParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle; // 0x1150, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_WhirlwindEvasionModifier; // 0x1230, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TornadoAura; // 0x1240, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AdditionalTornadoMover; // 0x1250, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTravelingInTornado; // 0x1260, 0xa0 bytes
+                CSoundEventName m_PurgeSound; // 0x1300, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Mirage_Tornado_VData) == 0x1688, "CAbility_Mirage_Tornado_VData size mismatch");
+            static_assert(sizeof(CAbility_Mirage_Tornado_VData) == 0x1310, "CAbility_Mirage_Tornado_VData size mismatch");
         }
     }
 }

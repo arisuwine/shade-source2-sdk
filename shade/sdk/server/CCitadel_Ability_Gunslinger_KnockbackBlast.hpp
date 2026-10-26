@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1998
+             * Size: 0x19a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Gunslinger_KnockbackBlast : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                Vector m_vecKnockbackDirection; // 0x14a0, 0xc bytes
-                std::uint8_t pad_14ac[0x4]; // 0x14ac, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecKnockbackedUnits; // 0x14b0, 0x18 bytes
-                std::uint8_t pad_14c8[0x4d0]; // 0x14c8, 0x4d0 bytes
+                Vector m_vecKnockbackDirection; // 0x14a8, 0xc bytes
+                std::uint8_t pad_14b4[0x4]; // 0x14b4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecKnockbackedUnits; // 0x14b8, 0x18 bytes
+                std::uint8_t pad_14d0[0x4d0]; // 0x14d0, 0x4d0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Gunslinger_KnockbackBlast) == 0x1998, "CCitadel_Ability_Gunslinger_KnockbackBlast size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Gunslinger_KnockbackBlast) == 0x19A0, "CCitadel_Ability_Gunslinger_KnockbackBlast size mismatch");
         }
     }
 }

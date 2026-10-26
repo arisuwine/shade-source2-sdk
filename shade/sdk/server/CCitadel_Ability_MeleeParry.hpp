@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16c0
+             * Size: 0x16c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_MeleeParry : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nActiveFX; // 0x14a0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flParryStartTime; // 0x14a4, 0x4 bytes
-                bool m_bAttackParried; // 0x14a8, 0x1 bytes
-                std::uint8_t pad_14a9[0x3]; // 0x14a9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flParrySuccessEndTime; // 0x14ac, 0x4 bytes
-                std::uint8_t pad_14b0[0x210]; // 0x14b0, 0x210 bytes
+                shade::sdk::client::ParticleIndex_t m_nActiveFX; // 0x14a8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryStartTime; // 0x14ac, 0x4 bytes
+                bool m_bAttackParried; // 0x14b0, 0x1 bytes
+                std::uint8_t pad_14b1[0x3]; // 0x14b1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flParrySuccessEndTime; // 0x14b4, 0x4 bytes
+                std::uint8_t pad_14b8[0x210]; // 0x14b8, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_MeleeParry) == 0x16C0, "CCitadel_Ability_MeleeParry size mismatch");
+            static_assert(sizeof(CCitadel_Ability_MeleeParry) == 0x16C8, "CCitadel_Ability_MeleeParry size mismatch");
         }
     }
 }

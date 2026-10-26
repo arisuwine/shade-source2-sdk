@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18e0
+             * Size: 0x18e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Wrecker_BoulderGrenade : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitTroopers; // 0x14a0, 0x18 bytes
-                std::uint8_t pad_14b8[0x4]; // 0x14b8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nBallParticle; // 0x14bc, 0x4 bytes
-                std::uint8_t pad_14c0[0x420]; // 0x14c0, 0x420 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitTroopers; // 0x14a8, 0x18 bytes
+                std::uint8_t pad_14c0[0x4]; // 0x14c0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nBallParticle; // 0x14c4, 0x4 bytes
+                std::uint8_t pad_14c8[0x420]; // 0x14c8, 0x420 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenade) == 0x18E0, "CCitadel_Ability_Wrecker_BoulderGrenade size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenade) == 0x18E8, "CCitadel_Ability_Wrecker_BoulderGrenade size mismatch");
         }
     }
 }

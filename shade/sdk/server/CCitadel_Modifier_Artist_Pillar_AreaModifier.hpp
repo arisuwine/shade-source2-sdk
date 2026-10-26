@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x6d8
+             * Size: 0x6e0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Artist_Pillar_AreaModifier : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_hAOEWarningParticle; // 0x0148, 0x4 bytes
-                std::uint8_t pad_014c[0x584]; // 0x014c, 0x584 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x06d0, 0x4 bytes
-                std::uint8_t pad_06d4[0x4]; // 0x06d4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_hAOEWarningParticle; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x584]; // 0x0154, 0x584 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x06d8, 0x4 bytes
+                std::uint8_t pad_06dc[0x4]; // 0x06dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Artist_Pillar_AreaModifier) == 0x6D8, "CCitadel_Modifier_Artist_Pillar_AreaModifier size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_Pillar_AreaModifier) == 0x6E0, "CCitadel_Modifier_Artist_Pillar_AreaModifier size mismatch");
         }
     }
 }

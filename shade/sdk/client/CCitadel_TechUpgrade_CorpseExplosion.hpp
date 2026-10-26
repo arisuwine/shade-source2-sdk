@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1998
+             * Size: 0x19a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_TechUpgrade_CorpseExplosion : public shade::sdk::client::CCitadel_Item {
             public:
-                std::uint8_t pad_16d8[0x2c0]; // 0x16d8, 0x2c0 bytes
+                std::uint8_t pad_16e0[0x2c0]; // 0x16e0, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_TechUpgrade_CorpseExplosion) == 0x1998, "CCitadel_TechUpgrade_CorpseExplosion size mismatch");
+            static_assert(sizeof(CCitadel_TechUpgrade_CorpseExplosion) == 0x19A0, "CCitadel_TechUpgrade_CorpseExplosion size mismatch");
         }
     }
 }

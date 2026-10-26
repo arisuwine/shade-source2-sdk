@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a40
+             * Size: 0x1a48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bookworm_DragonFire : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x580]; // 0x14a0, 0x580 bytes
-                VectorWS m_vLaunchPosition; // 0x1a20, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x1a2c, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x1a38, 0x4 bytes
-                std::uint8_t pad_1a3c[0x4]; // 0x1a3c, 0x4 bytes
+                std::uint8_t pad_14a8[0x580]; // 0x14a8, 0x580 bytes
+                VectorWS m_vLaunchPosition; // 0x1a28, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x1a34, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x1a40, 0x4 bytes
+                std::uint8_t pad_1a44[0x4]; // 0x1a44, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bookworm_DragonFire) == 0x1A40, "CCitadel_Ability_Bookworm_DragonFire size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bookworm_DragonFire) == 0x1A48, "CCitadel_Ability_Bookworm_DragonFire size mismatch");
         }
     }
 }

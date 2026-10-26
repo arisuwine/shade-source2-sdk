@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1828
+             * Size: 0x14b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,28 +43,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fencer_ThrowBladeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MarkParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MarkLingerParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchTrailParticle; // 0x1688, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1768, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1778, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisarmModifier; // 0x1788, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_UIRecastModifier; // 0x1798, 0x10 bytes
-                float m_flUpDisenageJumpRatio; // 0x17a8, 0x4 bytes
-                float m_flMinDisengageAmountBack; // 0x17ac, 0x4 bytes
-                float m_flForwardPlacementDistance; // 0x17b0, 0x4 bytes
-                float m_flHeightAboveGround; // 0x17b4, 0x4 bytes
-                CPiecewiseCurve m_velocityCurve; // 0x17b8, 0x40 bytes
-                CSoundEventName m_sStartSound; // 0x17f8, 0x10 bytes
-                CSoundEventName m_sExpiredSound; // 0x1808, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x1818, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MarkParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MarkLingerParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchTrailParticle; // 0x1310, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x13f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1400, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DisarmModifier; // 0x1410, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_UIRecastModifier; // 0x1420, 0x10 bytes
+                float m_flUpDisenageJumpRatio; // 0x1430, 0x4 bytes
+                float m_flMinDisengageAmountBack; // 0x1434, 0x4 bytes
+                float m_flForwardPlacementDistance; // 0x1438, 0x4 bytes
+                float m_flHeightAboveGround; // 0x143c, 0x4 bytes
+                CPiecewiseCurve m_velocityCurve; // 0x1440, 0x40 bytes
+                CSoundEventName m_sStartSound; // 0x1480, 0x10 bytes
+                CSoundEventName m_sExpiredSound; // 0x1490, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x14a0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fencer_ThrowBladeVData) == 0x1828, "CCitadel_Ability_Fencer_ThrowBladeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fencer_ThrowBladeVData) == 0x14B0, "CCitadel_Ability_Fencer_ThrowBladeVData size mismatch");
         }
     }
 }

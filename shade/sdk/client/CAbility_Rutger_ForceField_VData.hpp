@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1528
+             * Size: 0x11b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,19 +44,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Rutger_ForceField_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_VictimPushModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x1408, 0x10 bytes
-                CSoundEventName m_strDomeCreated; // 0x1418, 0x10 bytes
-                CSoundEventName m_strChargeUpSound; // 0x1428, 0x10 bytes
-                CSoundEventName m_strPushAndDamage; // 0x1438, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChronoSphereChargeParticle; // 0x1448, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_VictimPushModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_SlowModifier; // 0x1090, 0x10 bytes
+                CSoundEventName m_strDomeCreated; // 0x10a0, 0x10 bytes
+                CSoundEventName m_strChargeUpSound; // 0x10b0, 0x10 bytes
+                CSoundEventName m_strPushAndDamage; // 0x10c0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChronoSphereChargeParticle; // 0x10d0, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Rutger_ForceField_VData) == 0x1528, "CAbility_Rutger_ForceField_VData size mismatch");
+            static_assert(sizeof(CAbility_Rutger_ForceField_VData) == 0x11B0, "CAbility_Rutger_ForceField_VData size mismatch");
         }
     }
 }

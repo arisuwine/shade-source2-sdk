@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a60
+             * Size: 0x1a68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_Tether : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x14]; // 0x16d8, 0x14 bytes
-                bool m_bTetheringActive; // 0x16ec, 0x1 bytes
-                std::uint8_t pad_16ed[0x373]; // 0x16ed, 0x373 bytes
+                std::uint8_t pad_16e0[0x14]; // 0x16e0, 0x14 bytes
+                bool m_bTetheringActive; // 0x16f4, 0x1 bytes
+                std::uint8_t pad_16f5[0x373]; // 0x16f5, 0x373 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_Tether) == 0x1A60, "CCitadel_Ability_PunkGoat_Tether size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_Tether) == 0x1A68, "CCitadel_Ability_PunkGoat_Tether size mismatch");
         }
     }
 }

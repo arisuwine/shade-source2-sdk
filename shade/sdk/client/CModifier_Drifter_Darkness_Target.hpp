@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x5b8
+             * Size: 0x5c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CModifier_Drifter_Darkness_Target : public shade::sdk::client::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0188[0x430]; // 0x0188, 0x430 bytes
+                std::uint8_t pad_0190[0x430]; // 0x0190, 0x430 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Drifter_Darkness_Target) == 0x5B8, "CModifier_Drifter_Darkness_Target size mismatch");
+            static_assert(sizeof(CModifier_Drifter_Darkness_Target) == 0x5C0, "CModifier_Drifter_Darkness_Target size mismatch");
         }
     }
 }

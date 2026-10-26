@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a50
+             * Size: 0x1a58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Wrecker_Ultimate : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x20]; // 0x16d8, 0x20 bytes
-                QAngle m_angBeamAngles; // 0x16f8, 0xc bytes
-                std::uint8_t pad_1704[0x84]; // 0x1704, 0x84 bytes
-                bool m_bNeedsBeamReset; // 0x1788, 0x1 bytes
-                std::uint8_t pad_1789[0x2c7]; // 0x1789, 0x2c7 bytes
+                std::uint8_t pad_16e0[0x20]; // 0x16e0, 0x20 bytes
+                QAngle m_angBeamAngles; // 0x1700, 0xc bytes
+                std::uint8_t pad_170c[0x84]; // 0x170c, 0x84 bytes
+                bool m_bNeedsBeamReset; // 0x1790, 0x1 bytes
+                std::uint8_t pad_1791[0x2c7]; // 0x1791, 0x2c7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Wrecker_Ultimate) == 0x1A50, "CCitadel_Ability_Wrecker_Ultimate size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Wrecker_Ultimate) == 0x1A58, "CCitadel_Ability_Wrecker_Ultimate size mismatch");
         }
     }
 }

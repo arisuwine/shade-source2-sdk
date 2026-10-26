@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16d8
+             * Size: 0x16e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_SpiritSap) == 0x16D8, "CCitadel_Item_SpiritSap size mismatch");
+            static_assert(sizeof(CCitadel_Item_SpiritSap) == 0x16E0, "CCitadel_Item_SpiritSap size mismatch");
         }
     }
 }

@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1960
+             * Size: 0x15e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,46 +45,46 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_MoveChessPieceVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CUtlOrderedMap<shade::sdk::client::EChessPieceType, CSubclassName<4>> m_mapChessAbilities; // 0x13e8, 0x28 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveBishopModifier; // 0x1410, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveAllyModifier; // 0x1420, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveKingModifier; // 0x1430, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveQueenModifier; // 0x1440, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CooldownModifier; // 0x1450, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CooldownPlayerModifier; // 0x1460, 0x10 bytes
-                Color m_cHoverOutlineColor; // 0x1470, 0x4 bytes
-                float m_flHoverOutlineWidth; // 0x1474, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetHoverParticle; // 0x1478, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewBishopParticle; // 0x1558, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewAllyParticle; // 0x1638, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewQueenParticle; // 0x1718, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewKingParticle; // 0x17f8, 0xe0 bytes
-                CSoundEventName m_strMoveBishopSound; // 0x18d8, 0x10 bytes
-                CSoundEventName m_strMoveKnightSound; // 0x18e8, 0x10 bytes
-                CSoundEventName m_strMoveQueenSound; // 0x18f8, 0x10 bytes
-                CSoundEventName m_strMoveKingSound; // 0x1908, 0x10 bytes
-                CSoundEventName m_strSelectPieceSound; // 0x1918, 0x10 bytes
-                float m_flHoverTime; // 0x1928, 0x4 bytes
-                float m_flPassiveTargetingConeAngle; // 0x192c, 0x4 bytes
-                float m_flPassiveTargetingHalfWidth; // 0x1930, 0x4 bytes
-                float m_flPassiveTargetingNearbyCasterRadius; // 0x1934, 0x4 bytes
-                float m_flPassiveTargetingNearbyCrosshairRadius; // 0x1938, 0x4 bytes
-                float m_flSpawnPositionNavMeshSearchRange; // 0x193c, 0x4 bytes
-                bool m_bSweepToDestination; // 0x1940, 0x1 bytes
-                bool m_bCreateSatVolume; // 0x1941, 0x1 bytes
-                bool m_bAllowSelfTarget; // 0x1942, 0x1 bytes
-                bool m_bAllowNonSelfTarget; // 0x1943, 0x1 bytes
-                bool m_bDrawUIElements; // 0x1944, 0x1 bytes
-                bool m_bDebug; // 0x1945, 0x1 bytes
-                bool m_bApplyMoveCooldown; // 0x1946, 0x1 bytes
-                std::uint8_t pad_1947[0x1]; // 0x1947, 0x1 bytes
-                CUtlVector<shade::sdk::client::Class_T> m_vecPossibleClasses; // 0x1948, 0x18 bytes
+                CUtlOrderedMap<shade::sdk::client::EChessPieceType, CSubclassName<4>> m_mapChessAbilities; // 0x1070, 0x28 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveBishopModifier; // 0x1098, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveAllyModifier; // 0x10a8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveKingModifier; // 0x10b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveQueenModifier; // 0x10c8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CooldownModifier; // 0x10d8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CooldownPlayerModifier; // 0x10e8, 0x10 bytes
+                Color m_cHoverOutlineColor; // 0x10f8, 0x4 bytes
+                float m_flHoverOutlineWidth; // 0x10fc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetHoverParticle; // 0x1100, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewBishopParticle; // 0x11e0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewAllyParticle; // 0x12c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewQueenParticle; // 0x13a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewKingParticle; // 0x1480, 0xe0 bytes
+                CSoundEventName m_strMoveBishopSound; // 0x1560, 0x10 bytes
+                CSoundEventName m_strMoveKnightSound; // 0x1570, 0x10 bytes
+                CSoundEventName m_strMoveQueenSound; // 0x1580, 0x10 bytes
+                CSoundEventName m_strMoveKingSound; // 0x1590, 0x10 bytes
+                CSoundEventName m_strSelectPieceSound; // 0x15a0, 0x10 bytes
+                float m_flHoverTime; // 0x15b0, 0x4 bytes
+                float m_flPassiveTargetingConeAngle; // 0x15b4, 0x4 bytes
+                float m_flPassiveTargetingHalfWidth; // 0x15b8, 0x4 bytes
+                float m_flPassiveTargetingNearbyCasterRadius; // 0x15bc, 0x4 bytes
+                float m_flPassiveTargetingNearbyCrosshairRadius; // 0x15c0, 0x4 bytes
+                float m_flSpawnPositionNavMeshSearchRange; // 0x15c4, 0x4 bytes
+                bool m_bSweepToDestination; // 0x15c8, 0x1 bytes
+                bool m_bCreateSatVolume; // 0x15c9, 0x1 bytes
+                bool m_bAllowSelfTarget; // 0x15ca, 0x1 bytes
+                bool m_bAllowNonSelfTarget; // 0x15cb, 0x1 bytes
+                bool m_bDrawUIElements; // 0x15cc, 0x1 bytes
+                bool m_bDebug; // 0x15cd, 0x1 bytes
+                bool m_bApplyMoveCooldown; // 0x15ce, 0x1 bytes
+                std::uint8_t pad_15cf[0x1]; // 0x15cf, 0x1 bytes
+                CUtlVector<shade::sdk::client::Class_T> m_vecPossibleClasses; // 0x15d0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_MoveChessPieceVData) == 0x1960, "CCitadel_Ability_Chessmaster_MoveChessPieceVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_MoveChessPieceVData) == 0x15E8, "CCitadel_Ability_Chessmaster_MoveChessPieceVData size mismatch");
         }
     }
 }

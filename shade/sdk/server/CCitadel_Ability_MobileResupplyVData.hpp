@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1960
+             * Size: 0x15e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,23 +44,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_MobileResupplyVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flResupplyForceScale; // 0x13e8, 0x4 bytes
-                float m_flResupplyUp; // 0x13ec, 0x4 bytes
-                CSoundEventName m_strKilledSound; // 0x13f0, 0x10 bytes
-                CSoundEventName m_strDeploySound; // 0x1400, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_AuraModifier; // 0x1410, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_DispenserModel; // 0x1420, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticle; // 0x1500, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticleFriendly; // 0x15e0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DestroyedParticle; // 0x16c0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticle; // 0x17a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticleFriendly; // 0x1880, 0xe0 bytes
+                float m_flResupplyForceScale; // 0x1070, 0x4 bytes
+                float m_flResupplyUp; // 0x1074, 0x4 bytes
+                CSoundEventName m_strKilledSound; // 0x1078, 0x10 bytes
+                CSoundEventName m_strDeploySound; // 0x1088, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_AuraModifier; // 0x1098, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_DispenserModel; // 0x10a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticle; // 0x1188, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticleFriendly; // 0x1268, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DestroyedParticle; // 0x1348, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticle; // 0x1428, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticleFriendly; // 0x1508, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_MobileResupplyVData) == 0x1960, "CCitadel_Ability_MobileResupplyVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_MobileResupplyVData) == 0x15E8, "CCitadel_Ability_MobileResupplyVData size mismatch");
         }
     }
 }

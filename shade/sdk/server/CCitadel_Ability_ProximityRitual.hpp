@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19a0
+             * Size: 0x19a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,20 +41,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ProximityRitual : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ECatStatueState_t m_eState; // 0x14a0, 0x1 bytes
-                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hStatue; // 0x14a4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tCatRecallTime; // 0x14a8, 0x4 bytes
-                std::int32_t m_iCatRecallHealth; // 0x14ac, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x14b0, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x14bc, 0xc bytes
-                std::uint8_t pad_14c8[0x4d8]; // 0x14c8, 0x4d8 bytes
+                shade::sdk::client::ECatStatueState_t m_eState; // 0x14a8, 0x1 bytes
+                std::uint8_t pad_14a9[0x3]; // 0x14a9, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hStatue; // 0x14ac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tCatRecallTime; // 0x14b0, 0x4 bytes
+                std::int32_t m_iCatRecallHealth; // 0x14b4, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x14b8, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x14c4, 0xc bytes
+                std::uint8_t pad_14d0[0x4d8]; // 0x14d0, 0x4d8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ProximityRitual) == 0x19A0, "CCitadel_Ability_ProximityRitual size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ProximityRitual) == 0x19A8, "CCitadel_Ability_ProximityRitual size mismatch");
         }
     }
 }

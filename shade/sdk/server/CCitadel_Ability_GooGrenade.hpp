@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ba0
+             * Size: 0x1ba8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_GooGrenade : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecPuddleModifiers; // 0x14a0, 0x18 bytes
-                std::uint8_t pad_14b8[0x6e0]; // 0x14b8, 0x6e0 bytes
-                shade::sdk::entity2::GameTime_t m_LastDetonateTime; // 0x1b98, 0x4 bytes
-                std::uint8_t pad_1b9c[0x4]; // 0x1b9c, 0x4 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecPuddleModifiers; // 0x14a8, 0x18 bytes
+                std::uint8_t pad_14c0[0x6e0]; // 0x14c0, 0x6e0 bytes
+                shade::sdk::entity2::GameTime_t m_LastDetonateTime; // 0x1ba0, 0x4 bytes
+                std::uint8_t pad_1ba4[0x4]; // 0x1ba4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_GooGrenade) == 0x1BA0, "CCitadel_Ability_GooGrenade size mismatch");
+            static_assert(sizeof(CCitadel_Ability_GooGrenade) == 0x1BA8, "CCitadel_Ability_GooGrenade size mismatch");
         }
     }
 }

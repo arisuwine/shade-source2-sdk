@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15c8
+             * Size: 0x1250
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Synth_Affliction_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEParticle; // 0x13f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x14d8, 0xe0 bytes
-                CSoundEventName m_strHitSound; // 0x15b8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1070, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEParticle; // 0x1080, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1160, 0xe0 bytes
+                CSoundEventName m_strHitSound; // 0x1240, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Synth_Affliction_VData) == 0x15C8, "CAbility_Synth_Affliction_VData size mismatch");
+            static_assert(sizeof(CAbility_Synth_Affliction_VData) == 0x1250, "CAbility_Synth_Affliction_VData size mismatch");
         }
     }
 }

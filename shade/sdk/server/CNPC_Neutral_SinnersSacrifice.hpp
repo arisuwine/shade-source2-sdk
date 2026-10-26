@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,13 +35,13 @@ namespace shade {
                 std::int32_t m_nGoldToGiveOnDamage; // 0x17e4, 0x4 bytes
                 float m_flRandomTimePhase; // 0x17e8, 0x4 bytes
                 float m_flMiniGameTimeScale; // 0x17ec, 0x4 bytes
-                std::uint8_t pad_17f0[0x300]; // 0x17f0, 0x300 bytes
+                std::uint8_t pad_17f0[0x310]; // 0x17f0, 0x310 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNPC_Neutral_SinnersSacrifice) == 0x1AF0, "CNPC_Neutral_SinnersSacrifice size mismatch");
+            static_assert(sizeof(CNPC_Neutral_SinnersSacrifice) == 0x1B00, "CNPC_Neutral_SinnersSacrifice size mismatch");
         }
     }
 }

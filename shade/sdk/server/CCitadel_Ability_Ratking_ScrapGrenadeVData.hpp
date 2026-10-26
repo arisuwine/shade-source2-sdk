@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1830
+             * Size: 0x14b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,42 +43,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Ratking_ScrapGrenadeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BigExplosionSlowModifier; // 0x13f8, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1408, 0x10 bytes
-                CSoundEventName m_strBigExplodeSound; // 0x1418, 0x10 bytes
-                CSoundEventName m_BounceSound; // 0x1428, 0x10 bytes
-                CSoundEventName m_strTimerSound; // 0x1438, 0x10 bytes
-                CSoundEventName m_strExtraTimerSound; // 0x1448, 0x10 bytes
-                CSoundEventName m_strMeleeHitSound; // 0x1458, 0x10 bytes
-                float m_flBounceVerticalDampening; // 0x1468, 0x4 bytes
-                float m_flBounceDirectionalDampening; // 0x146c, 0x4 bytes
-                float m_flMinBounceSpeed; // 0x1470, 0x4 bytes
-                float m_flMinSurfaceDotToBounce; // 0x1474, 0x4 bytes
-                float m_flMaxSurfaceDotToBounce; // 0x1478, 0x4 bytes
-                float m_flBounceTargetingPlayerWeight; // 0x147c, 0x4 bytes
-                float m_flBounceTargetDistancePower; // 0x1480, 0x4 bytes
-                float m_flBounceMaxHorizontalSpeed; // 0x1484, 0x4 bytes
-                float m_flBounceUpMagnitude; // 0x1488, 0x4 bytes
-                float m_flMinTimeBetweenExplosions; // 0x148c, 0x4 bytes
-                float m_flBounceTargetDistanceCheck; // 0x1490, 0x4 bytes
-                float m_flFirstBounceDetonateTimer; // 0x1494, 0x4 bytes
-                float m_flAdditionalBounceDetonateTimer; // 0x1498, 0x4 bytes
-                float m_flFinalBounceDetonateTimer; // 0x149c, 0x4 bytes
-                float m_flBounceGrenadeSpeed; // 0x14a0, 0x4 bytes
-                float m_flMeleeImpulseLight; // 0x14a4, 0x4 bytes
-                float m_flMeleeImpulseHeavy; // 0x14a8, 0x4 bytes
-                float m_flMeleeImpulseUpScale; // 0x14ac, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShrapnelTracer; // 0x14b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1590, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1670, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConeParticle; // 0x1750, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BigExplosionSlowModifier; // 0x1080, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1090, 0x10 bytes
+                CSoundEventName m_strBigExplodeSound; // 0x10a0, 0x10 bytes
+                CSoundEventName m_BounceSound; // 0x10b0, 0x10 bytes
+                CSoundEventName m_strTimerSound; // 0x10c0, 0x10 bytes
+                CSoundEventName m_strExtraTimerSound; // 0x10d0, 0x10 bytes
+                CSoundEventName m_strMeleeHitSound; // 0x10e0, 0x10 bytes
+                float m_flBounceVerticalDampening; // 0x10f0, 0x4 bytes
+                float m_flBounceDirectionalDampening; // 0x10f4, 0x4 bytes
+                float m_flMinBounceSpeed; // 0x10f8, 0x4 bytes
+                float m_flMinSurfaceDotToBounce; // 0x10fc, 0x4 bytes
+                float m_flMaxSurfaceDotToBounce; // 0x1100, 0x4 bytes
+                float m_flBounceTargetingPlayerWeight; // 0x1104, 0x4 bytes
+                float m_flBounceTargetDistancePower; // 0x1108, 0x4 bytes
+                float m_flBounceMaxHorizontalSpeed; // 0x110c, 0x4 bytes
+                float m_flBounceUpMagnitude; // 0x1110, 0x4 bytes
+                float m_flMinTimeBetweenExplosions; // 0x1114, 0x4 bytes
+                float m_flBounceTargetDistanceCheck; // 0x1118, 0x4 bytes
+                float m_flFirstBounceDetonateTimer; // 0x111c, 0x4 bytes
+                float m_flAdditionalBounceDetonateTimer; // 0x1120, 0x4 bytes
+                float m_flFinalBounceDetonateTimer; // 0x1124, 0x4 bytes
+                float m_flBounceGrenadeSpeed; // 0x1128, 0x4 bytes
+                float m_flMeleeImpulseLight; // 0x112c, 0x4 bytes
+                float m_flMeleeImpulseHeavy; // 0x1130, 0x4 bytes
+                float m_flMeleeImpulseUpScale; // 0x1134, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShrapnelTracer; // 0x1138, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1218, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x12f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConeParticle; // 0x13d8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Ratking_ScrapGrenadeVData) == 0x1830, "CCitadel_Ability_Ratking_ScrapGrenadeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Ratking_ScrapGrenadeVData) == 0x14B8, "CCitadel_Ability_Ratking_ScrapGrenadeVData size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x170
+             * Size: 0x178
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_DPSTracker : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x18]; // 0x0148, 0x18 bytes
-                float m_flInterval; // 0x0160, 0x4 bytes
-                float m_flProgress; // 0x0164, 0x4 bytes
-                float m_flDistToTarget; // 0x0168, 0x4 bytes
-                std::uint8_t pad_016c[0x4]; // 0x016c, 0x4 bytes
+                std::uint8_t pad_0150[0x18]; // 0x0150, 0x18 bytes
+                float m_flInterval; // 0x0168, 0x4 bytes
+                float m_flProgress; // 0x016c, 0x4 bytes
+                float m_flDistToTarget; // 0x0170, 0x4 bytes
+                std::uint8_t pad_0174[0x4]; // 0x0174, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_DPSTracker) == 0x170, "CCitadel_Modifier_DPSTracker size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_DPSTracker) == 0x178, "CCitadel_Modifier_DPSTracker size mismatch");
         }
     }
 }

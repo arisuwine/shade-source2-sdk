@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a28
+             * Size: 0x1a30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_LightningBall : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                float m_flInitialSpeed; // 0x14a0, 0x4 bytes
-                std::uint8_t pad_14a4[0x584]; // 0x14a4, 0x584 bytes
+                float m_flInitialSpeed; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x584]; // 0x14ac, 0x584 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_LightningBall) == 0x1A28, "CCitadel_Ability_LightningBall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_LightningBall) == 0x1A30, "CCitadel_Ability_LightningBall size mismatch");
         }
     }
 }

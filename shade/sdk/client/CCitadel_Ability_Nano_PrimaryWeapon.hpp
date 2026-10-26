@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a20
+             * Size: 0x1a28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_PrimaryWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1970[0xb0]; // 0x1970, 0xb0 bytes
+                std::uint8_t pad_1978[0xb0]; // 0x1978, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_PrimaryWeapon) == 0x1A20, "CCitadel_Ability_Nano_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_PrimaryWeapon) == 0x1A28, "CCitadel_Ability_Nano_PrimaryWeapon size mismatch");
         }
     }
 }

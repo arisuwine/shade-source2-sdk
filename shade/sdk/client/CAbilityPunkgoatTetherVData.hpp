@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1538
+             * Size: 0x11c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityPunkgoatTetherVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FireRateSlowModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TetheredModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PullModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WaitingToPullModifier; // 0x1418, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UnstoppableModifier; // 0x1428, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RopeParticle; // 0x1438, 0xe0 bytes
-                CSoundEventName m_strPullSound; // 0x1518, 0x10 bytes
-                CSoundEventName m_strTimerSound; // 0x1528, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FireRateSlowModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TetheredModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PullModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_WaitingToPullModifier; // 0x10a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UnstoppableModifier; // 0x10b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RopeParticle; // 0x10c0, 0xe0 bytes
+                CSoundEventName m_strPullSound; // 0x11a0, 0x10 bytes
+                CSoundEventName m_strTimerSound; // 0x11b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityPunkgoatTetherVData) == 0x1538, "CAbilityPunkgoatTetherVData size mismatch");
+            static_assert(sizeof(CAbilityPunkgoatTetherVData) == 0x11C0, "CAbilityPunkgoatTetherVData size mismatch");
         }
     }
 }

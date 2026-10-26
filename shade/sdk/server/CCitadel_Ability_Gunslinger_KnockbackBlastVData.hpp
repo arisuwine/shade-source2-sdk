@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15c8
+             * Size: 0x1250
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Gunslinger_KnockbackBlastVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x14c8, 0xe0 bytes
-                CSoundEventName m_strWallSlamSound; // 0x15a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x15b8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle; // 0x1150, 0xe0 bytes
+                CSoundEventName m_strWallSlamSound; // 0x1230, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1240, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Gunslinger_KnockbackBlastVData) == 0x15C8, "CCitadel_Ability_Gunslinger_KnockbackBlastVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Gunslinger_KnockbackBlastVData) == 0x1250, "CCitadel_Ability_Gunslinger_KnockbackBlastVData size mismatch");
         }
     }
 }

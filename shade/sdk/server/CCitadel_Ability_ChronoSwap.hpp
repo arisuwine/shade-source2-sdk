@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18c8
+             * Size: 0x18d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ChronoSwap : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bHitTarget; // 0x14a0, 0x1 bytes
-                bool m_bAltCast; // 0x14a1, 0x1 bytes
-                std::uint8_t pad_14a2[0x426]; // 0x14a2, 0x426 bytes
+                bool m_bHitTarget; // 0x14a8, 0x1 bytes
+                bool m_bAltCast; // 0x14a9, 0x1 bytes
+                std::uint8_t pad_14aa[0x426]; // 0x14aa, 0x426 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ChronoSwap) == 0x18C8, "CCitadel_Ability_ChronoSwap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ChronoSwap) == 0x18D0, "CCitadel_Ability_ChronoSwap size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17a0
+             * Size: 0x17a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_ProjectileTest : public shade::sdk::client::CCitadel_Item {
             public:
-                VectorWS m_vLaunchPosition; // 0x16d8, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16e4, 0xc bytes
-                std::uint8_t pad_16f0[0xb0]; // 0x16f0, 0xb0 bytes
+                VectorWS m_vLaunchPosition; // 0x16e0, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16ec, 0xc bytes
+                std::uint8_t pad_16f8[0xb0]; // 0x16f8, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_ProjectileTest) == 0x17A0, "CCitadel_Item_ProjectileTest size mismatch");
+            static_assert(sizeof(CCitadel_Item_ProjectileTest) == 0x17A8, "CCitadel_Item_ProjectileTest size mismatch");
         }
     }
 }

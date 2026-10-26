@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a30
+             * Size: 0x1a38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,16 +33,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HealthSwap : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x14a0, 0x4 bytes
-                std::uint8_t pad_14a4[0x4d4]; // 0x14a4, 0x4d4 bytes
-                shade::sdk::entity2::GameTime_t m_flPostCastHoldEndTime; // 0x1978, 0x4 bytes
-                std::uint8_t pad_197c[0xb4]; // 0x197c, 0xb4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x4d4]; // 0x14ac, 0x4d4 bytes
+                shade::sdk::entity2::GameTime_t m_flPostCastHoldEndTime; // 0x1980, 0x4 bytes
+                std::uint8_t pad_1984[0xb4]; // 0x1984, 0xb4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HealthSwap) == 0x1A30, "CCitadel_Ability_HealthSwap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HealthSwap) == 0x1A38, "CCitadel_Ability_HealthSwap size mismatch");
         }
     }
 }

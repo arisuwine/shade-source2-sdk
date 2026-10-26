@@ -40,15 +40,14 @@ namespace shade {
                 bool m_bWantsInitialVelocity; // 0x0028, 0x1 bytes
                 std::uint8_t pad_0029[0x3]; // 0x0029, 0x3 bytes
                 float m_flChargeAmount; // 0x002c, 0x4 bytes
-                CUtlString m_sOverrideClassName; // 0x0030, 0x8 bytes
-                bool m_bShouldHitThrower; // 0x0038, 0x1 bytes
-                bool m_bLagCompensatePosition; // 0x0039, 0x1 bytes
-                std::uint8_t pad_003a[0x2]; // 0x003a, 0x2 bytes
-                float m_flHitThrowerDelay; // 0x003c, 0x4 bytes
-                CUtlString m_sModelOverrideName; // 0x0040, 0x8 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sTrailParticleOverrideName; // 0x0048, 0xe0 bytes
-                std::int32_t m_nNumDetonations; // 0x0128, 0x4 bytes
-                std::uint8_t pad_012c[0x4]; // 0x012c, 0x4 bytes
+                bool m_bShouldHitThrower; // 0x0030, 0x1 bytes
+                bool m_bLagCompensatePosition; // 0x0031, 0x1 bytes
+                std::uint8_t pad_0032[0x2]; // 0x0032, 0x2 bytes
+                float m_flHitThrowerDelay; // 0x0034, 0x4 bytes
+                CUtlString m_sModelOverrideName; // 0x0038, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sTrailParticleOverrideName; // 0x0040, 0xe0 bytes
+                std::int32_t m_nNumDetonations; // 0x0120, 0x4 bytes
+                std::uint8_t pad_0124[0xc]; // 0x0124, 0xc bytes
             };
             #pragma pack(pop)
 

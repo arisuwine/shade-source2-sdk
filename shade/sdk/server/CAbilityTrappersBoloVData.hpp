@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14e8
+             * Size: 0x1170
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityTrappersBoloVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13e8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TrapModifier; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x14d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1070, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TrapModifier; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1160, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityTrappersBoloVData) == 0x14E8, "CAbilityTrappersBoloVData size mismatch");
+            static_assert(sizeof(CAbilityTrappersBoloVData) == 0x1170, "CAbilityTrappersBoloVData size mismatch");
         }
     }
 }

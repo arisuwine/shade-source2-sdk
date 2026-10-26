@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15b8
+             * Size: 0x1240
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityWreckerScrapBlastVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelStartParticle; // 0x14c8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x15a8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelStartParticle; // 0x1150, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x1230, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityWreckerScrapBlastVData) == 0x15B8, "CAbilityWreckerScrapBlastVData size mismatch");
+            static_assert(sizeof(CAbilityWreckerScrapBlastVData) == 0x1240, "CAbilityWreckerScrapBlastVData size mismatch");
         }
     }
 }

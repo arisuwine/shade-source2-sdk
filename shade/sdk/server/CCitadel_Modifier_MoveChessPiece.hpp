@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x198
+             * Size: 0x1a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,18 +38,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_MoveChessPiece : public shade::sdk::server::CCitadelModifier {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x0148, 0x18 bytes
-                std::uint8_t pad_0160[0x10]; // 0x0160, 0x10 bytes
-                VectorWS m_vecStartLocation; // 0x0170, 0xc bytes
-                VectorWS m_vecEndLocation; // 0x017c, 0xc bytes
-                VectorWS m_vecCornerLocation; // 0x0188, 0xc bytes
-                std::uint8_t pad_0194[0x4]; // 0x0194, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitUnits; // 0x0150, 0x18 bytes
+                std::uint8_t pad_0168[0x10]; // 0x0168, 0x10 bytes
+                VectorWS m_vecStartLocation; // 0x0178, 0xc bytes
+                VectorWS m_vecEndLocation; // 0x0184, 0xc bytes
+                VectorWS m_vecCornerLocation; // 0x0190, 0xc bytes
+                std::uint8_t pad_019c[0x4]; // 0x019c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_MoveChessPiece) == 0x198, "CCitadel_Modifier_MoveChessPiece size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_MoveChessPiece) == 0x1A0, "CCitadel_Modifier_MoveChessPiece size mismatch");
         }
     }
 }

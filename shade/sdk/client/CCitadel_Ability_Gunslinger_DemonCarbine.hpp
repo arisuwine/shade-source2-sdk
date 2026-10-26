@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bc8
+             * Size: 0x1bd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Gunslinger_DemonCarbine : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bWantsSlow; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0x16dc, 0x4 bytes
-                float m_flLatchedTimeScaleFrac; // 0x16e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0x16e4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0x16e8, 0x4 bytes
-                std::uint8_t pad_16ec[0x4]; // 0x16ec, 0x4 bytes
-                float m_flStoredPowerPct; // 0x16f0, 0x4 bytes
-                std::uint8_t pad_16f4[0x4d4]; // 0x16f4, 0x4d4 bytes
+                bool m_bWantsSlow; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x3]; // 0x16e1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0x16e4, 0x4 bytes
+                float m_flLatchedTimeScaleFrac; // 0x16e8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0x16ec, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0x4]; // 0x16f4, 0x4 bytes
+                float m_flStoredPowerPct; // 0x16f8, 0x4 bytes
+                std::uint8_t pad_16fc[0x4d4]; // 0x16fc, 0x4d4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Gunslinger_DemonCarbine) == 0x1BC8, "CCitadel_Ability_Gunslinger_DemonCarbine size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Gunslinger_DemonCarbine) == 0x1BD0, "CCitadel_Ability_Gunslinger_DemonCarbine size mismatch");
         }
     }
 }

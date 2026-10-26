@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1790
+             * Size: 0x1798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_Intensifying_Clip : public shade::sdk::client::CCitadel_Item {
             public:
-                std::uint8_t pad_16d8[0xb0]; // 0x16d8, 0xb0 bytes
-                float m_flSpinUpTime; // 0x1788, 0x4 bytes
-                std::uint8_t pad_178c[0x4]; // 0x178c, 0x4 bytes
+                std::uint8_t pad_16e0[0xb0]; // 0x16e0, 0xb0 bytes
+                float m_flSpinUpTime; // 0x1790, 0x4 bytes
+                std::uint8_t pad_1794[0x4]; // 0x1794, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_Intensifying_Clip) == 0x1790, "CCitadel_Item_Intensifying_Clip size mismatch");
+            static_assert(sizeof(CCitadel_Item_Intensifying_Clip) == 0x1798, "CCitadel_Item_Intensifying_Clip size mismatch");
         }
     }
 }

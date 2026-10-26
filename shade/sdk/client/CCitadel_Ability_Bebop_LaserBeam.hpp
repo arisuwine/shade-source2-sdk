@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x32c0
+             * Size: 0x32c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bebop_LaserBeam : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0xb00]; // 0x16d8, 0xb00 bytes
-                bool m_bZoomed; // 0x21d8, 0x1 bytes
-                bool m_bAirCast; // 0x21d9, 0x1 bytes
-                std::uint8_t pad_21da[0x6]; // 0x21da, 0x6 bytes
-                shade::sdk::client::CCitadelAbilityBeam_t m_beam; // 0x21e0, 0x10d8 bytes
-                std::uint8_t pad_32b8[0x8]; // 0x32b8, 0x8 bytes
+                std::uint8_t pad_16e0[0xb00]; // 0x16e0, 0xb00 bytes
+                bool m_bZoomed; // 0x21e0, 0x1 bytes
+                bool m_bAirCast; // 0x21e1, 0x1 bytes
+                std::uint8_t pad_21e2[0x6]; // 0x21e2, 0x6 bytes
+                shade::sdk::client::CCitadelAbilityBeam_t m_beam; // 0x21e8, 0x10d8 bytes
+                std::uint8_t pad_32c0[0x8]; // 0x32c0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0x32C0, "CCitadel_Ability_Bebop_LaserBeam size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0x32C8, "CCitadel_Ability_Bebop_LaserBeam size mismatch");
         }
     }
 }

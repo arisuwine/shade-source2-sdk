@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16a0
+             * Size: 0x1328
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Wrecker_BoulderGrenadeVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonReadyParticle; // 0x15a8, 0xe0 bytes
-                CUtlString m_SummonParticleAttachment; // 0x1688, 0x8 bytes
-                CSoundEventName m_ExplodeSound; // 0x1690, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonReadyParticle; // 0x1230, 0xe0 bytes
+                CUtlString m_SummonParticleAttachment; // 0x1310, 0x8 bytes
+                CSoundEventName m_ExplodeSound; // 0x1318, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenadeVData) == 0x16A0, "CCitadel_Ability_Wrecker_BoulderGrenadeVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenadeVData) == 0x1328, "CCitadel_Ability_Wrecker_BoulderGrenadeVData size mismatch");
         }
     }
 }

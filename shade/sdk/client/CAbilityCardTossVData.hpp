@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a90
+             * Size: 0x1718
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,36 +43,36 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCardTossVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonedCard; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ClubCardTrail; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DiamondCardTrail; // 0x1688, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeartCardTrail; // 0x1768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpadeCardTrail; // 0x1848, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JokerCardTrail; // 0x1928, 0xe0 bytes
-                CSoundEventName m_strCardSummonSound; // 0x1a08, 0x10 bytes
-                CSoundEventName m_strCardCastSound; // 0x1a18, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ClubModifier; // 0x1a28, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DiamondModifier; // 0x1a38, 0x10 bytes
-                float m_flSummonedCardStartSideOffset; // 0x1a48, 0x4 bytes
-                float m_flSummonedCardSideOffsetStep; // 0x1a4c, 0x4 bytes
-                float m_flSummonedCardForwardOffset; // 0x1a50, 0x4 bytes
-                float m_flSummonedCardVerticalOffset; // 0x1a54, 0x4 bytes
-                float m_flSpadeWeight; // 0x1a58, 0x4 bytes
-                float m_flClubWeight; // 0x1a5c, 0x4 bytes
-                float m_flHeartWeight; // 0x1a60, 0x4 bytes
-                float m_flDiamondWeight; // 0x1a64, 0x4 bytes
-                float m_flJokerWeight; // 0x1a68, 0x4 bytes
-                float m_flImprovedJokerWeight; // 0x1a6c, 0x4 bytes
-                Vector m_vDefaultCardColor; // 0x1a70, 0xc bytes
-                Vector m_vNextCardColor; // 0x1a7c, 0xc bytes
-                CGlobalSymbol m_strNewCardActionName; // 0x1a88, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonedCard; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ClubCardTrail; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DiamondCardTrail; // 0x1310, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeartCardTrail; // 0x13f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpadeCardTrail; // 0x14d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JokerCardTrail; // 0x15b0, 0xe0 bytes
+                CSoundEventName m_strCardSummonSound; // 0x1690, 0x10 bytes
+                CSoundEventName m_strCardCastSound; // 0x16a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ClubModifier; // 0x16b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DiamondModifier; // 0x16c0, 0x10 bytes
+                float m_flSummonedCardStartSideOffset; // 0x16d0, 0x4 bytes
+                float m_flSummonedCardSideOffsetStep; // 0x16d4, 0x4 bytes
+                float m_flSummonedCardForwardOffset; // 0x16d8, 0x4 bytes
+                float m_flSummonedCardVerticalOffset; // 0x16dc, 0x4 bytes
+                float m_flSpadeWeight; // 0x16e0, 0x4 bytes
+                float m_flClubWeight; // 0x16e4, 0x4 bytes
+                float m_flHeartWeight; // 0x16e8, 0x4 bytes
+                float m_flDiamondWeight; // 0x16ec, 0x4 bytes
+                float m_flJokerWeight; // 0x16f0, 0x4 bytes
+                float m_flImprovedJokerWeight; // 0x16f4, 0x4 bytes
+                Vector m_vDefaultCardColor; // 0x16f8, 0xc bytes
+                Vector m_vNextCardColor; // 0x1704, 0xc bytes
+                CGlobalSymbol m_strNewCardActionName; // 0x1710, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCardTossVData) == 0x1A90, "CAbilityCardTossVData size mismatch");
+            static_assert(sizeof(CAbilityCardTossVData) == 0x1718, "CAbilityCardTossVData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1820
+             * Size: 0x1828
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_CosmeticAbility_Snowball : public shade::sdk::server::CCitadel_CosmeticAbility {
             public:
-                std::uint8_t pad_14a0[0x370]; // 0x14a0, 0x370 bytes
-                std::int32_t m_nSeasonal2025Level; // 0x1810, 0x4 bytes
-                float m_flSeasonal2025LevelFrac; // 0x1814, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextShotTime; // 0x1818, 0x4 bytes
-                std::int32_t m_nShotsRemaining; // 0x181c, 0x4 bytes
+                std::uint8_t pad_14a8[0x370]; // 0x14a8, 0x370 bytes
+                std::int32_t m_nSeasonal2025Level; // 0x1818, 0x4 bytes
+                float m_flSeasonal2025LevelFrac; // 0x181c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextShotTime; // 0x1820, 0x4 bytes
+                std::int32_t m_nShotsRemaining; // 0x1824, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_CosmeticAbility_Snowball) == 0x1820, "CCitadel_CosmeticAbility_Snowball size mismatch");
+            static_assert(sizeof(CCitadel_CosmeticAbility_Snowball) == 0x1828, "CCitadel_CosmeticAbility_Snowball size mismatch");
         }
     }
 }

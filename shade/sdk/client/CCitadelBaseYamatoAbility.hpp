@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16e0
+             * Size: 0x16e8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelBaseYamatoAbility : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                float m_flCachedCastTime; // 0x16d8, 0x4 bytes
-                bool m_bIsShadowFormCast; // 0x16dc, 0x1 bytes
-                std::uint8_t pad_16dd[0x3]; // 0x16dd, 0x3 bytes
+                float m_flCachedCastTime; // 0x16e0, 0x4 bytes
+                bool m_bIsShadowFormCast; // 0x16e4, 0x1 bytes
+                std::uint8_t pad_16e5[0x3]; // 0x16e5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBaseYamatoAbility) == 0x16E0, "CCitadelBaseYamatoAbility size mismatch");
+            static_assert(sizeof(CCitadelBaseYamatoAbility) == 0x16E8, "CCitadelBaseYamatoAbility size mismatch");
         }
     }
 }

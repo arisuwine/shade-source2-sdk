@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ba8
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chrono_KineticCarbine : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bWantsSlow; // 0x14a0, 0x1 bytes
-                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0x14a4, 0x4 bytes
-                float m_flLatchedTimeScaleFrac; // 0x14a8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0x14ac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0x14b0, 0x4 bytes
-                std::uint8_t pad_14b4[0x8]; // 0x14b4, 0x8 bytes
-                float m_flStoredPowerPct; // 0x14bc, 0x4 bytes
-                std::uint8_t pad_14c0[0x6e8]; // 0x14c0, 0x6e8 bytes
+                bool m_bWantsSlow; // 0x14a8, 0x1 bytes
+                std::uint8_t pad_14a9[0x3]; // 0x14a9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0x14ac, 0x4 bytes
+                float m_flLatchedTimeScaleFrac; // 0x14b0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0x14b4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0x14b8, 0x4 bytes
+                std::uint8_t pad_14bc[0x8]; // 0x14bc, 0x8 bytes
+                float m_flStoredPowerPct; // 0x14c4, 0x4 bytes
+                std::uint8_t pad_14c8[0x6e8]; // 0x14c8, 0x6e8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chrono_KineticCarbine) == 0x1BA8, "CCitadel_Ability_Chrono_KineticCarbine size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chrono_KineticCarbine) == 0x1BB0, "CCitadel_Ability_Chrono_KineticCarbine size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9c8
+             * Size: 0x9d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,17 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_Viscous_GooGrenade : public shade::sdk::server::CCitadelProjectile {
             public:
-                std::int32_t m_nBounces; // 0x0968, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tNextDetonateTime; // 0x096c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecLastHitTargets; // 0x0970, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecProjectileHitTargets; // 0x0988, 0x18 bytes
-                std::uint8_t pad_09a0[0x28]; // 0x09a0, 0x28 bytes
+                std::int32_t m_nBounces; // 0x0970, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tNextDetonateTime; // 0x0974, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecLastHitTargets; // 0x0978, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecProjectileHitTargets; // 0x0990, 0x18 bytes
+                std::uint8_t pad_09a8[0x28]; // 0x09a8, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_Viscous_GooGrenade) == 0x9C8, "CCitadel_Projectile_Viscous_GooGrenade size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_Viscous_GooGrenade) == 0x9D0, "CCitadel_Projectile_Viscous_GooGrenade size mismatch");
         }
     }
 }

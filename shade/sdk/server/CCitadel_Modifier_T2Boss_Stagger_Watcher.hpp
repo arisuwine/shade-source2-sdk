@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_T2Boss_Stagger_Watcher : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x8]; // 0x0148, 0x8 bytes
+                std::uint8_t pad_0150[0x8]; // 0x0150, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_T2Boss_Stagger_Watcher) == 0x150, "CCitadel_Modifier_T2Boss_Stagger_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_T2Boss_Stagger_Watcher) == 0x158, "CCitadel_Modifier_T2Boss_Stagger_Watcher size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16e8
+             * Size: 0x16f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport) == 0x16E8, "CAbility_Drifter_StalkersMark_Teleport size mismatch");
+            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport) == 0x16F0, "CAbility_Drifter_StalkersMark_Teleport size mismatch");
         }
     }
 }

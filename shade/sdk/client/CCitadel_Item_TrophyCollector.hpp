@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1850
+             * Size: 0x1858
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_TrophyCollector : public shade::sdk::client::CCitadel_Item {
             public:
-                std::uint8_t pad_16d8[0x160]; // 0x16d8, 0x160 bytes
-                std::int32_t m_iTrophyCount; // 0x1838, 0x4 bytes
-                std::int32_t m_iInitialKills; // 0x183c, 0x4 bytes
-                std::int32_t m_iInitialAssists; // 0x1840, 0x4 bytes
-                std::int32_t m_iPrevCount; // 0x1844, 0x4 bytes
-                bool m_bMaxStacksReached; // 0x1848, 0x1 bytes
-                std::uint8_t pad_1849[0x7]; // 0x1849, 0x7 bytes
+                std::uint8_t pad_16e0[0x160]; // 0x16e0, 0x160 bytes
+                std::int32_t m_iTrophyCount; // 0x1840, 0x4 bytes
+                std::int32_t m_iInitialKills; // 0x1844, 0x4 bytes
+                std::int32_t m_iInitialAssists; // 0x1848, 0x4 bytes
+                std::int32_t m_iPrevCount; // 0x184c, 0x4 bytes
+                bool m_bMaxStacksReached; // 0x1850, 0x1 bytes
+                std::uint8_t pad_1851[0x7]; // 0x1851, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_TrophyCollector) == 0x1850, "CCitadel_Item_TrophyCollector size mismatch");
+            static_assert(sizeof(CCitadel_Item_TrophyCollector) == 0x1858, "CCitadel_Item_TrophyCollector size mismatch");
         }
     }
 }

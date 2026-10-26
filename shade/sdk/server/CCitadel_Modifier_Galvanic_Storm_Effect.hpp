@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5c8
+             * Size: 0x5d0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Galvanic_Storm_Effect : public shade::sdk::server::CCitadel_Modifier_ChainLightningEffect {
             public:
-                std::uint8_t pad_0518[0xb0]; // 0x0518, 0xb0 bytes
+                std::uint8_t pad_0520[0xb0]; // 0x0520, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Galvanic_Storm_Effect) == 0x5C8, "CCitadel_Modifier_Galvanic_Storm_Effect size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Galvanic_Storm_Effect) == 0x5D0, "CCitadel_Modifier_Galvanic_Storm_Effect size mismatch");
         }
     }
 }

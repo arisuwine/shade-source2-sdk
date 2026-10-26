@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1808
+             * Size: 0x1490
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PrimaryWeapon_BebopVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CSoundEventName m_strWindupSound; // 0x16d0, 0x10 bytes
-                CSoundEventName m_strBeamStartSound; // 0x16e0, 0x10 bytes
-                CSoundEventName m_strBeamLoopSound1; // 0x16f0, 0x10 bytes
-                CSoundEventName m_strBeamLoopSound2; // 0x1700, 0x10 bytes
-                CSoundEventName m_strBeamStopSound; // 0x1710, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szWeaponBeamParticle; // 0x1720, 0xe0 bytes
-                float m_flWindupRepeatCycle; // 0x1800, 0x4 bytes
-                std::uint8_t pad_1804[0x4]; // 0x1804, 0x4 bytes
+                CSoundEventName m_strWindupSound; // 0x1358, 0x10 bytes
+                CSoundEventName m_strBeamStartSound; // 0x1368, 0x10 bytes
+                CSoundEventName m_strBeamLoopSound1; // 0x1378, 0x10 bytes
+                CSoundEventName m_strBeamLoopSound2; // 0x1388, 0x10 bytes
+                CSoundEventName m_strBeamStopSound; // 0x1398, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szWeaponBeamParticle; // 0x13a8, 0xe0 bytes
+                float m_flWindupRepeatCycle; // 0x1488, 0x4 bytes
+                std::uint8_t pad_148c[0x4]; // 0x148c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_BebopVData) == 0x1808, "CCitadel_Ability_PrimaryWeapon_BebopVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_BebopVData) == 0x1490, "CCitadel_Ability_PrimaryWeapon_BebopVData size mismatch");
         }
     }
 }

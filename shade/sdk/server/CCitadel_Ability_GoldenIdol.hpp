@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16e8
+             * Size: 0x16f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,20 +32,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_GoldenIdol : public shade::sdk::server::CCitadel_Ability_BaseHeldItem {
             public:
-                std::int32_t m_nGold; // 0x1560, 0x4 bytes
-                std::int32_t m_nTeamBias; // 0x1564, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tAbilityCreateTime; // 0x1568, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastDamageTime; // 0x156c, 0x4 bytes
-                std::uint8_t pad_1570[0x4]; // 0x1570, 0x4 bytes
-                VectorWS m_vHomePosition; // 0x1574, 0xc bytes
-                float m_flHeldTime; // 0x1580, 0x4 bytes
-                std::uint8_t pad_1584[0x164]; // 0x1584, 0x164 bytes
+                std::int32_t m_nGold; // 0x1568, 0x4 bytes
+                std::int32_t m_nTeamBias; // 0x156c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tAbilityCreateTime; // 0x1570, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastDamageTime; // 0x1574, 0x4 bytes
+                std::uint8_t pad_1578[0x4]; // 0x1578, 0x4 bytes
+                VectorWS m_vHomePosition; // 0x157c, 0xc bytes
+                float m_flHeldTime; // 0x1588, 0x4 bytes
+                std::uint8_t pad_158c[0x164]; // 0x158c, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_GoldenIdol) == 0x16E8, "CCitadel_Ability_GoldenIdol size mismatch");
+            static_assert(sizeof(CCitadel_Ability_GoldenIdol) == 0x16F0, "CCitadel_Ability_GoldenIdol size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2418
+             * Size: 0x2420
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_ForkPiece : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0xd2c]; // 0x16d8, 0xd2c bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCameraTarget; // 0x2404, 0x4 bytes
-                CHandle<shade::sdk::client::C_CitadelProjectile> m_cProjectileLeft; // 0x2408, 0x4 bytes
-                CHandle<shade::sdk::client::C_CitadelProjectile> m_cProjectileRight; // 0x240c, 0x4 bytes
-                bool m_bActive; // 0x2410, 0x1 bytes
-                std::uint8_t pad_2411[0x7]; // 0x2411, 0x7 bytes
+                std::uint8_t pad_16e0[0xd2c]; // 0x16e0, 0xd2c bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCameraTarget; // 0x240c, 0x4 bytes
+                CHandle<shade::sdk::client::C_CitadelProjectile> m_cProjectileLeft; // 0x2410, 0x4 bytes
+                CHandle<shade::sdk::client::C_CitadelProjectile> m_cProjectileRight; // 0x2414, 0x4 bytes
+                bool m_bActive; // 0x2418, 0x1 bytes
+                std::uint8_t pad_2419[0x7]; // 0x2419, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_ForkPiece) == 0x2418, "CCitadel_Ability_Chessmaster_ForkPiece size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_ForkPiece) == 0x2420, "CCitadel_Ability_Chessmaster_ForkPiece size mismatch");
         }
     }
 }

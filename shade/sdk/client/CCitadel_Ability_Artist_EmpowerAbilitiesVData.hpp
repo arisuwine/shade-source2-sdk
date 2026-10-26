@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1430
+             * Size: 0x10b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,15 +40,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_EmpowerAbilitiesVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CastModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x13f8, 0x10 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapEmpoweredAbilities; // 0x1408, 0x28 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CastModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1080, 0x10 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapEmpoweredAbilities; // 0x1090, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_EmpowerAbilitiesVData) == 0x1430, "CCitadel_Ability_Artist_EmpowerAbilitiesVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_EmpowerAbilitiesVData) == 0x10B8, "CCitadel_Ability_Artist_EmpowerAbilitiesVData size mismatch");
         }
     }
 }

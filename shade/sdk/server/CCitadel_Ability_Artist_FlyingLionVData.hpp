@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16f8
+             * Size: 0x1380
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,28 +43,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_FlyingLionVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x15a8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FlyingModifier; // 0x1688, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x1698, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AllyBuffModifier; // 0x16a8, 0x10 bytes
-                CSoundEventName m_strExplosionSound; // 0x16b8, 0x10 bytes
-                CSoundEventName m_strBounceSound; // 0x16c8, 0x10 bytes
-                float m_flFlyAccelerationStrength; // 0x16d8, 0x4 bytes
-                float m_flMinPitch; // 0x16dc, 0x4 bytes
-                float m_flMaxPitch; // 0x16e0, 0x4 bytes
-                float m_flMinGravityScale; // 0x16e4, 0x4 bytes
-                float m_flMaxGravityScale; // 0x16e8, 0x4 bytes
-                float m_flBounceUpSpeed; // 0x16ec, 0x4 bytes
-                float m_flBounceMaintainRatio; // 0x16f0, 0x4 bytes
-                float m_flMinDistanceAboveGround; // 0x16f4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1230, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FlyingModifier; // 0x1310, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x1320, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AllyBuffModifier; // 0x1330, 0x10 bytes
+                CSoundEventName m_strExplosionSound; // 0x1340, 0x10 bytes
+                CSoundEventName m_strBounceSound; // 0x1350, 0x10 bytes
+                float m_flFlyAccelerationStrength; // 0x1360, 0x4 bytes
+                float m_flMinPitch; // 0x1364, 0x4 bytes
+                float m_flMaxPitch; // 0x1368, 0x4 bytes
+                float m_flMinGravityScale; // 0x136c, 0x4 bytes
+                float m_flMaxGravityScale; // 0x1370, 0x4 bytes
+                float m_flBounceUpSpeed; // 0x1374, 0x4 bytes
+                float m_flBounceMaintainRatio; // 0x1378, 0x4 bytes
+                float m_flMinDistanceAboveGround; // 0x137c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_FlyingLionVData) == 0x16F8, "CCitadel_Ability_Artist_FlyingLionVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_FlyingLionVData) == 0x1380, "CCitadel_Ability_Artist_FlyingLionVData size mismatch");
         }
     }
 }

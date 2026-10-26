@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2278
+             * Size: 0x2280
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_VampireBat_StealLife : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4]; // 0x16d8, 0x4 bytes
-                float m_flFloatElapsedTime; // 0x16dc, 0x4 bytes
-                std::uint8_t pad_16e0[0x5a0]; // 0x16e0, 0x5a0 bytes
-                bool m_bFloating; // 0x1c80, 0x1 bytes
-                std::uint8_t pad_1c81[0x5f7]; // 0x1c81, 0x5f7 bytes
+                std::uint8_t pad_16e0[0x4]; // 0x16e0, 0x4 bytes
+                float m_flFloatElapsedTime; // 0x16e4, 0x4 bytes
+                std::uint8_t pad_16e8[0x5a0]; // 0x16e8, 0x5a0 bytes
+                bool m_bFloating; // 0x1c88, 0x1 bytes
+                std::uint8_t pad_1c89[0x5f7]; // 0x1c89, 0x5f7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_VampireBat_StealLife) == 0x2278, "CCitadel_Ability_VampireBat_StealLife size mismatch");
+            static_assert(sizeof(CCitadel_Ability_VampireBat_StealLife) == 0x2280, "CCitadel_Ability_VampireBat_StealLife size mismatch");
         }
     }
 }

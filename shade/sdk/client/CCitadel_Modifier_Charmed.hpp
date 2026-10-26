@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Charmed : public shade::sdk::client::CCitadelModifier {
             public:
-                VectorWS m_vecCharmLocation; // 0x0138, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCharmEntity; // 0x0144, 0x4 bytes
+                VectorWS m_vecCharmLocation; // 0x0140, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCharmEntity; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Charmed) == 0x148, "CCitadel_Modifier_Charmed size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Charmed) == 0x150, "CCitadel_Modifier_Charmed size mismatch");
         }
     }
 }

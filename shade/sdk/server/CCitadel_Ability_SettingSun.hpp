@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x1b08
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SettingSun : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bProjectileActive; // 0x14a0, 0x1 bytes
-                std::uint8_t pad_14a1[0x4d7]; // 0x14a1, 0x4d7 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_TargetPreviews; // 0x1978, 0x18 bytes
-                std::uint8_t pad_1990[0x168]; // 0x1990, 0x168 bytes
-                bool m_bWasSelected; // 0x1af8, 0x1 bytes
-                std::uint8_t pad_1af9[0x7]; // 0x1af9, 0x7 bytes
+                bool m_bProjectileActive; // 0x14a8, 0x1 bytes
+                std::uint8_t pad_14a9[0x4d7]; // 0x14a9, 0x4d7 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_TargetPreviews; // 0x1980, 0x18 bytes
+                std::uint8_t pad_1998[0x168]; // 0x1998, 0x168 bytes
+                bool m_bWasSelected; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x7]; // 0x1b01, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SettingSun) == 0x1B00, "CCitadel_Ability_SettingSun size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SettingSun) == 0x1B08, "CCitadel_Ability_SettingSun size mismatch");
         }
     }
 }

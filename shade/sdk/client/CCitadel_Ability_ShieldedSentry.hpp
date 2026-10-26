@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x20b0
+             * Size: 0x20b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ShieldedSentry : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::int32_t k_nOldestSentriesToShowInUI; // 0x16d8, 0x4 bytes
-                std::uint8_t pad_16dc[0x1c]; // 0x16dc, 0x1c bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_NPC_ShieldedSentry>> m_vecDeployedSentries; // 0x16f8, 0x18 bytes
-                std::uint8_t pad_1710[0x9a0]; // 0x1710, 0x9a0 bytes
+                std::int32_t k_nOldestSentriesToShowInUI; // 0x16e0, 0x4 bytes
+                std::uint8_t pad_16e4[0x1c]; // 0x16e4, 0x1c bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_NPC_ShieldedSentry>> m_vecDeployedSentries; // 0x1700, 0x18 bytes
+                std::uint8_t pad_1718[0x9a0]; // 0x1718, 0x9a0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ShieldedSentry) == 0x20B0, "CCitadel_Ability_ShieldedSentry size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ShieldedSentry) == 0x20B8, "CCitadel_Ability_ShieldedSentry size mismatch");
         }
     }
 }

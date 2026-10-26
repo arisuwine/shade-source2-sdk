@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d20
+             * Size: 0x1d28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,19 +32,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_CatForm : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bIsInCatform; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTransformStartTime; // 0x16e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTransformEndTime; // 0x16e4, 0x4 bytes
-                float m_flStoredDamageAmp; // 0x16e8, 0x4 bytes
-                std::uint8_t pad_16ec[0x634]; // 0x16ec, 0x634 bytes
+                bool m_bIsInCatform; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x3]; // 0x16e1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTransformStartTime; // 0x16e8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTransformEndTime; // 0x16ec, 0x4 bytes
+                float m_flStoredDamageAmp; // 0x16f0, 0x4 bytes
+                std::uint8_t pad_16f4[0x634]; // 0x16f4, 0x634 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_CatForm) == 0x1D20, "CCitadel_Ability_Nano_CatForm size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_CatForm) == 0x1D28, "CCitadel_Ability_Nano_CatForm size mismatch");
         }
     }
 }

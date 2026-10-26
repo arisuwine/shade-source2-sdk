@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1910
+             * Size: 0x1918
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_KillSummonTrigger : public shade::sdk::client::CCitadelBaseTriggerAbility {
             public:
-                VectorWS m_vLaunchPosition; // 0x16e8, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16f4, 0xc bytes
-                std::uint8_t pad_1700[0x210]; // 0x1700, 0x210 bytes
+                VectorWS m_vLaunchPosition; // 0x16f0, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16fc, 0xc bytes
+                std::uint8_t pad_1708[0x210]; // 0x1708, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_KillSummonTrigger) == 0x1910, "CCitadel_Ability_Necro_KillSummonTrigger size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_KillSummonTrigger) == 0x1918, "CCitadel_Ability_Necro_KillSummonTrigger size mismatch");
         }
     }
 }

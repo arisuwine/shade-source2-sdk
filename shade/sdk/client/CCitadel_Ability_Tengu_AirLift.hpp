@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2320
+             * Size: 0x2328
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,21 +41,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tengu_AirLift : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hGrabTarget; // 0x16d8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nHoldBombEffect; // 0x16dc, 0x4 bytes
-                std::uint8_t pad_16e0[0xc28]; // 0x16e0, 0xc28 bytes
-                shade::sdk::client::EFlightState m_eFlightState; // 0x2308, 0x1 bytes
-                bool m_bIsGrabbing; // 0x2309, 0x1 bytes
-                bool m_bIsHoldingBomb; // 0x230a, 0x1 bytes
-                std::uint8_t pad_230b[0x1]; // 0x230b, 0x1 bytes
-                float m_flCurrentSpeed; // 0x230c, 0x4 bytes
-                std::uint8_t pad_2310[0x10]; // 0x2310, 0x10 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hGrabTarget; // 0x16e0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nHoldBombEffect; // 0x16e4, 0x4 bytes
+                std::uint8_t pad_16e8[0xc28]; // 0x16e8, 0xc28 bytes
+                shade::sdk::client::EFlightState m_eFlightState; // 0x2310, 0x1 bytes
+                bool m_bIsGrabbing; // 0x2311, 0x1 bytes
+                bool m_bIsHoldingBomb; // 0x2312, 0x1 bytes
+                std::uint8_t pad_2313[0x1]; // 0x2313, 0x1 bytes
+                float m_flCurrentSpeed; // 0x2314, 0x4 bytes
+                std::uint8_t pad_2318[0x10]; // 0x2318, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tengu_AirLift) == 0x2320, "CCitadel_Ability_Tengu_AirLift size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tengu_AirLift) == 0x2328, "CCitadel_Ability_Tengu_AirLift size mismatch");
         }
     }
 }

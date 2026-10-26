@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14c0
+             * Size: 0x14c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_WeaponUpgrade_Ricochet : public shade::sdk::server::CCitadel_Item {
             public:
-                CModifierHandleTyped<shade::sdk::server::CCitadel_Modifier_Ricochet_> m_hRicochetModifier; // 0x14a8, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadel_Modifier_Ricochet_> m_hRicochetModifier; // 0x14b0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_WeaponUpgrade_Ricochet) == 0x14C0, "CCitadel_WeaponUpgrade_Ricochet size mismatch");
+            static_assert(sizeof(CCitadel_WeaponUpgrade_Ricochet) == 0x14C8, "CCitadel_WeaponUpgrade_Ricochet size mismatch");
         }
     }
 }

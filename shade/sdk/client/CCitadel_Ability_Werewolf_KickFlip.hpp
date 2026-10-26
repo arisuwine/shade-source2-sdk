@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x23f8
+             * Size: 0x2400
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_KickFlip : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bIsLeaping; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x16e0, 0x4 bytes
-                std::uint8_t pad_16e4[0xd14]; // 0x16e4, 0xd14 bytes
+                bool m_bIsLeaping; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x3]; // 0x16e1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x16e8, 0x4 bytes
+                std::uint8_t pad_16ec[0xd14]; // 0x16ec, 0xd14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_KickFlip) == 0x23F8, "CCitadel_Ability_Werewolf_KickFlip size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_KickFlip) == 0x2400, "CCitadel_Ability_Werewolf_KickFlip size mismatch");
         }
     }
 }

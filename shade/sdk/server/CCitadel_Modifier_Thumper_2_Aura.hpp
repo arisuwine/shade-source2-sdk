@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x308
+             * Size: 0x310
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Thumper_2_Aura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                VectorWS m_vecOrigin; // 0x0180, 0xc bytes
-                VectorWS m_vecWorldSpaceMins; // 0x018c, 0xc bytes
-                VectorWS m_vecWorldSpaceMaxs; // 0x0198, 0xc bytes
-                float m_flBarbedWireAuraRadius; // 0x01a4, 0x4 bytes
-                std::uint8_t pad_01a8[0x160]; // 0x01a8, 0x160 bytes
+                VectorWS m_vecOrigin; // 0x0188, 0xc bytes
+                VectorWS m_vecWorldSpaceMins; // 0x0194, 0xc bytes
+                VectorWS m_vecWorldSpaceMaxs; // 0x01a0, 0xc bytes
+                float m_flBarbedWireAuraRadius; // 0x01ac, 0x4 bytes
+                std::uint8_t pad_01b0[0x160]; // 0x01b0, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Thumper_2_Aura) == 0x308, "CCitadel_Modifier_Thumper_2_Aura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Thumper_2_Aura) == 0x310, "CCitadel_Modifier_Thumper_2_Aura size mismatch");
         }
     }
 }

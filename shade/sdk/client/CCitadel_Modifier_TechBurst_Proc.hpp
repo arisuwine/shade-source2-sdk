@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x648
+             * Size: 0x650
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TechBurst_Proc : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                std::uint8_t pad_02d0[0x378]; // 0x02d0, 0x378 bytes
+                std::uint8_t pad_02d8[0x378]; // 0x02d8, 0x378 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TechBurst_Proc) == 0x648, "CCitadel_Modifier_TechBurst_Proc size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TechBurst_Proc) == 0x650, "CCitadel_Modifier_TechBurst_Proc size mismatch");
         }
     }
 }

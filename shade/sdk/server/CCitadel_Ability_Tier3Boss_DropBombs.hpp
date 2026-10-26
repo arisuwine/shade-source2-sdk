@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14c8
+             * Size: 0x14d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,18 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_DropBombs : public shade::sdk::server::CTier3BossAbility {
             public:
-                std::uint8_t pad_14a0[0x4]; // 0x14a0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tNextBombTime; // 0x14a4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitTargets; // 0x14a8, 0x18 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x14c0, 0x1 bytes
-                std::uint8_t pad_14c1[0x3]; // 0x14c1, 0x3 bytes
-                float m_flDetonationTime; // 0x14c4, 0x4 bytes
+                std::uint8_t pad_14a8[0x4]; // 0x14a8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tNextBombTime; // 0x14ac, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitTargets; // 0x14b0, 0x18 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x14c8, 0x1 bytes
+                std::uint8_t pad_14c9[0x3]; // 0x14c9, 0x3 bytes
+                float m_flDetonationTime; // 0x14cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombs) == 0x14C8, "CCitadel_Ability_Tier3Boss_DropBombs size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombs) == 0x14D0, "CCitadel_Ability_Tier3Boss_DropBombs size mismatch");
         }
     }
 }

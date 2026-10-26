@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16b8
+             * Size: 0x16c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier2Boss_AoEWave : public shade::sdk::server::CCitadelBaseAbilityServerOnly {
             public:
-                std::uint8_t pad_14a0[0x218]; // 0x14a0, 0x218 bytes
+                std::uint8_t pad_14a8[0x218]; // 0x14a8, 0x218 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier2Boss_AoEWave) == 0x16B8, "CCitadel_Ability_Tier2Boss_AoEWave size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier2Boss_AoEWave) == 0x16C0, "CCitadel_Ability_Tier2Boss_AoEWave size mismatch");
         }
     }
 }

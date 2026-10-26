@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa80
+             * Size: 0xa88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_BatSwarmProjectile : public shade::sdk::server::CCitadelTrackedProjectile {
             public:
-                std::uint8_t pad_0998[0xbc]; // 0x0998, 0xbc bytes
-                Vector m_vecTargetVelocity; // 0x0a54, 0xc bytes
-                Vector m_vecLastVelocity; // 0x0a60, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_SpawnTime; // 0x0a6c, 0x4 bytes
-                std::uint8_t pad_0a70[0x10]; // 0x0a70, 0x10 bytes
+                std::uint8_t pad_09a0[0xbc]; // 0x09a0, 0xbc bytes
+                Vector m_vecTargetVelocity; // 0x0a5c, 0xc bytes
+                Vector m_vecLastVelocity; // 0x0a68, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_SpawnTime; // 0x0a74, 0x4 bytes
+                std::uint8_t pad_0a78[0x10]; // 0x0a78, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_BatSwarmProjectile) == 0xA80, "CCitadel_Projectile_BatSwarmProjectile size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_BatSwarmProjectile) == 0xA88, "CCitadel_Projectile_BatSwarmProjectile size mismatch");
         }
     }
 }

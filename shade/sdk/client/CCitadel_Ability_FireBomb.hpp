@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1860
+             * Size: 0x1868
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,16 +33,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FireBomb : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x168]; // 0x16d8, 0x168 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flDetonateTime; // 0x1840, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1858, 0x4 bytes
-                std::uint8_t pad_185c[0x4]; // 0x185c, 0x4 bytes
+                std::uint8_t pad_16e0[0x168]; // 0x16e0, 0x168 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flDetonateTime; // 0x1848, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1860, 0x4 bytes
+                std::uint8_t pad_1864[0x4]; // 0x1864, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FireBomb) == 0x1860, "CCitadel_Ability_FireBomb size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FireBomb) == 0x1868, "CCitadel_Ability_FireBomb size mismatch");
         }
     }
 }

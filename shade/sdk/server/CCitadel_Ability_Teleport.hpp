@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14c8
+             * Size: 0x14d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Teleport : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bTeleportingToTarget; // 0x14a0, 0x1 bytes
-                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
-                VectorWS m_vTargetPosition; // 0x14a4, 0xc bytes
-                QAngle m_vTargetAngles; // 0x14b0, 0xc bytes
-                std::uint8_t pad_14bc[0xc]; // 0x14bc, 0xc bytes
+                bool m_bTeleportingToTarget; // 0x14a8, 0x1 bytes
+                std::uint8_t pad_14a9[0x3]; // 0x14a9, 0x3 bytes
+                VectorWS m_vTargetPosition; // 0x14ac, 0xc bytes
+                QAngle m_vTargetAngles; // 0x14b8, 0xc bytes
+                std::uint8_t pad_14c4[0xc]; // 0x14c4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Teleport) == 0x14C8, "CCitadel_Ability_Teleport size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Teleport) == 0x14D0, "CCitadel_Ability_Teleport size mismatch");
         }
     }
 }

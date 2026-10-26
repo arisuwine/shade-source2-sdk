@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bb0
+             * Size: 0x1bb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_Ability02 : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4d0]; // 0x16d8, 0x4d0 bytes
-                bool m_bCastWhileAttached; // 0x1ba8, 0x1 bytes
-                std::uint8_t pad_1ba9[0x7]; // 0x1ba9, 0x7 bytes
+                std::uint8_t pad_16e0[0x4d0]; // 0x16e0, 0x4d0 bytes
+                bool m_bCastWhileAttached; // 0x1bb0, 0x1 bytes
+                std::uint8_t pad_1bb1[0x7]; // 0x1bb1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_Ability02) == 0x1BB0, "CCitadel_Ability_Familiar_Ability02 size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_Ability02) == 0x1BB8, "CCitadel_Ability_Familiar_Ability02 size mismatch");
         }
     }
 }

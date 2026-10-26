@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb68
+             * Size: 0xbc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CRectLight : public shade::sdk::server::CBarnLight {
             public:
-                bool m_bShowLight; // 0x0b60, 0x1 bytes
-                std::uint8_t pad_0b61[0x7]; // 0x0b61, 0x7 bytes
+                bool m_bShowLight; // 0x0bc0, 0x1 bytes
+                std::uint8_t pad_0bc1[0x7]; // 0x0bc1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRectLight) == 0xB68, "CRectLight size mismatch");
+            static_assert(sizeof(CRectLight) == 0xBC8, "CRectLight size mismatch");
         }
     }
 }

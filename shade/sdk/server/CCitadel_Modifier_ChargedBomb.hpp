@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x200
+             * Size: 0x208
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_ChargedBomb : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flNextBeep; // 0x0148, 0x4 bytes
-                float m_flBeepInterval; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0xb0]; // 0x0150, 0xb0 bytes
+                shade::sdk::entity2::GameTime_t m_flNextBeep; // 0x0150, 0x4 bytes
+                float m_flBeepInterval; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0xb0]; // 0x0158, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ChargedBomb) == 0x200, "CCitadel_Modifier_ChargedBomb size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ChargedBomb) == 0x208, "CCitadel_Modifier_ChargedBomb size mismatch");
         }
     }
 }

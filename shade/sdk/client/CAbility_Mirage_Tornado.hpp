@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1dd0
+             * Size: 0x1dd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Mirage_Tornado : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4]; // 0x16d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_RecastWindowEnd; // 0x16dc, 0x4 bytes
-                std::uint8_t pad_16e0[0x6e0]; // 0x16e0, 0x6e0 bytes
-                QAngle m_anglesCharging; // 0x1dc0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flChargeStartTime; // 0x1dcc, 0x4 bytes
+                std::uint8_t pad_16e0[0x4]; // 0x16e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_RecastWindowEnd; // 0x16e4, 0x4 bytes
+                std::uint8_t pad_16e8[0x6e0]; // 0x16e8, 0x6e0 bytes
+                QAngle m_anglesCharging; // 0x1dc8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flChargeStartTime; // 0x1dd4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Mirage_Tornado) == 0x1DD0, "CAbility_Mirage_Tornado size mismatch");
+            static_assert(sizeof(CAbility_Mirage_Tornado) == 0x1DD8, "CAbility_Mirage_Tornado size mismatch");
         }
     }
 }

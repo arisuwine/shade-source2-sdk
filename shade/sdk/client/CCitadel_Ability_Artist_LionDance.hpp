@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19c8
+             * Size: 0x19d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,22 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_LionDance : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4]; // 0x16d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tEndTime; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tNextPulseTime; // 0x16e0, 0x4 bytes
-                bool m_bActive; // 0x16e4, 0x1 bytes
-                std::uint8_t pad_16e5[0x3]; // 0x16e5, 0x3 bytes
-                std::int32_t m_iRemainingShots; // 0x16e8, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x16ec, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16f8, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_pPointModifier; // 0x1704, 0x4 bytes
-                std::uint8_t pad_1708[0x2c0]; // 0x1708, 0x2c0 bytes
+                std::uint8_t pad_16e0[0x4]; // 0x16e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tEndTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tNextPulseTime; // 0x16e8, 0x4 bytes
+                bool m_bActive; // 0x16ec, 0x1 bytes
+                std::uint8_t pad_16ed[0x3]; // 0x16ed, 0x3 bytes
+                std::int32_t m_iRemainingShots; // 0x16f0, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x16f4, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x1700, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_pPointModifier; // 0x170c, 0x4 bytes
+                std::uint8_t pad_1710[0x2c0]; // 0x1710, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_LionDance) == 0x19C8, "CCitadel_Ability_Artist_LionDance size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_LionDance) == 0x19D0, "CCitadel_Ability_Artist_LionDance size mismatch");
         }
     }
 }

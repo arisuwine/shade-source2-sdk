@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5a8
+             * Size: 0x5b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Nikuman : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0180[0x420]; // 0x0180, 0x420 bytes
-                std::int32_t m_nTotalSelfHeal; // 0x05a0, 0x4 bytes
-                std::int32_t m_nTotalTeammateHeal; // 0x05a4, 0x4 bytes
+                std::uint8_t pad_0188[0x420]; // 0x0188, 0x420 bytes
+                std::int32_t m_nTotalSelfHeal; // 0x05a8, 0x4 bytes
+                std::int32_t m_nTotalTeammateHeal; // 0x05ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Nikuman) == 0x5A8, "CCitadel_Modifier_Nikuman size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Nikuman) == 0x5B0, "CCitadel_Modifier_Nikuman size mismatch");
         }
     }
 }

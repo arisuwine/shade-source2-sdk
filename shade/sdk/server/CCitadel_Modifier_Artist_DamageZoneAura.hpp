@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x6d0
+             * Size: 0x6d8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Artist_DamageZoneAura : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x4]; // 0x0148, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_pWarningParticle; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0x580]; // 0x0150, 0x580 bytes
+                std::uint8_t pad_0150[0x4]; // 0x0150, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_pWarningParticle; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0x580]; // 0x0158, 0x580 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Artist_DamageZoneAura) == 0x6D0, "CCitadel_Modifier_Artist_DamageZoneAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_DamageZoneAura) == 0x6D8, "CCitadel_Modifier_Artist_DamageZoneAura size mismatch");
         }
     }
 }

@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b38
+             * Size: 0x17c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,45 +44,45 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Doorway_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CSoundEventName m_DoorOpenStartSound; // 0x13e8, 0x10 bytes
-                CSoundEventName m_DoorOpenEndSound; // 0x13f8, 0x10 bytes
-                CSoundEventName m_DoorPlaceSound; // 0x1408, 0x10 bytes
-                CSoundEventName m_DoorPlacementClearedSound; // 0x1418, 0x10 bytes
-                CSoundEventName m_DoorStartCastSound; // 0x1428, 0x10 bytes
-                CSoundEventName m_DoorEndCastSound; // 0x1438, 0x10 bytes
-                CSoundEventName m_DoorExpireSound; // 0x1448, 0x10 bytes
-                CSoundEventName m_DoorLoopSound; // 0x1458, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1468, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PendingDoorParticle; // 0x1548, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PlaceDoorParticle; // 0x1628, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DoorDurationParticle; // 0x1708, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DoorDestructionParticle; // 0x17e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hDoorModel; // 0x18c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hPortalModel; // 0x19a8, 0xe0 bytes
-                CPanoramaImageName m_strSingleDoorAbilityImage; // 0x1a88, 0x10 bytes
-                Color m_ColorStart; // 0x1a98, 0x4 bytes
-                Color m_ColorEnd; // 0x1a9c, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DoorwayTimerModifier; // 0x1aa0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PortalBarrierModifier; // 0x1ab0, 0x10 bytes
-                float m_flPlacementWallTestDistance; // 0x1ac0, 0x4 bytes
-                float m_flPlacementWallTestExtentsSolidScale; // 0x1ac4, 0x4 bytes
-                float m_flPlacementWallTestExtentsWallScale; // 0x1ac8, 0x4 bytes
-                float m_flPlacementWallTestSphereRadius; // 0x1acc, 0x4 bytes
-                Vector m_vPlacementOffset; // 0x1ad0, 0xc bytes
-                float m_flPlacementCooldown; // 0x1adc, 0x4 bytes
-                float m_flPlacementRangeHintDuration; // 0x1ae0, 0x4 bytes
-                float m_flPlacementSphereMaxDesat; // 0x1ae4, 0x4 bytes
-                Color m_colorPlacementSphereSat; // 0x1ae8, 0x4 bytes
-                Color m_colorPlacementSphereDesat; // 0x1aec, 0x4 bytes
-                Color m_colorPlacementSphereOutline; // 0x1af0, 0x4 bytes
-                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
-                CPiecewiseCurve m_curvePlacementFail; // 0x1af8, 0x40 bytes
+                CSoundEventName m_DoorOpenStartSound; // 0x1070, 0x10 bytes
+                CSoundEventName m_DoorOpenEndSound; // 0x1080, 0x10 bytes
+                CSoundEventName m_DoorPlaceSound; // 0x1090, 0x10 bytes
+                CSoundEventName m_DoorPlacementClearedSound; // 0x10a0, 0x10 bytes
+                CSoundEventName m_DoorStartCastSound; // 0x10b0, 0x10 bytes
+                CSoundEventName m_DoorEndCastSound; // 0x10c0, 0x10 bytes
+                CSoundEventName m_DoorExpireSound; // 0x10d0, 0x10 bytes
+                CSoundEventName m_DoorLoopSound; // 0x10e0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x10f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PendingDoorParticle; // 0x11d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PlaceDoorParticle; // 0x12b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DoorDurationParticle; // 0x1390, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DoorDestructionParticle; // 0x1470, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hDoorModel; // 0x1550, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_hPortalModel; // 0x1630, 0xe0 bytes
+                CPanoramaImageName m_strSingleDoorAbilityImage; // 0x1710, 0x10 bytes
+                Color m_ColorStart; // 0x1720, 0x4 bytes
+                Color m_ColorEnd; // 0x1724, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DoorwayTimerModifier; // 0x1728, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_PortalBarrierModifier; // 0x1738, 0x10 bytes
+                float m_flPlacementWallTestDistance; // 0x1748, 0x4 bytes
+                float m_flPlacementWallTestExtentsSolidScale; // 0x174c, 0x4 bytes
+                float m_flPlacementWallTestExtentsWallScale; // 0x1750, 0x4 bytes
+                float m_flPlacementWallTestSphereRadius; // 0x1754, 0x4 bytes
+                Vector m_vPlacementOffset; // 0x1758, 0xc bytes
+                float m_flPlacementCooldown; // 0x1764, 0x4 bytes
+                float m_flPlacementRangeHintDuration; // 0x1768, 0x4 bytes
+                float m_flPlacementSphereMaxDesat; // 0x176c, 0x4 bytes
+                Color m_colorPlacementSphereSat; // 0x1770, 0x4 bytes
+                Color m_colorPlacementSphereDesat; // 0x1774, 0x4 bytes
+                Color m_colorPlacementSphereOutline; // 0x1778, 0x4 bytes
+                std::uint8_t pad_177c[0x4]; // 0x177c, 0x4 bytes
+                CPiecewiseCurve m_curvePlacementFail; // 0x1780, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Doorway_VData) == 0x1B38, "CCitadel_Ability_Doorman_Doorway_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Doorway_VData) == 0x17C0, "CCitadel_Ability_Doorman_Doorway_VData size mismatch");
         }
     }
 }

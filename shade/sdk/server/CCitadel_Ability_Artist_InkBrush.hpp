@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b58
+             * Size: 0x1b60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_InkBrush : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x18]; // 0x14a0, 0x18 bytes
-                bool m_bButtonDown; // 0x14b8, 0x1 bytes
-                std::uint8_t pad_14b9[0x43]; // 0x14b9, 0x43 bytes
-                float m_flAccumulatedDrawDistance; // 0x14fc, 0x4 bytes
-                std::uint8_t pad_1500[0x658]; // 0x1500, 0x658 bytes
+                std::uint8_t pad_14a8[0x18]; // 0x14a8, 0x18 bytes
+                bool m_bButtonDown; // 0x14c0, 0x1 bytes
+                std::uint8_t pad_14c1[0x43]; // 0x14c1, 0x43 bytes
+                float m_flAccumulatedDrawDistance; // 0x1504, 0x4 bytes
+                std::uint8_t pad_1508[0x658]; // 0x1508, 0x658 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_InkBrush) == 0x1B58, "CCitadel_Ability_Artist_InkBrush size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_InkBrush) == 0x1B60, "CCitadel_Ability_Artist_InkBrush size mismatch");
         }
     }
 }

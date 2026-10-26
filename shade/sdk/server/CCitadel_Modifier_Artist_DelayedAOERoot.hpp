@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x578
+             * Size: 0x580
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Artist_DelayedAOERoot : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_hAOEWarningParticle; // 0x0148, 0x4 bytes
-                std::uint8_t pad_014c[0x424]; // 0x014c, 0x424 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x0570, 0x4 bytes
-                std::uint8_t pad_0574[0x4]; // 0x0574, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_hAOEWarningParticle; // 0x0150, 0x4 bytes
+                std::uint8_t pad_0154[0x424]; // 0x0154, 0x424 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x0578, 0x4 bytes
+                std::uint8_t pad_057c[0x4]; // 0x057c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Artist_DelayedAOERoot) == 0x578, "CCitadel_Modifier_Artist_DelayedAOERoot size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_DelayedAOERoot) == 0x580, "CCitadel_Modifier_Artist_DelayedAOERoot size mismatch");
         }
     }
 }

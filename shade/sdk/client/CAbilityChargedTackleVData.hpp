@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1508
+             * Size: 0x1190
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,17 +43,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityChargedTackleVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargePreviewParticle; // 0x13e8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargePrepareModifier; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargeActiveModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DragModifier; // 0x14e8, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x14f8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargePreviewParticle; // 0x1070, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargePrepareModifier; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargeActiveModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DragModifier; // 0x1170, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x1180, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityChargedTackleVData) == 0x1508, "CAbilityChargedTackleVData size mismatch");
+            static_assert(sizeof(CAbilityChargedTackleVData) == 0x1190, "CAbilityChargedTackleVData size mismatch");
         }
     }
 }

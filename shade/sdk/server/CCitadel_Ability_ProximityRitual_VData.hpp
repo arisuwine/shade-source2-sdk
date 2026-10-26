@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a68
+             * Size: 0x16f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,31 +44,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ProximityRitual_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_PredatoryStatueModel; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatReappearParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatDisappearParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatEyesParticle; // 0x1688, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatSummonParticle; // 0x1768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatRecallParticle; // 0x1848, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RecallLineParticle; // 0x1928, 0xe0 bytes
-                CSoundEventName m_strRecallSound; // 0x1a08, 0x10 bytes
-                CSoundEventName m_strKilledSound; // 0x1a18, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PredatoryStatueModifier; // 0x1a28, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RecentDamageModifier; // 0x1a38, 0x10 bytes
-                float m_flHeavyMeleeDmg; // 0x1a48, 0x4 bytes
-                float m_flLightMeleeDmg; // 0x1a4c, 0x4 bytes
-                float m_flAbilityDamageScale; // 0x1a50, 0x4 bytes
-                float m_flNPCDamageScale; // 0x1a54, 0x4 bytes
-                float m_flCastDelayMin; // 0x1a58, 0x4 bytes
-                float m_flCastDelayMax; // 0x1a5c, 0x4 bytes
-                float m_flCastDelayMaxDist; // 0x1a60, 0x4 bytes
-                float m_flPostCastCooldown; // 0x1a64, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_PredatoryStatueModel; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatReappearParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatDisappearParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatEyesParticle; // 0x1310, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatSummonParticle; // 0x13f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CatRecallParticle; // 0x14d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RecallLineParticle; // 0x15b0, 0xe0 bytes
+                CSoundEventName m_strRecallSound; // 0x1690, 0x10 bytes
+                CSoundEventName m_strKilledSound; // 0x16a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PredatoryStatueModifier; // 0x16b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RecentDamageModifier; // 0x16c0, 0x10 bytes
+                float m_flHeavyMeleeDmg; // 0x16d0, 0x4 bytes
+                float m_flLightMeleeDmg; // 0x16d4, 0x4 bytes
+                float m_flAbilityDamageScale; // 0x16d8, 0x4 bytes
+                float m_flNPCDamageScale; // 0x16dc, 0x4 bytes
+                float m_flCastDelayMin; // 0x16e0, 0x4 bytes
+                float m_flCastDelayMax; // 0x16e4, 0x4 bytes
+                float m_flCastDelayMaxDist; // 0x16e8, 0x4 bytes
+                float m_flPostCastCooldown; // 0x16ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ProximityRitual_VData) == 0x1A68, "CCitadel_Ability_ProximityRitual_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ProximityRitual_VData) == 0x16F0, "CCitadel_Ability_ProximityRitual_VData size mismatch");
         }
     }
 }

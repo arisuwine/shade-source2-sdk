@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x6e8
+             * Size: 0x6f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Necro_HauntingSpirits : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x5a0]; // 0x0148, 0x5a0 bytes
+                std::uint8_t pad_0150[0x5a0]; // 0x0150, 0x5a0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Necro_HauntingSpirits) == 0x6E8, "CCitadel_Modifier_Necro_HauntingSpirits size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Necro_HauntingSpirits) == 0x6F0, "CCitadel_Modifier_Necro_HauntingSpirits size mismatch");
         }
     }
 }

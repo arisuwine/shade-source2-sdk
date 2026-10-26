@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18a8
+             * Size: 0x1530
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,26 +43,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Nano_Pounce_InstantVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveBuff; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle; // 0x1418, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlashParticle; // 0x14f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x15d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeSlowParticle; // 0x16b8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PrimaryHitParticle; // 0x1798, 0xe0 bytes
-                CSoundEventName m_AttackSound; // 0x1878, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1888, 0x10 bytes
-                float m_flAttackTimePhase01; // 0x1898, 0x4 bytes
-                float m_flAttackTimePhase02; // 0x189c, 0x4 bytes
-                float m_flAllyMinTargetRange; // 0x18a0, 0x4 bytes
-                float m_flTargetVerticalOffset; // 0x18a4, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LeapModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveBuff; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle; // 0x10a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlashParticle; // 0x1180, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1260, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeSlowParticle; // 0x1340, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PrimaryHitParticle; // 0x1420, 0xe0 bytes
+                CSoundEventName m_AttackSound; // 0x1500, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1510, 0x10 bytes
+                float m_flAttackTimePhase01; // 0x1520, 0x4 bytes
+                float m_flAttackTimePhase02; // 0x1524, 0x4 bytes
+                float m_flAllyMinTargetRange; // 0x1528, 0x4 bytes
+                float m_flTargetVerticalOffset; // 0x152c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Nano_Pounce_InstantVData) == 0x18A8, "CCitadel_Ability_Nano_Pounce_InstantVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Nano_Pounce_InstantVData) == 0x1530, "CCitadel_Ability_Nano_Pounce_InstantVData size mismatch");
         }
     }
 }

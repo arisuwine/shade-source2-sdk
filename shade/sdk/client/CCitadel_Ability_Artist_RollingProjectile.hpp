@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x22c8
+             * Size: 0x22d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_RollingProjectile : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bActive; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0xbbf]; // 0x16d9, 0xbbf bytes
-                CHandle<shade::sdk::client::C_CitadelProjectile> m_hDeployedProjectile; // 0x2298, 0x4 bytes
-                std::uint8_t pad_229c[0x2c]; // 0x229c, 0x2c bytes
+                bool m_bActive; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0xbbf]; // 0x16e1, 0xbbf bytes
+                CHandle<shade::sdk::client::C_CitadelProjectile> m_hDeployedProjectile; // 0x22a0, 0x4 bytes
+                std::uint8_t pad_22a4[0x2c]; // 0x22a4, 0x2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_RollingProjectile) == 0x22C8, "CCitadel_Ability_Artist_RollingProjectile size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_RollingProjectile) == 0x22D0, "CCitadel_Ability_Artist_RollingProjectile size mismatch");
         }
     }
 }

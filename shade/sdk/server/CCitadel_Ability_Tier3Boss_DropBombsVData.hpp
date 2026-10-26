@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19e0
+             * Size: 0x1668
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,40 +43,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_DropBombsVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberExplodeParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningGroundParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphExplodeParticle; // 0x1688, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningParticle; // 0x1768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningGroundParticle; // 0x1848, 0xe0 bytes
-                CSoundEventName m_AmberAOEWarningSound; // 0x1928, 0x10 bytes
-                CSoundEventName m_AmberAOEImpactSound; // 0x1938, 0x10 bytes
-                CSoundEventName m_SapphireAOEWarningSound; // 0x1948, 0x10 bytes
-                CSoundEventName m_SapphireAOEImpactSound; // 0x1958, 0x10 bytes
-                CSoundEventName m_strLaunchSound; // 0x1968, 0x10 bytes
-                CSoundEventName m_strLandSound; // 0x1978, 0x10 bytes
-                CSoundEventName m_strExplodeSound; // 0x1988, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CurseModifier; // 0x1998, 0x10 bytes
-                float m_flExplodeRadius; // 0x19a8, 0x4 bytes
-                float m_flBombOffsets; // 0x19ac, 0x4 bytes
-                float m_flBaseDamage; // 0x19b0, 0x4 bytes
-                float m_flDamageNonPlayer; // 0x19b4, 0x4 bytes
-                float m_flMaxHealthPctDamage; // 0x19b8, 0x4 bytes
-                float m_flDebuffDuration; // 0x19bc, 0x4 bytes
-                float m_flCooldownMax; // 0x19c0, 0x4 bytes
-                float m_flCooldownMin; // 0x19c4, 0x4 bytes
-                float m_flDetonationTimeMax; // 0x19c8, 0x4 bytes
-                float m_flDetonationTimeMin; // 0x19cc, 0x4 bytes
-                float m_flBossHealthMax; // 0x19d0, 0x4 bytes
-                float m_flBossHealthMin; // 0x19d4, 0x4 bytes
-                float m_flBombDropDist; // 0x19d8, 0x4 bytes
-                float m_flWarningOffset; // 0x19dc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberExplodeParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberAoeWarningGroundParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphExplodeParticle; // 0x1310, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningParticle; // 0x13f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphAoeWarningGroundParticle; // 0x14d0, 0xe0 bytes
+                CSoundEventName m_AmberAOEWarningSound; // 0x15b0, 0x10 bytes
+                CSoundEventName m_AmberAOEImpactSound; // 0x15c0, 0x10 bytes
+                CSoundEventName m_SapphireAOEWarningSound; // 0x15d0, 0x10 bytes
+                CSoundEventName m_SapphireAOEImpactSound; // 0x15e0, 0x10 bytes
+                CSoundEventName m_strLaunchSound; // 0x15f0, 0x10 bytes
+                CSoundEventName m_strLandSound; // 0x1600, 0x10 bytes
+                CSoundEventName m_strExplodeSound; // 0x1610, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CurseModifier; // 0x1620, 0x10 bytes
+                float m_flExplodeRadius; // 0x1630, 0x4 bytes
+                float m_flBombOffsets; // 0x1634, 0x4 bytes
+                float m_flBaseDamage; // 0x1638, 0x4 bytes
+                float m_flDamageNonPlayer; // 0x163c, 0x4 bytes
+                float m_flMaxHealthPctDamage; // 0x1640, 0x4 bytes
+                float m_flDebuffDuration; // 0x1644, 0x4 bytes
+                float m_flCooldownMax; // 0x1648, 0x4 bytes
+                float m_flCooldownMin; // 0x164c, 0x4 bytes
+                float m_flDetonationTimeMax; // 0x1650, 0x4 bytes
+                float m_flDetonationTimeMin; // 0x1654, 0x4 bytes
+                float m_flBossHealthMax; // 0x1658, 0x4 bytes
+                float m_flBossHealthMin; // 0x165c, 0x4 bytes
+                float m_flBombDropDist; // 0x1660, 0x4 bytes
+                float m_flWarningOffset; // 0x1664, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombsVData) == 0x19E0, "CCitadel_Ability_Tier3Boss_DropBombsVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_DropBombsVData) == 0x1668, "CCitadel_Ability_Tier3Boss_DropBombsVData size mismatch");
         }
     }
 }

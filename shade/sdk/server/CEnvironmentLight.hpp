@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb70
+             * Size: 0xbd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvironmentLight : public shade::sdk::server::CBarnLight {
             public:
-                Color m_SkyColor; // 0x0b60, 0x4 bytes
-                float m_flSkyIntensity; // 0x0b64, 0x4 bytes
-                Color m_SkyAmbientBounce; // 0x0b68, 0x4 bytes
-                float m_flAngularDiameter; // 0x0b6c, 0x4 bytes
+                Color m_SkyColor; // 0x0bc0, 0x4 bytes
+                float m_flSkyIntensity; // 0x0bc4, 0x4 bytes
+                Color m_SkyAmbientBounce; // 0x0bc8, 0x4 bytes
+                float m_flAngularDiameter; // 0x0bcc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvironmentLight) == 0xB70, "CEnvironmentLight size mismatch");
+            static_assert(sizeof(CEnvironmentLight) == 0xBD0, "CEnvironmentLight size mismatch");
         }
     }
 }

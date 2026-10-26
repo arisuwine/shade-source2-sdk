@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16e8
+             * Size: 0x1370
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityCrackshotVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle; // 0x15a8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1688, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CrackshotImmuneModifier; // 0x1698, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BulletResistModifier; // 0x16a8, 0x10 bytes
-                CSoundEventName m_HeadShotVictimSound; // 0x16b8, 0x10 bytes
-                CSoundEventName m_HeadShotConfirmationSound; // 0x16c8, 0x10 bytes
-                CSoundEventName m_ReadySound; // 0x16d8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle; // 0x1230, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1310, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CrackshotImmuneModifier; // 0x1320, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BulletResistModifier; // 0x1330, 0x10 bytes
+                CSoundEventName m_HeadShotVictimSound; // 0x1340, 0x10 bytes
+                CSoundEventName m_HeadShotConfirmationSound; // 0x1350, 0x10 bytes
+                CSoundEventName m_ReadySound; // 0x1360, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityCrackshotVData) == 0x16E8, "CAbilityCrackshotVData size mismatch");
+            static_assert(sizeof(CAbilityCrackshotVData) == 0x1370, "CAbilityCrackshotVData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x140
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelHideoutInteractableModifier) == 0x140, "CCitadelHideoutInteractableModifier size mismatch");
+            static_assert(sizeof(CCitadelHideoutInteractableModifier) == 0x148, "CCitadelHideoutInteractableModifier size mismatch");
         }
     }
 }

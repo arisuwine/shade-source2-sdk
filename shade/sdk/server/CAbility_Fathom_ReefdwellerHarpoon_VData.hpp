@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14c0
+             * Size: 0x1148
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Fathom_ReefdwellerHarpoon_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_ReefdwellerHarpoon_DetachBuff> m_DetachBuff; // 0x13e8, 0x10 bytes
-                CSoundEventName m_strSwapStarted; // 0x13f8, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x1408, 0xa0 bytes
-                float m_flAirSpeedMax; // 0x14a8, 0x4 bytes
-                float m_flFallSpeedMax; // 0x14ac, 0x4 bytes
-                float m_flAirDrag; // 0x14b0, 0x4 bytes
-                float m_flInitialSlowSpeed; // 0x14b4, 0x4 bytes
-                float m_flInitialSpeedBias; // 0x14b8, 0x4 bytes
-                float m_flMaxSurfacePitch; // 0x14bc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadel_Modifier_ReefdwellerHarpoon_DetachBuff> m_DetachBuff; // 0x1070, 0x10 bytes
+                CSoundEventName m_strSwapStarted; // 0x1080, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x1090, 0xa0 bytes
+                float m_flAirSpeedMax; // 0x1130, 0x4 bytes
+                float m_flFallSpeedMax; // 0x1134, 0x4 bytes
+                float m_flAirDrag; // 0x1138, 0x4 bytes
+                float m_flInitialSlowSpeed; // 0x113c, 0x4 bytes
+                float m_flInitialSpeedBias; // 0x1140, 0x4 bytes
+                float m_flMaxSurfacePitch; // 0x1144, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Fathom_ReefdwellerHarpoon_VData) == 0x14C0, "CAbility_Fathom_ReefdwellerHarpoon_VData size mismatch");
+            static_assert(sizeof(CAbility_Fathom_ReefdwellerHarpoon_VData) == 0x1148, "CAbility_Fathom_ReefdwellerHarpoon_VData size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1418
+             * Size: 0x10a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseLockonAbilityVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_TargetModifier; // 0x13e8, 0x10 bytes
-                CSoundEventName m_strApplyLockonStack; // 0x13f8, 0x10 bytes
-                CSoundEventName m_strApplyMaxLockonStack; // 0x1408, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_TargetModifier; // 0x1070, 0x10 bytes
+                CSoundEventName m_strApplyLockonStack; // 0x1080, 0x10 bytes
+                CSoundEventName m_strApplyMaxLockonStack; // 0x1090, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseLockonAbilityVData) == 0x1418, "CBaseLockonAbilityVData size mismatch");
+            static_assert(sizeof(CBaseLockonAbilityVData) == 0x10A0, "CBaseLockonAbilityVData size mismatch");
         }
     }
 }

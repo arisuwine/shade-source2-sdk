@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1de0
+             * Size: 0x1de8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,16 +39,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_Attach : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x8]; // 0x16d8, 0x8 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecTagAlongVisitedAllies; // 0x16e0, 0x18 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLastAttachedTo; // 0x16f8, 0x4 bytes
-                std::uint8_t pad_16fc[0x6e4]; // 0x16fc, 0x6e4 bytes
+                std::uint8_t pad_16e0[0x8]; // 0x16e0, 0x8 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecTagAlongVisitedAllies; // 0x16e8, 0x18 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLastAttachedTo; // 0x1700, 0x4 bytes
+                std::uint8_t pad_1704[0x6e4]; // 0x1704, 0x6e4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_Attach) == 0x1DE0, "CCitadel_Ability_Familiar_Attach size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_Attach) == 0x1DE8, "CCitadel_Ability_Familiar_Attach size mismatch");
         }
     }
 }

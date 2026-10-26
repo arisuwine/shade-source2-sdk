@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17a0
+             * Size: 0x17a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelBaseDashCastAbility : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityToTrigger; // 0x16d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDashCastStartTime; // 0x16dc, 0x4 bytes
-                Vector m_vDashCastDir; // 0x16e0, 0xc bytes
-                std::uint8_t pad_16ec[0xb4]; // 0x16ec, 0xb4 bytes
+                CHandle<shade::sdk::client::C_CitadelBaseAbility> m_hAbilityToTrigger; // 0x16e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDashCastStartTime; // 0x16e4, 0x4 bytes
+                Vector m_vDashCastDir; // 0x16e8, 0xc bytes
+                std::uint8_t pad_16f4[0xb4]; // 0x16f4, 0xb4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBaseDashCastAbility) == 0x17A0, "CCitadelBaseDashCastAbility size mismatch");
+            static_assert(sizeof(CCitadelBaseDashCastAbility) == 0x17A8, "CCitadelBaseDashCastAbility size mismatch");
         }
     }
 }

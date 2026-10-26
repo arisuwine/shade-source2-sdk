@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1830
+             * Size: 0x14b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,42 +43,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_RollingProjectileVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                bool m_bShouldDamageOnPassthrough; // 0x13e8, 0x1 bytes
-                bool m_bShouldExplodeCameraForward; // 0x13e9, 0x1 bytes
-                bool m_bAllowCameraSteering; // 0x13ea, 0x1 bytes
-                bool m_bAttachProjectileWhileCharging; // 0x13eb, 0x1 bytes
-                float m_flAttachForwardDistance; // 0x13ec, 0x4 bytes
-                float m_flTraceRadius; // 0x13f0, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x13f4, 0x4 bytes
-                float m_flFloatDownRate; // 0x13f8, 0x4 bytes
-                float m_flClimbHeight; // 0x13fc, 0x4 bytes
-                float m_flStepDownHeight; // 0x1400, 0x4 bytes
-                float m_flSlideDotThreshold; // 0x1404, 0x4 bytes
-                float m_flMinPitch; // 0x1408, 0x4 bytes
-                float m_flMaxPitch; // 0x140c, 0x4 bytes
-                float m_flJumpHeight; // 0x1410, 0x4 bytes
-                float m_flTurnRate; // 0x1414, 0x4 bytes
-                float m_flTurnMultiplier; // 0x1418, 0x4 bytes
-                float m_flSinRate; // 0x141c, 0x4 bytes
-                float m_flSinScale; // 0x1420, 0x4 bytes
-                float m_flAccelerationSpeed; // 0x1424, 0x4 bytes
-                float m_flBonusProjectileBackOffset; // 0x1428, 0x4 bytes
-                float m_flBonusProjectileLeftOffset; // 0x142c, 0x4 bytes
-                CPiecewiseCurve m_SteeringSpeedCurve; // 0x1430, 0x40 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GroundAuraModifier; // 0x1470, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x1480, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x1490, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConeParticle; // 0x14a0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1580, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1660, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileHelperParticle; // 0x1740, 0xe0 bytes
-                CSoundEventName m_strExplode; // 0x1820, 0x10 bytes
+                bool m_bShouldDamageOnPassthrough; // 0x1070, 0x1 bytes
+                bool m_bShouldExplodeCameraForward; // 0x1071, 0x1 bytes
+                bool m_bAllowCameraSteering; // 0x1072, 0x1 bytes
+                bool m_bAttachProjectileWhileCharging; // 0x1073, 0x1 bytes
+                float m_flAttachForwardDistance; // 0x1074, 0x4 bytes
+                float m_flTraceRadius; // 0x1078, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x107c, 0x4 bytes
+                float m_flFloatDownRate; // 0x1080, 0x4 bytes
+                float m_flClimbHeight; // 0x1084, 0x4 bytes
+                float m_flStepDownHeight; // 0x1088, 0x4 bytes
+                float m_flSlideDotThreshold; // 0x108c, 0x4 bytes
+                float m_flMinPitch; // 0x1090, 0x4 bytes
+                float m_flMaxPitch; // 0x1094, 0x4 bytes
+                float m_flJumpHeight; // 0x1098, 0x4 bytes
+                float m_flTurnRate; // 0x109c, 0x4 bytes
+                float m_flTurnMultiplier; // 0x10a0, 0x4 bytes
+                float m_flSinRate; // 0x10a4, 0x4 bytes
+                float m_flSinScale; // 0x10a8, 0x4 bytes
+                float m_flAccelerationSpeed; // 0x10ac, 0x4 bytes
+                float m_flBonusProjectileBackOffset; // 0x10b0, 0x4 bytes
+                float m_flBonusProjectileLeftOffset; // 0x10b4, 0x4 bytes
+                CPiecewiseCurve m_SteeringSpeedCurve; // 0x10b8, 0x40 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_GroundAuraModifier; // 0x10f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_SlowModifier; // 0x1108, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x1118, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ConeParticle; // 0x1128, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1208, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x12e8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileHelperParticle; // 0x13c8, 0xe0 bytes
+                CSoundEventName m_strExplode; // 0x14a8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_RollingProjectileVData) == 0x1830, "CCitadel_Ability_Artist_RollingProjectileVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_RollingProjectileVData) == 0x14B8, "CCitadel_Ability_Artist_RollingProjectileVData size mismatch");
         }
     }
 }

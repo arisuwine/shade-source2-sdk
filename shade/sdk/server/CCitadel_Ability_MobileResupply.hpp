@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1568
+             * Size: 0x1570
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_MobileResupply : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                VectorWS m_vDeployPosition; // 0x14a0, 0xc bytes
-                QAngle m_angDeploy; // 0x14ac, 0xc bytes
-                std::uint8_t pad_14b8[0xb0]; // 0x14b8, 0xb0 bytes
+                VectorWS m_vDeployPosition; // 0x14a8, 0xc bytes
+                QAngle m_angDeploy; // 0x14b4, 0xc bytes
+                std::uint8_t pad_14c0[0xb0]; // 0x14c0, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_MobileResupply) == 0x1568, "CCitadel_Ability_MobileResupply size mismatch");
+            static_assert(sizeof(CCitadel_Ability_MobileResupply) == 0x1570, "CCitadel_Ability_MobileResupply size mismatch");
         }
     }
 }

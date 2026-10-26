@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1538
+             * Size: 0x11c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityPunkgoatBlastedVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BlastedModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BlastedPassiveModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ShredModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HealthModifier; // 0x1418, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HealthDisplayModifier; // 0x1428, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeReloadFX; // 0x1438, 0xe0 bytes
-                CSoundEventName m_strMeleeReloadSoundLight; // 0x1518, 0x10 bytes
-                CSoundEventName m_strMeleeReloadSoundHeavy; // 0x1528, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BlastedModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BlastedPassiveModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ShredModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HealthModifier; // 0x10a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HealthDisplayModifier; // 0x10b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeReloadFX; // 0x10c0, 0xe0 bytes
+                CSoundEventName m_strMeleeReloadSoundLight; // 0x11a0, 0x10 bytes
+                CSoundEventName m_strMeleeReloadSoundHeavy; // 0x11b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityPunkgoatBlastedVData) == 0x1538, "CAbilityPunkgoatBlastedVData size mismatch");
+            static_assert(sizeof(CAbilityPunkgoatBlastedVData) == 0x11C0, "CAbilityPunkgoatBlastedVData size mismatch");
         }
     }
 }

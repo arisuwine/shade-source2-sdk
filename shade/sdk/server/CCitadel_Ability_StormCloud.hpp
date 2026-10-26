@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1980
+             * Size: 0x1988
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_StormCloud : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x14a0, 0x4 bytes
-                std::uint8_t pad_14a4[0x4d4]; // 0x14a4, 0x4d4 bytes
-                float m_flFloat; // 0x1978, 0x4 bytes
-                std::int32_t m_nLightningStrikesRemaining; // 0x197c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x4d4]; // 0x14ac, 0x4d4 bytes
+                float m_flFloat; // 0x1980, 0x4 bytes
+                std::int32_t m_nLightningStrikesRemaining; // 0x1984, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_StormCloud) == 0x1980, "CCitadel_Ability_StormCloud size mismatch");
+            static_assert(sizeof(CCitadel_Ability_StormCloud) == 0x1988, "CCitadel_Ability_StormCloud size mismatch");
         }
     }
 }

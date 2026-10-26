@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_TangoTether_Tether : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x398]; // 0x0148, 0x398 bytes
-                float m_fHealingSoundBuildup; // 0x04e0, 0x4 bytes
-                std::uint8_t pad_04e4[0x4]; // 0x04e4, 0x4 bytes
+                std::uint8_t pad_0150[0x398]; // 0x0150, 0x398 bytes
+                float m_fHealingSoundBuildup; // 0x04e8, 0x4 bytes
+                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_TangoTether_Tether) == 0x4E8, "CCitadel_Modifier_TangoTether_Tether size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_TangoTether_Tether) == 0x4F0, "CCitadel_Modifier_TangoTether_Tether size mismatch");
         }
     }
 }

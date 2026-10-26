@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x398
+             * Size: 0x3a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Chessmaster_QueenHoldInPlace : public shade::sdk::client::CCitadel_Modifier_Stunned {
             public:
-                VectorWS m_vecFloatDest; // 0x0140, 0xc bytes
-                VectorWS m_vecQueenPosition; // 0x014c, 0xc bytes
-                std::uint8_t pad_0158[0x240]; // 0x0158, 0x240 bytes
+                VectorWS m_vecFloatDest; // 0x0148, 0xc bytes
+                VectorWS m_vecQueenPosition; // 0x0154, 0xc bytes
+                std::uint8_t pad_0160[0x240]; // 0x0160, 0x240 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Chessmaster_QueenHoldInPlace) == 0x398, "CCitadel_Modifier_Chessmaster_QueenHoldInPlace size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Chessmaster_QueenHoldInPlace) == 0x3A0, "CCitadel_Modifier_Chessmaster_QueenHoldInPlace size mismatch");
         }
     }
 }

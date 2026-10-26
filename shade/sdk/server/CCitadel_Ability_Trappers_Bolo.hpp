@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18e8
+             * Size: 0x18f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Trappers_Bolo : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0xb0]; // 0x14a0, 0xb0 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x1550, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hNextTarget; // 0x1554, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitTargets; // 0x1558, 0x18 bytes
-                std::int32_t m_iBounces; // 0x1570, 0x4 bytes
-                bool m_bReturning; // 0x1574, 0x1 bytes
-                std::uint8_t pad_1575[0x373]; // 0x1575, 0x373 bytes
+                std::uint8_t pad_14a8[0xb0]; // 0x14a8, 0xb0 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x1558, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hNextTarget; // 0x155c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitTargets; // 0x1560, 0x18 bytes
+                std::int32_t m_iBounces; // 0x1578, 0x4 bytes
+                bool m_bReturning; // 0x157c, 0x1 bytes
+                std::uint8_t pad_157d[0x373]; // 0x157d, 0x373 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Trappers_Bolo) == 0x18E8, "CCitadel_Ability_Trappers_Bolo size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Trappers_Bolo) == 0x18F0, "CCitadel_Ability_Trappers_Bolo size mismatch");
         }
     }
 }

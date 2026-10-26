@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14b8
+             * Size: 0x14c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Sprint : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nSprintParticle; // 0x14a0, 0x4 bytes
-                bool m_bSprinting; // 0x14a4, 0x1 bytes
-                std::uint8_t pad_14a5[0x3]; // 0x14a5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flSprintStartTime; // 0x14a8, 0x4 bytes
-                bool m_bInCombat; // 0x14ac, 0x1 bytes
-                std::uint8_t pad_14ad[0xb]; // 0x14ad, 0xb bytes
+                shade::sdk::client::ParticleIndex_t m_nSprintParticle; // 0x14a8, 0x4 bytes
+                bool m_bSprinting; // 0x14ac, 0x1 bytes
+                std::uint8_t pad_14ad[0x3]; // 0x14ad, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flSprintStartTime; // 0x14b0, 0x4 bytes
+                bool m_bInCombat; // 0x14b4, 0x1 bytes
+                std::uint8_t pad_14b5[0xb]; // 0x14b5, 0xb bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Sprint) == 0x14B8, "CCitadel_Ability_Sprint size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Sprint) == 0x14C0, "CCitadel_Ability_Sprint size mismatch");
         }
     }
 }

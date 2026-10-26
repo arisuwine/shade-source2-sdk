@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xae0
+             * Size: 0xae8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Deadpack_MaxHeat : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0138[0x9a8]; // 0x0138, 0x9a8 bytes
+                std::uint8_t pad_0140[0x9a8]; // 0x0140, 0x9a8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Deadpack_MaxHeat) == 0xAE0, "CCitadel_Modifier_Deadpack_MaxHeat size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Deadpack_MaxHeat) == 0xAE8, "CCitadel_Modifier_Deadpack_MaxHeat size mismatch");
         }
     }
 }

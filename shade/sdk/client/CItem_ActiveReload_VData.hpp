@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1700
+             * Size: 0x1388
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_ActiveReload_VData : public shade::sdk::client::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SuccessModifier; // 0x14f8, 0x10 bytes
-                CSoundEventName m_strSuccessSound; // 0x1508, 0x10 bytes
-                CSoundEventName m_strFailureSound; // 0x1518, 0x10 bytes
-                CSoundEventName m_strWindowEnteredSound; // 0x1528, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessParticle; // 0x1538, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FailureParticle; // 0x1618, 0xe0 bytes
-                float m_flGraceTime; // 0x16f8, 0x4 bytes
-                std::uint8_t pad_16fc[0x4]; // 0x16fc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SuccessModifier; // 0x1180, 0x10 bytes
+                CSoundEventName m_strSuccessSound; // 0x1190, 0x10 bytes
+                CSoundEventName m_strFailureSound; // 0x11a0, 0x10 bytes
+                CSoundEventName m_strWindowEnteredSound; // 0x11b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessParticle; // 0x11c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FailureParticle; // 0x12a0, 0xe0 bytes
+                float m_flGraceTime; // 0x1380, 0x4 bytes
+                std::uint8_t pad_1384[0x4]; // 0x1384, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_ActiveReload_VData) == 0x1700, "CItem_ActiveReload_VData size mismatch");
+            static_assert(sizeof(CItem_ActiveReload_VData) == 0x1388, "CItem_ActiveReload_VData size mismatch");
         }
     }
 }

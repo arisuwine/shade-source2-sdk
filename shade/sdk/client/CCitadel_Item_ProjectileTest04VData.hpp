@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1520
+             * Size: 0x11a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_ProjectileTest04VData : public shade::sdk::client::CCitadel_Item_ProjectileTestVData {
             public:
-                float m_flDrag; // 0x1508, 0x4 bytes
-                float m_flMaxDrag; // 0x150c, 0x4 bytes
-                float m_flMinDrag; // 0x1510, 0x4 bytes
-                float m_flMinGravity; // 0x1514, 0x4 bytes
-                float m_flMaxGravity; // 0x1518, 0x4 bytes
-                float m_flLerpBeginDistanceToTarget; // 0x151c, 0x4 bytes
+                float m_flDrag; // 0x1190, 0x4 bytes
+                float m_flMaxDrag; // 0x1194, 0x4 bytes
+                float m_flMinDrag; // 0x1198, 0x4 bytes
+                float m_flMinGravity; // 0x119c, 0x4 bytes
+                float m_flMaxGravity; // 0x11a0, 0x4 bytes
+                float m_flLerpBeginDistanceToTarget; // 0x11a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_ProjectileTest04VData) == 0x1520, "CCitadel_Item_ProjectileTest04VData size mismatch");
+            static_assert(sizeof(CCitadel_Item_ProjectileTest04VData) == 0x11A8, "CCitadel_Item_ProjectileTest04VData size mismatch");
         }
     }
 }

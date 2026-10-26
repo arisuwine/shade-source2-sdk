@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x208
+             * Size: 0x210
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Pillar : public shade::sdk::server::CCitadel_Modifier_Stunned {
             public:
-                float flAccumulatedDamage; // 0x0150, 0x4 bytes
-                std::uint8_t pad_0154[0xb4]; // 0x0154, 0xb4 bytes
+                float flAccumulatedDamage; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0xb4]; // 0x015c, 0xb4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Pillar) == 0x208, "CCitadel_Modifier_Pillar size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Pillar) == 0x210, "CCitadel_Modifier_Pillar size mismatch");
         }
     }
 }

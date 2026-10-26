@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15e8
+             * Size: 0x1270
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,22 +43,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_Flashbang_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x13e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x14d8, 0xe0 bytes
-                CSoundEventName m_ExplosionSound; // 0x15b8, 0x10 bytes
-                CSoundEventName m_BounceSound; // 0x15c8, 0x10 bytes
-                float m_flMinSurfaceDotToBounce; // 0x15d8, 0x4 bytes
-                float m_flMaxSurfaceDotToBounce; // 0x15dc, 0x4 bytes
-                float m_flBounceVerticalReductionRatio; // 0x15e0, 0x4 bytes
-                bool m_bDebug; // 0x15e4, 0x1 bytes
-                std::uint8_t pad_15e5[0x3]; // 0x15e5, 0x3 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x1070, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1080, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1160, 0xe0 bytes
+                CSoundEventName m_ExplosionSound; // 0x1240, 0x10 bytes
+                CSoundEventName m_BounceSound; // 0x1250, 0x10 bytes
+                float m_flMinSurfaceDotToBounce; // 0x1260, 0x4 bytes
+                float m_flMaxSurfaceDotToBounce; // 0x1264, 0x4 bytes
+                float m_flBounceVerticalReductionRatio; // 0x1268, 0x4 bytes
+                bool m_bDebug; // 0x126c, 0x1 bytes
+                std::uint8_t pad_126d[0x3]; // 0x126d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_Flashbang_VData) == 0x15E8, "CCitadel_Ability_Priest_Flashbang_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_Flashbang_VData) == 0x1270, "CCitadel_Ability_Priest_Flashbang_VData size mismatch");
         }
     }
 }

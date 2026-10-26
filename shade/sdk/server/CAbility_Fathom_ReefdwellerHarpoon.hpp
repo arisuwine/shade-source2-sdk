@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1840
+             * Size: 0x1848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,25 +32,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Fathom_ReefdwellerHarpoon : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                bool m_bHitTarget; // 0x14a0, 0x1 bytes
-                std::uint8_t pad_14a1[0x3]; // 0x14a1, 0x3 bytes
-                VectorWS m_vPrevPos; // 0x14a4, 0xc bytes
-                bool m_bBulletFlying; // 0x14b0, 0x1 bytes
-                bool m_bHasLatchedOnce; // 0x14b1, 0x1 bytes
-                bool m_bLatched; // 0x14b2, 0x1 bytes
-                std::uint8_t pad_14b3[0x1]; // 0x14b3, 0x1 bytes
-                VectorWS m_vHarpoonTarget; // 0x14b4, 0xc bytes
-                float m_flLatchedYaw; // 0x14c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCloseEnoughStartTime; // 0x14c4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckStartTime; // 0x14c8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flReelStartTime; // 0x14cc, 0x4 bytes
-                std::uint8_t pad_14d0[0x370]; // 0x14d0, 0x370 bytes
+                bool m_bHitTarget; // 0x14a8, 0x1 bytes
+                std::uint8_t pad_14a9[0x3]; // 0x14a9, 0x3 bytes
+                VectorWS m_vPrevPos; // 0x14ac, 0xc bytes
+                bool m_bBulletFlying; // 0x14b8, 0x1 bytes
+                bool m_bHasLatchedOnce; // 0x14b9, 0x1 bytes
+                bool m_bLatched; // 0x14ba, 0x1 bytes
+                std::uint8_t pad_14bb[0x1]; // 0x14bb, 0x1 bytes
+                VectorWS m_vHarpoonTarget; // 0x14bc, 0xc bytes
+                float m_flLatchedYaw; // 0x14c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCloseEnoughStartTime; // 0x14cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckStartTime; // 0x14d0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flReelStartTime; // 0x14d4, 0x4 bytes
+                std::uint8_t pad_14d8[0x370]; // 0x14d8, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Fathom_ReefdwellerHarpoon) == 0x1840, "CAbility_Fathom_ReefdwellerHarpoon size mismatch");
+            static_assert(sizeof(CAbility_Fathom_ReefdwellerHarpoon) == 0x1848, "CAbility_Fathom_ReefdwellerHarpoon size mismatch");
         }
     }
 }

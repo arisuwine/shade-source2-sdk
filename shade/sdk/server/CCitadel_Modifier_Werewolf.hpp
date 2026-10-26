@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x640
+             * Size: 0x648
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x4d0]; // 0x0148, 0x4d0 bytes
-                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapHunterAbilities; // 0x0618, 0x28 bytes
+                std::uint8_t pad_0150[0x4d0]; // 0x0150, 0x4d0 bytes
+                CUtlOrderedMap<shade::sdk::client::EAbilitySlots_t, CSubclassName<4>> m_mapHunterAbilities; // 0x0620, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf) == 0x640, "CCitadel_Modifier_Werewolf size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf) == 0x648, "CCitadel_Modifier_Werewolf size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bc8
+             * Size: 0x1bd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_Flashbang : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::ShotID_t m_tInitialShotID; // 0x16d8, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x16dc, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16e8, 0xc bytes
-                std::uint8_t pad_16f4[0x4d4]; // 0x16f4, 0x4d4 bytes
+                shade::sdk::client::ShotID_t m_tInitialShotID; // 0x16e0, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x16e4, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16f0, 0xc bytes
+                std::uint8_t pad_16fc[0x4d4]; // 0x16fc, 0x4d4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_Flashbang) == 0x1BC8, "CCitadel_Ability_Priest_Flashbang size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_Flashbang) == 0x1BD0, "CCitadel_Ability_Priest_Flashbang size mismatch");
         }
     }
 }

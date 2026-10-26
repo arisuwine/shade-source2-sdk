@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x238
+             * Size: 0x240
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_FlagAllyAura : public shade::sdk::server::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0180[0xb8]; // 0x0180, 0xb8 bytes
+                std::uint8_t pad_0188[0xb8]; // 0x0188, 0xb8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_FlagAllyAura) == 0x238, "CCitadel_Modifier_FlagAllyAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_FlagAllyAura) == 0x240, "CCitadel_Modifier_FlagAllyAura size mismatch");
         }
     }
 }

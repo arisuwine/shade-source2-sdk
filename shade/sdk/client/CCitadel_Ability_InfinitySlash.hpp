@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a58
+             * Size: 0x1a60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_InfinitySlash : public shade::sdk::client::CCitadelBaseYamatoAbility {
             public:
-                std::uint8_t pad_16e0[0x370]; // 0x16e0, 0x370 bytes
-                shade::sdk::entity2::GameTime_t m_flExplodeEndTime; // 0x1a50, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBuffEndTime; // 0x1a54, 0x4 bytes
+                std::uint8_t pad_16e8[0x370]; // 0x16e8, 0x370 bytes
+                shade::sdk::entity2::GameTime_t m_flExplodeEndTime; // 0x1a58, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBuffEndTime; // 0x1a5c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_InfinitySlash) == 0x1A58, "CCitadel_Ability_InfinitySlash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_InfinitySlash) == 0x1A60, "CCitadel_Ability_InfinitySlash size mismatch");
         }
     }
 }

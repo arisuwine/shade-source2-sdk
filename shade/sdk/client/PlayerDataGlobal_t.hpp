@@ -79,15 +79,15 @@ namespace shade {
                 std::uint8_t pad_007d[0x3]; // 0x007d, 0x3 bytes
                 shade::sdk::entity2::GameTime_t m_flUltimateCooldownStart; // 0x0080, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flUltimateCooldownEnd; // 0x0084, 0x4 bytes
-                bool m_bHasRejuvenator; // 0x0088, 0x1 bytes
-                bool m_bHasRebirth; // 0x0089, 0x1 bytes
-                bool m_bFlaggedAsCheater; // 0x008a, 0x1 bytes
-                bool m_bAbandon; // 0x008b, 0x1 bytes
-                std::int32_t m_iHeroDamage; // 0x008c, 0x4 bytes
-                std::int32_t m_iHeroHealing; // 0x0090, 0x4 bytes
-                std::int32_t m_iSelfHealing; // 0x0094, 0x4 bytes
-                std::int32_t m_iObjectiveDamage; // 0x0098, 0x4 bytes
-                std::uint8_t pad_009c[0x4]; // 0x009c, 0x4 bytes
+                float m_flUltimateStoppedCooldownRemaining; // 0x0088, 0x4 bytes
+                bool m_bHasRejuvenator; // 0x008c, 0x1 bytes
+                bool m_bHasRebirth; // 0x008d, 0x1 bytes
+                bool m_bFlaggedAsCheater; // 0x008e, 0x1 bytes
+                bool m_bAbandon; // 0x008f, 0x1 bytes
+                std::int32_t m_iHeroDamage; // 0x0090, 0x4 bytes
+                std::int32_t m_iHeroHealing; // 0x0094, 0x4 bytes
+                std::int32_t m_iSelfHealing; // 0x0098, 0x4 bytes
+                std::int32_t m_iObjectiveDamage; // 0x009c, 0x4 bytes
                 C_NetworkUtlVectorBase<CUtlStringToken> m_vecUpgrades; // 0x00a0, 0x18 bytes
                 C_NetworkUtlVectorBase<CUtlStringToken> m_vecBonusCounterAbilities; // 0x00b8, 0x18 bytes
                 C_NetworkUtlVectorBase<std::int32_t> m_vecBonusCounterValues; // 0x00d0, 0x18 bytes

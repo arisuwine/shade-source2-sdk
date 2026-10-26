@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x238
+             * Size: 0x240
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Neutral_Attack_LobBook : public shade::sdk::server::CCitadel_Neutral_Attack_BulletToPointModifier {
             public:
-                bool m_bFirstBullet; // 0x0200, 0x1 bytes
-                std::uint8_t pad_0201[0x3]; // 0x0201, 0x3 bytes
-                VectorWS m_vTargetLocation; // 0x0204, 0xc bytes
-                std::int32_t m_nBooksLanded; // 0x0210, 0x4 bytes
-                std::int32_t m_nBooksExpected; // 0x0214, 0x4 bytes
-                CHandle<shade::sdk::server::CPointModifierThinker> m_hPointThinker; // 0x0218, 0x4 bytes
-                std::uint8_t pad_021c[0x4]; // 0x021c, 0x4 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pShotCounterAutoModifier; // 0x0220, 0x18 bytes
+                bool m_bFirstBullet; // 0x0208, 0x1 bytes
+                std::uint8_t pad_0209[0x3]; // 0x0209, 0x3 bytes
+                VectorWS m_vTargetLocation; // 0x020c, 0xc bytes
+                std::int32_t m_nBooksLanded; // 0x0218, 0x4 bytes
+                std::int32_t m_nBooksExpected; // 0x021c, 0x4 bytes
+                CHandle<shade::sdk::server::CPointModifierThinker> m_hPointThinker; // 0x0220, 0x4 bytes
+                std::uint8_t pad_0224[0x4]; // 0x0224, 0x4 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_pShotCounterAutoModifier; // 0x0228, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Neutral_Attack_LobBook) == 0x238, "CCitadel_Neutral_Attack_LobBook size mismatch");
+            static_assert(sizeof(CCitadel_Neutral_Attack_LobBook) == 0x240, "CCitadel_Neutral_Attack_LobBook size mismatch");
         }
     }
 }

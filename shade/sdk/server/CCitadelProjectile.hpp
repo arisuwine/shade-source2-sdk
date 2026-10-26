@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x968
+             * Size: 0x970
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -61,25 +61,25 @@ namespace shade {
                 std::int32_t m_nDetonationsLeft; // 0x08d4, 0x4 bytes
                 VectorWS m_vLastAbsOrigin; // 0x08d8, 0xc bytes
                 Vector m_vLastAbsVelocity; // 0x08e4, 0xc bytes
-                std::uint8_t pad_08f0[0x20]; // 0x08f0, 0x20 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetToIgnore; // 0x0910, 0x18 bytes
-                bool m_bDetonateStarted; // 0x0928, 0x1 bytes
-                bool m_bTouchDisabled; // 0x0929, 0x1 bytes
-                std::uint8_t pad_092a[0x2]; // 0x092a, 0x2 bytes
-                Vector m_vInitialVelocity; // 0x092c, 0xc bytes
-                VectorWS m_vInitialPosition; // 0x0938, 0xc bytes
-                CUtlStringToken m_abilityID; // 0x0944, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hParticleDef; // 0x0948, 0x8 bytes
-                VectorWS m_vecSpawnPosition; // 0x0950, 0xc bytes
-                float m_flProjectileSpeed; // 0x095c, 0x4 bytes
-                float m_flMaxLifetime; // 0x0960, 0x4 bytes
-                float m_flParticleRadius; // 0x0964, 0x4 bytes
+                std::uint8_t pad_08f0[0x28]; // 0x08f0, 0x28 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetToIgnore; // 0x0918, 0x18 bytes
+                bool m_bDetonateStarted; // 0x0930, 0x1 bytes
+                bool m_bTouchDisabled; // 0x0931, 0x1 bytes
+                std::uint8_t pad_0932[0x2]; // 0x0932, 0x2 bytes
+                Vector m_vInitialVelocity; // 0x0934, 0xc bytes
+                VectorWS m_vInitialPosition; // 0x0940, 0xc bytes
+                CUtlStringToken m_abilityID; // 0x094c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hParticleDef; // 0x0950, 0x8 bytes
+                VectorWS m_vecSpawnPosition; // 0x0958, 0xc bytes
+                float m_flProjectileSpeed; // 0x0964, 0x4 bytes
+                float m_flMaxLifetime; // 0x0968, 0x4 bytes
+                float m_flParticleRadius; // 0x096c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelProjectile) == 0x968, "CCitadelProjectile size mismatch");
+            static_assert(sizeof(CCitadelProjectile) == 0x970, "CCitadelProjectile size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x218
+             * Size: 0x220
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_PriestKnockback : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_StartTime; // 0x0148, 0x4 bytes
-                Vector m_vecPushDirection; // 0x014c, 0xc bytes
-                Vector m_vecFinalPosition; // 0x0158, 0xc bytes
-                std::uint8_t pad_0164[0xb4]; // 0x0164, 0xb4 bytes
+                shade::sdk::entity2::GameTime_t m_StartTime; // 0x0150, 0x4 bytes
+                Vector m_vecPushDirection; // 0x0154, 0xc bytes
+                Vector m_vecFinalPosition; // 0x0160, 0xc bytes
+                std::uint8_t pad_016c[0xb4]; // 0x016c, 0xb4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_PriestKnockback) == 0x218, "CCitadel_Modifier_PriestKnockback size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_PriestKnockback) == 0x220, "CCitadel_Modifier_PriestKnockback size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1860
+             * Size: 0x1868
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_IcePath : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x160]; // 0x16d8, 0x160 bytes
-                bool m_bIcePathing; // 0x1838, 0x1 bytes
-                std::uint8_t pad_1839[0x3]; // 0x1839, 0x3 bytes
-                QAngle m_qLastAngles; // 0x183c, 0xc bytes
-                Vector m_vLastVelocity; // 0x1848, 0xc bytes
-                bool m_bFirstMovementTick; // 0x1854, 0x1 bytes
-                std::uint8_t pad_1855[0x3]; // 0x1855, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0x1858, 0x4 bytes
-                std::uint8_t pad_185c[0x4]; // 0x185c, 0x4 bytes
+                std::uint8_t pad_16e0[0x160]; // 0x16e0, 0x160 bytes
+                bool m_bIcePathing; // 0x1840, 0x1 bytes
+                std::uint8_t pad_1841[0x3]; // 0x1841, 0x3 bytes
+                QAngle m_qLastAngles; // 0x1844, 0xc bytes
+                Vector m_vLastVelocity; // 0x1850, 0xc bytes
+                bool m_bFirstMovementTick; // 0x185c, 0x1 bytes
+                std::uint8_t pad_185d[0x3]; // 0x185d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0x1860, 0x4 bytes
+                std::uint8_t pad_1864[0x4]; // 0x1864, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_IcePath) == 0x1860, "CCitadel_Ability_IcePath size mismatch");
+            static_assert(sizeof(CCitadel_Ability_IcePath) == 0x1868, "CCitadel_Ability_IcePath size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Basic_HealthRegen : public shade::sdk::client::CCitadelModifier {
             public:
-                float m_flHealthRegen; // 0x0138, 0x4 bytes
-                float m_flHealthRegenSnapShot; // 0x013c, 0x4 bytes
-                float m_flExternalHealthRegen; // 0x0140, 0x4 bytes
-                float m_flExternalHealthRegenSnapShot; // 0x0144, 0x4 bytes
+                float m_flHealthRegen; // 0x0140, 0x4 bytes
+                float m_flHealthRegenSnapShot; // 0x0144, 0x4 bytes
+                float m_flExternalHealthRegen; // 0x0148, 0x4 bytes
+                float m_flExternalHealthRegenSnapShot; // 0x014c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Basic_HealthRegen) == 0x148, "CCitadel_Modifier_Basic_HealthRegen size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Basic_HealthRegen) == 0x150, "CCitadel_Modifier_Basic_HealthRegen size mismatch");
         }
     }
 }

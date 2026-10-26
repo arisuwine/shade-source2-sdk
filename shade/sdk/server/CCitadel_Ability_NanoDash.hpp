@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1df8
+             * Size: 0x1e00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_NanoDash : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                VectorWS m_vStartPosition; // 0x14a0, 0xc bytes
-                VectorWS m_vEndPosition; // 0x14ac, 0xc bytes
-                bool m_bIsDashing; // 0x14b8, 0x1 bytes
-                std::uint8_t pad_14b9[0x7]; // 0x14b9, 0x7 bytes
-                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x14c0, 0x18 bytes
-                VectorWS m_vecLastPosition; // 0x14d8, 0xc bytes
-                std::uint8_t pad_14e4[0x8f4]; // 0x14e4, 0x8f4 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1dd8, 0x4 bytes
-                std::uint8_t pad_1ddc[0x1c]; // 0x1ddc, 0x1c bytes
+                VectorWS m_vStartPosition; // 0x14a8, 0xc bytes
+                VectorWS m_vEndPosition; // 0x14b4, 0xc bytes
+                bool m_bIsDashing; // 0x14c0, 0x1 bytes
+                std::uint8_t pad_14c1[0x7]; // 0x14c1, 0x7 bytes
+                CUtlVector<CEntityIndex> m_vecHitEnemies; // 0x14c8, 0x18 bytes
+                VectorWS m_vecLastPosition; // 0x14e0, 0xc bytes
+                std::uint8_t pad_14ec[0x8f4]; // 0x14ec, 0x8f4 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x1de0, 0x4 bytes
+                std::uint8_t pad_1de4[0x1c]; // 0x1de4, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_NanoDash) == 0x1DF8, "CCitadel_Ability_NanoDash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_NanoDash) == 0x1E00, "CCitadel_Ability_NanoDash size mismatch");
         }
     }
 }

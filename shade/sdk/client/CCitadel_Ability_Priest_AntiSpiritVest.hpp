@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1790
+             * Size: 0x1798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_AntiSpiritVest : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0xb0]; // 0x16d8, 0xb0 bytes
-                shade::sdk::entity2::GameTime_t m_tBuffRechargeTime; // 0x1788, 0x4 bytes
-                std::uint8_t pad_178c[0x4]; // 0x178c, 0x4 bytes
+                std::uint8_t pad_16e0[0xb0]; // 0x16e0, 0xb0 bytes
+                shade::sdk::entity2::GameTime_t m_tBuffRechargeTime; // 0x1790, 0x4 bytes
+                std::uint8_t pad_1794[0x4]; // 0x1794, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_AntiSpiritVest) == 0x1790, "CCitadel_Ability_Priest_AntiSpiritVest size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_AntiSpiritVest) == 0x1798, "CCitadel_Ability_Priest_AntiSpiritVest size mismatch");
         }
     }
 }

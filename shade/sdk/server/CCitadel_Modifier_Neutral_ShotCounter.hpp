@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Neutral_ShotCounter : public shade::sdk::server::CCitadelModifier {
             public:
-                std::int32_t m_nShotCount; // 0x0148, 0x4 bytes
-                float m_flCastDelay; // 0x014c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nCoreParticle; // 0x0150, 0x4 bytes
-                std::uint8_t pad_0154[0x4]; // 0x0154, 0x4 bytes
+                std::int32_t m_nShotCount; // 0x0150, 0x4 bytes
+                float m_flCastDelay; // 0x0154, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nCoreParticle; // 0x0158, 0x4 bytes
+                std::uint8_t pad_015c[0x4]; // 0x015c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Neutral_ShotCounter) == 0x158, "CCitadel_Modifier_Neutral_ShotCounter size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Neutral_ShotCounter) == 0x160, "CCitadel_Modifier_Neutral_ShotCounter size mismatch");
         }
     }
 }

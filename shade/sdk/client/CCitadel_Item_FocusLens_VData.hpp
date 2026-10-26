@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1638
+             * Size: 0x12c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_FocusLens_VData : public shade::sdk::client::CCitadel_Item_TrackingProjectileApplyModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x1608, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DamageModifier; // 0x1618, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ResistReductionModifier; // 0x1628, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SilenceModifier; // 0x1290, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DamageModifier; // 0x12a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ResistReductionModifier; // 0x12b0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_FocusLens_VData) == 0x1638, "CCitadel_Item_FocusLens_VData size mismatch");
+            static_assert(sizeof(CCitadel_Item_FocusLens_VData) == 0x12C0, "CCitadel_Item_FocusLens_VData size mismatch");
         }
     }
 }

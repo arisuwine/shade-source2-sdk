@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x170
+             * Size: 0x178
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Priest_CrossbowEquipped : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::server::CCitadel_Ability_Priest_CrossbowWeapon *m_pCrossbowWeapon; // 0x0148, 0x8 bytes
-                std::uint8_t pad_0150[0x20]; // 0x0150, 0x20 bytes
+                shade::sdk::server::CCitadel_Ability_Priest_CrossbowWeapon *m_pCrossbowWeapon; // 0x0150, 0x8 bytes
+                std::uint8_t pad_0158[0x20]; // 0x0158, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Priest_CrossbowEquipped) == 0x170, "CCitadel_Modifier_Priest_CrossbowEquipped size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Priest_CrossbowEquipped) == 0x178, "CCitadel_Modifier_Priest_CrossbowEquipped size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2b8
+             * Size: 0x2c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_GooseEggPassiveGold : public shade::sdk::server::CCitadel_Modifier_Intrinsic_Base {
             public:
-                std::uint8_t pad_0148[0x168]; // 0x0148, 0x168 bytes
-                float m_flCurrentThinkRate; // 0x02b0, 0x4 bytes
-                std::uint8_t pad_02b4[0x4]; // 0x02b4, 0x4 bytes
+                std::uint8_t pad_0150[0x168]; // 0x0150, 0x168 bytes
+                float m_flCurrentThinkRate; // 0x02b8, 0x4 bytes
+                std::uint8_t pad_02bc[0x4]; // 0x02bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_GooseEggPassiveGold) == 0x2B8, "CCitadel_Modifier_GooseEggPassiveGold size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_GooseEggPassiveGold) == 0x2C0, "CCitadel_Modifier_GooseEggPassiveGold size mismatch");
         }
     }
 }

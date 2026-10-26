@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1668
+             * Size: 0x12f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,35 +43,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_BearTrapVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ArmedParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x14c8, 0xe0 bytes
-                CSoundEventName m_strExpiredSound; // 0x15a8, 0x10 bytes
-                CSoundEventName m_strDestroyedSound; // 0x15b8, 0x10 bytes
-                CSoundEventName m_strArmSound; // 0x15c8, 0x10 bytes
-                CSoundEventName m_strProjBounceSound; // 0x15d8, 0x10 bytes
-                CSoundEventName m_strProjThrowLoopSound; // 0x15e8, 0x10 bytes
-                CSoundEventName m_strProjArmedLoopSound; // 0x15f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TetherModifier; // 0x1608, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1618, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UntargetableModifier; // 0x1628, 0x10 bytes
-                float m_flVerticalSpawnOffset; // 0x1638, 0x4 bytes
-                float m_flHorizontalSpawnOffset; // 0x163c, 0x4 bytes
-                float m_flDropDownRate; // 0x1640, 0x4 bytes
-                float m_flClimbHeight; // 0x1644, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x1648, 0x4 bytes
-                float m_flDeceleration; // 0x164c, 0x4 bytes
-                float m_flMinSpeedToArm; // 0x1650, 0x4 bytes
-                float m_flReflectSpeedReductionRatio; // 0x1654, 0x4 bytes
-                float m_flGroundYawSpeedRatio; // 0x1658, 0x4 bytes
-                float m_flAirYawSpeedRatio; // 0x165c, 0x4 bytes
-                float m_flAirPitchSpeedRatio; // 0x1660, 0x4 bytes
-                float m_flAirRollSpeedRatio; // 0x1664, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ArmedParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1150, 0xe0 bytes
+                CSoundEventName m_strExpiredSound; // 0x1230, 0x10 bytes
+                CSoundEventName m_strDestroyedSound; // 0x1240, 0x10 bytes
+                CSoundEventName m_strArmSound; // 0x1250, 0x10 bytes
+                CSoundEventName m_strProjBounceSound; // 0x1260, 0x10 bytes
+                CSoundEventName m_strProjThrowLoopSound; // 0x1270, 0x10 bytes
+                CSoundEventName m_strProjArmedLoopSound; // 0x1280, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TetherModifier; // 0x1290, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x12a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_UntargetableModifier; // 0x12b0, 0x10 bytes
+                float m_flVerticalSpawnOffset; // 0x12c0, 0x4 bytes
+                float m_flHorizontalSpawnOffset; // 0x12c4, 0x4 bytes
+                float m_flDropDownRate; // 0x12c8, 0x4 bytes
+                float m_flClimbHeight; // 0x12cc, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x12d0, 0x4 bytes
+                float m_flDeceleration; // 0x12d4, 0x4 bytes
+                float m_flMinSpeedToArm; // 0x12d8, 0x4 bytes
+                float m_flReflectSpeedReductionRatio; // 0x12dc, 0x4 bytes
+                float m_flGroundYawSpeedRatio; // 0x12e0, 0x4 bytes
+                float m_flAirYawSpeedRatio; // 0x12e4, 0x4 bytes
+                float m_flAirPitchSpeedRatio; // 0x12e8, 0x4 bytes
+                float m_flAirRollSpeedRatio; // 0x12ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_BearTrapVData) == 0x1668, "CCitadel_Ability_Priest_BearTrapVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_BearTrapVData) == 0x12F0, "CCitadel_Ability_Priest_BearTrapVData size mismatch");
         }
     }
 }

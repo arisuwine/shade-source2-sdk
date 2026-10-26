@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1900
+             * Size: 0x1588
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,44 +45,44 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Ratking_StandardBearerVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PlantedModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyFlagAuraModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AllyFlagAuraModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x1418, 0x10 bytes
-                CSoundEventName m_FlagPlantSound; // 0x1428, 0x10 bytes
-                CSoundEventName m_ChargeImpactSound; // 0x1438, 0x10 bytes
-                CSoundEventName m_strChargeLoopSound; // 0x1448, 0x10 bytes
-                float m_flPlantFlagZStart; // 0x1458, 0x4 bytes
-                float m_flDownTraceDistance; // 0x145c, 0x4 bytes
-                float m_flExplodeTimer; // 0x1460, 0x4 bytes
-                float m_flChargeAccelerationMeters; // 0x1464, 0x4 bytes
-                float m_flChargeFallGravityScale; // 0x1468, 0x4 bytes
-                float m_flTurnRateMax; // 0x146c, 0x4 bytes
-                float m_flTurnRateMin; // 0x1470, 0x4 bytes
-                float m_flFlagForwardDistance; // 0x1474, 0x4 bytes
-                float m_flNearGroundDistance; // 0x1478, 0x4 bytes
-                float m_flPlantAnticipationDistance; // 0x147c, 0x4 bytes
-                float m_flPlantLeapUpSpeed; // 0x1480, 0x4 bytes
-                float m_flPlantLeapRiseDuration; // 0x1484, 0x4 bytes
-                CPiecewiseCurve m_PlantLeapSpeedCurve; // 0x1488, 0x40 bytes
-                CPiecewiseCurve m_PlantLeapHorizontalCurve; // 0x14c8, 0x40 bytes
-                float m_flPlantLeapHoverDuration; // 0x1508, 0x4 bytes
-                float m_flPlantLeapSlamSpeed; // 0x150c, 0x4 bytes
-                float m_flPlantPopUpSpeed; // 0x1510, 0x4 bytes
-                float m_flPlantPopBackSpeed; // 0x1514, 0x4 bytes
-                float m_flRecoveryDelay; // 0x1518, 0x4 bytes
-                std::uint8_t pad_151c[0x4]; // 0x151c, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_FlagModel; // 0x1520, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1600, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AnticipationParticle; // 0x16e0, 0xe0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_ChargingCameraSequence; // 0x17c0, 0xa0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_PlantLeapCameraSequence; // 0x1860, 0xa0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PlantedModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyFlagAuraModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AllyFlagAuraModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CasterModifier; // 0x10a0, 0x10 bytes
+                CSoundEventName m_FlagPlantSound; // 0x10b0, 0x10 bytes
+                CSoundEventName m_ChargeImpactSound; // 0x10c0, 0x10 bytes
+                CSoundEventName m_strChargeLoopSound; // 0x10d0, 0x10 bytes
+                float m_flPlantFlagZStart; // 0x10e0, 0x4 bytes
+                float m_flDownTraceDistance; // 0x10e4, 0x4 bytes
+                float m_flExplodeTimer; // 0x10e8, 0x4 bytes
+                float m_flChargeAccelerationMeters; // 0x10ec, 0x4 bytes
+                float m_flChargeFallGravityScale; // 0x10f0, 0x4 bytes
+                float m_flTurnRateMax; // 0x10f4, 0x4 bytes
+                float m_flTurnRateMin; // 0x10f8, 0x4 bytes
+                float m_flFlagForwardDistance; // 0x10fc, 0x4 bytes
+                float m_flNearGroundDistance; // 0x1100, 0x4 bytes
+                float m_flPlantAnticipationDistance; // 0x1104, 0x4 bytes
+                float m_flPlantLeapUpSpeed; // 0x1108, 0x4 bytes
+                float m_flPlantLeapRiseDuration; // 0x110c, 0x4 bytes
+                CPiecewiseCurve m_PlantLeapSpeedCurve; // 0x1110, 0x40 bytes
+                CPiecewiseCurve m_PlantLeapHorizontalCurve; // 0x1150, 0x40 bytes
+                float m_flPlantLeapHoverDuration; // 0x1190, 0x4 bytes
+                float m_flPlantLeapSlamSpeed; // 0x1194, 0x4 bytes
+                float m_flPlantPopUpSpeed; // 0x1198, 0x4 bytes
+                float m_flPlantPopBackSpeed; // 0x119c, 0x4 bytes
+                float m_flRecoveryDelay; // 0x11a0, 0x4 bytes
+                std::uint8_t pad_11a4[0x4]; // 0x11a4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_FlagModel; // 0x11a8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1288, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AnticipationParticle; // 0x1368, 0xe0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_ChargingCameraSequence; // 0x1448, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_PlantLeapCameraSequence; // 0x14e8, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Ratking_StandardBearerVData) == 0x1900, "CCitadel_Ability_Ratking_StandardBearerVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Ratking_StandardBearerVData) == 0x1588, "CCitadel_Ability_Ratking_StandardBearerVData size mismatch");
         }
     }
 }

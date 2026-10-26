@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15b8
+             * Size: 0x1240
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityWreckerUltimateVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x14c8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x15a8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle; // 0x1150, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x1230, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityWreckerUltimateVData) == 0x15B8, "CAbilityWreckerUltimateVData size mismatch");
+            static_assert(sizeof(CAbilityWreckerUltimateVData) == 0x1240, "CAbilityWreckerUltimateVData size mismatch");
         }
     }
 }

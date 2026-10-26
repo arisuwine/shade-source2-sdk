@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1548
+             * Size: 0x11d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_AblativeCoatVData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RestoreEffectModifier; // 0x14f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnTakeDamageEffectModifier; // 0x1508, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnBreakEffectModifier; // 0x1518, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ResistBuffModifier; // 0x1528, 0x10 bytes
-                float m_flOnTakeDamageEffectDuration; // 0x1538, 0x4 bytes
-                float m_flOnBreakEffectDuration; // 0x153c, 0x4 bytes
-                float m_flOnRestoreEffectDuration; // 0x1540, 0x4 bytes
-                std::uint8_t pad_1544[0x4]; // 0x1544, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RestoreEffectModifier; // 0x1180, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnTakeDamageEffectModifier; // 0x1190, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_OnBreakEffectModifier; // 0x11a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ResistBuffModifier; // 0x11b0, 0x10 bytes
+                float m_flOnTakeDamageEffectDuration; // 0x11c0, 0x4 bytes
+                float m_flOnBreakEffectDuration; // 0x11c4, 0x4 bytes
+                float m_flOnRestoreEffectDuration; // 0x11c8, 0x4 bytes
+                std::uint8_t pad_11cc[0x4]; // 0x11cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_AblativeCoatVData) == 0x1548, "CCitadel_ArmorUpgrade_AblativeCoatVData size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_AblativeCoatVData) == 0x11D0, "CCitadel_ArmorUpgrade_AblativeCoatVData size mismatch");
         }
     }
 }

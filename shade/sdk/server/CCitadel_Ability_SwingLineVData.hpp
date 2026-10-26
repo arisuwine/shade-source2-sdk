@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1540
+             * Size: 0x11c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,34 +43,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_SwingLineVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SwingModifier; // 0x13e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingAttachParticle; // 0x13f8, 0xe0 bytes
-                CSoundEventName m_strDaggerHitSound; // 0x14d8, 0x10 bytes
-                CSoundEventName m_strDaggerExplodeSound; // 0x14e8, 0x10 bytes
-                float m_flSwingStartDelay; // 0x14f8, 0x4 bytes
-                float m_flSwingMaxDuration; // 0x14fc, 0x4 bytes
-                float m_flMass; // 0x1500, 0x4 bytes
-                float m_flBodyForwardForce; // 0x1504, 0x4 bytes
-                float m_flCameraForwardForce; // 0x1508, 0x4 bytes
-                float m_flInputForce; // 0x150c, 0x4 bytes
-                float m_flPullForce; // 0x1510, 0x4 bytes
-                float m_flGravityForce; // 0x1514, 0x4 bytes
-                float m_flDampingConstant; // 0x1518, 0x4 bytes
-                float m_flIdealSpringLengthOverride; // 0x151c, 0x4 bytes
-                float m_flTensionSpringConstant; // 0x1520, 0x4 bytes
-                float m_flMaxSpringForce; // 0x1524, 0x4 bytes
-                float m_flMaxSpeed; // 0x1528, 0x4 bytes
-                float m_flWhiskerLength; // 0x152c, 0x4 bytes
-                float m_flWhiskerOffset; // 0x1530, 0x4 bytes
-                float m_flWhiskerForce; // 0x1534, 0x4 bytes
-                float m_flWhiskerPositionVerticalOffset; // 0x1538, 0x4 bytes
-                std::uint8_t pad_153c[0x4]; // 0x153c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SwingModifier; // 0x1070, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingAttachParticle; // 0x1080, 0xe0 bytes
+                CSoundEventName m_strDaggerHitSound; // 0x1160, 0x10 bytes
+                CSoundEventName m_strDaggerExplodeSound; // 0x1170, 0x10 bytes
+                float m_flSwingStartDelay; // 0x1180, 0x4 bytes
+                float m_flSwingMaxDuration; // 0x1184, 0x4 bytes
+                float m_flMass; // 0x1188, 0x4 bytes
+                float m_flBodyForwardForce; // 0x118c, 0x4 bytes
+                float m_flCameraForwardForce; // 0x1190, 0x4 bytes
+                float m_flInputForce; // 0x1194, 0x4 bytes
+                float m_flPullForce; // 0x1198, 0x4 bytes
+                float m_flGravityForce; // 0x119c, 0x4 bytes
+                float m_flDampingConstant; // 0x11a0, 0x4 bytes
+                float m_flIdealSpringLengthOverride; // 0x11a4, 0x4 bytes
+                float m_flTensionSpringConstant; // 0x11a8, 0x4 bytes
+                float m_flMaxSpringForce; // 0x11ac, 0x4 bytes
+                float m_flMaxSpeed; // 0x11b0, 0x4 bytes
+                float m_flWhiskerLength; // 0x11b4, 0x4 bytes
+                float m_flWhiskerOffset; // 0x11b8, 0x4 bytes
+                float m_flWhiskerForce; // 0x11bc, 0x4 bytes
+                float m_flWhiskerPositionVerticalOffset; // 0x11c0, 0x4 bytes
+                std::uint8_t pad_11c4[0x4]; // 0x11c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_SwingLineVData) == 0x1540, "CCitadel_Ability_SwingLineVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_SwingLineVData) == 0x11C8, "CCitadel_Ability_SwingLineVData size mismatch");
         }
     }
 }

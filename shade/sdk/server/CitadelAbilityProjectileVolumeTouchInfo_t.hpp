@@ -28,22 +28,20 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18
+             * Size: 0x10
              * Alignment: 0xff
              * Has Trivial Destructor
              */
             #pragma pack(push, 1)
             struct CitadelAbilityProjectileVolumeTouchInfo_t {
-                bool m_bIsProjectileAsBullet; // 0x0000, 0x1 bytes
-                std::uint8_t pad_0001[0x7]; // 0x0001, 0x7 bytes
-                shade::sdk::server::CBaseEntity *m_pProjectile; // 0x0008, 0x8 bytes
-                void *m_pBullet; // 0x0010, 0x8 bytes
+                shade::sdk::server::CBaseEntity *m_pProjectile; // 0x0000, 0x8 bytes
+                void *m_pBullet; // 0x0008, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CitadelAbilityProjectileVolumeTouchInfo_t) == 0x18, "CitadelAbilityProjectileVolumeTouchInfo_t size mismatch");
+            static_assert(sizeof(CitadelAbilityProjectileVolumeTouchInfo_t) == 0x10, "CitadelAbilityProjectileVolumeTouchInfo_t size mismatch");
         }
     }
 }

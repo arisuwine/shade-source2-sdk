@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1718
+             * Size: 0x1720
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,30 +40,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Dash : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                float m_flDashAngle; // 0x16d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_GroundDashExecuteTime; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_GroundDashCancelExecuteTime; // 0x16e0, 0x4 bytes
-                std::int32_t m_nLastGroundDashTick; // 0x16e4, 0x4 bytes
-                bool m_bAnglesControlActive; // 0x16e8, 0x1 bytes
-                std::uint8_t pad_16e9[0x3]; // 0x16e9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flAirDashCastTime; // 0x16ec, 0x4 bytes
-                VectorWS m_flAirDashStartPos; // 0x16f0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flAirDashDragStartTime; // 0x16fc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flParryCancelSlideEndTime; // 0x1700, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flParryCancelAirGlideStartTime; // 0x1704, 0x4 bytes
-                std::int8_t m_nConsecutiveAirDashes; // 0x1708, 0x1 bytes
-                std::int8_t m_nConsecutiveDownDashes; // 0x1709, 0x1 bytes
-                bool m_bDownAirDash; // 0x170a, 0x1 bytes
-                std::uint8_t pad_170b[0x1]; // 0x170b, 0x1 bytes
-                CHandle<shade::sdk::client::CCitadel_Ability_Jump> m_hJumpAbility; // 0x170c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0x1710, 0x4 bytes
-                std::uint8_t pad_1714[0x4]; // 0x1714, 0x4 bytes
+                float m_flDashAngle; // 0x16e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_GroundDashExecuteTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_GroundDashCancelExecuteTime; // 0x16e8, 0x4 bytes
+                std::int32_t m_nLastGroundDashTick; // 0x16ec, 0x4 bytes
+                bool m_bAnglesControlActive; // 0x16f0, 0x1 bytes
+                std::uint8_t pad_16f1[0x3]; // 0x16f1, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flAirDashCastTime; // 0x16f4, 0x4 bytes
+                VectorWS m_flAirDashStartPos; // 0x16f8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flAirDashDragStartTime; // 0x1704, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryCancelSlideEndTime; // 0x1708, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flParryCancelAirGlideStartTime; // 0x170c, 0x4 bytes
+                std::int8_t m_nConsecutiveAirDashes; // 0x1710, 0x1 bytes
+                std::int8_t m_nConsecutiveDownDashes; // 0x1711, 0x1 bytes
+                bool m_bDownAirDash; // 0x1712, 0x1 bytes
+                std::uint8_t pad_1713[0x1]; // 0x1713, 0x1 bytes
+                CHandle<shade::sdk::client::CCitadel_Ability_Jump> m_hJumpAbility; // 0x1714, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0x1718, 0x4 bytes
+                std::uint8_t pad_171c[0x4]; // 0x171c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Dash) == 0x1718, "CCitadel_Ability_Dash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Dash) == 0x1720, "CCitadel_Ability_Dash size mismatch");
         }
     }
 }

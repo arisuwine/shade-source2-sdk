@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1928
+             * Size: 0x1948
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,23 +32,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_PullBrush : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x160]; // 0x14a0, 0x160 bytes
-                float m_flAccumulatedDrawDistance; // 0x1600, 0x4 bytes
-                bool m_bPainting; // 0x1604, 0x1 bytes
-                std::uint8_t pad_1605[0x3]; // 0x1605, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tStopPaintingTime; // 0x1608, 0x4 bytes
-                std::uint8_t pad_160c[0xc]; // 0x160c, 0xc bytes
-                CUtlVector<VectorWS> m_vecBrushPositions; // 0x1618, 0x18 bytes
-                std::uint8_t pad_1630[0x1c]; // 0x1630, 0x1c bytes
-                Vector m_vecBrushVelocity; // 0x164c, 0xc bytes
-                VectorWS m_vecBrushCurrentPosition; // 0x1658, 0xc bytes
-                std::uint8_t pad_1664[0x2c4]; // 0x1664, 0x2c4 bytes
+                std::uint8_t pad_14a8[0x160]; // 0x14a8, 0x160 bytes
+                float m_flAccumulatedDrawDistance; // 0x1608, 0x4 bytes
+                bool m_bPainting; // 0x160c, 0x1 bytes
+                std::uint8_t pad_160d[0x3]; // 0x160d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tStopPaintingTime; // 0x1610, 0x4 bytes
+                std::uint8_t pad_1614[0xc]; // 0x1614, 0xc bytes
+                CUtlVector<VectorWS> m_vecBrushPositions; // 0x1620, 0x18 bytes
+                std::uint8_t pad_1638[0x1c]; // 0x1638, 0x1c bytes
+                Vector m_vecBrushVelocity; // 0x1654, 0xc bytes
+                VectorWS m_vecBrushCurrentPosition; // 0x1660, 0xc bytes
+                std::uint8_t pad_166c[0x2dc]; // 0x166c, 0x2dc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_PullBrush) == 0x1928, "CCitadel_Ability_Artist_PullBrush size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_PullBrush) == 0x1948, "CCitadel_Ability_Artist_PullBrush size mismatch");
         }
     }
 }

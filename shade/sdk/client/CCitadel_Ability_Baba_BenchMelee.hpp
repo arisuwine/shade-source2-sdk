@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18b0
+             * Size: 0x18b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,29 +34,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_BenchMelee : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::EBabaBenchMeleeState m_eState; // 0x16d8, 0x1 bytes
-                shade::sdk::client::EBabaBenchMeleeAttackType m_eAttackType; // 0x16d9, 0x1 bytes
-                std::uint8_t pad_16da[0x2]; // 0x16da, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCommitTime; // 0x16e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x16e4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextLightAttackAllowedTime; // 0x16e8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextHeavyAttackAllowedTime; // 0x16ec, 0x4 bytes
-                Vector m_vDashDir; // 0x16f0, 0xc bytes
-                bool m_bDiveApplied; // 0x16fc, 0x1 bytes
-                std::uint8_t pad_16fd[0x3]; // 0x16fd, 0x3 bytes
-                Vector m_vDashStartVelocity; // 0x1700, 0xc bytes
-                bool m_bAttackImpulseApplied; // 0x170c, 0x1 bytes
-                std::uint8_t pad_170d[0x3]; // 0x170d, 0x3 bytes
-                std::int32_t m_nAirborneAttackImpulses; // 0x1710, 0x4 bytes
-                QAngle m_angForced; // 0x1714, 0xc bytes
-                std::uint8_t pad_1720[0x190]; // 0x1720, 0x190 bytes
+                shade::sdk::client::EBabaBenchMeleeState m_eState; // 0x16e0, 0x1 bytes
+                shade::sdk::client::EBabaBenchMeleeAttackType m_eAttackType; // 0x16e1, 0x1 bytes
+                std::uint8_t pad_16e2[0x2]; // 0x16e2, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCommitTime; // 0x16e8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x16ec, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextLightAttackAllowedTime; // 0x16f0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextHeavyAttackAllowedTime; // 0x16f4, 0x4 bytes
+                Vector m_vDashDir; // 0x16f8, 0xc bytes
+                bool m_bDiveApplied; // 0x1704, 0x1 bytes
+                std::uint8_t pad_1705[0x3]; // 0x1705, 0x3 bytes
+                Vector m_vDashStartVelocity; // 0x1708, 0xc bytes
+                bool m_bAttackImpulseApplied; // 0x1714, 0x1 bytes
+                std::uint8_t pad_1715[0x3]; // 0x1715, 0x3 bytes
+                std::int32_t m_nAirborneAttackImpulses; // 0x1718, 0x4 bytes
+                QAngle m_angForced; // 0x171c, 0xc bytes
+                std::uint8_t pad_1728[0x190]; // 0x1728, 0x190 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_BenchMelee) == 0x18B0, "CCitadel_Ability_Baba_BenchMelee size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_BenchMelee) == 0x18B8, "CCitadel_Ability_Baba_BenchMelee size mismatch");
         }
     }
 }

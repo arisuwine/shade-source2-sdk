@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1848
+             * Size: 0x1850
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -33,20 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Melee_Base : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bUsingThisMelee; // 0x16d8, 0x1 bytes
-                bool m_bUsingMeleeTagActive; // 0x16d9, 0x1 bytes
-                bool m_bHitWithThisAttack; // 0x16da, 0x1 bytes
-                std::uint8_t pad_16db[0x1]; // 0x16db, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0x16e0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x16e4, 0x4 bytes
-                std::uint8_t pad_16e8[0x160]; // 0x16e8, 0x160 bytes
+                bool m_bUsingThisMelee; // 0x16e0, 0x1 bytes
+                bool m_bUsingMeleeTagActive; // 0x16e1, 0x1 bytes
+                bool m_bHitWithThisAttack; // 0x16e2, 0x1 bytes
+                std::uint8_t pad_16e3[0x1]; // 0x16e3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0x16e8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x16ec, 0x4 bytes
+                std::uint8_t pad_16f0[0x160]; // 0x16f0, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Melee_Base) == 0x1848, "CCitadel_Ability_Melee_Base size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Melee_Base) == 0x1850, "CCitadel_Ability_Melee_Base size mismatch");
         }
     }
 }

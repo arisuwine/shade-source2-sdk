@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a68
+             * Size: 0x1a70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Boho_SkipGrenade : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::ShotID_t m_tInitialShotID; // 0x16d8, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x16dc, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16e8, 0xc bytes
-                std::uint8_t pad_16f4[0x374]; // 0x16f4, 0x374 bytes
+                shade::sdk::client::ShotID_t m_tInitialShotID; // 0x16e0, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x16e4, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16f0, 0xc bytes
+                std::uint8_t pad_16fc[0x374]; // 0x16fc, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Boho_SkipGrenade) == 0x1A68, "CCitadel_Ability_Boho_SkipGrenade size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Boho_SkipGrenade) == 0x1A70, "CCitadel_Ability_Boho_SkipGrenade size mismatch");
         }
     }
 }

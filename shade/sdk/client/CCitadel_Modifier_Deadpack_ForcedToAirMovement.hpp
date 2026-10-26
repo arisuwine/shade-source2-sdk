@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Deadpack_ForcedToAirMovement : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bForceApplied; // 0x0138, 0x1 bytes
-                std::uint8_t pad_0139[0x3]; // 0x0139, 0x3 bytes
-                Vector m_vForwardAtCast; // 0x013c, 0xc bytes
-                bool m_bDashCancelled; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x7]; // 0x0149, 0x7 bytes
+                bool m_bForceApplied; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x3]; // 0x0141, 0x3 bytes
+                Vector m_vForwardAtCast; // 0x0144, 0xc bytes
+                bool m_bDashCancelled; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x7]; // 0x0151, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Deadpack_ForcedToAirMovement) == 0x150, "CCitadel_Modifier_Deadpack_ForcedToAirMovement size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Deadpack_ForcedToAirMovement) == 0x158, "CCitadel_Modifier_Deadpack_ForcedToAirMovement size mismatch");
         }
     }
 }

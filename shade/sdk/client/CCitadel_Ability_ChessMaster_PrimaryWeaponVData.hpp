@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17d8
+             * Size: 0x1460
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ChessMaster_PrimaryWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strBishopTracer; // 0x16d0, 0xe0 bytes
-                float m_flMoveSlashThreshold; // 0x17b0, 0x4 bytes
-                std::uint8_t pad_17b4[0x4]; // 0x17b4, 0x4 bytes
-                CSoundEventName m_strBishopCommandSound; // 0x17b8, 0x10 bytes
-                float m_flHorizontalOffsetPerShot; // 0x17c8, 0x4 bytes
-                std::int32_t m_nTicksToHoldShuffleTime; // 0x17cc, 0x4 bytes
-                CGlobalSymbol m_strAG2HeroActionGainedBullets; // 0x17d0, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strBishopTracer; // 0x1358, 0xe0 bytes
+                float m_flMoveSlashThreshold; // 0x1438, 0x4 bytes
+                std::uint8_t pad_143c[0x4]; // 0x143c, 0x4 bytes
+                CSoundEventName m_strBishopCommandSound; // 0x1440, 0x10 bytes
+                float m_flHorizontalOffsetPerShot; // 0x1450, 0x4 bytes
+                std::int32_t m_nTicksToHoldShuffleTime; // 0x1454, 0x4 bytes
+                CGlobalSymbol m_strAG2HeroActionGainedBullets; // 0x1458, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ChessMaster_PrimaryWeaponVData) == 0x17D8, "CCitadel_Ability_ChessMaster_PrimaryWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ChessMaster_PrimaryWeaponVData) == 0x1460, "CCitadel_Ability_ChessMaster_PrimaryWeaponVData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x218
+             * Size: 0x220
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_EtherealBullets_BulletBuff : public shade::sdk::server::CCitadelModifier {
             public:
-                std::int32_t m_iHitCount; // 0x0148, 0x4 bytes
-                shade::sdk::client::ShotID_t m_shotProced; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0xc8]; // 0x0150, 0xc8 bytes
+                std::int32_t m_iHitCount; // 0x0150, 0x4 bytes
+                shade::sdk::client::ShotID_t m_shotProced; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0xc8]; // 0x0158, 0xc8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_EtherealBullets_BulletBuff) == 0x218, "CCitadel_Modifier_EtherealBullets_BulletBuff size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_EtherealBullets_BulletBuff) == 0x220, "CCitadel_Modifier_EtherealBullets_BulletBuff size mismatch");
         }
     }
 }

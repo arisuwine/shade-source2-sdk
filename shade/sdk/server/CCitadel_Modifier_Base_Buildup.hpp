@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Base_Buildup : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastBuildupAppliedTime; // 0x0148, 0x4 bytes
-                float m_flDelayedDieTimeRemaining; // 0x014c, 0x4 bytes
-                bool m_bInDelayTime; // 0x0150, 0x1 bytes
-                std::uint8_t pad_0151[0x3]; // 0x0151, 0x3 bytes
-                float m_flBuildUpDecayDelayFromWeaponCycleTime; // 0x0154, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastBuildupAppliedTime; // 0x0150, 0x4 bytes
+                float m_flDelayedDieTimeRemaining; // 0x0154, 0x4 bytes
+                bool m_bInDelayTime; // 0x0158, 0x1 bytes
+                std::uint8_t pad_0159[0x3]; // 0x0159, 0x3 bytes
+                float m_flBuildUpDecayDelayFromWeaponCycleTime; // 0x015c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Base_Buildup) == 0x158, "CCitadel_Modifier_Base_Buildup size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Base_Buildup) == 0x160, "CCitadel_Modifier_Base_Buildup size mismatch");
         }
     }
 }

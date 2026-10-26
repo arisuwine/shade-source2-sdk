@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2000
+             * Size: 0x2008
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_Ult : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x2c]; // 0x16d8, 0x2c bytes
-                std::uint8_t m_nSlamTravelType; // 0x1704, 0x1 bytes
-                std::uint8_t pad_1705[0x3]; // 0x1705, 0x3 bytes
-                float m_flDistanceToTravel; // 0x1708, 0x4 bytes
-                bool m_bHoldingAbilityButton; // 0x170c, 0x1 bytes
-                std::uint8_t pad_170d[0x8f3]; // 0x170d, 0x8f3 bytes
+                std::uint8_t pad_16e0[0x2c]; // 0x16e0, 0x2c bytes
+                std::uint8_t m_nSlamTravelType; // 0x170c, 0x1 bytes
+                std::uint8_t pad_170d[0x3]; // 0x170d, 0x3 bytes
+                float m_flDistanceToTravel; // 0x1710, 0x4 bytes
+                bool m_bHoldingAbilityButton; // 0x1714, 0x1 bytes
+                std::uint8_t pad_1715[0x8f3]; // 0x1715, 0x8f3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_Ult) == 0x2000, "CCitadel_Ability_PunkGoat_Ult size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_Ult) == 0x2008, "CCitadel_Ability_PunkGoat_Ult size mismatch");
         }
     }
 }

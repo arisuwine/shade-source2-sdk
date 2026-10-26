@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d58
+             * Size: 0x1d60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,19 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_RocketBarrage : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::CCitadelAutoScaledTime m_flBarrageEndTime; // 0x16d8, 0x18 bytes
-                std::uint8_t pad_16f0[0x630]; // 0x16f0, 0x630 bytes
-                float m_flCurrentTimeScale; // 0x1d20, 0x4 bytes
-                VectorWS m_vecAimPos; // 0x1d24, 0xc bytes
-                Vector m_vecAimVel; // 0x1d30, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastUpdateTime; // 0x1d3c, 0x4 bytes
-                std::uint8_t pad_1d40[0x18]; // 0x1d40, 0x18 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flBarrageEndTime; // 0x16e0, 0x18 bytes
+                std::uint8_t pad_16f8[0x630]; // 0x16f8, 0x630 bytes
+                float m_flCurrentTimeScale; // 0x1d28, 0x4 bytes
+                VectorWS m_vecAimPos; // 0x1d2c, 0xc bytes
+                Vector m_vecAimVel; // 0x1d38, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastUpdateTime; // 0x1d44, 0x4 bytes
+                std::uint8_t pad_1d48[0x18]; // 0x1d48, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_RocketBarrage) == 0x1D58, "CCitadel_Ability_RocketBarrage size mismatch");
+            static_assert(sizeof(CCitadel_Ability_RocketBarrage) == 0x1D60, "CCitadel_Ability_RocketBarrage size mismatch");
         }
     }
 }

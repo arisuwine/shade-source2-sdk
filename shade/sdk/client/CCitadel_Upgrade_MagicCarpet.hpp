@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1848
+             * Size: 0x1850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Upgrade_MagicCarpet : public shade::sdk::client::CCitadel_Item {
             public:
-                shade::sdk::entity2::GameTime_t m_flFlyingStartTime; // 0x16d8, 0x4 bytes
-                std::uint8_t pad_16dc[0x164]; // 0x16dc, 0x164 bytes
-                bool m_bFlying; // 0x1840, 0x1 bytes
-                bool m_bSummoning; // 0x1841, 0x1 bytes
-                std::uint8_t pad_1842[0x6]; // 0x1842, 0x6 bytes
+                shade::sdk::entity2::GameTime_t m_flFlyingStartTime; // 0x16e0, 0x4 bytes
+                std::uint8_t pad_16e4[0x164]; // 0x16e4, 0x164 bytes
+                bool m_bFlying; // 0x1848, 0x1 bytes
+                bool m_bSummoning; // 0x1849, 0x1 bytes
+                std::uint8_t pad_184a[0x6]; // 0x184a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Upgrade_MagicCarpet) == 0x1848, "CCitadel_Upgrade_MagicCarpet size mismatch");
+            static_assert(sizeof(CCitadel_Upgrade_MagicCarpet) == 0x1850, "CCitadel_Upgrade_MagicCarpet size mismatch");
         }
     }
 }

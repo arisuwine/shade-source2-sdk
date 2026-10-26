@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1bb0
+             * Size: 0x1bb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,20 +40,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_MultiHit : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::server::CCitadelBaseAbility *m_pTriggerAbility; // 0x14a0, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x14a8, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_tMultiHitEndTime; // 0x14c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tSubCooldownEndTime; // 0x14c4, 0x4 bytes
-                bool m_bActive; // 0x14c8, 0x1 bytes
-                std::uint8_t pad_14c9[0x3]; // 0x14c9, 0x3 bytes
-                std::int32_t m_iCurrentHits; // 0x14cc, 0x4 bytes
-                std::uint8_t pad_14d0[0x6e0]; // 0x14d0, 0x6e0 bytes
+                shade::sdk::server::CCitadelBaseAbility *m_pTriggerAbility; // 0x14a8, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x14b0, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_tMultiHitEndTime; // 0x14c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tSubCooldownEndTime; // 0x14cc, 0x4 bytes
+                bool m_bActive; // 0x14d0, 0x1 bytes
+                std::uint8_t pad_14d1[0x3]; // 0x14d1, 0x3 bytes
+                std::int32_t m_iCurrentHits; // 0x14d4, 0x4 bytes
+                std::uint8_t pad_14d8[0x6e0]; // 0x14d8, 0x6e0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_MultiHit) == 0x1BB0, "CCitadel_Ability_Artist_MultiHit size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_MultiHit) == 0x1BB8, "CCitadel_Ability_Artist_MultiHit size mismatch");
         }
     }
 }

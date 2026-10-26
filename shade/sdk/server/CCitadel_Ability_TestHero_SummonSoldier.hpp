@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17b8
+             * Size: 0x17c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TestHero_SummonSoldier : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetsInCone; // 0x14a0, 0x18 bytes
-                std::uint8_t pad_14b8[0x300]; // 0x14b8, 0x300 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetsInCone; // 0x14a8, 0x18 bytes
+                std::uint8_t pad_14c0[0x300]; // 0x14c0, 0x300 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TestHero_SummonSoldier) == 0x17B8, "CCitadel_Ability_TestHero_SummonSoldier size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TestHero_SummonSoldier) == 0x17C0, "CCitadel_Ability_TestHero_SummonSoldier size mismatch");
         }
     }
 }

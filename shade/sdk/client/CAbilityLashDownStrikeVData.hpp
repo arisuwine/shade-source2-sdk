@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19d0
+             * Size: 0x1658
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,42 +43,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityLashDownStrikeVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompLineParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompLineObstructedParticle; // 0x1688, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompImpactParticle; // 0x1768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargingParticle; // 0x1848, 0xe0 bytes
-                CSoundEventName m_StompExplosionSound; // 0x1928, 0x10 bytes
-                CSoundEventName m_StompEnemyImpactSound; // 0x1938, 0x10 bytes
-                CSoundEventName m_strFallCollideImpactSound; // 0x1948, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DownStrikeModifier; // 0x1958, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ImpactModifier; // 0x1968, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DragModifier; // 0x1978, 0x10 bytes
-                float m_flHeightUILingerTime; // 0x1988, 0x4 bytes
-                float m_flDamageFrustumHalfWidth; // 0x198c, 0x4 bytes
-                float m_flDamageFrustumAngle; // 0x1990, 0x4 bytes
-                float m_flDamageWaveSpeed; // 0x1994, 0x4 bytes
-                float m_flDamageTraceProbeDamageRadius; // 0x1998, 0x4 bytes
-                float m_flDamageTraceProbeWorldRadius; // 0x199c, 0x4 bytes
-                float m_flDamageTraceProbeStepUpHeight; // 0x19a0, 0x4 bytes
-                float m_flDamageTraceProbeStepDownHeight; // 0x19a4, 0x4 bytes
-                float m_flDamageTraceProbeDropDownRate; // 0x19a8, 0x4 bytes
-                float m_flInitialDamageRadiusInMeters; // 0x19ac, 0x4 bytes
-                std::int32_t m_nGroundCrackGap; // 0x19b0, 0x4 bytes
-                float m_flGroupLengthTolerance; // 0x19b4, 0x4 bytes
-                float m_flDamageEffectScaleMin; // 0x19b8, 0x4 bytes
-                float m_flDamageEffectScaleMax; // 0x19bc, 0x4 bytes
-                float m_flTrackAmount; // 0x19c0, 0x4 bytes
-                float m_flCollideRadius; // 0x19c4, 0x4 bytes
-                float m_flMaxTurnAmount; // 0x19c8, 0x4 bytes
-                std::uint8_t pad_19cc[0x4]; // 0x19cc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompLineParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompLineObstructedParticle; // 0x1310, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompImpactParticle; // 0x13f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargingParticle; // 0x14d0, 0xe0 bytes
+                CSoundEventName m_StompExplosionSound; // 0x15b0, 0x10 bytes
+                CSoundEventName m_StompEnemyImpactSound; // 0x15c0, 0x10 bytes
+                CSoundEventName m_strFallCollideImpactSound; // 0x15d0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DownStrikeModifier; // 0x15e0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_ImpactModifier; // 0x15f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CBaseModifier> m_DragModifier; // 0x1600, 0x10 bytes
+                float m_flHeightUILingerTime; // 0x1610, 0x4 bytes
+                float m_flDamageFrustumHalfWidth; // 0x1614, 0x4 bytes
+                float m_flDamageFrustumAngle; // 0x1618, 0x4 bytes
+                float m_flDamageWaveSpeed; // 0x161c, 0x4 bytes
+                float m_flDamageTraceProbeDamageRadius; // 0x1620, 0x4 bytes
+                float m_flDamageTraceProbeWorldRadius; // 0x1624, 0x4 bytes
+                float m_flDamageTraceProbeStepUpHeight; // 0x1628, 0x4 bytes
+                float m_flDamageTraceProbeStepDownHeight; // 0x162c, 0x4 bytes
+                float m_flDamageTraceProbeDropDownRate; // 0x1630, 0x4 bytes
+                float m_flInitialDamageRadiusInMeters; // 0x1634, 0x4 bytes
+                std::int32_t m_nGroundCrackGap; // 0x1638, 0x4 bytes
+                float m_flGroupLengthTolerance; // 0x163c, 0x4 bytes
+                float m_flDamageEffectScaleMin; // 0x1640, 0x4 bytes
+                float m_flDamageEffectScaleMax; // 0x1644, 0x4 bytes
+                float m_flTrackAmount; // 0x1648, 0x4 bytes
+                float m_flCollideRadius; // 0x164c, 0x4 bytes
+                float m_flMaxTurnAmount; // 0x1650, 0x4 bytes
+                std::uint8_t pad_1654[0x4]; // 0x1654, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityLashDownStrikeVData) == 0x19D0, "CAbilityLashDownStrikeVData size mismatch");
+            static_assert(sizeof(CAbilityLashDownStrikeVData) == 0x1658, "CAbilityLashDownStrikeVData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b90
+             * Size: 0x1b98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier3Boss_RocketBarrage : public shade::sdk::server::CTier3BossAbility {
             public:
-                std::int32_t m_nGrenadeIndex; // 0x14a0, 0x4 bytes
-                std::int32_t m_nTotalGrenades; // 0x14a4, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x14a8, 0x1 bytes
-                std::uint8_t pad_14a9[0x6e7]; // 0x14a9, 0x6e7 bytes
+                std::int32_t m_nGrenadeIndex; // 0x14a8, 0x4 bytes
+                std::int32_t m_nTotalGrenades; // 0x14ac, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hShootPos; // 0x14b0, 0x1 bytes
+                std::uint8_t pad_14b1[0x6e7]; // 0x14b1, 0x6e7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier3Boss_RocketBarrage) == 0x1B90, "CCitadel_Ability_Tier3Boss_RocketBarrage size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier3Boss_RocketBarrage) == 0x1B98, "CCitadel_Ability_Tier3Boss_RocketBarrage size mismatch");
         }
     }
 }

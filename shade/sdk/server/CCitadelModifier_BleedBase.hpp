@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2b0
+             * Size: 0x2b8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -33,15 +33,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelModifier_BleedBase : public shade::sdk::server::CCitadelModifier {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastTickTime; // 0x0148, 0x4 bytes
-                float m_flBleedPercent; // 0x014c, 0x4 bytes
-                std::uint8_t pad_0150[0x160]; // 0x0150, 0x160 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTickTime; // 0x0150, 0x4 bytes
+                float m_flBleedPercent; // 0x0154, 0x4 bytes
+                std::uint8_t pad_0158[0x160]; // 0x0158, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelModifier_BleedBase) == 0x2B0, "CCitadelModifier_BleedBase size mismatch");
+            static_assert(sizeof(CCitadelModifier_BleedBase) == 0x2B8, "CCitadelModifier_BleedBase size mismatch");
         }
     }
 }

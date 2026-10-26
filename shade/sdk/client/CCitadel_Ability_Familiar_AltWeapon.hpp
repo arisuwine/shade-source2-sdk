@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ba8
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_AltWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1970[0x230]; // 0x1970, 0x230 bytes
-                std::int16_t m_nAmmoToBeConsumedForChannel; // 0x1ba0, 0x2 bytes
-                bool m_bForceFiring; // 0x1ba2, 0x1 bytes
-                std::uint8_t pad_1ba3[0x5]; // 0x1ba3, 0x5 bytes
+                std::uint8_t pad_1978[0x230]; // 0x1978, 0x230 bytes
+                std::int16_t m_nAmmoToBeConsumedForChannel; // 0x1ba8, 0x2 bytes
+                bool m_bForceFiring; // 0x1baa, 0x1 bytes
+                std::uint8_t pad_1bab[0x5]; // 0x1bab, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_AltWeapon) == 0x1BA8, "CCitadel_Ability_Familiar_AltWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_AltWeapon) == 0x1BB0, "CCitadel_Ability_Familiar_AltWeapon size mismatch");
         }
     }
 }

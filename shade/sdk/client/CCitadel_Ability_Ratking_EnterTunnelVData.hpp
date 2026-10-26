@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1410
+             * Size: 0x1098
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Ratking_EnterTunnelVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                Vector m_vTeleportOffset; // 0x13e8, 0xc bytes
-                Vector m_vStartingOffset; // 0x13f4, 0xc bytes
-                float m_flMinPushIntoWallDot; // 0x1400, 0x4 bytes
-                float m_flUninterruptableAfter; // 0x1404, 0x4 bytes
-                float m_flMoveIntoPositionSpringStrength; // 0x1408, 0x4 bytes
-                std::uint8_t pad_140c[0x4]; // 0x140c, 0x4 bytes
+                Vector m_vTeleportOffset; // 0x1070, 0xc bytes
+                Vector m_vStartingOffset; // 0x107c, 0xc bytes
+                float m_flMinPushIntoWallDot; // 0x1088, 0x4 bytes
+                float m_flUninterruptableAfter; // 0x108c, 0x4 bytes
+                float m_flMoveIntoPositionSpringStrength; // 0x1090, 0x4 bytes
+                std::uint8_t pad_1094[0x4]; // 0x1094, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Ratking_EnterTunnelVData) == 0x1410, "CCitadel_Ability_Ratking_EnterTunnelVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Ratking_EnterTunnelVData) == 0x1098, "CCitadel_Ability_Ratking_EnterTunnelVData size mismatch");
         }
     }
 }

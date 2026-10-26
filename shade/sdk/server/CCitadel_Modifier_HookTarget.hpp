@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x3a8
+             * Size: 0x3b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_HookTarget : public shade::sdk::server::CCitadel_Modifier_Link {
             public:
-                float m_flCurrentVerticalSpeed; // 0x0178, 0x4 bytes
-                bool m_bSuccess; // 0x017c, 0x1 bytes
-                bool m_bSameTeam; // 0x017d, 0x1 bytes
-                bool m_bPlayedApproachingWhoosh; // 0x017e, 0x1 bytes
-                std::uint8_t pad_017f[0x1]; // 0x017f, 0x1 bytes
-                float m_flInitialTravelDistance; // 0x0180, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStuckStartTime; // 0x0184, 0x4 bytes
-                VectorWS m_vLastPos; // 0x0188, 0xc bytes
-                std::uint8_t pad_0194[0x214]; // 0x0194, 0x214 bytes
+                float m_flCurrentVerticalSpeed; // 0x0180, 0x4 bytes
+                bool m_bSuccess; // 0x0184, 0x1 bytes
+                bool m_bSameTeam; // 0x0185, 0x1 bytes
+                bool m_bPlayedApproachingWhoosh; // 0x0186, 0x1 bytes
+                std::uint8_t pad_0187[0x1]; // 0x0187, 0x1 bytes
+                float m_flInitialTravelDistance; // 0x0188, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStuckStartTime; // 0x018c, 0x4 bytes
+                VectorWS m_vLastPos; // 0x0190, 0xc bytes
+                std::uint8_t pad_019c[0x214]; // 0x019c, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_HookTarget) == 0x3A8, "CCitadel_Modifier_HookTarget size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_HookTarget) == 0x3B0, "CCitadel_Modifier_HookTarget size mismatch");
         }
     }
 }

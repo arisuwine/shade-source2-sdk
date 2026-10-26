@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4e8
+             * Size: 0x4f0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Chessmaster_MovingPieceDamage : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0138[0x3b0]; // 0x0138, 0x3b0 bytes
+                std::uint8_t pad_0140[0x3b0]; // 0x0140, 0x3b0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Chessmaster_MovingPieceDamage) == 0x4E8, "CCitadel_Modifier_Chessmaster_MovingPieceDamage size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Chessmaster_MovingPieceDamage) == 0x4F0, "CCitadel_Modifier_Chessmaster_MovingPieceDamage size mismatch");
         }
     }
 }

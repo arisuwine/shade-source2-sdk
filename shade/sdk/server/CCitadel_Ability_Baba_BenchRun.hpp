@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1cf0
+             * Size: 0x1cf8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +32,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_BenchRun : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x770]; // 0x14a0, 0x770 bytes
-                bool m_bHoldingJump; // 0x1c10, 0x1 bytes
-                bool m_bHeldJumpAborted; // 0x1c11, 0x1 bytes
-                std::uint8_t pad_1c12[0x2]; // 0x1c12, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flHoldJumpStartTime; // 0x1c14, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRideStartTime; // 0x1c18, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRideEndTime; // 0x1c1c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEndLaunchTime; // 0x1c20, 0x4 bytes
-                float m_flLastChargeJumpFraction; // 0x1c24, 0x4 bytes
-                bool m_bInMelee; // 0x1c28, 0x1 bytes
-                bool m_bRideCut; // 0x1c29, 0x1 bytes
-                std::uint8_t pad_1c2a[0xc6]; // 0x1c2a, 0xc6 bytes
+                std::uint8_t pad_14a8[0x770]; // 0x14a8, 0x770 bytes
+                bool m_bHoldingJump; // 0x1c18, 0x1 bytes
+                bool m_bHeldJumpAborted; // 0x1c19, 0x1 bytes
+                std::uint8_t pad_1c1a[0x2]; // 0x1c1a, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flHoldJumpStartTime; // 0x1c1c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRideStartTime; // 0x1c20, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRideEndTime; // 0x1c24, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEndLaunchTime; // 0x1c28, 0x4 bytes
+                float m_flLastChargeJumpFraction; // 0x1c2c, 0x4 bytes
+                bool m_bInMelee; // 0x1c30, 0x1 bytes
+                bool m_bRideCut; // 0x1c31, 0x1 bytes
+                std::uint8_t pad_1c32[0xc6]; // 0x1c32, 0xc6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_BenchRun) == 0x1CF0, "CCitadel_Ability_Baba_BenchRun size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_BenchRun) == 0x1CF8, "CCitadel_Ability_Baba_BenchRun size mismatch");
         }
     }
 }

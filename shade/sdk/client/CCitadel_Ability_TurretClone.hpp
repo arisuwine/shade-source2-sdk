@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ce0
+             * Size: 0x1ce8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,21 +41,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TurretClone : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x370]; // 0x16d8, 0x370 bytes
-                bool m_bHasTurretReady; // 0x1a48, 0x1 bytes
-                std::uint8_t pad_1a49[0x3]; // 0x1a49, 0x3 bytes
-                std::int32_t m_iCurrentSwapCount; // 0x1a4c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTurretExpireTime; // 0x1a50, 0x4 bytes
-                std::uint8_t pad_1a54[0x4]; // 0x1a54, 0x4 bytes
-                CHandle<shade::sdk::client::CCitadel_MagicianTurret> m_pActiveTurret; // 0x1a58, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTurretFXIndex; // 0x1a5c, 0x4 bytes
-                std::uint8_t pad_1a60[0x280]; // 0x1a60, 0x280 bytes
+                std::uint8_t pad_16e0[0x370]; // 0x16e0, 0x370 bytes
+                bool m_bHasTurretReady; // 0x1a50, 0x1 bytes
+                std::uint8_t pad_1a51[0x3]; // 0x1a51, 0x3 bytes
+                std::int32_t m_iCurrentSwapCount; // 0x1a54, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTurretExpireTime; // 0x1a58, 0x4 bytes
+                std::uint8_t pad_1a5c[0x4]; // 0x1a5c, 0x4 bytes
+                CHandle<shade::sdk::client::CCitadel_MagicianTurret> m_pActiveTurret; // 0x1a60, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTurretFXIndex; // 0x1a64, 0x4 bytes
+                std::uint8_t pad_1a68[0x280]; // 0x1a68, 0x280 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TurretClone) == 0x1CE0, "CCitadel_Ability_TurretClone size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TurretClone) == 0x1CE8, "CCitadel_Ability_TurretClone size mismatch");
         }
     }
 }

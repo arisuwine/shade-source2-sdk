@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x19a8
+             * Size: 0x19b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PowerJump : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4]; // 0x16d8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x16dc, 0x4 bytes
-                bool m_bAirRaiding; // 0x16e0, 0x1 bytes
-                std::uint8_t pad_16e1[0x2c7]; // 0x16e1, 0x2c7 bytes
+                std::uint8_t pad_16e0[0x4]; // 0x16e0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x16e4, 0x4 bytes
+                bool m_bAirRaiding; // 0x16e8, 0x1 bytes
+                std::uint8_t pad_16e9[0x2c7]; // 0x16e9, 0x2c7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PowerJump) == 0x19A8, "CCitadel_Ability_PowerJump size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PowerJump) == 0x19B0, "CCitadel_Ability_PowerJump size mismatch");
         }
     }
 }

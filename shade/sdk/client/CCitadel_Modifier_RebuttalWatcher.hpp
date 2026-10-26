@@ -30,7 +30,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_RebuttalWatcher : public shade::sdk::client::CCitadel_Modifier_Intrinsic_Base {
             public:
-                std::uint8_t pad_0138[0x168]; // 0x0138, 0x168 bytes
+                std::uint8_t pad_0140[0x160]; // 0x0140, 0x160 bytes
             };
             #pragma pack(pop)
 

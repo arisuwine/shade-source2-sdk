@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b08
+             * Size: 0x1b10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_Ability01 : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x20]; // 0x14a0, 0x20 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetsInCone; // 0x14c0, 0x18 bytes
-                std::uint8_t pad_14d8[0x630]; // 0x14d8, 0x630 bytes
+                std::uint8_t pad_14a8[0x20]; // 0x14a8, 0x20 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecTargetsInCone; // 0x14c8, 0x18 bytes
+                std::uint8_t pad_14e0[0x630]; // 0x14e0, 0x630 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_Ability01) == 0x1B08, "CCitadel_Ability_Familiar_Ability01 size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_Ability01) == 0x1B10, "CCitadel_Ability_Familiar_Ability01 size mismatch");
         }
     }
 }

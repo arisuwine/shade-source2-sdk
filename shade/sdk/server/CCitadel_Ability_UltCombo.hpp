@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16d8
+             * Size: 0x16e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,18 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_UltCombo : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hTargetComboModifier; // 0x14a0, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flLastAttackTime; // 0x14b8, 0x4 bytes
-                std::int32_t m_nAttackNum; // 0x14bc, 0x4 bytes
-                std::uint8_t pad_14c0[0x210]; // 0x14c0, 0x210 bytes
-                std::int32_t m_iBonusHealth; // 0x16d0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x16d4, 0x4 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_hTargetComboModifier; // 0x14a8, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flLastAttackTime; // 0x14c0, 0x4 bytes
+                std::int32_t m_nAttackNum; // 0x14c4, 0x4 bytes
+                std::uint8_t pad_14c8[0x210]; // 0x14c8, 0x210 bytes
+                std::int32_t m_iBonusHealth; // 0x16d8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x16dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_UltCombo) == 0x16D8, "CCitadel_Ability_UltCombo size mismatch");
+            static_assert(sizeof(CCitadel_Ability_UltCombo) == 0x16E0, "CCitadel_Ability_UltCombo size mismatch");
         }
     }
 }

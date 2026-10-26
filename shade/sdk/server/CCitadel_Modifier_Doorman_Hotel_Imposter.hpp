@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x160
+             * Size: 0x168
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,16 +38,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Doorman_Hotel_Imposter : public shade::sdk::server::CCitadelModifier {
             public:
-                CHandle<shade::sdk::server::CBaseAnimGraph> m_hRagdoll; // 0x0148, 0x4 bytes
-                VectorWS m_vImposterPos; // 0x014c, 0xc bytes
-                bool m_bPlayEnd; // 0x0158, 0x1 bytes
-                std::uint8_t pad_0159[0x7]; // 0x0159, 0x7 bytes
+                CHandle<shade::sdk::server::CBaseAnimGraph> m_hRagdoll; // 0x0150, 0x4 bytes
+                VectorWS m_vImposterPos; // 0x0154, 0xc bytes
+                bool m_bPlayEnd; // 0x0160, 0x1 bytes
+                std::uint8_t pad_0161[0x7]; // 0x0161, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Doorman_Hotel_Imposter) == 0x160, "CCitadel_Modifier_Doorman_Hotel_Imposter size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Doorman_Hotel_Imposter) == 0x168, "CCitadel_Modifier_Doorman_Hotel_Imposter size mismatch");
         }
     }
 }

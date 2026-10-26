@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x368
+             * Size: 0x370
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Apex_Watcher : public shade::sdk::server::CCitadel_Modifier_Out_Of_Combat_Health_Regen {
             public:
-                bool m_bShouldEnableBuff; // 0x02b0, 0x1 bytes
-                std::uint8_t pad_02b1[0xb7]; // 0x02b1, 0xb7 bytes
+                bool m_bShouldEnableBuff; // 0x02b8, 0x1 bytes
+                std::uint8_t pad_02b9[0xb7]; // 0x02b9, 0xb7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Apex_Watcher) == 0x368, "CCitadel_Modifier_Apex_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Apex_Watcher) == 0x370, "CCitadel_Modifier_Apex_Watcher size mismatch");
         }
     }
 }

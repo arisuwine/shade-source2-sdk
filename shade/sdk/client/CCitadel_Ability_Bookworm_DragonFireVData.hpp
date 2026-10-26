@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17d0
+             * Size: 0x1458
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,37 +44,37 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bookworm_DragonFireVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DragonSpawnParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DragonCastParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_ProjectileModel; // 0x1688, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x1768, 0x10 bytes
-                CSoundEventName m_strExpiredSound; // 0x1778, 0x10 bytes
-                float flSpawnVerticalOffset; // 0x1788, 0x4 bytes
-                float flIdealSpringLength; // 0x178c, 0x4 bytes
-                float flSpringConstant; // 0x1790, 0x4 bytes
-                float flDamperConstant; // 0x1794, 0x4 bytes
-                float flVelocityImpactOnAngle; // 0x1798, 0x4 bytes
-                float flPitchOffset; // 0x179c, 0x4 bytes
-                float flDotToChangeForwardDirectionBasedOnImpactNormal; // 0x17a0, 0x4 bytes
-                bool bDebug; // 0x17a4, 0x1 bytes
-                std::uint8_t pad_17a5[0x3]; // 0x17a5, 0x3 bytes
-                float flForwardTraceDistance; // 0x17a8, 0x4 bytes
-                float m_flFloorRaycastForward; // 0x17ac, 0x4 bytes
-                float m_flTraceRadius; // 0x17b0, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x17b4, 0x4 bytes
-                float m_flFloatDownRate; // 0x17b8, 0x4 bytes
-                float m_flClimbHeight; // 0x17bc, 0x4 bytes
-                float m_flStepDownHeight; // 0x17c0, 0x4 bytes
-                float m_flQAngleSmoothRate; // 0x17c4, 0x4 bytes
-                bool m_bShouldReflectAgainstWall; // 0x17c8, 0x1 bytes
-                std::uint8_t pad_17c9[0x7]; // 0x17c9, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DragonSpawnParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DragonCastParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_ProjectileModel; // 0x1310, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x13f0, 0x10 bytes
+                CSoundEventName m_strExpiredSound; // 0x1400, 0x10 bytes
+                float flSpawnVerticalOffset; // 0x1410, 0x4 bytes
+                float flIdealSpringLength; // 0x1414, 0x4 bytes
+                float flSpringConstant; // 0x1418, 0x4 bytes
+                float flDamperConstant; // 0x141c, 0x4 bytes
+                float flVelocityImpactOnAngle; // 0x1420, 0x4 bytes
+                float flPitchOffset; // 0x1424, 0x4 bytes
+                float flDotToChangeForwardDirectionBasedOnImpactNormal; // 0x1428, 0x4 bytes
+                bool bDebug; // 0x142c, 0x1 bytes
+                std::uint8_t pad_142d[0x3]; // 0x142d, 0x3 bytes
+                float flForwardTraceDistance; // 0x1430, 0x4 bytes
+                float m_flFloorRaycastForward; // 0x1434, 0x4 bytes
+                float m_flTraceRadius; // 0x1438, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x143c, 0x4 bytes
+                float m_flFloatDownRate; // 0x1440, 0x4 bytes
+                float m_flClimbHeight; // 0x1444, 0x4 bytes
+                float m_flStepDownHeight; // 0x1448, 0x4 bytes
+                float m_flQAngleSmoothRate; // 0x144c, 0x4 bytes
+                bool m_bShouldReflectAgainstWall; // 0x1450, 0x1 bytes
+                std::uint8_t pad_1451[0x7]; // 0x1451, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bookworm_DragonFireVData) == 0x17D0, "CCitadel_Ability_Bookworm_DragonFireVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bookworm_DragonFireVData) == 0x1458, "CCitadel_Ability_Bookworm_DragonFireVData size mismatch");
         }
     }
 }

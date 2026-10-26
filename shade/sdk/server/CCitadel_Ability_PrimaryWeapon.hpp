@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1708
+             * Size: 0x1710
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -34,86 +34,86 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PrimaryWeapon : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastReloadStartTime; // 0x14a0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextPrimaryAttack; // 0x14a4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDelayedShotCreateTime; // 0x14a8, 0x4 bytes
-                std::uint8_t pad_14ac[0x144]; // 0x14ac, 0x144 bytes
-                std::int32_t m_iClip; // 0x15f0, 0x4 bytes
-                std::int32_t m_iBonusClip; // 0x15f4, 0x4 bytes
-                std::int32_t m_nNumContinuousShots; // 0x15f8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flContinuousShotStartTime; // 0x15fc, 0x4 bytes
-                float m_flSpreadPenalty; // 0x1600, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flZoomTime; // 0x1604, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flZoomOutTime; // 0x1608, 0x4 bytes
-                std::int8_t m_iSpreadIndex; // 0x160c, 0x1 bytes
-                std::uint8_t pad_160d[0x1]; // 0x160d, 0x1 bytes
-                std::int16_t m_nShotRecoilIndex; // 0x160e, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flNextShotRecoilRecoveryTime; // 0x1610, 0x4 bytes
-                bool m_bIsZoomed; // 0x1614, 0x1 bytes
-                std::uint8_t m_nBurstShotsRemaining; // 0x1615, 0x1 bytes
-                std::uint8_t pad_1616[0x2]; // 0x1616, 0x2 bytes
-                std::uint32_t m_nShotNumber; // 0x1618, 0x4 bytes
-                bool m_bInReload; // 0x161c, 0x1 bytes
-                bool m_bSingleShotReloadFirstBullet; // 0x161d, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLastReloadStartTime; // 0x14a8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextPrimaryAttack; // 0x14ac, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDelayedShotCreateTime; // 0x14b0, 0x4 bytes
+                std::uint8_t pad_14b4[0x144]; // 0x14b4, 0x144 bytes
+                std::int32_t m_iClip; // 0x15f8, 0x4 bytes
+                std::int32_t m_iBonusClip; // 0x15fc, 0x4 bytes
+                std::int32_t m_nNumContinuousShots; // 0x1600, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flContinuousShotStartTime; // 0x1604, 0x4 bytes
+                float m_flSpreadPenalty; // 0x1608, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flZoomTime; // 0x160c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flZoomOutTime; // 0x1610, 0x4 bytes
+                std::int8_t m_iSpreadIndex; // 0x1614, 0x1 bytes
+                std::uint8_t pad_1615[0x1]; // 0x1615, 0x1 bytes
+                std::int16_t m_nShotRecoilIndex; // 0x1616, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flNextShotRecoilRecoveryTime; // 0x1618, 0x4 bytes
+                bool m_bIsZoomed; // 0x161c, 0x1 bytes
+                std::uint8_t m_nBurstShotsRemaining; // 0x161d, 0x1 bytes
                 std::uint8_t pad_161e[0x2]; // 0x161e, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_reloadQueuedStartTime; // 0x1620, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flReloadAvailableTime; // 0x1624, 0x4 bytes
-                bool m_bCanActiveReload; // 0x1628, 0x1 bytes
-                std::uint8_t pad_1629[0x3]; // 0x1629, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastAttackTime; // 0x162c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttackDelayStartTime; // 0x1630, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttackDelayEndTime; // 0x1634, 0x4 bytes
-                float m_flAttackDelayPauseTotalTime; // 0x1638, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAttackDelayPauseEndTime; // 0x163c, 0x4 bytes
-                shade::sdk::client::ENextAttackDelayReason_t m_eNextAttackDelayReason; // 0x1640, 0x4 bytes
-                bool m_bInputPressedWhileSelected; // 0x1644, 0x1 bytes
-                std::uint8_t pad_1645[0x3]; // 0x1645, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tFireOnReleaseHoldBeginTime; // 0x1648, 0x4 bytes
-                float m_flShotChargeFrac; // 0x164c, 0x4 bytes
-                shade::sdk::client::EFireMode_t m_eActiveFireMode; // 0x1650, 0x4 bytes
-                bool m_bPassiveFXActive; // 0x1654, 0x1 bytes
-                std::uint8_t pad_1655[0x3]; // 0x1655, 0x3 bytes
-                float m_flAmmoFrac; // 0x1658, 0x4 bytes
-                bool m_bFiredRecently; // 0x165c, 0x1 bytes
+                std::uint32_t m_nShotNumber; // 0x1620, 0x4 bytes
+                bool m_bInReload; // 0x1624, 0x1 bytes
+                bool m_bSingleShotReloadFirstBullet; // 0x1625, 0x1 bytes
+                std::uint8_t pad_1626[0x2]; // 0x1626, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_reloadQueuedStartTime; // 0x1628, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flReloadAvailableTime; // 0x162c, 0x4 bytes
+                bool m_bCanActiveReload; // 0x1630, 0x1 bytes
+                std::uint8_t pad_1631[0x3]; // 0x1631, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastAttackTime; // 0x1634, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttackDelayStartTime; // 0x1638, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttackDelayEndTime; // 0x163c, 0x4 bytes
+                float m_flAttackDelayPauseTotalTime; // 0x1640, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAttackDelayPauseEndTime; // 0x1644, 0x4 bytes
+                shade::sdk::client::ENextAttackDelayReason_t m_eNextAttackDelayReason; // 0x1648, 0x4 bytes
+                bool m_bInputPressedWhileSelected; // 0x164c, 0x1 bytes
+                std::uint8_t pad_164d[0x3]; // 0x164d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tFireOnReleaseHoldBeginTime; // 0x1650, 0x4 bytes
+                float m_flShotChargeFrac; // 0x1654, 0x4 bytes
+                shade::sdk::client::EFireMode_t m_eActiveFireMode; // 0x1658, 0x4 bytes
+                bool m_bPassiveFXActive; // 0x165c, 0x1 bytes
                 std::uint8_t pad_165d[0x3]; // 0x165d, 0x3 bytes
-                QAngle m_angRecoilAngles; // 0x1660, 0xc bytes
-                QAngle m_angRecoilToAdd; // 0x166c, 0xc bytes
-                QAngle m_angRecoilRecovery; // 0x1678, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flRecoilStartTime; // 0x1684, 0x4 bytes
-                float m_flRecoilRecoverySpeed; // 0x1688, 0x4 bytes
-                float m_flAddApproachSpeed; // 0x168c, 0x4 bytes
-                float m_currentSpread; // 0x1690, 0x4 bytes
-                float m_currentMaxSpread; // 0x1694, 0x4 bytes
-                float m_currentFireSpread; // 0x1698, 0x4 bytes
-                float m_flCurrentSpinRate; // 0x169c, 0x4 bytes
-                bool m_bWasSpinningUp; // 0x16a0, 0x1 bytes
-                std::uint8_t pad_16a1[0x3]; // 0x16a1, 0x3 bytes
-                float m_fFireDuration; // 0x16a4, 0x4 bytes
-                bool m_bPrimaryAttackHeld; // 0x16a8, 0x1 bytes
-                bool m_bFireOnEmpty; // 0x16a9, 0x1 bytes
-                bool m_bHasReleasedForFireOnRelease; // 0x16aa, 0x1 bytes
-                bool m_bInputReleasedForFireOnRelease; // 0x16ab, 0x1 bytes
-                bool m_bChargedShotNeedsInputRelease; // 0x16ac, 0x1 bytes
-                std::uint8_t pad_16ad[0x3]; // 0x16ad, 0x3 bytes
-                shade::sdk::client::EFireMode_t m_eFireOnReleaseMode; // 0x16b0, 0x4 bytes
-                bool m_bZoomMispredicted; // 0x16b4, 0x1 bytes
+                float m_flAmmoFrac; // 0x1660, 0x4 bytes
+                bool m_bFiredRecently; // 0x1664, 0x1 bytes
+                std::uint8_t pad_1665[0x3]; // 0x1665, 0x3 bytes
+                QAngle m_angRecoilAngles; // 0x1668, 0xc bytes
+                QAngle m_angRecoilToAdd; // 0x1674, 0xc bytes
+                QAngle m_angRecoilRecovery; // 0x1680, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flRecoilStartTime; // 0x168c, 0x4 bytes
+                float m_flRecoilRecoverySpeed; // 0x1690, 0x4 bytes
+                float m_flAddApproachSpeed; // 0x1694, 0x4 bytes
+                float m_currentSpread; // 0x1698, 0x4 bytes
+                float m_currentMaxSpread; // 0x169c, 0x4 bytes
+                float m_currentFireSpread; // 0x16a0, 0x4 bytes
+                float m_flCurrentSpinRate; // 0x16a4, 0x4 bytes
+                bool m_bWasSpinningUp; // 0x16a8, 0x1 bytes
+                std::uint8_t pad_16a9[0x3]; // 0x16a9, 0x3 bytes
+                float m_fFireDuration; // 0x16ac, 0x4 bytes
+                bool m_bPrimaryAttackHeld; // 0x16b0, 0x1 bytes
+                bool m_bFireOnEmpty; // 0x16b1, 0x1 bytes
+                bool m_bHasReleasedForFireOnRelease; // 0x16b2, 0x1 bytes
+                bool m_bInputReleasedForFireOnRelease; // 0x16b3, 0x1 bytes
+                bool m_bChargedShotNeedsInputRelease; // 0x16b4, 0x1 bytes
                 std::uint8_t pad_16b5[0x3]; // 0x16b5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flNextDisarmSound; // 0x16b8, 0x4 bytes
-                std::uint8_t pad_16bc[0x2c]; // 0x16bc, 0x2c bytes
-                std::int32_t m_nPrimaryMuzzleIndex; // 0x16e8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPrimaryMuzzleResetTime; // 0x16ec, 0x4 bytes
-                std::int32_t m_nSecondaryMuzzleIndex; // 0x16f0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSecondaryMuzzleResetTime; // 0x16f4, 0x4 bytes
-                std::int32_t m_nRandomStreak; // 0x16f8, 0x4 bytes
-                std::int32_t m_nLastUsedMuzzleIndex; // 0x16fc, 0x4 bytes
-                std::int32_t m_nClipSizeBeforeSwap; // 0x1700, 0x4 bytes
-                std::uint8_t pad_1704[0x4]; // 0x1704, 0x4 bytes
+                shade::sdk::client::EFireMode_t m_eFireOnReleaseMode; // 0x16b8, 0x4 bytes
+                bool m_bZoomMispredicted; // 0x16bc, 0x1 bytes
+                std::uint8_t pad_16bd[0x3]; // 0x16bd, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flNextDisarmSound; // 0x16c0, 0x4 bytes
+                std::uint8_t pad_16c4[0x2c]; // 0x16c4, 0x2c bytes
+                std::int32_t m_nPrimaryMuzzleIndex; // 0x16f0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPrimaryMuzzleResetTime; // 0x16f4, 0x4 bytes
+                std::int32_t m_nSecondaryMuzzleIndex; // 0x16f8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSecondaryMuzzleResetTime; // 0x16fc, 0x4 bytes
+                std::int32_t m_nRandomStreak; // 0x1700, 0x4 bytes
+                std::int32_t m_nLastUsedMuzzleIndex; // 0x1704, 0x4 bytes
+                std::int32_t m_nClipSizeBeforeSwap; // 0x1708, 0x4 bytes
+                std::uint8_t pad_170c[0x4]; // 0x170c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon) == 0x1708, "CCitadel_Ability_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon) == 0x1710, "CCitadel_Ability_PrimaryWeapon size mismatch");
         }
     }
 }

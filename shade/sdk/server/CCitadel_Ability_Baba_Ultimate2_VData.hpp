@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1718
+             * Size: 0x13a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,23 +39,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_Ultimate2_VData : public shade::sdk::server::CBaseTieredLockonAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x1430, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelParticle; // 0x1510, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchParticle; // 0x15f0, 0xe0 bytes
-                float m_flChannelingMaxFallSpeed; // 0x16d0, 0x4 bytes
-                std::uint8_t pad_16d4[0x4]; // 0x16d4, 0x4 bytes
-                CSoundEventName m_strSnapSound; // 0x16d8, 0x10 bytes
-                CSoundEventName m_strRampSound; // 0x16e8, 0x10 bytes
-                CSoundEventName m_strEmptyReleaseSound; // 0x16f8, 0x10 bytes
-                float m_flPostChannelDelay; // 0x1708, 0x4 bytes
-                std::uint8_t pad_170c[0x4]; // 0x170c, 0x4 bytes
-                CGlobalSymbol m_strAG2UltFinishedAction; // 0x1710, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle; // 0x10b8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelParticle; // 0x1198, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchParticle; // 0x1278, 0xe0 bytes
+                float m_flChannelingMaxFallSpeed; // 0x1358, 0x4 bytes
+                std::uint8_t pad_135c[0x4]; // 0x135c, 0x4 bytes
+                CSoundEventName m_strSnapSound; // 0x1360, 0x10 bytes
+                CSoundEventName m_strRampSound; // 0x1370, 0x10 bytes
+                CSoundEventName m_strEmptyReleaseSound; // 0x1380, 0x10 bytes
+                float m_flPostChannelDelay; // 0x1390, 0x4 bytes
+                std::uint8_t pad_1394[0x4]; // 0x1394, 0x4 bytes
+                CGlobalSymbol m_strAG2UltFinishedAction; // 0x1398, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_Ultimate2_VData) == 0x1718, "CCitadel_Ability_Baba_Ultimate2_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_Ultimate2_VData) == 0x13A0, "CCitadel_Ability_Baba_Ultimate2_VData size mismatch");
         }
     }
 }

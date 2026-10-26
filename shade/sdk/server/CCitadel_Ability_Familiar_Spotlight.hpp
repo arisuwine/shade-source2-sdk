@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1578
+             * Size: 0x1580
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,18 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_Spotlight : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CHandle<shade::sdk::server::CPointModifierThinker> m_hAuraThinker; // 0x14a0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nEyeGlowFX; // 0x14a4, 0x4 bytes
-                VectorWS m_vLastValidAuraPosition; // 0x14a8, 0xc bytes
-                std::uint8_t pad_14b4[0xb4]; // 0x14b4, 0xb4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hWasAttachedTo; // 0x1568, 0x4 bytes
-                VectorWS m_vAuraPosition; // 0x156c, 0xc bytes
+                CHandle<shade::sdk::server::CPointModifierThinker> m_hAuraThinker; // 0x14a8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nEyeGlowFX; // 0x14ac, 0x4 bytes
+                VectorWS m_vLastValidAuraPosition; // 0x14b0, 0xc bytes
+                std::uint8_t pad_14bc[0xb4]; // 0x14bc, 0xb4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hWasAttachedTo; // 0x1570, 0x4 bytes
+                VectorWS m_vAuraPosition; // 0x1574, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_Spotlight) == 0x1578, "CCitadel_Ability_Familiar_Spotlight size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_Spotlight) == 0x1580, "CCitadel_Ability_Familiar_Spotlight size mismatch");
         }
     }
 }

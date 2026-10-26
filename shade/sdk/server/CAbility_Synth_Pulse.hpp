@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16b0
+             * Size: 0x16b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Synth_Pulse : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x210]; // 0x14a0, 0x210 bytes
+                std::uint8_t pad_14a8[0x210]; // 0x14a8, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Synth_Pulse) == 0x16B0, "CAbility_Synth_Pulse size mismatch");
+            static_assert(sizeof(CAbility_Synth_Pulse) == 0x16B8, "CAbility_Synth_Pulse size mismatch");
         }
     }
 }

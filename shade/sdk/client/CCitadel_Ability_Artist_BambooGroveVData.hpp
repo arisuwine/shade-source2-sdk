@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1628
+             * Size: 0x12b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,29 +43,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_BambooGroveVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyCastParticle; // 0x14c8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BambooModifier; // 0x15a8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CenterEnemyModifier; // 0x15b8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CenterAllyModifier; // 0x15c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x15d8, 0x10 bytes
-                CSoundEventName m_strBambooAppearSound; // 0x15e8, 0x10 bytes
-                CSoundEventName m_strPreCastSound; // 0x15f8, 0x10 bytes
-                bool m_bDebug; // 0x1608, 0x1 bytes
-                std::uint8_t pad_1609[0x3]; // 0x1609, 0x3 bytes
-                float m_flForwardOffset; // 0x160c, 0x4 bytes
-                float m_flNoiseFrequency; // 0x1610, 0x4 bytes
-                float m_flNoiseStrength; // 0x1614, 0x4 bytes
-                float m_flWallTraceMaxDistance; // 0x1618, 0x4 bytes
-                float m_flWallTraceRadius; // 0x161c, 0x4 bytes
-                float m_flTimeBetweenDeployments; // 0x1620, 0x4 bytes
-                std::uint8_t pad_1624[0x4]; // 0x1624, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyCastParticle; // 0x1150, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BambooModifier; // 0x1230, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CenterEnemyModifier; // 0x1240, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CenterAllyModifier; // 0x1250, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1260, 0x10 bytes
+                CSoundEventName m_strBambooAppearSound; // 0x1270, 0x10 bytes
+                CSoundEventName m_strPreCastSound; // 0x1280, 0x10 bytes
+                bool m_bDebug; // 0x1290, 0x1 bytes
+                std::uint8_t pad_1291[0x3]; // 0x1291, 0x3 bytes
+                float m_flForwardOffset; // 0x1294, 0x4 bytes
+                float m_flNoiseFrequency; // 0x1298, 0x4 bytes
+                float m_flNoiseStrength; // 0x129c, 0x4 bytes
+                float m_flWallTraceMaxDistance; // 0x12a0, 0x4 bytes
+                float m_flWallTraceRadius; // 0x12a4, 0x4 bytes
+                float m_flTimeBetweenDeployments; // 0x12a8, 0x4 bytes
+                std::uint8_t pad_12ac[0x4]; // 0x12ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_BambooGroveVData) == 0x1628, "CCitadel_Ability_Artist_BambooGroveVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_BambooGroveVData) == 0x12B0, "CCitadel_Ability_Artist_BambooGroveVData size mismatch");
         }
     }
 }

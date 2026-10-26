@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x24d0
+             * Size: 0x24d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,21 +32,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Werewolf_Leap : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bWillLeapOff; // 0x16d8, 0x1 bytes
-                bool m_bIsLeaping; // 0x16d9, 0x1 bytes
-                std::uint8_t pad_16da[0x2]; // 0x16da, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x16dc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x16e0, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x16e4, 0xc bytes
-                Vector m_vLaunchVelocity; // 0x16f0, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16fc, 0xc bytes
-                std::uint8_t pad_1708[0xdc8]; // 0x1708, 0xdc8 bytes
+                bool m_bWillLeapOff; // 0x16e0, 0x1 bytes
+                bool m_bIsLeaping; // 0x16e1, 0x1 bytes
+                std::uint8_t pad_16e2[0x2]; // 0x16e2, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapStartTime; // 0x16e4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLeapOffTime; // 0x16e8, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x16ec, 0xc bytes
+                Vector m_vLaunchVelocity; // 0x16f8, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x1704, 0xc bytes
+                std::uint8_t pad_1710[0xdc8]; // 0x1710, 0xdc8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Werewolf_Leap) == 0x24D0, "CCitadel_Ability_Werewolf_Leap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Werewolf_Leap) == 0x24D8, "CCitadel_Ability_Werewolf_Leap size mismatch");
         }
     }
 }

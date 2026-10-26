@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1500
+             * Size: 0x1188
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_RootingProjectileVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HitModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RootModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1418, 0xe0 bytes
-                bool m_bShouldApplyHitModifier; // 0x14f8, 0x1 bytes
-                bool m_bShouldRootOnHit; // 0x14f9, 0x1 bytes
-                std::uint8_t pad_14fa[0x6]; // 0x14fa, 0x6 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HitModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_RootModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x10a0, 0xe0 bytes
+                bool m_bShouldApplyHitModifier; // 0x1180, 0x1 bytes
+                bool m_bShouldRootOnHit; // 0x1181, 0x1 bytes
+                std::uint8_t pad_1182[0x6]; // 0x1182, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_RootingProjectileVData) == 0x1500, "CCitadel_Ability_Artist_RootingProjectileVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_RootingProjectileVData) == 0x1188, "CCitadel_Ability_Artist_RootingProjectileVData size mismatch");
         }
     }
 }

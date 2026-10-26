@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16c0
+             * Size: 0x1348
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,20 +43,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityPsychicLiftVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LiftModifier; // 0x13e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x13f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x14d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DirectionalBeamParticle; // 0x15b8, 0xe0 bytes
-                CSoundEventName m_TargetCastSound; // 0x1698, 0x10 bytes
-                CSoundEventName m_HitConfirmSound; // 0x16a8, 0x10 bytes
-                float m_flTargetingDuration; // 0x16b8, 0x4 bytes
-                std::uint8_t pad_16bc[0x4]; // 0x16bc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LiftModifier; // 0x1070, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1080, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x1160, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DirectionalBeamParticle; // 0x1240, 0xe0 bytes
+                CSoundEventName m_TargetCastSound; // 0x1320, 0x10 bytes
+                CSoundEventName m_HitConfirmSound; // 0x1330, 0x10 bytes
+                float m_flTargetingDuration; // 0x1340, 0x4 bytes
+                std::uint8_t pad_1344[0x4]; // 0x1344, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityPsychicLiftVData) == 0x16C0, "CAbilityPsychicLiftVData size mismatch");
+            static_assert(sizeof(CAbilityPsychicLiftVData) == 0x1348, "CAbilityPsychicLiftVData size mismatch");
         }
     }
 }

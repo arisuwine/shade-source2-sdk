@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1618
+             * Size: 0x1620
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_ShieldProjectile : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnts; // 0x14a0, 0x18 bytes
-                std::uint8_t pad_14b8[0x160]; // 0x14b8, 0x160 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnts; // 0x14a8, 0x18 bytes
+                std::uint8_t pad_14c0[0x160]; // 0x14c0, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_ShieldProjectile) == 0x1618, "CCitadel_Ability_Artist_ShieldProjectile size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_ShieldProjectile) == 0x1620, "CCitadel_Ability_Artist_ShieldProjectile size mismatch");
         }
     }
 }

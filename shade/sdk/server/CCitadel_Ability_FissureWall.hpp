@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17d0
+             * Size: 0x17d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,24 +32,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FissureWall : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x2d0]; // 0x14a0, 0x2d0 bytes
-                VectorWS m_vecPosition; // 0x1770, 0xc bytes
-                VectorWS m_vecTravellingPosition; // 0x177c, 0xc bytes
-                VectorWS m_vecInitialPosition; // 0x1788, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_CastTime; // 0x1794, 0x4 bytes
-                Vector m_vecDirection; // 0x1798, 0xc bytes
-                Vector m_vecLeft; // 0x17a4, 0xc bytes
-                float m_Length; // 0x17b0, 0x4 bytes
-                std::uint8_t pad_17b4[0x16]; // 0x17b4, 0x16 bytes
-                bool m_bTraveling; // 0x17ca, 0x1 bytes
-                bool m_bPreview; // 0x17cb, 0x1 bytes
-                std::uint8_t pad_17cc[0x4]; // 0x17cc, 0x4 bytes
+                std::uint8_t pad_14a8[0x2d0]; // 0x14a8, 0x2d0 bytes
+                VectorWS m_vecPosition; // 0x1778, 0xc bytes
+                VectorWS m_vecTravellingPosition; // 0x1784, 0xc bytes
+                VectorWS m_vecInitialPosition; // 0x1790, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_CastTime; // 0x179c, 0x4 bytes
+                Vector m_vecDirection; // 0x17a0, 0xc bytes
+                Vector m_vecLeft; // 0x17ac, 0xc bytes
+                float m_Length; // 0x17b8, 0x4 bytes
+                std::uint8_t pad_17bc[0x16]; // 0x17bc, 0x16 bytes
+                bool m_bTraveling; // 0x17d2, 0x1 bytes
+                bool m_bPreview; // 0x17d3, 0x1 bytes
+                std::uint8_t pad_17d4[0x4]; // 0x17d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FissureWall) == 0x17D0, "CCitadel_Ability_FissureWall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FissureWall) == 0x17D8, "CCitadel_Ability_FissureWall size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a50
+             * Size: 0x1a58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Lash_Flog : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x370]; // 0x16d8, 0x370 bytes
-                shade::sdk::client::ParticleIndex_t m_SandEffect; // 0x1a48, 0x4 bytes
-                std::uint8_t pad_1a4c[0x4]; // 0x1a4c, 0x4 bytes
+                std::uint8_t pad_16e0[0x370]; // 0x16e0, 0x370 bytes
+                shade::sdk::client::ParticleIndex_t m_SandEffect; // 0x1a50, 0x4 bytes
+                std::uint8_t pad_1a54[0x4]; // 0x1a54, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Lash_Flog) == 0x1A50, "CCitadel_Ability_Lash_Flog size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Lash_Flog) == 0x1A58, "CCitadel_Ability_Lash_Flog size mismatch");
         }
     }
 }

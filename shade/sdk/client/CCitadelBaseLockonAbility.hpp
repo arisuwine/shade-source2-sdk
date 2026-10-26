@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b70
+             * Size: 0x1b78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,18 +41,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelBaseLockonAbility : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x420]; // 0x16d8, 0x420 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::LockonTarget_t> m_vecLockonTargets; // 0x1af8, 0x68 bytes
-                shade::sdk::entity2::GameTime_t m_LockOnStartTime; // 0x1b60, 0x4 bytes
-                std::uint8_t pad_1b64[0x4]; // 0x1b64, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTargetingLightEffect; // 0x1b68, 0x4 bytes
+                std::uint8_t pad_16e0[0x420]; // 0x16e0, 0x420 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::LockonTarget_t> m_vecLockonTargets; // 0x1b00, 0x68 bytes
+                shade::sdk::entity2::GameTime_t m_LockOnStartTime; // 0x1b68, 0x4 bytes
                 std::uint8_t pad_1b6c[0x4]; // 0x1b6c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTargetingLightEffect; // 0x1b70, 0x4 bytes
+                std::uint8_t pad_1b74[0x4]; // 0x1b74, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelBaseLockonAbility) == 0x1B70, "CCitadelBaseLockonAbility size mismatch");
+            static_assert(sizeof(CCitadelBaseLockonAbility) == 0x1B78, "CCitadelBaseLockonAbility size mismatch");
         }
     }
 }

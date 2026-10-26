@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1770
+             * Size: 0x13f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,33 +44,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_InkBrushVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PaintingParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x15a8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x1688, 0x10 bytes
-                bool m_bEndOnRelease; // 0x1698, 0x1 bytes
-                bool m_bRMBDraw; // 0x1699, 0x1 bytes
-                std::uint8_t pad_169a[0x2]; // 0x169a, 0x2 bytes
-                float m_flTimeBetweenConsumingMarker; // 0x169c, 0x4 bytes
-                float m_flTraceForwardDistance; // 0x16a0, 0x4 bytes
-                float m_flTraceDownDistance; // 0x16a4, 0x4 bytes
-                float m_flDragRadius; // 0x16a8, 0x4 bytes
-                float m_flDragSpringStrength; // 0x16ac, 0x4 bytes
-                float m_flDragDampingStrength; // 0x16b0, 0x4 bytes
-                float m_flDragMaxSpeed; // 0x16b4, 0x4 bytes
-                float m_flDragMaxSpeedWhilePainting; // 0x16b8, 0x4 bytes
-                std::int32_t m_iMinimumMarkers; // 0x16bc, 0x4 bytes
-                float m_flLoopPercentCheck; // 0x16c0, 0x4 bytes
-                float m_flDistanceThresholdForLoop; // 0x16c4, 0x4 bytes
-                float m_flLoopRadiusMultiplier; // 0x16c8, 0x4 bytes
-                std::uint8_t pad_16cc[0x4]; // 0x16cc, 0x4 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x16d0, 0xa0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PaintingParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x1230, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x1310, 0x10 bytes
+                bool m_bEndOnRelease; // 0x1320, 0x1 bytes
+                bool m_bRMBDraw; // 0x1321, 0x1 bytes
+                std::uint8_t pad_1322[0x2]; // 0x1322, 0x2 bytes
+                float m_flTimeBetweenConsumingMarker; // 0x1324, 0x4 bytes
+                float m_flTraceForwardDistance; // 0x1328, 0x4 bytes
+                float m_flTraceDownDistance; // 0x132c, 0x4 bytes
+                float m_flDragRadius; // 0x1330, 0x4 bytes
+                float m_flDragSpringStrength; // 0x1334, 0x4 bytes
+                float m_flDragDampingStrength; // 0x1338, 0x4 bytes
+                float m_flDragMaxSpeed; // 0x133c, 0x4 bytes
+                float m_flDragMaxSpeedWhilePainting; // 0x1340, 0x4 bytes
+                std::int32_t m_iMinimumMarkers; // 0x1344, 0x4 bytes
+                float m_flLoopPercentCheck; // 0x1348, 0x4 bytes
+                float m_flDistanceThresholdForLoop; // 0x134c, 0x4 bytes
+                float m_flLoopRadiusMultiplier; // 0x1350, 0x4 bytes
+                std::uint8_t pad_1354[0x4]; // 0x1354, 0x4 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x1358, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_InkBrushVData) == 0x1770, "CCitadel_Ability_Artist_InkBrushVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_InkBrushVData) == 0x13F8, "CCitadel_Ability_Artist_InkBrushVData size mismatch");
         }
     }
 }

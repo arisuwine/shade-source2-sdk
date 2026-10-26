@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CModifier_Baba_Bubbling_Brew_Debuff) == 0x148, "CModifier_Baba_Bubbling_Brew_Debuff size mismatch");
+            static_assert(sizeof(CModifier_Baba_Bubbling_Brew_Debuff) == 0x150, "CModifier_Baba_Bubbling_Brew_Debuff size mismatch");
         }
     }
 }

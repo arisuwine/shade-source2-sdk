@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1c48
+             * Size: 0x1c50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_MoveChessPiece : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_tCancelHoverTime; // 0x14a0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_pSelectedPiece; // 0x14a4, 0x4 bytes
-                float m_flCachedMoveDistance; // 0x14a8, 0x4 bytes
-                std::uint8_t pad_14ac[0x79c]; // 0x14ac, 0x79c bytes
+                shade::sdk::entity2::GameTime_t m_tCancelHoverTime; // 0x14a8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_pSelectedPiece; // 0x14ac, 0x4 bytes
+                float m_flCachedMoveDistance; // 0x14b0, 0x4 bytes
+                std::uint8_t pad_14b4[0x79c]; // 0x14b4, 0x79c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_MoveChessPiece) == 0x1C48, "CCitadel_Ability_Chessmaster_MoveChessPiece size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_MoveChessPiece) == 0x1C50, "CCitadel_Ability_Chessmaster_MoveChessPiece size mismatch");
         }
     }
 }

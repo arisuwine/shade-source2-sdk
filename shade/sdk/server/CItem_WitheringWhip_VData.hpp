@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1618
+             * Size: 0x12a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,13 +39,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CItem_WitheringWhip_VData : public shade::sdk::server::CCitadel_Item_TrackingProjectileApplyModifierVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x1608, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x1290, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CItem_WitheringWhip_VData) == 0x1618, "CItem_WitheringWhip_VData size mismatch");
+            static_assert(sizeof(CItem_WitheringWhip_VData) == 0x12A0, "CItem_WitheringWhip_VData size mismatch");
         }
     }
 }

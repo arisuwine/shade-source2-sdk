@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16c0
+             * Size: 0x16c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_AblativeCoat : public shade::sdk::server::CCitadel_Item {
             public:
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x14a8, 0x4 bytes
-                std::int32_t m_iCurrentResistValue; // 0x14ac, 0x4 bytes
-                std::uint8_t pad_14b0[0x210]; // 0x14b0, 0x210 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x14b0, 0x4 bytes
+                std::int32_t m_iCurrentResistValue; // 0x14b4, 0x4 bytes
+                std::uint8_t pad_14b8[0x210]; // 0x14b8, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_AblativeCoat) == 0x16C0, "CCitadel_ArmorUpgrade_AblativeCoat size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_AblativeCoat) == 0x16C8, "CCitadel_ArmorUpgrade_AblativeCoat size mismatch");
         }
     }
 }

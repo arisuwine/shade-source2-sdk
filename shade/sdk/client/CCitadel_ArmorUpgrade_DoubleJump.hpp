@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18f0
+             * Size: 0x18f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_DoubleJump : public shade::sdk::client::CCitadel_Item {
             public:
-                std::int32_t m_nTickJumped; // 0x16d8, 0x4 bytes
-                std::uint8_t pad_16dc[0x214]; // 0x16dc, 0x214 bytes
+                std::int32_t m_nTickJumped; // 0x16e0, 0x4 bytes
+                std::uint8_t pad_16e4[0x214]; // 0x16e4, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_DoubleJump) == 0x18F0, "CCitadel_ArmorUpgrade_DoubleJump size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_DoubleJump) == 0x18F8, "CCitadel_ArmorUpgrade_DoubleJump size mismatch");
         }
     }
 }

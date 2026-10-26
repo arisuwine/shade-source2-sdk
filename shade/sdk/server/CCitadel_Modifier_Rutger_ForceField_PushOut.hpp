@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x380
+             * Size: 0x388
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Rutger_ForceField_PushOut : public shade::sdk::server::CCitadelModifier {
             public:
-                VectorWS m_vStart; // 0x0148, 0xc bytes
-                VectorWS m_vDest; // 0x0154, 0xc bytes
-                VectorWS m_vCenter; // 0x0160, 0xc bytes
-                std::uint8_t pad_016c[0x214]; // 0x016c, 0x214 bytes
+                VectorWS m_vStart; // 0x0150, 0xc bytes
+                VectorWS m_vDest; // 0x015c, 0xc bytes
+                VectorWS m_vCenter; // 0x0168, 0xc bytes
+                std::uint8_t pad_0174[0x214]; // 0x0174, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Rutger_ForceField_PushOut) == 0x380, "CCitadel_Modifier_Rutger_ForceField_PushOut size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Rutger_ForceField_PushOut) == 0x388, "CCitadel_Modifier_Rutger_ForceField_PushOut size mismatch");
         }
     }
 }

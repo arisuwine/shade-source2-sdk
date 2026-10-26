@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a78
+             * Size: 0x1a80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Trapper_WebWall : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x370]; // 0x16d8, 0x370 bytes
-                VectorWS m_vecCastPosition; // 0x1a48, 0xc bytes
-                Vector m_vecCastPositionNormal; // 0x1a54, 0xc bytes
-                VectorWS m_vecEndPosition; // 0x1a60, 0xc bytes
-                Vector m_vecEndPositionNormal; // 0x1a6c, 0xc bytes
+                std::uint8_t pad_16e0[0x370]; // 0x16e0, 0x370 bytes
+                VectorWS m_vecCastPosition; // 0x1a50, 0xc bytes
+                Vector m_vecCastPositionNormal; // 0x1a5c, 0xc bytes
+                VectorWS m_vecEndPosition; // 0x1a68, 0xc bytes
+                Vector m_vecEndPositionNormal; // 0x1a74, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Trapper_WebWall) == 0x1A78, "CCitadel_Ability_Trapper_WebWall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Trapper_WebWall) == 0x1A80, "CCitadel_Ability_Trapper_WebWall size mismatch");
         }
     }
 }

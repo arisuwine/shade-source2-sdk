@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb50
+             * Size: 0xb58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -50,15 +50,17 @@ namespace shade {
                 float m_flVerticalOffset; // 0x0b38, 0x4 bytes
                 float m_flTolerance; // 0x0b3c, 0x4 bytes
                 float m_flRepathTime; // 0x0b40, 0x4 bytes
-                float m_flWaitTimeLimit; // 0x0b44, 0x4 bytes
-                float m_flWaitTimeLimitOverheld; // 0x0b48, 0x4 bytes
-                float m_flCheckPlayerRate; // 0x0b4c, 0x4 bytes
+                float m_flPathHeightPenaltyScale; // 0x0b44, 0x4 bytes
+                float m_flWaitTimeLimit; // 0x0b48, 0x4 bytes
+                float m_flWaitTimeLimitOverheld; // 0x0b4c, 0x4 bytes
+                float m_flCheckPlayerRate; // 0x0b50, 0x4 bytes
+                std::uint8_t pad_0b54[0x4]; // 0x0b54, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_ItemWalkBackVData) == 0xB50, "CCitadel_Modifier_ItemWalkBackVData size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_ItemWalkBackVData) == 0xB58, "CCitadel_Modifier_ItemWalkBackVData size mismatch");
         }
     }
 }

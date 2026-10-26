@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2100
+             * Size: 0x2108
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,26 +41,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_ThrowBishop : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedPieces; // 0x16d8, 0x18 bytes
-                CHandle<shade::sdk::client::CCitadel_Ability_Chessmaster_MoveChessPiece> m_hMoveAbility; // 0x16f0, 0x4 bytes
-                std::uint8_t pad_16f4[0x2]; // 0x16f4, 0x2 bytes
-                bool m_bActive; // 0x16f6, 0x1 bytes
-                std::uint8_t pad_16f7[0x1]; // 0x16f7, 0x1 bytes
-                std::int32_t m_iBishopIndex; // 0x16f8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tRecastEndTime; // 0x16fc, 0x4 bytes
-                std::uint8_t pad_1700[0x8]; // 0x1700, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecShotBishops; // 0x1708, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitTargets; // 0x1720, 0x18 bytes
-                VectorWS m_vecLaunchPosition; // 0x1738, 0xc bytes
-                Vector m_vecLaunchVelocity; // 0x1744, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x1750, 0xc bytes
-                std::uint8_t pad_175c[0x9a4]; // 0x175c, 0x9a4 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedPieces; // 0x16e0, 0x18 bytes
+                CHandle<shade::sdk::client::CCitadel_Ability_Chessmaster_MoveChessPiece> m_hMoveAbility; // 0x16f8, 0x4 bytes
+                std::uint8_t pad_16fc[0x2]; // 0x16fc, 0x2 bytes
+                bool m_bActive; // 0x16fe, 0x1 bytes
+                std::uint8_t pad_16ff[0x1]; // 0x16ff, 0x1 bytes
+                std::int32_t m_iBishopIndex; // 0x1700, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tRecastEndTime; // 0x1704, 0x4 bytes
+                std::uint8_t pad_1708[0x8]; // 0x1708, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecShotBishops; // 0x1710, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitTargets; // 0x1728, 0x18 bytes
+                VectorWS m_vecLaunchPosition; // 0x1740, 0xc bytes
+                Vector m_vecLaunchVelocity; // 0x174c, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x1758, 0xc bytes
+                std::uint8_t pad_1764[0x9a4]; // 0x1764, 0x9a4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_ThrowBishop) == 0x2100, "CCitadel_Ability_Chessmaster_ThrowBishop size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_ThrowBishop) == 0x2108, "CCitadel_Ability_Chessmaster_ThrowBishop size mismatch");
         }
     }
 }

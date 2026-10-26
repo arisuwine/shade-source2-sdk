@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2130
+             * Size: 0x2138
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,21 +33,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fencer_ThrowBlade : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                VectorWS m_vCastPosition; // 0x14a0, 0xc bytes
-                QAngle m_qCastAngles; // 0x14ac, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_nMarkParticleIndex; // 0x14b8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nLingerParticleIndex; // 0x14bc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nExplodeParticleIndex; // 0x14c0, 0x4 bytes
-                bool m_bHitEnemyPlayer; // 0x14c4, 0x1 bytes
-                std::uint8_t pad_14c5[0x3]; // 0x14c5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_tRecastEndTime; // 0x14c8, 0x4 bytes
-                std::uint8_t pad_14cc[0xc64]; // 0x14cc, 0xc64 bytes
+                VectorWS m_vCastPosition; // 0x14a8, 0xc bytes
+                QAngle m_qCastAngles; // 0x14b4, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nMarkParticleIndex; // 0x14c0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nLingerParticleIndex; // 0x14c4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nExplodeParticleIndex; // 0x14c8, 0x4 bytes
+                bool m_bHitEnemyPlayer; // 0x14cc, 0x1 bytes
+                std::uint8_t pad_14cd[0x3]; // 0x14cd, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_tRecastEndTime; // 0x14d0, 0x4 bytes
+                std::uint8_t pad_14d4[0xc64]; // 0x14d4, 0xc64 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fencer_ThrowBlade) == 0x2130, "CCitadel_Ability_Fencer_ThrowBlade size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fencer_ThrowBlade) == 0x2138, "CCitadel_Ability_Fencer_ThrowBlade size mismatch");
         }
     }
 }

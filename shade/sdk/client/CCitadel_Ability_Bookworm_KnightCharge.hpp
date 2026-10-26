@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2828
+             * Size: 0x2830
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bookworm_KnightCharge : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x114c]; // 0x16d8, 0x114c bytes
-                bool m_bAffectedAnyTargets; // 0x2824, 0x1 bytes
-                std::uint8_t pad_2825[0x3]; // 0x2825, 0x3 bytes
+                std::uint8_t pad_16e0[0x114c]; // 0x16e0, 0x114c bytes
+                bool m_bAffectedAnyTargets; // 0x282c, 0x1 bytes
+                std::uint8_t pad_282d[0x3]; // 0x282d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bookworm_KnightCharge) == 0x2828, "CCitadel_Ability_Bookworm_KnightCharge size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bookworm_KnightCharge) == 0x2830, "CCitadel_Ability_Bookworm_KnightCharge size mismatch");
         }
     }
 }

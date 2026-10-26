@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1af0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,20 +33,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Boho_RideBroom : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x2]; // 0x14a0, 0x2 bytes
-                bool m_bLeaping; // 0x14a2, 0x1 bytes
-                std::uint8_t pad_14a3[0x1]; // 0x14a3, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flLeapStartTime; // 0x14a4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x14a8, 0x4 bytes
-                std::uint8_t pad_14ac[0x634]; // 0x14ac, 0x634 bytes
-                shade::sdk::client::ParticleIndex_t m_TrailFX; // 0x1ae0, 0x4 bytes
-                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                std::uint8_t pad_14a8[0x2]; // 0x14a8, 0x2 bytes
+                bool m_bLeaping; // 0x14aa, 0x1 bytes
+                std::uint8_t pad_14ab[0x1]; // 0x14ab, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLeapStartTime; // 0x14ac, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x14b0, 0x4 bytes
+                std::uint8_t pad_14b4[0x634]; // 0x14b4, 0x634 bytes
+                shade::sdk::client::ParticleIndex_t m_TrailFX; // 0x1ae8, 0x4 bytes
+                std::uint8_t pad_1aec[0x4]; // 0x1aec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Boho_RideBroom) == 0x1AE8, "CCitadel_Ability_Boho_RideBroom size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Boho_RideBroom) == 0x1AF0, "CCitadel_Ability_Boho_RideBroom size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a68
+             * Size: 0x1a70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TestHero_SummonCannon : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4]; // 0x16d8, 0x4 bytes
-                bool m_bCannonPending; // 0x16dc, 0x1 bytes
-                std::uint8_t pad_16dd[0x3]; // 0x16dd, 0x3 bytes
-                VectorWS m_vLaunchPosition; // 0x16e0, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16ec, 0xc bytes
-                std::uint8_t pad_16f8[0x370]; // 0x16f8, 0x370 bytes
+                std::uint8_t pad_16e0[0x4]; // 0x16e0, 0x4 bytes
+                bool m_bCannonPending; // 0x16e4, 0x1 bytes
+                std::uint8_t pad_16e5[0x3]; // 0x16e5, 0x3 bytes
+                VectorWS m_vLaunchPosition; // 0x16e8, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16f4, 0xc bytes
+                std::uint8_t pad_1700[0x370]; // 0x1700, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TestHero_SummonCannon) == 0x1A68, "CCitadel_Ability_TestHero_SummonCannon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TestHero_SummonCannon) == 0x1A70, "CCitadel_Ability_TestHero_SummonCannon size mismatch");
         }
     }
 }

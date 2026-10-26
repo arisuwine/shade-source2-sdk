@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1608
+             * Size: 0x1290
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,16 +43,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_TrackingProjectileApplyModifierVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileImpactParticle; // 0x14f8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x15d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FriendlyOnlyModifier; // 0x15e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterModifier; // 0x15f8, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileImpactParticle; // 0x1180, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x1260, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FriendlyOnlyModifier; // 0x1270, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CasterModifier; // 0x1280, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_TrackingProjectileApplyModifierVData) == 0x1608, "CCitadel_Item_TrackingProjectileApplyModifierVData size mismatch");
+            static_assert(sizeof(CCitadel_Item_TrackingProjectileApplyModifierVData) == 0x1290, "CCitadel_Item_TrackingProjectileApplyModifierVData size mismatch");
         }
     }
 }

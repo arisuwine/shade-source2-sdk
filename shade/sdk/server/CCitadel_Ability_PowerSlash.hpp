@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1de0
+             * Size: 0x1de8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PowerSlash : public shade::sdk::server::CCitadelBaseYamatoAbility {
             public:
-                std::uint8_t pad_14a8[0x20]; // 0x14a8, 0x20 bytes
-                std::int32_t m_nPowerLevel; // 0x14c8, 0x4 bytes
-                std::uint8_t pad_14cc[0x4]; // 0x14cc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x14d0, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nCastParticle; // 0x14e8, 0x4 bytes
-                std::uint8_t pad_14ec[0x8f4]; // 0x14ec, 0x8f4 bytes
+                std::uint8_t pad_14b0[0x20]; // 0x14b0, 0x20 bytes
+                std::int32_t m_nPowerLevel; // 0x14d0, 0x4 bytes
+                std::uint8_t pad_14d4[0x4]; // 0x14d4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x14d8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nCastParticle; // 0x14f0, 0x4 bytes
+                std::uint8_t pad_14f4[0x8f4]; // 0x14f4, 0x8f4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PowerSlash) == 0x1DE0, "CCitadel_Ability_PowerSlash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PowerSlash) == 0x1DE8, "CCitadel_Ability_PowerSlash size mismatch");
         }
     }
 }

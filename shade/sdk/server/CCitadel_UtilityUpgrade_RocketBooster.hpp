@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f38
+             * Size: 0x1c80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,23 +33,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_UtilityUpgrade_RocketBooster : public shade::sdk::server::CCitadel_UtilityUpgrade_RocketBoots {
             public:
-                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x1608, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x160c, 0x4 bytes
-                bool m_bCrashingDown; // 0x1610, 0x1 bytes
-                bool m_bImpulseApplied; // 0x1611, 0x1 bytes
-                bool m_bCanCrash; // 0x1612, 0x1 bytes
-                std::uint8_t pad_1613[0x1]; // 0x1613, 0x1 bytes
-                VectorWS m_vecCrashPosition; // 0x1614, 0xc bytes
-                Vector m_vecCrashDirection; // 0x1620, 0xc bytes
-                std::uint8_t pad_162c[0x8f4]; // 0x162c, 0x8f4 bytes
-                SndOpEventGuid_t m_InAirLoopSound; // 0x1f20, 0x14 bytes
-                std::uint8_t pad_1f34[0x4]; // 0x1f34, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0x1610, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x1614, 0x4 bytes
+                bool m_bCrashingDown; // 0x1618, 0x1 bytes
+                bool m_bImpulseApplied; // 0x1619, 0x1 bytes
+                bool m_bCanCrash; // 0x161a, 0x1 bytes
+                bool m_bPlayLandingSound; // 0x161b, 0x1 bytes
+                VectorWS m_vecCrashPosition; // 0x161c, 0xc bytes
+                Vector m_vecCrashDirection; // 0x1628, 0xc bytes
+                std::uint8_t pad_1634[0x64c]; // 0x1634, 0x64c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBooster) == 0x1F38, "CCitadel_UtilityUpgrade_RocketBooster size mismatch");
+            static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBooster) == 0x1C80, "CCitadel_UtilityUpgrade_RocketBooster size mismatch");
         }
     }
 }

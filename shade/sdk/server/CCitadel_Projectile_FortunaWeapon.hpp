@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd20
+             * Size: 0xd28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_FortunaWeapon : public shade::sdk::server::CCitadelTrackedProjectile {
             public:
-                std::uint8_t pad_0998[0x388]; // 0x0998, 0x388 bytes
+                std::uint8_t pad_09a0[0x388]; // 0x09a0, 0x388 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_FortunaWeapon) == 0xD20, "CCitadel_Projectile_FortunaWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_FortunaWeapon) == 0xD28, "CCitadel_Projectile_FortunaWeapon size mismatch");
         }
     }
 }

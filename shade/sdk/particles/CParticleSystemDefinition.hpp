@@ -111,28 +111,26 @@ namespace shade {
                 std::int32_t m_nMinimumFrames; // 0x0330, 0x4 bytes
                 bool m_bIsGPUParticleSystem; // 0x0334, 0x1 bytes
                 std::uint8_t pad_0335[0x3]; // 0x0335, 0x3 bytes
-                std::int32_t m_nMinCPULevel; // 0x0338, 0x4 bytes
-                std::int32_t m_nMinGPULevel; // 0x033c, 0x4 bytes
-                float m_flNoDrawTimeToGoToSleep; // 0x0340, 0x4 bytes
-                float m_flMaxDrawDistance; // 0x0344, 0x4 bytes
-                float m_flStartFadeDistance; // 0x0348, 0x4 bytes
-                float m_flMaxCreationDistance; // 0x034c, 0x4 bytes
-                std::int32_t m_nAggregationMinAvailableParticles; // 0x0350, 0x4 bytes
-                float m_flAggregateRadius; // 0x0354, 0x4 bytes
-                bool m_bShouldBatch; // 0x0358, 0x1 bytes
-                bool m_bShouldHitboxesFallbackToRenderBounds; // 0x0359, 0x1 bytes
-                bool m_bShouldHitboxesFallbackToSnapshot; // 0x035a, 0x1 bytes
-                bool m_bShouldHitboxesFallbackToCollisionHulls; // 0x035b, 0x1 bytes
-                shade::sdk::particles::InheritableBoolType_t m_nViewModelEffect; // 0x035c, 0x4 bytes
-                bool m_bScreenSpaceEffect; // 0x0360, 0x1 bytes
-                std::uint8_t pad_0361[0x7]; // 0x0361, 0x7 bytes
-                CUtlSymbolLarge m_pszTargetLayerID; // 0x0368, 0x8 bytes
-                std::int32_t m_nSkipRenderControlPoint; // 0x0370, 0x4 bytes
-                std::int32_t m_nAllowRenderControlPoint; // 0x0374, 0x4 bytes
-                bool m_bShouldSort; // 0x0378, 0x1 bytes
-                std::uint8_t pad_0379[0x47]; // 0x0379, 0x47 bytes
-                CUtlVector<shade::sdk::particles::ParticleControlPointConfiguration_t> m_controlPointConfigurations; // 0x03c0, 0x18 bytes
-                std::uint8_t pad_03d8[0x1b8]; // 0x03d8, 0x1b8 bytes
+                float m_flNoDrawTimeToGoToSleep; // 0x0338, 0x4 bytes
+                float m_flMaxDrawDistance; // 0x033c, 0x4 bytes
+                float m_flStartFadeDistance; // 0x0340, 0x4 bytes
+                float m_flMaxCreationDistance; // 0x0344, 0x4 bytes
+                std::int32_t m_nAggregationMinAvailableParticles; // 0x0348, 0x4 bytes
+                float m_flAggregateRadius; // 0x034c, 0x4 bytes
+                bool m_bShouldBatch; // 0x0350, 0x1 bytes
+                bool m_bShouldHitboxesFallbackToRenderBounds; // 0x0351, 0x1 bytes
+                bool m_bShouldHitboxesFallbackToSnapshot; // 0x0352, 0x1 bytes
+                bool m_bShouldHitboxesFallbackToCollisionHulls; // 0x0353, 0x1 bytes
+                shade::sdk::particles::InheritableBoolType_t m_nViewModelEffect; // 0x0354, 0x4 bytes
+                bool m_bScreenSpaceEffect; // 0x0358, 0x1 bytes
+                std::uint8_t pad_0359[0x7]; // 0x0359, 0x7 bytes
+                CUtlSymbolLarge m_pszTargetLayerID; // 0x0360, 0x8 bytes
+                std::int32_t m_nSkipRenderControlPoint; // 0x0368, 0x4 bytes
+                std::int32_t m_nAllowRenderControlPoint; // 0x036c, 0x4 bytes
+                bool m_bShouldSort; // 0x0370, 0x1 bytes
+                std::uint8_t pad_0371[0x47]; // 0x0371, 0x47 bytes
+                CUtlVector<shade::sdk::particles::ParticleControlPointConfiguration_t> m_controlPointConfigurations; // 0x03b8, 0x18 bytes
+                std::uint8_t pad_03d0[0x1c0]; // 0x03d0, 0x1c0 bytes
             };
             #pragma pack(pop)
 

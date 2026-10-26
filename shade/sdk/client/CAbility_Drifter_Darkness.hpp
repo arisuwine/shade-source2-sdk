@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a50
+             * Size: 0x1a58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_Darkness : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x378]; // 0x16d8, 0x378 bytes
+                std::uint8_t pad_16e0[0x378]; // 0x16e0, 0x378 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_Darkness) == 0x1A50, "CAbility_Drifter_Darkness size mismatch");
+            static_assert(sizeof(CAbility_Drifter_Darkness) == 0x1A58, "CAbility_Drifter_Darkness size mismatch");
         }
     }
 }

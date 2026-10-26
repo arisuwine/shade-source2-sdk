@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1548
+             * Size: 0x11d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,21 +43,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Boho_BouncyProjectileVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x13e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13f8, 0xe0 bytes
-                CSoundEventName m_TargetCastSound; // 0x14d8, 0x10 bytes
-                CSoundEventName m_strImpactSound; // 0x14e8, 0x10 bytes
-                float m_flMinProjectileTravelTime; // 0x14f8, 0x4 bytes
-                float m_flDistanceBiasForCaster; // 0x14fc, 0x4 bytes
-                float m_flDistanceBiasForHeroes; // 0x1500, 0x4 bytes
-                std::uint8_t pad_1504[0x4]; // 0x1504, 0x4 bytes
-                CPiecewiseCurve m_bouncePositionCurve; // 0x1508, 0x40 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1070, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1080, 0xe0 bytes
+                CSoundEventName m_TargetCastSound; // 0x1160, 0x10 bytes
+                CSoundEventName m_strImpactSound; // 0x1170, 0x10 bytes
+                float m_flMinProjectileTravelTime; // 0x1180, 0x4 bytes
+                float m_flDistanceBiasForCaster; // 0x1184, 0x4 bytes
+                float m_flDistanceBiasForHeroes; // 0x1188, 0x4 bytes
+                std::uint8_t pad_118c[0x4]; // 0x118c, 0x4 bytes
+                CPiecewiseCurve m_bouncePositionCurve; // 0x1190, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Boho_BouncyProjectileVData) == 0x1548, "CCitadel_Ability_Boho_BouncyProjectileVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Boho_BouncyProjectileVData) == 0x11D0, "CCitadel_Ability_Boho_BouncyProjectileVData size mismatch");
         }
     }
 }

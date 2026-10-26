@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1400
+             * Size: 0x1088
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ZipLineBoost_VData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipboostModifier; // 0x13e8, 0x10 bytes
-                float m_flTimeToActivate; // 0x13f8, 0x4 bytes
-                float m_flTimeForHint; // 0x13fc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZipboostModifier; // 0x1070, 0x10 bytes
+                float m_flTimeToActivate; // 0x1080, 0x4 bytes
+                float m_flTimeForHint; // 0x1084, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ZipLineBoost_VData) == 0x1400, "CCitadel_Ability_ZipLineBoost_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ZipLineBoost_VData) == 0x1088, "CCitadel_Ability_ZipLineBoost_VData size mismatch");
         }
     }
 }

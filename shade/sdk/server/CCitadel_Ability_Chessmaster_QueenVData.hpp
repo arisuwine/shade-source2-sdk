@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1840
+             * Size: 0x14c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,43 +43,43 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_QueenVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LiftModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TileModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEExplodeParticle; // 0x1418, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect; // 0x14f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TileExplodeParticle; // 0x15d8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PostExplodeParticle; // 0x16b8, 0xe0 bytes
-                CSoundEventName m_AOEExplodeSound; // 0x1798, 0x10 bytes
-                CSoundEventName m_strAOEWarningSound; // 0x17a8, 0x10 bytes
-                CSoundEventName m_strExpireSound; // 0x17b8, 0x10 bytes
-                CSoundEventName m_QueenRecallSound; // 0x17c8, 0x10 bytes
-                CSoundEventName m_QueenExpireSound; // 0x17d8, 0x10 bytes
-                CSoundEventName m_strCheckmateSound; // 0x17e8, 0x10 bytes
-                CSoundEventName m_strTileReleasedSound; // 0x17f8, 0x10 bytes
-                CSoundEventName m_strSlamSound; // 0x1808, 0x10 bytes
-                bool m_bOrientToWorldForward; // 0x1818, 0x1 bytes
-                bool m_bHaveLinesStun; // 0x1819, 0x1 bytes
-                bool m_bOnlyStunOnce; // 0x181a, 0x1 bytes
-                bool m_bOnlyStunThreat; // 0x181b, 0x1 bytes
-                bool m_bDoLiftOnStun; // 0x181c, 0x1 bytes
-                bool m_bDamageBeforeLift; // 0x181d, 0x1 bytes
-                bool m_bHasLimitedMoves; // 0x181e, 0x1 bytes
-                std::uint8_t pad_181f[0x1]; // 0x181f, 0x1 bytes
-                float m_flInitialTileDelay; // 0x1820, 0x4 bytes
-                float m_flTimeBetweenTiles; // 0x1824, 0x4 bytes
-                float m_flTraceRadius; // 0x1828, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x182c, 0x4 bytes
-                float m_flFloatDownRate; // 0x1830, 0x4 bytes
-                float m_flClimbHeight; // 0x1834, 0x4 bytes
-                float m_flStepDownHeight; // 0x1838, 0x4 bytes
-                float m_flSinclairModelSwapHold; // 0x183c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LiftModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_TileModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEExplodeParticle; // 0x10a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect; // 0x1180, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TileExplodeParticle; // 0x1260, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PostExplodeParticle; // 0x1340, 0xe0 bytes
+                CSoundEventName m_AOEExplodeSound; // 0x1420, 0x10 bytes
+                CSoundEventName m_strAOEWarningSound; // 0x1430, 0x10 bytes
+                CSoundEventName m_strExpireSound; // 0x1440, 0x10 bytes
+                CSoundEventName m_QueenRecallSound; // 0x1450, 0x10 bytes
+                CSoundEventName m_QueenExpireSound; // 0x1460, 0x10 bytes
+                CSoundEventName m_strCheckmateSound; // 0x1470, 0x10 bytes
+                CSoundEventName m_strTileReleasedSound; // 0x1480, 0x10 bytes
+                CSoundEventName m_strSlamSound; // 0x1490, 0x10 bytes
+                bool m_bOrientToWorldForward; // 0x14a0, 0x1 bytes
+                bool m_bHaveLinesStun; // 0x14a1, 0x1 bytes
+                bool m_bOnlyStunOnce; // 0x14a2, 0x1 bytes
+                bool m_bOnlyStunThreat; // 0x14a3, 0x1 bytes
+                bool m_bDoLiftOnStun; // 0x14a4, 0x1 bytes
+                bool m_bDamageBeforeLift; // 0x14a5, 0x1 bytes
+                bool m_bHasLimitedMoves; // 0x14a6, 0x1 bytes
+                std::uint8_t pad_14a7[0x1]; // 0x14a7, 0x1 bytes
+                float m_flInitialTileDelay; // 0x14a8, 0x4 bytes
+                float m_flTimeBetweenTiles; // 0x14ac, 0x4 bytes
+                float m_flTraceRadius; // 0x14b0, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x14b4, 0x4 bytes
+                float m_flFloatDownRate; // 0x14b8, 0x4 bytes
+                float m_flClimbHeight; // 0x14bc, 0x4 bytes
+                float m_flStepDownHeight; // 0x14c0, 0x4 bytes
+                float m_flSinclairModelSwapHold; // 0x14c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_QueenVData) == 0x1840, "CCitadel_Ability_Chessmaster_QueenVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_QueenVData) == 0x14C8, "CCitadel_Ability_Chessmaster_QueenVData size mismatch");
         }
     }
 }

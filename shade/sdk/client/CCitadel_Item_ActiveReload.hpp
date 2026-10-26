@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x16e0
+             * Size: 0x16e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_ActiveReload : public shade::sdk::client::CCitadel_Item {
             public:
-                bool m_bPlayedStartSound; // 0x16d8, 0x1 bytes
-                bool m_bActiveReloadFailed; // 0x16d9, 0x1 bytes
-                std::uint8_t pad_16da[0x6]; // 0x16da, 0x6 bytes
+                bool m_bPlayedStartSound; // 0x16e0, 0x1 bytes
+                bool m_bActiveReloadFailed; // 0x16e1, 0x1 bytes
+                std::uint8_t pad_16e2[0x6]; // 0x16e2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_ActiveReload) == 0x16E0, "CCitadel_Item_ActiveReload size mismatch");
+            static_assert(sizeof(CCitadel_Item_ActiveReload) == 0x16E8, "CCitadel_Item_ActiveReload size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d40
+             * Size: 0x1d48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Burrow : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x630]; // 0x16d8, 0x630 bytes
-                bool m_bInGround; // 0x1d08, 0x1 bytes
-                std::uint8_t pad_1d09[0x3]; // 0x1d09, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1d0c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_SpinEndTime; // 0x1d10, 0x4 bytes
-                std::uint8_t pad_1d14[0x2c]; // 0x1d14, 0x2c bytes
+                std::uint8_t pad_16e0[0x630]; // 0x16e0, 0x630 bytes
+                bool m_bInGround; // 0x1d10, 0x1 bytes
+                std::uint8_t pad_1d11[0x3]; // 0x1d11, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1d14, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_SpinEndTime; // 0x1d18, 0x4 bytes
+                std::uint8_t pad_1d1c[0x2c]; // 0x1d1c, 0x2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Burrow) == 0x1D40, "CCitadel_Ability_Burrow size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Burrow) == 0x1D48, "CCitadel_Ability_Burrow size mismatch");
         }
     }
 }

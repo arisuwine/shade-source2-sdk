@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x21f8
+             * Size: 0x2200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,16 +40,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_BloodBlast : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0xb00]; // 0x16d8, 0xb00 bytes
-                shade::sdk::client::ParticleIndex_t m_SandEffect; // 0x21d8, 0x4 bytes
-                std::uint8_t pad_21dc[0x4]; // 0x21dc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitTargets; // 0x21e0, 0x18 bytes
+                std::uint8_t pad_16e0[0xb00]; // 0x16e0, 0xb00 bytes
+                shade::sdk::client::ParticleIndex_t m_SandEffect; // 0x21e0, 0x4 bytes
+                std::uint8_t pad_21e4[0x4]; // 0x21e4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitTargets; // 0x21e8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_BloodBlast) == 0x21F8, "CAbility_Drifter_BloodBlast size mismatch");
+            static_assert(sizeof(CAbility_Drifter_BloodBlast) == 0x2200, "CAbility_Drifter_BloodBlast size mismatch");
         }
     }
 }

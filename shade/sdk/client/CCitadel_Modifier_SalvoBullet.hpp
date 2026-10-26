@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x458
+             * Size: 0x460
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SalvoBullet : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_02f0[0x160]; // 0x02f0, 0x160 bytes
-                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0450, 0x4 bytes
-                std::uint8_t pad_0454[0x4]; // 0x0454, 0x4 bytes
+                std::uint8_t pad_02f8[0x160]; // 0x02f8, 0x160 bytes
+                shade::sdk::client::ShotID_t m_BuffedShotId; // 0x0458, 0x4 bytes
+                std::uint8_t pad_045c[0x4]; // 0x045c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SalvoBullet) == 0x458, "CCitadel_Modifier_SalvoBullet size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SalvoBullet) == 0x460, "CCitadel_Modifier_SalvoBullet size mismatch");
         }
     }
 }

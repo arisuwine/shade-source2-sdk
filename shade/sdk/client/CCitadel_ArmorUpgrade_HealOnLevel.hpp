@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1788
+             * Size: 0x1790
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_ArmorUpgrade_HealOnLevel : public shade::sdk::client::CCitadel_Item {
             public:
-                std::uint8_t pad_16d8[0xb0]; // 0x16d8, 0xb0 bytes
+                std::uint8_t pad_16e0[0xb0]; // 0x16e0, 0xb0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_ArmorUpgrade_HealOnLevel) == 0x1788, "CCitadel_ArmorUpgrade_HealOnLevel size mismatch");
+            static_assert(sizeof(CCitadel_ArmorUpgrade_HealOnLevel) == 0x1790, "CCitadel_ArmorUpgrade_HealOnLevel size mismatch");
         }
     }
 }

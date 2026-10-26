@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1878
+             * Size: 0x1500
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,36 +43,36 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_HexingBrew_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoneModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FireModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BarrierModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x1418, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FailModifier; // 0x1428, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HoldingModifier; // 0x1438, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateFireParticle; // 0x1448, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateBarrierParticle; // 0x1528, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateSilenceParticle; // 0x1608, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FuseParticle; // 0x16e8, 0xe0 bytes
-                Color m_FuseNoColor; // 0x17c8, 0x4 bytes
-                Color m_FuseFireColor; // 0x17cc, 0x4 bytes
-                Color m_FuseBarrierColor; // 0x17d0, 0x4 bytes
-                std::uint8_t pad_17d4[0x4]; // 0x17d4, 0x4 bytes
-                CSoundEventName m_strBrewLockSound; // 0x17d8, 0x10 bytes
-                CSoundEventName m_strBrewUnlockSound; // 0x17e8, 0x10 bytes
-                CSoundEventName m_DetonateSound; // 0x17f8, 0x10 bytes
-                CSoundEventName m_strBrewChangeDefaultSound; // 0x1808, 0x10 bytes
-                CSoundEventName m_strBrewChangeBarrierSound; // 0x1818, 0x10 bytes
-                CSoundEventName m_strBrewChangeFireSound; // 0x1828, 0x10 bytes
-                CSoundEventName m_strBrewChangeSilenceSound; // 0x1838, 0x10 bytes
-                CSoundEventName m_strBarrierAppliedSound; // 0x1848, 0x10 bytes
-                CSoundEventName m_strBurnAppliedSound; // 0x1858, 0x10 bytes
-                CSoundEventName m_strSilenceAppliedSound; // 0x1868, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_NoneModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FireModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BarrierModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x10a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FailModifier; // 0x10b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_HoldingModifier; // 0x10c0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateFireParticle; // 0x10d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateBarrierParticle; // 0x11b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateSilenceParticle; // 0x1290, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FuseParticle; // 0x1370, 0xe0 bytes
+                Color m_FuseNoColor; // 0x1450, 0x4 bytes
+                Color m_FuseFireColor; // 0x1454, 0x4 bytes
+                Color m_FuseBarrierColor; // 0x1458, 0x4 bytes
+                std::uint8_t pad_145c[0x4]; // 0x145c, 0x4 bytes
+                CSoundEventName m_strBrewLockSound; // 0x1460, 0x10 bytes
+                CSoundEventName m_strBrewUnlockSound; // 0x1470, 0x10 bytes
+                CSoundEventName m_DetonateSound; // 0x1480, 0x10 bytes
+                CSoundEventName m_strBrewChangeDefaultSound; // 0x1490, 0x10 bytes
+                CSoundEventName m_strBrewChangeBarrierSound; // 0x14a0, 0x10 bytes
+                CSoundEventName m_strBrewChangeFireSound; // 0x14b0, 0x10 bytes
+                CSoundEventName m_strBrewChangeSilenceSound; // 0x14c0, 0x10 bytes
+                CSoundEventName m_strBarrierAppliedSound; // 0x14d0, 0x10 bytes
+                CSoundEventName m_strBurnAppliedSound; // 0x14e0, 0x10 bytes
+                CSoundEventName m_strSilenceAppliedSound; // 0x14f0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_HexingBrew_VData) == 0x1878, "CCitadel_Ability_Baba_HexingBrew_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_HexingBrew_VData) == 0x1500, "CCitadel_Ability_Baba_HexingBrew_VData size mismatch");
         }
     }
 }

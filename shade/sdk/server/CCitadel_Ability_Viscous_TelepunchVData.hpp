@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18c0
+             * Size: 0x1548
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,29 +43,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Viscous_TelepunchVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PortalParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PunchParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallPunchParticle; // 0x1688, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CeilingPunchParticle; // 0x1768, 0xe0 bytes
-                CSoundEventName m_PunchSound; // 0x1848, 0x10 bytes
-                CSoundEventName m_PunchSelfSound; // 0x1858, 0x10 bytes
-                CSoundEventName m_EnemyPortalSound; // 0x1868, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PunchRollSlowModifier; // 0x1878, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ImpactModifier; // 0x1888, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FriendlyImpactModifier; // 0x1898, 0x10 bytes
-                float m_flEnemyPortalTelegraphTime; // 0x18a8, 0x4 bytes
-                float m_flSelfPortalTelegraphTime; // 0x18ac, 0x4 bytes
-                float m_flWindupTime; // 0x18b0, 0x4 bytes
-                float m_flAttackTime; // 0x18b4, 0x4 bytes
-                float m_flGroundTraceOnPlayerHitDistance; // 0x18b8, 0x4 bytes
-                float m_flPlayerCheckSphereRadius; // 0x18bc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PortalParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PunchParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallPunchParticle; // 0x1310, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CeilingPunchParticle; // 0x13f0, 0xe0 bytes
+                CSoundEventName m_PunchSound; // 0x14d0, 0x10 bytes
+                CSoundEventName m_PunchSelfSound; // 0x14e0, 0x10 bytes
+                CSoundEventName m_EnemyPortalSound; // 0x14f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_PunchRollSlowModifier; // 0x1500, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ImpactModifier; // 0x1510, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_FriendlyImpactModifier; // 0x1520, 0x10 bytes
+                float m_flEnemyPortalTelegraphTime; // 0x1530, 0x4 bytes
+                float m_flSelfPortalTelegraphTime; // 0x1534, 0x4 bytes
+                float m_flWindupTime; // 0x1538, 0x4 bytes
+                float m_flAttackTime; // 0x153c, 0x4 bytes
+                float m_flGroundTraceOnPlayerHitDistance; // 0x1540, 0x4 bytes
+                float m_flPlayerCheckSphereRadius; // 0x1544, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Viscous_TelepunchVData) == 0x18C0, "CCitadel_Ability_Viscous_TelepunchVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Viscous_TelepunchVData) == 0x1548, "CCitadel_Ability_Viscous_TelepunchVData size mismatch");
         }
     }
 }

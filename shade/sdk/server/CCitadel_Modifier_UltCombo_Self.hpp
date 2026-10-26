@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x158
+             * Size: 0x160
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_UltCombo_Self : public shade::sdk::server::CCitadelModifier {
             public:
-                QAngle m_angles; // 0x0148, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0154, 0x4 bytes
+                QAngle m_angles; // 0x0150, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x015c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_UltCombo_Self) == 0x158, "CCitadel_Modifier_UltCombo_Self size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_UltCombo_Self) == 0x160, "CCitadel_Modifier_UltCombo_Self size mismatch");
         }
     }
 }

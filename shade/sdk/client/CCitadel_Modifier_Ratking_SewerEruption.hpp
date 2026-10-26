@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x350
+             * Size: 0x358
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Ratking_SewerEruption : public shade::sdk::client::CCitadelModifier {
             public:
-                shade::sdk::client::ParticleIndex_t m_AnticipationParticleIndex; // 0x0138, 0x4 bytes
-                std::uint8_t pad_013c[0x214]; // 0x013c, 0x214 bytes
+                shade::sdk::client::ParticleIndex_t m_AnticipationParticleIndex; // 0x0140, 0x4 bytes
+                std::uint8_t pad_0144[0x214]; // 0x0144, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Ratking_SewerEruption) == 0x350, "CCitadel_Modifier_Ratking_SewerEruption size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Ratking_SewerEruption) == 0x358, "CCitadel_Modifier_Ratking_SewerEruption size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1348
+             * Size: 0x1350
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelProjectile_ImmobilizeTrap : public shade::sdk::server::CCitadelProjectile {
             public:
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0968, 0x4 bytes
-                Vector m_vecStartPos; // 0x096c, 0xc bytes
-                Vector m_vecEndPos; // 0x0978, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flProjectileLandTime; // 0x0984, 0x4 bytes
-                std::uint8_t pad_0988[0x9c0]; // 0x0988, 0x9c0 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0970, 0x4 bytes
+                Vector m_vecStartPos; // 0x0974, 0xc bytes
+                Vector m_vecEndPos; // 0x0980, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flProjectileLandTime; // 0x098c, 0x4 bytes
+                std::uint8_t pad_0990[0x9c0]; // 0x0990, 0x9c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelProjectile_ImmobilizeTrap) == 0x1348, "CCitadelProjectile_ImmobilizeTrap size mismatch");
+            static_assert(sizeof(CCitadelProjectile_ImmobilizeTrap) == 0x1350, "CCitadelProjectile_ImmobilizeTrap size mismatch");
         }
     }
 }

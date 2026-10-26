@@ -17,12 +17,14 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CCitadelModifier.hpp"
+#include "shade/sdk/client/ParticleIndex_t.hpp"
+#include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0x148
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,12 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Upgrade_Magic_Storm : public shade::sdk::client::CCitadelModifier {
             public:
+                shade::sdk::client::ParticleIndex_t m_hTrailParticle; // 0x0140, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tTrailStartTime; // 0x0144, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Upgrade_Magic_Storm) == 0x138, "CCitadel_Modifier_Upgrade_Magic_Storm size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Upgrade_Magic_Storm) == 0x148, "CCitadel_Modifier_Upgrade_Magic_Storm size mismatch");
         }
     }
 }

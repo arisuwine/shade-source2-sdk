@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x358
+             * Size: 0x360
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Werewolf_TrackingBomb : public shade::sdk::client::CCitadelModifier {
             public:
-                bool m_bWithinTrackingRange; // 0x0138, 0x1 bytes
-                std::uint8_t pad_0139[0x21f]; // 0x0139, 0x21f bytes
+                bool m_bWithinTrackingRange; // 0x0140, 0x1 bytes
+                std::uint8_t pad_0141[0x21f]; // 0x0141, 0x21f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Werewolf_TrackingBomb) == 0x358, "CCitadel_Modifier_Werewolf_TrackingBomb size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Werewolf_TrackingBomb) == 0x360, "CCitadel_Modifier_Werewolf_TrackingBomb size mismatch");
         }
     }
 }

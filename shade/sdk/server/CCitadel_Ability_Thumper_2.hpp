@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x16d0
+             * Size: 0x16d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Thumper_2 : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                VectorWS m_vStompPos; // 0x14a0, 0xc bytes
-                Vector m_vStompDir; // 0x14ac, 0xc bytes
-                std::int32_t m_nStomps; // 0x14b8, 0x4 bytes
-                std::uint8_t pad_14bc[0x214]; // 0x14bc, 0x214 bytes
+                VectorWS m_vStompPos; // 0x14a8, 0xc bytes
+                Vector m_vStompDir; // 0x14b4, 0xc bytes
+                std::int32_t m_nStomps; // 0x14c0, 0x4 bytes
+                std::uint8_t pad_14c4[0x214]; // 0x14c4, 0x214 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Thumper_2) == 0x16D0, "CCitadel_Ability_Thumper_2 size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Thumper_2) == 0x16D8, "CCitadel_Ability_Thumper_2 size mismatch");
         }
     }
 }

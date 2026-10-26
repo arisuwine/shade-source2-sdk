@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b18
+             * Size: 0x1b20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,24 +41,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ChargedTackle : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x630]; // 0x14a0, 0x630 bytes
-                bool m_bPreparing; // 0x1ad0, 0x1 bytes
-                bool m_bTackling; // 0x1ad1, 0x1 bytes
-                std::uint8_t pad_1ad2[0x2]; // 0x1ad2, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flTackleStartTime; // 0x1ad4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPrepareStartTime; // 0x1ad8, 0x4 bytes
-                Vector m_vecTackleDir; // 0x1adc, 0xc bytes
-                VectorWS m_vecLastPosition; // 0x1ae8, 0xc bytes
-                std::int32_t m_nStuckFramesCount; // 0x1af4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x1af8, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nDistancePreview; // 0x1b10, 0x4 bytes
-                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
+                std::uint8_t pad_14a8[0x630]; // 0x14a8, 0x630 bytes
+                bool m_bPreparing; // 0x1ad8, 0x1 bytes
+                bool m_bTackling; // 0x1ad9, 0x1 bytes
+                std::uint8_t pad_1ada[0x2]; // 0x1ada, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flTackleStartTime; // 0x1adc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPrepareStartTime; // 0x1ae0, 0x4 bytes
+                Vector m_vecTackleDir; // 0x1ae4, 0xc bytes
+                VectorWS m_vecLastPosition; // 0x1af0, 0xc bytes
+                std::int32_t m_nStuckFramesCount; // 0x1afc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x1b00, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nDistancePreview; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ChargedTackle) == 0x1B18, "CCitadel_Ability_ChargedTackle size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ChargedTackle) == 0x1B20, "CCitadel_Ability_ChargedTackle size mismatch");
         }
     }
 }

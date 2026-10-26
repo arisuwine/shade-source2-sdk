@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1610
+             * Size: 0x1298
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,31 +44,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_GraveStoneVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastWarningParticle; // 0x13e8, 0xe0 bytes
-                CSoundEventName m_strSummonGravestoneSound; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GraveStoneModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZombieSummonModifier; // 0x14e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BlockerModel; // 0x14f8, 0xe0 bytes
-                float m_flStoneSubmergeMinDepth; // 0x15d8, 0x4 bytes
-                float m_flStoneSubmergeMaxDepth; // 0x15dc, 0x4 bytes
-                float m_flStonePitchMinOffset; // 0x15e0, 0x4 bytes
-                float m_flStonePitchMaxOffset; // 0x15e4, 0x4 bytes
-                float m_flStoneRollMinOffset; // 0x15e8, 0x4 bytes
-                float m_flStoneRollMaxOffset; // 0x15ec, 0x4 bytes
-                float m_flStoneYawMinOffset; // 0x15f0, 0x4 bytes
-                float m_flStoneYawMaxOffset; // 0x15f4, 0x4 bytes
-                float m_flDropDownRate; // 0x15f8, 0x4 bytes
-                float m_flClimbHeight; // 0x15fc, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x1600, 0x4 bytes
-                float m_flNavMeshSearchRadius; // 0x1604, 0x4 bytes
-                bool m_bAllowStackingDamageFromGun; // 0x1608, 0x1 bytes
-                std::uint8_t pad_1609[0x7]; // 0x1609, 0x7 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastWarningParticle; // 0x1070, 0xe0 bytes
+                CSoundEventName m_strSummonGravestoneSound; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GraveStoneModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZombieSummonModifier; // 0x1170, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BlockerModel; // 0x1180, 0xe0 bytes
+                float m_flStoneSubmergeMinDepth; // 0x1260, 0x4 bytes
+                float m_flStoneSubmergeMaxDepth; // 0x1264, 0x4 bytes
+                float m_flStonePitchMinOffset; // 0x1268, 0x4 bytes
+                float m_flStonePitchMaxOffset; // 0x126c, 0x4 bytes
+                float m_flStoneRollMinOffset; // 0x1270, 0x4 bytes
+                float m_flStoneRollMaxOffset; // 0x1274, 0x4 bytes
+                float m_flStoneYawMinOffset; // 0x1278, 0x4 bytes
+                float m_flStoneYawMaxOffset; // 0x127c, 0x4 bytes
+                float m_flDropDownRate; // 0x1280, 0x4 bytes
+                float m_flClimbHeight; // 0x1284, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x1288, 0x4 bytes
+                float m_flNavMeshSearchRadius; // 0x128c, 0x4 bytes
+                bool m_bAllowStackingDamageFromGun; // 0x1290, 0x1 bytes
+                std::uint8_t pad_1291[0x7]; // 0x1291, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_GraveStoneVData) == 0x1610, "CCitadel_Ability_Necro_GraveStoneVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_GraveStoneVData) == 0x1298, "CCitadel_Ability_Necro_GraveStoneVData size mismatch");
         }
     }
 }

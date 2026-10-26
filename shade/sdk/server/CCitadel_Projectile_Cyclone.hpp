@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xce0
+             * Size: 0xce8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Projectile_Cyclone : public shade::sdk::server::CCitadelProjectile {
             public:
-                CHandle<shade::sdk::server::CCitadel_Ability_Thumper_4> m_CycloneAbility; // 0x0968, 0x4 bytes
-                std::uint8_t pad_096c[0x374]; // 0x096c, 0x374 bytes
+                CHandle<shade::sdk::server::CCitadel_Ability_Thumper_4> m_CycloneAbility; // 0x0970, 0x4 bytes
+                std::uint8_t pad_0974[0x374]; // 0x0974, 0x374 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Projectile_Cyclone) == 0xCE0, "CCitadel_Projectile_Cyclone size mismatch");
+            static_assert(sizeof(CCitadel_Projectile_Cyclone) == 0xCE8, "CCitadel_Projectile_Cyclone size mismatch");
         }
     }
 }

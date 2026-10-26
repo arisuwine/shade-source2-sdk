@@ -23,7 +23,8 @@ namespace shade {
                 EApplyFilter_OnlyIfNonImbued = 0x2,
                 EApplyFilter_OnlyIfHasCharges = 0x3,
                 EApplyFilter_OnlyIfUltimate = 0x4,
-                EApplyFilter_OnlyIfSignature = 0x5
+                EApplyFilter_OnlyIfSignature = 0x5,
+                EApplyFilter_OnlyIfNonUltimateSignature = 0x6
             };
         }
     }

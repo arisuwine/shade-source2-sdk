@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2340
+             * Size: 0x2348
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_PrimaryWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1970[0x9b8]; // 0x1970, 0x9b8 bytes
-                shade::sdk::entity2::GameTime_t m_tTetherAttachTime; // 0x2328, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tTetherBreakTime; // 0x232c, 0x4 bytes
-                bool m_bHasTetherTarget; // 0x2330, 0x1 bytes
-                std::uint8_t pad_2331[0xf]; // 0x2331, 0xf bytes
+                std::uint8_t pad_1978[0x9b8]; // 0x1978, 0x9b8 bytes
+                shade::sdk::entity2::GameTime_t m_tTetherAttachTime; // 0x2330, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tTetherBreakTime; // 0x2334, 0x4 bytes
+                bool m_bHasTetherTarget; // 0x2338, 0x1 bytes
+                std::uint8_t pad_2339[0xf]; // 0x2339, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_PrimaryWeapon) == 0x2340, "CCitadel_Ability_Necro_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_PrimaryWeapon) == 0x2348, "CCitadel_Ability_Necro_PrimaryWeapon size mismatch");
         }
     }
 }

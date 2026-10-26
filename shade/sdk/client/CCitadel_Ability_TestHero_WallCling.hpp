@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1860
+             * Size: 0x1868
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TestHero_WallCling : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x164]; // 0x16d8, 0x164 bytes
-                Vector m_vecWallClingNormal; // 0x183c, 0xc bytes
-                VectorWS m_vecWallPosition; // 0x1848, 0xc bytes
-                Vector m_vecLastVelocity; // 0x1854, 0xc bytes
+                std::uint8_t pad_16e0[0x164]; // 0x16e0, 0x164 bytes
+                Vector m_vecWallClingNormal; // 0x1844, 0xc bytes
+                VectorWS m_vecWallPosition; // 0x1850, 0xc bytes
+                Vector m_vecLastVelocity; // 0x185c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TestHero_WallCling) == 0x1860, "CCitadel_Ability_TestHero_WallCling size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TestHero_WallCling) == 0x1868, "CCitadel_Ability_TestHero_WallCling size mismatch");
         }
     }
 }

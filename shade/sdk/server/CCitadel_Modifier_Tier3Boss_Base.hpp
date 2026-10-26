@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x148
+             * Size: 0x150
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -37,7 +37,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_Base) == 0x148, "CCitadel_Modifier_Tier3Boss_Base size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Tier3Boss_Base) == 0x150, "CCitadel_Modifier_Tier3Boss_Base size mismatch");
         }
     }
 }

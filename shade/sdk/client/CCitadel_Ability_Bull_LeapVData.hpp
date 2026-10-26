@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1948
+             * Size: 0x15d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,42 +43,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bull_LeapVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CPiecewiseCurve m_CrashSpeedScaleCurve; // 0x13e8, 0x40 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x1428, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BoostModifier; // 0x1438, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CrashModifier; // 0x1448, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ImmunityModifier; // 0x1458, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LandingBonusesModifier; // 0x1468, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DragModifier; // 0x1478, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TakeOffParticle; // 0x1488, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1568, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x1648, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoverParticle; // 0x1728, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DivingPreviewParticle; // 0x1808, 0xe0 bytes
-                CSoundEventName m_strCrashingSound; // 0x18e8, 0x10 bytes
-                CSoundEventName m_strImpactSound; // 0x18f8, 0x10 bytes
-                float m_flStartupTime; // 0x1908, 0x4 bytes
-                float m_flForwardBoostSpeed; // 0x190c, 0x4 bytes
-                float m_flUpBoostSpeed; // 0x1910, 0x4 bytes
-                float m_flBoostTurnRate; // 0x1914, 0x4 bytes
-                float m_flHoverTime; // 0x1918, 0x4 bytes
-                float m_flMinAimAngle; // 0x191c, 0x4 bytes
-                float m_flBoostGain; // 0x1920, 0x4 bytes
-                float m_flBoostTime; // 0x1924, 0x4 bytes
-                float m_flLandingTime; // 0x1928, 0x4 bytes
-                float m_flCrashSpeed; // 0x192c, 0x4 bytes
-                float m_flCrashBraceAnimTime; // 0x1930, 0x4 bytes
-                float m_flCollideRadius; // 0x1934, 0x4 bytes
-                float m_flHoverInputSpeedMax; // 0x1938, 0x4 bytes
-                float m_flHoverInputAcceleration; // 0x193c, 0x4 bytes
-                float m_flHoverSpeedDecay; // 0x1940, 0x4 bytes
-                float m_flCrashDownInputBuffer; // 0x1944, 0x4 bytes
+                CPiecewiseCurve m_CrashSpeedScaleCurve; // 0x1070, 0x40 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x10b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BoostModifier; // 0x10c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_CrashModifier; // 0x10d0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ImmunityModifier; // 0x10e0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_LandingBonusesModifier; // 0x10f0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DragModifier; // 0x1100, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TakeOffParticle; // 0x1110, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x11f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x12d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoverParticle; // 0x13b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DivingPreviewParticle; // 0x1490, 0xe0 bytes
+                CSoundEventName m_strCrashingSound; // 0x1570, 0x10 bytes
+                CSoundEventName m_strImpactSound; // 0x1580, 0x10 bytes
+                float m_flStartupTime; // 0x1590, 0x4 bytes
+                float m_flForwardBoostSpeed; // 0x1594, 0x4 bytes
+                float m_flUpBoostSpeed; // 0x1598, 0x4 bytes
+                float m_flBoostTurnRate; // 0x159c, 0x4 bytes
+                float m_flHoverTime; // 0x15a0, 0x4 bytes
+                float m_flMinAimAngle; // 0x15a4, 0x4 bytes
+                float m_flBoostGain; // 0x15a8, 0x4 bytes
+                float m_flBoostTime; // 0x15ac, 0x4 bytes
+                float m_flLandingTime; // 0x15b0, 0x4 bytes
+                float m_flCrashSpeed; // 0x15b4, 0x4 bytes
+                float m_flCrashBraceAnimTime; // 0x15b8, 0x4 bytes
+                float m_flCollideRadius; // 0x15bc, 0x4 bytes
+                float m_flHoverInputSpeedMax; // 0x15c0, 0x4 bytes
+                float m_flHoverInputAcceleration; // 0x15c4, 0x4 bytes
+                float m_flHoverSpeedDecay; // 0x15c8, 0x4 bytes
+                float m_flCrashDownInputBuffer; // 0x15cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bull_LeapVData) == 0x1948, "CCitadel_Ability_Bull_LeapVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bull_LeapVData) == 0x15D0, "CCitadel_Ability_Bull_LeapVData size mismatch");
         }
     }
 }

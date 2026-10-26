@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1da0
+             * Size: 0x1dd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,21 +41,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Deadpack_Ultimate : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::EUltimateState_t m_eState; // 0x14a0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tStateTimeBegin; // 0x14a4, 0x4 bytes
-                VectorWS m_vStateOriginBegin; // 0x14a8, 0xc bytes
-                QAngle m_qStateAnglesBegin; // 0x14b4, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x14c0, 0x4 bytes
-                float m_flGoingUpTargetElevation; // 0x14c4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tLastUpwardVelocityTime; // 0x14c8, 0x4 bytes
-                bool m_bIsApproachingApex; // 0x14cc, 0x1 bytes
-                std::uint8_t pad_14cd[0x8d3]; // 0x14cd, 0x8d3 bytes
+                shade::sdk::client::EUltimateState_t m_eState; // 0x14a8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tStateTimeBegin; // 0x14ac, 0x4 bytes
+                VectorWS m_vStateOriginBegin; // 0x14b0, 0xc bytes
+                QAngle m_qStateAnglesBegin; // 0x14bc, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x14c8, 0x4 bytes
+                float m_flGoingUpTargetElevation; // 0x14cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tLastUpwardVelocityTime; // 0x14d0, 0x4 bytes
+                bool m_bIsApproachingApex; // 0x14d4, 0x1 bytes
+                std::uint8_t pad_14d5[0x903]; // 0x14d5, 0x903 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Deadpack_Ultimate) == 0x1DA0, "CCitadel_Ability_Deadpack_Ultimate size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Deadpack_Ultimate) == 0x1DD8, "CCitadel_Ability_Deadpack_Ultimate size mismatch");
         }
     }
 }

@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2328
+             * Size: 0x2330
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,25 +41,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fencer_Riposte : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x14a0, 0x4 bytes
-                VectorWS m_vRiposteStartPosition; // 0x14a4, 0xc bytes
-                Vector m_vDashDirection; // 0x14b0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x14bc, 0x4 bytes
-                std::uint8_t m_nCurrentRiposteState; // 0x14c0, 0x1 bytes
-                std::uint8_t pad_14c1[0x3]; // 0x14c1, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flSuccessfulRiposteTime; // 0x14c4, 0x4 bytes
-                std::uint8_t pad_14c8[0xbb0]; // 0x14c8, 0xbb0 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x2078, 0x18 bytes
-                VectorWS m_vecLastPosition; // 0x2090, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x209c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nParriedFXIndex; // 0x20a0, 0x4 bytes
-                std::uint8_t pad_20a4[0x284]; // 0x20a4, 0x284 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x14a8, 0x4 bytes
+                VectorWS m_vRiposteStartPosition; // 0x14ac, 0xc bytes
+                Vector m_vDashDirection; // 0x14b8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStateStartTime; // 0x14c4, 0x4 bytes
+                std::uint8_t m_nCurrentRiposteState; // 0x14c8, 0x1 bytes
+                std::uint8_t pad_14c9[0x3]; // 0x14c9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flSuccessfulRiposteTime; // 0x14cc, 0x4 bytes
+                std::uint8_t pad_14d0[0xbb0]; // 0x14d0, 0xbb0 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitEnemies; // 0x2080, 0x18 bytes
+                VectorWS m_vecLastPosition; // 0x2098, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStuckTime; // 0x20a4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nParriedFXIndex; // 0x20a8, 0x4 bytes
+                std::uint8_t pad_20ac[0x284]; // 0x20ac, 0x284 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fencer_Riposte) == 0x2328, "CCitadel_Ability_Fencer_Riposte size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fencer_Riposte) == 0x2330, "CCitadel_Ability_Fencer_Riposte size mismatch");
         }
     }
 }

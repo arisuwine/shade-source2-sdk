@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x7f0
+             * Size: 0x7f8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Artist_EnhancedSlide : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x6a8]; // 0x0148, 0x6a8 bytes
+                std::uint8_t pad_0150[0x6a8]; // 0x0150, 0x6a8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Artist_EnhancedSlide) == 0x7F0, "CCitadel_Modifier_Artist_EnhancedSlide size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_EnhancedSlide) == 0x7F8, "CCitadel_Modifier_Artist_EnhancedSlide size mismatch");
         }
     }
 }

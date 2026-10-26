@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1408
+             * Size: 0x1090
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityKobunVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                Vector m_vSummonFollowOffset; // 0x13e8, 0xc bytes
-                std::uint8_t pad_13f4[0x4]; // 0x13f4, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CloneModifier; // 0x13f8, 0x10 bytes
+                Vector m_vSummonFollowOffset; // 0x1070, 0xc bytes
+                std::uint8_t pad_107c[0x4]; // 0x107c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CloneModifier; // 0x1080, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityKobunVData) == 0x1408, "CAbilityKobunVData size mismatch");
+            static_assert(sizeof(CAbilityKobunVData) == 0x1090, "CAbilityKobunVData size mismatch");
         }
     }
 }

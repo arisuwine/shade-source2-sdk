@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xe68
+             * Size: 0xe70
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,42 +40,42 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Tier2Boss_LaserBeam : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x210]; // 0x0148, 0x210 bytes
-                bool m_bPreview; // 0x0358, 0x1 bytes
-                std::uint8_t pad_0359[0x3]; // 0x0359, 0x3 bytes
-                float m_flYaw; // 0x035c, 0x4 bytes
-                std::int32_t m_iEnemy; // 0x0360, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentEnemy; // 0x0364, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hLaserAttachPoint; // 0x0368, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hLaserAttachPoint02; // 0x0369, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_hLaserSearchStartPos; // 0x036a, 0x1 bytes
-                std::uint8_t pad_036b[0x7a5]; // 0x036b, 0x7a5 bytes
-                VectorWS m_vStart; // 0x0b10, 0xc bytes
-                VectorWS m_vEnd; // 0x0b1c, 0xc bytes
-                VectorWS m_vPrevEnd; // 0x0b28, 0xc bytes
-                float m_flAngleBetweenTrace; // 0x0b34, 0x4 bytes
-                float m_flDamagePerTick; // 0x0b38, 0x4 bytes
-                float m_flCreepDamagePerTick; // 0x0b3c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x0b40, 0x4 bytes
-                std::uint8_t pad_0b44[0x4]; // 0x0b44, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEntitiesHit; // 0x0b48, 0x18 bytes
-                float m_flDamageTickRate; // 0x0b60, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x0b64, 0x4 bytes
-                bool m_bSweepRightFirst; // 0x0b68, 0x1 bytes
-                std::uint8_t pad_0b69[0x3]; // 0x0b69, 0x3 bytes
-                QAngle m_angBeamAim; // 0x0b6c, 0xc bytes
-                VectorWS m_vecBeamTarget; // 0x0b78, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastBeamUpdateTime; // 0x0b84, 0x4 bytes
-                std::uint8_t pad_0b88[0x18]; // 0x0b88, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_flTargetingTaskStartTime; // 0x0ba0, 0x4 bytes
-                float m_flTrackVel; // 0x0ba4, 0x4 bytes
-                std::uint8_t pad_0ba8[0x2c0]; // 0x0ba8, 0x2c0 bytes
+                std::uint8_t pad_0150[0x210]; // 0x0150, 0x210 bytes
+                bool m_bPreview; // 0x0360, 0x1 bytes
+                std::uint8_t pad_0361[0x3]; // 0x0361, 0x3 bytes
+                float m_flYaw; // 0x0364, 0x4 bytes
+                std::int32_t m_iEnemy; // 0x0368, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentEnemy; // 0x036c, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hLaserAttachPoint; // 0x0370, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hLaserAttachPoint02; // 0x0371, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_hLaserSearchStartPos; // 0x0372, 0x1 bytes
+                std::uint8_t pad_0373[0x7a5]; // 0x0373, 0x7a5 bytes
+                VectorWS m_vStart; // 0x0b18, 0xc bytes
+                VectorWS m_vEnd; // 0x0b24, 0xc bytes
+                VectorWS m_vPrevEnd; // 0x0b30, 0xc bytes
+                float m_flAngleBetweenTrace; // 0x0b3c, 0x4 bytes
+                float m_flDamagePerTick; // 0x0b40, 0x4 bytes
+                float m_flCreepDamagePerTick; // 0x0b44, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x0b48, 0x4 bytes
+                std::uint8_t pad_0b4c[0x4]; // 0x0b4c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEntitiesHit; // 0x0b50, 0x18 bytes
+                float m_flDamageTickRate; // 0x0b68, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastShakeTime; // 0x0b6c, 0x4 bytes
+                bool m_bSweepRightFirst; // 0x0b70, 0x1 bytes
+                std::uint8_t pad_0b71[0x3]; // 0x0b71, 0x3 bytes
+                QAngle m_angBeamAim; // 0x0b74, 0xc bytes
+                VectorWS m_vecBeamTarget; // 0x0b80, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastBeamUpdateTime; // 0x0b8c, 0x4 bytes
+                std::uint8_t pad_0b90[0x18]; // 0x0b90, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_flTargetingTaskStartTime; // 0x0ba8, 0x4 bytes
+                float m_flTrackVel; // 0x0bac, 0x4 bytes
+                std::uint8_t pad_0bb0[0x2c0]; // 0x0bb0, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Tier2Boss_LaserBeam) == 0xE68, "CCitadel_Modifier_Tier2Boss_LaserBeam size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Tier2Boss_LaserBeam) == 0xE70, "CCitadel_Modifier_Tier2Boss_LaserBeam size mismatch");
         }
     }
 }

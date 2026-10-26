@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1a50
+             * Size: 0x1a58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,19 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chrono_TimeWall : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CHandle<shade::sdk::server::CCitadelBulletTimeWarp> m_hWall; // 0x14a0, 0x4 bytes
-                Vector vecDir; // 0x14a4, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_hChargingParticle; // 0x14b0, 0x4 bytes
-                VectorWS m_vSpawnPos; // 0x14b4, 0xc bytes
-                QAngle m_qAngles; // 0x14c0, 0xc bytes
-                bool m_bAirCast; // 0x14cc, 0x1 bytes
-                std::uint8_t pad_14cd[0x583]; // 0x14cd, 0x583 bytes
+                CHandle<shade::sdk::server::CCitadelBulletTimeWarp> m_hWall; // 0x14a8, 0x4 bytes
+                Vector vecDir; // 0x14ac, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_hChargingParticle; // 0x14b8, 0x4 bytes
+                VectorWS m_vSpawnPos; // 0x14bc, 0xc bytes
+                QAngle m_qAngles; // 0x14c8, 0xc bytes
+                bool m_bAirCast; // 0x14d4, 0x1 bytes
+                std::uint8_t pad_14d5[0x583]; // 0x14d5, 0x583 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chrono_TimeWall) == 0x1A50, "CCitadel_Ability_Chrono_TimeWall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chrono_TimeWall) == 0x1A58, "CCitadel_Ability_Chrono_TimeWall size mismatch");
         }
     }
 }

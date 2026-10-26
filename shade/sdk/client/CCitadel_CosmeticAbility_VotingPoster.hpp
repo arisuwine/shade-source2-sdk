@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1a50
+             * Size: 0x1a58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,16 +32,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_CosmeticAbility_VotingPoster : public shade::sdk::client::CCitadel_CosmeticAbility {
             public:
-                std::uint8_t pad_16d8[0x370]; // 0x16d8, 0x370 bytes
-                bool m_bPreview; // 0x1a48, 0x1 bytes
-                std::uint8_t pad_1a49[0x3]; // 0x1a49, 0x3 bytes
-                shade::sdk::client::HeroID_t m_nActiveHero; // 0x1a4c, 0x4 bytes
+                std::uint8_t pad_16e0[0x370]; // 0x16e0, 0x370 bytes
+                bool m_bPreview; // 0x1a50, 0x1 bytes
+                std::uint8_t pad_1a51[0x3]; // 0x1a51, 0x3 bytes
+                shade::sdk::client::HeroID_t m_nActiveHero; // 0x1a54, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_CosmeticAbility_VotingPoster) == 0x1A50, "CCitadel_CosmeticAbility_VotingPoster size mismatch");
+            static_assert(sizeof(CCitadel_CosmeticAbility_VotingPoster) == 0x1A58, "CCitadel_CosmeticAbility_VotingPoster size mismatch");
         }
     }
 }

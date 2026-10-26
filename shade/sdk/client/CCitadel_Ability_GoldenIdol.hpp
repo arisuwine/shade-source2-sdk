@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1840
+             * Size: 0x1848
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_GoldenIdol : public shade::sdk::client::CCitadel_Ability_BaseHeldItem {
             public:
-                float m_flHeldTime; // 0x16d8, 0x4 bytes
-                std::uint8_t pad_16dc[0x164]; // 0x16dc, 0x164 bytes
+                float m_flHeldTime; // 0x16e0, 0x4 bytes
+                std::uint8_t pad_16e4[0x164]; // 0x16e4, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_GoldenIdol) == 0x1840, "CCitadel_Ability_GoldenIdol size mismatch");
+            static_assert(sizeof(CCitadel_Ability_GoldenIdol) == 0x1848, "CCitadel_Ability_GoldenIdol size mismatch");
         }
     }
 }

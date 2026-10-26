@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x590
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,19 +39,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_RatNibble : public shade::sdk::client::CCitadelModifier {
             public:
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecRatParticles; // 0x0138, 0x18 bytes
-                std::uint8_t pad_0150[0x4]; // 0x0150, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDestroyTime; // 0x0154, 0x4 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecRatParticles; // 0x0140, 0x18 bytes
                 std::uint8_t pad_0158[0x4]; // 0x0158, 0x4 bytes
-                std::int32_t m_nRatsRemaining; // 0x015c, 0x4 bytes
-                std::int32_t m_nArmorStacks; // 0x0160, 0x4 bytes
-                std::uint8_t pad_0164[0x424]; // 0x0164, 0x424 bytes
+                shade::sdk::entity2::GameTime_t m_flDestroyTime; // 0x015c, 0x4 bytes
+                std::uint8_t pad_0160[0x4]; // 0x0160, 0x4 bytes
+                std::int32_t m_nRatsRemaining; // 0x0164, 0x4 bytes
+                std::int32_t m_nArmorStacks; // 0x0168, 0x4 bytes
+                std::uint8_t pad_016c[0x424]; // 0x016c, 0x424 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_RatNibble) == 0x588, "CCitadel_Modifier_RatNibble size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_RatNibble) == 0x590, "CCitadel_Modifier_RatNibble size mismatch");
         }
     }
 }

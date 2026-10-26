@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1fc0
+             * Size: 0x1fc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,32 +43,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Shiv_KillingBlow : public shade::sdk::server::CCitadelBaseShivAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnts; // 0x14a0, 0x18 bytes
-                std::uint8_t pad_14b8[0x638]; // 0x14b8, 0x638 bytes
-                bool m_bDamagedAnyHero; // 0x1af0, 0x1 bytes
-                bool m_bActive; // 0x1af1, 0x1 bytes
-                bool m_bStartedOnGround; // 0x1af2, 0x1 bytes
-                bool m_bIsBonusCast; // 0x1af3, 0x1 bytes
-                VectorWS m_vStartPosition; // 0x1af4, 0xc bytes
-                QAngle m_qCurrentAngles; // 0x1b00, 0xc bytes
-                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
-                shade::sdk::server::CCitadelAutoScaledTime m_flDepartureTime; // 0x1b10, 0x18 bytes
-                shade::sdk::server::CCitadelAutoScaledTime m_flArrivalTime; // 0x1b28, 0x18 bytes
-                VectorWS m_vLastKnownSafePos; // 0x1b40, 0xc bytes
-                bool m_bMadeSlashParticle; // 0x1b4c, 0x1 bytes
-                std::uint8_t pad_1b4d[0x3]; // 0x1b4d, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x1b50, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRecastWindowEnd; // 0x1b54, 0x4 bytes
-                std::uint8_t pad_1b58[0x420]; // 0x1b58, 0x420 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1f78, 0x18 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_RecastWindowModifierHandle; // 0x1f90, 0x18 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_RageDrainSuppressedHandle; // 0x1fa8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vHitEnts; // 0x14a8, 0x18 bytes
+                std::uint8_t pad_14c0[0x638]; // 0x14c0, 0x638 bytes
+                bool m_bDamagedAnyHero; // 0x1af8, 0x1 bytes
+                bool m_bActive; // 0x1af9, 0x1 bytes
+                bool m_bStartedOnGround; // 0x1afa, 0x1 bytes
+                bool m_bIsBonusCast; // 0x1afb, 0x1 bytes
+                VectorWS m_vStartPosition; // 0x1afc, 0xc bytes
+                QAngle m_qCurrentAngles; // 0x1b08, 0xc bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flDepartureTime; // 0x1b18, 0x18 bytes
+                shade::sdk::server::CCitadelAutoScaledTime m_flArrivalTime; // 0x1b30, 0x18 bytes
+                VectorWS m_vLastKnownSafePos; // 0x1b48, 0xc bytes
+                bool m_bMadeSlashParticle; // 0x1b54, 0x1 bytes
+                std::uint8_t pad_1b55[0x3]; // 0x1b55, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_ChannelParticle; // 0x1b58, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRecastWindowEnd; // 0x1b5c, 0x4 bytes
+                std::uint8_t pad_1b60[0x420]; // 0x1b60, 0x420 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1f80, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_RecastWindowModifierHandle; // 0x1f98, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadelModifier> m_RageDrainSuppressedHandle; // 0x1fb0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x1FC0, "CCitadel_Ability_Shiv_KillingBlow size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x1FC8, "CCitadel_Ability_Shiv_KillingBlow size mismatch");
         }
     }
 }

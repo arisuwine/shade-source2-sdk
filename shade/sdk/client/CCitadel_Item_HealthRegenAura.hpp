@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18e8
+             * Size: 0x18f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_HealthRegenAura : public shade::sdk::client::CCitadel_Item {
             public:
-                std::uint8_t pad_16d8[0x210]; // 0x16d8, 0x210 bytes
+                std::uint8_t pad_16e0[0x210]; // 0x16e0, 0x210 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_HealthRegenAura) == 0x18E8, "CCitadel_Item_HealthRegenAura size mismatch");
+            static_assert(sizeof(CCitadel_Item_HealthRegenAura) == 0x18F0, "CCitadel_Item_HealthRegenAura size mismatch");
         }
     }
 }

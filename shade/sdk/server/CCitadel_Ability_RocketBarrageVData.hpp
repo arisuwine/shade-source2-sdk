@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15c0
+             * Size: 0x1248
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,21 +44,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_RocketBarrageVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BarrageModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveSlowModifier; // 0x13f8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1408, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x14e8, 0x10 bytes
-                CSoundEventName m_strBarrageSound; // 0x14f8, 0x10 bytes
-                CSoundEventName m_strBarrageLoop; // 0x1508, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x1518, 0xa0 bytes
-                float m_flMoveSpeedReductionPct; // 0x15b8, 0x4 bytes
-                float m_flHeightTestDistance; // 0x15bc, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BarrageModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_MoveSlowModifier; // 0x1080, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1090, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1170, 0x10 bytes
+                CSoundEventName m_strBarrageSound; // 0x1180, 0x10 bytes
+                CSoundEventName m_strBarrageLoop; // 0x1190, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x11a0, 0xa0 bytes
+                float m_flMoveSpeedReductionPct; // 0x1240, 0x4 bytes
+                float m_flHeightTestDistance; // 0x1244, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_RocketBarrageVData) == 0x15C0, "CCitadel_Ability_RocketBarrageVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_RocketBarrageVData) == 0x1248, "CCitadel_Ability_RocketBarrageVData size mismatch");
         }
     }
 }

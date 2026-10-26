@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1848
+             * Size: 0x1850
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PunkGoat_Tether : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x18]; // 0x14a0, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_tTetherEndTime; // 0x14b8, 0x4 bytes
-                std::uint8_t pad_14bc[0x14]; // 0x14bc, 0x14 bytes
-                bool m_bTetheringActive; // 0x14d0, 0x1 bytes
-                std::uint8_t pad_14d1[0x377]; // 0x14d1, 0x377 bytes
+                std::uint8_t pad_14a8[0x18]; // 0x14a8, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_tTetherEndTime; // 0x14c0, 0x4 bytes
+                std::uint8_t pad_14c4[0x14]; // 0x14c4, 0x14 bytes
+                bool m_bTetheringActive; // 0x14d8, 0x1 bytes
+                std::uint8_t pad_14d9[0x377]; // 0x14d9, 0x377 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PunkGoat_Tether) == 0x1848, "CCitadel_Ability_PunkGoat_Tether size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PunkGoat_Tether) == 0x1850, "CCitadel_Ability_PunkGoat_Tether size mismatch");
         }
     }
 }

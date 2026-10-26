@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17d0
+             * Size: 0x1458
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_FamiliarAltWeaponVData : public shade::sdk::client::CCitadel_Ability_PrimaryWeaponVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PendingBulletParticle; // 0x16d0, 0xe0 bytes
-                CSoundEventName m_strAddPendingBulletSound; // 0x17b0, 0x10 bytes
-                CSoundEventName m_strFirePendingBulletSound; // 0x17c0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PendingBulletParticle; // 0x1358, 0xe0 bytes
+                CSoundEventName m_strAddPendingBulletSound; // 0x1438, 0x10 bytes
+                CSoundEventName m_strFirePendingBulletSound; // 0x1448, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_FamiliarAltWeaponVData) == 0x17D0, "CCitadel_Ability_FamiliarAltWeaponVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_FamiliarAltWeaponVData) == 0x1458, "CCitadel_Ability_FamiliarAltWeaponVData size mismatch");
         }
     }
 }

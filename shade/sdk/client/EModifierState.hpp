@@ -311,7 +311,7 @@ namespace shade {
                 MODIFIER_STATE_SHRUNK_CHARACTER = 0x122,
                 MODIFIER_STATE_PITCH_UP_VOICE = 0x123,
                 MODIFIER_STATE_USE_SHRUNKEN_CAMERA_OFFSETS = 0x124,
-                MODIFIER_STATE_NECRO_FEARIMMUNE = 0x125,
+                MODIFIER_STATE_FEAR_IMMUNE = 0x125,
                 MODIFIER_STATE_UNICORN_RADIANT_FLARED = 0x126,
                 MODIFIER_STATE_FACE_VELOCITY_DIRECTION = 0x127,
                 MODIFIER_STATE_ZIPLINE_LOCKED = 0x128,
@@ -364,8 +364,10 @@ namespace shade {
                 MODIFIER_STATE_HIDEOUT_GAME = 0x157,
                 MODIFIER_STATE_PARRY_IGNORES_MELEE_DISABLED = 0x158,
                 MODIFIER_STATE_FULL_SPEED_DUCKING = 0x159,
-                MODIFIER_STATE_DISABLE_LOOK_TARGET = 0x15a,
-                MODIFIER_STATE_COUNT = 0x15b,
+                MODIFIER_STATE_FREE_WALL_JUMPS = 0x15a,
+                MODIFIER_STATE_DISABLE_LOOK_TARGET = 0x15b,
+                MODIFIER_STATE_FEARED = 0x15c,
+                MODIFIER_STATE_COUNT = 0x15d,
                 MODIFIER_STATE_INVALID = 0xffff
             };
         }

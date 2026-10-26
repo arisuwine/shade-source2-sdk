@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b88
+             * Size: 0x1b90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Werewolf_UnloadGun : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x6e8]; // 0x14a0, 0x6e8 bytes
+                std::uint8_t pad_14a8[0x6e8]; // 0x14a8, 0x6e8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Werewolf_UnloadGun) == 0x1B88, "CCitadel_Werewolf_UnloadGun size mismatch");
+            static_assert(sizeof(CCitadel_Werewolf_UnloadGun) == 0x1B90, "CCitadel_Werewolf_UnloadGun size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1818
+             * Size: 0x1820
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Fathom_Breach : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_nRollFXIndex; // 0x14a0, 0x4 bytes
-                bool m_bInFlight; // 0x14a4, 0x1 bytes
-                std::uint8_t pad_14a5[0x373]; // 0x14a5, 0x373 bytes
+                shade::sdk::client::ParticleIndex_t m_nRollFXIndex; // 0x14a8, 0x4 bytes
+                bool m_bInFlight; // 0x14ac, 0x1 bytes
+                std::uint8_t pad_14ad[0x373]; // 0x14ad, 0x373 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Fathom_Breach) == 0x1818, "CCitadel_Ability_Fathom_Breach size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Fathom_Breach) == 0x1820, "CCitadel_Ability_Fathom_Breach size mismatch");
         }
     }
 }

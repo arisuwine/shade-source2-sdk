@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14f0
+             * Size: 0x1178
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,20 +39,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TestHero_SummonSoldierVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CSoundEventName m_strSoldierShootSound; // 0x13e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BlockerModel; // 0x13f8, 0xe0 bytes
-                float m_flHorizontalOffset; // 0x14d8, 0x4 bytes
-                float m_flForwardOffset; // 0x14dc, 0x4 bytes
-                float m_flHorizontalStaggerPerSoldier; // 0x14e0, 0x4 bytes
-                float m_flRandomPositionOffset; // 0x14e4, 0x4 bytes
-                float m_flRandomMissTargetOffset; // 0x14e8, 0x4 bytes
-                std::uint8_t pad_14ec[0x4]; // 0x14ec, 0x4 bytes
+                CSoundEventName m_strSoldierShootSound; // 0x1070, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_BlockerModel; // 0x1080, 0xe0 bytes
+                float m_flHorizontalOffset; // 0x1160, 0x4 bytes
+                float m_flForwardOffset; // 0x1164, 0x4 bytes
+                float m_flHorizontalStaggerPerSoldier; // 0x1168, 0x4 bytes
+                float m_flRandomPositionOffset; // 0x116c, 0x4 bytes
+                float m_flRandomMissTargetOffset; // 0x1170, 0x4 bytes
+                std::uint8_t pad_1174[0x4]; // 0x1174, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TestHero_SummonSoldierVData) == 0x14F0, "CCitadel_Ability_TestHero_SummonSoldierVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TestHero_SummonSoldierVData) == 0x1178, "CCitadel_Ability_TestHero_SummonSoldierVData size mismatch");
         }
     }
 }

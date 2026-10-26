@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x67d8
+             * Size: 0x67e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_PrismBlast : public shade::sdk::server::CCitadel_Item_Bubble {
             public:
-                std::uint8_t pad_16c0[0x230]; // 0x16c0, 0x230 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam00; // 0x18f0, 0xfc8 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam01; // 0x28b8, 0xfc8 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam02; // 0x3880, 0xfc8 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam03; // 0x4848, 0xfc8 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam04; // 0x5810, 0xfc8 bytes
+                std::uint8_t pad_16c8[0x230]; // 0x16c8, 0x230 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam00; // 0x18f8, 0xfc8 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam01; // 0x28c0, 0xfc8 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam02; // 0x3888, 0xfc8 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam03; // 0x4850, 0xfc8 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam04; // 0x5818, 0xfc8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_PrismBlast) == 0x67D8, "CCitadel_Item_PrismBlast size mismatch");
+            static_assert(sizeof(CCitadel_Item_PrismBlast) == 0x67E0, "CCitadel_Item_PrismBlast size mismatch");
         }
     }
 }

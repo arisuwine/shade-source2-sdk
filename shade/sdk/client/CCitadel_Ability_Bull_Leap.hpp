@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c58
+             * Size: 0x1c60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,31 +42,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Bull_Leap : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bBraceParamTriggered; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
-                float m_flBoostYaw; // 0x16dc, 0x4 bytes
-                VectorWS m_vecCrashPosition; // 0x16e0, 0xc bytes
-                Vector m_vecCrashDirection; // 0x16ec, 0xc bytes
-                shade::sdk::client::ELeapState_t m_eLeapState; // 0x16f8, 0x1 bytes
-                std::uint8_t pad_16f9[0x3]; // 0x16f9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStateEnterTime; // 0x16fc, 0x4 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flNextStateTime; // 0x1700, 0x18 bytes
-                shade::sdk::client::CCitadelAutoScaledTime m_flBoostEndTime; // 0x1718, 0x18 bytes
-                std::uint8_t pad_1730[0x4d0]; // 0x1730, 0x4d0 bytes
-                VectorWS m_vPrevPos; // 0x1c00, 0xc bytes
-                std::uint8_t pad_1c0c[0x4]; // 0x1c0c, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDraggedEntities; // 0x1c10, 0x18 bytes
-                std::uint8_t pad_1c28[0xc]; // 0x1c28, 0xc bytes
-                Vector m_vecLastVel; // 0x1c34, 0xc bytes
-                VectorWS m_vecCrashDownLastPos; // 0x1c40, 0xc bytes
-                bool m_bInputBufferCrash; // 0x1c4c, 0x1 bytes
-                std::uint8_t pad_1c4d[0xb]; // 0x1c4d, 0xb bytes
+                bool m_bBraceParamTriggered; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x3]; // 0x16e1, 0x3 bytes
+                float m_flBoostYaw; // 0x16e4, 0x4 bytes
+                VectorWS m_vecCrashPosition; // 0x16e8, 0xc bytes
+                Vector m_vecCrashDirection; // 0x16f4, 0xc bytes
+                shade::sdk::client::ELeapState_t m_eLeapState; // 0x1700, 0x1 bytes
+                std::uint8_t pad_1701[0x3]; // 0x1701, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStateEnterTime; // 0x1704, 0x4 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flNextStateTime; // 0x1708, 0x18 bytes
+                shade::sdk::client::CCitadelAutoScaledTime m_flBoostEndTime; // 0x1720, 0x18 bytes
+                std::uint8_t pad_1738[0x4d0]; // 0x1738, 0x4d0 bytes
+                VectorWS m_vPrevPos; // 0x1c08, 0xc bytes
+                std::uint8_t pad_1c14[0x4]; // 0x1c14, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDraggedEntities; // 0x1c18, 0x18 bytes
+                std::uint8_t pad_1c30[0xc]; // 0x1c30, 0xc bytes
+                Vector m_vecLastVel; // 0x1c3c, 0xc bytes
+                VectorWS m_vecCrashDownLastPos; // 0x1c48, 0xc bytes
+                bool m_bInputBufferCrash; // 0x1c54, 0x1 bytes
+                std::uint8_t pad_1c55[0xb]; // 0x1c55, 0xb bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Bull_Leap) == 0x1C58, "CCitadel_Ability_Bull_Leap size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Bull_Leap) == 0x1C60, "CCitadel_Ability_Bull_Leap size mismatch");
         }
     }
 }

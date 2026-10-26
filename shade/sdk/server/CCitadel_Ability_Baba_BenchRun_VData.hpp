@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1700
+             * Size: 0x1388
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,26 +43,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_BenchRun_VData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                float m_flMaxChargeJumpDuration; // 0x13e8, 0x4 bytes
-                Vector m_WeaponOffsetStand; // 0x13ec, 0xc bytes
-                Vector m_WeaponOffsetCrouch; // 0x13f8, 0xc bytes
-                std::uint8_t pad_1404[0x4]; // 0x1404, 0x4 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BenchRunModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1418, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargedJumpParticle; // 0x14f8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargingJumpParticle; // 0x15d8, 0xe0 bytes
-                float m_flChargeJumpAnimSpeedScale; // 0x16b8, 0x4 bytes
-                std::uint8_t pad_16bc[0x4]; // 0x16bc, 0x4 bytes
-                CSoundEventName m_strChargingLoopSound; // 0x16c0, 0x10 bytes
-                CSoundEventName m_strChargingStartSound; // 0x16d0, 0x10 bytes
-                CSoundEventName m_strChargedJumpSound; // 0x16e0, 0x10 bytes
-                CSoundEventName m_strFullyChargedSound; // 0x16f0, 0x10 bytes
+                float m_flMaxChargeJumpDuration; // 0x1070, 0x4 bytes
+                Vector m_WeaponOffsetStand; // 0x1074, 0xc bytes
+                Vector m_WeaponOffsetCrouch; // 0x1080, 0xc bytes
+                std::uint8_t pad_108c[0x4]; // 0x108c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BenchRunModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x10a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargedJumpParticle; // 0x1180, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargingJumpParticle; // 0x1260, 0xe0 bytes
+                float m_flChargeJumpAnimSpeedScale; // 0x1340, 0x4 bytes
+                std::uint8_t pad_1344[0x4]; // 0x1344, 0x4 bytes
+                CSoundEventName m_strChargingLoopSound; // 0x1348, 0x10 bytes
+                CSoundEventName m_strChargingStartSound; // 0x1358, 0x10 bytes
+                CSoundEventName m_strChargedJumpSound; // 0x1368, 0x10 bytes
+                CSoundEventName m_strFullyChargedSound; // 0x1378, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_BenchRun_VData) == 0x1700, "CCitadel_Ability_Baba_BenchRun_VData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_BenchRun_VData) == 0x1388, "CCitadel_Ability_Baba_BenchRun_VData size mismatch");
         }
     }
 }

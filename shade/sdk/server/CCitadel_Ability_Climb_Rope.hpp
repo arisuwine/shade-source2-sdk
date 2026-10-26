@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1540
+             * Size: 0x1548
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,30 +34,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Climb_Rope : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::client::CNetworkOriginQuantizedVectorWS m_vTop; // 0x14a0, 0x28 bytes
-                std::uint8_t pad_14c8[0x8]; // 0x14c8, 0x8 bytes
-                shade::sdk::client::CNetworkOriginQuantizedVectorWS m_vBottom; // 0x14d0, 0x28 bytes
-                std::uint8_t pad_14f8[0x8]; // 0x14f8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x1500, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDisconnectTime; // 0x1504, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flClimbStartTime; // 0x1508, 0x4 bytes
-                bool m_bNoDelayNeeded; // 0x150c, 0x1 bytes
-                bool m_bMouseWheelBind; // 0x150d, 0x1 bytes
-                std::uint8_t pad_150e[0x2]; // 0x150e, 0x2 bytes
-                VectorWS m_vLastPos; // 0x1510, 0xc bytes
-                std::uint8_t pad_151c[0x14]; // 0x151c, 0x14 bytes
-                bool m_bRequestStopClimbing; // 0x1530, 0x1 bytes
-                bool m_bRequestJumpToRoof; // 0x1531, 0x1 bytes
-                std::uint8_t pad_1532[0x2]; // 0x1532, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flMoveDownStartTime; // 0x1534, 0x4 bytes
-                shade::sdk::client::EClimbRopeState_t m_eClimbState; // 0x1538, 0x4 bytes
-                std::uint8_t pad_153c[0x4]; // 0x153c, 0x4 bytes
+                shade::sdk::client::CNetworkOriginQuantizedVectorWS m_vTop; // 0x14a8, 0x28 bytes
+                std::uint8_t pad_14d0[0x8]; // 0x14d0, 0x8 bytes
+                shade::sdk::client::CNetworkOriginQuantizedVectorWS m_vBottom; // 0x14d8, 0x28 bytes
+                std::uint8_t pad_1500[0x8]; // 0x1500, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x1508, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDisconnectTime; // 0x150c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flClimbStartTime; // 0x1510, 0x4 bytes
+                bool m_bNoDelayNeeded; // 0x1514, 0x1 bytes
+                bool m_bMouseWheelBind; // 0x1515, 0x1 bytes
+                std::uint8_t pad_1516[0x2]; // 0x1516, 0x2 bytes
+                VectorWS m_vLastPos; // 0x1518, 0xc bytes
+                std::uint8_t pad_1524[0x14]; // 0x1524, 0x14 bytes
+                bool m_bRequestStopClimbing; // 0x1538, 0x1 bytes
+                bool m_bRequestJumpToRoof; // 0x1539, 0x1 bytes
+                std::uint8_t pad_153a[0x2]; // 0x153a, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flMoveDownStartTime; // 0x153c, 0x4 bytes
+                shade::sdk::client::EClimbRopeState_t m_eClimbState; // 0x1540, 0x4 bytes
+                std::uint8_t pad_1544[0x4]; // 0x1544, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Climb_Rope) == 0x1540, "CCitadel_Ability_Climb_Rope size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Climb_Rope) == 0x1548, "CCitadel_Ability_Climb_Rope size mismatch");
         }
     }
 }

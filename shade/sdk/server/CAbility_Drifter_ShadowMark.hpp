@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1780
+             * Size: 0x1788
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,20 +40,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_ShadowMark : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTeleportTarget; // 0x14a0, 0x4 bytes
-                bool m_bTeleported; // 0x14a4, 0x1 bytes
-                std::uint8_t pad_14a5[0x3]; // 0x14a5, 0x3 bytes
-                QAngle m_qPostTeleportAngles; // 0x14a8, 0xc bytes
-                std::uint8_t pad_14b4[0x4]; // 0x14b4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flExpireTime; // 0x14b8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTeleportedTime; // 0x14bc, 0x4 bytes
-                std::uint8_t pad_14c0[0x2c0]; // 0x14c0, 0x2c0 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTeleportTarget; // 0x14a8, 0x4 bytes
+                bool m_bTeleported; // 0x14ac, 0x1 bytes
+                std::uint8_t pad_14ad[0x3]; // 0x14ad, 0x3 bytes
+                QAngle m_qPostTeleportAngles; // 0x14b0, 0xc bytes
+                std::uint8_t pad_14bc[0x4]; // 0x14bc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flExpireTime; // 0x14c0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTeleportedTime; // 0x14c4, 0x4 bytes
+                std::uint8_t pad_14c8[0x2c0]; // 0x14c8, 0x2c0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_ShadowMark) == 0x1780, "CAbility_Drifter_ShadowMark size mismatch");
+            static_assert(sizeof(CAbility_Drifter_ShadowMark) == 0x1788, "CAbility_Drifter_ShadowMark size mismatch");
         }
     }
 }

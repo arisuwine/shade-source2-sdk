@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1510
+             * Size: 0x1198
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,19 +43,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_MultiHitVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x13e8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x14e8, 0x10 bytes
-                CSoundEventName m_ExplodeSound; // 0x14f8, 0x10 bytes
-                float m_flRandomVarianceInDirection; // 0x1508, 0x4 bytes
-                std::uint8_t pad_150c[0x4]; // 0x150c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1070, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ActiveModifier; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GroundAuraModifier; // 0x1170, 0x10 bytes
+                CSoundEventName m_ExplodeSound; // 0x1180, 0x10 bytes
+                float m_flRandomVarianceInDirection; // 0x1190, 0x4 bytes
+                std::uint8_t pad_1194[0x4]; // 0x1194, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_MultiHitVData) == 0x1510, "CCitadel_Ability_Artist_MultiHitVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_MultiHitVData) == 0x1198, "CCitadel_Ability_Artist_MultiHitVData size mismatch");
         }
     }
 }

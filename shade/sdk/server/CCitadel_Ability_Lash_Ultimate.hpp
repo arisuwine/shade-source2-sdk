@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d80
+             * Size: 0x1d88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,18 +33,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Lash_Ultimate : public shade::sdk::server::CCitadelBaseLockonAbility {
             public:
-                shade::sdk::client::ELashGrappleState m_EGrappleState; // 0x1930, 0x1 bytes
-                std::uint8_t pad_1931[0x3]; // 0x1931, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStateEnterTime; // 0x1934, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x1938, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBoostEndTime; // 0x193c, 0x4 bytes
-                std::uint8_t pad_1940[0x440]; // 0x1940, 0x440 bytes
+                shade::sdk::client::ELashGrappleState m_EGrappleState; // 0x1938, 0x1 bytes
+                std::uint8_t pad_1939[0x3]; // 0x1939, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStateEnterTime; // 0x193c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextStateTime; // 0x1940, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBoostEndTime; // 0x1944, 0x4 bytes
+                std::uint8_t pad_1948[0x440]; // 0x1948, 0x440 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Lash_Ultimate) == 0x1D80, "CCitadel_Ability_Lash_Ultimate size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Lash_Ultimate) == 0x1D88, "CCitadel_Ability_Lash_Ultimate size mismatch");
         }
     }
 }

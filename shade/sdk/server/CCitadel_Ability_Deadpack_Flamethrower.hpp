@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2ce0
+             * Size: 0x2ce8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,22 +41,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Deadpack_Flamethrower : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x14a0, 0x4 bytes
-                std::uint8_t pad_14a4[0x4]; // 0x14a4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEntitiesHit; // 0x14a8, 0x18 bytes
-                std::uint8_t pad_14c0[0x844]; // 0x14c0, 0x844 bytes
-                shade::sdk::entity2::GameTime_t m_tLastDamageDealTime; // 0x1d04, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tActivationTime; // 0x1d08, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tPauseBeginTime; // 0x1d0c, 0x4 bytes
-                bool m_bBeaming; // 0x1d10, 0x1 bytes
-                std::uint8_t pad_1d11[0x7]; // 0x1d11, 0x7 bytes
-                shade::sdk::server::CCitadelAbilityBeam_t m_beam; // 0x1d18, 0xfc8 bytes
+                shade::sdk::entity2::GameTime_t m_flNextDamageTick; // 0x14a8, 0x4 bytes
+                std::uint8_t pad_14ac[0x4]; // 0x14ac, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecEntitiesHit; // 0x14b0, 0x18 bytes
+                std::uint8_t pad_14c8[0x844]; // 0x14c8, 0x844 bytes
+                shade::sdk::entity2::GameTime_t m_tLastDamageDealTime; // 0x1d0c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tActivationTime; // 0x1d10, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tPauseBeginTime; // 0x1d14, 0x4 bytes
+                bool m_bBeaming; // 0x1d18, 0x1 bytes
+                std::uint8_t pad_1d19[0x7]; // 0x1d19, 0x7 bytes
+                shade::sdk::server::CCitadelAbilityBeam_t m_beam; // 0x1d20, 0xfc8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Deadpack_Flamethrower) == 0x2CE0, "CCitadel_Ability_Deadpack_Flamethrower size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Deadpack_Flamethrower) == 0x2CE8, "CCitadel_Ability_Deadpack_Flamethrower size mismatch");
         }
     }
 }

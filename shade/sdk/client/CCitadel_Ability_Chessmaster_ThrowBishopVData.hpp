@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1578
+             * Size: 0x1200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,33 +44,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chessmaster_ThrowBishopVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpawnParticle; // 0x13e8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonModifier; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StackingModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveBuffModifier; // 0x14e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExpireModifier; // 0x14f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BlackPieceModifier; // 0x1508, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1518, 0x10 bytes
-                CSoundEventName m_BishopSpawnSound; // 0x1528, 0x10 bytes
-                CSoundEventName m_BishopRecallSound; // 0x1538, 0x10 bytes
-                CSoundEventName m_strBishopExpireSound; // 0x1548, 0x10 bytes
-                bool m_bShouldCreateEnemyAura; // 0x1558, 0x1 bytes
-                bool m_bExpireOverTime; // 0x1559, 0x1 bytes
-                bool m_bDebugTrace; // 0x155a, 0x1 bytes
-                bool m_bShouldApplySlowOnImpact; // 0x155b, 0x1 bytes
-                shade::sdk::client::EChessPieceType m_eChessPieceType; // 0x155c, 0x4 bytes
-                float m_flRecallOnMeleeRange; // 0x1560, 0x4 bytes
-                float m_flCylinderTraceRadius; // 0x1564, 0x4 bytes
-                float m_flCylinderTraceLength; // 0x1568, 0x4 bytes
-                float m_flPopUpSpeed; // 0x156c, 0x4 bytes
-                float m_flVerticalOffset; // 0x1570, 0x4 bytes
-                std::uint8_t pad_1574[0x4]; // 0x1574, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpawnParticle; // 0x1070, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonModifier; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StackingModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MoveBuffModifier; // 0x1170, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExpireModifier; // 0x1180, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BlackPieceModifier; // 0x1190, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x11a0, 0x10 bytes
+                CSoundEventName m_BishopSpawnSound; // 0x11b0, 0x10 bytes
+                CSoundEventName m_BishopRecallSound; // 0x11c0, 0x10 bytes
+                CSoundEventName m_strBishopExpireSound; // 0x11d0, 0x10 bytes
+                bool m_bShouldCreateEnemyAura; // 0x11e0, 0x1 bytes
+                bool m_bExpireOverTime; // 0x11e1, 0x1 bytes
+                bool m_bDebugTrace; // 0x11e2, 0x1 bytes
+                bool m_bShouldApplySlowOnImpact; // 0x11e3, 0x1 bytes
+                shade::sdk::client::EChessPieceType m_eChessPieceType; // 0x11e4, 0x4 bytes
+                float m_flRecallOnMeleeRange; // 0x11e8, 0x4 bytes
+                float m_flCylinderTraceRadius; // 0x11ec, 0x4 bytes
+                float m_flCylinderTraceLength; // 0x11f0, 0x4 bytes
+                float m_flPopUpSpeed; // 0x11f4, 0x4 bytes
+                float m_flVerticalOffset; // 0x11f8, 0x4 bytes
+                std::uint8_t pad_11fc[0x4]; // 0x11fc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chessmaster_ThrowBishopVData) == 0x1578, "CCitadel_Ability_Chessmaster_ThrowBishopVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chessmaster_ThrowBishopVData) == 0x1200, "CCitadel_Ability_Chessmaster_ThrowBishopVData size mismatch");
         }
     }
 }

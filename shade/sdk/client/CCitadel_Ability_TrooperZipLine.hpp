@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x25a0
+             * Size: 0x25a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TrooperZipLine) == 0x25A0, "CCitadel_Ability_TrooperZipLine size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TrooperZipLine) == 0x25A8, "CCitadel_Ability_TrooperZipLine size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x388
+             * Size: 0x390
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_IcePath_Explode : public shade::sdk::server::CCitadelModifier {
             public:
-                std::uint8_t pad_0148[0x210]; // 0x0148, 0x210 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadel_Modifier_IcePath_Explode> m_hNext; // 0x0358, 0x18 bytes
-                CModifierHandleTyped<shade::sdk::server::CCitadel_Modifier_IcePath_Explode> m_hPrev; // 0x0370, 0x18 bytes
+                std::uint8_t pad_0150[0x210]; // 0x0150, 0x210 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadel_Modifier_IcePath_Explode> m_hNext; // 0x0360, 0x18 bytes
+                CModifierHandleTyped<shade::sdk::server::CCitadel_Modifier_IcePath_Explode> m_hPrev; // 0x0378, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_IcePath_Explode) == 0x388, "CCitadel_Modifier_IcePath_Explode size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_IcePath_Explode) == 0x390, "CCitadel_Modifier_IcePath_Explode size mismatch");
         }
     }
 }

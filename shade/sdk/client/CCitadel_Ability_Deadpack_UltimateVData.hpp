@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1650
+             * Size: 0x12d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,33 +44,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Deadpack_UltimateVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundImpactParticle; // 0x13e8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargingModifier; // 0x14c8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GoingUpModifier; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GoingDownModifier; // 0x14e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x14f8, 0x10 bytes
-                CUtlOrderedMap<shade::sdk::client::ECitadelAudioLoopSounds, CSoundEventName> m_strGoingUpSounds; // 0x1508, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::client::ECitadelAudioLoopSounds, CSoundEventName> m_strGoingDownSounds; // 0x1530, 0x28 bytes
-                CSoundEventName m_strImpactSound; // 0x1558, 0x10 bytes
-                float m_flShakeAmp; // 0x1568, 0x4 bytes
-                float m_flShakeFreq; // 0x156c, 0x4 bytes
-                CPiecewiseCurve m_flGoingUpSpeedOverTime; // 0x1570, 0x40 bytes
-                CPiecewiseCurve m_flGoingDownSpeedOverTime; // 0x15b0, 0x40 bytes
-                CPiecewiseCurve m_flApexSpeedByDistance; // 0x15f0, 0x40 bytes
-                float m_flLateralSpeedGoingUp; // 0x1630, 0x4 bytes
-                float m_flLateralSpeedGoingDown; // 0x1634, 0x4 bytes
-                float m_flChargeTime; // 0x1638, 0x4 bytes
-                float m_flGrabDistance; // 0x163c, 0x4 bytes
-                float m_flCameraTurnRateMax; // 0x1640, 0x4 bytes
-                float m_flSpinRateGoingDownDegreesPerSec; // 0x1644, 0x4 bytes
-                float m_flMaxPossibleFlyHeight; // 0x1648, 0x4 bytes
-                std::uint8_t pad_164c[0x4]; // 0x164c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundImpactParticle; // 0x1070, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ChargingModifier; // 0x1150, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GoingUpModifier; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_GoingDownModifier; // 0x1170, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_TargetModifier; // 0x1180, 0x10 bytes
+                CUtlOrderedMap<shade::sdk::client::ECitadelAudioLoopSounds, CSoundEventName> m_strGoingUpSounds; // 0x1190, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::client::ECitadelAudioLoopSounds, CSoundEventName> m_strGoingDownSounds; // 0x11b8, 0x28 bytes
+                CSoundEventName m_strImpactSound; // 0x11e0, 0x10 bytes
+                float m_flShakeAmp; // 0x11f0, 0x4 bytes
+                float m_flShakeFreq; // 0x11f4, 0x4 bytes
+                CPiecewiseCurve m_flGoingUpSpeedOverTime; // 0x11f8, 0x40 bytes
+                CPiecewiseCurve m_flGoingDownSpeedOverTime; // 0x1238, 0x40 bytes
+                CPiecewiseCurve m_flApexSpeedByDistance; // 0x1278, 0x40 bytes
+                float m_flLateralSpeedGoingUp; // 0x12b8, 0x4 bytes
+                float m_flLateralSpeedGoingDown; // 0x12bc, 0x4 bytes
+                float m_flChargeTime; // 0x12c0, 0x4 bytes
+                float m_flGrabDistance; // 0x12c4, 0x4 bytes
+                float m_flCameraTurnRateMax; // 0x12c8, 0x4 bytes
+                float m_flSpinRateGoingDownDegreesPerSec; // 0x12cc, 0x4 bytes
+                float m_flMaxPossibleFlyHeight; // 0x12d0, 0x4 bytes
+                std::uint8_t pad_12d4[0x4]; // 0x12d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Deadpack_UltimateVData) == 0x1650, "CCitadel_Ability_Deadpack_UltimateVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Deadpack_UltimateVData) == 0x12D8, "CCitadel_Ability_Deadpack_UltimateVData size mismatch");
         }
     }
 }

@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bb0
+             * Size: 0x1bb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,29 +33,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Ratking_StandardBearer : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x218]; // 0x16d8, 0x218 bytes
-                shade::sdk::entity2::GameTime_t m_flForcedPlantTime; // 0x18f0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChargeResumeTime; // 0x18f4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flChargeStartTime; // 0x18f8, 0x4 bytes
-                shade::sdk::client::EPlantLeapPhase_t m_ePlantLeapPhase; // 0x18fc, 0x1 bytes
-                std::uint8_t pad_18fd[0x3]; // 0x18fd, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flPlantLeapPhaseStartTime; // 0x1900, 0x4 bytes
-                float m_flPlantLeapPhaseElapsedAtPause; // 0x1904, 0x4 bytes
-                bool m_bLeapLanded; // 0x1908, 0x1 bytes
-                std::uint8_t pad_1909[0x3]; // 0x1909, 0x3 bytes
-                Vector m_vPlantDir; // 0x190c, 0xc bytes
-                bool m_bFirstTick; // 0x1918, 0x1 bytes
-                std::uint8_t pad_1919[0x3]; // 0x1919, 0x3 bytes
-                Vector m_vGoalDir; // 0x191c, 0xc bytes
-                float m_flCurrentChargeSpeed; // 0x1928, 0x4 bytes
-                float m_flChargeStartSpeed; // 0x192c, 0x4 bytes
-                std::uint8_t pad_1930[0x280]; // 0x1930, 0x280 bytes
+                std::uint8_t pad_16e0[0x218]; // 0x16e0, 0x218 bytes
+                shade::sdk::entity2::GameTime_t m_flForcedPlantTime; // 0x18f8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChargeResumeTime; // 0x18fc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flChargeStartTime; // 0x1900, 0x4 bytes
+                shade::sdk::client::EPlantLeapPhase_t m_ePlantLeapPhase; // 0x1904, 0x1 bytes
+                std::uint8_t pad_1905[0x3]; // 0x1905, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flPlantLeapPhaseStartTime; // 0x1908, 0x4 bytes
+                float m_flPlantLeapPhaseElapsedAtPause; // 0x190c, 0x4 bytes
+                bool m_bLeapLanded; // 0x1910, 0x1 bytes
+                std::uint8_t pad_1911[0x3]; // 0x1911, 0x3 bytes
+                Vector m_vPlantDir; // 0x1914, 0xc bytes
+                bool m_bFirstTick; // 0x1920, 0x1 bytes
+                std::uint8_t pad_1921[0x3]; // 0x1921, 0x3 bytes
+                Vector m_vGoalDir; // 0x1924, 0xc bytes
+                float m_flCurrentChargeSpeed; // 0x1930, 0x4 bytes
+                float m_flChargeStartSpeed; // 0x1934, 0x4 bytes
+                std::uint8_t pad_1938[0x280]; // 0x1938, 0x280 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Ratking_StandardBearer) == 0x1BB0, "CCitadel_Ability_Ratking_StandardBearer size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Ratking_StandardBearer) == 0x1BB8, "CCitadel_Ability_Ratking_StandardBearer size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c30
+             * Size: 0x18b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,77 +43,77 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_DeadpackRocketeerVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_JetpackingModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_JetpackingVTOLModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MaxHeatModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BounceBackModifier; // 0x1418, 0x10 bytes
-                CPiecewiseCurve m_IntentSpaceFwdVelocity; // 0x1428, 0x40 bytes
-                CPiecewiseCurve m_IntentSpaceLeftVelocity; // 0x1468, 0x40 bytes
-                CPiecewiseCurve m_IntentSpaceVerticalVelocity; // 0x14a8, 0x40 bytes
-                CPiecewiseCurve m_IntentSpaceScaleWhileHolding; // 0x14e8, 0x40 bytes
-                float m_flIntentSpaceStringStrengthFwd; // 0x1528, 0x4 bytes
-                float m_flIntentSpaceStringStrengthLeft; // 0x152c, 0x4 bytes
-                float m_flIntentSpaceStringStrengthVertical; // 0x1530, 0x4 bytes
-                float m_flIntentSpaceSurplusSpringStrength; // 0x1534, 0x4 bytes
-                float m_flIntentSpaceVerticalWithXYInput; // 0x1538, 0x4 bytes
-                float m_flIntentSpaceVerticalZInputOnly; // 0x153c, 0x4 bytes
-                float m_flVerticalIntentDiminishRangeBegin; // 0x1540, 0x4 bytes
-                float m_flVerticalIntentDiminishRangeEnd; // 0x1544, 0x4 bytes
-                float m_flVerticalIntentDiminishFracAtRangeEnd; // 0x1548, 0x4 bytes
-                float m_flSlowEffectivenessLateral; // 0x154c, 0x4 bytes
-                float m_flSlowEffectivenessVertical; // 0x1550, 0x4 bytes
-                float m_flAirDrag; // 0x1554, 0x4 bytes
-                float m_flAirDashDistancePct; // 0x1558, 0x4 bytes
-                float m_flAirSpeed; // 0x155c, 0x4 bytes
-                float m_flDashJumpJetpackLockoutDuration; // 0x1560, 0x4 bytes
-                float m_flJumpHeightIncreasePercent; // 0x1564, 0x4 bytes
-                float m_flColdHitHeatRemovedPercent; // 0x1568, 0x4 bytes
-                float m_flSputterChance; // 0x156c, 0x4 bytes
-                float m_flSputterDuration; // 0x1570, 0x4 bytes
-                float m_flSputterImmuneDuration; // 0x1574, 0x4 bytes
-                CPiecewiseCurve m_FallSpeedReductionCurve; // 0x1578, 0x40 bytes
-                float m_flGravityReductionDuration_AirDash; // 0x15b8, 0x4 bytes
-                float m_flGravityReductionDuration_Shoot; // 0x15bc, 0x4 bytes
-                float m_flGravityReductionDuration_Ability; // 0x15c0, 0x4 bytes
-                float m_flGravityReductionDuration_JetpackInput; // 0x15c4, 0x4 bytes
-                CPiecewiseCurve m_ImpulseAccelCurve; // 0x15c8, 0x40 bytes
-                float m_flPlayerCollisionSphereSize; // 0x1608, 0x4 bytes
-                float m_flPlayerCollisionLookaheadFrames; // 0x160c, 0x4 bytes
-                float m_flTrackAmount; // 0x1610, 0x4 bytes
-                float m_flMinAimAngle; // 0x1614, 0x4 bytes
-                float m_flFromGroundThrustAddZ; // 0x1618, 0x4 bytes
-                float m_flFromGroundThrustXYMultiplier; // 0x161c, 0x4 bytes
-                float m_flFromGroundThrustFwd; // 0x1620, 0x4 bytes
-                float m_flFromGroundNoThrustAddZ; // 0x1624, 0x4 bytes
-                float m_flInSlideThrustMultiplier; // 0x1628, 0x4 bytes
-                float m_flTimeOnGroundBeforeLaunchAllowed; // 0x162c, 0x4 bytes
-                float m_flBounceBackZSpeed; // 0x1630, 0x4 bytes
-                float m_flBounceBackXYSpeedLimit; // 0x1634, 0x4 bytes
-                CSoundEventName m_strMaxHeatLoopingSound; // 0x1638, 0x10 bytes
-                CSoundEventName m_strLaunchGroundSound; // 0x1648, 0x10 bytes
-                CSoundEventName m_strLaunchAirSound; // 0x1658, 0x10 bytes
-                CSoundEventName m_strRocketeerLoopingSound; // 0x1668, 0x10 bytes
-                CSoundEventName m_strRocketeerLoopStopSound; // 0x1678, 0x10 bytes
-                CSoundEventName m_strRocketeerOverheatedLoopingSound; // 0x1688, 0x10 bytes
-                CSoundEventName m_strRocketeerAirDashJumpSound; // 0x1698, 0x10 bytes
-                CSoundEventName m_strHeatWarningSound; // 0x16a8, 0x10 bytes
-                CSoundEventName m_strMaxHeatSound; // 0x16b8, 0x10 bytes
-                CSoundEventName m_strChimeraDiveSound; // 0x16c8, 0x10 bytes
-                float m_flHeatWarningFraction; // 0x16d8, 0x4 bytes
-                std::uint8_t pad_16dc[0x4]; // 0x16dc, 0x4 bytes
-                CSoundEventName m_strLaunchInCooldownSound; // 0x16e0, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathExplosionWarningFX; // 0x16f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionFX; // 0x17d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VTOLImpactOnGroundFX; // 0x18b0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VTOLTargetingPreviewFX; // 0x1990, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbientParticle; // 0x1a70, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchInCooldownParticle; // 0x1b50, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_JetpackingModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_JetpackingVTOLModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_MaxHeatModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BounceBackModifier; // 0x10a0, 0x10 bytes
+                CPiecewiseCurve m_IntentSpaceFwdVelocity; // 0x10b0, 0x40 bytes
+                CPiecewiseCurve m_IntentSpaceLeftVelocity; // 0x10f0, 0x40 bytes
+                CPiecewiseCurve m_IntentSpaceVerticalVelocity; // 0x1130, 0x40 bytes
+                CPiecewiseCurve m_IntentSpaceScaleWhileHolding; // 0x1170, 0x40 bytes
+                float m_flIntentSpaceStringStrengthFwd; // 0x11b0, 0x4 bytes
+                float m_flIntentSpaceStringStrengthLeft; // 0x11b4, 0x4 bytes
+                float m_flIntentSpaceStringStrengthVertical; // 0x11b8, 0x4 bytes
+                float m_flIntentSpaceSurplusSpringStrength; // 0x11bc, 0x4 bytes
+                float m_flIntentSpaceVerticalWithXYInput; // 0x11c0, 0x4 bytes
+                float m_flIntentSpaceVerticalZInputOnly; // 0x11c4, 0x4 bytes
+                float m_flVerticalIntentDiminishRangeBegin; // 0x11c8, 0x4 bytes
+                float m_flVerticalIntentDiminishRangeEnd; // 0x11cc, 0x4 bytes
+                float m_flVerticalIntentDiminishFracAtRangeEnd; // 0x11d0, 0x4 bytes
+                float m_flSlowEffectivenessLateral; // 0x11d4, 0x4 bytes
+                float m_flSlowEffectivenessVertical; // 0x11d8, 0x4 bytes
+                float m_flAirDrag; // 0x11dc, 0x4 bytes
+                float m_flAirDashDistancePct; // 0x11e0, 0x4 bytes
+                float m_flAirSpeed; // 0x11e4, 0x4 bytes
+                float m_flDashJumpJetpackLockoutDuration; // 0x11e8, 0x4 bytes
+                float m_flJumpHeightIncreasePercent; // 0x11ec, 0x4 bytes
+                float m_flColdHitHeatRemovedPercent; // 0x11f0, 0x4 bytes
+                float m_flSputterChance; // 0x11f4, 0x4 bytes
+                float m_flSputterDuration; // 0x11f8, 0x4 bytes
+                float m_flSputterImmuneDuration; // 0x11fc, 0x4 bytes
+                CPiecewiseCurve m_FallSpeedReductionCurve; // 0x1200, 0x40 bytes
+                float m_flGravityReductionDuration_AirDash; // 0x1240, 0x4 bytes
+                float m_flGravityReductionDuration_Shoot; // 0x1244, 0x4 bytes
+                float m_flGravityReductionDuration_Ability; // 0x1248, 0x4 bytes
+                float m_flGravityReductionDuration_JetpackInput; // 0x124c, 0x4 bytes
+                CPiecewiseCurve m_ImpulseAccelCurve; // 0x1250, 0x40 bytes
+                float m_flPlayerCollisionSphereSize; // 0x1290, 0x4 bytes
+                float m_flPlayerCollisionLookaheadFrames; // 0x1294, 0x4 bytes
+                float m_flTrackAmount; // 0x1298, 0x4 bytes
+                float m_flMinAimAngle; // 0x129c, 0x4 bytes
+                float m_flFromGroundThrustAddZ; // 0x12a0, 0x4 bytes
+                float m_flFromGroundThrustXYMultiplier; // 0x12a4, 0x4 bytes
+                float m_flFromGroundThrustFwd; // 0x12a8, 0x4 bytes
+                float m_flFromGroundNoThrustAddZ; // 0x12ac, 0x4 bytes
+                float m_flInSlideThrustMultiplier; // 0x12b0, 0x4 bytes
+                float m_flTimeOnGroundBeforeLaunchAllowed; // 0x12b4, 0x4 bytes
+                float m_flBounceBackZSpeed; // 0x12b8, 0x4 bytes
+                float m_flBounceBackXYSpeedLimit; // 0x12bc, 0x4 bytes
+                CSoundEventName m_strMaxHeatLoopingSound; // 0x12c0, 0x10 bytes
+                CSoundEventName m_strLaunchGroundSound; // 0x12d0, 0x10 bytes
+                CSoundEventName m_strLaunchAirSound; // 0x12e0, 0x10 bytes
+                CSoundEventName m_strRocketeerLoopingSound; // 0x12f0, 0x10 bytes
+                CSoundEventName m_strRocketeerLoopStopSound; // 0x1300, 0x10 bytes
+                CSoundEventName m_strRocketeerOverheatedLoopingSound; // 0x1310, 0x10 bytes
+                CSoundEventName m_strRocketeerAirDashJumpSound; // 0x1320, 0x10 bytes
+                CSoundEventName m_strHeatWarningSound; // 0x1330, 0x10 bytes
+                CSoundEventName m_strMaxHeatSound; // 0x1340, 0x10 bytes
+                CSoundEventName m_strChimeraDiveSound; // 0x1350, 0x10 bytes
+                float m_flHeatWarningFraction; // 0x1360, 0x4 bytes
+                std::uint8_t pad_1364[0x4]; // 0x1364, 0x4 bytes
+                CSoundEventName m_strLaunchInCooldownSound; // 0x1368, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathExplosionWarningFX; // 0x1378, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionFX; // 0x1458, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VTOLImpactOnGroundFX; // 0x1538, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VTOLTargetingPreviewFX; // 0x1618, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbientParticle; // 0x16f8, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaunchInCooldownParticle; // 0x17d8, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_DeadpackRocketeerVData) == 0x1C30, "CCitadel_Ability_DeadpackRocketeerVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_DeadpackRocketeerVData) == 0x18B8, "CCitadel_Ability_DeadpackRocketeerVData size mismatch");
         }
     }
 }

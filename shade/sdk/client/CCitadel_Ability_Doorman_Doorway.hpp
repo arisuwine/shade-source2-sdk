@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1938
+             * Size: 0x1940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Doorway : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x30]; // 0x16d8, 0x30 bytes
-                CHandle<shade::sdk::client::CCitadel_DoorwayPortal> m_hDoor1; // 0x1708, 0x4 bytes
-                std::uint8_t pad_170c[0x4]; // 0x170c, 0x4 bytes
-                double m_flLastRangeFailCast; // 0x1710, 0x8 bytes
-                std::uint8_t pad_1718[0x210]; // 0x1718, 0x210 bytes
-                float m_flDoorBreakableRadius; // 0x1928, 0x4 bytes
-                std::uint8_t pad_192c[0x4]; // 0x192c, 0x4 bytes
-                shade::sdk::client::SatVolumeIndex_t m_nDoorPlacementSphere; // 0x1930, 0x4 bytes
+                std::uint8_t pad_16e0[0x30]; // 0x16e0, 0x30 bytes
+                CHandle<shade::sdk::client::CCitadel_DoorwayPortal> m_hDoor1; // 0x1710, 0x4 bytes
+                std::uint8_t pad_1714[0x4]; // 0x1714, 0x4 bytes
+                double m_flLastRangeFailCast; // 0x1718, 0x8 bytes
+                std::uint8_t pad_1720[0x210]; // 0x1720, 0x210 bytes
+                float m_flDoorBreakableRadius; // 0x1930, 0x4 bytes
                 std::uint8_t pad_1934[0x4]; // 0x1934, 0x4 bytes
+                float m_flDebugDrawDuration; // 0x1938, 0x4 bytes
+                shade::sdk::client::SatVolumeIndex_t m_nDoorPlacementSphere; // 0x193c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Doorway) == 0x1938, "CCitadel_Ability_Doorman_Doorway size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Doorway) == 0x1940, "CCitadel_Ability_Doorman_Doorway size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1af0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Frank_PrimaryWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1970[0x8]; // 0x1970, 0x8 bytes
-                shade::sdk::client::C_CitadelPlayerPawn *m_pNextShooter; // 0x1978, 0x8 bytes
-                std::uint8_t pad_1980[0x168]; // 0x1980, 0x168 bytes
+                std::uint8_t pad_1978[0x8]; // 0x1978, 0x8 bytes
+                shade::sdk::client::C_CitadelPlayerPawn *m_pNextShooter; // 0x1980, 0x8 bytes
+                std::uint8_t pad_1988[0x168]; // 0x1988, 0x168 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Frank_PrimaryWeapon) == 0x1AE8, "CCitadel_Ability_Frank_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Frank_PrimaryWeapon) == 0x1AF0, "CCitadel_Ability_Frank_PrimaryWeapon size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14b0
+             * Size: 0x14b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,7 +36,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TurretClone_Trigger) == 0x14B0, "CCitadel_Ability_TurretClone_Trigger size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TurretClone_Trigger) == 0x14B8, "CCitadel_Ability_TurretClone_Trigger size mismatch");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1718
+             * Size: 0x1720
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_ChessMaster_PrimaryWeapon : public shade::sdk::server::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1708[0x8]; // 0x1708, 0x8 bytes
-                std::int32_t m_iCurrentShotCount; // 0x1710, 0x4 bytes
-                std::uint8_t pad_1714[0x4]; // 0x1714, 0x4 bytes
+                std::uint8_t pad_1710[0x8]; // 0x1710, 0x8 bytes
+                std::int32_t m_iCurrentShotCount; // 0x1718, 0x4 bytes
+                std::uint8_t pad_171c[0x4]; // 0x171c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_ChessMaster_PrimaryWeapon) == 0x1718, "CCitadel_Ability_ChessMaster_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_ChessMaster_PrimaryWeapon) == 0x1720, "CCitadel_Ability_ChessMaster_PrimaryWeapon size mismatch");
         }
     }
 }

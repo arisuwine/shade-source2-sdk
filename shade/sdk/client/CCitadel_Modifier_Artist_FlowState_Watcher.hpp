@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x5b8
+             * Size: 0x5c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Artist_FlowState_Watcher : public shade::sdk::client::CCitadel_Modifier_BaseBulletPreRollProc {
             public:
-                std::uint8_t pad_02f0[0x2c8]; // 0x02f0, 0x2c8 bytes
+                std::uint8_t pad_02f8[0x2c8]; // 0x02f8, 0x2c8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Artist_FlowState_Watcher) == 0x5B8, "CCitadel_Modifier_Artist_FlowState_Watcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_FlowState_Watcher) == 0x5C0, "CCitadel_Modifier_Artist_FlowState_Watcher size mismatch");
         }
     }
 }

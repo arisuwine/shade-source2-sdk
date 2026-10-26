@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1630
+             * Size: 0x1638
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -33,23 +33,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Melee_Base : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x18]; // 0x14a0, 0x18 bytes
-                std::int32_t m_nHitNumber; // 0x14b8, 0x4 bytes
-                std::int32_t m_nPlayerKillNumber; // 0x14bc, 0x4 bytes
-                bool m_bUsingThisMelee; // 0x14c0, 0x1 bytes
-                bool m_bUsingMeleeTagActive; // 0x14c1, 0x1 bytes
-                bool m_bHitWithThisAttack; // 0x14c2, 0x1 bytes
-                std::uint8_t pad_14c3[0x1]; // 0x14c3, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x14c4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0x14c8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x14cc, 0x4 bytes
-                std::uint8_t pad_14d0[0x160]; // 0x14d0, 0x160 bytes
+                std::uint8_t pad_14a8[0x18]; // 0x14a8, 0x18 bytes
+                std::int32_t m_nHitNumber; // 0x14c0, 0x4 bytes
+                std::int32_t m_nPlayerKillNumber; // 0x14c4, 0x4 bytes
+                bool m_bUsingThisMelee; // 0x14c8, 0x1 bytes
+                bool m_bUsingMeleeTagActive; // 0x14c9, 0x1 bytes
+                bool m_bHitWithThisAttack; // 0x14ca, 0x1 bytes
+                std::uint8_t pad_14cb[0x1]; // 0x14cb, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flLastActivateTime; // 0x14cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0x14d0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0x14d4, 0x4 bytes
+                std::uint8_t pad_14d8[0x160]; // 0x14d8, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Melee_Base) == 0x1630, "CCitadel_Ability_Melee_Base size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Melee_Base) == 0x1638, "CCitadel_Ability_Melee_Base size mismatch");
         }
     }
 }

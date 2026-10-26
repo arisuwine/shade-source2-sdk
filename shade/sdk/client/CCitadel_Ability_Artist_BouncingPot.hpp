@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f68
+             * Size: 0x1f70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_BouncingPot : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecGroundAuras; // 0x16d8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitUnits; // 0x16f0, 0x18 bytes
-                shade::sdk::client::ShotID_t m_tInitialShotID; // 0x1708, 0x4 bytes
-                VectorWS m_vLaunchPosition; // 0x170c, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x1718, 0xc bytes
-                std::uint8_t pad_1724[0x844]; // 0x1724, 0x844 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecGroundAuras; // 0x16e0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitUnits; // 0x16f8, 0x18 bytes
+                shade::sdk::client::ShotID_t m_tInitialShotID; // 0x1710, 0x4 bytes
+                VectorWS m_vLaunchPosition; // 0x1714, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x1720, 0xc bytes
+                std::uint8_t pad_172c[0x844]; // 0x172c, 0x844 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_BouncingPot) == 0x1F68, "CCitadel_Ability_Artist_BouncingPot size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_BouncingPot) == 0x1F70, "CCitadel_Ability_Artist_BouncingPot size mismatch");
         }
     }
 }

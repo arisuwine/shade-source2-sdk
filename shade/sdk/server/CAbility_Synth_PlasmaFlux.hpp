@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1928
+             * Size: 0x1930
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Synth_PlasmaFlux : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x28]; // 0x14a0, 0x28 bytes
-                bool m_bTeleported; // 0x14c8, 0x1 bytes
-                std::uint8_t pad_14c9[0x7]; // 0x14c9, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecUniqueHitList; // 0x14d0, 0x18 bytes
-                VectorWS m_vLastValidTeleportPosition; // 0x14e8, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0x14f4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0x14f8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hActiveProjectile; // 0x14fc, 0x4 bytes
-                std::uint8_t pad_1500[0x428]; // 0x1500, 0x428 bytes
+                std::uint8_t pad_14a8[0x28]; // 0x14a8, 0x28 bytes
+                bool m_bTeleported; // 0x14d0, 0x1 bytes
+                std::uint8_t pad_14d1[0x7]; // 0x14d1, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecUniqueHitList; // 0x14d8, 0x18 bytes
+                VectorWS m_vLastValidTeleportPosition; // 0x14f0, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0x14fc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0x1500, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hActiveProjectile; // 0x1504, 0x4 bytes
+                std::uint8_t pad_1508[0x428]; // 0x1508, 0x428 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Synth_PlasmaFlux) == 0x1928, "CAbility_Synth_PlasmaFlux size mismatch");
+            static_assert(sizeof(CAbility_Synth_PlasmaFlux) == 0x1930, "CAbility_Synth_PlasmaFlux size mismatch");
         }
     }
 }

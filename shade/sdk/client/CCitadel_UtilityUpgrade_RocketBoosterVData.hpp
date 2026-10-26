@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18e8
+             * Size: 0x1580
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,22 +43,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_UtilityUpgrade_RocketBoosterVData : public shade::sdk::client::CCitadel_UtilityUpgrade_RocketBootsVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LandingParticle; // 0x15f0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x16d0, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DropDownStartParticle; // 0x17b0, 0xe0 bytes
-                CSoundEventName m_DropDownStartSound; // 0x1890, 0x10 bytes
-                CSoundEventName m_LandingSound; // 0x18a0, 0x10 bytes
-                CSoundEventName m_strInAirLoopingSound; // 0x18b0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x18c0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BarrierModifier; // 0x18d0, 0x10 bytes
-                float m_flSlamEnabledTime; // 0x18e0, 0x4 bytes
-                std::uint8_t pad_18e4[0x4]; // 0x18e4, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LandingParticle; // 0x1278, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle; // 0x1358, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DropDownStartParticle; // 0x1438, 0xe0 bytes
+                CSoundEventName m_DropDownStartSound; // 0x1518, 0x10 bytes
+                CSoundEventName m_LandingSound; // 0x1528, 0x10 bytes
+                CSoundEventName m_strInAirLoopingSound; // 0x1538, 0x10 bytes
+                float m_VelocityPitchScaleMin; // 0x1548, 0x4 bytes
+                float m_VelocityPitchScaleMax; // 0x154c, 0x4 bytes
+                float m_VelocityVolScaleMin; // 0x1550, 0x4 bytes
+                float m_VelocityVolScaleMax; // 0x1554, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1558, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BarrierModifier; // 0x1568, 0x10 bytes
+                float m_flSlamEnabledTime; // 0x1578, 0x4 bytes
+                std::uint8_t pad_157c[0x4]; // 0x157c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBoosterVData) == 0x18E8, "CCitadel_UtilityUpgrade_RocketBoosterVData size mismatch");
+            static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBoosterVData) == 0x1580, "CCitadel_UtilityUpgrade_RocketBoosterVData size mismatch");
         }
     }
 }

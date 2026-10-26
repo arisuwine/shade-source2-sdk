@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1630
+             * Size: 0x12b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Upgrade_MagicCarpetVData : public shade::sdk::client::CitadelItemVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x14f8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FlyingCarpetModifier; // 0x15d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonFlyingCarpetModifier; // 0x15e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonFlyingCarpetVisualModifier; // 0x15f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FlyingCarpetVisualModifier; // 0x1608, 0x10 bytes
-                float m_flSummonVisualDuration; // 0x1618, 0x4 bytes
-                float m_flBurstSpeedBonus; // 0x161c, 0x4 bytes
-                float m_flBurstSpeedMin; // 0x1620, 0x4 bytes
-                float m_flBurstSpeedDuration; // 0x1624, 0x4 bytes
-                float m_flMinDistanceAboveGround; // 0x1628, 0x4 bytes
-                std::uint8_t pad_162c[0x4]; // 0x162c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle; // 0x1180, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FlyingCarpetModifier; // 0x1260, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonFlyingCarpetModifier; // 0x1270, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SummonFlyingCarpetVisualModifier; // 0x1280, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_FlyingCarpetVisualModifier; // 0x1290, 0x10 bytes
+                float m_flSummonVisualDuration; // 0x12a0, 0x4 bytes
+                float m_flBurstSpeedBonus; // 0x12a4, 0x4 bytes
+                float m_flBurstSpeedMin; // 0x12a8, 0x4 bytes
+                float m_flBurstSpeedDuration; // 0x12ac, 0x4 bytes
+                float m_flMinDistanceAboveGround; // 0x12b0, 0x4 bytes
+                std::uint8_t pad_12b4[0x4]; // 0x12b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Upgrade_MagicCarpetVData) == 0x1630, "CCitadel_Upgrade_MagicCarpetVData size mismatch");
+            static_assert(sizeof(CCitadel_Upgrade_MagicCarpetVData) == 0x12B8, "CCitadel_Upgrade_MagicCarpetVData size mismatch");
         }
     }
 }

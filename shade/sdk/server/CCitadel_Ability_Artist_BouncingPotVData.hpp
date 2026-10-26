@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1738
+             * Size: 0x13c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,44 +43,44 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_BouncingPotVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GroundAuraModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x1418, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1428, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1508, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FireworkExplodeParticle; // 0x15e8, 0xe0 bytes
-                CSoundEventName m_ExplosionSound; // 0x16c8, 0x10 bytes
-                CSoundEventName m_BounceSound; // 0x16d8, 0x10 bytes
-                CSoundEventName m_FireworkExplosionSound; // 0x16e8, 0x10 bytes
-                bool m_bApplySlowOnBounce; // 0x16f8, 0x1 bytes
-                bool m_bApplySlowOnExplosion; // 0x16f9, 0x1 bytes
-                bool m_bApplySilenceOnBounce; // 0x16fa, 0x1 bytes
-                bool m_bApplySilenceOnExplosion; // 0x16fb, 0x1 bytes
-                bool m_bAlwaysBounceDamage; // 0x16fc, 0x1 bytes
-                bool m_bTryToMakePond; // 0x16fd, 0x1 bytes
-                bool m_bDebugPond; // 0x16fe, 0x1 bytes
-                std::uint8_t pad_16ff[0x1]; // 0x16ff, 0x1 bytes
-                float m_flPondDotThreshold; // 0x1700, 0x4 bytes
-                float m_flPondLengthThreshold; // 0x1704, 0x4 bytes
-                float m_flPondTangentSumThreshold; // 0x1708, 0x4 bytes
-                float m_flPondRadiusMultiplier; // 0x170c, 0x4 bytes
-                float m_flClimbHeight; // 0x1710, 0x4 bytes
-                float m_flStepDownHeight; // 0x1714, 0x4 bytes
-                float m_flDistanceAboveGround; // 0x1718, 0x4 bytes
-                float m_flFloatDownRate; // 0x171c, 0x4 bytes
-                float m_flTraceRadius; // 0x1720, 0x4 bytes
-                float m_flBounceUpSpeed; // 0x1724, 0x4 bytes
-                float m_flBounceForwardSpeed; // 0x1728, 0x4 bytes
-                float m_flBounceForwardRatio; // 0x172c, 0x4 bytes
-                float m_flLeftRightOffsetPerBounce; // 0x1730, 0x4 bytes
-                std::uint8_t pad_1734[0x4]; // 0x1734, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_EnemyDebuffModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_GroundAuraModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SilenceModifier; // 0x10a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x10b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BounceParticle; // 0x1190, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FireworkExplodeParticle; // 0x1270, 0xe0 bytes
+                CSoundEventName m_ExplosionSound; // 0x1350, 0x10 bytes
+                CSoundEventName m_BounceSound; // 0x1360, 0x10 bytes
+                CSoundEventName m_FireworkExplosionSound; // 0x1370, 0x10 bytes
+                bool m_bApplySlowOnBounce; // 0x1380, 0x1 bytes
+                bool m_bApplySlowOnExplosion; // 0x1381, 0x1 bytes
+                bool m_bApplySilenceOnBounce; // 0x1382, 0x1 bytes
+                bool m_bApplySilenceOnExplosion; // 0x1383, 0x1 bytes
+                bool m_bAlwaysBounceDamage; // 0x1384, 0x1 bytes
+                bool m_bTryToMakePond; // 0x1385, 0x1 bytes
+                bool m_bDebugPond; // 0x1386, 0x1 bytes
+                std::uint8_t pad_1387[0x1]; // 0x1387, 0x1 bytes
+                float m_flPondDotThreshold; // 0x1388, 0x4 bytes
+                float m_flPondLengthThreshold; // 0x138c, 0x4 bytes
+                float m_flPondTangentSumThreshold; // 0x1390, 0x4 bytes
+                float m_flPondRadiusMultiplier; // 0x1394, 0x4 bytes
+                float m_flClimbHeight; // 0x1398, 0x4 bytes
+                float m_flStepDownHeight; // 0x139c, 0x4 bytes
+                float m_flDistanceAboveGround; // 0x13a0, 0x4 bytes
+                float m_flFloatDownRate; // 0x13a4, 0x4 bytes
+                float m_flTraceRadius; // 0x13a8, 0x4 bytes
+                float m_flBounceUpSpeed; // 0x13ac, 0x4 bytes
+                float m_flBounceForwardSpeed; // 0x13b0, 0x4 bytes
+                float m_flBounceForwardRatio; // 0x13b4, 0x4 bytes
+                float m_flLeftRightOffsetPerBounce; // 0x13b8, 0x4 bytes
+                std::uint8_t pad_13bc[0x4]; // 0x13bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_BouncingPotVData) == 0x1738, "CCitadel_Ability_Artist_BouncingPotVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_BouncingPotVData) == 0x13C0, "CCitadel_Ability_Artist_BouncingPotVData size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2830
+             * Size: 0x24b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,68 +43,68 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_HelpingHandsVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AIPhysicsModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AIAggroModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InvisWatcherModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestModifier; // 0x1418, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestWaitingModifier; // 0x1428, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestBarrierModifier; // 0x1438, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestOwnerWatcherModifier; // 0x1448, 0x10 bytes
-                CSoundEventName m_strHelperShootSound; // 0x1458, 0x10 bytes
-                CSoundEventName m_strHelperSpawnSound; // 0x1468, 0x10 bytes
-                CSoundEventName m_strHelperEmoteSound; // 0x1478, 0x10 bytes
-                CSoundEventName m_strHelperFoundEnemySound; // 0x1488, 0x10 bytes
-                CSoundEventName m_strHelperHealTroopSound; // 0x1498, 0x10 bytes
-                CSoundEventName m_strHelperScaredSound; // 0x14a8, 0x10 bytes
-                CSoundEventName m_strHelperBuffSound; // 0x14b8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EmoteParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageParticle; // 0x1688, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageAttachedParticle; // 0x1768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastRegionIndicatorParticle; // 0x1848, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraIndicatorParticle; // 0x1928, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraInactiveParticle; // 0x1a08, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperCreateParticle; // 0x1ae8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperDestroyParticle; // 0x1bc8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperParticle; // 0x1ca8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperSleepingParticle; // 0x1d88, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperAttackingParticle; // 0x1e68, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperStunnedParticle; // 0x1f48, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperChargingUpParticle; // 0x2028, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperAttachedParticle; // 0x2108, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperTeleportOutParticle; // 0x21e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperTeleportInParticle; // 0x22c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperTargetIndicateParticle; // 0x23a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InfestedParticle; // 0x2488, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InfestedHeroParticle; // 0x2568, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ScaredParticle; // 0x2648, 0xe0 bytes
-                float m_flCollisionSize; // 0x2728, 0x4 bytes
-                float m_flCollisionHeight; // 0x272c, 0x4 bytes
-                float m_flLaunchBiasUp; // 0x2730, 0x4 bytes
-                float m_flLaunchSpeedMult; // 0x2734, 0x4 bytes
-                float m_flLaunchMaxSpeed; // 0x2738, 0x4 bytes
-                float m_flHomingBias; // 0x273c, 0x4 bytes
-                float m_flDamageCollisonScale; // 0x2740, 0x4 bytes
-                std::uint8_t pad_2744[0x4]; // 0x2744, 0x4 bytes
-                CPiecewiseCurve m_EmoteVelocityZByTime; // 0x2748, 0x40 bytes
-                CPiecewiseCurve m_EmoteSpinByTime; // 0x2788, 0x40 bytes
-                float m_flNewlySpawnedWaitTime; // 0x27c8, 0x4 bytes
-                float m_flHealInterval; // 0x27cc, 0x4 bytes
-                float m_flSpawnLaunchUpBias; // 0x27d0, 0x4 bytes
-                float m_flSpawnLaunchForce; // 0x27d4, 0x4 bytes
-                float m_flMoveTolerance_Meters; // 0x27d8, 0x4 bytes
-                float m_flMoveTolerance_UnitTarget_Meters; // 0x27dc, 0x4 bytes
-                float m_flTolerance_FarFromPlayer_Meters; // 0x27e0, 0x4 bytes
-                float m_flTolerance_CloseToPlayer_Meters; // 0x27e4, 0x4 bytes
-                CPiecewiseCurve m_PatrolTravelTimeByDistance; // 0x27e8, 0x40 bytes
-                float m_flInfestedNPCModelScale; // 0x2828, 0x4 bytes
-                std::uint8_t pad_282c[0x4]; // 0x282c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AIPhysicsModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AIAggroModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InvisWatcherModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestModifier; // 0x10a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestWaitingModifier; // 0x10b0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestBarrierModifier; // 0x10c0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_InfestOwnerWatcherModifier; // 0x10d0, 0x10 bytes
+                CSoundEventName m_strHelperShootSound; // 0x10e0, 0x10 bytes
+                CSoundEventName m_strHelperSpawnSound; // 0x10f0, 0x10 bytes
+                CSoundEventName m_strHelperEmoteSound; // 0x1100, 0x10 bytes
+                CSoundEventName m_strHelperFoundEnemySound; // 0x1110, 0x10 bytes
+                CSoundEventName m_strHelperHealTroopSound; // 0x1120, 0x10 bytes
+                CSoundEventName m_strHelperScaredSound; // 0x1130, 0x10 bytes
+                CSoundEventName m_strHelperBuffSound; // 0x1140, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EmoteParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageParticle; // 0x1310, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageAttachedParticle; // 0x13f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastRegionIndicatorParticle; // 0x14d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraIndicatorParticle; // 0x15b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraInactiveParticle; // 0x1690, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperCreateParticle; // 0x1770, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperDestroyParticle; // 0x1850, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperParticle; // 0x1930, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperSleepingParticle; // 0x1a10, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperAttackingParticle; // 0x1af0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperStunnedParticle; // 0x1bd0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperChargingUpParticle; // 0x1cb0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperAttachedParticle; // 0x1d90, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperTeleportOutParticle; // 0x1e70, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperTeleportInParticle; // 0x1f50, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HelperTargetIndicateParticle; // 0x2030, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InfestedParticle; // 0x2110, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InfestedHeroParticle; // 0x21f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ScaredParticle; // 0x22d0, 0xe0 bytes
+                float m_flCollisionSize; // 0x23b0, 0x4 bytes
+                float m_flCollisionHeight; // 0x23b4, 0x4 bytes
+                float m_flLaunchBiasUp; // 0x23b8, 0x4 bytes
+                float m_flLaunchSpeedMult; // 0x23bc, 0x4 bytes
+                float m_flLaunchMaxSpeed; // 0x23c0, 0x4 bytes
+                float m_flHomingBias; // 0x23c4, 0x4 bytes
+                float m_flDamageCollisonScale; // 0x23c8, 0x4 bytes
+                std::uint8_t pad_23cc[0x4]; // 0x23cc, 0x4 bytes
+                CPiecewiseCurve m_EmoteVelocityZByTime; // 0x23d0, 0x40 bytes
+                CPiecewiseCurve m_EmoteSpinByTime; // 0x2410, 0x40 bytes
+                float m_flNewlySpawnedWaitTime; // 0x2450, 0x4 bytes
+                float m_flHealInterval; // 0x2454, 0x4 bytes
+                float m_flSpawnLaunchUpBias; // 0x2458, 0x4 bytes
+                float m_flSpawnLaunchForce; // 0x245c, 0x4 bytes
+                float m_flMoveTolerance_Meters; // 0x2460, 0x4 bytes
+                float m_flMoveTolerance_UnitTarget_Meters; // 0x2464, 0x4 bytes
+                float m_flTolerance_FarFromPlayer_Meters; // 0x2468, 0x4 bytes
+                float m_flTolerance_CloseToPlayer_Meters; // 0x246c, 0x4 bytes
+                CPiecewiseCurve m_PatrolTravelTimeByDistance; // 0x2470, 0x40 bytes
+                float m_flInfestedNPCModelScale; // 0x24b0, 0x4 bytes
+                std::uint8_t pad_24b4[0x4]; // 0x24b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_HelpingHandsVData) == 0x2830, "CCitadel_Ability_Familiar_HelpingHandsVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_HelpingHandsVData) == 0x24B8, "CCitadel_Ability_Familiar_HelpingHandsVData size mismatch");
         }
     }
 }

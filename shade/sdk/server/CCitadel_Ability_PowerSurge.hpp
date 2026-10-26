@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1608
+             * Size: 0x1610
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PowerSurge : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                shade::sdk::entity2::GameTime_t m_flNextProcTime; // 0x14a0, 0x4 bytes
-                float m_flBaseCooldown; // 0x14a4, 0x4 bytes
-                std::uint8_t pad_14a8[0x160]; // 0x14a8, 0x160 bytes
+                shade::sdk::entity2::GameTime_t m_flNextProcTime; // 0x14a8, 0x4 bytes
+                float m_flBaseCooldown; // 0x14ac, 0x4 bytes
+                std::uint8_t pad_14b0[0x160]; // 0x14b0, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PowerSurge) == 0x1608, "CCitadel_Ability_PowerSurge size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PowerSurge) == 0x1610, "CCitadel_Ability_PowerSurge size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x17a0
+             * Size: 0x17a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_Spotlight : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0xb8]; // 0x16d8, 0xb8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hWasAttachedTo; // 0x1790, 0x4 bytes
-                VectorWS m_vAuraPosition; // 0x1794, 0xc bytes
+                std::uint8_t pad_16e0[0xb8]; // 0x16e0, 0xb8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hWasAttachedTo; // 0x1798, 0x4 bytes
+                VectorWS m_vAuraPosition; // 0x179c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_Spotlight) == 0x17A0, "CCitadel_Ability_Familiar_Spotlight size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_Spotlight) == 0x17A8, "CCitadel_Ability_Familiar_Spotlight size mismatch");
         }
     }
 }

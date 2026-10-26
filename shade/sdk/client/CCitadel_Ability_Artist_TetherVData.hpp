@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x15b8
+             * Size: 0x1240
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,41 +43,41 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_TetherVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x13e8, 0xe0 bytes
-                CSoundEventName m_strTetherHitConfirmSound; // 0x14c8, 0x10 bytes
-                CSoundEventName m_strFailSound; // 0x14d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuildupModifier; // 0x14e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x14f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunModifier; // 0x1508, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SuccessModifier; // 0x1518, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x1528, 0x10 bytes
-                float m_flMinimumCancelDelay; // 0x1538, 0x4 bytes
-                bool m_bBuildupRequiresLook; // 0x153c, 0x1 bytes
-                bool m_bBuildupRequiresRange; // 0x153d, 0x1 bytes
-                bool m_bBuildupRequiresLOS; // 0x153e, 0x1 bytes
-                bool m_bShouldVOOnProc; // 0x153f, 0x1 bytes
-                bool m_bShouldDropPickupOnproc; // 0x1540, 0x1 bytes
-                bool m_bShouldUseProjectiles; // 0x1541, 0x1 bytes
-                std::uint8_t pad_1542[0x2]; // 0x1542, 0x2 bytes
-                float m_flBuildupGracePeriod; // 0x1544, 0x4 bytes
-                bool m_bUseDesatVolumes; // 0x1548, 0x1 bytes
-                std::uint8_t pad_1549[0x3]; // 0x1549, 0x3 bytes
-                Color aimColorDesat; // 0x154c, 0x4 bytes
-                Color aimColorSat; // 0x1550, 0x4 bytes
-                Color aimColorOutline; // 0x1554, 0x4 bytes
-                float m_flSatVolumeInnerConeSize; // 0x1558, 0x4 bytes
-                std::uint8_t pad_155c[0x4]; // 0x155c, 0x4 bytes
-                CPiecewiseCurve m_flSatVolumeConeCurve; // 0x1560, 0x40 bytes
-                float m_flMashProtectionTime; // 0x15a0, 0x4 bytes
-                std::uint8_t pad_15a4[0x4]; // 0x15a4, 0x4 bytes
-                CGlobalSymbol m_strAG2HeroActionPostCastSuccess; // 0x15a8, 0x8 bytes
-                CGlobalSymbol m_strAG2HeroActionPostCastFail; // 0x15b0, 0x8 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1070, 0xe0 bytes
+                CSoundEventName m_strTetherHitConfirmSound; // 0x1150, 0x10 bytes
+                CSoundEventName m_strFailSound; // 0x1160, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuildupModifier; // 0x1170, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SelfModifier; // 0x1180, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_StunModifier; // 0x1190, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SuccessModifier; // 0x11a0, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_BuffModifier; // 0x11b0, 0x10 bytes
+                float m_flMinimumCancelDelay; // 0x11c0, 0x4 bytes
+                bool m_bBuildupRequiresLook; // 0x11c4, 0x1 bytes
+                bool m_bBuildupRequiresRange; // 0x11c5, 0x1 bytes
+                bool m_bBuildupRequiresLOS; // 0x11c6, 0x1 bytes
+                bool m_bShouldVOOnProc; // 0x11c7, 0x1 bytes
+                bool m_bShouldDropPickupOnproc; // 0x11c8, 0x1 bytes
+                bool m_bShouldUseProjectiles; // 0x11c9, 0x1 bytes
+                std::uint8_t pad_11ca[0x2]; // 0x11ca, 0x2 bytes
+                float m_flBuildupGracePeriod; // 0x11cc, 0x4 bytes
+                bool m_bUseDesatVolumes; // 0x11d0, 0x1 bytes
+                std::uint8_t pad_11d1[0x3]; // 0x11d1, 0x3 bytes
+                Color aimColorDesat; // 0x11d4, 0x4 bytes
+                Color aimColorSat; // 0x11d8, 0x4 bytes
+                Color aimColorOutline; // 0x11dc, 0x4 bytes
+                float m_flSatVolumeInnerConeSize; // 0x11e0, 0x4 bytes
+                std::uint8_t pad_11e4[0x4]; // 0x11e4, 0x4 bytes
+                CPiecewiseCurve m_flSatVolumeConeCurve; // 0x11e8, 0x40 bytes
+                float m_flMashProtectionTime; // 0x1228, 0x4 bytes
+                std::uint8_t pad_122c[0x4]; // 0x122c, 0x4 bytes
+                CGlobalSymbol m_strAG2HeroActionPostCastSuccess; // 0x1230, 0x8 bytes
+                CGlobalSymbol m_strAG2HeroActionPostCastFail; // 0x1238, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_TetherVData) == 0x15B8, "CCitadel_Ability_Artist_TetherVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_TetherVData) == 0x1240, "CCitadel_Ability_Artist_TetherVData size mismatch");
         }
     }
 }

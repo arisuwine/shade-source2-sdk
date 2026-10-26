@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ea0
+             * Size: 0x1ea8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,19 +33,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Baba_HexingBrew : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x798]; // 0x16d8, 0x798 bytes
-                shade::sdk::client::CCitadel_Ability_Baba_HexingBrew__EBrewEffect m_eBrewEffect; // 0x1e70, 0x4 bytes
-                bool m_bBrewLocked; // 0x1e74, 0x1 bytes
-                std::uint8_t pad_1e75[0x3]; // 0x1e75, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flBrewLockTime; // 0x1e78, 0x4 bytes
-                float m_flBrewPausedTime; // 0x1e7c, 0x4 bytes
-                std::uint8_t pad_1e80[0x20]; // 0x1e80, 0x20 bytes
+                std::uint8_t pad_16e0[0x798]; // 0x16e0, 0x798 bytes
+                shade::sdk::client::CCitadel_Ability_Baba_HexingBrew__EBrewEffect m_eBrewEffect; // 0x1e78, 0x4 bytes
+                bool m_bBrewLocked; // 0x1e7c, 0x1 bytes
+                std::uint8_t pad_1e7d[0x3]; // 0x1e7d, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flBrewLockTime; // 0x1e80, 0x4 bytes
+                float m_flBrewPausedTime; // 0x1e84, 0x4 bytes
+                std::uint8_t pad_1e88[0x20]; // 0x1e88, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Baba_HexingBrew) == 0x1EA0, "CCitadel_Ability_Baba_HexingBrew size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Baba_HexingBrew) == 0x1EA8, "CCitadel_Ability_Baba_HexingBrew size mismatch");
         }
     }
 }

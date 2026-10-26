@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1af0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,18 +32,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Magician_BigBolt : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x638]; // 0x14a0, 0x638 bytes
-                shade::sdk::entity2::GameTime_t m_flNextShootTime; // 0x1ad8, 0x4 bytes
-                std::int32_t m_iBoltsFired; // 0x1adc, 0x4 bytes
-                std::int32_t m_iRemainingBolts; // 0x1ae0, 0x4 bytes
-                bool m_bPreppingShoot; // 0x1ae4, 0x1 bytes
-                std::uint8_t pad_1ae5[0x3]; // 0x1ae5, 0x3 bytes
+                std::uint8_t pad_14a8[0x638]; // 0x14a8, 0x638 bytes
+                shade::sdk::entity2::GameTime_t m_flNextShootTime; // 0x1ae0, 0x4 bytes
+                std::int32_t m_iBoltsFired; // 0x1ae4, 0x4 bytes
+                std::int32_t m_iRemainingBolts; // 0x1ae8, 0x4 bytes
+                bool m_bPreppingShoot; // 0x1aec, 0x1 bytes
+                std::uint8_t pad_1aed[0x3]; // 0x1aed, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Magician_BigBolt) == 0x1AE8, "CCitadel_Ability_Magician_BigBolt size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Magician_BigBolt) == 0x1AF0, "CCitadel_Ability_Magician_BigBolt size mismatch");
         }
     }
 }

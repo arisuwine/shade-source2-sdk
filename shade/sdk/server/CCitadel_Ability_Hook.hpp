@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1bb0
+             * Size: 0x1bb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +40,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Hook : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hHookVictim; // 0x14a0, 0x4 bytes
-                VectorWS m_vecHookTargetStartPos; // 0x14a4, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flCancelHookTime; // 0x14b0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBeginReelHookTime; // 0x14b4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBulletShouldExpireTime; // 0x14b8, 0x4 bytes
-                std::uint8_t pad_14bc[0x8]; // 0x14bc, 0x8 bytes
-                float m_flMaxHookTravelTime; // 0x14c4, 0x4 bytes
-                float m_flLastUppercutRestoreTime; // 0x14c8, 0x4 bytes
-                std::uint8_t pad_14cc[0x6e4]; // 0x14cc, 0x6e4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hHookVictim; // 0x14a8, 0x4 bytes
+                VectorWS m_vecHookTargetStartPos; // 0x14ac, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flCancelHookTime; // 0x14b8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBeginReelHookTime; // 0x14bc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBulletShouldExpireTime; // 0x14c0, 0x4 bytes
+                std::uint8_t pad_14c4[0x8]; // 0x14c4, 0x8 bytes
+                float m_flMaxHookTravelTime; // 0x14cc, 0x4 bytes
+                float m_flLastUppercutRestoreTime; // 0x14d0, 0x4 bytes
+                std::uint8_t pad_14d4[0x6e4]; // 0x14d4, 0x6e4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Hook) == 0x1BB0, "CCitadel_Ability_Hook size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Hook) == 0x1BB8, "CCitadel_Ability_Hook size mismatch");
         }
     }
 }

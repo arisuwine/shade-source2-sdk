@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18f0
+             * Size: 0x18f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TestHero_Stance_Spaceman : public shade::sdk::client::CCitadel_Ability_TestHero_StanceSwitch {
             public:
-                std::uint8_t pad_1790[0x160]; // 0x1790, 0x160 bytes
+                std::uint8_t pad_1798[0x160]; // 0x1798, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TestHero_Stance_Spaceman) == 0x18F0, "CCitadel_Ability_TestHero_Stance_Spaceman size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TestHero_Stance_Spaceman) == 0x18F8, "CCitadel_Ability_TestHero_Stance_Spaceman size mismatch");
         }
     }
 }

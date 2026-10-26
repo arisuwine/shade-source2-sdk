@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1640
+             * Size: 0x1648
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Item_Mystic_Regeneration : public shade::sdk::server::CCitadel_Item {
             public:
-                std::uint8_t pad_14a8[0x2c]; // 0x14a8, 0x2c bytes
-                bool m_bForceModUpdate; // 0x14d4, 0x1 bytes
-                std::uint8_t pad_14d5[0x3]; // 0x14d5, 0x3 bytes
-                std::int32_t m_iRegenStacks; // 0x14d8, 0x4 bytes
-                float m_flPendingIncomingHeal; // 0x14dc, 0x4 bytes
-                std::uint8_t pad_14e0[0x160]; // 0x14e0, 0x160 bytes
+                std::uint8_t pad_14b0[0x2c]; // 0x14b0, 0x2c bytes
+                bool m_bForceModUpdate; // 0x14dc, 0x1 bytes
+                std::uint8_t pad_14dd[0x3]; // 0x14dd, 0x3 bytes
+                std::int32_t m_iRegenStacks; // 0x14e0, 0x4 bytes
+                float m_flPendingIncomingHeal; // 0x14e4, 0x4 bytes
+                std::uint8_t pad_14e8[0x160]; // 0x14e8, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Item_Mystic_Regeneration) == 0x1640, "CCitadel_Item_Mystic_Regeneration size mismatch");
+            static_assert(sizeof(CCitadel_Item_Mystic_Regeneration) == 0x1648, "CCitadel_Item_Mystic_Regeneration size mismatch");
         }
     }
 }

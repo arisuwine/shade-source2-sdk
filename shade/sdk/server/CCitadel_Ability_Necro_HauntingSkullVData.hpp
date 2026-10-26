@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1d70
+             * Size: 0x19f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,68 +44,68 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_HauntingSkullVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JarExplodeParticle; // 0x13e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullFriendlyFoundParticle; // 0x14c8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullTargetFoundParticle; // 0x15a8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullTargetDashParticle; // 0x1688, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullHitParticle; // 0x1768, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullExplodeParticle; // 0x1848, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ResourceGainedParticle; // 0x1928, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeroResourceGainedParticle; // 0x1a08, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SkullModel; // 0x1ae8, 0xe0 bytes
-                float m_flSkullScale; // 0x1bc8, 0x4 bytes
-                std::uint8_t pad_1bcc[0x4]; // 0x1bcc, 0x4 bytes
-                CSoundEventName m_ResourceGainedSound; // 0x1bd0, 0x10 bytes
-                CSoundEventName m_HeroResourceGainedSound; // 0x1be0, 0x10 bytes
-                CSoundEventName m_JarExplodeSound; // 0x1bf0, 0x10 bytes
-                CSoundEventName m_SkullHitSound; // 0x1c00, 0x10 bytes
-                CSoundEventName m_SkullKilledSound; // 0x1c10, 0x10 bytes
-                CSoundEventName m_SkullAttackSound; // 0x1c20, 0x10 bytes
-                CSoundEventName m_SkullLoopStartSound; // 0x1c30, 0x10 bytes
-                CSoundEventName m_SkullLoopEndSound; // 0x1c40, 0x10 bytes
-                CSoundEventName m_SkullLoopSound; // 0x1c50, 0x10 bytes
-                CSoundEventName m_SkullLastHitSound; // 0x1c60, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AreaModifier; // 0x1c70, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SummonModifier; // 0x1c80, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SummonBuffModifier; // 0x1c90, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StackingDebuffModifier; // 0x1ca0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1cb0, 0x10 bytes
-                float m_flSkullRadius; // 0x1cc0, 0x4 bytes
-                bool m_bAllowStackingDamageFromGun; // 0x1cc4, 0x1 bytes
-                std::uint8_t pad_1cc5[0x3]; // 0x1cc5, 0x3 bytes
-                float m_flInitialVelocityVariance; // 0x1cc8, 0x4 bytes
-                float m_flDrag; // 0x1ccc, 0x4 bytes
-                float m_flCurlNoiseStrength; // 0x1cd0, 0x4 bytes
-                float m_flCurlNoiseStrengthDuringTarget; // 0x1cd4, 0x4 bytes
-                float m_flCurlNoiseStrengthDuringFriendly; // 0x1cd8, 0x4 bytes
-                float m_flCurlNoiseMinFrequency; // 0x1cdc, 0x4 bytes
-                float m_flCurlNoiseMaxFrequency; // 0x1ce0, 0x4 bytes
-                float m_flBobbingFrequency; // 0x1ce4, 0x4 bytes
-                float m_flBobbingStrength; // 0x1ce8, 0x4 bytes
-                float m_flFloorSpringLength; // 0x1cec, 0x4 bytes
-                float m_flFloorSpringStrength; // 0x1cf0, 0x4 bytes
-                std::uint8_t pad_1cf4[0x4]; // 0x1cf4, 0x4 bytes
-                CPiecewiseCurve m_flTargetForwardSpeed; // 0x1cf8, 0x40 bytes
-                float m_flTargetHitRecoilRatio; // 0x1d38, 0x4 bytes
-                float m_flTargetHitRecoilRandomness; // 0x1d3c, 0x4 bytes
-                float m_flTargetHitUpVelocity; // 0x1d40, 0x4 bytes
-                float m_flFriendlyChaseAcceleration; // 0x1d44, 0x4 bytes
-                float m_flEnemyChaseAcceleration; // 0x1d48, 0x4 bytes
-                float m_flFriendlyChaseMaxSpeed; // 0x1d4c, 0x4 bytes
-                float m_flEnemyChaseMaxSpeed; // 0x1d50, 0x4 bytes
-                float m_flFriendlyChaseMinDistance; // 0x1d54, 0x4 bytes
-                float m_flFriendlyChaseMaxDistance; // 0x1d58, 0x4 bytes
-                float m_flFriendlyChaseRandomPositionDistance; // 0x1d5c, 0x4 bytes
-                float m_flFriendlyChaseBufferDelay; // 0x1d60, 0x4 bytes
-                float m_flPriorityTargetLingerDuration; // 0x1d64, 0x4 bytes
-                float m_flSkullMeleeRange; // 0x1d68, 0x4 bytes
-                std::uint8_t pad_1d6c[0x4]; // 0x1d6c, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_JarExplodeParticle; // 0x1070, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullFriendlyFoundParticle; // 0x1150, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullTargetFoundParticle; // 0x1230, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullTargetDashParticle; // 0x1310, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullHitParticle; // 0x13f0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SkullExplodeParticle; // 0x14d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ResourceGainedParticle; // 0x15b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HeroResourceGainedParticle; // 0x1690, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel>> m_SkullModel; // 0x1770, 0xe0 bytes
+                float m_flSkullScale; // 0x1850, 0x4 bytes
+                std::uint8_t pad_1854[0x4]; // 0x1854, 0x4 bytes
+                CSoundEventName m_ResourceGainedSound; // 0x1858, 0x10 bytes
+                CSoundEventName m_HeroResourceGainedSound; // 0x1868, 0x10 bytes
+                CSoundEventName m_JarExplodeSound; // 0x1878, 0x10 bytes
+                CSoundEventName m_SkullHitSound; // 0x1888, 0x10 bytes
+                CSoundEventName m_SkullKilledSound; // 0x1898, 0x10 bytes
+                CSoundEventName m_SkullAttackSound; // 0x18a8, 0x10 bytes
+                CSoundEventName m_SkullLoopStartSound; // 0x18b8, 0x10 bytes
+                CSoundEventName m_SkullLoopEndSound; // 0x18c8, 0x10 bytes
+                CSoundEventName m_SkullLoopSound; // 0x18d8, 0x10 bytes
+                CSoundEventName m_SkullLastHitSound; // 0x18e8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_AreaModifier; // 0x18f8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SummonModifier; // 0x1908, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SummonBuffModifier; // 0x1918, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StackingDebuffModifier; // 0x1928, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_SlowModifier; // 0x1938, 0x10 bytes
+                float m_flSkullRadius; // 0x1948, 0x4 bytes
+                bool m_bAllowStackingDamageFromGun; // 0x194c, 0x1 bytes
+                std::uint8_t pad_194d[0x3]; // 0x194d, 0x3 bytes
+                float m_flInitialVelocityVariance; // 0x1950, 0x4 bytes
+                float m_flDrag; // 0x1954, 0x4 bytes
+                float m_flCurlNoiseStrength; // 0x1958, 0x4 bytes
+                float m_flCurlNoiseStrengthDuringTarget; // 0x195c, 0x4 bytes
+                float m_flCurlNoiseStrengthDuringFriendly; // 0x1960, 0x4 bytes
+                float m_flCurlNoiseMinFrequency; // 0x1964, 0x4 bytes
+                float m_flCurlNoiseMaxFrequency; // 0x1968, 0x4 bytes
+                float m_flBobbingFrequency; // 0x196c, 0x4 bytes
+                float m_flBobbingStrength; // 0x1970, 0x4 bytes
+                float m_flFloorSpringLength; // 0x1974, 0x4 bytes
+                float m_flFloorSpringStrength; // 0x1978, 0x4 bytes
+                std::uint8_t pad_197c[0x4]; // 0x197c, 0x4 bytes
+                CPiecewiseCurve m_flTargetForwardSpeed; // 0x1980, 0x40 bytes
+                float m_flTargetHitRecoilRatio; // 0x19c0, 0x4 bytes
+                float m_flTargetHitRecoilRandomness; // 0x19c4, 0x4 bytes
+                float m_flTargetHitUpVelocity; // 0x19c8, 0x4 bytes
+                float m_flFriendlyChaseAcceleration; // 0x19cc, 0x4 bytes
+                float m_flEnemyChaseAcceleration; // 0x19d0, 0x4 bytes
+                float m_flFriendlyChaseMaxSpeed; // 0x19d4, 0x4 bytes
+                float m_flEnemyChaseMaxSpeed; // 0x19d8, 0x4 bytes
+                float m_flFriendlyChaseMinDistance; // 0x19dc, 0x4 bytes
+                float m_flFriendlyChaseMaxDistance; // 0x19e0, 0x4 bytes
+                float m_flFriendlyChaseRandomPositionDistance; // 0x19e4, 0x4 bytes
+                float m_flFriendlyChaseBufferDelay; // 0x19e8, 0x4 bytes
+                float m_flPriorityTargetLingerDuration; // 0x19ec, 0x4 bytes
+                float m_flSkullMeleeRange; // 0x19f0, 0x4 bytes
+                std::uint8_t pad_19f4[0x4]; // 0x19f4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSkullVData) == 0x1D70, "CCitadel_Ability_Necro_HauntingSkullVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_HauntingSkullVData) == 0x19F8, "CCitadel_Ability_Necro_HauntingSkullVData size mismatch");
         }
     }
 }

@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1818
+             * Size: 0x14a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -45,34 +45,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityBabaBenchMeleeVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CUtlOrderedMap<shade::sdk::client::EBabaBenchMeleeAttackType, shade::sdk::client::BabaBenchMeleeAttack_t> m_mapAttacks; // 0x13e8, 0x28 bytes
-                float m_flHeavyHoldTime; // 0x1410, 0x4 bytes
-                float m_flMinChargeTime; // 0x1414, 0x4 bytes
-                float m_flCollisionDistance; // 0x1418, 0x4 bytes
-                float m_flMinDashTime; // 0x141c, 0x4 bytes
-                float m_flDashMaxTurnRate; // 0x1420, 0x4 bytes
-                std::uint8_t pad_1424[0x4]; // 0x1424, 0x4 bytes
-                CUtlString m_strEffectsAttachName; // 0x1428, 0x8 bytes
-                float m_flGroundPoundDiveSpeed; // 0x1430, 0x4 bytes
-                float m_flGroundPoundLaunchSpeed; // 0x1434, 0x4 bytes
-                float m_flGroundPoundChargeAirControlSpeed; // 0x1438, 0x4 bytes
-                float m_flGroundPoundChargeAirControlAccel; // 0x143c, 0x4 bytes
-                float m_flGroundPoundGravityScale; // 0x1440, 0x4 bytes
-                std::uint8_t pad_1444[0x4]; // 0x1444, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoldBeginEffect; // 0x1448, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundPoundImpactParticle; // 0x1528, 0xe0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHoldStart; // 0x1608, 0xa0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHitImpact; // 0x16a8, 0xa0 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceMiss; // 0x1748, 0xa0 bytes
-                CSoundEventName m_strHoldBegin; // 0x17e8, 0x10 bytes
-                CSoundEventName m_strGroundImpactSound; // 0x17f8, 0x10 bytes
-                CSoundEventName m_strLightKickBeginSound; // 0x1808, 0x10 bytes
+                CUtlOrderedMap<shade::sdk::client::EBabaBenchMeleeAttackType, shade::sdk::client::BabaBenchMeleeAttack_t> m_mapAttacks; // 0x1070, 0x28 bytes
+                float m_flHeavyHoldTime; // 0x1098, 0x4 bytes
+                float m_flMinChargeTime; // 0x109c, 0x4 bytes
+                float m_flCollisionDistance; // 0x10a0, 0x4 bytes
+                float m_flMinDashTime; // 0x10a4, 0x4 bytes
+                float m_flDashMaxTurnRate; // 0x10a8, 0x4 bytes
+                std::uint8_t pad_10ac[0x4]; // 0x10ac, 0x4 bytes
+                CUtlString m_strEffectsAttachName; // 0x10b0, 0x8 bytes
+                float m_flGroundPoundDiveSpeed; // 0x10b8, 0x4 bytes
+                float m_flGroundPoundLaunchSpeed; // 0x10bc, 0x4 bytes
+                float m_flGroundPoundChargeAirControlSpeed; // 0x10c0, 0x4 bytes
+                float m_flGroundPoundChargeAirControlAccel; // 0x10c4, 0x4 bytes
+                float m_flGroundPoundGravityScale; // 0x10c8, 0x4 bytes
+                std::uint8_t pad_10cc[0x4]; // 0x10cc, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoldBeginEffect; // 0x10d0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundPoundImpactParticle; // 0x11b0, 0xe0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHoldStart; // 0x1290, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHitImpact; // 0x1330, 0xa0 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceMiss; // 0x13d0, 0xa0 bytes
+                CSoundEventName m_strHoldBegin; // 0x1470, 0x10 bytes
+                CSoundEventName m_strGroundImpactSound; // 0x1480, 0x10 bytes
+                CSoundEventName m_strLightKickBeginSound; // 0x1490, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityBabaBenchMeleeVData) == 0x1818, "CAbilityBabaBenchMeleeVData size mismatch");
+            static_assert(sizeof(CAbilityBabaBenchMeleeVData) == 0x14A0, "CAbilityBabaBenchMeleeVData size mismatch");
         }
     }
 }

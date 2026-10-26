@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x658
+             * Size: 0x660
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_SpiritSnatch : public shade::sdk::client::CCitadel_Modifier_BaseEventProc {
             public:
-                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_hBuffHandle; // 0x02d0, 0x18 bytes
-                std::uint8_t pad_02e8[0x370]; // 0x02e8, 0x370 bytes
+                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_hBuffHandle; // 0x02d8, 0x18 bytes
+                std::uint8_t pad_02f0[0x370]; // 0x02f0, 0x370 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_SpiritSnatch) == 0x658, "CCitadel_Modifier_SpiritSnatch size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_SpiritSnatch) == 0x660, "CCitadel_Modifier_SpiritSnatch size mismatch");
         }
     }
 }

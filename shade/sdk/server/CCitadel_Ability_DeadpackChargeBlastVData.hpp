@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1768
+             * Size: 0x13f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,40 +44,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_DeadpackChargeBlastVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CSoundEventName m_strHomeSound; // 0x13e8, 0x10 bytes
-                CSoundEventName m_strFireSound; // 0x13f8, 0x10 bytes
-                CSoundEventName m_strImpactSound; // 0x1408, 0x10 bytes
-                CSoundEventName m_strCoatedAppliedSound; // 0x1418, 0x10 bytes
-                CSoundEventName m_strCoatedConsumeSound; // 0x1428, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RangeIndicatorParticle; // 0x1438, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RangeCircleIndicator; // 0x1518, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MarkedExplosionParticle; // 0x15f8, 0xe0 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StuckMineAuraModifier; // 0x16d8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CoatedModifier; // 0x16e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CoatedSlowModifier; // 0x16f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1708, 0x10 bytes
-                shade::sdk::tier2::CRangeFloat m_flFloatDistanceAboveHead; // 0x1718, 0x8 bytes
-                shade::sdk::tier2::CRangeFloat m_flFloatLeftRightDistance; // 0x1720, 0x8 bytes
-                shade::sdk::tier2::CRangeFloat m_flFloatForwardBackDistance; // 0x1728, 0x8 bytes
-                shade::sdk::tier2::CRangeFloat m_flFloatInitialSpeed; // 0x1730, 0x8 bytes
-                float m_flHomeDelay; // 0x1738, 0x4 bytes
-                float m_flHomeInterval; // 0x173c, 0x4 bytes
-                float m_flShootDelay; // 0x1740, 0x4 bytes
-                float m_flShootInterval; // 0x1744, 0x4 bytes
-                float m_flTrackedProjectileSpeed; // 0x1748, 0x4 bytes
-                float m_flMaxHoldDuration; // 0x174c, 0x4 bytes
-                float m_flAimDeadzone; // 0x1750, 0x4 bytes
-                float m_flPathSegmentLengthMeters; // 0x1754, 0x4 bytes
-                float m_flPathScatterDistanceMeters; // 0x1758, 0x4 bytes
-                float m_flPathApexFractionOfDistance; // 0x175c, 0x4 bytes
-                float m_flPathApexMaxMeters; // 0x1760, 0x4 bytes
-                std::uint8_t pad_1764[0x4]; // 0x1764, 0x4 bytes
+                CSoundEventName m_strHomeSound; // 0x1070, 0x10 bytes
+                CSoundEventName m_strFireSound; // 0x1080, 0x10 bytes
+                CSoundEventName m_strImpactSound; // 0x1090, 0x10 bytes
+                CSoundEventName m_strCoatedAppliedSound; // 0x10a0, 0x10 bytes
+                CSoundEventName m_strCoatedConsumeSound; // 0x10b0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RangeIndicatorParticle; // 0x10c0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RangeCircleIndicator; // 0x11a0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MarkedExplosionParticle; // 0x1280, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_StuckMineAuraModifier; // 0x1360, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CoatedModifier; // 0x1370, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_CoatedSlowModifier; // 0x1380, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1390, 0x10 bytes
+                shade::sdk::tier2::CRangeFloat m_flFloatDistanceAboveHead; // 0x13a0, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flFloatLeftRightDistance; // 0x13a8, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flFloatForwardBackDistance; // 0x13b0, 0x8 bytes
+                shade::sdk::tier2::CRangeFloat m_flFloatInitialSpeed; // 0x13b8, 0x8 bytes
+                float m_flHomeDelay; // 0x13c0, 0x4 bytes
+                float m_flHomeInterval; // 0x13c4, 0x4 bytes
+                float m_flShootDelay; // 0x13c8, 0x4 bytes
+                float m_flShootInterval; // 0x13cc, 0x4 bytes
+                float m_flTrackedProjectileSpeed; // 0x13d0, 0x4 bytes
+                float m_flMaxHoldDuration; // 0x13d4, 0x4 bytes
+                float m_flAimDeadzone; // 0x13d8, 0x4 bytes
+                float m_flPathSegmentLengthMeters; // 0x13dc, 0x4 bytes
+                float m_flPathScatterDistanceMeters; // 0x13e0, 0x4 bytes
+                float m_flPathApexFractionOfDistance; // 0x13e4, 0x4 bytes
+                float m_flPathApexMaxMeters; // 0x13e8, 0x4 bytes
+                std::uint8_t pad_13ec[0x4]; // 0x13ec, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_DeadpackChargeBlastVData) == 0x1768, "CCitadel_Ability_DeadpackChargeBlastVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_DeadpackChargeBlastVData) == 0x13F0, "CCitadel_Ability_DeadpackChargeBlastVData size mismatch");
         }
     }
 }

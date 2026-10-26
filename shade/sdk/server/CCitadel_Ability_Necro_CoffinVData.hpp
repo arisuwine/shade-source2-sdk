@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1678
+             * Size: 0x1300
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,18 +44,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Necro_CoffinVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x13f8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEParticle; // 0x1408, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x14e8, 0xe0 bytes
-                CSoundEventName m_strExplodeSound; // 0x15c8, 0x10 bytes
-                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceInSatchel; // 0x15d8, 0xa0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_DebuffModifier; // 0x1080, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEParticle; // 0x1090, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle; // 0x1170, 0xe0 bytes
+                CSoundEventName m_strExplodeSound; // 0x1250, 0x10 bytes
+                shade::sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceInSatchel; // 0x1260, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Necro_CoffinVData) == 0x1678, "CCitadel_Ability_Necro_CoffinVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Necro_CoffinVData) == 0x1300, "CCitadel_Ability_Necro_CoffinVData size mismatch");
         }
     }
 }

@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1540
+             * Size: 0x11c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,31 +44,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_SpotlightVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExposedAuraModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_Base_Buildup> m_BuildupModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EffectModifier; // 0x1408, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EyeGlowParticle; // 0x1418, 0xe0 bytes
-                CSoundEventName m_strChannelFinishSound; // 0x14f8, 0x10 bytes
-                float m_AirSpeedMax; // 0x1508, 0x4 bytes
-                float m_FallSpeedMax; // 0x150c, 0x4 bytes
-                float m_VerticalDrag; // 0x1510, 0x4 bytes
-                float m_AirDrag; // 0x1514, 0x4 bytes
-                float m_CameraTurnRateMax; // 0x1518, 0x4 bytes
-                float m_flShotCosmeticVarianceMagnitude; // 0x151c, 0x4 bytes
-                float m_JumpCeilingCheckDistance; // 0x1520, 0x4 bytes
-                float m_JumpSpeed; // 0x1524, 0x4 bytes
-                float m_JumpPitch; // 0x1528, 0x4 bytes
-                Color aimColorDesat; // 0x152c, 0x4 bytes
-                Color aimColorSat; // 0x1530, 0x4 bytes
-                Color aimColorOutline; // 0x1534, 0x4 bytes
-                float m_flSatVolumeInnerConeSize; // 0x1538, 0x4 bytes
-                std::uint8_t pad_153c[0x4]; // 0x153c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ExposedAuraModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadel_Modifier_Base_Buildup> m_BuildupModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_EffectModifier; // 0x1090, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EyeGlowParticle; // 0x10a0, 0xe0 bytes
+                CSoundEventName m_strChannelFinishSound; // 0x1180, 0x10 bytes
+                float m_AirSpeedMax; // 0x1190, 0x4 bytes
+                float m_FallSpeedMax; // 0x1194, 0x4 bytes
+                float m_VerticalDrag; // 0x1198, 0x4 bytes
+                float m_AirDrag; // 0x119c, 0x4 bytes
+                float m_CameraTurnRateMax; // 0x11a0, 0x4 bytes
+                float m_flShotCosmeticVarianceMagnitude; // 0x11a4, 0x4 bytes
+                float m_JumpCeilingCheckDistance; // 0x11a8, 0x4 bytes
+                float m_JumpSpeed; // 0x11ac, 0x4 bytes
+                float m_JumpPitch; // 0x11b0, 0x4 bytes
+                Color aimColorDesat; // 0x11b4, 0x4 bytes
+                Color aimColorSat; // 0x11b8, 0x4 bytes
+                Color aimColorOutline; // 0x11bc, 0x4 bytes
+                float m_flSatVolumeInnerConeSize; // 0x11c0, 0x4 bytes
+                std::uint8_t pad_11c4[0x4]; // 0x11c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_SpotlightVData) == 0x1540, "CCitadel_Ability_Familiar_SpotlightVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_SpotlightVData) == 0x11C8, "CCitadel_Ability_Familiar_SpotlightVData size mismatch");
         }
     }
 }

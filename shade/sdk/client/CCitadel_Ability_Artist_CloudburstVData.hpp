@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1620
+             * Size: 0x12a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,23 +43,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_CloudburstVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZapModifier; // 0x13e8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProjectileArmedModifier; // 0x1418, 0x10 bytes
-                CSoundEventName m_strHitSound; // 0x1428, 0x10 bytes
-                CSoundEventName m_strProjectileLoopingSound; // 0x1438, 0x10 bytes
-                CSoundEventName m_strExplosionSound; // 0x1448, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x1458, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1538, 0xe0 bytes
-                float m_flArmingSpeed; // 0x1618, 0x4 bytes
-                float m_flNonArmingSpeed; // 0x161c, 0x4 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ZapModifier; // 0x1070, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_SlowModifier; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_DebuffModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_ProjectileArmedModifier; // 0x10a0, 0x10 bytes
+                CSoundEventName m_strHitSound; // 0x10b0, 0x10 bytes
+                CSoundEventName m_strProjectileLoopingSound; // 0x10c0, 0x10 bytes
+                CSoundEventName m_strExplosionSound; // 0x10d0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle; // 0x10e0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x11c0, 0xe0 bytes
+                float m_flArmingSpeed; // 0x12a0, 0x4 bytes
+                float m_flNonArmingSpeed; // 0x12a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_CloudburstVData) == 0x1620, "CCitadel_Ability_Artist_CloudburstVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_CloudburstVData) == 0x12A8, "CCitadel_Ability_Artist_CloudburstVData size mismatch");
         }
     }
 }

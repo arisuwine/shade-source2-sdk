@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x18e8
+             * Size: 0x18f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_HealingSlash : public shade::sdk::server::CCitadelBaseYamatoAbility {
             public:
-                std::uint8_t pad_14a8[0x440]; // 0x14a8, 0x440 bytes
+                std::uint8_t pad_14b0[0x440]; // 0x14b0, 0x440 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_HealingSlash) == 0x18E8, "CCitadel_Ability_HealingSlash size mismatch");
+            static_assert(sizeof(CCitadel_Ability_HealingSlash) == 0x18F0, "CCitadel_Ability_HealingSlash size mismatch");
         }
     }
 }

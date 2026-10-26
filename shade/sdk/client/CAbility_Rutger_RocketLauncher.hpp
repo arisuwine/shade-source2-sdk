@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1db8
+             * Size: 0x1dc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Rutger_RocketLauncher : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x6e0]; // 0x16d8, 0x6e0 bytes
+                std::uint8_t pad_16e0[0x6e0]; // 0x16e0, 0x6e0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Rutger_RocketLauncher) == 0x1DB8, "CAbility_Rutger_RocketLauncher size mismatch");
+            static_assert(sizeof(CAbility_Rutger_RocketLauncher) == 0x1DC0, "CAbility_Rutger_RocketLauncher size mismatch");
         }
     }
 }

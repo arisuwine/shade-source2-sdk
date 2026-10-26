@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19a0
+             * Size: 0x19a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,18 +40,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Familiar_HelpingHands : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x8]; // 0x14a0, 0x8 bytes
-                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecHelpers; // 0x14a8, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_tChoreUseCooldownEndTime; // 0x14c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_tSoonestHelperCooldownEndTime; // 0x14c4, 0x4 bytes
-                char m_nAvailableHelperCount; // 0x14c8, 0x1 bytes
-                std::uint8_t pad_14c9[0x4d7]; // 0x14c9, 0x4d7 bytes
+                std::uint8_t pad_14a8[0x8]; // 0x14a8, 0x8 bytes
+                CNetworkUtlVectorBase<CHandle<shade::sdk::server::CBaseEntity>> m_vecHelpers; // 0x14b0, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_tChoreUseCooldownEndTime; // 0x14c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_tSoonestHelperCooldownEndTime; // 0x14cc, 0x4 bytes
+                char m_nAvailableHelperCount; // 0x14d0, 0x1 bytes
+                std::uint8_t pad_14d1[0x4d7]; // 0x14d1, 0x4d7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Familiar_HelpingHands) == 0x19A0, "CCitadel_Ability_Familiar_HelpingHands size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Familiar_HelpingHands) == 0x19A8, "CCitadel_Ability_Familiar_HelpingHands size mismatch");
         }
     }
 }

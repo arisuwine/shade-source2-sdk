@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1850
+             * Size: 0x1858
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Priest_SilenceBomb : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                VectorWS m_vLaunchPosition; // 0x16d8, 0xc bytes
-                QAngle m_qLaunchAngle; // 0x16e4, 0xc bytes
-                std::uint8_t pad_16f0[0x160]; // 0x16f0, 0x160 bytes
+                VectorWS m_vLaunchPosition; // 0x16e0, 0xc bytes
+                QAngle m_qLaunchAngle; // 0x16ec, 0xc bytes
+                std::uint8_t pad_16f8[0x160]; // 0x16f8, 0x160 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Priest_SilenceBomb) == 0x1850, "CCitadel_Ability_Priest_SilenceBomb size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Priest_SilenceBomb) == 0x1858, "CCitadel_Ability_Priest_SilenceBomb size mismatch");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x14e8
+             * Size: 0x1170
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,15 +43,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbilityVandalSurgeVData : public shade::sdk::server::CitadelAbilityVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LiftModifier; // 0x13e8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x13f8, 0xe0 bytes
-                CSoundEventName m_TargetCastSound; // 0x14d8, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_LiftModifier; // 0x1070, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle; // 0x1080, 0xe0 bytes
+                CSoundEventName m_TargetCastSound; // 0x1160, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbilityVandalSurgeVData) == 0x14E8, "CAbilityVandalSurgeVData size mismatch");
+            static_assert(sizeof(CAbilityVandalSurgeVData) == 0x1170, "CAbilityVandalSurgeVData size mismatch");
         }
     }
 }

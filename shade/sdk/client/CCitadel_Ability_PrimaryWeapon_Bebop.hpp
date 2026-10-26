@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d78
+             * Size: 0x1d80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_PrimaryWeapon_Bebop : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1970[0x168]; // 0x1970, 0x168 bytes
-                shade::sdk::entity2::GameTime_t m_flStartWindUpTime; // 0x1ad8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartFiringTime; // 0x1adc, 0x4 bytes
-                bool m_bFiring; // 0x1ae0, 0x1 bytes
-                std::uint8_t pad_1ae1[0x297]; // 0x1ae1, 0x297 bytes
+                std::uint8_t pad_1978[0x168]; // 0x1978, 0x168 bytes
+                shade::sdk::entity2::GameTime_t m_flStartWindUpTime; // 0x1ae0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartFiringTime; // 0x1ae4, 0x4 bytes
+                bool m_bFiring; // 0x1ae8, 0x1 bytes
+                std::uint8_t pad_1ae9[0x297]; // 0x1ae9, 0x297 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_Bebop) == 0x1D78, "CCitadel_Ability_PrimaryWeapon_Bebop size mismatch");
+            static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_Bebop) == 0x1D80, "CCitadel_Ability_PrimaryWeapon_Bebop size mismatch");
         }
     }
 }

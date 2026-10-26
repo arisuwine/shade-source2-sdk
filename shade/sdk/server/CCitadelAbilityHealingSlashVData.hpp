@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17a8
+             * Size: 0x1430
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,21 +44,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadelAbilityHealingSlashVData : public shade::sdk::server::CCitadelYamatoBaseVData {
             public:
-                float m_flEffectSize; // 0x13f0, 0x4 bytes
-                float m_flMaxAttackAngle; // 0x13f4, 0x4 bytes
-                shade::sdk::client::CRemapFloat m_remapAngleToTime; // 0x13f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x1408, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_BuffModifier; // 0x1418, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x1428, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealingSlashParticle; // 0x1508, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealingSlashSwordGlow; // 0x15e8, 0xe0 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x16c8, 0xe0 bytes
+                float m_flEffectSize; // 0x1078, 0x4 bytes
+                float m_flMaxAttackAngle; // 0x107c, 0x4 bytes
+                shade::sdk::client::CRemapFloat m_remapAngleToTime; // 0x1080, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_DebuffModifier; // 0x1090, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CBaseModifier> m_BuffModifier; // 0x10a0, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle; // 0x10b0, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealingSlashParticle; // 0x1190, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealingSlashSwordGlow; // 0x1270, 0xe0 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle; // 0x1350, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadelAbilityHealingSlashVData) == 0x17A8, "CCitadelAbilityHealingSlashVData size mismatch");
+            static_assert(sizeof(CCitadelAbilityHealingSlashVData) == 0x1430, "CCitadelAbilityHealingSlashVData size mismatch");
         }
     }
 }

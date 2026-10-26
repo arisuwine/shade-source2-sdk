@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x418
+             * Size: 0x420
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Thumper_Ability_2 : public shade::sdk::server::CCitadelModifier {
             public:
-                VectorWS m_vLastPosition; // 0x0148, 0xc bytes
-                std::uint8_t pad_0154[0x2c4]; // 0x0154, 0x2c4 bytes
+                VectorWS m_vLastPosition; // 0x0150, 0xc bytes
+                std::uint8_t pad_015c[0x2c4]; // 0x015c, 0x2c4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Thumper_Ability_2) == 0x418, "CCitadel_Modifier_Thumper_Ability_2 size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Thumper_Ability_2) == 0x420, "CCitadel_Modifier_Thumper_Ability_2 size mismatch");
         }
     }
 }

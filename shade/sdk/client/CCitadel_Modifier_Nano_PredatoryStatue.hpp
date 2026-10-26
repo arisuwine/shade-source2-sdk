@@ -31,7 +31,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Nano_PredatoryStatue : public shade::sdk::client::CCitadelModifier {
             public:
-                std::uint8_t pad_0138[0x60]; // 0x0138, 0x60 bytes
+                std::uint8_t pad_0140[0x58]; // 0x0140, 0x58 bytes
                 shade::sdk::entity2::GameTime_t m_GameTimeEnabled; // 0x0198, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_LastCatInAreaTime; // 0x019c, 0x4 bytes
                 bool m_bIsAttacking; // 0x01a0, 0x1 bytes

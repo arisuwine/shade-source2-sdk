@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2b8
+             * Size: 0x2c0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_VeilWalkerWatcher : public shade::sdk::server::CCitadelModifier {
             public:
-                VectorWS m_vPreviousPos; // 0x0148, 0xc bytes
-                std::uint8_t pad_0154[0x164]; // 0x0154, 0x164 bytes
+                VectorWS m_vPreviousPos; // 0x0150, 0xc bytes
+                std::uint8_t pad_015c[0x164]; // 0x015c, 0x164 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_VeilWalkerWatcher) == 0x2B8, "CCitadel_Modifier_VeilWalkerWatcher size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_VeilWalkerWatcher) == 0x2C0, "CCitadel_Modifier_VeilWalkerWatcher size mismatch");
         }
     }
 }

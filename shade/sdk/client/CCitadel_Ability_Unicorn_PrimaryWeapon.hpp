@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c18
+             * Size: 0x1c20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,15 +32,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Unicorn_PrimaryWeapon : public shade::sdk::client::CCitadel_Ability_PrimaryWeapon {
             public:
-                std::uint8_t pad_1970[0x2a0]; // 0x1970, 0x2a0 bytes
-                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x1c10, 0x4 bytes
-                std::uint8_t pad_1c14[0x4]; // 0x1c14, 0x4 bytes
+                std::uint8_t pad_1978[0x2a0]; // 0x1978, 0x2a0 bytes
+                shade::sdk::entity2::GameTime_t m_flActivatePressTime; // 0x1c18, 0x4 bytes
+                std::uint8_t pad_1c1c[0x4]; // 0x1c1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Unicorn_PrimaryWeapon) == 0x1C18, "CCitadel_Ability_Unicorn_PrimaryWeapon size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Unicorn_PrimaryWeapon) == 0x1C20, "CCitadel_Ability_Unicorn_PrimaryWeapon size mismatch");
         }
     }
 }

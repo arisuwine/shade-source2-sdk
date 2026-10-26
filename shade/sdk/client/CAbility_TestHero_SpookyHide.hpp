@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1868
+             * Size: 0x1870
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,19 +40,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_TestHero_SpookyHide : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x160]; // 0x16d8, 0x160 bytes
-                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_hInvisModifier; // 0x1838, 0x18 bytes
-                bool m_bIsVisibleOnMinimap; // 0x1850, 0x1 bytes
-                std::uint8_t pad_1851[0x3]; // 0x1851, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flStoppedMovingStartTime; // 0x1854, 0x4 bytes
-                VectorWS m_vLastPos; // 0x1858, 0xc bytes
-                std::uint8_t pad_1864[0x4]; // 0x1864, 0x4 bytes
+                std::uint8_t pad_16e0[0x160]; // 0x16e0, 0x160 bytes
+                CModifierHandleTyped<shade::sdk::client::CCitadelModifier> m_hInvisModifier; // 0x1840, 0x18 bytes
+                bool m_bIsVisibleOnMinimap; // 0x1858, 0x1 bytes
+                std::uint8_t pad_1859[0x3]; // 0x1859, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flStoppedMovingStartTime; // 0x185c, 0x4 bytes
+                VectorWS m_vLastPos; // 0x1860, 0xc bytes
+                std::uint8_t pad_186c[0x4]; // 0x186c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_TestHero_SpookyHide) == 0x1868, "CAbility_TestHero_SpookyHide size mismatch");
+            static_assert(sizeof(CAbility_TestHero_SpookyHide) == 0x1870, "CAbility_TestHero_SpookyHide size mismatch");
         }
     }
 }

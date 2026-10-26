@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1500
+             * Size: 0x1188
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,18 +43,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Tier2Boss_RocketBarrageVData : public shade::sdk::client::CitadelAbilityVData {
             public:
-                float m_LaunchAngle; // 0x13e8, 0x4 bytes
-                std::uint8_t pad_13ec[0x4]; // 0x13ec, 0x4 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x13f0, 0xe0 bytes
-                CSoundEventName m_ExplosionSound; // 0x14d0, 0x10 bytes
-                CSoundEventName m_RocketFireSound; // 0x14e0, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x14f0, 0x10 bytes
+                float m_LaunchAngle; // 0x1070, 0x4 bytes
+                std::uint8_t pad_1074[0x4]; // 0x1074, 0x4 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle; // 0x1078, 0xe0 bytes
+                CSoundEventName m_ExplosionSound; // 0x1158, 0x10 bytes
+                CSoundEventName m_RocketFireSound; // 0x1168, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::client::CCitadelModifier> m_AuraModifier; // 0x1178, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Tier2Boss_RocketBarrageVData) == 0x1500, "CCitadel_Ability_Tier2Boss_RocketBarrageVData size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Tier2Boss_RocketBarrageVData) == 0x1188, "CCitadel_Ability_Tier2Boss_RocketBarrageVData size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1518
+             * Size: 0x11a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,14 +39,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_WeaponUpgrade_BurstFireVData : public shade::sdk::server::CitadelItemVData {
             public:
-                CSoundEventName m_ActivationSound; // 0x14f8, 0x10 bytes
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1508, 0x10 bytes
+                CSoundEventName m_ActivationSound; // 0x1180, 0x10 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_BuffModifier; // 0x1190, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_WeaponUpgrade_BurstFireVData) == 0x1518, "CCitadel_WeaponUpgrade_BurstFireVData size mismatch");
+            static_assert(sizeof(CCitadel_WeaponUpgrade_BurstFireVData) == 0x11A0, "CCitadel_WeaponUpgrade_BurstFireVData size mismatch");
         }
     }
 }

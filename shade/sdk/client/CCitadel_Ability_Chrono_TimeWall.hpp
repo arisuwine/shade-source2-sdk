@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1c78
+             * Size: 0x1c80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Chrono_TimeWall : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                shade::sdk::client::ParticleIndex_t m_hChargingParticle; // 0x16d8, 0x4 bytes
-                VectorWS m_vSpawnPos; // 0x16dc, 0xc bytes
-                QAngle m_qAngles; // 0x16e8, 0xc bytes
-                bool m_bAirCast; // 0x16f4, 0x1 bytes
-                std::uint8_t pad_16f5[0x583]; // 0x16f5, 0x583 bytes
+                shade::sdk::client::ParticleIndex_t m_hChargingParticle; // 0x16e0, 0x4 bytes
+                VectorWS m_vSpawnPos; // 0x16e4, 0xc bytes
+                QAngle m_qAngles; // 0x16f0, 0xc bytes
+                bool m_bAirCast; // 0x16fc, 0x1 bytes
+                std::uint8_t pad_16fd[0x583]; // 0x16fd, 0x583 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Chrono_TimeWall) == 0x1C78, "CCitadel_Ability_Chrono_TimeWall size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Chrono_TimeWall) == 0x1C80, "CCitadel_Ability_Chrono_TimeWall size mismatch");
         }
     }
 }

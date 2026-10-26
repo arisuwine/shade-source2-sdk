@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1790
+             * Size: 0x1798
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_TestHero_StanceSwitch : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x1]; // 0x16d8, 0x1 bytes
-                bool m_bStanceActive; // 0x16d9, 0x1 bytes
-                std::uint8_t pad_16da[0xb6]; // 0x16da, 0xb6 bytes
+                std::uint8_t pad_16e0[0x1]; // 0x16e0, 0x1 bytes
+                bool m_bStanceActive; // 0x16e1, 0x1 bytes
+                std::uint8_t pad_16e2[0xb6]; // 0x16e2, 0xb6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_TestHero_StanceSwitch) == 0x1790, "CCitadel_Ability_TestHero_StanceSwitch size mismatch");
+            static_assert(sizeof(CCitadel_Ability_TestHero_StanceSwitch) == 0x1798, "CCitadel_Ability_TestHero_StanceSwitch size mismatch");
         }
     }
 }

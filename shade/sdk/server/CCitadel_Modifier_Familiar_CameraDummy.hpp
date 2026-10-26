@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x150
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Familiar_CameraDummy : public shade::sdk::server::CCitadelModifier {
             public:
-                bool m_bCamOverrideActive; // 0x0148, 0x1 bytes
-                std::uint8_t pad_0149[0x3]; // 0x0149, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hDummy; // 0x014c, 0x4 bytes
+                bool m_bCamOverrideActive; // 0x0150, 0x1 bytes
+                std::uint8_t pad_0151[0x3]; // 0x0151, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hDummy; // 0x0154, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Familiar_CameraDummy) == 0x150, "CCitadel_Modifier_Familiar_CameraDummy size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Familiar_CameraDummy) == 0x158, "CCitadel_Modifier_Familiar_CameraDummy size mismatch");
         }
     }
 }

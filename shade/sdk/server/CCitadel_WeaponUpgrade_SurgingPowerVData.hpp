@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x15e8
+             * Size: 0x1270
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -43,14 +43,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_WeaponUpgrade_SurgingPowerVData : public shade::sdk::server::CitadelItemVData {
             public:
-                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ModifierSurgingPower; // 0x14f8, 0x10 bytes
-                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastTargetEffect; // 0x1508, 0xe0 bytes
+                CEmbeddedSubclass<shade::sdk::server::CCitadelModifier> m_ModifierSurgingPower; // 0x1180, 0x10 bytes
+                CResourceNameTyped<CWeakHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastTargetEffect; // 0x1190, 0xe0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_WeaponUpgrade_SurgingPowerVData) == 0x15E8, "CCitadel_WeaponUpgrade_SurgingPowerVData size mismatch");
+            static_assert(sizeof(CCitadel_WeaponUpgrade_SurgingPowerVData) == 0x1270, "CCitadel_WeaponUpgrade_SurgingPowerVData size mismatch");
         }
     }
 }

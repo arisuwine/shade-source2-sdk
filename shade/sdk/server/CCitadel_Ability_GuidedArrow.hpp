@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x17b8
+             * Size: 0x17c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,29 +41,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_GuidedArrow : public shade::sdk::server::CCitadelBaseAbility {
             public:
-                std::uint8_t pad_14a0[0x8]; // 0x14a0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x14a8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCameraTarget; // 0x14ac, 0x4 bytes
-                float m_flArrowSpeed; // 0x14b0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flSnapAnglesBackTime; // 0x14b4, 0x4 bytes
-                bool m_bNeedsExplosion; // 0x14b8, 0x1 bytes
-                std::uint8_t pad_14b9[0x3]; // 0x14b9, 0x3 bytes
-                CHandle<shade::sdk::server::CCitadel_GuidedArrow_OwlModel> m_hOwl; // 0x14bc, 0x4 bytes
-                std::uint8_t pad_14c0[0xc]; // 0x14c0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x14cc, 0x4 bytes
-                VectorWS m_vProjectileRemovedOrigin; // 0x14d0, 0xc bytes
-                QAngle m_angCasterAnglesAtCastTime; // 0x14dc, 0xc bytes
-                float m_flTravelDistance; // 0x14e8, 0x4 bytes
-                bool m_bInKillFlow; // 0x14ec, 0x1 bytes
-                std::uint8_t pad_14ed[0x3]; // 0x14ed, 0x3 bytes
-                float m_flProjectileTurnVel; // 0x14f0, 0x4 bytes
-                std::uint8_t pad_14f4[0x2c4]; // 0x14f4, 0x2c4 bytes
+                std::uint8_t pad_14a8[0x8]; // 0x14a8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hProjectile; // 0x14b0, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCameraTarget; // 0x14b4, 0x4 bytes
+                float m_flArrowSpeed; // 0x14b8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flSnapAnglesBackTime; // 0x14bc, 0x4 bytes
+                bool m_bNeedsExplosion; // 0x14c0, 0x1 bytes
+                std::uint8_t pad_14c1[0x3]; // 0x14c1, 0x3 bytes
+                CHandle<shade::sdk::server::CCitadel_GuidedArrow_OwlModel> m_hOwl; // 0x14c4, 0x4 bytes
+                std::uint8_t pad_14c8[0xc]; // 0x14c8, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flCastTime; // 0x14d4, 0x4 bytes
+                VectorWS m_vProjectileRemovedOrigin; // 0x14d8, 0xc bytes
+                QAngle m_angCasterAnglesAtCastTime; // 0x14e4, 0xc bytes
+                float m_flTravelDistance; // 0x14f0, 0x4 bytes
+                bool m_bInKillFlow; // 0x14f4, 0x1 bytes
+                std::uint8_t pad_14f5[0x3]; // 0x14f5, 0x3 bytes
+                float m_flProjectileTurnVel; // 0x14f8, 0x4 bytes
+                std::uint8_t pad_14fc[0x2c4]; // 0x14fc, 0x2c4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_GuidedArrow) == 0x17B8, "CCitadel_Ability_GuidedArrow size mismatch");
+            static_assert(sizeof(CCitadel_Ability_GuidedArrow) == 0x17C0, "CCitadel_Ability_GuidedArrow size mismatch");
         }
     }
 }

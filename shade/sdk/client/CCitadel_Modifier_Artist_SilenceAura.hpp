@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x3a8
+             * Size: 0x3b0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,15 +38,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Modifier_Artist_SilenceAura : public shade::sdk::client::CCitadelModifierAura {
             public:
-                std::uint8_t pad_0188[0x4]; // 0x0188, 0x4 bytes
-                CHandle<shade::sdk::client::C_Citadel_Artist_VisionBlocker> m_hBlocker; // 0x018c, 0x4 bytes
-                std::uint8_t pad_0190[0x218]; // 0x0190, 0x218 bytes
+                std::uint8_t pad_0190[0x4]; // 0x0190, 0x4 bytes
+                CHandle<shade::sdk::client::C_Citadel_Artist_VisionBlocker> m_hBlocker; // 0x0194, 0x4 bytes
+                std::uint8_t pad_0198[0x218]; // 0x0198, 0x218 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Modifier_Artist_SilenceAura) == 0x3A8, "CCitadel_Modifier_Artist_SilenceAura size mismatch");
+            static_assert(sizeof(CCitadel_Modifier_Artist_SilenceAura) == 0x3B0, "CCitadel_Modifier_Artist_SilenceAura size mismatch");
         }
     }
 }

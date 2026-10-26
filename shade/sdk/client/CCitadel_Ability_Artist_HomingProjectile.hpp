@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e90
+             * Size: 0x1e98
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,17 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_HomingProjectile : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bDealtStrokeDamageThisTick; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x7]; // 0x16d9, 0x7 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedProjectiles; // 0x16e0, 0x18 bytes
-                shade::sdk::entity2::GameTime_t m_tShootingLockoutEndTime; // 0x16f8, 0x4 bytes
-                std::uint8_t pad_16fc[0x794]; // 0x16fc, 0x794 bytes
+                bool m_bDealtStrokeDamageThisTick; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x7]; // 0x16e1, 0x7 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_vecDeployedProjectiles; // 0x16e8, 0x18 bytes
+                shade::sdk::entity2::GameTime_t m_tShootingLockoutEndTime; // 0x1700, 0x4 bytes
+                std::uint8_t pad_1704[0x794]; // 0x1704, 0x794 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_HomingProjectile) == 0x1E90, "CCitadel_Ability_Artist_HomingProjectile size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_HomingProjectile) == 0x1E98, "CCitadel_Ability_Artist_HomingProjectile size mismatch");
         }
     }
 }

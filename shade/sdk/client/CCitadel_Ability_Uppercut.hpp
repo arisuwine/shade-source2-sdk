@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x2138
+             * Size: 0x2140
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Uppercut : public shade::sdk::client::CCitadel_Ability_Melee_Base {
             public:
-                std::uint8_t pad_1848[0x8f0]; // 0x1848, 0x8f0 bytes
+                std::uint8_t pad_1850[0x8f0]; // 0x1850, 0x8f0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Uppercut) == 0x2138, "CCitadel_Ability_Uppercut size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Uppercut) == 0x2140, "CCitadel_Ability_Uppercut size mismatch");
         }
     }
 }

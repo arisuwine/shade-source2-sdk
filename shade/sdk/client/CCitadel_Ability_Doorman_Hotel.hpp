@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1d18
+             * Size: 0x1d20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Doorman_Hotel : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                bool m_bSpendCooldown; // 0x16d8, 0x1 bytes
-                std::uint8_t pad_16d9[0x3]; // 0x16d9, 0x3 bytes
-                VectorWS m_vLookTarget; // 0x16dc, 0xc bytes
-                std::uint8_t pad_16e8[0x630]; // 0x16e8, 0x630 bytes
+                bool m_bSpendCooldown; // 0x16e0, 0x1 bytes
+                std::uint8_t pad_16e1[0x3]; // 0x16e1, 0x3 bytes
+                VectorWS m_vLookTarget; // 0x16e4, 0xc bytes
+                std::uint8_t pad_16f0[0x630]; // 0x16f0, 0x630 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Doorman_Hotel) == 0x1D18, "CCitadel_Ability_Doorman_Hotel size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Doorman_Hotel) == 0x1D20, "CCitadel_Ability_Doorman_Hotel size mismatch");
         }
     }
 }

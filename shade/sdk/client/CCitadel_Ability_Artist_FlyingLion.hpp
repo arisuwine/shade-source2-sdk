@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f28
+             * Size: 0x1f30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CCitadel_Ability_Artist_FlyingLion : public shade::sdk::client::C_CitadelBaseAbility {
             public:
-                std::uint8_t pad_16d8[0x4]; // 0x16d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flFlyingStartTime; // 0x16dc, 0x4 bytes
-                std::uint8_t pad_16e0[0x840]; // 0x16e0, 0x840 bytes
-                bool m_bFlying; // 0x1f20, 0x1 bytes
-                std::uint8_t pad_1f21[0x7]; // 0x1f21, 0x7 bytes
+                std::uint8_t pad_16e0[0x4]; // 0x16e0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flFlyingStartTime; // 0x16e4, 0x4 bytes
+                std::uint8_t pad_16e8[0x840]; // 0x16e8, 0x840 bytes
+                bool m_bFlying; // 0x1f28, 0x1 bytes
+                std::uint8_t pad_1f29[0x7]; // 0x1f29, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCitadel_Ability_Artist_FlyingLion) == 0x1F28, "CCitadel_Ability_Artist_FlyingLion size mismatch");
+            static_assert(sizeof(CCitadel_Ability_Artist_FlyingLion) == 0x1F30, "CCitadel_Ability_Artist_FlyingLion size mismatch");
         }
     }
 }

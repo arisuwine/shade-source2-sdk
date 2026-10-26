@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1418
+             * Size: 0x10a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAbility_Drifter_StalkersMark_Teleport_VData : public shade::sdk::client::CBaseTriggerAbilityVData {
             public:
-                CSoundEventName m_strCastStartSound; // 0x1408, 0x10 bytes
+                CSoundEventName m_strCastStartSound; // 0x1090, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport_VData) == 0x1418, "CAbility_Drifter_StalkersMark_Teleport_VData size mismatch");
+            static_assert(sizeof(CAbility_Drifter_StalkersMark_Teleport_VData) == 0x10A0, "CAbility_Drifter_StalkersMark_Teleport_VData size mismatch");
         }
     }
 }
