@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class QuickBuyPurchasable_t : std::uint32_t {
+            enum class QuickBuyPurchasable_t : std::int32_t {
                 QUICK_BUY_PURCHASABLE_INVALID = -0x1,
                 QUICK_BUY_NOT_PURCHASABLE_GOLD = 0x0,
                 QUICK_BUY_NOT_PURCHASABLE_BUYBACK_PROTECTION = 0x1,

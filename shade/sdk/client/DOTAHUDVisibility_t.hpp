@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTAHUDVisibility_t : std::uint32_t {
+            enum class DOTAHUDVisibility_t : std::int32_t {
                 DOTA_HUD_VISIBILITY_INVALID = -0x1,
                 DOTA_HUD_VISIBILITY_TOP_TIMEOFDAY = 0x0,
                 DOTA_HUD_VISIBILITY_TOP_HEROES = 0x1,

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EntityDissolveType_t : std::uint32_t {
+            enum class EntityDissolveType_t : std::int32_t {
                 ENTITY_DISSOLVE_INVALID = -0x1,
                 ENTITY_DISSOLVE_NORMAL = 0x0,
                 ENTITY_DISSOLVE_ELECTRICAL = 0x1,

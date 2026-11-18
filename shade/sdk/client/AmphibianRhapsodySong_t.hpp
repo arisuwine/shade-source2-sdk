@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class AmphibianRhapsodySong_t : std::uint32_t {
+            enum class AmphibianRhapsodySong_t : std::int32_t {
                 SONG_INVALID = -0x1,
                 SONG_ATTACK = 0x0,
                 SONG_HEAL = 0x1,

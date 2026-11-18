@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
-            enum class PulseValueType_t : std::uint32_t {
+            enum class PulseValueType_t : std::int32_t {
                 PVAL_VOID = -0x1,
                 PVAL_BOOL = 0x0,
                 PVAL_INT = 0x1,

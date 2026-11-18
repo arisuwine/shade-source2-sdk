@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particleslib {
-            enum class ParticleFloatRandomMode_t : std::uint32_t {
+            enum class ParticleFloatRandomMode_t : std::int32_t {
                 PF_RANDOM_MODE_INVALID = -0x1,
                 PF_RANDOM_MODE_CONSTANT = 0x0,
                 PF_RANDOM_MODE_VARYING = 0x1,

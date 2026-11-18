@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class VectorFloatExpressionType_t : std::uint32_t {
+            enum class VectorFloatExpressionType_t : std::int32_t {
                 VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = -0x1,
                 VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0x0,
                 VECTOR_FLOAT_EXPRESSION_DISTANCE = 0x1,

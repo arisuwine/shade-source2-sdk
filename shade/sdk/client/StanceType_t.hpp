@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class StanceType_t : std::uint32_t {
+            enum class StanceType_t : std::int32_t {
                 STANCE_CURRENT = -0x1,
                 STANCE_DEFAULT = 0x0,
                 STANCE_CROUCHING = 0x1,

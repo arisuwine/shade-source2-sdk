@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class HitGroup_t : std::uint32_t {
+            enum class HitGroup_t : std::int32_t {
                 HITGROUP_INVALID = -0x1,
                 HITGROUP_GENERIC = 0x0,
                 HITGROUP_HEAD = 0x1,

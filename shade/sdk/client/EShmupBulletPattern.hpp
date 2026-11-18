@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EShmupBulletPattern : std::uint32_t {
+            enum class EShmupBulletPattern : std::int32_t {
                 k_eShmupBulletPattern_Invalid = -0x1,
                 k_eShmupBulletPattern_Radial = 0x0,
                 k_eShmupBulletPattern_HorizontalLeft = 0x1,

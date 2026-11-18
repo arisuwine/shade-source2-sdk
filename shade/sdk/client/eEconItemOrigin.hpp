@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class eEconItemOrigin : std::uint32_t {
+            enum class eEconItemOrigin : std::int32_t {
                 kEconItemOrigin_Invalid = -0x1,
                 kEconItemOrigin_Drop = 0x0,
                 kEconItemOrigin_Achievement = 0x1,

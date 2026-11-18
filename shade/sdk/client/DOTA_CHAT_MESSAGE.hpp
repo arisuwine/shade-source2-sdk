@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTA_CHAT_MESSAGE : std::uint32_t {
+            enum class DOTA_CHAT_MESSAGE : std::int32_t {
                 CHAT_MESSAGE_INVALID = -0x1,
                 CHAT_MESSAGE_HERO_KILL = 0x0,
                 CHAT_MESSAGE_HERO_DENY = 0x1,

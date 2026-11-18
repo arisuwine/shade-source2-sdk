@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EntitySubclassScope_t : std::uint32_t {
+            enum class EntitySubclassScope_t : std::int32_t {
                 SUBCLASS_SCOPE_NONE = -0x1,
                 SUBCLASS_SCOPE_COUNT = 0x0
             };

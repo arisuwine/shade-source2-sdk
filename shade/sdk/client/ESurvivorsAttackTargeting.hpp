@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsAttackTargeting : std::uint32_t {
+            enum class ESurvivorsAttackTargeting : std::int32_t {
                 INVALID_TARGET = -0x1,
                 CLOSEST_TARGET = 0x0,
                 RANDOM_TARGET_IN_RANGE = 0x1,

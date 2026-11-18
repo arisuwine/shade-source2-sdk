@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particleslib {
-            enum class ParticleFloatType_t : std::uint32_t {
+            enum class ParticleFloatType_t : std::int32_t {
                 PF_TYPE_INVALID = -0x1,
                 PF_TYPE_LITERAL = 0x0,
                 PF_TYPE_NAMED_VALUE = 0x1,

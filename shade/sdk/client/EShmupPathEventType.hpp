@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EShmupPathEventType : std::uint32_t {
+            enum class EShmupPathEventType : std::int32_t {
                 k_eShmupPathEventType_Invalid = -0x1,
                 k_eShmupPathEventType_Speed = 0x0,
                 k_eShmupPathEventType_Shoot = 0x1,

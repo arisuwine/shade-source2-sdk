@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ECandyShopUpgrade : std::uint32_t {
+            enum class ECandyShopUpgrade : std::int32_t {
                 k_ECandyShopUpgradeInvalid = -0x1,
                 k_ECandyShopUpgrade_InventorySize = 0x0,
                 k_ECandyShopUpgrade_RewardShelf = 0x1,

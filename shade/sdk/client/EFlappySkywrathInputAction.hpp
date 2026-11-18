@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EFlappySkywrathInputAction : std::uint32_t {
+            enum class EFlappySkywrathInputAction : std::int32_t {
                 Jump = 0x0,
                 Dash = 0x1,
                 Dive = 0x2,

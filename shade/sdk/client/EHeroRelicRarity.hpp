@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EHeroRelicRarity : std::uint32_t {
+            enum class EHeroRelicRarity : std::int32_t {
                 HERO_RELIC_RARITY_INVALID = -0x1,
                 HERO_RELIC_RARITY_COMMON = 0x0,
                 HERO_RELIC_RARITY_RARE = 0x1

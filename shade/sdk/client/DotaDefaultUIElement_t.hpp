@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DotaDefaultUIElement_t : std::uint32_t {
+            enum class DotaDefaultUIElement_t : std::int32_t {
                 DOTA_DEFAULT_UI_INVALID = -0x1,
                 DOTA_DEFAULT_UI_TOP_TIMEOFDAY = 0x0,
                 DOTA_DEFAULT_UI_TOP_HEROES = 0x1,

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class CMsgBattleReport_ELaneOutcome : std::uint32_t {
+            enum class CMsgBattleReport_ELaneOutcome : std::int32_t {
                 k_eUnknownLaneOutcome = -0x1,
                 k_eWonLane = 0x0,
                 k_eLostLane = 0x1,

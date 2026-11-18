@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class BloodType : std::uint32_t {
+            enum class BloodType : std::int32_t {
                 Unspecified = -0x2,
                 None = -0x1,
                 ColorRed = 0x0,

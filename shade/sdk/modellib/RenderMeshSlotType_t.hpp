@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace modellib {
-            enum class RenderMeshSlotType_t : std::uint8_t {
+            enum class RenderMeshSlotType_t : std::int8_t {
                 RENDERMESH_SLOT_INVALID = -0x1,
                 RENDERMESH_SLOT_PER_VERTEX = 0x0,
                 RENDERMESH_SLOT_PER_INSTANCE = 0x1

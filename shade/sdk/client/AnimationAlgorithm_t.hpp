@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class AnimationAlgorithm_t : std::uint8_t {
+            enum class AnimationAlgorithm_t : std::int8_t {
                 eInvalid = -0x1,
                 eNone = 0x0,
                 eSequence = 0x1,

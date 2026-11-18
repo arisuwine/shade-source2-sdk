@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class PlayerUltimateStateOrTime_t : std::uint32_t {
+            enum class PlayerUltimateStateOrTime_t : std::int32_t {
                 PLAYER_ULTIMATE_STATE_READY = 0x0,
                 PLAYER_ULTIMATE_STATE_NO_MANA = -0x1,
                 PLAYER_ULTIMATE_STATE_NOT_LEVELED = -0x2,

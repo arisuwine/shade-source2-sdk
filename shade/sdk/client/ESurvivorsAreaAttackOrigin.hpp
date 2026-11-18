@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsAreaAttackOrigin : std::uint32_t {
+            enum class ESurvivorsAreaAttackOrigin : std::int32_t {
                 INVALID_ORIGIN = -0x1,
                 PLAYER_ORIGIN = 0x0,
                 RANDOM_ENEMY_ORIGIN = 0x1

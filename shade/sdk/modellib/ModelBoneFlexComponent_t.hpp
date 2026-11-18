@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace modellib {
-            enum class ModelBoneFlexComponent_t : std::uint32_t {
+            enum class ModelBoneFlexComponent_t : std::int32_t {
                 MODEL_BONE_FLEX_INVALID = -0x1,
                 MODEL_BONE_FLEX_TX = 0x0,
                 MODEL_BONE_FLEX_TY = 0x1,

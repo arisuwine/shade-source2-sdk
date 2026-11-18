@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class PlayerConnectedState : std::uint32_t {
+            enum class PlayerConnectedState : std::int32_t {
                 NeverConnected = -0x1,
                 Connected = 0x0,
                 Connecting = 0x1,

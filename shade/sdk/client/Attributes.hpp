@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class Attributes : std::uint32_t {
+            enum class Attributes : std::int32_t {
                 DOTA_ATTRIBUTE_STRENGTH = 0x0,
                 DOTA_ATTRIBUTE_AGILITY = 0x1,
                 DOTA_ATTRIBUTE_INTELLECT = 0x2,

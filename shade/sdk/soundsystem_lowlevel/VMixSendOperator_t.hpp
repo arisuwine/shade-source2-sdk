@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
-            enum class VMixSendOperator_t : std::uint16_t {
+            enum class VMixSendOperator_t : std::int16_t {
                 NO_VOICES = -0x1,
                 ALL_VOICES = 0x0,
                 ROOM_VOICES = 0x1,

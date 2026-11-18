@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EFightingGameActionID : std::uint32_t {
+            enum class EFightingGameActionID : std::int32_t {
                 INVALID_ACTION_DEFINITION = -0x1,
                 IDLE_ACTION_DEFINITION = 0x0,
                 BLOCKSTUN_ACTION_DEFINITION = 0x1,

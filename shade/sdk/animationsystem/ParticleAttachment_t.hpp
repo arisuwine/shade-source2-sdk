@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace animationsystem {
-            enum class ParticleAttachment_t : std::uint32_t {
+            enum class ParticleAttachment_t : std::int32_t {
                 PATTACH_INVALID = -0x1,
                 PATTACH_ABSORIGIN = 0x0,
                 PATTACH_ABSORIGIN_FOLLOW = 0x1,

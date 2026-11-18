@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particleslib {
-            enum class ParticleFloatBiasType_t : std::uint32_t {
+            enum class ParticleFloatBiasType_t : std::int32_t {
                 PF_BIAS_TYPE_INVALID = -0x1,
                 PF_BIAS_TYPE_STANDARD = 0x0,
                 PF_BIAS_TYPE_GAIN = 0x1,

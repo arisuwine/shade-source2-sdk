@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DarkCarnivalRewardVisual_t : std::uint32_t {
+            enum class DarkCarnivalRewardVisual_t : std::int32_t {
                 k_eDarkCarnivalRewardVisual_Invalid = -0x1,
                 k_eDarkCarnivalRewardVisual_Coin = 0x0,
                 k_eDarkCarnivalRewardVisual_Tome = 0x1,

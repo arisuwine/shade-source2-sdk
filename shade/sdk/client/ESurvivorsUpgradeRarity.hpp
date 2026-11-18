@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsUpgradeRarity : std::uint32_t {
+            enum class ESurvivorsUpgradeRarity : std::int32_t {
                 RARITY_INVALID = -0x1,
                 RARITY_COMMON = 0x0,
                 RARITY_COUNT = 0x1

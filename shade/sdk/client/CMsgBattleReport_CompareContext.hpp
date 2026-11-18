@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class CMsgBattleReport_CompareContext : std::uint32_t {
+            enum class CMsgBattleReport_CompareContext : std::int32_t {
                 k_eCompareContextInvalid = -0x1,
                 k_eAbsoluteValue = 0x0,
                 k_ePlayersOfSimilarRank = 0x1,

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace animationsystem {
-            enum class BoneTransformSpace_t : std::uint32_t {
+            enum class BoneTransformSpace_t : std::int32_t {
                 BoneTransformSpace_Invalid = -0x1,
                 BoneTransformSpace_Parent = 0x0,
                 BoneTransformSpace_Model = 0x1,

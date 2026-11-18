@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTAPortraitEnvironmentType_t : std::uint32_t {
+            enum class DOTAPortraitEnvironmentType_t : std::int32_t {
                 DOTA_PORTRAIT_ENVIRONMENT_INVALID = -0x1,
                 DOTA_PORTRAIT_ENVIRONMENT_DEFAULT = 0x0,
                 DOTA_PORTRAIT_ENVIRONMENT_FULL_BODY = 0x1,

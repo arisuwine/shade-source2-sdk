@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class eRollType : std::uint32_t {
+            enum class eRollType : std::int32_t {
                 ROLL_NONE = -0x1,
                 ROLL_STATS = 0x0,
                 ROLL_CREDITS = 0x1,

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EShmupEventType : std::uint32_t {
+            enum class EShmupEventType : std::int32_t {
                 k_eShmupEventType_Invalid = -0x1,
                 k_eShmupEventType_SpawnEnemy = 0x0,
                 k_eShmupEventType_UI = 0x1

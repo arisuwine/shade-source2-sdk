@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class AmmoPosition_t : std::uint32_t {
+            enum class AmmoPosition_t : std::int32_t {
                 AMMO_POSITION_INVALID = -0x1,
                 AMMO_POSITION_PRIMARY = 0x0,
                 AMMO_POSITION_SECONDARY = 0x1,

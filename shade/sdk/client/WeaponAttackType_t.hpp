@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class WeaponAttackType_t : std::uint32_t {
+            enum class WeaponAttackType_t : std::int32_t {
                 eInvalid = -0x1,
                 ePrimary = 0x0,
                 eSecondary = 0x1,

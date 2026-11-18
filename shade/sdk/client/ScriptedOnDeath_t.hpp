@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ScriptedOnDeath_t : std::uint32_t {
+            enum class ScriptedOnDeath_t : std::int32_t {
                 SS_ONDEATH_NOT_APPLICABLE = -0x1,
                 SS_ONDEATH_UNDEFINED = 0x0,
                 SS_ONDEATH_RAGDOLL = 0x1,

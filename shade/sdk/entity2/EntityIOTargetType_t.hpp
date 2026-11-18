@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace entity2 {
-            enum class EntityIOTargetType_t : std::uint32_t {
+            enum class EntityIOTargetType_t : std::int32_t {
                 ENTITY_IO_TARGET_INVALID = -0x1,
                 ENTITY_IO_TARGET_ENTITYNAME = 0x2,
                 ENTITY_IO_TARGET_EHANDLE = 0x6,
