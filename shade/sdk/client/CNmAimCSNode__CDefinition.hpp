@@ -40,7 +40,7 @@ namespace shade {
                 float m_flHandIKBlendInTimeSeconds; // 0x0028, 0x4 bytes
                 float m_flActionBlendTimeSeconds; // 0x002c, 0x4 bytes
                 float m_flPlantingBlendTimeSeconds; // 0x0030, 0x4 bytes
-                std::uint8_t pad_0034[0x4]; // 0x0034, 0x4 bytes
+                float m_flTransitionBlendTimeSeconds; // 0x0034, 0x4 bytes
             };
             #pragma pack(pop)
 

@@ -41,6 +41,8 @@ namespace shade {
                 WPN_ANIMSTATE_SILENCER_REMOVE = 0x259,
                 WPN_ANIMSTATE_RELOAD = 0x320,
                 WPN_ANIMSTATE_RELOAD_OUTRO = 0x321,
+                WPN_ANIMSTATE_RELOAD_SILENT = 0x322,
+                WPN_ANIMSTATE_RELOAD_OUTRO_SILENT = 0x323,
                 WPN_ANIMSTATE_INSPECT = 0x3e8,
                 WPN_ANIMSTATE_INSPECT_OUTRO = 0x3e9,
                 WPN_ANIMSTATE_INVENTORY_UI_TUMBLE = 0x5dc,

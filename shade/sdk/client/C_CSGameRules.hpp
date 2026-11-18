@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4f60
+             * Size: 0x4f68
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -110,56 +110,58 @@ namespace shade {
                 std::int32_t m_iMatchStats_PlayersAlive_CT[0x1e]; // 0x0a30, 0x78 bytes
                 std::int32_t m_iMatchStats_PlayersAlive_T[0x1e]; // 0x0aa8, 0x78 bytes
                 float m_TeamRespawnWaveTimes[0x20]; // 0x0b20, 0x80 bytes
-                shade::sdk::entity2::GameTime_t m_flNextRespawnWave[0x20]; // 0x0ba0, 0x80 bytes
-                VectorWS m_vMinimapMins; // 0x0c20, 0xc bytes
-                VectorWS m_vMinimapMaxs; // 0x0c2c, 0xc bytes
-                float m_MinimapVerticalSectionHeights[0x8]; // 0x0c38, 0x20 bytes
-                std::uint64_t m_ullLocalMatchID; // 0x0c58, 0x8 bytes
-                std::int32_t m_nEndMatchMapGroupVoteTypes[0xa]; // 0x0c60, 0x28 bytes
-                std::int32_t m_nEndMatchMapGroupVoteOptions[0xa]; // 0x0c88, 0x28 bytes
-                std::int32_t m_nEndMatchMapVoteWinner; // 0x0cb0, 0x4 bytes
-                std::int32_t m_iNumConsecutiveCTLoses; // 0x0cb4, 0x4 bytes
-                std::int32_t m_iNumConsecutiveTerroristLoses; // 0x0cb8, 0x4 bytes
-                std::uint8_t pad_0cbc[0xbc]; // 0x0cbc, 0xbc bytes
-                std::int32_t m_nMatchAbortedEarlyReason; // 0x0d78, 0x4 bytes
-                bool m_bHasTriggeredRoundStartMusic; // 0x0d7c, 0x1 bytes
-                bool m_bSwitchingTeamsAtRoundReset; // 0x0d7d, 0x1 bytes
-                std::uint8_t pad_0d7e[0x1a]; // 0x0d7e, 0x1a bytes
-                shade::sdk::client::CCSGameModeRules *m_pGameModeRules; // 0x0d98, 0x8 bytes
-                shade::sdk::client::C_RetakeGameRules m_RetakeRules; // 0x0da0, 0x158 bytes
-                std::uint8_t m_nMatchEndCount; // 0x0ef8, 0x1 bytes
-                std::uint8_t pad_0ef9[0x3]; // 0x0ef9, 0x3 bytes
-                std::int32_t m_nTTeamIntroVariant; // 0x0efc, 0x4 bytes
-                std::int32_t m_nCTTeamIntroVariant; // 0x0f00, 0x4 bytes
-                bool m_bTeamIntroPeriod; // 0x0f04, 0x1 bytes
-                std::uint8_t pad_0f05[0x3]; // 0x0f05, 0x3 bytes
-                std::int32_t m_iRoundEndWinnerTeam; // 0x0f08, 0x4 bytes
-                std::int32_t m_eRoundEndReason; // 0x0f0c, 0x4 bytes
-                bool m_bRoundEndShowTimerDefend; // 0x0f10, 0x1 bytes
-                std::uint8_t pad_0f11[0x3]; // 0x0f11, 0x3 bytes
-                std::int32_t m_iRoundEndTimerTime; // 0x0f14, 0x4 bytes
-                CUtlString m_sRoundEndFunFactToken; // 0x0f18, 0x8 bytes
-                CPlayerSlot m_iRoundEndFunFactPlayerSlot; // 0x0f20, 0x4 bytes
-                std::int32_t m_iRoundEndFunFactData1; // 0x0f24, 0x4 bytes
-                std::int32_t m_iRoundEndFunFactData2; // 0x0f28, 0x4 bytes
-                std::int32_t m_iRoundEndFunFactData3; // 0x0f2c, 0x4 bytes
-                CUtlString m_sRoundEndMessage; // 0x0f30, 0x8 bytes
-                std::int32_t m_iRoundEndPlayerCount; // 0x0f38, 0x4 bytes
-                bool m_bRoundEndNoMusic; // 0x0f3c, 0x1 bytes
-                std::uint8_t pad_0f3d[0x3]; // 0x0f3d, 0x3 bytes
-                std::int32_t m_iRoundEndLegacy; // 0x0f40, 0x4 bytes
-                std::uint8_t m_nRoundEndCount; // 0x0f44, 0x1 bytes
+                std::int32_t m_nActiveMutators; // 0x0ba0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextRespawnWave[0x20]; // 0x0ba4, 0x80 bytes
+                VectorWS m_vMinimapMins; // 0x0c24, 0xc bytes
+                VectorWS m_vMinimapMaxs; // 0x0c30, 0xc bytes
+                float m_MinimapVerticalSectionHeights[0x8]; // 0x0c3c, 0x20 bytes
+                std::uint8_t pad_0c5c[0x4]; // 0x0c5c, 0x4 bytes
+                std::uint64_t m_ullLocalMatchID; // 0x0c60, 0x8 bytes
+                std::int32_t m_nEndMatchMapGroupVoteTypes[0xa]; // 0x0c68, 0x28 bytes
+                std::int32_t m_nEndMatchMapGroupVoteOptions[0xa]; // 0x0c90, 0x28 bytes
+                std::int32_t m_nEndMatchMapVoteWinner; // 0x0cb8, 0x4 bytes
+                std::int32_t m_iNumConsecutiveCTLoses; // 0x0cbc, 0x4 bytes
+                std::int32_t m_iNumConsecutiveTerroristLoses; // 0x0cc0, 0x4 bytes
+                std::uint8_t pad_0cc4[0xbc]; // 0x0cc4, 0xbc bytes
+                std::int32_t m_nMatchAbortedEarlyReason; // 0x0d80, 0x4 bytes
+                bool m_bHasTriggeredRoundStartMusic; // 0x0d84, 0x1 bytes
+                bool m_bSwitchingTeamsAtRoundReset; // 0x0d85, 0x1 bytes
+                std::uint8_t pad_0d86[0x1a]; // 0x0d86, 0x1a bytes
+                shade::sdk::client::CCSGameModeRules *m_pGameModeRules; // 0x0da0, 0x8 bytes
+                shade::sdk::client::C_RetakeGameRules m_RetakeRules; // 0x0da8, 0x158 bytes
+                std::uint8_t m_nMatchEndCount; // 0x0f00, 0x1 bytes
+                std::uint8_t pad_0f01[0x3]; // 0x0f01, 0x3 bytes
+                std::int32_t m_nTTeamIntroVariant; // 0x0f04, 0x4 bytes
+                std::int32_t m_nCTTeamIntroVariant; // 0x0f08, 0x4 bytes
+                bool m_bTeamIntroPeriod; // 0x0f0c, 0x1 bytes
+                std::uint8_t pad_0f0d[0x3]; // 0x0f0d, 0x3 bytes
+                std::int32_t m_iRoundEndWinnerTeam; // 0x0f10, 0x4 bytes
+                std::int32_t m_eRoundEndReason; // 0x0f14, 0x4 bytes
+                bool m_bRoundEndShowTimerDefend; // 0x0f18, 0x1 bytes
+                std::uint8_t pad_0f19[0x3]; // 0x0f19, 0x3 bytes
+                std::int32_t m_iRoundEndTimerTime; // 0x0f1c, 0x4 bytes
+                CUtlString m_sRoundEndFunFactToken; // 0x0f20, 0x8 bytes
+                CPlayerSlot m_iRoundEndFunFactPlayerSlot; // 0x0f28, 0x4 bytes
+                std::int32_t m_iRoundEndFunFactData1; // 0x0f2c, 0x4 bytes
+                std::int32_t m_iRoundEndFunFactData2; // 0x0f30, 0x4 bytes
+                std::int32_t m_iRoundEndFunFactData3; // 0x0f34, 0x4 bytes
+                CUtlString m_sRoundEndMessage; // 0x0f38, 0x8 bytes
+                std::int32_t m_iRoundEndPlayerCount; // 0x0f40, 0x4 bytes
+                bool m_bRoundEndNoMusic; // 0x0f44, 0x1 bytes
                 std::uint8_t pad_0f45[0x3]; // 0x0f45, 0x3 bytes
-                std::int32_t m_iRoundStartRoundNumber; // 0x0f48, 0x4 bytes
-                std::uint8_t m_nRoundStartCount; // 0x0f4c, 0x1 bytes
-                std::uint8_t pad_0f4d[0x400b]; // 0x0f4d, 0x400b bytes
-                double m_flLastPerfSampleTime; // 0x4f58, 0x8 bytes
+                std::int32_t m_iRoundEndLegacy; // 0x0f48, 0x4 bytes
+                std::uint8_t m_nRoundEndCount; // 0x0f4c, 0x1 bytes
+                std::uint8_t pad_0f4d[0x3]; // 0x0f4d, 0x3 bytes
+                std::int32_t m_iRoundStartRoundNumber; // 0x0f50, 0x4 bytes
+                std::uint8_t m_nRoundStartCount; // 0x0f54, 0x1 bytes
+                std::uint8_t pad_0f55[0x400b]; // 0x0f55, 0x400b bytes
+                double m_flLastPerfSampleTime; // 0x4f60, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CSGameRules) == 0x4F60, "C_CSGameRules size mismatch");
+            static_assert(sizeof(C_CSGameRules) == 0x4F68, "C_CSGameRules size mismatch");
         }
     }
 }

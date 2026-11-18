@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x630
+             * Size: 0x638
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -47,12 +47,14 @@ namespace shade {
                 float m_flEnvPuddleRippleDirection; // 0x0624, 0x4 bytes
                 float m_flEnvWetnessCoverage; // 0x0628, 0x4 bytes
                 float m_flEnvWetnessDryingAmount; // 0x062c, 0x4 bytes
+                bool m_bFrostEnabled; // 0x0630, 0x1 bytes
+                std::uint8_t pad_0631[0x7]; // 0x0631, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CMapInfo) == 0x630, "CMapInfo size mismatch");
+            static_assert(sizeof(CMapInfo) == 0x638, "CMapInfo size mismatch");
         }
     }
 }

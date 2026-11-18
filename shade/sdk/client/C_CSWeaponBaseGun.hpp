@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f50
+             * Size: 0x1f90
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_CSWeaponBaseGun : public shade::sdk::client::C_CSWeaponBase {
             public:
-                std::int32_t m_zoomLevel; // 0x1f20, 0x4 bytes
-                std::int32_t m_iBurstShotsRemaining; // 0x1f24, 0x4 bytes
-                std::int32_t m_iSilencerBodygroup; // 0x1f28, 0x4 bytes
-                std::uint8_t pad_1f2c[0xc]; // 0x1f2c, 0xc bytes
-                std::int32_t m_silencedModelIndex; // 0x1f38, 0x4 bytes
-                bool m_inPrecache; // 0x1f3c, 0x1 bytes
-                bool m_bNeedsBoltAction; // 0x1f3d, 0x1 bytes
-                std::uint8_t pad_1f3e[0x2]; // 0x1f3e, 0x2 bytes
-                std::int32_t m_nRevolverCylinderIdx; // 0x1f40, 0x4 bytes
-                std::uint8_t pad_1f44[0xc]; // 0x1f44, 0xc bytes
+                std::int32_t m_zoomLevel; // 0x1f60, 0x4 bytes
+                std::int32_t m_iBurstShotsRemaining; // 0x1f64, 0x4 bytes
+                std::int32_t m_iSilencerBodygroup; // 0x1f68, 0x4 bytes
+                std::uint8_t pad_1f6c[0xc]; // 0x1f6c, 0xc bytes
+                std::int32_t m_silencedModelIndex; // 0x1f78, 0x4 bytes
+                bool m_inPrecache; // 0x1f7c, 0x1 bytes
+                bool m_bNeedsBoltAction; // 0x1f7d, 0x1 bytes
+                std::uint8_t pad_1f7e[0x2]; // 0x1f7e, 0x2 bytes
+                std::int32_t m_nRevolverCylinderIdx; // 0x1f80, 0x4 bytes
+                std::uint8_t pad_1f84[0xc]; // 0x1f84, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_CSWeaponBaseGun) == 0x1F50, "C_CSWeaponBaseGun size mismatch");
+            static_assert(sizeof(C_CSWeaponBaseGun) == 0x1F90, "C_CSWeaponBaseGun size mismatch");
         }
     }
 }

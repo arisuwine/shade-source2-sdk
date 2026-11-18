@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x4
+             * Size: 0x8
              * Alignment: 0xff
              * Has Trivial Destructor
              * Global Type Scope
@@ -27,12 +27,13 @@ namespace shade {
             #pragma pack(push, 1)
             struct EventClientPollNetworking_t {
                 std::int32_t m_nTickCount; // 0x0000, 0x4 bytes
+                std::int32_t m_nTotalTicks; // 0x0004, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(EventClientPollNetworking_t) == 0x4, "EventClientPollNetworking_t size mismatch");
+            static_assert(sizeof(EventClientPollNetworking_t) == 0x8, "EventClientPollNetworking_t size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x130
+             * Size: 0x1f0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -29,13 +29,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CNmAimCSTask : public shade::sdk::animlib::CNmPoseTask {
             public:
-                std::uint8_t pad_0070[0xc0]; // 0x0070, 0xc0 bytes
+                std::uint8_t pad_0070[0x180]; // 0x0070, 0x180 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNmAimCSTask) == 0x130, "CNmAimCSTask size mismatch");
+            static_assert(sizeof(CNmAimCSTask) == 0x1F0, "CNmAimCSTask size mismatch");
         }
     }
 }

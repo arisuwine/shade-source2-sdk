@@ -84,11 +84,11 @@ namespace shade {
                 bool m_bSilencerOn; // 0x0fbd, 0x1 bytes
                 std::uint8_t pad_0fbe[0x2]; // 0x0fbe, 0x2 bytes
                 shade::sdk::entity2::GameTime_t m_flTimeSilencerSwitchComplete; // 0x0fc0, 0x4 bytes
-                bool m_bStealthy; // 0x0fc4, 0x1 bytes
+                bool m_bIsInStealthReload; // 0x0fc4, 0x1 bytes
                 bool m_bInSilentReloadSection; // 0x0fc5, 0x1 bytes
-                bool m_bSilentReloadStatCounted; // 0x0fc6, 0x1 bytes
-                bool m_bSilentReloadStatPending; // 0x0fc7, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flStealthHoldStartTime; // 0x0fc8, 0x4 bytes
+                bool m_bSilentReloadStatPending; // 0x0fc6, 0x1 bytes
+                std::uint8_t pad_0fc7[0x1]; // 0x0fc7, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flStealthReloadHoldStartTime; // 0x0fc8, 0x4 bytes
                 bool m_bReloadHeldSinceStart; // 0x0fcc, 0x1 bytes
                 std::uint8_t pad_0fcd[0x3]; // 0x0fcd, 0x3 bytes
                 float m_flWeaponActionPlaybackRate; // 0x0fd0, 0x4 bytes

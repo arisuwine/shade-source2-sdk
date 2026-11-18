@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x13c0
+             * Size: 0x13b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -61,25 +61,23 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flRescueStartTime; // 0x1354, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flGrabSuccessTime; // 0x1358, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flDropStartTime; // 0x135c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDeadOrRescuedTime; // 0x1360, 0x4 bytes
-                std::uint8_t pad_1364[0x4]; // 0x1364, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_blinkTimer; // 0x1368, 0x18 bytes
-                VectorWS m_lookAt; // 0x1380, 0xc bytes
-                std::uint8_t pad_138c[0x4]; // 0x138c, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_lookAroundTimer; // 0x1390, 0x18 bytes
-                bool m_isInit; // 0x13a8, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_eyeAttachment; // 0x13a9, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_chestAttachment; // 0x13aa, 0x1 bytes
-                std::uint8_t pad_13ab[0x5]; // 0x13ab, 0x5 bytes
-                shade::sdk::client::CBasePlayerController *m_pPredictionOwner; // 0x13b0, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_fNewestAlphaThinkTime; // 0x13b8, 0x4 bytes
-                std::uint8_t pad_13bc[0x4]; // 0x13bc, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_blinkTimer; // 0x1360, 0x18 bytes
+                VectorWS m_lookAt; // 0x1378, 0xc bytes
+                std::uint8_t pad_1384[0x4]; // 0x1384, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_lookAroundTimer; // 0x1388, 0x18 bytes
+                bool m_isInit; // 0x13a0, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_eyeAttachment; // 0x13a1, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_chestAttachment; // 0x13a2, 0x1 bytes
+                std::uint8_t pad_13a3[0x5]; // 0x13a3, 0x5 bytes
+                shade::sdk::client::CBasePlayerController *m_pPredictionOwner; // 0x13a8, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_fNewestAlphaThinkTime; // 0x13b0, 0x4 bytes
+                std::uint8_t pad_13b4[0x4]; // 0x13b4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Hostage) == 0x13C0, "C_Hostage size mismatch");
+            static_assert(sizeof(C_Hostage) == 0x13B8, "C_Hostage size mismatch");
         }
     }
 }

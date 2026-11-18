@@ -182,7 +182,7 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_fImmuneToGunGameDamageTime; // 0x15a4, 0x4 bytes
                 bool m_bGunGameImmunity; // 0x15a8, 0x1 bytes
                 std::uint8_t pad_15a9[0x3]; // 0x15a9, 0x3 bytes
-                float m_flModifier0; // 0x15ac, 0x4 bytes
+                float m_flBigHeadScale; // 0x15ac, 0x4 bytes
                 float m_fMolotovDamageTime; // 0x15b0, 0x4 bytes
                 QAngle m_angEyeAngles; // 0x15b4, 0xc bytes
                 std::uint8_t pad_15c0[0x10]; // 0x15c0, 0x10 bytes

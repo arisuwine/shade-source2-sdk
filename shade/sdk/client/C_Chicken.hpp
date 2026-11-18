@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ba0
+             * Size: 0x1bd0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -50,15 +50,15 @@ namespace shade {
                 std::uint8_t pad_1ad9[0x3]; // 0x1ad9, 0x3 bytes
                 shade::sdk::client::ParticleIndex_t m_hWaterWakeParticles; // 0x1adc, 0x4 bytes
                 bool m_bIsPreviewModel; // 0x1ae0, 0x1 bytes
-                std::uint8_t pad_1ae1[0x87]; // 0x1ae1, 0x87 bytes
-                bool m_bSpawnDyingParticles; // 0x1b68, 0x1 bytes
-                std::uint8_t pad_1b69[0x37]; // 0x1b69, 0x37 bytes
+                std::uint8_t pad_1ae1[0xb7]; // 0x1ae1, 0xb7 bytes
+                bool m_bSpawnDyingParticles; // 0x1b98, 0x1 bytes
+                std::uint8_t pad_1b99[0x37]; // 0x1b99, 0x37 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_Chicken) == 0x1BA0, "C_Chicken size mismatch");
+            static_assert(sizeof(C_Chicken) == 0x1BD0, "C_Chicken size mismatch");
         }
     }
 }
