@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19a8
+             * Size: 0x1a38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Broodmother_Web : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1998, 0x4 bytes
-                VectorWS m_vecOrigin; // 0x199c, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a28, 0x4 bytes
+                VectorWS m_vecOrigin; // 0x1a2c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Broodmother_Web) == 0x19A8, "CDOTA_Unit_Broodmother_Web size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Broodmother_Web) == 0x1A38, "CDOTA_Unit_Broodmother_Web size mismatch");
         }
     }
 }

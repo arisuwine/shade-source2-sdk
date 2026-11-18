@@ -16,6 +16,8 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/DebugSnapshotBaseStructuredData_t.hpp"
+#include "shade/sdk/client/DebugSnapshotMotorSettingsResolveTrace_t.hpp"
+#include "shade/sdk/client/DebugSnapshotVDataRef_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -29,41 +31,46 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x90
+             * Size: 0x278
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct AI_GroundRootMotionMotor_DebugSnapshotData_t : public shade::sdk::client::DebugSnapshotBaseStructuredData_t {
-                CGlobalSymbol desired_movement_gait_set; // 0x0008, 0x8 bytes
-                CGlobalSymbol desired_movement_gait; // 0x0010, 0x8 bytes
-                CGlobalSymbol current_movement_gait_set; // 0x0018, 0x8 bytes
-                CGlobalSymbol current_movement_gait; // 0x0020, 0x8 bytes
-                CGlobalSymbol movement_setting_id; // 0x0028, 0x8 bytes
-                CGlobalSymbol gait_switch_blocked_reason; // 0x0030, 0x8 bytes
-                bool b_goal_completion_allowed; // 0x0038, 0x1 bytes
-                std::uint8_t pad_0039[0x7]; // 0x0039, 0x7 bytes
-                CGlobalSymbol state; // 0x0040, 0x8 bytes
-                std::int32_t n_state_active_tick_count; // 0x0048, 0x4 bytes
-                bool b_has_path; // 0x004c, 0x1 bytes
-                std::uint8_t pad_004d[0x3]; // 0x004d, 0x3 bytes
-                float f_remaining_ground_path_length; // 0x0050, 0x4 bytes
-                float f_current_speed; // 0x0054, 0x4 bytes
-                CGlobalSymbol move_type; // 0x0058, 0x8 bytes
-                float f_forward_strafing_angle_actual; // 0x0060, 0x4 bytes
-                float f_forward_strafing_angle_desired; // 0x0064, 0x4 bytes
-                float f_forward_strafing_angle_committed; // 0x0068, 0x4 bytes
-                float f_current_lean; // 0x006c, 0x4 bytes
-                float f_target_lean; // 0x0070, 0x4 bytes
-                std::uint8_t pad_0074[0x4]; // 0x0074, 0x4 bytes
-                CUtlVector<shade::sdk::client::AI_GroundRootMotionMotor_DebugSnapshotData_t__Event_t> vec_events; // 0x0078, 0x18 bytes
+                shade::sdk::client::DebugSnapshotMotorSettingsResolveTrace_t desired_movement_gait_set; // 0x0008, 0x50 bytes
+                shade::sdk::client::DebugSnapshotMotorSettingsResolveTrace_t desired_movement_gait; // 0x0058, 0x50 bytes
+                shade::sdk::client::DebugSnapshotMotorSettingsResolveTrace_t desired_stance; // 0x00a8, 0x50 bytes
+                shade::sdk::client::DebugSnapshotMotorSettingsResolveTrace_t current_movement_gait_set; // 0x00f8, 0x50 bytes
+                shade::sdk::client::DebugSnapshotMotorSettingsResolveTrace_t current_movement_gait; // 0x0148, 0x50 bytes
+                shade::sdk::client::DebugSnapshotMotorSettingsResolveTrace_t current_stance; // 0x0198, 0x50 bytes
+                CGlobalSymbol movement_setting_id; // 0x01e8, 0x8 bytes
+                shade::sdk::client::DebugSnapshotVDataRef_t current_movement_settings_vdata; // 0x01f0, 0x10 bytes
+                shade::sdk::client::DebugSnapshotVDataRef_t desired_movement_settings_vdata; // 0x0200, 0x10 bytes
+                CGlobalSymbol pending_settings_changes; // 0x0210, 0x8 bytes
+                CGlobalSymbol settings_change_transition; // 0x0218, 0x8 bytes
+                bool b_goal_completion_allowed; // 0x0220, 0x1 bytes
+                std::uint8_t pad_0221[0x7]; // 0x0221, 0x7 bytes
+                CGlobalSymbol state; // 0x0228, 0x8 bytes
+                std::int32_t n_state_active_tick_count; // 0x0230, 0x4 bytes
+                bool b_has_path; // 0x0234, 0x1 bytes
+                std::uint8_t pad_0235[0x3]; // 0x0235, 0x3 bytes
+                float f_remaining_ground_path_length; // 0x0238, 0x4 bytes
+                float f_current_speed; // 0x023c, 0x4 bytes
+                CGlobalSymbol move_type; // 0x0240, 0x8 bytes
+                float f_forward_strafing_angle_actual; // 0x0248, 0x4 bytes
+                float f_forward_strafing_angle_desired; // 0x024c, 0x4 bytes
+                float f_forward_strafing_angle_committed; // 0x0250, 0x4 bytes
+                float f_current_lean; // 0x0254, 0x4 bytes
+                float f_target_lean; // 0x0258, 0x4 bytes
+                std::uint8_t pad_025c[0x4]; // 0x025c, 0x4 bytes
+                CUtlVector<shade::sdk::client::AI_GroundRootMotionMotor_DebugSnapshotData_t__Event_t> vec_events; // 0x0260, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(AI_GroundRootMotionMotor_DebugSnapshotData_t) == 0x90, "AI_GroundRootMotionMotor_DebugSnapshotData_t size mismatch");
+            static_assert(sizeof(AI_GroundRootMotionMotor_DebugSnapshotData_t) == 0x278, "AI_GroundRootMotionMotor_DebugSnapshotData_t size mismatch");
         }
     }
 }

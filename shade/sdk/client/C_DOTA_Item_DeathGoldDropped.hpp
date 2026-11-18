@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc50
+             * Size: 0xcb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Item_DeathGoldDropped : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                std::uint8_t pad_0bb0[0xa0]; // 0x0bb0, 0xa0 bytes
+                std::uint8_t pad_0c10[0xa0]; // 0x0c10, 0xa0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item_DeathGoldDropped) == 0xC50, "C_DOTA_Item_DeathGoldDropped size mismatch");
+            static_assert(sizeof(C_DOTA_Item_DeathGoldDropped) == 0xCB0, "C_DOTA_Item_DeathGoldDropped size mismatch");
         }
     }
 }

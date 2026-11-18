@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbc0
+             * Size: 0xc20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Item_RuneSpawner_XP : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                shade::sdk::client::DOTA_RUNES m_nRuneType; // 0x0bb0, 0x4 bytes
-                float m_flLastSpawnTime; // 0x0bb4, 0x4 bytes
-                float m_flNextSpawnTime; // 0x0bb8, 0x4 bytes
-                std::uint8_t pad_0bbc[0x4]; // 0x0bbc, 0x4 bytes
+                shade::sdk::client::DOTA_RUNES m_nRuneType; // 0x0c10, 0x4 bytes
+                float m_flLastSpawnTime; // 0x0c14, 0x4 bytes
+                float m_flNextSpawnTime; // 0x0c18, 0x4 bytes
+                std::uint8_t pad_0c1c[0x4]; // 0x0c1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item_RuneSpawner_XP) == 0xBC0, "C_DOTA_Item_RuneSpawner_XP size mismatch");
+            static_assert(sizeof(C_DOTA_Item_RuneSpawner_XP) == 0xC20, "C_DOTA_Item_RuneSpawner_XP size mismatch");
         }
     }
 }

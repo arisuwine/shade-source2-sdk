@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x6a0
+             * Size: 0x698
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,18 +31,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_GameLiquidSpill : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flLiquidContentsField; // 0x0230, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flExpirationTime; // 0x03a8, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadius; // 0x0520, 0x178 bytes
-                bool m_bCheckExposedToSky; // 0x0698, 0x1 bytes
-                std::uint8_t pad_0699[0x3]; // 0x0699, 0x3 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAmountAttribute; // 0x069c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flLiquidContentsField; // 0x0228, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flExpirationTime; // 0x03a0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadius; // 0x0518, 0x178 bytes
+                bool m_bCheckExposedToSky; // 0x0690, 0x1 bytes
+                std::uint8_t pad_0691[0x3]; // 0x0691, 0x3 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAmountAttribute; // 0x0694, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_GameLiquidSpill) == 0x6A0, "C_OP_GameLiquidSpill size mismatch");
+            static_assert(sizeof(C_OP_GameLiquidSpill) == 0x698, "C_OP_GameLiquidSpill size mismatch");
         }
     }
 }

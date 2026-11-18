@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x830
+             * Size: 0x860
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CInstancedSceneEntity : public shade::sdk::server::CSceneEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0818, 0x4 bytes
-                bool m_bHadOwner; // 0x081c, 0x1 bytes
-                std::uint8_t pad_081d[0x3]; // 0x081d, 0x3 bytes
-                float m_flPostSpeakDelay; // 0x0820, 0x4 bytes
-                float m_flPreDelay; // 0x0824, 0x4 bytes
-                bool m_bIsBackground; // 0x0828, 0x1 bytes
-                std::uint8_t pad_0829[0x3]; // 0x0829, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x082c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0848, 0x4 bytes
+                bool m_bHadOwner; // 0x084c, 0x1 bytes
+                std::uint8_t pad_084d[0x3]; // 0x084d, 0x3 bytes
+                float m_flPostSpeakDelay; // 0x0850, 0x4 bytes
+                float m_flPreDelay; // 0x0854, 0x4 bytes
+                bool m_bIsBackground; // 0x0858, 0x1 bytes
+                std::uint8_t pad_0859[0x3]; // 0x0859, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x085c, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -53,7 +53,7 @@ namespace shade {
              * bool m_bRemoveOnCompletion; // Offset: 0x529, Size: 0x1, Size In Bytes: 0x1
              */
 
-            static_assert(sizeof(CInstancedSceneEntity) == 0x830, "CInstancedSceneEntity size mismatch");
+            static_assert(sizeof(CInstancedSceneEntity) == 0x860, "CInstancedSceneEntity size mismatch");
         }
     }
 }

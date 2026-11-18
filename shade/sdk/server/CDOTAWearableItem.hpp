@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9e8
+             * Size: 0xa48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,11 +38,11 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTAWearableItem : public shade::sdk::server::CEconWearable {
             public:
-                bool m_bOwnerModelChanged; // 0x09e0, 0x1 bytes
-                bool m_bIsGeneratingEconItem; // 0x09e1, 0x1 bytes
-                bool m_bIsItemVisibleOnGeneratedEntity; // 0x09e2, 0x1 bytes
-                bool m_bHideWearableButDrawAdditionalWearables; // 0x09e3, 0x1 bytes
-                CHandle<shade::sdk::server::CBaseAnimatingActivity> m_hAdditionalWearable; // 0x09e4, 0x4 bytes
+                bool m_bOwnerModelChanged; // 0x0a40, 0x1 bytes
+                bool m_bIsGeneratingEconItem; // 0x0a41, 0x1 bytes
+                bool m_bIsItemVisibleOnGeneratedEntity; // 0x0a42, 0x1 bytes
+                bool m_bHideWearableButDrawAdditionalWearables; // 0x0a43, 0x1 bytes
+                CHandle<shade::sdk::server::CBaseAnimatingActivity> m_hAdditionalWearable; // 0x0a44, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -51,7 +51,7 @@ namespace shade {
              * std::uint32_t ItemDefIndex; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDOTAWearableItem) == 0x9E8, "CDOTAWearableItem size mismatch");
+            static_assert(sizeof(CDOTAWearableItem) == 0xA48, "CDOTAWearableItem size mismatch");
         }
     }
 }

@@ -32,13 +32,13 @@ namespace shade {
             class CDOTA_Ability_PrimalBeast_Rock_Throw : public shade::sdk::client::C_DOTABaseAbility {
             public:
                 std::int32_t base_damage; // 0x06a8, 0x4 bytes
-                float impact_radius; // 0x06ac, 0x4 bytes
-                float fragment_impact_radius; // 0x06b0, 0x4 bytes
-                std::int32_t fragment_impact_distance; // 0x06b4, 0x4 bytes
-                std::int32_t min_range; // 0x06b8, 0x4 bytes
-                float stun_duration; // 0x06bc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXPreview; // 0x06c0, 0x4 bytes
-                std::uint8_t pad_06c4[0x4]; // 0x06c4, 0x4 bytes
+                std::int32_t damage_str_pct; // 0x06ac, 0x4 bytes
+                float impact_radius; // 0x06b0, 0x4 bytes
+                float fragment_impact_radius; // 0x06b4, 0x4 bytes
+                std::int32_t fragment_impact_distance; // 0x06b8, 0x4 bytes
+                std::int32_t min_range; // 0x06bc, 0x4 bytes
+                float stun_duration; // 0x06c0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXPreview; // 0x06c4, 0x4 bytes
             };
             #pragma pack(pop)
 

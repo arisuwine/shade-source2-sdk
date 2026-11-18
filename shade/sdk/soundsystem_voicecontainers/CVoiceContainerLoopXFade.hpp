@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xa8
+             * Size: 0xb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerLoopXFade : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_sound; // 0x0070, 0x20 bytes
-                float m_flLoopEnd; // 0x0090, 0x4 bytes
-                float m_flLoopStart; // 0x0094, 0x4 bytes
-                float m_flFadeOut; // 0x0098, 0x4 bytes
-                float m_flFadeIn; // 0x009c, 0x4 bytes
-                bool m_bPlayHead; // 0x00a0, 0x1 bytes
-                bool m_bPlayTail; // 0x00a1, 0x1 bytes
-                bool m_bEqualPow; // 0x00a2, 0x1 bytes
-                std::uint8_t pad_00a3[0x5]; // 0x00a3, 0x5 bytes
+                shade::sdk::soundsystem_voicecontainers::CSoundContainerReference m_sound; // 0x0078, 0x20 bytes
+                float m_flLoopEnd; // 0x0098, 0x4 bytes
+                float m_flLoopStart; // 0x009c, 0x4 bytes
+                float m_flFadeOut; // 0x00a0, 0x4 bytes
+                float m_flFadeIn; // 0x00a4, 0x4 bytes
+                bool m_bPlayHead; // 0x00a8, 0x1 bytes
+                bool m_bPlayTail; // 0x00a9, 0x1 bytes
+                bool m_bEqualPow; // 0x00aa, 0x1 bytes
+                std::uint8_t pad_00ab[0x5]; // 0x00ab, 0x5 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerLoopXFade) == 0xA8, "CVoiceContainerLoopXFade size mismatch");
+            static_assert(sizeof(CVoiceContainerLoopXFade) == 0xB0, "CVoiceContainerLoopXFade size mismatch");
         }
     }
 }

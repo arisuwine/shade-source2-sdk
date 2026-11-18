@@ -20,7 +20,8 @@ namespace shade {
                 eLocatorArrivalOption_None = 0x0,
                 eLocatorArrivalOption_DontStopAtGoal = 0x1,
                 eLocatorArrivalOption_IgnoreArrivalFacing = 0x2,
-                eLocatorArrivalOption_SmoothArrivalPath = 0x4
+                eLocatorArrivalOption_SmoothArrivalPath = 0x4,
+                eLocatorArrivalOption_DontStopAtGoalIfAligned = 0x8
             };
         }
     }

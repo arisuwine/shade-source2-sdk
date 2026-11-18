@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,16 +37,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_EmberSpirit_FireRemnant_RemnantTracker : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vActiveRemnants; // 0x1aa8, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vTrackingDelayedRemnants; // 0x1ac0, 0x18 bytes
-                float shard_charge_radius; // 0x1ad8, 0x4 bytes
-                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vActiveRemnants; // 0x1af8, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vTrackingDelayedRemnants; // 0x1b10, 0x18 bytes
+                float shard_charge_radius; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_EmberSpirit_FireRemnant_RemnantTracker) == 0x1AE0, "CDOTA_Modifier_EmberSpirit_FireRemnant_RemnantTracker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_EmberSpirit_FireRemnant_RemnantTracker) == 0x1B30, "CDOTA_Modifier_EmberSpirit_FireRemnant_RemnantTracker size mismatch");
         }
     }
 }

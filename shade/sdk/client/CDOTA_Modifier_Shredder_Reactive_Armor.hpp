@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Shredder_Reactive_Armor : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t stack_limit; // 0x1aa8, 0x4 bytes
-                float stack_duration; // 0x1aac, 0x4 bytes
-                std::int32_t stacks_per_hero_attack; // 0x1ab0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStackDieTime; // 0x1ab4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_pFXIndex[0x4]; // 0x1ab8, 0x10 bytes
+                std::int32_t stack_limit; // 0x1af8, 0x4 bytes
+                float stack_duration; // 0x1afc, 0x4 bytes
+                std::int32_t stacks_per_hero_attack; // 0x1b00, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStackDieTime; // 0x1b04, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_pFXIndex[0x4]; // 0x1b08, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Shredder_Reactive_Armor) == 0x1AC8, "CDOTA_Modifier_Shredder_Reactive_Armor size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Shredder_Reactive_Armor) == 0x1B18, "CDOTA_Modifier_Shredder_Reactive_Armor size mismatch");
         }
     }
 }

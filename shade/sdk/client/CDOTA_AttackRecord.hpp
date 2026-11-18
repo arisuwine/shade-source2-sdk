@@ -77,6 +77,8 @@ namespace shade {
                 std::uint8_t m_bSuppressDamageSounds : 1; // 0x0052, 0x1 bytes
                 std::uint8_t m_bSuppressDamageEffects : 1; // 0x0052, 0x1 bytes
                 std::uint8_t m_bSuppressCleave : 1; // 0x0052, 0x1 bytes
+                std::uint8_t m_bNoLifesteal : 1; // 0x0052, 0x1 bytes
+                std::uint8_t m_bNoCrit : 1; // 0x0052, 0x1 bytes
                 std::uint8_t pad_0053[0x1]; // 0x0053, 0x1 bytes
                 std::int32_t m_nBashSource; // 0x0054, 0x4 bytes
                 std::int32_t m_nCritSource; // 0x0058, 0x4 bytes
@@ -88,11 +90,11 @@ namespace shade {
                 float m_flDeadlyBlowBonus; // 0x0070, 0x4 bytes
                 float m_flDeadlyBlowDamage; // 0x0074, 0x4 bytes
                 float m_flDeadlyBlowDisplay; // 0x0078, 0x4 bytes
-                std::int32_t m_iProjectileSpeed; // 0x007c, 0x4 bytes
-                Vector m_vForceDirectionOverride; // 0x0080, 0xc bytes
-                VectorWS m_vTargetLoc; // 0x008c, 0xc bytes
-                VectorWS m_vBlockLoc; // 0x0098, 0xc bytes
-                std::uint8_t pad_00a4[0x4]; // 0x00a4, 0x4 bytes
+                float m_flEffectiveness; // 0x007c, 0x4 bytes
+                std::int32_t m_iProjectileSpeed; // 0x0080, 0x4 bytes
+                Vector m_vForceDirectionOverride; // 0x0084, 0xc bytes
+                VectorWS m_vTargetLoc; // 0x0090, 0xc bytes
+                VectorWS m_vBlockLoc; // 0x009c, 0xc bytes
                 CUtlSymbolLarge m_iszAutoAttackRangedParticle; // 0x00a8, 0x8 bytes
                 CUtlSymbolLarge m_iszAutoAttackRangedParticleAdditionalEffect; // 0x00b0, 0x8 bytes
                 std::uint8_t pad_00b8[0x14]; // 0x00b8, 0x14 bytes

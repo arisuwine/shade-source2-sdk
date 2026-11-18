@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe20
+             * Size: 0xe80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_EnvDeferredSpotLightClientOnly) == 0xE20, "C_EnvDeferredSpotLightClientOnly size mismatch");
+            static_assert(sizeof(C_EnvDeferredSpotLightClientOnly) == 0xE80, "C_EnvDeferredSpotLightClientOnly size mismatch");
         }
     }
 }

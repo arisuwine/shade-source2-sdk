@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,21 +37,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Alchemist_GoblinsGreed : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<shade::sdk::entity2::GameTime_t> m_DeathList; // 0x1aa8, 0x18 bytes
-                float damage; // 0x1ac0, 0x4 bytes
-                float duration; // 0x1ac4, 0x4 bytes
-                std::int32_t bonus_gold; // 0x1ac8, 0x4 bytes
-                std::int32_t bonus_bonus_gold; // 0x1acc, 0x4 bytes
-                std::int32_t bonus_gold_cap; // 0x1ad0, 0x4 bytes
-                std::int32_t bonus_gold_per_scepter; // 0x1ad4, 0x4 bytes
-                std::int32_t scepter_bonus_damage; // 0x1ad8, 0x4 bytes
-                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
+                CUtlVector<shade::sdk::entity2::GameTime_t> m_DeathList; // 0x1af8, 0x18 bytes
+                float damage; // 0x1b10, 0x4 bytes
+                float duration; // 0x1b14, 0x4 bytes
+                std::int32_t bonus_gold; // 0x1b18, 0x4 bytes
+                std::int32_t bonus_bonus_gold; // 0x1b1c, 0x4 bytes
+                std::int32_t bonus_gold_cap; // 0x1b20, 0x4 bytes
+                std::int32_t bonus_gold_per_scepter; // 0x1b24, 0x4 bytes
+                std::int32_t scepter_bonus_damage; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Alchemist_GoblinsGreed) == 0x1AE0, "CDOTA_Modifier_Alchemist_GoblinsGreed size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Alchemist_GoblinsGreed) == 0x1B30, "CDOTA_Modifier_Alchemist_GoblinsGreed size mismatch");
         }
     }
 }

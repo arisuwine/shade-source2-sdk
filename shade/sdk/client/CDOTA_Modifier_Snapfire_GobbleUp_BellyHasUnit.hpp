@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Snapfire_GobbleUp_BellyHasUnit : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hGobbledUnit; // 0x1aa8, 0x4 bytes
-                shade::sdk::client::PlayerID_t m_nOriginalControllingUnit; // 0x1aac, 0x4 bytes
-                bool m_bUnitWasLaunched; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
-                float max_time_in_belly; // 0x1ab4, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hGobbledUnit; // 0x1af8, 0x4 bytes
+                shade::sdk::client::PlayerID_t m_nOriginalControllingUnit; // 0x1afc, 0x4 bytes
+                bool m_bUnitWasLaunched; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x3]; // 0x1b01, 0x3 bytes
+                float max_time_in_belly; // 0x1b04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Snapfire_GobbleUp_BellyHasUnit) == 0x1AB8, "CDOTA_Modifier_Snapfire_GobbleUp_BellyHasUnit size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Snapfire_GobbleUp_BellyHasUnit) == 0x1B08, "CDOTA_Modifier_Snapfire_GobbleUp_BellyHasUnit size mismatch");
         }
     }
 }

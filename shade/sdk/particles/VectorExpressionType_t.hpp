@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class VectorExpressionType_t : std::int32_t {
+            enum class VectorExpressionType_t : std::uint32_t {
                 VECTOR_EXPRESSION_UNINITIALIZED = -0x1,
                 VECTOR_EXPRESSION_ADD = 0x0,
                 VECTOR_EXPRESSION_SUBTRACT = 0x1,

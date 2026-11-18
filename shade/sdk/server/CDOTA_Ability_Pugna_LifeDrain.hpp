@@ -15,15 +15,8 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CDOTABaseAbility.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace server {
-            class CBaseEntity;
-        }
-    }
-}
 
 namespace shade {
     namespace sdk {
@@ -38,8 +31,9 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_Pugna_LifeDrain : public shade::sdk::server::CDOTABaseAbility {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0580, 0x4 bytes
-                std::uint8_t pad_0584[0x4]; // 0x0584, 0x4 bytes
+                bool m_bIgnoreActiveDrains; // 0x0580, 0x1 bytes
+                std::uint8_t pad_0581[0x3]; // 0x0581, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flChannelEndTime; // 0x0584, 0x4 bytes
             };
             #pragma pack(pop)
 

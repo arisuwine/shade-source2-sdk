@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,20 +37,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Centaur_Cart : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hUnit; // 0x1aa8, 0x4 bytes
-                bool m_bWasMoving; // 0x1aac, 0x1 bytes
-                bool m_bSpawnDone; // 0x1aad, 0x1 bytes
-                std::uint8_t pad_1aae[0x2]; // 0x1aae, 0x2 bytes
-                Vector m_vecOldForward; // 0x1ab0, 0xc bytes
-                std::int32_t break_distance; // 0x1abc, 0x4 bytes
-                VectorWS m_vecPreviousLocation; // 0x1ac0, 0xc bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hUnit; // 0x1af8, 0x4 bytes
+                bool m_bWasMoving; // 0x1afc, 0x1 bytes
+                bool m_bSpawnDone; // 0x1afd, 0x1 bytes
+                std::uint8_t pad_1afe[0x2]; // 0x1afe, 0x2 bytes
+                Vector m_vecOldForward; // 0x1b00, 0xc bytes
+                std::int32_t break_distance; // 0x1b0c, 0x4 bytes
+                VectorWS m_vecPreviousLocation; // 0x1b10, 0xc bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Centaur_Cart) == 0x1AD0, "CDOTA_Modifier_Centaur_Cart size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Centaur_Cart) == 0x1B20, "CDOTA_Modifier_Centaur_Cart size mismatch");
         }
     }
 }

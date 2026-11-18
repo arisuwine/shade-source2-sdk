@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b18
+             * Size: 0x1b68
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,39 +30,39 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Dawnbreaker_Fire_Wreath_Caster : public shade::sdk::client::CDOTA_Buff {
             public:
-                float movement_speed; // 0x1aa8, 0x4 bytes
-                std::int32_t shard_movement_penalty; // 0x1aac, 0x4 bytes
-                float swipe_radius; // 0x1ab0, 0x4 bytes
-                float swipe_damage; // 0x1ab4, 0x4 bytes
-                float smash_radius; // 0x1ab8, 0x4 bytes
-                float smash_damage; // 0x1abc, 0x4 bytes
-                float m_flCurrentSpeed; // 0x1ac0, 0x4 bytes
-                float flSwipeInterval; // 0x1ac4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextHit; // 0x1ac8, 0x4 bytes
-                std::int32_t iCurrentAttack; // 0x1acc, 0x4 bytes
-                std::int32_t total_attacks; // 0x1ad0, 0x4 bytes
-                float smash_stun_duration; // 0x1ad4, 0x4 bytes
-                float sweep_stun_duration; // 0x1ad8, 0x4 bytes
-                bool m_bHasCompletedMove; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
-                float duration; // 0x1ae0, 0x4 bytes
-                Vector m_vTargetHorizontalDirection; // 0x1ae4, 0xc bytes
-                float smash_distance_from_hero; // 0x1af0, 0x4 bytes
-                float animation_rate; // 0x1af4, 0x4 bytes
-                float turn_rate; // 0x1af8, 0x4 bytes
-                float m_flFacingTarget; // 0x1afc, 0x4 bytes
-                float movespeed_bonus_self_max; // 0x1b00, 0x4 bytes
-                float movespeed_bonus_ally_max; // 0x1b04, 0x4 bytes
-                float movespeed_bonus_radius; // 0x1b08, 0x4 bytes
-                float movespeed_bonus_duration; // 0x1b0c, 0x4 bytes
-                float immunity_resist; // 0x1b10, 0x4 bytes
-                std::int32_t m_iSuccessfulSwipesHittingHeroes; // 0x1b14, 0x4 bytes
+                float movement_speed; // 0x1af8, 0x4 bytes
+                std::int32_t shard_movement_penalty; // 0x1afc, 0x4 bytes
+                float swipe_radius; // 0x1b00, 0x4 bytes
+                float swipe_damage; // 0x1b04, 0x4 bytes
+                float smash_radius; // 0x1b08, 0x4 bytes
+                float smash_damage; // 0x1b0c, 0x4 bytes
+                float m_flCurrentSpeed; // 0x1b10, 0x4 bytes
+                float flSwipeInterval; // 0x1b14, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextHit; // 0x1b18, 0x4 bytes
+                std::int32_t iCurrentAttack; // 0x1b1c, 0x4 bytes
+                std::int32_t total_attacks; // 0x1b20, 0x4 bytes
+                float smash_stun_duration; // 0x1b24, 0x4 bytes
+                float sweep_stun_duration; // 0x1b28, 0x4 bytes
+                bool m_bHasCompletedMove; // 0x1b2c, 0x1 bytes
+                std::uint8_t pad_1b2d[0x3]; // 0x1b2d, 0x3 bytes
+                float duration; // 0x1b30, 0x4 bytes
+                Vector m_vTargetHorizontalDirection; // 0x1b34, 0xc bytes
+                float smash_distance_from_hero; // 0x1b40, 0x4 bytes
+                float animation_rate; // 0x1b44, 0x4 bytes
+                float turn_rate; // 0x1b48, 0x4 bytes
+                float m_flFacingTarget; // 0x1b4c, 0x4 bytes
+                float movespeed_bonus_self_max; // 0x1b50, 0x4 bytes
+                float movespeed_bonus_ally_max; // 0x1b54, 0x4 bytes
+                float movespeed_bonus_radius; // 0x1b58, 0x4 bytes
+                float movespeed_bonus_duration; // 0x1b5c, 0x4 bytes
+                float immunity_resist; // 0x1b60, 0x4 bytes
+                std::int32_t m_iSuccessfulSwipesHittingHeroes; // 0x1b64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Dawnbreaker_Fire_Wreath_Caster) == 0x1B18, "CDOTA_Modifier_Dawnbreaker_Fire_Wreath_Caster size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Dawnbreaker_Fire_Wreath_Caster) == 0x1B68, "CDOTA_Modifier_Dawnbreaker_Fire_Wreath_Caster size mismatch");
         }
     }
 }

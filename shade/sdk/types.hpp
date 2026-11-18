@@ -111,6 +111,8 @@ namespace shade {
         template <typename T0>
         class CHandle;
         class Vector2D;
+        template <typename T0>
+        class HPulseObservableLambda;
         class CAnimVariant;
         class CKV3MemberNameSet;
         template <typename T0>
@@ -123,8 +125,6 @@ namespace shade {
         template <typename T0>
         class HPulseCell;
         class WorldGroupId_t;
-        template <typename T0>
-        class CPulseObservableExpression;
         class CUtlStringToken;
         class CEntityNameString;
         class CTransformWS;
@@ -342,6 +342,7 @@ namespace shade {
             class CDOTA_AbilityDraftHeroState;
             class CDOTA_BaseNPC_Largo_Frogling;
             class CDOTA_BuffParticle;
+            class CDOTA_FoWRevealedRegion;
             class CDOTA_ItemStockInfo;
             class CDOTA_Modifier_Visage_GravekeepersCloak_Stack;
             class CDOTA_PlayerChallengeInfo;
@@ -432,6 +433,7 @@ namespace shade {
             struct CandyShopRewardOptionGC_t;
             struct CandyShopRewardOption_t;
             struct CandyShopRewardSlot_t;
+            struct ChoreoAnimSlotNetworkedData_t;
             class ClientQuickBuyItemState;
             struct DOTAAbilityDefinition_t;
             struct DOTACavernCrawlMapResult_t;
@@ -442,6 +444,7 @@ namespace shade {
             struct DOTATeleportInfo_t;
             struct DOTAThreatLevelInfo_t;
             struct DataTeamPlayer_t;
+            struct DebugSnapshotMotorSettingsResolveTrace_t__Step_t;
             struct DebugSnapshotSourceLocation_t;
             struct DecalGroupOption_t;
             struct DestructiblePartDamageRequest_t;
@@ -472,15 +475,16 @@ namespace shade {
             struct HeroDeathRecord_t;
             struct HeroID_t;
             struct HeroPickRecord_t;
-            struct InGamePredictionData_t;
             struct ItemRecipe_t;
             struct LeagueID_t;
+            struct NeutralArtifactPoolState_t;
             struct NeutralCampStackPullAlarm_t;
             struct NeutralSpawnBoxes_t;
             struct OverworldNodeID_t;
             struct OverworldRoomID_t;
             struct OverworldTokenID_t;
             struct ParticleIndex_t;
+            struct PhysWorldBody_t;
             struct PingConfirmationState_t;
             struct PingMinimapIconLayerInfo_t;
             struct PlayerID_t;
@@ -583,6 +587,7 @@ namespace shade {
             struct ModelBoneFlexDriverControl_t;
             struct ModelBoneFlexDriver_t;
             struct ModelMeshBufferData_t;
+            struct ModelMeshDNARig_t;
             struct PermModelDataAnimatedMaterialAttribute_t;
             struct PermModelExtPart_t;
             struct PhysShapeMarkup_t;
@@ -647,6 +652,7 @@ namespace shade {
             struct FeFollowNode_t;
             struct FeHingeLimit_t;
             struct FeKelagerBend2_t;
+            struct FeModelDeformer_t;
             struct FeModelSelfCollisionLayer_t;
             struct FeMorphLayerDepr_t;
             struct FeNodeBase_t;
@@ -709,6 +715,7 @@ namespace shade {
             class CPulse_DomainValue;
             class CPulse_InstructionDebug;
             class CPulse_InvokeBinding;
+            class CPulse_LambdaDef;
             class CPulse_OutflowConnection;
             class CPulse_OutputConnection;
             class CPulse_PublicOutput;
@@ -724,6 +731,8 @@ namespace shade {
             struct PulseGraphExecutionHistoryEntry_t;
             struct PulseGraphExecutionHistoryNodeDesc_t;
             struct PulseNodeDynamicOutflows_t__DynamicOutflow_t;
+            struct PulseRuntimeBlackboardReferenceIndex_t;
+            struct PulseRuntimeVarIndex_t;
         }
 
         namespace pulse_system {
@@ -747,6 +756,7 @@ namespace shade {
             class InfoForResourceTypeCRenderMesh;
             class InfoForResourceTypeCSequenceGroupData;
             class InfoForResourceTypeCTextureBase;
+            class InfoForResourceTypeCVDataResource;
             class InfoForResourceTypeCVoiceContainerBase;
             class InfoForResourceTypeIMaterial2;
             class InfoForResourceTypeIParticleSnapshot;
@@ -778,6 +788,7 @@ namespace shade {
 
         namespace server {
             struct ActorClipEntry_t;
+            struct ActorGraphEntry_t;
             struct ActorMapping_t;
             struct AnimGraph2SerializedPoseRecipeSlot_t;
             struct AutoRoomDoorwayPairs_t;
@@ -815,6 +826,7 @@ namespace shade {
             class CDOTA_BaseNPC_Pet;
             class CDOTA_BaseNPC_Tower;
             class CDOTA_CombatLogQueryProgress;
+            class CDOTA_FoWRevealedRegion;
             class CDOTA_Item;
             class CDOTA_ItemStockInfo;
             class CDOTA_Item_Physical;
@@ -872,6 +884,7 @@ namespace shade {
             struct CTestPulseIO__ThreeStringArgs_t;
             class CTonemapController2;
             class CTormentorSpawnPhase;
+            struct ChoreoAnimSlotNetworkedData_t;
             struct CreatureAbilityData_t;
             struct CreatureStateData_t;
             struct DOTANeutralCampInfo_t;
@@ -885,8 +898,8 @@ namespace shade {
             struct FuncMoverTransitionRecord_t;
             struct GameChatLogEntry_t;
             class INavObstacle;
-            struct InGamePredictionData_t;
             struct ItemDropData_t;
+            struct NeutralArtifactPoolState_t;
             struct NianDamageTaken_t;
             class PathMoverEntitySpawn;
             struct PingConfirmationState_t;
@@ -1225,7 +1238,7 @@ namespace shade {
         template <typename T0, int N0>
         class CUtlVectorFixedGrowable {
         public:
-            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
+            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
         };
 
         template<>
@@ -1235,21 +1248,21 @@ namespace shade {
         };
 
         template<>
-        class CUtlVectorFixedGrowable<shade::sdk::animlib::CNmFloatChannelData*, 2> {
+        class CUtlVectorFixedGrowable<shade::sdk::animlib::CNmClip*, 1> {
         public:
-            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
-        };
-
-        template<>
-        class CUtlVectorFixedGrowable<CGlobalSymbol, 2> {
-        public:
-            std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
+            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
         };
 
         template<>
         class CUtlVectorFixedGrowable<CGlobalSymbol, 5> {
         public:
             std::uint8_t pad_0000[0x40]; // 0x0000, 0x40 bytes
+        };
+
+        template<>
+        class CUtlVectorFixedGrowable<std::uint8_t, 8> {
+        public:
+            std::uint8_t pad_0000[0x20]; // 0x0000, 0x20 bytes
         };
 
         template<>
@@ -1326,9 +1339,9 @@ namespace shade {
         };
 
         template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__StateDefinition_t, 5> {
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmParameterizedBlendNode__BlendRange_t, 5> {
         public:
-            std::uint8_t pad_0000[0x120]; // 0x0000, 0x120 bytes
+            std::uint8_t pad_0000[0x48]; // 0x0000, 0x48 bytes
         };
 
         template<>
@@ -1338,9 +1351,9 @@ namespace shade {
         };
 
         template<>
-        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmParameterizedBlendNode__BlendRange_t, 5> {
+        class CUtlLeanVectorFixedGrowable<shade::sdk::animlib::CNmStateMachineNode__StateDefinition_t, 5> {
         public:
-            std::uint8_t pad_0000[0x48]; // 0x0000, 0x48 bytes
+            std::uint8_t pad_0000[0x120]; // 0x0000, 0x120 bytes
         };
 
         template<>
@@ -1388,7 +1401,7 @@ namespace shade {
         template<>
         class CUtlLeanVectorFixedGrowable<shade::sdk::modellib::CSceneObjectData, 1> {
         public:
-            std::uint8_t pad_0000[0xc0]; // 0x0000, 0xc0 bytes
+            std::uint8_t pad_0000[0xc8]; // 0x0000, 0xc8 bytes
         };
 
         template<>
@@ -1433,13 +1446,13 @@ namespace shade {
         };
 
         template<>
-        class CNetworkUtlVectorBase<shade::sdk::client::NeutralSpawnBoxes_t> {
+        class CNetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> {
         public:
             std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
         };
 
         template<>
-        class CNetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> {
+        class CNetworkUtlVectorBase<shade::sdk::client::NeutralSpawnBoxes_t> {
         public:
             std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
         };
@@ -1544,6 +1557,12 @@ namespace shade {
         };
 
         template<>
+        class CUtlVectorEmbeddedNetworkVar<shade::sdk::server::CDOTA_FoWRevealedRegion> {
+        public:
+            std::uint8_t pad_0000[0x88]; // 0x0000, 0x88 bytes
+        };
+
+        template<>
         class CUtlVectorEmbeddedNetworkVar<shade::sdk::server::CDOTA_AbilityDraftAbilityState> {
         public:
             std::uint8_t pad_0000[0x88]; // 0x0000, 0x88 bytes
@@ -1551,6 +1570,12 @@ namespace shade {
 
         template<>
         class CUtlVectorEmbeddedNetworkVar<shade::sdk::server::CDOTA_AbilityDraftHeroState> {
+        public:
+            std::uint8_t pad_0000[0x88]; // 0x0000, 0x88 bytes
+        };
+
+        template<>
+        class CUtlVectorEmbeddedNetworkVar<shade::sdk::server::NeutralArtifactPoolState_t> {
         public:
             std::uint8_t pad_0000[0x88]; // 0x0000, 0x88 bytes
         };
@@ -1660,6 +1685,12 @@ namespace shade {
             std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
         };
 
+        template <typename T0>
+        class HPulseObservableLambda {
+        public:
+            std::uint8_t pad_0000[0xc]; // 0x0000, 0xc bytes
+        };
+
         class CAnimVariant {
         public:
             std::uint8_t pad_0000[0x11]; // 0x0000, 0x11 bytes
@@ -1706,12 +1737,6 @@ namespace shade {
         class WorldGroupId_t {
         public:
             std::uint8_t pad_0000[0x4]; // 0x0000, 0x4 bytes
-        };
-
-        template <typename T0>
-        class CPulseObservableExpression {
-        public:
-            std::uint8_t pad_0000[0x90]; // 0x0000, 0x90 bytes
         };
 
         class CUtlStringToken {

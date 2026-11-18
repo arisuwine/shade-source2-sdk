@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,25 +31,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Marci_Unleash_Flurry : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t flurry_bonus_attack_speed; // 0x1aa8, 0x4 bytes
-                float time_between_flurries; // 0x1aac, 0x4 bytes
-                float debuff_duration; // 0x1ab0, 0x4 bytes
-                float max_time_window_per_hit; // 0x1ab4, 0x4 bytes
-                bool m_bBonusSpeed; // 0x1ab8, 0x1 bytes
-                std::uint8_t pad_1ab9[0x3]; // 0x1ab9, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1abc, 0x4 bytes
-                bool m_bIsDoingFlurryAttack; // 0x1ac0, 0x1 bytes
-                bool m_bIsDoingFlurryPulseAttack; // 0x1ac1, 0x1 bytes
-                std::uint8_t pad_1ac2[0x2]; // 0x1ac2, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_fLastAttackTime; // 0x1ac4, 0x4 bytes
-                bool m_bShouldConsiderSilence; // 0x1ac8, 0x1 bytes
-                std::uint8_t pad_1ac9[0x7]; // 0x1ac9, 0x7 bytes
+                std::int32_t flurry_bonus_attack_speed; // 0x1af8, 0x4 bytes
+                float time_between_flurries; // 0x1afc, 0x4 bytes
+                float debuff_duration; // 0x1b00, 0x4 bytes
+                float max_time_window_per_hit; // 0x1b04, 0x4 bytes
+                bool m_bBonusSpeed; // 0x1b08, 0x1 bytes
+                std::uint8_t pad_1b09[0x3]; // 0x1b09, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1b0c, 0x4 bytes
+                bool m_bIsDoingFlurryAttack; // 0x1b10, 0x1 bytes
+                bool m_bIsDoingFlurryPulseAttack; // 0x1b11, 0x1 bytes
+                std::uint8_t pad_1b12[0x2]; // 0x1b12, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_fLastAttackTime; // 0x1b14, 0x4 bytes
+                bool m_bShouldConsiderSilence; // 0x1b18, 0x1 bytes
+                std::uint8_t pad_1b19[0x7]; // 0x1b19, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Marci_Unleash_Flurry) == 0x1AD0, "CDOTA_Modifier_Marci_Unleash_Flurry size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Marci_Unleash_Flurry) == 0x1B20, "CDOTA_Modifier_Marci_Unleash_Flurry size mismatch");
         }
     }
 }

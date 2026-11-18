@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,24 +29,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_PrimalBeast_Onslaught_Knockback : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vLoc; // 0x1aa8, 0xc bytes
-                float m_flPredictedTotalTime; // 0x1ab4, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1ab8, 0xc bytes
-                float m_flCurrentTimeHoriz; // 0x1ac4, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1ac8, 0x4 bytes
-                bool m_bHorizontalMotionInterrupted; // 0x1acc, 0x1 bytes
-                bool m_bTargetTeleported; // 0x1acd, 0x1 bytes
-                std::uint8_t pad_1ace[0x2]; // 0x1ace, 0x2 bytes
-                Vector m_vHorizontalVelocity; // 0x1ad0, 0xc bytes
-                VectorWS m_vLastKnownTargetPosition; // 0x1adc, 0xc bytes
-                float m_flInitialVelocityZ; // 0x1ae8, 0x4 bytes
-                std::uint8_t pad_1aec[0x4]; // 0x1aec, 0x4 bytes
+                VectorWS m_vLoc; // 0x1af8, 0xc bytes
+                float m_flPredictedTotalTime; // 0x1b04, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1b08, 0xc bytes
+                float m_flCurrentTimeHoriz; // 0x1b14, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1b18, 0x4 bytes
+                bool m_bHorizontalMotionInterrupted; // 0x1b1c, 0x1 bytes
+                bool m_bTargetTeleported; // 0x1b1d, 0x1 bytes
+                std::uint8_t pad_1b1e[0x2]; // 0x1b1e, 0x2 bytes
+                Vector m_vHorizontalVelocity; // 0x1b20, 0xc bytes
+                VectorWS m_vLastKnownTargetPosition; // 0x1b2c, 0xc bytes
+                float m_flInitialVelocityZ; // 0x1b38, 0x4 bytes
+                std::uint8_t pad_1b3c[0x4]; // 0x1b3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_PrimalBeast_Onslaught_Knockback) == 0x1AF0, "CDOTA_Modifier_PrimalBeast_Onslaught_Knockback size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_PrimalBeast_Onslaught_Knockback) == 0x1B40, "CDOTA_Modifier_PrimalBeast_Onslaught_Knockback size mismatch");
         }
     }
 }

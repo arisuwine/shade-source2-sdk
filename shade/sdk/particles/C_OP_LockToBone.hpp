@@ -27,7 +27,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0xba0
+             * Size: 0xba8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -52,12 +52,13 @@ namespace shade {
                 std::uint8_t pad_0349[0x7]; // 0x0349, 0x7 bytes
                 shade::sdk::particleslib::CPerParticleVecInput m_vecRotation; // 0x0350, 0x6d8 bytes
                 shade::sdk::particleslib::CPerParticleFloatInput m_flRotLerp; // 0x0a28, 0x178 bytes
+                std::uint8_t pad_0ba0[0x8]; // 0x0ba0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_LockToBone) == 0xBA0, "C_OP_LockToBone size mismatch");
+            static_assert(sizeof(C_OP_LockToBone) == 0xBA8, "C_OP_LockToBone size mismatch");
         }
     }
 }

@@ -46,14 +46,16 @@ namespace shade {
                 shade::sdk::client::DAMAGE_TYPES m_nDamageTypeField; // 0x0104, 0x4 bytes
                 std::uint8_t m_unLevelUpInterval; // 0x0108, 0x1 bytes
                 std::uint8_t m_unLevelUpBonusRequiredLevel; // 0x0109, 0x1 bytes
-                bool m_bSpellDamageField; // 0x010a, 0x1 bytes
-                bool m_bRequiresScepterField; // 0x010b, 0x1 bytes
-                bool m_bRequiresShardField; // 0x010c, 0x1 bytes
-                bool m_bAffectedByAoEIncrease; // 0x010d, 0x1 bytes
-                bool m_bDynamicValue; // 0x010e, 0x1 bytes
-                bool m_bAffectedByCurio; // 0x010f, 0x1 bytes
-                bool m_bShowAbsoluteValues; // 0x0110, 0x1 bytes
-                std::uint8_t pad_0111[0x7]; // 0x0111, 0x7 bytes
+                std::uint8_t pad_010a[0x2]; // 0x010a, 0x2 bytes
+                float m_flLevelUpMaxValue; // 0x010c, 0x4 bytes
+                bool m_bSpellDamageField; // 0x0110, 0x1 bytes
+                bool m_bRequiresScepterField; // 0x0111, 0x1 bytes
+                bool m_bRequiresShardField; // 0x0112, 0x1 bytes
+                bool m_bAffectedByAoEIncrease; // 0x0113, 0x1 bytes
+                bool m_bDynamicValue; // 0x0114, 0x1 bytes
+                std::int8_t m_nAffectedByCurio; // 0x0115, 0x1 bytes
+                bool m_bApplyEffectiveness; // 0x0116, 0x1 bytes
+                bool m_bShowAbsoluteValues; // 0x0117, 0x1 bytes
             };
             #pragma pack(pop)
 

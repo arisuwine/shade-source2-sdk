@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8c0
+             * Size: 0x920
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CMarkupVolumeWithRef : public shade::sdk::server::CMarkupVolumeTagged {
             public:
-                std::uint8_t pad_0898[0x8]; // 0x0898, 0x8 bytes
-                bool m_bUseRef; // 0x08a0, 0x1 bytes
-                std::uint8_t pad_08a1[0x3]; // 0x08a1, 0x3 bytes
-                Vector m_vRefPosEntitySpace; // 0x08a4, 0xc bytes
-                VectorWS m_vRefPosWorldSpace; // 0x08b0, 0xc bytes
-                float m_flRefDot; // 0x08bc, 0x4 bytes
+                std::uint8_t pad_08f8[0x8]; // 0x08f8, 0x8 bytes
+                bool m_bUseRef; // 0x0900, 0x1 bytes
+                std::uint8_t pad_0901[0x3]; // 0x0901, 0x3 bytes
+                Vector m_vRefPosEntitySpace; // 0x0904, 0xc bytes
+                VectorWS m_vRefPosWorldSpace; // 0x0910, 0xc bytes
+                float m_flRefDot; // 0x091c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CMarkupVolumeWithRef) == 0x8C0, "CMarkupVolumeWithRef size mismatch");
+            static_assert(sizeof(CMarkupVolumeWithRef) == 0x920, "CMarkupVolumeWithRef size mismatch");
         }
     }
 }

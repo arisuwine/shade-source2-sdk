@@ -16,6 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CBasePlayerController.hpp"
+#include "shade/sdk/client/HeroID_t.hpp"
 #include "shade/sdk/client/ParticleIndex_t.hpp"
 #include "shade/sdk/client/PlayerID_t.hpp"
 #include "shade/sdk/client/ShopItemViewMode_t.hpp"
@@ -27,6 +28,7 @@ namespace shade {
             class CUnitOrders;
             class C_BaseEntity;
             class C_DOTABaseAbility;
+            class C_DOTAWearableItem;
             class C_DOTA_BaseNPC;
             class ClientQuickBuyItemState;
             struct NeutralCampStackPullAlarm_t;
@@ -39,7 +41,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xf20
+             * Size: 0xf40
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -179,15 +181,18 @@ namespace shade {
                 std::uint8_t pad_0d8c[0x4]; // 0x0d8c, 0x4 bytes
                 CUtlVector<shade::sdk::client::sControlGroupElem> m_ControlGroups[0xa]; // 0x0d90, 0xf0 bytes
                 KeyValues *m_pkvControlGroupKV; // 0x0e80, 0x8 bytes
-                std::uint8_t pad_0e88[0x58]; // 0x0e88, 0x58 bytes
-                float m_flAltHeldStartTime; // 0x0ee0, 0x4 bytes
-                std::uint8_t pad_0ee4[0x3c]; // 0x0ee4, 0x3c bytes
+                shade::sdk::client::HeroID_t m_cachedWearablesHeroID; // 0x0e88, 0x4 bytes
+                std::uint8_t pad_0e8c[0x4]; // 0x0e8c, 0x4 bytes
+                CUtlVector<shade::sdk::client::C_DOTAWearableItem*> m_vecCachedWearables; // 0x0e90, 0x18 bytes
+                std::uint8_t pad_0ea8[0x58]; // 0x0ea8, 0x58 bytes
+                float m_flAltHeldStartTime; // 0x0f00, 0x4 bytes
+                std::uint8_t pad_0f04[0x3c]; // 0x0f04, 0x3c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTAPlayerController) == 0xF20, "C_DOTAPlayerController size mismatch");
+            static_assert(sizeof(C_DOTAPlayerController) == 0xF40, "C_DOTAPlayerController size mismatch");
         }
     }
 }

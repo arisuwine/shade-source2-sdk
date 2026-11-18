@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x888
+             * Size: 0x8e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,22 +32,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CEntityDissolve : public shade::sdk::server::CBaseModelEntity {
             public:
-                float m_flFadeInStart; // 0x0858, 0x4 bytes
-                float m_flFadeInLength; // 0x085c, 0x4 bytes
-                float m_flFadeOutModelStart; // 0x0860, 0x4 bytes
-                float m_flFadeOutModelLength; // 0x0864, 0x4 bytes
-                float m_flFadeOutStart; // 0x0868, 0x4 bytes
-                float m_flFadeOutLength; // 0x086c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0870, 0x4 bytes
-                shade::sdk::client::EntityDissolveType_t m_nDissolveType; // 0x0874, 0x4 bytes
-                VectorWS m_vDissolverOrigin; // 0x0878, 0xc bytes
-                std::uint32_t m_nMagnitude; // 0x0884, 0x4 bytes
+                float m_flFadeInStart; // 0x08b8, 0x4 bytes
+                float m_flFadeInLength; // 0x08bc, 0x4 bytes
+                float m_flFadeOutModelStart; // 0x08c0, 0x4 bytes
+                float m_flFadeOutModelLength; // 0x08c4, 0x4 bytes
+                float m_flFadeOutStart; // 0x08c8, 0x4 bytes
+                float m_flFadeOutLength; // 0x08cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x08d0, 0x4 bytes
+                shade::sdk::client::EntityDissolveType_t m_nDissolveType; // 0x08d4, 0x4 bytes
+                VectorWS m_vDissolverOrigin; // 0x08d8, 0xc bytes
+                std::uint32_t m_nMagnitude; // 0x08e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEntityDissolve) == 0x888, "CEntityDissolve size mismatch");
+            static_assert(sizeof(CEntityDissolve) == 0x8E8, "CEntityDissolve size mismatch");
         }
     }
 }

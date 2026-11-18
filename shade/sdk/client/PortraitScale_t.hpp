@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class PortraitScale_t : std::int32_t {
+            enum class PortraitScale_t : std::uint32_t {
                 PORTRAIT_SCALE_INVALID = -0x1,
                 PORTRAIT_SCALE_LOADOUT = 0x0,
                 PORTRAIT_SCALE_ALTERNATE_LOADOUT = 0x1,

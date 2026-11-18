@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1b60
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,25 +31,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_PrimalBeast_Uproar : public shade::sdk::server::CDOTA_Modifier_Stacking_Base {
             public:
-                std::int32_t stack_limit; // 0x1ac8, 0x4 bytes
-                std::int32_t damage_limit; // 0x1acc, 0x4 bytes
-                std::int32_t stack_count_increase_on_disable; // 0x1ad0, 0x4 bytes
-                float stack_duration; // 0x1ad4, 0x4 bytes
-                float damage_min; // 0x1ad8, 0x4 bytes
-                float damage_max; // 0x1adc, 0x4 bytes
-                std::int32_t bonus_damage_per_stack; // 0x1ae0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFxIndexA; // 0x1ae4, 0x4 bytes
-                std::int32_t iCur_stack; // 0x1ae8, 0x4 bytes
-                float slow_duration; // 0x1aec, 0x4 bytes
-                std::uint8_t pad_1af0[0x18]; // 0x1af0, 0x18 bytes
-                float m_fTotalDamage; // 0x1b08, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastStackTime; // 0x1b0c, 0x4 bytes
+                std::int32_t stack_limit; // 0x1b18, 0x4 bytes
+                std::int32_t damage_limit; // 0x1b1c, 0x4 bytes
+                float stack_duration; // 0x1b20, 0x4 bytes
+                float damage_min; // 0x1b24, 0x4 bytes
+                float damage_max; // 0x1b28, 0x4 bytes
+                std::int32_t bonus_damage_per_stack; // 0x1b2c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFxIndexA; // 0x1b30, 0x4 bytes
+                std::int32_t iCur_stack; // 0x1b34, 0x4 bytes
+                float slow_duration; // 0x1b38, 0x4 bytes
+                std::uint8_t pad_1b3c[0x1c]; // 0x1b3c, 0x1c bytes
+                float m_fTotalDamage; // 0x1b58, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastStackTime; // 0x1b5c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_PrimalBeast_Uproar) == 0x1B10, "CDOTA_Modifier_PrimalBeast_Uproar size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_PrimalBeast_Uproar) == 0x1B60, "CDOTA_Modifier_PrimalBeast_Uproar size mismatch");
         }
     }
 }

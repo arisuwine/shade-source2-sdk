@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AbyssalUnderlord_DarkRift : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nfxTargetTp; // 0x1aa8, 0x4 bytes
-                float radius; // 0x1aac, 0x4 bytes
-                std::int32_t duration; // 0x1ab0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nfxAmbientFx; // 0x1ab4, 0x4 bytes
-                bool bPointTarget; // 0x1ab8, 0x1 bytes
-                std::uint8_t pad_1ab9[0x3]; // 0x1ab9, 0x3 bytes
-                VectorWS vDestination; // 0x1abc, 0xc bytes
-                std::uint8_t pad_1ac8[0x18]; // 0x1ac8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxTargetTp; // 0x1af8, 0x4 bytes
+                float radius; // 0x1afc, 0x4 bytes
+                std::int32_t duration; // 0x1b00, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxAmbientFx; // 0x1b04, 0x4 bytes
+                bool bPointTarget; // 0x1b08, 0x1 bytes
+                std::uint8_t pad_1b09[0x3]; // 0x1b09, 0x3 bytes
+                VectorWS vDestination; // 0x1b0c, 0xc bytes
+                std::uint8_t pad_1b18[0x18]; // 0x1b18, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AbyssalUnderlord_DarkRift) == 0x1AE0, "CDOTA_Modifier_AbyssalUnderlord_DarkRift size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AbyssalUnderlord_DarkRift) == 0x1B30, "CDOTA_Modifier_AbyssalUnderlord_DarkRift size mismatch");
         }
     }
 }

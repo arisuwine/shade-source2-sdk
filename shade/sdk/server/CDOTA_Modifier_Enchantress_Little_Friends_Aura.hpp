@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,23 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Enchantress_Little_Friends_Aura : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1aa8, 0x4 bytes
-                std::int32_t m_nAlliesTaunted; // 0x1aac, 0x4 bytes
-                bool m_bRelicTriggered; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
-                float radius; // 0x1ab4, 0x4 bytes
-                std::int32_t damage_amplification; // 0x1ab8, 0x4 bytes
-                std::int32_t damage_reduction; // 0x1abc, 0x4 bytes
-                float root_base_duration; // 0x1ac0, 0x4 bytes
-                float root_per_target; // 0x1ac4, 0x4 bytes
-                float max_root; // 0x1ac8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastSeen; // 0x1acc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1af8, 0x4 bytes
+                std::int32_t m_nAlliesTaunted; // 0x1afc, 0x4 bytes
+                bool m_bRelicTriggered; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x3]; // 0x1b01, 0x3 bytes
+                float radius; // 0x1b04, 0x4 bytes
+                std::int32_t damage_amplification; // 0x1b08, 0x4 bytes
+                std::int32_t damage_reduction; // 0x1b0c, 0x4 bytes
+                float root_base_duration; // 0x1b10, 0x4 bytes
+                float root_per_target; // 0x1b14, 0x4 bytes
+                float max_root; // 0x1b18, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastSeen; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Enchantress_Little_Friends_Aura) == 0x1AD0, "CDOTA_Modifier_Enchantress_Little_Friends_Aura size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Enchantress_Little_Friends_Aura) == 0x1B20, "CDOTA_Modifier_Enchantress_Little_Friends_Aura size mismatch");
         }
     }
 }

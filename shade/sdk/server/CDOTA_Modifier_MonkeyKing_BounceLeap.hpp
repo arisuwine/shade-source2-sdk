@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x1b50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,34 +38,34 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_MonkeyKing_BounceLeap : public shade::sdk::client::CDOTA_Buff {
             public:
-                float give_up_distance; // 0x1aa8, 0x4 bytes
-                float ground_jump_distance; // 0x1aac, 0x4 bytes
-                float m_flZDelta; // 0x1ab0, 0x4 bytes
-                float perched_day_vision; // 0x1ab4, 0x4 bytes
-                float perched_night_vision; // 0x1ab8, 0x4 bytes
-                VectorWS m_vStart; // 0x1abc, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1ac8, 0x4 bytes
-                VectorWS m_vTargetPos; // 0x1acc, 0xc bytes
-                float m_flSpeed; // 0x1ad8, 0x4 bytes
-                bool m_bTargetingEntity; // 0x1adc, 0x1 bytes
-                bool m_bGroundToTree; // 0x1add, 0x1 bytes
-                bool m_bTreeToGround; // 0x1ade, 0x1 bytes
-                bool m_bTreeToTree; // 0x1adf, 0x1 bytes
-                bool m_bIsSpringJump; // 0x1ae0, 0x1 bytes
-                std::uint8_t pad_1ae1[0x3]; // 0x1ae1, 0x3 bytes
-                float m_fSpringChanneledPercent; // 0x1ae4, 0x4 bytes
-                std::int32_t m_nLeapSpeed; // 0x1ae8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1aec, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex2; // 0x1af0, 0x4 bytes
-                float m_flFlightDuration; // 0x1af4, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1af8, 0x4 bytes
-                std::uint8_t pad_1afc[0x4]; // 0x1afc, 0x4 bytes
+                float give_up_distance; // 0x1af8, 0x4 bytes
+                float ground_jump_distance; // 0x1afc, 0x4 bytes
+                float m_flZDelta; // 0x1b00, 0x4 bytes
+                float perched_day_vision; // 0x1b04, 0x4 bytes
+                float perched_night_vision; // 0x1b08, 0x4 bytes
+                VectorWS m_vStart; // 0x1b0c, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1b18, 0x4 bytes
+                VectorWS m_vTargetPos; // 0x1b1c, 0xc bytes
+                float m_flSpeed; // 0x1b28, 0x4 bytes
+                bool m_bTargetingEntity; // 0x1b2c, 0x1 bytes
+                bool m_bGroundToTree; // 0x1b2d, 0x1 bytes
+                bool m_bTreeToGround; // 0x1b2e, 0x1 bytes
+                bool m_bTreeToTree; // 0x1b2f, 0x1 bytes
+                bool m_bIsSpringJump; // 0x1b30, 0x1 bytes
+                std::uint8_t pad_1b31[0x3]; // 0x1b31, 0x3 bytes
+                float m_fSpringChanneledPercent; // 0x1b34, 0x4 bytes
+                std::int32_t m_nLeapSpeed; // 0x1b38, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b3c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex2; // 0x1b40, 0x4 bytes
+                float m_flFlightDuration; // 0x1b44, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1b48, 0x4 bytes
+                std::uint8_t pad_1b4c[0x4]; // 0x1b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_BounceLeap) == 0x1B00, "CDOTA_Modifier_MonkeyKing_BounceLeap size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_BounceLeap) == 0x1B50, "CDOTA_Modifier_MonkeyKing_BounceLeap size mismatch");
         }
     }
 }

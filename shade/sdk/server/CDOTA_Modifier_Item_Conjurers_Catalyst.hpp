@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1b60
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,25 +31,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Conjurers_Catalyst : public shade::sdk::server::CDOTA_Buff_Item {
             public:
-                float damage_aoe; // 0x1aa8, 0x4 bytes
-                float damage; // 0x1aac, 0x4 bytes
-                float damage_creep; // 0x1ab0, 0x4 bytes
-                float cooldown; // 0x1ab4, 0x4 bytes
-                float duration; // 0x1ab8, 0x4 bytes
-                std::int32_t damage_threshold; // 0x1abc, 0x4 bytes
-                bool has_hands; // 0x1ac0, 0x1 bytes
-                std::uint8_t pad_1ac1[0x3]; // 0x1ac1, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ac4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_OverheatTimer; // 0x1ad0, 0x18 bytes
-                std::uint8_t pad_1ae8[0x28]; // 0x1ae8, 0x28 bytes
+                float damage_aoe; // 0x1af8, 0x4 bytes
+                float damage; // 0x1afc, 0x4 bytes
+                float damage_creep; // 0x1b00, 0x4 bytes
+                float cooldown; // 0x1b04, 0x4 bytes
+                float duration; // 0x1b08, 0x4 bytes
+                std::int32_t damage_threshold; // 0x1b0c, 0x4 bytes
+                bool has_hands; // 0x1b10, 0x1 bytes
+                std::uint8_t pad_1b11[0x3]; // 0x1b11, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b14, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_OverheatTimer; // 0x1b20, 0x18 bytes
+                std::uint8_t pad_1b38[0x28]; // 0x1b38, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Conjurers_Catalyst) == 0x1B10, "CDOTA_Modifier_Item_Conjurers_Catalyst size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Conjurers_Catalyst) == 0x1B60, "CDOTA_Modifier_Item_Conjurers_Catalyst size mismatch");
         }
     }
 }

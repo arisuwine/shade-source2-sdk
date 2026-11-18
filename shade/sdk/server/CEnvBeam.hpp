@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x990
+             * Size: 0x9f0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,35 +44,35 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvBeam : public shade::sdk::server::CBeam {
             public:
-                std::int32_t m_active; // 0x08f8, 0x4 bytes
-                std::uint8_t pad_08fc[0x4]; // 0x08fc, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_spriteTexture; // 0x0900, 0x8 bytes
-                CUtlSymbolLarge m_iszStartEntity; // 0x0908, 0x8 bytes
-                CUtlSymbolLarge m_iszEndEntity; // 0x0910, 0x8 bytes
-                float m_life; // 0x0918, 0x4 bytes
-                float m_boltWidth; // 0x091c, 0x4 bytes
-                float m_noiseAmplitude; // 0x0920, 0x4 bytes
-                std::int32_t m_speed; // 0x0924, 0x4 bytes
-                float m_restrike; // 0x0928, 0x4 bytes
-                std::uint8_t pad_092c[0x4]; // 0x092c, 0x4 bytes
-                CUtlSymbolLarge m_iszSpriteName; // 0x0930, 0x8 bytes
-                std::int32_t m_frameStart; // 0x0938, 0x4 bytes
-                VectorWS m_vEndPointWorld; // 0x093c, 0xc bytes
-                Vector m_vEndPointRelative; // 0x0948, 0xc bytes
-                float m_radius; // 0x0954, 0x4 bytes
-                shade::sdk::server::Touch_t m_TouchType; // 0x0958, 0x4 bytes
+                std::int32_t m_active; // 0x0958, 0x4 bytes
                 std::uint8_t pad_095c[0x4]; // 0x095c, 0x4 bytes
-                CUtlSymbolLarge m_iFilterName; // 0x0960, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hFilter; // 0x0968, 0x4 bytes
-                std::uint8_t pad_096c[0x4]; // 0x096c, 0x4 bytes
-                CUtlSymbolLarge m_iszDecal; // 0x0970, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTouchedByEntity; // 0x0978, 0x18 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_spriteTexture; // 0x0960, 0x8 bytes
+                CUtlSymbolLarge m_iszStartEntity; // 0x0968, 0x8 bytes
+                CUtlSymbolLarge m_iszEndEntity; // 0x0970, 0x8 bytes
+                float m_life; // 0x0978, 0x4 bytes
+                float m_boltWidth; // 0x097c, 0x4 bytes
+                float m_noiseAmplitude; // 0x0980, 0x4 bytes
+                std::int32_t m_speed; // 0x0984, 0x4 bytes
+                float m_restrike; // 0x0988, 0x4 bytes
+                std::uint8_t pad_098c[0x4]; // 0x098c, 0x4 bytes
+                CUtlSymbolLarge m_iszSpriteName; // 0x0990, 0x8 bytes
+                std::int32_t m_frameStart; // 0x0998, 0x4 bytes
+                VectorWS m_vEndPointWorld; // 0x099c, 0xc bytes
+                Vector m_vEndPointRelative; // 0x09a8, 0xc bytes
+                float m_radius; // 0x09b4, 0x4 bytes
+                shade::sdk::server::Touch_t m_TouchType; // 0x09b8, 0x4 bytes
+                std::uint8_t pad_09bc[0x4]; // 0x09bc, 0x4 bytes
+                CUtlSymbolLarge m_iFilterName; // 0x09c0, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFilter; // 0x09c8, 0x4 bytes
+                std::uint8_t pad_09cc[0x4]; // 0x09cc, 0x4 bytes
+                CUtlSymbolLarge m_iszDecal; // 0x09d0, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTouchedByEntity; // 0x09d8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvBeam) == 0x990, "CEnvBeam size mismatch");
+            static_assert(sizeof(CEnvBeam) == 0x9F0, "CEnvBeam size mismatch");
         }
     }
 }

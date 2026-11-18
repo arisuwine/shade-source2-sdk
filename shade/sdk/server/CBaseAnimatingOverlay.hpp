@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,7 +37,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBaseAnimatingOverlay) == 0x878, "CBaseAnimatingOverlay size mismatch");
+            static_assert(sizeof(CBaseAnimatingOverlay) == 0x8D8, "CBaseAnimatingOverlay size mismatch");
         }
     }
 }

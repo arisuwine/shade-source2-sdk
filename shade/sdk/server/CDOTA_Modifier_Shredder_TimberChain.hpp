@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,19 +37,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Shredder_TimberChain : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hDamaged; // 0x1aa8, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1ac0, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1ac4, 0xc bytes
-                std::int32_t speed; // 0x1ad0, 0x4 bytes
-                std::int32_t radius; // 0x1ad4, 0x4 bytes
-                std::int32_t damage; // 0x1ad8, 0x4 bytes
-                std::int32_t tree_splinter_count; // 0x1adc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hDamaged; // 0x1af8, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1b10, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1b14, 0xc bytes
+                std::int32_t speed; // 0x1b20, 0x4 bytes
+                std::int32_t radius; // 0x1b24, 0x4 bytes
+                std::int32_t damage; // 0x1b28, 0x4 bytes
+                std::int32_t tree_splinter_count; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Shredder_TimberChain) == 0x1AE0, "CDOTA_Modifier_Shredder_TimberChain size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Shredder_TimberChain) == 0x1B30, "CDOTA_Modifier_Shredder_TimberChain size mismatch");
         }
     }
 }

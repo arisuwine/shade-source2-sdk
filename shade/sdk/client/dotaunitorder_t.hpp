@@ -59,7 +59,8 @@ namespace shade {
                 DOTA_UNIT_ORDER_MOVE_RELATIVE = 0x27,
                 DOTA_UNIT_ORDER_CAST_TOGGLE_ALT = 0x28,
                 DOTA_UNIT_ORDER_CONSUME_ITEM = 0x29,
-                DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL = 0x2a
+                DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL = 0x2a,
+                DOTA_UNIT_ORDER_INTERACT_WITH_TARGET = 0x2b
             };
         }
     }

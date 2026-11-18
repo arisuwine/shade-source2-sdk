@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace animgraphlib {
-            enum class AnimScriptType : std::int16_t {
+            enum class AnimScriptType : std::uint16_t {
                 ANIMSCRIPT_TYPE_INVALID = -0x1,
                 ANIMSCRIPT_FUSE_GENERAL = 0x0,
                 ANIMSCRIPT_FUSE_STATEMACHINE = 0x1

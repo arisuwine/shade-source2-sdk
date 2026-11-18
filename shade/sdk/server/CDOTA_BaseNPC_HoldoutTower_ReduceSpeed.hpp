@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_HoldoutTower_ReduceSpeed) == 0x1AE0, "CDOTA_BaseNPC_HoldoutTower_ReduceSpeed size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_HoldoutTower_ReduceSpeed) == 0x1B70, "CDOTA_BaseNPC_HoldoutTower_ReduceSpeed size mismatch");
         }
     }
 }

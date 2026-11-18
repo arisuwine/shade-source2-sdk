@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_BackdoorProtection : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bActivated; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                float m_flHealthToRestore; // 0x1aac, 0x4 bytes
-                std::int32_t radius; // 0x1ab0, 0x4 bytes
-                float activation_time; // 0x1ab4, 0x4 bytes
-                std::int32_t regen_rate; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_TimerToActivate; // 0x1ac0, 0x18 bytes
+                bool m_bActivated; // 0x1af8, 0x1 bytes
+                std::uint8_t pad_1af9[0x3]; // 0x1af9, 0x3 bytes
+                float m_flHealthToRestore; // 0x1afc, 0x4 bytes
+                std::int32_t radius; // 0x1b00, 0x4 bytes
+                float activation_time; // 0x1b04, 0x4 bytes
+                std::int32_t regen_rate; // 0x1b08, 0x4 bytes
+                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_TimerToActivate; // 0x1b10, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_BackdoorProtection) == 0x1AD8, "CDOTA_Modifier_BackdoorProtection size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_BackdoorProtection) == 0x1B28, "CDOTA_Modifier_BackdoorProtection size mismatch");
         }
     }
 }

@@ -50,7 +50,8 @@ namespace shade {
                 bool m_bStopImmediately; // 0x0038, 0x1 bytes
                 bool m_bDetachFromOwner; // 0x0039, 0x1 bytes
                 bool m_bPlayEndCap; // 0x003a, 0x1 bytes
-                std::uint8_t pad_003b[0x5]; // 0x003b, 0x5 bytes
+                bool m_bAggregate; // 0x003b, 0x1 bytes
+                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
                 CUtlString m_attachmentPoint0; // 0x0040, 0x8 bytes
                 shade::sdk::animationsystem::ParticleAttachment_t m_attachmentType0; // 0x0048, 0x4 bytes
                 std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes

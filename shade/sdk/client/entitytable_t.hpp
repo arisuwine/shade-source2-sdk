@@ -42,7 +42,7 @@ namespace shade {
                 bool bWasSaved; // 0x0014, 0x1 bytes
                 std::uint8_t pad_0015[0x3]; // 0x0015, 0x3 bytes
                 shade::sdk::client::SaveRestoreTableFlags_t flags; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                std::int32_t spawngroupslot; // 0x001c, 0x4 bytes
                 CUtlSymbolLarge classname; // 0x0020, 0x8 bytes
                 CUtlSymbolLarge globalname; // 0x0028, 0x8 bytes
                 CUtlSymbolLarge entityname; // 0x0030, 0x8 bytes

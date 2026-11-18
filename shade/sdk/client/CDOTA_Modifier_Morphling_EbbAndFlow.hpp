@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1b60
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,23 +30,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Morphling_EbbAndFlow : public shade::sdk::client::CDOTA_Buff {
             public:
-                float flStrengthBonus; // 0x1aa8, 0x4 bytes
-                float flAgilityBonus; // 0x1aac, 0x4 bytes
-                float stats_pct; // 0x1ab0, 0x4 bytes
-                float model_scale; // 0x1ab4, 0x4 bytes
-                float swell_up_duration; // 0x1ab8, 0x4 bytes
-                float swell_down_duration; // 0x1abc, 0x4 bytes
-                float max_swell_duration; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_SwellUpTimer; // 0x1ac8, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_SwellDownTimer; // 0x1ae0, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_MaxSwellTimer; // 0x1af8, 0x18 bytes
+                float flStrengthBonus; // 0x1af8, 0x4 bytes
+                float flAgilityBonus; // 0x1afc, 0x4 bytes
+                float stats_pct; // 0x1b00, 0x4 bytes
+                float model_scale; // 0x1b04, 0x4 bytes
+                float swell_up_duration; // 0x1b08, 0x4 bytes
+                float swell_down_duration; // 0x1b0c, 0x4 bytes
+                float max_swell_duration; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_SwellUpTimer; // 0x1b18, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_SwellDownTimer; // 0x1b30, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_MaxSwellTimer; // 0x1b48, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Morphling_EbbAndFlow) == 0x1B10, "CDOTA_Modifier_Morphling_EbbAndFlow size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Morphling_EbbAndFlow) == 0x1B60, "CDOTA_Modifier_Morphling_EbbAndFlow size mismatch");
         }
     }
 }

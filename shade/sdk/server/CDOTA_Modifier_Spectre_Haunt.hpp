@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,19 +38,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Spectre_Haunt : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bRealityApplied; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                std::int32_t destroy_if_target_is_dead; // 0x1aac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fStartAttackTime; // 0x1ab0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1ab4, 0x4 bytes
-                bool m_bTargetIsAlive; // 0x1ab8, 0x1 bytes
-                std::uint8_t pad_1ab9[0x7]; // 0x1ab9, 0x7 bytes
+                bool m_bRealityApplied; // 0x1af8, 0x1 bytes
+                std::uint8_t pad_1af9[0x3]; // 0x1af9, 0x3 bytes
+                std::int32_t destroy_if_target_is_dead; // 0x1afc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fStartAttackTime; // 0x1b00, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1b04, 0x4 bytes
+                bool m_bTargetIsAlive; // 0x1b08, 0x1 bytes
+                std::uint8_t pad_1b09[0x7]; // 0x1b09, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Spectre_Haunt) == 0x1AC0, "CDOTA_Modifier_Spectre_Haunt size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Spectre_Haunt) == 0x1B10, "CDOTA_Modifier_Spectre_Haunt size mismatch");
         }
     }
 }

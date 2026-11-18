@@ -33,9 +33,10 @@ namespace shade {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0008, 0x28 bytes
                 std::int32_t m_nTotalPausedTicks; // 0x0030, 0x4 bytes
-                std::int32_t m_nPauseStartTick; // 0x0034, 0x4 bytes
-                bool m_bGamePaused; // 0x0038, 0x1 bytes
-                std::uint8_t pad_0039[0x7]; // 0x0039, 0x7 bytes
+                std::int32_t m_nTotalGameDeltaTicks; // 0x0034, 0x4 bytes
+                std::int32_t m_nPauseStartTick; // 0x0038, 0x4 bytes
+                bool m_bGamePaused; // 0x003c, 0x1 bytes
+                std::uint8_t pad_003d[0x3]; // 0x003d, 0x3 bytes
             };
             #pragma pack(pop)
 

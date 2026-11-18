@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleOrientationSetMode_t : std::int32_t {
+            enum class ParticleOrientationSetMode_t : std::uint32_t {
                 PARTICLE_ORIENTATION_SET_NONE = -0x1,
                 PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
                 PARTICLE_ORIENTATION_SET_FROM_NORMAL = 0x1,

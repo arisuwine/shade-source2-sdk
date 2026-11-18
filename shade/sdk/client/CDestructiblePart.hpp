@@ -38,8 +38,9 @@ namespace shade {
             public:
                 CGlobalSymbol m_DebugName; // 0x0000, 0x8 bytes
                 shade::sdk::client::HitGroup_t m_nHitGroup; // 0x0008, 0x4 bytes
-                bool m_bDisableHitGroupWhenDestroyed; // 0x000c, 0x1 bytes
-                std::uint8_t pad_000d[0x3]; // 0x000d, 0x3 bytes
+                bool m_bIsIntactProxy; // 0x000c, 0x1 bytes
+                bool m_bDisableHitGroupWhenDestroyed; // 0x000d, 0x1 bytes
+                std::uint8_t pad_000e[0x2]; // 0x000e, 0x2 bytes
                 CUtlVector<shade::sdk::client::HitGroup_t> m_nOtherHitgroupsToDestroyWhenFullyDestructed; // 0x0010, 0x18 bytes
                 bool m_bOnlyDestroyWhenGibbing; // 0x0028, 0x1 bytes
                 std::uint8_t pad_0029[0x7]; // 0x0029, 0x7 bytes

@@ -42,7 +42,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x2ee8
+             * Size: 0x2ee0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -50,82 +50,82 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderModels : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                bool m_bOnlyRenderInEffectsBloomPass; // 0x0230, 0x1 bytes
-                bool m_bOnlyRenderInEffectsWaterPass; // 0x0231, 0x1 bytes
-                bool m_bUseMixedResolutionRendering; // 0x0232, 0x1 bytes
-                bool m_bOnlyRenderInEffecsGameOverlay; // 0x0233, 0x1 bytes
-                std::uint8_t pad_0234[0x4]; // 0x0234, 0x4 bytes
-                CUtlVector<shade::sdk::particles::ModelReference_t> m_ModelList; // 0x0238, 0x18 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nBodyGroupField; // 0x0250, 0x4 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nSubModelField; // 0x0254, 0x4 bytes
-                bool m_bIgnoreNormal; // 0x0258, 0x1 bytes
-                bool m_bOrientZ; // 0x0259, 0x1 bytes
-                bool m_bCenterOffset; // 0x025a, 0x1 bytes
-                std::uint8_t pad_025b[0x5]; // 0x025b, 0x5 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecLocalOffset; // 0x0260, 0x6d8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecLocalRotation; // 0x0938, 0x6d8 bytes
-                bool m_bIgnoreRadius; // 0x1010, 0x1 bytes
-                std::uint8_t pad_1011[0x3]; // 0x1011, 0x3 bytes
-                std::int32_t m_nModelScaleCP; // 0x1014, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecComponentScale; // 0x1018, 0x6d8 bytes
-                bool m_bLocalScale; // 0x16f0, 0x1 bytes
-                std::uint8_t pad_16f1[0x3]; // 0x16f1, 0x3 bytes
-                std::int32_t m_nSizeCullBloat; // 0x16f4, 0x4 bytes
-                bool m_bAnimated; // 0x16f8, 0x1 bytes
-                std::uint8_t pad_16f9[0x7]; // 0x16f9, 0x7 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flAnimationRate; // 0x1700, 0x178 bytes
-                bool m_bScaleAnimationRate; // 0x1878, 0x1 bytes
-                bool m_bForceLoopingAnimation; // 0x1879, 0x1 bytes
-                bool m_bResetAnimOnStop; // 0x187a, 0x1 bytes
-                bool m_bManualAnimFrame; // 0x187b, 0x1 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAnimationScaleField; // 0x187c, 0x4 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAnimationField; // 0x1880, 0x4 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nManualFrameField; // 0x1884, 0x4 bytes
-                char m_ActivityName[0x100]; // 0x1888, 0x100 bytes
-                char m_SequenceName[0x100]; // 0x1988, 0x100 bytes
-                bool m_bEnableClothSimulation; // 0x1a88, 0x1 bytes
-                bool m_bDisableClothGroundCollision; // 0x1a89, 0x1 bytes
-                char m_ClothEffectName[0x40]; // 0x1a8a, 0x40 bytes
-                std::uint8_t pad_1aca[0x6]; // 0x1aca, 0x6 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hOverrideMaterial; // 0x1ad0, 0x8 bytes
-                bool m_bOverrideTranslucentMaterials; // 0x1ad8, 0x1 bytes
-                std::uint8_t pad_1ad9[0x7]; // 0x1ad9, 0x7 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_nSkin; // 0x1ae0, 0x178 bytes
-                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x1c58, 0x18 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flRenderFilter; // 0x1c70, 0x178 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flManualModelSelection; // 0x1de8, 0x178 bytes
-                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x1f60, 0x60 bytes
-                std::int32_t m_nLOD; // 0x1fc0, 0x4 bytes
-                char m_EconSlotName[0x100]; // 0x1fc4, 0x100 bytes
-                bool m_bOriginalModel; // 0x20c4, 0x1 bytes
-                bool m_bSuppressTint; // 0x20c5, 0x1 bytes
-                std::uint8_t pad_20c6[0x2]; // 0x20c6, 0x2 bytes
-                shade::sdk::particles::RenderModelSubModelFieldType_t m_nSubModelFieldType; // 0x20c8, 0x4 bytes
-                bool m_bDisableShadows; // 0x20cc, 0x1 bytes
-                bool m_bDisableDepthPrepass; // 0x20cd, 0x1 bytes
-                bool m_bAcceptsDecals; // 0x20ce, 0x1 bytes
-                bool m_bForceDrawInterlevedWithSiblings; // 0x20cf, 0x1 bytes
-                bool m_bDoNotDrawInParticlePass; // 0x20d0, 0x1 bytes
-                bool m_bAllowApproximateTransforms; // 0x20d1, 0x1 bytes
-                char m_szRenderAttribute[0x104]; // 0x20d2, 0x104 bytes
-                std::uint8_t pad_21d6[0x2]; // 0x21d6, 0x2 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x21d8, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x2350, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRollScale; // 0x24c8, 0x178 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlpha2Field; // 0x2640, 0x4 bytes
-                std::uint8_t pad_2644[0x4]; // 0x2644, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x2648, 0x6d8 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x2d20, 0x4 bytes
-                std::uint8_t pad_2d24[0x4]; // 0x2d24, 0x4 bytes
-                CUtlString m_strLightStyle; // 0x2d28, 0x8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flLightStyleTime; // 0x2d30, 0x178 bytes
-                std::uint8_t pad_2ea8[0x40]; // 0x2ea8, 0x40 bytes
+                bool m_bOnlyRenderInEffectsBloomPass; // 0x0228, 0x1 bytes
+                bool m_bOnlyRenderInEffectsWaterPass; // 0x0229, 0x1 bytes
+                bool m_bUseMixedResolutionRendering; // 0x022a, 0x1 bytes
+                bool m_bOnlyRenderInEffecsGameOverlay; // 0x022b, 0x1 bytes
+                std::uint8_t pad_022c[0x4]; // 0x022c, 0x4 bytes
+                CUtlVector<shade::sdk::particles::ModelReference_t> m_ModelList; // 0x0230, 0x18 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nBodyGroupField; // 0x0248, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nSubModelField; // 0x024c, 0x4 bytes
+                bool m_bIgnoreNormal; // 0x0250, 0x1 bytes
+                bool m_bOrientZ; // 0x0251, 0x1 bytes
+                bool m_bCenterOffset; // 0x0252, 0x1 bytes
+                std::uint8_t pad_0253[0x5]; // 0x0253, 0x5 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecLocalOffset; // 0x0258, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecLocalRotation; // 0x0930, 0x6d8 bytes
+                bool m_bIgnoreRadius; // 0x1008, 0x1 bytes
+                std::uint8_t pad_1009[0x3]; // 0x1009, 0x3 bytes
+                std::int32_t m_nModelScaleCP; // 0x100c, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecComponentScale; // 0x1010, 0x6d8 bytes
+                bool m_bLocalScale; // 0x16e8, 0x1 bytes
+                std::uint8_t pad_16e9[0x3]; // 0x16e9, 0x3 bytes
+                std::int32_t m_nSizeCullBloat; // 0x16ec, 0x4 bytes
+                bool m_bAnimated; // 0x16f0, 0x1 bytes
+                std::uint8_t pad_16f1[0x7]; // 0x16f1, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flAnimationRate; // 0x16f8, 0x178 bytes
+                bool m_bScaleAnimationRate; // 0x1870, 0x1 bytes
+                bool m_bForceLoopingAnimation; // 0x1871, 0x1 bytes
+                bool m_bResetAnimOnStop; // 0x1872, 0x1 bytes
+                bool m_bManualAnimFrame; // 0x1873, 0x1 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAnimationScaleField; // 0x1874, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAnimationField; // 0x1878, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nManualFrameField; // 0x187c, 0x4 bytes
+                char m_ActivityName[0x100]; // 0x1880, 0x100 bytes
+                char m_SequenceName[0x100]; // 0x1980, 0x100 bytes
+                bool m_bEnableClothSimulation; // 0x1a80, 0x1 bytes
+                bool m_bDisableClothGroundCollision; // 0x1a81, 0x1 bytes
+                char m_ClothEffectName[0x40]; // 0x1a82, 0x40 bytes
+                std::uint8_t pad_1ac2[0x6]; // 0x1ac2, 0x6 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hOverrideMaterial; // 0x1ac8, 0x8 bytes
+                bool m_bOverrideTranslucentMaterials; // 0x1ad0, 0x1 bytes
+                std::uint8_t pad_1ad1[0x7]; // 0x1ad1, 0x7 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_nSkin; // 0x1ad8, 0x178 bytes
+                CUtlVector<shade::sdk::particles::MaterialVariable_t> m_MaterialVars; // 0x1c50, 0x18 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flRenderFilter; // 0x1c68, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flManualModelSelection; // 0x1de0, 0x178 bytes
+                shade::sdk::particleslib::CParticleModelInput m_modelInput; // 0x1f58, 0x60 bytes
+                std::int32_t m_nLOD; // 0x1fb8, 0x4 bytes
+                char m_EconSlotName[0x100]; // 0x1fbc, 0x100 bytes
+                bool m_bOriginalModel; // 0x20bc, 0x1 bytes
+                bool m_bSuppressTint; // 0x20bd, 0x1 bytes
+                std::uint8_t pad_20be[0x2]; // 0x20be, 0x2 bytes
+                shade::sdk::particles::RenderModelSubModelFieldType_t m_nSubModelFieldType; // 0x20c0, 0x4 bytes
+                bool m_bDisableShadows; // 0x20c4, 0x1 bytes
+                bool m_bDisableDepthPrepass; // 0x20c5, 0x1 bytes
+                bool m_bAcceptsDecals; // 0x20c6, 0x1 bytes
+                bool m_bForceDrawInterlevedWithSiblings; // 0x20c7, 0x1 bytes
+                bool m_bDoNotDrawInParticlePass; // 0x20c8, 0x1 bytes
+                bool m_bAllowApproximateTransforms; // 0x20c9, 0x1 bytes
+                char m_szRenderAttribute[0x104]; // 0x20ca, 0x104 bytes
+                std::uint8_t pad_21ce[0x2]; // 0x21ce, 0x2 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x21d0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x2348, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flRollScale; // 0x24c0, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlpha2Field; // 0x2638, 0x4 bytes
+                std::uint8_t pad_263c[0x4]; // 0x263c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x2640, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x2d18, 0x4 bytes
+                std::uint8_t pad_2d1c[0x4]; // 0x2d1c, 0x4 bytes
+                CUtlString m_strLightStyle; // 0x2d20, 0x8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flLightStyleTime; // 0x2d28, 0x178 bytes
+                std::uint8_t pad_2ea0[0x40]; // 0x2ea0, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderModels) == 0x2EE8, "C_OP_RenderModels size mismatch");
+            static_assert(sizeof(C_OP_RenderModels) == 0x2EE0, "C_OP_RenderModels size mismatch");
         }
     }
 }

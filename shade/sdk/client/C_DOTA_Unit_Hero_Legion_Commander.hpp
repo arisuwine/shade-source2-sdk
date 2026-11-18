@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e90
+             * Size: 0x1f18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Hero_Legion_Commander : public shade::sdk::client::C_DOTA_BaseNPC_Hero {
             public:
-                std::uint32_t m_unDuelsWon; // 0x1e88, 0x4 bytes
-                std::uint8_t pad_1e8c[0x4]; // 0x1e8c, 0x4 bytes
+                std::uint32_t m_unDuelsWon; // 0x1f10, 0x4 bytes
+                std::uint8_t pad_1f14[0x4]; // 0x1f14, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Hero_Legion_Commander) == 0x1E90, "C_DOTA_Unit_Hero_Legion_Commander size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Hero_Legion_Commander) == 0x1F18, "C_DOTA_Unit_Hero_Legion_Commander size mismatch");
         }
     }
 }

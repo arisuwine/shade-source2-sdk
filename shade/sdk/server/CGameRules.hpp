@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0xd8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -36,16 +36,18 @@ namespace shade {
                 std::int32_t m_nQuestPhase; // 0x00b0, 0x4 bytes
                 std::uint32_t m_nLastMatchTime; // 0x00b4, 0x4 bytes
                 std::uint64_t m_nLastMatchTime_MatchID64; // 0x00b8, 0x8 bytes
-                std::int32_t m_nTotalPausedTicks; // 0x00c0, 0x4 bytes
-                std::int32_t m_nPauseStartTick; // 0x00c4, 0x4 bytes
-                bool m_bGamePaused; // 0x00c8, 0x1 bytes
-                std::uint8_t pad_00c9[0x7]; // 0x00c9, 0x7 bytes
+                std::int32_t m_nLastSimulationTick; // 0x00c0, 0x4 bytes
+                std::int32_t m_nTotalPausedTicks; // 0x00c4, 0x4 bytes
+                std::int32_t m_nTotalGameDeltaTicks; // 0x00c8, 0x4 bytes
+                std::int32_t m_nPauseStartTick; // 0x00cc, 0x4 bytes
+                bool m_bGamePaused; // 0x00d0, 0x1 bytes
+                std::uint8_t pad_00d1[0x7]; // 0x00d1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CGameRules) == 0xD0, "CGameRules size mismatch");
+            static_assert(sizeof(CGameRules) == 0xD8, "CGameRules size mismatch");
         }
     }
 }

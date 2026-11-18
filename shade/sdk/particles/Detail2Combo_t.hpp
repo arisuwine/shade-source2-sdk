@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class Detail2Combo_t : std::int32_t {
+            enum class Detail2Combo_t : std::uint32_t {
                 DETAIL_2_COMBO_UNINITIALIZED = -0x1,
                 DETAIL_2_COMBO_OFF = 0x0,
                 DETAIL_2_COMBO_ADD = 0x1,

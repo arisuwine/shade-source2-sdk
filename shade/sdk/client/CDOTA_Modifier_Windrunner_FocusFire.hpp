@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b48
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,30 +39,32 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Windrunner_FocusFire : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1aa8, 0x4 bytes
-                std::int32_t focusfire_damage_reduction; // 0x1aac, 0x4 bytes
-                bool bActive; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
-                std::int32_t bonus_attack_speed; // 0x1ab4, 0x4 bytes
-                std::int32_t focusfire_fire_on_the_move; // 0x1ab8, 0x4 bytes
-                bool m_bPause; // 0x1abc, 0x1 bytes
-                std::uint8_t pad_1abd[0x3]; // 0x1abd, 0x3 bytes
-                std::int32_t m_nNumArrowsLanded; // 0x1ac0, 0x4 bytes
-                std::int32_t m_nDamageDealt; // 0x1ac4, 0x4 bytes
-                std::int32_t m_nDamageDealtMax; // 0x1ac8, 0x4 bytes
-                std::int32_t m_nTargetInitialHP; // 0x1acc, 0x4 bytes
-                bool m_bHeroKilled; // 0x1ad0, 0x1 bytes
-                bool m_bRecentFocusFireAttack; // 0x1ad1, 0x1 bytes
-                bool m_bFocusFireProcessProcs; // 0x1ad2, 0x1 bytes
-                std::uint8_t pad_1ad3[0x15]; // 0x1ad3, 0x15 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXFocusFire; // 0x1ae8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastFocusFireAttackTime; // 0x1aec, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1af8, 0x4 bytes
+                std::int32_t focusfire_damage_reduction; // 0x1afc, 0x4 bytes
+                bool bActive; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x3]; // 0x1b01, 0x3 bytes
+                std::int32_t bonus_attack_speed; // 0x1b04, 0x4 bytes
+                std::int32_t focusfire_fire_on_the_move; // 0x1b08, 0x4 bytes
+                float focusfire_attack_effectiveness; // 0x1b0c, 0x4 bytes
+                bool m_bPause; // 0x1b10, 0x1 bytes
+                std::uint8_t pad_1b11[0x3]; // 0x1b11, 0x3 bytes
+                std::int32_t m_nNumArrowsLanded; // 0x1b14, 0x4 bytes
+                std::int32_t m_nDamageDealt; // 0x1b18, 0x4 bytes
+                std::int32_t m_nDamageDealtMax; // 0x1b1c, 0x4 bytes
+                std::int32_t m_nTargetInitialHP; // 0x1b20, 0x4 bytes
+                bool m_bHeroKilled; // 0x1b24, 0x1 bytes
+                bool m_bRecentFocusFireAttack; // 0x1b25, 0x1 bytes
+                bool m_bFocusFireProcessProcs; // 0x1b26, 0x1 bytes
+                std::uint8_t pad_1b27[0x15]; // 0x1b27, 0x15 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXFocusFire; // 0x1b3c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastFocusFireAttackTime; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Windrunner_FocusFire) == 0x1AF0, "CDOTA_Modifier_Windrunner_FocusFire size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Windrunner_FocusFire) == 0x1B48, "CDOTA_Modifier_Windrunner_FocusFire size mismatch");
         }
     }
 }

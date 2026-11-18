@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -32,29 +32,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_Watch_Tower : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::TowerState_t m_nState; // 0x1aa8, 0x4 bytes
-                float m_flYaw; // 0x1aac, 0x4 bytes
-                std::int32_t m_nCaptureDuration; // 0x1ab0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flEffectiveCaptureStartTime; // 0x1ab4, 0x4 bytes
-                std::int32_t m_nCapturingPlayerCount; // 0x1ab8, 0x4 bytes
-                float m_flCaptureProgress; // 0x1abc, 0x4 bytes
-                std::int32_t m_iCapturingTeam; // 0x1ac0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFxOutpostAmbient; // 0x1ac4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDestroyTime; // 0x1ac8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flAutoChannelCompleteTime; // 0x1acc, 0x4 bytes
-                bool m_bAscensionLevelPicker; // 0x1ad0, 0x1 bytes
-                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
-                std::int32_t m_nEliteChallengeLevel; // 0x1ad4, 0x4 bytes
-                CUtlString m_strNextRoomName; // 0x1ad8, 0x8 bytes
-                CUtlString m_strNextEncounterName; // 0x1ae0, 0x8 bytes
-                bool m_bStartedBeamFacing; // 0x1ae8, 0x1 bytes
-                std::uint8_t pad_1ae9[0x7]; // 0x1ae9, 0x7 bytes
+                shade::sdk::client::TowerState_t m_nState; // 0x1af8, 0x4 bytes
+                float m_flYaw; // 0x1afc, 0x4 bytes
+                std::int32_t m_nCaptureDuration; // 0x1b00, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flEffectiveCaptureStartTime; // 0x1b04, 0x4 bytes
+                std::int32_t m_nCapturingPlayerCount; // 0x1b08, 0x4 bytes
+                float m_flCaptureProgress; // 0x1b0c, 0x4 bytes
+                std::int32_t m_iCapturingTeam; // 0x1b10, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFxOutpostAmbient; // 0x1b14, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDestroyTime; // 0x1b18, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flAutoChannelCompleteTime; // 0x1b1c, 0x4 bytes
+                bool m_bAscensionLevelPicker; // 0x1b20, 0x1 bytes
+                std::uint8_t pad_1b21[0x3]; // 0x1b21, 0x3 bytes
+                std::int32_t m_nEliteChallengeLevel; // 0x1b24, 0x4 bytes
+                CUtlString m_strNextRoomName; // 0x1b28, 0x8 bytes
+                CUtlString m_strNextEncounterName; // 0x1b30, 0x8 bytes
+                bool m_bStartedBeamFacing; // 0x1b38, 0x1 bytes
+                std::uint8_t pad_1b39[0x7]; // 0x1b39, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_Watch_Tower) == 0x1AF0, "CDOTA_Modifier_AghsFort_Watch_Tower size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_Watch_Tower) == 0x1B40, "CDOTA_Modifier_AghsFort_Watch_Tower size mismatch");
         }
     }
 }

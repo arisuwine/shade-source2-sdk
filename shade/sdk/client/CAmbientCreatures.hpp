@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbc8
+             * Size: 0xc28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAmbientCreatures : public shade::sdk::client::C_DOTAWorldParticleSystem {
             public:
-                CUtlString m_szAnimationName; // 0x0bc0, 0x8 bytes
+                CUtlString m_szAnimationName; // 0x0c20, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAmbientCreatures) == 0xBC8, "CAmbientCreatures size mismatch");
+            static_assert(sizeof(CAmbientCreatures) == 0xC28, "CAmbientCreatures size mismatch");
         }
     }
 }

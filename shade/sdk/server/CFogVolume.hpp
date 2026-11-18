@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x880
+             * Size: 0x8e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,19 +30,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CFogVolume : public shade::sdk::server::CServerOnlyModelEntity {
             public:
-                CUtlSymbolLarge m_fogName; // 0x0858, 0x8 bytes
-                CUtlSymbolLarge m_postProcessName; // 0x0860, 0x8 bytes
-                CUtlSymbolLarge m_colorCorrectionName; // 0x0868, 0x8 bytes
-                std::uint8_t pad_0870[0x8]; // 0x0870, 0x8 bytes
-                bool m_bDisabled; // 0x0878, 0x1 bytes
-                bool m_bInFogVolumesList; // 0x0879, 0x1 bytes
-                std::uint8_t pad_087a[0x6]; // 0x087a, 0x6 bytes
+                CUtlSymbolLarge m_fogName; // 0x08b8, 0x8 bytes
+                CUtlSymbolLarge m_postProcessName; // 0x08c0, 0x8 bytes
+                CUtlSymbolLarge m_colorCorrectionName; // 0x08c8, 0x8 bytes
+                std::uint8_t pad_08d0[0x8]; // 0x08d0, 0x8 bytes
+                bool m_bDisabled; // 0x08d8, 0x1 bytes
+                bool m_bInFogVolumesList; // 0x08d9, 0x1 bytes
+                std::uint8_t pad_08da[0x6]; // 0x08da, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFogVolume) == 0x880, "CFogVolume size mismatch");
+            static_assert(sizeof(CFogVolume) == 0x8E0, "CFogVolume size mismatch");
         }
     }
 }

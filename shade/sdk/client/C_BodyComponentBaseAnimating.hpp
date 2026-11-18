@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xac0
+             * Size: 0xab0
              * Alignment: 0xff
              * Has VTable
              * Construct Allowed
@@ -32,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BodyComponentBaseAnimating : public shade::sdk::client::CBodyComponentSkeletonInstance {
             public:
-                shade::sdk::client::C_BaseAnimatingController m_animationController; // 0x0550, 0x568 bytes
-                std::uint8_t pad_0ab8[0x8]; // 0x0ab8, 0x8 bytes
+                shade::sdk::client::C_BaseAnimatingController m_animationController; // 0x0540, 0x568 bytes
+                std::uint8_t pad_0aa8[0x8]; // 0x0aa8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BodyComponentBaseAnimating) == 0xAC0, "C_BodyComponentBaseAnimating size mismatch");
+            static_assert(sizeof(C_BodyComponentBaseAnimating) == 0xAB0, "C_BodyComponentBaseAnimating size mismatch");
         }
     }
 }

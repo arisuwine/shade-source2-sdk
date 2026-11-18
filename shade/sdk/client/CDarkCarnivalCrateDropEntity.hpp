@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdd0
+             * Size: 0xe30
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -40,37 +40,37 @@ namespace shade {
             #pragma pack(push, 1)
             class CDarkCarnivalCrateDropEntity : public shade::sdk::client::C_PhysicsProp {
             public:
-                shade::sdk::client::DOTACrateDropObjectDefID_t m_unDefID; // 0x0d40, 0x4 bytes
-                std::uint8_t pad_0d44[0xc]; // 0x0d44, 0xc bytes
-                float m_flAcceleration; // 0x0d50, 0x4 bytes
-                float m_flMaxSpeed; // 0x0d54, 0x4 bytes
-                std::uint8_t pad_0d58[0x14]; // 0x0d58, 0x14 bytes
-                std::int8_t m_nTutorialObject; // 0x0d6c, 0x1 bytes
-                std::int8_t m_nDisableSpawnRotation; // 0x0d6d, 0x1 bytes
-                std::uint8_t pad_0d6e[0x22]; // 0x0d6e, 0x22 bytes
-                float m_flPoints; // 0x0d90, 0x4 bytes
-                float m_flHazardExplosionRadius; // 0x0d94, 0x4 bytes
-                float m_flExplosionStrength; // 0x0d98, 0x4 bytes
-                float m_flUpkickExplosionStrength; // 0x0d9c, 0x4 bytes
-                float m_flTriggerDelay; // 0x0da0, 0x4 bytes
-                float m_flTriggeredGravityScale; // 0x0da4, 0x4 bytes
-                bool m_bHasBeenTriggered; // 0x0da8, 0x1 bytes
-                bool m_bHazardDefused; // 0x0da9, 0x1 bytes
-                bool m_bCurrentlyActivated; // 0x0daa, 0x1 bytes
-                std::uint8_t pad_0dab[0x1]; // 0x0dab, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flNextPossibleTriggerTime; // 0x0dac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCreationTime; // 0x0db0, 0x4 bytes
-                std::uint8_t pad_0db4[0x4]; // 0x0db4, 0x4 bytes
-                shade::sdk::particleslib::CNewParticleEffect *pDropEffect; // 0x0db8, 0x8 bytes
-                bool m_bMarkedForDestroy; // 0x0dc0, 0x1 bytes
-                bool m_bHazardRotationApplied; // 0x0dc1, 0x1 bytes
-                std::uint8_t pad_0dc2[0xe]; // 0x0dc2, 0xe bytes
+                shade::sdk::client::DOTACrateDropObjectDefID_t m_unDefID; // 0x0da0, 0x4 bytes
+                std::uint8_t pad_0da4[0xc]; // 0x0da4, 0xc bytes
+                float m_flAcceleration; // 0x0db0, 0x4 bytes
+                float m_flMaxSpeed; // 0x0db4, 0x4 bytes
+                std::uint8_t pad_0db8[0x14]; // 0x0db8, 0x14 bytes
+                std::int8_t m_nTutorialObject; // 0x0dcc, 0x1 bytes
+                std::int8_t m_nDisableSpawnRotation; // 0x0dcd, 0x1 bytes
+                std::uint8_t pad_0dce[0x22]; // 0x0dce, 0x22 bytes
+                float m_flPoints; // 0x0df0, 0x4 bytes
+                float m_flHazardExplosionRadius; // 0x0df4, 0x4 bytes
+                float m_flExplosionStrength; // 0x0df8, 0x4 bytes
+                float m_flUpkickExplosionStrength; // 0x0dfc, 0x4 bytes
+                float m_flTriggerDelay; // 0x0e00, 0x4 bytes
+                float m_flTriggeredGravityScale; // 0x0e04, 0x4 bytes
+                bool m_bHasBeenTriggered; // 0x0e08, 0x1 bytes
+                bool m_bHazardDefused; // 0x0e09, 0x1 bytes
+                bool m_bCurrentlyActivated; // 0x0e0a, 0x1 bytes
+                std::uint8_t pad_0e0b[0x1]; // 0x0e0b, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flNextPossibleTriggerTime; // 0x0e0c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCreationTime; // 0x0e10, 0x4 bytes
+                std::uint8_t pad_0e14[0x4]; // 0x0e14, 0x4 bytes
+                shade::sdk::particleslib::CNewParticleEffect *pDropEffect; // 0x0e18, 0x8 bytes
+                bool m_bMarkedForDestroy; // 0x0e20, 0x1 bytes
+                bool m_bHazardRotationApplied; // 0x0e21, 0x1 bytes
+                std::uint8_t pad_0e22[0xe]; // 0x0e22, 0xe bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDarkCarnivalCrateDropEntity) == 0xDD0, "CDarkCarnivalCrateDropEntity size mismatch");
+            static_assert(sizeof(CDarkCarnivalCrateDropEntity) == 0xE30, "CDarkCarnivalCrateDropEntity size mismatch");
         }
     }
 }

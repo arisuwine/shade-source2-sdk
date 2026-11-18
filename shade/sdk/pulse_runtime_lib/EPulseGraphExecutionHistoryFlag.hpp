@@ -25,7 +25,10 @@ namespace shade {
                 REQUIREMENT_PASS = 0x10,
                 REQUIREMENT_FAIL = 0x20,
                 CALL_TO_PULSE = 0x40,
-                RETURN = 0x80
+                INTERNAL_CALL_TO_PULSE = 0x80,
+                RETURN = 0x100,
+                RECORD_NEXT_SEQ_POINT = 0x200,
+                CURSOR_MAX_INSTRUCTIONS = 0x400
             };
         }
     }

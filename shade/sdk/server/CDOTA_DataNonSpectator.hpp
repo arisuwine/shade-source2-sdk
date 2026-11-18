@@ -15,7 +15,9 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/ERoshanSpawnPhase.hpp"
 #include "shade/sdk/client/HeroID_t.hpp"
+#include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CBaseEntity.hpp"
 #include "shade/sdk/server/CRoshanPhaseInfo.hpp"
 
@@ -40,7 +42,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ce8
+             * Size: 0x1d00
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -72,17 +74,21 @@ namespace shade {
                 float m_vPossibleWardRadii[0x64]; // 0x1a60, 0x190 bytes
                 CUtlVectorEmbeddedNetworkVar<shade::sdk::server::DOTATeleportInfo_t> m_vecTrackedTeleports; // 0x1bf0, 0x68 bytes
                 CUtlVectorEmbeddedNetworkVar<shade::sdk::server::DOTANeutralCampInfo_t> m_vecKnownCampStacks; // 0x1c58, 0x68 bytes
-                shade::sdk::server::CRoshanPhaseInfo m_roshanSpawnInfo; // 0x1cc0, 0x18 bytes
-                std::int32_t m_nNextPowerRuneType; // 0x1cd8, 0x4 bytes
-                std::int32_t m_nNextPowerRuneSpawnIndex; // 0x1cdc, 0x4 bytes
-                std::int32_t m_iTowerKills; // 0x1ce0, 0x4 bytes
-                std::uint8_t pad_1ce4[0x4]; // 0x1ce4, 0x4 bytes
+                shade::sdk::server::CRoshanPhaseInfo m_roshanSpawnInfo; // 0x1cc0, 0x20 bytes
+                std::int32_t m_nNextPowerRuneType; // 0x1ce0, 0x4 bytes
+                std::int32_t m_nNextPowerRuneSpawnIndex; // 0x1ce4, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hNextPowerRuneSpawner; // 0x1ce8, 0x4 bytes
+                std::int32_t m_iTowerKills; // 0x1cec, 0x4 bytes
+                shade::sdk::client::ERoshanSpawnPhase m_eKnownRoshanPhase; // 0x1cf0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flKnownRoshanPhaseStartTime; // 0x1cf4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flKnownRoshanPhaseEndTime; // 0x1cf8, 0x4 bytes
+                std::uint8_t pad_1cfc[0x4]; // 0x1cfc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_DataNonSpectator) == 0x1CE8, "CDOTA_DataNonSpectator size mismatch");
+            static_assert(sizeof(CDOTA_DataNonSpectator) == 0x1D00, "CDOTA_DataNonSpectator size mismatch");
         }
     }
 }

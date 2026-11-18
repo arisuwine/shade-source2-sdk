@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Ringmaster_Wheel_Mesmerize_Facing : public shade::sdk::client::CDOTA_Buff {
             public:
-                float face_duration; // 0x1aa8, 0x4 bytes
-                float duration; // 0x1aac, 0x4 bytes
-                float vision_cone; // 0x1ab0, 0x4 bytes
-                float m_flAccumulatedTime; // 0x1ab4, 0x4 bytes
-                float mesmerize_radius; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
-                shade::sdk::client::CountdownTimer ctFacing; // 0x1ac0, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ad8, 0x4 bytes
-                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
+                float face_duration; // 0x1af8, 0x4 bytes
+                float duration; // 0x1afc, 0x4 bytes
+                float vision_cone; // 0x1b00, 0x4 bytes
+                float m_flAccumulatedTime; // 0x1b04, 0x4 bytes
+                float mesmerize_radius; // 0x1b08, 0x4 bytes
+                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                shade::sdk::client::CountdownTimer ctFacing; // 0x1b10, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Ringmaster_Wheel_Mesmerize_Facing) == 0x1AE0, "CDOTA_Modifier_Ringmaster_Wheel_Mesmerize_Facing size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Ringmaster_Wheel_Mesmerize_Facing) == 0x1B30, "CDOTA_Modifier_Ringmaster_Wheel_Mesmerize_Facing size mismatch");
         }
     }
 }

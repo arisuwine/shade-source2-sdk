@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x168
+             * Size: 0x170
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,12 +34,15 @@ namespace shade {
             public:
                 shade::sdk::pulse_runtime_lib::CPulse_ResumePoint m_Completed; // 0x00d8, 0x48 bytes
                 shade::sdk::pulse_runtime_lib::SignatureOutflow_Continue m_OnInterval; // 0x0120, 0x48 bytes
+                bool m_bFireAtStart; // 0x0168, 0x1 bytes
+                bool m_bFireAtEnd; // 0x0169, 0x1 bytes
+                std::uint8_t pad_016a[0x6]; // 0x016a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_IntervalTimer) == 0x168, "CPulseCell_IntervalTimer size mismatch");
+            static_assert(sizeof(CPulseCell_IntervalTimer) == 0x170, "CPulseCell_IntervalTimer size mismatch");
         }
     }
 }

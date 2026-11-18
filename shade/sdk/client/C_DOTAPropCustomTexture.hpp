@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xea0
+             * Size: 0xf00
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTAPropCustomTexture : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint32_t m_unTeamID; // 0x0e80, 0x4 bytes
-                std::uint8_t pad_0e84[0xc]; // 0x0e84, 0xc bytes
-                bool m_bSetupMaterialProxy; // 0x0e90, 0x1 bytes
-                std::uint8_t pad_0e91[0xf]; // 0x0e91, 0xf bytes
+                std::uint32_t m_unTeamID; // 0x0ee0, 0x4 bytes
+                std::uint8_t pad_0ee4[0xc]; // 0x0ee4, 0xc bytes
+                bool m_bSetupMaterialProxy; // 0x0ef0, 0x1 bytes
+                std::uint8_t pad_0ef1[0xf]; // 0x0ef1, 0xf bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTAPropCustomTexture) == 0xEA0, "C_DOTAPropCustomTexture size mismatch");
+            static_assert(sizeof(C_DOTAPropCustomTexture) == 0xF00, "C_DOTAPropCustomTexture size mismatch");
         }
     }
 }

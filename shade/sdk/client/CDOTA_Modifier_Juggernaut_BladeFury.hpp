@@ -16,13 +16,12 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CDOTA_Buff.hpp"
-#include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,26 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Juggernaut_BladeFury : public shade::sdk::client::CDOTA_Buff {
             public:
-                float immunity_resist; // 0x1aa8, 0x4 bytes
-                float blade_fury_radius; // 0x1aac, 0x4 bytes
-                float blade_fury_outer_radius; // 0x1ab0, 0x4 bytes
-                std::int32_t blade_fury_damage; // 0x1ab4, 0x4 bytes
-                float blade_fury_damage_tick; // 0x1ab8, 0x4 bytes
-                float m_flTotalAppliedDamage; // 0x1abc, 0x4 bytes
-                float attack_interval; // 0x1ac0, 0x4 bytes
-                std::int32_t can_crit; // 0x1ac4, 0x4 bytes
-                std::int32_t bonus_movespeed; // 0x1ac8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAttack; // 0x1acc, 0x4 bytes
-                bool m_bIgnoreAttackRestriction; // 0x1ad0, 0x1 bytes
-                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
-                float blade_fury_aspd_multiplier; // 0x1ad4, 0x4 bytes
-                std::uint8_t pad_1ad8[0x18]; // 0x1ad8, 0x18 bytes
+                float immunity_resist; // 0x1af8, 0x4 bytes
+                float blade_fury_radius; // 0x1afc, 0x4 bytes
+                float blade_fury_outer_radius; // 0x1b00, 0x4 bytes
+                std::int32_t blade_fury_damage; // 0x1b04, 0x4 bytes
+                float blade_fury_damage_tick; // 0x1b08, 0x4 bytes
+                float m_flTotalAppliedDamage; // 0x1b0c, 0x4 bytes
+                std::int32_t can_crit; // 0x1b10, 0x4 bytes
+                std::int32_t bonus_movespeed; // 0x1b14, 0x4 bytes
+                float scepter_attack_damage_pct; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x14]; // 0x1b1c, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Juggernaut_BladeFury) == 0x1AF0, "CDOTA_Modifier_Juggernaut_BladeFury size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Juggernaut_BladeFury) == 0x1B30, "CDOTA_Modifier_Juggernaut_BladeFury size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,23 +31,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Weaver_Threads_Of_Fate_Established : public shade::sdk::client::CDOTA_Buff {
             public:
-                float established_thread_break_distance; // 0x1aa8, 0x4 bytes
-                float thread_setup_distance; // 0x1aac, 0x4 bytes
-                std::int32_t damage_per_thread_creep; // 0x1ab0, 0x4 bytes
-                std::int32_t damage_per_thread_hero; // 0x1ab4, 0x4 bytes
-                float death_linger_duration; // 0x1ab8, 0x4 bytes
-                float thread_setup_time; // 0x1abc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTetherParticle; // 0x1ac0, 0x4 bytes
-                bool m_bEstablished; // 0x1ac4, 0x1 bytes
-                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_fEstablishTime; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                float established_thread_break_distance; // 0x1af8, 0x4 bytes
+                float established_thread_duration; // 0x1afc, 0x4 bytes
+                float thread_setup_distance; // 0x1b00, 0x4 bytes
+                std::int32_t damage_per_thread_creep; // 0x1b04, 0x4 bytes
+                std::int32_t damage_per_thread_hero; // 0x1b08, 0x4 bytes
+                float death_linger_duration; // 0x1b0c, 0x4 bytes
+                float thread_setup_time; // 0x1b10, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTetherParticle; // 0x1b14, 0x4 bytes
+                bool m_bEstablished; // 0x1b18, 0x1 bytes
+                std::uint8_t pad_1b19[0x3]; // 0x1b19, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fEstablishTime; // 0x1b1c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fNextSlowTime; // 0x1b20, 0x4 bytes
+                std::uint8_t pad_1b24[0x4]; // 0x1b24, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Weaver_Threads_Of_Fate_Established) == 0x1AD0, "CDOTA_Modifier_Weaver_Threads_Of_Fate_Established size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Weaver_Threads_Of_Fate_Established) == 0x1B28, "CDOTA_Modifier_Weaver_Threads_Of_Fate_Established size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x928
+             * Size: 0x988
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncTrain : public shade::sdk::server::CBasePlatTrain {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentTarget; // 0x0900, 0x4 bytes
-                bool m_activated; // 0x0904, 0x1 bytes
-                std::uint8_t pad_0905[0x3]; // 0x0905, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0908, 0x4 bytes
-                float m_flBlockDamage; // 0x090c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextBlockTime; // 0x0910, 0x4 bytes
-                std::uint8_t pad_0914[0x4]; // 0x0914, 0x4 bytes
-                CUtlSymbolLarge m_iszLastTarget; // 0x0918, 0x8 bytes
-                float m_flSpeed; // 0x0920, 0x4 bytes
-                std::uint8_t pad_0924[0x4]; // 0x0924, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentTarget; // 0x0960, 0x4 bytes
+                bool m_activated; // 0x0964, 0x1 bytes
+                std::uint8_t pad_0965[0x3]; // 0x0965, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEnemy; // 0x0968, 0x4 bytes
+                float m_flBlockDamage; // 0x096c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextBlockTime; // 0x0970, 0x4 bytes
+                std::uint8_t pad_0974[0x4]; // 0x0974, 0x4 bytes
+                CUtlSymbolLarge m_iszLastTarget; // 0x0978, 0x8 bytes
+                float m_flSpeed; // 0x0980, 0x4 bytes
+                std::uint8_t pad_0984[0x4]; // 0x0984, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncTrain) == 0x928, "CFuncTrain size mismatch");
+            static_assert(sizeof(CFuncTrain) == 0x988, "CFuncTrain size mismatch");
         }
     }
 }

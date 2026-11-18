@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd30
+             * Size: 0xd90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,28 +38,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerSndSosOpvar : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hTouchingPlayers; // 0x09d0, 0x18 bytes
-                VectorWS m_flPosition; // 0x09e8, 0xc bytes
-                float m_flCenterSize; // 0x09f4, 0x4 bytes
-                float m_flMinVal; // 0x09f8, 0x4 bytes
-                float m_flMaxVal; // 0x09fc, 0x4 bytes
-                CUtlSymbolLarge m_opvarName; // 0x0a00, 0x8 bytes
-                CUtlSymbolLarge m_stackName; // 0x0a08, 0x8 bytes
-                CUtlSymbolLarge m_operatorName; // 0x0a10, 0x8 bytes
-                bool m_bVolIs2D; // 0x0a18, 0x1 bytes
-                char m_opvarNameChar[0x100]; // 0x0a19, 0x100 bytes
-                char m_stackNameChar[0x100]; // 0x0b19, 0x100 bytes
-                char m_operatorNameChar[0x100]; // 0x0c19, 0x100 bytes
-                std::uint8_t pad_0d19[0x3]; // 0x0d19, 0x3 bytes
-                Vector m_VecNormPos; // 0x0d1c, 0xc bytes
-                float m_flNormCenterSize; // 0x0d28, 0x4 bytes
-                std::uint8_t pad_0d2c[0x4]; // 0x0d2c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hTouchingPlayers; // 0x0a30, 0x18 bytes
+                VectorWS m_flPosition; // 0x0a48, 0xc bytes
+                float m_flCenterSize; // 0x0a54, 0x4 bytes
+                float m_flMinVal; // 0x0a58, 0x4 bytes
+                float m_flMaxVal; // 0x0a5c, 0x4 bytes
+                CUtlSymbolLarge m_opvarName; // 0x0a60, 0x8 bytes
+                CUtlSymbolLarge m_stackName; // 0x0a68, 0x8 bytes
+                CUtlSymbolLarge m_operatorName; // 0x0a70, 0x8 bytes
+                bool m_bVolIs2D; // 0x0a78, 0x1 bytes
+                char m_opvarNameChar[0x100]; // 0x0a79, 0x100 bytes
+                char m_stackNameChar[0x100]; // 0x0b79, 0x100 bytes
+                char m_operatorNameChar[0x100]; // 0x0c79, 0x100 bytes
+                std::uint8_t pad_0d79[0x3]; // 0x0d79, 0x3 bytes
+                Vector m_VecNormPos; // 0x0d7c, 0xc bytes
+                float m_flNormCenterSize; // 0x0d88, 0x4 bytes
+                std::uint8_t pad_0d8c[0x4]; // 0x0d8c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerSndSosOpvar) == 0xD30, "CTriggerSndSosOpvar size mismatch");
+            static_assert(sizeof(CTriggerSndSosOpvar) == 0xD90, "CTriggerSndSosOpvar size mismatch");
         }
     }
 }

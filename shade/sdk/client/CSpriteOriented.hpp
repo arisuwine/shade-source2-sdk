@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbf8
+             * Size: 0xc58
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CSpriteOriented) == 0xBF8, "CSpriteOriented size mismatch");
+            static_assert(sizeof(CSpriteOriented) == 0xC58, "CSpriteOriented size mismatch");
         }
     }
 }

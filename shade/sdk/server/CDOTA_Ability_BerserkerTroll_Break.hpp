@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x580
+             * Size: 0x5b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,12 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_BerserkerTroll_Break : public shade::sdk::server::CDOTABaseAbility {
             public:
+                float base_damage; // 0x0580, 0x4 bytes
+                float impact_radius; // 0x0584, 0x4 bytes
+                float break_duration; // 0x0588, 0x4 bytes
+                std::uint8_t pad_058c[0x14]; // 0x058c, 0x14 bytes
+                VectorWS vTargetPos; // 0x05a0, 0xc bytes
+                std::uint8_t pad_05ac[0x4]; // 0x05ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_BerserkerTroll_Break) == 0x580, "CDOTA_Ability_BerserkerTroll_Break size mismatch");
+            static_assert(sizeof(CDOTA_Ability_BerserkerTroll_Break) == 0x5B0, "CDOTA_Ability_BerserkerTroll_Break size mismatch");
         }
     }
 }

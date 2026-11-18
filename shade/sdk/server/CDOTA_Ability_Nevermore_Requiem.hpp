@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5b0
+             * Size: 0x5e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,12 +46,14 @@ namespace shade {
                 std::int32_t m_nKilleater_nLines; // 0x0590, 0x4 bytes
                 std::uint8_t pad_0594[0x4]; // 0x0594, 0x4 bytes
                 CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHeroesReqd; // 0x0598, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitTargets; // 0x05b0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecReturnHitTargets; // 0x05c8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Nevermore_Requiem) == 0x5B0, "CDOTA_Ability_Nevermore_Requiem size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Nevermore_Requiem) == 0x5E0, "CDOTA_Ability_Nevermore_Requiem size mismatch");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b08
+             * Size: 0x1b78
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,25 +39,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Kez_RavensVeil_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fCurRadius; // 0x1aa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1aac, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_entitiesHit; // 0x1ab0, 0x18 bytes
-                shade::sdk::client::CountdownTimer m_ViewerTimer; // 0x1ac8, 0x18 bytes
-                float blast_radius; // 0x1ae0, 0x4 bytes
-                float blast_speed; // 0x1ae4, 0x4 bytes
-                std::int32_t apply_parry_bonus; // 0x1ae8, 0x4 bytes
-                float blind_duration; // 0x1aec, 0x4 bytes
-                float vuln_duration; // 0x1af0, 0x4 bytes
-                bool mark_only_heroes; // 0x1af4, 0x1 bytes
-                std::uint8_t pad_1af5[0x3]; // 0x1af5, 0x3 bytes
-                VectorWS m_vStartLoc; // 0x1af8, 0xc bytes
-                std::uint8_t pad_1b04[0x4]; // 0x1b04, 0x4 bytes
+                float m_fCurRadius; // 0x1af8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1afc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_entitiesHit; // 0x1b00, 0x18 bytes
+                shade::sdk::client::CountdownTimer m_ViewerTimer; // 0x1b18, 0x18 bytes
+                float blast_radius; // 0x1b30, 0x4 bytes
+                float blast_speed; // 0x1b34, 0x4 bytes
+                std::int32_t apply_parry_bonus; // 0x1b38, 0x4 bytes
+                float blind_duration; // 0x1b3c, 0x4 bytes
+                float vuln_duration; // 0x1b40, 0x4 bytes
+                bool mark_only_heroes; // 0x1b44, 0x1 bytes
+                bool buff_allies; // 0x1b45, 0x1 bytes
+                std::uint8_t pad_1b46[0x2]; // 0x1b46, 0x2 bytes
+                float buff_duration; // 0x1b48, 0x4 bytes
+                std::uint8_t pad_1b4c[0x4]; // 0x1b4c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_alliesBuffed; // 0x1b50, 0x18 bytes
+                VectorWS m_vStartLoc; // 0x1b68, 0xc bytes
+                std::uint8_t pad_1b74[0x4]; // 0x1b74, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Kez_RavensVeil_Thinker) == 0x1B08, "CDOTA_Modifier_Kez_RavensVeil_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Kez_RavensVeil_Thinker) == 0x1B78, "CDOTA_Modifier_Kez_RavensVeil_Thinker size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd60
+             * Size: 0xdc0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -32,17 +32,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PhysPropClientside : public shade::sdk::client::C_BreakableProp {
             public:
-                shade::sdk::entity2::GameTime_t m_flTouchDelta; // 0x0d30, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fDeathTime; // 0x0d34, 0x4 bytes
-                VectorWS m_vecDamagePosition; // 0x0d38, 0xc bytes
-                Vector m_vecDamageDirection; // 0x0d44, 0xc bytes
-                shade::sdk::client::DamageTypes_t m_nDamageType; // 0x0d50, 0x4 bytes
-                std::uint8_t pad_0d54[0xc]; // 0x0d54, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flTouchDelta; // 0x0d90, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fDeathTime; // 0x0d94, 0x4 bytes
+                VectorWS m_vecDamagePosition; // 0x0d98, 0xc bytes
+                Vector m_vecDamageDirection; // 0x0da4, 0xc bytes
+                shade::sdk::client::DamageTypes_t m_nDamageType; // 0x0db0, 0x4 bytes
+                std::uint8_t pad_0db4[0xc]; // 0x0db4, 0xc bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * float m_impactEnergyScale; // Offset: 0xc88, Size: 0x1, Size In Bytes: 0x4
+             * float m_impactEnergyScale; // Offset: 0xce8, Size: 0x1, Size In Bytes: 0x4
              * bool forcemotiondisabled; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * bool phys_start_asleep; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float fademaxdist; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
@@ -52,7 +52,7 @@ namespace shade {
              * CUtlString skin; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_PhysPropClientside) == 0xD60, "C_PhysPropClientside size mismatch");
+            static_assert(sizeof(C_PhysPropClientside) == 0xDC0, "C_PhysPropClientside size mismatch");
         }
     }
 }

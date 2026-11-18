@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2048
+             * Size: 0x20d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_Meepo : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                bool m_bRecursionGuard; // 0x2020, 0x1 bytes
-                std::uint8_t pad_2021[0x1f]; // 0x2021, 0x1f bytes
-                std::int32_t m_nWhichMeepo; // 0x2040, 0x4 bytes
-                std::uint8_t pad_2044[0x4]; // 0x2044, 0x4 bytes
+                bool m_bRecursionGuard; // 0x20b0, 0x1 bytes
+                std::uint8_t pad_20b1[0x1f]; // 0x20b1, 0x1f bytes
+                std::int32_t m_nWhichMeepo; // 0x20d0, 0x4 bytes
+                std::uint8_t pad_20d4[0x4]; // 0x20d4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_Meepo) == 0x2048, "CDOTA_Unit_Hero_Meepo size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_Meepo) == 0x20D8, "CDOTA_Unit_Hero_Meepo size mismatch");
         }
     }
 }

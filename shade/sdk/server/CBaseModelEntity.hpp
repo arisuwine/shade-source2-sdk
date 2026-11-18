@@ -43,7 +43,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x858
+             * Size: 0x8b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -73,41 +73,42 @@ namespace shade {
                 std::uint8_t pad_04ed[0x3]; // 0x04ed, 0x3 bytes
                 shade::sdk::server::CDestructiblePartsComponent *m_pDestructiblePartsSystemComponent; // 0x04f0, 0x8 bytes
                 CEntityOutputTemplate<shade::sdk::server::CBaseModelEntity__OnDamageLevelChangedArgs_t> m_OnDestructibleHitGroupDamageLevelChanged; // 0x04f8, 0x28 bytes
-                shade::sdk::entity2::GameTime_t m_flDissolveStartTime; // 0x0520, 0x4 bytes
-                std::uint8_t pad_0524[0x4]; // 0x0524, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnIgnite; // 0x0528, 0x18 bytes
-                std::int32_t m_iViewerID; // 0x0540, 0x4 bytes
-                std::int32_t m_iTeamVisibilityBitmask; // 0x0544, 0x4 bytes
-                shade::sdk::client::RenderMode_t m_nRenderMode; // 0x0548, 0x1 bytes
-                bool m_bVisibilityDirtyFlag; // 0x0549, 0x1 bytes
-                std::int16_t m_iFOWTempViewerID[0xa]; // 0x054a, 0x14 bytes
-                shade::sdk::client::RenderFx_t m_nRenderFX; // 0x055e, 0x1 bytes
-                bool m_bAllowFadeInView; // 0x055f, 0x1 bytes
-                std::uint8_t pad_0560[0x18]; // 0x0560, 0x18 bytes
-                Color m_clrRender; // 0x0578, 0x4 bytes
-                std::uint8_t pad_057c[0x4]; // 0x057c, 0x4 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::EntityRenderAttribute_t> m_vecRenderAttributes; // 0x0580, 0x68 bytes
-                bool m_bRenderToCubemaps; // 0x05e8, 0x1 bytes
-                bool m_bExpandRenderBoundsToIncludeCloth; // 0x05e9, 0x1 bytes
-                bool m_bNoInterpolate; // 0x05ea, 0x1 bytes
-                std::uint8_t pad_05eb[0x5]; // 0x05eb, 0x5 bytes
-                shade::sdk::server::CCollisionProperty m_Collision; // 0x05f0, 0xb8 bytes
-                shade::sdk::server::CGlowProperty m_Glow; // 0x06a8, 0x58 bytes
-                float m_flGlowBackfaceMult; // 0x0700, 0x4 bytes
-                float m_fadeMinDist; // 0x0704, 0x4 bytes
-                float m_fadeMaxDist; // 0x0708, 0x4 bytes
-                float m_flFadeScale; // 0x070c, 0x4 bytes
-                float m_flShadowStrength; // 0x0710, 0x4 bytes
-                std::uint8_t m_nObjectCulling; // 0x0714, 0x1 bytes
-                std::uint8_t pad_0715[0x3]; // 0x0715, 0x3 bytes
-                std::uint32_t m_bodyGroupTotalRequestCount; // 0x0718, 0x4 bytes
-                std::uint8_t pad_071c[0x4]; // 0x071c, 0x4 bytes
-                CUtlVectorFixedGrowable<shade::sdk::server::CBaseModelEntity__BodyGroupRequest_t, 8> m_bodyGroupRequests; // 0x0720, 0xd8 bytes
-                CUtlOrderedMap<CGlobalSymbol, std::int32_t> m_bodyGroupChoices; // 0x07f8, 0x28 bytes
-                shade::sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x0820, 0x28 bytes
-                std::uint8_t pad_0848[0x8]; // 0x0848, 0x8 bytes
-                std::uint32_t m_bvDisabledHitGroups[0x1]; // 0x0850, 0x4 bytes
-                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
+                std::uint8_t pad_0520[0x50]; // 0x0520, 0x50 bytes
+                shade::sdk::entity2::GameTime_t m_flDissolveStartTime; // 0x0570, 0x4 bytes
+                std::uint8_t pad_0574[0x4]; // 0x0574, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnIgnite; // 0x0578, 0x18 bytes
+                std::int32_t m_iViewerID; // 0x0590, 0x4 bytes
+                std::int32_t m_iTeamVisibilityBitmask; // 0x0594, 0x4 bytes
+                shade::sdk::client::RenderMode_t m_nRenderMode; // 0x0598, 0x1 bytes
+                bool m_bVisibilityDirtyFlag; // 0x0599, 0x1 bytes
+                std::int16_t m_iFOWTempViewerID[0xa]; // 0x059a, 0x14 bytes
+                shade::sdk::client::RenderFx_t m_nRenderFX; // 0x05ae, 0x1 bytes
+                bool m_bAllowFadeInView; // 0x05af, 0x1 bytes
+                std::uint8_t pad_05b0[0x18]; // 0x05b0, 0x18 bytes
+                Color m_clrRender; // 0x05c8, 0x4 bytes
+                std::uint8_t pad_05cc[0x4]; // 0x05cc, 0x4 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::EntityRenderAttribute_t> m_vecRenderAttributes; // 0x05d0, 0x68 bytes
+                bool m_bRenderToCubemaps; // 0x0638, 0x1 bytes
+                bool m_bExpandRenderBoundsToIncludeCloth; // 0x0639, 0x1 bytes
+                bool m_bNoInterpolate; // 0x063a, 0x1 bytes
+                std::uint8_t pad_063b[0x5]; // 0x063b, 0x5 bytes
+                shade::sdk::server::CCollisionProperty m_Collision; // 0x0640, 0xc8 bytes
+                shade::sdk::server::CGlowProperty m_Glow; // 0x0708, 0x58 bytes
+                float m_flGlowBackfaceMult; // 0x0760, 0x4 bytes
+                float m_fadeMinDist; // 0x0764, 0x4 bytes
+                float m_fadeMaxDist; // 0x0768, 0x4 bytes
+                float m_flFadeScale; // 0x076c, 0x4 bytes
+                float m_flShadowStrength; // 0x0770, 0x4 bytes
+                std::uint8_t m_nObjectCulling; // 0x0774, 0x1 bytes
+                std::uint8_t pad_0775[0x3]; // 0x0775, 0x3 bytes
+                std::uint32_t m_bodyGroupTotalRequestCount; // 0x0778, 0x4 bytes
+                std::uint8_t pad_077c[0x4]; // 0x077c, 0x4 bytes
+                CUtlVectorFixedGrowable<shade::sdk::server::CBaseModelEntity__BodyGroupRequest_t, 8> m_bodyGroupRequests; // 0x0780, 0xd8 bytes
+                CUtlOrderedMap<CGlobalSymbol, std::int32_t> m_bodyGroupChoices; // 0x0858, 0x28 bytes
+                shade::sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x0880, 0x28 bytes
+                std::uint8_t pad_08a8[0x8]; // 0x08a8, 0x8 bytes
+                std::uint32_t m_bvDisabledHitGroups[0x1]; // 0x08b0, 0x4 bytes
+                std::uint8_t pad_08b4[0x4]; // 0x08b4, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -121,7 +122,7 @@ namespace shade {
              * CUtlString bodygroups; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBaseModelEntity) == 0x858, "CBaseModelEntity size mismatch");
+            static_assert(sizeof(CBaseModelEntity) == 0x8B8, "CBaseModelEntity size mismatch");
         }
     }
 }

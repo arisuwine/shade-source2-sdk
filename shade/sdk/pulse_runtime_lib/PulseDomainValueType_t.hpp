@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
-            enum class PulseDomainValueType_t : std::int32_t {
+            enum class PulseDomainValueType_t : std::uint32_t {
                 INVALID = -0x1,
                 ENTITY_NAME = 0x0,
                 PANEL_ID = 0x1,

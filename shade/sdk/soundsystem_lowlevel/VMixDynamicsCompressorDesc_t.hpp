@@ -15,6 +15,8 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/soundsystem_lowlevel/VMixCompressorType_t.hpp"
+
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
@@ -35,9 +37,10 @@ namespace shade {
                 float m_flRMSTimeMS; // 0x0018, 0x4 bytes
                 float m_flWetMix; // 0x001c, 0x4 bytes
                 float m_flSCHighPassFreq; // 0x0020, 0x4 bytes
-                bool m_bPeakMode; // 0x0024, 0x1 bytes
-                bool m_bAutoMakeupGain; // 0x0025, 0x1 bytes
-                std::uint8_t pad_0026[0x2]; // 0x0026, 0x2 bytes
+                shade::sdk::soundsystem_lowlevel::VMixCompressorType_t m_nCompressorType; // 0x0024, 0x1 bytes
+                bool m_bPeakMode; // 0x0025, 0x1 bytes
+                bool m_bAutoMakeupGain; // 0x0026, 0x1 bytes
+                std::uint8_t pad_0027[0x1]; // 0x0027, 0x1 bytes
             };
             #pragma pack(pop)
 

@@ -15,11 +15,14 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/EventEndTimestamp_t.hpp"
+#include "shade/sdk/client/EventStartTimestamp_t.hpp"
+
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x138
+             * Size: 0x188
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -28,20 +31,24 @@ namespace shade {
             class CBaseEventDefinition {
             public:
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                std::uint32_t m_unEventStartTime; // 0x0008, 0x4 bytes
-                std::uint32_t m_unEventEndTime; // 0x000c, 0x4 bytes
-                std::uint32_t m_unExpirationDate; // 0x0010, 0x4 bytes
-                bool m_bMustBeOwned; // 0x0014, 0x1 bytes
-                std::uint8_t pad_0015[0x3]; // 0x0015, 0x3 bytes
-                std::uint32_t m_unDefaultEventPoints; // 0x0018, 0x4 bytes
-                std::uint32_t m_unEventPointsPerLevel; // 0x001c, 0x4 bytes
-                std::uint8_t pad_0020[0x118]; // 0x0020, 0x118 bytes
+                shade::sdk::client::EventStartTimestamp_t m_rtEventStartTime; // 0x0008, 0x10 bytes
+                shade::sdk::client::EventEndTimestamp_t m_rtEventEndTime; // 0x0018, 0x10 bytes
+                shade::sdk::client::EventEndTimestamp_t m_rtEventExpireTime; // 0x0028, 0x10 bytes
+                shade::sdk::client::EventStartTimestamp_t m_rtEventStartTimeDev; // 0x0038, 0x10 bytes
+                shade::sdk::client::EventEndTimestamp_t m_rtEventEndTimeDev; // 0x0048, 0x10 bytes
+                shade::sdk::client::EventEndTimestamp_t m_rtEventExpireTimeDev; // 0x0058, 0x10 bytes
+                bool m_bExperimentalUsesDevTiming; // 0x0068, 0x1 bytes
+                bool m_bMustBeOwned; // 0x0069, 0x1 bytes
+                std::uint8_t pad_006a[0x2]; // 0x006a, 0x2 bytes
+                std::uint32_t m_unDefaultEventPoints; // 0x006c, 0x4 bytes
+                std::uint32_t m_unEventPointsPerLevel; // 0x0070, 0x4 bytes
+                std::uint8_t pad_0074[0x114]; // 0x0074, 0x114 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseEventDefinition) == 0x138, "CBaseEventDefinition size mismatch");
+            static_assert(sizeof(CBaseEventDefinition) == 0x188, "CBaseEventDefinition size mismatch");
         }
     }
 }

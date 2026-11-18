@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,21 +29,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Mars_ArenaOfBlood_Leash : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1aa8, 0x4 bytes
-                float width; // 0x1aac, 0x4 bytes
-                std::int32_t obscure_vision; // 0x1ab0, 0x4 bytes
-                bool block_targeting; // 0x1ab4, 0x1 bytes
-                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
-                float reduced_vision_percent; // 0x1ab8, 0x4 bytes
-                VectorWS m_vOriginLoc; // 0x1abc, 0xc bytes
-                bool pierces_debuff_immunity; // 0x1ac8, 0x1 bytes
-                std::uint8_t pad_1ac9[0x7]; // 0x1ac9, 0x7 bytes
+                float radius; // 0x1af8, 0x4 bytes
+                float width; // 0x1afc, 0x4 bytes
+                std::int32_t obscure_vision; // 0x1b00, 0x4 bytes
+                bool block_targeting; // 0x1b04, 0x1 bytes
+                std::uint8_t pad_1b05[0x3]; // 0x1b05, 0x3 bytes
+                float reduced_vision_percent; // 0x1b08, 0x4 bytes
+                VectorWS m_vOriginLoc; // 0x1b0c, 0xc bytes
+                bool pierces_debuff_immunity; // 0x1b18, 0x1 bytes
+                std::uint8_t pad_1b19[0x7]; // 0x1b19, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Mars_ArenaOfBlood_Leash) == 0x1AD0, "CDOTA_Modifier_Mars_ArenaOfBlood_Leash size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Mars_ArenaOfBlood_Leash) == 0x1B20, "CDOTA_Modifier_Mars_ArenaOfBlood_Leash size mismatch");
         }
     }
 }

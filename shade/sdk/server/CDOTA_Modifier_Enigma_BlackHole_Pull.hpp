@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,22 +30,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Enigma_BlackHole_Pull : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t pull_speed; // 0x1aa8, 0x4 bytes
-                float radius; // 0x1aac, 0x4 bytes
-                float damage; // 0x1ab0, 0x4 bytes
-                float tick_rate; // 0x1ab4, 0x4 bytes
-                float pull_rotate_speed; // 0x1ab8, 0x4 bytes
-                float animation_rate; // 0x1abc, 0x4 bytes
-                float scepter_pct_damage; // 0x1ac0, 0x4 bytes
-                float m_flBlackHoleDuration; // 0x1ac4, 0x4 bytes
-                float m_flBlackHoleCreationTime; // 0x1ac8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDamageTick; // 0x1acc, 0x4 bytes
+                std::int32_t pull_speed; // 0x1af8, 0x4 bytes
+                float radius; // 0x1afc, 0x4 bytes
+                float damage; // 0x1b00, 0x4 bytes
+                float tick_rate; // 0x1b04, 0x4 bytes
+                float pull_rotate_speed; // 0x1b08, 0x4 bytes
+                float animation_rate; // 0x1b0c, 0x4 bytes
+                float scepter_pct_damage; // 0x1b10, 0x4 bytes
+                float m_flBlackHoleDuration; // 0x1b14, 0x4 bytes
+                float m_flBlackHoleCreationTime; // 0x1b18, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDamageTick; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Enigma_BlackHole_Pull) == 0x1AD0, "CDOTA_Modifier_Enigma_BlackHole_Pull size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Enigma_BlackHole_Pull) == 0x1B20, "CDOTA_Modifier_Enigma_BlackHole_Pull size mismatch");
         }
     }
 }

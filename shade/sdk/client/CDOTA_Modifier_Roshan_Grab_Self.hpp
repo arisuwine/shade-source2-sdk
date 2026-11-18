@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,16 +37,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Roshan_Grab_Self : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_DOTA_BaseNPC> m_hTarget; // 0x1aa8, 0x4 bytes
-                VectorWS m_vPulverizeCenter; // 0x1aac, 0xc bytes
-                VectorWS m_vCasterStartPos; // 0x1ab8, 0xc bytes
-                float interval; // 0x1ac4, 0x4 bytes
+                CHandle<shade::sdk::client::C_DOTA_BaseNPC> m_hTarget; // 0x1af8, 0x4 bytes
+                VectorWS m_vPulverizeCenter; // 0x1afc, 0xc bytes
+                VectorWS m_vCasterStartPos; // 0x1b08, 0xc bytes
+                float interval; // 0x1b14, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Roshan_Grab_Self) == 0x1AC8, "CDOTA_Modifier_Roshan_Grab_Self size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Roshan_Grab_Self) == 0x1B18, "CDOTA_Modifier_Roshan_Grab_Self size mismatch");
         }
     }
 }

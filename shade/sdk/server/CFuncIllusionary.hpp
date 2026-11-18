@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x858
+             * Size: 0x8b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncIllusionary) == 0x858, "CFuncIllusionary size mismatch");
+            static_assert(sizeof(CFuncIllusionary) == 0x8B8, "CFuncIllusionary size mismatch");
         }
     }
 }

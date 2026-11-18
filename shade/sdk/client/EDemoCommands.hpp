@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EDemoCommands : std::int32_t {
+            enum class EDemoCommands : std::uint32_t {
                 DEM_Error = -0x1,
                 DEM_Stop = 0x0,
                 DEM_FileHeader = 0x1,

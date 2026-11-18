@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe80
+             * Size: 0xee0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_AncientDecorationProp) == 0xE80, "C_DOTA_AncientDecorationProp size mismatch");
+            static_assert(sizeof(C_DOTA_AncientDecorationProp) == 0xEE0, "C_DOTA_AncientDecorationProp size mismatch");
         }
     }
 }

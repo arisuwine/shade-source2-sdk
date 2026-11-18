@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa20
+             * Size: 0xa80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerImpact : public shade::sdk::server::CTriggerMultiple {
             public:
-                float m_flMagnitude; // 0x09e8, 0x4 bytes
-                float m_flNoise; // 0x09ec, 0x4 bytes
-                float m_flViewkick; // 0x09f0, 0x4 bytes
-                std::uint8_t pad_09f4[0x4]; // 0x09f4, 0x4 bytes
-                CEntityOutputTemplate<Vector> m_pOutputForce; // 0x09f8, 0x28 bytes
+                float m_flMagnitude; // 0x0a48, 0x4 bytes
+                float m_flNoise; // 0x0a4c, 0x4 bytes
+                float m_flViewkick; // 0x0a50, 0x4 bytes
+                std::uint8_t pad_0a54[0x4]; // 0x0a54, 0x4 bytes
+                CEntityOutputTemplate<Vector> m_pOutputForce; // 0x0a58, 0x28 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerImpact) == 0xA20, "CTriggerImpact size mismatch");
+            static_assert(sizeof(CTriggerImpact) == 0xA80, "CTriggerImpact size mismatch");
         }
     }
 }

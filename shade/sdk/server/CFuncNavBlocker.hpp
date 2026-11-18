@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncNavBlocker : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t pad_0858[0x8]; // 0x0858, 0x8 bytes
-                bool m_bDisabled; // 0x0860, 0x1 bytes
-                std::uint8_t pad_0861[0x3]; // 0x0861, 0x3 bytes
-                std::int32_t m_nBlockedTeamNumber; // 0x0864, 0x4 bytes
-                std::uint8_t pad_0868[0x8]; // 0x0868, 0x8 bytes
+                std::uint8_t pad_08b8[0x8]; // 0x08b8, 0x8 bytes
+                bool m_bDisabled; // 0x08c0, 0x1 bytes
+                std::uint8_t pad_08c1[0x3]; // 0x08c1, 0x3 bytes
+                std::int32_t m_nBlockedTeamNumber; // 0x08c4, 0x4 bytes
+                std::uint8_t pad_08c8[0x8]; // 0x08c8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncNavBlocker) == 0x870, "CFuncNavBlocker size mismatch");
+            static_assert(sizeof(CFuncNavBlocker) == 0x8D0, "CFuncNavBlocker size mismatch");
         }
     }
 }

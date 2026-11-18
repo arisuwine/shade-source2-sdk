@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6c0
+             * Size: 0x6c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,12 +36,14 @@ namespace shade {
                 float point_blank_dmg_bonus_pct; // 0x06b4, 0x4 bytes
                 float point_blank_debuff_duration_pct; // 0x06b8, 0x4 bytes
                 float blast_width_end; // 0x06bc, 0x4 bytes
+                float knockback_duration; // 0x06c0, 0x4 bytes
+                std::uint8_t pad_06c4[0x4]; // 0x06c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Snapfire_Scatterblast) == 0x6C0, "CDOTA_Ability_Snapfire_Scatterblast size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Snapfire_Scatterblast) == 0x6C8, "CDOTA_Ability_Snapfire_Scatterblast size mismatch");
         }
     }
 }

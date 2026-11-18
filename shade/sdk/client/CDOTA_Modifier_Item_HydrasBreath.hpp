@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b48
+             * Size: 0x1b98
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,25 +29,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_HydrasBreath : public shade::sdk::client::CDOTA_Buff_Item {
             public:
-                std::int32_t strength; // 0x1aa8, 0x4 bytes
-                std::int32_t agility; // 0x1aac, 0x4 bytes
-                std::int32_t damage; // 0x1ab0, 0x4 bytes
-                std::int32_t proc_chance; // 0x1ab4, 0x4 bytes
-                std::int32_t proc_dmg_pct; // 0x1ab8, 0x4 bytes
-                std::int32_t count; // 0x1abc, 0x4 bytes
-                std::int32_t base_count; // 0x1ac0, 0x4 bytes
-                std::int32_t secondary_target_range_bonus; // 0x1ac4, 0x4 bytes
-                std::int32_t secondary_target_angle; // 0x1ac8, 0x4 bytes
-                std::int32_t base_attack_range; // 0x1acc, 0x4 bytes
-                std::int32_t base_proc_dmg; // 0x1ad0, 0x4 bytes
-                float poison_duration; // 0x1ad4, 0x4 bytes
-                std::uint8_t pad_1ad8[0x70]; // 0x1ad8, 0x70 bytes
+                std::int32_t strength; // 0x1af8, 0x4 bytes
+                std::int32_t agility; // 0x1afc, 0x4 bytes
+                std::int32_t damage; // 0x1b00, 0x4 bytes
+                std::int32_t proc_chance; // 0x1b04, 0x4 bytes
+                std::int32_t proc_dmg_pct; // 0x1b08, 0x4 bytes
+                std::int32_t count; // 0x1b0c, 0x4 bytes
+                std::int32_t base_count; // 0x1b10, 0x4 bytes
+                std::int32_t secondary_target_range_bonus; // 0x1b14, 0x4 bytes
+                std::int32_t secondary_target_angle; // 0x1b18, 0x4 bytes
+                std::int32_t base_attack_range; // 0x1b1c, 0x4 bytes
+                std::int32_t base_proc_dmg; // 0x1b20, 0x4 bytes
+                float poison_duration; // 0x1b24, 0x4 bytes
+                std::uint8_t pad_1b28[0x70]; // 0x1b28, 0x70 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_HydrasBreath) == 0x1B48, "CDOTA_Modifier_Item_HydrasBreath size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_HydrasBreath) == 0x1B98, "CDOTA_Modifier_Item_HydrasBreath size mismatch");
         }
     }
 }

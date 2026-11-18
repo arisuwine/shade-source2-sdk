@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,26 +38,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Kez_Shodo_Sai_Mark : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t vuln_slow; // 0x1aa8, 0x4 bytes
-                std::int32_t base_crit_pct; // 0x1aac, 0x4 bytes
-                std::int32_t parry_bonus_crit; // 0x1ab0, 0x4 bytes
-                std::int32_t invis_bonus_crit; // 0x1ab4, 0x4 bytes
-                float stun_duration; // 0x1ab8, 0x4 bytes
-                float parry_stun_duration; // 0x1abc, 0x4 bytes
-                float parry_bonus_stun_duration; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_vecAttackRecords; // 0x1ac8, 0x18 bytes
-                bool m_bFromParry; // 0x1ae0, 0x1 bytes
-                bool m_bParryBonus; // 0x1ae1, 0x1 bytes
-                bool m_bConsumed; // 0x1ae2, 0x1 bytes
-                bool m_bForceInvisBonus; // 0x1ae3, 0x1 bytes
-                shade::sdk::client::ParticleIndex_t m_nOverheadFXIndex; // 0x1ae4, 0x4 bytes
+                std::int32_t vuln_slow; // 0x1af8, 0x4 bytes
+                std::int32_t base_crit_pct; // 0x1afc, 0x4 bytes
+                std::int32_t parry_bonus_crit; // 0x1b00, 0x4 bytes
+                std::int32_t invis_bonus_crit; // 0x1b04, 0x4 bytes
+                float stun_duration; // 0x1b08, 0x4 bytes
+                float parry_stun_duration; // 0x1b0c, 0x4 bytes
+                float parry_bonus_stun_duration; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_vecAttackRecords; // 0x1b18, 0x18 bytes
+                bool m_bFromParry; // 0x1b30, 0x1 bytes
+                bool m_bParryBonus; // 0x1b31, 0x1 bytes
+                bool m_bConsumed; // 0x1b32, 0x1 bytes
+                bool m_bForceInvisBonus; // 0x1b33, 0x1 bytes
+                shade::sdk::client::ParticleIndex_t m_nOverheadFXIndex; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Kez_Shodo_Sai_Mark) == 0x1AE8, "CDOTA_Modifier_Kez_Shodo_Sai_Mark size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Kez_Shodo_Sai_Mark) == 0x1B38, "CDOTA_Modifier_Kez_Shodo_Sai_Mark size mismatch");
         }
     }
 }

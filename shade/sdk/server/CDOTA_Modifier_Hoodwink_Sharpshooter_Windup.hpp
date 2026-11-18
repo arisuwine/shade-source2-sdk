@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,24 +38,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Hoodwink_Sharpshooter_Windup : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bReachedMax; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                float m_flLastOverheadTime; // 0x1aac, 0x4 bytes
-                float m_flFacingTarget; // 0x1ab0, 0x4 bytes
-                VectorWS m_vAimTarget; // 0x1ab4, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_nCrosshairFX; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecVisionThinkers; // 0x1ac8, 0x18 bytes
-                float arrow_vision; // 0x1ae0, 0x4 bytes
-                float max_charge_time; // 0x1ae4, 0x4 bytes
-                float turn_rate; // 0x1ae8, 0x4 bytes
-                float base_power; // 0x1aec, 0x4 bytes
+                bool m_bReachedMax; // 0x1af8, 0x1 bytes
+                std::uint8_t pad_1af9[0x3]; // 0x1af9, 0x3 bytes
+                float m_flLastOverheadTime; // 0x1afc, 0x4 bytes
+                float m_flFacingTarget; // 0x1b00, 0x4 bytes
+                VectorWS m_vAimTarget; // 0x1b04, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nCrosshairFX; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecVisionThinkers; // 0x1b18, 0x18 bytes
+                float arrow_vision; // 0x1b30, 0x4 bytes
+                float max_charge_time; // 0x1b34, 0x4 bytes
+                float turn_rate; // 0x1b38, 0x4 bytes
+                float base_power; // 0x1b3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Hoodwink_Sharpshooter_Windup) == 0x1AF0, "CDOTA_Modifier_Hoodwink_Sharpshooter_Windup size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Hoodwink_Sharpshooter_Windup) == 0x1B40, "CDOTA_Modifier_Hoodwink_Sharpshooter_Windup size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x960
+             * Size: 0x9c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncMoveLinearAlias_momentary_door) == 0x960, "CFuncMoveLinearAlias_momentary_door size mismatch");
+            static_assert(sizeof(CFuncMoveLinearAlias_momentary_door) == 0x9C0, "CFuncMoveLinearAlias_momentary_door size mismatch");
         }
     }
 }

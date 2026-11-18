@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EDOTAFightingGameAILevel : std::int32_t {
+            enum class EDOTAFightingGameAILevel : std::uint32_t {
                 FG_AI_LEVEL_NONE = -0x1,
                 FG_AI_LEVEL_EASY = 0x0,
                 FG_AI_LEVEL_MEDIUM = 0x1,

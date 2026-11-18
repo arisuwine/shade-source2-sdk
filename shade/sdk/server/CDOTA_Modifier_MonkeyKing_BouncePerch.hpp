@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,21 +37,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_MonkeyKing_BouncePerch : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTree; // 0x1aa8, 0x4 bytes
-                bool m_bGroundToTree; // 0x1aac, 0x1 bytes
-                bool m_bTreeToGround; // 0x1aad, 0x1 bytes
-                bool m_bTreeToTree; // 0x1aae, 0x1 bytes
-                std::uint8_t pad_1aaf[0x1]; // 0x1aaf, 0x1 bytes
-                float perched_day_vision; // 0x1ab0, 0x4 bytes
-                float perched_night_vision; // 0x1ab4, 0x4 bytes
-                bool m_bAbilityIsStolen; // 0x1ab8, 0x1 bytes
-                std::uint8_t pad_1ab9[0x7]; // 0x1ab9, 0x7 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTree; // 0x1af8, 0x4 bytes
+                bool m_bGroundToTree; // 0x1afc, 0x1 bytes
+                bool m_bTreeToGround; // 0x1afd, 0x1 bytes
+                bool m_bTreeToTree; // 0x1afe, 0x1 bytes
+                std::uint8_t pad_1aff[0x1]; // 0x1aff, 0x1 bytes
+                float perched_day_vision; // 0x1b00, 0x4 bytes
+                float perched_night_vision; // 0x1b04, 0x4 bytes
+                bool m_bAbilityIsStolen; // 0x1b08, 0x1 bytes
+                std::uint8_t pad_1b09[0x7]; // 0x1b09, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_BouncePerch) == 0x1AC0, "CDOTA_Modifier_MonkeyKing_BouncePerch size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_BouncePerch) == 0x1B10, "CDOTA_Modifier_MonkeyKing_BouncePerch size mismatch");
         }
     }
 }

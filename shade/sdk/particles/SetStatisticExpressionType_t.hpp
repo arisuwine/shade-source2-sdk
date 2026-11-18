@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class SetStatisticExpressionType_t : std::int32_t {
+            enum class SetStatisticExpressionType_t : std::uint32_t {
                 SET_EXPRESSION_UNINITIALIZED = -0x1,
                 SET_EXPRESSION_SUM = 0x0,
                 SET_EXPRESSION_MEAN = 0x1,

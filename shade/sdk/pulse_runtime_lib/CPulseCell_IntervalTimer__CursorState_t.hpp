@@ -34,7 +34,8 @@ namespace shade {
                 float m_flWaitInterval; // 0x0008, 0x4 bytes
                 float m_flWaitIntervalHigh; // 0x000c, 0x4 bytes
                 bool m_bCompleteOnNextWake; // 0x0010, 0x1 bytes
-                std::uint8_t pad_0011[0x3]; // 0x0011, 0x3 bytes
+                bool m_bCompletingVeryCloseToEndOfInterval; // 0x0011, 0x1 bytes
+                std::uint8_t pad_0012[0x2]; // 0x0012, 0x2 bytes
             };
             #pragma pack(pop)
 

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,13 +29,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Tidehunter_Arcana : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1aa8[0x10]; // 0x1aa8, 0x10 bytes
+                std::uint8_t pad_1af8[0x10]; // 0x1af8, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Tidehunter_Arcana) == 0x1AB8, "CDOTA_Modifier_Tidehunter_Arcana size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Tidehunter_Arcana) == 0x1B08, "CDOTA_Modifier_Tidehunter_Arcana size mismatch");
         }
     }
 }

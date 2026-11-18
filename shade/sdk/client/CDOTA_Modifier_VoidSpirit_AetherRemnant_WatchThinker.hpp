@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_VoidSpirit_AetherRemnant_WatchThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float remnant_watch_radius; // 0x1aa8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDamageTick; // 0x1aac, 0x4 bytes
-                float damage_tick_rate; // 0x1ab0, 0x4 bytes
-                float m_flDamage; // 0x1ab4, 0x4 bytes
-                bool m_bPiercesCreeps; // 0x1ab8, 0x1 bytes
-                bool bIsArtifice; // 0x1ab9, 0x1 bytes
-                std::uint8_t pad_1aba[0x2]; // 0x1aba, 0x2 bytes
-                float artifice_pct_effectiveness; // 0x1abc, 0x4 bytes
+                float remnant_watch_radius; // 0x1af8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTick; // 0x1afc, 0x4 bytes
+                float damage_tick_rate; // 0x1b00, 0x4 bytes
+                float m_flDamage; // 0x1b04, 0x4 bytes
+                bool m_bPiercesCreeps; // 0x1b08, 0x1 bytes
+                bool bIsArtifice; // 0x1b09, 0x1 bytes
+                std::uint8_t pad_1b0a[0x2]; // 0x1b0a, 0x2 bytes
+                float artifice_pct_effectiveness; // 0x1b0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnant_WatchThinker) == 0x1AC0, "CDOTA_Modifier_VoidSpirit_AetherRemnant_WatchThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_VoidSpirit_AetherRemnant_WatchThinker) == 0x1B10, "CDOTA_Modifier_VoidSpirit_AetherRemnant_WatchThinker size mismatch");
         }
     }
 }

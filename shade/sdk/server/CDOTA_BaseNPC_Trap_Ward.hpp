@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b30
+             * Size: 0x1bc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Trap_Ward : public shade::sdk::server::CDOTA_BaseNPC_Creature {
             public:
-                CUtlSymbolLarge m_iszDefaultAnim; // 0x1b18, 0x8 bytes
-                Vector m_vTrapTargetLocal; // 0x1b20, 0xc bytes
-                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
+                CUtlSymbolLarge m_iszDefaultAnim; // 0x1ba8, 0x8 bytes
+                Vector m_vTrapTargetLocal; // 0x1bb0, 0xc bytes
+                std::uint8_t pad_1bbc[0x4]; // 0x1bbc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Trap_Ward) == 0x1B30, "CDOTA_BaseNPC_Trap_Ward size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Trap_Ward) == 0x1BC0, "CDOTA_BaseNPC_Trap_Ward size mismatch");
         }
     }
 }

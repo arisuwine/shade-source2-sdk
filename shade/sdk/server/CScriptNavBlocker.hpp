@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x880
+             * Size: 0x8e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CScriptNavBlocker : public shade::sdk::server::CFuncNavBlocker {
             public:
-                Vector m_vExtent; // 0x0870, 0xc bytes
-                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
+                Vector m_vExtent; // 0x08d0, 0xc bytes
+                std::uint8_t pad_08dc[0x4]; // 0x08dc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CScriptNavBlocker) == 0x880, "CScriptNavBlocker size mismatch");
+            static_assert(sizeof(CScriptNavBlocker) == 0x8E0, "CScriptNavBlocker size mismatch");
         }
     }
 }

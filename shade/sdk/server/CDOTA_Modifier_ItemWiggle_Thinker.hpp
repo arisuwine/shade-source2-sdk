@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b48
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,27 +30,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_ItemWiggle_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vOriginalPosition; // 0x1aa8, 0xc bytes
-                float m_flOriginalScale; // 0x1ab4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastChangeTime; // 0x1ab8, 0x4 bytes
-                VectorWS m_vLastChangePosition; // 0x1abc, 0xc bytes
-                float m_flLastChangeScale; // 0x1ac8, 0x4 bytes
-                VectorWS m_vTargetPosition; // 0x1acc, 0xc bytes
-                float m_flTargetScale; // 0x1ad8, 0x4 bytes
-                bool m_bFirstThink; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
-                float m_flStartAmplitude; // 0x1ae0, 0x4 bytes
-                float m_flEndAmplitude; // 0x1ae4, 0x4 bytes
-                float m_flScaleAmplitude; // 0x1ae8, 0x4 bytes
-                float m_flStartFrequency; // 0x1aec, 0x4 bytes
-                float m_flEndFrequency; // 0x1af0, 0x4 bytes
-                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
+                VectorWS m_vOriginalPosition; // 0x1af8, 0xc bytes
+                float m_flOriginalScale; // 0x1b04, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastChangeTime; // 0x1b08, 0x4 bytes
+                VectorWS m_vLastChangePosition; // 0x1b0c, 0xc bytes
+                float m_flLastChangeScale; // 0x1b18, 0x4 bytes
+                VectorWS m_vTargetPosition; // 0x1b1c, 0xc bytes
+                float m_flTargetScale; // 0x1b28, 0x4 bytes
+                bool m_bFirstThink; // 0x1b2c, 0x1 bytes
+                std::uint8_t pad_1b2d[0x3]; // 0x1b2d, 0x3 bytes
+                float m_flStartAmplitude; // 0x1b30, 0x4 bytes
+                float m_flEndAmplitude; // 0x1b34, 0x4 bytes
+                float m_flScaleAmplitude; // 0x1b38, 0x4 bytes
+                float m_flStartFrequency; // 0x1b3c, 0x4 bytes
+                float m_flEndFrequency; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_ItemWiggle_Thinker) == 0x1AF8, "CDOTA_Modifier_ItemWiggle_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_ItemWiggle_Thinker) == 0x1B48, "CDOTA_Modifier_ItemWiggle_Thinker size mismatch");
         }
     }
 }

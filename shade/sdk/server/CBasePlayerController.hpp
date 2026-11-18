@@ -15,6 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/ButtonBitMask_t.hpp"
 #include "shade/sdk/client/ChatIgnoreType_t.hpp"
 #include "shade/sdk/client/PlayerConnectedState.hpp"
 #include "shade/sdk/server/CBaseEntity.hpp"
@@ -41,7 +42,7 @@ namespace shade {
             class CBasePlayerController : public shade::sdk::server::CBaseEntity {
             public:
                 std::uint8_t pad_0498[0x8]; // 0x0498, 0x8 bytes
-                std::uint64_t m_nInButtonsWhichAreToggles; // 0x04a0, 0x8 bytes
+                shade::sdk::client::ButtonBitMask_t m_nInButtonsWhichAreToggles; // 0x04a0, 0x8 bytes
                 std::uint32_t m_nTickBase; // 0x04a8, 0x4 bytes
                 std::uint8_t pad_04ac[0x24]; // 0x04ac, 0x24 bytes
                 CHandle<shade::sdk::server::CBasePlayerPawn> m_hPawn; // 0x04d0, 0x4 bytes

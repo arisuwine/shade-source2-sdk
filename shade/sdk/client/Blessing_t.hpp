@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x38
+             * Size: 0x40
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -33,17 +33,19 @@ namespace shade {
                 std::uint8_t pad_0010[0x4]; // 0x0010, 0x4 bytes
                 std::int32_t nCost; // 0x0014, 0x4 bytes
                 std::int32_t nValue; // 0x0018, 0x4 bytes
-                bool bStartNode; // 0x001c, 0x1 bytes
-                std::uint8_t pad_001d[0xb]; // 0x001d, 0xb bytes
-                Vector2D vecPos; // 0x0028, 0x8 bytes
-                float flSize; // 0x0030, 0x4 bytes
-                Color color; // 0x0034, 0x4 bytes
+                float flValue; // 0x001c, 0x4 bytes
+                bool bStartNode; // 0x0020, 0x1 bytes
+                std::uint8_t pad_0021[0xb]; // 0x0021, 0xb bytes
+                Vector2D vecPos; // 0x002c, 0x8 bytes
+                float flSize; // 0x0034, 0x4 bytes
+                Color color; // 0x0038, 0x4 bytes
+                std::uint8_t pad_003c[0x4]; // 0x003c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(Blessing_t) == 0x38, "Blessing_t size mismatch");
+            static_assert(sizeof(Blessing_t) == 0x40, "Blessing_t size mismatch");
         }
     }
 }

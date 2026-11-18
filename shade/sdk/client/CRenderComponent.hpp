@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0x78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,18 +35,15 @@ namespace shade {
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0010, 0x28 bytes
                 std::uint8_t pad_0038[0x18]; // 0x0038, 0x18 bytes
                 bool m_bIsRenderingWithViewModels; // 0x0050, 0x1 bytes
-                std::uint8_t pad_0051[0x3]; // 0x0051, 0x3 bytes
-                std::uint32_t m_nSplitscreenFlags; // 0x0054, 0x4 bytes
-                bool m_bEnableRendering; // 0x0058, 0x1 bytes
-                std::uint8_t pad_0059[0x4f]; // 0x0059, 0x4f bytes
-                bool m_bInterpolationReadyToDraw; // 0x00a8, 0x1 bytes
-                std::uint8_t pad_00a9[0x27]; // 0x00a9, 0x27 bytes
+                bool m_bEnableRendering; // 0x0051, 0x1 bytes
+                bool m_bInterpolationReadyToDraw; // 0x0052, 0x1 bytes
+                std::uint8_t pad_0053[0x25]; // 0x0053, 0x25 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRenderComponent) == 0xD0, "CRenderComponent size mismatch");
+            static_assert(sizeof(CRenderComponent) == 0x78, "CRenderComponent size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x900
+             * Size: 0x960
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CBasePlatTrain : public shade::sdk::server::CBaseToggle {
             public:
-                CGameSoundEventName m_NoiseMoving; // 0x08d8, 0x8 bytes
-                CGameSoundEventName m_NoiseArrived; // 0x08e0, 0x8 bytes
-                std::uint8_t pad_08e8[0x8]; // 0x08e8, 0x8 bytes
-                float m_volume; // 0x08f0, 0x4 bytes
-                float m_flTWidth; // 0x08f4, 0x4 bytes
-                float m_flTLength; // 0x08f8, 0x4 bytes
-                std::uint8_t pad_08fc[0x4]; // 0x08fc, 0x4 bytes
+                CGameSoundEventName m_NoiseMoving; // 0x0938, 0x8 bytes
+                CGameSoundEventName m_NoiseArrived; // 0x0940, 0x8 bytes
+                std::uint8_t pad_0948[0x8]; // 0x0948, 0x8 bytes
+                float m_volume; // 0x0950, 0x4 bytes
+                float m_flTWidth; // 0x0954, 0x4 bytes
+                float m_flTLength; // 0x0958, 0x4 bytes
+                std::uint8_t pad_095c[0x4]; // 0x095c, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -44,7 +44,7 @@ namespace shade {
              * float rotation; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBasePlatTrain) == 0x900, "CBasePlatTrain size mismatch");
+            static_assert(sizeof(CBasePlatTrain) == 0x960, "CBasePlatTrain size mismatch");
         }
     }
 }

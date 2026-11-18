@@ -16,12 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/C_DOTABaseAbility.hpp"
+#include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6a8
+             * Size: 0x6b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,12 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Ability_BlackDragon_Fireball : public shade::sdk::client::C_DOTABaseAbility {
             public:
+                shade::sdk::entity2::GameTime_t flCooldown; // 0x06a8, 0x4 bytes
+                std::uint8_t pad_06ac[0x4]; // 0x06ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Ability_BlackDragon_Fireball) == 0x6A8, "C_DOTA_Ability_BlackDragon_Fireball size mismatch");
+            static_assert(sizeof(C_DOTA_Ability_BlackDragon_Fireball) == 0x6B0, "C_DOTA_Ability_BlackDragon_Fireball size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_NPC_Observer_Ward_TrueSight : public shade::sdk::client::CDOTA_NPC_Observer_Ward {
             public:
-                float m_flTrueSight; // 0x1ad0, 0x4 bytes
-                CEntityHandle m_hAbilityEntity; // 0x1ad4, 0x4 bytes
+                float m_flTrueSight; // 0x1b58, 0x4 bytes
+                CEntityHandle m_hAbilityEntity; // 0x1b5c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NPC_Observer_Ward_TrueSight) == 0x1AD8, "CDOTA_NPC_Observer_Ward_TrueSight size mismatch");
+            static_assert(sizeof(CDOTA_NPC_Observer_Ward_TrueSight) == 0x1B60, "CDOTA_NPC_Observer_Ward_TrueSight size mismatch");
         }
     }
 }

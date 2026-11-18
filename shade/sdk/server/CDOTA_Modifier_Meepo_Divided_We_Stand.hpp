@@ -16,12 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/CDOTA_Buff.hpp"
+#include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,26 +30,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Meepo_Divided_We_Stand : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t max_level; // 0x1aa8, 0x4 bytes
-                std::int32_t dps_penalty_pct; // 0x1aac, 0x4 bytes
-                std::int32_t attribute_penalty_pct; // 0x1ab0, 0x4 bytes
-                std::int32_t m_nPenaltyAS; // 0x1ab4, 0x4 bytes
-                std::int32_t m_nPenaltyDamage; // 0x1ab8, 0x4 bytes
-                std::int32_t m_nPenaltyHealth; // 0x1abc, 0x4 bytes
-                std::int32_t m_nPenaltyMana; // 0x1ac0, 0x4 bytes
-                float m_flPenaltyHPRegen; // 0x1ac4, 0x4 bytes
-                float m_flPenaltyHPRegenPct; // 0x1ac8, 0x4 bytes
-                float m_flPenaltyMPRegen; // 0x1acc, 0x4 bytes
-                float m_flPenaltyStrength; // 0x1ad0, 0x4 bytes
-                float m_flPenaltyAgility; // 0x1ad4, 0x4 bytes
-                float m_flPenaltyIntelligence; // 0x1ad8, 0x4 bytes
-                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
+                std::int32_t max_level; // 0x1af8, 0x4 bytes
+                std::int32_t dps_penalty_pct; // 0x1afc, 0x4 bytes
+                std::int32_t attribute_penalty_pct; // 0x1b00, 0x4 bytes
+                float xp_penalty_time; // 0x1b04, 0x4 bytes
+                std::int32_t m_nPenaltyAS; // 0x1b08, 0x4 bytes
+                std::int32_t m_nPenaltyDamage; // 0x1b0c, 0x4 bytes
+                std::int32_t m_nPenaltyHealth; // 0x1b10, 0x4 bytes
+                std::int32_t m_nPenaltyMana; // 0x1b14, 0x4 bytes
+                float m_flPenaltyHPRegen; // 0x1b18, 0x4 bytes
+                float m_flPenaltyHPRegenPct; // 0x1b1c, 0x4 bytes
+                float m_flPenaltyMPRegen; // 0x1b20, 0x4 bytes
+                float m_flPenaltyStrength; // 0x1b24, 0x4 bytes
+                float m_flPenaltyAgility; // 0x1b28, 0x4 bytes
+                float m_flPenaltyIntelligence; // 0x1b2c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_LastExpTime; // 0x1b30, 0x4 bytes
+                std::uint8_t pad_1b34[0x4]; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Meepo_Divided_We_Stand) == 0x1AE0, "CDOTA_Modifier_Meepo_Divided_We_Stand size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Meepo_Divided_We_Stand) == 0x1B38, "CDOTA_Modifier_Meepo_Divided_We_Stand size mismatch");
         }
     }
 }

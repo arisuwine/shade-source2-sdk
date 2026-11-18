@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc70
+             * Size: 0xcd0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Item_Physical : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                CHandle<shade::sdk::client::C_DOTA_Item> m_hItem; // 0x0bb0, 0x4 bytes
-                bool m_bIsLowPriorityHoverItem; // 0x0bb4, 0x1 bytes
-                std::uint8_t pad_0bb5[0x3]; // 0x0bb5, 0x3 bytes
-                CHandle<shade::sdk::client::C_DOTA_Item> m_hOldItem; // 0x0bb8, 0x4 bytes
-                std::uint8_t pad_0bbc[0x4]; // 0x0bbc, 0x4 bytes
-                char *m_pszParticleName; // 0x0bc0, 0x8 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0bc8, 0x4 bytes
-                bool m_bShowingTooltip; // 0x0bcc, 0x1 bytes
-                bool m_bShowingSimpleTooltip; // 0x0bcd, 0x1 bytes
-                std::uint8_t pad_0bce[0xa2]; // 0x0bce, 0xa2 bytes
+                CHandle<shade::sdk::client::C_DOTA_Item> m_hItem; // 0x0c10, 0x4 bytes
+                bool m_bIsLowPriorityHoverItem; // 0x0c14, 0x1 bytes
+                std::uint8_t pad_0c15[0x3]; // 0x0c15, 0x3 bytes
+                CHandle<shade::sdk::client::C_DOTA_Item> m_hOldItem; // 0x0c18, 0x4 bytes
+                std::uint8_t pad_0c1c[0x4]; // 0x0c1c, 0x4 bytes
+                char *m_pszParticleName; // 0x0c20, 0x8 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x0c28, 0x4 bytes
+                bool m_bShowingTooltip; // 0x0c2c, 0x1 bytes
+                bool m_bShowingSimpleTooltip; // 0x0c2d, 0x1 bytes
+                std::uint8_t pad_0c2e[0xa2]; // 0x0c2e, 0xa2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Item_Physical) == 0xC70, "C_DOTA_Item_Physical size mismatch");
+            static_assert(sizeof(C_DOTA_Item_Physical) == 0xCD0, "C_DOTA_Item_Physical size mismatch");
         }
     }
 }

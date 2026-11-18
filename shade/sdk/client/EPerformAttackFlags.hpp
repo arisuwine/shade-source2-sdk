@@ -22,7 +22,8 @@ namespace shade {
                 k_PerformAttackFlags_DontBreakInvis = 0x2,
                 k_PerformAttackFlags_UseProjectile = 0x4,
                 k_PerformAttackFlags_SkipRangeCheck = 0x8,
-                k_PerformAttackFlags_ForceDefaultProjectile = 0x10
+                k_PerformAttackFlags_ForceDefaultProjectile = 0x10,
+                k_PerformAttackFlags_NoLifesteal = 0x20
             };
         }
     }

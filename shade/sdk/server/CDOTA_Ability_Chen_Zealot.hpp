@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x598
+             * Size: 0x5a8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,12 +39,15 @@ namespace shade {
             class CDOTA_Ability_Chen_Zealot : public shade::sdk::server::CDOTABaseAbility {
             public:
                 CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecZealots; // 0x0580, 0x18 bytes
+                CUtlString m_strZealotUnitName; // 0x0598, 0x8 bytes
+                bool m_bSpawnedInitialZealot; // 0x05a0, 0x1 bytes
+                std::uint8_t pad_05a1[0x7]; // 0x05a1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Chen_Zealot) == 0x598, "CDOTA_Ability_Chen_Zealot size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Chen_Zealot) == 0x5A8, "CDOTA_Ability_Chen_Zealot size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,25 +37,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Brewmaster_DrunkenBrawler_Passive : public shade::sdk::client::CDOTA_Buff {
             public:
-                float bonus_armor; // 0x1aa8, 0x4 bytes
-                float magic_resist; // 0x1aac, 0x4 bytes
-                float dodge_chance; // 0x1ab0, 0x4 bytes
-                float bonus_move_speed; // 0x1ab4, 0x4 bytes
-                float crit_chance; // 0x1ab8, 0x4 bytes
-                float crit_multiplier; // 0x1abc, 0x4 bytes
-                float attack_speed; // 0x1ac0, 0x4 bytes
-                float brewed_up_duration; // 0x1ac4, 0x4 bytes
-                float brewed_up_duration_extend; // 0x1ac8, 0x4 bytes
-                float brewed_up_bonus; // 0x1acc, 0x4 bytes
-                bool m_bBrewedUp; // 0x1ad0, 0x1 bytes
-                std::uint8_t pad_1ad1[0x7]; // 0x1ad1, 0x7 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1ad8, 0x18 bytes
+                float bonus_armor; // 0x1af8, 0x4 bytes
+                float magic_resist; // 0x1afc, 0x4 bytes
+                float dodge_chance; // 0x1b00, 0x4 bytes
+                float bonus_move_speed; // 0x1b04, 0x4 bytes
+                float crit_chance; // 0x1b08, 0x4 bytes
+                float crit_multiplier; // 0x1b0c, 0x4 bytes
+                float attack_speed; // 0x1b10, 0x4 bytes
+                float brewed_up_duration; // 0x1b14, 0x4 bytes
+                float brewed_up_duration_extend; // 0x1b18, 0x4 bytes
+                float brewed_up_bonus; // 0x1b1c, 0x4 bytes
+                bool m_bBrewedUp; // 0x1b20, 0x1 bytes
+                std::uint8_t pad_1b21[0x7]; // 0x1b21, 0x7 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1b28, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Brewmaster_DrunkenBrawler_Passive) == 0x1AF0, "CDOTA_Modifier_Brewmaster_DrunkenBrawler_Passive size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Brewmaster_DrunkenBrawler_Passive) == 0x1B40, "CDOTA_Modifier_Brewmaster_DrunkenBrawler_Passive size mismatch");
         }
     }
 }

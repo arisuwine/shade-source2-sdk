@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc08
+             * Size: 0xc68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,30 +40,30 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PointCommentaryNode : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                std::uint8_t pad_0bb0[0x10]; // 0x0bb0, 0x10 bytes
-                bool m_bActive; // 0x0bc0, 0x1 bytes
-                bool m_bWasActive; // 0x0bc1, 0x1 bytes
-                std::uint8_t pad_0bc2[0x2]; // 0x0bc2, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flEndTime; // 0x0bc4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0bc8, 0x4 bytes
-                float m_flStartTimeInCommentary; // 0x0bcc, 0x4 bytes
-                CUtlSymbolLarge m_iszCommentaryFile; // 0x0bd0, 0x8 bytes
-                CUtlSymbolLarge m_iszTitle; // 0x0bd8, 0x8 bytes
-                CUtlSymbolLarge m_iszSpeakers; // 0x0be0, 0x8 bytes
-                std::int32_t m_iNodeNumber; // 0x0be8, 0x4 bytes
-                std::int32_t m_iNodeNumberMax; // 0x0bec, 0x4 bytes
-                bool m_bListenedTo; // 0x0bf0, 0x1 bytes
-                std::uint8_t pad_0bf1[0x7]; // 0x0bf1, 0x7 bytes
-                shade::sdk::client::CSoundPatch *m_sndCommentary; // 0x0bf8, 0x8 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hViewPosition; // 0x0c00, 0x4 bytes
-                bool m_bRestartAfterRestore; // 0x0c04, 0x1 bytes
-                std::uint8_t pad_0c05[0x3]; // 0x0c05, 0x3 bytes
+                std::uint8_t pad_0c10[0x10]; // 0x0c10, 0x10 bytes
+                bool m_bActive; // 0x0c20, 0x1 bytes
+                bool m_bWasActive; // 0x0c21, 0x1 bytes
+                std::uint8_t pad_0c22[0x2]; // 0x0c22, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flEndTime; // 0x0c24, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x0c28, 0x4 bytes
+                float m_flStartTimeInCommentary; // 0x0c2c, 0x4 bytes
+                CUtlSymbolLarge m_iszCommentaryFile; // 0x0c30, 0x8 bytes
+                CUtlSymbolLarge m_iszTitle; // 0x0c38, 0x8 bytes
+                CUtlSymbolLarge m_iszSpeakers; // 0x0c40, 0x8 bytes
+                std::int32_t m_iNodeNumber; // 0x0c48, 0x4 bytes
+                std::int32_t m_iNodeNumberMax; // 0x0c4c, 0x4 bytes
+                bool m_bListenedTo; // 0x0c50, 0x1 bytes
+                std::uint8_t pad_0c51[0x7]; // 0x0c51, 0x7 bytes
+                shade::sdk::client::CSoundPatch *m_sndCommentary; // 0x0c58, 0x8 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hViewPosition; // 0x0c60, 0x4 bytes
+                bool m_bRestartAfterRestore; // 0x0c64, 0x1 bytes
+                std::uint8_t pad_0c65[0x3]; // 0x0c65, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PointCommentaryNode) == 0xC08, "C_PointCommentaryNode size mismatch");
+            static_assert(sizeof(C_PointCommentaryNode) == 0xC68, "C_PointCommentaryNode size mismatch");
         }
     }
 }

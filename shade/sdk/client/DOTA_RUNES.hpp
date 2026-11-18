@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTA_RUNES : std::int32_t {
+            enum class DOTA_RUNES : std::uint32_t {
                 DOTA_RUNE_INVALID = -0x1,
                 DOTA_RUNE_DOUBLEDAMAGE = 0x0,
                 DOTA_RUNE_HASTE = 0x1,

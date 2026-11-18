@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,24 +37,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float underling_search_radius; // 0x1aa8, 0x4 bytes
-                std::int32_t warrior_health; // 0x1aac, 0x4 bytes
-                std::int32_t warrior_damage; // 0x1ab0, 0x4 bytes
-                std::int32_t archer_health; // 0x1ab4, 0x4 bytes
-                std::int32_t archer_damage; // 0x1ab8, 0x4 bytes
-                std::int32_t hull_radius; // 0x1abc, 0x4 bytes
-                std::int32_t gold_bounty; // 0x1ac0, 0x4 bytes
-                std::int32_t xp_bounty; // 0x1ac4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecAttackedEnemies; // 0x1ac8, 0x18 bytes
-                bool m_bSpawnsStarted; // 0x1ae0, 0x1 bytes
-                std::uint8_t pad_1ae1[0x3]; // 0x1ae1, 0x3 bytes
-                std::int32_t nSpawnsCompleted; // 0x1ae4, 0x4 bytes
+                float underling_search_radius; // 0x1af8, 0x4 bytes
+                std::int32_t warrior_health; // 0x1afc, 0x4 bytes
+                std::int32_t warrior_damage; // 0x1b00, 0x4 bytes
+                std::int32_t archer_health; // 0x1b04, 0x4 bytes
+                std::int32_t archer_damage; // 0x1b08, 0x4 bytes
+                std::int32_t hull_radius; // 0x1b0c, 0x4 bytes
+                std::int32_t gold_bounty; // 0x1b10, 0x4 bytes
+                std::int32_t xp_bounty; // 0x1b14, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecAttackedEnemies; // 0x1b18, 0x18 bytes
+                bool m_bSpawnsStarted; // 0x1b30, 0x1 bytes
+                std::uint8_t pad_1b31[0x3]; // 0x1b31, 0x3 bytes
+                std::int32_t nSpawnsCompleted; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker) == 0x1AE8, "CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker) == 0x1B38, "CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker size mismatch");
         }
     }
 }

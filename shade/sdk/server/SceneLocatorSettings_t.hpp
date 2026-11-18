@@ -22,8 +22,8 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x6
-             * Alignment: 0x2
+             * Size: 0xc
+             * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
              */
@@ -33,13 +33,14 @@ namespace shade {
                 std::uint8_t pad_0001[0x1]; // 0x0001, 0x1 bytes
                 shade::sdk::client::ChoreoLocatorArrivalOptionFlags_t m_nArrivalOptions; // 0x0002, 0x2 bytes
                 bool m_bHasArrivalOptions; // 0x0004, 0x1 bytes
-                std::uint8_t pad_0005[0x1]; // 0x0005, 0x1 bytes
+                std::uint8_t pad_0005[0x3]; // 0x0005, 0x3 bytes
+                float m_flSpeedScale; // 0x0008, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(SceneLocatorSettings_t) == 0x6, "SceneLocatorSettings_t size mismatch");
+            static_assert(sizeof(SceneLocatorSettings_t) == 0xC, "SceneLocatorSettings_t size mismatch");
         }
     }
 }

@@ -23,7 +23,6 @@ namespace shade {
             struct PulseCursorID_t;
             struct PulseDocNodeID_t;
             struct PulseGraphExecutionHistoryCursorDesc_t;
-            struct PulseGraphExecutionHistoryEntry_t;
             struct PulseGraphExecutionHistoryNodeDesc_t;
         }
     }
@@ -33,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0xa8
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -43,15 +42,18 @@ namespace shade {
                 shade::sdk::pulse_runtime_lib::PulseGraphInstanceID_t m_nInstanceID; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 CUtlString m_strFileName; // 0x0008, 0x8 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::PulseGraphExecutionHistoryEntry_t*> m_vecHistory; // 0x0010, 0x18 bytes
-                CUtlOrderedMap<shade::sdk::pulse_runtime_lib::PulseDocNodeID_t, shade::sdk::pulse_runtime_lib::PulseGraphExecutionHistoryNodeDesc_t*> m_mapCellDesc; // 0x0028, 0x28 bytes
-                CUtlOrderedMap<shade::sdk::pulse_runtime_lib::PulseCursorID_t, shade::sdk::pulse_runtime_lib::PulseGraphExecutionHistoryCursorDesc_t*> m_mapCursorDesc; // 0x0050, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::pulse_runtime_lib::PulseDocNodeID_t, shade::sdk::pulse_runtime_lib::PulseGraphExecutionHistoryNodeDesc_t*> m_mapCellDesc; // 0x0010, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::pulse_runtime_lib::PulseCursorID_t, shade::sdk::pulse_runtime_lib::PulseGraphExecutionHistoryCursorDesc_t*> m_mapCursorDesc; // 0x0038, 0x28 bytes
+                CUtlOrderedMap<shade::sdk::pulse_runtime_lib::PulseDocNodeID_t, CUtlVector<std::int32_t>> m_mapNodeToNewCursorCount; // 0x0060, 0x28 bytes
+                std::uint8_t pad_0088[0x18]; // 0x0088, 0x18 bytes
+                std::int32_t m_nCulledCursorCount; // 0x00a0, 0x4 bytes
+                std::uint8_t pad_00a4[0x4]; // 0x00a4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphExecutionHistory) == 0x78, "CPulseGraphExecutionHistory size mismatch");
+            static_assert(sizeof(CPulseGraphExecutionHistory) == 0xA8, "CPulseGraphExecutionHistory size mismatch");
         }
     }
 }

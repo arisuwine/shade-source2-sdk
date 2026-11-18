@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x70
+             * Size: 0x78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,7 +34,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerNull) == 0x70, "CVoiceContainerNull size mismatch");
+            static_assert(sizeof(CVoiceContainerNull) == 0x78, "CVoiceContainerNull size mismatch");
         }
     }
 }

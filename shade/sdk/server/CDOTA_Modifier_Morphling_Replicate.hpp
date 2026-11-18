@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b40
+             * Size: 0x1b90
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -40,30 +40,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Morphling_Replicate : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTinyTreeWearable; // 0x1aa8, 0x4 bytes
-                float m_flBaseAttackRange; // 0x1aac, 0x4 bytes
-                float m_flBaseMovementSpeed; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlSymbolLarge m_iszModelName; // 0x1ab8, 0x8 bytes
-                CUtlSymbolLarge m_iszProjectileName; // 0x1ac0, 0x8 bytes
-                shade::sdk::client::HeroFacetKey_t m_nFacetKey; // 0x1ac8, 0x8 bytes
-                CUtlSymbolLarge m_iszOriginalModel; // 0x1ad0, 0x8 bytes
-                shade::sdk::client::HeroID_t m_nCopiedHeroID; // 0x1ad8, 0x4 bytes
-                float m_fOriginalModelScale; // 0x1adc, 0x4 bytes
-                CUtlVector<shade::sdk::server::CEconItemView*> m_vecOriginalItems; // 0x1ae0, 0x18 bytes
-                std::uint8_t pad_1af8[0x30]; // 0x1af8, 0x30 bytes
-                float m_flOriginalStr; // 0x1b28, 0x4 bytes
-                float m_flOriginalAgi; // 0x1b2c, 0x4 bytes
-                float m_flOriginalInt; // 0x1b30, 0x4 bytes
-                std::int32_t m_iOriginalAttackCapability; // 0x1b34, 0x4 bytes
-                float m_flOriginalHealthPercentage; // 0x1b38, 0x4 bytes
-                float m_flOriginalManaPercentage; // 0x1b3c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTinyTreeWearable; // 0x1af8, 0x4 bytes
+                float m_flBaseAttackRange; // 0x1afc, 0x4 bytes
+                float m_flBaseMovementSpeed; // 0x1b00, 0x4 bytes
+                std::uint8_t pad_1b04[0x4]; // 0x1b04, 0x4 bytes
+                CUtlSymbolLarge m_iszModelName; // 0x1b08, 0x8 bytes
+                CUtlSymbolLarge m_iszProjectileName; // 0x1b10, 0x8 bytes
+                shade::sdk::client::HeroFacetKey_t m_nFacetKey; // 0x1b18, 0x8 bytes
+                CUtlSymbolLarge m_iszOriginalModel; // 0x1b20, 0x8 bytes
+                shade::sdk::client::HeroID_t m_nCopiedHeroID; // 0x1b28, 0x4 bytes
+                float m_fOriginalModelScale; // 0x1b2c, 0x4 bytes
+                CUtlVector<shade::sdk::server::CEconItemView*> m_vecOriginalItems; // 0x1b30, 0x18 bytes
+                std::uint8_t pad_1b48[0x30]; // 0x1b48, 0x30 bytes
+                float m_flOriginalStr; // 0x1b78, 0x4 bytes
+                float m_flOriginalAgi; // 0x1b7c, 0x4 bytes
+                float m_flOriginalInt; // 0x1b80, 0x4 bytes
+                std::int32_t m_iOriginalAttackCapability; // 0x1b84, 0x4 bytes
+                float m_flOriginalHealthPercentage; // 0x1b88, 0x4 bytes
+                float m_flOriginalManaPercentage; // 0x1b8c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Morphling_Replicate) == 0x1B40, "CDOTA_Modifier_Morphling_Replicate size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Morphling_Replicate) == 0x1B90, "CDOTA_Modifier_Morphling_Replicate size mismatch");
         }
     }
 }

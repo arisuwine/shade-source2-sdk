@@ -40,7 +40,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xefb0
+             * Size: 0xf200
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -154,47 +154,47 @@ namespace shade {
                 std::int32_t m_iCouriersPotentiallyKilled[0x18]; // 0xc390, 0x60 bytes
                 std::int32_t m_iCommandsIssued[0x18]; // 0xc3f0, 0x60 bytes
                 std::uint32_t m_hHeroSpawnGroup[0x18]; // 0xc450, 0x60 bytes
-                std::uint8_t pad_c4b0[0x17c0]; // 0xc4b0, 0x17c0 bytes
-                float m_fNextLaneDetectionUpdate; // 0xdc70, 0x4 bytes
-                float m_fNextTimedHeroStatsUpdate; // 0xdc74, 0x4 bytes
-                std::uint8_t pad_dc78[0x2a0]; // 0xdc78, 0x2a0 bytes
-                bool m_bInitializedLaneWaypoints; // 0xdf18, 0x1 bytes
-                std::uint8_t pad_df19[0x517]; // 0xdf19, 0x517 bytes
-                std::uint32_t m_nLastWardSuggestionBuildingState; // 0xe430, 0x4 bytes
-                std::uint32_t m_nLastWardSuggestionUpdateNum; // 0xe434, 0x4 bytes
-                bool m_bLastWardSuggestionRoshanAlive; // 0xe438, 0x1 bytes
-                bool m_bDoFinalPregameSuggestion[0xa]; // 0xe439, 0xa bytes
-                std::uint8_t pad_e443[0x1]; // 0xe443, 0x1 bytes
-                float m_fNextCreepDistanceUpdate; // 0xe444, 0x4 bytes
-                float m_fCreepDistanceSafe[0xf]; // 0xe448, 0x3c bytes
-                float m_fCreepDistanceMid[0xf]; // 0xe484, 0x3c bytes
-                float m_fCreepDistanceOff[0xf]; // 0xe4c0, 0x3c bytes
-                shade::sdk::entity2::GameTime_t m_fLastSuggestionTime; // 0xe4fc, 0x4 bytes
-                bool m_bHasRevealedAnonymizedEnemyPlayerInfo; // 0xe500, 0x1 bytes
-                std::uint8_t pad_e501[0x607]; // 0xe501, 0x607 bytes
-                shade::sdk::client::PlayerID_t m_nRequestedBotPlayerID; // 0xeb08, 0x4 bytes
-                float m_fNextCombatLogLocationUpdateTime; // 0xeb0c, 0x4 bytes
-                float m_fNextAPMUpdateTime; // 0xeb10, 0x4 bytes
-                std::uint8_t pad_eb14[0x4]; // 0xeb14, 0x4 bytes
-                CUtlVector<std::uint32_t> m_vecPendingPlayerResourceRequests; // 0xeb18, 0x18 bytes
-                std::int32_t m_iRampages[0x18]; // 0xeb30, 0x60 bytes
-                std::int32_t m_iTripleKills[0x18]; // 0xeb90, 0x60 bytes
-                std::int32_t m_iCouriersKilled[0x18]; // 0xebf0, 0x60 bytes
-                std::int32_t m_iAegisesSnatched[0x18]; // 0xec50, 0x60 bytes
-                std::int32_t m_iCheesesEaten[0x18]; // 0xecb0, 0x60 bytes
-                std::int32_t m_iRapiersPurchased[0x18]; // 0xed10, 0x60 bytes
-                float m_flPushingDamage[0x18]; // 0xed70, 0x60 bytes
-                std::int32_t m_iRoshanKillsNight[0x18]; // 0xedd0, 0x60 bytes
-                std::int32_t m_iRoshanKillsDay[0x18]; // 0xee30, 0x60 bytes
-                std::int32_t m_iPortalsUsed[0x18]; // 0xee90, 0x60 bytes
-                std::int32_t m_iWisdomRunesGained[0x18]; // 0xeef0, 0x60 bytes
-                std::int32_t m_iShieldRunesGained[0x18]; // 0xef50, 0x60 bytes
+                std::uint8_t pad_c4b0[0x1a10]; // 0xc4b0, 0x1a10 bytes
+                float m_fNextLaneDetectionUpdate; // 0xdec0, 0x4 bytes
+                float m_fNextTimedHeroStatsUpdate; // 0xdec4, 0x4 bytes
+                std::uint8_t pad_dec8[0x2a0]; // 0xdec8, 0x2a0 bytes
+                bool m_bInitializedLaneWaypoints; // 0xe168, 0x1 bytes
+                std::uint8_t pad_e169[0x517]; // 0xe169, 0x517 bytes
+                std::uint32_t m_nLastWardSuggestionBuildingState; // 0xe680, 0x4 bytes
+                std::uint32_t m_nLastWardSuggestionUpdateNum; // 0xe684, 0x4 bytes
+                bool m_bLastWardSuggestionRoshanAlive; // 0xe688, 0x1 bytes
+                bool m_bDoFinalPregameSuggestion[0xa]; // 0xe689, 0xa bytes
+                std::uint8_t pad_e693[0x1]; // 0xe693, 0x1 bytes
+                float m_fNextCreepDistanceUpdate; // 0xe694, 0x4 bytes
+                float m_fCreepDistanceSafe[0xf]; // 0xe698, 0x3c bytes
+                float m_fCreepDistanceMid[0xf]; // 0xe6d4, 0x3c bytes
+                float m_fCreepDistanceOff[0xf]; // 0xe710, 0x3c bytes
+                shade::sdk::entity2::GameTime_t m_fLastSuggestionTime; // 0xe74c, 0x4 bytes
+                bool m_bHasRevealedAnonymizedEnemyPlayerInfo; // 0xe750, 0x1 bytes
+                std::uint8_t pad_e751[0x607]; // 0xe751, 0x607 bytes
+                shade::sdk::client::PlayerID_t m_nRequestedBotPlayerID; // 0xed58, 0x4 bytes
+                float m_fNextCombatLogLocationUpdateTime; // 0xed5c, 0x4 bytes
+                float m_fNextAPMUpdateTime; // 0xed60, 0x4 bytes
+                std::uint8_t pad_ed64[0x4]; // 0xed64, 0x4 bytes
+                CUtlVector<std::uint32_t> m_vecPendingPlayerResourceRequests; // 0xed68, 0x18 bytes
+                std::int32_t m_iRampages[0x18]; // 0xed80, 0x60 bytes
+                std::int32_t m_iTripleKills[0x18]; // 0xede0, 0x60 bytes
+                std::int32_t m_iCouriersKilled[0x18]; // 0xee40, 0x60 bytes
+                std::int32_t m_iAegisesSnatched[0x18]; // 0xeea0, 0x60 bytes
+                std::int32_t m_iCheesesEaten[0x18]; // 0xef00, 0x60 bytes
+                std::int32_t m_iRapiersPurchased[0x18]; // 0xef60, 0x60 bytes
+                float m_flPushingDamage[0x18]; // 0xefc0, 0x60 bytes
+                std::int32_t m_iRoshanKillsNight[0x18]; // 0xf020, 0x60 bytes
+                std::int32_t m_iRoshanKillsDay[0x18]; // 0xf080, 0x60 bytes
+                std::int32_t m_iPortalsUsed[0x18]; // 0xf0e0, 0x60 bytes
+                std::int32_t m_iWisdomRunesGained[0x18]; // 0xf140, 0x60 bytes
+                std::int32_t m_iShieldRunesGained[0x18]; // 0xf1a0, 0x60 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_PlayerResource) == 0xEFB0, "CDOTA_PlayerResource size mismatch");
+            static_assert(sizeof(CDOTA_PlayerResource) == 0xF200, "CDOTA_PlayerResource size mismatch");
         }
     }
 }

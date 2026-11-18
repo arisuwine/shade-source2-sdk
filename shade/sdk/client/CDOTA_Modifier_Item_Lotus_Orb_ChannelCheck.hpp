@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,19 +38,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Lotus_Orb_ChannelCheck : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentAbility; // 0x1aa8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1aac, 0x4 bytes
-                VectorWS m_vLocation; // 0x1ab0, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_fChannelEnd; // 0x1abc, 0x4 bytes
-                bool m_bInterrupt; // 0x1ac0, 0x1 bytes
-                bool m_bExpired; // 0x1ac1, 0x1 bytes
-                std::uint8_t pad_1ac2[0x6]; // 0x1ac2, 0x6 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentAbility; // 0x1af8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1afc, 0x4 bytes
+                VectorWS m_vLocation; // 0x1b00, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_fChannelEnd; // 0x1b0c, 0x4 bytes
+                bool m_bInterrupt; // 0x1b10, 0x1 bytes
+                bool m_bExpired; // 0x1b11, 0x1 bytes
+                std::uint8_t pad_1b12[0x6]; // 0x1b12, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Lotus_Orb_ChannelCheck) == 0x1AC8, "CDOTA_Modifier_Item_Lotus_Orb_ChannelCheck size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Lotus_Orb_ChannelCheck) == 0x1B18, "CDOTA_Modifier_Item_Lotus_Orb_ChannelCheck size mismatch");
         }
     }
 }

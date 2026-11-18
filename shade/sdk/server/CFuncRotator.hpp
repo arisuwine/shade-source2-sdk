@@ -36,7 +36,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9e0
+             * Size: 0xa80
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -45,58 +45,62 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncRotator : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::server::CFuncRotator__Rotate_t m_eRotateType; // 0x0858, 0x4 bytes
-                bool m_bIsRotating; // 0x085c, 0x1 bytes
-                shade::sdk::client::SolidType_t m_eSolidType; // 0x085d, 0x1 bytes
-                std::uint8_t pad_085e[0x2]; // 0x085e, 0x2 bytes
-                float m_flSpeed; // 0x0860, 0x4 bytes
-                float m_flRotationDistanceDegrees; // 0x0864, 0x4 bytes
-                float m_flTimeToCompleteRotation; // 0x0868, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hRotatorTarget; // 0x086c, 0x4 bytes
-                CUtlSymbolLarge m_strRotatorTarget; // 0x0870, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnRotationStarted; // 0x0878, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnRotationCompleted; // 0x0890, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOscillate; // 0x08a8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOscillateStartArrive; // 0x08c0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOscillateStartDepart; // 0x08d8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOscillateEndArrive; // 0x08f0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnOscillateEndDepart; // 0x0908, 0x18 bytes
-                shade::sdk::entity2::GameTick_t m_nTickRotateRan; // 0x0920, 0x4 bytes
-                bool m_bStartedRotating; // 0x0924, 0x1 bytes
-                std::uint8_t pad_0925[0x3]; // 0x0925, 0x3 bytes
-                shade::sdk::server::FuncRotatorRotationSummary_t m_rotationSummary; // 0x0928, 0x8 bytes
-                float m_flTimeToReachMaxSpeed; // 0x0930, 0x4 bytes
-                float m_flTimeToReachZeroSpeed; // 0x0934, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeRotationStart; // 0x0938, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTimeRotationStop; // 0x093c, 0x4 bytes
-                float m_flStartSpeed; // 0x0940, 0x4 bytes
-                std::uint8_t pad_0944[0xc]; // 0x0944, 0xc bytes
-                Quaternion m_qLocalOrientation; // 0x0950, 0x10 bytes
-                QAngle m_angLastWrittenLocal; // 0x0960, 0xc bytes
-                std::uint8_t pad_096c[0x4]; // 0x096c, 0x4 bytes
-                Quaternion m_qSpawnOrientation; // 0x0970, 0x10 bytes
-                bool m_bReturningToInitialRotation; // 0x0980, 0x1 bytes
-                std::uint8_t pad_0981[0x3]; // 0x0981, 0x3 bytes
-                float m_flMinYawRotation; // 0x0984, 0x4 bytes
-                float m_flMaxYawRotation; // 0x0988, 0x4 bytes
-                bool m_bOscillationFromStart; // 0x098c, 0x1 bytes
-                std::uint8_t pad_098d[0x3]; // 0x098d, 0x3 bytes
-                CGameSoundEventName m_iszStartSound; // 0x0990, 0x8 bytes
-                CGameSoundEventName m_iszLoopSound; // 0x0998, 0x8 bytes
-                std::uint8_t pad_09a0[0x18]; // 0x09a0, 0x18 bytes
-                CGameSoundEventName m_iszStopSound; // 0x09b8, 0x8 bytes
-                float m_flTargetAngle; // 0x09c0, 0x4 bytes
-                float m_flCurrentAngle; // 0x09c4, 0x4 bytes
-                shade::sdk::server::CFuncRotator__RotationAxis_t m_eRotationAxis; // 0x09c8, 0x4 bytes
-                float m_flSpeedDriftFromOverRotate; // 0x09cc, 0x4 bytes
-                bool m_bQueueStop; // 0x09d0, 0x1 bytes
-                std::uint8_t pad_09d1[0xf]; // 0x09d1, 0xf bytes
+                shade::sdk::server::CFuncRotator__Rotate_t m_eRotateType; // 0x08b8, 0x4 bytes
+                bool m_bIsRotating; // 0x08bc, 0x1 bytes
+                shade::sdk::client::SolidType_t m_eSolidType; // 0x08bd, 0x1 bytes
+                std::uint8_t pad_08be[0x2]; // 0x08be, 0x2 bytes
+                float m_flSpeed; // 0x08c0, 0x4 bytes
+                float m_flRotationDistanceDegrees; // 0x08c4, 0x4 bytes
+                float m_flTimeToCompleteRotation; // 0x08c8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hRotatorTarget; // 0x08cc, 0x4 bytes
+                CUtlSymbolLarge m_strRotatorTarget; // 0x08d0, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnRotationStarted; // 0x08d8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnRotationCompleted; // 0x08f0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOscillate; // 0x0908, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOscillateStartArrive; // 0x0920, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOscillateStartDepart; // 0x0938, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOscillateEndArrive; // 0x0950, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnOscillateEndDepart; // 0x0968, 0x18 bytes
+                shade::sdk::entity2::GameTick_t m_nTickRotateRan; // 0x0980, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nTickDependenciesResolved; // 0x0984, 0x4 bytes
+                bool m_bStartedRotating; // 0x0988, 0x1 bytes
+                std::uint8_t pad_0989[0x3]; // 0x0989, 0x3 bytes
+                shade::sdk::server::FuncRotatorRotationSummary_t m_rotationSummary; // 0x098c, 0x8 bytes
+                float m_flTimeToReachMaxSpeed; // 0x0994, 0x4 bytes
+                float m_flTimeToReachZeroSpeed; // 0x0998, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeRotationStart; // 0x099c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTimeRotationStop; // 0x09a0, 0x4 bytes
+                float m_flStartSpeed; // 0x09a4, 0x4 bytes
+                std::uint8_t pad_09a8[0x8]; // 0x09a8, 0x8 bytes
+                Quaternion m_qLocalOrientation; // 0x09b0, 0x10 bytes
+                QAngle m_angLastWrittenLocal; // 0x09c0, 0xc bytes
+                std::uint8_t pad_09cc[0x4]; // 0x09cc, 0x4 bytes
+                Quaternion m_qSpawnOrientation; // 0x09d0, 0x10 bytes
+                bool m_bReturningToInitialRotation; // 0x09e0, 0x1 bytes
+                std::uint8_t pad_09e1[0x3]; // 0x09e1, 0x3 bytes
+                float m_flMinYawRotation; // 0x09e4, 0x4 bytes
+                float m_flMaxYawRotation; // 0x09e8, 0x4 bytes
+                bool m_bOscillationFromStart; // 0x09ec, 0x1 bytes
+                std::uint8_t pad_09ed[0x3]; // 0x09ed, 0x3 bytes
+                CGameSoundEventName m_iszStartSound; // 0x09f0, 0x8 bytes
+                CGameSoundEventName m_iszLoopSound; // 0x09f8, 0x8 bytes
+                std::uint8_t pad_0a00[0x18]; // 0x0a00, 0x18 bytes
+                CGameSoundEventName m_iszStopSound; // 0x0a18, 0x8 bytes
+                float m_flTargetAngle; // 0x0a20, 0x4 bytes
+                float m_flCurrentAngle; // 0x0a24, 0x4 bytes
+                shade::sdk::server::CFuncRotator__RotationAxis_t m_eRotationAxis; // 0x0a28, 0x4 bytes
+                float m_flSpeedDriftFromOverRotate; // 0x0a2c, 0x4 bytes
+                std::uint8_t pad_0a30[0x4]; // 0x0a30, 0x4 bytes
+                bool m_bQueueStop; // 0x0a34, 0x1 bytes
+                bool m_bIsImGuiLogging; // 0x0a35, 0x1 bytes
+                bool m_bIsImGuiEntTextLogging; // 0x0a36, 0x1 bytes
+                std::uint8_t pad_0a37[0x49]; // 0x0a37, 0x49 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncRotator) == 0x9E0, "CFuncRotator size mismatch");
+            static_assert(sizeof(CFuncRotator) == 0xA80, "CFuncRotator size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,27 +29,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_ArcWarden_SparkWraith_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1aa8, 0x4 bytes
-                float wraith_vision_radius; // 0x1aac, 0x4 bytes
-                std::int32_t wraith_speed; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x14]; // 0x1ab4, 0x14 bytes
-                float activation_delay; // 0x1ac8, 0x4 bytes
-                float think_interval; // 0x1acc, 0x4 bytes
-                float m_flSparkDamage; // 0x1ad0, 0x4 bytes
-                std::int32_t m_nViewerID; // 0x1ad4, 0x4 bytes
-                std::int32_t m_nViewerTeam; // 0x1ad8, 0x4 bytes
-                bool m_bActive; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
-                std::int32_t maximum_targets; // 0x1ae0, 0x4 bytes
-                float second_wraith_damage_pct; // 0x1ae4, 0x4 bytes
-                float second_wraith_speed_pct; // 0x1ae8, 0x4 bytes
-                std::uint8_t pad_1aec[0x4]; // 0x1aec, 0x4 bytes
+                float radius; // 0x1af8, 0x4 bytes
+                float wraith_vision_radius; // 0x1afc, 0x4 bytes
+                std::int32_t wraith_speed; // 0x1b00, 0x4 bytes
+                std::uint8_t pad_1b04[0x14]; // 0x1b04, 0x14 bytes
+                float activation_delay; // 0x1b18, 0x4 bytes
+                float think_interval; // 0x1b1c, 0x4 bytes
+                float m_flSparkDamage; // 0x1b20, 0x4 bytes
+                std::int32_t m_nViewerID; // 0x1b24, 0x4 bytes
+                std::int32_t m_nViewerTeam; // 0x1b28, 0x4 bytes
+                bool m_bActive; // 0x1b2c, 0x1 bytes
+                std::uint8_t pad_1b2d[0x3]; // 0x1b2d, 0x3 bytes
+                std::int32_t maximum_targets; // 0x1b30, 0x4 bytes
+                float second_wraith_damage_pct; // 0x1b34, 0x4 bytes
+                float second_wraith_speed_pct; // 0x1b38, 0x4 bytes
+                std::uint8_t pad_1b3c[0x4]; // 0x1b3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_ArcWarden_SparkWraith_Thinker) == 0x1AF0, "CDOTA_Modifier_ArcWarden_SparkWraith_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_ArcWarden_SparkWraith_Thinker) == 0x1B40, "CDOTA_Modifier_ArcWarden_SparkWraith_Thinker size mismatch");
         }
     }
 }

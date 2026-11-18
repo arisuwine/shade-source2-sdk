@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleLightingQuality_t : std::int32_t {
+            enum class ParticleLightingQuality_t : std::uint32_t {
                 PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
                 PARTICLE_LIGHTING_PER_VERTEX = 0x1,
                 PARTICLE_LIGHTING_PER_PIXEL = -0x1,

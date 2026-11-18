@@ -16,12 +16,13 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/OverworldRoomGroupID_t.hpp"
+#include "shade/sdk/client/OverworldRoomID_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x20
+             * Size: 0x28
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -32,13 +33,15 @@ namespace shade {
                 CUtlString m_strRingmasterVisualNovelName; // 0x0010, 0x8 bytes
                 std::uint32_t m_unReleaseTime; // 0x0018, 0x4 bytes
                 shade::sdk::client::OverworldRoomGroupID_t m_unGroupID; // 0x001c, 0x1 bytes
-                std::uint8_t pad_001d[0x3]; // 0x001d, 0x3 bytes
+                std::uint8_t pad_001d[0x1]; // 0x001d, 0x1 bytes
+                shade::sdk::client::OverworldRoomID_t m_unRoomID; // 0x001e, 0x2 bytes
+                std::uint8_t pad_0020[0x8]; // 0x0020, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(DOTAOverworldReleaseScheduledUnlock_t) == 0x20, "DOTAOverworldReleaseScheduledUnlock_t size mismatch");
+            static_assert(sizeof(DOTAOverworldReleaseScheduledUnlock_t) == 0x28, "DOTAOverworldReleaseScheduledUnlock_t size mismatch");
         }
     }
 }

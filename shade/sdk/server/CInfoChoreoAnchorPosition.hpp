@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x60
              * Alignment: 0x10
              * Has Trivial Destructor
              * Construct Allowed
@@ -45,16 +45,20 @@ namespace shade {
                 float m_flRadius; // 0x0038, 0x4 bytes
                 float m_flToleranceAngle; // 0x003c, 0x4 bytes
                 bool m_bOnlyWarpPosition; // 0x0040, 0x1 bytes
-                std::uint8_t pad_0041[0x3]; // 0x0041, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hParent; // 0x0044, 0x4 bytes
-                shade::sdk::server::CInfoChoreoLocatorShapeType_t m_nShapeType; // 0x0048, 0x4 bytes
-                std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
+                bool m_bDontSnapToNav; // 0x0041, 0x1 bytes
+                bool m_bDontSnapToGround; // 0x0042, 0x1 bytes
+                std::uint8_t pad_0043[0x1]; // 0x0043, 0x1 bytes
+                float m_flMaxDistanceFromNav; // 0x0044, 0x4 bytes
+                float m_flGroundTraceDistance; // 0x0048, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hParent; // 0x004c, 0x4 bytes
+                shade::sdk::server::CInfoChoreoLocatorShapeType_t m_nShapeType; // 0x0050, 0x4 bytes
+                std::uint8_t pad_0054[0xc]; // 0x0054, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoChoreoAnchorPosition) == 0x50, "CInfoChoreoAnchorPosition size mismatch");
+            static_assert(sizeof(CInfoChoreoAnchorPosition) == 0x60, "CInfoChoreoAnchorPosition size mismatch");
         }
     }
 }

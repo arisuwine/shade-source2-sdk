@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ELanguage : std::int32_t {
+            enum class ELanguage : std::uint32_t {
                 k_Lang_None = -0x1,
                 k_Lang_First = 0x0,
                 k_Lang_English = 0x0,

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb78
+             * Size: 0xbd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Artillery_EffectsEntity) == 0xB78, "CDOTA_Artillery_EffectsEntity size mismatch");
+            static_assert(sizeof(CDOTA_Artillery_EffectsEntity) == 0xBD8, "CDOTA_Artillery_EffectsEntity size mismatch");
         }
     }
 }

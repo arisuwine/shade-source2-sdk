@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,26 +31,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Brewmaster_LiquidCourage : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t min_health_threshold; // 0x1aa8, 0x4 bytes
-                std::int32_t max_health_threshold; // 0x1aac, 0x4 bytes
-                float status_resist; // 0x1ab0, 0x4 bytes
-                std::int32_t min_speed; // 0x1ab4, 0x4 bytes
-                std::int32_t max_speed; // 0x1ab8, 0x4 bytes
-                float max_hp_regen; // 0x1abc, 0x4 bytes
-                float speed_toggle_time; // 0x1ac0, 0x4 bytes
-                std::int32_t m_nCurrentSpeed; // 0x1ac4, 0x4 bytes
-                std::int32_t m_nMaxHPRegen; // 0x1ac8, 0x4 bytes
-                bool m_bForceActive; // 0x1acc, 0x1 bytes
-                bool m_bMinimumSpeed; // 0x1acd, 0x1 bytes
-                std::uint8_t pad_1ace[0x2]; // 0x1ace, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_SpeedToggleTime; // 0x1ad0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ad4, 0x4 bytes
+                std::int32_t damage_threshold; // 0x1af8, 0x4 bytes
+                float trigger_duration; // 0x1afc, 0x4 bytes
+                float damage_reset_interval; // 0x1b00, 0x4 bytes
+                float trigger_cooldown; // 0x1b04, 0x4 bytes
+                float status_resist; // 0x1b08, 0x4 bytes
+                std::int32_t min_speed; // 0x1b0c, 0x4 bytes
+                std::int32_t max_speed; // 0x1b10, 0x4 bytes
+                float max_hp_regen; // 0x1b14, 0x4 bytes
+                float speed_toggle_time; // 0x1b18, 0x4 bytes
+                std::int32_t m_nCurrentSpeed; // 0x1b1c, 0x4 bytes
+                std::int32_t m_nDamageTaken; // 0x1b20, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDamageTime; // 0x1b24, 0x4 bytes
+                bool m_bForceActive; // 0x1b28, 0x1 bytes
+                bool m_bShardDrink; // 0x1b29, 0x1 bytes
+                bool m_bMinimumSpeed; // 0x1b2a, 0x1 bytes
+                std::uint8_t pad_1b2b[0x1]; // 0x1b2b, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_SpeedToggleTime; // 0x1b2c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b30, 0x4 bytes
+                std::uint8_t pad_1b34[0x4]; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Brewmaster_LiquidCourage) == 0x1AD8, "CDOTA_Modifier_Brewmaster_LiquidCourage size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Brewmaster_LiquidCourage) == 0x1B38, "CDOTA_Modifier_Brewmaster_LiquidCourage size mismatch");
         }
     }
 }

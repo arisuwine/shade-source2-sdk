@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x898
+             * Size: 0x8f8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CSimpleMarkupVolumeTagged) == 0x898, "CSimpleMarkupVolumeTagged size mismatch");
+            static_assert(sizeof(CSimpleMarkupVolumeTagged) == 0x8F8, "CSimpleMarkupVolumeTagged size mismatch");
         }
     }
 }

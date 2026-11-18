@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,27 +38,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_MonkeyKing_Transform : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlString m_strDisguise; // 0x1aa8, 0x8 bytes
-                std::int32_t movespeed; // 0x1ab0, 0x4 bytes
-                std::int32_t m_nDisguisedSpeed; // 0x1ab4, 0x4 bytes
-                std::int32_t reveal_radius; // 0x1ab8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nDisguiseEffectIndex; // 0x1abc, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCourierToClone; // 0x1ac0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCreepToClone; // 0x1ac4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_aryBountyRuneSpawners; // 0x1ac8, 0x18 bytes
-                bool m_bIsFlyingCourier; // 0x1ae0, 0x1 bytes
-                bool m_bIsRune; // 0x1ae1, 0x1 bytes
-                bool m_bIsBanana; // 0x1ae2, 0x1 bytes
-                bool m_bIsFakeAlly; // 0x1ae3, 0x1 bytes
-                std::uint32_t m_nMischiefUnitType; // 0x1ae4, 0x4 bytes
-                std::int32_t m_nMischiefHealthbarOffset; // 0x1ae8, 0x4 bytes
-                float invul_duration; // 0x1aec, 0x4 bytes
+                CUtlString m_strDisguise; // 0x1af8, 0x8 bytes
+                std::int32_t movespeed; // 0x1b00, 0x4 bytes
+                std::int32_t m_nDisguisedSpeed; // 0x1b04, 0x4 bytes
+                std::int32_t reveal_radius; // 0x1b08, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nDisguiseEffectIndex; // 0x1b0c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCourierToClone; // 0x1b10, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCreepToClone; // 0x1b14, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_aryBountyRuneSpawners; // 0x1b18, 0x18 bytes
+                bool m_bIsFlyingCourier; // 0x1b30, 0x1 bytes
+                bool m_bIsRune; // 0x1b31, 0x1 bytes
+                bool m_bIsBanana; // 0x1b32, 0x1 bytes
+                bool m_bIsFakeAlly; // 0x1b33, 0x1 bytes
+                std::uint32_t m_nMischiefUnitType; // 0x1b34, 0x4 bytes
+                std::int32_t m_nMischiefHealthbarOffset; // 0x1b38, 0x4 bytes
+                float invul_duration; // 0x1b3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_Transform) == 0x1AF0, "CDOTA_Modifier_MonkeyKing_Transform size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_MonkeyKing_Transform) == 0x1B40, "CDOTA_Modifier_MonkeyKing_Transform size mismatch");
         }
     }
 }

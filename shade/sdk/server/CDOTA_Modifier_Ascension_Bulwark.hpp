@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Ascension_Bulwark : public shade::sdk::client::CDOTA_Buff {
             public:
-                float physical_damage_reduction; // 0x1aa8, 0x4 bytes
-                float physical_damage_reduction_side; // 0x1aac, 0x4 bytes
-                float forward_angle; // 0x1ab0, 0x4 bytes
-                float side_angle; // 0x1ab4, 0x4 bytes
+                float physical_damage_reduction; // 0x1af8, 0x4 bytes
+                float physical_damage_reduction_side; // 0x1afc, 0x4 bytes
+                float forward_angle; // 0x1b00, 0x4 bytes
+                float side_angle; // 0x1b04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Ascension_Bulwark) == 0x1AB8, "CDOTA_Modifier_Ascension_Bulwark size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Ascension_Bulwark) == 0x1B08, "CDOTA_Modifier_Ascension_Bulwark size mismatch");
         }
     }
 }

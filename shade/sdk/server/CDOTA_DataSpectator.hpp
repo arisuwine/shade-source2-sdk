@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1dd8
+             * Size: 0x1df0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_DataSpectator : public shade::sdk::server::CDOTA_DataNonSpectator {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hPowerupRune_1; // 0x1ce8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPowerupRune_2; // 0x1cec, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_1; // 0x1cf0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_2; // 0x1cf4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_3; // 0x1cf8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_4; // 0x1cfc, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hXPRune_1; // 0x1d00, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hXPRune_2; // 0x1d04, 0x4 bytes
-                std::int32_t m_iNetWorth[0x18]; // 0x1d08, 0x60 bytes
-                float m_fRadiantWinProbability; // 0x1d68, 0x4 bytes
-                std::uint8_t pad_1d6c[0x4]; // 0x1d6c, 0x4 bytes
-                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::DOTAThreatLevelInfo_t> m_ThreatLevelInfos; // 0x1d70, 0x68 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPowerupRune_1; // 0x1d00, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPowerupRune_2; // 0x1d04, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_1; // 0x1d08, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_2; // 0x1d0c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_3; // 0x1d10, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBountyRune_4; // 0x1d14, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hXPRune_1; // 0x1d18, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hXPRune_2; // 0x1d1c, 0x4 bytes
+                std::int32_t m_iNetWorth[0x18]; // 0x1d20, 0x60 bytes
+                float m_fRadiantWinProbability; // 0x1d80, 0x4 bytes
+                std::uint8_t pad_1d84[0x4]; // 0x1d84, 0x4 bytes
+                CUtlVectorEmbeddedNetworkVar<shade::sdk::server::DOTAThreatLevelInfo_t> m_ThreatLevelInfos; // 0x1d88, 0x68 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_DataSpectator) == 0x1DD8, "CDOTA_DataSpectator size mismatch");
+            static_assert(sizeof(CDOTA_DataSpectator) == 0x1DF0, "CDOTA_DataSpectator size mismatch");
         }
     }
 }

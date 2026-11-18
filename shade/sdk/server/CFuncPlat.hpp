@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x910
+             * Size: 0x970
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncPlat : public shade::sdk::server::CBasePlatTrain {
             public:
-                float m_flSpeed; // 0x0900, 0x4 bytes
-                std::uint8_t pad_0904[0x4]; // 0x0904, 0x4 bytes
-                CUtlSymbolLarge m_sNoise; // 0x0908, 0x8 bytes
+                float m_flSpeed; // 0x0960, 0x4 bytes
+                std::uint8_t pad_0964[0x4]; // 0x0964, 0x4 bytes
+                CUtlSymbolLarge m_sNoise; // 0x0968, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncPlat) == 0x910, "CFuncPlat size mismatch");
+            static_assert(sizeof(CFuncPlat) == 0x970, "CFuncPlat size mismatch");
         }
     }
 }

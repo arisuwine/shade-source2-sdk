@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsBossState : std::int32_t {
+            enum class ESurvivorsBossState : std::uint32_t {
                 INVALID = -0x1,
                 IDLE = 0x0,
                 CASTING_BURNING_GROUND = 0x1,

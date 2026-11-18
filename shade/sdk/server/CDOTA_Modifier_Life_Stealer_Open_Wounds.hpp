@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,19 +29,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Life_Stealer_Open_Wounds : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t slow_steps[0x8]; // 0x1aa8, 0x20 bytes
-                std::int32_t heal_percent; // 0x1ac8, 0x4 bytes
-                std::int32_t m_nDamageTracker; // 0x1acc, 0x4 bytes
-                std::int32_t damage_threshold; // 0x1ad0, 0x4 bytes
-                float spread_radius; // 0x1ad4, 0x4 bytes
-                std::int32_t max_health_as_damage_pct; // 0x1ad8, 0x4 bytes
-                std::int32_t attack_speed_on_target; // 0x1adc, 0x4 bytes
+                std::int32_t slow_steps[0x8]; // 0x1af8, 0x20 bytes
+                std::int32_t heal_percent; // 0x1b18, 0x4 bytes
+                std::int32_t m_nDamageTracker; // 0x1b1c, 0x4 bytes
+                std::int32_t damage_threshold; // 0x1b20, 0x4 bytes
+                float spread_radius; // 0x1b24, 0x4 bytes
+                std::int32_t max_health_as_damage_pct; // 0x1b28, 0x4 bytes
+                std::int32_t attack_speed_on_target; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Life_Stealer_Open_Wounds) == 0x1AE0, "CDOTA_Modifier_Life_Stealer_Open_Wounds size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Life_Stealer_Open_Wounds) == 0x1B30, "CDOTA_Modifier_Life_Stealer_Open_Wounds size mismatch");
         }
     }
 }

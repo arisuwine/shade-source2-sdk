@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b28
+             * Size: 0x1b78
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -42,32 +42,33 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DeathProphet_Exorcism : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1aa8, 0x4 bytes
-                std::int32_t spirit_speed; // 0x1aac, 0x4 bytes
-                std::int32_t max_distance; // 0x1ab0, 0x4 bytes
-                std::int32_t give_up_distance; // 0x1ab4, 0x4 bytes
-                std::int32_t heal_percent; // 0x1ab8, 0x4 bytes
-                std::int32_t spirit_duration; // 0x1abc, 0x4 bytes
-                float ghost_spawn_rate; // 0x1ac0, 0x4 bytes
-                std::int32_t movement_bonus; // 0x1ac4, 0x4 bytes
-                float m_flBonusExorcismDuration; // 0x1ac8, 0x4 bytes
-                std::int32_t m_iSpirits; // 0x1acc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1ad0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThinkTime; // 0x1ad4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fSpawnTime; // 0x1ad8, 0x4 bytes
-                bool m_bFirstSpawn; // 0x1adc, 0x1 bytes
-                bool m_bCommentedOnExpired; // 0x1add, 0x1 bytes
-                bool m_bForceExpired; // 0x1ade, 0x1 bytes
-                std::uint8_t pad_1adf[0x1]; // 0x1adf, 0x1 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecDeadHeroes; // 0x1ae0, 0x18 bytes
-                CUtlVector<shade::sdk::client::sSpiritInfo*> m_vecSpirits; // 0x1af8, 0x18 bytes
-                std::uint8_t pad_1b10[0x18]; // 0x1b10, 0x18 bytes
+                float radius; // 0x1af8, 0x4 bytes
+                std::int32_t spirit_speed; // 0x1afc, 0x4 bytes
+                std::int32_t max_distance; // 0x1b00, 0x4 bytes
+                std::int32_t give_up_distance; // 0x1b04, 0x4 bytes
+                std::int32_t heal_percent; // 0x1b08, 0x4 bytes
+                std::int32_t spirit_duration; // 0x1b0c, 0x4 bytes
+                float ghost_spawn_rate; // 0x1b10, 0x4 bytes
+                bool unslowable; // 0x1b14, 0x1 bytes
+                std::uint8_t pad_1b15[0x3]; // 0x1b15, 0x3 bytes
+                float m_flBonusExorcismDuration; // 0x1b18, 0x4 bytes
+                std::int32_t m_iSpirits; // 0x1b1c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1b20, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThinkTime; // 0x1b24, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fSpawnTime; // 0x1b28, 0x4 bytes
+                bool m_bFirstSpawn; // 0x1b2c, 0x1 bytes
+                bool m_bCommentedOnExpired; // 0x1b2d, 0x1 bytes
+                bool m_bForceExpired; // 0x1b2e, 0x1 bytes
+                std::uint8_t pad_1b2f[0x1]; // 0x1b2f, 0x1 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecDeadHeroes; // 0x1b30, 0x18 bytes
+                CUtlVector<shade::sdk::client::sSpiritInfo*> m_vecSpirits; // 0x1b48, 0x18 bytes
+                std::uint8_t pad_1b60[0x18]; // 0x1b60, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DeathProphet_Exorcism) == 0x1B28, "CDOTA_Modifier_DeathProphet_Exorcism size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DeathProphet_Exorcism) == 0x1B78, "CDOTA_Modifier_DeathProphet_Exorcism size mismatch");
         }
     }
 }

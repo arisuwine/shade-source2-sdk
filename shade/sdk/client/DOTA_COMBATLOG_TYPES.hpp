@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTA_COMBATLOG_TYPES : std::int32_t {
+            enum class DOTA_COMBATLOG_TYPES : std::uint32_t {
                 DOTA_COMBATLOG_INVALID = -0x1,
                 DOTA_COMBATLOG_DAMAGE = 0x0,
                 DOTA_COMBATLOG_HEAL = 0x1,

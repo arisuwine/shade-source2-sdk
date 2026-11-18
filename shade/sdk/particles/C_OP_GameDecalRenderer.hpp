@@ -26,7 +26,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x1cc0
+             * Size: 0x1cb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -34,31 +34,31 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_GameDecalRenderer : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                CGlobalSymbol m_sDecalGroupName; // 0x0230, 0x8 bytes
-                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x0238, 0x4 bytes
-                std::uint8_t pad_023c[0x4]; // 0x023c, 0x4 bytes
-                shade::sdk::particles::ParticleCollisionMask_t m_nInteractionMask; // 0x0240, 0x8 bytes
-                shade::sdk::particles::ParticleCollisionGroup_t m_nCollisionGroup; // 0x0248, 0x4 bytes
-                std::uint8_t pad_024c[0x4]; // 0x024c, 0x4 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecStartPos; // 0x0250, 0x6d8 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vecEndPos; // 0x0928, 0x6d8 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flTraceBloat; // 0x1000, 0x178 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flDecalSize; // 0x1178, 0x178 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_nDecalGroupIndex; // 0x12f0, 0x178 bytes
-                shade::sdk::particleslib::CPerParticleFloatInput m_flDecalRotation; // 0x1468, 0x178 bytes
-                shade::sdk::particleslib::CPerParticleVecInput m_vModulationColor; // 0x15e0, 0x6d8 bytes
-                bool m_bUseGameDefaultDecalSize; // 0x1cb8, 0x1 bytes
-                bool m_bRandomDecalRotation; // 0x1cb9, 0x1 bytes
-                bool m_bRandomlySelectDecalInGroup; // 0x1cba, 0x1 bytes
-                bool m_bNoDecalsOnOwner; // 0x1cbb, 0x1 bytes
-                bool m_bVisualizeTraces; // 0x1cbc, 0x1 bytes
-                std::uint8_t pad_1cbd[0x3]; // 0x1cbd, 0x3 bytes
+                CGlobalSymbol m_sDecalGroupName; // 0x0228, 0x8 bytes
+                shade::sdk::particles::EventTypeSelection_t m_nEventType; // 0x0230, 0x4 bytes
+                std::uint8_t pad_0234[0x4]; // 0x0234, 0x4 bytes
+                shade::sdk::particles::ParticleCollisionMask_t m_nInteractionMask; // 0x0238, 0x8 bytes
+                shade::sdk::particles::ParticleCollisionGroup_t m_nCollisionGroup; // 0x0240, 0x4 bytes
+                std::uint8_t pad_0244[0x4]; // 0x0244, 0x4 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecStartPos; // 0x0248, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vecEndPos; // 0x0920, 0x6d8 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flTraceBloat; // 0x0ff8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flDecalSize; // 0x1170, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_nDecalGroupIndex; // 0x12e8, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleFloatInput m_flDecalRotation; // 0x1460, 0x178 bytes
+                shade::sdk::particleslib::CPerParticleVecInput m_vModulationColor; // 0x15d8, 0x6d8 bytes
+                bool m_bUseGameDefaultDecalSize; // 0x1cb0, 0x1 bytes
+                bool m_bRandomDecalRotation; // 0x1cb1, 0x1 bytes
+                bool m_bRandomlySelectDecalInGroup; // 0x1cb2, 0x1 bytes
+                bool m_bNoDecalsOnOwner; // 0x1cb3, 0x1 bytes
+                bool m_bVisualizeTraces; // 0x1cb4, 0x1 bytes
+                std::uint8_t pad_1cb5[0x3]; // 0x1cb5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_GameDecalRenderer) == 0x1CC0, "C_OP_GameDecalRenderer size mismatch");
+            static_assert(sizeof(C_OP_GameDecalRenderer) == 0x1CB8, "C_OP_GameDecalRenderer size mismatch");
         }
     }
 }

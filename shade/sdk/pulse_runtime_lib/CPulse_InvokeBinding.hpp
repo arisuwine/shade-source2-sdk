@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0xb0
+             * Size: 0xb8
              * Alignment: 0x8
              * Construct Allowed
              * Module Local Type Scope
@@ -36,13 +36,13 @@ namespace shade {
                 shade::sdk::pulse_runtime_lib::PulseRuntimeCellIndex_t m_nCellIndex; // 0x0040, 0x4 bytes
                 shade::sdk::pulse_runtime_lib::PulseRuntimeChunkIndex_t m_nSrcChunk; // 0x0044, 0x4 bytes
                 std::int32_t m_nSrcInstruction; // 0x0048, 0x4 bytes
-                std::uint8_t pad_004c[0x64]; // 0x004c, 0x64 bytes
+                std::uint8_t pad_004c[0x6c]; // 0x004c, 0x6c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulse_InvokeBinding) == 0xB0, "CPulse_InvokeBinding size mismatch");
+            static_assert(sizeof(CPulse_InvokeBinding) == 0xB8, "CPulse_InvokeBinding size mismatch");
         }
     }
 }

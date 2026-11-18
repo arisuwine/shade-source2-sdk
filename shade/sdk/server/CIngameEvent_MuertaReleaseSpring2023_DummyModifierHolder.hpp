@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1998
+             * Size: 0x1a28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CIngameEvent_MuertaReleaseSpring2023_DummyModifierHolder) == 0x1998, "CIngameEvent_MuertaReleaseSpring2023_DummyModifierHolder size mismatch");
+            static_assert(sizeof(CIngameEvent_MuertaReleaseSpring2023_DummyModifierHolder) == 0x1A28, "CIngameEvent_MuertaReleaseSpring2023_DummyModifierHolder size mismatch");
         }
     }
 }

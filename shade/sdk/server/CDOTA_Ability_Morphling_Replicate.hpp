@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x590
+             * Size: 0x588
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,13 @@ namespace shade {
             class CDOTA_Ability_Morphling_Replicate : public shade::sdk::server::CDOTABaseAbility {
             public:
                 CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x0580, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hScepterIllusion; // 0x0584, 0x4 bytes
-                bool m_bIsAltCastState; // 0x0588, 0x1 bytes
-                std::uint8_t pad_0589[0x7]; // 0x0589, 0x7 bytes
+                std::uint8_t pad_0584[0x4]; // 0x0584, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Morphling_Replicate) == 0x590, "CDOTA_Ability_Morphling_Replicate size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Morphling_Replicate) == 0x588, "CDOTA_Ability_Morphling_Replicate size mismatch");
         }
     }
 }

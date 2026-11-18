@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbb0
+             * Size: 0xc10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,21 +38,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_TextureBasedAnimatable : public shade::sdk::client::C_BaseModelEntity {
             public:
-                bool m_bLoop; // 0x0b78, 0x1 bytes
-                std::uint8_t pad_0b79[0x3]; // 0x0b79, 0x3 bytes
-                float m_flFPS; // 0x0b7c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hPositionKeys; // 0x0b80, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hRotationKeys; // 0x0b88, 0x8 bytes
-                Vector m_vAnimationBoundsMin; // 0x0b90, 0xc bytes
-                Vector m_vAnimationBoundsMax; // 0x0b9c, 0xc bytes
-                float m_flStartTime; // 0x0ba8, 0x4 bytes
-                float m_flStartFrame; // 0x0bac, 0x4 bytes
+                bool m_bLoop; // 0x0bd8, 0x1 bytes
+                std::uint8_t pad_0bd9[0x3]; // 0x0bd9, 0x3 bytes
+                float m_flFPS; // 0x0bdc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hPositionKeys; // 0x0be0, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hRotationKeys; // 0x0be8, 0x8 bytes
+                Vector m_vAnimationBoundsMin; // 0x0bf0, 0xc bytes
+                Vector m_vAnimationBoundsMax; // 0x0bfc, 0xc bytes
+                float m_flStartTime; // 0x0c08, 0x4 bytes
+                float m_flStartFrame; // 0x0c0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_TextureBasedAnimatable) == 0xBB0, "C_TextureBasedAnimatable size mismatch");
+            static_assert(sizeof(C_TextureBasedAnimatable) == 0xC10, "C_TextureBasedAnimatable size mismatch");
         }
     }
 }

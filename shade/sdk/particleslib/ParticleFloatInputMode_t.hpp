@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particleslib {
-            enum class ParticleFloatInputMode_t : std::int32_t {
+            enum class ParticleFloatInputMode_t : std::uint32_t {
                 PF_INPUT_MODE_INVALID = -0x1,
                 PF_INPUT_MODE_CLAMPED = 0x0,
                 PF_INPUT_MODE_LOOPED = 0x1,

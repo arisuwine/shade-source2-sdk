@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0x990
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -46,25 +46,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CBreakable : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t pad_0858[0x8]; // 0x0858, 0x8 bytes
-                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x0860, 0x40 bytes
-                shade::sdk::server::Materials m_Material; // 0x08a0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBreaker; // 0x08a4, 0x4 bytes
-                shade::sdk::server::Explosions m_Explosion; // 0x08a8, 0x4 bytes
-                std::uint8_t pad_08ac[0x4]; // 0x08ac, 0x4 bytes
-                CUtlSymbolLarge m_iszSpawnObject; // 0x08b0, 0x8 bytes
-                float m_flPressureDelay; // 0x08b8, 0x4 bytes
-                std::int32_t m_iMinHealthDmg; // 0x08bc, 0x4 bytes
-                CUtlSymbolLarge m_iszPropData; // 0x08c0, 0x8 bytes
-                float m_impactEnergyScale; // 0x08c8, 0x4 bytes
-                shade::sdk::server::EOverrideBlockLOS_t m_nOverrideBlockLOS; // 0x08cc, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x08d0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x08e8, 0x18 bytes
-                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x0900, 0x20 bytes
-                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x0920, 0x4 bytes
-                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x0924, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0928, 0x4 bytes
-                std::uint8_t pad_092c[0x4]; // 0x092c, 0x4 bytes
+                std::uint8_t pad_08b8[0x8]; // 0x08b8, 0x8 bytes
+                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x08c0, 0x40 bytes
+                shade::sdk::server::Materials m_Material; // 0x0900, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBreaker; // 0x0904, 0x4 bytes
+                shade::sdk::server::Explosions m_Explosion; // 0x0908, 0x4 bytes
+                std::uint8_t pad_090c[0x4]; // 0x090c, 0x4 bytes
+                CUtlSymbolLarge m_iszSpawnObject; // 0x0910, 0x8 bytes
+                float m_flPressureDelay; // 0x0918, 0x4 bytes
+                std::int32_t m_iMinHealthDmg; // 0x091c, 0x4 bytes
+                CUtlSymbolLarge m_iszPropData; // 0x0920, 0x8 bytes
+                float m_impactEnergyScale; // 0x0928, 0x4 bytes
+                shade::sdk::server::EOverrideBlockLOS_t m_nOverrideBlockLOS; // 0x092c, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x0930, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x0948, 0x18 bytes
+                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x0960, 0x20 bytes
+                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x0980, 0x4 bytes
+                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x0984, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0988, 0x4 bytes
+                std::uint8_t pad_098c[0x4]; // 0x098c, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -73,13 +73,14 @@ namespace shade {
              * std::int32_t spawnobject; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t propdata; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int64_t gamemass; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * std::int32_t nodamageforces; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * Vector masscenteroffset; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float massScale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float buoyancyscale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float fluiddragscale; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBreakable) == 0x930, "CBreakable size mismatch");
+            static_assert(sizeof(CBreakable) == 0x990, "CBreakable size mismatch");
         }
     }
 }

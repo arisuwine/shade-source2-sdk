@@ -16,9 +16,8 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class InputBitMask_t : std::int64_t {
+            enum class InputBitMask_t : std::uint64_t {
                 IN_NONE = 0x0,
-                IN_ALL = -0x1,
                 IN_ATTACK = 0x1,
                 IN_JUMP = 0x2,
                 IN_DUCK = 0x4,

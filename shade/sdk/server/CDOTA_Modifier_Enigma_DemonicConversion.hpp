@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b48
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,31 +37,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Enigma_DemonicConversion : public shade::sdk::server::CDOTA_Modifier_Kill {
             public:
-                std::int32_t m_iAttackCount; // 0x1ab0, 0x4 bytes
-                std::int32_t split_attack_count; // 0x1ab4, 0x4 bytes
-                float life_extension; // 0x1ab8, 0x4 bytes
-                std::int32_t eidolon_attack_range; // 0x1abc, 0x4 bytes
-                std::int32_t eidolon_bonus_damage; // 0x1ac0, 0x4 bytes
-                std::int32_t eidolon_bonus_attack_speed; // 0x1ac4, 0x4 bytes
-                std::int32_t eidelon_max_health; // 0x1ac8, 0x4 bytes
-                std::int32_t eidolon_magic_resist; // 0x1acc, 0x4 bytes
-                std::int32_t eidelon_base_damage; // 0x1ad0, 0x4 bytes
-                std::int32_t eidolon_damage_spread; // 0x1ad4, 0x4 bytes
-                std::int32_t eidelon_base_movespeed; // 0x1ad8, 0x4 bytes
-                std::int32_t eidolon_xp_bounty; // 0x1adc, 0x4 bytes
-                std::int32_t eidolon_gold_bounty_min; // 0x1ae0, 0x4 bytes
-                std::int32_t eidolon_gold_bounty_max; // 0x1ae4, 0x4 bytes
-                std::int32_t current_health_pct; // 0x1ae8, 0x4 bytes
-                bool m_bAllowSplit; // 0x1aec, 0x1 bytes
-                std::uint8_t pad_1aed[0x3]; // 0x1aed, 0x3 bytes
-                std::int32_t m_nSpawnNum; // 0x1af0, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> attack_target; // 0x1af4, 0x4 bytes
+                std::int32_t m_iAttackCount; // 0x1b00, 0x4 bytes
+                std::int32_t split_attack_count; // 0x1b04, 0x4 bytes
+                float life_extension; // 0x1b08, 0x4 bytes
+                std::int32_t eidolon_attack_range; // 0x1b0c, 0x4 bytes
+                std::int32_t eidolon_bonus_damage; // 0x1b10, 0x4 bytes
+                std::int32_t eidolon_bonus_attack_speed; // 0x1b14, 0x4 bytes
+                std::int32_t eidelon_max_health; // 0x1b18, 0x4 bytes
+                std::int32_t eidolon_magic_resist; // 0x1b1c, 0x4 bytes
+                std::int32_t eidelon_base_damage; // 0x1b20, 0x4 bytes
+                std::int32_t eidolon_damage_spread; // 0x1b24, 0x4 bytes
+                std::int32_t eidelon_base_movespeed; // 0x1b28, 0x4 bytes
+                std::int32_t eidolon_xp_bounty; // 0x1b2c, 0x4 bytes
+                std::int32_t eidolon_gold_bounty_min; // 0x1b30, 0x4 bytes
+                std::int32_t eidolon_gold_bounty_max; // 0x1b34, 0x4 bytes
+                std::int32_t current_health_pct; // 0x1b38, 0x4 bytes
+                bool m_bAllowSplit; // 0x1b3c, 0x1 bytes
+                std::uint8_t pad_1b3d[0x3]; // 0x1b3d, 0x3 bytes
+                std::int32_t m_nSpawnNum; // 0x1b40, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> attack_target; // 0x1b44, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Enigma_DemonicConversion) == 0x1AF8, "CDOTA_Modifier_Enigma_DemonicConversion size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Enigma_DemonicConversion) == 0x1B48, "CDOTA_Modifier_Enigma_DemonicConversion size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x268
+             * Size: 0x260
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,19 +37,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderStatusEffectTf : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureColorWarp; // 0x0230, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureNormal; // 0x0238, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureMetalness; // 0x0240, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureRoughness; // 0x0248, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureSelfIllum; // 0x0250, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureDetail; // 0x0258, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureEnvMap; // 0x0260, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureColorWarp; // 0x0228, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureNormal; // 0x0230, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureMetalness; // 0x0238, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureRoughness; // 0x0240, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureSelfIllum; // 0x0248, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureDetail; // 0x0250, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_pTextureEnvMap; // 0x0258, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderStatusEffectTf) == 0x268, "C_OP_RenderStatusEffectTf size mismatch");
+            static_assert(sizeof(C_OP_RenderStatusEffectTf) == 0x260, "C_OP_RenderStatusEffectTf size mismatch");
         }
     }
 }

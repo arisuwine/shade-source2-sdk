@@ -40,12 +40,13 @@ namespace shade {
                 bool m_bMeshoptIndexSequence; // 0x000d, 0x1 bytes
                 std::int8_t m_nMeshoptMeshletEncodeVersion; // 0x000e, 0x1 bytes
                 bool m_bCompressedZSTD; // 0x000f, 0x1 bytes
-                bool m_bCreateBufferSRV; // 0x0010, 0x1 bytes
-                bool m_bCreateBufferUAV; // 0x0011, 0x1 bytes
-                bool m_bCreateRawBuffer; // 0x0012, 0x1 bytes
-                bool m_bCreatePooledBuffer; // 0x0013, 0x1 bytes
-                std::uint16_t m_nBufferUsage; // 0x0014, 0x2 bytes
-                std::uint8_t pad_0016[0x2]; // 0x0016, 0x2 bytes
+                bool m_bCompressedZ3; // 0x0010, 0x1 bytes
+                bool m_bCreateBufferSRV; // 0x0011, 0x1 bytes
+                bool m_bCreateBufferUAV; // 0x0012, 0x1 bytes
+                bool m_bCreateRawBuffer; // 0x0013, 0x1 bytes
+                bool m_bCreatePooledBuffer; // 0x0014, 0x1 bytes
+                std::uint8_t pad_0015[0x1]; // 0x0015, 0x1 bytes
+                std::uint16_t m_nBufferUsage; // 0x0016, 0x2 bytes
                 CUtlVector<shade::sdk::modellib::RenderInputLayoutField_t> m_inputLayoutFields; // 0x0018, 0x18 bytes
             };
             #pragma pack(pop)

@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9d0
+             * Size: 0xa30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,21 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseTrigger : public shade::sdk::server::CBaseToggle {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x08d8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0x08f0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x0908, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0x0920, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTouching; // 0x0938, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTouchingEachEntity; // 0x0950, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnNotTouching; // 0x0968, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTouchingChanged; // 0x0980, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hTouchingEntities; // 0x0998, 0x18 bytes
-                CUtlSymbolLarge m_iFilterName; // 0x09b0, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseFilter> m_hFilter; // 0x09b8, 0x4 bytes
-                bool m_bDisabled; // 0x09bc, 0x1 bytes
-                std::uint8_t pad_09bd[0xb]; // 0x09bd, 0xb bytes
-                bool m_bUseAsyncQueries; // 0x09c8, 0x1 bytes
-                std::uint8_t pad_09c9[0x7]; // 0x09c9, 0x7 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x0938, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0x0950, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x0968, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0x0980, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTouching; // 0x0998, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTouchingEachEntity; // 0x09b0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnNotTouching; // 0x09c8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTouchingChanged; // 0x09e0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hTouchingEntities; // 0x09f8, 0x18 bytes
+                CUtlSymbolLarge m_iFilterName; // 0x0a10, 0x8 bytes
+                bool m_bDisabled; // 0x0a18, 0x1 bytes
+                std::uint8_t pad_0a19[0x3]; // 0x0a19, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseFilter> m_hFilter; // 0x0a1c, 0x4 bytes
+                std::uint8_t pad_0a20[0x8]; // 0x0a20, 0x8 bytes
+                bool m_bUseAsyncQueries; // 0x0a28, 0x1 bytes
+                std::uint8_t pad_0a29[0x7]; // 0x0a29, 0x7 bytes
             };
             #pragma pack(pop)
 
@@ -63,7 +64,7 @@ namespace shade {
              * float radius; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBaseTrigger) == 0x9D0, "CBaseTrigger size mismatch");
+            static_assert(sizeof(CBaseTrigger) == 0xA30, "CBaseTrigger size mismatch");
         }
     }
 }

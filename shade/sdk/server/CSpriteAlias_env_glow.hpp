@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8c8
+             * Size: 0x928
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CSpriteAlias_env_glow) == 0x8C8, "CSpriteAlias_env_glow size mismatch");
+            static_assert(sizeof(CSpriteAlias_env_glow) == 0x928, "CSpriteAlias_env_glow size mismatch");
         }
     }
 }

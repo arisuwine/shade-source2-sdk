@@ -99,7 +99,7 @@ namespace shade {
                 bool m_bUpgradedWithTome; // 0x0694, 0x1 bytes
                 std::uint8_t pad_0695[0xb]; // 0x0695, 0xb bytes
                 float m_flLastCastClickTime; // 0x06a0, 0x4 bytes
-                std::uint8_t pad_06a4[0x4]; // 0x06a4, 0x4 bytes
+                float m_flLastDoubleTapCastTime; // 0x06a4, 0x4 bytes
             };
             #pragma pack(pop)
 

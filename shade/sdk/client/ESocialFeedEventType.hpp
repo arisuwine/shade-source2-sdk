@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESocialFeedEventType : std::int32_t {
+            enum class ESocialFeedEventType : std::uint32_t {
                 k_ESocialFeedEventType_Invalid = -0x1,
                 k_ESocialFeedEventType_MatchEvent = 0x0,
                 k_ESocialFeedEventType_EconomyEvent = 0x1,

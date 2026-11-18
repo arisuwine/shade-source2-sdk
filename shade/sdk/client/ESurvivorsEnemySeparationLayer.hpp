@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsEnemySeparationLayer : std::int32_t {
+            enum class ESurvivorsEnemySeparationLayer : std::uint32_t {
                 OFF = -0x1,
                 SMALL = 0x1,
                 LARGE = 0x2,

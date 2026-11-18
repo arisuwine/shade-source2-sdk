@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbb0
+             * Size: 0xc10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EnvDecal : public shade::sdk::client::C_BaseModelEntity {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x0b78, 0x8 bytes
-                float m_flWidth; // 0x0b80, 0x4 bytes
-                float m_flHeight; // 0x0b84, 0x4 bytes
-                float m_flDepth; // 0x0b88, 0x4 bytes
-                std::uint32_t m_nRenderOrder; // 0x0b8c, 0x4 bytes
-                bool m_bProjectOnWorld; // 0x0b90, 0x1 bytes
-                bool m_bProjectOnCharacters; // 0x0b91, 0x1 bytes
-                bool m_bProjectOnWater; // 0x0b92, 0x1 bytes
-                std::uint8_t pad_0b93[0x1]; // 0x0b93, 0x1 bytes
-                float m_flDepthSortBias; // 0x0b94, 0x4 bytes
-                std::uint8_t pad_0b98[0x18]; // 0x0b98, 0x18 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hDecalMaterial; // 0x0bd8, 0x8 bytes
+                float m_flWidth; // 0x0be0, 0x4 bytes
+                float m_flHeight; // 0x0be4, 0x4 bytes
+                float m_flDepth; // 0x0be8, 0x4 bytes
+                std::uint32_t m_nRenderOrder; // 0x0bec, 0x4 bytes
+                bool m_bProjectOnWorld; // 0x0bf0, 0x1 bytes
+                bool m_bProjectOnCharacters; // 0x0bf1, 0x1 bytes
+                bool m_bProjectOnWater; // 0x0bf2, 0x1 bytes
+                std::uint8_t pad_0bf3[0x1]; // 0x0bf3, 0x1 bytes
+                float m_flDepthSortBias; // 0x0bf4, 0x4 bytes
+                std::uint8_t pad_0bf8[0x18]; // 0x0bf8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_EnvDecal) == 0xBB0, "C_EnvDecal size mismatch");
+            static_assert(sizeof(C_EnvDecal) == 0xC10, "C_EnvDecal size mismatch");
         }
     }
 }

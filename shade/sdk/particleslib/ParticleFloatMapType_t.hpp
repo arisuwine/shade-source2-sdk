@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particleslib {
-            enum class ParticleFloatMapType_t : std::int32_t {
+            enum class ParticleFloatMapType_t : std::uint32_t {
                 PF_MAP_TYPE_INVALID = -0x1,
                 PF_MAP_TYPE_DIRECT = 0x0,
                 PF_MAP_TYPE_MULT = 0x1,

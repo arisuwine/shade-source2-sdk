@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbc0
+             * Size: 0xc20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,28 +40,28 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTAWorldParticleSystem : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::int32_t m_nType; // 0x0b78, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_iClientEffectIndex; // 0x0b7c, 0x4 bytes
-                CUtlSymbolLarge m_szEffectName; // 0x0b80, 0x8 bytes
-                CUtlSymbolLarge m_szTargetName; // 0x0b88, 0x8 bytes
-                CUtlSymbolLarge m_szControlPoint; // 0x0b90, 0x8 bytes
-                shade::sdk::animationsystem::HSequence m_hOverrideSequence; // 0x0b98, 0x4 bytes
-                std::uint8_t pad_0b9c[0x4]; // 0x0b9c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hOverrideModel; // 0x0ba0, 0x8 bytes
-                Vector m_vModelScale; // 0x0ba8, 0xc bytes
-                std::int32_t m_nSkinOverride; // 0x0bb4, 0x4 bytes
-                bool m_bDayTime; // 0x0bb8, 0x1 bytes
-                bool m_bNightTime; // 0x0bb9, 0x1 bytes
-                bool m_bShowInFow; // 0x0bba, 0x1 bytes
-                bool m_bShowWhileDynamicWeatherActive; // 0x0bbb, 0x1 bytes
-                bool m_bAnimateDuringGameplayPause; // 0x0bbc, 0x1 bytes
-                std::uint8_t pad_0bbd[0x3]; // 0x0bbd, 0x3 bytes
+                std::int32_t m_nType; // 0x0bd8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_iClientEffectIndex; // 0x0bdc, 0x4 bytes
+                CUtlSymbolLarge m_szEffectName; // 0x0be0, 0x8 bytes
+                CUtlSymbolLarge m_szTargetName; // 0x0be8, 0x8 bytes
+                CUtlSymbolLarge m_szControlPoint; // 0x0bf0, 0x8 bytes
+                shade::sdk::animationsystem::HSequence m_hOverrideSequence; // 0x0bf8, 0x4 bytes
+                std::uint8_t pad_0bfc[0x4]; // 0x0bfc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_hOverrideModel; // 0x0c00, 0x8 bytes
+                Vector m_vModelScale; // 0x0c08, 0xc bytes
+                std::int32_t m_nSkinOverride; // 0x0c14, 0x4 bytes
+                bool m_bDayTime; // 0x0c18, 0x1 bytes
+                bool m_bNightTime; // 0x0c19, 0x1 bytes
+                bool m_bShowInFow; // 0x0c1a, 0x1 bytes
+                bool m_bShowWhileDynamicWeatherActive; // 0x0c1b, 0x1 bytes
+                bool m_bAnimateDuringGameplayPause; // 0x0c1c, 0x1 bytes
+                std::uint8_t pad_0c1d[0x3]; // 0x0c1d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTAWorldParticleSystem) == 0xBC0, "C_DOTAWorldParticleSystem size mismatch");
+            static_assert(sizeof(C_DOTAWorldParticleSystem) == 0xC20, "C_DOTAWorldParticleSystem size mismatch");
         }
     }
 }

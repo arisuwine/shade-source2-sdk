@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa58
+             * Size: 0xab8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -41,30 +41,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerHurt : public shade::sdk::server::CBaseTrigger {
             public:
-                float m_flOriginalDamage; // 0x09d0, 0x4 bytes
-                float m_flDamage; // 0x09d4, 0x4 bytes
-                float m_flDamageCap; // 0x09d8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDmgTime; // 0x09dc, 0x4 bytes
-                float m_flForgivenessDelay; // 0x09e0, 0x4 bytes
-                shade::sdk::client::DamageTypes_t m_bitsDamageInflict; // 0x09e4, 0x4 bytes
-                std::int32_t m_damageModel; // 0x09e8, 0x4 bytes
-                bool m_bNoDmgForce; // 0x09ec, 0x1 bytes
-                std::uint8_t pad_09ed[0x3]; // 0x09ed, 0x3 bytes
-                Vector m_vDamageForce; // 0x09f0, 0xc bytes
-                bool m_thinkAlways; // 0x09fc, 0x1 bytes
-                std::uint8_t pad_09fd[0x3]; // 0x09fd, 0x3 bytes
-                float m_hurtThinkPeriod; // 0x0a00, 0x4 bytes
-                std::uint8_t pad_0a04[0x4]; // 0x0a04, 0x4 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnHurt; // 0x0a08, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnHurtPlayer; // 0x0a20, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hurtEntities; // 0x0a38, 0x18 bytes
-                std::uint8_t pad_0a50[0x8]; // 0x0a50, 0x8 bytes
+                float m_flOriginalDamage; // 0x0a30, 0x4 bytes
+                float m_flDamage; // 0x0a34, 0x4 bytes
+                float m_flDamageCap; // 0x0a38, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDmgTime; // 0x0a3c, 0x4 bytes
+                float m_flForgivenessDelay; // 0x0a40, 0x4 bytes
+                shade::sdk::client::DamageTypes_t m_bitsDamageInflict; // 0x0a44, 0x4 bytes
+                std::int32_t m_damageModel; // 0x0a48, 0x4 bytes
+                bool m_bNoDmgForce; // 0x0a4c, 0x1 bytes
+                std::uint8_t pad_0a4d[0x3]; // 0x0a4d, 0x3 bytes
+                Vector m_vDamageForce; // 0x0a50, 0xc bytes
+                bool m_thinkAlways; // 0x0a5c, 0x1 bytes
+                std::uint8_t pad_0a5d[0x3]; // 0x0a5d, 0x3 bytes
+                float m_hurtThinkPeriod; // 0x0a60, 0x4 bytes
+                std::uint8_t pad_0a64[0x4]; // 0x0a64, 0x4 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnHurt; // 0x0a68, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnHurtPlayer; // 0x0a80, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hurtEntities; // 0x0a98, 0x18 bytes
+                std::uint8_t pad_0ab0[0x8]; // 0x0ab0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerHurt) == 0xA58, "CTriggerHurt size mismatch");
+            static_assert(sizeof(CTriggerHurt) == 0xAB8, "CTriggerHurt size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,22 +29,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Trident : public shade::sdk::server::CDOTA_Buff_Item {
             public:
-                std::int32_t bonus_agility; // 0x1aa8, 0x4 bytes
-                std::int32_t bonus_attack_speed; // 0x1aac, 0x4 bytes
-                std::int32_t movement_speed_percent_bonus; // 0x1ab0, 0x4 bytes
-                std::int32_t bonus_strength; // 0x1ab4, 0x4 bytes
-                std::int32_t hp_regen_amp; // 0x1ab8, 0x4 bytes
-                std::int32_t status_resistance; // 0x1abc, 0x4 bytes
-                std::int32_t bonus_intellect; // 0x1ac0, 0x4 bytes
-                std::int32_t spell_amp; // 0x1ac4, 0x4 bytes
-                std::int32_t mana_regen_multiplier; // 0x1ac8, 0x4 bytes
-                std::int32_t magic_damage_attack; // 0x1acc, 0x4 bytes
+                std::int32_t bonus_agility; // 0x1af8, 0x4 bytes
+                std::int32_t bonus_attack_speed; // 0x1afc, 0x4 bytes
+                std::int32_t movement_speed_percent_bonus; // 0x1b00, 0x4 bytes
+                std::int32_t bonus_strength; // 0x1b04, 0x4 bytes
+                std::int32_t hp_regen_amp; // 0x1b08, 0x4 bytes
+                std::int32_t status_resistance; // 0x1b0c, 0x4 bytes
+                std::int32_t bonus_intellect; // 0x1b10, 0x4 bytes
+                std::int32_t spell_amp; // 0x1b14, 0x4 bytes
+                std::int32_t mana_regen_multiplier; // 0x1b18, 0x4 bytes
+                std::int32_t magic_damage_attack; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Trident) == 0x1AD0, "CDOTA_Modifier_Item_Trident size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Trident) == 0x1B20, "CDOTA_Modifier_Item_Trident size mismatch");
         }
     }
 }

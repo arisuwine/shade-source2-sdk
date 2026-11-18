@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x10
+             * Size: 0x20
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -28,13 +28,17 @@ namespace shade {
             class INavObstacle {
             public:
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                std::uint64_t m_nId; // 0x0008, 0x8 bytes
+                std::uint32_t m_nDontBlockMovableMeshId; // 0x0008, 0x4 bytes
+                std::uint8_t pad_000c[0x4]; // 0x000c, 0x4 bytes
+                std::uint64_t m_nId; // 0x0010, 0x8 bytes
+                bool m_bInitDontBlockMovableMeshCalled; // 0x0018, 0x1 bytes
+                std::uint8_t pad_0019[0x7]; // 0x0019, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(INavObstacle) == 0x10, "INavObstacle size mismatch");
+            static_assert(sizeof(INavObstacle) == 0x20, "INavObstacle size mismatch");
         }
     }
 }

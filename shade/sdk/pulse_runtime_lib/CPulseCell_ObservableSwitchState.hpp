@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x1e0
+             * Size: 0x150
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_ObservableSwitchState : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseState {
             public:
-                CPulseObservableExpression<CPulseVariant> m_SwitchValue; // 0x00d8, 0x90 bytes
-                CPulseObservableSwitchCases m_Cases; // 0x0168, 0x78 bytes
+                CPulseObservableSwitchCases m_Cases; // 0x00d8, 0x78 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_ObservableSwitchState) == 0x1E0, "CPulseCell_ObservableSwitchState size mismatch");
+            static_assert(sizeof(CPulseCell_ObservableSwitchState) == 0x150, "CPulseCell_ObservableSwitchState size mismatch");
         }
     }
 }

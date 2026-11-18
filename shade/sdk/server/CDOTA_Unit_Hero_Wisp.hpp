@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2038
+             * Size: 0x20c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_Wisp : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x2020, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nStunnedFXIndex; // 0x2024, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTalkFXIndex; // 0x2028, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nIllusionFXIndex; // 0x202c, 0x4 bytes
-                bool m_bParticleHexed; // 0x2030, 0x1 bytes
-                bool m_bParticleStunned; // 0x2031, 0x1 bytes
-                bool m_bDetermineAmbientEffect; // 0x2032, 0x1 bytes
-                std::uint8_t pad_2033[0x1]; // 0x2033, 0x1 bytes
-                float m_flPrevHealth; // 0x2034, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x20b0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nStunnedFXIndex; // 0x20b4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTalkFXIndex; // 0x20b8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nIllusionFXIndex; // 0x20bc, 0x4 bytes
+                bool m_bParticleHexed; // 0x20c0, 0x1 bytes
+                bool m_bParticleStunned; // 0x20c1, 0x1 bytes
+                bool m_bDetermineAmbientEffect; // 0x20c2, 0x1 bytes
+                std::uint8_t pad_20c3[0x1]; // 0x20c3, 0x1 bytes
+                float m_flPrevHealth; // 0x20c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_Wisp) == 0x2038, "CDOTA_Unit_Hero_Wisp size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_Wisp) == 0x20C8, "CDOTA_Unit_Hero_Wisp size mismatch");
         }
     }
 }

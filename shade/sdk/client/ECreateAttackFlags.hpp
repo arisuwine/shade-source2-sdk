@@ -21,7 +21,8 @@ namespace shade {
                 k_CreateAttackFlags_ProcessProcs = 0x1,
                 k_CreateAttackFlags_FakeAttack = 0x2,
                 k_CreateAttackFlags_NeverMiss = 0x4,
-                k_CreateAttackFlags_TriggeredAttack = 0x8
+                k_CreateAttackFlags_TriggeredAttack = 0x8,
+                k_CreateAttackFlags_NoCrit = 0x10
             };
         }
     }

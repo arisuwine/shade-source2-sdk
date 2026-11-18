@@ -33,6 +33,7 @@ namespace shade {
                 k_EMsgGCGiftedItems = 0x403,
                 k_EMsgGCUnwrapGiftRequest = 0x40d,
                 k_EMsgGCUnwrapGiftResponse = 0x40e,
+                k_EMsgGCDeleteItem = 0x410,
                 k_EMsgGCSortItems = 0x411,
                 k_EMsgGCBackpackSortFinished = 0x422,
                 k_EMsgGCAdjustItemEquippedState = 0x423,

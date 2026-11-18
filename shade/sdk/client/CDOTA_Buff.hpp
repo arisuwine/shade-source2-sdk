@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1aa8
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -55,42 +55,42 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_flLastAppliedTime; // 0x005c, 0x4 bytes
                 float m_flDuration; // 0x0060, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flDieTime; // 0x0064, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCaster; // 0x0068, 0x4 bytes
-                shade::sdk::client::HeroID_t m_nApplierHeroID; // 0x006c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAbility; // 0x0070, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hParent; // 0x0074, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDuplicationSource; // 0x0078, 0x4 bytes
-                shade::sdk::client::AbilityID_t m_nApplierAbilityID; // 0x007c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAuraOwner; // 0x0080, 0x4 bytes
-                std::int32_t m_iStackCount; // 0x0084, 0x4 bytes
-                std::int16_t m_iAuraSearchTeam; // 0x0088, 0x2 bytes
-                std::int16_t m_iAuraSearchType; // 0x008a, 0x2 bytes
-                std::int32_t m_iAuraSearchFlags; // 0x008c, 0x4 bytes
-                float m_flAuraRadius; // 0x0090, 0x4 bytes
-                std::int32_t m_iTeam; // 0x0094, 0x4 bytes
-                std::int32_t m_iAttributes; // 0x0098, 0x4 bytes
-                std::int16_t m_iTooltipParity; // 0x009c, 0x2 bytes
-                std::uint8_t m_bIsAura : 1; // 0x009e, 0x1 bytes
-                std::uint8_t m_bIsAuraActiveOnDeath : 1; // 0x009e, 0x1 bytes
-                std::uint8_t m_bMarkedForDeletion : 1; // 0x009e, 0x1 bytes
-                std::uint8_t m_bAuraIsHeal : 1; // 0x009e, 0x1 bytes
-                std::uint8_t m_bProvidedByAura : 1; // 0x009e, 0x1 bytes
-                std::uint8_t m_bCurrentlyInAuraRange : 1; // 0x009e, 0x1 bytes
-                bool m_bPurgedDestroy; // 0x009f, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flPreviousTick; // 0x00a0, 0x4 bytes
-                float m_flThinkInterval; // 0x00a4, 0x4 bytes
-                float m_flThinkTimeAccumulator; // 0x00a8, 0x4 bytes
-                std::uint8_t pad_00ac[0x4]; // 0x00ac, 0x4 bytes
+                float m_flEffectiveness; // 0x0068, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCaster; // 0x006c, 0x4 bytes
+                shade::sdk::client::HeroID_t m_nApplierHeroID; // 0x0070, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAbility; // 0x0074, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hParent; // 0x0078, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hDuplicationSource; // 0x007c, 0x4 bytes
+                shade::sdk::client::AbilityID_t m_nApplierAbilityID; // 0x0080, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAuraOwner; // 0x0084, 0x4 bytes
+                std::int32_t m_iStackCount; // 0x0088, 0x4 bytes
+                std::int16_t m_iAuraSearchTeam; // 0x008c, 0x2 bytes
+                std::int16_t m_iAuraSearchType; // 0x008e, 0x2 bytes
+                std::int32_t m_iAuraSearchFlags; // 0x0090, 0x4 bytes
+                float m_flAuraRadius; // 0x0094, 0x4 bytes
+                std::int32_t m_iTeam; // 0x0098, 0x4 bytes
+                std::int32_t m_iAttributes; // 0x009c, 0x4 bytes
+                std::int16_t m_iTooltipParity; // 0x00a0, 0x2 bytes
+                std::uint8_t m_bIsAura : 1; // 0x00a2, 0x1 bytes
+                std::uint8_t m_bIsAuraActiveOnDeath : 1; // 0x00a2, 0x1 bytes
+                std::uint8_t m_bMarkedForDeletion : 1; // 0x00a2, 0x1 bytes
+                std::uint8_t m_bAuraIsHeal : 1; // 0x00a2, 0x1 bytes
+                std::uint8_t m_bProvidedByAura : 1; // 0x00a2, 0x1 bytes
+                std::uint8_t m_bCurrentlyInAuraRange : 1; // 0x00a2, 0x1 bytes
+                bool m_bPurgedDestroy; // 0x00a3, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flPreviousTick; // 0x00a4, 0x4 bytes
+                float m_flThinkInterval; // 0x00a8, 0x4 bytes
+                float m_flThinkTimeAccumulator; // 0x00ac, 0x4 bytes
                 CUtlVector<shade::sdk::client::CDOTA_BuffParticle> m_iParticles; // 0x00b0, 0x18 bytes
                 CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAuraUnits; // 0x00c8, 0x18 bytes
-                std::uint8_t pad_00e0[0x19c0]; // 0x00e0, 0x19c0 bytes
-                HSCRIPT m_hScriptScope; // 0x1aa0, 0x8 bytes
+                std::uint8_t pad_00e0[0x1a10]; // 0x00e0, 0x1a10 bytes
+                HSCRIPT m_hScriptScope; // 0x1af0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Buff) == 0x1AA8, "CDOTA_Buff size mismatch");
+            static_assert(sizeof(CDOTA_Buff) == 0x1AF8, "CDOTA_Buff size mismatch");
         }
     }
 }

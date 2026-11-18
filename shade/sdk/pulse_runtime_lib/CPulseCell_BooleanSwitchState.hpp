@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x1f8
+             * Size: 0x168
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CPulseCell_BooleanSwitchState : public shade::sdk::pulse_runtime_lib::CPulseCell_BaseState {
             public:
-                CPulseObservableExpression<bool> m_Condition; // 0x00d8, 0x90 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_WhenTrue; // 0x0168, 0x48 bytes
-                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_WhenFalse; // 0x01b0, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_WhenTrue; // 0x00d8, 0x48 bytes
+                shade::sdk::pulse_runtime_lib::CPulse_OutflowConnection m_WhenFalse; // 0x0120, 0x48 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseCell_BooleanSwitchState) == 0x1F8, "CPulseCell_BooleanSwitchState size mismatch");
+            static_assert(sizeof(CPulseCell_BooleanSwitchState) == 0x168, "CPulseCell_BooleanSwitchState size mismatch");
         }
     }
 }

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleCollisionMode_t : std::int32_t {
+            enum class ParticleCollisionMode_t : std::uint32_t {
                 COLLISION_MODE_PER_PARTICLE_TRACE = 0x3,
                 COLLISION_MODE_USE_NEAREST_TRACE = 0x2,
                 COLLISION_MODE_PER_FRAME_PLANESET = 0x1,

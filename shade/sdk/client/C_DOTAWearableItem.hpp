@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xde0
+             * Size: 0xe48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,25 +42,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTAWearableItem : public shade::sdk::client::C_EconWearable {
             public:
-                bool m_bOwnerModelChanged; // 0x0d40, 0x1 bytes
-                bool m_bIsGeneratingEconItem; // 0x0d41, 0x1 bytes
-                bool m_bIsItemVisibleOnGeneratedEntity; // 0x0d42, 0x1 bytes
-                bool m_bHideWearableButDrawAdditionalWearables; // 0x0d43, 0x1 bytes
-                CHandle<shade::sdk::client::CBaseAnimatingActivity> m_hAdditionalWearable; // 0x0d44, 0x4 bytes
-                CHandle<shade::sdk::client::C_DOTAWearableItem> m_hDrawWearable; // 0x0d48, 0x4 bytes
-                bool m_bHiddenByCombiner; // 0x0d4c, 0x1 bytes
-                bool m_bHiddenByEquipmentSlot; // 0x0d4d, 0x1 bytes
-                bool m_bIsPortrait; // 0x0d4e, 0x1 bytes
-                std::uint8_t pad_0d4f[0x1]; // 0x0d4f, 0x1 bytes
-                float m_fZDelta; // 0x0d50, 0x4 bytes
-                std::uint8_t pad_0d54[0x4]; // 0x0d54, 0x4 bytes
-                CUtlVector<CStrongHandleCopyable<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2>> m_combinerMaterialOverrideList; // 0x0d58, 0x18 bytes
-                std::uint8_t pad_0d70[0x8]; // 0x0d70, 0x8 bytes
-                bool m_bCombinerMaterialOverrideListChanged; // 0x0d78, 0x1 bytes
-                bool m_bRubickFollower; // 0x0d79, 0x1 bytes
-                bool m_bHasPlayerModel; // 0x0d7a, 0x1 bytes
-                std::uint8_t pad_0d7b[0x4d]; // 0x0d7b, 0x4d bytes
-                CUtlVector<CHandle<shade::sdk::client::CBaseAnimatingActivity>> m_vecAdditionalClientsideWearables; // 0x0dc8, 0x18 bytes
+                bool m_bOwnerModelChanged; // 0x0da0, 0x1 bytes
+                bool m_bIsGeneratingEconItem; // 0x0da1, 0x1 bytes
+                bool m_bIsItemVisibleOnGeneratedEntity; // 0x0da2, 0x1 bytes
+                bool m_bHideWearableButDrawAdditionalWearables; // 0x0da3, 0x1 bytes
+                CHandle<shade::sdk::client::CBaseAnimatingActivity> m_hAdditionalWearable; // 0x0da4, 0x4 bytes
+                CHandle<shade::sdk::client::C_DOTAWearableItem> m_hDrawWearable; // 0x0da8, 0x4 bytes
+                bool m_bHiddenByCombiner; // 0x0dac, 0x1 bytes
+                bool m_bHiddenByEquipmentSlot; // 0x0dad, 0x1 bytes
+                bool m_bIsPortrait; // 0x0dae, 0x1 bytes
+                std::uint8_t pad_0daf[0x1]; // 0x0daf, 0x1 bytes
+                float m_fZDelta; // 0x0db0, 0x4 bytes
+                std::uint8_t pad_0db4[0x4]; // 0x0db4, 0x4 bytes
+                CUtlVector<CStrongHandleCopyable<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2>> m_combinerMaterialOverrideList; // 0x0db8, 0x18 bytes
+                std::uint8_t pad_0dd0[0x8]; // 0x0dd0, 0x8 bytes
+                bool m_bCombinerMaterialOverrideListChanged; // 0x0dd8, 0x1 bytes
+                bool m_bRubickFollower; // 0x0dd9, 0x1 bytes
+                bool m_bHasPlayerModel; // 0x0dda, 0x1 bytes
+                std::uint8_t pad_0ddb[0x4d]; // 0x0ddb, 0x4d bytes
+                CUtlVector<CHandle<shade::sdk::client::CBaseAnimatingActivity>> m_vecAdditionalClientsideWearables; // 0x0e28, 0x18 bytes
+                std::uint8_t pad_0e40[0x8]; // 0x0e40, 0x8 bytes
             };
             #pragma pack(pop)
 
@@ -69,7 +70,7 @@ namespace shade {
              * std::uint32_t ItemDefIndex; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(C_DOTAWearableItem) == 0xDE0, "C_DOTAWearableItem size mismatch");
+            static_assert(sizeof(C_DOTAWearableItem) == 0xE48, "C_DOTAWearableItem size mismatch");
         }
     }
 }

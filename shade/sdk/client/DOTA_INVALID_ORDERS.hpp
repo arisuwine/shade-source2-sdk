@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTA_INVALID_ORDERS : std::int32_t {
+            enum class DOTA_INVALID_ORDERS : std::uint32_t {
                 DOTA_ORDER_SUCCESS = -0x1,
                 DOTA_INVALID_ORDER_NOT_CONTROLLABLE_BY_PLAYER = 0x0,
                 DOTA_INVALID_ORDER_UNIT_IS_NOT_NPC = 0x1,

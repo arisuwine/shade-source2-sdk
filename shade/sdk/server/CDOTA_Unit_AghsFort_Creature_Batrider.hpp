@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b18
+             * Size: 0x1ba8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_AghsFort_Creature_Batrider) == 0x1B18, "CDOTA_Unit_AghsFort_Creature_Batrider size mismatch");
+            static_assert(sizeof(CDOTA_Unit_AghsFort_Creature_Batrider) == 0x1BA8, "CDOTA_Unit_AghsFort_Creature_Batrider size mismatch");
         }
     }
 }

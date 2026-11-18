@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,21 +29,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Techies_SnareTrap_Slowed : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1aa8[0x4]; // 0x1aa8, 0x4 bytes
-                float damage; // 0x1aac, 0x4 bytes
-                float damage_interval; // 0x1ab0, 0x4 bytes
-                float move_slow_pct; // 0x1ab4, 0x4 bytes
-                float cast_slow_pct; // 0x1ab8, 0x4 bytes
-                float effect_radius; // 0x1abc, 0x4 bytes
-                bool m_bEscaped; // 0x1ac0, 0x1 bytes
-                std::uint8_t pad_1ac1[0x3]; // 0x1ac1, 0x3 bytes
-                VectorWS vTetherOrigin; // 0x1ac4, 0xc bytes
+                std::uint8_t pad_1af8[0x4]; // 0x1af8, 0x4 bytes
+                float damage; // 0x1afc, 0x4 bytes
+                float damage_interval; // 0x1b00, 0x4 bytes
+                float move_slow_pct; // 0x1b04, 0x4 bytes
+                float cast_slow_pct; // 0x1b08, 0x4 bytes
+                float effect_radius; // 0x1b0c, 0x4 bytes
+                bool m_bEscaped; // 0x1b10, 0x1 bytes
+                std::uint8_t pad_1b11[0x3]; // 0x1b11, 0x3 bytes
+                VectorWS vTetherOrigin; // 0x1b14, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Techies_SnareTrap_Slowed) == 0x1AD0, "CDOTA_Modifier_Techies_SnareTrap_Slowed size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Techies_SnareTrap_Slowed) == 0x1B20, "CDOTA_Modifier_Techies_SnareTrap_Slowed size mismatch");
         }
     }
 }

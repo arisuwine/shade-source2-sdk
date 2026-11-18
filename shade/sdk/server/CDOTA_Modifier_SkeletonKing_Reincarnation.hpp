@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_SkeletonKing_Reincarnation : public shade::sdk::client::CDOTA_Buff {
             public:
-                float reincarnate_time; // 0x1aa8, 0x4 bytes
-                std::int32_t scepter_aura_radius; // 0x1aac, 0x4 bytes
-                std::int32_t bonus_mortal_strike_pct; // 0x1ab0, 0x4 bytes
-                float bonus_mortal_strike_duration; // 0x1ab4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastReincarnationTime; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
+                float reincarnate_time; // 0x1af8, 0x4 bytes
+                std::int32_t scepter_aura_radius; // 0x1afc, 0x4 bytes
+                std::int32_t bonus_mortal_strike_pct; // 0x1b00, 0x4 bytes
+                float bonus_mortal_strike_duration; // 0x1b04, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastReincarnationTime; // 0x1b08, 0x4 bytes
+                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_SkeletonKing_Reincarnation) == 0x1AC0, "CDOTA_Modifier_SkeletonKing_Reincarnation size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_SkeletonKing_Reincarnation) == 0x1B10, "CDOTA_Modifier_SkeletonKing_Reincarnation size mismatch");
         }
     }
 }

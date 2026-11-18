@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,27 +38,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Largo_Frogstomp_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage_per_stomp; // 0x1aa8, 0x4 bytes
-                std::int32_t total_ticks; // 0x1aac, 0x4 bytes
-                float radius; // 0x1ab0, 0x4 bytes
-                float stun_duration; // 0x1ab4, 0x4 bytes
-                float stomp_interval; // 0x1ab8, 0x4 bytes
-                float delay; // 0x1abc, 0x4 bytes
-                std::int32_t infinite_stomps; // 0x1ac0, 0x4 bytes
-                bool m_bStarted; // 0x1ac4, 0x1 bytes
-                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ac8, 0x4 bytes
-                std::int32_t nNumTicks; // 0x1acc, 0x4 bytes
-                bool m_bGrantedGem; // 0x1ad0, 0x1 bytes
-                bool m_bPendingDestroy; // 0x1ad1, 0x1 bytes
-                std::uint8_t pad_1ad2[0x6]; // 0x1ad2, 0x6 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitHeroes; // 0x1ad8, 0x18 bytes
+                float damage_per_stomp; // 0x1af8, 0x4 bytes
+                std::int32_t total_ticks; // 0x1afc, 0x4 bytes
+                float radius; // 0x1b00, 0x4 bytes
+                float stun_duration; // 0x1b04, 0x4 bytes
+                float stomp_interval; // 0x1b08, 0x4 bytes
+                float delay; // 0x1b0c, 0x4 bytes
+                std::int32_t infinite_stomps; // 0x1b10, 0x4 bytes
+                bool m_bStarted; // 0x1b14, 0x1 bytes
+                std::uint8_t pad_1b15[0x3]; // 0x1b15, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b18, 0x4 bytes
+                float m_flFroglingScale; // 0x1b1c, 0x4 bytes
+                std::int32_t nNumTicks; // 0x1b20, 0x4 bytes
+                bool m_bGrantedGem; // 0x1b24, 0x1 bytes
+                bool m_bPendingDestroy; // 0x1b25, 0x1 bytes
+                std::uint8_t pad_1b26[0x2]; // 0x1b26, 0x2 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitHeroes; // 0x1b28, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Largo_Frogstomp_Thinker) == 0x1AF0, "CDOTA_Modifier_Largo_Frogstomp_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Largo_Frogstomp_Thinker) == 0x1B40, "CDOTA_Modifier_Largo_Frogstomp_Thinker size mismatch");
         }
     }
 }

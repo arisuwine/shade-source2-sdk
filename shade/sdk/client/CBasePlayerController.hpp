@@ -15,6 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/ButtonBitMask_t.hpp"
 #include "shade/sdk/client/C_BaseEntity.hpp"
 #include "shade/sdk/client/C_CommandContext.hpp"
 #include "shade/sdk/client/PlayerConnectedState.hpp"
@@ -42,7 +43,7 @@ namespace shade {
             public:
                 std::uint8_t pad_05f0[0x8]; // 0x05f0, 0x8 bytes
                 shade::sdk::client::C_CommandContext m_CommandContext; // 0x05f8, 0xa0 bytes
-                std::uint64_t m_nInButtonsWhichAreToggles; // 0x0698, 0x8 bytes
+                shade::sdk::client::ButtonBitMask_t m_nInButtonsWhichAreToggles; // 0x0698, 0x8 bytes
                 std::uint32_t m_nTickBase; // 0x06a0, 0x4 bytes
                 CHandle<shade::sdk::client::C_BasePlayerPawn> m_hPawn; // 0x06a4, 0x4 bytes
                 bool m_bKnownTeamMismatch; // 0x06a8, 0x1 bytes

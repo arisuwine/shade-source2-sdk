@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class SteamUGCMatchingUGCType : std::int32_t {
+            enum class SteamUGCMatchingUGCType : std::uint32_t {
                 Items = 0x0,
                 Items_Mtx = 0x1,
                 Items_ReadyToUse = 0x2,

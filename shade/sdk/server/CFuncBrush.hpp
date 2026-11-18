@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,20 +31,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncBrush : public shade::sdk::server::CBaseModelEntity {
             public:
-                shade::sdk::client::BrushSolidities_e m_iSolidity; // 0x0858, 0x4 bytes
-                std::int32_t m_iDisabled; // 0x085c, 0x4 bytes
-                bool m_bSolidBsp; // 0x0860, 0x1 bytes
-                std::uint8_t pad_0861[0x7]; // 0x0861, 0x7 bytes
-                CUtlSymbolLarge m_iszExcludedClass; // 0x0868, 0x8 bytes
-                bool m_bInvertExclusion; // 0x0870, 0x1 bytes
-                bool m_bScriptedMovement; // 0x0871, 0x1 bytes
-                std::uint8_t pad_0872[0x6]; // 0x0872, 0x6 bytes
+                shade::sdk::client::BrushSolidities_e m_iSolidity; // 0x08b8, 0x4 bytes
+                std::int32_t m_iDisabled; // 0x08bc, 0x4 bytes
+                bool m_bSolidBsp; // 0x08c0, 0x1 bytes
+                std::uint8_t pad_08c1[0x7]; // 0x08c1, 0x7 bytes
+                CUtlSymbolLarge m_iszExcludedClass; // 0x08c8, 0x8 bytes
+                bool m_bInvertExclusion; // 0x08d0, 0x1 bytes
+                bool m_bScriptedMovement; // 0x08d1, 0x1 bytes
+                std::uint8_t pad_08d2[0x6]; // 0x08d2, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncBrush) == 0x878, "CFuncBrush size mismatch");
+            static_assert(sizeof(CFuncBrush) == 0x8D8, "CFuncBrush size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0xc8
+             * Size: 0xe0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,13 +31,13 @@ namespace shade {
             public:
                 CUtlVector<std::pair<CUtlString, std::uint32_t>> m_inputBones; // 0x0020, 0x18 bytes
                 CUtlVector<std::pair<CUtlString, std::uint32_t>> m_outputBones; // 0x0038, 0x18 bytes
-                std::uint8_t pad_0050[0x78]; // 0x0050, 0x78 bytes
+                std::uint8_t pad_0050[0x90]; // 0x0050, 0x90 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBoneConstraintRbf) == 0xC8, "CBoneConstraintRbf size mismatch");
+            static_assert(sizeof(CBoneConstraintRbf) == 0xE0, "CBoneConstraintRbf size mismatch");
         }
     }
 }

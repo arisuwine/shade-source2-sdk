@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class CourierState_t : std::int32_t {
+            enum class CourierState_t : std::uint32_t {
                 COURIER_STATE_INIT = -0x1,
                 COURIER_STATE_IDLE = 0x0,
                 COURIER_STATE_AT_BASE = 0x1,

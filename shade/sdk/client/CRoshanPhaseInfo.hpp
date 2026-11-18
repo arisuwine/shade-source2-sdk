@@ -16,13 +16,22 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/ERoshanSpawnPhase.hpp"
+#include "shade/sdk/client/HeroID_t.hpp"
 #include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace client {
+            class C_BaseEntity;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace client {
             /* Class Parameters
-             * Size: 0x18
+             * Size: 0x20
              * Alignment: 0xff
              * Has VTable
              * Has Trivial Destructor
@@ -35,13 +44,15 @@ namespace shade {
                 shade::sdk::client::ERoshanSpawnPhase m_eRoshanPhase; // 0x0008, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flRoshanPhaseStartTime; // 0x000c, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flRoshanPhaseEndTime; // 0x0010, 0x4 bytes
-                std::uint8_t pad_0014[0x4]; // 0x0014, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAegisItem; // 0x0014, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAegisHolder; // 0x0018, 0x4 bytes
+                shade::sdk::client::HeroID_t m_nAegisHolderHeroID; // 0x001c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CRoshanPhaseInfo) == 0x18, "CRoshanPhaseInfo size mismatch");
+            static_assert(sizeof(CRoshanPhaseInfo) == 0x20, "CRoshanPhaseInfo size mismatch");
         }
     }
 }

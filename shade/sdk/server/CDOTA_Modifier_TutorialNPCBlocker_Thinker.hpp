@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_TutorialNPCBlocker_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                Vector m_vecStart; // 0x1aa8, 0xc bytes
-                Vector m_vecEnd; // 0x1ab4, 0xc bytes
-                float m_flRadius; // 0x1ac0, 0x4 bytes
-                bool m_bHidden; // 0x1ac4, 0x1 bytes
-                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
+                Vector m_vecStart; // 0x1af8, 0xc bytes
+                Vector m_vecEnd; // 0x1b04, 0xc bytes
+                float m_flRadius; // 0x1b10, 0x4 bytes
+                bool m_bHidden; // 0x1b14, 0x1 bytes
+                std::uint8_t pad_1b15[0x3]; // 0x1b15, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_TutorialNPCBlocker_Thinker) == 0x1AC8, "CDOTA_Modifier_TutorialNPCBlocker_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_TutorialNPCBlocker_Thinker) == 0x1B18, "CDOTA_Modifier_TutorialNPCBlocker_Thinker size mismatch");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0xc0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -47,13 +47,13 @@ namespace shade {
                 CUtlLeanVector<shade::sdk::modellib::CMeshletDescriptor> m_meshlets; // 0x0038, 0x10 bytes
                 CUtlLeanVector<shade::sdk::modellib::CSceneObjectData__RTProxyDrawDescriptor_t> m_rtProxyDrawCalls; // 0x0048, 0x10 bytes
                 Vector4D m_vTintColor; // 0x0058, 0x10 bytes
-                std::uint8_t pad_0068[0x50]; // 0x0068, 0x50 bytes
+                std::uint8_t pad_0068[0x58]; // 0x0068, 0x58 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSceneObjectData) == 0xB8, "CSceneObjectData size mismatch");
+            static_assert(sizeof(CSceneObjectData) == 0xC0, "CSceneObjectData size mismatch");
         }
     }
 }

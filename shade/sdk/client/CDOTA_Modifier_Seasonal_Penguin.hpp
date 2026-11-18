@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b50
+             * Size: 0x1ba0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,46 +39,46 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Seasonal_Penguin : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fLifetimeGained; // 0x1aa8, 0x4 bytes
-                VectorWS m_vTargetPos; // 0x1aac, 0xc bytes
-                std::int32_t m_nCurrentSpeed; // 0x1ab8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastBumpTime; // 0x1abc, 0x4 bytes
-                VectorWS m_vLastPos; // 0x1ac0, 0xc bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLastHit; // 0x1acc, 0x4 bytes
-                Vector m_vDir; // 0x1ad0, 0xc bytes
-                VectorWS m_vRunEndPos; // 0x1adc, 0xc bytes
-                bool m_bIsInInitialRun; // 0x1ae8, 0x1 bytes
-                std::uint8_t pad_1ae9[0x3]; // 0x1ae9, 0x3 bytes
-                VectorWS m_vJumpEndPos; // 0x1aec, 0xc bytes
-                bool m_bPlayedVroomSinceLastCrash; // 0x1af8, 0x1 bytes
-                std::uint8_t pad_1af9[0x3]; // 0x1af9, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nVroomFX; // 0x1afc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastSpeedStepTime; // 0x1b00, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastSpeechTime; // 0x1b04, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1b08, 0x4 bytes
-                std::int32_t m_nBumpsSinceLastCrash; // 0x1b0c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLastBumpingHero; // 0x1b10, 0x4 bytes
-                std::int32_t initial_speed; // 0x1b14, 0x4 bytes
-                std::int32_t max_speed; // 0x1b18, 0x4 bytes
-                std::int32_t speed_step; // 0x1b1c, 0x4 bytes
-                float speed_step_interval; // 0x1b20, 0x4 bytes
-                float bump_delay; // 0x1b24, 0x4 bytes
-                float bump_delay_absolute; // 0x1b28, 0x4 bytes
-                std::int32_t bump_collision_radius; // 0x1b2c, 0x4 bytes
-                std::int32_t run_distance; // 0x1b30, 0x4 bytes
-                std::int32_t jump_distance; // 0x1b34, 0x4 bytes
-                std::int32_t speed_after_crash; // 0x1b38, 0x4 bytes
-                std::int32_t speed_gain_per_hero_bump; // 0x1b3c, 0x4 bytes
-                float max_gainable_lifetime; // 0x1b40, 0x4 bytes
-                float lifetime_gain_per_hero_bump; // 0x1b44, 0x4 bytes
-                float min_speech_repeat_time; // 0x1b48, 0x4 bytes
-                std::uint8_t pad_1b4c[0x4]; // 0x1b4c, 0x4 bytes
+                float m_fLifetimeGained; // 0x1af8, 0x4 bytes
+                VectorWS m_vTargetPos; // 0x1afc, 0xc bytes
+                std::int32_t m_nCurrentSpeed; // 0x1b08, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastBumpTime; // 0x1b0c, 0x4 bytes
+                VectorWS m_vLastPos; // 0x1b10, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLastHit; // 0x1b1c, 0x4 bytes
+                Vector m_vDir; // 0x1b20, 0xc bytes
+                VectorWS m_vRunEndPos; // 0x1b2c, 0xc bytes
+                bool m_bIsInInitialRun; // 0x1b38, 0x1 bytes
+                std::uint8_t pad_1b39[0x3]; // 0x1b39, 0x3 bytes
+                VectorWS m_vJumpEndPos; // 0x1b3c, 0xc bytes
+                bool m_bPlayedVroomSinceLastCrash; // 0x1b48, 0x1 bytes
+                std::uint8_t pad_1b49[0x3]; // 0x1b49, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nVroomFX; // 0x1b4c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastSpeedStepTime; // 0x1b50, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastSpeechTime; // 0x1b54, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1b58, 0x4 bytes
+                std::int32_t m_nBumpsSinceLastCrash; // 0x1b5c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLastBumpingHero; // 0x1b60, 0x4 bytes
+                std::int32_t initial_speed; // 0x1b64, 0x4 bytes
+                std::int32_t max_speed; // 0x1b68, 0x4 bytes
+                std::int32_t speed_step; // 0x1b6c, 0x4 bytes
+                float speed_step_interval; // 0x1b70, 0x4 bytes
+                float bump_delay; // 0x1b74, 0x4 bytes
+                float bump_delay_absolute; // 0x1b78, 0x4 bytes
+                std::int32_t bump_collision_radius; // 0x1b7c, 0x4 bytes
+                std::int32_t run_distance; // 0x1b80, 0x4 bytes
+                std::int32_t jump_distance; // 0x1b84, 0x4 bytes
+                std::int32_t speed_after_crash; // 0x1b88, 0x4 bytes
+                std::int32_t speed_gain_per_hero_bump; // 0x1b8c, 0x4 bytes
+                float max_gainable_lifetime; // 0x1b90, 0x4 bytes
+                float lifetime_gain_per_hero_bump; // 0x1b94, 0x4 bytes
+                float min_speech_repeat_time; // 0x1b98, 0x4 bytes
+                std::uint8_t pad_1b9c[0x4]; // 0x1b9c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Seasonal_Penguin) == 0x1B50, "CDOTA_Modifier_Seasonal_Penguin size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Seasonal_Penguin) == 0x1BA0, "CDOTA_Modifier_Seasonal_Penguin size mismatch");
         }
     }
 }

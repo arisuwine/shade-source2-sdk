@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_RotatableBuilding : public shade::sdk::client::C_DOTA_BaseNPC {
             public:
-                shade::sdk::animationsystem::HSequence m_hObsoleteHeroStatueSequence; // 0x1ab8, 0x4 bytes
-                shade::sdk::animationsystem::HSequence m_hObsoleteConstantLayerSequence; // 0x1abc, 0x4 bytes
+                shade::sdk::animationsystem::HSequence m_hObsoleteHeroStatueSequence; // 0x1b40, 0x4 bytes
+                shade::sdk::animationsystem::HSequence m_hObsoleteConstantLayerSequence; // 0x1b44, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_RotatableBuilding) == 0x1AC0, "C_DOTA_BaseNPC_RotatableBuilding size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_RotatableBuilding) == 0x1B48, "C_DOTA_BaseNPC_RotatableBuilding size mismatch");
         }
     }
 }

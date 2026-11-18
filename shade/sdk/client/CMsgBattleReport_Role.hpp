@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class CMsgBattleReport_Role : std::int32_t {
+            enum class CMsgBattleReport_Role : std::uint32_t {
                 k_eUnknownRole = -0x1,
                 k_eSafelane = 0x0,
                 k_eMidlane = 0x1,

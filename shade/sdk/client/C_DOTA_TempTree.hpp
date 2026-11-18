@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcb8
+             * Size: 0xd18
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_TempTree : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                std::uint8_t pad_0bb0[0x30]; // 0x0bb0, 0x30 bytes
-                shade::sdk::entity2::GameTime_t m_fExpireTime; // 0x0be0, 0x4 bytes
-                VectorWS m_vecTreeCircleCenter; // 0x0be4, 0xc bytes
-                bool m_bCanApplyTreeCostume; // 0x0bf0, 0x1 bytes
-                bool m_bIsMangoTree; // 0x0bf1, 0x1 bytes
-                std::uint8_t pad_0bf2[0x6]; // 0x0bf2, 0x6 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_ParticleList; // 0x0bf8, 0x18 bytes
-                bool m_bIsPartOfFowSystem; // 0x0c10, 0x1 bytes
-                std::uint8_t pad_0c11[0xa7]; // 0x0c11, 0xa7 bytes
+                std::uint8_t pad_0c10[0x30]; // 0x0c10, 0x30 bytes
+                shade::sdk::entity2::GameTime_t m_fExpireTime; // 0x0c40, 0x4 bytes
+                VectorWS m_vecTreeCircleCenter; // 0x0c44, 0xc bytes
+                bool m_bCanApplyTreeCostume; // 0x0c50, 0x1 bytes
+                bool m_bIsMangoTree; // 0x0c51, 0x1 bytes
+                std::uint8_t pad_0c52[0x6]; // 0x0c52, 0x6 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_ParticleList; // 0x0c58, 0x18 bytes
+                bool m_bIsPartOfFowSystem; // 0x0c70, 0x1 bytes
+                std::uint8_t pad_0c71[0xa7]; // 0x0c71, 0xa7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_TempTree) == 0xCB8, "C_DOTA_TempTree size mismatch");
+            static_assert(sizeof(C_DOTA_TempTree) == 0xD18, "C_DOTA_TempTree size mismatch");
         }
     }
 }

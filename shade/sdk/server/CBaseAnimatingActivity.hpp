@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x878
+             * Size: 0x8d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseAnimatingActivity : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bShouldAnimateDuringGameplayPause; // 0x0858, 0x1 bytes
-                bool m_bInitiallyPopulateInterpHistory; // 0x0859, 0x1 bytes
-                bool m_bAnimationUpdateScheduled; // 0x085a, 0x1 bytes
-                std::uint8_t pad_085b[0x5]; // 0x085b, 0x5 bytes
-                CUtlVector<CUtlString> m_vecSuppressedAnimEventTags; // 0x0860, 0x18 bytes
+                bool m_bShouldAnimateDuringGameplayPause; // 0x08b8, 0x1 bytes
+                bool m_bInitiallyPopulateInterpHistory; // 0x08b9, 0x1 bytes
+                bool m_bAnimationUpdateScheduled; // 0x08ba, 0x1 bytes
+                std::uint8_t pad_08bb[0x5]; // 0x08bb, 0x5 bytes
+                CUtlVector<CUtlString> m_vecSuppressedAnimEventTags; // 0x08c0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimatingActivity) == 0x878, "CBaseAnimatingActivity size mismatch");
+            static_assert(sizeof(CBaseAnimatingActivity) == 0x8D8, "CBaseAnimatingActivity size mismatch");
         }
     }
 }

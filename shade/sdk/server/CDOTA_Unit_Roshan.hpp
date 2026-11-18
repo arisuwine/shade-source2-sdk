@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19d0
+             * Size: 0x1a60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,21 +39,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Roshan : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                std::int32_t m_iKillerTeam; // 0x1998, 0x4 bytes
-                std::int32_t m_iLastHealthPercent; // 0x199c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x19a0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hRadiantRoshanPit; // 0x19a4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hDireRoshanPit; // 0x19a8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hRiverMidpoint; // 0x19ac, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAttackingHeroes; // 0x19b0, 0x18 bytes
-                bool m_bGoldenRoshan; // 0x19c8, 0x1 bytes
-                std::uint8_t pad_19c9[0x7]; // 0x19c9, 0x7 bytes
+                std::int32_t m_iKillerTeam; // 0x1a28, 0x4 bytes
+                std::int32_t m_iLastHealthPercent; // 0x1a2c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a30, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hRadiantRoshanPit; // 0x1a34, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hDireRoshanPit; // 0x1a38, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hRiverMidpoint; // 0x1a3c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hAttackingHeroes; // 0x1a40, 0x18 bytes
+                bool m_bGoldenRoshan; // 0x1a58, 0x1 bytes
+                std::uint8_t pad_1a59[0x7]; // 0x1a59, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Roshan) == 0x19D0, "CDOTA_Unit_Roshan size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Roshan) == 0x1A60, "CDOTA_Unit_Roshan size mismatch");
         }
     }
 }

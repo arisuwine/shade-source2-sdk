@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe20
+             * Size: 0xe80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EnvDeferredLight : public shade::sdk::client::C_ModelPointEntity, public shade::sdk::client::CDeferredLightBase {
             public:
-                std::uint8_t pad_0e08[0x18]; // 0x0e08, 0x18 bytes
+                std::uint8_t pad_0e68[0x18]; // 0x0e68, 0x18 bytes
             };
             #pragma pack(pop)
 
             /* Data Map Fields
-             * std::uint8_t CDeferredLightBase[0x290]; // Offset: 0xb78, Size: 0x1, Size In Bytes: 0x290
+             * std::uint8_t CDeferredLightBase[0x290]; // Offset: 0xbd8, Size: 0x1, Size In Bytes: 0x290
              */
 
-            static_assert(sizeof(C_EnvDeferredLight) == 0xE20, "C_EnvDeferredLight size mismatch");
+            static_assert(sizeof(C_EnvDeferredLight) == 0xE80, "C_EnvDeferredLight size mismatch");
         }
     }
 }

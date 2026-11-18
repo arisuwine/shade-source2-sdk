@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xd70
+             * Size: 0xdb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,29 +30,29 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PointClientUIHUD : public shade::sdk::client::C_BaseClientUIEntity {
             public:
-                std::uint8_t pad_0ba8[0x8]; // 0x0ba8, 0x8 bytes
-                bool m_bCheckCSSClasses; // 0x0bb0, 0x1 bytes
-                std::uint8_t pad_0bb1[0x177]; // 0x0bb1, 0x177 bytes
-                bool m_bIgnoreInput; // 0x0d28, 0x1 bytes
-                std::uint8_t pad_0d29[0x3]; // 0x0d29, 0x3 bytes
-                float m_flWidth; // 0x0d2c, 0x4 bytes
-                float m_flHeight; // 0x0d30, 0x4 bytes
-                float m_flDPI; // 0x0d34, 0x4 bytes
-                float m_flInteractDistance; // 0x0d38, 0x4 bytes
-                float m_flDepthOffset; // 0x0d3c, 0x4 bytes
-                std::uint32_t m_unOwnerContext; // 0x0d40, 0x4 bytes
-                std::uint32_t m_unHorizontalAlign; // 0x0d44, 0x4 bytes
-                std::uint32_t m_unVerticalAlign; // 0x0d48, 0x4 bytes
-                std::uint32_t m_unOrientation; // 0x0d4c, 0x4 bytes
-                bool m_bAllowInteractionFromAllSceneWorlds; // 0x0d50, 0x1 bytes
-                std::uint8_t pad_0d51[0x7]; // 0x0d51, 0x7 bytes
-                C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x0d58, 0x18 bytes
+                std::uint8_t pad_0c08[0x8]; // 0x0c08, 0x8 bytes
+                bool m_bCheckCSSClasses; // 0x0c10, 0x1 bytes
+                std::uint8_t pad_0c11[0x15f]; // 0x0c11, 0x15f bytes
+                bool m_bIgnoreInput; // 0x0d70, 0x1 bytes
+                std::uint8_t pad_0d71[0x3]; // 0x0d71, 0x3 bytes
+                float m_flWidth; // 0x0d74, 0x4 bytes
+                float m_flHeight; // 0x0d78, 0x4 bytes
+                float m_flDPI; // 0x0d7c, 0x4 bytes
+                float m_flInteractDistance; // 0x0d80, 0x4 bytes
+                float m_flDepthOffset; // 0x0d84, 0x4 bytes
+                std::uint32_t m_unOwnerContext; // 0x0d88, 0x4 bytes
+                std::uint32_t m_unHorizontalAlign; // 0x0d8c, 0x4 bytes
+                std::uint32_t m_unVerticalAlign; // 0x0d90, 0x4 bytes
+                std::uint32_t m_unOrientation; // 0x0d94, 0x4 bytes
+                bool m_bAllowInteractionFromAllSceneWorlds; // 0x0d98, 0x1 bytes
+                std::uint8_t pad_0d99[0x7]; // 0x0d99, 0x7 bytes
+                C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x0da0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PointClientUIHUD) == 0xD70, "C_PointClientUIHUD size mismatch");
+            static_assert(sizeof(C_PointClientUIHUD) == 0xDB8, "C_PointClientUIHUD size mismatch");
         }
     }
 }

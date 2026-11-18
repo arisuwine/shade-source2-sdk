@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x1b50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Roshan_Grab_Thrown : public shade::sdk::server::CDOTA_Modifier_Knockback {
             public:
-                float m_flDamage; // 0x1ae0, 0x4 bytes
-                QAngle m_vStartAngle; // 0x1ae4, 0xc bytes
-                QAngle m_vEndAngle; // 0x1af0, 0xc bytes
-                float m_flAngleAnimDuration; // 0x1afc, 0x4 bytes
+                float m_flDamage; // 0x1b30, 0x4 bytes
+                QAngle m_vStartAngle; // 0x1b34, 0xc bytes
+                QAngle m_vEndAngle; // 0x1b40, 0xc bytes
+                float m_flAngleAnimDuration; // 0x1b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Roshan_Grab_Thrown) == 0x1B00, "CDOTA_Modifier_Roshan_Grab_Thrown size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Roshan_Grab_Thrown) == 0x1B50, "CDOTA_Modifier_Roshan_Grab_Thrown size mismatch");
         }
     }
 }

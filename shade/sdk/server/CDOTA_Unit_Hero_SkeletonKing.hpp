@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2058
+             * Size: 0x20e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_SkeletonKing : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                std::int32_t m_nSkeletonWarriors; // 0x2020, 0x4 bytes
-                std::int32_t m_vecInitialHeroKillBitmask[0x6]; // 0x2024, 0x18 bytes
-                std::int32_t m_vecInGameHeroKillBitmask[0x6]; // 0x203c, 0x18 bytes
-                std::uint8_t pad_2054[0x4]; // 0x2054, 0x4 bytes
+                std::int32_t m_nSkeletonWarriors; // 0x20b0, 0x4 bytes
+                std::int32_t m_vecInitialHeroKillBitmask[0x6]; // 0x20b4, 0x18 bytes
+                std::int32_t m_vecInGameHeroKillBitmask[0x6]; // 0x20cc, 0x18 bytes
+                std::uint8_t pad_20e4[0x4]; // 0x20e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_SkeletonKing) == 0x2058, "CDOTA_Unit_Hero_SkeletonKing size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_SkeletonKing) == 0x20E8, "CDOTA_Unit_Hero_SkeletonKing size mismatch");
         }
     }
 }

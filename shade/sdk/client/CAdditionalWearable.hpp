@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xe90
+             * Size: 0xef0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CAdditionalWearable : public shade::sdk::client::C_DynamicProp {
             public:
-                std::uint8_t pad_0e80[0x10]; // 0x0e80, 0x10 bytes
+                std::uint8_t pad_0ee0[0x10]; // 0x0ee0, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAdditionalWearable) == 0xE90, "CAdditionalWearable size mismatch");
+            static_assert(sizeof(CAdditionalWearable) == 0xEF0, "CAdditionalWearable size mismatch");
         }
     }
 }

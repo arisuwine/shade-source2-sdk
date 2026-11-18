@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Invoker_Tornado : public shade::sdk::server::CDOTA_Modifier_Cyclone {
             public:
-                float m_flLandDamage; // 0x1ac0, 0x4 bytes
-                float spell_lifesteal; // 0x1ac4, 0x4 bytes
-                float spell_amp; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                float m_flLandDamage; // 0x1b10, 0x4 bytes
+                float spell_lifesteal; // 0x1b14, 0x4 bytes
+                float spell_amp; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Invoker_Tornado) == 0x1AD0, "CDOTA_Modifier_Invoker_Tornado size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Invoker_Tornado) == 0x1B20, "CDOTA_Modifier_Invoker_Tornado size mismatch");
         }
     }
 }

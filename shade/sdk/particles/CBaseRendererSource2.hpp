@@ -43,7 +43,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x2ed8
+             * Size: 0x2ed0
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -52,84 +52,84 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseRendererSource2 : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flRadiusScale; // 0x0230, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flAlphaScale; // 0x03a8, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flRollScale; // 0x0520, 0x178 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlpha2Field; // 0x0698, 0x4 bytes
-                std::uint8_t pad_069c[0x4]; // 0x069c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererVecInput m_vecColorScale; // 0x06a0, 0x6d8 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0d78, 0x4 bytes
-                shade::sdk::particles::SpriteCardShaderType_t m_nShaderType; // 0x0d7c, 0x4 bytes
-                CUtlString m_strShaderOverride; // 0x0d80, 0x8 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flCenterXOffset; // 0x0d88, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flCenterYOffset; // 0x0f00, 0x178 bytes
-                float m_flBumpStrength; // 0x1078, 0x4 bytes
-                shade::sdk::particles::ParticleSequenceCropOverride_t m_nCropTextureOverride; // 0x107c, 0x4 bytes
-                CUtlLeanVector<shade::sdk::particles::TextureGroup_t> m_vecTexturesInput; // 0x1080, 0x10 bytes
-                float m_flAnimationRate; // 0x1090, 0x4 bytes
-                shade::sdk::particleslib::AnimationType_t m_nAnimationType; // 0x1094, 0x4 bytes
-                bool m_bAnimateInFPS; // 0x1098, 0x1 bytes
-                std::uint8_t pad_1099[0x7]; // 0x1099, 0x7 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMotionVectorScaleU; // 0x10a0, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMotionVectorScaleV; // 0x1218, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSelfIllumAmount; // 0x1390, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDiffuseAmount; // 0x1508, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDiffuseClamp; // 0x1680, 0x178 bytes
-                std::int32_t m_nLightingControlPoint; // 0x17f8, 0x4 bytes
-                shade::sdk::particles::ParticleOutputBlendMode_t m_nOutputBlendMode; // 0x17fc, 0x4 bytes
-                bool m_bGammaCorrectVertexColors; // 0x1800, 0x1 bytes
-                bool m_bSaturateColorPreAlphaBlend; // 0x1801, 0x1 bytes
-                std::uint8_t pad_1802[0x6]; // 0x1802, 0x6 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flAddSelfAmount; // 0x1808, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDesaturation; // 0x1980, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flOverbrightFactor; // 0x1af8, 0x178 bytes
-                std::int32_t m_nHSVShiftControlPoint; // 0x1c70, 0x4 bytes
-                shade::sdk::particles::ParticleFogType_t m_nFogType; // 0x1c74, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFogAmount; // 0x1c78, 0x178 bytes
-                bool m_bTintByFOW; // 0x1df0, 0x1 bytes
-                bool m_bTintByGlobalLight; // 0x1df1, 0x1 bytes
-                std::uint8_t pad_1df2[0x2]; // 0x1df2, 0x2 bytes
-                shade::sdk::particles::SpriteCardPerParticleScale_t m_nPerParticleAlphaReference; // 0x1df4, 0x4 bytes
-                shade::sdk::particles::SpriteCardPerParticleScale_t m_nPerParticleAlphaRefWindow; // 0x1df8, 0x4 bytes
-                shade::sdk::particles::ParticleAlphaReferenceType_t m_nAlphaReferenceType; // 0x1dfc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flAlphaReferenceSoftness; // 0x1e00, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToZero; // 0x1f78, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToOne; // 0x20f0, 0x178 bytes
-                bool m_bRefract; // 0x2268, 0x1 bytes
-                bool m_bRefractSolid; // 0x2269, 0x1 bytes
-                bool m_bRefract2Passes; // 0x226a, 0x1 bytes
-                std::uint8_t pad_226b[0x5]; // 0x226b, 0x5 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flRefractAmount; // 0x2270, 0x178 bytes
-                std::int32_t m_nRefractBlurRadius; // 0x23e8, 0x4 bytes
-                shade::sdk::particles::BlurFilterType_t m_nRefractBlurType; // 0x23ec, 0x4 bytes
-                bool m_bOnlyRenderInEffectsBloomPass; // 0x23f0, 0x1 bytes
-                bool m_bOnlyRenderInEffectsWaterPass; // 0x23f1, 0x1 bytes
-                bool m_bUseMixedResolutionRendering; // 0x23f2, 0x1 bytes
-                bool m_bOnlyRenderInEffecsGameOverlay; // 0x23f3, 0x1 bytes
-                char m_stencilTestID[0x80]; // 0x23f4, 0x80 bytes
-                bool m_bStencilTestExclude; // 0x2474, 0x1 bytes
-                char m_stencilWriteID[0x80]; // 0x2475, 0x80 bytes
-                bool m_bWriteStencilOnDepthPass; // 0x24f5, 0x1 bytes
-                bool m_bWriteStencilOnDepthFail; // 0x24f6, 0x1 bytes
-                bool m_bReverseZBuffering; // 0x24f7, 0x1 bytes
-                bool m_bDisableZBuffering; // 0x24f8, 0x1 bytes
-                std::uint8_t pad_24f9[0x3]; // 0x24f9, 0x3 bytes
-                shade::sdk::particles::ParticleDepthFeatheringMode_t m_nFeatheringMode; // 0x24fc, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringMinDist; // 0x2500, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringMaxDist; // 0x2678, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringFilter; // 0x27f0, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringDepthMapFilter; // 0x2968, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDepthBias; // 0x2ae0, 0x178 bytes
-                shade::sdk::particles::ParticleSortingChoiceList_t m_nSortMethod; // 0x2c58, 0x4 bytes
-                bool m_bBlendFramesSeq0; // 0x2c5c, 0x1 bytes
-                bool m_bMaxLuminanceBlendingSequence0; // 0x2c5d, 0x1 bytes
-                std::uint8_t pad_2c5e[0x27a]; // 0x2c5e, 0x27a bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flRadiusScale; // 0x0228, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flAlphaScale; // 0x03a0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flRollScale; // 0x0518, 0x178 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlpha2Field; // 0x0690, 0x4 bytes
+                std::uint8_t pad_0694[0x4]; // 0x0694, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererVecInput m_vecColorScale; // 0x0698, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0d70, 0x4 bytes
+                shade::sdk::particles::SpriteCardShaderType_t m_nShaderType; // 0x0d74, 0x4 bytes
+                CUtlString m_strShaderOverride; // 0x0d78, 0x8 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flCenterXOffset; // 0x0d80, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flCenterYOffset; // 0x0ef8, 0x178 bytes
+                float m_flBumpStrength; // 0x1070, 0x4 bytes
+                shade::sdk::particles::ParticleSequenceCropOverride_t m_nCropTextureOverride; // 0x1074, 0x4 bytes
+                CUtlLeanVector<shade::sdk::particles::TextureGroup_t> m_vecTexturesInput; // 0x1078, 0x10 bytes
+                float m_flAnimationRate; // 0x1088, 0x4 bytes
+                shade::sdk::particleslib::AnimationType_t m_nAnimationType; // 0x108c, 0x4 bytes
+                bool m_bAnimateInFPS; // 0x1090, 0x1 bytes
+                std::uint8_t pad_1091[0x7]; // 0x1091, 0x7 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMotionVectorScaleU; // 0x1098, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flMotionVectorScaleV; // 0x1210, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSelfIllumAmount; // 0x1388, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDiffuseAmount; // 0x1500, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDiffuseClamp; // 0x1678, 0x178 bytes
+                std::int32_t m_nLightingControlPoint; // 0x17f0, 0x4 bytes
+                shade::sdk::particles::ParticleOutputBlendMode_t m_nOutputBlendMode; // 0x17f4, 0x4 bytes
+                bool m_bGammaCorrectVertexColors; // 0x17f8, 0x1 bytes
+                bool m_bSaturateColorPreAlphaBlend; // 0x17f9, 0x1 bytes
+                std::uint8_t pad_17fa[0x6]; // 0x17fa, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flAddSelfAmount; // 0x1800, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDesaturation; // 0x1978, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flOverbrightFactor; // 0x1af0, 0x178 bytes
+                std::int32_t m_nHSVShiftControlPoint; // 0x1c68, 0x4 bytes
+                shade::sdk::particles::ParticleFogType_t m_nFogType; // 0x1c6c, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFogAmount; // 0x1c70, 0x178 bytes
+                bool m_bTintByFOW; // 0x1de8, 0x1 bytes
+                bool m_bTintByGlobalLight; // 0x1de9, 0x1 bytes
+                std::uint8_t pad_1dea[0x2]; // 0x1dea, 0x2 bytes
+                shade::sdk::particles::SpriteCardPerParticleScale_t m_nPerParticleAlphaReference; // 0x1dec, 0x4 bytes
+                shade::sdk::particles::SpriteCardPerParticleScale_t m_nPerParticleAlphaRefWindow; // 0x1df0, 0x4 bytes
+                shade::sdk::particles::ParticleAlphaReferenceType_t m_nAlphaReferenceType; // 0x1df4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flAlphaReferenceSoftness; // 0x1df8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToZero; // 0x1f70, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToOne; // 0x20e8, 0x178 bytes
+                bool m_bRefract; // 0x2260, 0x1 bytes
+                bool m_bRefractSolid; // 0x2261, 0x1 bytes
+                bool m_bRefract2Passes; // 0x2262, 0x1 bytes
+                std::uint8_t pad_2263[0x5]; // 0x2263, 0x5 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flRefractAmount; // 0x2268, 0x178 bytes
+                std::int32_t m_nRefractBlurRadius; // 0x23e0, 0x4 bytes
+                shade::sdk::particles::BlurFilterType_t m_nRefractBlurType; // 0x23e4, 0x4 bytes
+                bool m_bOnlyRenderInEffectsBloomPass; // 0x23e8, 0x1 bytes
+                bool m_bOnlyRenderInEffectsWaterPass; // 0x23e9, 0x1 bytes
+                bool m_bUseMixedResolutionRendering; // 0x23ea, 0x1 bytes
+                bool m_bOnlyRenderInEffecsGameOverlay; // 0x23eb, 0x1 bytes
+                char m_stencilTestID[0x80]; // 0x23ec, 0x80 bytes
+                bool m_bStencilTestExclude; // 0x246c, 0x1 bytes
+                char m_stencilWriteID[0x80]; // 0x246d, 0x80 bytes
+                bool m_bWriteStencilOnDepthPass; // 0x24ed, 0x1 bytes
+                bool m_bWriteStencilOnDepthFail; // 0x24ee, 0x1 bytes
+                bool m_bReverseZBuffering; // 0x24ef, 0x1 bytes
+                bool m_bDisableZBuffering; // 0x24f0, 0x1 bytes
+                std::uint8_t pad_24f1[0x3]; // 0x24f1, 0x3 bytes
+                shade::sdk::particles::ParticleDepthFeatheringMode_t m_nFeatheringMode; // 0x24f4, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringMinDist; // 0x24f8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringMaxDist; // 0x2670, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringFilter; // 0x27e8, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flFeatheringDepthMapFilter; // 0x2960, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flDepthBias; // 0x2ad8, 0x178 bytes
+                shade::sdk::particles::ParticleSortingChoiceList_t m_nSortMethod; // 0x2c50, 0x4 bytes
+                bool m_bBlendFramesSeq0; // 0x2c54, 0x1 bytes
+                bool m_bMaxLuminanceBlendingSequence0; // 0x2c55, 0x1 bytes
+                std::uint8_t pad_2c56[0x27a]; // 0x2c56, 0x27a bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseRendererSource2) == 0x2ED8, "CBaseRendererSource2 size mismatch");
+            static_assert(sizeof(CBaseRendererSource2) == 0x2ED0, "CBaseRendererSource2 size mismatch");
         }
     }
 }

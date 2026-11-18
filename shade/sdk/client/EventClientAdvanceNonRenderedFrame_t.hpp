@@ -21,13 +21,12 @@ namespace shade {
             /* Class Parameters
              * Size: 0x1
              * Alignment: 0xff
-             * Has Trivial Constructor
              * Has Trivial Destructor
              * Global Type Scope
              */
             #pragma pack(push, 1)
             struct EventClientAdvanceNonRenderedFrame_t {
-                std::uint8_t pad_0000[0x1]; // 0x0000, 0x1 bytes
+                bool m_bRenderOnly; // 0x0000, 0x1 bytes
             };
             #pragma pack(pop)
 

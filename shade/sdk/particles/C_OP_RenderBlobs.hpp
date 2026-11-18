@@ -42,6 +42,8 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderBlobs : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
+                bool m_bUseParticleColorForVertColor; // 0x0228, 0x1 bytes
+                std::uint8_t pad_0229[0x7]; // 0x0229, 0x7 bytes
                 shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_cubeWidth; // 0x0230, 0x178 bytes
                 shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_cutoffRadius; // 0x03a8, 0x178 bytes
                 shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_renderRadius; // 0x0520, 0x178 bytes

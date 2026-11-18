@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x580
+             * Size: 0x5a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,12 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_Medusa_GorgonGrasp : public shade::sdk::server::CDOTABaseAbility {
             public:
+                std::uint8_t pad_0580[0x18]; // 0x0580, 0x18 bytes
+                std::int32_t m_nCastIndex; // 0x0598, 0x4 bytes
+                std::uint8_t pad_059c[0x4]; // 0x059c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Medusa_GorgonGrasp) == 0x580, "CDOTA_Ability_Medusa_GorgonGrasp size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Medusa_GorgonGrasp) == 0x5A0, "CDOTA_Ability_Medusa_GorgonGrasp size mismatch");
         }
     }
 }

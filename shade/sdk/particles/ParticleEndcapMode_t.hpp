@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleEndcapMode_t : std::int32_t {
+            enum class ParticleEndcapMode_t : std::uint32_t {
                 PARTICLE_ENDCAP_ALWAYS_ON = -0x1,
                 PARTICLE_ENDCAP_ENDCAP_OFF = 0x0,
                 PARTICLE_ENDCAP_ENDCAP_ON = 0x1

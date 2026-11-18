@@ -32,7 +32,8 @@ namespace shade {
                 matrix3x4_t m_invBindPose; // 0x0010, 0x30 bytes
                 shade::sdk::modellib::SkeletonBoneBounds_t m_bbox; // 0x0040, 0x18 bytes
                 float m_flSphereRadius; // 0x0058, 0x4 bytes
-                std::uint8_t pad_005c[0x4]; // 0x005c, 0x4 bytes
+                bool m_bRenderOnly; // 0x005c, 0x1 bytes
+                std::uint8_t pad_005d[0x3]; // 0x005d, 0x3 bytes
             };
             #pragma pack(pop)
 

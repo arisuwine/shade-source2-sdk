@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x3528
+             * Size: 0x3520
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,53 +32,53 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderRopes : public shade::sdk::particles::CBaseRendererSource2 {
             public:
-                bool m_bEnableFadingAndClamping; // 0x2ed8, 0x1 bytes
-                std::uint8_t pad_2ed9[0x3]; // 0x2ed9, 0x3 bytes
-                float m_flMinSize; // 0x2edc, 0x4 bytes
-                float m_flMaxSize; // 0x2ee0, 0x4 bytes
-                float m_flStartFadeSize; // 0x2ee4, 0x4 bytes
-                float m_flEndFadeSize; // 0x2ee8, 0x4 bytes
-                float m_flStartFadeDot; // 0x2eec, 0x4 bytes
-                float m_flEndFadeDot; // 0x2ef0, 0x4 bytes
-                std::uint8_t pad_2ef4[0x4]; // 0x2ef4, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSubPixelAAScale; // 0x2ef8, 0x178 bytes
-                float m_flRadiusTaper; // 0x3070, 0x4 bytes
-                std::int32_t m_nMinTesselation; // 0x3074, 0x4 bytes
-                std::int32_t m_nMaxTesselation; // 0x3078, 0x4 bytes
-                float m_flTessScale; // 0x307c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureVWorldSize; // 0x3080, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureVScrollRate; // 0x31f8, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureVOffset; // 0x3370, 0x178 bytes
-                std::int32_t m_nTextureVParamsCP; // 0x34e8, 0x4 bytes
-                bool m_bClampV; // 0x34ec, 0x1 bytes
-                std::uint8_t pad_34ed[0x3]; // 0x34ed, 0x3 bytes
-                std::int32_t m_nScaleCP1; // 0x34f0, 0x4 bytes
-                std::int32_t m_nScaleCP2; // 0x34f4, 0x4 bytes
-                float m_flScaleVSizeByControlPointDistance; // 0x34f8, 0x4 bytes
-                float m_flScaleVScrollByControlPointDistance; // 0x34fc, 0x4 bytes
-                float m_flScaleVOffsetByControlPointDistance; // 0x3500, 0x4 bytes
-                std::uint8_t pad_3504[0x1]; // 0x3504, 0x1 bytes
-                bool m_bUseScalarForTextureCoordinate; // 0x3505, 0x1 bytes
-                std::uint8_t pad_3506[0x2]; // 0x3506, 0x2 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nScalarFieldForTextureCoordinate; // 0x3508, 0x4 bytes
-                float m_flScalarAttributeTextureCoordScale; // 0x350c, 0x4 bytes
-                bool m_bReverseOrder; // 0x3510, 0x1 bytes
-                bool m_bClosedLoop; // 0x3511, 0x1 bytes
-                std::uint8_t pad_3512[0x2]; // 0x3512, 0x2 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nSplitField; // 0x3514, 0x4 bytes
-                bool m_bSortBySegmentID; // 0x3518, 0x1 bytes
-                std::uint8_t pad_3519[0x3]; // 0x3519, 0x3 bytes
-                shade::sdk::particles::ParticleOrientationChoiceList_t m_nOrientationType; // 0x351c, 0x4 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nVectorFieldForOrientation; // 0x3520, 0x4 bytes
-                bool m_bDrawAsOpaque; // 0x3524, 0x1 bytes
-                bool m_bGenerateNormals; // 0x3525, 0x1 bytes
-                std::uint8_t pad_3526[0x2]; // 0x3526, 0x2 bytes
+                bool m_bEnableFadingAndClamping; // 0x2ed0, 0x1 bytes
+                std::uint8_t pad_2ed1[0x3]; // 0x2ed1, 0x3 bytes
+                float m_flMinSize; // 0x2ed4, 0x4 bytes
+                float m_flMaxSize; // 0x2ed8, 0x4 bytes
+                float m_flStartFadeSize; // 0x2edc, 0x4 bytes
+                float m_flEndFadeSize; // 0x2ee0, 0x4 bytes
+                float m_flStartFadeDot; // 0x2ee4, 0x4 bytes
+                float m_flEndFadeDot; // 0x2ee8, 0x4 bytes
+                std::uint8_t pad_2eec[0x4]; // 0x2eec, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flSubPixelAAScale; // 0x2ef0, 0x178 bytes
+                float m_flRadiusTaper; // 0x3068, 0x4 bytes
+                std::int32_t m_nMinTesselation; // 0x306c, 0x4 bytes
+                std::int32_t m_nMaxTesselation; // 0x3070, 0x4 bytes
+                float m_flTessScale; // 0x3074, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureVWorldSize; // 0x3078, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureVScrollRate; // 0x31f0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_flTextureVOffset; // 0x3368, 0x178 bytes
+                std::int32_t m_nTextureVParamsCP; // 0x34e0, 0x4 bytes
+                bool m_bClampV; // 0x34e4, 0x1 bytes
+                std::uint8_t pad_34e5[0x3]; // 0x34e5, 0x3 bytes
+                std::int32_t m_nScaleCP1; // 0x34e8, 0x4 bytes
+                std::int32_t m_nScaleCP2; // 0x34ec, 0x4 bytes
+                float m_flScaleVSizeByControlPointDistance; // 0x34f0, 0x4 bytes
+                float m_flScaleVScrollByControlPointDistance; // 0x34f4, 0x4 bytes
+                float m_flScaleVOffsetByControlPointDistance; // 0x34f8, 0x4 bytes
+                std::uint8_t pad_34fc[0x1]; // 0x34fc, 0x1 bytes
+                bool m_bUseScalarForTextureCoordinate; // 0x34fd, 0x1 bytes
+                std::uint8_t pad_34fe[0x2]; // 0x34fe, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nScalarFieldForTextureCoordinate; // 0x3500, 0x4 bytes
+                float m_flScalarAttributeTextureCoordScale; // 0x3504, 0x4 bytes
+                bool m_bReverseOrder; // 0x3508, 0x1 bytes
+                bool m_bClosedLoop; // 0x3509, 0x1 bytes
+                std::uint8_t pad_350a[0x2]; // 0x350a, 0x2 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nSplitField; // 0x350c, 0x4 bytes
+                bool m_bSortBySegmentID; // 0x3510, 0x1 bytes
+                std::uint8_t pad_3511[0x3]; // 0x3511, 0x3 bytes
+                shade::sdk::particles::ParticleOrientationChoiceList_t m_nOrientationType; // 0x3514, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nVectorFieldForOrientation; // 0x3518, 0x4 bytes
+                bool m_bDrawAsOpaque; // 0x351c, 0x1 bytes
+                bool m_bGenerateNormals; // 0x351d, 0x1 bytes
+                std::uint8_t pad_351e[0x2]; // 0x351e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderRopes) == 0x3528, "C_OP_RenderRopes size mismatch");
+            static_assert(sizeof(C_OP_RenderRopes) == 0x3520, "C_OP_RenderRopes size mismatch");
         }
     }
 }

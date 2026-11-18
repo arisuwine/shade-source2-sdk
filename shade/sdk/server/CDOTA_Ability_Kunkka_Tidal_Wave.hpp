@@ -39,7 +39,7 @@ namespace shade {
             class CDOTA_Ability_Kunkka_Tidal_Wave : public shade::sdk::server::CDOTABaseAbility {
             public:
                 CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> hAlreadyHitList; // 0x0580, 0x18 bytes
-                VectorWS m_vStart; // 0x0598, 0xc bytes
+                Vector m_vWaveDirection; // 0x0598, 0xc bytes
                 std::uint8_t pad_05a4[0x14]; // 0x05a4, 0x14 bytes
             };
             #pragma pack(pop)

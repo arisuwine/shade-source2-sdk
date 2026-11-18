@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +37,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_TemplarAssassin_Trap : public shade::sdk::server::CDOTA_Modifier_Invisible {
             public:
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTriggers; // 0x1ab8, 0x18 bytes
-                float bonus_vision; // 0x1ad0, 0x4 bytes
-                std::uint8_t pad_1ad4[0x4]; // 0x1ad4, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTriggers; // 0x1b08, 0x18 bytes
+                float bonus_vision; // 0x1b20, 0x4 bytes
+                std::uint8_t pad_1b24[0x4]; // 0x1b24, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_TemplarAssassin_Trap) == 0x1AD8, "CDOTA_Modifier_TemplarAssassin_Trap size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_TemplarAssassin_Trap) == 0x1B28, "CDOTA_Modifier_TemplarAssassin_Trap size mismatch");
         }
     }
 }

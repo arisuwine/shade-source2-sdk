@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Ursa_Earthshock_Move : public shade::sdk::client::CDOTA_Buff {
             public:
-                float hop_duration; // 0x1aa8, 0x4 bytes
-                std::int32_t hop_height; // 0x1aac, 0x4 bytes
-                std::int32_t hop_distance; // 0x1ab0, 0x4 bytes
-                float m_flStartZ; // 0x1ab4, 0x4 bytes
-                float m_flCurTime; // 0x1ab8, 0x4 bytes
-                float m_flJumpDuration; // 0x1abc, 0x4 bytes
-                float m_flJumpHeight; // 0x1ac0, 0x4 bytes
-                Vector m_vTargetHorizontalDirection; // 0x1ac4, 0xc bytes
+                float hop_duration; // 0x1af8, 0x4 bytes
+                std::int32_t hop_height; // 0x1afc, 0x4 bytes
+                std::int32_t hop_distance; // 0x1b00, 0x4 bytes
+                float m_flStartZ; // 0x1b04, 0x4 bytes
+                float m_flCurTime; // 0x1b08, 0x4 bytes
+                float m_flJumpDuration; // 0x1b0c, 0x4 bytes
+                float m_flJumpHeight; // 0x1b10, 0x4 bytes
+                Vector m_vTargetHorizontalDirection; // 0x1b14, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Ursa_Earthshock_Move) == 0x1AD0, "CDOTA_Modifier_Ursa_Earthshock_Move size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Ursa_Earthshock_Move) == 0x1B20, "CDOTA_Modifier_Ursa_Earthshock_Move size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9b8
+             * Size: 0xa18
              * Alignment: 0xff
              * Has VTable
              * Construct Disallowed
@@ -30,27 +30,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseClientUIEntity : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bEnabled; // 0x0858, 0x1 bytes
-                std::uint8_t pad_0859[0x7]; // 0x0859, 0x7 bytes
-                CUtlSymbolLarge m_DialogXMLName; // 0x0860, 0x8 bytes
-                CUtlSymbolLarge m_PanelClassName; // 0x0868, 0x8 bytes
-                CUtlSymbolLarge m_PanelID; // 0x0870, 0x8 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput0; // 0x0878, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput1; // 0x0898, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput2; // 0x08b8, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput3; // 0x08d8, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput4; // 0x08f8, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput5; // 0x0918, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput6; // 0x0938, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput7; // 0x0958, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput8; // 0x0978, 0x20 bytes
-                CEntityOutputTemplate<CUtlString> m_CustomOutput9; // 0x0998, 0x20 bytes
+                bool m_bEnabled; // 0x08b8, 0x1 bytes
+                std::uint8_t pad_08b9[0x7]; // 0x08b9, 0x7 bytes
+                CUtlSymbolLarge m_DialogXMLName; // 0x08c0, 0x8 bytes
+                CUtlSymbolLarge m_PanelClassName; // 0x08c8, 0x8 bytes
+                CUtlSymbolLarge m_PanelID; // 0x08d0, 0x8 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput0; // 0x08d8, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput1; // 0x08f8, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput2; // 0x0918, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput3; // 0x0938, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput4; // 0x0958, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput5; // 0x0978, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput6; // 0x0998, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput7; // 0x09b8, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput8; // 0x09d8, 0x20 bytes
+                CEntityOutputTemplate<CUtlString> m_CustomOutput9; // 0x09f8, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseClientUIEntity) == 0x9B8, "CBaseClientUIEntity size mismatch");
+            static_assert(sizeof(CBaseClientUIEntity) == 0xA18, "CBaseClientUIEntity size mismatch");
         }
     }
 }

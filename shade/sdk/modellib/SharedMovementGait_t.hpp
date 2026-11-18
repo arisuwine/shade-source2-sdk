@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace modellib {
-            enum class SharedMovementGait_t : std::int8_t {
+            enum class SharedMovementGait_t : std::uint8_t {
                 eInvalid = -0x1,
                 eSlow = 0x0,
                 eMedium = 0x1,

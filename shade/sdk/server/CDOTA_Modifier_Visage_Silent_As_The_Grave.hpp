@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Visage_Silent_As_The_Grave : public shade::sdk::server::CDOTA_Modifier_Invisible {
             public:
-                std::int32_t invis; // 0x1ab8, 0x4 bytes
-                std::int32_t movespeed_bonus; // 0x1abc, 0x4 bytes
-                std::int32_t bonus_damage; // 0x1ac0, 0x4 bytes
-                float bonus_duration; // 0x1ac4, 0x4 bytes
-                bool m_bHasMadeAttack; // 0x1ac8, 0x1 bytes
-                std::uint8_t pad_1ac9[0x7]; // 0x1ac9, 0x7 bytes
+                std::int32_t invis; // 0x1b08, 0x4 bytes
+                std::int32_t movespeed_bonus; // 0x1b0c, 0x4 bytes
+                std::int32_t bonus_damage; // 0x1b10, 0x4 bytes
+                float bonus_duration; // 0x1b14, 0x4 bytes
+                bool m_bHasMadeAttack; // 0x1b18, 0x1 bytes
+                std::uint8_t pad_1b19[0x7]; // 0x1b19, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Visage_Silent_As_The_Grave) == 0x1AD0, "CDOTA_Modifier_Visage_Silent_As_The_Grave size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Visage_Silent_As_The_Grave) == 0x1B20, "CDOTA_Modifier_Visage_Silent_As_The_Grave size mismatch");
         }
     }
 }

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EHeroSelectionText : std::int32_t {
+            enum class EHeroSelectionText : std::uint32_t {
                 k_EHeroSelectionText_Invalid = -0x1,
                 k_EHeroSelectionText_None = 0x0,
                 k_EHeroSelectionText_ChooseHero = 0x1,

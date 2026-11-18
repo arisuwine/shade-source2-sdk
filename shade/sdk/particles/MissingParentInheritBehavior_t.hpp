@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class MissingParentInheritBehavior_t : std::int32_t {
+            enum class MissingParentInheritBehavior_t : std::uint32_t {
                 MISSING_PARENT_DO_NOTHING = -0x1,
                 MISSING_PARENT_KILL = 0x0,
                 MISSING_PARENT_FIND_NEW = 0x1,

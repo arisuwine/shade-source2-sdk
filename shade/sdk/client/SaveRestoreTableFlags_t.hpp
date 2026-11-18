@@ -23,6 +23,7 @@ namespace shade {
                 FENTTABLE_MOVEABLE = 0x20000000,
                 FENTTABLE_GLOBAL = 0x10000000,
                 FENTTABLE_PLAYERCHILD = 0x8000000,
+                FENTTABLE_PERSISTENT = 0x4000000,
                 LEVELMASK_BIT_0 = 0x1,
                 LEVELMASK_BIT_1 = 0x2,
                 LEVELMASK_BIT_2 = 0x4,

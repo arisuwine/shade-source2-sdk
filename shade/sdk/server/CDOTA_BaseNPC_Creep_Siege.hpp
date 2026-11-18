@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19e8
+             * Size: 0x1a78
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Creep_Siege) == 0x19E8, "CDOTA_BaseNPC_Creep_Siege size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Creep_Siege) == 0x1A78, "CDOTA_BaseNPC_Creep_Siege size mismatch");
         }
     }
 }

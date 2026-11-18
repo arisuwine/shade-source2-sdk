@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,20 +37,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Primalbeast_Trample : public shade::sdk::client::CDOTA_Buff {
             public:
-                float effect_radius; // 0x1aa8, 0x4 bytes
-                VectorWS vLastPos; // 0x1aac, 0xc bytes
-                float flCurrentDistance; // 0x1ab8, 0x4 bytes
-                std::int32_t step_distance; // 0x1abc, 0x4 bytes
-                std::int32_t bonus_magic_resistance; // 0x1ac0, 0x4 bytes
-                bool m_bIsUnslowable; // 0x1ac4, 0x1 bytes
-                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1ac8, 0x18 bytes
+                float effect_radius; // 0x1af8, 0x4 bytes
+                VectorWS vLastPos; // 0x1afc, 0xc bytes
+                float flCurrentDistance; // 0x1b08, 0x4 bytes
+                std::int32_t step_distance; // 0x1b0c, 0x4 bytes
+                std::int32_t bonus_magic_resistance; // 0x1b10, 0x4 bytes
+                bool m_bIsUnslowable; // 0x1b14, 0x1 bytes
+                std::uint8_t pad_1b15[0x3]; // 0x1b15, 0x3 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1b18, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Primalbeast_Trample) == 0x1AE0, "CDOTA_Modifier_Primalbeast_Trample size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Primalbeast_Trample) == 0x1B30, "CDOTA_Modifier_Primalbeast_Trample size mismatch");
         }
     }
 }

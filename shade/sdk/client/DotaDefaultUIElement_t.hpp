@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DotaDefaultUIElement_t : std::int32_t {
+            enum class DotaDefaultUIElement_t : std::uint32_t {
                 DOTA_DEFAULT_UI_INVALID = -0x1,
                 DOTA_DEFAULT_UI_TOP_TIMEOFDAY = 0x0,
                 DOTA_DEFAULT_UI_TOP_HEROES = 0x1,
@@ -50,7 +50,11 @@ namespace shade {
                 DOTA_DEFAULT_UI_TOP_BAR = 0x1d,
                 DOTA_DEFAULT_UI_CUSTOMUI_BEHIND_HUD_ELEMENTS = 0x1e,
                 DOTA_DEFAULT_UI_AGHANIMS_STATUS = 0x1f,
-                DOTA_DEFAULT_UI_ELEMENT_COUNT = 0x20
+                DOTA_DEFAULT_UI_PREGAME_HERO_SELECTION = 0x20,
+                DOTA_DEFAULT_UI_INVENTORY_NEUTRAL_CRAFT = 0x21,
+                DOTA_DEFAULT_UI_INVENTORY_NEUTRAL_SLOT = 0x22,
+                DOTA_DEFAULT_UI_INVENTORY_TPSCROLL = 0x23,
+                DOTA_DEFAULT_UI_ELEMENT_COUNT = 0x24
             };
         }
     }

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ChoreoLookAtSpeed_t : std::int32_t {
+            enum class ChoreoLookAtSpeed_t : std::uint32_t {
                 eInvalid = -0x1,
                 eSlow = 0x0,
                 eMedium = 0x1,

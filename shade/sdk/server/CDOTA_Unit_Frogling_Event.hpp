@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19a0
+             * Size: 0x1a30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Frogling_Event : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                CHandle<shade::sdk::server::CDOTA_BaseNPC_Hero> m_hHeroHandle; // 0x1998, 0x4 bytes
-                std::int32_t m_nFroglingIndex; // 0x199c, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC_Hero> m_hHeroHandle; // 0x1a28, 0x4 bytes
+                std::int32_t m_nFroglingIndex; // 0x1a2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Frogling_Event) == 0x19A0, "CDOTA_Unit_Frogling_Event size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Frogling_Event) == 0x1A30, "CDOTA_Unit_Frogling_Event size mismatch");
         }
     }
 }

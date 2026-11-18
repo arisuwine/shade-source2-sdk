@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class CDebugOverlayFilterType_t : std::int32_t {
+            enum class CDebugOverlayFilterType_t : std::uint32_t {
                 NONE = 0x0,
                 TEXT = 0x1,
                 ENTITY = 0x2,

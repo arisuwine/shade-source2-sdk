@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd0
+             * Size: 0xd8
              * Alignment: 0xff
              * Has VTable
              * Abstract Class
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CMultiplayRules) == 0xD0, "CMultiplayRules size mismatch");
+            static_assert(sizeof(CMultiplayRules) == 0xD8, "CMultiplayRules size mismatch");
         }
     }
 }

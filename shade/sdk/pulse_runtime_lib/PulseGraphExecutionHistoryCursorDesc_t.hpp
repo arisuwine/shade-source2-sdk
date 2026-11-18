@@ -15,12 +15,14 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/pulse_runtime_lib/PulseCursorID_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseDocNodeID_t.hpp"
+#include "shade/sdk/pulse_runtime_lib/PulseExecHistoryCallerInfo_t.hpp"
 
 namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
-            struct PulseCursorID_t;
+            struct PulseGraphExecutionHistoryEntry_t;
         }
     }
 }
@@ -29,25 +31,30 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x30
+             * Size: 0x50
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct PulseGraphExecutionHistoryCursorDesc_t {
-                CUtlVector<shade::sdk::pulse_runtime_lib::PulseCursorID_t> vecAncestorCursorIDs; // 0x0000, 0x18 bytes
-                shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nSpawnNodeID; // 0x0018, 0x4 bytes
-                shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nRetiredAtNodeID; // 0x001c, 0x4 bytes
-                float flLastReferenced; // 0x0020, 0x4 bytes
-                std::int32_t nLastValidEntryIdx; // 0x0024, 0x4 bytes
-                bool bWasAnObservableComputation; // 0x0028, 0x1 bytes
-                std::uint8_t pad_0029[0x7]; // 0x0029, 0x7 bytes
+                shade::sdk::pulse_runtime_lib::PulseCursorID_t nCursorID; // 0x0000, 0x4 bytes
+                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::PulseCursorID_t> vecAncestorCursorIDs; // 0x0008, 0x18 bytes
+                shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nSpawnNodeID; // 0x0020, 0x4 bytes
+                shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nRetiredAtNodeID; // 0x0024, 0x4 bytes
+                shade::sdk::pulse_runtime_lib::PulseExecHistoryCallerInfo_t externalCallerInfo; // 0x0028, 0x4 bytes
+                std::uint8_t pad_002c[0x4]; // 0x002c, 0x4 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::PulseGraphExecutionHistoryEntry_t*> m_vecHistory; // 0x0030, 0x18 bytes
+                float flLastReferenced; // 0x0048, 0x4 bytes
+                bool bWasAnObservableComputation; // 0x004c, 0x1 bytes
+                bool bOverflowedInstructionHistoryLimit; // 0x004d, 0x1 bytes
+                std::uint8_t pad_004e[0x2]; // 0x004e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PulseGraphExecutionHistoryCursorDesc_t) == 0x30, "PulseGraphExecutionHistoryCursorDesc_t size mismatch");
+            static_assert(sizeof(PulseGraphExecutionHistoryCursorDesc_t) == 0x50, "PulseGraphExecutionHistoryCursorDesc_t size mismatch");
         }
     }
 }

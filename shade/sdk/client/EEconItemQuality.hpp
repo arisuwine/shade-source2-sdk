@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EEconItemQuality : std::int32_t {
+            enum class EEconItemQuality : std::uint32_t {
                 AE_UNDEFINED = -0x1,
                 AE_BASE = 0x0,
                 AE_GENUINE = 0x1,

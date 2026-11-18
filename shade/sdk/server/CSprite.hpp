@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8c8
+             * Size: 0x928
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,39 +44,39 @@ namespace shade {
             #pragma pack(push, 1)
             class CSprite : public shade::sdk::server::CBaseModelEntity {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSpriteMaterial; // 0x0858, 0x8 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hAttachedToEntity; // 0x0860, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_nAttachment; // 0x0864, 0x1 bytes
-                std::uint8_t pad_0865[0x3]; // 0x0865, 0x3 bytes
-                float m_flSpriteFramerate; // 0x0868, 0x4 bytes
-                float m_flFrame; // 0x086c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flDieTime; // 0x0870, 0x4 bytes
-                std::uint8_t pad_0874[0xc]; // 0x0874, 0xc bytes
-                std::uint32_t m_nBrightness; // 0x0880, 0x4 bytes
-                float m_flBrightnessDuration; // 0x0884, 0x4 bytes
-                float m_flSpriteScale; // 0x0888, 0x4 bytes
-                float m_flScaleDuration; // 0x088c, 0x4 bytes
-                bool m_bWorldSpaceScale; // 0x0890, 0x1 bytes
-                std::uint8_t pad_0891[0x3]; // 0x0891, 0x3 bytes
-                float m_flGlowProxySize; // 0x0894, 0x4 bytes
-                float m_flHDRColorScale; // 0x0898, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTime; // 0x089c, 0x4 bytes
-                float m_flMaxFrame; // 0x08a0, 0x4 bytes
-                float m_flStartScale; // 0x08a4, 0x4 bytes
-                float m_flDestScale; // 0x08a8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flScaleTimeStart; // 0x08ac, 0x4 bytes
-                std::int32_t m_nStartBrightness; // 0x08b0, 0x4 bytes
-                std::int32_t m_nDestBrightness; // 0x08b4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBrightnessTimeStart; // 0x08b8, 0x4 bytes
-                std::int32_t m_nSpriteWidth; // 0x08bc, 0x4 bytes
-                std::int32_t m_nSpriteHeight; // 0x08c0, 0x4 bytes
-                float m_flSpeed; // 0x08c4, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSpriteMaterial; // 0x08b8, 0x8 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hAttachedToEntity; // 0x08c0, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_nAttachment; // 0x08c4, 0x1 bytes
+                std::uint8_t pad_08c5[0x3]; // 0x08c5, 0x3 bytes
+                float m_flSpriteFramerate; // 0x08c8, 0x4 bytes
+                float m_flFrame; // 0x08cc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flDieTime; // 0x08d0, 0x4 bytes
+                std::uint8_t pad_08d4[0xc]; // 0x08d4, 0xc bytes
+                std::uint32_t m_nBrightness; // 0x08e0, 0x4 bytes
+                float m_flBrightnessDuration; // 0x08e4, 0x4 bytes
+                float m_flSpriteScale; // 0x08e8, 0x4 bytes
+                float m_flScaleDuration; // 0x08ec, 0x4 bytes
+                bool m_bWorldSpaceScale; // 0x08f0, 0x1 bytes
+                std::uint8_t pad_08f1[0x3]; // 0x08f1, 0x3 bytes
+                float m_flGlowProxySize; // 0x08f4, 0x4 bytes
+                float m_flHDRColorScale; // 0x08f8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTime; // 0x08fc, 0x4 bytes
+                float m_flMaxFrame; // 0x0900, 0x4 bytes
+                float m_flStartScale; // 0x0904, 0x4 bytes
+                float m_flDestScale; // 0x0908, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flScaleTimeStart; // 0x090c, 0x4 bytes
+                std::int32_t m_nStartBrightness; // 0x0910, 0x4 bytes
+                std::int32_t m_nDestBrightness; // 0x0914, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBrightnessTimeStart; // 0x0918, 0x4 bytes
+                std::int32_t m_nSpriteWidth; // 0x091c, 0x4 bytes
+                std::int32_t m_nSpriteHeight; // 0x0920, 0x4 bytes
+                float m_flSpeed; // 0x0924, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSprite) == 0x8C8, "CSprite size mismatch");
+            static_assert(sizeof(CSprite) == 0x928, "CSprite size mismatch");
         }
     }
 }

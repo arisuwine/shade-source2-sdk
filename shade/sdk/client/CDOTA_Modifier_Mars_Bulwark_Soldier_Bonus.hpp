@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,20 +30,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Mars_Bulwark_Soldier_Bonus : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_nPoseParameterWE; // 0x1aa8, 0x4 bytes
-                std::int32_t m_nPoseParameterNS; // 0x1aac, 0x4 bytes
-                float m_flLastPoseX; // 0x1ab0, 0x4 bytes
-                float m_flLastPoseY; // 0x1ab4, 0x4 bytes
-                std::int32_t m_nLastMaxDirection; // 0x1ab8, 0x4 bytes
-                VectorWS m_vLastOrigin; // 0x1abc, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                std::int32_t m_nPoseParameterWE; // 0x1af8, 0x4 bytes
+                std::int32_t m_nPoseParameterNS; // 0x1afc, 0x4 bytes
+                float m_flLastPoseX; // 0x1b00, 0x4 bytes
+                float m_flLastPoseY; // 0x1b04, 0x4 bytes
+                std::int32_t m_nLastMaxDirection; // 0x1b08, 0x4 bytes
+                VectorWS m_vLastOrigin; // 0x1b0c, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Mars_Bulwark_Soldier_Bonus) == 0x1AD0, "CDOTA_Modifier_Mars_Bulwark_Soldier_Bonus size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Mars_Bulwark_Soldier_Bonus) == 0x1B20, "CDOTA_Modifier_Mars_Bulwark_Soldier_Bonus size mismatch");
         }
     }
 }

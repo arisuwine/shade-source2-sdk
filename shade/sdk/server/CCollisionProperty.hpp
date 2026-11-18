@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb8
+             * Size: 0xc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -48,16 +48,17 @@ namespace shade {
                 Vector m_vecSpecifiedSurroundingMaxs; // 0x0070, 0xc bytes
                 Vector m_vecSurroundingMaxs; // 0x007c, 0xc bytes
                 Vector m_vecSurroundingMins; // 0x0088, 0xc bytes
-                Vector m_vCapsuleCenter1; // 0x0094, 0xc bytes
-                Vector m_vCapsuleCenter2; // 0x00a0, 0xc bytes
-                float m_flCapsuleRadius; // 0x00ac, 0x4 bytes
-                std::uint8_t pad_00b0[0x8]; // 0x00b0, 0x8 bytes
+                std::uint8_t pad_0094[0x10]; // 0x0094, 0x10 bytes
+                Vector m_vCapsuleCenter1; // 0x00a4, 0xc bytes
+                Vector m_vCapsuleCenter2; // 0x00b0, 0xc bytes
+                float m_flCapsuleRadius; // 0x00bc, 0x4 bytes
+                std::uint8_t pad_00c0[0x8]; // 0x00c0, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CCollisionProperty) == 0xB8, "CCollisionProperty size mismatch");
+            static_assert(sizeof(CCollisionProperty) == 0xC8, "CCollisionProperty size mismatch");
         }
     }
 }

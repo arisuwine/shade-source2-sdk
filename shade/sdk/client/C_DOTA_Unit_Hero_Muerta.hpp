@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e98
+             * Size: 0x1f20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Hero_Muerta : public shade::sdk::client::C_DOTA_BaseNPC_Hero {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hDoubleShotTarget; // 0x1e88, 0x4 bytes
-                QAngle m_qStartAngle; // 0x1e8c, 0xc bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hDoubleShotTarget; // 0x1f10, 0x4 bytes
+                QAngle m_qStartAngle; // 0x1f14, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Hero_Muerta) == 0x1E98, "C_DOTA_Unit_Hero_Muerta size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Hero_Muerta) == 0x1F20, "C_DOTA_Unit_Hero_Muerta size mismatch");
         }
     }
 }

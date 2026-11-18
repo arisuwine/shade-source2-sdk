@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleSequenceCropOverride_t : std::int32_t {
+            enum class ParticleSequenceCropOverride_t : std::uint32_t {
                 PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = -0x1,
                 PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0x0,
                 PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 0x1

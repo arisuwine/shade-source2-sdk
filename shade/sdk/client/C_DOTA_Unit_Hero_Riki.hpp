@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ea0
+             * Size: 0x1f28
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Hero_Riki : public shade::sdk::client::C_DOTA_BaseNPC_Hero {
             public:
-                std::uint8_t pad_1e88[0x18]; // 0x1e88, 0x18 bytes
+                std::uint8_t pad_1f10[0x18]; // 0x1f10, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Hero_Riki) == 0x1EA0, "C_DOTA_Unit_Hero_Riki size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Hero_Riki) == 0x1F28, "C_DOTA_Unit_Hero_Riki size mismatch");
         }
     }
 }

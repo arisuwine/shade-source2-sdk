@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsEnemySpawnBehavior : std::int32_t {
+            enum class ESurvivorsEnemySpawnBehavior : std::uint32_t {
                 INVALID_SPAWN_BEHAVIOR = -0x1,
                 FIXED_DIRECTION = 0x0,
                 FIXED_DIRECTION_PERPENDICULAR_WALL = 0x1,

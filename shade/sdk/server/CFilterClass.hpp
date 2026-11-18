@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x4d8
+             * Size: 0x4e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,12 +31,14 @@ namespace shade {
             class CFilterClass : public shade::sdk::server::CBaseFilter {
             public:
                 CUtlSymbolLarge m_iFilterClass; // 0x04d0, 0x8 bytes
+                bool m_bMatchSubclass; // 0x04d8, 0x1 bytes
+                std::uint8_t pad_04d9[0x7]; // 0x04d9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFilterClass) == 0x4D8, "CFilterClass size mismatch");
+            static_assert(sizeof(CFilterClass) == 0x4E0, "CFilterClass size mismatch");
         }
     }
 }

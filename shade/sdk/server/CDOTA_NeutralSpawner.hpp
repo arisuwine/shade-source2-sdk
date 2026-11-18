@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5a8
+             * Size: 0x598
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -60,28 +60,29 @@ namespace shade {
                 bool m_bLimitedBatches; // 0x04e4, 0x1 bytes
                 std::uint8_t pad_04e5[0x3]; // 0x04e5, 0x3 bytes
                 shade::sdk::client::PlayerID_t m_iStackingCreditPlayerID; // 0x04e8, 0x4 bytes
-                float m_fInternalSpawnTimerTime; // 0x04ec, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_InternalSpawnTimer; // 0x04f0, 0x18 bytes
-                shade::sdk::server::CountdownTimer m_FXTimer; // 0x0508, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CDOTA_BaseNPC>> m_PendingUnits; // 0x0520, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::server::CDOTA_BaseNPC>> m_Units; // 0x0538, 0x18 bytes
-                std::int32_t m_iNextTypeUnitCount; // 0x0550, 0x4 bytes
-                bool m_bSeenClearedByTeam[0x2]; // 0x0554, 0x2 bytes
-                std::uint8_t pad_0556[0x2]; // 0x0556, 0x2 bytes
-                std::int32_t m_nStacksSeenByTeam[0x2]; // 0x0558, 0x8 bytes
-                CUtlSymbolLarge m_szVolumeName; // 0x0560, 0x8 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hVolumes; // 0x0568, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnSpawnerExhausted; // 0x0580, 0x18 bytes
-                std::int32_t m_Type; // 0x0598, 0x4 bytes
-                std::int32_t m_PullType; // 0x059c, 0x4 bytes
-                std::int32_t m_AggroType; // 0x05a0, 0x4 bytes
-                std::uint8_t pad_05a4[0x4]; // 0x05a4, 0x4 bytes
+                std::uint8_t pad_04ec[0x4]; // 0x04ec, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_FXTimer; // 0x04f0, 0x18 bytes
+                bool m_bFinishedPendingUnits; // 0x0508, 0x1 bytes
+                std::uint8_t pad_0509[0x7]; // 0x0509, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::server::CDOTA_BaseNPC>> m_PendingUnits; // 0x0510, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::server::CDOTA_BaseNPC>> m_Units; // 0x0528, 0x18 bytes
+                std::int32_t m_iNextTypeUnitCount; // 0x0540, 0x4 bytes
+                bool m_bSeenClearedByTeam[0x2]; // 0x0544, 0x2 bytes
+                std::uint8_t pad_0546[0x2]; // 0x0546, 0x2 bytes
+                std::int32_t m_nStacksSeenByTeam[0x2]; // 0x0548, 0x8 bytes
+                CUtlSymbolLarge m_szVolumeName; // 0x0550, 0x8 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hVolumes; // 0x0558, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnSpawnerExhausted; // 0x0570, 0x18 bytes
+                std::int32_t m_Type; // 0x0588, 0x4 bytes
+                std::int32_t m_PullType; // 0x058c, 0x4 bytes
+                std::int32_t m_AggroType; // 0x0590, 0x4 bytes
+                std::uint8_t pad_0594[0x4]; // 0x0594, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NeutralSpawner) == 0x5A8, "CDOTA_NeutralSpawner size mismatch");
+            static_assert(sizeof(CDOTA_NeutralSpawner) == 0x598, "CDOTA_NeutralSpawner size mismatch");
         }
     }
 }

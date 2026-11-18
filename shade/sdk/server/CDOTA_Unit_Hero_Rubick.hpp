@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2048
+             * Size: 0x20d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_Rubick : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                Vector m_stolenAbilityColorHSV1; // 0x2020, 0xc bytes
-                Vector m_stolenAbilityColorHSV2; // 0x202c, 0xc bytes
-                Vector m_stolenAbilityFXColorHSV; // 0x2038, 0xc bytes
-                bool m_bHasInitializedAbilityColors; // 0x2044, 0x1 bytes
-                std::uint8_t pad_2045[0x3]; // 0x2045, 0x3 bytes
+                Vector m_stolenAbilityColorHSV1; // 0x20b0, 0xc bytes
+                Vector m_stolenAbilityColorHSV2; // 0x20bc, 0xc bytes
+                Vector m_stolenAbilityFXColorHSV; // 0x20c8, 0xc bytes
+                bool m_bHasInitializedAbilityColors; // 0x20d4, 0x1 bytes
+                std::uint8_t pad_20d5[0x3]; // 0x20d5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_Rubick) == 0x2048, "CDOTA_Unit_Hero_Rubick size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_Rubick) == 0x20D8, "CDOTA_Unit_Hero_Rubick size mismatch");
         }
     }
 }

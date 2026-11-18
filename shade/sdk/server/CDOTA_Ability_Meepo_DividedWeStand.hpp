@@ -20,8 +20,16 @@
 namespace shade {
     namespace sdk {
         namespace server {
+            class CBaseEntity;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace server {
             /* Class Parameters
-             * Size: 0x598
+             * Size: 0x5a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,12 +45,14 @@ namespace shade {
                 CHandle<shade::sdk::server::CDOTA_Ability_Meepo_DividedWeStand> m_entPrimeDividedWeStand; // 0x058c, 0x4 bytes
                 CHandle<shade::sdk::server::CDOTA_Ability_Meepo_DividedWeStand> m_entNextDividedWeStand; // 0x0590, 0x4 bytes
                 std::int32_t m_iPendingUpgrades; // 0x0594, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hHeldEntity; // 0x0598, 0x4 bytes
+                std::uint8_t pad_059c[0x4]; // 0x059c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Meepo_DividedWeStand) == 0x598, "CDOTA_Ability_Meepo_DividedWeStand size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Meepo_DividedWeStand) == 0x5A0, "CDOTA_Ability_Meepo_DividedWeStand size mismatch");
         }
     }
 }

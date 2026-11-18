@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class CMsgBattleReport_HighlightTier : std::int32_t {
+            enum class CMsgBattleReport_HighlightTier : std::uint32_t {
                 k_eHighlightTierLow = -0x1,
                 k_eHighlightTierNone = 0x0,
                 k_eHighlightTier1 = 0x1,

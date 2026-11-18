@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class PortraitSoundMode_t : std::int32_t {
+            enum class PortraitSoundMode_t : std::uint32_t {
                 PORTRAIT_SOUND_MODE_INVALID = -0x1,
                 PORTRAIT_SOUND_MODE_NO_SOUNDS = 0x0,
                 PORTRAIT_SOUND_MODE_ONLY_TAUNT_SOUNDS = 0x1,

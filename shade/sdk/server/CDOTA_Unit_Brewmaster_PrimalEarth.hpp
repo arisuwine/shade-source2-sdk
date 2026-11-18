@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19d0
+             * Size: 0x1a60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Brewmaster_PrimalEarth : public shade::sdk::server::CDOTA_BaseNPC_Creep {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXEarthAmbient1; // 0x19c8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXEarthAmbient2; // 0x19cc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXEarthAmbient1; // 0x1a58, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXEarthAmbient2; // 0x1a5c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Brewmaster_PrimalEarth) == 0x19D0, "CDOTA_Unit_Brewmaster_PrimalEarth size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Brewmaster_PrimalEarth) == 0x1A60, "CDOTA_Unit_Brewmaster_PrimalEarth size mismatch");
         }
     }
 }

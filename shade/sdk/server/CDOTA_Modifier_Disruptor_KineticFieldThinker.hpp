@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Disruptor_KineticFieldThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1aa8, 0x4 bytes
-                float formation_time; // 0x1aac, 0x4 bytes
-                bool m_bActive; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x17]; // 0x1ab1, 0x17 bytes
+                float radius; // 0x1af8, 0x4 bytes
+                float formation_time; // 0x1afc, 0x4 bytes
+                bool m_bActive; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x17]; // 0x1b01, 0x17 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Disruptor_KineticFieldThinker) == 0x1AC8, "CDOTA_Modifier_Disruptor_KineticFieldThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Disruptor_KineticFieldThinker) == 0x1B18, "CDOTA_Modifier_Disruptor_KineticFieldThinker size mismatch");
         }
     }
 }

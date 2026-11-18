@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DarkWillow_Debuff_Fear : public shade::sdk::server::CDOTA_Modifier_Fear {
             public:
-                bool m_bDidGiveOrder; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x7]; // 0x1aa9, 0x7 bytes
+                bool m_bDidGiveOrder; // 0x1b08, 0x1 bytes
+                std::uint8_t pad_1b09[0x7]; // 0x1b09, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DarkWillow_Debuff_Fear) == 0x1AB0, "CDOTA_Modifier_DarkWillow_Debuff_Fear size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DarkWillow_Debuff_Fear) == 0x1B10, "CDOTA_Modifier_DarkWillow_Debuff_Fear size mismatch");
         }
     }
 }

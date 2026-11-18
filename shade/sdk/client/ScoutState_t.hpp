@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ScoutState_t : std::int32_t {
+            enum class ScoutState_t : std::uint32_t {
                 SCOUT_STATE_INIT = -0x1,
                 SCOUT_STATE_IDLE = 0x0,
                 SCOUT_STATE_AT_BASE = 0x1,

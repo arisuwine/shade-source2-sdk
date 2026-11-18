@@ -15,6 +15,7 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/ButtonBitMask_t.hpp"
 #include "shade/sdk/client/CInButtonState.hpp"
 #include "shade/sdk/client/CPlayerPawnComponent.hpp"
 
@@ -33,13 +34,13 @@ namespace shade {
                 std::int32_t m_nImpulse; // 0x0048, 0x4 bytes
                 std::uint8_t pad_004c[0x4]; // 0x004c, 0x4 bytes
                 shade::sdk::client::CInButtonState m_nButtons; // 0x0050, 0x20 bytes
-                std::uint64_t m_nQueuedButtonDownMask; // 0x0070, 0x8 bytes
-                std::uint64_t m_nQueuedButtonChangeMask; // 0x0078, 0x8 bytes
-                std::uint64_t m_nButtonDoublePressed; // 0x0080, 0x8 bytes
+                shade::sdk::client::ButtonBitMask_t m_nQueuedButtonDownMask; // 0x0070, 0x8 bytes
+                shade::sdk::client::ButtonBitMask_t m_nQueuedButtonChangeMask; // 0x0078, 0x8 bytes
+                shade::sdk::client::ButtonBitMask_t m_nButtonDoublePressed; // 0x0080, 0x8 bytes
                 std::uint32_t m_pButtonPressedCmdNumber[0x40]; // 0x0088, 0x100 bytes
                 std::uint32_t m_nLastCommandNumberProcessed; // 0x0188, 0x4 bytes
                 std::uint8_t pad_018c[0x4]; // 0x018c, 0x4 bytes
-                std::uint64_t m_nToggleButtonDownMask; // 0x0190, 0x8 bytes
+                shade::sdk::client::ButtonBitMask_t m_nToggleButtonDownMask; // 0x0190, 0x8 bytes
                 std::uint8_t pad_0198[0x8]; // 0x0198, 0x8 bytes
                 float m_flCmdForwardMove; // 0x01a0, 0x4 bytes
                 float m_flCmdLeftMove; // 0x01a4, 0x4 bytes

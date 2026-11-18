@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,26 +31,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Ringmaster_TheBox_Buff : public shade::sdk::client::CDOTA_Buff {
             public:
-                float leash_radius; // 0x1aa8, 0x4 bytes
-                VectorWS m_vLeashLocation; // 0x1aac, 0xc bytes
-                float transform_time; // 0x1ab8, 0x4 bytes
-                float invis_duration; // 0x1abc, 0x4 bytes
-                std::int32_t radius; // 0x1ac0, 0x4 bytes
-                std::int32_t move_speed; // 0x1ac4, 0x4 bytes
-                std::int32_t magic_resist; // 0x1ac8, 0x4 bytes
-                std::int32_t grant_flying; // 0x1acc, 0x4 bytes
-                std::int32_t grant_debuff_immunity; // 0x1ad0, 0x4 bytes
-                float slow_resist; // 0x1ad4, 0x4 bytes
-                float m_flDamageTaken; // 0x1ad8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flCancelTime; // 0x1adc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nCircleFXIndex; // 0x1ae0, 0x4 bytes
-                std::uint8_t pad_1ae4[0x4]; // 0x1ae4, 0x4 bytes
+                float leash_radius; // 0x1af8, 0x4 bytes
+                VectorWS m_vLeashLocation; // 0x1afc, 0xc bytes
+                float transform_time; // 0x1b08, 0x4 bytes
+                float invis_duration; // 0x1b0c, 0x4 bytes
+                std::int32_t radius; // 0x1b10, 0x4 bytes
+                std::int32_t move_speed; // 0x1b14, 0x4 bytes
+                std::int32_t magic_resist; // 0x1b18, 0x4 bytes
+                std::int32_t grant_flying; // 0x1b1c, 0x4 bytes
+                std::int32_t grant_debuff_immunity; // 0x1b20, 0x4 bytes
+                float slow_resist; // 0x1b24, 0x4 bytes
+                float m_flDamageTaken; // 0x1b28, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flCancelTime; // 0x1b2c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nCircleFXIndex; // 0x1b30, 0x4 bytes
+                std::uint8_t pad_1b34[0x4]; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Ringmaster_TheBox_Buff) == 0x1AE8, "CDOTA_Modifier_Ringmaster_TheBox_Buff size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Ringmaster_TheBox_Buff) == 0x1B38, "CDOTA_Modifier_Ringmaster_TheBox_Buff size mismatch");
         }
     }
 }

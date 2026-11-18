@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9d8
+             * Size: 0xa38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class NextBotCombatCharacter : public shade::sdk::server::CBaseCombatCharacter {
             public:
-                std::uint8_t pad_0948[0x88]; // 0x0948, 0x88 bytes
-                std::uint8_t m_nLod; // 0x09d0, 0x1 bytes
-                bool m_didModelChange; // 0x09d1, 0x1 bytes
-                std::uint8_t pad_09d2[0x6]; // 0x09d2, 0x6 bytes
+                std::uint8_t pad_09a8[0x88]; // 0x09a8, 0x88 bytes
+                std::uint8_t m_nLod; // 0x0a30, 0x1 bytes
+                bool m_didModelChange; // 0x0a31, 0x1 bytes
+                std::uint8_t pad_0a32[0x6]; // 0x0a32, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(NextBotCombatCharacter) == 0x9D8, "NextBotCombatCharacter size mismatch");
+            static_assert(sizeof(NextBotCombatCharacter) == 0xA38, "NextBotCombatCharacter size mismatch");
         }
     }
 }

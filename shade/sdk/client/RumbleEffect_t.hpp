@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class RumbleEffect_t : std::int32_t {
+            enum class RumbleEffect_t : std::uint32_t {
                 RUMBLE_INVALID = -0x1,
                 RUMBLE_STOP_ALL = 0x0,
                 RUMBLE_PISTOL = 0x1,

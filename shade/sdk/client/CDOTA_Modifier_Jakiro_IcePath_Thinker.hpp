@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b48
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,23 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Jakiro_IcePath_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float path_delay; // 0x1aa8, 0x4 bytes
-                float path_radius; // 0x1aac, 0x4 bytes
-                std::int32_t m_nDamage; // 0x1ab0, 0x4 bytes
-                float m_flRadius; // 0x1ab4, 0x4 bytes
-                float stun_duration; // 0x1ab8, 0x4 bytes
-                std::int32_t detonate_projectile_speed; // 0x1abc, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hUnitsHit; // 0x1ac0, 0x18 bytes
-                VectorWS m_vPathStart; // 0x1ad8, 0xc bytes
-                VectorWS m_vPathEnd; // 0x1ae4, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1af0, 0x4 bytes
-                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
+                float path_delay; // 0x1af8, 0x4 bytes
+                float path_radius; // 0x1afc, 0x4 bytes
+                std::int32_t m_nDamage; // 0x1b00, 0x4 bytes
+                float m_flRadius; // 0x1b04, 0x4 bytes
+                float stun_duration; // 0x1b08, 0x4 bytes
+                std::int32_t detonate_projectile_speed; // 0x1b0c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hUnitsHit; // 0x1b10, 0x18 bytes
+                VectorWS m_vPathStart; // 0x1b28, 0xc bytes
+                VectorWS m_vPathEnd; // 0x1b34, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Jakiro_IcePath_Thinker) == 0x1AF8, "CDOTA_Modifier_Jakiro_IcePath_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Jakiro_IcePath_Thinker) == 0x1B48, "CDOTA_Modifier_Jakiro_IcePath_Thinker size mismatch");
         }
     }
 }

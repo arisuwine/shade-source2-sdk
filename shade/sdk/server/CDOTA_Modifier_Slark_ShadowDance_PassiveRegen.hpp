@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Slark_ShadowDance_PassiveRegen : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t bonus_movement_speed; // 0x1aa8, 0x4 bytes
-                float bonus_regen; // 0x1aac, 0x4 bytes
-                float corruption_duration; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1ab8, 0x18 bytes
+                std::int32_t bonus_movement_speed; // 0x1af8, 0x4 bytes
+                float bonus_regen; // 0x1afc, 0x4 bytes
+                float corruption_duration; // 0x1b00, 0x4 bytes
+                std::uint8_t pad_1b04[0x4]; // 0x1b04, 0x4 bytes
+                CUtlVector<shade::sdk::client::AttackRecord_t> m_InFlightAttackRecords; // 0x1b08, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Slark_ShadowDance_PassiveRegen) == 0x1AD0, "CDOTA_Modifier_Slark_ShadowDance_PassiveRegen size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Slark_ShadowDance_PassiveRegen) == 0x1B20, "CDOTA_Modifier_Slark_ShadowDance_PassiveRegen size mismatch");
         }
     }
 }

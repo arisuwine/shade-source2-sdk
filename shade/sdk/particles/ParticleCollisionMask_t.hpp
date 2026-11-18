@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleCollisionMask_t : std::int64_t {
+            enum class ParticleCollisionMask_t : std::uint64_t {
                 PARTICLE_MASK_ALL = -0x1,
                 PARTICLE_MASK_SOLID = 0xc3001,
                 PARTICLE_MASK_WATER = 0x18000,

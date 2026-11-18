@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2030
+             * Size: 0x20c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_TargetDummy : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                float m_flDamageTaken; // 0x2020, 0x4 bytes
-                float m_flLastHit; // 0x2024, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartDamageTime; // 0x2028, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTargetDummyDamageTime; // 0x202c, 0x4 bytes
+                float m_flDamageTaken; // 0x20b0, 0x4 bytes
+                float m_flLastHit; // 0x20b4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartDamageTime; // 0x20b8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTargetDummyDamageTime; // 0x20bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_TargetDummy) == 0x2030, "CDOTA_Unit_TargetDummy size mismatch");
+            static_assert(sizeof(CDOTA_Unit_TargetDummy) == 0x20C0, "CDOTA_Unit_TargetDummy size mismatch");
         }
     }
 }

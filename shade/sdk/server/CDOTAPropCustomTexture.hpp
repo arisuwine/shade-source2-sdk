@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb70
+             * Size: 0xbd0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTAPropCustomTexture : public shade::sdk::server::CDynamicProp {
             public:
-                std::uint32_t m_unTeamID; // 0x0b60, 0x4 bytes
-                std::uint8_t pad_0b64[0xc]; // 0x0b64, 0xc bytes
+                std::uint32_t m_unTeamID; // 0x0bc0, 0x4 bytes
+                std::uint8_t pad_0bc4[0xc]; // 0x0bc4, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTAPropCustomTexture) == 0xB70, "CDOTAPropCustomTexture size mismatch");
+            static_assert(sizeof(CDOTAPropCustomTexture) == 0xBD0, "CDOTAPropCustomTexture size mismatch");
         }
     }
 }

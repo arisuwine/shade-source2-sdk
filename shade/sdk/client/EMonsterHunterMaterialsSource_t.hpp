@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class EMonsterHunterMaterialsSource_t : std::int32_t {
+            enum class EMonsterHunterMaterialsSource_t : std::uint32_t {
                 Invalid = -0x1,
                 PremiumPass = 0x0,
                 Tutorial = 0x1,

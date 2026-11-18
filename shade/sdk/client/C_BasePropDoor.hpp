@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xeb0
+             * Size: 0xf10
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class C_BasePropDoor : public shade::sdk::client::C_DynamicProp {
             public:
-                shade::sdk::client::DoorState_t m_eDoorState; // 0x0e80, 0x4 bytes
-                bool m_modelChanged; // 0x0e84, 0x1 bytes
-                bool m_bLocked; // 0x0e85, 0x1 bytes
-                bool m_bNoNPCs; // 0x0e86, 0x1 bytes
-                std::uint8_t pad_0e87[0x1]; // 0x0e87, 0x1 bytes
-                VectorWS m_closedPosition; // 0x0e88, 0xc bytes
-                QAngle m_closedAngles; // 0x0e94, 0xc bytes
-                CHandle<shade::sdk::client::C_BasePropDoor> m_hMaster; // 0x0ea0, 0x4 bytes
-                std::uint8_t pad_0ea4[0xc]; // 0x0ea4, 0xc bytes
+                shade::sdk::client::DoorState_t m_eDoorState; // 0x0ee0, 0x4 bytes
+                bool m_modelChanged; // 0x0ee4, 0x1 bytes
+                bool m_bLocked; // 0x0ee5, 0x1 bytes
+                bool m_bNoNPCs; // 0x0ee6, 0x1 bytes
+                std::uint8_t pad_0ee7[0x1]; // 0x0ee7, 0x1 bytes
+                VectorWS m_closedPosition; // 0x0ee8, 0xc bytes
+                QAngle m_closedAngles; // 0x0ef4, 0xc bytes
+                CHandle<shade::sdk::client::C_BasePropDoor> m_hMaster; // 0x0f00, 0x4 bytes
+                std::uint8_t pad_0f04[0xc]; // 0x0f04, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_BasePropDoor) == 0xEB0, "C_BasePropDoor size mismatch");
+            static_assert(sizeof(C_BasePropDoor) == 0xF10, "C_BasePropDoor size mismatch");
         }
     }
 }

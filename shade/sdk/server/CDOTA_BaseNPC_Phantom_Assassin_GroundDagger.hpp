@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19a0
+             * Size: 0x1a30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_Phantom_Assassin_GroundDagger : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1998, 0x4 bytes
-                std::uint8_t pad_199c[0x4]; // 0x199c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1a28, 0x4 bytes
+                std::uint8_t pad_1a2c[0x4]; // 0x1a2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_Phantom_Assassin_GroundDagger) == 0x19A0, "CDOTA_BaseNPC_Phantom_Assassin_GroundDagger size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_Phantom_Assassin_GroundDagger) == 0x1A30, "CDOTA_BaseNPC_Phantom_Assassin_GroundDagger size mismatch");
         }
     }
 }

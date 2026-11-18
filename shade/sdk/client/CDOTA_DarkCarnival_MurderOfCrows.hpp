@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6b0
+             * Size: 0x6e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,13 +44,13 @@ namespace shade {
                 std::int32_t m_nCountingCrows; // 0x0608, 0x4 bytes
                 float m_flCrowSpeed; // 0x060c, 0x4 bytes
                 float m_flCrowScale; // 0x0610, 0x4 bytes
-                std::uint8_t pad_0614[0x9c]; // 0x0614, 0x9c bytes
+                std::uint8_t pad_0614[0xcc]; // 0x0614, 0xcc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_DarkCarnival_MurderOfCrows) == 0x6B0, "CDOTA_DarkCarnival_MurderOfCrows size mismatch");
+            static_assert(sizeof(CDOTA_DarkCarnival_MurderOfCrows) == 0x6E0, "CDOTA_DarkCarnival_MurderOfCrows size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb70
+             * Size: 0xbd0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class COrnamentProp : public shade::sdk::server::CDynamicProp {
             public:
-                CUtlSymbolLarge m_initialOwner; // 0x0b60, 0x8 bytes
-                std::uint8_t pad_0b68[0x8]; // 0x0b68, 0x8 bytes
+                CUtlSymbolLarge m_initialOwner; // 0x0bc0, 0x8 bytes
+                std::uint8_t pad_0bc8[0x8]; // 0x0bc8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(COrnamentProp) == 0xB70, "COrnamentProp size mismatch");
+            static_assert(sizeof(COrnamentProp) == 0xBD0, "COrnamentProp size mismatch");
         }
     }
 }

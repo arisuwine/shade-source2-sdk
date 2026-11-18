@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleToolsState_t : std::int32_t {
+            enum class ParticleToolsState_t : std::uint32_t {
                 PARTICLE_TOOLS_STATE_ALWAYS_ON = -0x1,
                 PARTICLE_TOOLS_STATE_TOOLS_ONLY = 0x0,
                 PARTICLE_TOOLS_STATE_GAME_ONLY = 0x1

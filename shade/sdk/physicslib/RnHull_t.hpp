@@ -20,7 +20,6 @@
 namespace shade {
     namespace sdk {
         namespace physicslib {
-            class CRegionSVM;
             struct RnFace_t;
             struct RnHalfEdge_t;
             struct RnPlane_t;
@@ -33,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace physicslib {
             /* Class Parameters
-             * Size: 0xf8
+             * Size: 0xf0
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -51,16 +50,15 @@ namespace shade {
                 CUtlVector<shade::sdk::physicslib::RnPlane_t> m_FacePlanes; // 0x0088, 0x18 bytes
                 std::uint32_t m_nFlags; // 0x00a0, 0x4 bytes
                 std::uint8_t pad_00a4[0x4]; // 0x00a4, 0x4 bytes
-                shade::sdk::physicslib::CRegionSVM *m_pRegionSVM; // 0x00a8, 0x8 bytes
-                CUtlVector<shade::sdk::physicslib::RnVertex_t> m_Vertices; // 0x00b0, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnHalfEdge_t> m_Edges; // 0x00c8, 0x18 bytes
-                CUtlVector<shade::sdk::physicslib::RnFace_t> m_Faces; // 0x00e0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::RnVertex_t> m_Vertices; // 0x00a8, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::RnHalfEdge_t> m_Edges; // 0x00c0, 0x18 bytes
+                CUtlVector<shade::sdk::physicslib::RnFace_t> m_Faces; // 0x00d8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(RnHull_t) == 0xF8, "RnHull_t size mismatch");
+            static_assert(sizeof(RnHull_t) == 0xF0, "RnHull_t size mismatch");
         }
     }
 }

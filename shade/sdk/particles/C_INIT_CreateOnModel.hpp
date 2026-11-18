@@ -25,7 +25,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x13f0
+             * Size: 0x1400
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -52,13 +52,17 @@ namespace shade {
                 bool m_bUseMesh; // 0x1272, 0x1 bytes
                 std::uint8_t pad_1273[0x1]; // 0x1273, 0x1 bytes
                 float m_flMeshNormalOffset; // 0x1274, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x1278, 0x178 bytes
+                bool m_bInitColorToAlbedo; // 0x1278, 0x1 bytes
+                bool m_bInitNormal; // 0x1279, 0x1 bytes
+                std::uint8_t pad_127a[0x6]; // 0x127a, 0x6 bytes
+                shade::sdk::particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x1280, 0x178 bytes
+                std::uint8_t pad_13f8[0x8]; // 0x13f8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_INIT_CreateOnModel) == 0x13F0, "C_INIT_CreateOnModel size mismatch");
+            static_assert(sizeof(C_INIT_CreateOnModel) == 0x1400, "C_INIT_CreateOnModel size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,23 +37,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_SpiritBreaker_ChargeOfDarkness : public shade::sdk::client::CDOTA_Buff {
             public:
-                float movement_speed; // 0x1aa8, 0x4 bytes
-                std::int32_t min_movespeed_bonus_pct; // 0x1aac, 0x4 bytes
-                float out_of_world_time; // 0x1ab0, 0x4 bytes
-                float linger_time_min; // 0x1ab4, 0x4 bytes
-                float linger_time_max; // 0x1ab8, 0x4 bytes
-                float charge_for_max_linger; // 0x1abc, 0x4 bytes
-                float windup_time; // 0x1ac0, 0x4 bytes
-                float m_flCurrentMovespeedBonus; // 0x1ac4, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1ac8, 0x4 bytes
-                bool m_bGestureStarted; // 0x1acc, 0x1 bytes
-                std::uint8_t pad_1acd[0x3]; // 0x1acd, 0x3 bytes
+                float movement_speed; // 0x1af8, 0x4 bytes
+                std::int32_t min_movespeed_bonus_pct; // 0x1afc, 0x4 bytes
+                float out_of_world_time; // 0x1b00, 0x4 bytes
+                float linger_time_min; // 0x1b04, 0x4 bytes
+                float linger_time_max; // 0x1b08, 0x4 bytes
+                float charge_for_max_linger; // 0x1b0c, 0x4 bytes
+                float windup_time; // 0x1b10, 0x4 bytes
+                float m_flCurrentMovespeedBonus; // 0x1b14, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1b18, 0x4 bytes
+                bool m_bGestureStarted; // 0x1b1c, 0x1 bytes
+                std::uint8_t pad_1b1d[0x3]; // 0x1b1d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_SpiritBreaker_ChargeOfDarkness) == 0x1AD0, "CDOTA_Modifier_SpiritBreaker_ChargeOfDarkness size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_SpiritBreaker_ChargeOfDarkness) == 0x1B20, "CDOTA_Modifier_SpiritBreaker_ChargeOfDarkness size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Prophets_Pendulum : public shade::sdk::server::CDOTA_Buff_Item {
             public:
-                float delay_pct; // 0x1aa8, 0x4 bytes
-                float delay_time; // 0x1aac, 0x4 bytes
-                float damage_interval; // 0x1ab0, 0x4 bytes
-                float m_flDamageMultiplier; // 0x1ab4, 0x4 bytes
-                bool m_bApplyingDelayedDamage; // 0x1ab8, 0x1 bytes
-                std::uint8_t pad_1ab9[0x1f]; // 0x1ab9, 0x1f bytes
+                float delay_pct; // 0x1af8, 0x4 bytes
+                float delay_time; // 0x1afc, 0x4 bytes
+                float damage_interval; // 0x1b00, 0x4 bytes
+                float m_flDamageMultiplier; // 0x1b04, 0x4 bytes
+                bool m_bApplyingDelayedDamage; // 0x1b08, 0x1 bytes
+                std::uint8_t pad_1b09[0x1f]; // 0x1b09, 0x1f bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Prophets_Pendulum) == 0x1AD8, "CDOTA_Modifier_Item_Prophets_Pendulum size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Prophets_Pendulum) == 0x1B28, "CDOTA_Modifier_Item_Prophets_Pendulum size mismatch");
         }
     }
 }

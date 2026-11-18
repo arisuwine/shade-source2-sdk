@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa88
+             * Size: 0xae8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,23 +38,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CEnvDeferredLight : public shade::sdk::server::CModelPointEntity {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x0858, 0x4 bytes
-                Color m_LightColor; // 0x085c, 0x4 bytes
-                float m_flIntensity; // 0x0860, 0x4 bytes
-                float m_flLightSize; // 0x0864, 0x4 bytes
-                float m_flSpotFoV; // 0x0868, 0x4 bytes
-                QAngle m_vLightDirection; // 0x086c, 0xc bytes
-                float m_flStartFalloff; // 0x0878, 0x4 bytes
-                float m_flDistanceFalloff; // 0x087c, 0x4 bytes
-                std::uint32_t m_nFlags; // 0x0880, 0x4 bytes
-                char m_ProjectedTextureName[0x200]; // 0x0884, 0x200 bytes
-                std::uint8_t pad_0a84[0x4]; // 0x0a84, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTargetEntity; // 0x08b8, 0x4 bytes
+                Color m_LightColor; // 0x08bc, 0x4 bytes
+                float m_flIntensity; // 0x08c0, 0x4 bytes
+                float m_flLightSize; // 0x08c4, 0x4 bytes
+                float m_flSpotFoV; // 0x08c8, 0x4 bytes
+                QAngle m_vLightDirection; // 0x08cc, 0xc bytes
+                float m_flStartFalloff; // 0x08d8, 0x4 bytes
+                float m_flDistanceFalloff; // 0x08dc, 0x4 bytes
+                std::uint32_t m_nFlags; // 0x08e0, 0x4 bytes
+                char m_ProjectedTextureName[0x200]; // 0x08e4, 0x200 bytes
+                std::uint8_t pad_0ae4[0x4]; // 0x0ae4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CEnvDeferredLight) == 0xA88, "CEnvDeferredLight size mismatch");
+            static_assert(sizeof(CEnvDeferredLight) == 0xAE8, "CEnvDeferredLight size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b28
+             * Size: 0x1b78
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,40 +38,40 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Phoenix_SunRay : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t hp_cost_perc_per_second; // 0x1aa8, 0x4 bytes
-                std::int32_t beam_range; // 0x1aac, 0x4 bytes
-                std::int32_t base_damage; // 0x1ab0, 0x4 bytes
-                std::int32_t base_heal; // 0x1ab4, 0x4 bytes
-                float tick_interval; // 0x1ab8, 0x4 bytes
-                float forward_move_speed; // 0x1abc, 0x4 bytes
-                float turn_rate_initial; // 0x1ac0, 0x4 bytes
-                float turn_rate; // 0x1ac4, 0x4 bytes
-                float radius; // 0x1ac8, 0x4 bytes
-                float m_flCurrentTime; // 0x1acc, 0x4 bytes
-                float m_flAccumulatedSelfDamage; // 0x1ad0, 0x4 bytes
-                bool m_bMovingForward; // 0x1ad4, 0x1 bytes
-                bool m_bTurningFast; // 0x1ad5, 0x1 bytes
-                std::uint8_t pad_1ad6[0x2]; // 0x1ad6, 0x2 bytes
-                float m_flFacingTarget; // 0x1ad8, 0x4 bytes
-                float hp_perc_damage; // 0x1adc, 0x4 bytes
-                float hp_perc_heal; // 0x1ae0, 0x4 bytes
-                float blind_duration; // 0x1ae4, 0x4 bytes
-                float blind_per_second; // 0x1ae8, 0x4 bytes
-                std::int32_t focal_point_max_multiplier; // 0x1aec, 0x4 bytes
-                std::int32_t focal_point_start_length_pct; // 0x1af0, 0x4 bytes
-                std::int32_t focal_point_blind_stack_multiplier; // 0x1af4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1af8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hVisionThinkers[0x8]; // 0x1afc, 0x20 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEnd; // 0x1b1c, 0x4 bytes
-                bool m_bCreatedVisionThinkers; // 0x1b20, 0x1 bytes
-                std::uint8_t pad_1b21[0x3]; // 0x1b21, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEndSound; // 0x1b24, 0x4 bytes
+                std::int32_t hp_cost_perc_per_second; // 0x1af8, 0x4 bytes
+                std::int32_t beam_range; // 0x1afc, 0x4 bytes
+                std::int32_t base_damage; // 0x1b00, 0x4 bytes
+                std::int32_t base_heal; // 0x1b04, 0x4 bytes
+                float tick_interval; // 0x1b08, 0x4 bytes
+                float forward_move_speed; // 0x1b0c, 0x4 bytes
+                float turn_rate_initial; // 0x1b10, 0x4 bytes
+                float turn_rate; // 0x1b14, 0x4 bytes
+                float radius; // 0x1b18, 0x4 bytes
+                float m_flCurrentTime; // 0x1b1c, 0x4 bytes
+                float m_flAccumulatedSelfDamage; // 0x1b20, 0x4 bytes
+                bool m_bMovingForward; // 0x1b24, 0x1 bytes
+                bool m_bTurningFast; // 0x1b25, 0x1 bytes
+                std::uint8_t pad_1b26[0x2]; // 0x1b26, 0x2 bytes
+                float m_flFacingTarget; // 0x1b28, 0x4 bytes
+                float hp_perc_damage; // 0x1b2c, 0x4 bytes
+                float hp_perc_heal; // 0x1b30, 0x4 bytes
+                float blind_duration; // 0x1b34, 0x4 bytes
+                float blind_per_second; // 0x1b38, 0x4 bytes
+                std::int32_t focal_point_max_multiplier; // 0x1b3c, 0x4 bytes
+                std::int32_t focal_point_start_length_pct; // 0x1b40, 0x4 bytes
+                std::int32_t focal_point_blind_stack_multiplier; // 0x1b44, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1b48, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hVisionThinkers[0x8]; // 0x1b4c, 0x20 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEnd; // 0x1b6c, 0x4 bytes
+                bool m_bCreatedVisionThinkers; // 0x1b70, 0x1 bytes
+                std::uint8_t pad_1b71[0x3]; // 0x1b71, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBeamEndSound; // 0x1b74, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Phoenix_SunRay) == 0x1B28, "CDOTA_Modifier_Phoenix_SunRay size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Phoenix_SunRay) == 0x1B78, "CDOTA_Modifier_Phoenix_SunRay size mismatch");
         }
     }
 }

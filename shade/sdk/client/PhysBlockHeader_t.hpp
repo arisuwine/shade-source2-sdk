@@ -18,11 +18,17 @@
 namespace shade {
     namespace sdk {
         namespace client {
+            struct PhysWorldBody_t;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace client {
             /* Class Parameters
-             * Size: 0x10
+             * Size: 0x28
              * Alignment: 0x8
-             * Has Trivial Constructor
-             * Has Trivial Destructor
              * Construct Allowed
              */
             #pragma pack(push, 1)
@@ -30,12 +36,13 @@ namespace shade {
                 std::int32_t nSaved; // 0x0000, 0x4 bytes
                 std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 std::uint64_t pWorldObject; // 0x0008, 0x8 bytes
+                CUtlVector<shade::sdk::client::PhysWorldBody_t> m_WorldBodies; // 0x0010, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PhysBlockHeader_t) == 0x10, "PhysBlockHeader_t size mismatch");
+            static_assert(sizeof(PhysBlockHeader_t) == 0x28, "PhysBlockHeader_t size mismatch");
         }
     }
 }

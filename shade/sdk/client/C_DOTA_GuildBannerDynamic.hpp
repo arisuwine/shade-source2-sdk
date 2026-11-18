@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xee0
+             * Size: 0xf40
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -39,26 +39,26 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_GuildBannerDynamic : public shade::sdk::client::C_DynamicProp {
             public:
-                bool m_bRespawnClientEntity; // 0x0e80, 0x1 bytes
-                bool m_bPlaySpawnAnimation; // 0x0e81, 0x1 bytes
-                std::uint8_t m_unGuildTier; // 0x0e82, 0x1 bytes
-                std::uint8_t m_unPrimaryColor; // 0x0e83, 0x1 bytes
-                std::uint8_t m_unSecondaryColor; // 0x0e84, 0x1 bytes
-                std::uint8_t m_unPattern; // 0x0e85, 0x1 bytes
-                std::uint8_t pad_0e86[0x2]; // 0x0e86, 0x2 bytes
-                std::uint64_t m_unLogo; // 0x0e88, 0x8 bytes
-                shade::sdk::client::GuildID_t m_unGuildID; // 0x0e90, 0x4 bytes
-                std::uint32_t m_unGuildFlags; // 0x0e94, 0x4 bytes
-                bool m_bUsePanelCache; // 0x0e98, 0x1 bytes
-                std::uint8_t pad_0e99[0x3]; // 0x0e99, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hClientEntity; // 0x0e9c, 0x4 bytes
-                std::uint8_t pad_0ea0[0x40]; // 0x0ea0, 0x40 bytes
+                bool m_bRespawnClientEntity; // 0x0ee0, 0x1 bytes
+                bool m_bPlaySpawnAnimation; // 0x0ee1, 0x1 bytes
+                std::uint8_t m_unGuildTier; // 0x0ee2, 0x1 bytes
+                std::uint8_t m_unPrimaryColor; // 0x0ee3, 0x1 bytes
+                std::uint8_t m_unSecondaryColor; // 0x0ee4, 0x1 bytes
+                std::uint8_t m_unPattern; // 0x0ee5, 0x1 bytes
+                std::uint8_t pad_0ee6[0x2]; // 0x0ee6, 0x2 bytes
+                std::uint64_t m_unLogo; // 0x0ee8, 0x8 bytes
+                shade::sdk::client::GuildID_t m_unGuildID; // 0x0ef0, 0x4 bytes
+                std::uint32_t m_unGuildFlags; // 0x0ef4, 0x4 bytes
+                bool m_bUsePanelCache; // 0x0ef8, 0x1 bytes
+                std::uint8_t pad_0ef9[0x3]; // 0x0ef9, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hClientEntity; // 0x0efc, 0x4 bytes
+                std::uint8_t pad_0f00[0x40]; // 0x0f00, 0x40 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_GuildBannerDynamic) == 0xEE0, "C_DOTA_GuildBannerDynamic size mismatch");
+            static_assert(sizeof(C_DOTA_GuildBannerDynamic) == 0xF40, "C_DOTA_GuildBannerDynamic size mismatch");
         }
     }
 }

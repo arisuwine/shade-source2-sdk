@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,15 +29,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Broodmother_StickySnare_Root : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage_per_second; // 0x1aa8, 0x4 bytes
-                bool m_bFirstSecond; // 0x1aac, 0x1 bytes
-                std::uint8_t pad_1aad[0x3]; // 0x1aad, 0x3 bytes
+                float damage_per_second; // 0x1af8, 0x4 bytes
+                bool m_bFirstSecond; // 0x1afc, 0x1 bytes
+                std::uint8_t pad_1afd[0x3]; // 0x1afd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Broodmother_StickySnare_Root) == 0x1AB0, "CDOTA_Modifier_Broodmother_StickySnare_Root size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Broodmother_StickySnare_Root) == 0x1B00, "CDOTA_Modifier_Broodmother_StickySnare_Root size mismatch");
         }
     }
 }

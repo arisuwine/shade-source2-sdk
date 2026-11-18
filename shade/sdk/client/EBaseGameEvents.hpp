@@ -31,7 +31,8 @@ namespace shade {
                 GE_SosSetLibraryStackFields = 0xd3,
                 GE_SosStopSoundEventHash = 0xd4,
                 GE_ClothStiffenAnimEvent = 0xd5,
-                GE_ClothEffectAnimEvent = 0xd6
+                GE_ClothEffectAnimEvent = 0xd6,
+                GE_MoveWorldDecalsEvent = 0xd7
             };
         }
     }

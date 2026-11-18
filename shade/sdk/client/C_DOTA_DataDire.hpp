@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e40
+             * Size: 0x1e50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_DataDire) == 0x1E40, "C_DOTA_DataDire size mismatch");
+            static_assert(sizeof(C_DOTA_DataDire) == 0x1E50, "C_DOTA_DataDire size mismatch");
         }
     }
 }

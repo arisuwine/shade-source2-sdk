@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1f30
+             * Size: 0x1f80
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,26 +29,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Teleporting : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1aa8[0x50]; // 0x1aa8, 0x50 bytes
-                float m_fStartTime; // 0x1af8, 0x4 bytes
-                char m_iszPortalLoopAppear[0x104]; // 0x1afc, 0x104 bytes
-                char m_iszPortalLoopDisappear[0x104]; // 0x1c00, 0x104 bytes
-                char m_iszHeroLoopAppear[0x104]; // 0x1d04, 0x104 bytes
-                char m_iszHeroLoopDisappear[0x104]; // 0x1e08, 0x104 bytes
-                bool m_bSkipTeleportAnim; // 0x1f0c, 0x1 bytes
-                bool m_bPlayingCoopAnim; // 0x1f0d, 0x1 bytes
-                bool m_bIsPlayingTauntGesture; // 0x1f0e, 0x1 bytes
-                std::uint8_t pad_1f0f[0x1]; // 0x1f0f, 0x1 bytes
-                float m_fChannelTime; // 0x1f10, 0x4 bytes
-                VectorWS m_vStart; // 0x1f14, 0xc bytes
-                VectorWS m_vEnd; // 0x1f20, 0xc bytes
-                std::uint8_t pad_1f2c[0x4]; // 0x1f2c, 0x4 bytes
+                std::uint8_t pad_1af8[0x50]; // 0x1af8, 0x50 bytes
+                float m_fStartTime; // 0x1b48, 0x4 bytes
+                char m_iszPortalLoopAppear[0x104]; // 0x1b4c, 0x104 bytes
+                char m_iszPortalLoopDisappear[0x104]; // 0x1c50, 0x104 bytes
+                char m_iszHeroLoopAppear[0x104]; // 0x1d54, 0x104 bytes
+                char m_iszHeroLoopDisappear[0x104]; // 0x1e58, 0x104 bytes
+                bool m_bSkipTeleportAnim; // 0x1f5c, 0x1 bytes
+                bool m_bPlayingCoopAnim; // 0x1f5d, 0x1 bytes
+                bool m_bIsPlayingTauntGesture; // 0x1f5e, 0x1 bytes
+                std::uint8_t pad_1f5f[0x1]; // 0x1f5f, 0x1 bytes
+                float m_fChannelTime; // 0x1f60, 0x4 bytes
+                VectorWS m_vStart; // 0x1f64, 0xc bytes
+                VectorWS m_vEnd; // 0x1f70, 0xc bytes
+                std::uint8_t pad_1f7c[0x4]; // 0x1f7c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Teleporting) == 0x1F30, "CDOTA_Modifier_Teleporting size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Teleporting) == 0x1F80, "CDOTA_Modifier_Teleporting size mismatch");
         }
     }
 }

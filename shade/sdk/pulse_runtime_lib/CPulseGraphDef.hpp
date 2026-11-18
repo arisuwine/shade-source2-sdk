@@ -25,6 +25,7 @@ namespace shade {
             class CPulse_Constant;
             class CPulse_DomainValue;
             class CPulse_InvokeBinding;
+            class CPulse_LambdaDef;
             class CPulse_OutputConnection;
             class CPulse_PublicOutput;
             class CPulse_TempVarBankDefinition;
@@ -37,7 +38,7 @@ namespace shade {
     namespace sdk {
         namespace pulse_runtime_lib {
             /* Class Parameters
-             * Size: 0x1c0
+             * Size: 0x1d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -61,14 +62,15 @@ namespace shade {
                 CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_Constant> m_Constants; // 0x00f8, 0x18 bytes
                 CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_DomainValue> m_DomainValues; // 0x0110, 0x18 bytes
                 CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_BlackboardReference> m_BlackboardReferences; // 0x0128, 0x18 bytes
-                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutputConnection*> m_OutputConnections; // 0x0140, 0x18 bytes
-                std::uint8_t pad_0158[0x68]; // 0x0158, 0x68 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_LambdaDef> m_LambdaDefs; // 0x0140, 0x18 bytes
+                CUtlVector<shade::sdk::pulse_runtime_lib::CPulse_OutputConnection*> m_OutputConnections; // 0x0158, 0x18 bytes
+                std::uint8_t pad_0170[0x68]; // 0x0170, 0x68 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPulseGraphDef) == 0x1C0, "CPulseGraphDef size mismatch");
+            static_assert(sizeof(CPulseGraphDef) == 0x1D8, "CPulseGraphDef size mismatch");
         }
     }
 }

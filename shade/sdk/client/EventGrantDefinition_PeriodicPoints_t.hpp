@@ -27,6 +27,7 @@ namespace shade {
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
+             * Module Local Type Scope
              */
             #pragma pack(push, 1)
             struct EventGrantDefinition_PeriodicPoints_t : public shade::sdk::client::EventGrantDefinition_t {

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Batrider_Smoldering_Resin_Debuff : public shade::sdk::client::CDOTA_Buff {
             public:
-                float damage; // 0x1aa8, 0x4 bytes
-                float tick_rate; // 0x1aac, 0x4 bytes
-                std::int32_t tick_attack_damage_pct; // 0x1ab0, 0x4 bytes
-                std::int32_t total_ticks; // 0x1ab4, 0x4 bytes
-                CUtlVector<float> m_nDamageQueue; // 0x1ab8, 0x18 bytes
+                float damage; // 0x1af8, 0x4 bytes
+                float tick_rate; // 0x1afc, 0x4 bytes
+                std::int32_t tick_attack_damage_pct; // 0x1b00, 0x4 bytes
+                std::int32_t total_ticks; // 0x1b04, 0x4 bytes
+                CUtlVector<float> m_nDamageQueue; // 0x1b08, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Batrider_Smoldering_Resin_Debuff) == 0x1AD0, "CDOTA_Modifier_Batrider_Smoldering_Resin_Debuff size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Batrider_Smoldering_Resin_Debuff) == 0x1B20, "CDOTA_Modifier_Batrider_Smoldering_Resin_Debuff size mismatch");
         }
     }
 }

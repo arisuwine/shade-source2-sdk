@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,28 +29,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Aghsfort_Minor_Stats_Upgrade : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t bonus_all_stats; // 0x1aa8, 0x4 bytes
-                std::int32_t bonus_primary_stat; // 0x1aac, 0x4 bytes
-                std::int32_t bonus_movespeed; // 0x1ab0, 0x4 bytes
-                std::int32_t bonus_hp_regen; // 0x1ab4, 0x4 bytes
-                std::int32_t bonus_armor; // 0x1ab8, 0x4 bytes
-                std::int32_t bonus_attack_damage; // 0x1abc, 0x4 bytes
-                std::int32_t bonus_cast_range; // 0x1ac0, 0x4 bytes
-                std::int32_t bonus_spell_amp; // 0x1ac4, 0x4 bytes
-                std::int32_t bonus_health; // 0x1ac8, 0x4 bytes
-                std::int32_t bonus_mana; // 0x1acc, 0x4 bytes
-                std::int32_t bonus_attack_speed; // 0x1ad0, 0x4 bytes
-                std::int32_t bonus_heal_amp; // 0x1ad4, 0x4 bytes
-                std::int32_t bonus_mana_regen; // 0x1ad8, 0x4 bytes
-                std::int32_t bonus_evasion; // 0x1adc, 0x4 bytes
-                std::int32_t bonus_magic_resist; // 0x1ae0, 0x4 bytes
-                std::int32_t bonus_lifesteal; // 0x1ae4, 0x4 bytes
+                std::int32_t bonus_all_stats; // 0x1af8, 0x4 bytes
+                std::int32_t bonus_primary_stat; // 0x1afc, 0x4 bytes
+                std::int32_t bonus_movespeed; // 0x1b00, 0x4 bytes
+                std::int32_t bonus_hp_regen; // 0x1b04, 0x4 bytes
+                std::int32_t bonus_armor; // 0x1b08, 0x4 bytes
+                std::int32_t bonus_attack_damage; // 0x1b0c, 0x4 bytes
+                std::int32_t bonus_cast_range; // 0x1b10, 0x4 bytes
+                std::int32_t bonus_spell_amp; // 0x1b14, 0x4 bytes
+                std::int32_t bonus_health; // 0x1b18, 0x4 bytes
+                std::int32_t bonus_mana; // 0x1b1c, 0x4 bytes
+                std::int32_t bonus_attack_speed; // 0x1b20, 0x4 bytes
+                std::int32_t bonus_heal_amp; // 0x1b24, 0x4 bytes
+                std::int32_t bonus_mana_regen; // 0x1b28, 0x4 bytes
+                std::int32_t bonus_evasion; // 0x1b2c, 0x4 bytes
+                std::int32_t bonus_magic_resist; // 0x1b30, 0x4 bytes
+                std::int32_t bonus_lifesteal; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Aghsfort_Minor_Stats_Upgrade) == 0x1AE8, "CDOTA_Modifier_Aghsfort_Minor_Stats_Upgrade size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Aghsfort_Minor_Stats_Upgrade) == 0x1B38, "CDOTA_Modifier_Aghsfort_Minor_Stats_Upgrade size mismatch");
         }
     }
 }

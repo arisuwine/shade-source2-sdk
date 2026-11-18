@@ -24,7 +24,8 @@ namespace shade {
                 SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTITIES = 0x10,
                 SPAWN_GROUP_BLOCK_UNTIL_LOADED = 0x40,
                 SPAWN_GROUP_LOAD_STREAMING_DATA = 0x80,
-                SPAWN_GROUP_CREATE_NEW_SCENE_WORLD = 0x100
+                SPAWN_GROUP_CREATE_NEW_SCENE_WORLD = 0x100,
+                SPAWN_GROUP_DONT_SAVE_RESTORE = 0x200
             };
         }
     }

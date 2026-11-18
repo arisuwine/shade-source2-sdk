@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Muerta_Gunslinger : public shade::sdk::client::CDOTA_Buff {
             public:
-                float double_shot_chance; // 0x1aa8, 0x4 bytes
-                float target_search_bonus_range; // 0x1aac, 0x4 bytes
-                std::int32_t bonus_damage; // 0x1ab0, 0x4 bytes
-                float dead_shot_cooldown_reduction_on_proc; // 0x1ab4, 0x4 bytes
+                float double_shot_chance; // 0x1af8, 0x4 bytes
+                float target_search_bonus_range; // 0x1afc, 0x4 bytes
+                std::int32_t bonus_damage; // 0x1b00, 0x4 bytes
+                float dead_shot_cooldown_reduction_on_proc; // 0x1b04, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Muerta_Gunslinger) == 0x1AB8, "CDOTA_Modifier_Muerta_Gunslinger size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Muerta_Gunslinger) == 0x1B08, "CDOTA_Modifier_Muerta_Gunslinger size mismatch");
         }
     }
 }

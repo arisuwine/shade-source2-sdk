@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Elder_Titan_Momentum : public shade::sdk::client::CDOTA_Buff {
             public:
-                float armor_from_movespeed; // 0x1aa8, 0x4 bytes
-                float attack_speed_from_movespeed; // 0x1aac, 0x4 bytes
+                float armor_from_movespeed; // 0x1af8, 0x4 bytes
+                float attack_speed_from_movespeed; // 0x1afc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Elder_Titan_Momentum) == 0x1AB0, "CDOTA_Modifier_Elder_Titan_Momentum size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Elder_Titan_Momentum) == 0x1B00, "CDOTA_Modifier_Elder_Titan_Momentum size mismatch");
         }
     }
 }

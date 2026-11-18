@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Rubick_Might_And_Magus : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t magic_resist_bonus; // 0x1aa8, 0x4 bytes
-                float aoe_bonus; // 0x1aac, 0x4 bytes
-                float aoe_bonus_duration; // 0x1ab0, 0x4 bytes
-                std::uint8_t pad_1ab4[0x4]; // 0x1ab4, 0x4 bytes
-                CUtlVector<shade::sdk::entity2::GameTime_t> m_vecAoEExpireTimes; // 0x1ab8, 0x18 bytes
+                std::int32_t magic_resist_bonus; // 0x1af8, 0x4 bytes
+                float aoe_bonus; // 0x1afc, 0x4 bytes
+                float aoe_bonus_duration; // 0x1b00, 0x4 bytes
+                std::uint8_t pad_1b04[0x4]; // 0x1b04, 0x4 bytes
+                CUtlVector<shade::sdk::entity2::GameTime_t> m_vecAoEExpireTimes; // 0x1b08, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Rubick_Might_And_Magus) == 0x1AD0, "CDOTA_Modifier_Rubick_Might_And_Magus size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Rubick_Might_And_Magus) == 0x1B20, "CDOTA_Modifier_Rubick_Might_And_Magus size mismatch");
         }
     }
 }

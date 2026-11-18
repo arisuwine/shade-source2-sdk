@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x78
+             * Size: 0x210
              * Alignment: 0xff
              */
             #pragma pack(push, 1)
@@ -51,26 +51,26 @@ namespace shade {
                 float m_flLastCycle; // 0x001c, 0x4 bytes
                 CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCNmClip> m_hAnimClip; // 0x0020, 0x8 bytes
                 CGlobalSymbol m_sAnimClipSlot; // 0x0028, 0x8 bytes
-                CGlobalSymbol m_sAnimClipSlotWeight; // 0x0030, 0x8 bytes
-                bool m_bHasArrived; // 0x0038, 0x1 bytes
-                bool m_bExternalGraphFinished; // 0x0039, 0x1 bytes
-                std::uint8_t pad_003a[0x2]; // 0x003a, 0x2 bytes
-                std::int32_t m_nType; // 0x003c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNext; // 0x0040, 0x4 bytes
-                bool m_bIsGesture; // 0x0044, 0x1 bytes
-                bool m_bShouldRemove; // 0x0045, 0x1 bytes
-                std::uint8_t pad_0046[0x26]; // 0x0046, 0x26 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x006c, 0x4 bytes
-                shade::sdk::client::SceneEventId_t m_nSceneEventId; // 0x0070, 0x4 bytes
-                bool m_bClientSide; // 0x0074, 0x1 bytes
-                bool m_bStarted; // 0x0075, 0x1 bytes
-                std::uint8_t pad_0076[0x2]; // 0x0076, 0x2 bytes
+                std::uint8_t pad_0030[0x1a1]; // 0x0030, 0x1a1 bytes
+                bool m_bHasArrived; // 0x01d1, 0x1 bytes
+                bool m_bExternalGraphFinished; // 0x01d2, 0x1 bytes
+                std::uint8_t pad_01d3[0x1]; // 0x01d3, 0x1 bytes
+                std::int32_t m_nType; // 0x01d4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNext; // 0x01d8, 0x4 bytes
+                bool m_bIsGesture; // 0x01dc, 0x1 bytes
+                bool m_bShouldRemove; // 0x01dd, 0x1 bytes
+                std::uint8_t pad_01de[0x26]; // 0x01de, 0x26 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x0204, 0x4 bytes
+                shade::sdk::client::SceneEventId_t m_nSceneEventId; // 0x0208, 0x4 bytes
+                bool m_bClientSide; // 0x020c, 0x1 bytes
+                bool m_bStarted; // 0x020d, 0x1 bytes
+                std::uint8_t pad_020e[0x2]; // 0x020e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSceneEventInfo) == 0x78, "CSceneEventInfo size mismatch");
+            static_assert(sizeof(CSceneEventInfo) == 0x210, "CSceneEventInfo size mismatch");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,15 +37,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Viper_Nethertoxin_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius_increase; // 0x1aa8, 0x4 bytes
-                float m_flCurrentRadius; // 0x1aac, 0x4 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vParticleList; // 0x1ab0, 0x18 bytes
+                float radius_increase; // 0x1af8, 0x4 bytes
+                float m_flCurrentRadius; // 0x1afc, 0x4 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vParticleList; // 0x1b00, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Viper_Nethertoxin_Thinker) == 0x1AC8, "CDOTA_Modifier_Viper_Nethertoxin_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Viper_Nethertoxin_Thinker) == 0x1B18, "CDOTA_Modifier_Viper_Nethertoxin_Thinker size mismatch");
         }
     }
 }

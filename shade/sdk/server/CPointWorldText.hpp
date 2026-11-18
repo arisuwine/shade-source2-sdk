@@ -24,7 +24,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xb08
+             * Size: 0xb68
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -33,30 +33,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointWorldText : public shade::sdk::server::CModelPointEntity {
             public:
-                char m_messageText[0x200]; // 0x0858, 0x200 bytes
-                char m_FontName[0x40]; // 0x0a58, 0x40 bytes
-                char m_BackgroundMaterialName[0x40]; // 0x0a98, 0x40 bytes
-                bool m_bEnabled; // 0x0ad8, 0x1 bytes
-                bool m_bFullbright; // 0x0ad9, 0x1 bytes
-                std::uint8_t pad_0ada[0x2]; // 0x0ada, 0x2 bytes
-                float m_flWorldUnitsPerPx; // 0x0adc, 0x4 bytes
-                float m_flFontSize; // 0x0ae0, 0x4 bytes
-                float m_flDepthOffset; // 0x0ae4, 0x4 bytes
-                bool m_bDrawBackground; // 0x0ae8, 0x1 bytes
-                std::uint8_t pad_0ae9[0x3]; // 0x0ae9, 0x3 bytes
-                float m_flBackgroundBorderWidth; // 0x0aec, 0x4 bytes
-                float m_flBackgroundBorderHeight; // 0x0af0, 0x4 bytes
-                float m_flBackgroundWorldToUV; // 0x0af4, 0x4 bytes
-                Color m_Color; // 0x0af8, 0x4 bytes
-                shade::sdk::client::PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x0afc, 0x4 bytes
-                shade::sdk::client::PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x0b00, 0x4 bytes
-                shade::sdk::client::PointWorldTextReorientMode_t m_nReorientMode; // 0x0b04, 0x4 bytes
+                char m_messageText[0x200]; // 0x08b8, 0x200 bytes
+                char m_FontName[0x40]; // 0x0ab8, 0x40 bytes
+                char m_BackgroundMaterialName[0x40]; // 0x0af8, 0x40 bytes
+                bool m_bEnabled; // 0x0b38, 0x1 bytes
+                bool m_bFullbright; // 0x0b39, 0x1 bytes
+                std::uint8_t pad_0b3a[0x2]; // 0x0b3a, 0x2 bytes
+                float m_flWorldUnitsPerPx; // 0x0b3c, 0x4 bytes
+                float m_flFontSize; // 0x0b40, 0x4 bytes
+                float m_flDepthOffset; // 0x0b44, 0x4 bytes
+                bool m_bDrawBackground; // 0x0b48, 0x1 bytes
+                std::uint8_t pad_0b49[0x3]; // 0x0b49, 0x3 bytes
+                float m_flBackgroundBorderWidth; // 0x0b4c, 0x4 bytes
+                float m_flBackgroundBorderHeight; // 0x0b50, 0x4 bytes
+                float m_flBackgroundWorldToUV; // 0x0b54, 0x4 bytes
+                Color m_Color; // 0x0b58, 0x4 bytes
+                shade::sdk::client::PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x0b5c, 0x4 bytes
+                shade::sdk::client::PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x0b60, 0x4 bytes
+                shade::sdk::client::PointWorldTextReorientMode_t m_nReorientMode; // 0x0b64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPointWorldText) == 0xB08, "CPointWorldText size mismatch");
+            static_assert(sizeof(CPointWorldText) == 0xB68, "CPointWorldText size mismatch");
         }
     }
 }

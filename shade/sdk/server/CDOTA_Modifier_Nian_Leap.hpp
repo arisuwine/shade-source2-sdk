@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b08
+             * Size: 0x1b58
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,31 +29,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Nian_Leap : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_flTotalTimeInAir; // 0x1aa8, 0x4 bytes
-                float m_flInitialVelocity; // 0x1aac, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1ab0, 0xc bytes
-                Vector m_vTargetHorizontalDirection; // 0x1abc, 0xc bytes
-                VectorWS m_vTargetPosition; // 0x1ac8, 0xc bytes
-                float m_flCurrentTimeHoriz; // 0x1ad4, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1ad8, 0x4 bytes
-                bool m_bInterrupted; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
-                float m_flHorizDelayTime; // 0x1ae0, 0x4 bytes
-                float m_flVertDelayTime; // 0x1ae4, 0x4 bytes
-                float m_flLeapSequenceDuration; // 0x1ae8, 0x4 bytes
-                float m_flPlaybackRate; // 0x1aec, 0x4 bytes
-                std::int32_t pounce_distance; // 0x1af0, 0x4 bytes
-                float pounce_speed; // 0x1af4, 0x4 bytes
-                float pounce_acceleration; // 0x1af8, 0x4 bytes
-                float initial_delay; // 0x1afc, 0x4 bytes
-                float landing_delay; // 0x1b00, 0x4 bytes
-                std::uint8_t pad_1b04[0x4]; // 0x1b04, 0x4 bytes
+                float m_flTotalTimeInAir; // 0x1af8, 0x4 bytes
+                float m_flInitialVelocity; // 0x1afc, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1b00, 0xc bytes
+                Vector m_vTargetHorizontalDirection; // 0x1b0c, 0xc bytes
+                VectorWS m_vTargetPosition; // 0x1b18, 0xc bytes
+                float m_flCurrentTimeHoriz; // 0x1b24, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1b28, 0x4 bytes
+                bool m_bInterrupted; // 0x1b2c, 0x1 bytes
+                std::uint8_t pad_1b2d[0x3]; // 0x1b2d, 0x3 bytes
+                float m_flHorizDelayTime; // 0x1b30, 0x4 bytes
+                float m_flVertDelayTime; // 0x1b34, 0x4 bytes
+                float m_flLeapSequenceDuration; // 0x1b38, 0x4 bytes
+                float m_flPlaybackRate; // 0x1b3c, 0x4 bytes
+                std::int32_t pounce_distance; // 0x1b40, 0x4 bytes
+                float pounce_speed; // 0x1b44, 0x4 bytes
+                float pounce_acceleration; // 0x1b48, 0x4 bytes
+                float initial_delay; // 0x1b4c, 0x4 bytes
+                float landing_delay; // 0x1b50, 0x4 bytes
+                std::uint8_t pad_1b54[0x4]; // 0x1b54, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Nian_Leap) == 0x1B08, "CDOTA_Modifier_Nian_Leap size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Nian_Leap) == 0x1B58, "CDOTA_Modifier_Nian_Leap size mismatch");
         }
     }
 }

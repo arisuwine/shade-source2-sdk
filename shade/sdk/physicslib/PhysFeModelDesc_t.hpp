@@ -35,6 +35,7 @@ namespace shade {
             struct FeFollowNode_t;
             struct FeHingeLimit_t;
             struct FeKelagerBend2_t;
+            struct FeModelDeformer_t;
             struct FeModelSelfCollisionLayer_t;
             struct FeMorphLayerDepr_t;
             struct FeNodeBase_t;
@@ -72,7 +73,7 @@ namespace shade {
     namespace sdk {
         namespace physicslib {
             /* Class Parameters
-             * Size: 0x758
+             * Size: 0x770
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -175,31 +176,32 @@ namespace shade {
                 CUtlVector<std::int16_t> m_SkelParents; // 0x06c8, 0x18 bytes
                 CUtlVector<shade::sdk::physicslib::FeNodeWindBase_t> m_DynNodeWindBases; // 0x06e0, 0x18 bytes
                 CUtlVector<shade::sdk::physicslib::FeModelSelfCollisionLayer_t> m_SelfCollisionLayers; // 0x06f8, 0x18 bytes
-                float m_flInternalPressure; // 0x0710, 0x4 bytes
-                float m_flDefaultTimeDilation; // 0x0714, 0x4 bytes
-                float m_flWindage; // 0x0718, 0x4 bytes
-                float m_flWindDrag; // 0x071c, 0x4 bytes
-                float m_flDefaultSurfaceStretch; // 0x0720, 0x4 bytes
-                float m_flDefaultThreadStretch; // 0x0724, 0x4 bytes
-                float m_flDefaultGravityScale; // 0x0728, 0x4 bytes
-                float m_flDefaultVelAirDrag; // 0x072c, 0x4 bytes
-                float m_flDefaultExpAirDrag; // 0x0730, 0x4 bytes
-                float m_flDefaultVelQuadAirDrag; // 0x0734, 0x4 bytes
-                float m_flDefaultExpQuadAirDrag; // 0x0738, 0x4 bytes
-                float m_flRodVelocitySmoothRate; // 0x073c, 0x4 bytes
-                float m_flQuadVelocitySmoothRate; // 0x0740, 0x4 bytes
-                float m_flAddWorldCollisionRadius; // 0x0744, 0x4 bytes
-                float m_flDefaultVolumetricSolveAmount; // 0x0748, 0x4 bytes
-                float m_flMotionSmoothCDT; // 0x074c, 0x4 bytes
-                float m_flLocalDrag1; // 0x0750, 0x4 bytes
-                std::uint16_t m_nRodVelocitySmoothIterations; // 0x0754, 0x2 bytes
-                std::uint16_t m_nQuadVelocitySmoothIterations; // 0x0756, 0x2 bytes
+                CUtlVector<shade::sdk::physicslib::FeModelDeformer_t> m_Deformers; // 0x0710, 0x18 bytes
+                float m_flInternalPressure; // 0x0728, 0x4 bytes
+                float m_flDefaultTimeDilation; // 0x072c, 0x4 bytes
+                float m_flWindage; // 0x0730, 0x4 bytes
+                float m_flWindDrag; // 0x0734, 0x4 bytes
+                float m_flDefaultSurfaceStretch; // 0x0738, 0x4 bytes
+                float m_flDefaultThreadStretch; // 0x073c, 0x4 bytes
+                float m_flDefaultGravityScale; // 0x0740, 0x4 bytes
+                float m_flDefaultVelAirDrag; // 0x0744, 0x4 bytes
+                float m_flDefaultExpAirDrag; // 0x0748, 0x4 bytes
+                float m_flDefaultVelQuadAirDrag; // 0x074c, 0x4 bytes
+                float m_flDefaultExpQuadAirDrag; // 0x0750, 0x4 bytes
+                float m_flRodVelocitySmoothRate; // 0x0754, 0x4 bytes
+                float m_flQuadVelocitySmoothRate; // 0x0758, 0x4 bytes
+                float m_flAddWorldCollisionRadius; // 0x075c, 0x4 bytes
+                float m_flDefaultVolumetricSolveAmount; // 0x0760, 0x4 bytes
+                float m_flMotionSmoothCDT; // 0x0764, 0x4 bytes
+                float m_flLocalDrag1; // 0x0768, 0x4 bytes
+                std::uint16_t m_nRodVelocitySmoothIterations; // 0x076c, 0x2 bytes
+                std::uint16_t m_nQuadVelocitySmoothIterations; // 0x076e, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PhysFeModelDesc_t) == 0x758, "PhysFeModelDesc_t size mismatch");
+            static_assert(sizeof(PhysFeModelDesc_t) == 0x770, "PhysFeModelDesc_t size mismatch");
         }
     }
 }

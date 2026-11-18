@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class AnimLoopMode_t : std::int32_t {
+            enum class AnimLoopMode_t : std::uint32_t {
                 ANIM_LOOP_MODE_INVALID = -0x1,
                 ANIM_LOOP_MODE_NOT_LOOPING = 0x0,
                 ANIM_LOOP_MODE_LOOPING = 0x1,

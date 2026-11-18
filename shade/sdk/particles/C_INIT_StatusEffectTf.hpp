@@ -49,9 +49,10 @@ namespace shade {
                 float m_flSFXSDetailScrollY; // 0x0228, 0x4 bytes
                 float m_flSFXSDetailScrollZ; // 0x022c, 0x4 bytes
                 bool m_bAnimatedDetail; // 0x0230, 0x1 bytes
-                std::uint8_t pad_0231[0x3]; // 0x0231, 0x3 bytes
-                float m_flSFXDetailAnimationTimePerFrame; // 0x0234, 0x4 bytes
-                float m_flSFXDetailAnimationTimeOffset; // 0x0238, 0x4 bytes
+                bool m_bAnimatedNormal; // 0x0231, 0x1 bytes
+                std::uint8_t pad_0232[0x2]; // 0x0232, 0x2 bytes
+                float m_flSFXAnimationTimePerFrame; // 0x0234, 0x4 bytes
+                float m_flSFXAnimationTimeOffset; // 0x0238, 0x4 bytes
                 float m_flSFXSUseModelUVs; // 0x023c, 0x4 bytes
                 float m_flSFXEnvMapAmount; // 0x0240, 0x4 bytes
                 std::uint8_t pad_0244[0x4]; // 0x0244, 0x4 bytes

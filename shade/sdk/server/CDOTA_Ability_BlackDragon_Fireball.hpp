@@ -15,13 +15,14 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/entity2/GameTime_t.hpp"
 #include "shade/sdk/server/CDOTABaseAbility.hpp"
 
 namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x580
+             * Size: 0x588
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,12 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_BlackDragon_Fireball : public shade::sdk::server::CDOTABaseAbility {
             public:
+                shade::sdk::entity2::GameTime_t flCooldown; // 0x0580, 0x4 bytes
+                std::uint8_t pad_0584[0x4]; // 0x0584, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_BlackDragon_Fireball) == 0x580, "CDOTA_Ability_BlackDragon_Fireball size mismatch");
+            static_assert(sizeof(CDOTA_Ability_BlackDragon_Fireball) == 0x588, "CDOTA_Ability_BlackDragon_Fireball size mismatch");
         }
     }
 }

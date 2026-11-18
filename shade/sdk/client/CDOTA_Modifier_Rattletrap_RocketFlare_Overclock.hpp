@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Rattletrap_RocketFlare_Overclock : public shade::sdk::client::CDOTA_Buff {
             public:
-                float rocket_flare_interval; // 0x1aa8, 0x4 bytes
-                std::int32_t rocket_flare_offset_pct; // 0x1aac, 0x4 bytes
-                std::int32_t rocket_flare_rockets; // 0x1ab0, 0x4 bytes
-                std::int32_t m_nRocketsFired; // 0x1ab4, 0x4 bytes
-                float radius; // 0x1ab8, 0x4 bytes
-                VectorWS m_vOriginalTarget; // 0x1abc, 0xc bytes
+                float rocket_flare_interval; // 0x1af8, 0x4 bytes
+                std::int32_t rocket_flare_offset_pct; // 0x1afc, 0x4 bytes
+                std::int32_t rocket_flare_rockets; // 0x1b00, 0x4 bytes
+                std::int32_t m_nRocketsFired; // 0x1b04, 0x4 bytes
+                float radius; // 0x1b08, 0x4 bytes
+                VectorWS m_vOriginalTarget; // 0x1b0c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Rattletrap_RocketFlare_Overclock) == 0x1AC8, "CDOTA_Modifier_Rattletrap_RocketFlare_Overclock size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Rattletrap_RocketFlare_Overclock) == 0x1B18, "CDOTA_Modifier_Rattletrap_RocketFlare_Overclock size mismatch");
         }
     }
 }

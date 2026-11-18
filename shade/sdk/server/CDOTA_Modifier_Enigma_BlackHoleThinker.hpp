@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Enigma_BlackHoleThinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float radius; // 0x1aa8, 0x4 bytes
-                bool m_bFoundFive; // 0x1aac, 0x1 bytes
-                bool m_bGrantedKillEater; // 0x1aad, 0x1 bytes
-                std::uint8_t pad_1aae[0x1a]; // 0x1aae, 0x1a bytes
+                float radius; // 0x1af8, 0x4 bytes
+                bool m_bFoundFive; // 0x1afc, 0x1 bytes
+                bool m_bGrantedKillEater; // 0x1afd, 0x1 bytes
+                std::uint8_t pad_1afe[0x1a]; // 0x1afe, 0x1a bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Enigma_BlackHoleThinker) == 0x1AC8, "CDOTA_Modifier_Enigma_BlackHoleThinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Enigma_BlackHoleThinker) == 0x1B18, "CDOTA_Modifier_Enigma_BlackHoleThinker size mismatch");
         }
     }
 }

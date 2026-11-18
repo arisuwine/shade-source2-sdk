@@ -37,7 +37,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e40
+             * Size: 0x1e50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -71,15 +71,17 @@ namespace shade {
                 Vector2D m_vPossibleWardPlacement[0x64]; // 0x1908, 0x320 bytes
                 float m_vPossibleWardRadii[0x64]; // 0x1c28, 0x190 bytes
                 C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::DOTATeleportInfo_t> m_vecTrackedTeleports; // 0x1db8, 0x68 bytes
-                shade::sdk::client::CRoshanPhaseInfo m_roshanSpawnInfo; // 0x1e20, 0x18 bytes
-                std::int32_t m_nNextPowerRuneType; // 0x1e38, 0x4 bytes
-                std::int32_t m_nNextPowerRuneSpawnIndex; // 0x1e3c, 0x4 bytes
+                shade::sdk::client::CRoshanPhaseInfo m_roshanSpawnInfo; // 0x1e20, 0x20 bytes
+                std::int32_t m_nNextPowerRuneType; // 0x1e40, 0x4 bytes
+                std::int32_t m_nNextPowerRuneSpawnIndex; // 0x1e44, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hNextPowerRuneSpawner; // 0x1e48, 0x4 bytes
+                std::uint8_t pad_1e4c[0x4]; // 0x1e4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_DataNonSpectator) == 0x1E40, "C_DOTA_DataNonSpectator size mismatch");
+            static_assert(sizeof(C_DOTA_DataNonSpectator) == 0x1E50, "C_DOTA_DataNonSpectator size mismatch");
         }
     }
 }

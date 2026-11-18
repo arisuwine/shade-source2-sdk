@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particleslib {
-            enum class ParticleFloatRoundType_t : std::int32_t {
+            enum class ParticleFloatRoundType_t : std::uint32_t {
                 PF_ROUND_TYPE_INVALID = -0x1,
                 PF_ROUND_TYPE_NEAREST = 0x0,
                 PF_ROUND_TYPE_FLOOR = 0x1,

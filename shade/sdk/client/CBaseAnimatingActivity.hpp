@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xbb0
+             * Size: 0xc10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CBaseAnimatingActivity : public shade::sdk::client::C_BaseModelEntity {
             public:
-                bool m_bShouldAnimateDuringGameplayPause; // 0x0b78, 0x1 bytes
-                bool m_bInitiallyPopulateInterpHistory; // 0x0b79, 0x1 bytes
-                bool m_bAnimationUpdateScheduled; // 0x0b7a, 0x1 bytes
-                std::uint8_t pad_0b7b[0x5]; // 0x0b7b, 0x5 bytes
-                CUtlVector<CUtlString> m_vecSuppressedAnimEventTags; // 0x0b80, 0x18 bytes
-                bool m_bHasAnimatedMaterialAttributes; // 0x0b98, 0x1 bytes
-                std::uint8_t pad_0b99[0xf]; // 0x0b99, 0xf bytes
-                bool m_bSuppressAnimEventSounds; // 0x0ba8, 0x1 bytes
-                std::uint8_t pad_0ba9[0x7]; // 0x0ba9, 0x7 bytes
+                bool m_bShouldAnimateDuringGameplayPause; // 0x0bd8, 0x1 bytes
+                bool m_bInitiallyPopulateInterpHistory; // 0x0bd9, 0x1 bytes
+                bool m_bAnimationUpdateScheduled; // 0x0bda, 0x1 bytes
+                std::uint8_t pad_0bdb[0x5]; // 0x0bdb, 0x5 bytes
+                CUtlVector<CUtlString> m_vecSuppressedAnimEventTags; // 0x0be0, 0x18 bytes
+                bool m_bHasAnimatedMaterialAttributes; // 0x0bf8, 0x1 bytes
+                std::uint8_t pad_0bf9[0xf]; // 0x0bf9, 0xf bytes
+                bool m_bSuppressAnimEventSounds; // 0x0c08, 0x1 bytes
+                std::uint8_t pad_0c09[0x7]; // 0x0c09, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBaseAnimatingActivity) == 0xBB0, "CBaseAnimatingActivity size mismatch");
+            static_assert(sizeof(CBaseAnimatingActivity) == 0xC10, "CBaseAnimatingActivity size mismatch");
         }
     }
 }

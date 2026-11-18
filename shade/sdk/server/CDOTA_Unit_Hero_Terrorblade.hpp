@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2038
+             * Size: 0x20c8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_Terrorblade : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXDeath; // 0x2020, 0x4 bytes
-                std::uint8_t pad_2024[0x4]; // 0x2024, 0x4 bytes
-                CUtlString m_szResponseCriteria; // 0x2028, 0x8 bytes
-                std::uint32_t m_nArcanaColor; // 0x2030, 0x4 bytes
-                std::uint8_t pad_2034[0x4]; // 0x2034, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXDeath; // 0x20b0, 0x4 bytes
+                std::uint8_t pad_20b4[0x4]; // 0x20b4, 0x4 bytes
+                CUtlString m_szResponseCriteria; // 0x20b8, 0x8 bytes
+                std::uint32_t m_nArcanaColor; // 0x20c0, 0x4 bytes
+                std::uint8_t pad_20c4[0x4]; // 0x20c4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_Terrorblade) == 0x2038, "CDOTA_Unit_Hero_Terrorblade size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_Terrorblade) == 0x20C8, "CDOTA_Unit_Hero_Terrorblade size mismatch");
         }
     }
 }

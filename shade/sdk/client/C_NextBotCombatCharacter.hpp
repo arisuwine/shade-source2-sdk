@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc78
+             * Size: 0xcd8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_NextBotCombatCharacter : public shade::sdk::client::C_BaseCombatCharacter {
             public:
-                shade::sdk::client::CountdownTimer m_shadowTimer; // 0x0c50, 0x18 bytes
-                bool m_bInFrustum; // 0x0c68, 0x1 bytes
-                std::uint8_t pad_0c69[0x3]; // 0x0c69, 0x3 bytes
-                std::int32_t m_nInFrustumFrame; // 0x0c6c, 0x4 bytes
-                float m_flFrustumDistanceSqr; // 0x0c70, 0x4 bytes
-                std::uint8_t m_nLod; // 0x0c74, 0x1 bytes
-                std::uint8_t pad_0c75[0x3]; // 0x0c75, 0x3 bytes
+                shade::sdk::client::CountdownTimer m_shadowTimer; // 0x0cb0, 0x18 bytes
+                bool m_bInFrustum; // 0x0cc8, 0x1 bytes
+                std::uint8_t pad_0cc9[0x3]; // 0x0cc9, 0x3 bytes
+                std::int32_t m_nInFrustumFrame; // 0x0ccc, 0x4 bytes
+                float m_flFrustumDistanceSqr; // 0x0cd0, 0x4 bytes
+                std::uint8_t m_nLod; // 0x0cd4, 0x1 bytes
+                std::uint8_t pad_0cd5[0x3]; // 0x0cd5, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_NextBotCombatCharacter) == 0xC78, "C_NextBotCombatCharacter size mismatch");
+            static_assert(sizeof(C_NextBotCombatCharacter) == 0xCD8, "C_NextBotCombatCharacter size mismatch");
         }
     }
 }

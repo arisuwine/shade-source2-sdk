@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,24 +39,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Watch_Tower : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t m_iCapturingTeam; // 0x1aa8, 0x4 bytes
-                float m_flCaptureProgress; // 0x1aac, 0x4 bytes
-                float m_flBonusTime; // 0x1ab0, 0x4 bytes
-                bool m_bInitialSetupDone; // 0x1ab4, 0x1 bytes
-                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
-                std::int32_t m_iOriginalTeam; // 0x1ab8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hPreviousHero; // 0x1abc, 0x4 bytes
-                CUtlVector<shade::sdk::client::PlayerID_t> m_vecLastCreditedPlayerIDs; // 0x1ac0, 0x18 bytes
-                float m_flAccumulatedCaptureTime; // 0x1ad8, 0x4 bytes
-                std::int32_t m_iBonusCount; // 0x1adc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFxOutpostAmbient; // 0x1ae0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFxOutpostInitialAmbient; // 0x1ae4, 0x4 bytes
+                std::int32_t m_iCapturingTeam; // 0x1af8, 0x4 bytes
+                float m_flCaptureProgress; // 0x1afc, 0x4 bytes
+                float m_flBonusTime; // 0x1b00, 0x4 bytes
+                bool m_bInitialSetupDone; // 0x1b04, 0x1 bytes
+                std::uint8_t pad_1b05[0x3]; // 0x1b05, 0x3 bytes
+                std::int32_t m_iOriginalTeam; // 0x1b08, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hPreviousHero; // 0x1b0c, 0x4 bytes
+                CUtlVector<shade::sdk::client::PlayerID_t> m_vecLastCreditedPlayerIDs; // 0x1b10, 0x18 bytes
+                float m_flAccumulatedCaptureTime; // 0x1b28, 0x4 bytes
+                std::int32_t m_iBonusCount; // 0x1b2c, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFxOutpostAmbient; // 0x1b30, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFxOutpostInitialAmbient; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Watch_Tower) == 0x1AE8, "CDOTA_Modifier_Watch_Tower size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Watch_Tower) == 0x1B38, "CDOTA_Modifier_Watch_Tower size mismatch");
         }
     }
 }

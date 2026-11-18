@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDynamicLight : public shade::sdk::server::CBaseModelEntity {
             public:
-                std::uint8_t m_ActualFlags; // 0x0858, 0x1 bytes
-                std::uint8_t m_Flags; // 0x0859, 0x1 bytes
-                std::uint8_t m_LightStyle; // 0x085a, 0x1 bytes
-                bool m_On; // 0x085b, 0x1 bytes
-                float m_Radius; // 0x085c, 0x4 bytes
-                std::int32_t m_Exponent; // 0x0860, 0x4 bytes
-                float m_InnerAngle; // 0x0864, 0x4 bytes
-                float m_OuterAngle; // 0x0868, 0x4 bytes
-                float m_SpotRadius; // 0x086c, 0x4 bytes
+                std::uint8_t m_ActualFlags; // 0x08b8, 0x1 bytes
+                std::uint8_t m_Flags; // 0x08b9, 0x1 bytes
+                std::uint8_t m_LightStyle; // 0x08ba, 0x1 bytes
+                bool m_On; // 0x08bb, 0x1 bytes
+                float m_Radius; // 0x08bc, 0x4 bytes
+                std::int32_t m_Exponent; // 0x08c0, 0x4 bytes
+                float m_InnerAngle; // 0x08c4, 0x4 bytes
+                float m_OuterAngle; // 0x08c8, 0x4 bytes
+                float m_SpotRadius; // 0x08cc, 0x4 bytes
             };
             #pragma pack(pop)
 
@@ -48,7 +48,7 @@ namespace shade {
              * std::int32_t spawnflags; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CDynamicLight) == 0x870, "CDynamicLight size mismatch");
+            static_assert(sizeof(CDynamicLight) == 0x8D0, "CDynamicLight size mismatch");
         }
     }
 }

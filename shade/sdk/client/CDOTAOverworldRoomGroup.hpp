@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x50
+             * Size: 0x68
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -41,18 +41,22 @@ namespace shade {
                 CUtlString m_strLocName; // 0x0008, 0x8 bytes
                 CUtlString m_strEntityParentName; // 0x0010, 0x8 bytes
                 Vector2D m_vSize; // 0x0018, 0x8 bytes
-                CUtlVector<shade::sdk::client::OverworldRoomID_t> m_vecRooms; // 0x0020, 0x18 bytes
-                float m_flTrainCarViewDistance; // 0x0038, 0x4 bytes
-                float m_flTrainCarZoomedInViewDistance; // 0x003c, 0x4 bytes
-                Vector2D m_flTrainCarViewOffset; // 0x0040, 0x8 bytes
-                std::int32_t m_nNavPosX; // 0x0048, 0x4 bytes
-                std::int32_t m_nNavPosY; // 0x004c, 0x4 bytes
+                Vector2D m_vHoverRegionPos; // 0x0020, 0x8 bytes
+                Vector2D m_vHoverRegionSize; // 0x0028, 0x8 bytes
+                CUtlVector<shade::sdk::client::OverworldRoomID_t> m_vecRooms; // 0x0030, 0x18 bytes
+                float m_flTrainCarViewDistance; // 0x0048, 0x4 bytes
+                float m_flTrainCarZoomedInViewDistance; // 0x004c, 0x4 bytes
+                float m_flVisualNovelOpenDistanceModifier; // 0x0050, 0x4 bytes
+                Vector2D m_flTrainCarViewOffset; // 0x0054, 0x8 bytes
+                std::int32_t m_nNavPosX; // 0x005c, 0x4 bytes
+                std::int32_t m_nNavPosY; // 0x0060, 0x4 bytes
+                std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTAOverworldRoomGroup) == 0x50, "CDOTAOverworldRoomGroup size mismatch");
+            static_assert(sizeof(CDOTAOverworldRoomGroup) == 0x68, "CDOTAOverworldRoomGroup size mismatch");
         }
     }
 }

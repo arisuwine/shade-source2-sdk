@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x18
+             * Size: 0x1c
              * Alignment: 0xff
              * Has Trivial Constructor
              * Has Trivial Destructor
@@ -30,12 +30,13 @@ namespace shade {
                 float m_flRadius; // 0x000c, 0x4 bytes
                 float m_flDistToNext; // 0x0010, 0x4 bytes
                 std::int32_t m_nMoveSpeedType; // 0x0014, 0x4 bytes
+                std::int32_t m_nNPCType; // 0x0018, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(DotaModifierPathNode_t) == 0x18, "DotaModifierPathNode_t size mismatch");
+            static_assert(sizeof(DotaModifierPathNode_t) == 0x1C, "DotaModifierPathNode_t size mismatch");
         }
     }
 }

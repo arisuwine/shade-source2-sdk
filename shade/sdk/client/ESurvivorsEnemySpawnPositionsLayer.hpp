@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsEnemySpawnPositionsLayer : std::int32_t {
+            enum class ESurvivorsEnemySpawnPositionsLayer : std::uint32_t {
                 INVALID = -0x1,
                 ENEMY_MAIN = 0x1,
                 DESTRUCTIBLE_MAIN = 0x2,

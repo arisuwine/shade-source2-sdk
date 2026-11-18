@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19a8
+             * Size: 0x1a38
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Tidehunter_Anchor : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1998, 0x4 bytes
-                VectorWS m_vProjectilePosition; // 0x199c, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1a28, 0x4 bytes
+                VectorWS m_vProjectilePosition; // 0x1a2c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Tidehunter_Anchor) == 0x19A8, "CDOTA_Unit_Tidehunter_Anchor size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Tidehunter_Anchor) == 0x1A38, "CDOTA_Unit_Tidehunter_Anchor size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2028
+             * Size: 0x20b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_Skywrath_Mage : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                bool m_bArcanaEquipped; // 0x2020, 0x1 bytes
-                std::uint8_t pad_2021[0x7]; // 0x2021, 0x7 bytes
+                bool m_bArcanaEquipped; // 0x20b0, 0x1 bytes
+                std::uint8_t pad_20b1[0x7]; // 0x20b1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_Skywrath_Mage) == 0x2028, "CDOTA_Unit_Hero_Skywrath_Mage size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_Skywrath_Mage) == 0x20B8, "CDOTA_Unit_Hero_Skywrath_Mage size mismatch");
         }
     }
 }

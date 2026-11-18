@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,21 +37,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_AghsFort_ShadowWaveEffectPotion : public shade::sdk::client::CDOTA_Buff_Item {
             public:
-                std::int32_t m_iCurJumpCount; // 0x1aa8, 0x4 bytes
-                VectorWS m_vCurTargetLoc; // 0x1aac, 0xc bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitEntities; // 0x1ab8, 0x18 bytes
-                float m_fProcChance; // 0x1ad0, 0x4 bytes
-                std::int32_t m_nCastRange; // 0x1ad4, 0x4 bytes
-                std::int32_t m_nBounceRadius; // 0x1ad8, 0x4 bytes
-                std::int32_t m_nDamageRadius; // 0x1adc, 0x4 bytes
-                std::int32_t m_nDamage; // 0x1ae0, 0x4 bytes
-                std::int32_t m_nMaxTargets; // 0x1ae4, 0x4 bytes
+                std::int32_t m_iCurJumpCount; // 0x1af8, 0x4 bytes
+                VectorWS m_vCurTargetLoc; // 0x1afc, 0xc bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hHitEntities; // 0x1b08, 0x18 bytes
+                float m_fProcChance; // 0x1b20, 0x4 bytes
+                std::int32_t m_nCastRange; // 0x1b24, 0x4 bytes
+                std::int32_t m_nBounceRadius; // 0x1b28, 0x4 bytes
+                std::int32_t m_nDamageRadius; // 0x1b2c, 0x4 bytes
+                std::int32_t m_nDamage; // 0x1b30, 0x4 bytes
+                std::int32_t m_nMaxTargets; // 0x1b34, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_AghsFort_ShadowWaveEffectPotion) == 0x1AE8, "CDOTA_Modifier_AghsFort_ShadowWaveEffectPotion size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_AghsFort_ShadowWaveEffectPotion) == 0x1B38, "CDOTA_Modifier_AghsFort_ShadowWaveEffectPotion size mismatch");
         }
     }
 }

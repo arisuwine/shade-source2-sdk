@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x68
+             * Size: 0x60
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -27,13 +27,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTABehavior_NPCControllerGlue {
             public:
-                std::uint8_t pad_0000[0x68]; // 0x0000, 0x68 bytes
+                std::uint8_t pad_0000[0x60]; // 0x0000, 0x60 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTABehavior_NPCControllerGlue) == 0x68, "CDOTABehavior_NPCControllerGlue size mismatch");
+            static_assert(sizeof(CDOTABehavior_NPCControllerGlue) == 0x60, "CDOTABehavior_NPCControllerGlue size mismatch");
         }
     }
 }

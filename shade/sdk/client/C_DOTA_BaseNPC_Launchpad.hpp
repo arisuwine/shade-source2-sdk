@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b28
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Launchpad) == 0x1B28, "C_DOTA_BaseNPC_Launchpad size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Launchpad) == 0x1BB0, "C_DOTA_BaseNPC_Launchpad size mismatch");
         }
     }
 }

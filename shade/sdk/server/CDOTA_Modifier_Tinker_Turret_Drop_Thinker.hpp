@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b58
+             * Size: 0x1ba8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,43 +38,43 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Tinker_Turret_Drop_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float missile_damage; // 0x1aa8, 0x4 bytes
-                float radius; // 0x1aac, 0x4 bytes
-                float turret_placement_radius; // 0x1ab0, 0x4 bytes
-                float delay; // 0x1ab4, 0x4 bytes
-                float drop_knockback_distance; // 0x1ab8, 0x4 bytes
-                float drop_knockback_distance_tinker; // 0x1abc, 0x4 bytes
-                float drop_knockback_duration; // 0x1ac0, 0x4 bytes
-                float drop_knockback_duration_tinker; // 0x1ac4, 0x4 bytes
-                float slow_duration; // 0x1ac8, 0x4 bytes
-                float missile_target_range; // 0x1acc, 0x4 bytes
-                float activation_time; // 0x1ad0, 0x4 bytes
-                float turret_duration; // 0x1ad4, 0x4 bytes
-                std::int32_t turrets_per_drop; // 0x1ad8, 0x4 bytes
-                std::int32_t extra_turrets_per_drop; // 0x1adc, 0x4 bytes
-                float drop_damage; // 0x1ae0, 0x4 bytes
-                float pre_delay; // 0x1ae4, 0x4 bytes
-                bool m_bAttachToRocket1; // 0x1ae8, 0x1 bytes
-                std::uint8_t pad_1ae9[0x7]; // 0x1ae9, 0x7 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitHeroes; // 0x1af0, 0x18 bytes
-                bool m_bHitInvisibleHeroes; // 0x1b08, 0x1 bytes
-                std::uint8_t pad_1b09[0x3]; // 0x1b09, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nIndicatorParticle; // 0x1b0c, 0x4 bytes
-                bool m_bWaitingForPreDelay; // 0x1b10, 0x1 bytes
-                bool m_bTurretsSpawned; // 0x1b11, 0x1 bytes
-                std::uint8_t pad_1b12[0x6]; // 0x1b12, 0x6 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTurrets; // 0x1b18, 0x18 bytes
-                CUtlVector<float> m_vecTurretActivationTimes; // 0x1b30, 0x18 bytes
-                float m_flTotalTurretLifeTime; // 0x1b48, 0x4 bytes
-                float m_flTurretSpawnTime; // 0x1b4c, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentTarget; // 0x1b50, 0x4 bytes
-                std::uint8_t pad_1b54[0x4]; // 0x1b54, 0x4 bytes
+                float missile_damage; // 0x1af8, 0x4 bytes
+                float radius; // 0x1afc, 0x4 bytes
+                float turret_placement_radius; // 0x1b00, 0x4 bytes
+                float delay; // 0x1b04, 0x4 bytes
+                float drop_knockback_distance; // 0x1b08, 0x4 bytes
+                float drop_knockback_distance_tinker; // 0x1b0c, 0x4 bytes
+                float drop_knockback_duration; // 0x1b10, 0x4 bytes
+                float drop_knockback_duration_tinker; // 0x1b14, 0x4 bytes
+                float slow_duration; // 0x1b18, 0x4 bytes
+                float missile_target_range; // 0x1b1c, 0x4 bytes
+                float activation_time; // 0x1b20, 0x4 bytes
+                float turret_duration; // 0x1b24, 0x4 bytes
+                std::int32_t turrets_per_drop; // 0x1b28, 0x4 bytes
+                std::int32_t extra_turrets_per_drop; // 0x1b2c, 0x4 bytes
+                float drop_damage; // 0x1b30, 0x4 bytes
+                float pre_delay; // 0x1b34, 0x4 bytes
+                bool m_bAttachToRocket1; // 0x1b38, 0x1 bytes
+                std::uint8_t pad_1b39[0x7]; // 0x1b39, 0x7 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecHitHeroes; // 0x1b40, 0x18 bytes
+                bool m_bHitInvisibleHeroes; // 0x1b58, 0x1 bytes
+                std::uint8_t pad_1b59[0x3]; // 0x1b59, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nIndicatorParticle; // 0x1b5c, 0x4 bytes
+                bool m_bWaitingForPreDelay; // 0x1b60, 0x1 bytes
+                bool m_bTurretsSpawned; // 0x1b61, 0x1 bytes
+                std::uint8_t pad_1b62[0x6]; // 0x1b62, 0x6 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecTurrets; // 0x1b68, 0x18 bytes
+                CUtlVector<float> m_vecTurretActivationTimes; // 0x1b80, 0x18 bytes
+                float m_flTotalTurretLifeTime; // 0x1b98, 0x4 bytes
+                float m_flTurretSpawnTime; // 0x1b9c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCurrentTarget; // 0x1ba0, 0x4 bytes
+                std::uint8_t pad_1ba4[0x4]; // 0x1ba4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Tinker_Turret_Drop_Thinker) == 0x1B58, "CDOTA_Modifier_Tinker_Turret_Drop_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Tinker_Turret_Drop_Thinker) == 0x1BA8, "CDOTA_Modifier_Tinker_Turret_Drop_Thinker size mismatch");
         }
     }
 }

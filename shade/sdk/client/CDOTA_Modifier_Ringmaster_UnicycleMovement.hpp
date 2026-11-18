@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,26 +38,26 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Ringmaster_UnicycleMovement : public shade::sdk::client::CDOTA_Buff {
             public:
-                float max_speed; // 0x1aa8, 0x4 bytes
-                float acceleration; // 0x1aac, 0x4 bytes
-                float turn_rate_min; // 0x1ab0, 0x4 bytes
-                float turn_rate_max; // 0x1ab4, 0x4 bytes
-                float impact_radius; // 0x1ab8, 0x4 bytes
-                float tree_impact_speed_divisor; // 0x1abc, 0x4 bytes
-                float knockback_distance; // 0x1ac0, 0x4 bytes
-                float damage_threshold; // 0x1ac4, 0x4 bytes
-                float damage_grace_period; // 0x1ac8, 0x4 bytes
-                float m_flCurrentSpeed; // 0x1acc, 0x4 bytes
-                float m_bCrashScheduled; // 0x1ad0, 0x4 bytes
-                float m_flDesiredYaw; // 0x1ad4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nMaxSpeedFXIndex; // 0x1ad8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hUnicycle; // 0x1adc, 0x4 bytes
+                float max_speed; // 0x1af8, 0x4 bytes
+                float acceleration; // 0x1afc, 0x4 bytes
+                float turn_rate_min; // 0x1b00, 0x4 bytes
+                float turn_rate_max; // 0x1b04, 0x4 bytes
+                float impact_radius; // 0x1b08, 0x4 bytes
+                float tree_impact_speed_divisor; // 0x1b0c, 0x4 bytes
+                float knockback_distance; // 0x1b10, 0x4 bytes
+                float damage_threshold; // 0x1b14, 0x4 bytes
+                float damage_grace_period; // 0x1b18, 0x4 bytes
+                float m_flCurrentSpeed; // 0x1b1c, 0x4 bytes
+                float m_bCrashScheduled; // 0x1b20, 0x4 bytes
+                float m_flDesiredYaw; // 0x1b24, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nMaxSpeedFXIndex; // 0x1b28, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hUnicycle; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Ringmaster_UnicycleMovement) == 0x1AE0, "CDOTA_Modifier_Ringmaster_UnicycleMovement size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Ringmaster_UnicycleMovement) == 0x1B30, "CDOTA_Modifier_Ringmaster_UnicycleMovement size mismatch");
         }
     }
 }

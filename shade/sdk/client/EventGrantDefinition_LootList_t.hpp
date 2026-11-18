@@ -33,9 +33,8 @@ namespace shade {
                 CUtlString m_strLootList; // 0x0008, 0x8 bytes
                 shade::sdk::client::eEconItemOrigin m_eOrigin; // 0x0010, 0x4 bytes
                 shade::sdk::client::unacknowledged_item_inventory_positions_t m_eAckPos; // 0x0014, 0x4 bytes
-                std::uint32_t m_unQuantity; // 0x0018, 0x4 bytes
-                bool m_bDisableTrade; // 0x001c, 0x1 bytes
-                std::uint8_t pad_001d[0x3]; // 0x001d, 0x3 bytes
+                bool m_bDisableTrade; // 0x0018, 0x1 bytes
+                std::uint8_t pad_0019[0x7]; // 0x0019, 0x7 bytes
                 CUtlString m_strRewardName; // 0x0020, 0x8 bytes
                 CUtlString m_strRewardDescription; // 0x0028, 0x8 bytes
                 CUtlString m_strRewardFlavor; // 0x0030, 0x8 bytes

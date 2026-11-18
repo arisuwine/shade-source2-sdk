@@ -17,6 +17,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             enum class EntityEffects_t : std::uint16_t {
+                EF_USE_INFINITE_AXIS_FOR_DISTANCE_COMPUTATION = 0x2,
                 DEPRICATED_EF_NOINTERP = 0x8,
                 EF_NOSHADOW = 0x10,
                 EF_NODRAW = 0x20,

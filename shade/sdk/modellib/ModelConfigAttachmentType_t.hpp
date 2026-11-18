@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace modellib {
-            enum class ModelConfigAttachmentType_t : std::int32_t {
+            enum class ModelConfigAttachmentType_t : std::uint32_t {
                 MODEL_CONFIG_ATTACHMENT_INVALID = -0x1,
                 MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
                 MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,

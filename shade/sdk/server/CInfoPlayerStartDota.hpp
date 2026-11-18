@@ -32,7 +32,8 @@ namespace shade {
             class CInfoPlayerStartDota : public shade::sdk::server::CPointEntity {
             public:
                 bool m_bDisabled; // 0x0498, 0x1 bytes
-                std::uint8_t pad_0499[0x7]; // 0x0499, 0x7 bytes
+                std::uint8_t pad_0499[0x3]; // 0x0499, 0x3 bytes
+                std::int32_t m_nTeamSlot; // 0x049c, 0x4 bytes
                 shade::sdk::entity2::CEntityIOOutput m_OnEnabled; // 0x04a0, 0x18 bytes
                 shade::sdk::entity2::CEntityIOOutput m_OnDisabled; // 0x04b8, 0x18 bytes
             };

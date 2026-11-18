@@ -144,7 +144,8 @@ namespace shade {
                 DOTA_CM_ChooseDeityBlessing = 0x33f,
                 DOTA_CM_ChooseAghanimUpgrade = 0x340,
                 DOTA_CM_ChooseAbilityImbue = 0x341,
-                DOTA_CM_NetworkStats = 0x342
+                DOTA_CM_NetworkStats = 0x342,
+                DOTA_CM_BrewmasterAssignScepterItem = 0x343
             };
         }
     }

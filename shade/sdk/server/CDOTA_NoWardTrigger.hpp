@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9d0
+             * Size: 0xa30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NoWardTrigger) == 0x9D0, "CDOTA_NoWardTrigger size mismatch");
+            static_assert(sizeof(CDOTA_NoWardTrigger) == 0xA30, "CDOTA_NoWardTrigger size mismatch");
         }
     }
 }

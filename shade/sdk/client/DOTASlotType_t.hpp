@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTASlotType_t : std::int32_t {
+            enum class DOTASlotType_t : std::uint32_t {
                 DOTA_LOADOUT_TYPE_INVALID = -0x1,
                 DOTA_LOADOUT_TYPE_WEAPON = 0x0,
                 DOTA_LOADOUT_TYPE_OFFHAND_WEAPON = 0x1,

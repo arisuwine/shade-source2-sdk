@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b30
+             * Size: 0x1bb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,14 +38,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Templar_Gate : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hOtherPortal; // 0x1b28, 0x4 bytes
-                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hOtherPortal; // 0x1bb0, 0x4 bytes
+                std::uint8_t pad_1bb4[0x4]; // 0x1bb4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Templar_Gate) == 0x1B30, "CDOTA_Unit_Templar_Gate size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Templar_Gate) == 0x1BB8, "CDOTA_Unit_Templar_Gate size mismatch");
         }
     }
 }

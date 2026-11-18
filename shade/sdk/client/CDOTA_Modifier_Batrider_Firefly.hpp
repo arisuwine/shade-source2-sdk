@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x1b50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,27 +31,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Batrider_Firefly : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bActive; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                float radius; // 0x1aac, 0x4 bytes
-                std::int32_t m_ifirefly_Active; // 0x1ab0, 0x4 bytes
-                float tree_radius; // 0x1ab4, 0x4 bytes
-                float damage_per_second; // 0x1ab8, 0x4 bytes
-                float movement_speed; // 0x1abc, 0x4 bytes
-                std::int32_t bonus_slow_resistance; // 0x1ac0, 0x4 bytes
-                float tick_interval; // 0x1ac4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ac8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1acc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fNextDamageTick; // 0x1ad0, 0x4 bytes
-                VectorWS m_vLastFirePoolLoc; // 0x1ad4, 0xc bytes
-                std::int32_t bonus_vision; // 0x1ae0, 0x4 bytes
-                std::uint8_t pad_1ae4[0x1c]; // 0x1ae4, 0x1c bytes
+                bool m_bActive; // 0x1af8, 0x1 bytes
+                std::uint8_t pad_1af9[0x3]; // 0x1af9, 0x3 bytes
+                float radius; // 0x1afc, 0x4 bytes
+                std::int32_t m_ifirefly_Active; // 0x1b00, 0x4 bytes
+                float tree_radius; // 0x1b04, 0x4 bytes
+                float damage_per_second; // 0x1b08, 0x4 bytes
+                float movement_speed; // 0x1b0c, 0x4 bytes
+                std::int32_t bonus_slow_resistance; // 0x1b10, 0x4 bytes
+                float tick_interval; // 0x1b14, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b18, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexB; // 0x1b1c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fNextDamageTick; // 0x1b20, 0x4 bytes
+                VectorWS m_vLastFirePoolLoc; // 0x1b24, 0xc bytes
+                std::int32_t bonus_vision; // 0x1b30, 0x4 bytes
+                std::uint8_t pad_1b34[0x1c]; // 0x1b34, 0x1c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Batrider_Firefly) == 0x1B00, "CDOTA_Modifier_Batrider_Firefly size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Batrider_Firefly) == 0x1B50, "CDOTA_Modifier_Batrider_Firefly size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b48
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,22 +38,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Puck_DreamCoil_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hLinkedEntities; // 0x1aa8, 0x18 bytes
-                float coil_radius; // 0x1ac0, 0x4 bytes
-                float coil_break_radius; // 0x1ac4, 0x4 bytes
-                float coil_initial_damage; // 0x1ac8, 0x4 bytes
-                float coil_stun_duration; // 0x1acc, 0x4 bytes
-                float coil_duration; // 0x1ad0, 0x4 bytes
-                float coil_break_damage; // 0x1ad4, 0x4 bytes
-                bool pierces_debuff_immunity; // 0x1ad8, 0x1 bytes
-                std::uint8_t pad_1ad9[0x7]; // 0x1ad9, 0x7 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_FXIndex; // 0x1ae0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hLinkedEntities; // 0x1af8, 0x18 bytes
+                float coil_radius; // 0x1b10, 0x4 bytes
+                float coil_break_radius; // 0x1b14, 0x4 bytes
+                float coil_initial_damage; // 0x1b18, 0x4 bytes
+                float coil_stun_duration; // 0x1b1c, 0x4 bytes
+                float coil_duration; // 0x1b20, 0x4 bytes
+                float coil_break_damage; // 0x1b24, 0x4 bytes
+                bool pierces_debuff_immunity; // 0x1b28, 0x1 bytes
+                std::uint8_t pad_1b29[0x7]; // 0x1b29, 0x7 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_FXIndex; // 0x1b30, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Puck_DreamCoil_Thinker) == 0x1AF8, "CDOTA_Modifier_Puck_DreamCoil_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Puck_DreamCoil_Thinker) == 0x1B48, "CDOTA_Modifier_Puck_DreamCoil_Thinker size mismatch");
         }
     }
 }

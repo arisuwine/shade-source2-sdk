@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,17 +37,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Ogre_Magi_Fireblast_Multicast : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hTarget; // 0x1aa8, 0x4 bytes
-                float multicast_delay; // 0x1aac, 0x4 bytes
-                std::int32_t m_nMultiCastCount; // 0x1ab0, 0x4 bytes
-                bool m_bTalentCast; // 0x1ab4, 0x1 bytes
-                std::uint8_t pad_1ab5[0x3]; // 0x1ab5, 0x3 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hTarget; // 0x1af8, 0x4 bytes
+                float multicast_delay; // 0x1afc, 0x4 bytes
+                std::int32_t m_nMultiCastCount; // 0x1b00, 0x4 bytes
+                bool m_bTalentCast; // 0x1b04, 0x1 bytes
+                std::uint8_t pad_1b05[0x3]; // 0x1b05, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Ogre_Magi_Fireblast_Multicast) == 0x1AB8, "CDOTA_Modifier_Ogre_Magi_Fireblast_Multicast size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Ogre_Magi_Fireblast_Multicast) == 0x1B08, "CDOTA_Modifier_Ogre_Magi_Fireblast_Multicast size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1bd8
+             * Size: 0x1c60
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_LoopingSound : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                std::uint8_t pad_1ab8[0x14]; // 0x1ab8, 0x14 bytes
-                std::int32_t m_nPrevLoopingSoundParity; // 0x1acc, 0x4 bytes
-                char m_pszNetworkedSoundLoop[0x100]; // 0x1ad0, 0x100 bytes
-                std::int32_t m_nLoopingSoundParity; // 0x1bd0, 0x4 bytes
-                std::uint8_t pad_1bd4[0x4]; // 0x1bd4, 0x4 bytes
+                std::uint8_t pad_1b40[0x14]; // 0x1b40, 0x14 bytes
+                std::int32_t m_nPrevLoopingSoundParity; // 0x1b54, 0x4 bytes
+                char m_pszNetworkedSoundLoop[0x100]; // 0x1b58, 0x100 bytes
+                std::int32_t m_nLoopingSoundParity; // 0x1c58, 0x4 bytes
+                std::uint8_t pad_1c5c[0x4]; // 0x1c5c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_LoopingSound) == 0x1BD8, "C_DOTA_Unit_LoopingSound size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_LoopingSound) == 0x1C60, "C_DOTA_Unit_LoopingSound size mismatch");
         }
     }
 }

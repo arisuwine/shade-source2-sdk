@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ETourneyQueueDeadlineState : std::int32_t {
+            enum class ETourneyQueueDeadlineState : std::uint32_t {
                 k_ETourneyQueueDeadlineState_Normal = 0x0,
                 k_ETourneyQueueDeadlineState_Missed = 0x1,
                 k_ETourneyQueueDeadlineState_ExpiredOK = 0x2,

@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,16 +31,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_BaseNPC_HallofFame : public shade::sdk::server::CDOTA_BaseNPC_Building {
             public:
-                std::uint8_t pad_1ab0[0x10]; // 0x1ab0, 0x10 bytes
-                std::int32_t m_event_dota_player_team_changed; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_glowThinkTimer; // 0x1ac8, 0x18 bytes
+                std::uint8_t pad_1b40[0x10]; // 0x1b40, 0x10 bytes
+                std::int32_t m_event_dota_player_team_changed; // 0x1b50, 0x4 bytes
+                std::uint8_t pad_1b54[0x4]; // 0x1b54, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_glowThinkTimer; // 0x1b58, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_BaseNPC_HallofFame) == 0x1AE0, "CDOTA_BaseNPC_HallofFame size mismatch");
+            static_assert(sizeof(CDOTA_BaseNPC_HallofFame) == 0x1B70, "CDOTA_BaseNPC_HallofFame size mismatch");
         }
     }
 }

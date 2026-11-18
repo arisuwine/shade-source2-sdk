@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Cyclone : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1aa8, 0x4 bytes
-                VectorWS m_vStartPos; // 0x1aac, 0xc bytes
-                float m_flCurTime; // 0x1ab8, 0x4 bytes
-                float m_flHeightT; // 0x1abc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1af8, 0x4 bytes
+                VectorWS m_vStartPos; // 0x1afc, 0xc bytes
+                float m_flCurTime; // 0x1b08, 0x4 bytes
+                float m_flHeightT; // 0x1b0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Cyclone) == 0x1AC0, "CDOTA_Modifier_Cyclone size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Cyclone) == 0x1B10, "CDOTA_Modifier_Cyclone size mismatch");
         }
     }
 }

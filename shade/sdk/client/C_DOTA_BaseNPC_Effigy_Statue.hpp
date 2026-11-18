@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b60
+             * Size: 0x1be8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,17 +39,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Effigy_Statue : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hEffigyParticleDef; // 0x1b28, 0x8 bytes
-                shade::sdk::client::EEvent m_eEffigyEvent; // 0x1b30, 0x4 bytes
-                std::int32_t m_nEffigyLevel; // 0x1b34, 0x4 bytes
-                std::uint8_t pad_1b38[0x24]; // 0x1b38, 0x24 bytes
-                std::int32_t m_nQuality; // 0x1b5c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_hEffigyParticleDef; // 0x1bb0, 0x8 bytes
+                shade::sdk::client::EEvent m_eEffigyEvent; // 0x1bb8, 0x4 bytes
+                std::int32_t m_nEffigyLevel; // 0x1bbc, 0x4 bytes
+                std::uint8_t pad_1bc0[0x24]; // 0x1bc0, 0x24 bytes
+                std::int32_t m_nQuality; // 0x1be4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Effigy_Statue) == 0x1B60, "C_DOTA_BaseNPC_Effigy_Statue size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Effigy_Statue) == 0x1BE8, "C_DOTA_BaseNPC_Effigy_Statue size mismatch");
         }
     }
 }

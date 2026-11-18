@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class CMsgBattleReport_HighlightType : std::int32_t {
+            enum class CMsgBattleReport_HighlightType : std::uint32_t {
                 k_eHighlightTypeInvalid = -0x1,
                 k_eGameWinrate = 0x0,
                 k_eLaneWinrate = 0x1,

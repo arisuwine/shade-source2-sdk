@@ -22,19 +22,19 @@ namespace shade {
     namespace sdk {
         namespace physicslib {
             /* Class Parameters
-             * Size: 0x110
+             * Size: 0x108
              * Alignment: 0x8
              * Construct Allowed
              */
             #pragma pack(push, 1)
             struct RnHullDesc_t : public shade::sdk::physicslib::RnShapeDesc_t {
-                shade::sdk::physicslib::RnHull_t m_Hull; // 0x0018, 0xf8 bytes
+                shade::sdk::physicslib::RnHull_t m_Hull; // 0x0018, 0xf0 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(RnHullDesc_t) == 0x110, "RnHullDesc_t size mismatch");
+            static_assert(sizeof(RnHullDesc_t) == 0x108, "RnHullDesc_t size mismatch");
         }
     }
 }

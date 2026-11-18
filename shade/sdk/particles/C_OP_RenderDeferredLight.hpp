@@ -32,7 +32,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x948
+             * Size: 0x940
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,30 +40,30 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderDeferredLight : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                float m_flRadiusScale; // 0x0230, 0x4 bytes
-                float m_flAlphaScale; // 0x0234, 0x4 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlpha2Field; // 0x0238, 0x4 bytes
-                std::uint8_t pad_023c[0x4]; // 0x023c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0240, 0x6d8 bytes
-                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0918, 0x4 bytes
-                bool m_bUseTexture; // 0x091c, 0x1 bytes
-                bool m_bUseAlphaTestWindow; // 0x091d, 0x1 bytes
-                std::uint8_t pad_091e[0x2]; // 0x091e, 0x2 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTexture; // 0x0920, 0x8 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlphaTestPointField; // 0x0928, 0x4 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlphaTestRangeField; // 0x092c, 0x4 bytes
-                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlphaTestSharpnessField; // 0x0930, 0x4 bytes
-                float m_flLightDistance; // 0x0934, 0x4 bytes
-                float m_flStartFalloff; // 0x0938, 0x4 bytes
-                float m_flDistanceFalloff; // 0x093c, 0x4 bytes
-                float m_flSpotFoV; // 0x0940, 0x4 bytes
-                std::int32_t m_nHSVShiftControlPoint; // 0x0944, 0x4 bytes
+                float m_flRadiusScale; // 0x0228, 0x4 bytes
+                float m_flAlphaScale; // 0x022c, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlpha2Field; // 0x0230, 0x4 bytes
+                std::uint8_t pad_0234[0x4]; // 0x0234, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x0238, 0x6d8 bytes
+                shade::sdk::particleslib::ParticleColorBlendType_t m_nColorBlendType; // 0x0910, 0x4 bytes
+                bool m_bUseTexture; // 0x0914, 0x1 bytes
+                bool m_bUseAlphaTestWindow; // 0x0915, 0x1 bytes
+                std::uint8_t pad_0916[0x2]; // 0x0916, 0x2 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTexture; // 0x0918, 0x8 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlphaTestPointField; // 0x0920, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlphaTestRangeField; // 0x0924, 0x4 bytes
+                shade::sdk::particleslib::ParticleAttributeIndex_t m_nAlphaTestSharpnessField; // 0x0928, 0x4 bytes
+                float m_flLightDistance; // 0x092c, 0x4 bytes
+                float m_flStartFalloff; // 0x0930, 0x4 bytes
+                float m_flDistanceFalloff; // 0x0934, 0x4 bytes
+                float m_flSpotFoV; // 0x0938, 0x4 bytes
+                std::int32_t m_nHSVShiftControlPoint; // 0x093c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_OP_RenderDeferredLight) == 0x948, "C_OP_RenderDeferredLight size mismatch");
+            static_assert(sizeof(C_OP_RenderDeferredLight) == 0x940, "C_OP_RenderDeferredLight size mismatch");
         }
     }
 }

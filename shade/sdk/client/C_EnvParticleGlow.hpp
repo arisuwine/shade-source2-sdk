@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1160
+             * Size: 0x11c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,17 +38,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_EnvParticleGlow : public shade::sdk::client::C_ParticleSystem {
             public:
-                float m_flAlphaScale; // 0x1148, 0x4 bytes
-                float m_flRadiusScale; // 0x114c, 0x4 bytes
-                float m_flSelfIllumScale; // 0x1150, 0x4 bytes
-                Color m_ColorTint; // 0x1154, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTextureOverride; // 0x1158, 0x8 bytes
+                float m_flAlphaScale; // 0x11a8, 0x4 bytes
+                float m_flRadiusScale; // 0x11ac, 0x4 bytes
+                float m_flSelfIllumScale; // 0x11b0, 0x4 bytes
+                Color m_ColorTint; // 0x11b4, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hTextureOverride; // 0x11b8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_EnvParticleGlow) == 0x1160, "C_EnvParticleGlow size mismatch");
+            static_assert(sizeof(C_EnvParticleGlow) == 0x11C0, "C_EnvParticleGlow size mismatch");
         }
     }
 }

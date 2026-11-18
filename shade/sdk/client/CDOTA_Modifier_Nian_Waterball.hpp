@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Nian_Waterball : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t trail_damage_per_second; // 0x1aa8, 0x4 bytes
-                std::int32_t trail_damage_radius; // 0x1aac, 0x4 bytes
-                CUtlVector<std::int32_t> m_vFXIndices; // 0x1ab0, 0x18 bytes
-                CUtlVector<VectorWS> m_vLocations; // 0x1ac8, 0x18 bytes
+                std::int32_t trail_damage_per_second; // 0x1af8, 0x4 bytes
+                std::int32_t trail_damage_radius; // 0x1afc, 0x4 bytes
+                CUtlVector<std::int32_t> m_vFXIndices; // 0x1b00, 0x18 bytes
+                CUtlVector<VectorWS> m_vLocations; // 0x1b18, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Nian_Waterball) == 0x1AE0, "CDOTA_Modifier_Nian_Waterball size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Nian_Waterball) == 0x1B30, "CDOTA_Modifier_Nian_Waterball size mismatch");
         }
     }
 }

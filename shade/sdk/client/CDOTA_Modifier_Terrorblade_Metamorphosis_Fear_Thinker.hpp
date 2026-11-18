@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,22 +39,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Terrorblade_Metamorphosis_Fear_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_fLastRadius; // 0x1aa8, 0x4 bytes
-                float m_fCurRadius; // 0x1aac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1ab0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ab4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_EntitiesHit; // 0x1ab8, 0x18 bytes
-                float scepter_speed; // 0x1ad0, 0x4 bytes
-                float scepter_radius; // 0x1ad4, 0x4 bytes
-                float damage; // 0x1ad8, 0x4 bytes
-                bool m_bFirstThink; // 0x1adc, 0x1 bytes
-                std::uint8_t pad_1add[0x3]; // 0x1add, 0x3 bytes
+                float m_fLastRadius; // 0x1af8, 0x4 bytes
+                float m_fCurRadius; // 0x1afc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fLastThink; // 0x1b00, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b04, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_EntitiesHit; // 0x1b08, 0x18 bytes
+                float scepter_speed; // 0x1b20, 0x4 bytes
+                float scepter_radius; // 0x1b24, 0x4 bytes
+                float damage; // 0x1b28, 0x4 bytes
+                bool m_bFirstThink; // 0x1b2c, 0x1 bytes
+                std::uint8_t pad_1b2d[0x3]; // 0x1b2d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Terrorblade_Metamorphosis_Fear_Thinker) == 0x1AE0, "CDOTA_Modifier_Terrorblade_Metamorphosis_Fear_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Terrorblade_Metamorphosis_Fear_Thinker) == 0x1B30, "CDOTA_Modifier_Terrorblade_Metamorphosis_Fear_Thinker size mismatch");
         }
     }
 }

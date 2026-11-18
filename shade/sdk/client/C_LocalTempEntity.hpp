@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xc58
+             * Size: 0xcb8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,39 +31,39 @@ namespace shade {
             #pragma pack(push, 1)
             class C_LocalTempEntity : public shade::sdk::client::CBaseAnimatingActivity {
             public:
-                std::int32_t flags; // 0x0bb0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t die; // 0x0bb4, 0x4 bytes
-                float m_flFrameMax; // 0x0bb8, 0x4 bytes
-                float x; // 0x0bbc, 0x4 bytes
-                float y; // 0x0bc0, 0x4 bytes
-                float fadeSpeed; // 0x0bc4, 0x4 bytes
-                float bounceFactor; // 0x0bc8, 0x4 bytes
-                std::int32_t hitSound; // 0x0bcc, 0x4 bytes
-                std::int32_t priority; // 0x0bd0, 0x4 bytes
-                Vector tentOffset; // 0x0bd4, 0xc bytes
-                QAngle m_vecTempEntAngVelocity; // 0x0be0, 0xc bytes
-                std::int32_t tempent_renderamt; // 0x0bec, 0x4 bytes
-                Vector m_vecNormal; // 0x0bf0, 0xc bytes
-                float m_flSpriteScale; // 0x0bfc, 0x4 bytes
-                std::int32_t m_nFlickerFrame; // 0x0c00, 0x4 bytes
-                float m_flFrameRate; // 0x0c04, 0x4 bytes
-                float m_flFrame; // 0x0c08, 0x4 bytes
-                std::uint8_t pad_0c0c[0x4]; // 0x0c0c, 0x4 bytes
-                char *m_pszImpactEffect; // 0x0c10, 0x8 bytes
-                char *m_pszParticleEffect; // 0x0c18, 0x8 bytes
-                bool m_bParticleCollision; // 0x0c20, 0x1 bytes
-                std::uint8_t pad_0c21[0x3]; // 0x0c21, 0x3 bytes
-                std::int32_t m_iLastCollisionFrame; // 0x0c24, 0x4 bytes
-                VectorWS m_vLastCollisionOrigin; // 0x0c28, 0xc bytes
-                Vector m_vecTempEntVelocity; // 0x0c34, 0xc bytes
-                VectorWS m_vecPrevAbsOrigin; // 0x0c40, 0xc bytes
-                Vector m_vecTempEntAcceleration; // 0x0c4c, 0xc bytes
+                std::int32_t flags; // 0x0c10, 0x4 bytes
+                shade::sdk::entity2::GameTime_t die; // 0x0c14, 0x4 bytes
+                float m_flFrameMax; // 0x0c18, 0x4 bytes
+                float x; // 0x0c1c, 0x4 bytes
+                float y; // 0x0c20, 0x4 bytes
+                float fadeSpeed; // 0x0c24, 0x4 bytes
+                float bounceFactor; // 0x0c28, 0x4 bytes
+                std::int32_t hitSound; // 0x0c2c, 0x4 bytes
+                std::int32_t priority; // 0x0c30, 0x4 bytes
+                Vector tentOffset; // 0x0c34, 0xc bytes
+                QAngle m_vecTempEntAngVelocity; // 0x0c40, 0xc bytes
+                std::int32_t tempent_renderamt; // 0x0c4c, 0x4 bytes
+                Vector m_vecNormal; // 0x0c50, 0xc bytes
+                float m_flSpriteScale; // 0x0c5c, 0x4 bytes
+                std::int32_t m_nFlickerFrame; // 0x0c60, 0x4 bytes
+                float m_flFrameRate; // 0x0c64, 0x4 bytes
+                float m_flFrame; // 0x0c68, 0x4 bytes
+                std::uint8_t pad_0c6c[0x4]; // 0x0c6c, 0x4 bytes
+                char *m_pszImpactEffect; // 0x0c70, 0x8 bytes
+                char *m_pszParticleEffect; // 0x0c78, 0x8 bytes
+                bool m_bParticleCollision; // 0x0c80, 0x1 bytes
+                std::uint8_t pad_0c81[0x3]; // 0x0c81, 0x3 bytes
+                std::int32_t m_iLastCollisionFrame; // 0x0c84, 0x4 bytes
+                VectorWS m_vLastCollisionOrigin; // 0x0c88, 0xc bytes
+                Vector m_vecTempEntVelocity; // 0x0c94, 0xc bytes
+                VectorWS m_vecPrevAbsOrigin; // 0x0ca0, 0xc bytes
+                Vector m_vecTempEntAcceleration; // 0x0cac, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_LocalTempEntity) == 0xC58, "C_LocalTempEntity size mismatch");
+            static_assert(sizeof(C_LocalTempEntity) == 0xCB8, "C_LocalTempEntity size mismatch");
         }
     }
 }

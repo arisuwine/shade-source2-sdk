@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace soundsystem_lowlevel {
-            enum class VMixGraphCommandID_t : std::int32_t {
+            enum class VMixGraphCommandID_t : std::uint32_t {
                 CMD_INVALID = -0x1,
                 CMD_CONTROL_CONVERT_DB_TO_GAIN = 0x1,
                 CMD_CONTROL_TRANSIENT_INPUT_STORE = 0x2,

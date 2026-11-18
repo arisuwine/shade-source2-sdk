@@ -34,7 +34,7 @@ namespace shade {
     namespace sdk {
         namespace particleslib {
             /* Class Parameters
-             * Size: 0xd8
+             * Size: 0xd0
              * Alignment: 0xff
              * Has VTable
              */
@@ -74,17 +74,16 @@ namespace shade {
                 float m_flFreezeTransitionOverride; // 0x0078, 0x4 bytes
                 Vector m_LastMin; // 0x007c, 0xc bytes
                 Vector m_LastMax; // 0x0088, 0xc bytes
-                CSplitScreenSlot m_nSplitScreenUser; // 0x0094, 0x4 bytes
-                Vector m_vecAggregationCenter; // 0x0098, 0xc bytes
-                std::uint8_t pad_00a4[0x2c]; // 0x00a4, 0x2c bytes
-                std::int32_t m_RefCount; // 0x00d0, 0x4 bytes
-                std::uint8_t pad_00d4[0x4]; // 0x00d4, 0x4 bytes
+                Vector m_vecAggregationCenter; // 0x0094, 0xc bytes
+                std::uint8_t pad_00a0[0x28]; // 0x00a0, 0x28 bytes
+                std::int32_t m_RefCount; // 0x00c8, 0x4 bytes
+                std::uint8_t pad_00cc[0x4]; // 0x00cc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CNewParticleEffect) == 0xD8, "CNewParticleEffect size mismatch");
+            static_assert(sizeof(CNewParticleEffect) == 0xD0, "CNewParticleEffect size mismatch");
         }
     }
 }

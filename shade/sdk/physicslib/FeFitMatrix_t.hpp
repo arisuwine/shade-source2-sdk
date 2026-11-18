@@ -31,7 +31,8 @@ namespace shade {
                 std::uint16_t nEnd; // 0x002c, 0x2 bytes
                 std::uint16_t nNode; // 0x002e, 0x2 bytes
                 std::uint16_t nBeginDynamic; // 0x0030, 0x2 bytes
-                std::uint8_t pad_0032[0xe]; // 0x0032, 0xe bytes
+                std::uint16_t nFlags; // 0x0032, 0x2 bytes
+                std::uint8_t pad_0034[0xc]; // 0x0034, 0xc bytes
             };
             #pragma pack(pop)
 

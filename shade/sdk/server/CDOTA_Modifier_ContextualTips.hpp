@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b28
+             * Size: 0x1b78
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,18 +30,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_ContextualTips : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bAllEnemiesBots; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x3]; // 0x1aa9, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flGloblLastTipSendTime; // 0x1aac, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastEnemyHeroDamageTime; // 0x1ab0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastEnemyHeroVisibleTime; // 0x1ab4, 0x4 bytes
-                std::uint8_t pad_1ab8[0x70]; // 0x1ab8, 0x70 bytes
+                bool m_bAllEnemiesBots; // 0x1af8, 0x1 bytes
+                std::uint8_t pad_1af9[0x3]; // 0x1af9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flGloblLastTipSendTime; // 0x1afc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastEnemyHeroDamageTime; // 0x1b00, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastEnemyHeroVisibleTime; // 0x1b04, 0x4 bytes
+                std::uint8_t pad_1b08[0x70]; // 0x1b08, 0x70 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_ContextualTips) == 0x1B28, "CDOTA_Modifier_ContextualTips size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_ContextualTips) == 0x1B78, "CDOTA_Modifier_ContextualTips size mismatch");
         }
     }
 }

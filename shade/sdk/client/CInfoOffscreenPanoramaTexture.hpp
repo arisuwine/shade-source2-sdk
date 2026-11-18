@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7f8
+             * Size: 0x7e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -53,15 +53,15 @@ namespace shade {
                 C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses; // 0x0638, 0x18 bytes
                 CUtlSymbolLarge m_szTargetsName; // 0x0650, 0x8 bytes
                 CUtlVector<CHandle<shade::sdk::client::C_BaseModelEntity>> m_AdditionalTargetEntities; // 0x0658, 0x18 bytes
-                std::uint8_t pad_0670[0x160]; // 0x0670, 0x160 bytes
-                bool m_bCheckCSSClasses; // 0x07d0, 0x1 bytes
-                std::uint8_t pad_07d1[0x27]; // 0x07d1, 0x27 bytes
+                std::uint8_t pad_0670[0x148]; // 0x0670, 0x148 bytes
+                bool m_bCheckCSSClasses; // 0x07b8, 0x1 bytes
+                std::uint8_t pad_07b9[0x27]; // 0x07b9, 0x27 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoOffscreenPanoramaTexture) == 0x7F8, "CInfoOffscreenPanoramaTexture size mismatch");
+            static_assert(sizeof(CInfoOffscreenPanoramaTexture) == 0x7E0, "CInfoOffscreenPanoramaTexture size mismatch");
         }
     }
 }

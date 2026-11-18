@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x570
+             * Size: 0x578
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,13 +44,14 @@ namespace shade {
                 bool m_bUnloadingStarted; // 0x051d, 0x1 bytes
                 bool m_bQueueActiveSpawnGroupChange; // 0x051e, 0x1 bytes
                 bool m_bQueueFinishLoading; // 0x051f, 0x1 bytes
-                std::uint8_t pad_0520[0x50]; // 0x0520, 0x50 bytes
+                bool m_bLoadFinishedFired; // 0x0520, 0x1 bytes
+                std::uint8_t pad_0521[0x57]; // 0x0521, 0x57 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoSpawnGroupLoadUnload) == 0x570, "CInfoSpawnGroupLoadUnload size mismatch");
+            static_assert(sizeof(CInfoSpawnGroupLoadUnload) == 0x578, "CInfoSpawnGroupLoadUnload size mismatch");
         }
     }
 }

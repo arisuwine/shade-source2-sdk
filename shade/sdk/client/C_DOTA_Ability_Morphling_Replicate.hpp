@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6b8
+             * Size: 0x6b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,15 +39,13 @@ namespace shade {
             class C_DOTA_Ability_Morphling_Replicate : public shade::sdk::client::C_DOTABaseAbility {
             public:
                 CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x06a8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hScepterIllusion; // 0x06ac, 0x4 bytes
-                bool m_bIsAltCastState; // 0x06b0, 0x1 bytes
-                std::uint8_t pad_06b1[0x7]; // 0x06b1, 0x7 bytes
+                std::uint8_t pad_06ac[0x4]; // 0x06ac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Ability_Morphling_Replicate) == 0x6B8, "C_DOTA_Ability_Morphling_Replicate size mismatch");
+            static_assert(sizeof(C_DOTA_Ability_Morphling_Replicate) == 0x6B0, "C_DOTA_Ability_Morphling_Replicate size mismatch");
         }
     }
 }

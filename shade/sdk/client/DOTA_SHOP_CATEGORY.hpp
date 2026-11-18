@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DOTA_SHOP_CATEGORY : std::int32_t {
+            enum class DOTA_SHOP_CATEGORY : std::uint32_t {
                 DOTA_SHOP_CATEGORY_NONE = -0x1,
                 DOTA_SHOP_CATEGORY_CONSUMABLES = 0x0,
                 DOTA_SHOP_CATEGORY_ATTRIBUTES = 0x1,

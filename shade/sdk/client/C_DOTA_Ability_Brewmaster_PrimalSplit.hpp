@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x6c8
+             * Size: 0x6d8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +42,21 @@ namespace shade {
                 CHandle<shade::sdk::client::C_BaseEntity> m_hPrimary; // 0x06a8, 0x4 bytes
                 CHandle<shade::sdk::client::C_BaseEntity> m_hSecondary; // 0x06ac, 0x4 bytes
                 CHandle<shade::sdk::client::C_BaseEntity> m_hTertiary; // 0x06b0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fHurlBoulder_CooldownTime; // 0x06b4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fHDispelMagic_CooldownTime; // 0x06b8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fCyclone_CooldownTime; // 0x06bc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fWindWalk_CooldownTime; // 0x06c0, 0x4 bytes
-                bool m_bGainedScepterLevels; // 0x06c4, 0x1 bytes
-                std::uint8_t pad_06c5[0x3]; // 0x06c5, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hEarthScepterItem; // 0x06b4, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hStormScepterItem; // 0x06b8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hFireScepterItem; // 0x06bc, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fHurlBoulder_CooldownTime; // 0x06c0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fHDispelMagic_CooldownTime; // 0x06c4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fCyclone_CooldownTime; // 0x06c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fWindWalk_CooldownTime; // 0x06cc, 0x4 bytes
+                bool m_bGainedScepterLevels; // 0x06d0, 0x1 bytes
+                std::uint8_t pad_06d1[0x7]; // 0x06d1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Ability_Brewmaster_PrimalSplit) == 0x6C8, "C_DOTA_Ability_Brewmaster_PrimalSplit size mismatch");
+            static_assert(sizeof(C_DOTA_Ability_Brewmaster_PrimalSplit) == 0x6D8, "C_DOTA_Ability_Brewmaster_PrimalSplit size mismatch");
         }
     }
 }

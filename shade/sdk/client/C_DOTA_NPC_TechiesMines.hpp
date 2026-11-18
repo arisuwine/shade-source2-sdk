@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,15 +31,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_NPC_TechiesMines : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                shade::sdk::client::ParticleIndex_t m_iRangeFX; // 0x1ab8, 0x4 bytes
-                bool m_bShowPlacementRadius; // 0x1abc, 0x1 bytes
-                std::uint8_t pad_1abd[0x3]; // 0x1abd, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_iRangeFX; // 0x1b40, 0x4 bytes
+                bool m_bShowPlacementRadius; // 0x1b44, 0x1 bytes
+                std::uint8_t pad_1b45[0x3]; // 0x1b45, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_NPC_TechiesMines) == 0x1AC0, "C_DOTA_NPC_TechiesMines size mismatch");
+            static_assert(sizeof(C_DOTA_NPC_TechiesMines) == 0x1B48, "C_DOTA_NPC_TechiesMines size mismatch");
         }
     }
 }

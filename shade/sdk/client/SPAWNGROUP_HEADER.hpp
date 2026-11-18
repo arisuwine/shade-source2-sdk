@@ -31,7 +31,10 @@ namespace shade {
                 matrix3x4a_t m_vecWorldOffset; // 0x0010, 0x30 bytes
                 bool m_bClientSpawnGroup; // 0x0040, 0x1 bytes
                 bool m_bSuppressAllEntities; // 0x0041, 0x1 bytes
-                std::uint8_t pad_0042[0xe]; // 0x0042, 0xe bytes
+                bool m_bPersistentSpawnGroup; // 0x0042, 0x1 bytes
+                std::uint8_t pad_0043[0x1]; // 0x0043, 0x1 bytes
+                std::int32_t m_nSaveSlot; // 0x0044, 0x4 bytes
+                std::uint8_t pad_0048[0x8]; // 0x0048, 0x8 bytes
             };
             #pragma pack(pop)
 

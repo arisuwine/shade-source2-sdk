@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace modellib {
-            enum class ScriptedHeldWeaponBehavior_t : std::int32_t {
+            enum class ScriptedHeldWeaponBehavior_t : std::uint32_t {
                 eInvalid = -0x1,
                 eHolster = 0x0,
                 eDeploy = 0x1,

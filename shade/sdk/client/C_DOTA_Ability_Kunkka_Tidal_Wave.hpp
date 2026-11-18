@@ -39,7 +39,7 @@ namespace shade {
             class C_DOTA_Ability_Kunkka_Tidal_Wave : public shade::sdk::client::C_DOTABaseAbility {
             public:
                 CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> hAlreadyHitList; // 0x06a8, 0x18 bytes
-                VectorWS m_vStart; // 0x06c0, 0xc bytes
+                Vector m_vWaveDirection; // 0x06c0, 0xc bytes
                 std::uint8_t pad_06cc[0x14]; // 0x06cc, 0x14 bytes
             };
             #pragma pack(pop)

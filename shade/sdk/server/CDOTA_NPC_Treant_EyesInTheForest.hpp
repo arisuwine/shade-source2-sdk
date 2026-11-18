@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x19a0
+             * Size: 0x1a30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_NPC_Treant_EyesInTheForest : public shade::sdk::server::CDOTA_BaseNPC_Additive {
             public:
-                bool m_bIsBlind; // 0x1998, 0x1 bytes
-                std::uint8_t pad_1999[0x7]; // 0x1999, 0x7 bytes
+                bool m_bIsBlind; // 0x1a28, 0x1 bytes
+                std::uint8_t pad_1a29[0x7]; // 0x1a29, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_NPC_Treant_EyesInTheForest) == 0x19A0, "CDOTA_NPC_Treant_EyesInTheForest size mismatch");
+            static_assert(sizeof(CDOTA_NPC_Treant_EyesInTheForest) == 0x1A30, "CDOTA_NPC_Treant_EyesInTheForest size mismatch");
         }
     }
 }

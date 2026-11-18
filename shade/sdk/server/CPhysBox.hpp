@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xa70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,27 +32,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CPhysBox : public shade::sdk::server::CBreakable {
             public:
-                std::int32_t m_damageType; // 0x0930, 0x4 bytes
-                std::int32_t m_damageToEnableMotion; // 0x0934, 0x4 bytes
-                float m_flForceToEnableMotion; // 0x0938, 0x4 bytes
-                Vector m_vHoverPosePosition; // 0x093c, 0xc bytes
-                QAngle m_angHoverPoseAngles; // 0x0948, 0xc bytes
-                bool m_bNotSolidToWorld; // 0x0954, 0x1 bytes
-                bool m_bEnableUseOutput; // 0x0955, 0x1 bytes
-                shade::sdk::server::HoverPoseFlags_t m_nHoverPoseFlags; // 0x0956, 0x1 bytes
-                std::uint8_t pad_0957[0x1]; // 0x0957, 0x1 bytes
-                float m_flTouchOutputPerEntityDelay; // 0x0958, 0x4 bytes
-                std::uint8_t pad_095c[0x4]; // 0x095c, 0x4 bytes
-                CUtlSymbolLarge m_iszCollisionGroup; // 0x0960, 0x8 bytes
-                CUtlSymbolLarge m_iszInteractsAs; // 0x0968, 0x8 bytes
-                CUtlSymbolLarge m_iszInteractsWith; // 0x0970, 0x8 bytes
-                CUtlSymbolLarge m_iszInteractsExclude; // 0x0978, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x0980, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x0998, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnMotionEnabled; // 0x09b0, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x09c8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x09e0, 0x18 bytes
-                std::uint8_t pad_09f8[0x18]; // 0x09f8, 0x18 bytes
+                std::int32_t m_damageType; // 0x0990, 0x4 bytes
+                std::int32_t m_damageToEnableMotion; // 0x0994, 0x4 bytes
+                float m_flForceToEnableMotion; // 0x0998, 0x4 bytes
+                Vector m_vHoverPosePosition; // 0x099c, 0xc bytes
+                QAngle m_angHoverPoseAngles; // 0x09a8, 0xc bytes
+                bool m_bNotSolidToWorld; // 0x09b4, 0x1 bytes
+                bool m_bEnableUseOutput; // 0x09b5, 0x1 bytes
+                shade::sdk::server::HoverPoseFlags_t m_nHoverPoseFlags; // 0x09b6, 0x1 bytes
+                std::uint8_t pad_09b7[0x1]; // 0x09b7, 0x1 bytes
+                float m_flTouchOutputPerEntityDelay; // 0x09b8, 0x4 bytes
+                std::uint8_t pad_09bc[0x4]; // 0x09bc, 0x4 bytes
+                CUtlSymbolLarge m_iszCollisionGroup; // 0x09c0, 0x8 bytes
+                CUtlSymbolLarge m_iszInteractsAs; // 0x09c8, 0x8 bytes
+                CUtlSymbolLarge m_iszInteractsWith; // 0x09d0, 0x8 bytes
+                CUtlSymbolLarge m_iszInteractsExclude; // 0x09d8, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x09e0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x09f8, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnMotionEnabled; // 0x0a10, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x0a28, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x0a40, 0x18 bytes
+                std::uint8_t pad_0a58[0x18]; // 0x0a58, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -60,7 +60,7 @@ namespace shade {
              * QAngle preferredcarryangles; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CPhysBox) == 0xA10, "CPhysBox size mismatch");
+            static_assert(sizeof(CPhysBox) == 0xA70, "CPhysBox size mismatch");
         }
     }
 }

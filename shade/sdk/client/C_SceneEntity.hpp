@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x658
+             * Size: 0x660
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -55,15 +55,17 @@ namespace shade {
                 C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseModelEntity>> m_hActorList; // 0x0610, 0x18 bytes
                 bool m_bWasPlaying; // 0x0628, 0x1 bytes
                 std::uint8_t pad_0629[0xf]; // 0x0629, 0xf bytes
-                CUtlVector<shade::sdk::client::C_SceneEntity__QueuedEvents_t> m_QueuedEvents; // 0x0638, 0x18 bytes
-                float m_flCurrentTime; // 0x0650, 0x4 bytes
-                std::uint8_t pad_0654[0x4]; // 0x0654, 0x4 bytes
+                bool m_bDisableFrameSimulate; // 0x0638, 0x1 bytes
+                std::uint8_t pad_0639[0x7]; // 0x0639, 0x7 bytes
+                CUtlVector<shade::sdk::client::C_SceneEntity__QueuedEvents_t> m_QueuedEvents; // 0x0640, 0x18 bytes
+                float m_flCurrentTime; // 0x0658, 0x4 bytes
+                std::uint8_t pad_065c[0x4]; // 0x065c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_SceneEntity) == 0x658, "C_SceneEntity size mismatch");
+            static_assert(sizeof(C_SceneEntity) == 0x660, "C_SceneEntity size mismatch");
         }
     }
 }

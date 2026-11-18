@@ -40,7 +40,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x13d0
+             * Size: 0x1380
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -72,89 +72,91 @@ namespace shade {
                 std::int32_t m_iIncomeGold; // 0x0084, 0x4 bytes
                 std::int32_t m_iWardKillGold; // 0x0088, 0x4 bytes
                 std::int32_t m_iAbilityGold; // 0x008c, 0x4 bytes
-                std::int32_t m_iNetWorth; // 0x0090, 0x4 bytes
-                std::int32_t m_iDenyCount; // 0x0094, 0x4 bytes
-                std::int32_t m_iLastHitCount; // 0x0098, 0x4 bytes
-                std::int32_t m_iLastHitStreak; // 0x009c, 0x4 bytes
-                std::int32_t m_iLastHitMultikill; // 0x00a0, 0x4 bytes
-                std::int32_t m_iNearbyCreepDeathCount; // 0x00a4, 0x4 bytes
-                std::int32_t m_iClaimedDenyCount; // 0x00a8, 0x4 bytes
-                std::int32_t m_iClaimedMissCount; // 0x00ac, 0x4 bytes
-                std::int32_t m_iMissCount; // 0x00b0, 0x4 bytes
-                shade::sdk::client::HeroID_t m_nPossibleHeroSelection; // 0x00b4, 0x4 bytes
-                shade::sdk::client::HeroFacetKey_t m_nPossibleHeroFacetSelection; // 0x00b8, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flBuybackCooldownTime; // 0x00c0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flBuybackGoldLimitTime; // 0x00c4, 0x4 bytes
-                float m_flBuybackCostTime; // 0x00c8, 0x4 bytes
-                float m_flCustomBuybackCooldown; // 0x00cc, 0x4 bytes
-                float m_fStuns; // 0x00d0, 0x4 bytes
-                float m_fHealing; // 0x00d4, 0x4 bytes
-                float m_fRegeneratedHealth; // 0x00d8, 0x4 bytes
-                std::int32_t m_iTowerKills; // 0x00dc, 0x4 bytes
-                std::int32_t m_iRoshanKills; // 0x00e0, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hCameraTarget; // 0x00e4, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOverrideSelectionEntity; // 0x00e8, 0x4 bytes
-                std::int32_t m_iObserverWardsPlaced; // 0x00ec, 0x4 bytes
-                std::int32_t m_iSentryWardsPlaced; // 0x00f0, 0x4 bytes
-                std::int32_t m_iCreepsStacked; // 0x00f4, 0x4 bytes
-                std::int32_t m_iCampsStacked; // 0x00f8, 0x4 bytes
-                std::int32_t m_iRunePickups; // 0x00fc, 0x4 bytes
-                std::int32_t m_iGoldSpentOnSupport; // 0x0100, 0x4 bytes
-                float m_flHeroDamage; // 0x0104, 0x4 bytes
-                float m_flTowerDamage; // 0x0108, 0x4 bytes
-                std::int32_t m_iWardsPurchased; // 0x010c, 0x4 bytes
-                std::int32_t m_iWardsDestroyed; // 0x0110, 0x4 bytes
-                std::uint8_t pad_0114[0x4]; // 0x0114, 0x4 bytes
-                shade::sdk::server::CDOTA_UnitInventory m_PreGameInventory; // 0x0118, 0xf8 bytes
-                std::int32_t m_nKillsPerOpposingTeamMember[0x18]; // 0x0210, 0x60 bytes
-                shade::sdk::client::AbilityID_t m_iSuggestedAbilities[0x5]; // 0x0270, 0x14 bytes
-                float m_fSuggestedAbilityWeights[0x5]; // 0x0284, 0x14 bytes
-                shade::sdk::client::AbilityID_t m_iSuggestedPregameItems[0xf]; // 0x0298, 0x3c bytes
-                shade::sdk::client::AbilityID_t m_iSuggestedItemSequence[0x32]; // 0x02d4, 0xc8 bytes
-                shade::sdk::client::AbilityID_t m_iSuggestedItemSequenceVariants[0x96]; // 0x039c, 0x258 bytes
-                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedItemOptions[0xfa]; // 0x05f4, 0x7d0 bytes
-                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedGeneralItems[0x1e]; // 0x0dc4, 0xf0 bytes
-                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedNeutralTrinkets[0x5]; // 0x0eb4, 0x28 bytes
-                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedNeutralEnhancements[0x5]; // 0x0edc, 0x28 bytes
-                shade::sdk::client::HeroID_t m_iSuggestedHeroes[0xa]; // 0x0f04, 0x28 bytes
-                float m_flSuggestedHeroesWeights[0xa]; // 0x0f2c, 0x28 bytes
-                std::int32_t m_iWisdomShrinesTaken; // 0x0f54, 0x4 bytes
-                float m_flDamageByTypeReceivedPreReduction[0x3]; // 0x0f58, 0xc bytes
-                float m_flDamageByTypeReceivedPostReduction[0x3]; // 0x0f64, 0xc bytes
-                float m_flOutgoingDamageByTypePreReduction[0x3]; // 0x0f70, 0xc bytes
-                float m_flOutgoingDamageByTypePostReduction[0x3]; // 0x0f7c, 0xc bytes
-                shade::sdk::client::OverworldID_t m_uSelectedOverworldID; // 0x0f88, 0x1 bytes
-                shade::sdk::client::OverworldTokenID_t m_uSelectedOverworldTokenRewards[0x3]; // 0x0f89, 0x3 bytes
-                shade::sdk::client::OverworldTarotCardID_t m_uOverworldFortune[0x3]; // 0x0f8c, 0x3 bytes
-                std::uint8_t pad_0f8f[0x1]; // 0x0f8f, 0x1 bytes
-                std::int32_t m_iCommandsIssued; // 0x0f90, 0x4 bytes
-                std::int32_t m_iGoldSpentOnConsumables; // 0x0f94, 0x4 bytes
-                std::int32_t m_iGoldSpentOnItems; // 0x0f98, 0x4 bytes
-                std::int32_t m_iGoldSpentOnBuybacks; // 0x0f9c, 0x4 bytes
-                std::int32_t m_iGoldLostToDeath; // 0x0fa0, 0x4 bytes
-                bool m_bIsNewPlayer; // 0x0fa4, 0x1 bytes
-                bool m_bIsGuidePlayer; // 0x0fa5, 0x1 bytes
-                std::uint8_t pad_0fa6[0x2]; // 0x0fa6, 0x2 bytes
-                std::uint64_t m_iPlayerSteamID; // 0x0fa8, 0x8 bytes
-                std::int32_t m_iSmokesUsed; // 0x0fb0, 0x4 bytes
-                std::int32_t m_iNeutralTokensFound; // 0x0fb4, 0x4 bytes
-                std::int32_t m_iWatchersTaken; // 0x0fb8, 0x4 bytes
-                std::int32_t m_iLotusesTaken; // 0x0fbc, 0x4 bytes
-                std::int32_t m_iTormentorKills; // 0x0fc0, 0x4 bytes
-                std::int32_t m_iCourierKills; // 0x0fc4, 0x4 bytes
-                std::int32_t m_nAcquiredMadstone; // 0x0fc8, 0x4 bytes
-                std::int32_t m_nCurrentMadstone; // 0x0fcc, 0x4 bytes
-                shade::sdk::server::PlayerNeutralChoices_t m_NeutralChoices; // 0x0fd0, 0x1b0 bytes
-                shade::sdk::server::CDOTACourierController m_CourierController; // 0x1180, 0xc0 bytes
-                shade::sdk::server::CQuickBuyController m_quickBuyController; // 0x1240, 0x188 bytes
-                shade::sdk::client::AbilityID_t m_nSelectedBlessing; // 0x13c8, 0x4 bytes
-                std::uint8_t pad_13cc[0x4]; // 0x13cc, 0x4 bytes
+                std::int32_t m_iMidasGold; // 0x0090, 0x4 bytes
+                std::int32_t m_iNetWorth; // 0x0094, 0x4 bytes
+                std::int32_t m_iDenyCount; // 0x0098, 0x4 bytes
+                std::int32_t m_iLastHitCount; // 0x009c, 0x4 bytes
+                std::int32_t m_iLastHitStreak; // 0x00a0, 0x4 bytes
+                std::int32_t m_iLastHitMultikill; // 0x00a4, 0x4 bytes
+                std::int32_t m_iNearbyCreepDeathCount; // 0x00a8, 0x4 bytes
+                std::int32_t m_iClaimedDenyCount; // 0x00ac, 0x4 bytes
+                std::int32_t m_iClaimedMissCount; // 0x00b0, 0x4 bytes
+                std::int32_t m_iMissCount; // 0x00b4, 0x4 bytes
+                shade::sdk::client::HeroID_t m_nPossibleHeroSelection; // 0x00b8, 0x4 bytes
+                std::uint8_t pad_00bc[0x4]; // 0x00bc, 0x4 bytes
+                shade::sdk::client::HeroFacetKey_t m_nPossibleHeroFacetSelection; // 0x00c0, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flBuybackCooldownTime; // 0x00c8, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flBuybackGoldLimitTime; // 0x00cc, 0x4 bytes
+                float m_flBuybackCostTime; // 0x00d0, 0x4 bytes
+                float m_flCustomBuybackCooldown; // 0x00d4, 0x4 bytes
+                float m_fStuns; // 0x00d8, 0x4 bytes
+                float m_fHealing; // 0x00dc, 0x4 bytes
+                float m_fRegeneratedHealth; // 0x00e0, 0x4 bytes
+                std::int32_t m_iTowerKills; // 0x00e4, 0x4 bytes
+                std::int32_t m_iRoshanKills; // 0x00e8, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hCameraTarget; // 0x00ec, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOverrideSelectionEntity; // 0x00f0, 0x4 bytes
+                std::int32_t m_iObserverWardsPlaced; // 0x00f4, 0x4 bytes
+                std::int32_t m_iSentryWardsPlaced; // 0x00f8, 0x4 bytes
+                std::int32_t m_iCreepsStacked; // 0x00fc, 0x4 bytes
+                std::int32_t m_iCampsStacked; // 0x0100, 0x4 bytes
+                std::int32_t m_iRunePickups; // 0x0104, 0x4 bytes
+                std::int32_t m_iGoldSpentOnSupport; // 0x0108, 0x4 bytes
+                float m_flHeroDamage; // 0x010c, 0x4 bytes
+                float m_flTowerDamage; // 0x0110, 0x4 bytes
+                std::int32_t m_iWardsPurchased; // 0x0114, 0x4 bytes
+                std::int32_t m_iWardsDestroyed; // 0x0118, 0x4 bytes
+                std::uint8_t pad_011c[0x4]; // 0x011c, 0x4 bytes
+                shade::sdk::server::CDOTA_UnitInventory m_PreGameInventory; // 0x0120, 0xf8 bytes
+                std::int32_t m_nKillsPerOpposingTeamMember[0x18]; // 0x0218, 0x60 bytes
+                shade::sdk::client::AbilityID_t m_iSuggestedAbilities[0x5]; // 0x0278, 0x14 bytes
+                float m_fSuggestedAbilityWeights[0x5]; // 0x028c, 0x14 bytes
+                shade::sdk::client::AbilityID_t m_iSuggestedPregameItems[0xf]; // 0x02a0, 0x3c bytes
+                shade::sdk::client::AbilityID_t m_iSuggestedItemSequence[0x32]; // 0x02dc, 0xc8 bytes
+                shade::sdk::client::AbilityID_t m_iSuggestedItemSequenceVariants[0x96]; // 0x03a4, 0x258 bytes
+                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedItemOptions[0xfa]; // 0x05fc, 0x7d0 bytes
+                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedGeneralItems[0x1e]; // 0x0dcc, 0xf0 bytes
+                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedNeutralTrinkets[0x5]; // 0x0ebc, 0x28 bytes
+                shade::sdk::client::WeightedAbilitySuggestion_t m_iSuggestedNeutralEnhancements[0x5]; // 0x0ee4, 0x28 bytes
+                shade::sdk::client::HeroID_t m_iSuggestedHeroes[0xa]; // 0x0f0c, 0x28 bytes
+                float m_flSuggestedHeroesWeights[0xa]; // 0x0f34, 0x28 bytes
+                std::int32_t m_iWisdomShrinesTaken; // 0x0f5c, 0x4 bytes
+                float m_flDamageByTypeReceivedPreReduction[0x3]; // 0x0f60, 0xc bytes
+                float m_flDamageByTypeReceivedPostReduction[0x3]; // 0x0f6c, 0xc bytes
+                float m_flOutgoingDamageByTypePreReduction[0x3]; // 0x0f78, 0xc bytes
+                float m_flOutgoingDamageByTypePostReduction[0x3]; // 0x0f84, 0xc bytes
+                shade::sdk::client::OverworldID_t m_uSelectedOverworldID; // 0x0f90, 0x1 bytes
+                shade::sdk::client::OverworldTokenID_t m_uSelectedOverworldTokenRewards[0x3]; // 0x0f91, 0x3 bytes
+                shade::sdk::client::OverworldTarotCardID_t m_uOverworldFortune[0x3]; // 0x0f94, 0x3 bytes
+                std::uint8_t pad_0f97[0x1]; // 0x0f97, 0x1 bytes
+                std::int32_t m_iCommandsIssued; // 0x0f98, 0x4 bytes
+                std::int32_t m_iGoldSpentOnConsumables; // 0x0f9c, 0x4 bytes
+                std::int32_t m_iGoldSpentOnItems; // 0x0fa0, 0x4 bytes
+                std::int32_t m_iGoldSpentOnBuybacks; // 0x0fa4, 0x4 bytes
+                std::int32_t m_iGoldLostToDeath; // 0x0fa8, 0x4 bytes
+                bool m_bIsNewPlayer; // 0x0fac, 0x1 bytes
+                bool m_bIsGuidePlayer; // 0x0fad, 0x1 bytes
+                std::uint8_t pad_0fae[0x2]; // 0x0fae, 0x2 bytes
+                std::uint64_t m_iPlayerSteamID; // 0x0fb0, 0x8 bytes
+                std::int32_t m_iSmokesUsed; // 0x0fb8, 0x4 bytes
+                std::int32_t m_iNeutralTokensFound; // 0x0fbc, 0x4 bytes
+                std::int32_t m_iWatchersTaken; // 0x0fc0, 0x4 bytes
+                std::int32_t m_iLotusesTaken; // 0x0fc4, 0x4 bytes
+                std::int32_t m_iTormentorKills; // 0x0fc8, 0x4 bytes
+                std::int32_t m_iCourierKills; // 0x0fcc, 0x4 bytes
+                std::int32_t m_nAcquiredMadstone; // 0x0fd0, 0x4 bytes
+                std::int32_t m_nCurrentMadstone; // 0x0fd4, 0x4 bytes
+                shade::sdk::server::PlayerNeutralChoices_t m_NeutralChoices; // 0x0fd8, 0x158 bytes
+                shade::sdk::server::CDOTACourierController m_CourierController; // 0x1130, 0xc0 bytes
+                shade::sdk::server::CQuickBuyController m_quickBuyController; // 0x11f0, 0x188 bytes
+                shade::sdk::client::AbilityID_t m_nSelectedBlessing; // 0x1378, 0x4 bytes
+                std::uint8_t pad_137c[0x4]; // 0x137c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(DataTeamPlayer_t) == 0x13D0, "DataTeamPlayer_t size mismatch");
+            static_assert(sizeof(DataTeamPlayer_t) == 0x1380, "DataTeamPlayer_t size mismatch");
         }
     }
 }

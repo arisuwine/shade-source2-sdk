@@ -15,6 +15,8 @@
 
 #include "shade/sdk/types.hpp"
 
+#include "shade/sdk/client/ButtonBitMask_t.hpp"
+
 namespace shade {
     namespace sdk {
         namespace client {
@@ -28,7 +30,7 @@ namespace shade {
             class CInButtonState {
             public:
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                std::uint64_t m_pButtonStates[0x3]; // 0x0008, 0x18 bytes
+                shade::sdk::client::ButtonBitMask_t m_pButtonStates[0x3]; // 0x0008, 0x18 bytes
             };
             #pragma pack(pop)
 

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ECandyShopRewardOptionType : std::int32_t {
+            enum class ECandyShopRewardOptionType : std::uint32_t {
                 k_eCandyShopRewardOptionType_Invalid = -0x1,
                 k_eCandyShopRewardOptionType_SingleItem = 0x0,
                 k_eCandyShopRewardOptionType_LootList = 0x1,

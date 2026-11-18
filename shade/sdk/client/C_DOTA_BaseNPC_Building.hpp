@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b28
+             * Size: 0x1bb0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,31 +42,31 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Building : public shade::sdk::client::C_DOTA_BaseNPC {
             public:
-                std::int32_t m_iDamageLevel; // 0x1ab8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x1abc, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTPFXIndex; // 0x1ac0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nStatusFXIndex; // 0x1ac4, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndex; // 0x1ac8, 0x8 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndexDestruction; // 0x1ad0, 0x8 bytes
-                QAngle m_angInitialAngles; // 0x1ad8, 0xc bytes
-                shade::sdk::animationsystem::HSequence m_hHeroStatueSequence; // 0x1ae4, 0x4 bytes
-                shade::sdk::animationsystem::HSequence m_hConstantLayerSequence; // 0x1ae8, 0x4 bytes
-                float m_fHeroStatueCycle; // 0x1aec, 0x4 bytes
-                std::int32_t m_iHeroStatueStatusEffectIndex; // 0x1af0, 0x4 bytes
-                bool m_bHeroStatue; // 0x1af4, 0x1 bytes
-                bool m_bBattleCup; // 0x1af5, 0x1 bytes
-                char m_HeroStatueInscription[0x20]; // 0x1af6, 0x20 bytes
-                std::uint8_t pad_1b16[0x2]; // 0x1b16, 0x2 bytes
-                shade::sdk::client::PlayerID_t m_iHeroStatueOwnerPlayerID; // 0x1b18, 0x4 bytes
-                Color m_ParticleTintColor; // 0x1b1c, 0x4 bytes
-                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x1b20, 0x4 bytes
-                std::uint8_t pad_1b24[0x4]; // 0x1b24, 0x4 bytes
+                std::int32_t m_iDamageLevel; // 0x1b40, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientFXIndex; // 0x1b44, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTPFXIndex; // 0x1b48, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nStatusFXIndex; // 0x1b4c, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndex; // 0x1b50, 0x8 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_nFXIndexDestruction; // 0x1b58, 0x8 bytes
+                QAngle m_angInitialAngles; // 0x1b60, 0xc bytes
+                shade::sdk::animationsystem::HSequence m_hHeroStatueSequence; // 0x1b6c, 0x4 bytes
+                shade::sdk::animationsystem::HSequence m_hConstantLayerSequence; // 0x1b70, 0x4 bytes
+                float m_fHeroStatueCycle; // 0x1b74, 0x4 bytes
+                std::int32_t m_iHeroStatueStatusEffectIndex; // 0x1b78, 0x4 bytes
+                bool m_bHeroStatue; // 0x1b7c, 0x1 bytes
+                bool m_bBattleCup; // 0x1b7d, 0x1 bytes
+                char m_HeroStatueInscription[0x20]; // 0x1b7e, 0x20 bytes
+                std::uint8_t pad_1b9e[0x2]; // 0x1b9e, 0x2 bytes
+                shade::sdk::client::PlayerID_t m_iHeroStatueOwnerPlayerID; // 0x1ba0, 0x4 bytes
+                Color m_ParticleTintColor; // 0x1ba4, 0x4 bytes
+                shade::sdk::client::FowCustomTeams_t m_nFoWTeam; // 0x1ba8, 0x4 bytes
+                std::uint8_t pad_1bac[0x4]; // 0x1bac, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Building) == 0x1B28, "C_DOTA_BaseNPC_Building size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Building) == 0x1BB0, "C_DOTA_BaseNPC_Building size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x570
+             * Size: 0x578
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload) == 0x570, "CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload size mismatch");
+            static_assert(sizeof(CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload) == 0x578, "CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload size mismatch");
         }
     }
 }

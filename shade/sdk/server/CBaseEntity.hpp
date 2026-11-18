@@ -113,10 +113,10 @@ namespace shade {
                 std::int32_t m_iSentToClients; // 0x0350, 0x4 bytes
                 std::uint8_t pad_0354[0x4]; // 0x0354, 0x4 bytes
                 CUtlString m_sUniqueHammerID; // 0x0358, 0x8 bytes
-                std::uint32_t m_spawnflags; // 0x0360, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nNextThinkTick; // 0x0364, 0x4 bytes
-                std::int32_t m_nSimulationTick; // 0x0368, 0x4 bytes
-                std::uint8_t pad_036c[0x4]; // 0x036c, 0x4 bytes
+                std::uint32_t m_nHammerHashKey; // 0x0360, 0x4 bytes
+                std::uint32_t m_spawnflags; // 0x0364, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nNextThinkTick; // 0x0368, 0x4 bytes
+                std::int32_t m_nSimulationTick; // 0x036c, 0x4 bytes
                 shade::sdk::entity2::CEntityIOOutput m_OnKilled; // 0x0370, 0x18 bytes
                 std::uint32_t m_fFlags; // 0x0388, 0x4 bytes
                 Vector m_vecAbsVelocity; // 0x038c, 0xc bytes
@@ -171,7 +171,6 @@ namespace shade {
              * CUtlString ownername; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t disableshadows; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * std::int32_t disablereceiveshadows; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * std::int32_t nodamageforces; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * float angle; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 

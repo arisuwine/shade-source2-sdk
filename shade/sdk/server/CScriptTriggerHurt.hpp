@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa68
+             * Size: 0xac8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CScriptTriggerHurt : public shade::sdk::server::CTriggerHurt {
             public:
-                Vector m_vExtent; // 0x0a58, 0xc bytes
-                std::uint8_t pad_0a64[0x4]; // 0x0a64, 0x4 bytes
+                Vector m_vExtent; // 0x0ab8, 0xc bytes
+                std::uint8_t pad_0ac4[0x4]; // 0x0ac4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CScriptTriggerHurt) == 0xA68, "CScriptTriggerHurt size mismatch");
+            static_assert(sizeof(CScriptTriggerHurt) == 0xAC8, "CScriptTriggerHurt size mismatch");
         }
     }
 }

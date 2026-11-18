@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1b60
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,25 +37,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Phoenix_IcarusDive : public shade::sdk::client::CDOTA_Buff {
             public:
-                VectorWS m_vSource; // 0x1aa8, 0xc bytes
-                VectorWS m_vTarget; // 0x1ab4, 0xc bytes
-                Vector m_vDirection; // 0x1ac0, 0xc bytes
-                QAngle m_angDirection; // 0x1acc, 0xc bytes
-                float m_flCurrentTime; // 0x1ad8, 0x4 bytes
-                float dash_length; // 0x1adc, 0x4 bytes
-                float dash_width; // 0x1ae0, 0x4 bytes
-                float hit_radius; // 0x1ae4, 0x4 bytes
-                float burn_duration; // 0x1ae8, 0x4 bytes
-                float dive_duration; // 0x1aec, 0x4 bytes
-                float impact_damage; // 0x1af0, 0x4 bytes
-                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitEntities; // 0x1af8, 0x18 bytes
+                VectorWS m_vSource; // 0x1af8, 0xc bytes
+                VectorWS m_vTarget; // 0x1b04, 0xc bytes
+                Vector m_vDirection; // 0x1b10, 0xc bytes
+                QAngle m_angDirection; // 0x1b1c, 0xc bytes
+                float m_flCurrentTime; // 0x1b28, 0x4 bytes
+                float dash_length; // 0x1b2c, 0x4 bytes
+                float dash_width; // 0x1b30, 0x4 bytes
+                float hit_radius; // 0x1b34, 0x4 bytes
+                float burn_duration; // 0x1b38, 0x4 bytes
+                float dive_duration; // 0x1b3c, 0x4 bytes
+                float impact_damage; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_vecHitEntities; // 0x1b48, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Phoenix_IcarusDive) == 0x1B10, "CDOTA_Modifier_Phoenix_IcarusDive size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Phoenix_IcarusDive) == 0x1B60, "CDOTA_Modifier_Phoenix_IcarusDive size mismatch");
         }
     }
 }

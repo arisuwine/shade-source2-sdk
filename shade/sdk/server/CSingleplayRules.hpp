@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xd8
+             * Size: 0xe0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CSingleplayRules : public shade::sdk::server::CGameRules {
             public:
-                bool m_bSinglePlayerGameEnding; // 0x00d0, 0x1 bytes
-                std::uint8_t pad_00d1[0x7]; // 0x00d1, 0x7 bytes
+                bool m_bSinglePlayerGameEnding; // 0x00d8, 0x1 bytes
+                std::uint8_t pad_00d9[0x7]; // 0x00d9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CSingleplayRules) == 0xD8, "CSingleplayRules size mismatch");
+            static_assert(sizeof(CSingleplayRules) == 0xE0, "CSingleplayRules size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa98
+             * Size: 0xaf8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Item_Rune : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                std::uint8_t pad_0878[0x10]; // 0x0878, 0x10 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hRuneSpawner; // 0x0888, 0x4 bytes
-                std::int32_t m_iRuneType; // 0x088c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRuneTime; // 0x0890, 0x4 bytes
-                std::int32_t m_nMapLocationTeam; // 0x0894, 0x4 bytes
-                char m_szLocation[0x200]; // 0x0898, 0x200 bytes
+                std::uint8_t pad_08d8[0x10]; // 0x08d8, 0x10 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hRuneSpawner; // 0x08e8, 0x4 bytes
+                std::int32_t m_iRuneType; // 0x08ec, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRuneTime; // 0x08f0, 0x4 bytes
+                std::int32_t m_nMapLocationTeam; // 0x08f4, 0x4 bytes
+                char m_szLocation[0x200]; // 0x08f8, 0x200 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Item_Rune) == 0xA98, "CDOTA_Item_Rune size mismatch");
+            static_assert(sizeof(CDOTA_Item_Rune) == 0xAF8, "CDOTA_Item_Rune size mismatch");
         }
     }
 }

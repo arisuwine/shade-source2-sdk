@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace modellib {
-            enum class RenderMultisampleType_t : std::int8_t {
+            enum class RenderMultisampleType_t : std::uint8_t {
                 RENDER_MULTISAMPLE_INVALID = -0x1,
                 RENDER_MULTISAMPLE_NONE = 0x0,
                 RENDER_MULTISAMPLE_2X = 0x1,

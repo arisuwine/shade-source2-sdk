@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xc0
+             * Size: 0xc8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,13 +30,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerLoopTriggerWithRandomPanner : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerLoopTrigger {
             public:
-                shade::sdk::soundsystem_voicecontainers::CRandomPannerControls m_randomPannerControls; // 0x00a0, 0x20 bytes
+                shade::sdk::soundsystem_voicecontainers::CRandomPannerControls m_randomPannerControls; // 0x00a8, 0x20 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerLoopTriggerWithRandomPanner) == 0xC0, "CVoiceContainerLoopTriggerWithRandomPanner size mismatch");
+            static_assert(sizeof(CVoiceContainerLoopTriggerWithRandomPanner) == 0xC8, "CVoiceContainerLoopTriggerWithRandomPanner size mismatch");
         }
     }
 }

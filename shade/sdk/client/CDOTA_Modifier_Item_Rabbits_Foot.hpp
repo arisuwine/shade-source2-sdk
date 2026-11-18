@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Item_Rabbits_Foot : public shade::sdk::client::CDOTA_Buff_Item {
             public:
-                float cooldown; // 0x1aa8, 0x4 bytes
-                std::uint8_t pad_1aac[0x2c]; // 0x1aac, 0x2c bytes
+                float cooldown; // 0x1af8, 0x4 bytes
+                std::uint8_t pad_1afc[0x2c]; // 0x1afc, 0x2c bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Item_Rabbits_Foot) == 0x1AD8, "CDOTA_Modifier_Item_Rabbits_Foot size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Item_Rabbits_Foot) == 0x1B28, "CDOTA_Modifier_Item_Rabbits_Foot size mismatch");
         }
     }
 }

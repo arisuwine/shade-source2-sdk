@@ -22,6 +22,7 @@
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeConstantIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeDomainValueIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeInvokeIndex_t.hpp"
+#include "shade/sdk/pulse_runtime_lib/PulseRuntimeLambdaIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeRegisterIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeTempVarIndex_t.hpp"
 #include "shade/sdk/pulse_runtime_lib/PulseRuntimeVarIndex_t.hpp"
@@ -34,6 +35,7 @@ namespace shade {
              * Alignment: 0x8
              * Has Trivial Destructor
              * Construct Allowed
+             * Module Local Type Scope
              */
             #pragma pack(push, 1)
             struct PGDInstruction_t {
@@ -43,7 +45,7 @@ namespace shade {
                 shade::sdk::pulse_runtime_lib::PulseRuntimeRegisterIndex_t m_nReg0; // 0x0008, 0x2 bytes
                 shade::sdk::pulse_runtime_lib::PulseRuntimeRegisterIndex_t m_nReg1; // 0x000a, 0x2 bytes
                 shade::sdk::pulse_runtime_lib::PulseRuntimeRegisterIndex_t m_nReg2; // 0x000c, 0x2 bytes
-                std::uint8_t pad_000e[0x2]; // 0x000e, 0x2 bytes
+                shade::sdk::pulse_runtime_lib::PulseRuntimeLambdaIndex_t m_nLambdaIdx; // 0x000e, 0x2 bytes
                 shade::sdk::pulse_runtime_lib::PulseRuntimeInvokeIndex_t m_nInvokeBindingIndex; // 0x0010, 0x4 bytes
                 shade::sdk::pulse_runtime_lib::PulseRuntimeChunkIndex_t m_nChunk; // 0x0014, 0x4 bytes
                 std::int32_t m_nDestInstruction; // 0x0018, 0x4 bytes

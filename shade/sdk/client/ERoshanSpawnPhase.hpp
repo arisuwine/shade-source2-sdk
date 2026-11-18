@@ -19,7 +19,8 @@ namespace shade {
             enum class ERoshanSpawnPhase : std::uint32_t {
                 ROSHAN_SPAWN_PHASE_ALIVE = 0x0,
                 ROSHAN_SPAWN_PHASE_BASE_TIMER = 0x1,
-                ROSHAN_SPAWN_PHASE_VARIABLE_TIMER = 0x2
+                ROSHAN_SPAWN_PHASE_VARIABLE_TIMER = 0x2,
+                ROSHAN_SPAWN_PHASE_AEGIS_HELD = 0x3
             };
         }
     }

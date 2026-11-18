@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x390
+             * Size: 0x3a0
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,19 +29,21 @@ namespace shade {
             public:
                 std::uint8_t pad_0000[0x28]; // 0x0000, 0x28 bytes
                 bool m_bCompactBuffListPending; // 0x0028, 0x1 bytes
-                std::uint8_t pad_0029[0x357]; // 0x0029, 0x357 bytes
-                std::uint16_t m_nHasTruesightForTeam; // 0x0380, 0x2 bytes
-                std::uint16_t m_nHasTruesightForTeamValid; // 0x0382, 0x2 bytes
-                std::uint16_t m_nProvidesFOWPositionForTeam; // 0x0384, 0x2 bytes
-                std::uint16_t m_nProvidesFOWPositionForTeamValid; // 0x0386, 0x2 bytes
-                std::int32_t m_iBuffIndex; // 0x0388, 0x4 bytes
-                std::int32_t m_iLockRefCount; // 0x038c, 0x4 bytes
+                std::uint8_t pad_0029[0x361]; // 0x0029, 0x361 bytes
+                std::uint16_t m_nHasTruesightForTeam; // 0x038a, 0x2 bytes
+                std::uint16_t m_nHasTruesightForTeamValid; // 0x038c, 0x2 bytes
+                std::uint16_t m_nProvidesFOWPositionForTeam; // 0x038e, 0x2 bytes
+                std::uint16_t m_nProvidesFOWPositionForTeamValid; // 0x0390, 0x2 bytes
+                std::uint8_t pad_0392[0x2]; // 0x0392, 0x2 bytes
+                std::int32_t m_iBuffIndex; // 0x0394, 0x4 bytes
+                std::int32_t m_iLockRefCount; // 0x0398, 0x4 bytes
+                std::uint8_t pad_039c[0x4]; // 0x039c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_ModifierManager) == 0x390, "CDOTA_ModifierManager size mismatch");
+            static_assert(sizeof(CDOTA_ModifierManager) == 0x3A0, "CDOTA_ModifierManager size mismatch");
         }
     }
 }

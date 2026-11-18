@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x42d0
+             * Size: 0x4398
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,75 +31,75 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_DataDriven : public shade::sdk::client::CDOTA_Buff, public shade::sdk::server::CDOTA_ActionRunner {
             public:
-                shade::sdk::client::AbilityID_t m_nAbilityID; // 0x1ac0, 0x4 bytes
-                std::int32_t m_nIndexInAbility; // 0x1ac4, 0x4 bytes
-                bool m_bIsHidden; // 0x1ac8, 0x1 bytes
-                bool m_bIsDebuff; // 0x1ac9, 0x1 bytes
-                bool m_bIsPurgable; // 0x1aca, 0x1 bytes
-                bool m_bIsStunDebuff; // 0x1acb, 0x1 bytes
-                bool m_bAllowIllusionDuplicate; // 0x1acc, 0x1 bytes
-                bool m_bRemoveOnDeath; // 0x1acd, 0x1 bytes
-                std::uint8_t pad_1ace[0x2]; // 0x1ace, 0x2 bytes
-                char *m_pszAuraModifier; // 0x1ad0, 0x8 bytes
-                std::int32_t m_nAuraModifierIndex; // 0x1ad8, 0x4 bytes
-                std::int32_t m_nAuraRadius; // 0x1adc, 0x4 bytes
-                std::int32_t m_nAuraSearchTeam; // 0x1ae0, 0x4 bytes
-                std::int32_t m_nAuraSearchType; // 0x1ae4, 0x4 bytes
-                std::int32_t m_nAuraSearchFlags; // 0x1ae8, 0x4 bytes
-                bool m_bAuraApplyToCaster; // 0x1aec, 0x1 bytes
-                bool m_bAuraApplyToParent; // 0x1aed, 0x1 bytes
-                std::uint8_t pad_1aee[0x2]; // 0x1aee, 0x2 bytes
-                std::int32_t m_nAttributes; // 0x1af0, 0x4 bytes
-                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
-                char *m_pszEffectName; // 0x1af8, 0x8 bytes
-                std::int32_t m_nEffectAttachType; // 0x1b00, 0x4 bytes
-                std::int32_t m_nModifierPriority; // 0x1b04, 0x4 bytes
-                char *m_pszStatusEffectName; // 0x1b08, 0x8 bytes
-                std::int32_t m_nStatusEffectPriority; // 0x1b10, 0x4 bytes
-                std::int32_t m_nOverrideAnimation; // 0x1b14, 0x4 bytes
-                bool m_bNeedsReParseIfRefreshed; // 0x1b18, 0x1 bytes
-                std::uint8_t pad_1b19[0x7]; // 0x1b19, 0x7 bytes
-                char *m_pszModelName; // 0x1b20, 0x8 bytes
-                std::uint8_t pad_1b28[0x26a0]; // 0x1b28, 0x26a0 bytes
-                std::uint64_t m_nModifierStatesEnabled; // 0x41c8, 0x8 bytes
-                std::uint64_t m_nModifierStatesDisabled; // 0x41d0, 0x8 bytes
-                KeyValues *m_pOnCreated; // 0x41d8, 0x8 bytes
-                KeyValues *m_pOnIntervalThink; // 0x41e0, 0x8 bytes
-                KeyValues *m_pOnDestroy; // 0x41e8, 0x8 bytes
-                KeyValues *m_pOnAttackStart; // 0x41f0, 0x8 bytes
-                KeyValues *m_pOnAttack; // 0x41f8, 0x8 bytes
-                KeyValues *m_pOnAttackLanded; // 0x4200, 0x8 bytes
-                KeyValues *m_pOnAttackFailed; // 0x4208, 0x8 bytes
-                KeyValues *m_pOnAttackAllied; // 0x4210, 0x8 bytes
-                KeyValues *m_pOnProjectileDodge; // 0x4218, 0x8 bytes
-                KeyValues *m_pOnOrder; // 0x4220, 0x8 bytes
-                KeyValues *m_pOnUnitMoved; // 0x4228, 0x8 bytes
-                KeyValues *m_pOnAbilityStart; // 0x4230, 0x8 bytes
-                KeyValues *m_pOnAbilityExecuted; // 0x4238, 0x8 bytes
-                KeyValues *m_pOnBreakInvisibility; // 0x4240, 0x8 bytes
-                KeyValues *m_pOnAbilityEndChannel; // 0x4248, 0x8 bytes
-                KeyValues *m_pOnTakeDamage; // 0x4250, 0x8 bytes
-                KeyValues *m_pOnDealDamage; // 0x4258, 0x8 bytes
-                KeyValues *m_pOnStateChanged; // 0x4260, 0x8 bytes
-                KeyValues *m_pOnAttacked; // 0x4268, 0x8 bytes
-                KeyValues *m_pOnDeath; // 0x4270, 0x8 bytes
-                KeyValues *m_pOnKill; // 0x4278, 0x8 bytes
-                KeyValues *m_pOnRespawn; // 0x4280, 0x8 bytes
-                KeyValues *m_pOnSpentMana; // 0x4288, 0x8 bytes
-                KeyValues *m_pOnTeleporting; // 0x4290, 0x8 bytes
-                KeyValues *m_pOnTeleported; // 0x4298, 0x8 bytes
-                KeyValues *m_pOnHealthGained; // 0x42a0, 0x8 bytes
-                KeyValues *m_pOnManaGained; // 0x42a8, 0x8 bytes
-                KeyValues *m_pOnHeroKilled; // 0x42b0, 0x8 bytes
-                KeyValues *m_pOnHealReceived; // 0x42b8, 0x8 bytes
-                KeyValues *m_pOnAttackFinished; // 0x42c0, 0x8 bytes
-                KeyValues *m_pOnAttackCancelled; // 0x42c8, 0x8 bytes
+                shade::sdk::client::AbilityID_t m_nAbilityID; // 0x1b10, 0x4 bytes
+                std::int32_t m_nIndexInAbility; // 0x1b14, 0x4 bytes
+                bool m_bIsHidden; // 0x1b18, 0x1 bytes
+                bool m_bIsDebuff; // 0x1b19, 0x1 bytes
+                bool m_bIsPurgable; // 0x1b1a, 0x1 bytes
+                bool m_bIsStunDebuff; // 0x1b1b, 0x1 bytes
+                bool m_bAllowIllusionDuplicate; // 0x1b1c, 0x1 bytes
+                bool m_bRemoveOnDeath; // 0x1b1d, 0x1 bytes
+                std::uint8_t pad_1b1e[0x2]; // 0x1b1e, 0x2 bytes
+                char *m_pszAuraModifier; // 0x1b20, 0x8 bytes
+                std::int32_t m_nAuraModifierIndex; // 0x1b28, 0x4 bytes
+                std::int32_t m_nAuraRadius; // 0x1b2c, 0x4 bytes
+                std::int32_t m_nAuraSearchTeam; // 0x1b30, 0x4 bytes
+                std::int32_t m_nAuraSearchType; // 0x1b34, 0x4 bytes
+                std::int32_t m_nAuraSearchFlags; // 0x1b38, 0x4 bytes
+                bool m_bAuraApplyToCaster; // 0x1b3c, 0x1 bytes
+                bool m_bAuraApplyToParent; // 0x1b3d, 0x1 bytes
+                std::uint8_t pad_1b3e[0x2]; // 0x1b3e, 0x2 bytes
+                std::int32_t m_nAttributes; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
+                char *m_pszEffectName; // 0x1b48, 0x8 bytes
+                std::int32_t m_nEffectAttachType; // 0x1b50, 0x4 bytes
+                std::int32_t m_nModifierPriority; // 0x1b54, 0x4 bytes
+                char *m_pszStatusEffectName; // 0x1b58, 0x8 bytes
+                std::int32_t m_nStatusEffectPriority; // 0x1b60, 0x4 bytes
+                std::int32_t m_nOverrideAnimation; // 0x1b64, 0x4 bytes
+                bool m_bNeedsReParseIfRefreshed; // 0x1b68, 0x1 bytes
+                std::uint8_t pad_1b69[0x7]; // 0x1b69, 0x7 bytes
+                char *m_pszModelName; // 0x1b70, 0x8 bytes
+                std::uint8_t pad_1b78[0x2718]; // 0x1b78, 0x2718 bytes
+                std::uint64_t m_nModifierStatesEnabled; // 0x4290, 0x8 bytes
+                std::uint64_t m_nModifierStatesDisabled; // 0x4298, 0x8 bytes
+                KeyValues *m_pOnCreated; // 0x42a0, 0x8 bytes
+                KeyValues *m_pOnIntervalThink; // 0x42a8, 0x8 bytes
+                KeyValues *m_pOnDestroy; // 0x42b0, 0x8 bytes
+                KeyValues *m_pOnAttackStart; // 0x42b8, 0x8 bytes
+                KeyValues *m_pOnAttack; // 0x42c0, 0x8 bytes
+                KeyValues *m_pOnAttackLanded; // 0x42c8, 0x8 bytes
+                KeyValues *m_pOnAttackFailed; // 0x42d0, 0x8 bytes
+                KeyValues *m_pOnAttackAllied; // 0x42d8, 0x8 bytes
+                KeyValues *m_pOnProjectileDodge; // 0x42e0, 0x8 bytes
+                KeyValues *m_pOnOrder; // 0x42e8, 0x8 bytes
+                KeyValues *m_pOnUnitMoved; // 0x42f0, 0x8 bytes
+                KeyValues *m_pOnAbilityStart; // 0x42f8, 0x8 bytes
+                KeyValues *m_pOnAbilityExecuted; // 0x4300, 0x8 bytes
+                KeyValues *m_pOnBreakInvisibility; // 0x4308, 0x8 bytes
+                KeyValues *m_pOnAbilityEndChannel; // 0x4310, 0x8 bytes
+                KeyValues *m_pOnTakeDamage; // 0x4318, 0x8 bytes
+                KeyValues *m_pOnDealDamage; // 0x4320, 0x8 bytes
+                KeyValues *m_pOnStateChanged; // 0x4328, 0x8 bytes
+                KeyValues *m_pOnAttacked; // 0x4330, 0x8 bytes
+                KeyValues *m_pOnDeath; // 0x4338, 0x8 bytes
+                KeyValues *m_pOnKill; // 0x4340, 0x8 bytes
+                KeyValues *m_pOnRespawn; // 0x4348, 0x8 bytes
+                KeyValues *m_pOnSpentMana; // 0x4350, 0x8 bytes
+                KeyValues *m_pOnTeleporting; // 0x4358, 0x8 bytes
+                KeyValues *m_pOnTeleported; // 0x4360, 0x8 bytes
+                KeyValues *m_pOnHealthGained; // 0x4368, 0x8 bytes
+                KeyValues *m_pOnManaGained; // 0x4370, 0x8 bytes
+                KeyValues *m_pOnHeroKilled; // 0x4378, 0x8 bytes
+                KeyValues *m_pOnHealReceived; // 0x4380, 0x8 bytes
+                KeyValues *m_pOnAttackFinished; // 0x4388, 0x8 bytes
+                KeyValues *m_pOnAttackCancelled; // 0x4390, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_DataDriven) == 0x42D0, "CDOTA_Modifier_DataDriven size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_DataDriven) == 0x4398, "CDOTA_Modifier_DataDriven size mismatch");
         }
     }
 }

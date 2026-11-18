@@ -38,7 +38,7 @@ namespace shade {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
                 CNetworkUtlVectorBase<CTransform> m_RelativeTransforms; // 0x0008, 0x18 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hOwner; // 0x0020, 0x4 bytes
-                bool m_bSetFromDebugHistory; // 0x0024, 0x1 bytes
+                bool m_bFullyKeyframed; // 0x0024, 0x1 bytes
                 std::uint8_t pad_0025[0x3]; // 0x0025, 0x3 bytes
             };
             #pragma pack(pop)

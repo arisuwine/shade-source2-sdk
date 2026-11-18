@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0x1a8
+             * Size: 0x1b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,20 +37,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerRandomSampler : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator {
             public:
-                float m_flAmplitude; // 0x0080, 0x4 bytes
-                float m_flAmplitudeJitter; // 0x0084, 0x4 bytes
-                float m_flTimeJitter; // 0x0088, 0x4 bytes
-                float m_flMaxLength; // 0x008c, 0x4 bytes
-                std::int32_t m_nNumDelayVariations; // 0x0090, 0x4 bytes
-                std::uint8_t pad_0094[0x4]; // 0x0094, 0x4 bytes
-                CUtlVector<CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVoiceContainerBase>> m_grainResources; // 0x0098, 0x18 bytes
-                std::uint8_t pad_00b0[0xf8]; // 0x00b0, 0xf8 bytes
+                float m_flAmplitude; // 0x0088, 0x4 bytes
+                float m_flAmplitudeJitter; // 0x008c, 0x4 bytes
+                float m_flTimeJitter; // 0x0090, 0x4 bytes
+                float m_flMaxLength; // 0x0094, 0x4 bytes
+                std::int32_t m_nNumDelayVariations; // 0x0098, 0x4 bytes
+                std::uint8_t pad_009c[0x4]; // 0x009c, 0x4 bytes
+                CUtlVector<CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCVoiceContainerBase>> m_grainResources; // 0x00a0, 0x18 bytes
+                std::uint8_t pad_00b8[0xf8]; // 0x00b8, 0xf8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerRandomSampler) == 0x1A8, "CVoiceContainerRandomSampler size mismatch");
+            static_assert(sizeof(CVoiceContainerRandomSampler) == 0x1B0, "CVoiceContainerRandomSampler size mismatch");
         }
     }
 }

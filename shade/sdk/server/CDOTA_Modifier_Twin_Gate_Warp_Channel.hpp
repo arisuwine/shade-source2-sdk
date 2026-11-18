@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,24 +38,24 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Twin_Gate_Warp_Channel : public shade::sdk::client::CDOTA_Buff {
             public:
-                shade::sdk::client::ParticleIndex_t m_nfxTargetTp; // 0x1aa8, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nfxTargetTp2; // 0x1aac, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nfxAmbientFx; // 0x1ab0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nfxPortal1; // 0x1ab4, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nfxPortal2; // 0x1ab8, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hPortal; // 0x1abc, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hOtherPortal; // 0x1ac0, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1ac4, 0xc bytes
-                float m_flTotalTime; // 0x1ad0, 0x4 bytes
-                float m_flElapsedTimePortion; // 0x1ad4, 0x4 bytes
-                float animation_rate; // 0x1ad8, 0x4 bytes
-                std::int32_t stop_distance; // 0x1adc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxTargetTp; // 0x1af8, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxTargetTp2; // 0x1afc, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxAmbientFx; // 0x1b00, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxPortal1; // 0x1b04, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nfxPortal2; // 0x1b08, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hPortal; // 0x1b0c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hOtherPortal; // 0x1b10, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1b14, 0xc bytes
+                float m_flTotalTime; // 0x1b20, 0x4 bytes
+                float m_flElapsedTimePortion; // 0x1b24, 0x4 bytes
+                float animation_rate; // 0x1b28, 0x4 bytes
+                std::int32_t stop_distance; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Twin_Gate_Warp_Channel) == 0x1AE0, "CDOTA_Modifier_Twin_Gate_Warp_Channel size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Twin_Gate_Warp_Channel) == 0x1B30, "CDOTA_Modifier_Twin_Gate_Warp_Channel size mismatch");
         }
     }
 }

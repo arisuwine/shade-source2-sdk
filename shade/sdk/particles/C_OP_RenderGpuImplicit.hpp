@@ -38,17 +38,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_OP_RenderGpuImplicit : public shade::sdk::particles::CParticleFunctionRenderer {
             public:
-                bool m_bUsePerParticleRadius; // 0x0230, 0x1 bytes
-                std::uint8_t pad_0231[0x3]; // 0x0231, 0x3 bytes
-                std::uint32_t m_nVertexCountKb; // 0x0234, 0x4 bytes
-                std::uint32_t m_nIndexCountKb; // 0x0238, 0x4 bytes
-                std::uint8_t pad_023c[0x4]; // 0x023c, 0x4 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fGridSize; // 0x0240, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fRadiusScale; // 0x03b8, 0x178 bytes
-                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fIsosurfaceThreshold; // 0x0530, 0x178 bytes
-                std::int32_t m_nScaleCP; // 0x06a8, 0x4 bytes
-                std::uint8_t pad_06ac[0x4]; // 0x06ac, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x06b0, 0x8 bytes
+                bool m_bUsePerParticleRadius; // 0x0228, 0x1 bytes
+                std::uint8_t pad_0229[0x3]; // 0x0229, 0x3 bytes
+                std::uint32_t m_nVertexCountKb; // 0x022c, 0x4 bytes
+                std::uint32_t m_nIndexCountKb; // 0x0230, 0x4 bytes
+                std::uint8_t pad_0234[0x4]; // 0x0234, 0x4 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fGridSize; // 0x0238, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fRadiusScale; // 0x03b0, 0x178 bytes
+                shade::sdk::particleslib::CParticleCollectionRendererFloatInput m_fIsosurfaceThreshold; // 0x0528, 0x178 bytes
+                std::int32_t m_nScaleCP; // 0x06a0, 0x4 bytes
+                std::uint8_t pad_06a4[0x4]; // 0x06a4, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x06a8, 0x8 bytes
+                bool m_bUseParticleColorForVertColor; // 0x06b0, 0x1 bytes
+                std::uint8_t pad_06b1[0x7]; // 0x06b1, 0x7 bytes
             };
             #pragma pack(pop)
 

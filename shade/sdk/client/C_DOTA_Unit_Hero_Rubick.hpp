@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1f00
+             * Size: 0x1f88
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,25 +31,25 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Hero_Rubick : public shade::sdk::client::C_DOTA_BaseNPC_Hero {
             public:
-                Vector m_stolenAbilityColorHSV1; // 0x1e88, 0xc bytes
-                Vector m_stolenAbilityColorHSV2; // 0x1e94, 0xc bytes
-                Vector m_stolenAbilityFXColorHSV; // 0x1ea0, 0xc bytes
-                bool m_bHasInitializedAbilityColors; // 0x1eac, 0x1 bytes
-                std::uint8_t pad_1ead[0x3]; // 0x1ead, 0x3 bytes
-                Vector m_startAbilityColorHSV1; // 0x1eb0, 0xc bytes
-                Vector m_startAbilityColorHSV2; // 0x1ebc, 0xc bytes
-                Vector m_startAbilityFXColorHSV; // 0x1ec8, 0xc bytes
-                Vector m_currAbilityColorHSV1; // 0x1ed4, 0xc bytes
-                Vector m_currAbilityColorHSV2; // 0x1ee0, 0xc bytes
-                Vector m_currAbilityFXColorHSV; // 0x1eec, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1ef8, 0x4 bytes
-                std::uint8_t pad_1efc[0x4]; // 0x1efc, 0x4 bytes
+                Vector m_stolenAbilityColorHSV1; // 0x1f10, 0xc bytes
+                Vector m_stolenAbilityColorHSV2; // 0x1f1c, 0xc bytes
+                Vector m_stolenAbilityFXColorHSV; // 0x1f28, 0xc bytes
+                bool m_bHasInitializedAbilityColors; // 0x1f34, 0x1 bytes
+                std::uint8_t pad_1f35[0x3]; // 0x1f35, 0x3 bytes
+                Vector m_startAbilityColorHSV1; // 0x1f38, 0xc bytes
+                Vector m_startAbilityColorHSV2; // 0x1f44, 0xc bytes
+                Vector m_startAbilityFXColorHSV; // 0x1f50, 0xc bytes
+                Vector m_currAbilityColorHSV1; // 0x1f5c, 0xc bytes
+                Vector m_currAbilityColorHSV2; // 0x1f68, 0xc bytes
+                Vector m_currAbilityFXColorHSV; // 0x1f74, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1f80, 0x4 bytes
+                std::uint8_t pad_1f84[0x4]; // 0x1f84, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Hero_Rubick) == 0x1F00, "C_DOTA_Unit_Hero_Rubick size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Hero_Rubick) == 0x1F88, "C_DOTA_Unit_Hero_Rubick size mismatch");
         }
     }
 }

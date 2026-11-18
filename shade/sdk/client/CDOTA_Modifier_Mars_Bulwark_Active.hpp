@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b48
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,29 +30,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Mars_Bulwark_Active : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t redirect_chance; // 0x1aa8, 0x4 bytes
-                float redirect_range; // 0x1aac, 0x4 bytes
-                float forward_angle; // 0x1ab0, 0x4 bytes
-                float side_angle; // 0x1ab4, 0x4 bytes
-                float redirect_speed_penatly; // 0x1ab8, 0x4 bytes
-                float redirect_close_range; // 0x1abc, 0x4 bytes
-                std::int32_t attack_redirection_grace_distance; // 0x1ac0, 0x4 bytes
-                bool forced_movement_immunity; // 0x1ac4, 0x1 bytes
-                std::uint8_t pad_1ac5[0x3]; // 0x1ac5, 0x3 bytes
-                std::int32_t m_nPoseParameterWE; // 0x1ac8, 0x4 bytes
-                std::int32_t m_nPoseParameterNS; // 0x1acc, 0x4 bytes
-                float m_flLastPoseX; // 0x1ad0, 0x4 bytes
-                float m_flLastPoseY; // 0x1ad4, 0x4 bytes
-                std::int32_t m_nLastMaxDirection; // 0x1ad8, 0x4 bytes
-                VectorWS m_vLastOrigin; // 0x1adc, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x1ae8, 0x4 bytes
-                Vector m_vFacing; // 0x1aec, 0xc bytes
+                std::int32_t redirect_chance; // 0x1af8, 0x4 bytes
+                float redirect_range; // 0x1afc, 0x4 bytes
+                float forward_angle; // 0x1b00, 0x4 bytes
+                float side_angle; // 0x1b04, 0x4 bytes
+                float redirect_speed_penatly; // 0x1b08, 0x4 bytes
+                float redirect_close_range; // 0x1b0c, 0x4 bytes
+                std::int32_t attack_redirection_grace_distance; // 0x1b10, 0x4 bytes
+                bool forced_movement_immunity; // 0x1b14, 0x1 bytes
+                std::uint8_t pad_1b15[0x3]; // 0x1b15, 0x3 bytes
+                std::int32_t m_nPoseParameterWE; // 0x1b18, 0x4 bytes
+                std::int32_t m_nPoseParameterNS; // 0x1b1c, 0x4 bytes
+                float m_flLastPoseX; // 0x1b20, 0x4 bytes
+                float m_flLastPoseY; // 0x1b24, 0x4 bytes
+                std::int32_t m_nLastMaxDirection; // 0x1b28, 0x4 bytes
+                VectorWS m_vLastOrigin; // 0x1b2c, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_flLastGameTime; // 0x1b38, 0x4 bytes
+                Vector m_vFacing; // 0x1b3c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Mars_Bulwark_Active) == 0x1AF8, "CDOTA_Modifier_Mars_Bulwark_Active size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Mars_Bulwark_Active) == 0x1B48, "CDOTA_Modifier_Mars_Bulwark_Active size mismatch");
         }
     }
 }

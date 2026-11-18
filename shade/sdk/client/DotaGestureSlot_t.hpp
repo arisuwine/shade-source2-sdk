@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DotaGestureSlot_t : std::int32_t {
+            enum class DotaGestureSlot_t : std::uint32_t {
                 GESTURE_SLOT_NONE = -0x1,
                 GESTURE_SLOT_ATTACK = 0x0,
                 GESTURE_SLOT_ABILITY = 0x1,

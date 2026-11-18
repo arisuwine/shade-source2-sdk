@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x870
+             * Size: 0x8d0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,16 +30,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncInteractionLayerClip : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bDisabled; // 0x0858, 0x1 bytes
-                std::uint8_t pad_0859[0x7]; // 0x0859, 0x7 bytes
-                CUtlSymbolLarge m_iszInteractsAs; // 0x0860, 0x8 bytes
-                CUtlSymbolLarge m_iszInteractsWith; // 0x0868, 0x8 bytes
+                bool m_bDisabled; // 0x08b8, 0x1 bytes
+                std::uint8_t pad_08b9[0x7]; // 0x08b9, 0x7 bytes
+                CUtlSymbolLarge m_iszInteractsAs; // 0x08c0, 0x8 bytes
+                CUtlSymbolLarge m_iszInteractsWith; // 0x08c8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncInteractionLayerClip) == 0x870, "CFuncInteractionLayerClip size mismatch");
+            static_assert(sizeof(CFuncInteractionLayerClip) == 0x8D0, "CFuncInteractionLayerClip size mismatch");
         }
     }
 }

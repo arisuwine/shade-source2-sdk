@@ -20,8 +20,16 @@
 namespace shade {
     namespace sdk {
         namespace server {
+            class CBaseEntity;
+        }
+    }
+}
+
+namespace shade {
+    namespace sdk {
+        namespace server {
             /* Class Parameters
-             * Size: 0x588
+             * Size: 0x5a0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,12 +38,13 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Ability_Kez_TalonToss : public shade::sdk::server::CDOTA_Ability_Kez_BaseAbility {
             public:
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_vecAlreadyBouncedUnits; // 0x0588, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Kez_TalonToss) == 0x588, "CDOTA_Ability_Kez_TalonToss size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Kez_TalonToss) == 0x5A0, "CDOTA_Ability_Kez_TalonToss size mismatch");
         }
     }
 }

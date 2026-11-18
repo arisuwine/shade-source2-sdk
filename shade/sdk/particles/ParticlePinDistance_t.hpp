@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticlePinDistance_t : std::int32_t {
+            enum class ParticlePinDistance_t : std::uint32_t {
                 PARTICLE_PIN_DISTANCE_NONE = -0x1,
                 PARTICLE_PIN_DISTANCE_NEIGHBOR = 0x0,
                 PARTICLE_PIN_DISTANCE_FARTHEST = 0x1,

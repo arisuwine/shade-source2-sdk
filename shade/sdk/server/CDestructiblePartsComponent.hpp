@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x70
+             * Size: 0x78
              * Alignment: 0x8
              * Construct Allowed
              * Module Local Type Scope
@@ -39,17 +39,17 @@ namespace shade {
             class CDestructiblePartsComponent {
             public:
                 shade::sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x0000, 0x28 bytes
-                std::uint8_t pad_0028[0x20]; // 0x0028, 0x20 bytes
-                CUtlVector<std::uint16_t> m_vecDamageTakenByHitGroup; // 0x0048, 0x18 bytes
-                CHandle<shade::sdk::server::CBaseModelEntity> m_hOwner; // 0x0060, 0x4 bytes
-                std::uint8_t pad_0064[0x4]; // 0x0064, 0x4 bytes
-                shade::sdk::client::CAnimGraphControllerPtr m_pAnimGraphDestructibleGraphController; // 0x0068, 0x8 bytes
+                std::uint8_t pad_0028[0x28]; // 0x0028, 0x28 bytes
+                CUtlVector<std::uint16_t> m_vecDamageTakenByHitGroup; // 0x0050, 0x18 bytes
+                CHandle<shade::sdk::server::CBaseModelEntity> m_hOwner; // 0x0068, 0x4 bytes
+                std::uint8_t pad_006c[0x4]; // 0x006c, 0x4 bytes
+                shade::sdk::client::CAnimGraphControllerPtr m_pAnimGraphDestructibleGraphController; // 0x0070, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDestructiblePartsComponent) == 0x70, "CDestructiblePartsComponent size mismatch");
+            static_assert(sizeof(CDestructiblePartsComponent) == 0x78, "CDestructiblePartsComponent size mismatch");
         }
     }
 }

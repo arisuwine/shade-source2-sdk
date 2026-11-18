@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x720
+             * Size: 0x730
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -45,16 +45,21 @@ namespace shade {
                 float effect_duration; // 0x0708, 0x4 bytes
                 std::int32_t m_nStrikesLeft; // 0x070c, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_NextStrikeTime; // 0x0710, 0x4 bytes
-                bool m_bFlutter; // 0x0714, 0x1 bytes
-                std::uint8_t pad_0715[0x3]; // 0x0715, 0x3 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXCast; // 0x0718, 0x4 bytes
-                std::uint8_t pad_071c[0x4]; // 0x071c, 0x4 bytes
+                bool m_bBackwardStrikes; // 0x0714, 0x1 bytes
+                bool m_bBackwardStrikePending; // 0x0715, 0x1 bytes
+                bool m_bStrikingBackward; // 0x0716, 0x1 bytes
+                bool m_bStrikePairHitAnyTarget; // 0x0717, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_NextBackwardStrikeTime; // 0x0718, 0x4 bytes
+                bool m_bFlutter; // 0x071c, 0x1 bytes
+                std::uint8_t pad_071d[0x3]; // 0x071d, 0x3 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXCast; // 0x0720, 0x4 bytes
+                std::uint8_t pad_0724[0xc]; // 0x0724, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Kez_Echo_Slash) == 0x720, "CDOTA_Ability_Kez_Echo_Slash size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Kez_Echo_Slash) == 0x730, "CDOTA_Ability_Kez_Echo_Slash size mismatch");
         }
     }
 }

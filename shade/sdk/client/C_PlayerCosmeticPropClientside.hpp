@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1070
+             * Size: 0x10d0
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -42,22 +42,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_PlayerCosmeticPropClientside : public shade::sdk::client::C_DynamicPropClientside {
             public:
-                std::int32_t m_iPlayerNum; // 0x0e90, 0x4 bytes
-                std::int32_t m_iCosmeticType; // 0x0e94, 0x4 bytes
-                char m_szProxyTextureName[0x104]; // 0x0e98, 0x104 bytes
-                std::uint8_t pad_0f9c[0x4]; // 0x0f9c, 0x4 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hProxyTexture; // 0x0fa0, 0x8 bytes
-                std::uint8_t pad_0fa8[0xa0]; // 0x0fa8, 0xa0 bytes
-                bool m_bGeneratedShowcaseProps; // 0x1048, 0x1 bytes
-                std::uint8_t pad_1049[0x7]; // 0x1049, 0x7 bytes
-                CUtlVector<shade::sdk::client::C_PlayerCosmeticPropClientside*> m_vecShowcaseProps; // 0x1050, 0x18 bytes
-                shade::sdk::client::C_EconItemView *m_pShowcaseItem; // 0x1068, 0x8 bytes
+                std::int32_t m_iPlayerNum; // 0x0ef0, 0x4 bytes
+                std::int32_t m_iCosmeticType; // 0x0ef4, 0x4 bytes
+                char m_szProxyTextureName[0x104]; // 0x0ef8, 0x104 bytes
+                std::uint8_t pad_0ffc[0x4]; // 0x0ffc, 0x4 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hProxyTexture; // 0x1000, 0x8 bytes
+                std::uint8_t pad_1008[0xa0]; // 0x1008, 0xa0 bytes
+                bool m_bGeneratedShowcaseProps; // 0x10a8, 0x1 bytes
+                std::uint8_t pad_10a9[0x7]; // 0x10a9, 0x7 bytes
+                CUtlVector<shade::sdk::client::C_PlayerCosmeticPropClientside*> m_vecShowcaseProps; // 0x10b0, 0x18 bytes
+                shade::sdk::client::C_EconItemView *m_pShowcaseItem; // 0x10c8, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_PlayerCosmeticPropClientside) == 0x1070, "C_PlayerCosmeticPropClientside size mismatch");
+            static_assert(sizeof(C_PlayerCosmeticPropClientside) == 0x10D0, "C_PlayerCosmeticPropClientside size mismatch");
         }
     }
 }

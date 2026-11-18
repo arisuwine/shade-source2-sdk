@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xee8
+             * Size: 0xf48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -44,61 +44,61 @@ namespace shade {
             #pragma pack(push, 1)
             class C_RopeKeyframe : public shade::sdk::client::C_BaseModelEntity {
             public:
-                std::uint8_t pad_0b78[0x8]; // 0x0b78, 0x8 bytes
-                CBitVec<10> m_LinksTouchingSomething; // 0x0b80, 0x4 bytes
-                std::int32_t m_nLinksTouchingSomething; // 0x0b84, 0x4 bytes
-                bool m_bApplyWind; // 0x0b88, 0x1 bytes
-                std::uint8_t pad_0b89[0x3]; // 0x0b89, 0x3 bytes
-                std::int32_t m_fPrevLockedPoints; // 0x0b8c, 0x4 bytes
-                std::int32_t m_iForcePointMoveCounter; // 0x0b90, 0x4 bytes
-                bool m_bPrevEndPointPos[0x2]; // 0x0b94, 0x2 bytes
-                std::uint8_t pad_0b96[0x2]; // 0x0b96, 0x2 bytes
-                VectorWS m_vPrevEndPointPos[0x2]; // 0x0b98, 0x18 bytes
-                float m_flCurScroll; // 0x0bb0, 0x4 bytes
-                float m_flScrollSpeed; // 0x0bb4, 0x4 bytes
-                std::uint16_t m_RopeFlags; // 0x0bb8, 0x2 bytes
-                std::uint8_t pad_0bba[0x6]; // 0x0bba, 0x6 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_iRopeMaterialModelIndex; // 0x0bc0, 0x8 bytes
-                std::uint8_t pad_0bc8[0x270]; // 0x0bc8, 0x270 bytes
-                std::uint8_t m_nSegments; // 0x0e38, 0x1 bytes
-                std::uint8_t pad_0e39[0x3]; // 0x0e39, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hStartPoint; // 0x0e3c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hEndPoint; // 0x0e40, 0x4 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_iStartAttachment; // 0x0e44, 0x1 bytes
-                shade::sdk::modellib::AttachmentHandle_t m_iEndAttachment; // 0x0e45, 0x1 bytes
-                std::uint8_t m_Subdiv; // 0x0e46, 0x1 bytes
-                std::uint8_t pad_0e47[0x1]; // 0x0e47, 0x1 bytes
-                std::int16_t m_RopeLength; // 0x0e48, 0x2 bytes
-                std::int16_t m_Slack; // 0x0e4a, 0x2 bytes
-                float m_TextureScale; // 0x0e4c, 0x4 bytes
-                std::uint8_t m_fLockedPoints; // 0x0e50, 0x1 bytes
-                std::uint8_t m_nChangeCount; // 0x0e51, 0x1 bytes
-                std::uint8_t pad_0e52[0x2]; // 0x0e52, 0x2 bytes
-                float m_Width; // 0x0e54, 0x4 bytes
-                shade::sdk::client::C_RopeKeyframe__CPhysicsDelegate m_PhysicsDelegate; // 0x0e58, 0x10 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x0e68, 0x8 bytes
-                std::int32_t m_TextureHeight; // 0x0e70, 0x4 bytes
-                Vector m_vecImpulse; // 0x0e74, 0xc bytes
-                Vector m_vecPreviousImpulse; // 0x0e80, 0xc bytes
-                float m_flCurrentGustTimer; // 0x0e8c, 0x4 bytes
-                float m_flCurrentGustLifetime; // 0x0e90, 0x4 bytes
-                float m_flTimeToNextGust; // 0x0e94, 0x4 bytes
-                Vector m_vWindDir; // 0x0e98, 0xc bytes
-                Vector m_vColorMod; // 0x0ea4, 0xc bytes
-                VectorWS m_vCachedEndPointAttachmentPos[0x2]; // 0x0eb0, 0x18 bytes
-                QAngle m_vCachedEndPointAttachmentAngle[0x2]; // 0x0ec8, 0x18 bytes
-                bool m_bConstrainBetweenEndpoints; // 0x0ee0, 0x1 bytes
-                std::uint8_t m_bEndPointAttachmentPositionsDirty : 1; // 0x0ee1, 0x1 bytes
-                std::uint8_t m_bEndPointAttachmentAnglesDirty : 1; // 0x0ee1, 0x1 bytes
-                std::uint8_t m_bNewDataThisFrame : 1; // 0x0ee1, 0x1 bytes
-                std::uint8_t m_bPhysicsInitted : 1; // 0x0ee1, 0x1 bytes
-                std::uint8_t pad_0ee2[0x6]; // 0x0ee2, 0x6 bytes
+                std::uint8_t pad_0bd8[0x8]; // 0x0bd8, 0x8 bytes
+                CBitVec<10> m_LinksTouchingSomething; // 0x0be0, 0x4 bytes
+                std::int32_t m_nLinksTouchingSomething; // 0x0be4, 0x4 bytes
+                bool m_bApplyWind; // 0x0be8, 0x1 bytes
+                std::uint8_t pad_0be9[0x3]; // 0x0be9, 0x3 bytes
+                std::int32_t m_fPrevLockedPoints; // 0x0bec, 0x4 bytes
+                std::int32_t m_iForcePointMoveCounter; // 0x0bf0, 0x4 bytes
+                bool m_bPrevEndPointPos[0x2]; // 0x0bf4, 0x2 bytes
+                std::uint8_t pad_0bf6[0x2]; // 0x0bf6, 0x2 bytes
+                VectorWS m_vPrevEndPointPos[0x2]; // 0x0bf8, 0x18 bytes
+                float m_flCurScroll; // 0x0c10, 0x4 bytes
+                float m_flScrollSpeed; // 0x0c14, 0x4 bytes
+                std::uint16_t m_RopeFlags; // 0x0c18, 0x2 bytes
+                std::uint8_t pad_0c1a[0x6]; // 0x0c1a, 0x6 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_iRopeMaterialModelIndex; // 0x0c20, 0x8 bytes
+                std::uint8_t pad_0c28[0x270]; // 0x0c28, 0x270 bytes
+                std::uint8_t m_nSegments; // 0x0e98, 0x1 bytes
+                std::uint8_t pad_0e99[0x3]; // 0x0e99, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hStartPoint; // 0x0e9c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hEndPoint; // 0x0ea0, 0x4 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_iStartAttachment; // 0x0ea4, 0x1 bytes
+                shade::sdk::modellib::AttachmentHandle_t m_iEndAttachment; // 0x0ea5, 0x1 bytes
+                std::uint8_t m_Subdiv; // 0x0ea6, 0x1 bytes
+                std::uint8_t pad_0ea7[0x1]; // 0x0ea7, 0x1 bytes
+                std::int16_t m_RopeLength; // 0x0ea8, 0x2 bytes
+                std::int16_t m_Slack; // 0x0eaa, 0x2 bytes
+                float m_TextureScale; // 0x0eac, 0x4 bytes
+                std::uint8_t m_fLockedPoints; // 0x0eb0, 0x1 bytes
+                std::uint8_t m_nChangeCount; // 0x0eb1, 0x1 bytes
+                std::uint8_t pad_0eb2[0x2]; // 0x0eb2, 0x2 bytes
+                float m_Width; // 0x0eb4, 0x4 bytes
+                shade::sdk::client::C_RopeKeyframe__CPhysicsDelegate m_PhysicsDelegate; // 0x0eb8, 0x10 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hMaterial; // 0x0ec8, 0x8 bytes
+                std::int32_t m_TextureHeight; // 0x0ed0, 0x4 bytes
+                Vector m_vecImpulse; // 0x0ed4, 0xc bytes
+                Vector m_vecPreviousImpulse; // 0x0ee0, 0xc bytes
+                float m_flCurrentGustTimer; // 0x0eec, 0x4 bytes
+                float m_flCurrentGustLifetime; // 0x0ef0, 0x4 bytes
+                float m_flTimeToNextGust; // 0x0ef4, 0x4 bytes
+                Vector m_vWindDir; // 0x0ef8, 0xc bytes
+                Vector m_vColorMod; // 0x0f04, 0xc bytes
+                VectorWS m_vCachedEndPointAttachmentPos[0x2]; // 0x0f10, 0x18 bytes
+                QAngle m_vCachedEndPointAttachmentAngle[0x2]; // 0x0f28, 0x18 bytes
+                bool m_bConstrainBetweenEndpoints; // 0x0f40, 0x1 bytes
+                std::uint8_t m_bEndPointAttachmentPositionsDirty : 1; // 0x0f41, 0x1 bytes
+                std::uint8_t m_bEndPointAttachmentAnglesDirty : 1; // 0x0f41, 0x1 bytes
+                std::uint8_t m_bNewDataThisFrame : 1; // 0x0f41, 0x1 bytes
+                std::uint8_t m_bPhysicsInitted : 1; // 0x0f41, 0x1 bytes
+                std::uint8_t pad_0f42[0x6]; // 0x0f42, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_RopeKeyframe) == 0xEE8, "C_RopeKeyframe size mismatch");
+            static_assert(sizeof(C_RopeKeyframe) == 0xF48, "C_RopeKeyframe size mismatch");
         }
     }
 }

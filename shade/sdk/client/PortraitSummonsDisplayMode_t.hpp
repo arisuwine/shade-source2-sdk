@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class PortraitSummonsDisplayMode_t : std::int32_t {
+            enum class PortraitSummonsDisplayMode_t : std::uint32_t {
                 PORTRAIT_SUMMONS_DISPLAY_MODE_INVALID = -0x1,
                 PORTRAIT_SUMMONS_DISPLAY_MODE_NONE = 0x0,
                 PORTRAIT_SUMMONS_DISPLAY_MODE_ALL = 0x1,

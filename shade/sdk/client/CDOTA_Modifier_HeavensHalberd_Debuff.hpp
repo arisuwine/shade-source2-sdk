@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab0
+             * Size: 0x1af8
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,14 +29,12 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_HeavensHalberd_Debuff : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bPierceDebuffImmunity; // 0x1aa8, 0x1 bytes
-                std::uint8_t pad_1aa9[0x7]; // 0x1aa9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_HeavensHalberd_Debuff) == 0x1AB0, "CDOTA_Modifier_HeavensHalberd_Debuff size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_HeavensHalberd_Debuff) == 0x1AF8, "CDOTA_Modifier_HeavensHalberd_Debuff size mismatch");
         }
     }
 }

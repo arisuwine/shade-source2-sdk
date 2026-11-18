@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class ESurvivorsEnemyMovementBehavior : std::int32_t {
+            enum class ESurvivorsEnemyMovementBehavior : std::uint32_t {
                 ENEMY_MOVEMENT_BEHAVIOR_INVALID = -0x1,
                 ENEMY_MOVEMENT_BEHAVIOR_TRACKING = 0x0,
                 ENEMY_MOVEMENT_BEHAVIOR_LINEAR = 0x1,

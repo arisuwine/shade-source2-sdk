@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8b0
+             * Size: 0x910
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,14 +32,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CBasePlayerWeapon : public shade::sdk::server::CBaseAnimatingActivity {
             public:
-                shade::sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0x0878, 0x4 bytes
-                float m_flNextPrimaryAttackTickRatio; // 0x087c, 0x4 bytes
-                shade::sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0x0880, 0x4 bytes
-                float m_flNextSecondaryAttackTickRatio; // 0x0884, 0x4 bytes
-                std::int32_t m_iClip1; // 0x0888, 0x4 bytes
-                std::int32_t m_iClip2; // 0x088c, 0x4 bytes
-                std::int32_t m_pReserveAmmo[0x2]; // 0x0890, 0x8 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x0898, 0x18 bytes
+                shade::sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0x08d8, 0x4 bytes
+                float m_flNextPrimaryAttackTickRatio; // 0x08dc, 0x4 bytes
+                shade::sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0x08e0, 0x4 bytes
+                float m_flNextSecondaryAttackTickRatio; // 0x08e4, 0x4 bytes
+                std::int32_t m_iClip1; // 0x08e8, 0x4 bytes
+                std::int32_t m_iClip2; // 0x08ec, 0x4 bytes
+                std::int32_t m_pReserveAmmo[0x2]; // 0x08f0, 0x8 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x08f8, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -47,7 +47,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CBasePlayerWeapon) == 0x8B0, "CBasePlayerWeapon size mismatch");
+            static_assert(sizeof(CBasePlayerWeapon) == 0x910, "CBasePlayerWeapon size mismatch");
         }
     }
 }

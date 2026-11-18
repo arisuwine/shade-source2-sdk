@@ -16,14 +16,7 @@
 #include "shade/sdk/types.hpp"
 
 #include "shade/sdk/client/C_DOTABaseAbility.hpp"
-
-namespace shade {
-    namespace sdk {
-        namespace client {
-            class C_BaseEntity;
-        }
-    }
-}
+#include "shade/sdk/entity2/GameTime_t.hpp"
 
 namespace shade {
     namespace sdk {
@@ -38,8 +31,9 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Ability_Pugna_LifeDrain : public shade::sdk::client::C_DOTABaseAbility {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x06a8, 0x4 bytes
-                std::uint8_t pad_06ac[0x4]; // 0x06ac, 0x4 bytes
+                bool m_bIgnoreActiveDrains; // 0x06a8, 0x1 bytes
+                std::uint8_t pad_06a9[0x3]; // 0x06a9, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flChannelEndTime; // 0x06ac, 0x4 bytes
             };
             #pragma pack(pop)
 

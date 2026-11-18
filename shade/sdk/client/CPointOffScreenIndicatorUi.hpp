@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xdf0
+             * Size: 0xe30
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CPointOffScreenIndicatorUi : public shade::sdk::client::C_PointClientUIWorldPanel {
             public:
-                bool m_bBeenEnabled; // 0x0de0, 0x1 bytes
-                bool m_bHide; // 0x0de1, 0x1 bytes
-                std::uint8_t pad_0de2[0x2]; // 0x0de2, 0x2 bytes
-                float m_flSeenTargetTime; // 0x0de4, 0x4 bytes
-                shade::sdk::client::C_PointClientUIWorldPanel *m_pTargetPanel; // 0x0de8, 0x8 bytes
+                bool m_bBeenEnabled; // 0x0e20, 0x1 bytes
+                bool m_bHide; // 0x0e21, 0x1 bytes
+                std::uint8_t pad_0e22[0x2]; // 0x0e22, 0x2 bytes
+                float m_flSeenTargetTime; // 0x0e24, 0x4 bytes
+                shade::sdk::client::C_PointClientUIWorldPanel *m_pTargetPanel; // 0x0e28, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CPointOffScreenIndicatorUi) == 0xDF0, "CPointOffScreenIndicatorUi size mismatch");
+            static_assert(sizeof(CPointOffScreenIndicatorUi) == 0xE30, "CPointOffScreenIndicatorUi size mismatch");
         }
     }
 }

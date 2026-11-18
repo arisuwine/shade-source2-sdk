@@ -29,28 +29,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CNavPathCost : public shade::sdk::navlib::INavPathCost {
             public:
-                bool m_bAllowBlockingViaFloorAreaCost; // 0x0010, 0x1 bytes
-                bool m_bAllowLadders; // 0x0011, 0x1 bytes
-                std::uint8_t pad_0012[0x2]; // 0x0012, 0x2 bytes
-                float m_flMaxDropDown; // 0x0014, 0x4 bytes
-                float m_flMaxClimbUp; // 0x0018, 0x4 bytes
-                float m_flDropDownPenaltyCostBase; // 0x001c, 0x4 bytes
-                float m_flDropDownPenaltyCostScalar; // 0x0020, 0x4 bytes
-                float m_flClimbUpPenaltyCostBase; // 0x0024, 0x4 bytes
-                float m_flClimbUpPenaltyCostScalar; // 0x0028, 0x4 bytes
-                float m_flStepHeight; // 0x002c, 0x4 bytes
-                bool m_bCanFly; // 0x0030, 0x1 bytes
-                bool m_bCanSwim; // 0x0031, 0x1 bytes
-                std::uint8_t pad_0032[0x2]; // 0x0032, 0x2 bytes
-                float m_flWaterToGroundMaxHeight; // 0x0034, 0x4 bytes
-                float m_flGroundToWaterMaxHeight; // 0x0038, 0x4 bytes
-                float m_flGroundToWaterTransitionDistance; // 0x003c, 0x4 bytes
-                float m_flWaterToGroundTransitionDistance; // 0x0040, 0x4 bytes
-                float m_flFlyingTransitionTolerance; // 0x0044, 0x4 bytes
-                bool m_bOptimizeFlySpacePathfinds; // 0x0048, 0x1 bytes
-                bool m_bStringPullFlySpacePathfinds; // 0x0049, 0x1 bytes
-                bool m_bSupportsTransitions; // 0x004a, 0x1 bytes
-                std::uint8_t pad_004b[0x1]; // 0x004b, 0x1 bytes
+                bool m_bCanFly; // 0x0010, 0x1 bytes
+                bool m_bCanSwim; // 0x0011, 0x1 bytes
+                bool m_bOptimizeFlySpacePathfinds; // 0x0012, 0x1 bytes
+                bool m_bStringPullFlySpacePathfinds; // 0x0013, 0x1 bytes
+                bool m_bSupportsTransitions; // 0x0014, 0x1 bytes
+                std::uint8_t pad_0015[0x3]; // 0x0015, 0x3 bytes
+                float m_flWaterToGroundMaxHeight; // 0x0018, 0x4 bytes
+                float m_flGroundToWaterMaxHeight; // 0x001c, 0x4 bytes
+                float m_flGroundToWaterTransitionDistance; // 0x0020, 0x4 bytes
+                float m_flWaterToGroundTransitionDistance; // 0x0024, 0x4 bytes
+                float m_flFlyingTransitionTolerance; // 0x0028, 0x4 bytes
+                bool m_bAllowBlockingViaFloorAreaCost; // 0x002c, 0x1 bytes
+                bool m_bAllowLadders; // 0x002d, 0x1 bytes
+                std::uint8_t pad_002e[0x2]; // 0x002e, 0x2 bytes
+                float m_flMaxDropDown; // 0x0030, 0x4 bytes
+                float m_flMaxClimbUp; // 0x0034, 0x4 bytes
+                float m_flDropDownPenaltyCostBase; // 0x0038, 0x4 bytes
+                float m_flDropDownPenaltyCostScalar; // 0x003c, 0x4 bytes
+                float m_flClimbUpPenaltyCostBase; // 0x0040, 0x4 bytes
+                float m_flClimbUpPenaltyCostScalar; // 0x0044, 0x4 bytes
+                float m_flStepHeight; // 0x0048, 0x4 bytes
                 float m_flTransitionPenalty; // 0x004c, 0x4 bytes
             };
             #pragma pack(pop)

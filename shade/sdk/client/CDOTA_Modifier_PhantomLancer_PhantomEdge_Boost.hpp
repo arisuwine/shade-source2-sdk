@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad8
+             * Size: 0x1b28
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,23 +37,23 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_PhantomLancer_PhantomEdge_Boost : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t bonus_speed; // 0x1aa8, 0x4 bytes
-                float agility_duration; // 0x1aac, 0x4 bytes
-                bool m_bGiveAgility; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x3]; // 0x1ab1, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1ab4, 0x4 bytes
-                std::int32_t bonus_agility; // 0x1ab8, 0x4 bytes
-                float illusion_spawn_radius; // 0x1abc, 0x4 bytes
-                float illusion_spawn_travel_distance; // 0x1ac0, 0x4 bytes
-                float evasion; // 0x1ac4, 0x4 bytes
-                float m_flDistanceAccumulator; // 0x1ac8, 0x4 bytes
-                VectorWS m_vPreviousLocation; // 0x1acc, 0xc bytes
+                std::int32_t bonus_speed; // 0x1af8, 0x4 bytes
+                float agility_duration; // 0x1afc, 0x4 bytes
+                bool m_bGiveAgility; // 0x1b00, 0x1 bytes
+                std::uint8_t pad_1b01[0x3]; // 0x1b01, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1b04, 0x4 bytes
+                std::int32_t bonus_agility; // 0x1b08, 0x4 bytes
+                float illusion_spawn_radius; // 0x1b0c, 0x4 bytes
+                float illusion_spawn_travel_distance; // 0x1b10, 0x4 bytes
+                float evasion; // 0x1b14, 0x4 bytes
+                float m_flDistanceAccumulator; // 0x1b18, 0x4 bytes
+                VectorWS m_vPreviousLocation; // 0x1b1c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_PhantomLancer_PhantomEdge_Boost) == 0x1AD8, "CDOTA_Modifier_PhantomLancer_PhantomEdge_Boost size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_PhantomLancer_PhantomEdge_Boost) == 0x1B28, "CDOTA_Modifier_PhantomLancer_PhantomEdge_Boost size mismatch");
         }
     }
 }

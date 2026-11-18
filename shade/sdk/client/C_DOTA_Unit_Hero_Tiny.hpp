@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e98
+             * Size: 0x1f20
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,17 +40,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Hero_Tiny : public shade::sdk::client::C_DOTA_BaseNPC_Hero {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTreeWearable; // 0x1e88, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndexScepterAmbient; // 0x1e8c, 0x4 bytes
-                CHandle<shade::sdk::client::C_DOTA_BaseNPC> m_hIllusionOwner; // 0x1e90, 0x4 bytes
-                bool m_bIllusionHasTree; // 0x1e94, 0x1 bytes
-                std::uint8_t pad_1e95[0x3]; // 0x1e95, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTreeWearable; // 0x1f10, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndexScepterAmbient; // 0x1f14, 0x4 bytes
+                CHandle<shade::sdk::client::C_DOTA_BaseNPC> m_hIllusionOwner; // 0x1f18, 0x4 bytes
+                bool m_bIllusionHasTree; // 0x1f1c, 0x1 bytes
+                std::uint8_t pad_1f1d[0x3]; // 0x1f1d, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Hero_Tiny) == 0x1E98, "C_DOTA_Unit_Hero_Tiny size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Hero_Tiny) == 0x1F20, "C_DOTA_Unit_Hero_Tiny size mismatch");
         }
     }
 }

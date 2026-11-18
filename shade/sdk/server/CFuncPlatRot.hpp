@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x928
+             * Size: 0x988
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncPlatRot : public shade::sdk::server::CFuncPlat {
             public:
-                QAngle m_end; // 0x0910, 0xc bytes
-                QAngle m_start; // 0x091c, 0xc bytes
+                QAngle m_end; // 0x0970, 0xc bytes
+                QAngle m_start; // 0x097c, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncPlatRot) == 0x928, "CFuncPlatRot size mismatch");
+            static_assert(sizeof(CFuncPlatRot) == 0x988, "CFuncPlatRot size mismatch");
         }
     }
 }

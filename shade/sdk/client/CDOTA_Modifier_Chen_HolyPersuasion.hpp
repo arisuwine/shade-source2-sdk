@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b00
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,18 +29,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Chen_HolyPersuasion : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t health_min; // 0x1aa8, 0x4 bytes
-                std::int32_t damage_bonus; // 0x1aac, 0x4 bytes
-                std::int32_t movement_speed_bonus; // 0x1ab0, 0x4 bytes
-                float unsummon_time; // 0x1ab4, 0x4 bytes
-                bool m_bCanBeUnsummoned; // 0x1ab8, 0x1 bytes
-                std::uint8_t pad_1ab9[0x7]; // 0x1ab9, 0x7 bytes
+                float unsummon_time; // 0x1af8, 0x4 bytes
+                bool m_bCanBeUnsummoned; // 0x1afc, 0x1 bytes
+                std::uint8_t pad_1afd[0x3]; // 0x1afd, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Chen_HolyPersuasion) == 0x1AC0, "CDOTA_Modifier_Chen_HolyPersuasion size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Chen_HolyPersuasion) == 0x1B00, "CDOTA_Modifier_Chen_HolyPersuasion size mismatch");
         }
     }
 }

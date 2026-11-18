@@ -39,7 +39,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1e88
+             * Size: 0x1f10
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -48,92 +48,92 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_Hero : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                std::uint8_t pad_1ab8[0x8]; // 0x1ab8, 0x8 bytes
-                bool m_bDisableWearables; // 0x1ac0, 0x1 bytes
-                std::uint8_t pad_1ac1[0x3]; // 0x1ac1, 0x3 bytes
-                std::int32_t m_iCurrentXP; // 0x1ac4, 0x4 bytes
-                std::int32_t m_iAbilityPoints; // 0x1ac8, 0x4 bytes
-                std::int32_t m_iTotalAbilityPoints; // 0x1acc, 0x4 bytes
-                std::int32_t m_iAghanimsAbilityPoints; // 0x1ad0, 0x4 bytes
-                std::int32_t m_iTotalAghanimsAbilityPoints; // 0x1ad4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x1ad8, 0x4 bytes
-                float m_flRespawnTimePenalty; // 0x1adc, 0x4 bytes
-                float m_flStrength; // 0x1ae0, 0x4 bytes
-                float m_flAgility; // 0x1ae4, 0x4 bytes
-                float m_flIntellect; // 0x1ae8, 0x4 bytes
-                float m_flStrengthTotal; // 0x1aec, 0x4 bytes
-                float m_flAgilityTotal; // 0x1af0, 0x4 bytes
-                float m_flIntellectTotal; // 0x1af4, 0x4 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_hFacetAbilities; // 0x1af8, 0x18 bytes
-                C_NetworkUtlVectorBase<std::int32_t> m_vecHiddenLoadoutSlots; // 0x1b10, 0x18 bytes
-                std::int32_t m_iRecentDamage; // 0x1b28, 0x4 bytes
-                float m_fPainFactor; // 0x1b2c, 0x4 bytes
-                float m_fTargetPainFactor; // 0x1b30, 0x4 bytes
-                bool m_bLifeState; // 0x1b34, 0x1 bytes
-                bool m_bFirstSpawn; // 0x1b35, 0x1 bytes
-                std::uint8_t pad_1b36[0x2]; // 0x1b36, 0x2 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXStunIndex; // 0x1b38, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXSilenceIndex; // 0x1b3c, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXDeathIndex; // 0x1b40, 0x4 bytes
-                std::uint8_t pad_1b44[0x24]; // 0x1b44, 0x24 bytes
-                shade::sdk::client::PlayerID_t m_iPlayerID; // 0x1b68, 0x4 bytes
-                std::uint8_t pad_1b6c[0x4]; // 0x1b6c, 0x4 bytes
-                shade::sdk::client::HeroFacetKey_t m_iHeroFacetKey; // 0x1b70, 0x8 bytes
-                shade::sdk::client::PlayerID_t m_iEconSpecifyingPlayerID; // 0x1b78, 0x4 bytes
-                CHandle<shade::sdk::client::C_DOTA_BaseNPC_Hero> m_hReplicatingOtherHeroModel; // 0x1b7c, 0x4 bytes
-                bool m_bReincarnating; // 0x1b80, 0x1 bytes
-                bool m_bCustomKillEffect; // 0x1b81, 0x1 bytes
-                std::uint8_t pad_1b82[0x2]; // 0x1b82, 0x2 bytes
-                shade::sdk::entity2::GameTime_t m_flSpawnedAt; // 0x1b84, 0x4 bytes
-                bool m_bScriptDisableRespawns; // 0x1b88, 0x1 bytes
-                std::uint8_t pad_1b89[0x3]; // 0x1b89, 0x3 bytes
-                std::int32_t m_iPrimaryAttribute; // 0x1b8c, 0x4 bytes
-                std::int32_t m_nLastDrawnHealth; // 0x1b90, 0x4 bytes
-                float m_flHurtAmount; // 0x1b94, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastHurtTime; // 0x1b98, 0x4 bytes
-                float m_flHurtDecayRate; // 0x1b9c, 0x4 bytes
-                float m_flHealAmount; // 0x1ba0, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastHealTime; // 0x1ba4, 0x4 bytes
-                float m_flHealDecayRate; // 0x1ba8, 0x4 bytes
-                bool m_bIsFirstTimeHeal; // 0x1bac, 0x1 bytes
-                std::uint8_t pad_1bad[0x3]; // 0x1bad, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDispellTime; // 0x1bb0, 0x4 bytes
-                float m_flDispellAnimationAmount; // 0x1bb4, 0x4 bytes
-                float m_flDeathAnimationAmount; // 0x1bb8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastDeathTime; // 0x1bbc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastTreeShakeTime; // 0x1bc0, 0x4 bytes
-                std::uint8_t pad_1bc4[0x4]; // 0x1bc4, 0x4 bytes
-                shade::sdk::client::CountdownTimer m_CenterOnHeroCooldownTimer; // 0x1bc8, 0x18 bytes
-                std::uint8_t pad_1be0[0x208]; // 0x1be0, 0x208 bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_CombinedModels[0x4]; // 0x1de8, 0x20 bytes
-                std::int32_t m_nCurrentCombinedModelIndex; // 0x1e08, 0x4 bytes
-                std::int32_t m_nPendingCombinedModelIndex; // 0x1e0c, 0x4 bytes
-                shade::sdk::client::HeroID_t m_iHeroID; // 0x1e10, 0x4 bytes
-                float m_flCheckLegacyItemsAt; // 0x1e14, 0x4 bytes
-                bool m_bDisplayAdditionalHeroes; // 0x1e18, 0x1 bytes
-                std::uint8_t pad_1e19[0xf]; // 0x1e19, 0xf bytes
-                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_CombinedParticleModels[0x4]; // 0x1e28, 0x20 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecAttachedParticleIndeces; // 0x1e48, 0x18 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hPets; // 0x1e60, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nKillStreakFX; // 0x1e78, 0x4 bytes
-                std::int32_t m_nKillStreakFXTier; // 0x1e7c, 0x4 bytes
-                std::uint8_t m_bBuybackDisabled : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bWasFrozen : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bUpdateClientsideWearables : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bForceBuildCombinedModel : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bRecombineForMaterialsOnly : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bBuildingCombinedModel : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bInReloadEvent : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bStoreOldVisibility : 1; // 0x1e80, 0x1 bytes
-                std::uint8_t m_bResetVisibility : 1; // 0x1e81, 0x1 bytes
-                std::uint8_t m_bStoredVisibility : 1; // 0x1e81, 0x1 bytes
-                std::uint8_t pad_1e82[0x6]; // 0x1e82, 0x6 bytes
+                std::uint8_t pad_1b40[0x8]; // 0x1b40, 0x8 bytes
+                bool m_bDisableWearables; // 0x1b48, 0x1 bytes
+                std::uint8_t pad_1b49[0x3]; // 0x1b49, 0x3 bytes
+                std::int32_t m_iCurrentXP; // 0x1b4c, 0x4 bytes
+                std::int32_t m_iAbilityPoints; // 0x1b50, 0x4 bytes
+                std::int32_t m_iTotalAbilityPoints; // 0x1b54, 0x4 bytes
+                std::int32_t m_iAghanimsAbilityPoints; // 0x1b58, 0x4 bytes
+                std::int32_t m_iTotalAghanimsAbilityPoints; // 0x1b5c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x1b60, 0x4 bytes
+                float m_flRespawnTimePenalty; // 0x1b64, 0x4 bytes
+                float m_flStrength; // 0x1b68, 0x4 bytes
+                float m_flAgility; // 0x1b6c, 0x4 bytes
+                float m_flIntellect; // 0x1b70, 0x4 bytes
+                float m_flStrengthTotal; // 0x1b74, 0x4 bytes
+                float m_flAgilityTotal; // 0x1b78, 0x4 bytes
+                float m_flIntellectTotal; // 0x1b7c, 0x4 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_hFacetAbilities; // 0x1b80, 0x18 bytes
+                C_NetworkUtlVectorBase<std::int32_t> m_vecHiddenLoadoutSlots; // 0x1b98, 0x18 bytes
+                std::int32_t m_iRecentDamage; // 0x1bb0, 0x4 bytes
+                float m_fPainFactor; // 0x1bb4, 0x4 bytes
+                float m_fTargetPainFactor; // 0x1bb8, 0x4 bytes
+                bool m_bLifeState; // 0x1bbc, 0x1 bytes
+                bool m_bFirstSpawn; // 0x1bbd, 0x1 bytes
+                std::uint8_t pad_1bbe[0x2]; // 0x1bbe, 0x2 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXStunIndex; // 0x1bc0, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXSilenceIndex; // 0x1bc4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXDeathIndex; // 0x1bc8, 0x4 bytes
+                std::uint8_t pad_1bcc[0x24]; // 0x1bcc, 0x24 bytes
+                shade::sdk::client::PlayerID_t m_iPlayerID; // 0x1bf0, 0x4 bytes
+                std::uint8_t pad_1bf4[0x4]; // 0x1bf4, 0x4 bytes
+                shade::sdk::client::HeroFacetKey_t m_iHeroFacetKey; // 0x1bf8, 0x8 bytes
+                shade::sdk::client::PlayerID_t m_iEconSpecifyingPlayerID; // 0x1c00, 0x4 bytes
+                CHandle<shade::sdk::client::C_DOTA_BaseNPC_Hero> m_hReplicatingOtherHeroModel; // 0x1c04, 0x4 bytes
+                bool m_bReincarnating; // 0x1c08, 0x1 bytes
+                bool m_bCustomKillEffect; // 0x1c09, 0x1 bytes
+                std::uint8_t pad_1c0a[0x2]; // 0x1c0a, 0x2 bytes
+                shade::sdk::entity2::GameTime_t m_flSpawnedAt; // 0x1c0c, 0x4 bytes
+                bool m_bScriptDisableRespawns; // 0x1c10, 0x1 bytes
+                std::uint8_t pad_1c11[0x3]; // 0x1c11, 0x3 bytes
+                std::int32_t m_iPrimaryAttribute; // 0x1c14, 0x4 bytes
+                std::int32_t m_nLastDrawnHealth; // 0x1c18, 0x4 bytes
+                float m_flHurtAmount; // 0x1c1c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastHurtTime; // 0x1c20, 0x4 bytes
+                float m_flHurtDecayRate; // 0x1c24, 0x4 bytes
+                float m_flHealAmount; // 0x1c28, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastHealTime; // 0x1c2c, 0x4 bytes
+                float m_flHealDecayRate; // 0x1c30, 0x4 bytes
+                bool m_bIsFirstTimeHeal; // 0x1c34, 0x1 bytes
+                std::uint8_t pad_1c35[0x3]; // 0x1c35, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDispellTime; // 0x1c38, 0x4 bytes
+                float m_flDispellAnimationAmount; // 0x1c3c, 0x4 bytes
+                float m_flDeathAnimationAmount; // 0x1c40, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastDeathTime; // 0x1c44, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastTreeShakeTime; // 0x1c48, 0x4 bytes
+                std::uint8_t pad_1c4c[0x4]; // 0x1c4c, 0x4 bytes
+                shade::sdk::client::CountdownTimer m_CenterOnHeroCooldownTimer; // 0x1c50, 0x18 bytes
+                std::uint8_t pad_1c68[0x208]; // 0x1c68, 0x208 bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_CombinedModels[0x4]; // 0x1e70, 0x20 bytes
+                std::int32_t m_nCurrentCombinedModelIndex; // 0x1e90, 0x4 bytes
+                std::int32_t m_nPendingCombinedModelIndex; // 0x1e94, 0x4 bytes
+                shade::sdk::client::HeroID_t m_iHeroID; // 0x1e98, 0x4 bytes
+                float m_flCheckLegacyItemsAt; // 0x1e9c, 0x4 bytes
+                bool m_bDisplayAdditionalHeroes; // 0x1ea0, 0x1 bytes
+                std::uint8_t pad_1ea1[0xf]; // 0x1ea1, 0xf bytes
+                CStrongHandle<shade::sdk::resourcesystem::InfoForResourceTypeCModel> m_CombinedParticleModels[0x4]; // 0x1eb0, 0x20 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecAttachedParticleIndeces; // 0x1ed0, 0x18 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hPets; // 0x1ee8, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nKillStreakFX; // 0x1f00, 0x4 bytes
+                std::int32_t m_nKillStreakFXTier; // 0x1f04, 0x4 bytes
+                std::uint8_t m_bBuybackDisabled : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bWasFrozen : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bUpdateClientsideWearables : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bForceBuildCombinedModel : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bRecombineForMaterialsOnly : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bBuildingCombinedModel : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bInReloadEvent : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bStoreOldVisibility : 1; // 0x1f08, 0x1 bytes
+                std::uint8_t m_bResetVisibility : 1; // 0x1f09, 0x1 bytes
+                std::uint8_t m_bStoredVisibility : 1; // 0x1f09, 0x1 bytes
+                std::uint8_t pad_1f0a[0x6]; // 0x1f0a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_Hero) == 0x1E88, "C_DOTA_BaseNPC_Hero size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_Hero) == 0x1F10, "C_DOTA_BaseNPC_Hero size mismatch");
         }
     }
 }

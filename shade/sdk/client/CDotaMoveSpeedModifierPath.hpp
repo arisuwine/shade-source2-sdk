@@ -50,7 +50,8 @@ namespace shade {
             /* Data Map Fields
              * CUtlSymbolLarge pathNodes; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              * CUtlSymbolLarge pathNodeRadiusScales; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
-             * CUtlSymbolLarge pathNodeMoveSpeedTypes; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlSymbolLarge pathNodeMoveSpeedType; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
+             * CUtlSymbolLarge pathNodeNPCTypes; // Offset: 0x7fffffff, Size: 0x1, Size In Bytes: 0x0
              */
 
             static_assert(sizeof(CDotaMoveSpeedModifierPath) == 0x630, "CDotaMoveSpeedModifierPath size mismatch");

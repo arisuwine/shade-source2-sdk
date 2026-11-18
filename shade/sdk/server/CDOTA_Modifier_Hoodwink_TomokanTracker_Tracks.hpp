@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae8
+             * Size: 0x1b38
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,17 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Hoodwink_TomokanTracker_Tracks : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t search_radius; // 0x1aa8, 0x4 bytes
-                float trail_duration; // 0x1aac, 0x4 bytes
-                float trail_interval; // 0x1ab0, 0x4 bytes
-                float trail_history_duration; // 0x1ab4, 0x4 bytes
-                std::uint8_t pad_1ab8[0x30]; // 0x1ab8, 0x30 bytes
+                std::int32_t search_radius; // 0x1af8, 0x4 bytes
+                float trail_duration; // 0x1afc, 0x4 bytes
+                float trail_interval; // 0x1b00, 0x4 bytes
+                float trail_history_duration; // 0x1b04, 0x4 bytes
+                std::uint8_t pad_1b08[0x30]; // 0x1b08, 0x30 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Hoodwink_TomokanTracker_Tracks) == 0x1AE8, "CDOTA_Modifier_Hoodwink_TomokanTracker_Tracks size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Hoodwink_TomokanTracker_Tracks) == 0x1B38, "CDOTA_Modifier_Hoodwink_TomokanTracker_Tracks size mismatch");
         }
     }
 }

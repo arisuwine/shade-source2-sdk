@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x670
+             * Size: 0x678
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTASceneEntity : public shade::sdk::client::C_SceneEntity {
             public:
-                std::int32_t m_nCustomStackIndex; // 0x0658, 0x4 bytes
-                std::uint8_t pad_065c[0x14]; // 0x065c, 0x14 bytes
+                std::int32_t m_nCustomStackIndex; // 0x0660, 0x4 bytes
+                std::uint8_t pad_0664[0x14]; // 0x0664, 0x14 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTASceneEntity) == 0x670, "C_DOTASceneEntity size mismatch");
+            static_assert(sizeof(C_DOTASceneEntity) == 0x678, "C_DOTASceneEntity size mismatch");
         }
     }
 }

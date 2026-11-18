@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace animgraphlib {
             /* Class Parameters
-             * Size: 0x398
+             * Size: 0x428
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -29,14 +29,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CChoreoInstanceData {
             public:
-                shade::sdk::animgraphlib::CAnimationLayer m_AnimOverlay[0xc]; // 0x0000, 0x390 bytes
-                std::uint8_t pad_0390[0x8]; // 0x0390, 0x8 bytes
+                shade::sdk::animgraphlib::CAnimationLayer m_AnimOverlay[0xc]; // 0x0000, 0x420 bytes
+                std::uint8_t pad_0420[0x8]; // 0x0420, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CChoreoInstanceData) == 0x398, "CChoreoInstanceData size mismatch");
+            static_assert(sizeof(CChoreoInstanceData) == 0x428, "CChoreoInstanceData size mismatch");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b10
+             * Size: 0x1b60
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,31 +31,31 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_KeeperOfTheLight_Illuminate : public shade::sdk::client::CDOTA_Buff {
             public:
-                float range; // 0x1aa8, 0x4 bytes
-                float total_damage; // 0x1aac, 0x4 bytes
-                float radius; // 0x1ab0, 0x4 bytes
-                float max_channel_time; // 0x1ab4, 0x4 bytes
-                float speed; // 0x1ab8, 0x4 bytes
-                float channel_vision_radius; // 0x1abc, 0x4 bytes
-                float channel_vision_interval; // 0x1ac0, 0x4 bytes
-                float channel_vision_duration; // 0x1ac4, 0x4 bytes
-                float channel_vision_step; // 0x1ac8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastChantTime; // 0x1acc, 0x4 bytes
-                VectorWS m_vNextVisionLocation; // 0x1ad0, 0xc bytes
-                Vector m_vCastDirection; // 0x1adc, 0xc bytes
-                VectorWS m_vCastLoc; // 0x1ae8, 0xc bytes
-                QAngle m_qCastAngle; // 0x1af4, 0xc bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b00, 0x4 bytes
-                bool m_bIsSpiritForm; // 0x1b04, 0x1 bytes
-                std::uint8_t pad_1b05[0x3]; // 0x1b05, 0x3 bytes
-                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1b08, 0x4 bytes
-                std::uint8_t pad_1b0c[0x4]; // 0x1b0c, 0x4 bytes
+                float range; // 0x1af8, 0x4 bytes
+                float total_damage; // 0x1afc, 0x4 bytes
+                float radius; // 0x1b00, 0x4 bytes
+                float max_channel_time; // 0x1b04, 0x4 bytes
+                float speed; // 0x1b08, 0x4 bytes
+                float channel_vision_radius; // 0x1b0c, 0x4 bytes
+                float channel_vision_interval; // 0x1b10, 0x4 bytes
+                float channel_vision_duration; // 0x1b14, 0x4 bytes
+                float channel_vision_step; // 0x1b18, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastChantTime; // 0x1b1c, 0x4 bytes
+                VectorWS m_vNextVisionLocation; // 0x1b20, 0xc bytes
+                Vector m_vCastDirection; // 0x1b2c, 0xc bytes
+                VectorWS m_vCastLoc; // 0x1b38, 0xc bytes
+                QAngle m_qCastAngle; // 0x1b44, 0xc bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b50, 0x4 bytes
+                bool m_bIsSpiritForm; // 0x1b54, 0x1 bytes
+                std::uint8_t pad_1b55[0x3]; // 0x1b55, 0x3 bytes
+                shade::sdk::entity2::GameTime_t m_fStartTime; // 0x1b58, 0x4 bytes
+                std::uint8_t pad_1b5c[0x4]; // 0x1b5c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_KeeperOfTheLight_Illuminate) == 0x1B10, "CDOTA_Modifier_KeeperOfTheLight_Illuminate size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_KeeperOfTheLight_Illuminate) == 0x1B60, "CDOTA_Modifier_KeeperOfTheLight_Illuminate size mismatch");
         }
     }
 }

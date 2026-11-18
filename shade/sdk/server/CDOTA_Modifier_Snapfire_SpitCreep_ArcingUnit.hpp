@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b18
+             * Size: 0x1b68
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,37 +30,37 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Snapfire_SpitCreep_ArcingUnit : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_flPredictedTotalTime; // 0x1aa8, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1aac, 0xc bytes
-                float m_flCurrentTimeHoriz; // 0x1ab8, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1abc, 0x4 bytes
-                bool m_bHorizontalMotionInterrupted; // 0x1ac0, 0x1 bytes
-                bool m_bDamageApplied; // 0x1ac1, 0x1 bytes
-                bool m_bTargetTeleported; // 0x1ac2, 0x1 bytes
-                std::uint8_t pad_1ac3[0x1]; // 0x1ac3, 0x1 bytes
-                Vector m_vHorizontalVelocity; // 0x1ac4, 0xc bytes
-                VectorWS m_vLastKnownTargetPosition; // 0x1ad0, 0xc bytes
-                float m_flInitialVelocityZ; // 0x1adc, 0x4 bytes
-                float m_fClampedProjectileSpeed; // 0x1ae0, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ae4, 0x4 bytes
-                float m_fAcceleration; // 0x1ae8, 0x4 bytes
-                float min_range; // 0x1aec, 0x4 bytes
-                float min_lob_travel_time; // 0x1af0, 0x4 bytes
-                float max_lob_travel_time; // 0x1af4, 0x4 bytes
-                float impact_radius; // 0x1af8, 0x4 bytes
-                float projectile_vision; // 0x1afc, 0x4 bytes
-                float stun_duration; // 0x1b00, 0x4 bytes
-                float min_height_above_lowest; // 0x1b04, 0x4 bytes
-                float min_height_above_highest; // 0x1b08, 0x4 bytes
-                float min_acceleration; // 0x1b0c, 0x4 bytes
-                float max_acceleration; // 0x1b10, 0x4 bytes
-                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
+                float m_flPredictedTotalTime; // 0x1af8, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1afc, 0xc bytes
+                float m_flCurrentTimeHoriz; // 0x1b08, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1b0c, 0x4 bytes
+                bool m_bHorizontalMotionInterrupted; // 0x1b10, 0x1 bytes
+                bool m_bDamageApplied; // 0x1b11, 0x1 bytes
+                bool m_bTargetTeleported; // 0x1b12, 0x1 bytes
+                std::uint8_t pad_1b13[0x1]; // 0x1b13, 0x1 bytes
+                Vector m_vHorizontalVelocity; // 0x1b14, 0xc bytes
+                VectorWS m_vLastKnownTargetPosition; // 0x1b20, 0xc bytes
+                float m_flInitialVelocityZ; // 0x1b2c, 0x4 bytes
+                float m_fClampedProjectileSpeed; // 0x1b30, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b34, 0x4 bytes
+                float m_fAcceleration; // 0x1b38, 0x4 bytes
+                float min_range; // 0x1b3c, 0x4 bytes
+                float min_lob_travel_time; // 0x1b40, 0x4 bytes
+                float max_lob_travel_time; // 0x1b44, 0x4 bytes
+                float impact_radius; // 0x1b48, 0x4 bytes
+                float projectile_vision; // 0x1b4c, 0x4 bytes
+                float stun_duration; // 0x1b50, 0x4 bytes
+                float min_height_above_lowest; // 0x1b54, 0x4 bytes
+                float min_height_above_highest; // 0x1b58, 0x4 bytes
+                float min_acceleration; // 0x1b5c, 0x4 bytes
+                float max_acceleration; // 0x1b60, 0x4 bytes
+                std::uint8_t pad_1b64[0x4]; // 0x1b64, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Snapfire_SpitCreep_ArcingUnit) == 0x1B18, "CDOTA_Modifier_Snapfire_SpitCreep_ArcingUnit size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Snapfire_SpitCreep_ArcingUnit) == 0x1B68, "CDOTA_Modifier_Snapfire_SpitCreep_ArcingUnit size mismatch");
         }
     }
 }

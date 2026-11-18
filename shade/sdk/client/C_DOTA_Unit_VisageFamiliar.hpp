@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b50
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,14 +31,14 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_VisageFamiliar : public shade::sdk::client::C_DOTA_BaseNPC_Creep {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFXAmbient; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXAmbient; // 0x1b48, 0x4 bytes
+                std::uint8_t pad_1b4c[0x4]; // 0x1b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_VisageFamiliar) == 0x1AC8, "C_DOTA_Unit_VisageFamiliar size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_VisageFamiliar) == 0x1B50, "C_DOTA_Unit_VisageFamiliar size mismatch");
         }
     }
 }

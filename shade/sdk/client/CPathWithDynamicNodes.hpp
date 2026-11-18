@@ -44,9 +44,9 @@ namespace shade {
                 CTransform m_xInitialPathWorldToLocal; // 0x0720, 0x20 bytes
                 shade::sdk::client::DirectionAlongSimplePath_t m_eDesiredDirection; // 0x0740, 0x4 bytes
                 bool m_bIgnoreParentRotation; // 0x0744, 0x1 bytes
-                std::uint8_t pad_0745[0x1b]; // 0x0745, 0x1b bytes
-                bool m_bAlwaysReevaluateSpline; // 0x0760, 0x1 bytes
-                std::uint8_t pad_0761[0xf]; // 0x0761, 0xf bytes
+                std::uint8_t pad_0745[0x1f]; // 0x0745, 0x1f bytes
+                bool m_bAlwaysReevaluateSpline; // 0x0764, 0x1 bytes
+                std::uint8_t pad_0765[0xb]; // 0x0765, 0xb bytes
             };
             #pragma pack(pop)
 

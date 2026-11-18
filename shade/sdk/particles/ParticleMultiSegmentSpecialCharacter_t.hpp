@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particles {
-            enum class ParticleMultiSegmentSpecialCharacter_t : std::int32_t {
+            enum class ParticleMultiSegmentSpecialCharacter_t : std::uint32_t {
                 PARTICLE_MULTISEGMENT_SPECIAL_NONE = -0x1,
                 PARTICLE_MULTISEGMENT_SPECIAL_DECIMAL = 0x0,
                 PARTICLE_MULTISEGMENT_SPECIAL_COLON = 0x1,

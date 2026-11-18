@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9e8
+             * Size: 0xa48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,7 +31,7 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerMultiple : public shade::sdk::server::CBaseTrigger {
             public:
-                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x09d0, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x0a30, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -39,7 +39,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CTriggerMultiple) == 0x9E8, "CTriggerMultiple size mismatch");
+            static_assert(sizeof(CTriggerMultiple) == 0xA48, "CTriggerMultiple size mismatch");
         }
     }
 }

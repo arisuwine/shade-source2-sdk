@@ -23,7 +23,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -31,21 +31,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Ringmaster_Wheel_Mesmerize : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1aa8[0x14]; // 0x1aa8, 0x14 bytes
-                float wheel_stun; // 0x1abc, 0x4 bytes
-                float mesmerize_radius; // 0x1ac0, 0x4 bytes
-                float vision_cone; // 0x1ac4, 0x4 bytes
-                float explosion_damage; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
-                shade::sdk::server::CountdownTimer m_ctFuseTimer; // 0x1ad0, 0x18 bytes
-                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1ae8, 0x4 bytes
-                std::int32_t m_nTimesTriggered; // 0x1aec, 0x4 bytes
+                std::uint8_t pad_1af8[0x14]; // 0x1af8, 0x14 bytes
+                float wheel_stun; // 0x1b0c, 0x4 bytes
+                float mesmerize_radius; // 0x1b10, 0x4 bytes
+                float vision_cone; // 0x1b14, 0x4 bytes
+                float explosion_damage; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
+                shade::sdk::server::CountdownTimer m_ctFuseTimer; // 0x1b20, 0x18 bytes
+                shade::sdk::client::ParticleIndex_t m_nFXIndex; // 0x1b38, 0x4 bytes
+                std::int32_t m_nTimesTriggered; // 0x1b3c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Ringmaster_Wheel_Mesmerize) == 0x1AF0, "CDOTA_Modifier_Ringmaster_Wheel_Mesmerize size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Ringmaster_Wheel_Mesmerize) == 0x1B40, "CDOTA_Modifier_Ringmaster_Wheel_Mesmerize size mismatch");
         }
     }
 }

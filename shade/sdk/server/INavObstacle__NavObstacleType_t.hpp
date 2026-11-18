@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace server {
-            enum class INavObstacle__NavObstacleType_t : std::int32_t {
+            enum class INavObstacle__NavObstacleType_t : std::uint32_t {
                 NAV_OBSTACLE_TYPE_INVALID = -0x1,
                 NAV_OBSTACLE_TYPE_NONE = 0x0,
                 NAV_OBSTACLE_TYPE_AVOID = 0x1,

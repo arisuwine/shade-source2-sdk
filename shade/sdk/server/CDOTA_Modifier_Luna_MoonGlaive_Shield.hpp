@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b18
+             * Size: 0x1b68
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,28 +30,28 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Luna_MoonGlaive_Shield : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t rotating_glaives; // 0x1aa8, 0x4 bytes
-                float rotating_glaives_hit_radius; // 0x1aac, 0x4 bytes
-                float rotating_glaives_speed; // 0x1ab0, 0x4 bytes
-                float rotating_glaives_collision_damage; // 0x1ab4, 0x4 bytes
-                float rotating_glaives_movement_radius; // 0x1ab8, 0x4 bytes
-                float rotating_glaives_movement_radius_expand_speed_scale; // 0x1abc, 0x4 bytes
-                float rotating_glaives_damage_reduction; // 0x1ac0, 0x4 bytes
-                float rotating_glaives_duration; // 0x1ac4, 0x4 bytes
-                std::int32_t bonus_movement_speed; // 0x1ac8, 0x4 bytes
-                float m_flCurRotation; // 0x1acc, 0x4 bytes
-                float m_flCurRadius; // 0x1ad0, 0x4 bytes
-                float m_flCurRadiusUnclamped; // 0x1ad4, 0x4 bytes
-                float m_flSecondsPerRotation; // 0x1ad8, 0x4 bytes
-                float m_flMaxRadius; // 0x1adc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1ae0, 0x4 bytes
-                std::uint8_t pad_1ae4[0x34]; // 0x1ae4, 0x34 bytes
+                std::int32_t rotating_glaives; // 0x1af8, 0x4 bytes
+                float rotating_glaives_hit_radius; // 0x1afc, 0x4 bytes
+                float rotating_glaives_speed; // 0x1b00, 0x4 bytes
+                float rotating_glaives_collision_damage; // 0x1b04, 0x4 bytes
+                float rotating_glaives_movement_radius; // 0x1b08, 0x4 bytes
+                float rotating_glaives_movement_radius_expand_speed_scale; // 0x1b0c, 0x4 bytes
+                float rotating_glaives_damage_reduction; // 0x1b10, 0x4 bytes
+                float rotating_glaives_duration; // 0x1b14, 0x4 bytes
+                std::int32_t bonus_movement_speed; // 0x1b18, 0x4 bytes
+                float m_flCurRotation; // 0x1b1c, 0x4 bytes
+                float m_flCurRadius; // 0x1b20, 0x4 bytes
+                float m_flCurRadiusUnclamped; // 0x1b24, 0x4 bytes
+                float m_flSecondsPerRotation; // 0x1b28, 0x4 bytes
+                float m_flMaxRadius; // 0x1b2c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flStartTime; // 0x1b30, 0x4 bytes
+                std::uint8_t pad_1b34[0x34]; // 0x1b34, 0x34 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Luna_MoonGlaive_Shield) == 0x1B18, "CDOTA_Modifier_Luna_MoonGlaive_Shield size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Luna_MoonGlaive_Shield) == 0x1B68, "CDOTA_Modifier_Luna_MoonGlaive_Shield size mismatch");
         }
     }
 }

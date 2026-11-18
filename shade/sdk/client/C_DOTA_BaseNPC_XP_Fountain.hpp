@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b38
+             * Size: 0x1bc0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,19 +31,19 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_XP_Fountain : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                shade::sdk::client::ParticleIndex_t m_nFxRing; // 0x1b28, 0x4 bytes
-                bool m_bActive; // 0x1b2c, 0x1 bytes
-                bool m_bIsBeingGranted; // 0x1b2d, 0x1 bytes
-                bool m_bWasBeingGranted; // 0x1b2e, 0x1 bytes
-                std::uint8_t pad_1b2f[0x1]; // 0x1b2f, 0x1 bytes
-                std::int32_t m_nIntervals; // 0x1b30, 0x4 bytes
-                std::uint8_t pad_1b34[0x4]; // 0x1b34, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nFxRing; // 0x1bb0, 0x4 bytes
+                bool m_bActive; // 0x1bb4, 0x1 bytes
+                bool m_bIsBeingGranted; // 0x1bb5, 0x1 bytes
+                bool m_bWasBeingGranted; // 0x1bb6, 0x1 bytes
+                std::uint8_t pad_1bb7[0x1]; // 0x1bb7, 0x1 bytes
+                std::int32_t m_nIntervals; // 0x1bb8, 0x4 bytes
+                std::uint8_t pad_1bbc[0x4]; // 0x1bbc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_XP_Fountain) == 0x1B38, "C_DOTA_BaseNPC_XP_Fountain size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_XP_Fountain) == 0x1BC0, "C_DOTA_BaseNPC_XP_Fountain size mismatch");
         }
     }
 }

@@ -49,7 +49,8 @@ namespace shade {
                 shade::sdk::particleslib::ParticleAttributeIndex_t m_nVectorAttribute; // 0x0068, 0x4 bytes
                 std::int32_t m_nVectorComponent; // 0x006c, 0x4 bytes
                 bool m_bReverseOrder; // 0x0070, 0x1 bytes
-                std::uint8_t pad_0071[0x3]; // 0x0071, 0x3 bytes
+                bool m_bAbsoluteValue; // 0x0071, 0x1 bytes
+                std::uint8_t pad_0072[0x2]; // 0x0072, 0x2 bytes
                 float m_flRandomMin; // 0x0074, 0x4 bytes
                 float m_flRandomMax; // 0x0078, 0x4 bytes
                 bool m_bHasRandomSignFlip; // 0x007c, 0x1 bytes

@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace particleslib {
-            enum class ParticleVecType_t : std::int32_t {
+            enum class ParticleVecType_t : std::uint32_t {
                 PVEC_TYPE_INVALID = -0x1,
                 PVEC_TYPE_LITERAL = 0x0,
                 PVEC_TYPE_LITERAL_COLOR = 0x1,

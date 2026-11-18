@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5a0
+             * Size: 0x5b0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -42,18 +42,21 @@ namespace shade {
                 CHandle<shade::sdk::server::CBaseEntity> m_hPrimary; // 0x0580, 0x4 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hSecondary; // 0x0584, 0x4 bytes
                 CHandle<shade::sdk::server::CBaseEntity> m_hTertiary; // 0x0588, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fHurlBoulder_CooldownTime; // 0x058c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fHDispelMagic_CooldownTime; // 0x0590, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fCyclone_CooldownTime; // 0x0594, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fWindWalk_CooldownTime; // 0x0598, 0x4 bytes
-                bool m_bGainedScepterLevels; // 0x059c, 0x1 bytes
-                std::uint8_t pad_059d[0x3]; // 0x059d, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hEarthScepterItem; // 0x058c, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hStormScepterItem; // 0x0590, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hFireScepterItem; // 0x0594, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fHurlBoulder_CooldownTime; // 0x0598, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fHDispelMagic_CooldownTime; // 0x059c, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fCyclone_CooldownTime; // 0x05a0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fWindWalk_CooldownTime; // 0x05a4, 0x4 bytes
+                bool m_bGainedScepterLevels; // 0x05a8, 0x1 bytes
+                std::uint8_t pad_05a9[0x7]; // 0x05a9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_Brewmaster_PrimalSplit) == 0x5A0, "CDOTA_Ability_Brewmaster_PrimalSplit size mismatch");
+            static_assert(sizeof(CDOTA_Ability_Brewmaster_PrimalSplit) == 0x5B0, "CDOTA_Ability_Brewmaster_PrimalSplit size mismatch");
         }
     }
 }

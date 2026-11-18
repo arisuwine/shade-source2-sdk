@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1b70
+             * Size: 0x1bf8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,18 +39,18 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_BaseNPC_NeutralItemStash : public shade::sdk::client::C_DOTA_BaseNPC_Building {
             public:
-                std::uint8_t pad_1b28[0x10]; // 0x1b28, 0x10 bytes
-                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecNewItemFX; // 0x1b38, 0x18 bytes
-                bool m_bHasFoundProps; // 0x1b50, 0x1 bytes
-                bool m_bDidHaveNewItems; // 0x1b51, 0x1 bytes
-                std::uint8_t pad_1b52[0x6]; // 0x1b52, 0x6 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_DynamicPropClientside>> m_vecProps; // 0x1b58, 0x18 bytes
+                std::uint8_t pad_1bb0[0x10]; // 0x1bb0, 0x10 bytes
+                CUtlVector<shade::sdk::client::ParticleIndex_t> m_vecNewItemFX; // 0x1bc0, 0x18 bytes
+                bool m_bHasFoundProps; // 0x1bd8, 0x1 bytes
+                bool m_bDidHaveNewItems; // 0x1bd9, 0x1 bytes
+                std::uint8_t pad_1bda[0x6]; // 0x1bda, 0x6 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_DynamicPropClientside>> m_vecProps; // 0x1be0, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_BaseNPC_NeutralItemStash) == 0x1B70, "C_DOTA_BaseNPC_NeutralItemStash size mismatch");
+            static_assert(sizeof(C_DOTA_BaseNPC_NeutralItemStash) == 0x1BF8, "C_DOTA_BaseNPC_NeutralItemStash size mismatch");
         }
     }
 }

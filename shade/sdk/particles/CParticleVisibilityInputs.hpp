@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace particles {
             /* Class Parameters
-             * Size: 0x48
+             * Size: 0x44
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -45,15 +45,14 @@ namespace shade {
                 float m_flAlphaScaleMax; // 0x0034, 0x4 bytes
                 float m_flRadiusScaleMin; // 0x0038, 0x4 bytes
                 float m_flRadiusScaleMax; // 0x003c, 0x4 bytes
-                float m_flRadiusScaleFOVBase; // 0x0040, 0x4 bytes
-                bool m_bRightEye; // 0x0044, 0x1 bytes
-                std::uint8_t pad_0045[0x3]; // 0x0045, 0x3 bytes
+                bool m_bRightEye; // 0x0040, 0x1 bytes
+                std::uint8_t pad_0041[0x3]; // 0x0041, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CParticleVisibilityInputs) == 0x48, "CParticleVisibilityInputs size mismatch");
+            static_assert(sizeof(CParticleVisibilityInputs) == 0x44, "CParticleVisibilityInputs size mismatch");
         }
     }
 }

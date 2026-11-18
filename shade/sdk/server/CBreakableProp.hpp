@@ -35,7 +35,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa20
+             * Size: 0xa80
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -44,57 +44,57 @@ namespace shade {
             #pragma pack(push, 1)
             class CBreakableProp : public shade::sdk::server::CBaseProp {
             public:
-                std::uint8_t pad_08b0[0x8]; // 0x08b0, 0x8 bytes
-                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x08b8, 0x40 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x08f8, 0x18 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x0910, 0x18 bytes
-                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x0928, 0x20 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x0948, 0x18 bytes
-                float m_impactEnergyScale; // 0x0960, 0x4 bytes
-                std::int32_t m_iMinHealthDmg; // 0x0964, 0x4 bytes
-                QAngle m_preferredCarryAngles; // 0x0968, 0xc bytes
-                float m_flPressureDelay; // 0x0974, 0x4 bytes
-                float m_flDefBurstScale; // 0x0978, 0x4 bytes
-                Vector m_vDefBurstOffset; // 0x097c, 0xc bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hBreaker; // 0x0988, 0x4 bytes
-                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x098c, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPreventDamageBeforeTime; // 0x0990, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPreventNonPlayerDamageBeforeTime; // 0x0994, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flPreventNonPlayerDamageWhileHeldBeforeTime; // 0x0998, 0x4 bytes
-                bool m_bUnbreakableUntilIgnited; // 0x099c, 0x1 bytes
-                std::uint8_t pad_099d[0x3]; // 0x099d, 0x3 bytes
-                shade::sdk::client::BreakableContentsType_t m_BreakableContentsType; // 0x09a0, 0x4 bytes
-                std::uint8_t pad_09a4[0x4]; // 0x09a4, 0x4 bytes
-                CUtlString m_strBreakableContentsPropGroupOverride; // 0x09a8, 0x8 bytes
-                CUtlString m_strBreakableContentsParticleOverride; // 0x09b0, 0x8 bytes
-                bool m_bHasBreakPiecesOrCommands; // 0x09b8, 0x1 bytes
-                std::uint8_t pad_09b9[0x3]; // 0x09b9, 0x3 bytes
-                float m_explodeDamage; // 0x09bc, 0x4 bytes
-                float m_explodeRadius; // 0x09c0, 0x4 bytes
-                std::uint8_t pad_09c4[0x4]; // 0x09c4, 0x4 bytes
-                CGlobalSymbol m_sExplosionType; // 0x09c8, 0x8 bytes
-                float m_explosionDelay; // 0x09d0, 0x4 bytes
-                std::uint8_t pad_09d4[0x4]; // 0x09d4, 0x4 bytes
-                CUtlSymbolLarge m_explosionBuildupSound; // 0x09d8, 0x8 bytes
-                CUtlSymbolLarge m_explosionCustomEffect; // 0x09e0, 0x8 bytes
-                CUtlSymbolLarge m_explosionCustomSound; // 0x09e8, 0x8 bytes
-                CUtlSymbolLarge m_explosionModifier; // 0x09f0, 0x8 bytes
-                float m_flPreventNonPlayerDamageDuration; // 0x09f8, 0x4 bytes
-                float m_flPreventNonPlayerDamageWhileHeldDuration; // 0x09fc, 0x4 bytes
-                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x0a00, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0a04, 0x4 bytes
-                float m_flDefaultFadeScale; // 0x0a08, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hLastAttacker; // 0x0a0c, 0x4 bytes
-                CUtlSymbolLarge m_iszPuntSound; // 0x0a10, 0x8 bytes
-                bool m_bUsePuntSound; // 0x0a18, 0x1 bytes
-                bool m_bOriginalBlockLOS; // 0x0a19, 0x1 bytes
-                std::uint8_t pad_0a1a[0x6]; // 0x0a1a, 0x6 bytes
+                std::uint8_t pad_0910[0x8]; // 0x0910, 0x8 bytes
+                shade::sdk::server::CPropDataComponent m_CPropDataComponent; // 0x0918, 0x40 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x0958, 0x18 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnBreak; // 0x0970, 0x18 bytes
+                CEntityOutputTemplate<float> m_OnHealthChanged; // 0x0988, 0x20 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0x09a8, 0x18 bytes
+                float m_impactEnergyScale; // 0x09c0, 0x4 bytes
+                std::int32_t m_iMinHealthDmg; // 0x09c4, 0x4 bytes
+                QAngle m_preferredCarryAngles; // 0x09c8, 0xc bytes
+                float m_flPressureDelay; // 0x09d4, 0x4 bytes
+                float m_flDefBurstScale; // 0x09d8, 0x4 bytes
+                Vector m_vDefBurstOffset; // 0x09dc, 0xc bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hBreaker; // 0x09e8, 0x4 bytes
+                shade::sdk::client::PerformanceMode_t m_PerformanceMode; // 0x09ec, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPreventDamageBeforeTime; // 0x09f0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPreventNonPlayerDamageBeforeTime; // 0x09f4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flPreventNonPlayerDamageWhileHeldBeforeTime; // 0x09f8, 0x4 bytes
+                bool m_bUnbreakableUntilIgnited; // 0x09fc, 0x1 bytes
+                std::uint8_t pad_09fd[0x3]; // 0x09fd, 0x3 bytes
+                shade::sdk::client::BreakableContentsType_t m_BreakableContentsType; // 0x0a00, 0x4 bytes
+                std::uint8_t pad_0a04[0x4]; // 0x0a04, 0x4 bytes
+                CUtlString m_strBreakableContentsPropGroupOverride; // 0x0a08, 0x8 bytes
+                CUtlString m_strBreakableContentsParticleOverride; // 0x0a10, 0x8 bytes
+                bool m_bHasBreakPiecesOrCommands; // 0x0a18, 0x1 bytes
+                std::uint8_t pad_0a19[0x3]; // 0x0a19, 0x3 bytes
+                float m_explodeDamage; // 0x0a1c, 0x4 bytes
+                float m_explodeRadius; // 0x0a20, 0x4 bytes
+                std::uint8_t pad_0a24[0x4]; // 0x0a24, 0x4 bytes
+                CGlobalSymbol m_sExplosionType; // 0x0a28, 0x8 bytes
+                float m_explosionDelay; // 0x0a30, 0x4 bytes
+                std::uint8_t pad_0a34[0x4]; // 0x0a34, 0x4 bytes
+                CUtlSymbolLarge m_explosionBuildupSound; // 0x0a38, 0x8 bytes
+                CUtlSymbolLarge m_explosionCustomEffect; // 0x0a40, 0x8 bytes
+                CUtlSymbolLarge m_explosionCustomSound; // 0x0a48, 0x8 bytes
+                CUtlSymbolLarge m_explosionModifier; // 0x0a50, 0x8 bytes
+                float m_flPreventNonPlayerDamageDuration; // 0x0a58, 0x4 bytes
+                float m_flPreventNonPlayerDamageWhileHeldDuration; // 0x0a5c, 0x4 bytes
+                CHandle<shade::sdk::server::CBasePlayerPawn> m_hPhysicsAttacker; // 0x0a60, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x0a64, 0x4 bytes
+                float m_flDefaultFadeScale; // 0x0a68, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hLastAttacker; // 0x0a6c, 0x4 bytes
+                CUtlSymbolLarge m_iszPuntSound; // 0x0a70, 0x8 bytes
+                bool m_bUsePuntSound; // 0x0a78, 0x1 bytes
+                bool m_bOriginalBlockLOS; // 0x0a79, 0x1 bytes
+                std::uint8_t pad_0a7a[0x6]; // 0x0a7a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CBreakableProp) == 0xA20, "CBreakableProp size mismatch");
+            static_assert(sizeof(CBreakableProp) == 0xA80, "CBreakableProp size mismatch");
         }
     }
 }

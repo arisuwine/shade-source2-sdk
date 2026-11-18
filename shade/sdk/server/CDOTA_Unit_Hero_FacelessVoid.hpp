@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2030
+             * Size: 0x20c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Unit_Hero_FacelessVoid : public shade::sdk::server::CDOTA_BaseNPC_Hero {
             public:
-                VectorWS m_vecStanceDestinationPoint; // 0x2020, 0xc bytes
-                std::uint8_t pad_202c[0x4]; // 0x202c, 0x4 bytes
+                VectorWS m_vecStanceDestinationPoint; // 0x20b0, 0xc bytes
+                std::uint8_t pad_20bc[0x4]; // 0x20bc, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Unit_Hero_FacelessVoid) == 0x2030, "CDOTA_Unit_Hero_FacelessVoid size mismatch");
+            static_assert(sizeof(CDOTA_Unit_Hero_FacelessVoid) == 0x20C0, "CDOTA_Unit_Hero_FacelessVoid size mismatch");
         }
     }
 }

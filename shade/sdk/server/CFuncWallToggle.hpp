@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x860
+             * Size: 0x8c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,7 +37,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CFuncWallToggle) == 0x860, "CFuncWallToggle size mismatch");
+            static_assert(sizeof(CFuncWallToggle) == 0x8C0, "CFuncWallToggle size mismatch");
         }
     }
 }

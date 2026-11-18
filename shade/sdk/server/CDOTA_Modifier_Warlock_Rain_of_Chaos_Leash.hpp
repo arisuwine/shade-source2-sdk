@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ac8
+             * Size: 0x1b18
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,19 +29,19 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Warlock_Rain_of_Chaos_Leash : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_flMaxMovespeed; // 0x1aa8, 0x4 bytes
-                float leash_start_radius; // 0x1aac, 0x4 bytes
-                float leash_radius; // 0x1ab0, 0x4 bytes
-                float leashed_movespeed; // 0x1ab4, 0x4 bytes
-                Vector2D m_vStartLoc; // 0x1ab8, 0x8 bytes
-                float m_flLastMaxMovespeed; // 0x1ac0, 0x4 bytes
-                std::uint8_t pad_1ac4[0x4]; // 0x1ac4, 0x4 bytes
+                float m_flMaxMovespeed; // 0x1af8, 0x4 bytes
+                float leash_start_radius; // 0x1afc, 0x4 bytes
+                float leash_radius; // 0x1b00, 0x4 bytes
+                float leashed_movespeed; // 0x1b04, 0x4 bytes
+                Vector2D m_vStartLoc; // 0x1b08, 0x8 bytes
+                float m_flLastMaxMovespeed; // 0x1b10, 0x4 bytes
+                std::uint8_t pad_1b14[0x4]; // 0x1b14, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Warlock_Rain_of_Chaos_Leash) == 0x1AC8, "CDOTA_Modifier_Warlock_Rain_of_Chaos_Leash size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Warlock_Rain_of_Chaos_Leash) == 0x1B18, "CDOTA_Modifier_Warlock_Rain_of_Chaos_Leash size mismatch");
         }
     }
 }

@@ -29,8 +29,8 @@ namespace shade {
              */
             #pragma pack(push, 1)
             struct PulseGraphExecutionHistoryEntry_t {
-                shade::sdk::pulse_runtime_lib::PulseCursorID_t nCursorID; // 0x0000, 0x4 bytes
-                shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nEditorID; // 0x0004, 0x4 bytes
+                shade::sdk::pulse_runtime_lib::PulseDocNodeID_t nEditorID; // 0x0000, 0x4 bytes
+                std::uint8_t pad_0004[0x4]; // 0x0004, 0x4 bytes
                 PulseSymbol_t seqPoint; // 0x0008, 0x10 bytes
                 float flExecTime; // 0x0018, 0x4 bytes
                 std::uint32_t unFlags; // 0x001c, 0x4 bytes

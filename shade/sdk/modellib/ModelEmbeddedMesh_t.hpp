@@ -19,6 +19,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             struct ModelMeshBufferData_t;
+            struct ModelMeshDNARig_t;
         }
     }
 }
@@ -27,7 +28,7 @@ namespace shade {
     namespace sdk {
         namespace modellib {
             /* Class Parameters
-             * Size: 0x70
+             * Size: 0x88
              * Alignment: 0x8
              * Construct Allowed
              */
@@ -42,14 +43,15 @@ namespace shade {
                 CUtlVector<shade::sdk::modellib::ModelMeshBufferData_t> m_vertexBuffers; // 0x0020, 0x18 bytes
                 CUtlVector<shade::sdk::modellib::ModelMeshBufferData_t> m_indexBuffers; // 0x0038, 0x18 bytes
                 CUtlVector<shade::sdk::modellib::ModelMeshBufferData_t> m_toolsBuffers; // 0x0050, 0x18 bytes
-                std::int32_t m_nVBIBBlock; // 0x0068, 0x4 bytes
-                std::int32_t m_nToolsVBBlock; // 0x006c, 0x4 bytes
+                CUtlVector<shade::sdk::modellib::ModelMeshDNARig_t> m_dnaRigs; // 0x0068, 0x18 bytes
+                std::int32_t m_nVBIBBlock; // 0x0080, 0x4 bytes
+                std::int32_t m_nToolsVBBlock; // 0x0084, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(ModelEmbeddedMesh_t) == 0x70, "ModelEmbeddedMesh_t size mismatch");
+            static_assert(sizeof(ModelEmbeddedMesh_t) == 0x88, "ModelEmbeddedMesh_t size mismatch");
         }
     }
 }

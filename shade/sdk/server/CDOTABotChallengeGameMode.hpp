@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x820
+             * Size: 0x828
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,22 +38,22 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTABotChallengeGameMode : public shade::sdk::server::CDOTABaseGameMode {
             public:
-                bool m_bRuleMidLaneOnly; // 0x07e0, 0x1 bytes
-                bool m_bRuleEliteBotHeroes; // 0x07e1, 0x1 bytes
-                bool m_bRuleMeteorStaff; // 0x07e2, 0x1 bytes
-                bool m_bHasStartedEndgame; // 0x07e3, 0x1 bytes
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hRadiantAncientNPC; // 0x07e4, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hDireAncientNPC; // 0x07e8, 0x4 bytes
-                std::uint8_t pad_07ec[0x2c]; // 0x07ec, 0x2c bytes
-                bool m_bRuleAncientsDuel; // 0x0818, 0x1 bytes
-                std::uint8_t pad_0819[0x3]; // 0x0819, 0x3 bytes
-                float m_flEndgameTime; // 0x081c, 0x4 bytes
+                bool m_bRuleMidLaneOnly; // 0x07e8, 0x1 bytes
+                bool m_bRuleEliteBotHeroes; // 0x07e9, 0x1 bytes
+                bool m_bRuleMeteorStaff; // 0x07ea, 0x1 bytes
+                bool m_bHasStartedEndgame; // 0x07eb, 0x1 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hRadiantAncientNPC; // 0x07ec, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_BaseNPC> m_hDireAncientNPC; // 0x07f0, 0x4 bytes
+                std::uint8_t pad_07f4[0x2c]; // 0x07f4, 0x2c bytes
+                bool m_bRuleAncientsDuel; // 0x0820, 0x1 bytes
+                std::uint8_t pad_0821[0x3]; // 0x0821, 0x3 bytes
+                float m_flEndgameTime; // 0x0824, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTABotChallengeGameMode) == 0x820, "CDOTABotChallengeGameMode size mismatch");
+            static_assert(sizeof(CDOTABotChallengeGameMode) == 0x828, "CDOTABotChallengeGameMode size mismatch");
         }
     }
 }

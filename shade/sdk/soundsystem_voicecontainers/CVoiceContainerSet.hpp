@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace soundsystem_voicecontainers {
             /* Class Parameters
-             * Size: 0xa0
+             * Size: 0xa8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -37,14 +37,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CVoiceContainerSet : public shade::sdk::soundsystem_voicecontainers::CVoiceContainerBase {
             public:
-                CUtlVector<shade::sdk::soundsystem_voicecontainers::CVoiceContainerSetElement> m_soundsToPlay; // 0x0070, 0x18 bytes
-                std::uint8_t pad_0088[0x18]; // 0x0088, 0x18 bytes
+                CUtlVector<shade::sdk::soundsystem_voicecontainers::CVoiceContainerSetElement> m_soundsToPlay; // 0x0078, 0x18 bytes
+                std::uint8_t pad_0090[0x18]; // 0x0090, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CVoiceContainerSet) == 0xA0, "CVoiceContainerSet size mismatch");
+            static_assert(sizeof(CVoiceContainerSet) == 0xA8, "CVoiceContainerSet size mismatch");
         }
     }
 }

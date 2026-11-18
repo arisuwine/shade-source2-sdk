@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace animgraphlib {
-            enum class HandshakeTagType_t : std::int32_t {
+            enum class HandshakeTagType_t : std::uint32_t {
                 eInvalid = -0x1,
                 eTask = 0x0,
                 eMovement = 0x1,

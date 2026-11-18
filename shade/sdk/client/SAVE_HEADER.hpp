@@ -34,7 +34,9 @@ namespace shade {
                 std::uint8_t pad_0018[0x8]; // 0x0018, 0x8 bytes
                 matrix3x4a_t m_vecWorldOffset; // 0x0020, 0x30 bytes
                 float m_flSaveTime; // 0x0050, 0x4 bytes
-                std::uint8_t pad_0054[0xc]; // 0x0054, 0xc bytes
+                std::int32_t m_nGameSavedTick; // 0x0054, 0x4 bytes
+                std::int32_t m_nGameDeltaTicks; // 0x0058, 0x4 bytes
+                std::uint8_t pad_005c[0x4]; // 0x005c, 0x4 bytes
             };
             #pragma pack(pop)
 

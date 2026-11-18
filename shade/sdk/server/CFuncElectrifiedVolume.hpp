@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8b0
+             * Size: 0x910
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,17 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CFuncElectrifiedVolume : public shade::sdk::server::CFuncBrush {
             public:
-                CUtlSymbolLarge m_EffectName; // 0x0878, 0x8 bytes
-                CUtlSymbolLarge m_EffectInterpenetrateName; // 0x0880, 0x8 bytes
-                CUtlSymbolLarge m_EffectZapName; // 0x0888, 0x8 bytes
-                CUtlSymbolLarge m_iszEffectSource; // 0x0890, 0x8 bytes
-                std::uint8_t pad_0898[0x18]; // 0x0898, 0x18 bytes
+                CUtlSymbolLarge m_EffectName; // 0x08d8, 0x8 bytes
+                CUtlSymbolLarge m_EffectInterpenetrateName; // 0x08e0, 0x8 bytes
+                CUtlSymbolLarge m_EffectZapName; // 0x08e8, 0x8 bytes
+                CUtlSymbolLarge m_iszEffectSource; // 0x08f0, 0x8 bytes
+                std::uint8_t pad_08f8[0x18]; // 0x08f8, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CFuncElectrifiedVolume) == 0x8B0, "CFuncElectrifiedVolume size mismatch");
+            static_assert(sizeof(CFuncElectrifiedVolume) == 0x910, "CFuncElectrifiedVolume size mismatch");
         }
     }
 }

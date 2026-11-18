@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xef0
+             * Size: 0xf50
              * Alignment: 0x10
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTAPropPlusPlayerGuildBanner : public shade::sdk::client::C_DOTA_GuildBannerDynamic {
             public:
-                std::int32_t m_nPlayerID; // 0x0ee0, 0x4 bytes
-                std::uint8_t pad_0ee4[0xc]; // 0x0ee4, 0xc bytes
+                std::int32_t m_nPlayerID; // 0x0f40, 0x4 bytes
+                std::uint8_t pad_0f44[0xc]; // 0x0f44, 0xc bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTAPropPlusPlayerGuildBanner) == 0xEF0, "CDOTAPropPlusPlayerGuildBanner size mismatch");
+            static_assert(sizeof(CDOTAPropPlusPlayerGuildBanner) == 0xF50, "CDOTAPropPlusPlayerGuildBanner size mismatch");
         }
     }
 }

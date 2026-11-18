@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x9e8
+             * Size: 0xa48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerGameEvent : public shade::sdk::server::CBaseTrigger {
             public:
-                CUtlString m_strStartTouchEventName; // 0x09d0, 0x8 bytes
-                CUtlString m_strEndTouchEventName; // 0x09d8, 0x8 bytes
-                CUtlString m_strTriggerID; // 0x09e0, 0x8 bytes
+                CUtlString m_strStartTouchEventName; // 0x0a30, 0x8 bytes
+                CUtlString m_strEndTouchEventName; // 0x0a38, 0x8 bytes
+                CUtlString m_strTriggerID; // 0x0a40, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerGameEvent) == 0x9E8, "CTriggerGameEvent size mismatch");
+            static_assert(sizeof(CTriggerGameEvent) == 0xA48, "CTriggerGameEvent size mismatch");
         }
     }
 }

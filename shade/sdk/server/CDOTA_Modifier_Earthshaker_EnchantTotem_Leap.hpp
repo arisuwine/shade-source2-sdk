@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b00
+             * Size: 0x1b50
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,29 +29,29 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Earthshaker_EnchantTotem_Leap : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::uint8_t pad_1aa8[0x4]; // 0x1aa8, 0x4 bytes
-                VectorWS m_vLoc; // 0x1aac, 0xc bytes
-                float m_flPredictedTotalTime; // 0x1ab8, 0x4 bytes
-                VectorWS m_vStartPosition; // 0x1abc, 0xc bytes
-                float m_flCurrentTimeHoriz; // 0x1ac8, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1acc, 0x4 bytes
-                bool m_bHorizontalMotionInterrupted; // 0x1ad0, 0x1 bytes
-                bool m_bDamageApplied; // 0x1ad1, 0x1 bytes
-                bool m_bTargetTeleported; // 0x1ad2, 0x1 bytes
-                std::uint8_t pad_1ad3[0x1]; // 0x1ad3, 0x1 bytes
-                Vector m_vHorizontalVelocity; // 0x1ad4, 0xc bytes
-                VectorWS m_vLastKnownTargetPosition; // 0x1ae0, 0xc bytes
-                float m_flInitialVelocityZ; // 0x1aec, 0x4 bytes
-                std::int32_t scepter_height; // 0x1af0, 0x4 bytes
-                std::int32_t scepter_height_arcbuffer; // 0x1af4, 0x4 bytes
-                std::int32_t scepter_acceleration_z; // 0x1af8, 0x4 bytes
-                std::int32_t scepter_acceleration_horizontal; // 0x1afc, 0x4 bytes
+                std::uint8_t pad_1af8[0x4]; // 0x1af8, 0x4 bytes
+                VectorWS m_vLoc; // 0x1afc, 0xc bytes
+                float m_flPredictedTotalTime; // 0x1b08, 0x4 bytes
+                VectorWS m_vStartPosition; // 0x1b0c, 0xc bytes
+                float m_flCurrentTimeHoriz; // 0x1b18, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1b1c, 0x4 bytes
+                bool m_bHorizontalMotionInterrupted; // 0x1b20, 0x1 bytes
+                bool m_bDamageApplied; // 0x1b21, 0x1 bytes
+                bool m_bTargetTeleported; // 0x1b22, 0x1 bytes
+                std::uint8_t pad_1b23[0x1]; // 0x1b23, 0x1 bytes
+                Vector m_vHorizontalVelocity; // 0x1b24, 0xc bytes
+                VectorWS m_vLastKnownTargetPosition; // 0x1b30, 0xc bytes
+                float m_flInitialVelocityZ; // 0x1b3c, 0x4 bytes
+                std::int32_t scepter_height; // 0x1b40, 0x4 bytes
+                std::int32_t scepter_height_arcbuffer; // 0x1b44, 0x4 bytes
+                std::int32_t scepter_acceleration_z; // 0x1b48, 0x4 bytes
+                std::int32_t scepter_acceleration_horizontal; // 0x1b4c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Earthshaker_EnchantTotem_Leap) == 0x1B00, "CDOTA_Modifier_Earthshaker_EnchantTotem_Leap size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Earthshaker_EnchantTotem_Leap) == 0x1B50, "CDOTA_Modifier_Earthshaker_EnchantTotem_Leap size mismatch");
         }
     }
 }

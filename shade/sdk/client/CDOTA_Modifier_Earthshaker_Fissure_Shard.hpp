@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,20 +29,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Earthshaker_Fissure_Shard : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t shard_aftershock_stun_duration_pct; // 0x1aa8, 0x4 bytes
-                float shard_free_pathing_linger_duration; // 0x1aac, 0x4 bytes
-                float fissure_movement_speed; // 0x1ab0, 0x4 bytes
-                float fissure_max_distance_moved; // 0x1ab4, 0x4 bytes
-                VectorWS m_vStartPos; // 0x1ab8, 0xc bytes
-                VectorWS m_vEndPos; // 0x1ac4, 0xc bytes
-                Vector m_vMoveDir; // 0x1ad0, 0xc bytes
-                float m_flTotalDistanceMoved; // 0x1adc, 0x4 bytes
+                std::int32_t shard_aftershock_stun_duration_pct; // 0x1af8, 0x4 bytes
+                float shard_free_pathing_linger_duration; // 0x1afc, 0x4 bytes
+                float fissure_movement_speed; // 0x1b00, 0x4 bytes
+                float fissure_max_distance_moved; // 0x1b04, 0x4 bytes
+                VectorWS m_vStartPos; // 0x1b08, 0xc bytes
+                VectorWS m_vEndPos; // 0x1b14, 0xc bytes
+                Vector m_vMoveDir; // 0x1b20, 0xc bytes
+                float m_flTotalDistanceMoved; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Earthshaker_Fissure_Shard) == 0x1AE0, "CDOTA_Modifier_Earthshaker_Fissure_Shard size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Earthshaker_Fissure_Shard) == 0x1B30, "CDOTA_Modifier_Earthshaker_Fissure_Shard size mismatch");
         }
     }
 }

@@ -23,7 +23,8 @@ namespace shade {
                 VMDL = 0x3,
                 XML = 0x4,
                 VDATA = 0x5,
-                COUNT = 0x6
+                VMAP_AND_VDATA = 0x6,
+                COUNT = 0x7
             };
         }
     }

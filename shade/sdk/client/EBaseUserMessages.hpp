@@ -69,6 +69,7 @@ namespace shade {
                 UM_UsageReport = 0xa8,
                 UM_RemoteServerCommand = 0xa9,
                 UM_RemoteServerResponse = 0xaa,
+                UM_EntitySpawnGroupChanged = 0xab,
                 UM_MAX_BASE = 0xc8
             };
         }

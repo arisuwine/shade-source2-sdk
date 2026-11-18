@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x860
+             * Size: 0x8c0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,14 +30,14 @@ namespace shade {
             #pragma pack(push, 1)
             class CMarkupVolume : public shade::sdk::server::CBaseModelEntity {
             public:
-                bool m_bDisabled; // 0x0858, 0x1 bytes
-                std::uint8_t pad_0859[0x7]; // 0x0859, 0x7 bytes
+                bool m_bDisabled; // 0x08b8, 0x1 bytes
+                std::uint8_t pad_08b9[0x7]; // 0x08b9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CMarkupVolume) == 0x860, "CMarkupVolume size mismatch");
+            static_assert(sizeof(CMarkupVolume) == 0x8C0, "CMarkupVolume size mismatch");
         }
     }
 }

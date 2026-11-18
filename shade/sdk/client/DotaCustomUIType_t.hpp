@@ -16,7 +16,7 @@
 namespace shade {
     namespace sdk {
         namespace client {
-            enum class DotaCustomUIType_t : std::int32_t {
+            enum class DotaCustomUIType_t : std::uint32_t {
                 DOTA_CUSTOM_UI_TYPE_HUD = 0x0,
                 DOTA_CUSTOM_UI_TYPE_HERO_SELECTION = 0x1,
                 DOTA_CUSTOM_UI_TYPE_PREGAME_STRATEGY = 0x2,

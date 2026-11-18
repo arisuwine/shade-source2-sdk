@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,17 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Nevermore_Presence : public shade::sdk::client::CDOTA_Buff {
             public:
-                float presence_armor_reduction; // 0x1aa8, 0x4 bytes
-                std::int32_t bonus_armor_per_stack; // 0x1aac, 0x4 bytes
-                bool m_bWasHidden; // 0x1ab0, 0x1 bytes
-                std::uint8_t pad_1ab1[0x7]; // 0x1ab1, 0x7 bytes
+                float presence_armor_reduction; // 0x1af8, 0x4 bytes
+                float presence_magic_resistance_reduction; // 0x1afc, 0x4 bytes
+                std::int32_t bonus_armor_per_stack; // 0x1b00, 0x4 bytes
+                bool m_bWasHidden; // 0x1b04, 0x1 bytes
+                std::uint8_t pad_1b05[0x3]; // 0x1b05, 0x3 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Nevermore_Presence) == 0x1AB8, "CDOTA_Modifier_Nevermore_Presence size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Nevermore_Presence) == 0x1B08, "CDOTA_Modifier_Nevermore_Presence size mismatch");
         }
     }
 }

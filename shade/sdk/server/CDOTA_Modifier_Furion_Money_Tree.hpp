@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -39,27 +39,27 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Furion_Money_Tree : public shade::sdk::client::CDOTA_Buff {
             public:
-                float gold_per_bag; // 0x1aa8, 0x4 bytes
-                float tick_interval; // 0x1aac, 0x4 bytes
-                float tree_duration; // 0x1ab0, 0x4 bytes
-                std::int32_t min_throw_range; // 0x1ab4, 0x4 bytes
-                std::int32_t max_throw_range; // 0x1ab8, 0x4 bytes
-                float gold_bag_duration; // 0x1abc, 0x4 bytes
-                std::int32_t bags_per_tick; // 0x1ac0, 0x4 bytes
-                float hero_level_gold_multiplier; // 0x1ac4, 0x4 bytes
-                CHandle<shade::sdk::server::CDOTA_TempTree> m_hTree; // 0x1ac8, 0x4 bytes
-                std::int32_t nTargetHeroLevel; // 0x1acc, 0x4 bytes
-                bool m_bInitialized; // 0x1ad0, 0x1 bytes
-                std::uint8_t pad_1ad1[0x3]; // 0x1ad1, 0x3 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hObstruction; // 0x1ad4, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_timeLastGoldBagSpawn; // 0x1ad8, 0x4 bytes
-                std::uint8_t pad_1adc[0x4]; // 0x1adc, 0x4 bytes
+                float gold_per_bag; // 0x1af8, 0x4 bytes
+                float tick_interval; // 0x1afc, 0x4 bytes
+                float tree_duration; // 0x1b00, 0x4 bytes
+                std::int32_t min_throw_range; // 0x1b04, 0x4 bytes
+                std::int32_t max_throw_range; // 0x1b08, 0x4 bytes
+                float gold_bag_duration; // 0x1b0c, 0x4 bytes
+                std::int32_t bags_per_tick; // 0x1b10, 0x4 bytes
+                float hero_level_gold_multiplier; // 0x1b14, 0x4 bytes
+                CHandle<shade::sdk::server::CDOTA_TempTree> m_hTree; // 0x1b18, 0x4 bytes
+                std::int32_t nTargetHeroLevel; // 0x1b1c, 0x4 bytes
+                bool m_bInitialized; // 0x1b20, 0x1 bytes
+                std::uint8_t pad_1b21[0x3]; // 0x1b21, 0x3 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hObstruction; // 0x1b24, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_timeLastGoldBagSpawn; // 0x1b28, 0x4 bytes
+                std::uint8_t pad_1b2c[0x4]; // 0x1b2c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Furion_Money_Tree) == 0x1AE0, "CDOTA_Modifier_Furion_Money_Tree size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Furion_Money_Tree) == 0x1B30, "CDOTA_Modifier_Furion_Money_Tree size mismatch");
         }
     }
 }

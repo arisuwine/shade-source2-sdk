@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7e0
+             * Size: 0x7e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTANewPlayerPoolGameMode) == 0x7E0, "C_DOTANewPlayerPoolGameMode size mismatch");
+            static_assert(sizeof(C_DOTANewPlayerPoolGameMode) == 0x7E8, "C_DOTANewPlayerPoolGameMode size mismatch");
         }
     }
 }

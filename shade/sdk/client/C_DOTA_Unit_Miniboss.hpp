@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1af8
+             * Size: 0x1b80
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -40,22 +40,22 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_Unit_Miniboss : public shade::sdk::client::C_DOTA_BaseNPC_Additive {
             public:
-                std::int32_t m_nVisualTeam; // 0x1ab8, 0x4 bytes
-                std::uint8_t pad_1abc[0x4]; // 0x1abc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flTransitionTimestamp; // 0x1ac0, 0x4 bytes
-                std::int32_t m_nTempViewer; // 0x1ac4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAttackingHeroes; // 0x1ac8, 0x18 bytes
-                std::uint8_t pad_1ae0[0x8]; // 0x1ae0, 0x8 bytes
-                shade::sdk::client::ParticleIndex_t nShieldFX; // 0x1ae8, 0x4 bytes
-                std::int32_t m_nPreviewViewer; // 0x1aec, 0x4 bytes
-                shade::sdk::client::ParticleIndex_t m_nTPFXIndex; // 0x1af0, 0x4 bytes
-                std::uint8_t pad_1af4[0x4]; // 0x1af4, 0x4 bytes
+                std::int32_t m_nVisualTeam; // 0x1b40, 0x4 bytes
+                std::uint8_t pad_1b44[0x4]; // 0x1b44, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flTransitionTimestamp; // 0x1b48, 0x4 bytes
+                std::int32_t m_nTempViewer; // 0x1b4c, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAttackingHeroes; // 0x1b50, 0x18 bytes
+                std::uint8_t pad_1b68[0x8]; // 0x1b68, 0x8 bytes
+                shade::sdk::client::ParticleIndex_t nShieldFX; // 0x1b70, 0x4 bytes
+                std::int32_t m_nPreviewViewer; // 0x1b74, 0x4 bytes
+                shade::sdk::client::ParticleIndex_t m_nTPFXIndex; // 0x1b78, 0x4 bytes
+                std::uint8_t pad_1b7c[0x4]; // 0x1b7c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_Unit_Miniboss) == 0x1AF8, "C_DOTA_Unit_Miniboss size mismatch");
+            static_assert(sizeof(C_DOTA_Unit_Miniboss) == 0x1B80, "C_DOTA_Unit_Miniboss size mismatch");
         }
     }
 }

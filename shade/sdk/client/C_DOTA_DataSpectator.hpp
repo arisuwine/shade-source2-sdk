@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x21d0
+             * Size: 0x21e0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -39,31 +39,31 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_DataSpectator : public shade::sdk::client::C_DOTA_DataNonSpectator {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hPowerupRune_1; // 0x1e40, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hPowerupRune_2; // 0x1e44, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_1; // 0x1e48, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_2; // 0x1e4c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_3; // 0x1e50, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_4; // 0x1e54, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hXPRune_1; // 0x1e58, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hXPRune_2; // 0x1e5c, 0x4 bytes
-                std::int32_t m_iNetWorth[0x18]; // 0x1e60, 0x60 bytes
-                float m_fRadiantWinProbability; // 0x1ec0, 0x4 bytes
-                std::int32_t m_iGoldSpentOnSupport[0x18]; // 0x1ec4, 0x60 bytes
-                std::int32_t m_iHeroDamage[0x18]; // 0x1f24, 0x60 bytes
-                std::int32_t m_nWardsPurchased[0x18]; // 0x1f84, 0x60 bytes
-                std::int32_t m_nWardsPlaced[0x18]; // 0x1fe4, 0x60 bytes
-                std::int32_t m_nWardsDestroyed[0x18]; // 0x2044, 0x60 bytes
-                std::int32_t m_nRunesActivated[0x18]; // 0x20a4, 0x60 bytes
-                std::int32_t m_nCampsStacked[0x18]; // 0x2104, 0x60 bytes
-                std::uint8_t pad_2164[0x4]; // 0x2164, 0x4 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::DOTAThreatLevelInfo_t> m_ThreatLevelInfos; // 0x2168, 0x68 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hPowerupRune_1; // 0x1e50, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hPowerupRune_2; // 0x1e54, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_1; // 0x1e58, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_2; // 0x1e5c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_3; // 0x1e60, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBountyRune_4; // 0x1e64, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hXPRune_1; // 0x1e68, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hXPRune_2; // 0x1e6c, 0x4 bytes
+                std::int32_t m_iNetWorth[0x18]; // 0x1e70, 0x60 bytes
+                float m_fRadiantWinProbability; // 0x1ed0, 0x4 bytes
+                std::int32_t m_iGoldSpentOnSupport[0x18]; // 0x1ed4, 0x60 bytes
+                std::int32_t m_iHeroDamage[0x18]; // 0x1f34, 0x60 bytes
+                std::int32_t m_nWardsPurchased[0x18]; // 0x1f94, 0x60 bytes
+                std::int32_t m_nWardsPlaced[0x18]; // 0x1ff4, 0x60 bytes
+                std::int32_t m_nWardsDestroyed[0x18]; // 0x2054, 0x60 bytes
+                std::int32_t m_nRunesActivated[0x18]; // 0x20b4, 0x60 bytes
+                std::int32_t m_nCampsStacked[0x18]; // 0x2114, 0x60 bytes
+                std::uint8_t pad_2174[0x4]; // 0x2174, 0x4 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::DOTAThreatLevelInfo_t> m_ThreatLevelInfos; // 0x2178, 0x68 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_DataSpectator) == 0x21D0, "C_DOTA_DataSpectator size mismatch");
+            static_assert(sizeof(C_DOTA_DataSpectator) == 0x21E0, "C_DOTA_DataSpectator size mismatch");
         }
     }
 }

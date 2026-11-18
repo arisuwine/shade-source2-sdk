@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x890
+             * Size: 0x898
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,25 +30,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTATurboGameMode : public shade::sdk::server::CDOTABaseGameMode {
             public:
-                std::uint8_t pad_07e0[0x18]; // 0x07e0, 0x18 bytes
-                std::int32_t m_nHighestLevelInCurrentGame; // 0x07f8, 0x4 bytes
-                std::uint8_t pad_07fc[0x34]; // 0x07fc, 0x34 bytes
-                CUtlVector<float> m_ExtraMeleeCreepTimes; // 0x0830, 0x18 bytes
-                CUtlVector<float> m_ExtraRangedCreepTimes; // 0x0848, 0x18 bytes
-                CUtlVector<float> m_ExtraSiegeCreepTimes; // 0x0860, 0x18 bytes
-                std::int32_t m_nExtraGoldPerWave; // 0x0878, 0x4 bytes
-                std::int32_t m_nExtraXPPerWave; // 0x087c, 0x4 bytes
-                float m_flNextRewardDistributionTime; // 0x0880, 0x4 bytes
-                float m_flNextWaveRecalculationTime; // 0x0884, 0x4 bytes
-                bool m_bInOvertime; // 0x0888, 0x1 bytes
-                bool m_bDistributingPassiveGoldAndXp; // 0x0889, 0x1 bytes
-                std::uint8_t pad_088a[0x6]; // 0x088a, 0x6 bytes
+                std::uint8_t pad_07e8[0x18]; // 0x07e8, 0x18 bytes
+                std::int32_t m_nHighestLevelInCurrentGame; // 0x0800, 0x4 bytes
+                std::uint8_t pad_0804[0x34]; // 0x0804, 0x34 bytes
+                CUtlVector<float> m_ExtraMeleeCreepTimes; // 0x0838, 0x18 bytes
+                CUtlVector<float> m_ExtraRangedCreepTimes; // 0x0850, 0x18 bytes
+                CUtlVector<float> m_ExtraSiegeCreepTimes; // 0x0868, 0x18 bytes
+                std::int32_t m_nExtraGoldPerWave; // 0x0880, 0x4 bytes
+                std::int32_t m_nExtraXPPerWave; // 0x0884, 0x4 bytes
+                float m_flNextRewardDistributionTime; // 0x0888, 0x4 bytes
+                float m_flNextWaveRecalculationTime; // 0x088c, 0x4 bytes
+                bool m_bInOvertime; // 0x0890, 0x1 bytes
+                bool m_bDistributingPassiveGoldAndXp; // 0x0891, 0x1 bytes
+                std::uint8_t pad_0892[0x6]; // 0x0892, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTATurboGameMode) == 0x890, "CDOTATurboGameMode size mismatch");
+            static_assert(sizeof(CDOTATurboGameMode) == 0x898, "CDOTATurboGameMode size mismatch");
         }
     }
 }

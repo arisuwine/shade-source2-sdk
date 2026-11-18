@@ -19,7 +19,7 @@ namespace shade {
     namespace sdk {
         namespace animgraphlib {
             /* Class Parameters
-             * Size: 0x4c
+             * Size: 0x58
              * Alignment: 0x4
              * Has Trivial Destructor
              * Construct Allowed
@@ -33,20 +33,21 @@ namespace shade {
                 CAnimNetVar<float> m_flCycle; // 0x0010, 0xc bytes
                 CAnimNetVar<float> m_flWeight; // 0x001c, 0xc bytes
                 CAnimNetVar<std::int32_t> m_nOrder; // 0x0028, 0xc bytes
-                bool m_bLooping; // 0x0034, 0x1 bytes
-                std::uint8_t pad_0035[0x3]; // 0x0035, 0x3 bytes
-                std::int32_t m_nFlags; // 0x0038, 0x4 bytes
-                bool m_bSequenceFinished; // 0x003c, 0x1 bytes
-                std::uint8_t pad_003d[0x3]; // 0x003d, 0x3 bytes
-                float m_flKillRate; // 0x0040, 0x4 bytes
-                float m_flKillDelay; // 0x0044, 0x4 bytes
-                std::int32_t m_nPriority; // 0x0048, 0x4 bytes
+                CAnimNetVar<bool> m_bDisableSequenceFadeOut; // 0x0034, 0xc bytes
+                bool m_bLooping; // 0x0040, 0x1 bytes
+                std::uint8_t pad_0041[0x3]; // 0x0041, 0x3 bytes
+                std::int32_t m_nFlags; // 0x0044, 0x4 bytes
+                bool m_bSequenceFinished; // 0x0048, 0x1 bytes
+                std::uint8_t pad_0049[0x3]; // 0x0049, 0x3 bytes
+                float m_flKillRate; // 0x004c, 0x4 bytes
+                float m_flKillDelay; // 0x0050, 0x4 bytes
+                std::int32_t m_nPriority; // 0x0054, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CAnimationLayer) == 0x4C, "CAnimationLayer size mismatch");
+            static_assert(sizeof(CAnimationLayer) == 0x58, "CAnimationLayer size mismatch");
         }
     }
 }

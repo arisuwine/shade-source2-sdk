@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x8b0
+             * Size: 0x910
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CRopeKeyframeAlias_move_rope) == 0x8B0, "CRopeKeyframeAlias_move_rope size mismatch");
+            static_assert(sizeof(CRopeKeyframeAlias_move_rope) == 0x910, "CRopeKeyframeAlias_move_rope size mismatch");
         }
     }
 }

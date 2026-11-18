@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b48
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CODTA_Unit_Warlock_Imp) == 0x1AC0, "CODTA_Unit_Warlock_Imp size mismatch");
+            static_assert(sizeof(CODTA_Unit_Warlock_Imp) == 0x1B48, "CODTA_Unit_Warlock_Imp size mismatch");
         }
     }
 }

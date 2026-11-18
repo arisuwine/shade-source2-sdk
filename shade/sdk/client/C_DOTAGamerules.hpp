@@ -36,12 +36,14 @@ namespace shade {
             struct AbilityID_t;
             class CDOTA_AbilityDraftAbilityState;
             class CDOTA_AbilityDraftHeroState;
+            class CDOTA_FoWRevealedRegion;
             class CDOTA_ItemStockInfo;
             class CHeroStatueLiked;
             class CHeroesPerPlayer;
             class C_BaseEntity;
             class C_DOTA_BaseNPC;
             class C_IngameEvent_Base;
+            struct NeutralArtifactPoolState_t;
             struct NeutralSpawnBoxes_t;
             struct RegionTriggerBoxes_t;
         }
@@ -52,7 +54,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xfc98
+             * Size: 0xfe70
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -182,156 +184,168 @@ namespace shade {
                 shade::sdk::entity2::GameTime_t m_fGoodGlyphCooldown; // 0x05b8, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_fBadGlyphCooldown; // 0x05bc, 0x4 bytes
                 shade::sdk::entity2::GameTime_t m_flGlyphCooldowns[0xf]; // 0x05c0, 0x3c bytes
-                shade::sdk::entity2::GameTime_t m_fGoodRadarCooldown; // 0x05fc, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_fBadRadarCooldown; // 0x0600, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRadarCooldowns[0xf]; // 0x0604, 0x3c bytes
-                std::int32_t m_iGoodRadarCharges; // 0x0640, 0x4 bytes
-                std::int32_t m_iBadRadarCharges; // 0x0644, 0x4 bytes
-                std::int32_t m_iRadarCharges[0xf]; // 0x0648, 0x3c bytes
-                float m_flOutpostTimes[0x18]; // 0x0684, 0x60 bytes
-                bool m_bIsNightstalkerNight; // 0x06e4, 0x1 bytes
-                bool m_bIsTemporaryNight; // 0x06e5, 0x1 bytes
-                bool m_bIsTemporaryDay; // 0x06e6, 0x1 bytes
-                std::uint8_t pad_06e7[0x1]; // 0x06e7, 0x1 bytes
-                std::int32_t m_nRiverType; // 0x06e8, 0x4 bytes
-                shade::sdk::client::HeroID_t m_nTemporaryDayNightSource; // 0x06ec, 0x4 bytes
-                shade::sdk::client::PlayerID_t m_nTeamFeaturedPlayerID[0xf]; // 0x06f0, 0x3c bytes
-                shade::sdk::client::item_definition_index_t m_nTeamVersusScreen[0xf]; // 0x072c, 0x3c bytes
-                float m_flGoldRedistributeTime; // 0x0768, 0x4 bytes
-                std::int32_t m_nGoldToRedistribute[0x2]; // 0x076c, 0x8 bytes
-                shade::sdk::entity2::GameTime_t m_flNextPreGameThink; // 0x0774, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flNextAllDraftGoldThink; // 0x0778, 0x4 bytes
-                std::uint8_t pad_077c[0x4]; // 0x077c, 0x4 bytes
-                double m_flTimeEnteredState; // 0x0780, 0x8 bytes
-                std::uint32_t m_unRiverAccountID; // 0x0788, 0x4 bytes
-                std::uint8_t pad_078c[0x4]; // 0x078c, 0x4 bytes
-                shade::sdk::client::itemid_t m_ulRiverItemID; // 0x0790, 0x8 bytes
-                std::uint8_t pad_0798[0x40]; // 0x0798, 0x40 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_ItemStockInfo> m_vecItemStockInfo; // 0x07d8, 0x68 bytes
-                shade::sdk::client::DOTA_AssassinMinigameNetworkState m_AssassinMiniGameNetData; // 0x0840, 0x10 bytes
-                std::int32_t m_nGameWinner; // 0x0850, 0x4 bytes
-                std::uint8_t pad_0854[0x4]; // 0x0854, 0x4 bytes
-                shade::sdk::client::MatchID_t m_unMatchID64; // 0x0858, 0x8 bytes
-                bool m_bMatchSignoutComplete; // 0x0860, 0x1 bytes
-                std::uint8_t pad_0861[0x3]; // 0x0861, 0x3 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hSideShop1; // 0x0864, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hSideShop2; // 0x0868, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hSecretShop1; // 0x086c, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hSecretShop2; // 0x0870, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTeamFountains[0xf]; // 0x0874, 0x3c bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTeamForts[0xf]; // 0x08b0, 0x3c bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTeamShops[0xf]; // 0x08ec, 0x3c bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_hWatchers; // 0x0928, 0x18 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hWisdomShrines[0xf]; // 0x0940, 0x3c bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hLotusPools[0xf]; // 0x097c, 0x3c bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerGood; // 0x09b8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerBad; // 0x09bc, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerSpectator; // 0x09c0, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerGood_KillingSpree; // 0x09c4, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerBad_KillingSpree; // 0x09c8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerSpectator_KillingSpree; // 0x09cc, 0x4 bytes
-                bool m_arrTier1TowerDestroyed[0xf]; // 0x09d0, 0xf bytes
-                bool m_arrTier2TowerDestroyed[0xf]; // 0x09df, 0xf bytes
-                bool m_arrTier3TowerDestroyed[0xf]; // 0x09ee, 0xf bytes
-                bool m_arrMeleeBarracksDestroyed[0xf]; // 0x09fd, 0xf bytes
-                bool m_bTier1TowerDestroyed; // 0x0a0c, 0x1 bytes
-                bool m_bTier2TowerDestroyed; // 0x0a0d, 0x1 bytes
-                bool m_bTier3TowerDestroyed; // 0x0a0e, 0x1 bytes
-                bool m_bMeleeBarracksDestroyed; // 0x0a0f, 0x1 bytes
-                float m_fTimeOfDay; // 0x0a10, 0x4 bytes
-                std::int32_t m_iNetTimeOfDay; // 0x0a14, 0x4 bytes
-                float m_flDaytimeStart; // 0x0a18, 0x4 bytes
-                float m_flNighttimeStart; // 0x0a1c, 0x4 bytes
-                std::int32_t m_nLoadedPlayers; // 0x0a20, 0x4 bytes
-                std::int32_t m_nExpectedPlayers; // 0x0a24, 0x4 bytes
-                std::uint8_t pad_0a28[0x8]; // 0x0a28, 0x8 bytes
-                std::int32_t m_iMinimapDebugGridState; // 0x0a30, 0x4 bytes
-                std::uint8_t pad_0a34[0x7c]; // 0x0a34, 0x7c bytes
-                std::int32_t m_iFoWFrameNumber; // 0x0ab0, 0x4 bytes
-                Vector m_vWeatherWindDirection; // 0x0ab4, 0xc bytes
-                shade::sdk::client::CTormentorSpawnPhase m_tormentorSpawnPhase; // 0x0ac0, 0x40 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CTormentorSpawnPhase> m_vecTormentorSpawnPhases; // 0x0b00, 0x68 bytes
-                C_NetworkUtlVectorBase<shade::sdk::client::AbilityID_t> m_vecDeityBlessings; // 0x0b68, 0x18 bytes
-                shade::sdk::client::HeroID_t m_vecRequiredPlaytestHeroesStorage[0x18]; // 0x0b80, 0x60 bytes
-                shade::sdk::client::HeroID_t m_vecRecommendedPlaytestHeroesStorage[0x18]; // 0x0be0, 0x60 bytes
-                bool m_bAllRequiredPlaytestHeroesPicked; // 0x0c40, 0x1 bytes
-                std::uint8_t pad_0c41[0x3]; // 0x0c41, 0x3 bytes
-                std::int32_t m_nLastPlaytestPickPhase; // 0x0c44, 0x4 bytes
-                std::int32_t m_nCustomGameFowTeamCount; // 0x0c48, 0x4 bytes
-                bool m_bUseAlternateABRules; // 0x0c4c, 0x1 bytes
-                bool m_bLobbyIsAssociatedWithGame; // 0x0c4d, 0x1 bytes
-                std::uint8_t pad_0c4e[0x2]; // 0x0c4e, 0x2 bytes
-                shade::sdk::client::CountdownTimer m_BotDebugTimer; // 0x0c50, 0x18 bytes
-                std::uint8_t m_BotDebugPushLane[0x12]; // 0x0c68, 0x12 bytes
-                std::uint8_t m_BotDebugDefendLane[0x12]; // 0x0c7a, 0x12 bytes
-                std::uint8_t m_BotDebugFarmLane[0x6]; // 0x0c8c, 0x6 bytes
-                std::uint8_t m_BotDebugRoam[0x8]; // 0x0c92, 0x8 bytes
-                std::uint8_t pad_0c9a[0x2]; // 0x0c9a, 0x2 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hBotDebugRoamTarget[0x2]; // 0x0c9c, 0x8 bytes
-                std::uint8_t m_BotDebugRoshan[0x2]; // 0x0ca4, 0x2 bytes
-                std::uint8_t pad_0ca6[0x2]; // 0x0ca6, 0x2 bytes
-                shade::sdk::client::ERoshanSpawnPhase m_nRoshanRespawnPhase; // 0x0ca8, 0x4 bytes
-                shade::sdk::entity2::GameTime_t m_flRoshanRespawnPhaseEndTime; // 0x0cac, 0x4 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_AbilityDraftAbilityState> m_AbilityDraftAbilities; // 0x0cb0, 0x68 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_AbilityDraftHeroState> m_AbilityDraftHeroes; // 0x0d18, 0x68 bytes
-                bool m_bAbilityDraftCurrentPlayerHasPicked; // 0x0d80, 0x1 bytes
-                std::uint8_t pad_0d81[0x3]; // 0x0d81, 0x3 bytes
-                std::int32_t m_nAbilityDraftPlayerTracker; // 0x0d84, 0x4 bytes
-                std::int32_t m_nAbilityDraftRoundNumber; // 0x0d88, 0x4 bytes
-                std::int32_t m_nAbilityDraftAdvanceSteps; // 0x0d8c, 0x4 bytes
-                std::int32_t m_nAbilityDraftPhase; // 0x0d90, 0x4 bytes
-                bool m_bIsPlayerDraft; // 0x0d94, 0x1 bytes
-                std::uint8_t pad_0d95[0x3]; // 0x0d95, 0x3 bytes
-                shade::sdk::client::DOTA_PlayerDraftState m_ePlayerDraftState; // 0x0d98, 0x4 bytes
-                std::uint8_t pad_0d9c[0x4]; // 0x0d9c, 0x4 bytes
-                C_NetworkUtlVectorBase<std::uint8_t> m_vecPlayerDraftPickOrder; // 0x0da0, 0x18 bytes
-                std::int32_t m_nPlayerDraftPick; // 0x0db8, 0x4 bytes
-                std::int32_t m_nPlayerDraftActiveTeam; // 0x0dbc, 0x4 bytes
-                float m_flPlayerDraftTimeBank[0x2]; // 0x0dc0, 0x8 bytes
-                CUtlVector<KeyValues*> m_vecARDMHeroes[0x2]; // 0x0dc8, 0x30 bytes
-                std::int32_t m_nARDMHeroesPrecached; // 0x0df8, 0x4 bytes
-                float m_fLastARDMPrecache; // 0x0dfc, 0x4 bytes
-                std::int32_t m_nAllDraftPhase; // 0x0e00, 0x4 bytes
-                bool m_bAllDraftRadiantFirst; // 0x0e04, 0x1 bytes
-                bool m_bAllowOverrideVPK; // 0x0e05, 0x1 bytes
-                std::uint8_t pad_0e06[0x2]; // 0x0e06, 0x2 bytes
-                std::int32_t m_nARDMHeroesRemaining[0x2]; // 0x0e08, 0x8 bytes
-                bool m_bUpdateHeroStatues; // 0x0e10, 0x1 bytes
-                std::uint8_t pad_0e11[0x27]; // 0x0e11, 0x27 bytes
-                bool m_bExperimentalGameplay; // 0x0e38, 0x1 bytes
-                std::uint8_t pad_0e39[0x47]; // 0x0e39, 0x47 bytes
-                std::uint32_t m_lobbyType; // 0x0e80, 0x4 bytes
-                shade::sdk::client::LeagueID_t m_lobbyLeagueID; // 0x0e84, 0x4 bytes
-                char m_lobbyGameName[0x100]; // 0x0e88, 0x100 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CHeroStatueLiked> m_vecHeroStatueLiked; // 0x0f88, 0x68 bytes
-                std::int32_t m_CustomGameTeamMaxPlayers[0xf]; // 0x0ff0, 0x3c bytes
-                std::int32_t m_iMutations[0x5]; // 0x102c, 0x14 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_IngameEvent_Base>> m_vecIngameEvents; // 0x1040, 0x18 bytes
-                std::int8_t m_nPrimaryIngameEventIndex; // 0x1058, 0x1 bytes
-                std::uint8_t pad_1059[0x3]; // 0x1059, 0x3 bytes
-                CHandle<shade::sdk::client::C_IngameEvent_Base> m_hObsoleteIngameEvent; // 0x105c, 0x4 bytes
-                std::uint32_t m_nOfrendaPledges; // 0x1060, 0x4 bytes
-                std::uint32_t m_nRadiantOfrendas; // 0x1064, 0x4 bytes
-                std::uint32_t m_nDireOfrendas; // 0x1068, 0x4 bytes
-                bool m_bOfrendaEnabled; // 0x106c, 0x1 bytes
-                std::uint8_t pad_106d[0x43]; // 0x106d, 0x43 bytes
-                C_NetworkUtlVectorBase<shade::sdk::client::NeutralSpawnBoxes_t> m_NeutralSpawnBoxes; // 0x10b0, 0x18 bytes
-                C_NetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> m_RegionTriggerBoxes; // 0x10c8, 0x18 bytes
-                std::uint8_t pad_10e0[0xfb8]; // 0x10e0, 0xfb8 bytes
-                double m_flLastPerfSampleTime; // 0x2098, 0x8 bytes
-                std::uint8_t pad_20a0[0x3ed0]; // 0x20a0, 0x3ed0 bytes
-                std::int32_t m_nMultipleTickFrameCount; // 0x5f70, 0x4 bytes
-                std::int32_t m_nTimesPlayersDisconnected; // 0x5f74, 0x4 bytes
-                double m_flLastPerfSampleSendTime; // 0x5f78, 0x8 bytes
-                bool m_bDidSeeStrategyTime; // 0x5f80, 0x1 bytes
-                std::uint8_t pad_5f81[0x9d0f]; // 0x5f81, 0x9d0f bytes
-                double m_flLastUnfocusedSleepTime; // 0xfc90, 0x8 bytes
+                std::int32_t m_iGoodGlyphCharges; // 0x05fc, 0x4 bytes
+                std::int32_t m_iBadGlyphCharges; // 0x0600, 0x4 bytes
+                std::int32_t m_iGlyphCharges[0xf]; // 0x0604, 0x3c bytes
+                shade::sdk::entity2::GameTime_t m_fGoodGlyphActiveEndTime; // 0x0640, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fBadGlyphActiveEndTime; // 0x0644, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flGlyphActiveEndTimes[0xf]; // 0x0648, 0x3c bytes
+                shade::sdk::entity2::GameTime_t m_flGlyphUseCooldowns[0xf]; // 0x0684, 0x3c bytes
+                shade::sdk::entity2::GameTime_t m_fGoodRadarCooldown; // 0x06c0, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_fBadRadarCooldown; // 0x06c4, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRadarCooldowns[0xf]; // 0x06c8, 0x3c bytes
+                shade::sdk::entity2::GameTime_t m_flGreaterHornOfBattleCooldowns[0xf]; // 0x0704, 0x3c bytes
+                std::int32_t m_iGoodRadarCharges; // 0x0740, 0x4 bytes
+                std::int32_t m_iBadRadarCharges; // 0x0744, 0x4 bytes
+                std::int32_t m_iRadarCharges[0xf]; // 0x0748, 0x3c bytes
+                float m_flOutpostTimes[0x18]; // 0x0784, 0x60 bytes
+                bool m_bIsNightstalkerNight; // 0x07e4, 0x1 bytes
+                bool m_bIsTemporaryNight; // 0x07e5, 0x1 bytes
+                bool m_bIsTemporaryDay; // 0x07e6, 0x1 bytes
+                std::uint8_t pad_07e7[0x1]; // 0x07e7, 0x1 bytes
+                std::int32_t m_nRiverType; // 0x07e8, 0x4 bytes
+                shade::sdk::client::HeroID_t m_nTemporaryDayNightSource; // 0x07ec, 0x4 bytes
+                shade::sdk::client::PlayerID_t m_nTeamFeaturedPlayerID[0xf]; // 0x07f0, 0x3c bytes
+                shade::sdk::client::item_definition_index_t m_nTeamVersusScreen[0xf]; // 0x082c, 0x3c bytes
+                float m_flGoldRedistributeTime; // 0x0868, 0x4 bytes
+                std::int32_t m_nGoldToRedistribute[0x2]; // 0x086c, 0x8 bytes
+                shade::sdk::entity2::GameTime_t m_flNextPreGameThink; // 0x0874, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flNextAllDraftGoldThink; // 0x0878, 0x4 bytes
+                std::uint8_t pad_087c[0x4]; // 0x087c, 0x4 bytes
+                double m_flTimeEnteredState; // 0x0880, 0x8 bytes
+                std::uint32_t m_unRiverAccountID; // 0x0888, 0x4 bytes
+                std::uint8_t pad_088c[0x4]; // 0x088c, 0x4 bytes
+                shade::sdk::client::itemid_t m_ulRiverItemID; // 0x0890, 0x8 bytes
+                std::uint8_t pad_0898[0x40]; // 0x0898, 0x40 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_ItemStockInfo> m_vecItemStockInfo; // 0x08d8, 0x68 bytes
+                shade::sdk::client::DOTA_AssassinMinigameNetworkState m_AssassinMiniGameNetData; // 0x0940, 0x10 bytes
+                std::int32_t m_nGameWinner; // 0x0950, 0x4 bytes
+                std::uint8_t pad_0954[0x4]; // 0x0954, 0x4 bytes
+                shade::sdk::client::MatchID_t m_unMatchID64; // 0x0958, 0x8 bytes
+                bool m_bMatchSignoutComplete; // 0x0960, 0x1 bytes
+                std::uint8_t pad_0961[0x3]; // 0x0961, 0x3 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hSideShop1; // 0x0964, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hSideShop2; // 0x0968, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hSecretShop1; // 0x096c, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hSecretShop2; // 0x0970, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTeamFountains[0xf]; // 0x0974, 0x3c bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTeamForts[0xf]; // 0x09b0, 0x3c bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTeamShops[0xf]; // 0x09ec, 0x3c bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_BaseEntity>> m_hWatchers; // 0x0a28, 0x18 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hWisdomShrines[0xf]; // 0x0a40, 0x3c bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hLotusPools[0xf]; // 0x0a7c, 0x3c bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerGood; // 0x0ab8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerBad; // 0x0abc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerSpectator; // 0x0ac0, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerGood_KillingSpree; // 0x0ac4, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerBad_KillingSpree; // 0x0ac8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hAnnouncerSpectator_KillingSpree; // 0x0acc, 0x4 bytes
+                bool m_arrTier1TowerDestroyed[0xf]; // 0x0ad0, 0xf bytes
+                bool m_arrTier2TowerDestroyed[0xf]; // 0x0adf, 0xf bytes
+                bool m_arrTier3TowerDestroyed[0xf]; // 0x0aee, 0xf bytes
+                bool m_arrMeleeBarracksDestroyed[0xf]; // 0x0afd, 0xf bytes
+                bool m_bTier1TowerDestroyed; // 0x0b0c, 0x1 bytes
+                bool m_bTier2TowerDestroyed; // 0x0b0d, 0x1 bytes
+                bool m_bTier3TowerDestroyed; // 0x0b0e, 0x1 bytes
+                bool m_bMeleeBarracksDestroyed; // 0x0b0f, 0x1 bytes
+                float m_fTimeOfDay; // 0x0b10, 0x4 bytes
+                std::int32_t m_iNetTimeOfDay; // 0x0b14, 0x4 bytes
+                float m_flDaytimeStart; // 0x0b18, 0x4 bytes
+                float m_flNighttimeStart; // 0x0b1c, 0x4 bytes
+                std::int32_t m_nLoadedPlayers; // 0x0b20, 0x4 bytes
+                std::int32_t m_nExpectedPlayers; // 0x0b24, 0x4 bytes
+                std::uint8_t pad_0b28[0x8]; // 0x0b28, 0x8 bytes
+                std::int32_t m_iMinimapDebugGridState; // 0x0b30, 0x4 bytes
+                std::uint8_t pad_0b34[0x7c]; // 0x0b34, 0x7c bytes
+                std::int32_t m_iFoWFrameNumber; // 0x0bb0, 0x4 bytes
+                std::uint8_t pad_0bb4[0x4]; // 0x0bb4, 0x4 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_FoWRevealedRegion> m_vecFoWRevealedRegions; // 0x0bb8, 0x68 bytes
+                Vector m_vWeatherWindDirection; // 0x0c20, 0xc bytes
+                std::uint8_t pad_0c2c[0x4]; // 0x0c2c, 0x4 bytes
+                shade::sdk::client::CTormentorSpawnPhase m_tormentorSpawnPhase; // 0x0c30, 0x40 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CTormentorSpawnPhase> m_vecTormentorSpawnPhases; // 0x0c70, 0x68 bytes
+                C_NetworkUtlVectorBase<shade::sdk::client::AbilityID_t> m_vecDeityBlessings; // 0x0cd8, 0x18 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::NeutralArtifactPoolState_t> m_arrArtifactPools; // 0x0cf0, 0x68 bytes
+                shade::sdk::client::HeroID_t m_vecRequiredPlaytestHeroesStorage[0x18]; // 0x0d58, 0x60 bytes
+                shade::sdk::client::HeroID_t m_vecRecommendedPlaytestHeroesStorage[0x18]; // 0x0db8, 0x60 bytes
+                bool m_bAllRequiredPlaytestHeroesPicked; // 0x0e18, 0x1 bytes
+                std::uint8_t pad_0e19[0x3]; // 0x0e19, 0x3 bytes
+                std::int32_t m_nLastPlaytestPickPhase; // 0x0e1c, 0x4 bytes
+                std::int32_t m_nCustomGameFowTeamCount; // 0x0e20, 0x4 bytes
+                bool m_bUseAlternateABRules; // 0x0e24, 0x1 bytes
+                bool m_bLobbyIsAssociatedWithGame; // 0x0e25, 0x1 bytes
+                std::uint8_t pad_0e26[0x2]; // 0x0e26, 0x2 bytes
+                shade::sdk::client::CountdownTimer m_BotDebugTimer; // 0x0e28, 0x18 bytes
+                std::uint8_t m_BotDebugPushLane[0x12]; // 0x0e40, 0x12 bytes
+                std::uint8_t m_BotDebugDefendLane[0x12]; // 0x0e52, 0x12 bytes
+                std::uint8_t m_BotDebugFarmLane[0x6]; // 0x0e64, 0x6 bytes
+                std::uint8_t m_BotDebugRoam[0x8]; // 0x0e6a, 0x8 bytes
+                std::uint8_t pad_0e72[0x2]; // 0x0e72, 0x2 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hBotDebugRoamTarget[0x2]; // 0x0e74, 0x8 bytes
+                std::uint8_t m_BotDebugRoshan[0x2]; // 0x0e7c, 0x2 bytes
+                std::uint8_t pad_0e7e[0x2]; // 0x0e7e, 0x2 bytes
+                shade::sdk::client::ERoshanSpawnPhase m_nRoshanRespawnPhase; // 0x0e80, 0x4 bytes
+                shade::sdk::entity2::GameTime_t m_flRoshanRespawnPhaseEndTime; // 0x0e84, 0x4 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_AbilityDraftAbilityState> m_AbilityDraftAbilities; // 0x0e88, 0x68 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTA_AbilityDraftHeroState> m_AbilityDraftHeroes; // 0x0ef0, 0x68 bytes
+                bool m_bAbilityDraftCurrentPlayerHasPicked; // 0x0f58, 0x1 bytes
+                std::uint8_t pad_0f59[0x3]; // 0x0f59, 0x3 bytes
+                std::int32_t m_nAbilityDraftPlayerTracker; // 0x0f5c, 0x4 bytes
+                std::int32_t m_nAbilityDraftRoundNumber; // 0x0f60, 0x4 bytes
+                std::int32_t m_nAbilityDraftAdvanceSteps; // 0x0f64, 0x4 bytes
+                std::int32_t m_nAbilityDraftPhase; // 0x0f68, 0x4 bytes
+                bool m_bIsPlayerDraft; // 0x0f6c, 0x1 bytes
+                std::uint8_t pad_0f6d[0x3]; // 0x0f6d, 0x3 bytes
+                shade::sdk::client::DOTA_PlayerDraftState m_ePlayerDraftState; // 0x0f70, 0x4 bytes
+                std::uint8_t pad_0f74[0x4]; // 0x0f74, 0x4 bytes
+                C_NetworkUtlVectorBase<std::uint8_t> m_vecPlayerDraftPickOrder; // 0x0f78, 0x18 bytes
+                std::int32_t m_nPlayerDraftPick; // 0x0f90, 0x4 bytes
+                std::int32_t m_nPlayerDraftActiveTeam; // 0x0f94, 0x4 bytes
+                float m_flPlayerDraftTimeBank[0x2]; // 0x0f98, 0x8 bytes
+                CUtlVector<KeyValues*> m_vecARDMHeroes[0x2]; // 0x0fa0, 0x30 bytes
+                std::int32_t m_nARDMHeroesPrecached; // 0x0fd0, 0x4 bytes
+                float m_fLastARDMPrecache; // 0x0fd4, 0x4 bytes
+                std::int32_t m_nAllDraftPhase; // 0x0fd8, 0x4 bytes
+                bool m_bAllDraftRadiantFirst; // 0x0fdc, 0x1 bytes
+                bool m_bAllowOverrideVPK; // 0x0fdd, 0x1 bytes
+                std::uint8_t pad_0fde[0x2]; // 0x0fde, 0x2 bytes
+                std::int32_t m_nARDMHeroesRemaining[0x2]; // 0x0fe0, 0x8 bytes
+                bool m_bUpdateHeroStatues; // 0x0fe8, 0x1 bytes
+                std::uint8_t pad_0fe9[0x27]; // 0x0fe9, 0x27 bytes
+                bool m_bExperimentalGameplay; // 0x1010, 0x1 bytes
+                std::uint8_t pad_1011[0x47]; // 0x1011, 0x47 bytes
+                std::uint32_t m_lobbyType; // 0x1058, 0x4 bytes
+                shade::sdk::client::LeagueID_t m_lobbyLeagueID; // 0x105c, 0x4 bytes
+                char m_lobbyGameName[0x100]; // 0x1060, 0x100 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CHeroStatueLiked> m_vecHeroStatueLiked; // 0x1160, 0x68 bytes
+                std::int32_t m_CustomGameTeamMaxPlayers[0xf]; // 0x11c8, 0x3c bytes
+                std::int32_t m_iMutations[0x5]; // 0x1204, 0x14 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_IngameEvent_Base>> m_vecIngameEvents; // 0x1218, 0x18 bytes
+                std::int8_t m_nPrimaryIngameEventIndex; // 0x1230, 0x1 bytes
+                std::uint8_t pad_1231[0x3]; // 0x1231, 0x3 bytes
+                CHandle<shade::sdk::client::C_IngameEvent_Base> m_hObsoleteIngameEvent; // 0x1234, 0x4 bytes
+                std::uint32_t m_nOfrendaPledges; // 0x1238, 0x4 bytes
+                std::uint32_t m_nRadiantOfrendas; // 0x123c, 0x4 bytes
+                std::uint32_t m_nDireOfrendas; // 0x1240, 0x4 bytes
+                bool m_bOfrendaEnabled; // 0x1244, 0x1 bytes
+                std::uint8_t pad_1245[0x43]; // 0x1245, 0x43 bytes
+                C_NetworkUtlVectorBase<shade::sdk::client::NeutralSpawnBoxes_t> m_NeutralSpawnBoxes; // 0x1288, 0x18 bytes
+                C_NetworkUtlVectorBase<shade::sdk::client::RegionTriggerBoxes_t> m_RegionTriggerBoxes; // 0x12a0, 0x18 bytes
+                std::uint8_t pad_12b8[0xfb8]; // 0x12b8, 0xfb8 bytes
+                double m_flLastPerfSampleTime; // 0x2270, 0x8 bytes
+                std::uint8_t pad_2278[0x3ed0]; // 0x2278, 0x3ed0 bytes
+                std::int32_t m_nMultipleTickFrameCount; // 0x6148, 0x4 bytes
+                std::int32_t m_nTimesPlayersDisconnected; // 0x614c, 0x4 bytes
+                double m_flLastPerfSampleSendTime; // 0x6150, 0x8 bytes
+                bool m_bDidSeeStrategyTime; // 0x6158, 0x1 bytes
+                std::uint8_t pad_6159[0x9d0f]; // 0x6159, 0x9d0f bytes
+                double m_flLastUnfocusedSleepTime; // 0xfe68, 0x8 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTAGamerules) == 0xFC98, "C_DOTAGamerules size mismatch");
+            static_assert(sizeof(C_DOTAGamerules) == 0xFE70, "C_DOTAGamerules size mismatch");
         }
     }
 }

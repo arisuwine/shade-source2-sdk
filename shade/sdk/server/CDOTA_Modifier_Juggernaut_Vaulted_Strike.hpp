@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1af0
+             * Size: 0x1b40
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,21 +37,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Juggernaut_Vaulted_Strike : public shade::sdk::client::CDOTA_Buff {
             public:
-                float m_flPredictedTotalTime; // 0x1aa8, 0x4 bytes
-                float m_flCurrentTimeVert; // 0x1aac, 0x4 bytes
-                VectorWS m_vTargetPos; // 0x1ab0, 0xc bytes
-                VectorWS m_vStart; // 0x1abc, 0xc bytes
-                float m_flZDelta; // 0x1ac8, 0x4 bytes
-                float jump_speed; // 0x1acc, 0x4 bytes
-                float start_height; // 0x1ad0, 0x4 bytes
-                float jump_attack_radius; // 0x1ad4, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1ad8, 0x18 bytes
+                float m_flPredictedTotalTime; // 0x1af8, 0x4 bytes
+                float m_flCurrentTimeVert; // 0x1afc, 0x4 bytes
+                VectorWS m_vTargetPos; // 0x1b00, 0xc bytes
+                VectorWS m_vStart; // 0x1b0c, 0xc bytes
+                float m_flZDelta; // 0x1b18, 0x4 bytes
+                float jump_speed; // 0x1b1c, 0x4 bytes
+                float start_height; // 0x1b20, 0x4 bytes
+                float jump_attack_radius; // 0x1b24, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::server::CBaseEntity>> m_hHitEntities; // 0x1b28, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Juggernaut_Vaulted_Strike) == 0x1AF0, "CDOTA_Modifier_Juggernaut_Vaulted_Strike size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Juggernaut_Vaulted_Strike) == 0x1B40, "CDOTA_Modifier_Juggernaut_Vaulted_Strike size mismatch");
         }
     }
 }

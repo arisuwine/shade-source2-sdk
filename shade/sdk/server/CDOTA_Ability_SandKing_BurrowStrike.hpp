@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x5a0
+             * Size: 0x5b8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -36,13 +36,17 @@ namespace shade {
                 bool m_bIsVectorTargeted; // 0x058c, 0x1 bytes
                 std::uint8_t pad_058d[0x3]; // 0x058d, 0x3 bytes
                 VectorWS m_vEndpoint; // 0x0590, 0xc bytes
-                std::uint8_t pad_059c[0x4]; // 0x059c, 0x4 bytes
+                VectorWS m_vLastThinkerLocation; // 0x059c, 0xc bytes
+                float spine_radius; // 0x05a8, 0x4 bytes
+                float spine_duration; // 0x05ac, 0x4 bytes
+                bool bHasStartedSpines; // 0x05b0, 0x1 bytes
+                std::uint8_t pad_05b1[0x7]; // 0x05b1, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Ability_SandKing_BurrowStrike) == 0x5A0, "CDOTA_Ability_SandKing_BurrowStrike size mismatch");
+            static_assert(sizeof(CDOTA_Ability_SandKing_BurrowStrike) == 0x5B8, "CDOTA_Ability_SandKing_BurrowStrike size mismatch");
         }
     }
 }

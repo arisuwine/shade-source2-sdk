@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1b0
+             * Size: 0x158
              * Alignment: 0xff
              * Has VTable
              * Has Trivial Destructor
@@ -30,18 +30,17 @@ namespace shade {
             #pragma pack(push, 1)
             struct PlayerNeutralChoices_t {
                 std::uint8_t pad_0000[0x8]; // 0x0000, 0x8 bytes
-                shade::sdk::client::AbilityID_t m_vecTrinketChoices[0x2d]; // 0x0008, 0xb4 bytes
-                shade::sdk::client::AbilityID_t m_vecEnhancementChoices[0x2d]; // 0x00bc, 0xb4 bytes
-                std::int32_t m_vecSelectedTrinkets[0x5]; // 0x0170, 0x14 bytes
-                std::int32_t m_vecSelectedEnhancements[0x5]; // 0x0184, 0x14 bytes
-                std::int32_t m_vecTimesCrafted[0x5]; // 0x0198, 0x14 bytes
-                std::uint8_t pad_01ac[0x4]; // 0x01ac, 0x4 bytes
+                shade::sdk::client::AbilityID_t m_vecTrinketChoices[0x24]; // 0x0008, 0x90 bytes
+                shade::sdk::client::AbilityID_t m_vecEnhancementChoices[0x24]; // 0x0098, 0x90 bytes
+                std::int32_t m_vecSelectedTrinkets[0x4]; // 0x0128, 0x10 bytes
+                std::int32_t m_vecSelectedEnhancements[0x4]; // 0x0138, 0x10 bytes
+                std::int32_t m_vecTimesCrafted[0x4]; // 0x0148, 0x10 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(PlayerNeutralChoices_t) == 0x1B0, "PlayerNeutralChoices_t size mismatch");
+            static_assert(sizeof(PlayerNeutralChoices_t) == 0x158, "PlayerNeutralChoices_t size mismatch");
         }
     }
 }

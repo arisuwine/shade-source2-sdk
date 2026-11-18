@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,18 +37,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Largo_CatchyLick_Rune : public shade::sdk::client::CDOTA_Buff {
             public:
-                float pull_duration; // 0x1aa8, 0x4 bytes
-                float pull_distance_ally; // 0x1aac, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hRune; // 0x1ab0, 0x4 bytes
-                VectorWS m_vOriginalPos; // 0x1ab4, 0xc bytes
-                VectorWS m_vDestination; // 0x1ac0, 0xc bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                float pull_duration; // 0x1af8, 0x4 bytes
+                float pull_distance_ally; // 0x1afc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hRune; // 0x1b00, 0x4 bytes
+                VectorWS m_vOriginalPos; // 0x1b04, 0xc bytes
+                VectorWS m_vDestination; // 0x1b10, 0xc bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Largo_CatchyLick_Rune) == 0x1AD0, "CDOTA_Modifier_Largo_CatchyLick_Rune size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Largo_CatchyLick_Rune) == 0x1B20, "CDOTA_Modifier_Largo_CatchyLick_Rune size mismatch");
         }
     }
 }

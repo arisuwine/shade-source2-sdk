@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xcd0
+             * Size: 0xd30
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -30,15 +30,15 @@ namespace shade {
             #pragma pack(push, 1)
             class C_DOTA_MapTree : public shade::sdk::client::C_DOTA_BinaryObject {
             public:
-                std::uint8_t pad_0bb8[0x30]; // 0x0bb8, 0x30 bytes
-                bool m_bInitialized; // 0x0be8, 0x1 bytes
-                std::uint8_t pad_0be9[0xe7]; // 0x0be9, 0xe7 bytes
+                std::uint8_t pad_0c18[0x30]; // 0x0c18, 0x30 bytes
+                bool m_bInitialized; // 0x0c48, 0x1 bytes
+                std::uint8_t pad_0c49[0xe7]; // 0x0c49, 0xe7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTA_MapTree) == 0xCD0, "C_DOTA_MapTree size mismatch");
+            static_assert(sizeof(C_DOTA_MapTree) == 0xD30, "C_DOTA_MapTree size mismatch");
         }
     }
 }

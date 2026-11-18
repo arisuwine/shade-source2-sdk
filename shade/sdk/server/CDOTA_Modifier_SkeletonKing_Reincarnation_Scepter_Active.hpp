@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x1ab8
+             * Size: 0x1b08
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -37,18 +37,18 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_SkeletonKing_Reincarnation_Scepter_Active : public shade::sdk::client::CDOTA_Buff {
             public:
-                std::int32_t scepter_move_speed_pct; // 0x1aa8, 0x4 bytes
-                std::int32_t scepter_attack_speed; // 0x1aac, 0x4 bytes
-                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1ab0, 0x4 bytes
-                bool m_bPassive; // 0x1ab4, 0x1 bytes
-                bool m_bKillAtEnd; // 0x1ab5, 0x1 bytes
-                std::uint8_t pad_1ab6[0x2]; // 0x1ab6, 0x2 bytes
+                std::int32_t scepter_move_speed_pct; // 0x1af8, 0x4 bytes
+                std::int32_t scepter_attack_speed; // 0x1afc, 0x4 bytes
+                CHandle<shade::sdk::server::CBaseEntity> m_hTarget; // 0x1b00, 0x4 bytes
+                bool m_bPassive; // 0x1b04, 0x1 bytes
+                bool m_bKillAtEnd; // 0x1b05, 0x1 bytes
+                std::uint8_t pad_1b06[0x2]; // 0x1b06, 0x2 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_SkeletonKing_Reincarnation_Scepter_Active) == 0x1AB8, "CDOTA_Modifier_SkeletonKing_Reincarnation_Scepter_Active size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_SkeletonKing_Reincarnation_Scepter_Active) == 0x1B08, "CDOTA_Modifier_SkeletonKing_Reincarnation_Scepter_Active size mismatch");
         }
     }
 }

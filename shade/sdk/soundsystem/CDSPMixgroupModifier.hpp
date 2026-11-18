@@ -27,12 +27,12 @@ namespace shade {
             class CDSPMixgroupModifier {
             public:
                 CUtlString m_mixgroup; // 0x0000, 0x8 bytes
-                float m_flModifier; // 0x0008, 0x4 bytes
-                float m_flModifierMin; // 0x000c, 0x4 bytes
-                float m_flSourceModifier; // 0x0010, 0x4 bytes
-                float m_flSourceModifierMin; // 0x0014, 0x4 bytes
+                float m_flListenerReverbFar; // 0x0008, 0x4 bytes
+                float m_flListenerReverbNear; // 0x000c, 0x4 bytes
+                float m_flSourceReverbFar; // 0x0010, 0x4 bytes
+                float m_flSourceReverbNear; // 0x0014, 0x4 bytes
                 float m_flListenerReverbModifierWhenSourceReverbIsActive; // 0x0018, 0x4 bytes
-                std::uint8_t pad_001c[0x4]; // 0x001c, 0x4 bytes
+                float m_flTailVolume; // 0x001c, 0x4 bytes
             };
             #pragma pack(pop)
 

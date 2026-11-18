@@ -33,7 +33,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x7e0
+             * Size: 0x7e8
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -121,43 +121,45 @@ namespace shade {
                 std::int32_t m_iCustomScanMaxCharges; // 0x06dc, 0x4 bytes
                 float m_flCustomScanCooldown; // 0x06e0, 0x4 bytes
                 float m_flCustomGlyphCooldown; // 0x06e4, 0x4 bytes
-                float m_flCustomBackpackSwapCooldown; // 0x06e8, 0x4 bytes
-                float m_flCustomBackpackCooldownPercent; // 0x06ec, 0x4 bytes
-                bool m_bDefaultRuneSpawnLogic; // 0x06f0, 0x1 bytes
-                bool m_bEnableFreeCourierMode; // 0x06f1, 0x1 bytes
-                bool m_bAllowNeutralItemDrops; // 0x06f2, 0x1 bytes
-                bool m_bEnableNeutralStash; // 0x06f3, 0x1 bytes
-                bool m_bEnableNeutralStashTeamViewOnly; // 0x06f4, 0x1 bytes
-                bool m_bEnableNeutralItemHideUndiscovered; // 0x06f5, 0x1 bytes
-                bool m_bEnableSendToStash; // 0x06f6, 0x1 bytes
-                bool m_bForceRightClickAttackDisabled; // 0x06f7, 0x1 bytes
-                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTACustomShopInfo> m_vecCustomShopInfo; // 0x06f8, 0x68 bytes
-                bool m_bCanSellAnywhere; // 0x0760, 0x1 bytes
-                std::uint8_t pad_0761[0x3]; // 0x0761, 0x3 bytes
-                float m_flCameraNearZ; // 0x0764, 0x4 bytes
-                float m_flCameraFarZ; // 0x0768, 0x4 bytes
-                std::int32_t m_nCustomRadiantScore; // 0x076c, 0x4 bytes
-                std::int32_t m_nCustomDireScore; // 0x0770, 0x4 bytes
-                bool m_bAbilityUpgradeWhitelistEnabled; // 0x0774, 0x1 bytes
-                std::uint8_t pad_0775[0x3]; // 0x0775, 0x3 bytes
-                C_NetworkUtlVectorBase<shade::sdk::client::AbilityID_t> m_vecAbilityUpgradeWhitelist; // 0x0778, 0x18 bytes
-                bool m_bGiveFreeTPOnDeath; // 0x0790, 0x1 bytes
-                std::uint8_t pad_0791[0x3]; // 0x0791, 0x3 bytes
-                std::int32_t m_nInnateMeleeDamageBlockPct; // 0x0794, 0x4 bytes
-                std::int32_t m_nInnateMeleeDamageBlockAmount; // 0x0798, 0x4 bytes
-                std::int32_t m_nInnateMeleeDamageBlockPerLevelAmount; // 0x079c, 0x4 bytes
-                float m_flWaterRuneSpawnInterval; // 0x07a0, 0x4 bytes
-                std::uint8_t pad_07a4[0x4]; // 0x07a4, 0x4 bytes
-                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_DOTA_BaseNPC>> m_vecBigHealthBarUnits; // 0x07a8, 0x18 bytes
-                std::uint8_t pad_07c0[0x18]; // 0x07c0, 0x18 bytes
-                std::uint32_t m_nHUDVisibilityBitsPrevious; // 0x07d8, 0x4 bytes
-                std::uint8_t pad_07dc[0x4]; // 0x07dc, 0x4 bytes
+                std::int32_t m_iCustomGlyphMaxCharges; // 0x06e8, 0x4 bytes
+                float m_flCustomBackpackSwapCooldown; // 0x06ec, 0x4 bytes
+                float m_flCustomBackpackCooldownPercent; // 0x06f0, 0x4 bytes
+                bool m_bDefaultRuneSpawnLogic; // 0x06f4, 0x1 bytes
+                bool m_bEnableFreeCourierMode; // 0x06f5, 0x1 bytes
+                bool m_bAllowNeutralItemDrops; // 0x06f6, 0x1 bytes
+                bool m_bEnableNeutralStash; // 0x06f7, 0x1 bytes
+                bool m_bEnableNeutralStashTeamViewOnly; // 0x06f8, 0x1 bytes
+                bool m_bEnableNeutralItemHideUndiscovered; // 0x06f9, 0x1 bytes
+                bool m_bEnableSendToStash; // 0x06fa, 0x1 bytes
+                bool m_bForceRightClickAttackDisabled; // 0x06fb, 0x1 bytes
+                std::uint8_t pad_06fc[0x4]; // 0x06fc, 0x4 bytes
+                C_UtlVectorEmbeddedNetworkVar<shade::sdk::client::CDOTACustomShopInfo> m_vecCustomShopInfo; // 0x0700, 0x68 bytes
+                bool m_bCanSellAnywhere; // 0x0768, 0x1 bytes
+                std::uint8_t pad_0769[0x3]; // 0x0769, 0x3 bytes
+                float m_flCameraNearZ; // 0x076c, 0x4 bytes
+                float m_flCameraFarZ; // 0x0770, 0x4 bytes
+                std::int32_t m_nCustomRadiantScore; // 0x0774, 0x4 bytes
+                std::int32_t m_nCustomDireScore; // 0x0778, 0x4 bytes
+                bool m_bAbilityUpgradeWhitelistEnabled; // 0x077c, 0x1 bytes
+                std::uint8_t pad_077d[0x3]; // 0x077d, 0x3 bytes
+                C_NetworkUtlVectorBase<shade::sdk::client::AbilityID_t> m_vecAbilityUpgradeWhitelist; // 0x0780, 0x18 bytes
+                bool m_bGiveFreeTPOnDeath; // 0x0798, 0x1 bytes
+                std::uint8_t pad_0799[0x3]; // 0x0799, 0x3 bytes
+                std::int32_t m_nInnateMeleeDamageBlockPct; // 0x079c, 0x4 bytes
+                std::int32_t m_nInnateMeleeDamageBlockAmount; // 0x07a0, 0x4 bytes
+                std::int32_t m_nInnateMeleeDamageBlockPerLevelAmount; // 0x07a4, 0x4 bytes
+                float m_flWaterRuneSpawnInterval; // 0x07a8, 0x4 bytes
+                std::uint8_t pad_07ac[0x4]; // 0x07ac, 0x4 bytes
+                C_NetworkUtlVectorBase<CHandle<shade::sdk::client::C_DOTA_BaseNPC>> m_vecBigHealthBarUnits; // 0x07b0, 0x18 bytes
+                std::uint8_t pad_07c8[0x18]; // 0x07c8, 0x18 bytes
+                std::uint32_t m_nHUDVisibilityBitsPrevious; // 0x07e0, 0x4 bytes
+                std::uint8_t pad_07e4[0x4]; // 0x07e4, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_DOTABaseGameMode) == 0x7E0, "C_DOTABaseGameMode size mismatch");
+            static_assert(sizeof(C_DOTABaseGameMode) == 0x7E8, "C_DOTABaseGameMode size mismatch");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x108
+             * Size: 0x138
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -32,12 +32,14 @@ namespace shade {
                 CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eChoreoState; // 0x00c0, 0x18 bytes
                 CAnimGraph2ParamOptionalRef<CTransform> m_tChoreoTargetWarp; // 0x00d8, 0x18 bytes
                 CAnimGraph2ParamOptionalRef<CTransform> m_tChoreoExitWarp; // 0x00f0, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eChoreoEntryType; // 0x0108, 0x18 bytes
+                CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_eChoreoOutroType; // 0x0120, 0x18 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CChoreo_GraphController) == 0x108, "CChoreo_GraphController size mismatch");
+            static_assert(sizeof(CChoreo_GraphController) == 0x138, "CChoreo_GraphController size mismatch");
         }
     }
 }

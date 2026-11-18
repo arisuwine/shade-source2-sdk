@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x930
+             * Size: 0x990
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -35,7 +35,7 @@ namespace shade {
 
             // No unique data map fields
 
-            static_assert(sizeof(CPushable) == 0x930, "CPushable size mismatch");
+            static_assert(sizeof(CPushable) == 0x990, "CPushable size mismatch");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ad0
+             * Size: 0x1b20
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,25 +38,25 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_BotChallenge_SkeletonKing_BoneGuard_Summon : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1aa8, 0x4 bytes
-                std::int32_t talent_skeleton_damage; // 0x1aac, 0x4 bytes
-                bool m_bRespawnReady; // 0x1ab0, 0x1 bytes
-                bool m_bRespawnConsumed; // 0x1ab1, 0x1 bytes
-                bool m_bKillParentOnDestroy; // 0x1ab2, 0x1 bytes
-                std::uint8_t pad_1ab3[0x1]; // 0x1ab3, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x1ab4, 0x4 bytes
-                std::int32_t vampiric_aura; // 0x1ab8, 0x4 bytes
-                std::int32_t gold_bounty; // 0x1abc, 0x4 bytes
-                std::int32_t xp_bounty; // 0x1ac0, 0x4 bytes
-                std::int32_t skeleton_building_damage_reduction; // 0x1ac4, 0x4 bytes
-                std::int32_t skeleton_bonus_hero_damage; // 0x1ac8, 0x4 bytes
-                std::uint8_t pad_1acc[0x4]; // 0x1acc, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1af8, 0x4 bytes
+                std::int32_t talent_skeleton_damage; // 0x1afc, 0x4 bytes
+                bool m_bRespawnReady; // 0x1b00, 0x1 bytes
+                bool m_bRespawnConsumed; // 0x1b01, 0x1 bytes
+                bool m_bKillParentOnDestroy; // 0x1b02, 0x1 bytes
+                std::uint8_t pad_1b03[0x1]; // 0x1b03, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_flRespawnTime; // 0x1b04, 0x4 bytes
+                std::int32_t vampiric_aura; // 0x1b08, 0x4 bytes
+                std::int32_t gold_bounty; // 0x1b0c, 0x4 bytes
+                std::int32_t xp_bounty; // 0x1b10, 0x4 bytes
+                std::int32_t skeleton_building_damage_reduction; // 0x1b14, 0x4 bytes
+                std::int32_t skeleton_bonus_hero_damage; // 0x1b18, 0x4 bytes
+                std::uint8_t pad_1b1c[0x4]; // 0x1b1c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_BotChallenge_SkeletonKing_BoneGuard_Summon) == 0x1AD0, "CDOTA_Modifier_BotChallenge_SkeletonKing_BoneGuard_Summon size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_BotChallenge_SkeletonKing_BoneGuard_Summon) == 0x1B20, "CDOTA_Modifier_BotChallenge_SkeletonKing_BoneGuard_Summon size mismatch");
         }
     }
 }

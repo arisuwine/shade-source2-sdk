@@ -26,8 +26,10 @@ namespace shade {
                 ePlantedTurn = 0x6,
                 eUseStartAsPlantedTurn = 0x7,
                 eLean = 0x8,
-                eForwardStartOnly = 0x9,
-                eCount = 0xa
+                eTurnToStart = 0x9,
+                eAim = 0xa,
+                eForwardStopOnly = 0xb,
+                eCount = 0xc
             };
         }
     }

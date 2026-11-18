@@ -30,7 +30,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ae0
+             * Size: 0x1b30
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -38,20 +38,20 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Grimstroke_SoulChain_ChannelCheck : public shade::sdk::client::CDOTA_Buff {
             public:
-                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentAbility; // 0x1aa8, 0x4 bytes
-                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1aac, 0x4 bytes
-                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAbilities; // 0x1ab0, 0x18 bytes
-                VectorWS m_vLocation; // 0x1ac8, 0xc bytes
-                shade::sdk::entity2::GameTime_t m_fChannelEnd; // 0x1ad4, 0x4 bytes
-                bool m_bInterrupt; // 0x1ad8, 0x1 bytes
-                bool m_bExpired; // 0x1ad9, 0x1 bytes
-                std::uint8_t pad_1ada[0x6]; // 0x1ada, 0x6 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hCurrentAbility; // 0x1af8, 0x4 bytes
+                CHandle<shade::sdk::client::C_BaseEntity> m_hTarget; // 0x1afc, 0x4 bytes
+                CUtlVector<CHandle<shade::sdk::client::C_BaseEntity>> m_hAbilities; // 0x1b00, 0x18 bytes
+                VectorWS m_vLocation; // 0x1b18, 0xc bytes
+                shade::sdk::entity2::GameTime_t m_fChannelEnd; // 0x1b24, 0x4 bytes
+                bool m_bInterrupt; // 0x1b28, 0x1 bytes
+                bool m_bExpired; // 0x1b29, 0x1 bytes
+                std::uint8_t pad_1b2a[0x6]; // 0x1b2a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Grimstroke_SoulChain_ChannelCheck) == 0x1AE0, "CDOTA_Modifier_Grimstroke_SoulChain_ChannelCheck size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Grimstroke_SoulChain_ChannelCheck) == 0x1B30, "CDOTA_Modifier_Grimstroke_SoulChain_ChannelCheck size mismatch");
         }
     }
 }

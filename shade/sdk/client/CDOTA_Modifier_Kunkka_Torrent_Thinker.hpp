@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -30,21 +30,21 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Kunkka_Torrent_Thinker : public shade::sdk::client::CDOTA_Buff {
             public:
-                bool m_bShowEnemies; // 0x1aa8, 0x1 bytes
-                bool m_bTorrentStorm; // 0x1aa9, 0x1 bytes
-                bool m_bTorrentStarted; // 0x1aaa, 0x1 bytes
-                std::uint8_t pad_1aab[0x1]; // 0x1aab, 0x1 bytes
-                shade::sdk::entity2::GameTime_t m_fTorrentStartTime; // 0x1aac, 0x4 bytes
-                float flDamagePerTick; // 0x1ab0, 0x4 bytes
-                float flFirstDamage; // 0x1ab4, 0x4 bytes
-                float damage_tick_interval; // 0x1ab8, 0x4 bytes
-                float percent_instant; // 0x1abc, 0x4 bytes
+                bool m_bShowEnemies; // 0x1af8, 0x1 bytes
+                bool m_bTorrentStorm; // 0x1af9, 0x1 bytes
+                bool m_bTorrentStarted; // 0x1afa, 0x1 bytes
+                std::uint8_t pad_1afb[0x1]; // 0x1afb, 0x1 bytes
+                shade::sdk::entity2::GameTime_t m_fTorrentStartTime; // 0x1afc, 0x4 bytes
+                float flDamagePerTick; // 0x1b00, 0x4 bytes
+                float flFirstDamage; // 0x1b04, 0x4 bytes
+                float damage_tick_interval; // 0x1b08, 0x4 bytes
+                float percent_instant; // 0x1b0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Kunkka_Torrent_Thinker) == 0x1AC0, "CDOTA_Modifier_Kunkka_Torrent_Thinker size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Kunkka_Torrent_Thinker) == 0x1B10, "CDOTA_Modifier_Kunkka_Torrent_Thinker size mismatch");
         }
     }
 }

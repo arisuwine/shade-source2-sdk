@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0xb90
+             * Size: 0xbf0
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,17 +31,17 @@ namespace shade {
             #pragma pack(push, 1)
             class C_FuncElectrifiedVolume : public shade::sdk::client::C_FuncBrush {
             public:
-                shade::sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x0b78, 0x4 bytes
-                std::uint8_t pad_0b7c[0x4]; // 0x0b7c, 0x4 bytes
-                CUtlSymbolLarge m_EffectName; // 0x0b80, 0x8 bytes
-                bool m_bState; // 0x0b88, 0x1 bytes
-                std::uint8_t pad_0b89[0x7]; // 0x0b89, 0x7 bytes
+                shade::sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x0bd8, 0x4 bytes
+                std::uint8_t pad_0bdc[0x4]; // 0x0bdc, 0x4 bytes
+                CUtlSymbolLarge m_EffectName; // 0x0be0, 0x8 bytes
+                bool m_bState; // 0x0be8, 0x1 bytes
+                std::uint8_t pad_0be9[0x7]; // 0x0be9, 0x7 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(C_FuncElectrifiedVolume) == 0xB90, "C_FuncElectrifiedVolume size mismatch");
+            static_assert(sizeof(C_FuncElectrifiedVolume) == 0xBF0, "C_FuncElectrifiedVolume size mismatch");
         }
     }
 }

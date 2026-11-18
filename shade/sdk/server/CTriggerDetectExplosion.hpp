@@ -22,7 +22,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa10
+             * Size: 0xa70
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -31,8 +31,8 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerDetectExplosion : public shade::sdk::server::CBaseTrigger {
             public:
-                std::uint8_t pad_09d0[0x28]; // 0x09d0, 0x28 bytes
-                shade::sdk::entity2::CEntityIOOutput m_OnDetectedExplosion; // 0x09f8, 0x18 bytes
+                std::uint8_t pad_0a30[0x28]; // 0x0a30, 0x28 bytes
+                shade::sdk::entity2::CEntityIOOutput m_OnDetectedExplosion; // 0x0a58, 0x18 bytes
             };
             #pragma pack(pop)
 
@@ -40,7 +40,7 @@ namespace shade {
              * void; // Offset: 0x0, Size: 0x0, Size In Bytes: 0x0
              */
 
-            static_assert(sizeof(CTriggerDetectExplosion) == 0xA10, "CTriggerDetectExplosion size mismatch");
+            static_assert(sizeof(CTriggerDetectExplosion) == 0xA70, "CTriggerDetectExplosion size mismatch");
         }
     }
 }

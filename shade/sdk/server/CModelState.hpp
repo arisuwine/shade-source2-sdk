@@ -31,7 +31,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0x2a0
+             * Size: 0x280
              * Alignment: 0xff
              * Has VTable
              * Construct Allowed
@@ -51,23 +51,23 @@ namespace shade {
                 float m_flRootBoneOffset_z; // 0x00f0, 0x4 bytes
                 std::uint8_t m_nRootBoneOffsetResetSerialNumber; // 0x00f4, 0x1 bytes
                 bool m_bClientClothCreationSuppressed; // 0x00f5, 0x1 bytes
-                std::uint8_t pad_00f6[0xea]; // 0x00f6, 0xea bytes
-                std::uint8_t m_nAnimStateNoInterpSerialNumber; // 0x01e0, 0x1 bytes
-                std::uint8_t pad_01e1[0x7]; // 0x01e1, 0x7 bytes
-                std::uint64_t m_MeshGroupMask; // 0x01e8, 0x8 bytes
-                std::uint8_t pad_01f0[0x48]; // 0x01f0, 0x48 bytes
-                CNetworkUtlVectorBase<std::int32_t> m_nBodyGroupChoices; // 0x0238, 0x18 bytes
-                std::uint8_t pad_0250[0x32]; // 0x0250, 0x32 bytes
-                std::int8_t m_nIdealMotionType; // 0x0282, 0x1 bytes
-                std::int8_t m_nForceLOD; // 0x0283, 0x1 bytes
-                std::int8_t m_nClothUpdateFlags; // 0x0284, 0x1 bytes
-                std::uint8_t pad_0285[0x1b]; // 0x0285, 0x1b bytes
+                std::uint8_t pad_00f6[0xca]; // 0x00f6, 0xca bytes
+                std::uint8_t m_nAnimStateNoInterpSerialNumber; // 0x01c0, 0x1 bytes
+                std::uint8_t pad_01c1[0x7]; // 0x01c1, 0x7 bytes
+                std::uint64_t m_MeshGroupMask; // 0x01c8, 0x8 bytes
+                std::uint8_t pad_01d0[0x48]; // 0x01d0, 0x48 bytes
+                CNetworkUtlVectorBase<std::int32_t> m_nBodyGroupChoices; // 0x0218, 0x18 bytes
+                std::uint8_t pad_0230[0x32]; // 0x0230, 0x32 bytes
+                std::int8_t m_nIdealMotionType; // 0x0262, 0x1 bytes
+                std::int8_t m_nForceLOD; // 0x0263, 0x1 bytes
+                std::int8_t m_nClothUpdateFlags; // 0x0264, 0x1 bytes
+                std::uint8_t pad_0265[0x1b]; // 0x0265, 0x1b bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CModelState) == 0x2A0, "CModelState size mismatch");
+            static_assert(sizeof(CModelState) == 0x280, "CModelState size mismatch");
         }
     }
 }

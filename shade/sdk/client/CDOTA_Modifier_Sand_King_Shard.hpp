@@ -21,7 +21,7 @@ namespace shade {
     namespace sdk {
         namespace client {
             /* Class Parameters
-             * Size: 0x1ac0
+             * Size: 0x1b10
              * Alignment: 0xff
              * Has VTable
              * Module Local Type Scope
@@ -29,16 +29,16 @@ namespace shade {
             #pragma pack(push, 1)
             class CDOTA_Modifier_Sand_King_Shard : public shade::sdk::client::CDOTA_Buff {
             public:
-                float shard_move_distance; // 0x1aa8, 0x4 bytes
-                float shard_interval; // 0x1aac, 0x4 bytes
-                VectorWS vLastPos; // 0x1ab0, 0xc bytes
-                float m_fAccumulatedDistance; // 0x1abc, 0x4 bytes
+                float shard_move_distance; // 0x1af8, 0x4 bytes
+                float shard_interval; // 0x1afc, 0x4 bytes
+                VectorWS vLastPos; // 0x1b00, 0xc bytes
+                float m_fAccumulatedDistance; // 0x1b0c, 0x4 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CDOTA_Modifier_Sand_King_Shard) == 0x1AC0, "CDOTA_Modifier_Sand_King_Shard size mismatch");
+            static_assert(sizeof(CDOTA_Modifier_Sand_King_Shard) == 0x1B10, "CDOTA_Modifier_Sand_King_Shard size mismatch");
         }
     }
 }

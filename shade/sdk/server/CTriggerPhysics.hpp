@@ -29,7 +29,7 @@ namespace shade {
     namespace sdk {
         namespace server {
             /* Class Parameters
-             * Size: 0xa30
+             * Size: 0xa90
              * Alignment: 0x8
              * Has VTable
              * Construct Allowed
@@ -38,30 +38,30 @@ namespace shade {
             #pragma pack(push, 1)
             class CTriggerPhysics : public shade::sdk::server::CBaseTrigger {
             public:
-                std::uint8_t pad_09d0[0x8]; // 0x09d0, 0x8 bytes
-                shade::sdk::client::IPhysicsMotionController *m_pController; // 0x09d8, 0x8 bytes
-                float m_gravityScale; // 0x09e0, 0x4 bytes
-                float m_linearLimit; // 0x09e4, 0x4 bytes
-                float m_linearDamping; // 0x09e8, 0x4 bytes
-                float m_angularLimit; // 0x09ec, 0x4 bytes
-                float m_angularDamping; // 0x09f0, 0x4 bytes
-                float m_linearForce; // 0x09f4, 0x4 bytes
-                float m_flFrequency; // 0x09f8, 0x4 bytes
-                float m_flDampingRatio; // 0x09fc, 0x4 bytes
-                Vector m_vecLinearForcePointAt; // 0x0a00, 0xc bytes
-                bool m_bCollapseToForcePoint; // 0x0a0c, 0x1 bytes
-                std::uint8_t pad_0a0d[0x3]; // 0x0a0d, 0x3 bytes
-                VectorWS m_vecLinearForcePointAtWorld; // 0x0a10, 0xc bytes
-                Vector m_vecLinearForceDirection; // 0x0a1c, 0xc bytes
-                bool m_bForceDirectionIsInLocalSpace; // 0x0a28, 0x1 bytes
-                bool m_bConvertToDebrisWhenPossible; // 0x0a29, 0x1 bytes
-                std::uint8_t pad_0a2a[0x6]; // 0x0a2a, 0x6 bytes
+                std::uint8_t pad_0a30[0x8]; // 0x0a30, 0x8 bytes
+                shade::sdk::client::IPhysicsMotionController *m_pController; // 0x0a38, 0x8 bytes
+                float m_gravityScale; // 0x0a40, 0x4 bytes
+                float m_linearLimit; // 0x0a44, 0x4 bytes
+                float m_linearDamping; // 0x0a48, 0x4 bytes
+                float m_angularLimit; // 0x0a4c, 0x4 bytes
+                float m_angularDamping; // 0x0a50, 0x4 bytes
+                float m_linearForce; // 0x0a54, 0x4 bytes
+                float m_flFrequency; // 0x0a58, 0x4 bytes
+                float m_flDampingRatio; // 0x0a5c, 0x4 bytes
+                Vector m_vecLinearForcePointAt; // 0x0a60, 0xc bytes
+                bool m_bCollapseToForcePoint; // 0x0a6c, 0x1 bytes
+                std::uint8_t pad_0a6d[0x3]; // 0x0a6d, 0x3 bytes
+                VectorWS m_vecLinearForcePointAtWorld; // 0x0a70, 0xc bytes
+                Vector m_vecLinearForceDirection; // 0x0a7c, 0xc bytes
+                bool m_bForceDirectionIsInLocalSpace; // 0x0a88, 0x1 bytes
+                bool m_bConvertToDebrisWhenPossible; // 0x0a89, 0x1 bytes
+                std::uint8_t pad_0a8a[0x6]; // 0x0a8a, 0x6 bytes
             };
             #pragma pack(pop)
 
             // No unique data map fields
 
-            static_assert(sizeof(CTriggerPhysics) == 0xA30, "CTriggerPhysics size mismatch");
+            static_assert(sizeof(CTriggerPhysics) == 0xA90, "CTriggerPhysics size mismatch");
         }
     }
 }
